@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsKendraThesaurusConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataThesaurusConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kendra_thesaurus#id DataAwsKendraThesaurus#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kendra_thesaurus#id TfDataThesaurus#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kendra_thesaurus#index_id DataAwsKendraThesaurus#index_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kendra_thesaurus#index_id TfDataThesaurus#index_id}
   */
   readonly indexId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kendra_thesaurus#region DataAwsKendraThesaurus#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kendra_thesaurus#region TfDataThesaurus#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kendra_thesaurus#tags DataAwsKendraThesaurus#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kendra_thesaurus#tags TfDataThesaurus#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kendra_thesaurus#thesaurus_id DataAwsKendraThesaurus#thesaurus_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kendra_thesaurus#thesaurus_id TfDataThesaurus#thesaurus_id}
   */
   readonly thesaurusId: string;
 }
@@ -36,7 +36,7 @@ export interface DataAwsKendraThesaurusConfig extends cdktn.TerraformMetaArgumen
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kendra_thesaurus aws_kendra_thesaurus}
 */
-export class DataAwsKendraThesaurus extends cdktn.TerraformDataSource {
+export class TfDataThesaurus extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class DataAwsKendraThesaurus extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsKendraThesaurus resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataThesaurus resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsKendraThesaurus to import
-  * @param importFromId The id of the existing DataAwsKendraThesaurus that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kendra_thesaurus#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsKendraThesaurus to import is found
+  * @param importToId The construct id used in the generated config for the TfDataThesaurus to import
+  * @param importFromId The id of the existing TfDataThesaurus that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kendra_thesaurus#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataThesaurus to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_kendra_thesaurus", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class DataAwsKendraThesaurus extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsKendraThesaurusConfig
+  * @param options TfDataThesaurusConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsKendraThesaurusConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataThesaurusConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_kendra_thesaurus',
       terraformGeneratorMetadata: {
@@ -176,7 +176,7 @@ export class DataAwsKendraThesaurus extends cdktn.TerraformDataSource {
   }
 
   // source_s3_path - computed: true, optional: false, required: false
-  private _sourceS3Path = new DataAwsKendraThesaurus.SourceS3PathPropertyList(this, "source_s3_path", false);
+  private _sourceS3Path = new TfDataThesaurus.SourceS3PathPropertyList(this, "source_s3_path", false);
   public get sourceS3Path() {
     return this._sourceS3Path;
   }
@@ -283,7 +283,7 @@ export class DataAwsKendraThesaurus extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsKendraThesaurusSourceS3PathPropertyToTerraform(struct?: DataAwsKendraThesaurus.SourceS3PathProperty): any {
+export function tfDataThesaurusSourceS3PathPropertyToTerraform(struct?: TfDataThesaurus.SourceS3PathProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -293,7 +293,7 @@ export function dataAwsKendraThesaurusSourceS3PathPropertyToTerraform(struct?: D
 }
 
 
-export function dataAwsKendraThesaurusSourceS3PathPropertyToHclTerraform(struct?: DataAwsKendraThesaurus.SourceS3PathProperty): any {
+export function tfDataThesaurusSourceS3PathPropertyToHclTerraform(struct?: TfDataThesaurus.SourceS3PathProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -304,7 +304,7 @@ export function dataAwsKendraThesaurusSourceS3PathPropertyToHclTerraform(struct?
 }
 
 
-export namespace DataAwsKendraThesaurus {
+export namespace TfDataThesaurus {
 export interface SourceS3PathProperty {
 }
 export class SourceS3PathPropertyOutputReference extends cdktn.ComplexObject {

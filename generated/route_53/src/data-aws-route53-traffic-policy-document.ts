@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsRoute53TrafficPolicyDocumentConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataTrafficPolicyDocumentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#id DataAwsRoute53TrafficPolicyDocument#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#id TfDataTrafficPolicyDocument#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#record_type DataAwsRoute53TrafficPolicyDocument#record_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#record_type TfDataTrafficPolicyDocument#record_type}
   */
   readonly recordType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#start_endpoint DataAwsRoute53TrafficPolicyDocument#start_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#start_endpoint TfDataTrafficPolicyDocument#start_endpoint}
   */
   readonly startEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#start_rule DataAwsRoute53TrafficPolicyDocument#start_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#start_rule TfDataTrafficPolicyDocument#start_rule}
   */
   readonly startRule?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#version DataAwsRoute53TrafficPolicyDocument#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#version TfDataTrafficPolicyDocument#version}
   */
   readonly version?: string;
   /**
   * endpoint block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#endpoint DataAwsRoute53TrafficPolicyDocument#endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#endpoint TfDataTrafficPolicyDocument#endpoint}
   */
-  readonly endpoint?: DataAwsRoute53TrafficPolicyDocument.EndpointProperty[] | cdktn.IResolvable;
+  readonly endpoint?: TfDataTrafficPolicyDocument.EndpointProperty[] | cdktn.IResolvable;
   /**
   * rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#rule DataAwsRoute53TrafficPolicyDocument#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#rule TfDataTrafficPolicyDocument#rule}
   */
-  readonly rule?: DataAwsRoute53TrafficPolicyDocument.RuleProperty[] | cdktn.IResolvable;
+  readonly rule?: TfDataTrafficPolicyDocument.RuleProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document aws_route53_traffic_policy_document}
 */
-export class DataAwsRoute53TrafficPolicyDocument extends cdktn.TerraformDataSource {
+export class TfDataTrafficPolicyDocument extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class DataAwsRoute53TrafficPolicyDocument extends cdktn.TerraformDataSour
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsRoute53TrafficPolicyDocument resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataTrafficPolicyDocument resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsRoute53TrafficPolicyDocument to import
-  * @param importFromId The id of the existing DataAwsRoute53TrafficPolicyDocument that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsRoute53TrafficPolicyDocument to import is found
+  * @param importToId The construct id used in the generated config for the TfDataTrafficPolicyDocument to import
+  * @param importFromId The id of the existing TfDataTrafficPolicyDocument that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataTrafficPolicyDocument to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route53_traffic_policy_document", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class DataAwsRoute53TrafficPolicyDocument extends cdktn.TerraformDataSour
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsRoute53TrafficPolicyDocumentConfig = {}
+  * @param options TfDataTrafficPolicyDocumentConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsRoute53TrafficPolicyDocumentConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDataTrafficPolicyDocumentConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_route53_traffic_policy_document',
       terraformGeneratorMetadata: {
@@ -193,11 +193,11 @@ export class DataAwsRoute53TrafficPolicyDocument extends cdktn.TerraformDataSour
   }
 
   // endpoint - computed: false, optional: true, required: false
-  private _endpoint = new DataAwsRoute53TrafficPolicyDocument.EndpointPropertyList(this, "endpoint", true);
+  private _endpoint = new TfDataTrafficPolicyDocument.EndpointPropertyList(this, "endpoint", true);
   public get endpoint() {
     return this._endpoint;
   }
-  public putEndpoint(value: DataAwsRoute53TrafficPolicyDocument.EndpointProperty[] | cdktn.IResolvable) {
+  public putEndpoint(value: TfDataTrafficPolicyDocument.EndpointProperty[] | cdktn.IResolvable) {
     this._endpoint.internalValue = value;
   }
   public resetEndpoint() {
@@ -209,11 +209,11 @@ export class DataAwsRoute53TrafficPolicyDocument extends cdktn.TerraformDataSour
   }
 
   // rule - computed: false, optional: true, required: false
-  private _rule = new DataAwsRoute53TrafficPolicyDocument.RulePropertyList(this, "rule", true);
+  private _rule = new TfDataTrafficPolicyDocument.RulePropertyList(this, "rule", true);
   public get rule() {
     return this._rule;
   }
-  public putRule(value: DataAwsRoute53TrafficPolicyDocument.RuleProperty[] | cdktn.IResolvable) {
+  public putRule(value: TfDataTrafficPolicyDocument.RuleProperty[] | cdktn.IResolvable) {
     this._rule.internalValue = value;
   }
   public resetRule() {
@@ -235,8 +235,8 @@ export class DataAwsRoute53TrafficPolicyDocument extends cdktn.TerraformDataSour
       start_endpoint: cdktn.stringToTerraform(this._startEndpoint),
       start_rule: cdktn.stringToTerraform(this._startRule),
       version: cdktn.stringToTerraform(this._version),
-      endpoint: cdktn.listMapper(dataAwsRoute53TrafficPolicyDocumentEndpointPropertyToTerraform, true)(this._endpoint.internalValue),
-      rule: cdktn.listMapper(dataAwsRoute53TrafficPolicyDocumentRulePropertyToTerraform, true)(this._rule.internalValue),
+      endpoint: cdktn.listMapper(tfDataTrafficPolicyDocumentEndpointPropertyToTerraform, true)(this._endpoint.internalValue),
+      rule: cdktn.listMapper(tfDataTrafficPolicyDocumentRulePropertyToTerraform, true)(this._rule.internalValue),
     };
   }
 
@@ -273,16 +273,16 @@ export class DataAwsRoute53TrafficPolicyDocument extends cdktn.TerraformDataSour
         storageClassType: "string",
       },
       endpoint: {
-        value: cdktn.listMapperHcl(dataAwsRoute53TrafficPolicyDocumentEndpointPropertyToHclTerraform, true)(this._endpoint.internalValue),
+        value: cdktn.listMapperHcl(tfDataTrafficPolicyDocumentEndpointPropertyToHclTerraform, true)(this._endpoint.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataAwsRoute53TrafficPolicyDocument.EndpointPropertyList",
+        storageClassType: "TfDataTrafficPolicyDocument.EndpointPropertyList",
       },
       rule: {
-        value: cdktn.listMapperHcl(dataAwsRoute53TrafficPolicyDocumentRulePropertyToHclTerraform, true)(this._rule.internalValue),
+        value: cdktn.listMapperHcl(tfDataTrafficPolicyDocumentRulePropertyToHclTerraform, true)(this._rule.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataAwsRoute53TrafficPolicyDocument.RulePropertyList",
+        storageClassType: "TfDataTrafficPolicyDocument.RulePropertyList",
       },
     };
 
@@ -291,7 +291,7 @@ export class DataAwsRoute53TrafficPolicyDocument extends cdktn.TerraformDataSour
   }
 }
 
-export function dataAwsRoute53TrafficPolicyDocumentEndpointPropertyToTerraform(struct?: DataAwsRoute53TrafficPolicyDocument.EndpointProperty | cdktn.IResolvable): any {
+export function tfDataTrafficPolicyDocumentEndpointPropertyToTerraform(struct?: TfDataTrafficPolicyDocument.EndpointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -305,7 +305,7 @@ export function dataAwsRoute53TrafficPolicyDocumentEndpointPropertyToTerraform(s
 }
 
 
-export function dataAwsRoute53TrafficPolicyDocumentEndpointPropertyToHclTerraform(struct?: DataAwsRoute53TrafficPolicyDocument.EndpointProperty | cdktn.IResolvable): any {
+export function tfDataTrafficPolicyDocumentEndpointPropertyToHclTerraform(struct?: TfDataTrafficPolicyDocument.EndpointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -342,7 +342,7 @@ export function dataAwsRoute53TrafficPolicyDocumentEndpointPropertyToHclTerrafor
 }
 
 
-export function dataAwsRoute53TrafficPolicyDocumentGeoProximityLocationPropertyToTerraform(struct?: DataAwsRoute53TrafficPolicyDocument.GeoProximityLocationProperty | cdktn.IResolvable): any {
+export function tfDataTrafficPolicyDocumentGeoProximityLocationPropertyToTerraform(struct?: TfDataTrafficPolicyDocument.GeoProximityLocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -360,7 +360,7 @@ export function dataAwsRoute53TrafficPolicyDocumentGeoProximityLocationPropertyT
 }
 
 
-export function dataAwsRoute53TrafficPolicyDocumentGeoProximityLocationPropertyToHclTerraform(struct?: DataAwsRoute53TrafficPolicyDocument.GeoProximityLocationProperty | cdktn.IResolvable): any {
+export function tfDataTrafficPolicyDocumentGeoProximityLocationPropertyToHclTerraform(struct?: TfDataTrafficPolicyDocument.GeoProximityLocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -421,7 +421,7 @@ export function dataAwsRoute53TrafficPolicyDocumentGeoProximityLocationPropertyT
 }
 
 
-export function dataAwsRoute53TrafficPolicyDocumentItemsPropertyToTerraform(struct?: DataAwsRoute53TrafficPolicyDocument.ItemsProperty | cdktn.IResolvable): any {
+export function tfDataTrafficPolicyDocumentItemsPropertyToTerraform(struct?: TfDataTrafficPolicyDocument.ItemsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -433,7 +433,7 @@ export function dataAwsRoute53TrafficPolicyDocumentItemsPropertyToTerraform(stru
 }
 
 
-export function dataAwsRoute53TrafficPolicyDocumentItemsPropertyToHclTerraform(struct?: DataAwsRoute53TrafficPolicyDocument.ItemsProperty | cdktn.IResolvable): any {
+export function tfDataTrafficPolicyDocumentItemsPropertyToHclTerraform(struct?: TfDataTrafficPolicyDocument.ItemsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -458,7 +458,7 @@ export function dataAwsRoute53TrafficPolicyDocumentItemsPropertyToHclTerraform(s
 }
 
 
-export function dataAwsRoute53TrafficPolicyDocumentLocationPropertyToTerraform(struct?: DataAwsRoute53TrafficPolicyDocument.LocationProperty | cdktn.IResolvable): any {
+export function tfDataTrafficPolicyDocumentLocationPropertyToTerraform(struct?: TfDataTrafficPolicyDocument.LocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -476,7 +476,7 @@ export function dataAwsRoute53TrafficPolicyDocumentLocationPropertyToTerraform(s
 }
 
 
-export function dataAwsRoute53TrafficPolicyDocumentLocationPropertyToHclTerraform(struct?: DataAwsRoute53TrafficPolicyDocument.LocationProperty | cdktn.IResolvable): any {
+export function tfDataTrafficPolicyDocumentLocationPropertyToHclTerraform(struct?: TfDataTrafficPolicyDocument.LocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -537,7 +537,7 @@ export function dataAwsRoute53TrafficPolicyDocumentLocationPropertyToHclTerrafor
 }
 
 
-export function dataAwsRoute53TrafficPolicyDocumentPrimaryPropertyToTerraform(struct?: DataAwsRoute53TrafficPolicyDocument.PrimaryPropertyOutputReference | DataAwsRoute53TrafficPolicyDocument.PrimaryProperty): any {
+export function tfDataTrafficPolicyDocumentPrimaryPropertyToTerraform(struct?: TfDataTrafficPolicyDocument.PrimaryPropertyOutputReference | TfDataTrafficPolicyDocument.PrimaryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -551,7 +551,7 @@ export function dataAwsRoute53TrafficPolicyDocumentPrimaryPropertyToTerraform(st
 }
 
 
-export function dataAwsRoute53TrafficPolicyDocumentPrimaryPropertyToHclTerraform(struct?: DataAwsRoute53TrafficPolicyDocument.PrimaryPropertyOutputReference | DataAwsRoute53TrafficPolicyDocument.PrimaryProperty): any {
+export function tfDataTrafficPolicyDocumentPrimaryPropertyToHclTerraform(struct?: TfDataTrafficPolicyDocument.PrimaryPropertyOutputReference | TfDataTrafficPolicyDocument.PrimaryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -588,7 +588,7 @@ export function dataAwsRoute53TrafficPolicyDocumentPrimaryPropertyToHclTerraform
 }
 
 
-export function dataAwsRoute53TrafficPolicyDocumentRegionPropertyToTerraform(struct?: DataAwsRoute53TrafficPolicyDocument.RegionProperty | cdktn.IResolvable): any {
+export function tfDataTrafficPolicyDocumentRegionPropertyToTerraform(struct?: TfDataTrafficPolicyDocument.RegionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -603,7 +603,7 @@ export function dataAwsRoute53TrafficPolicyDocumentRegionPropertyToTerraform(str
 }
 
 
-export function dataAwsRoute53TrafficPolicyDocumentRegionPropertyToHclTerraform(struct?: DataAwsRoute53TrafficPolicyDocument.RegionProperty | cdktn.IResolvable): any {
+export function tfDataTrafficPolicyDocumentRegionPropertyToHclTerraform(struct?: TfDataTrafficPolicyDocument.RegionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -646,7 +646,7 @@ export function dataAwsRoute53TrafficPolicyDocumentRegionPropertyToHclTerraform(
 }
 
 
-export function dataAwsRoute53TrafficPolicyDocumentSecondaryPropertyToTerraform(struct?: DataAwsRoute53TrafficPolicyDocument.SecondaryPropertyOutputReference | DataAwsRoute53TrafficPolicyDocument.SecondaryProperty): any {
+export function tfDataTrafficPolicyDocumentSecondaryPropertyToTerraform(struct?: TfDataTrafficPolicyDocument.SecondaryPropertyOutputReference | TfDataTrafficPolicyDocument.SecondaryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -660,7 +660,7 @@ export function dataAwsRoute53TrafficPolicyDocumentSecondaryPropertyToTerraform(
 }
 
 
-export function dataAwsRoute53TrafficPolicyDocumentSecondaryPropertyToHclTerraform(struct?: DataAwsRoute53TrafficPolicyDocument.SecondaryPropertyOutputReference | DataAwsRoute53TrafficPolicyDocument.SecondaryProperty): any {
+export function tfDataTrafficPolicyDocumentSecondaryPropertyToHclTerraform(struct?: TfDataTrafficPolicyDocument.SecondaryPropertyOutputReference | TfDataTrafficPolicyDocument.SecondaryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -697,7 +697,7 @@ export function dataAwsRoute53TrafficPolicyDocumentSecondaryPropertyToHclTerrafo
 }
 
 
-export function dataAwsRoute53TrafficPolicyDocumentRulePropertyToTerraform(struct?: DataAwsRoute53TrafficPolicyDocument.RuleProperty | cdktn.IResolvable): any {
+export function tfDataTrafficPolicyDocumentRulePropertyToTerraform(struct?: TfDataTrafficPolicyDocument.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -705,17 +705,17 @@ export function dataAwsRoute53TrafficPolicyDocumentRulePropertyToTerraform(struc
   return {
     id: cdktn.stringToTerraform(struct!.id),
     type: cdktn.stringToTerraform(struct!.type),
-    geo_proximity_location: cdktn.listMapper(dataAwsRoute53TrafficPolicyDocumentGeoProximityLocationPropertyToTerraform, true)(struct!.geoProximityLocation),
-    items: cdktn.listMapper(dataAwsRoute53TrafficPolicyDocumentItemsPropertyToTerraform, true)(struct!.items),
-    location: cdktn.listMapper(dataAwsRoute53TrafficPolicyDocumentLocationPropertyToTerraform, true)(struct!.location),
-    primary: dataAwsRoute53TrafficPolicyDocumentPrimaryPropertyToTerraform(struct!.primary),
-    region: cdktn.listMapper(dataAwsRoute53TrafficPolicyDocumentRegionPropertyToTerraform, true)(struct!.region),
-    secondary: dataAwsRoute53TrafficPolicyDocumentSecondaryPropertyToTerraform(struct!.secondary),
+    geo_proximity_location: cdktn.listMapper(tfDataTrafficPolicyDocumentGeoProximityLocationPropertyToTerraform, true)(struct!.geoProximityLocation),
+    items: cdktn.listMapper(tfDataTrafficPolicyDocumentItemsPropertyToTerraform, true)(struct!.items),
+    location: cdktn.listMapper(tfDataTrafficPolicyDocumentLocationPropertyToTerraform, true)(struct!.location),
+    primary: tfDataTrafficPolicyDocumentPrimaryPropertyToTerraform(struct!.primary),
+    region: cdktn.listMapper(tfDataTrafficPolicyDocumentRegionPropertyToTerraform, true)(struct!.region),
+    secondary: tfDataTrafficPolicyDocumentSecondaryPropertyToTerraform(struct!.secondary),
   }
 }
 
 
-export function dataAwsRoute53TrafficPolicyDocumentRulePropertyToHclTerraform(struct?: DataAwsRoute53TrafficPolicyDocument.RuleProperty | cdktn.IResolvable): any {
+export function tfDataTrafficPolicyDocumentRulePropertyToHclTerraform(struct?: TfDataTrafficPolicyDocument.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -734,37 +734,37 @@ export function dataAwsRoute53TrafficPolicyDocumentRulePropertyToHclTerraform(st
       storageClassType: "string",
     },
     geo_proximity_location: {
-      value: cdktn.listMapperHcl(dataAwsRoute53TrafficPolicyDocumentGeoProximityLocationPropertyToHclTerraform, true)(struct!.geoProximityLocation),
+      value: cdktn.listMapperHcl(tfDataTrafficPolicyDocumentGeoProximityLocationPropertyToHclTerraform, true)(struct!.geoProximityLocation),
       isBlock: true,
       type: "set",
       storageClassType: "GeoProximityLocationPropertyList",
     },
     items: {
-      value: cdktn.listMapperHcl(dataAwsRoute53TrafficPolicyDocumentItemsPropertyToHclTerraform, true)(struct!.items),
+      value: cdktn.listMapperHcl(tfDataTrafficPolicyDocumentItemsPropertyToHclTerraform, true)(struct!.items),
       isBlock: true,
       type: "set",
       storageClassType: "ItemsPropertyList",
     },
     location: {
-      value: cdktn.listMapperHcl(dataAwsRoute53TrafficPolicyDocumentLocationPropertyToHclTerraform, true)(struct!.location),
+      value: cdktn.listMapperHcl(tfDataTrafficPolicyDocumentLocationPropertyToHclTerraform, true)(struct!.location),
       isBlock: true,
       type: "set",
       storageClassType: "LocationPropertyList",
     },
     primary: {
-      value: dataAwsRoute53TrafficPolicyDocumentPrimaryPropertyToHclTerraform(struct!.primary),
+      value: tfDataTrafficPolicyDocumentPrimaryPropertyToHclTerraform(struct!.primary),
       isBlock: true,
       type: "list",
       storageClassType: "PrimaryPropertyList",
     },
     region: {
-      value: cdktn.listMapperHcl(dataAwsRoute53TrafficPolicyDocumentRegionPropertyToHclTerraform, true)(struct!.region),
+      value: cdktn.listMapperHcl(tfDataTrafficPolicyDocumentRegionPropertyToHclTerraform, true)(struct!.region),
       isBlock: true,
       type: "set",
       storageClassType: "RegionPropertyList",
     },
     secondary: {
-      value: dataAwsRoute53TrafficPolicyDocumentSecondaryPropertyToHclTerraform(struct!.secondary),
+      value: tfDataTrafficPolicyDocumentSecondaryPropertyToHclTerraform(struct!.secondary),
       isBlock: true,
       type: "list",
       storageClassType: "SecondaryPropertyList",
@@ -776,25 +776,25 @@ export function dataAwsRoute53TrafficPolicyDocumentRulePropertyToHclTerraform(st
 }
 
 
-export namespace DataAwsRoute53TrafficPolicyDocument {
+export namespace TfDataTrafficPolicyDocument {
 export interface EndpointProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#id DataAwsRoute53TrafficPolicyDocument#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#id TfDataTrafficPolicyDocument#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#region DataAwsRoute53TrafficPolicyDocument#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#region TfDataTrafficPolicyDocument#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#type DataAwsRoute53TrafficPolicyDocument#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#type TfDataTrafficPolicyDocument#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#value DataAwsRoute53TrafficPolicyDocument#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#value TfDataTrafficPolicyDocument#value}
   */
   readonly value?: string;
 }
@@ -943,35 +943,35 @@ export class EndpointPropertyList extends cdktn.ComplexList {
 }
 export interface GeoProximityLocationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#bias DataAwsRoute53TrafficPolicyDocument#bias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#bias TfDataTrafficPolicyDocument#bias}
   */
   readonly bias?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#endpoint_reference DataAwsRoute53TrafficPolicyDocument#endpoint_reference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#endpoint_reference TfDataTrafficPolicyDocument#endpoint_reference}
   */
   readonly endpointReference?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#evaluate_target_health DataAwsRoute53TrafficPolicyDocument#evaluate_target_health}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#evaluate_target_health TfDataTrafficPolicyDocument#evaluate_target_health}
   */
   readonly evaluateTargetHealth?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#health_check DataAwsRoute53TrafficPolicyDocument#health_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#health_check TfDataTrafficPolicyDocument#health_check}
   */
   readonly healthCheck?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#latitude DataAwsRoute53TrafficPolicyDocument#latitude}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#latitude TfDataTrafficPolicyDocument#latitude}
   */
   readonly latitude?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#longitude DataAwsRoute53TrafficPolicyDocument#longitude}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#longitude TfDataTrafficPolicyDocument#longitude}
   */
   readonly longitude?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#region DataAwsRoute53TrafficPolicyDocument#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#region TfDataTrafficPolicyDocument#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#rule_reference DataAwsRoute53TrafficPolicyDocument#rule_reference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#rule_reference TfDataTrafficPolicyDocument#rule_reference}
   */
   readonly ruleReference?: string;
 }
@@ -1211,11 +1211,11 @@ export class GeoProximityLocationPropertyList extends cdktn.ComplexList {
 }
 export interface ItemsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#endpoint_reference DataAwsRoute53TrafficPolicyDocument#endpoint_reference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#endpoint_reference TfDataTrafficPolicyDocument#endpoint_reference}
   */
   readonly endpointReference?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#health_check DataAwsRoute53TrafficPolicyDocument#health_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#health_check TfDataTrafficPolicyDocument#health_check}
   */
   readonly healthCheck?: string;
 }
@@ -1323,35 +1323,35 @@ export class ItemsPropertyList extends cdktn.ComplexList {
 }
 export interface LocationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#continent DataAwsRoute53TrafficPolicyDocument#continent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#continent TfDataTrafficPolicyDocument#continent}
   */
   readonly continent?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#country DataAwsRoute53TrafficPolicyDocument#country}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#country TfDataTrafficPolicyDocument#country}
   */
   readonly country?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#endpoint_reference DataAwsRoute53TrafficPolicyDocument#endpoint_reference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#endpoint_reference TfDataTrafficPolicyDocument#endpoint_reference}
   */
   readonly endpointReference?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#evaluate_target_health DataAwsRoute53TrafficPolicyDocument#evaluate_target_health}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#evaluate_target_health TfDataTrafficPolicyDocument#evaluate_target_health}
   */
   readonly evaluateTargetHealth?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#health_check DataAwsRoute53TrafficPolicyDocument#health_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#health_check TfDataTrafficPolicyDocument#health_check}
   */
   readonly healthCheck?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#is_default DataAwsRoute53TrafficPolicyDocument#is_default}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#is_default TfDataTrafficPolicyDocument#is_default}
   */
   readonly isDefault?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#rule_reference DataAwsRoute53TrafficPolicyDocument#rule_reference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#rule_reference TfDataTrafficPolicyDocument#rule_reference}
   */
   readonly ruleReference?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#subdivision DataAwsRoute53TrafficPolicyDocument#subdivision}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#subdivision TfDataTrafficPolicyDocument#subdivision}
   */
   readonly subdivision?: string;
 }
@@ -1591,19 +1591,19 @@ export class LocationPropertyList extends cdktn.ComplexList {
 }
 export interface PrimaryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#endpoint_reference DataAwsRoute53TrafficPolicyDocument#endpoint_reference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#endpoint_reference TfDataTrafficPolicyDocument#endpoint_reference}
   */
   readonly endpointReference?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#evaluate_target_health DataAwsRoute53TrafficPolicyDocument#evaluate_target_health}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#evaluate_target_health TfDataTrafficPolicyDocument#evaluate_target_health}
   */
   readonly evaluateTargetHealth?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#health_check DataAwsRoute53TrafficPolicyDocument#health_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#health_check TfDataTrafficPolicyDocument#health_check}
   */
   readonly healthCheck?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#rule_reference DataAwsRoute53TrafficPolicyDocument#rule_reference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#rule_reference TfDataTrafficPolicyDocument#rule_reference}
   */
   readonly ruleReference?: string;
 }
@@ -1723,23 +1723,23 @@ export class PrimaryPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RegionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#endpoint_reference DataAwsRoute53TrafficPolicyDocument#endpoint_reference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#endpoint_reference TfDataTrafficPolicyDocument#endpoint_reference}
   */
   readonly endpointReference?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#evaluate_target_health DataAwsRoute53TrafficPolicyDocument#evaluate_target_health}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#evaluate_target_health TfDataTrafficPolicyDocument#evaluate_target_health}
   */
   readonly evaluateTargetHealth?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#health_check DataAwsRoute53TrafficPolicyDocument#health_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#health_check TfDataTrafficPolicyDocument#health_check}
   */
   readonly healthCheck?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#region DataAwsRoute53TrafficPolicyDocument#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#region TfDataTrafficPolicyDocument#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#rule_reference DataAwsRoute53TrafficPolicyDocument#rule_reference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#rule_reference TfDataTrafficPolicyDocument#rule_reference}
   */
   readonly ruleReference?: string;
 }
@@ -1913,19 +1913,19 @@ export class RegionPropertyList extends cdktn.ComplexList {
 }
 export interface SecondaryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#endpoint_reference DataAwsRoute53TrafficPolicyDocument#endpoint_reference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#endpoint_reference TfDataTrafficPolicyDocument#endpoint_reference}
   */
   readonly endpointReference?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#evaluate_target_health DataAwsRoute53TrafficPolicyDocument#evaluate_target_health}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#evaluate_target_health TfDataTrafficPolicyDocument#evaluate_target_health}
   */
   readonly evaluateTargetHealth?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#health_check DataAwsRoute53TrafficPolicyDocument#health_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#health_check TfDataTrafficPolicyDocument#health_check}
   */
   readonly healthCheck?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#rule_reference DataAwsRoute53TrafficPolicyDocument#rule_reference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#rule_reference TfDataTrafficPolicyDocument#rule_reference}
   */
   readonly ruleReference?: string;
 }
@@ -2045,50 +2045,50 @@ export class SecondaryPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#id DataAwsRoute53TrafficPolicyDocument#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#id TfDataTrafficPolicyDocument#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#type DataAwsRoute53TrafficPolicyDocument#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#type TfDataTrafficPolicyDocument#type}
   */
   readonly type?: string;
   /**
   * geo_proximity_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#geo_proximity_location DataAwsRoute53TrafficPolicyDocument#geo_proximity_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#geo_proximity_location TfDataTrafficPolicyDocument#geo_proximity_location}
   */
   readonly geoProximityLocation?: GeoProximityLocationProperty[] | cdktn.IResolvable;
   /**
   * items block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#items DataAwsRoute53TrafficPolicyDocument#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#items TfDataTrafficPolicyDocument#items}
   */
   readonly items?: ItemsProperty[] | cdktn.IResolvable;
   /**
   * location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#location DataAwsRoute53TrafficPolicyDocument#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#location TfDataTrafficPolicyDocument#location}
   */
   readonly location?: LocationProperty[] | cdktn.IResolvable;
   /**
   * primary block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#primary DataAwsRoute53TrafficPolicyDocument#primary}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#primary TfDataTrafficPolicyDocument#primary}
   */
   readonly primary?: PrimaryProperty;
   /**
   * region block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#region DataAwsRoute53TrafficPolicyDocument#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#region TfDataTrafficPolicyDocument#region}
   */
   readonly region?: RegionProperty[] | cdktn.IResolvable;
   /**
   * secondary block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#secondary DataAwsRoute53TrafficPolicyDocument#secondary}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_traffic_policy_document#secondary TfDataTrafficPolicyDocument#secondary}
   */
   readonly secondary?: SecondaryProperty;
 }

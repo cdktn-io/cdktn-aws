@@ -5,43 +5,43 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCloudwatchLogAnomalyDetectorConfig extends cdktn.TerraformMetaArguments {
+export interface TfAnomalyDetectorConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_anomaly_detector#anomaly_visibility_time AwsCloudwatchLogAnomalyDetector#anomaly_visibility_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_anomaly_detector#anomaly_visibility_time TfAnomalyDetector#anomaly_visibility_time}
   */
   readonly anomalyVisibilityTime?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_anomaly_detector#detector_name AwsCloudwatchLogAnomalyDetector#detector_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_anomaly_detector#detector_name TfAnomalyDetector#detector_name}
   */
   readonly detectorName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_anomaly_detector#enabled AwsCloudwatchLogAnomalyDetector#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_anomaly_detector#enabled TfAnomalyDetector#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_anomaly_detector#evaluation_frequency AwsCloudwatchLogAnomalyDetector#evaluation_frequency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_anomaly_detector#evaluation_frequency TfAnomalyDetector#evaluation_frequency}
   */
   readonly evaluationFrequency?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_anomaly_detector#filter_pattern AwsCloudwatchLogAnomalyDetector#filter_pattern}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_anomaly_detector#filter_pattern TfAnomalyDetector#filter_pattern}
   */
   readonly filterPattern?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_anomaly_detector#kms_key_id AwsCloudwatchLogAnomalyDetector#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_anomaly_detector#kms_key_id TfAnomalyDetector#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_anomaly_detector#log_group_arn_list AwsCloudwatchLogAnomalyDetector#log_group_arn_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_anomaly_detector#log_group_arn_list TfAnomalyDetector#log_group_arn_list}
   */
   readonly logGroupArnList: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_anomaly_detector#region AwsCloudwatchLogAnomalyDetector#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_anomaly_detector#region TfAnomalyDetector#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_anomaly_detector#tags AwsCloudwatchLogAnomalyDetector#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_anomaly_detector#tags TfAnomalyDetector#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -49,7 +49,7 @@ export interface AwsCloudwatchLogAnomalyDetectorConfig extends cdktn.TerraformMe
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_anomaly_detector aws_cloudwatch_log_anomaly_detector}
 */
-export class AwsCloudwatchLogAnomalyDetector extends cdktn.TerraformResource {
+export class TfAnomalyDetector extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -60,11 +60,11 @@ export class AwsCloudwatchLogAnomalyDetector extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCloudwatchLogAnomalyDetector resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAnomalyDetector resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCloudwatchLogAnomalyDetector to import
-  * @param importFromId The id of the existing AwsCloudwatchLogAnomalyDetector that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_anomaly_detector#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCloudwatchLogAnomalyDetector to import is found
+  * @param importToId The construct id used in the generated config for the TfAnomalyDetector to import
+  * @param importFromId The id of the existing TfAnomalyDetector that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_anomaly_detector#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAnomalyDetector to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudwatch_log_anomaly_detector", importId: importFromId, provider });
@@ -79,9 +79,9 @@ export class AwsCloudwatchLogAnomalyDetector extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCloudwatchLogAnomalyDetectorConfig
+  * @param options TfAnomalyDetectorConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCloudwatchLogAnomalyDetectorConfig) {
+  public constructor(scope: Construct, id: string, config: TfAnomalyDetectorConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudwatch_log_anomaly_detector',
       terraformGeneratorMetadata: {

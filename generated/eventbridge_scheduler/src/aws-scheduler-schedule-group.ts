@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSchedulerScheduleGroupConfig extends cdktn.TerraformMetaArguments {
+export interface TfScheduleGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule_group#id AwsSchedulerScheduleGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule_group#id TfScheduleGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule_group#name AwsSchedulerScheduleGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule_group#name TfScheduleGroup#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule_group#name_prefix AwsSchedulerScheduleGroup#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule_group#name_prefix TfScheduleGroup#name_prefix}
   */
   readonly namePrefix?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule_group#region AwsSchedulerScheduleGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule_group#region TfScheduleGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule_group#tags AwsSchedulerScheduleGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule_group#tags TfScheduleGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule_group#tags_all AwsSchedulerScheduleGroup#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule_group#tags_all TfScheduleGroup#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule_group#timeouts AwsSchedulerScheduleGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule_group#timeouts TfScheduleGroup#timeouts}
   */
-  readonly timeouts?: AwsSchedulerScheduleGroup.TimeoutsProperty;
+  readonly timeouts?: TfScheduleGroup.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule_group aws_scheduler_schedule_group}
 */
-export class AwsSchedulerScheduleGroup extends cdktn.TerraformResource {
+export class TfScheduleGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class AwsSchedulerScheduleGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSchedulerScheduleGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfScheduleGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSchedulerScheduleGroup to import
-  * @param importFromId The id of the existing AwsSchedulerScheduleGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSchedulerScheduleGroup to import is found
+  * @param importToId The construct id used in the generated config for the TfScheduleGroup to import
+  * @param importFromId The id of the existing TfScheduleGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfScheduleGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_scheduler_schedule_group", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class AwsSchedulerScheduleGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSchedulerScheduleGroupConfig = {}
+  * @param options TfScheduleGroupConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsSchedulerScheduleGroupConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfScheduleGroupConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_scheduler_schedule_group',
       terraformGeneratorMetadata: {
@@ -224,11 +224,11 @@ export class AwsSchedulerScheduleGroup extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsSchedulerScheduleGroup.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfScheduleGroup.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsSchedulerScheduleGroup.TimeoutsProperty) {
+  public putTimeouts(value: TfScheduleGroup.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -251,7 +251,7 @@ export class AwsSchedulerScheduleGroup extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: awsSchedulerScheduleGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfScheduleGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -294,10 +294,10 @@ export class AwsSchedulerScheduleGroup extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsSchedulerScheduleGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfScheduleGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsSchedulerScheduleGroup.TimeoutsProperty",
+        storageClassType: "TfScheduleGroup.TimeoutsProperty",
       },
     };
 
@@ -306,7 +306,7 @@ export class AwsSchedulerScheduleGroup extends cdktn.TerraformResource {
   }
 }
 
-export function awsSchedulerScheduleGroupTimeoutsPropertyToTerraform(struct?: AwsSchedulerScheduleGroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfScheduleGroupTimeoutsPropertyToTerraform(struct?: TfScheduleGroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -318,7 +318,7 @@ export function awsSchedulerScheduleGroupTimeoutsPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsSchedulerScheduleGroupTimeoutsPropertyToHclTerraform(struct?: AwsSchedulerScheduleGroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfScheduleGroupTimeoutsPropertyToHclTerraform(struct?: TfScheduleGroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -343,14 +343,14 @@ export function awsSchedulerScheduleGroupTimeoutsPropertyToHclTerraform(struct?:
 }
 
 
-export namespace AwsSchedulerScheduleGroup {
+export namespace TfScheduleGroup {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule_group#create AwsSchedulerScheduleGroup#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule_group#create TfScheduleGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule_group#delete AwsSchedulerScheduleGroup#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/scheduler_schedule_group#delete TfScheduleGroup#delete}
   */
   readonly delete?: string;
 }

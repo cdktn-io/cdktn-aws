@@ -5,21 +5,21 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsAppsyncApiCacheConfig extends cdktn.TerraformMetaArguments {
+export interface TfApiCacheConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api_cache#api_caching_behavior AwsAppsyncApiCache#api_caching_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api_cache#api_caching_behavior TfApiCache#api_caching_behavior}
   */
   readonly apiCachingBehavior: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api_cache#api_id AwsAppsyncApiCache#api_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api_cache#api_id TfApiCache#api_id}
   */
   readonly apiId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api_cache#at_rest_encryption_enabled AwsAppsyncApiCache#at_rest_encryption_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api_cache#at_rest_encryption_enabled TfApiCache#at_rest_encryption_enabled}
   */
   readonly atRestEncryptionEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api_cache#id AwsAppsyncApiCache#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api_cache#id TfApiCache#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,19 +28,19 @@ export interface AwsAppsyncApiCacheConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api_cache#region AwsAppsyncApiCache#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api_cache#region TfApiCache#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api_cache#transit_encryption_enabled AwsAppsyncApiCache#transit_encryption_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api_cache#transit_encryption_enabled TfApiCache#transit_encryption_enabled}
   */
   readonly transitEncryptionEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api_cache#ttl AwsAppsyncApiCache#ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api_cache#ttl TfApiCache#ttl}
   */
   readonly ttl: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api_cache#type AwsAppsyncApiCache#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api_cache#type TfApiCache#type}
   */
   readonly type: string;
 }
@@ -48,7 +48,7 @@ export interface AwsAppsyncApiCacheConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api_cache aws_appsync_api_cache}
 */
-export class AwsAppsyncApiCache extends cdktn.TerraformResource {
+export class TfApiCache extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class AwsAppsyncApiCache extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsAppsyncApiCache resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfApiCache resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsAppsyncApiCache to import
-  * @param importFromId The id of the existing AwsAppsyncApiCache that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api_cache#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsAppsyncApiCache to import is found
+  * @param importToId The construct id used in the generated config for the TfApiCache to import
+  * @param importFromId The id of the existing TfApiCache that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api_cache#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfApiCache to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appsync_api_cache", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class AwsAppsyncApiCache extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsAppsyncApiCacheConfig
+  * @param options TfApiCacheConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsAppsyncApiCacheConfig) {
+  public constructor(scope: Construct, id: string, config: TfApiCacheConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appsync_api_cache',
       terraformGeneratorMetadata: {

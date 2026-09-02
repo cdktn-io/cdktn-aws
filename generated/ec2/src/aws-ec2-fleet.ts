@@ -5,29 +5,29 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEc2FleetConfig extends cdktn.TerraformMetaArguments {
+export interface TfFleetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#context AwsEc2Fleet#context}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#context TfFleet#context}
   */
   readonly context?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#excess_capacity_termination_policy AwsEc2Fleet#excess_capacity_termination_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#excess_capacity_termination_policy TfFleet#excess_capacity_termination_policy}
   */
   readonly excessCapacityTerminationPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#fleet_state AwsEc2Fleet#fleet_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#fleet_state TfFleet#fleet_state}
   */
   readonly fleetState?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#fulfilled_capacity AwsEc2Fleet#fulfilled_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#fulfilled_capacity TfFleet#fulfilled_capacity}
   */
   readonly fulfilledCapacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#fulfilled_on_demand_capacity AwsEc2Fleet#fulfilled_on_demand_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#fulfilled_on_demand_capacity TfFleet#fulfilled_on_demand_capacity}
   */
   readonly fulfilledOnDemandCapacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#id AwsEc2Fleet#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#id TfFleet#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -36,83 +36,83 @@ export interface AwsEc2FleetConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#region AwsEc2Fleet#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#region TfFleet#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#replace_unhealthy_instances AwsEc2Fleet#replace_unhealthy_instances}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#replace_unhealthy_instances TfFleet#replace_unhealthy_instances}
   */
   readonly replaceUnhealthyInstances?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#tags AwsEc2Fleet#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#tags TfFleet#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#tags_all AwsEc2Fleet#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#tags_all TfFleet#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#terminate_instances AwsEc2Fleet#terminate_instances}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#terminate_instances TfFleet#terminate_instances}
   */
   readonly terminateInstances?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#terminate_instances_with_expiration AwsEc2Fleet#terminate_instances_with_expiration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#terminate_instances_with_expiration TfFleet#terminate_instances_with_expiration}
   */
   readonly terminateInstancesWithExpiration?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#type AwsEc2Fleet#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#type TfFleet#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#valid_from AwsEc2Fleet#valid_from}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#valid_from TfFleet#valid_from}
   */
   readonly validFrom?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#valid_until AwsEc2Fleet#valid_until}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#valid_until TfFleet#valid_until}
   */
   readonly validUntil?: string;
   /**
   * fleet_instance_set block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#fleet_instance_set AwsEc2Fleet#fleet_instance_set}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#fleet_instance_set TfFleet#fleet_instance_set}
   */
-  readonly fleetInstanceSet?: AwsEc2Fleet.FleetInstanceSetProperty[] | cdktn.IResolvable;
+  readonly fleetInstanceSet?: TfFleet.FleetInstanceSetProperty[] | cdktn.IResolvable;
   /**
   * launch_template_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#launch_template_config AwsEc2Fleet#launch_template_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#launch_template_config TfFleet#launch_template_config}
   */
-  readonly launchTemplateConfig: AwsEc2Fleet.LaunchTemplateConfigProperty[] | cdktn.IResolvable;
+  readonly launchTemplateConfig: TfFleet.LaunchTemplateConfigProperty[] | cdktn.IResolvable;
   /**
   * on_demand_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#on_demand_options AwsEc2Fleet#on_demand_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#on_demand_options TfFleet#on_demand_options}
   */
-  readonly onDemandOptions?: AwsEc2Fleet.OnDemandOptionsProperty;
+  readonly onDemandOptions?: TfFleet.OnDemandOptionsProperty;
   /**
   * spot_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#spot_options AwsEc2Fleet#spot_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#spot_options TfFleet#spot_options}
   */
-  readonly spotOptions?: AwsEc2Fleet.SpotOptionsProperty;
+  readonly spotOptions?: TfFleet.SpotOptionsProperty;
   /**
   * target_capacity_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#target_capacity_specification AwsEc2Fleet#target_capacity_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#target_capacity_specification TfFleet#target_capacity_specification}
   */
-  readonly targetCapacitySpecification: AwsEc2Fleet.TargetCapacitySpecificationProperty;
+  readonly targetCapacitySpecification: TfFleet.TargetCapacitySpecificationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#timeouts AwsEc2Fleet#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#timeouts TfFleet#timeouts}
   */
-  readonly timeouts?: AwsEc2Fleet.TimeoutsProperty;
+  readonly timeouts?: TfFleet.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet aws_ec2_fleet}
 */
-export class AwsEc2Fleet extends cdktn.TerraformResource {
+export class TfFleet extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -123,11 +123,11 @@ export class AwsEc2Fleet extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEc2Fleet resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfFleet resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEc2Fleet to import
-  * @param importFromId The id of the existing AwsEc2Fleet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEc2Fleet to import is found
+  * @param importToId The construct id used in the generated config for the TfFleet to import
+  * @param importFromId The id of the existing TfFleet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfFleet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_fleet", importId: importFromId, provider });
@@ -142,9 +142,9 @@ export class AwsEc2Fleet extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEc2FleetConfig
+  * @param options TfFleetConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEc2FleetConfig) {
+  public constructor(scope: Construct, id: string, config: TfFleetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_fleet',
       terraformGeneratorMetadata: {
@@ -433,11 +433,11 @@ export class AwsEc2Fleet extends cdktn.TerraformResource {
   }
 
   // fleet_instance_set - computed: false, optional: true, required: false
-  private _fleetInstanceSet = new AwsEc2Fleet.FleetInstanceSetPropertyList(this, "fleet_instance_set", false);
+  private _fleetInstanceSet = new TfFleet.FleetInstanceSetPropertyList(this, "fleet_instance_set", false);
   public get fleetInstanceSet() {
     return this._fleetInstanceSet;
   }
-  public putFleetInstanceSet(value: AwsEc2Fleet.FleetInstanceSetProperty[] | cdktn.IResolvable) {
+  public putFleetInstanceSet(value: TfFleet.FleetInstanceSetProperty[] | cdktn.IResolvable) {
     this._fleetInstanceSet.internalValue = value;
   }
   public resetFleetInstanceSet() {
@@ -449,11 +449,11 @@ export class AwsEc2Fleet extends cdktn.TerraformResource {
   }
 
   // launch_template_config - computed: false, optional: false, required: true
-  private _launchTemplateConfig = new AwsEc2Fleet.LaunchTemplateConfigPropertyList(this, "launch_template_config", false);
+  private _launchTemplateConfig = new TfFleet.LaunchTemplateConfigPropertyList(this, "launch_template_config", false);
   public get launchTemplateConfig() {
     return this._launchTemplateConfig;
   }
-  public putLaunchTemplateConfig(value: AwsEc2Fleet.LaunchTemplateConfigProperty[] | cdktn.IResolvable) {
+  public putLaunchTemplateConfig(value: TfFleet.LaunchTemplateConfigProperty[] | cdktn.IResolvable) {
     this._launchTemplateConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -462,11 +462,11 @@ export class AwsEc2Fleet extends cdktn.TerraformResource {
   }
 
   // on_demand_options - computed: false, optional: true, required: false
-  private _onDemandOptions = new AwsEc2Fleet.OnDemandOptionsPropertyOutputReference(this, "on_demand_options");
+  private _onDemandOptions = new TfFleet.OnDemandOptionsPropertyOutputReference(this, "on_demand_options");
   public get onDemandOptions() {
     return this._onDemandOptions;
   }
-  public putOnDemandOptions(value: AwsEc2Fleet.OnDemandOptionsProperty) {
+  public putOnDemandOptions(value: TfFleet.OnDemandOptionsProperty) {
     this._onDemandOptions.internalValue = value;
   }
   public resetOnDemandOptions() {
@@ -478,11 +478,11 @@ export class AwsEc2Fleet extends cdktn.TerraformResource {
   }
 
   // spot_options - computed: false, optional: true, required: false
-  private _spotOptions = new AwsEc2Fleet.SpotOptionsPropertyOutputReference(this, "spot_options");
+  private _spotOptions = new TfFleet.SpotOptionsPropertyOutputReference(this, "spot_options");
   public get spotOptions() {
     return this._spotOptions;
   }
-  public putSpotOptions(value: AwsEc2Fleet.SpotOptionsProperty) {
+  public putSpotOptions(value: TfFleet.SpotOptionsProperty) {
     this._spotOptions.internalValue = value;
   }
   public resetSpotOptions() {
@@ -494,11 +494,11 @@ export class AwsEc2Fleet extends cdktn.TerraformResource {
   }
 
   // target_capacity_specification - computed: false, optional: false, required: true
-  private _targetCapacitySpecification = new AwsEc2Fleet.TargetCapacitySpecificationPropertyOutputReference(this, "target_capacity_specification");
+  private _targetCapacitySpecification = new TfFleet.TargetCapacitySpecificationPropertyOutputReference(this, "target_capacity_specification");
   public get targetCapacitySpecification() {
     return this._targetCapacitySpecification;
   }
-  public putTargetCapacitySpecification(value: AwsEc2Fleet.TargetCapacitySpecificationProperty) {
+  public putTargetCapacitySpecification(value: TfFleet.TargetCapacitySpecificationProperty) {
     this._targetCapacitySpecification.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -507,11 +507,11 @@ export class AwsEc2Fleet extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsEc2Fleet.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfFleet.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsEc2Fleet.TimeoutsProperty) {
+  public putTimeouts(value: TfFleet.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -543,12 +543,12 @@ export class AwsEc2Fleet extends cdktn.TerraformResource {
       type: cdktn.stringToTerraform(this._type),
       valid_from: cdktn.stringToTerraform(this._validFrom),
       valid_until: cdktn.stringToTerraform(this._validUntil),
-      fleet_instance_set: cdktn.listMapper(awsEc2FleetFleetInstanceSetPropertyToTerraform, true)(this._fleetInstanceSet.internalValue),
-      launch_template_config: cdktn.listMapper(awsEc2FleetLaunchTemplateConfigPropertyToTerraform, true)(this._launchTemplateConfig.internalValue),
-      on_demand_options: awsEc2FleetOnDemandOptionsPropertyToTerraform(this._onDemandOptions.internalValue),
-      spot_options: awsEc2FleetSpotOptionsPropertyToTerraform(this._spotOptions.internalValue),
-      target_capacity_specification: awsEc2FleetTargetCapacitySpecificationPropertyToTerraform(this._targetCapacitySpecification.internalValue),
-      timeouts: awsEc2FleetTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      fleet_instance_set: cdktn.listMapper(tfFleetFleetInstanceSetPropertyToTerraform, true)(this._fleetInstanceSet.internalValue),
+      launch_template_config: cdktn.listMapper(tfFleetLaunchTemplateConfigPropertyToTerraform, true)(this._launchTemplateConfig.internalValue),
+      on_demand_options: tfFleetOnDemandOptionsPropertyToTerraform(this._onDemandOptions.internalValue),
+      spot_options: tfFleetSpotOptionsPropertyToTerraform(this._spotOptions.internalValue),
+      target_capacity_specification: tfFleetTargetCapacitySpecificationPropertyToTerraform(this._targetCapacitySpecification.internalValue),
+      timeouts: tfFleetTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -645,40 +645,40 @@ export class AwsEc2Fleet extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       fleet_instance_set: {
-        value: cdktn.listMapperHcl(awsEc2FleetFleetInstanceSetPropertyToHclTerraform, true)(this._fleetInstanceSet.internalValue),
+        value: cdktn.listMapperHcl(tfFleetFleetInstanceSetPropertyToHclTerraform, true)(this._fleetInstanceSet.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEc2Fleet.FleetInstanceSetPropertyList",
+        storageClassType: "TfFleet.FleetInstanceSetPropertyList",
       },
       launch_template_config: {
-        value: cdktn.listMapperHcl(awsEc2FleetLaunchTemplateConfigPropertyToHclTerraform, true)(this._launchTemplateConfig.internalValue),
+        value: cdktn.listMapperHcl(tfFleetLaunchTemplateConfigPropertyToHclTerraform, true)(this._launchTemplateConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEc2Fleet.LaunchTemplateConfigPropertyList",
+        storageClassType: "TfFleet.LaunchTemplateConfigPropertyList",
       },
       on_demand_options: {
-        value: awsEc2FleetOnDemandOptionsPropertyToHclTerraform(this._onDemandOptions.internalValue),
+        value: tfFleetOnDemandOptionsPropertyToHclTerraform(this._onDemandOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEc2Fleet.OnDemandOptionsPropertyList",
+        storageClassType: "TfFleet.OnDemandOptionsPropertyList",
       },
       spot_options: {
-        value: awsEc2FleetSpotOptionsPropertyToHclTerraform(this._spotOptions.internalValue),
+        value: tfFleetSpotOptionsPropertyToHclTerraform(this._spotOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEc2Fleet.SpotOptionsPropertyList",
+        storageClassType: "TfFleet.SpotOptionsPropertyList",
       },
       target_capacity_specification: {
-        value: awsEc2FleetTargetCapacitySpecificationPropertyToHclTerraform(this._targetCapacitySpecification.internalValue),
+        value: tfFleetTargetCapacitySpecificationPropertyToHclTerraform(this._targetCapacitySpecification.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEc2Fleet.TargetCapacitySpecificationPropertyList",
+        storageClassType: "TfFleet.TargetCapacitySpecificationPropertyList",
       },
       timeouts: {
-        value: awsEc2FleetTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfFleetTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsEc2Fleet.TimeoutsProperty",
+        storageClassType: "TfFleet.TimeoutsProperty",
       },
     };
 
@@ -687,7 +687,7 @@ export class AwsEc2Fleet extends cdktn.TerraformResource {
   }
 }
 
-export function awsEc2FleetFleetInstanceSetPropertyToTerraform(struct?: AwsEc2Fleet.FleetInstanceSetProperty | cdktn.IResolvable): any {
+export function tfFleetFleetInstanceSetPropertyToTerraform(struct?: TfFleet.FleetInstanceSetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -701,7 +701,7 @@ export function awsEc2FleetFleetInstanceSetPropertyToTerraform(struct?: AwsEc2Fl
 }
 
 
-export function awsEc2FleetFleetInstanceSetPropertyToHclTerraform(struct?: AwsEc2Fleet.FleetInstanceSetProperty | cdktn.IResolvable): any {
+export function tfFleetFleetInstanceSetPropertyToHclTerraform(struct?: TfFleet.FleetInstanceSetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -738,7 +738,7 @@ export function awsEc2FleetFleetInstanceSetPropertyToHclTerraform(struct?: AwsEc
 }
 
 
-export function awsEc2FleetLaunchTemplateSpecificationPropertyToTerraform(struct?: AwsEc2Fleet.LaunchTemplateSpecificationPropertyOutputReference | AwsEc2Fleet.LaunchTemplateSpecificationProperty): any {
+export function tfFleetLaunchTemplateSpecificationPropertyToTerraform(struct?: TfFleet.LaunchTemplateSpecificationPropertyOutputReference | TfFleet.LaunchTemplateSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -751,7 +751,7 @@ export function awsEc2FleetLaunchTemplateSpecificationPropertyToTerraform(struct
 }
 
 
-export function awsEc2FleetLaunchTemplateSpecificationPropertyToHclTerraform(struct?: AwsEc2Fleet.LaunchTemplateSpecificationPropertyOutputReference | AwsEc2Fleet.LaunchTemplateSpecificationProperty): any {
+export function tfFleetLaunchTemplateSpecificationPropertyToHclTerraform(struct?: TfFleet.LaunchTemplateSpecificationPropertyOutputReference | TfFleet.LaunchTemplateSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -782,7 +782,7 @@ export function awsEc2FleetLaunchTemplateSpecificationPropertyToHclTerraform(str
 }
 
 
-export function awsEc2FleetAcceleratorCountPropertyToTerraform(struct?: AwsEc2Fleet.AcceleratorCountPropertyOutputReference | AwsEc2Fleet.AcceleratorCountProperty): any {
+export function tfFleetAcceleratorCountPropertyToTerraform(struct?: TfFleet.AcceleratorCountPropertyOutputReference | TfFleet.AcceleratorCountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -794,7 +794,7 @@ export function awsEc2FleetAcceleratorCountPropertyToTerraform(struct?: AwsEc2Fl
 }
 
 
-export function awsEc2FleetAcceleratorCountPropertyToHclTerraform(struct?: AwsEc2Fleet.AcceleratorCountPropertyOutputReference | AwsEc2Fleet.AcceleratorCountProperty): any {
+export function tfFleetAcceleratorCountPropertyToHclTerraform(struct?: TfFleet.AcceleratorCountPropertyOutputReference | TfFleet.AcceleratorCountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -819,7 +819,7 @@ export function awsEc2FleetAcceleratorCountPropertyToHclTerraform(struct?: AwsEc
 }
 
 
-export function awsEc2FleetAcceleratorTotalMemoryMibPropertyToTerraform(struct?: AwsEc2Fleet.AcceleratorTotalMemoryMibPropertyOutputReference | AwsEc2Fleet.AcceleratorTotalMemoryMibProperty): any {
+export function tfFleetAcceleratorTotalMemoryMibPropertyToTerraform(struct?: TfFleet.AcceleratorTotalMemoryMibPropertyOutputReference | TfFleet.AcceleratorTotalMemoryMibProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -831,7 +831,7 @@ export function awsEc2FleetAcceleratorTotalMemoryMibPropertyToTerraform(struct?:
 }
 
 
-export function awsEc2FleetAcceleratorTotalMemoryMibPropertyToHclTerraform(struct?: AwsEc2Fleet.AcceleratorTotalMemoryMibPropertyOutputReference | AwsEc2Fleet.AcceleratorTotalMemoryMibProperty): any {
+export function tfFleetAcceleratorTotalMemoryMibPropertyToHclTerraform(struct?: TfFleet.AcceleratorTotalMemoryMibPropertyOutputReference | TfFleet.AcceleratorTotalMemoryMibProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -856,7 +856,7 @@ export function awsEc2FleetAcceleratorTotalMemoryMibPropertyToHclTerraform(struc
 }
 
 
-export function awsEc2FleetBaselineEbsBandwidthMbpsPropertyToTerraform(struct?: AwsEc2Fleet.BaselineEbsBandwidthMbpsPropertyOutputReference | AwsEc2Fleet.BaselineEbsBandwidthMbpsProperty): any {
+export function tfFleetBaselineEbsBandwidthMbpsPropertyToTerraform(struct?: TfFleet.BaselineEbsBandwidthMbpsPropertyOutputReference | TfFleet.BaselineEbsBandwidthMbpsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -868,7 +868,7 @@ export function awsEc2FleetBaselineEbsBandwidthMbpsPropertyToTerraform(struct?: 
 }
 
 
-export function awsEc2FleetBaselineEbsBandwidthMbpsPropertyToHclTerraform(struct?: AwsEc2Fleet.BaselineEbsBandwidthMbpsPropertyOutputReference | AwsEc2Fleet.BaselineEbsBandwidthMbpsProperty): any {
+export function tfFleetBaselineEbsBandwidthMbpsPropertyToHclTerraform(struct?: TfFleet.BaselineEbsBandwidthMbpsPropertyOutputReference | TfFleet.BaselineEbsBandwidthMbpsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -893,7 +893,7 @@ export function awsEc2FleetBaselineEbsBandwidthMbpsPropertyToHclTerraform(struct
 }
 
 
-export function awsEc2FleetMemoryGibPerVcpuPropertyToTerraform(struct?: AwsEc2Fleet.MemoryGibPerVcpuPropertyOutputReference | AwsEc2Fleet.MemoryGibPerVcpuProperty): any {
+export function tfFleetMemoryGibPerVcpuPropertyToTerraform(struct?: TfFleet.MemoryGibPerVcpuPropertyOutputReference | TfFleet.MemoryGibPerVcpuProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -905,7 +905,7 @@ export function awsEc2FleetMemoryGibPerVcpuPropertyToTerraform(struct?: AwsEc2Fl
 }
 
 
-export function awsEc2FleetMemoryGibPerVcpuPropertyToHclTerraform(struct?: AwsEc2Fleet.MemoryGibPerVcpuPropertyOutputReference | AwsEc2Fleet.MemoryGibPerVcpuProperty): any {
+export function tfFleetMemoryGibPerVcpuPropertyToHclTerraform(struct?: TfFleet.MemoryGibPerVcpuPropertyOutputReference | TfFleet.MemoryGibPerVcpuProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -930,7 +930,7 @@ export function awsEc2FleetMemoryGibPerVcpuPropertyToHclTerraform(struct?: AwsEc
 }
 
 
-export function awsEc2FleetMemoryMibPropertyToTerraform(struct?: AwsEc2Fleet.MemoryMibPropertyOutputReference | AwsEc2Fleet.MemoryMibProperty): any {
+export function tfFleetMemoryMibPropertyToTerraform(struct?: TfFleet.MemoryMibPropertyOutputReference | TfFleet.MemoryMibProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -942,7 +942,7 @@ export function awsEc2FleetMemoryMibPropertyToTerraform(struct?: AwsEc2Fleet.Mem
 }
 
 
-export function awsEc2FleetMemoryMibPropertyToHclTerraform(struct?: AwsEc2Fleet.MemoryMibPropertyOutputReference | AwsEc2Fleet.MemoryMibProperty): any {
+export function tfFleetMemoryMibPropertyToHclTerraform(struct?: TfFleet.MemoryMibPropertyOutputReference | TfFleet.MemoryMibProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -967,7 +967,7 @@ export function awsEc2FleetMemoryMibPropertyToHclTerraform(struct?: AwsEc2Fleet.
 }
 
 
-export function awsEc2FleetNetworkBandwidthGbpsPropertyToTerraform(struct?: AwsEc2Fleet.NetworkBandwidthGbpsPropertyOutputReference | AwsEc2Fleet.NetworkBandwidthGbpsProperty): any {
+export function tfFleetNetworkBandwidthGbpsPropertyToTerraform(struct?: TfFleet.NetworkBandwidthGbpsPropertyOutputReference | TfFleet.NetworkBandwidthGbpsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -979,7 +979,7 @@ export function awsEc2FleetNetworkBandwidthGbpsPropertyToTerraform(struct?: AwsE
 }
 
 
-export function awsEc2FleetNetworkBandwidthGbpsPropertyToHclTerraform(struct?: AwsEc2Fleet.NetworkBandwidthGbpsPropertyOutputReference | AwsEc2Fleet.NetworkBandwidthGbpsProperty): any {
+export function tfFleetNetworkBandwidthGbpsPropertyToHclTerraform(struct?: TfFleet.NetworkBandwidthGbpsPropertyOutputReference | TfFleet.NetworkBandwidthGbpsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1004,7 +1004,7 @@ export function awsEc2FleetNetworkBandwidthGbpsPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsEc2FleetNetworkInterfaceCountPropertyToTerraform(struct?: AwsEc2Fleet.NetworkInterfaceCountPropertyOutputReference | AwsEc2Fleet.NetworkInterfaceCountProperty): any {
+export function tfFleetNetworkInterfaceCountPropertyToTerraform(struct?: TfFleet.NetworkInterfaceCountPropertyOutputReference | TfFleet.NetworkInterfaceCountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1016,7 +1016,7 @@ export function awsEc2FleetNetworkInterfaceCountPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsEc2FleetNetworkInterfaceCountPropertyToHclTerraform(struct?: AwsEc2Fleet.NetworkInterfaceCountPropertyOutputReference | AwsEc2Fleet.NetworkInterfaceCountProperty): any {
+export function tfFleetNetworkInterfaceCountPropertyToHclTerraform(struct?: TfFleet.NetworkInterfaceCountPropertyOutputReference | TfFleet.NetworkInterfaceCountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1041,7 +1041,7 @@ export function awsEc2FleetNetworkInterfaceCountPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsEc2FleetTotalLocalStorageGbPropertyToTerraform(struct?: AwsEc2Fleet.TotalLocalStorageGbPropertyOutputReference | AwsEc2Fleet.TotalLocalStorageGbProperty): any {
+export function tfFleetTotalLocalStorageGbPropertyToTerraform(struct?: TfFleet.TotalLocalStorageGbPropertyOutputReference | TfFleet.TotalLocalStorageGbProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1053,7 +1053,7 @@ export function awsEc2FleetTotalLocalStorageGbPropertyToTerraform(struct?: AwsEc
 }
 
 
-export function awsEc2FleetTotalLocalStorageGbPropertyToHclTerraform(struct?: AwsEc2Fleet.TotalLocalStorageGbPropertyOutputReference | AwsEc2Fleet.TotalLocalStorageGbProperty): any {
+export function tfFleetTotalLocalStorageGbPropertyToHclTerraform(struct?: TfFleet.TotalLocalStorageGbPropertyOutputReference | TfFleet.TotalLocalStorageGbProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1078,7 +1078,7 @@ export function awsEc2FleetTotalLocalStorageGbPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsEc2FleetVcpuCountPropertyToTerraform(struct?: AwsEc2Fleet.VcpuCountPropertyOutputReference | AwsEc2Fleet.VcpuCountProperty): any {
+export function tfFleetVcpuCountPropertyToTerraform(struct?: TfFleet.VcpuCountPropertyOutputReference | TfFleet.VcpuCountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1090,7 +1090,7 @@ export function awsEc2FleetVcpuCountPropertyToTerraform(struct?: AwsEc2Fleet.Vcp
 }
 
 
-export function awsEc2FleetVcpuCountPropertyToHclTerraform(struct?: AwsEc2Fleet.VcpuCountPropertyOutputReference | AwsEc2Fleet.VcpuCountProperty): any {
+export function tfFleetVcpuCountPropertyToHclTerraform(struct?: TfFleet.VcpuCountPropertyOutputReference | TfFleet.VcpuCountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1115,7 +1115,7 @@ export function awsEc2FleetVcpuCountPropertyToHclTerraform(struct?: AwsEc2Fleet.
 }
 
 
-export function awsEc2FleetInstanceRequirementsPropertyToTerraform(struct?: AwsEc2Fleet.InstanceRequirementsPropertyOutputReference | AwsEc2Fleet.InstanceRequirementsProperty): any {
+export function tfFleetInstanceRequirementsPropertyToTerraform(struct?: TfFleet.InstanceRequirementsPropertyOutputReference | TfFleet.InstanceRequirementsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1136,20 +1136,20 @@ export function awsEc2FleetInstanceRequirementsPropertyToTerraform(struct?: AwsE
     on_demand_max_price_percentage_over_lowest_price: cdktn.numberToTerraform(struct!.onDemandMaxPricePercentageOverLowestPrice),
     require_hibernate_support: cdktn.booleanToTerraform(struct!.requireHibernateSupport),
     spot_max_price_percentage_over_lowest_price: cdktn.numberToTerraform(struct!.spotMaxPricePercentageOverLowestPrice),
-    accelerator_count: awsEc2FleetAcceleratorCountPropertyToTerraform(struct!.acceleratorCount),
-    accelerator_total_memory_mib: awsEc2FleetAcceleratorTotalMemoryMibPropertyToTerraform(struct!.acceleratorTotalMemoryMib),
-    baseline_ebs_bandwidth_mbps: awsEc2FleetBaselineEbsBandwidthMbpsPropertyToTerraform(struct!.baselineEbsBandwidthMbps),
-    memory_gib_per_vcpu: awsEc2FleetMemoryGibPerVcpuPropertyToTerraform(struct!.memoryGibPerVcpu),
-    memory_mib: awsEc2FleetMemoryMibPropertyToTerraform(struct!.memoryMib),
-    network_bandwidth_gbps: awsEc2FleetNetworkBandwidthGbpsPropertyToTerraform(struct!.networkBandwidthGbps),
-    network_interface_count: awsEc2FleetNetworkInterfaceCountPropertyToTerraform(struct!.networkInterfaceCount),
-    total_local_storage_gb: awsEc2FleetTotalLocalStorageGbPropertyToTerraform(struct!.totalLocalStorageGb),
-    vcpu_count: awsEc2FleetVcpuCountPropertyToTerraform(struct!.vcpuCount),
+    accelerator_count: tfFleetAcceleratorCountPropertyToTerraform(struct!.acceleratorCount),
+    accelerator_total_memory_mib: tfFleetAcceleratorTotalMemoryMibPropertyToTerraform(struct!.acceleratorTotalMemoryMib),
+    baseline_ebs_bandwidth_mbps: tfFleetBaselineEbsBandwidthMbpsPropertyToTerraform(struct!.baselineEbsBandwidthMbps),
+    memory_gib_per_vcpu: tfFleetMemoryGibPerVcpuPropertyToTerraform(struct!.memoryGibPerVcpu),
+    memory_mib: tfFleetMemoryMibPropertyToTerraform(struct!.memoryMib),
+    network_bandwidth_gbps: tfFleetNetworkBandwidthGbpsPropertyToTerraform(struct!.networkBandwidthGbps),
+    network_interface_count: tfFleetNetworkInterfaceCountPropertyToTerraform(struct!.networkInterfaceCount),
+    total_local_storage_gb: tfFleetTotalLocalStorageGbPropertyToTerraform(struct!.totalLocalStorageGb),
+    vcpu_count: tfFleetVcpuCountPropertyToTerraform(struct!.vcpuCount),
   }
 }
 
 
-export function awsEc2FleetInstanceRequirementsPropertyToHclTerraform(struct?: AwsEc2Fleet.InstanceRequirementsPropertyOutputReference | AwsEc2Fleet.InstanceRequirementsProperty): any {
+export function tfFleetInstanceRequirementsPropertyToHclTerraform(struct?: TfFleet.InstanceRequirementsPropertyOutputReference | TfFleet.InstanceRequirementsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1246,55 +1246,55 @@ export function awsEc2FleetInstanceRequirementsPropertyToHclTerraform(struct?: A
       storageClassType: "number",
     },
     accelerator_count: {
-      value: awsEc2FleetAcceleratorCountPropertyToHclTerraform(struct!.acceleratorCount),
+      value: tfFleetAcceleratorCountPropertyToHclTerraform(struct!.acceleratorCount),
       isBlock: true,
       type: "list",
       storageClassType: "AcceleratorCountPropertyList",
     },
     accelerator_total_memory_mib: {
-      value: awsEc2FleetAcceleratorTotalMemoryMibPropertyToHclTerraform(struct!.acceleratorTotalMemoryMib),
+      value: tfFleetAcceleratorTotalMemoryMibPropertyToHclTerraform(struct!.acceleratorTotalMemoryMib),
       isBlock: true,
       type: "list",
       storageClassType: "AcceleratorTotalMemoryMibPropertyList",
     },
     baseline_ebs_bandwidth_mbps: {
-      value: awsEc2FleetBaselineEbsBandwidthMbpsPropertyToHclTerraform(struct!.baselineEbsBandwidthMbps),
+      value: tfFleetBaselineEbsBandwidthMbpsPropertyToHclTerraform(struct!.baselineEbsBandwidthMbps),
       isBlock: true,
       type: "list",
       storageClassType: "BaselineEbsBandwidthMbpsPropertyList",
     },
     memory_gib_per_vcpu: {
-      value: awsEc2FleetMemoryGibPerVcpuPropertyToHclTerraform(struct!.memoryGibPerVcpu),
+      value: tfFleetMemoryGibPerVcpuPropertyToHclTerraform(struct!.memoryGibPerVcpu),
       isBlock: true,
       type: "list",
       storageClassType: "MemoryGibPerVcpuPropertyList",
     },
     memory_mib: {
-      value: awsEc2FleetMemoryMibPropertyToHclTerraform(struct!.memoryMib),
+      value: tfFleetMemoryMibPropertyToHclTerraform(struct!.memoryMib),
       isBlock: true,
       type: "list",
       storageClassType: "MemoryMibPropertyList",
     },
     network_bandwidth_gbps: {
-      value: awsEc2FleetNetworkBandwidthGbpsPropertyToHclTerraform(struct!.networkBandwidthGbps),
+      value: tfFleetNetworkBandwidthGbpsPropertyToHclTerraform(struct!.networkBandwidthGbps),
       isBlock: true,
       type: "list",
       storageClassType: "NetworkBandwidthGbpsPropertyList",
     },
     network_interface_count: {
-      value: awsEc2FleetNetworkInterfaceCountPropertyToHclTerraform(struct!.networkInterfaceCount),
+      value: tfFleetNetworkInterfaceCountPropertyToHclTerraform(struct!.networkInterfaceCount),
       isBlock: true,
       type: "list",
       storageClassType: "NetworkInterfaceCountPropertyList",
     },
     total_local_storage_gb: {
-      value: awsEc2FleetTotalLocalStorageGbPropertyToHclTerraform(struct!.totalLocalStorageGb),
+      value: tfFleetTotalLocalStorageGbPropertyToHclTerraform(struct!.totalLocalStorageGb),
       isBlock: true,
       type: "list",
       storageClassType: "TotalLocalStorageGbPropertyList",
     },
     vcpu_count: {
-      value: awsEc2FleetVcpuCountPropertyToHclTerraform(struct!.vcpuCount),
+      value: tfFleetVcpuCountPropertyToHclTerraform(struct!.vcpuCount),
       isBlock: true,
       type: "list",
       storageClassType: "VcpuCountPropertyList",
@@ -1306,7 +1306,7 @@ export function awsEc2FleetInstanceRequirementsPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsEc2FleetOverridePropertyToTerraform(struct?: AwsEc2Fleet.OverrideProperty | cdktn.IResolvable): any {
+export function tfFleetOverridePropertyToTerraform(struct?: TfFleet.OverrideProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1318,12 +1318,12 @@ export function awsEc2FleetOverridePropertyToTerraform(struct?: AwsEc2Fleet.Over
     priority: cdktn.numberToTerraform(struct!.priority),
     subnet_id: cdktn.stringToTerraform(struct!.subnetId),
     weighted_capacity: cdktn.numberToTerraform(struct!.weightedCapacity),
-    instance_requirements: awsEc2FleetInstanceRequirementsPropertyToTerraform(struct!.instanceRequirements),
+    instance_requirements: tfFleetInstanceRequirementsPropertyToTerraform(struct!.instanceRequirements),
   }
 }
 
 
-export function awsEc2FleetOverridePropertyToHclTerraform(struct?: AwsEc2Fleet.OverrideProperty | cdktn.IResolvable): any {
+export function tfFleetOverridePropertyToHclTerraform(struct?: TfFleet.OverrideProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1366,7 +1366,7 @@ export function awsEc2FleetOverridePropertyToHclTerraform(struct?: AwsEc2Fleet.O
       storageClassType: "number",
     },
     instance_requirements: {
-      value: awsEc2FleetInstanceRequirementsPropertyToHclTerraform(struct!.instanceRequirements),
+      value: tfFleetInstanceRequirementsPropertyToHclTerraform(struct!.instanceRequirements),
       isBlock: true,
       type: "list",
       storageClassType: "InstanceRequirementsPropertyList",
@@ -1378,32 +1378,32 @@ export function awsEc2FleetOverridePropertyToHclTerraform(struct?: AwsEc2Fleet.O
 }
 
 
-export function awsEc2FleetLaunchTemplateConfigPropertyToTerraform(struct?: AwsEc2Fleet.LaunchTemplateConfigProperty | cdktn.IResolvable): any {
+export function tfFleetLaunchTemplateConfigPropertyToTerraform(struct?: TfFleet.LaunchTemplateConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    launch_template_specification: awsEc2FleetLaunchTemplateSpecificationPropertyToTerraform(struct!.launchTemplateSpecification),
-    override: cdktn.listMapper(awsEc2FleetOverridePropertyToTerraform, true)(struct!.override),
+    launch_template_specification: tfFleetLaunchTemplateSpecificationPropertyToTerraform(struct!.launchTemplateSpecification),
+    override: cdktn.listMapper(tfFleetOverridePropertyToTerraform, true)(struct!.override),
   }
 }
 
 
-export function awsEc2FleetLaunchTemplateConfigPropertyToHclTerraform(struct?: AwsEc2Fleet.LaunchTemplateConfigProperty | cdktn.IResolvable): any {
+export function tfFleetLaunchTemplateConfigPropertyToHclTerraform(struct?: TfFleet.LaunchTemplateConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     launch_template_specification: {
-      value: awsEc2FleetLaunchTemplateSpecificationPropertyToHclTerraform(struct!.launchTemplateSpecification),
+      value: tfFleetLaunchTemplateSpecificationPropertyToHclTerraform(struct!.launchTemplateSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "LaunchTemplateSpecificationPropertyList",
     },
     override: {
-      value: cdktn.listMapperHcl(awsEc2FleetOverridePropertyToHclTerraform, true)(struct!.override),
+      value: cdktn.listMapperHcl(tfFleetOverridePropertyToHclTerraform, true)(struct!.override),
       isBlock: true,
       type: "list",
       storageClassType: "OverridePropertyList",
@@ -1415,7 +1415,7 @@ export function awsEc2FleetLaunchTemplateConfigPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsEc2FleetCapacityReservationOptionsPropertyToTerraform(struct?: AwsEc2Fleet.CapacityReservationOptionsPropertyOutputReference | AwsEc2Fleet.CapacityReservationOptionsProperty): any {
+export function tfFleetCapacityReservationOptionsPropertyToTerraform(struct?: TfFleet.CapacityReservationOptionsPropertyOutputReference | TfFleet.CapacityReservationOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1426,7 +1426,7 @@ export function awsEc2FleetCapacityReservationOptionsPropertyToTerraform(struct?
 }
 
 
-export function awsEc2FleetCapacityReservationOptionsPropertyToHclTerraform(struct?: AwsEc2Fleet.CapacityReservationOptionsPropertyOutputReference | AwsEc2Fleet.CapacityReservationOptionsProperty): any {
+export function tfFleetCapacityReservationOptionsPropertyToHclTerraform(struct?: TfFleet.CapacityReservationOptionsPropertyOutputReference | TfFleet.CapacityReservationOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1445,7 +1445,7 @@ export function awsEc2FleetCapacityReservationOptionsPropertyToHclTerraform(stru
 }
 
 
-export function awsEc2FleetOnDemandOptionsPropertyToTerraform(struct?: AwsEc2Fleet.OnDemandOptionsPropertyOutputReference | AwsEc2Fleet.OnDemandOptionsProperty): any {
+export function tfFleetOnDemandOptionsPropertyToTerraform(struct?: TfFleet.OnDemandOptionsPropertyOutputReference | TfFleet.OnDemandOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1456,12 +1456,12 @@ export function awsEc2FleetOnDemandOptionsPropertyToTerraform(struct?: AwsEc2Fle
     min_target_capacity: cdktn.numberToTerraform(struct!.minTargetCapacity),
     single_availability_zone: cdktn.booleanToTerraform(struct!.singleAvailabilityZone),
     single_instance_type: cdktn.booleanToTerraform(struct!.singleInstanceType),
-    capacity_reservation_options: awsEc2FleetCapacityReservationOptionsPropertyToTerraform(struct!.capacityReservationOptions),
+    capacity_reservation_options: tfFleetCapacityReservationOptionsPropertyToTerraform(struct!.capacityReservationOptions),
   }
 }
 
 
-export function awsEc2FleetOnDemandOptionsPropertyToHclTerraform(struct?: AwsEc2Fleet.OnDemandOptionsPropertyOutputReference | AwsEc2Fleet.OnDemandOptionsProperty): any {
+export function tfFleetOnDemandOptionsPropertyToHclTerraform(struct?: TfFleet.OnDemandOptionsPropertyOutputReference | TfFleet.OnDemandOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1498,7 +1498,7 @@ export function awsEc2FleetOnDemandOptionsPropertyToHclTerraform(struct?: AwsEc2
       storageClassType: "boolean",
     },
     capacity_reservation_options: {
-      value: awsEc2FleetCapacityReservationOptionsPropertyToHclTerraform(struct!.capacityReservationOptions),
+      value: tfFleetCapacityReservationOptionsPropertyToHclTerraform(struct!.capacityReservationOptions),
       isBlock: true,
       type: "list",
       storageClassType: "CapacityReservationOptionsPropertyList",
@@ -1510,7 +1510,7 @@ export function awsEc2FleetOnDemandOptionsPropertyToHclTerraform(struct?: AwsEc2
 }
 
 
-export function awsEc2FleetCapacityRebalancePropertyToTerraform(struct?: AwsEc2Fleet.CapacityRebalancePropertyOutputReference | AwsEc2Fleet.CapacityRebalanceProperty): any {
+export function tfFleetCapacityRebalancePropertyToTerraform(struct?: TfFleet.CapacityRebalancePropertyOutputReference | TfFleet.CapacityRebalanceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1522,7 +1522,7 @@ export function awsEc2FleetCapacityRebalancePropertyToTerraform(struct?: AwsEc2F
 }
 
 
-export function awsEc2FleetCapacityRebalancePropertyToHclTerraform(struct?: AwsEc2Fleet.CapacityRebalancePropertyOutputReference | AwsEc2Fleet.CapacityRebalanceProperty): any {
+export function tfFleetCapacityRebalancePropertyToHclTerraform(struct?: TfFleet.CapacityRebalancePropertyOutputReference | TfFleet.CapacityRebalanceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1547,25 +1547,25 @@ export function awsEc2FleetCapacityRebalancePropertyToHclTerraform(struct?: AwsE
 }
 
 
-export function awsEc2FleetMaintenanceStrategiesPropertyToTerraform(struct?: AwsEc2Fleet.MaintenanceStrategiesPropertyOutputReference | AwsEc2Fleet.MaintenanceStrategiesProperty): any {
+export function tfFleetMaintenanceStrategiesPropertyToTerraform(struct?: TfFleet.MaintenanceStrategiesPropertyOutputReference | TfFleet.MaintenanceStrategiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    capacity_rebalance: awsEc2FleetCapacityRebalancePropertyToTerraform(struct!.capacityRebalance),
+    capacity_rebalance: tfFleetCapacityRebalancePropertyToTerraform(struct!.capacityRebalance),
   }
 }
 
 
-export function awsEc2FleetMaintenanceStrategiesPropertyToHclTerraform(struct?: AwsEc2Fleet.MaintenanceStrategiesPropertyOutputReference | AwsEc2Fleet.MaintenanceStrategiesProperty): any {
+export function tfFleetMaintenanceStrategiesPropertyToHclTerraform(struct?: TfFleet.MaintenanceStrategiesPropertyOutputReference | TfFleet.MaintenanceStrategiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     capacity_rebalance: {
-      value: awsEc2FleetCapacityRebalancePropertyToHclTerraform(struct!.capacityRebalance),
+      value: tfFleetCapacityRebalancePropertyToHclTerraform(struct!.capacityRebalance),
       isBlock: true,
       type: "list",
       storageClassType: "CapacityRebalancePropertyList",
@@ -1577,7 +1577,7 @@ export function awsEc2FleetMaintenanceStrategiesPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsEc2FleetSpotOptionsPropertyToTerraform(struct?: AwsEc2Fleet.SpotOptionsPropertyOutputReference | AwsEc2Fleet.SpotOptionsProperty): any {
+export function tfFleetSpotOptionsPropertyToTerraform(struct?: TfFleet.SpotOptionsPropertyOutputReference | TfFleet.SpotOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1590,12 +1590,12 @@ export function awsEc2FleetSpotOptionsPropertyToTerraform(struct?: AwsEc2Fleet.S
     min_target_capacity: cdktn.numberToTerraform(struct!.minTargetCapacity),
     single_availability_zone: cdktn.booleanToTerraform(struct!.singleAvailabilityZone),
     single_instance_type: cdktn.booleanToTerraform(struct!.singleInstanceType),
-    maintenance_strategies: awsEc2FleetMaintenanceStrategiesPropertyToTerraform(struct!.maintenanceStrategies),
+    maintenance_strategies: tfFleetMaintenanceStrategiesPropertyToTerraform(struct!.maintenanceStrategies),
   }
 }
 
 
-export function awsEc2FleetSpotOptionsPropertyToHclTerraform(struct?: AwsEc2Fleet.SpotOptionsPropertyOutputReference | AwsEc2Fleet.SpotOptionsProperty): any {
+export function tfFleetSpotOptionsPropertyToHclTerraform(struct?: TfFleet.SpotOptionsPropertyOutputReference | TfFleet.SpotOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1644,7 +1644,7 @@ export function awsEc2FleetSpotOptionsPropertyToHclTerraform(struct?: AwsEc2Flee
       storageClassType: "boolean",
     },
     maintenance_strategies: {
-      value: awsEc2FleetMaintenanceStrategiesPropertyToHclTerraform(struct!.maintenanceStrategies),
+      value: tfFleetMaintenanceStrategiesPropertyToHclTerraform(struct!.maintenanceStrategies),
       isBlock: true,
       type: "list",
       storageClassType: "MaintenanceStrategiesPropertyList",
@@ -1656,7 +1656,7 @@ export function awsEc2FleetSpotOptionsPropertyToHclTerraform(struct?: AwsEc2Flee
 }
 
 
-export function awsEc2FleetTargetCapacitySpecificationPropertyToTerraform(struct?: AwsEc2Fleet.TargetCapacitySpecificationPropertyOutputReference | AwsEc2Fleet.TargetCapacitySpecificationProperty): any {
+export function tfFleetTargetCapacitySpecificationPropertyToTerraform(struct?: TfFleet.TargetCapacitySpecificationPropertyOutputReference | TfFleet.TargetCapacitySpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1671,7 +1671,7 @@ export function awsEc2FleetTargetCapacitySpecificationPropertyToTerraform(struct
 }
 
 
-export function awsEc2FleetTargetCapacitySpecificationPropertyToHclTerraform(struct?: AwsEc2Fleet.TargetCapacitySpecificationPropertyOutputReference | AwsEc2Fleet.TargetCapacitySpecificationProperty): any {
+export function tfFleetTargetCapacitySpecificationPropertyToHclTerraform(struct?: TfFleet.TargetCapacitySpecificationPropertyOutputReference | TfFleet.TargetCapacitySpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1714,7 +1714,7 @@ export function awsEc2FleetTargetCapacitySpecificationPropertyToHclTerraform(str
 }
 
 
-export function awsEc2FleetTimeoutsPropertyToTerraform(struct?: AwsEc2Fleet.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfFleetTimeoutsPropertyToTerraform(struct?: TfFleet.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1727,7 +1727,7 @@ export function awsEc2FleetTimeoutsPropertyToTerraform(struct?: AwsEc2Fleet.Time
 }
 
 
-export function awsEc2FleetTimeoutsPropertyToHclTerraform(struct?: AwsEc2Fleet.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfFleetTimeoutsPropertyToHclTerraform(struct?: TfFleet.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1758,22 +1758,22 @@ export function awsEc2FleetTimeoutsPropertyToHclTerraform(struct?: AwsEc2Fleet.T
 }
 
 
-export namespace AwsEc2Fleet {
+export namespace TfFleet {
 export interface FleetInstanceSetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#instance_ids AwsEc2Fleet#instance_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#instance_ids TfFleet#instance_ids}
   */
   readonly instanceIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#instance_type AwsEc2Fleet#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#instance_type TfFleet#instance_type}
   */
   readonly instanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#lifecycle AwsEc2Fleet#lifecycle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#lifecycle TfFleet#lifecycle}
   */
   readonly lifecycle?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#platform AwsEc2Fleet#platform}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#platform TfFleet#platform}
   */
   readonly platform?: string;
 }
@@ -1925,15 +1925,15 @@ export class FleetInstanceSetPropertyList extends cdktn.ComplexList {
 }
 export interface LaunchTemplateSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#launch_template_id AwsEc2Fleet#launch_template_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#launch_template_id TfFleet#launch_template_id}
   */
   readonly launchTemplateId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#launch_template_name AwsEc2Fleet#launch_template_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#launch_template_name TfFleet#launch_template_name}
   */
   readonly launchTemplateName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#version AwsEc2Fleet#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#version TfFleet#version}
   */
   readonly version: string;
 }
@@ -2028,11 +2028,11 @@ export class LaunchTemplateSpecificationPropertyOutputReference extends cdktn.Co
 }
 export interface AcceleratorCountProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#max AwsEc2Fleet#max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#max TfFleet#max}
   */
   readonly max?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#min AwsEc2Fleet#min}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#min TfFleet#min}
   */
   readonly min?: number;
 }
@@ -2108,11 +2108,11 @@ export class AcceleratorCountPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface AcceleratorTotalMemoryMibProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#max AwsEc2Fleet#max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#max TfFleet#max}
   */
   readonly max?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#min AwsEc2Fleet#min}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#min TfFleet#min}
   */
   readonly min?: number;
 }
@@ -2188,11 +2188,11 @@ export class AcceleratorTotalMemoryMibPropertyOutputReference extends cdktn.Comp
 }
 export interface BaselineEbsBandwidthMbpsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#max AwsEc2Fleet#max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#max TfFleet#max}
   */
   readonly max?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#min AwsEc2Fleet#min}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#min TfFleet#min}
   */
   readonly min?: number;
 }
@@ -2268,11 +2268,11 @@ export class BaselineEbsBandwidthMbpsPropertyOutputReference extends cdktn.Compl
 }
 export interface MemoryGibPerVcpuProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#max AwsEc2Fleet#max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#max TfFleet#max}
   */
   readonly max?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#min AwsEc2Fleet#min}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#min TfFleet#min}
   */
   readonly min?: number;
 }
@@ -2348,11 +2348,11 @@ export class MemoryGibPerVcpuPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface MemoryMibProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#max AwsEc2Fleet#max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#max TfFleet#max}
   */
   readonly max?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#min AwsEc2Fleet#min}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#min TfFleet#min}
   */
   readonly min: number;
 }
@@ -2425,11 +2425,11 @@ export class MemoryMibPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface NetworkBandwidthGbpsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#max AwsEc2Fleet#max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#max TfFleet#max}
   */
   readonly max?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#min AwsEc2Fleet#min}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#min TfFleet#min}
   */
   readonly min?: number;
 }
@@ -2505,11 +2505,11 @@ export class NetworkBandwidthGbpsPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface NetworkInterfaceCountProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#max AwsEc2Fleet#max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#max TfFleet#max}
   */
   readonly max?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#min AwsEc2Fleet#min}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#min TfFleet#min}
   */
   readonly min?: number;
 }
@@ -2585,11 +2585,11 @@ export class NetworkInterfaceCountPropertyOutputReference extends cdktn.ComplexO
 }
 export interface TotalLocalStorageGbProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#max AwsEc2Fleet#max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#max TfFleet#max}
   */
   readonly max?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#min AwsEc2Fleet#min}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#min TfFleet#min}
   */
   readonly min?: number;
 }
@@ -2665,11 +2665,11 @@ export class TotalLocalStorageGbPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface VcpuCountProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#max AwsEc2Fleet#max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#max TfFleet#max}
   */
   readonly max?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#min AwsEc2Fleet#min}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#min TfFleet#min}
   */
   readonly min: number;
 }
@@ -2742,117 +2742,117 @@ export class VcpuCountPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface InstanceRequirementsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#accelerator_manufacturers AwsEc2Fleet#accelerator_manufacturers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#accelerator_manufacturers TfFleet#accelerator_manufacturers}
   */
   readonly acceleratorManufacturers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#accelerator_names AwsEc2Fleet#accelerator_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#accelerator_names TfFleet#accelerator_names}
   */
   readonly acceleratorNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#accelerator_types AwsEc2Fleet#accelerator_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#accelerator_types TfFleet#accelerator_types}
   */
   readonly acceleratorTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#allowed_instance_types AwsEc2Fleet#allowed_instance_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#allowed_instance_types TfFleet#allowed_instance_types}
   */
   readonly allowedInstanceTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#bare_metal AwsEc2Fleet#bare_metal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#bare_metal TfFleet#bare_metal}
   */
   readonly bareMetal?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#burstable_performance AwsEc2Fleet#burstable_performance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#burstable_performance TfFleet#burstable_performance}
   */
   readonly burstablePerformance?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#cpu_manufacturers AwsEc2Fleet#cpu_manufacturers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#cpu_manufacturers TfFleet#cpu_manufacturers}
   */
   readonly cpuManufacturers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#excluded_instance_types AwsEc2Fleet#excluded_instance_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#excluded_instance_types TfFleet#excluded_instance_types}
   */
   readonly excludedInstanceTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#instance_generations AwsEc2Fleet#instance_generations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#instance_generations TfFleet#instance_generations}
   */
   readonly instanceGenerations?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#local_storage AwsEc2Fleet#local_storage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#local_storage TfFleet#local_storage}
   */
   readonly localStorage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#local_storage_types AwsEc2Fleet#local_storage_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#local_storage_types TfFleet#local_storage_types}
   */
   readonly localStorageTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#max_spot_price_as_percentage_of_optimal_on_demand_price AwsEc2Fleet#max_spot_price_as_percentage_of_optimal_on_demand_price}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#max_spot_price_as_percentage_of_optimal_on_demand_price TfFleet#max_spot_price_as_percentage_of_optimal_on_demand_price}
   */
   readonly maxSpotPriceAsPercentageOfOptimalOnDemandPrice?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#on_demand_max_price_percentage_over_lowest_price AwsEc2Fleet#on_demand_max_price_percentage_over_lowest_price}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#on_demand_max_price_percentage_over_lowest_price TfFleet#on_demand_max_price_percentage_over_lowest_price}
   */
   readonly onDemandMaxPricePercentageOverLowestPrice?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#require_hibernate_support AwsEc2Fleet#require_hibernate_support}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#require_hibernate_support TfFleet#require_hibernate_support}
   */
   readonly requireHibernateSupport?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#spot_max_price_percentage_over_lowest_price AwsEc2Fleet#spot_max_price_percentage_over_lowest_price}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#spot_max_price_percentage_over_lowest_price TfFleet#spot_max_price_percentage_over_lowest_price}
   */
   readonly spotMaxPricePercentageOverLowestPrice?: number;
   /**
   * accelerator_count block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#accelerator_count AwsEc2Fleet#accelerator_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#accelerator_count TfFleet#accelerator_count}
   */
   readonly acceleratorCount?: AcceleratorCountProperty;
   /**
   * accelerator_total_memory_mib block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#accelerator_total_memory_mib AwsEc2Fleet#accelerator_total_memory_mib}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#accelerator_total_memory_mib TfFleet#accelerator_total_memory_mib}
   */
   readonly acceleratorTotalMemoryMib?: AcceleratorTotalMemoryMibProperty;
   /**
   * baseline_ebs_bandwidth_mbps block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#baseline_ebs_bandwidth_mbps AwsEc2Fleet#baseline_ebs_bandwidth_mbps}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#baseline_ebs_bandwidth_mbps TfFleet#baseline_ebs_bandwidth_mbps}
   */
   readonly baselineEbsBandwidthMbps?: BaselineEbsBandwidthMbpsProperty;
   /**
   * memory_gib_per_vcpu block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#memory_gib_per_vcpu AwsEc2Fleet#memory_gib_per_vcpu}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#memory_gib_per_vcpu TfFleet#memory_gib_per_vcpu}
   */
   readonly memoryGibPerVcpu?: MemoryGibPerVcpuProperty;
   /**
   * memory_mib block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#memory_mib AwsEc2Fleet#memory_mib}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#memory_mib TfFleet#memory_mib}
   */
   readonly memoryMib: MemoryMibProperty;
   /**
   * network_bandwidth_gbps block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#network_bandwidth_gbps AwsEc2Fleet#network_bandwidth_gbps}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#network_bandwidth_gbps TfFleet#network_bandwidth_gbps}
   */
   readonly networkBandwidthGbps?: NetworkBandwidthGbpsProperty;
   /**
   * network_interface_count block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#network_interface_count AwsEc2Fleet#network_interface_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#network_interface_count TfFleet#network_interface_count}
   */
   readonly networkInterfaceCount?: NetworkInterfaceCountProperty;
   /**
   * total_local_storage_gb block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#total_local_storage_gb AwsEc2Fleet#total_local_storage_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#total_local_storage_gb TfFleet#total_local_storage_gb}
   */
   readonly totalLocalStorageGb?: TotalLocalStorageGbProperty;
   /**
   * vcpu_count block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#vcpu_count AwsEc2Fleet#vcpu_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#vcpu_count TfFleet#vcpu_count}
   */
   readonly vcpuCount: VcpuCountProperty;
 }
@@ -3406,33 +3406,33 @@ export class InstanceRequirementsPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface OverrideProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#availability_zone AwsEc2Fleet#availability_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#availability_zone TfFleet#availability_zone}
   */
   readonly availabilityZone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#instance_type AwsEc2Fleet#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#instance_type TfFleet#instance_type}
   */
   readonly instanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#max_price AwsEc2Fleet#max_price}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#max_price TfFleet#max_price}
   */
   readonly maxPrice?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#priority AwsEc2Fleet#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#priority TfFleet#priority}
   */
   readonly priority?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#subnet_id AwsEc2Fleet#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#subnet_id TfFleet#subnet_id}
   */
   readonly subnetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#weighted_capacity AwsEc2Fleet#weighted_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#weighted_capacity TfFleet#weighted_capacity}
   */
   readonly weightedCapacity?: number;
   /**
   * instance_requirements block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#instance_requirements AwsEc2Fleet#instance_requirements}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#instance_requirements TfFleet#instance_requirements}
   */
   readonly instanceRequirements?: InstanceRequirementsProperty;
 }
@@ -3652,13 +3652,13 @@ export interface LaunchTemplateConfigProperty {
   /**
   * launch_template_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#launch_template_specification AwsEc2Fleet#launch_template_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#launch_template_specification TfFleet#launch_template_specification}
   */
   readonly launchTemplateSpecification?: LaunchTemplateSpecificationProperty;
   /**
   * override block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#override AwsEc2Fleet#override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#override TfFleet#override}
   */
   readonly override?: OverrideProperty[] | cdktn.IResolvable;
 }
@@ -3766,7 +3766,7 @@ export class LaunchTemplateConfigPropertyList extends cdktn.ComplexList {
 }
 export interface CapacityReservationOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#usage_strategy AwsEc2Fleet#usage_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#usage_strategy TfFleet#usage_strategy}
   */
   readonly usageStrategy?: string;
 }
@@ -3820,29 +3820,29 @@ export class CapacityReservationOptionsPropertyOutputReference extends cdktn.Com
 }
 export interface OnDemandOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#allocation_strategy AwsEc2Fleet#allocation_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#allocation_strategy TfFleet#allocation_strategy}
   */
   readonly allocationStrategy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#max_total_price AwsEc2Fleet#max_total_price}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#max_total_price TfFleet#max_total_price}
   */
   readonly maxTotalPrice?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#min_target_capacity AwsEc2Fleet#min_target_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#min_target_capacity TfFleet#min_target_capacity}
   */
   readonly minTargetCapacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#single_availability_zone AwsEc2Fleet#single_availability_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#single_availability_zone TfFleet#single_availability_zone}
   */
   readonly singleAvailabilityZone?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#single_instance_type AwsEc2Fleet#single_instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#single_instance_type TfFleet#single_instance_type}
   */
   readonly singleInstanceType?: boolean | cdktn.IResolvable;
   /**
   * capacity_reservation_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#capacity_reservation_options AwsEc2Fleet#capacity_reservation_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#capacity_reservation_options TfFleet#capacity_reservation_options}
   */
   readonly capacityReservationOptions?: CapacityReservationOptionsProperty;
 }
@@ -4006,11 +4006,11 @@ export class OnDemandOptionsPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface CapacityRebalanceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#replacement_strategy AwsEc2Fleet#replacement_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#replacement_strategy TfFleet#replacement_strategy}
   */
   readonly replacementStrategy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#termination_delay AwsEc2Fleet#termination_delay}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#termination_delay TfFleet#termination_delay}
   */
   readonly terminationDelay?: number;
 }
@@ -4088,7 +4088,7 @@ export interface MaintenanceStrategiesProperty {
   /**
   * capacity_rebalance block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#capacity_rebalance AwsEc2Fleet#capacity_rebalance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#capacity_rebalance TfFleet#capacity_rebalance}
   */
   readonly capacityRebalance?: CapacityRebalanceProperty;
 }
@@ -4142,37 +4142,37 @@ export class MaintenanceStrategiesPropertyOutputReference extends cdktn.ComplexO
 }
 export interface SpotOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#allocation_strategy AwsEc2Fleet#allocation_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#allocation_strategy TfFleet#allocation_strategy}
   */
   readonly allocationStrategy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#instance_interruption_behavior AwsEc2Fleet#instance_interruption_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#instance_interruption_behavior TfFleet#instance_interruption_behavior}
   */
   readonly instanceInterruptionBehavior?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#instance_pools_to_use_count AwsEc2Fleet#instance_pools_to_use_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#instance_pools_to_use_count TfFleet#instance_pools_to_use_count}
   */
   readonly instancePoolsToUseCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#max_total_price AwsEc2Fleet#max_total_price}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#max_total_price TfFleet#max_total_price}
   */
   readonly maxTotalPrice?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#min_target_capacity AwsEc2Fleet#min_target_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#min_target_capacity TfFleet#min_target_capacity}
   */
   readonly minTargetCapacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#single_availability_zone AwsEc2Fleet#single_availability_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#single_availability_zone TfFleet#single_availability_zone}
   */
   readonly singleAvailabilityZone?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#single_instance_type AwsEc2Fleet#single_instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#single_instance_type TfFleet#single_instance_type}
   */
   readonly singleInstanceType?: boolean | cdktn.IResolvable;
   /**
   * maintenance_strategies block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#maintenance_strategies AwsEc2Fleet#maintenance_strategies}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#maintenance_strategies TfFleet#maintenance_strategies}
   */
   readonly maintenanceStrategies?: MaintenanceStrategiesProperty;
 }
@@ -4380,23 +4380,23 @@ export class SpotOptionsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TargetCapacitySpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#default_target_capacity_type AwsEc2Fleet#default_target_capacity_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#default_target_capacity_type TfFleet#default_target_capacity_type}
   */
   readonly defaultTargetCapacityType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#on_demand_target_capacity AwsEc2Fleet#on_demand_target_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#on_demand_target_capacity TfFleet#on_demand_target_capacity}
   */
   readonly onDemandTargetCapacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#spot_target_capacity AwsEc2Fleet#spot_target_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#spot_target_capacity TfFleet#spot_target_capacity}
   */
   readonly spotTargetCapacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#target_capacity_unit_type AwsEc2Fleet#target_capacity_unit_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#target_capacity_unit_type TfFleet#target_capacity_unit_type}
   */
   readonly targetCapacityUnitType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#total_target_capacity AwsEc2Fleet#total_target_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#total_target_capacity TfFleet#total_target_capacity}
   */
   readonly totalTargetCapacity: number;
 }
@@ -4532,15 +4532,15 @@ export class TargetCapacitySpecificationPropertyOutputReference extends cdktn.Co
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#create AwsEc2Fleet#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#create TfFleet#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#delete AwsEc2Fleet#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#delete TfFleet#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#update AwsEc2Fleet#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_fleet#update TfFleet#update}
   */
   readonly update?: string;
 }

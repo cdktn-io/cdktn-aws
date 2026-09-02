@@ -5,16 +5,16 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsNetworkmanagerGlobalNetworksConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataGlobalNetworksConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_global_networks#id DataAwsNetworkmanagerGlobalNetworks#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_global_networks#id TfDataGlobalNetworks#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_global_networks#tags DataAwsNetworkmanagerGlobalNetworks#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_global_networks#tags TfDataGlobalNetworks#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -22,7 +22,7 @@ export interface DataAwsNetworkmanagerGlobalNetworksConfig extends cdktn.Terrafo
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_global_networks aws_networkmanager_global_networks}
 */
-export class DataAwsNetworkmanagerGlobalNetworks extends cdktn.TerraformDataSource {
+export class TfDataGlobalNetworks extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -33,11 +33,11 @@ export class DataAwsNetworkmanagerGlobalNetworks extends cdktn.TerraformDataSour
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsNetworkmanagerGlobalNetworks resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataGlobalNetworks resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsNetworkmanagerGlobalNetworks to import
-  * @param importFromId The id of the existing DataAwsNetworkmanagerGlobalNetworks that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_global_networks#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsNetworkmanagerGlobalNetworks to import is found
+  * @param importToId The construct id used in the generated config for the TfDataGlobalNetworks to import
+  * @param importFromId The id of the existing TfDataGlobalNetworks that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_global_networks#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataGlobalNetworks to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkmanager_global_networks", importId: importFromId, provider });
@@ -52,9 +52,9 @@ export class DataAwsNetworkmanagerGlobalNetworks extends cdktn.TerraformDataSour
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsNetworkmanagerGlobalNetworksConfig = {}
+  * @param options TfDataGlobalNetworksConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsNetworkmanagerGlobalNetworksConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDataGlobalNetworksConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_networkmanager_global_networks',
       terraformGeneratorMetadata: {

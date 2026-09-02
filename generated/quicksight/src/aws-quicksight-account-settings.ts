@@ -5,37 +5,37 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsQuicksightAccountSettingsConfig extends cdktn.TerraformMetaArguments {
+export interface TfAccountSettingsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_settings#aws_account_id AwsQuicksightAccountSettings#aws_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_settings#aws_account_id TfAccountSettings#aws_account_id}
   */
   readonly awsAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_settings#default_namespace AwsQuicksightAccountSettings#default_namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_settings#default_namespace TfAccountSettings#default_namespace}
   */
   readonly defaultNamespace?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_settings#region AwsQuicksightAccountSettings#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_settings#region TfAccountSettings#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_settings#termination_protection_enabled AwsQuicksightAccountSettings#termination_protection_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_settings#termination_protection_enabled TfAccountSettings#termination_protection_enabled}
   */
   readonly terminationProtectionEnabled?: boolean | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_settings#timeouts AwsQuicksightAccountSettings#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_settings#timeouts TfAccountSettings#timeouts}
   */
-  readonly timeouts?: AwsQuicksightAccountSettings.TimeoutsProperty;
+  readonly timeouts?: TfAccountSettings.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_settings aws_quicksight_account_settings}
 */
-export class AwsQuicksightAccountSettings extends cdktn.TerraformResource {
+export class TfAccountSettings extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -46,11 +46,11 @@ export class AwsQuicksightAccountSettings extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsQuicksightAccountSettings resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAccountSettings resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsQuicksightAccountSettings to import
-  * @param importFromId The id of the existing AwsQuicksightAccountSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_settings#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsQuicksightAccountSettings to import is found
+  * @param importToId The construct id used in the generated config for the TfAccountSettings to import
+  * @param importFromId The id of the existing TfAccountSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_settings#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAccountSettings to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_quicksight_account_settings", importId: importFromId, provider });
@@ -65,9 +65,9 @@ export class AwsQuicksightAccountSettings extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsQuicksightAccountSettingsConfig = {}
+  * @param options TfAccountSettingsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsQuicksightAccountSettingsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfAccountSettingsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_quicksight_account_settings',
       terraformGeneratorMetadata: {
@@ -159,11 +159,11 @@ export class AwsQuicksightAccountSettings extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsQuicksightAccountSettings.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfAccountSettings.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsQuicksightAccountSettings.TimeoutsProperty) {
+  public putTimeouts(value: TfAccountSettings.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -184,7 +184,7 @@ export class AwsQuicksightAccountSettings extends cdktn.TerraformResource {
       default_namespace: cdktn.stringToTerraform(this._defaultNamespace),
       region: cdktn.stringToTerraform(this._region),
       termination_protection_enabled: cdktn.booleanToTerraform(this._terminationProtectionEnabled),
-      timeouts: awsQuicksightAccountSettingsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfAccountSettingsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -215,10 +215,10 @@ export class AwsQuicksightAccountSettings extends cdktn.TerraformResource {
         storageClassType: "boolean",
       },
       timeouts: {
-        value: awsQuicksightAccountSettingsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfAccountSettingsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsQuicksightAccountSettings.TimeoutsProperty",
+        storageClassType: "TfAccountSettings.TimeoutsProperty",
       },
     };
 
@@ -227,7 +227,7 @@ export class AwsQuicksightAccountSettings extends cdktn.TerraformResource {
   }
 }
 
-export function awsQuicksightAccountSettingsTimeoutsPropertyToTerraform(struct?: AwsQuicksightAccountSettings.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfAccountSettingsTimeoutsPropertyToTerraform(struct?: TfAccountSettings.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -239,7 +239,7 @@ export function awsQuicksightAccountSettingsTimeoutsPropertyToTerraform(struct?:
 }
 
 
-export function awsQuicksightAccountSettingsTimeoutsPropertyToHclTerraform(struct?: AwsQuicksightAccountSettings.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfAccountSettingsTimeoutsPropertyToHclTerraform(struct?: TfAccountSettings.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -264,18 +264,18 @@ export function awsQuicksightAccountSettingsTimeoutsPropertyToHclTerraform(struc
 }
 
 
-export namespace AwsQuicksightAccountSettings {
+export namespace TfAccountSettings {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_settings#create AwsQuicksightAccountSettings#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_settings#create TfAccountSettings#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_settings#update AwsQuicksightAccountSettings#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_account_settings#update TfAccountSettings#update}
   */
   readonly update?: string;
 }

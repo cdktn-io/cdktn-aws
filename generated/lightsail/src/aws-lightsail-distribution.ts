@@ -5,21 +5,21 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsLightsailDistributionConfig extends cdktn.TerraformMetaArguments {
+export interface TfDistributionConfig extends cdktn.TerraformMetaArguments {
   /**
   * The bundle ID to use for the distribution.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#bundle_id AwsLightsailDistribution#bundle_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#bundle_id TfDistribution#bundle_id}
   */
   readonly bundleId: string;
   /**
   * The name of the SSL/TLS certificate attached to the distribution, if any.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#certificate_name AwsLightsailDistribution#certificate_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#certificate_name TfDistribution#certificate_name}
   */
   readonly certificateName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#id AwsLightsailDistribution#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#id TfDistribution#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,71 +28,71 @@ export interface AwsLightsailDistributionConfig extends cdktn.TerraformMetaArgum
   /**
   * The IP address type of the distribution.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#ip_address_type AwsLightsailDistribution#ip_address_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#ip_address_type TfDistribution#ip_address_type}
   */
   readonly ipAddressType?: string;
   /**
   * Indicates whether the distribution is enabled.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#is_enabled AwsLightsailDistribution#is_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#is_enabled TfDistribution#is_enabled}
   */
   readonly isEnabled?: boolean | cdktn.IResolvable;
   /**
   * The name of the distribution.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#name AwsLightsailDistribution#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#name TfDistribution#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#region AwsLightsailDistribution#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#region TfDistribution#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#tags AwsLightsailDistribution#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#tags TfDistribution#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#tags_all AwsLightsailDistribution#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#tags_all TfDistribution#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * cache_behavior block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#cache_behavior AwsLightsailDistribution#cache_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#cache_behavior TfDistribution#cache_behavior}
   */
-  readonly cacheBehavior?: AwsLightsailDistribution.CacheBehaviorProperty[] | cdktn.IResolvable;
+  readonly cacheBehavior?: TfDistribution.CacheBehaviorProperty[] | cdktn.IResolvable;
   /**
   * cache_behavior_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#cache_behavior_settings AwsLightsailDistribution#cache_behavior_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#cache_behavior_settings TfDistribution#cache_behavior_settings}
   */
-  readonly cacheBehaviorSettings?: AwsLightsailDistribution.CacheBehaviorSettingsProperty;
+  readonly cacheBehaviorSettings?: TfDistribution.CacheBehaviorSettingsProperty;
   /**
   * default_cache_behavior block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#default_cache_behavior AwsLightsailDistribution#default_cache_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#default_cache_behavior TfDistribution#default_cache_behavior}
   */
-  readonly defaultCacheBehavior: AwsLightsailDistribution.DefaultCacheBehaviorProperty;
+  readonly defaultCacheBehavior: TfDistribution.DefaultCacheBehaviorProperty;
   /**
   * origin block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#origin AwsLightsailDistribution#origin}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#origin TfDistribution#origin}
   */
-  readonly origin: AwsLightsailDistribution.OriginProperty;
+  readonly origin: TfDistribution.OriginProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#timeouts AwsLightsailDistribution#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#timeouts TfDistribution#timeouts}
   */
-  readonly timeouts?: AwsLightsailDistribution.TimeoutsProperty;
+  readonly timeouts?: TfDistribution.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution aws_lightsail_distribution}
 */
-export class AwsLightsailDistribution extends cdktn.TerraformResource {
+export class TfDistribution extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -103,11 +103,11 @@ export class AwsLightsailDistribution extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsLightsailDistribution resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDistribution resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsLightsailDistribution to import
-  * @param importFromId The id of the existing AwsLightsailDistribution that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsLightsailDistribution to import is found
+  * @param importToId The construct id used in the generated config for the TfDistribution to import
+  * @param importFromId The id of the existing TfDistribution that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDistribution to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lightsail_distribution", importId: importFromId, provider });
@@ -122,9 +122,9 @@ export class AwsLightsailDistribution extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsLightsailDistributionConfig
+  * @param options TfDistributionConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsLightsailDistributionConfig) {
+  public constructor(scope: Construct, id: string, config: TfDistributionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lightsail_distribution',
       terraformGeneratorMetadata: {
@@ -258,7 +258,7 @@ export class AwsLightsailDistribution extends cdktn.TerraformResource {
   }
 
   // location - computed: true, optional: false, required: false
-  private _location = new AwsLightsailDistribution.LocationPropertyList(this, "location", false);
+  private _location = new TfDistribution.LocationPropertyList(this, "location", false);
   public get location() {
     return this._location;
   }
@@ -345,11 +345,11 @@ export class AwsLightsailDistribution extends cdktn.TerraformResource {
   }
 
   // cache_behavior - computed: false, optional: true, required: false
-  private _cacheBehavior = new AwsLightsailDistribution.CacheBehaviorPropertyList(this, "cache_behavior", true);
+  private _cacheBehavior = new TfDistribution.CacheBehaviorPropertyList(this, "cache_behavior", true);
   public get cacheBehavior() {
     return this._cacheBehavior;
   }
-  public putCacheBehavior(value: AwsLightsailDistribution.CacheBehaviorProperty[] | cdktn.IResolvable) {
+  public putCacheBehavior(value: TfDistribution.CacheBehaviorProperty[] | cdktn.IResolvable) {
     this._cacheBehavior.internalValue = value;
   }
   public resetCacheBehavior() {
@@ -361,11 +361,11 @@ export class AwsLightsailDistribution extends cdktn.TerraformResource {
   }
 
   // cache_behavior_settings - computed: false, optional: true, required: false
-  private _cacheBehaviorSettings = new AwsLightsailDistribution.CacheBehaviorSettingsPropertyOutputReference(this, "cache_behavior_settings");
+  private _cacheBehaviorSettings = new TfDistribution.CacheBehaviorSettingsPropertyOutputReference(this, "cache_behavior_settings");
   public get cacheBehaviorSettings() {
     return this._cacheBehaviorSettings;
   }
-  public putCacheBehaviorSettings(value: AwsLightsailDistribution.CacheBehaviorSettingsProperty) {
+  public putCacheBehaviorSettings(value: TfDistribution.CacheBehaviorSettingsProperty) {
     this._cacheBehaviorSettings.internalValue = value;
   }
   public resetCacheBehaviorSettings() {
@@ -377,11 +377,11 @@ export class AwsLightsailDistribution extends cdktn.TerraformResource {
   }
 
   // default_cache_behavior - computed: false, optional: false, required: true
-  private _defaultCacheBehavior = new AwsLightsailDistribution.DefaultCacheBehaviorPropertyOutputReference(this, "default_cache_behavior");
+  private _defaultCacheBehavior = new TfDistribution.DefaultCacheBehaviorPropertyOutputReference(this, "default_cache_behavior");
   public get defaultCacheBehavior() {
     return this._defaultCacheBehavior;
   }
-  public putDefaultCacheBehavior(value: AwsLightsailDistribution.DefaultCacheBehaviorProperty) {
+  public putDefaultCacheBehavior(value: TfDistribution.DefaultCacheBehaviorProperty) {
     this._defaultCacheBehavior.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -390,11 +390,11 @@ export class AwsLightsailDistribution extends cdktn.TerraformResource {
   }
 
   // origin - computed: false, optional: false, required: true
-  private _origin = new AwsLightsailDistribution.OriginPropertyOutputReference(this, "origin");
+  private _origin = new TfDistribution.OriginPropertyOutputReference(this, "origin");
   public get origin() {
     return this._origin;
   }
-  public putOrigin(value: AwsLightsailDistribution.OriginProperty) {
+  public putOrigin(value: TfDistribution.OriginProperty) {
     this._origin.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -403,11 +403,11 @@ export class AwsLightsailDistribution extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsLightsailDistribution.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfDistribution.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsLightsailDistribution.TimeoutsProperty) {
+  public putTimeouts(value: TfDistribution.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -433,11 +433,11 @@ export class AwsLightsailDistribution extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      cache_behavior: cdktn.listMapper(awsLightsailDistributionCacheBehaviorPropertyToTerraform, true)(this._cacheBehavior.internalValue),
-      cache_behavior_settings: awsLightsailDistributionCacheBehaviorSettingsPropertyToTerraform(this._cacheBehaviorSettings.internalValue),
-      default_cache_behavior: awsLightsailDistributionDefaultCacheBehaviorPropertyToTerraform(this._defaultCacheBehavior.internalValue),
-      origin: awsLightsailDistributionOriginPropertyToTerraform(this._origin.internalValue),
-      timeouts: awsLightsailDistributionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      cache_behavior: cdktn.listMapper(tfDistributionCacheBehaviorPropertyToTerraform, true)(this._cacheBehavior.internalValue),
+      cache_behavior_settings: tfDistributionCacheBehaviorSettingsPropertyToTerraform(this._cacheBehaviorSettings.internalValue),
+      default_cache_behavior: tfDistributionDefaultCacheBehaviorPropertyToTerraform(this._defaultCacheBehavior.internalValue),
+      origin: tfDistributionOriginPropertyToTerraform(this._origin.internalValue),
+      timeouts: tfDistributionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -498,34 +498,34 @@ export class AwsLightsailDistribution extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       cache_behavior: {
-        value: cdktn.listMapperHcl(awsLightsailDistributionCacheBehaviorPropertyToHclTerraform, true)(this._cacheBehavior.internalValue),
+        value: cdktn.listMapperHcl(tfDistributionCacheBehaviorPropertyToHclTerraform, true)(this._cacheBehavior.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsLightsailDistribution.CacheBehaviorPropertyList",
+        storageClassType: "TfDistribution.CacheBehaviorPropertyList",
       },
       cache_behavior_settings: {
-        value: awsLightsailDistributionCacheBehaviorSettingsPropertyToHclTerraform(this._cacheBehaviorSettings.internalValue),
+        value: tfDistributionCacheBehaviorSettingsPropertyToHclTerraform(this._cacheBehaviorSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLightsailDistribution.CacheBehaviorSettingsPropertyList",
+        storageClassType: "TfDistribution.CacheBehaviorSettingsPropertyList",
       },
       default_cache_behavior: {
-        value: awsLightsailDistributionDefaultCacheBehaviorPropertyToHclTerraform(this._defaultCacheBehavior.internalValue),
+        value: tfDistributionDefaultCacheBehaviorPropertyToHclTerraform(this._defaultCacheBehavior.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLightsailDistribution.DefaultCacheBehaviorPropertyList",
+        storageClassType: "TfDistribution.DefaultCacheBehaviorPropertyList",
       },
       origin: {
-        value: awsLightsailDistributionOriginPropertyToHclTerraform(this._origin.internalValue),
+        value: tfDistributionOriginPropertyToHclTerraform(this._origin.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLightsailDistribution.OriginPropertyList",
+        storageClassType: "TfDistribution.OriginPropertyList",
       },
       timeouts: {
-        value: awsLightsailDistributionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfDistributionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsLightsailDistribution.TimeoutsProperty",
+        storageClassType: "TfDistribution.TimeoutsProperty",
       },
     };
 
@@ -534,7 +534,7 @@ export class AwsLightsailDistribution extends cdktn.TerraformResource {
   }
 }
 
-export function awsLightsailDistributionLocationPropertyToTerraform(struct?: AwsLightsailDistribution.LocationProperty): any {
+export function tfDistributionLocationPropertyToTerraform(struct?: TfDistribution.LocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -544,7 +544,7 @@ export function awsLightsailDistributionLocationPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsLightsailDistributionLocationPropertyToHclTerraform(struct?: AwsLightsailDistribution.LocationProperty): any {
+export function tfDistributionLocationPropertyToHclTerraform(struct?: TfDistribution.LocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -555,7 +555,7 @@ export function awsLightsailDistributionLocationPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsLightsailDistributionCacheBehaviorPropertyToTerraform(struct?: AwsLightsailDistribution.CacheBehaviorProperty | cdktn.IResolvable): any {
+export function tfDistributionCacheBehaviorPropertyToTerraform(struct?: TfDistribution.CacheBehaviorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -567,7 +567,7 @@ export function awsLightsailDistributionCacheBehaviorPropertyToTerraform(struct?
 }
 
 
-export function awsLightsailDistributionCacheBehaviorPropertyToHclTerraform(struct?: AwsLightsailDistribution.CacheBehaviorProperty | cdktn.IResolvable): any {
+export function tfDistributionCacheBehaviorPropertyToHclTerraform(struct?: TfDistribution.CacheBehaviorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -592,7 +592,7 @@ export function awsLightsailDistributionCacheBehaviorPropertyToHclTerraform(stru
 }
 
 
-export function awsLightsailDistributionForwardedCookiesPropertyToTerraform(struct?: AwsLightsailDistribution.ForwardedCookiesPropertyOutputReference | AwsLightsailDistribution.ForwardedCookiesProperty): any {
+export function tfDistributionForwardedCookiesPropertyToTerraform(struct?: TfDistribution.ForwardedCookiesPropertyOutputReference | TfDistribution.ForwardedCookiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -604,7 +604,7 @@ export function awsLightsailDistributionForwardedCookiesPropertyToTerraform(stru
 }
 
 
-export function awsLightsailDistributionForwardedCookiesPropertyToHclTerraform(struct?: AwsLightsailDistribution.ForwardedCookiesPropertyOutputReference | AwsLightsailDistribution.ForwardedCookiesProperty): any {
+export function tfDistributionForwardedCookiesPropertyToHclTerraform(struct?: TfDistribution.ForwardedCookiesPropertyOutputReference | TfDistribution.ForwardedCookiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -629,7 +629,7 @@ export function awsLightsailDistributionForwardedCookiesPropertyToHclTerraform(s
 }
 
 
-export function awsLightsailDistributionForwardedHeadersPropertyToTerraform(struct?: AwsLightsailDistribution.ForwardedHeadersPropertyOutputReference | AwsLightsailDistribution.ForwardedHeadersProperty): any {
+export function tfDistributionForwardedHeadersPropertyToTerraform(struct?: TfDistribution.ForwardedHeadersPropertyOutputReference | TfDistribution.ForwardedHeadersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -641,7 +641,7 @@ export function awsLightsailDistributionForwardedHeadersPropertyToTerraform(stru
 }
 
 
-export function awsLightsailDistributionForwardedHeadersPropertyToHclTerraform(struct?: AwsLightsailDistribution.ForwardedHeadersPropertyOutputReference | AwsLightsailDistribution.ForwardedHeadersProperty): any {
+export function tfDistributionForwardedHeadersPropertyToHclTerraform(struct?: TfDistribution.ForwardedHeadersPropertyOutputReference | TfDistribution.ForwardedHeadersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -666,7 +666,7 @@ export function awsLightsailDistributionForwardedHeadersPropertyToHclTerraform(s
 }
 
 
-export function awsLightsailDistributionForwardedQueryStringsPropertyToTerraform(struct?: AwsLightsailDistribution.ForwardedQueryStringsPropertyOutputReference | AwsLightsailDistribution.ForwardedQueryStringsProperty): any {
+export function tfDistributionForwardedQueryStringsPropertyToTerraform(struct?: TfDistribution.ForwardedQueryStringsPropertyOutputReference | TfDistribution.ForwardedQueryStringsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -678,7 +678,7 @@ export function awsLightsailDistributionForwardedQueryStringsPropertyToTerraform
 }
 
 
-export function awsLightsailDistributionForwardedQueryStringsPropertyToHclTerraform(struct?: AwsLightsailDistribution.ForwardedQueryStringsPropertyOutputReference | AwsLightsailDistribution.ForwardedQueryStringsProperty): any {
+export function tfDistributionForwardedQueryStringsPropertyToHclTerraform(struct?: TfDistribution.ForwardedQueryStringsPropertyOutputReference | TfDistribution.ForwardedQueryStringsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -703,7 +703,7 @@ export function awsLightsailDistributionForwardedQueryStringsPropertyToHclTerraf
 }
 
 
-export function awsLightsailDistributionCacheBehaviorSettingsPropertyToTerraform(struct?: AwsLightsailDistribution.CacheBehaviorSettingsPropertyOutputReference | AwsLightsailDistribution.CacheBehaviorSettingsProperty): any {
+export function tfDistributionCacheBehaviorSettingsPropertyToTerraform(struct?: TfDistribution.CacheBehaviorSettingsPropertyOutputReference | TfDistribution.CacheBehaviorSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -714,14 +714,14 @@ export function awsLightsailDistributionCacheBehaviorSettingsPropertyToTerraform
     default_ttl: cdktn.numberToTerraform(struct!.defaultTtl),
     maximum_ttl: cdktn.numberToTerraform(struct!.maximumTtl),
     minimum_ttl: cdktn.numberToTerraform(struct!.minimumTtl),
-    forwarded_cookies: awsLightsailDistributionForwardedCookiesPropertyToTerraform(struct!.forwardedCookies),
-    forwarded_headers: awsLightsailDistributionForwardedHeadersPropertyToTerraform(struct!.forwardedHeaders),
-    forwarded_query_strings: awsLightsailDistributionForwardedQueryStringsPropertyToTerraform(struct!.forwardedQueryStrings),
+    forwarded_cookies: tfDistributionForwardedCookiesPropertyToTerraform(struct!.forwardedCookies),
+    forwarded_headers: tfDistributionForwardedHeadersPropertyToTerraform(struct!.forwardedHeaders),
+    forwarded_query_strings: tfDistributionForwardedQueryStringsPropertyToTerraform(struct!.forwardedQueryStrings),
   }
 }
 
 
-export function awsLightsailDistributionCacheBehaviorSettingsPropertyToHclTerraform(struct?: AwsLightsailDistribution.CacheBehaviorSettingsPropertyOutputReference | AwsLightsailDistribution.CacheBehaviorSettingsProperty): any {
+export function tfDistributionCacheBehaviorSettingsPropertyToHclTerraform(struct?: TfDistribution.CacheBehaviorSettingsPropertyOutputReference | TfDistribution.CacheBehaviorSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -758,19 +758,19 @@ export function awsLightsailDistributionCacheBehaviorSettingsPropertyToHclTerraf
       storageClassType: "number",
     },
     forwarded_cookies: {
-      value: awsLightsailDistributionForwardedCookiesPropertyToHclTerraform(struct!.forwardedCookies),
+      value: tfDistributionForwardedCookiesPropertyToHclTerraform(struct!.forwardedCookies),
       isBlock: true,
       type: "list",
       storageClassType: "ForwardedCookiesPropertyList",
     },
     forwarded_headers: {
-      value: awsLightsailDistributionForwardedHeadersPropertyToHclTerraform(struct!.forwardedHeaders),
+      value: tfDistributionForwardedHeadersPropertyToHclTerraform(struct!.forwardedHeaders),
       isBlock: true,
       type: "list",
       storageClassType: "ForwardedHeadersPropertyList",
     },
     forwarded_query_strings: {
-      value: awsLightsailDistributionForwardedQueryStringsPropertyToHclTerraform(struct!.forwardedQueryStrings),
+      value: tfDistributionForwardedQueryStringsPropertyToHclTerraform(struct!.forwardedQueryStrings),
       isBlock: true,
       type: "list",
       storageClassType: "ForwardedQueryStringsPropertyList",
@@ -782,7 +782,7 @@ export function awsLightsailDistributionCacheBehaviorSettingsPropertyToHclTerraf
 }
 
 
-export function awsLightsailDistributionDefaultCacheBehaviorPropertyToTerraform(struct?: AwsLightsailDistribution.DefaultCacheBehaviorPropertyOutputReference | AwsLightsailDistribution.DefaultCacheBehaviorProperty): any {
+export function tfDistributionDefaultCacheBehaviorPropertyToTerraform(struct?: TfDistribution.DefaultCacheBehaviorPropertyOutputReference | TfDistribution.DefaultCacheBehaviorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -793,7 +793,7 @@ export function awsLightsailDistributionDefaultCacheBehaviorPropertyToTerraform(
 }
 
 
-export function awsLightsailDistributionDefaultCacheBehaviorPropertyToHclTerraform(struct?: AwsLightsailDistribution.DefaultCacheBehaviorPropertyOutputReference | AwsLightsailDistribution.DefaultCacheBehaviorProperty): any {
+export function tfDistributionDefaultCacheBehaviorPropertyToHclTerraform(struct?: TfDistribution.DefaultCacheBehaviorPropertyOutputReference | TfDistribution.DefaultCacheBehaviorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -812,7 +812,7 @@ export function awsLightsailDistributionDefaultCacheBehaviorPropertyToHclTerrafo
 }
 
 
-export function awsLightsailDistributionOriginPropertyToTerraform(struct?: AwsLightsailDistribution.OriginPropertyOutputReference | AwsLightsailDistribution.OriginProperty): any {
+export function tfDistributionOriginPropertyToTerraform(struct?: TfDistribution.OriginPropertyOutputReference | TfDistribution.OriginProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -825,7 +825,7 @@ export function awsLightsailDistributionOriginPropertyToTerraform(struct?: AwsLi
 }
 
 
-export function awsLightsailDistributionOriginPropertyToHclTerraform(struct?: AwsLightsailDistribution.OriginPropertyOutputReference | AwsLightsailDistribution.OriginProperty): any {
+export function tfDistributionOriginPropertyToHclTerraform(struct?: TfDistribution.OriginPropertyOutputReference | TfDistribution.OriginProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -856,7 +856,7 @@ export function awsLightsailDistributionOriginPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsLightsailDistributionTimeoutsPropertyToTerraform(struct?: AwsLightsailDistribution.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDistributionTimeoutsPropertyToTerraform(struct?: TfDistribution.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -869,7 +869,7 @@ export function awsLightsailDistributionTimeoutsPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsLightsailDistributionTimeoutsPropertyToHclTerraform(struct?: AwsLightsailDistribution.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDistributionTimeoutsPropertyToHclTerraform(struct?: TfDistribution.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -900,7 +900,7 @@ export function awsLightsailDistributionTimeoutsPropertyToHclTerraform(struct?: 
 }
 
 
-export namespace AwsLightsailDistribution {
+export namespace TfDistribution {
 export interface LocationProperty {
 }
 export class LocationPropertyOutputReference extends cdktn.ComplexObject {
@@ -964,13 +964,13 @@ export interface CacheBehaviorProperty {
   /**
   * The cache behavior for the specified path.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#behavior AwsLightsailDistribution#behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#behavior TfDistribution#behavior}
   */
   readonly behavior: string;
   /**
   * The path to a directory or file to cached, or not cache. Use an asterisk symbol to specify wildcard directories (path/to/assets/*), and file types (*.html, *jpg, *js). Directories and file paths are case-sensitive.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#path AwsLightsailDistribution#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#path TfDistribution#path}
   */
   readonly path: string;
 }
@@ -1074,13 +1074,13 @@ export interface ForwardedCookiesProperty {
   /**
   * The specific cookies to forward to your distribution's origin.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#cookies_allow_list AwsLightsailDistribution#cookies_allow_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#cookies_allow_list TfDistribution#cookies_allow_list}
   */
   readonly cookiesAllowList?: string[];
   /**
   * Specifies which cookies to forward to the distribution's origin for a cache behavior: all, none, or allow-list to forward only the cookies specified in the cookiesAllowList parameter.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#option AwsLightsailDistribution#option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#option TfDistribution#option}
   */
   readonly option?: string;
 }
@@ -1158,13 +1158,13 @@ export interface ForwardedHeadersProperty {
   /**
   * The specific headers to forward to your distribution's origin.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#headers_allow_list AwsLightsailDistribution#headers_allow_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#headers_allow_list TfDistribution#headers_allow_list}
   */
   readonly headersAllowList?: string[];
   /**
   * The headers that you want your distribution to forward to your origin and base caching on.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#option AwsLightsailDistribution#option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#option TfDistribution#option}
   */
   readonly option?: string;
 }
@@ -1242,13 +1242,13 @@ export interface ForwardedQueryStringsProperty {
   /**
   * Indicates whether the distribution forwards and caches based on query strings.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#option AwsLightsailDistribution#option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#option TfDistribution#option}
   */
   readonly option?: boolean | cdktn.IResolvable;
   /**
   * The specific query strings that the distribution forwards to the origin.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#query_strings_allowed_list AwsLightsailDistribution#query_strings_allowed_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#query_strings_allowed_list TfDistribution#query_strings_allowed_list}
   */
   readonly queryStringsAllowedList?: string[];
 }
@@ -1326,49 +1326,49 @@ export interface CacheBehaviorSettingsProperty {
   /**
   * The HTTP methods that are processed and forwarded to the distribution's origin.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#allowed_http_methods AwsLightsailDistribution#allowed_http_methods}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#allowed_http_methods TfDistribution#allowed_http_methods}
   */
   readonly allowedHttpMethods?: string;
   /**
   * The HTTP method responses that are cached by your distribution.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#cached_http_methods AwsLightsailDistribution#cached_http_methods}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#cached_http_methods TfDistribution#cached_http_methods}
   */
   readonly cachedHttpMethods?: string;
   /**
   * The default amount of time that objects stay in the distribution's cache before the distribution forwards another request to the origin to determine whether the content has been updated.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#default_ttl AwsLightsailDistribution#default_ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#default_ttl TfDistribution#default_ttl}
   */
   readonly defaultTtl?: number;
   /**
   * The maximum amount of time that objects stay in the distribution's cache before the distribution forwards another request to the origin to determine whether the object has been updated.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#maximum_ttl AwsLightsailDistribution#maximum_ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#maximum_ttl TfDistribution#maximum_ttl}
   */
   readonly maximumTtl?: number;
   /**
   * The minimum amount of time that objects stay in the distribution's cache before the distribution forwards another request to the origin to determine whether the object has been updated.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#minimum_ttl AwsLightsailDistribution#minimum_ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#minimum_ttl TfDistribution#minimum_ttl}
   */
   readonly minimumTtl?: number;
   /**
   * forwarded_cookies block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#forwarded_cookies AwsLightsailDistribution#forwarded_cookies}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#forwarded_cookies TfDistribution#forwarded_cookies}
   */
   readonly forwardedCookies?: ForwardedCookiesProperty;
   /**
   * forwarded_headers block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#forwarded_headers AwsLightsailDistribution#forwarded_headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#forwarded_headers TfDistribution#forwarded_headers}
   */
   readonly forwardedHeaders?: ForwardedHeadersProperty;
   /**
   * forwarded_query_strings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#forwarded_query_strings AwsLightsailDistribution#forwarded_query_strings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#forwarded_query_strings TfDistribution#forwarded_query_strings}
   */
   readonly forwardedQueryStrings?: ForwardedQueryStringsProperty;
 }
@@ -1578,7 +1578,7 @@ export interface DefaultCacheBehaviorProperty {
   /**
   * The cache behavior of the distribution.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#behavior AwsLightsailDistribution#behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#behavior TfDistribution#behavior}
   */
   readonly behavior: string;
 }
@@ -1631,19 +1631,19 @@ export interface OriginProperty {
   /**
   * The name of the origin resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#name AwsLightsailDistribution#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#name TfDistribution#name}
   */
   readonly name: string;
   /**
   * The protocol that your Amazon Lightsail distribution uses when establishing a connection with your origin to pull content.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#protocol_policy AwsLightsailDistribution#protocol_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#protocol_policy TfDistribution#protocol_policy}
   */
   readonly protocolPolicy?: string;
   /**
   * The AWS Region name of the origin resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#region_name AwsLightsailDistribution#region_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#region_name TfDistribution#region_name}
   */
   readonly regionName: string;
 }
@@ -1740,15 +1740,15 @@ export class OriginPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#create AwsLightsailDistribution#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#create TfDistribution#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#delete AwsLightsailDistribution#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#delete TfDistribution#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#update AwsLightsailDistribution#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#update TfDistribution#update}
   */
   readonly update?: string;
 }

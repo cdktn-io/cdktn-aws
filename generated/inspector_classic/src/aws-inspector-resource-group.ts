@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsInspectorResourceGroupConfig extends cdktn.TerraformMetaArguments {
+export interface TfResourceGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_resource_group#id AwsInspectorResourceGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_resource_group#id TfResourceGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,11 +16,11 @@ export interface AwsInspectorResourceGroupConfig extends cdktn.TerraformMetaArgu
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_resource_group#region AwsInspectorResourceGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_resource_group#region TfResourceGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_resource_group#tags AwsInspectorResourceGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_resource_group#tags TfResourceGroup#tags}
   */
   readonly tags: { [key: string]: string };
 }
@@ -28,7 +28,7 @@ export interface AwsInspectorResourceGroupConfig extends cdktn.TerraformMetaArgu
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_resource_group aws_inspector_resource_group}
 */
-export class AwsInspectorResourceGroup extends cdktn.TerraformResource {
+export class TfResourceGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class AwsInspectorResourceGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsInspectorResourceGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfResourceGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsInspectorResourceGroup to import
-  * @param importFromId The id of the existing AwsInspectorResourceGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_resource_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsInspectorResourceGroup to import is found
+  * @param importToId The construct id used in the generated config for the TfResourceGroup to import
+  * @param importFromId The id of the existing TfResourceGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_resource_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfResourceGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_inspector_resource_group", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class AwsInspectorResourceGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsInspectorResourceGroupConfig
+  * @param options TfResourceGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsInspectorResourceGroupConfig) {
+  public constructor(scope: Construct, id: string, config: TfResourceGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_inspector_resource_group',
       terraformGeneratorMetadata: {

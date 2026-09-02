@@ -5,40 +5,40 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsInternetGatewayAttachmentConfig extends cdktn.TerraformMetaArguments {
+export interface TfInternetGatewayAttachmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway_attachment#id AwsInternetGatewayAttachment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway_attachment#id TfInternetGatewayAttachment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway_attachment#internet_gateway_id AwsInternetGatewayAttachment#internet_gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway_attachment#internet_gateway_id TfInternetGatewayAttachment#internet_gateway_id}
   */
   readonly internetGatewayId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway_attachment#region AwsInternetGatewayAttachment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway_attachment#region TfInternetGatewayAttachment#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway_attachment#vpc_id AwsInternetGatewayAttachment#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway_attachment#vpc_id TfInternetGatewayAttachment#vpc_id}
   */
   readonly vpcId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway_attachment#timeouts AwsInternetGatewayAttachment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway_attachment#timeouts TfInternetGatewayAttachment#timeouts}
   */
-  readonly timeouts?: AwsInternetGatewayAttachment.TimeoutsProperty;
+  readonly timeouts?: TfInternetGatewayAttachment.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway_attachment aws_internet_gateway_attachment}
 */
-export class AwsInternetGatewayAttachment extends cdktn.TerraformResource {
+export class TfInternetGatewayAttachment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class AwsInternetGatewayAttachment extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsInternetGatewayAttachment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfInternetGatewayAttachment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsInternetGatewayAttachment to import
-  * @param importFromId The id of the existing AwsInternetGatewayAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway_attachment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsInternetGatewayAttachment to import is found
+  * @param importToId The construct id used in the generated config for the TfInternetGatewayAttachment to import
+  * @param importFromId The id of the existing TfInternetGatewayAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway_attachment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfInternetGatewayAttachment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_internet_gateway_attachment", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class AwsInternetGatewayAttachment extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsInternetGatewayAttachmentConfig
+  * @param options TfInternetGatewayAttachmentConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsInternetGatewayAttachmentConfig) {
+  public constructor(scope: Construct, id: string, config: TfInternetGatewayAttachmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_internet_gateway_attachment',
       terraformGeneratorMetadata: {
@@ -156,11 +156,11 @@ export class AwsInternetGatewayAttachment extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsInternetGatewayAttachment.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfInternetGatewayAttachment.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsInternetGatewayAttachment.TimeoutsProperty) {
+  public putTimeouts(value: TfInternetGatewayAttachment.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -181,7 +181,7 @@ export class AwsInternetGatewayAttachment extends cdktn.TerraformResource {
       internet_gateway_id: cdktn.stringToTerraform(this._internetGatewayId),
       region: cdktn.stringToTerraform(this._region),
       vpc_id: cdktn.stringToTerraform(this._vpcId),
-      timeouts: awsInternetGatewayAttachmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfInternetGatewayAttachmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -212,10 +212,10 @@ export class AwsInternetGatewayAttachment extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsInternetGatewayAttachmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfInternetGatewayAttachmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsInternetGatewayAttachment.TimeoutsProperty",
+        storageClassType: "TfInternetGatewayAttachment.TimeoutsProperty",
       },
     };
 
@@ -224,7 +224,7 @@ export class AwsInternetGatewayAttachment extends cdktn.TerraformResource {
   }
 }
 
-export function awsInternetGatewayAttachmentTimeoutsPropertyToTerraform(struct?: AwsInternetGatewayAttachment.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfInternetGatewayAttachmentTimeoutsPropertyToTerraform(struct?: TfInternetGatewayAttachment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -236,7 +236,7 @@ export function awsInternetGatewayAttachmentTimeoutsPropertyToTerraform(struct?:
 }
 
 
-export function awsInternetGatewayAttachmentTimeoutsPropertyToHclTerraform(struct?: AwsInternetGatewayAttachment.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfInternetGatewayAttachmentTimeoutsPropertyToHclTerraform(struct?: TfInternetGatewayAttachment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -261,14 +261,14 @@ export function awsInternetGatewayAttachmentTimeoutsPropertyToHclTerraform(struc
 }
 
 
-export namespace AwsInternetGatewayAttachment {
+export namespace TfInternetGatewayAttachment {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway_attachment#create AwsInternetGatewayAttachment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway_attachment#create TfInternetGatewayAttachment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway_attachment#delete AwsInternetGatewayAttachment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway_attachment#delete TfInternetGatewayAttachment#delete}
   */
   readonly delete?: string;
 }

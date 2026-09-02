@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsApiGatewayAuthorizersConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataAuthorizersConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_authorizers#id DataAwsApiGatewayAuthorizers#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_authorizers#id TfDataAuthorizers#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,11 +16,11 @@ export interface DataAwsApiGatewayAuthorizersConfig extends cdktn.TerraformMetaA
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_authorizers#region DataAwsApiGatewayAuthorizers#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_authorizers#region TfDataAuthorizers#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_authorizers#rest_api_id DataAwsApiGatewayAuthorizers#rest_api_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_authorizers#rest_api_id TfDataAuthorizers#rest_api_id}
   */
   readonly restApiId: string;
 }
@@ -28,7 +28,7 @@ export interface DataAwsApiGatewayAuthorizersConfig extends cdktn.TerraformMetaA
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_authorizers aws_api_gateway_authorizers}
 */
-export class DataAwsApiGatewayAuthorizers extends cdktn.TerraformDataSource {
+export class TfDataAuthorizers extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class DataAwsApiGatewayAuthorizers extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsApiGatewayAuthorizers resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataAuthorizers resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsApiGatewayAuthorizers to import
-  * @param importFromId The id of the existing DataAwsApiGatewayAuthorizers that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_authorizers#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsApiGatewayAuthorizers to import is found
+  * @param importToId The construct id used in the generated config for the TfDataAuthorizers to import
+  * @param importFromId The id of the existing TfDataAuthorizers that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_authorizers#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataAuthorizers to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_api_gateway_authorizers", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class DataAwsApiGatewayAuthorizers extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsApiGatewayAuthorizersConfig
+  * @param options TfDataAuthorizersConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsApiGatewayAuthorizersConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataAuthorizersConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_api_gateway_authorizers',
       terraformGeneratorMetadata: {

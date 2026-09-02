@@ -5,42 +5,42 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSignerSigningProfilePermissionConfig extends cdktn.TerraformMetaArguments {
+export interface TfSigningProfilePermissionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile_permission#action AwsSignerSigningProfilePermission#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile_permission#action TfSigningProfilePermission#action}
   */
   readonly action: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile_permission#id AwsSignerSigningProfilePermission#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile_permission#id TfSigningProfilePermission#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile_permission#principal AwsSignerSigningProfilePermission#principal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile_permission#principal TfSigningProfilePermission#principal}
   */
   readonly principal: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile_permission#profile_name AwsSignerSigningProfilePermission#profile_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile_permission#profile_name TfSigningProfilePermission#profile_name}
   */
   readonly profileName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile_permission#profile_version AwsSignerSigningProfilePermission#profile_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile_permission#profile_version TfSigningProfilePermission#profile_version}
   */
   readonly profileVersion?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile_permission#region AwsSignerSigningProfilePermission#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile_permission#region TfSigningProfilePermission#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile_permission#statement_id AwsSignerSigningProfilePermission#statement_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile_permission#statement_id TfSigningProfilePermission#statement_id}
   */
   readonly statementId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile_permission#statement_id_prefix AwsSignerSigningProfilePermission#statement_id_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile_permission#statement_id_prefix TfSigningProfilePermission#statement_id_prefix}
   */
   readonly statementIdPrefix?: string;
 }
@@ -48,7 +48,7 @@ export interface AwsSignerSigningProfilePermissionConfig extends cdktn.Terraform
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile_permission aws_signer_signing_profile_permission}
 */
-export class AwsSignerSigningProfilePermission extends cdktn.TerraformResource {
+export class TfSigningProfilePermission extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class AwsSignerSigningProfilePermission extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSignerSigningProfilePermission resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfSigningProfilePermission resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSignerSigningProfilePermission to import
-  * @param importFromId The id of the existing AwsSignerSigningProfilePermission that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile_permission#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSignerSigningProfilePermission to import is found
+  * @param importToId The construct id used in the generated config for the TfSigningProfilePermission to import
+  * @param importFromId The id of the existing TfSigningProfilePermission that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_profile_permission#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfSigningProfilePermission to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_signer_signing_profile_permission", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class AwsSignerSigningProfilePermission extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSignerSigningProfilePermissionConfig
+  * @param options TfSigningProfilePermissionConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSignerSigningProfilePermissionConfig) {
+  public constructor(scope: Construct, id: string, config: TfSigningProfilePermissionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_signer_signing_profile_permission',
       terraformGeneratorMetadata: {

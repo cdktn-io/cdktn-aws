@@ -5,64 +5,64 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsIotProvisioningTemplateConfig extends cdktn.TerraformMetaArguments {
+export interface TfProvisioningTemplateConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_provisioning_template#description AwsIotProvisioningTemplate#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_provisioning_template#description TfProvisioningTemplate#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_provisioning_template#enabled AwsIotProvisioningTemplate#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_provisioning_template#enabled TfProvisioningTemplate#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_provisioning_template#id AwsIotProvisioningTemplate#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_provisioning_template#id TfProvisioningTemplate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_provisioning_template#name AwsIotProvisioningTemplate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_provisioning_template#name TfProvisioningTemplate#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_provisioning_template#provisioning_role_arn AwsIotProvisioningTemplate#provisioning_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_provisioning_template#provisioning_role_arn TfProvisioningTemplate#provisioning_role_arn}
   */
   readonly provisioningRoleArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_provisioning_template#region AwsIotProvisioningTemplate#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_provisioning_template#region TfProvisioningTemplate#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_provisioning_template#tags AwsIotProvisioningTemplate#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_provisioning_template#tags TfProvisioningTemplate#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_provisioning_template#tags_all AwsIotProvisioningTemplate#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_provisioning_template#tags_all TfProvisioningTemplate#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_provisioning_template#template_body AwsIotProvisioningTemplate#template_body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_provisioning_template#template_body TfProvisioningTemplate#template_body}
   */
   readonly templateBody: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_provisioning_template#type AwsIotProvisioningTemplate#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_provisioning_template#type TfProvisioningTemplate#type}
   */
   readonly type?: string;
   /**
   * pre_provisioning_hook block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_provisioning_template#pre_provisioning_hook AwsIotProvisioningTemplate#pre_provisioning_hook}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_provisioning_template#pre_provisioning_hook TfProvisioningTemplate#pre_provisioning_hook}
   */
-  readonly preProvisioningHook?: AwsIotProvisioningTemplate.PreProvisioningHookProperty;
+  readonly preProvisioningHook?: TfProvisioningTemplate.PreProvisioningHookProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_provisioning_template aws_iot_provisioning_template}
 */
-export class AwsIotProvisioningTemplate extends cdktn.TerraformResource {
+export class TfProvisioningTemplate extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -73,11 +73,11 @@ export class AwsIotProvisioningTemplate extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsIotProvisioningTemplate resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfProvisioningTemplate resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsIotProvisioningTemplate to import
-  * @param importFromId The id of the existing AwsIotProvisioningTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_provisioning_template#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsIotProvisioningTemplate to import is found
+  * @param importToId The construct id used in the generated config for the TfProvisioningTemplate to import
+  * @param importFromId The id of the existing TfProvisioningTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_provisioning_template#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfProvisioningTemplate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iot_provisioning_template", importId: importFromId, provider });
@@ -92,9 +92,9 @@ export class AwsIotProvisioningTemplate extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsIotProvisioningTemplateConfig
+  * @param options TfProvisioningTemplateConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsIotProvisioningTemplateConfig) {
+  public constructor(scope: Construct, id: string, config: TfProvisioningTemplateConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iot_provisioning_template',
       terraformGeneratorMetadata: {
@@ -289,11 +289,11 @@ export class AwsIotProvisioningTemplate extends cdktn.TerraformResource {
   }
 
   // pre_provisioning_hook - computed: false, optional: true, required: false
-  private _preProvisioningHook = new AwsIotProvisioningTemplate.PreProvisioningHookPropertyOutputReference(this, "pre_provisioning_hook");
+  private _preProvisioningHook = new TfProvisioningTemplate.PreProvisioningHookPropertyOutputReference(this, "pre_provisioning_hook");
   public get preProvisioningHook() {
     return this._preProvisioningHook;
   }
-  public putPreProvisioningHook(value: AwsIotProvisioningTemplate.PreProvisioningHookProperty) {
+  public putPreProvisioningHook(value: TfProvisioningTemplate.PreProvisioningHookProperty) {
     this._preProvisioningHook.internalValue = value;
   }
   public resetPreProvisioningHook() {
@@ -320,7 +320,7 @@ export class AwsIotProvisioningTemplate extends cdktn.TerraformResource {
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       template_body: cdktn.stringToTerraform(this._templateBody),
       type: cdktn.stringToTerraform(this._type),
-      pre_provisioning_hook: awsIotProvisioningTemplatePreProvisioningHookPropertyToTerraform(this._preProvisioningHook.internalValue),
+      pre_provisioning_hook: tfProvisioningTemplatePreProvisioningHookPropertyToTerraform(this._preProvisioningHook.internalValue),
     };
   }
 
@@ -387,10 +387,10 @@ export class AwsIotProvisioningTemplate extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       pre_provisioning_hook: {
-        value: awsIotProvisioningTemplatePreProvisioningHookPropertyToHclTerraform(this._preProvisioningHook.internalValue),
+        value: tfProvisioningTemplatePreProvisioningHookPropertyToHclTerraform(this._preProvisioningHook.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsIotProvisioningTemplate.PreProvisioningHookPropertyList",
+        storageClassType: "TfProvisioningTemplate.PreProvisioningHookPropertyList",
       },
     };
 
@@ -399,7 +399,7 @@ export class AwsIotProvisioningTemplate extends cdktn.TerraformResource {
   }
 }
 
-export function awsIotProvisioningTemplatePreProvisioningHookPropertyToTerraform(struct?: AwsIotProvisioningTemplate.PreProvisioningHookPropertyOutputReference | AwsIotProvisioningTemplate.PreProvisioningHookProperty): any {
+export function tfProvisioningTemplatePreProvisioningHookPropertyToTerraform(struct?: TfProvisioningTemplate.PreProvisioningHookPropertyOutputReference | TfProvisioningTemplate.PreProvisioningHookProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -411,7 +411,7 @@ export function awsIotProvisioningTemplatePreProvisioningHookPropertyToTerraform
 }
 
 
-export function awsIotProvisioningTemplatePreProvisioningHookPropertyToHclTerraform(struct?: AwsIotProvisioningTemplate.PreProvisioningHookPropertyOutputReference | AwsIotProvisioningTemplate.PreProvisioningHookProperty): any {
+export function tfProvisioningTemplatePreProvisioningHookPropertyToHclTerraform(struct?: TfProvisioningTemplate.PreProvisioningHookPropertyOutputReference | TfProvisioningTemplate.PreProvisioningHookProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -436,14 +436,14 @@ export function awsIotProvisioningTemplatePreProvisioningHookPropertyToHclTerraf
 }
 
 
-export namespace AwsIotProvisioningTemplate {
+export namespace TfProvisioningTemplate {
 export interface PreProvisioningHookProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_provisioning_template#payload_version AwsIotProvisioningTemplate#payload_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_provisioning_template#payload_version TfProvisioningTemplate#payload_version}
   */
   readonly payloadVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_provisioning_template#target_arn AwsIotProvisioningTemplate#target_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_provisioning_template#target_arn TfProvisioningTemplate#target_arn}
   */
   readonly targetArn: string;
 }

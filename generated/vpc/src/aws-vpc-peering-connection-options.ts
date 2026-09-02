@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsVpcPeeringConnectionOptionsConfig extends cdktn.TerraformMetaArguments {
+export interface TfPeeringConnectionOptionsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection_options#id AwsVpcPeeringConnectionOptions#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection_options#id TfPeeringConnectionOptions#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,31 +16,31 @@ export interface AwsVpcPeeringConnectionOptionsConfig extends cdktn.TerraformMet
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection_options#region AwsVpcPeeringConnectionOptions#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection_options#region TfPeeringConnectionOptions#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection_options#vpc_peering_connection_id AwsVpcPeeringConnectionOptions#vpc_peering_connection_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection_options#vpc_peering_connection_id TfPeeringConnectionOptions#vpc_peering_connection_id}
   */
   readonly vpcPeeringConnectionId: string;
   /**
   * accepter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection_options#accepter AwsVpcPeeringConnectionOptions#accepter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection_options#accepter TfPeeringConnectionOptions#accepter}
   */
-  readonly accepter?: AwsVpcPeeringConnectionOptions.AccepterProperty;
+  readonly accepter?: TfPeeringConnectionOptions.AccepterProperty;
   /**
   * requester block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection_options#requester AwsVpcPeeringConnectionOptions#requester}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection_options#requester TfPeeringConnectionOptions#requester}
   */
-  readonly requester?: AwsVpcPeeringConnectionOptions.RequesterProperty;
+  readonly requester?: TfPeeringConnectionOptions.RequesterProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection_options aws_vpc_peering_connection_options}
 */
-export class AwsVpcPeeringConnectionOptions extends cdktn.TerraformResource {
+export class TfPeeringConnectionOptions extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class AwsVpcPeeringConnectionOptions extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsVpcPeeringConnectionOptions resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfPeeringConnectionOptions resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsVpcPeeringConnectionOptions to import
-  * @param importFromId The id of the existing AwsVpcPeeringConnectionOptions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection_options#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsVpcPeeringConnectionOptions to import is found
+  * @param importToId The construct id used in the generated config for the TfPeeringConnectionOptions to import
+  * @param importFromId The id of the existing TfPeeringConnectionOptions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection_options#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfPeeringConnectionOptions to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpc_peering_connection_options", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class AwsVpcPeeringConnectionOptions extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsVpcPeeringConnectionOptionsConfig
+  * @param options TfPeeringConnectionOptionsConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsVpcPeeringConnectionOptionsConfig) {
+  public constructor(scope: Construct, id: string, config: TfPeeringConnectionOptionsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpc_peering_connection_options',
       terraformGeneratorMetadata: {
@@ -145,11 +145,11 @@ export class AwsVpcPeeringConnectionOptions extends cdktn.TerraformResource {
   }
 
   // accepter - computed: false, optional: true, required: false
-  private _accepter = new AwsVpcPeeringConnectionOptions.AccepterPropertyOutputReference(this, "accepter");
+  private _accepter = new TfPeeringConnectionOptions.AccepterPropertyOutputReference(this, "accepter");
   public get accepter() {
     return this._accepter;
   }
-  public putAccepter(value: AwsVpcPeeringConnectionOptions.AccepterProperty) {
+  public putAccepter(value: TfPeeringConnectionOptions.AccepterProperty) {
     this._accepter.internalValue = value;
   }
   public resetAccepter() {
@@ -161,11 +161,11 @@ export class AwsVpcPeeringConnectionOptions extends cdktn.TerraformResource {
   }
 
   // requester - computed: false, optional: true, required: false
-  private _requester = new AwsVpcPeeringConnectionOptions.RequesterPropertyOutputReference(this, "requester");
+  private _requester = new TfPeeringConnectionOptions.RequesterPropertyOutputReference(this, "requester");
   public get requester() {
     return this._requester;
   }
-  public putRequester(value: AwsVpcPeeringConnectionOptions.RequesterProperty) {
+  public putRequester(value: TfPeeringConnectionOptions.RequesterProperty) {
     this._requester.internalValue = value;
   }
   public resetRequester() {
@@ -185,8 +185,8 @@ export class AwsVpcPeeringConnectionOptions extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       vpc_peering_connection_id: cdktn.stringToTerraform(this._vpcPeeringConnectionId),
-      accepter: awsVpcPeeringConnectionOptionsAccepterPropertyToTerraform(this._accepter.internalValue),
-      requester: awsVpcPeeringConnectionOptionsRequesterPropertyToTerraform(this._requester.internalValue),
+      accepter: tfPeeringConnectionOptionsAccepterPropertyToTerraform(this._accepter.internalValue),
+      requester: tfPeeringConnectionOptionsRequesterPropertyToTerraform(this._requester.internalValue),
     };
   }
 
@@ -211,16 +211,16 @@ export class AwsVpcPeeringConnectionOptions extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       accepter: {
-        value: awsVpcPeeringConnectionOptionsAccepterPropertyToHclTerraform(this._accepter.internalValue),
+        value: tfPeeringConnectionOptionsAccepterPropertyToHclTerraform(this._accepter.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsVpcPeeringConnectionOptions.AccepterPropertyList",
+        storageClassType: "TfPeeringConnectionOptions.AccepterPropertyList",
       },
       requester: {
-        value: awsVpcPeeringConnectionOptionsRequesterPropertyToHclTerraform(this._requester.internalValue),
+        value: tfPeeringConnectionOptionsRequesterPropertyToHclTerraform(this._requester.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsVpcPeeringConnectionOptions.RequesterPropertyList",
+        storageClassType: "TfPeeringConnectionOptions.RequesterPropertyList",
       },
     };
 
@@ -229,7 +229,7 @@ export class AwsVpcPeeringConnectionOptions extends cdktn.TerraformResource {
   }
 }
 
-export function awsVpcPeeringConnectionOptionsAccepterPropertyToTerraform(struct?: AwsVpcPeeringConnectionOptions.AccepterPropertyOutputReference | AwsVpcPeeringConnectionOptions.AccepterProperty): any {
+export function tfPeeringConnectionOptionsAccepterPropertyToTerraform(struct?: TfPeeringConnectionOptions.AccepterPropertyOutputReference | TfPeeringConnectionOptions.AccepterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -240,7 +240,7 @@ export function awsVpcPeeringConnectionOptionsAccepterPropertyToTerraform(struct
 }
 
 
-export function awsVpcPeeringConnectionOptionsAccepterPropertyToHclTerraform(struct?: AwsVpcPeeringConnectionOptions.AccepterPropertyOutputReference | AwsVpcPeeringConnectionOptions.AccepterProperty): any {
+export function tfPeeringConnectionOptionsAccepterPropertyToHclTerraform(struct?: TfPeeringConnectionOptions.AccepterPropertyOutputReference | TfPeeringConnectionOptions.AccepterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -259,7 +259,7 @@ export function awsVpcPeeringConnectionOptionsAccepterPropertyToHclTerraform(str
 }
 
 
-export function awsVpcPeeringConnectionOptionsRequesterPropertyToTerraform(struct?: AwsVpcPeeringConnectionOptions.RequesterPropertyOutputReference | AwsVpcPeeringConnectionOptions.RequesterProperty): any {
+export function tfPeeringConnectionOptionsRequesterPropertyToTerraform(struct?: TfPeeringConnectionOptions.RequesterPropertyOutputReference | TfPeeringConnectionOptions.RequesterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -270,7 +270,7 @@ export function awsVpcPeeringConnectionOptionsRequesterPropertyToTerraform(struc
 }
 
 
-export function awsVpcPeeringConnectionOptionsRequesterPropertyToHclTerraform(struct?: AwsVpcPeeringConnectionOptions.RequesterPropertyOutputReference | AwsVpcPeeringConnectionOptions.RequesterProperty): any {
+export function tfPeeringConnectionOptionsRequesterPropertyToHclTerraform(struct?: TfPeeringConnectionOptions.RequesterPropertyOutputReference | TfPeeringConnectionOptions.RequesterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -289,10 +289,10 @@ export function awsVpcPeeringConnectionOptionsRequesterPropertyToHclTerraform(st
 }
 
 
-export namespace AwsVpcPeeringConnectionOptions {
+export namespace TfPeeringConnectionOptions {
 export interface AccepterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection_options#allow_remote_vpc_dns_resolution AwsVpcPeeringConnectionOptions#allow_remote_vpc_dns_resolution}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection_options#allow_remote_vpc_dns_resolution TfPeeringConnectionOptions#allow_remote_vpc_dns_resolution}
   */
   readonly allowRemoteVpcDnsResolution?: boolean | cdktn.IResolvable;
 }
@@ -346,7 +346,7 @@ export class AccepterPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RequesterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection_options#allow_remote_vpc_dns_resolution AwsVpcPeeringConnectionOptions#allow_remote_vpc_dns_resolution}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection_options#allow_remote_vpc_dns_resolution TfPeeringConnectionOptions#allow_remote_vpc_dns_resolution}
   */
   readonly allowRemoteVpcDnsResolution?: boolean | cdktn.IResolvable;
 }

@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsXrayResourcePolicyConfig extends cdktn.TerraformMetaArguments {
+export interface TfResourcePolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_resource_policy#bypass_policy_lockout_check AwsXrayResourcePolicy#bypass_policy_lockout_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_resource_policy#bypass_policy_lockout_check TfResourcePolicy#bypass_policy_lockout_check}
   */
   readonly bypassPolicyLockoutCheck?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_resource_policy#policy_document AwsXrayResourcePolicy#policy_document}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_resource_policy#policy_document TfResourcePolicy#policy_document}
   */
   readonly policyDocument: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_resource_policy#policy_name AwsXrayResourcePolicy#policy_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_resource_policy#policy_name TfResourcePolicy#policy_name}
   */
   readonly policyName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_resource_policy#policy_revision_id AwsXrayResourcePolicy#policy_revision_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_resource_policy#policy_revision_id TfResourcePolicy#policy_revision_id}
   */
   readonly policyRevisionId?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_resource_policy#region AwsXrayResourcePolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_resource_policy#region TfResourcePolicy#region}
   */
   readonly region?: string;
 }
@@ -33,7 +33,7 @@ export interface AwsXrayResourcePolicyConfig extends cdktn.TerraformMetaArgument
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_resource_policy aws_xray_resource_policy}
 */
-export class AwsXrayResourcePolicy extends cdktn.TerraformResource {
+export class TfResourcePolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class AwsXrayResourcePolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsXrayResourcePolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfResourcePolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsXrayResourcePolicy to import
-  * @param importFromId The id of the existing AwsXrayResourcePolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_resource_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsXrayResourcePolicy to import is found
+  * @param importToId The construct id used in the generated config for the TfResourcePolicy to import
+  * @param importFromId The id of the existing TfResourcePolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_resource_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfResourcePolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_xray_resource_policy", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class AwsXrayResourcePolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsXrayResourcePolicyConfig
+  * @param options TfResourcePolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsXrayResourcePolicyConfig) {
+  public constructor(scope: Construct, id: string, config: TfResourcePolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_xray_resource_policy',
       terraformGeneratorMetadata: {

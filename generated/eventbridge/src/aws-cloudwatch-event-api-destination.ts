@@ -5,42 +5,42 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCloudwatchEventApiDestinationConfig extends cdktn.TerraformMetaArguments {
+export interface TfApiDestinationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_api_destination#connection_arn AwsCloudwatchEventApiDestination#connection_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_api_destination#connection_arn TfApiDestination#connection_arn}
   */
   readonly connectionArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_api_destination#description AwsCloudwatchEventApiDestination#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_api_destination#description TfApiDestination#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_api_destination#http_method AwsCloudwatchEventApiDestination#http_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_api_destination#http_method TfApiDestination#http_method}
   */
   readonly httpMethod: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_api_destination#id AwsCloudwatchEventApiDestination#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_api_destination#id TfApiDestination#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_api_destination#invocation_endpoint AwsCloudwatchEventApiDestination#invocation_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_api_destination#invocation_endpoint TfApiDestination#invocation_endpoint}
   */
   readonly invocationEndpoint: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_api_destination#invocation_rate_limit_per_second AwsCloudwatchEventApiDestination#invocation_rate_limit_per_second}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_api_destination#invocation_rate_limit_per_second TfApiDestination#invocation_rate_limit_per_second}
   */
   readonly invocationRateLimitPerSecond?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_api_destination#name AwsCloudwatchEventApiDestination#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_api_destination#name TfApiDestination#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_api_destination#region AwsCloudwatchEventApiDestination#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_api_destination#region TfApiDestination#region}
   */
   readonly region?: string;
 }
@@ -48,7 +48,7 @@ export interface AwsCloudwatchEventApiDestinationConfig extends cdktn.TerraformM
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_api_destination aws_cloudwatch_event_api_destination}
 */
-export class AwsCloudwatchEventApiDestination extends cdktn.TerraformResource {
+export class TfApiDestination extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class AwsCloudwatchEventApiDestination extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCloudwatchEventApiDestination resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfApiDestination resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCloudwatchEventApiDestination to import
-  * @param importFromId The id of the existing AwsCloudwatchEventApiDestination that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_api_destination#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCloudwatchEventApiDestination to import is found
+  * @param importToId The construct id used in the generated config for the TfApiDestination to import
+  * @param importFromId The id of the existing TfApiDestination that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_api_destination#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfApiDestination to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudwatch_event_api_destination", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class AwsCloudwatchEventApiDestination extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCloudwatchEventApiDestinationConfig
+  * @param options TfApiDestinationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCloudwatchEventApiDestinationConfig) {
+  public constructor(scope: Construct, id: string, config: TfApiDestinationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudwatch_event_api_destination',
       terraformGeneratorMetadata: {

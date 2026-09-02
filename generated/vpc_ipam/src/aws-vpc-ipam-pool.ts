@@ -5,102 +5,102 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsVpcIpamPoolConfig extends cdktn.TerraformMetaArguments {
+export interface TfPoolConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#address_family AwsVpcIpamPool#address_family}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#address_family TfPool#address_family}
   */
   readonly addressFamily: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#allocation_default_netmask_length AwsVpcIpamPool#allocation_default_netmask_length}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#allocation_default_netmask_length TfPool#allocation_default_netmask_length}
   */
   readonly allocationDefaultNetmaskLength?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#allocation_max_netmask_length AwsVpcIpamPool#allocation_max_netmask_length}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#allocation_max_netmask_length TfPool#allocation_max_netmask_length}
   */
   readonly allocationMaxNetmaskLength?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#allocation_min_netmask_length AwsVpcIpamPool#allocation_min_netmask_length}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#allocation_min_netmask_length TfPool#allocation_min_netmask_length}
   */
   readonly allocationMinNetmaskLength?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#allocation_resource_tags AwsVpcIpamPool#allocation_resource_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#allocation_resource_tags TfPool#allocation_resource_tags}
   */
   readonly allocationResourceTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#auto_import AwsVpcIpamPool#auto_import}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#auto_import TfPool#auto_import}
   */
   readonly autoImport?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#aws_service AwsVpcIpamPool#aws_service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#aws_service TfPool#aws_service}
   */
   readonly awsService?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#cascade AwsVpcIpamPool#cascade}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#cascade TfPool#cascade}
   */
   readonly cascade?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#description AwsVpcIpamPool#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#description TfPool#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#id AwsVpcIpamPool#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#id TfPool#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#ipam_scope_id AwsVpcIpamPool#ipam_scope_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#ipam_scope_id TfPool#ipam_scope_id}
   */
   readonly ipamScopeId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#locale AwsVpcIpamPool#locale}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#locale TfPool#locale}
   */
   readonly locale?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#public_ip_source AwsVpcIpamPool#public_ip_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#public_ip_source TfPool#public_ip_source}
   */
   readonly publicIpSource?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#publicly_advertisable AwsVpcIpamPool#publicly_advertisable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#publicly_advertisable TfPool#publicly_advertisable}
   */
   readonly publiclyAdvertisable?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#region AwsVpcIpamPool#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#region TfPool#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#source_ipam_pool_id AwsVpcIpamPool#source_ipam_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#source_ipam_pool_id TfPool#source_ipam_pool_id}
   */
   readonly sourceIpamPoolId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#tags AwsVpcIpamPool#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#tags TfPool#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#tags_all AwsVpcIpamPool#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#tags_all TfPool#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * source_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#source_resource AwsVpcIpamPool#source_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#source_resource TfPool#source_resource}
   */
-  readonly sourceResource?: AwsVpcIpamPool.SourceResourceProperty;
+  readonly sourceResource?: TfPool.SourceResourceProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#timeouts AwsVpcIpamPool#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#timeouts TfPool#timeouts}
   */
-  readonly timeouts?: AwsVpcIpamPool.TimeoutsProperty;
+  readonly timeouts?: TfPool.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool aws_vpc_ipam_pool}
 */
-export class AwsVpcIpamPool extends cdktn.TerraformResource {
+export class TfPool extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -111,11 +111,11 @@ export class AwsVpcIpamPool extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsVpcIpamPool resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfPool resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsVpcIpamPool to import
-  * @param importFromId The id of the existing AwsVpcIpamPool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsVpcIpamPool to import is found
+  * @param importToId The construct id used in the generated config for the TfPool to import
+  * @param importFromId The id of the existing TfPool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfPool to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpc_ipam_pool", importId: importFromId, provider });
@@ -130,9 +130,9 @@ export class AwsVpcIpamPool extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsVpcIpamPoolConfig
+  * @param options TfPoolConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsVpcIpamPoolConfig) {
+  public constructor(scope: Construct, id: string, config: TfPoolConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpc_ipam_pool',
       terraformGeneratorMetadata: {
@@ -477,11 +477,11 @@ export class AwsVpcIpamPool extends cdktn.TerraformResource {
   }
 
   // source_resource - computed: false, optional: true, required: false
-  private _sourceResource = new AwsVpcIpamPool.SourceResourcePropertyOutputReference(this, "source_resource");
+  private _sourceResource = new TfPool.SourceResourcePropertyOutputReference(this, "source_resource");
   public get sourceResource() {
     return this._sourceResource;
   }
-  public putSourceResource(value: AwsVpcIpamPool.SourceResourceProperty) {
+  public putSourceResource(value: TfPool.SourceResourceProperty) {
     this._sourceResource.internalValue = value;
   }
   public resetSourceResource() {
@@ -493,11 +493,11 @@ export class AwsVpcIpamPool extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsVpcIpamPool.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfPool.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsVpcIpamPool.TimeoutsProperty) {
+  public putTimeouts(value: TfPool.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -532,8 +532,8 @@ export class AwsVpcIpamPool extends cdktn.TerraformResource {
       source_ipam_pool_id: cdktn.stringToTerraform(this._sourceIpamPoolId),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      source_resource: awsVpcIpamPoolSourceResourcePropertyToTerraform(this._sourceResource.internalValue),
-      timeouts: awsVpcIpamPoolTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      source_resource: tfPoolSourceResourcePropertyToTerraform(this._sourceResource.internalValue),
+      timeouts: tfPoolTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -648,16 +648,16 @@ export class AwsVpcIpamPool extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       source_resource: {
-        value: awsVpcIpamPoolSourceResourcePropertyToHclTerraform(this._sourceResource.internalValue),
+        value: tfPoolSourceResourcePropertyToHclTerraform(this._sourceResource.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsVpcIpamPool.SourceResourcePropertyList",
+        storageClassType: "TfPool.SourceResourcePropertyList",
       },
       timeouts: {
-        value: awsVpcIpamPoolTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfPoolTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsVpcIpamPool.TimeoutsProperty",
+        storageClassType: "TfPool.TimeoutsProperty",
       },
     };
 
@@ -666,7 +666,7 @@ export class AwsVpcIpamPool extends cdktn.TerraformResource {
   }
 }
 
-export function awsVpcIpamPoolSourceResourcePropertyToTerraform(struct?: AwsVpcIpamPool.SourceResourcePropertyOutputReference | AwsVpcIpamPool.SourceResourceProperty): any {
+export function tfPoolSourceResourcePropertyToTerraform(struct?: TfPool.SourceResourcePropertyOutputReference | TfPool.SourceResourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -680,7 +680,7 @@ export function awsVpcIpamPoolSourceResourcePropertyToTerraform(struct?: AwsVpcI
 }
 
 
-export function awsVpcIpamPoolSourceResourcePropertyToHclTerraform(struct?: AwsVpcIpamPool.SourceResourcePropertyOutputReference | AwsVpcIpamPool.SourceResourceProperty): any {
+export function tfPoolSourceResourcePropertyToHclTerraform(struct?: TfPool.SourceResourcePropertyOutputReference | TfPool.SourceResourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -717,7 +717,7 @@ export function awsVpcIpamPoolSourceResourcePropertyToHclTerraform(struct?: AwsV
 }
 
 
-export function awsVpcIpamPoolTimeoutsPropertyToTerraform(struct?: AwsVpcIpamPool.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfPoolTimeoutsPropertyToTerraform(struct?: TfPool.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -730,7 +730,7 @@ export function awsVpcIpamPoolTimeoutsPropertyToTerraform(struct?: AwsVpcIpamPoo
 }
 
 
-export function awsVpcIpamPoolTimeoutsPropertyToHclTerraform(struct?: AwsVpcIpamPool.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfPoolTimeoutsPropertyToHclTerraform(struct?: TfPool.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -761,22 +761,22 @@ export function awsVpcIpamPoolTimeoutsPropertyToHclTerraform(struct?: AwsVpcIpam
 }
 
 
-export namespace AwsVpcIpamPool {
+export namespace TfPool {
 export interface SourceResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#resource_id AwsVpcIpamPool#resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#resource_id TfPool#resource_id}
   */
   readonly resourceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#resource_owner AwsVpcIpamPool#resource_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#resource_owner TfPool#resource_owner}
   */
   readonly resourceOwner: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#resource_region AwsVpcIpamPool#resource_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#resource_region TfPool#resource_region}
   */
   readonly resourceRegion: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#resource_type AwsVpcIpamPool#resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#resource_type TfPool#resource_type}
   */
   readonly resourceType: string;
 }
@@ -884,15 +884,15 @@ export class SourceResourcePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#create AwsVpcIpamPool#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#create TfPool#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#delete AwsVpcIpamPool#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#delete TfPool#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#update AwsVpcIpamPool#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool#update TfPool#update}
   */
   readonly update?: string;
 }

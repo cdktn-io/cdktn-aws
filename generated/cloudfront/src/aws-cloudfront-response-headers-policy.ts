@@ -5,58 +5,58 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCloudfrontResponseHeadersPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface TfResponseHeadersPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#comment AwsCloudfrontResponseHeadersPolicy#comment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#comment TfResponseHeadersPolicy#comment}
   */
   readonly comment?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#id AwsCloudfrontResponseHeadersPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#id TfResponseHeadersPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#name AwsCloudfrontResponseHeadersPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#name TfResponseHeadersPolicy#name}
   */
   readonly name: string;
   /**
   * cors_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#cors_config AwsCloudfrontResponseHeadersPolicy#cors_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#cors_config TfResponseHeadersPolicy#cors_config}
   */
-  readonly corsConfig?: AwsCloudfrontResponseHeadersPolicy.CorsConfigProperty;
+  readonly corsConfig?: TfResponseHeadersPolicy.CorsConfigProperty;
   /**
   * custom_headers_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#custom_headers_config AwsCloudfrontResponseHeadersPolicy#custom_headers_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#custom_headers_config TfResponseHeadersPolicy#custom_headers_config}
   */
-  readonly customHeadersConfig?: AwsCloudfrontResponseHeadersPolicy.CustomHeadersConfigProperty;
+  readonly customHeadersConfig?: TfResponseHeadersPolicy.CustomHeadersConfigProperty;
   /**
   * remove_headers_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#remove_headers_config AwsCloudfrontResponseHeadersPolicy#remove_headers_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#remove_headers_config TfResponseHeadersPolicy#remove_headers_config}
   */
-  readonly removeHeadersConfig?: AwsCloudfrontResponseHeadersPolicy.RemoveHeadersConfigProperty;
+  readonly removeHeadersConfig?: TfResponseHeadersPolicy.RemoveHeadersConfigProperty;
   /**
   * security_headers_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#security_headers_config AwsCloudfrontResponseHeadersPolicy#security_headers_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#security_headers_config TfResponseHeadersPolicy#security_headers_config}
   */
-  readonly securityHeadersConfig?: AwsCloudfrontResponseHeadersPolicy.SecurityHeadersConfigProperty;
+  readonly securityHeadersConfig?: TfResponseHeadersPolicy.SecurityHeadersConfigProperty;
   /**
   * server_timing_headers_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#server_timing_headers_config AwsCloudfrontResponseHeadersPolicy#server_timing_headers_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#server_timing_headers_config TfResponseHeadersPolicy#server_timing_headers_config}
   */
-  readonly serverTimingHeadersConfig?: AwsCloudfrontResponseHeadersPolicy.ServerTimingHeadersConfigProperty;
+  readonly serverTimingHeadersConfig?: TfResponseHeadersPolicy.ServerTimingHeadersConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy aws_cloudfront_response_headers_policy}
 */
-export class AwsCloudfrontResponseHeadersPolicy extends cdktn.TerraformResource {
+export class TfResponseHeadersPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -67,11 +67,11 @@ export class AwsCloudfrontResponseHeadersPolicy extends cdktn.TerraformResource 
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCloudfrontResponseHeadersPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfResponseHeadersPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCloudfrontResponseHeadersPolicy to import
-  * @param importFromId The id of the existing AwsCloudfrontResponseHeadersPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCloudfrontResponseHeadersPolicy to import is found
+  * @param importToId The construct id used in the generated config for the TfResponseHeadersPolicy to import
+  * @param importFromId The id of the existing TfResponseHeadersPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfResponseHeadersPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudfront_response_headers_policy", importId: importFromId, provider });
@@ -86,9 +86,9 @@ export class AwsCloudfrontResponseHeadersPolicy extends cdktn.TerraformResource 
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCloudfrontResponseHeadersPolicyConfig
+  * @param options TfResponseHeadersPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCloudfrontResponseHeadersPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: TfResponseHeadersPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudfront_response_headers_policy',
       terraformGeneratorMetadata: {
@@ -174,11 +174,11 @@ export class AwsCloudfrontResponseHeadersPolicy extends cdktn.TerraformResource 
   }
 
   // cors_config - computed: false, optional: true, required: false
-  private _corsConfig = new AwsCloudfrontResponseHeadersPolicy.CorsConfigPropertyOutputReference(this, "cors_config");
+  private _corsConfig = new TfResponseHeadersPolicy.CorsConfigPropertyOutputReference(this, "cors_config");
   public get corsConfig() {
     return this._corsConfig;
   }
-  public putCorsConfig(value: AwsCloudfrontResponseHeadersPolicy.CorsConfigProperty) {
+  public putCorsConfig(value: TfResponseHeadersPolicy.CorsConfigProperty) {
     this._corsConfig.internalValue = value;
   }
   public resetCorsConfig() {
@@ -190,11 +190,11 @@ export class AwsCloudfrontResponseHeadersPolicy extends cdktn.TerraformResource 
   }
 
   // custom_headers_config - computed: false, optional: true, required: false
-  private _customHeadersConfig = new AwsCloudfrontResponseHeadersPolicy.CustomHeadersConfigPropertyOutputReference(this, "custom_headers_config");
+  private _customHeadersConfig = new TfResponseHeadersPolicy.CustomHeadersConfigPropertyOutputReference(this, "custom_headers_config");
   public get customHeadersConfig() {
     return this._customHeadersConfig;
   }
-  public putCustomHeadersConfig(value: AwsCloudfrontResponseHeadersPolicy.CustomHeadersConfigProperty) {
+  public putCustomHeadersConfig(value: TfResponseHeadersPolicy.CustomHeadersConfigProperty) {
     this._customHeadersConfig.internalValue = value;
   }
   public resetCustomHeadersConfig() {
@@ -206,11 +206,11 @@ export class AwsCloudfrontResponseHeadersPolicy extends cdktn.TerraformResource 
   }
 
   // remove_headers_config - computed: false, optional: true, required: false
-  private _removeHeadersConfig = new AwsCloudfrontResponseHeadersPolicy.RemoveHeadersConfigPropertyOutputReference(this, "remove_headers_config");
+  private _removeHeadersConfig = new TfResponseHeadersPolicy.RemoveHeadersConfigPropertyOutputReference(this, "remove_headers_config");
   public get removeHeadersConfig() {
     return this._removeHeadersConfig;
   }
-  public putRemoveHeadersConfig(value: AwsCloudfrontResponseHeadersPolicy.RemoveHeadersConfigProperty) {
+  public putRemoveHeadersConfig(value: TfResponseHeadersPolicy.RemoveHeadersConfigProperty) {
     this._removeHeadersConfig.internalValue = value;
   }
   public resetRemoveHeadersConfig() {
@@ -222,11 +222,11 @@ export class AwsCloudfrontResponseHeadersPolicy extends cdktn.TerraformResource 
   }
 
   // security_headers_config - computed: false, optional: true, required: false
-  private _securityHeadersConfig = new AwsCloudfrontResponseHeadersPolicy.SecurityHeadersConfigPropertyOutputReference(this, "security_headers_config");
+  private _securityHeadersConfig = new TfResponseHeadersPolicy.SecurityHeadersConfigPropertyOutputReference(this, "security_headers_config");
   public get securityHeadersConfig() {
     return this._securityHeadersConfig;
   }
-  public putSecurityHeadersConfig(value: AwsCloudfrontResponseHeadersPolicy.SecurityHeadersConfigProperty) {
+  public putSecurityHeadersConfig(value: TfResponseHeadersPolicy.SecurityHeadersConfigProperty) {
     this._securityHeadersConfig.internalValue = value;
   }
   public resetSecurityHeadersConfig() {
@@ -238,11 +238,11 @@ export class AwsCloudfrontResponseHeadersPolicy extends cdktn.TerraformResource 
   }
 
   // server_timing_headers_config - computed: false, optional: true, required: false
-  private _serverTimingHeadersConfig = new AwsCloudfrontResponseHeadersPolicy.ServerTimingHeadersConfigPropertyOutputReference(this, "server_timing_headers_config");
+  private _serverTimingHeadersConfig = new TfResponseHeadersPolicy.ServerTimingHeadersConfigPropertyOutputReference(this, "server_timing_headers_config");
   public get serverTimingHeadersConfig() {
     return this._serverTimingHeadersConfig;
   }
-  public putServerTimingHeadersConfig(value: AwsCloudfrontResponseHeadersPolicy.ServerTimingHeadersConfigProperty) {
+  public putServerTimingHeadersConfig(value: TfResponseHeadersPolicy.ServerTimingHeadersConfigProperty) {
     this._serverTimingHeadersConfig.internalValue = value;
   }
   public resetServerTimingHeadersConfig() {
@@ -262,11 +262,11 @@ export class AwsCloudfrontResponseHeadersPolicy extends cdktn.TerraformResource 
       comment: cdktn.stringToTerraform(this._comment),
       id: cdktn.stringToTerraform(this._id),
       name: cdktn.stringToTerraform(this._name),
-      cors_config: awsCloudfrontResponseHeadersPolicyCorsConfigPropertyToTerraform(this._corsConfig.internalValue),
-      custom_headers_config: awsCloudfrontResponseHeadersPolicyCustomHeadersConfigPropertyToTerraform(this._customHeadersConfig.internalValue),
-      remove_headers_config: awsCloudfrontResponseHeadersPolicyRemoveHeadersConfigPropertyToTerraform(this._removeHeadersConfig.internalValue),
-      security_headers_config: awsCloudfrontResponseHeadersPolicySecurityHeadersConfigPropertyToTerraform(this._securityHeadersConfig.internalValue),
-      server_timing_headers_config: awsCloudfrontResponseHeadersPolicyServerTimingHeadersConfigPropertyToTerraform(this._serverTimingHeadersConfig.internalValue),
+      cors_config: tfResponseHeadersPolicyCorsConfigPropertyToTerraform(this._corsConfig.internalValue),
+      custom_headers_config: tfResponseHeadersPolicyCustomHeadersConfigPropertyToTerraform(this._customHeadersConfig.internalValue),
+      remove_headers_config: tfResponseHeadersPolicyRemoveHeadersConfigPropertyToTerraform(this._removeHeadersConfig.internalValue),
+      security_headers_config: tfResponseHeadersPolicySecurityHeadersConfigPropertyToTerraform(this._securityHeadersConfig.internalValue),
+      server_timing_headers_config: tfResponseHeadersPolicyServerTimingHeadersConfigPropertyToTerraform(this._serverTimingHeadersConfig.internalValue),
     };
   }
 
@@ -291,34 +291,34 @@ export class AwsCloudfrontResponseHeadersPolicy extends cdktn.TerraformResource 
         storageClassType: "string",
       },
       cors_config: {
-        value: awsCloudfrontResponseHeadersPolicyCorsConfigPropertyToHclTerraform(this._corsConfig.internalValue),
+        value: tfResponseHeadersPolicyCorsConfigPropertyToHclTerraform(this._corsConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudfrontResponseHeadersPolicy.CorsConfigPropertyList",
+        storageClassType: "TfResponseHeadersPolicy.CorsConfigPropertyList",
       },
       custom_headers_config: {
-        value: awsCloudfrontResponseHeadersPolicyCustomHeadersConfigPropertyToHclTerraform(this._customHeadersConfig.internalValue),
+        value: tfResponseHeadersPolicyCustomHeadersConfigPropertyToHclTerraform(this._customHeadersConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudfrontResponseHeadersPolicy.CustomHeadersConfigPropertyList",
+        storageClassType: "TfResponseHeadersPolicy.CustomHeadersConfigPropertyList",
       },
       remove_headers_config: {
-        value: awsCloudfrontResponseHeadersPolicyRemoveHeadersConfigPropertyToHclTerraform(this._removeHeadersConfig.internalValue),
+        value: tfResponseHeadersPolicyRemoveHeadersConfigPropertyToHclTerraform(this._removeHeadersConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudfrontResponseHeadersPolicy.RemoveHeadersConfigPropertyList",
+        storageClassType: "TfResponseHeadersPolicy.RemoveHeadersConfigPropertyList",
       },
       security_headers_config: {
-        value: awsCloudfrontResponseHeadersPolicySecurityHeadersConfigPropertyToHclTerraform(this._securityHeadersConfig.internalValue),
+        value: tfResponseHeadersPolicySecurityHeadersConfigPropertyToHclTerraform(this._securityHeadersConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudfrontResponseHeadersPolicy.SecurityHeadersConfigPropertyList",
+        storageClassType: "TfResponseHeadersPolicy.SecurityHeadersConfigPropertyList",
       },
       server_timing_headers_config: {
-        value: awsCloudfrontResponseHeadersPolicyServerTimingHeadersConfigPropertyToHclTerraform(this._serverTimingHeadersConfig.internalValue),
+        value: tfResponseHeadersPolicyServerTimingHeadersConfigPropertyToHclTerraform(this._serverTimingHeadersConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudfrontResponseHeadersPolicy.ServerTimingHeadersConfigPropertyList",
+        storageClassType: "TfResponseHeadersPolicy.ServerTimingHeadersConfigPropertyList",
       },
     };
 
@@ -327,7 +327,7 @@ export class AwsCloudfrontResponseHeadersPolicy extends cdktn.TerraformResource 
   }
 }
 
-export function awsCloudfrontResponseHeadersPolicyAccessControlAllowHeadersPropertyToTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.AccessControlAllowHeadersPropertyOutputReference | AwsCloudfrontResponseHeadersPolicy.AccessControlAllowHeadersProperty): any {
+export function tfResponseHeadersPolicyAccessControlAllowHeadersPropertyToTerraform(struct?: TfResponseHeadersPolicy.AccessControlAllowHeadersPropertyOutputReference | TfResponseHeadersPolicy.AccessControlAllowHeadersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -338,7 +338,7 @@ export function awsCloudfrontResponseHeadersPolicyAccessControlAllowHeadersPrope
 }
 
 
-export function awsCloudfrontResponseHeadersPolicyAccessControlAllowHeadersPropertyToHclTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.AccessControlAllowHeadersPropertyOutputReference | AwsCloudfrontResponseHeadersPolicy.AccessControlAllowHeadersProperty): any {
+export function tfResponseHeadersPolicyAccessControlAllowHeadersPropertyToHclTerraform(struct?: TfResponseHeadersPolicy.AccessControlAllowHeadersPropertyOutputReference | TfResponseHeadersPolicy.AccessControlAllowHeadersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -357,7 +357,7 @@ export function awsCloudfrontResponseHeadersPolicyAccessControlAllowHeadersPrope
 }
 
 
-export function awsCloudfrontResponseHeadersPolicyAccessControlAllowMethodsPropertyToTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.AccessControlAllowMethodsPropertyOutputReference | AwsCloudfrontResponseHeadersPolicy.AccessControlAllowMethodsProperty): any {
+export function tfResponseHeadersPolicyAccessControlAllowMethodsPropertyToTerraform(struct?: TfResponseHeadersPolicy.AccessControlAllowMethodsPropertyOutputReference | TfResponseHeadersPolicy.AccessControlAllowMethodsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -368,7 +368,7 @@ export function awsCloudfrontResponseHeadersPolicyAccessControlAllowMethodsPrope
 }
 
 
-export function awsCloudfrontResponseHeadersPolicyAccessControlAllowMethodsPropertyToHclTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.AccessControlAllowMethodsPropertyOutputReference | AwsCloudfrontResponseHeadersPolicy.AccessControlAllowMethodsProperty): any {
+export function tfResponseHeadersPolicyAccessControlAllowMethodsPropertyToHclTerraform(struct?: TfResponseHeadersPolicy.AccessControlAllowMethodsPropertyOutputReference | TfResponseHeadersPolicy.AccessControlAllowMethodsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -387,7 +387,7 @@ export function awsCloudfrontResponseHeadersPolicyAccessControlAllowMethodsPrope
 }
 
 
-export function awsCloudfrontResponseHeadersPolicyAccessControlAllowOriginsPropertyToTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.AccessControlAllowOriginsPropertyOutputReference | AwsCloudfrontResponseHeadersPolicy.AccessControlAllowOriginsProperty): any {
+export function tfResponseHeadersPolicyAccessControlAllowOriginsPropertyToTerraform(struct?: TfResponseHeadersPolicy.AccessControlAllowOriginsPropertyOutputReference | TfResponseHeadersPolicy.AccessControlAllowOriginsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -398,7 +398,7 @@ export function awsCloudfrontResponseHeadersPolicyAccessControlAllowOriginsPrope
 }
 
 
-export function awsCloudfrontResponseHeadersPolicyAccessControlAllowOriginsPropertyToHclTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.AccessControlAllowOriginsPropertyOutputReference | AwsCloudfrontResponseHeadersPolicy.AccessControlAllowOriginsProperty): any {
+export function tfResponseHeadersPolicyAccessControlAllowOriginsPropertyToHclTerraform(struct?: TfResponseHeadersPolicy.AccessControlAllowOriginsPropertyOutputReference | TfResponseHeadersPolicy.AccessControlAllowOriginsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -417,7 +417,7 @@ export function awsCloudfrontResponseHeadersPolicyAccessControlAllowOriginsPrope
 }
 
 
-export function awsCloudfrontResponseHeadersPolicyAccessControlExposeHeadersPropertyToTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.AccessControlExposeHeadersPropertyOutputReference | AwsCloudfrontResponseHeadersPolicy.AccessControlExposeHeadersProperty): any {
+export function tfResponseHeadersPolicyAccessControlExposeHeadersPropertyToTerraform(struct?: TfResponseHeadersPolicy.AccessControlExposeHeadersPropertyOutputReference | TfResponseHeadersPolicy.AccessControlExposeHeadersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -428,7 +428,7 @@ export function awsCloudfrontResponseHeadersPolicyAccessControlExposeHeadersProp
 }
 
 
-export function awsCloudfrontResponseHeadersPolicyAccessControlExposeHeadersPropertyToHclTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.AccessControlExposeHeadersPropertyOutputReference | AwsCloudfrontResponseHeadersPolicy.AccessControlExposeHeadersProperty): any {
+export function tfResponseHeadersPolicyAccessControlExposeHeadersPropertyToHclTerraform(struct?: TfResponseHeadersPolicy.AccessControlExposeHeadersPropertyOutputReference | TfResponseHeadersPolicy.AccessControlExposeHeadersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -447,7 +447,7 @@ export function awsCloudfrontResponseHeadersPolicyAccessControlExposeHeadersProp
 }
 
 
-export function awsCloudfrontResponseHeadersPolicyCorsConfigPropertyToTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.CorsConfigPropertyOutputReference | AwsCloudfrontResponseHeadersPolicy.CorsConfigProperty): any {
+export function tfResponseHeadersPolicyCorsConfigPropertyToTerraform(struct?: TfResponseHeadersPolicy.CorsConfigPropertyOutputReference | TfResponseHeadersPolicy.CorsConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -456,15 +456,15 @@ export function awsCloudfrontResponseHeadersPolicyCorsConfigPropertyToTerraform(
     access_control_allow_credentials: cdktn.booleanToTerraform(struct!.accessControlAllowCredentials),
     access_control_max_age_sec: cdktn.numberToTerraform(struct!.accessControlMaxAgeSec),
     origin_override: cdktn.booleanToTerraform(struct!.originOverride),
-    access_control_allow_headers: awsCloudfrontResponseHeadersPolicyAccessControlAllowHeadersPropertyToTerraform(struct!.accessControlAllowHeaders),
-    access_control_allow_methods: awsCloudfrontResponseHeadersPolicyAccessControlAllowMethodsPropertyToTerraform(struct!.accessControlAllowMethods),
-    access_control_allow_origins: awsCloudfrontResponseHeadersPolicyAccessControlAllowOriginsPropertyToTerraform(struct!.accessControlAllowOrigins),
-    access_control_expose_headers: awsCloudfrontResponseHeadersPolicyAccessControlExposeHeadersPropertyToTerraform(struct!.accessControlExposeHeaders),
+    access_control_allow_headers: tfResponseHeadersPolicyAccessControlAllowHeadersPropertyToTerraform(struct!.accessControlAllowHeaders),
+    access_control_allow_methods: tfResponseHeadersPolicyAccessControlAllowMethodsPropertyToTerraform(struct!.accessControlAllowMethods),
+    access_control_allow_origins: tfResponseHeadersPolicyAccessControlAllowOriginsPropertyToTerraform(struct!.accessControlAllowOrigins),
+    access_control_expose_headers: tfResponseHeadersPolicyAccessControlExposeHeadersPropertyToTerraform(struct!.accessControlExposeHeaders),
   }
 }
 
 
-export function awsCloudfrontResponseHeadersPolicyCorsConfigPropertyToHclTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.CorsConfigPropertyOutputReference | AwsCloudfrontResponseHeadersPolicy.CorsConfigProperty): any {
+export function tfResponseHeadersPolicyCorsConfigPropertyToHclTerraform(struct?: TfResponseHeadersPolicy.CorsConfigPropertyOutputReference | TfResponseHeadersPolicy.CorsConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -489,25 +489,25 @@ export function awsCloudfrontResponseHeadersPolicyCorsConfigPropertyToHclTerrafo
       storageClassType: "boolean",
     },
     access_control_allow_headers: {
-      value: awsCloudfrontResponseHeadersPolicyAccessControlAllowHeadersPropertyToHclTerraform(struct!.accessControlAllowHeaders),
+      value: tfResponseHeadersPolicyAccessControlAllowHeadersPropertyToHclTerraform(struct!.accessControlAllowHeaders),
       isBlock: true,
       type: "list",
       storageClassType: "AccessControlAllowHeadersPropertyList",
     },
     access_control_allow_methods: {
-      value: awsCloudfrontResponseHeadersPolicyAccessControlAllowMethodsPropertyToHclTerraform(struct!.accessControlAllowMethods),
+      value: tfResponseHeadersPolicyAccessControlAllowMethodsPropertyToHclTerraform(struct!.accessControlAllowMethods),
       isBlock: true,
       type: "list",
       storageClassType: "AccessControlAllowMethodsPropertyList",
     },
     access_control_allow_origins: {
-      value: awsCloudfrontResponseHeadersPolicyAccessControlAllowOriginsPropertyToHclTerraform(struct!.accessControlAllowOrigins),
+      value: tfResponseHeadersPolicyAccessControlAllowOriginsPropertyToHclTerraform(struct!.accessControlAllowOrigins),
       isBlock: true,
       type: "list",
       storageClassType: "AccessControlAllowOriginsPropertyList",
     },
     access_control_expose_headers: {
-      value: awsCloudfrontResponseHeadersPolicyAccessControlExposeHeadersPropertyToHclTerraform(struct!.accessControlExposeHeaders),
+      value: tfResponseHeadersPolicyAccessControlExposeHeadersPropertyToHclTerraform(struct!.accessControlExposeHeaders),
       isBlock: true,
       type: "list",
       storageClassType: "AccessControlExposeHeadersPropertyList",
@@ -519,7 +519,7 @@ export function awsCloudfrontResponseHeadersPolicyCorsConfigPropertyToHclTerrafo
 }
 
 
-export function awsCloudfrontResponseHeadersPolicyCustomHeadersConfigItemsPropertyToTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.CustomHeadersConfigItemsProperty | cdktn.IResolvable): any {
+export function tfResponseHeadersPolicyCustomHeadersConfigItemsPropertyToTerraform(struct?: TfResponseHeadersPolicy.CustomHeadersConfigItemsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -532,7 +532,7 @@ export function awsCloudfrontResponseHeadersPolicyCustomHeadersConfigItemsProper
 }
 
 
-export function awsCloudfrontResponseHeadersPolicyCustomHeadersConfigItemsPropertyToHclTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.CustomHeadersConfigItemsProperty | cdktn.IResolvable): any {
+export function tfResponseHeadersPolicyCustomHeadersConfigItemsPropertyToHclTerraform(struct?: TfResponseHeadersPolicy.CustomHeadersConfigItemsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -563,25 +563,25 @@ export function awsCloudfrontResponseHeadersPolicyCustomHeadersConfigItemsProper
 }
 
 
-export function awsCloudfrontResponseHeadersPolicyCustomHeadersConfigPropertyToTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.CustomHeadersConfigPropertyOutputReference | AwsCloudfrontResponseHeadersPolicy.CustomHeadersConfigProperty): any {
+export function tfResponseHeadersPolicyCustomHeadersConfigPropertyToTerraform(struct?: TfResponseHeadersPolicy.CustomHeadersConfigPropertyOutputReference | TfResponseHeadersPolicy.CustomHeadersConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    items: cdktn.listMapper(awsCloudfrontResponseHeadersPolicyCustomHeadersConfigItemsPropertyToTerraform, true)(struct!.items),
+    items: cdktn.listMapper(tfResponseHeadersPolicyCustomHeadersConfigItemsPropertyToTerraform, true)(struct!.items),
   }
 }
 
 
-export function awsCloudfrontResponseHeadersPolicyCustomHeadersConfigPropertyToHclTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.CustomHeadersConfigPropertyOutputReference | AwsCloudfrontResponseHeadersPolicy.CustomHeadersConfigProperty): any {
+export function tfResponseHeadersPolicyCustomHeadersConfigPropertyToHclTerraform(struct?: TfResponseHeadersPolicy.CustomHeadersConfigPropertyOutputReference | TfResponseHeadersPolicy.CustomHeadersConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     items: {
-      value: cdktn.listMapperHcl(awsCloudfrontResponseHeadersPolicyCustomHeadersConfigItemsPropertyToHclTerraform, true)(struct!.items),
+      value: cdktn.listMapperHcl(tfResponseHeadersPolicyCustomHeadersConfigItemsPropertyToHclTerraform, true)(struct!.items),
       isBlock: true,
       type: "set",
       storageClassType: "CustomHeadersConfigItemsPropertyList",
@@ -593,7 +593,7 @@ export function awsCloudfrontResponseHeadersPolicyCustomHeadersConfigPropertyToH
 }
 
 
-export function awsCloudfrontResponseHeadersPolicyRemoveHeadersConfigItemsPropertyToTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.RemoveHeadersConfigItemsProperty | cdktn.IResolvable): any {
+export function tfResponseHeadersPolicyRemoveHeadersConfigItemsPropertyToTerraform(struct?: TfResponseHeadersPolicy.RemoveHeadersConfigItemsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -604,7 +604,7 @@ export function awsCloudfrontResponseHeadersPolicyRemoveHeadersConfigItemsProper
 }
 
 
-export function awsCloudfrontResponseHeadersPolicyRemoveHeadersConfigItemsPropertyToHclTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.RemoveHeadersConfigItemsProperty | cdktn.IResolvable): any {
+export function tfResponseHeadersPolicyRemoveHeadersConfigItemsPropertyToHclTerraform(struct?: TfResponseHeadersPolicy.RemoveHeadersConfigItemsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -623,25 +623,25 @@ export function awsCloudfrontResponseHeadersPolicyRemoveHeadersConfigItemsProper
 }
 
 
-export function awsCloudfrontResponseHeadersPolicyRemoveHeadersConfigPropertyToTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.RemoveHeadersConfigPropertyOutputReference | AwsCloudfrontResponseHeadersPolicy.RemoveHeadersConfigProperty): any {
+export function tfResponseHeadersPolicyRemoveHeadersConfigPropertyToTerraform(struct?: TfResponseHeadersPolicy.RemoveHeadersConfigPropertyOutputReference | TfResponseHeadersPolicy.RemoveHeadersConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    items: cdktn.listMapper(awsCloudfrontResponseHeadersPolicyRemoveHeadersConfigItemsPropertyToTerraform, true)(struct!.items),
+    items: cdktn.listMapper(tfResponseHeadersPolicyRemoveHeadersConfigItemsPropertyToTerraform, true)(struct!.items),
   }
 }
 
 
-export function awsCloudfrontResponseHeadersPolicyRemoveHeadersConfigPropertyToHclTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.RemoveHeadersConfigPropertyOutputReference | AwsCloudfrontResponseHeadersPolicy.RemoveHeadersConfigProperty): any {
+export function tfResponseHeadersPolicyRemoveHeadersConfigPropertyToHclTerraform(struct?: TfResponseHeadersPolicy.RemoveHeadersConfigPropertyOutputReference | TfResponseHeadersPolicy.RemoveHeadersConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     items: {
-      value: cdktn.listMapperHcl(awsCloudfrontResponseHeadersPolicyRemoveHeadersConfigItemsPropertyToHclTerraform, true)(struct!.items),
+      value: cdktn.listMapperHcl(tfResponseHeadersPolicyRemoveHeadersConfigItemsPropertyToHclTerraform, true)(struct!.items),
       isBlock: true,
       type: "set",
       storageClassType: "RemoveHeadersConfigItemsPropertyList",
@@ -653,7 +653,7 @@ export function awsCloudfrontResponseHeadersPolicyRemoveHeadersConfigPropertyToH
 }
 
 
-export function awsCloudfrontResponseHeadersPolicyContentSecurityPolicyPropertyToTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.ContentSecurityPolicyPropertyOutputReference | AwsCloudfrontResponseHeadersPolicy.ContentSecurityPolicyProperty): any {
+export function tfResponseHeadersPolicyContentSecurityPolicyPropertyToTerraform(struct?: TfResponseHeadersPolicy.ContentSecurityPolicyPropertyOutputReference | TfResponseHeadersPolicy.ContentSecurityPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -665,7 +665,7 @@ export function awsCloudfrontResponseHeadersPolicyContentSecurityPolicyPropertyT
 }
 
 
-export function awsCloudfrontResponseHeadersPolicyContentSecurityPolicyPropertyToHclTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.ContentSecurityPolicyPropertyOutputReference | AwsCloudfrontResponseHeadersPolicy.ContentSecurityPolicyProperty): any {
+export function tfResponseHeadersPolicyContentSecurityPolicyPropertyToHclTerraform(struct?: TfResponseHeadersPolicy.ContentSecurityPolicyPropertyOutputReference | TfResponseHeadersPolicy.ContentSecurityPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -690,7 +690,7 @@ export function awsCloudfrontResponseHeadersPolicyContentSecurityPolicyPropertyT
 }
 
 
-export function awsCloudfrontResponseHeadersPolicyContentTypeOptionsPropertyToTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.ContentTypeOptionsPropertyOutputReference | AwsCloudfrontResponseHeadersPolicy.ContentTypeOptionsProperty): any {
+export function tfResponseHeadersPolicyContentTypeOptionsPropertyToTerraform(struct?: TfResponseHeadersPolicy.ContentTypeOptionsPropertyOutputReference | TfResponseHeadersPolicy.ContentTypeOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -701,7 +701,7 @@ export function awsCloudfrontResponseHeadersPolicyContentTypeOptionsPropertyToTe
 }
 
 
-export function awsCloudfrontResponseHeadersPolicyContentTypeOptionsPropertyToHclTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.ContentTypeOptionsPropertyOutputReference | AwsCloudfrontResponseHeadersPolicy.ContentTypeOptionsProperty): any {
+export function tfResponseHeadersPolicyContentTypeOptionsPropertyToHclTerraform(struct?: TfResponseHeadersPolicy.ContentTypeOptionsPropertyOutputReference | TfResponseHeadersPolicy.ContentTypeOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -720,7 +720,7 @@ export function awsCloudfrontResponseHeadersPolicyContentTypeOptionsPropertyToHc
 }
 
 
-export function awsCloudfrontResponseHeadersPolicyFrameOptionsPropertyToTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.FrameOptionsPropertyOutputReference | AwsCloudfrontResponseHeadersPolicy.FrameOptionsProperty): any {
+export function tfResponseHeadersPolicyFrameOptionsPropertyToTerraform(struct?: TfResponseHeadersPolicy.FrameOptionsPropertyOutputReference | TfResponseHeadersPolicy.FrameOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -732,7 +732,7 @@ export function awsCloudfrontResponseHeadersPolicyFrameOptionsPropertyToTerrafor
 }
 
 
-export function awsCloudfrontResponseHeadersPolicyFrameOptionsPropertyToHclTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.FrameOptionsPropertyOutputReference | AwsCloudfrontResponseHeadersPolicy.FrameOptionsProperty): any {
+export function tfResponseHeadersPolicyFrameOptionsPropertyToHclTerraform(struct?: TfResponseHeadersPolicy.FrameOptionsPropertyOutputReference | TfResponseHeadersPolicy.FrameOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -757,7 +757,7 @@ export function awsCloudfrontResponseHeadersPolicyFrameOptionsPropertyToHclTerra
 }
 
 
-export function awsCloudfrontResponseHeadersPolicyReferrerPolicyPropertyToTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.ReferrerPolicyPropertyOutputReference | AwsCloudfrontResponseHeadersPolicy.ReferrerPolicyProperty): any {
+export function tfResponseHeadersPolicyReferrerPolicyPropertyToTerraform(struct?: TfResponseHeadersPolicy.ReferrerPolicyPropertyOutputReference | TfResponseHeadersPolicy.ReferrerPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -769,7 +769,7 @@ export function awsCloudfrontResponseHeadersPolicyReferrerPolicyPropertyToTerraf
 }
 
 
-export function awsCloudfrontResponseHeadersPolicyReferrerPolicyPropertyToHclTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.ReferrerPolicyPropertyOutputReference | AwsCloudfrontResponseHeadersPolicy.ReferrerPolicyProperty): any {
+export function tfResponseHeadersPolicyReferrerPolicyPropertyToHclTerraform(struct?: TfResponseHeadersPolicy.ReferrerPolicyPropertyOutputReference | TfResponseHeadersPolicy.ReferrerPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -794,7 +794,7 @@ export function awsCloudfrontResponseHeadersPolicyReferrerPolicyPropertyToHclTer
 }
 
 
-export function awsCloudfrontResponseHeadersPolicyStrictTransportSecurityPropertyToTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.StrictTransportSecurityPropertyOutputReference | AwsCloudfrontResponseHeadersPolicy.StrictTransportSecurityProperty): any {
+export function tfResponseHeadersPolicyStrictTransportSecurityPropertyToTerraform(struct?: TfResponseHeadersPolicy.StrictTransportSecurityPropertyOutputReference | TfResponseHeadersPolicy.StrictTransportSecurityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -808,7 +808,7 @@ export function awsCloudfrontResponseHeadersPolicyStrictTransportSecurityPropert
 }
 
 
-export function awsCloudfrontResponseHeadersPolicyStrictTransportSecurityPropertyToHclTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.StrictTransportSecurityPropertyOutputReference | AwsCloudfrontResponseHeadersPolicy.StrictTransportSecurityProperty): any {
+export function tfResponseHeadersPolicyStrictTransportSecurityPropertyToHclTerraform(struct?: TfResponseHeadersPolicy.StrictTransportSecurityPropertyOutputReference | TfResponseHeadersPolicy.StrictTransportSecurityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -845,7 +845,7 @@ export function awsCloudfrontResponseHeadersPolicyStrictTransportSecurityPropert
 }
 
 
-export function awsCloudfrontResponseHeadersPolicyXssProtectionPropertyToTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.XssProtectionPropertyOutputReference | AwsCloudfrontResponseHeadersPolicy.XssProtectionProperty): any {
+export function tfResponseHeadersPolicyXssProtectionPropertyToTerraform(struct?: TfResponseHeadersPolicy.XssProtectionPropertyOutputReference | TfResponseHeadersPolicy.XssProtectionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -859,7 +859,7 @@ export function awsCloudfrontResponseHeadersPolicyXssProtectionPropertyToTerrafo
 }
 
 
-export function awsCloudfrontResponseHeadersPolicyXssProtectionPropertyToHclTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.XssProtectionPropertyOutputReference | AwsCloudfrontResponseHeadersPolicy.XssProtectionProperty): any {
+export function tfResponseHeadersPolicyXssProtectionPropertyToHclTerraform(struct?: TfResponseHeadersPolicy.XssProtectionPropertyOutputReference | TfResponseHeadersPolicy.XssProtectionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -896,60 +896,60 @@ export function awsCloudfrontResponseHeadersPolicyXssProtectionPropertyToHclTerr
 }
 
 
-export function awsCloudfrontResponseHeadersPolicySecurityHeadersConfigPropertyToTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.SecurityHeadersConfigPropertyOutputReference | AwsCloudfrontResponseHeadersPolicy.SecurityHeadersConfigProperty): any {
+export function tfResponseHeadersPolicySecurityHeadersConfigPropertyToTerraform(struct?: TfResponseHeadersPolicy.SecurityHeadersConfigPropertyOutputReference | TfResponseHeadersPolicy.SecurityHeadersConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    content_security_policy: awsCloudfrontResponseHeadersPolicyContentSecurityPolicyPropertyToTerraform(struct!.contentSecurityPolicy),
-    content_type_options: awsCloudfrontResponseHeadersPolicyContentTypeOptionsPropertyToTerraform(struct!.contentTypeOptions),
-    frame_options: awsCloudfrontResponseHeadersPolicyFrameOptionsPropertyToTerraform(struct!.frameOptions),
-    referrer_policy: awsCloudfrontResponseHeadersPolicyReferrerPolicyPropertyToTerraform(struct!.referrerPolicy),
-    strict_transport_security: awsCloudfrontResponseHeadersPolicyStrictTransportSecurityPropertyToTerraform(struct!.strictTransportSecurity),
-    xss_protection: awsCloudfrontResponseHeadersPolicyXssProtectionPropertyToTerraform(struct!.xssProtection),
+    content_security_policy: tfResponseHeadersPolicyContentSecurityPolicyPropertyToTerraform(struct!.contentSecurityPolicy),
+    content_type_options: tfResponseHeadersPolicyContentTypeOptionsPropertyToTerraform(struct!.contentTypeOptions),
+    frame_options: tfResponseHeadersPolicyFrameOptionsPropertyToTerraform(struct!.frameOptions),
+    referrer_policy: tfResponseHeadersPolicyReferrerPolicyPropertyToTerraform(struct!.referrerPolicy),
+    strict_transport_security: tfResponseHeadersPolicyStrictTransportSecurityPropertyToTerraform(struct!.strictTransportSecurity),
+    xss_protection: tfResponseHeadersPolicyXssProtectionPropertyToTerraform(struct!.xssProtection),
   }
 }
 
 
-export function awsCloudfrontResponseHeadersPolicySecurityHeadersConfigPropertyToHclTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.SecurityHeadersConfigPropertyOutputReference | AwsCloudfrontResponseHeadersPolicy.SecurityHeadersConfigProperty): any {
+export function tfResponseHeadersPolicySecurityHeadersConfigPropertyToHclTerraform(struct?: TfResponseHeadersPolicy.SecurityHeadersConfigPropertyOutputReference | TfResponseHeadersPolicy.SecurityHeadersConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     content_security_policy: {
-      value: awsCloudfrontResponseHeadersPolicyContentSecurityPolicyPropertyToHclTerraform(struct!.contentSecurityPolicy),
+      value: tfResponseHeadersPolicyContentSecurityPolicyPropertyToHclTerraform(struct!.contentSecurityPolicy),
       isBlock: true,
       type: "list",
       storageClassType: "ContentSecurityPolicyPropertyList",
     },
     content_type_options: {
-      value: awsCloudfrontResponseHeadersPolicyContentTypeOptionsPropertyToHclTerraform(struct!.contentTypeOptions),
+      value: tfResponseHeadersPolicyContentTypeOptionsPropertyToHclTerraform(struct!.contentTypeOptions),
       isBlock: true,
       type: "list",
       storageClassType: "ContentTypeOptionsPropertyList",
     },
     frame_options: {
-      value: awsCloudfrontResponseHeadersPolicyFrameOptionsPropertyToHclTerraform(struct!.frameOptions),
+      value: tfResponseHeadersPolicyFrameOptionsPropertyToHclTerraform(struct!.frameOptions),
       isBlock: true,
       type: "list",
       storageClassType: "FrameOptionsPropertyList",
     },
     referrer_policy: {
-      value: awsCloudfrontResponseHeadersPolicyReferrerPolicyPropertyToHclTerraform(struct!.referrerPolicy),
+      value: tfResponseHeadersPolicyReferrerPolicyPropertyToHclTerraform(struct!.referrerPolicy),
       isBlock: true,
       type: "list",
       storageClassType: "ReferrerPolicyPropertyList",
     },
     strict_transport_security: {
-      value: awsCloudfrontResponseHeadersPolicyStrictTransportSecurityPropertyToHclTerraform(struct!.strictTransportSecurity),
+      value: tfResponseHeadersPolicyStrictTransportSecurityPropertyToHclTerraform(struct!.strictTransportSecurity),
       isBlock: true,
       type: "list",
       storageClassType: "StrictTransportSecurityPropertyList",
     },
     xss_protection: {
-      value: awsCloudfrontResponseHeadersPolicyXssProtectionPropertyToHclTerraform(struct!.xssProtection),
+      value: tfResponseHeadersPolicyXssProtectionPropertyToHclTerraform(struct!.xssProtection),
       isBlock: true,
       type: "list",
       storageClassType: "XssProtectionPropertyList",
@@ -961,7 +961,7 @@ export function awsCloudfrontResponseHeadersPolicySecurityHeadersConfigPropertyT
 }
 
 
-export function awsCloudfrontResponseHeadersPolicyServerTimingHeadersConfigPropertyToTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.ServerTimingHeadersConfigPropertyOutputReference | AwsCloudfrontResponseHeadersPolicy.ServerTimingHeadersConfigProperty): any {
+export function tfResponseHeadersPolicyServerTimingHeadersConfigPropertyToTerraform(struct?: TfResponseHeadersPolicy.ServerTimingHeadersConfigPropertyOutputReference | TfResponseHeadersPolicy.ServerTimingHeadersConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -973,7 +973,7 @@ export function awsCloudfrontResponseHeadersPolicyServerTimingHeadersConfigPrope
 }
 
 
-export function awsCloudfrontResponseHeadersPolicyServerTimingHeadersConfigPropertyToHclTerraform(struct?: AwsCloudfrontResponseHeadersPolicy.ServerTimingHeadersConfigPropertyOutputReference | AwsCloudfrontResponseHeadersPolicy.ServerTimingHeadersConfigProperty): any {
+export function tfResponseHeadersPolicyServerTimingHeadersConfigPropertyToHclTerraform(struct?: TfResponseHeadersPolicy.ServerTimingHeadersConfigPropertyOutputReference | TfResponseHeadersPolicy.ServerTimingHeadersConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -998,10 +998,10 @@ export function awsCloudfrontResponseHeadersPolicyServerTimingHeadersConfigPrope
 }
 
 
-export namespace AwsCloudfrontResponseHeadersPolicy {
+export namespace TfResponseHeadersPolicy {
 export interface AccessControlAllowHeadersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#items AwsCloudfrontResponseHeadersPolicy#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#items TfResponseHeadersPolicy#items}
   */
   readonly items?: string[];
 }
@@ -1055,7 +1055,7 @@ export class AccessControlAllowHeadersPropertyOutputReference extends cdktn.Comp
 }
 export interface AccessControlAllowMethodsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#items AwsCloudfrontResponseHeadersPolicy#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#items TfResponseHeadersPolicy#items}
   */
   readonly items?: string[];
 }
@@ -1109,7 +1109,7 @@ export class AccessControlAllowMethodsPropertyOutputReference extends cdktn.Comp
 }
 export interface AccessControlAllowOriginsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#items AwsCloudfrontResponseHeadersPolicy#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#items TfResponseHeadersPolicy#items}
   */
   readonly items?: string[];
 }
@@ -1163,7 +1163,7 @@ export class AccessControlAllowOriginsPropertyOutputReference extends cdktn.Comp
 }
 export interface AccessControlExposeHeadersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#items AwsCloudfrontResponseHeadersPolicy#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#items TfResponseHeadersPolicy#items}
   */
   readonly items?: string[];
 }
@@ -1217,39 +1217,39 @@ export class AccessControlExposeHeadersPropertyOutputReference extends cdktn.Com
 }
 export interface CorsConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#access_control_allow_credentials AwsCloudfrontResponseHeadersPolicy#access_control_allow_credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#access_control_allow_credentials TfResponseHeadersPolicy#access_control_allow_credentials}
   */
   readonly accessControlAllowCredentials: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#access_control_max_age_sec AwsCloudfrontResponseHeadersPolicy#access_control_max_age_sec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#access_control_max_age_sec TfResponseHeadersPolicy#access_control_max_age_sec}
   */
   readonly accessControlMaxAgeSec?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#origin_override AwsCloudfrontResponseHeadersPolicy#origin_override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#origin_override TfResponseHeadersPolicy#origin_override}
   */
   readonly originOverride: boolean | cdktn.IResolvable;
   /**
   * access_control_allow_headers block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#access_control_allow_headers AwsCloudfrontResponseHeadersPolicy#access_control_allow_headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#access_control_allow_headers TfResponseHeadersPolicy#access_control_allow_headers}
   */
   readonly accessControlAllowHeaders: AccessControlAllowHeadersProperty;
   /**
   * access_control_allow_methods block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#access_control_allow_methods AwsCloudfrontResponseHeadersPolicy#access_control_allow_methods}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#access_control_allow_methods TfResponseHeadersPolicy#access_control_allow_methods}
   */
   readonly accessControlAllowMethods: AccessControlAllowMethodsProperty;
   /**
   * access_control_allow_origins block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#access_control_allow_origins AwsCloudfrontResponseHeadersPolicy#access_control_allow_origins}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#access_control_allow_origins TfResponseHeadersPolicy#access_control_allow_origins}
   */
   readonly accessControlAllowOrigins: AccessControlAllowOriginsProperty;
   /**
   * access_control_expose_headers block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#access_control_expose_headers AwsCloudfrontResponseHeadersPolicy#access_control_expose_headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#access_control_expose_headers TfResponseHeadersPolicy#access_control_expose_headers}
   */
   readonly accessControlExposeHeaders?: AccessControlExposeHeadersProperty;
 }
@@ -1420,15 +1420,15 @@ export class CorsConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface CustomHeadersConfigItemsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#header AwsCloudfrontResponseHeadersPolicy#header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#header TfResponseHeadersPolicy#header}
   */
   readonly header: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#override AwsCloudfrontResponseHeadersPolicy#override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#override TfResponseHeadersPolicy#override}
   */
   readonly override: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#value AwsCloudfrontResponseHeadersPolicy#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#value TfResponseHeadersPolicy#value}
   */
   readonly value: string;
 }
@@ -1551,7 +1551,7 @@ export interface CustomHeadersConfigProperty {
   /**
   * items block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#items AwsCloudfrontResponseHeadersPolicy#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#items TfResponseHeadersPolicy#items}
   */
   readonly items?: CustomHeadersConfigItemsProperty[] | cdktn.IResolvable;
 }
@@ -1605,7 +1605,7 @@ export class CustomHeadersConfigPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface RemoveHeadersConfigItemsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#header AwsCloudfrontResponseHeadersPolicy#header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#header TfResponseHeadersPolicy#header}
   */
   readonly header: string;
 }
@@ -1690,7 +1690,7 @@ export interface RemoveHeadersConfigProperty {
   /**
   * items block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#items AwsCloudfrontResponseHeadersPolicy#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#items TfResponseHeadersPolicy#items}
   */
   readonly items?: RemoveHeadersConfigItemsProperty[] | cdktn.IResolvable;
 }
@@ -1744,11 +1744,11 @@ export class RemoveHeadersConfigPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface ContentSecurityPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#content_security_policy AwsCloudfrontResponseHeadersPolicy#content_security_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#content_security_policy TfResponseHeadersPolicy#content_security_policy}
   */
   readonly contentSecurityPolicy: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#override AwsCloudfrontResponseHeadersPolicy#override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#override TfResponseHeadersPolicy#override}
   */
   readonly override: boolean | cdktn.IResolvable;
 }
@@ -1818,7 +1818,7 @@ export class ContentSecurityPolicyPropertyOutputReference extends cdktn.ComplexO
 }
 export interface ContentTypeOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#override AwsCloudfrontResponseHeadersPolicy#override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#override TfResponseHeadersPolicy#override}
   */
   readonly override: boolean | cdktn.IResolvable;
 }
@@ -1869,11 +1869,11 @@ export class ContentTypeOptionsPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface FrameOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#frame_option AwsCloudfrontResponseHeadersPolicy#frame_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#frame_option TfResponseHeadersPolicy#frame_option}
   */
   readonly frameOption: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#override AwsCloudfrontResponseHeadersPolicy#override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#override TfResponseHeadersPolicy#override}
   */
   readonly override: boolean | cdktn.IResolvable;
 }
@@ -1943,11 +1943,11 @@ export class FrameOptionsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ReferrerPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#override AwsCloudfrontResponseHeadersPolicy#override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#override TfResponseHeadersPolicy#override}
   */
   readonly override: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#referrer_policy AwsCloudfrontResponseHeadersPolicy#referrer_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#referrer_policy TfResponseHeadersPolicy#referrer_policy}
   */
   readonly referrerPolicy: string;
 }
@@ -2017,19 +2017,19 @@ export class ReferrerPolicyPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface StrictTransportSecurityProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#access_control_max_age_sec AwsCloudfrontResponseHeadersPolicy#access_control_max_age_sec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#access_control_max_age_sec TfResponseHeadersPolicy#access_control_max_age_sec}
   */
   readonly accessControlMaxAgeSec: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#include_subdomains AwsCloudfrontResponseHeadersPolicy#include_subdomains}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#include_subdomains TfResponseHeadersPolicy#include_subdomains}
   */
   readonly includeSubdomains?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#override AwsCloudfrontResponseHeadersPolicy#override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#override TfResponseHeadersPolicy#override}
   */
   readonly override: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#preload AwsCloudfrontResponseHeadersPolicy#preload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#preload TfResponseHeadersPolicy#preload}
   */
   readonly preload?: boolean | cdktn.IResolvable;
 }
@@ -2143,19 +2143,19 @@ export class StrictTransportSecurityPropertyOutputReference extends cdktn.Comple
 }
 export interface XssProtectionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#mode_block AwsCloudfrontResponseHeadersPolicy#mode_block}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#mode_block TfResponseHeadersPolicy#mode_block}
   */
   readonly modeBlock?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#override AwsCloudfrontResponseHeadersPolicy#override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#override TfResponseHeadersPolicy#override}
   */
   readonly override: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#protection AwsCloudfrontResponseHeadersPolicy#protection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#protection TfResponseHeadersPolicy#protection}
   */
   readonly protection: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#report_uri AwsCloudfrontResponseHeadersPolicy#report_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#report_uri TfResponseHeadersPolicy#report_uri}
   */
   readonly reportUri?: string;
 }
@@ -2271,37 +2271,37 @@ export interface SecurityHeadersConfigProperty {
   /**
   * content_security_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#content_security_policy AwsCloudfrontResponseHeadersPolicy#content_security_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#content_security_policy TfResponseHeadersPolicy#content_security_policy}
   */
   readonly contentSecurityPolicy?: ContentSecurityPolicyProperty;
   /**
   * content_type_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#content_type_options AwsCloudfrontResponseHeadersPolicy#content_type_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#content_type_options TfResponseHeadersPolicy#content_type_options}
   */
   readonly contentTypeOptions?: ContentTypeOptionsProperty;
   /**
   * frame_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#frame_options AwsCloudfrontResponseHeadersPolicy#frame_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#frame_options TfResponseHeadersPolicy#frame_options}
   */
   readonly frameOptions?: FrameOptionsProperty;
   /**
   * referrer_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#referrer_policy AwsCloudfrontResponseHeadersPolicy#referrer_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#referrer_policy TfResponseHeadersPolicy#referrer_policy}
   */
   readonly referrerPolicy?: ReferrerPolicyProperty;
   /**
   * strict_transport_security block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#strict_transport_security AwsCloudfrontResponseHeadersPolicy#strict_transport_security}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#strict_transport_security TfResponseHeadersPolicy#strict_transport_security}
   */
   readonly strictTransportSecurity?: StrictTransportSecurityProperty;
   /**
   * xss_protection block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#xss_protection AwsCloudfrontResponseHeadersPolicy#xss_protection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#xss_protection TfResponseHeadersPolicy#xss_protection}
   */
   readonly xssProtection?: XssProtectionProperty;
 }
@@ -2465,11 +2465,11 @@ export class SecurityHeadersConfigPropertyOutputReference extends cdktn.ComplexO
 }
 export interface ServerTimingHeadersConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#enabled AwsCloudfrontResponseHeadersPolicy#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#enabled TfResponseHeadersPolicy#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#sampling_rate AwsCloudfrontResponseHeadersPolicy#sampling_rate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_response_headers_policy#sampling_rate TfResponseHeadersPolicy#sampling_rate}
   */
   readonly samplingRate: number;
 }

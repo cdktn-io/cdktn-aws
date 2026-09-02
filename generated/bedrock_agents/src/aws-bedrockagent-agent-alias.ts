@@ -5,45 +5,45 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsBedrockagentAgentAliasConfig extends cdktn.TerraformMetaArguments {
+export interface TfAgentAliasConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_alias#agent_alias_name AwsBedrockagentAgentAlias#agent_alias_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_alias#agent_alias_name TfAgentAlias#agent_alias_name}
   */
   readonly agentAliasName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_alias#agent_id AwsBedrockagentAgentAlias#agent_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_alias#agent_id TfAgentAlias#agent_id}
   */
   readonly agentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_alias#description AwsBedrockagentAgentAlias#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_alias#description TfAgentAlias#description}
   */
   readonly description?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_alias#region AwsBedrockagentAgentAlias#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_alias#region TfAgentAlias#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_alias#routing_configuration AwsBedrockagentAgentAlias#routing_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_alias#routing_configuration TfAgentAlias#routing_configuration}
   */
-  readonly routingConfiguration?: AwsBedrockagentAgentAlias.RoutingConfigurationProperty[] | cdktn.IResolvable;
+  readonly routingConfiguration?: TfAgentAlias.RoutingConfigurationProperty[] | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_alias#tags AwsBedrockagentAgentAlias#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_alias#tags TfAgentAlias#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_alias#timeouts AwsBedrockagentAgentAlias#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_alias#timeouts TfAgentAlias#timeouts}
   */
-  readonly timeouts?: AwsBedrockagentAgentAlias.TimeoutsProperty;
+  readonly timeouts?: TfAgentAlias.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_alias aws_bedrockagent_agent_alias}
 */
-export class AwsBedrockagentAgentAlias extends cdktn.TerraformResource {
+export class TfAgentAlias extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -54,11 +54,11 @@ export class AwsBedrockagentAgentAlias extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsBedrockagentAgentAlias resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAgentAlias resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsBedrockagentAgentAlias to import
-  * @param importFromId The id of the existing AwsBedrockagentAgentAlias that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_alias#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsBedrockagentAgentAlias to import is found
+  * @param importToId The construct id used in the generated config for the TfAgentAlias to import
+  * @param importFromId The id of the existing TfAgentAlias that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_alias#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAgentAlias to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrockagent_agent_alias", importId: importFromId, provider });
@@ -73,9 +73,9 @@ export class AwsBedrockagentAgentAlias extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsBedrockagentAgentAliasConfig
+  * @param options TfAgentAliasConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsBedrockagentAgentAliasConfig) {
+  public constructor(scope: Construct, id: string, config: TfAgentAliasConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrockagent_agent_alias',
       terraformGeneratorMetadata: {
@@ -178,11 +178,11 @@ export class AwsBedrockagentAgentAlias extends cdktn.TerraformResource {
   }
 
   // routing_configuration - computed: true, optional: true, required: false
-  private _routingConfiguration = new AwsBedrockagentAgentAlias.RoutingConfigurationPropertyList(this, "routing_configuration", false);
+  private _routingConfiguration = new TfAgentAlias.RoutingConfigurationPropertyList(this, "routing_configuration", false);
   public get routingConfiguration() {
     return this._routingConfiguration;
   }
-  public putRoutingConfiguration(value: AwsBedrockagentAgentAlias.RoutingConfigurationProperty[] | cdktn.IResolvable) {
+  public putRoutingConfiguration(value: TfAgentAlias.RoutingConfigurationProperty[] | cdktn.IResolvable) {
     this._routingConfiguration.internalValue = value;
   }
   public resetRoutingConfiguration() {
@@ -216,11 +216,11 @@ export class AwsBedrockagentAgentAlias extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsBedrockagentAgentAlias.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfAgentAlias.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsBedrockagentAgentAlias.TimeoutsProperty) {
+  public putTimeouts(value: TfAgentAlias.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -241,9 +241,9 @@ export class AwsBedrockagentAgentAlias extends cdktn.TerraformResource {
       agent_id: cdktn.stringToTerraform(this._agentId),
       description: cdktn.stringToTerraform(this._description),
       region: cdktn.stringToTerraform(this._region),
-      routing_configuration: cdktn.listMapper(awsBedrockagentAgentAliasRoutingConfigurationPropertyToTerraform, false)(this._routingConfiguration.internalValue),
+      routing_configuration: cdktn.listMapper(tfAgentAliasRoutingConfigurationPropertyToTerraform, false)(this._routingConfiguration.internalValue),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      timeouts: awsBedrockagentAgentAliasTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfAgentAliasTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -274,10 +274,10 @@ export class AwsBedrockagentAgentAlias extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       routing_configuration: {
-        value: cdktn.listMapperHcl(awsBedrockagentAgentAliasRoutingConfigurationPropertyToHclTerraform, false)(this._routingConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfAgentAliasRoutingConfigurationPropertyToHclTerraform, false)(this._routingConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentAgentAlias.RoutingConfigurationPropertyList",
+        storageClassType: "TfAgentAlias.RoutingConfigurationPropertyList",
       },
       tags: {
         value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
@@ -286,10 +286,10 @@ export class AwsBedrockagentAgentAlias extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsBedrockagentAgentAliasTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfAgentAliasTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsBedrockagentAgentAlias.TimeoutsProperty",
+        storageClassType: "TfAgentAlias.TimeoutsProperty",
       },
     };
 
@@ -298,7 +298,7 @@ export class AwsBedrockagentAgentAlias extends cdktn.TerraformResource {
   }
 }
 
-export function awsBedrockagentAgentAliasRoutingConfigurationPropertyToTerraform(struct?: AwsBedrockagentAgentAlias.RoutingConfigurationProperty | cdktn.IResolvable): any {
+export function tfAgentAliasRoutingConfigurationPropertyToTerraform(struct?: TfAgentAlias.RoutingConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -310,7 +310,7 @@ export function awsBedrockagentAgentAliasRoutingConfigurationPropertyToTerraform
 }
 
 
-export function awsBedrockagentAgentAliasRoutingConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentAgentAlias.RoutingConfigurationProperty | cdktn.IResolvable): any {
+export function tfAgentAliasRoutingConfigurationPropertyToHclTerraform(struct?: TfAgentAlias.RoutingConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -335,7 +335,7 @@ export function awsBedrockagentAgentAliasRoutingConfigurationPropertyToHclTerraf
 }
 
 
-export function awsBedrockagentAgentAliasTimeoutsPropertyToTerraform(struct?: AwsBedrockagentAgentAlias.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfAgentAliasTimeoutsPropertyToTerraform(struct?: TfAgentAlias.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -348,7 +348,7 @@ export function awsBedrockagentAgentAliasTimeoutsPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsBedrockagentAgentAliasTimeoutsPropertyToHclTerraform(struct?: AwsBedrockagentAgentAlias.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfAgentAliasTimeoutsPropertyToHclTerraform(struct?: TfAgentAlias.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -379,14 +379,14 @@ export function awsBedrockagentAgentAliasTimeoutsPropertyToHclTerraform(struct?:
 }
 
 
-export namespace AwsBedrockagentAgentAlias {
+export namespace TfAgentAlias {
 export interface RoutingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_alias#agent_version AwsBedrockagentAgentAlias#agent_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_alias#agent_version TfAgentAlias#agent_version}
   */
   readonly agentVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_alias#provisioned_throughput AwsBedrockagentAgentAlias#provisioned_throughput}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_alias#provisioned_throughput TfAgentAlias#provisioned_throughput}
   */
   readonly provisionedThroughput?: string;
 }
@@ -496,19 +496,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_alias#create AwsBedrockagentAgentAlias#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_alias#create TfAgentAlias#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_alias#delete AwsBedrockagentAgentAlias#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_alias#delete TfAgentAlias#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_alias#update AwsBedrockagentAgentAlias#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_alias#update TfAgentAlias#update}
   */
   readonly update?: string;
 }

@@ -5,33 +5,33 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEc2TransitGatewayDefaultRouteTablePropagationConfig extends cdktn.TerraformMetaArguments {
+export interface TfTransitGatewayDefaultRouteTablePropagationConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_default_route_table_propagation#region AwsEc2TransitGatewayDefaultRouteTablePropagation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_default_route_table_propagation#region TfTransitGatewayDefaultRouteTablePropagation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_default_route_table_propagation#transit_gateway_id AwsEc2TransitGatewayDefaultRouteTablePropagation#transit_gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_default_route_table_propagation#transit_gateway_id TfTransitGatewayDefaultRouteTablePropagation#transit_gateway_id}
   */
   readonly transitGatewayId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_default_route_table_propagation#transit_gateway_route_table_id AwsEc2TransitGatewayDefaultRouteTablePropagation#transit_gateway_route_table_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_default_route_table_propagation#transit_gateway_route_table_id TfTransitGatewayDefaultRouteTablePropagation#transit_gateway_route_table_id}
   */
   readonly transitGatewayRouteTableId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_default_route_table_propagation#timeouts AwsEc2TransitGatewayDefaultRouteTablePropagation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_default_route_table_propagation#timeouts TfTransitGatewayDefaultRouteTablePropagation#timeouts}
   */
-  readonly timeouts?: AwsEc2TransitGatewayDefaultRouteTablePropagation.TimeoutsProperty;
+  readonly timeouts?: TfTransitGatewayDefaultRouteTablePropagation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_default_route_table_propagation aws_ec2_transit_gateway_default_route_table_propagation}
 */
-export class AwsEc2TransitGatewayDefaultRouteTablePropagation extends cdktn.TerraformResource {
+export class TfTransitGatewayDefaultRouteTablePropagation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -42,11 +42,11 @@ export class AwsEc2TransitGatewayDefaultRouteTablePropagation extends cdktn.Terr
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEc2TransitGatewayDefaultRouteTablePropagation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfTransitGatewayDefaultRouteTablePropagation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEc2TransitGatewayDefaultRouteTablePropagation to import
-  * @param importFromId The id of the existing AwsEc2TransitGatewayDefaultRouteTablePropagation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_default_route_table_propagation#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEc2TransitGatewayDefaultRouteTablePropagation to import is found
+  * @param importToId The construct id used in the generated config for the TfTransitGatewayDefaultRouteTablePropagation to import
+  * @param importFromId The id of the existing TfTransitGatewayDefaultRouteTablePropagation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_default_route_table_propagation#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfTransitGatewayDefaultRouteTablePropagation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_transit_gateway_default_route_table_propagation", importId: importFromId, provider });
@@ -61,9 +61,9 @@ export class AwsEc2TransitGatewayDefaultRouteTablePropagation extends cdktn.Terr
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEc2TransitGatewayDefaultRouteTablePropagationConfig
+  * @param options TfTransitGatewayDefaultRouteTablePropagationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEc2TransitGatewayDefaultRouteTablePropagationConfig) {
+  public constructor(scope: Construct, id: string, config: TfTransitGatewayDefaultRouteTablePropagationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_transit_gateway_default_route_table_propagation',
       terraformGeneratorMetadata: {
@@ -142,11 +142,11 @@ export class AwsEc2TransitGatewayDefaultRouteTablePropagation extends cdktn.Terr
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsEc2TransitGatewayDefaultRouteTablePropagation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfTransitGatewayDefaultRouteTablePropagation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsEc2TransitGatewayDefaultRouteTablePropagation.TimeoutsProperty) {
+  public putTimeouts(value: TfTransitGatewayDefaultRouteTablePropagation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -166,7 +166,7 @@ export class AwsEc2TransitGatewayDefaultRouteTablePropagation extends cdktn.Terr
       region: cdktn.stringToTerraform(this._region),
       transit_gateway_id: cdktn.stringToTerraform(this._transitGatewayId),
       transit_gateway_route_table_id: cdktn.stringToTerraform(this._transitGatewayRouteTableId),
-      timeouts: awsEc2TransitGatewayDefaultRouteTablePropagationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfTransitGatewayDefaultRouteTablePropagationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -191,10 +191,10 @@ export class AwsEc2TransitGatewayDefaultRouteTablePropagation extends cdktn.Terr
         storageClassType: "string",
       },
       timeouts: {
-        value: awsEc2TransitGatewayDefaultRouteTablePropagationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfTransitGatewayDefaultRouteTablePropagationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsEc2TransitGatewayDefaultRouteTablePropagation.TimeoutsProperty",
+        storageClassType: "TfTransitGatewayDefaultRouteTablePropagation.TimeoutsProperty",
       },
     };
 
@@ -203,7 +203,7 @@ export class AwsEc2TransitGatewayDefaultRouteTablePropagation extends cdktn.Terr
   }
 }
 
-export function awsEc2TransitGatewayDefaultRouteTablePropagationTimeoutsPropertyToTerraform(struct?: AwsEc2TransitGatewayDefaultRouteTablePropagation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfTransitGatewayDefaultRouteTablePropagationTimeoutsPropertyToTerraform(struct?: TfTransitGatewayDefaultRouteTablePropagation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -216,7 +216,7 @@ export function awsEc2TransitGatewayDefaultRouteTablePropagationTimeoutsProperty
 }
 
 
-export function awsEc2TransitGatewayDefaultRouteTablePropagationTimeoutsPropertyToHclTerraform(struct?: AwsEc2TransitGatewayDefaultRouteTablePropagation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfTransitGatewayDefaultRouteTablePropagationTimeoutsPropertyToHclTerraform(struct?: TfTransitGatewayDefaultRouteTablePropagation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -247,24 +247,24 @@ export function awsEc2TransitGatewayDefaultRouteTablePropagationTimeoutsProperty
 }
 
 
-export namespace AwsEc2TransitGatewayDefaultRouteTablePropagation {
+export namespace TfTransitGatewayDefaultRouteTablePropagation {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_default_route_table_propagation#create AwsEc2TransitGatewayDefaultRouteTablePropagation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_default_route_table_propagation#create TfTransitGatewayDefaultRouteTablePropagation#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_default_route_table_propagation#delete AwsEc2TransitGatewayDefaultRouteTablePropagation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_default_route_table_propagation#delete TfTransitGatewayDefaultRouteTablePropagation#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_default_route_table_propagation#update AwsEc2TransitGatewayDefaultRouteTablePropagation#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_default_route_table_propagation#update TfTransitGatewayDefaultRouteTablePropagation#update}
   */
   readonly update?: string;
 }

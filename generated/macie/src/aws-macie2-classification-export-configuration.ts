@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsMacie2ClassificationExportConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface TfClassificationExportConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_export_configuration#id AwsMacie2ClassificationExportConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_export_configuration#id TfClassificationExportConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,21 +16,21 @@ export interface AwsMacie2ClassificationExportConfigurationConfig extends cdktn.
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_export_configuration#region AwsMacie2ClassificationExportConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_export_configuration#region TfClassificationExportConfiguration#region}
   */
   readonly region?: string;
   /**
   * s3_destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_export_configuration#s3_destination AwsMacie2ClassificationExportConfiguration#s3_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_export_configuration#s3_destination TfClassificationExportConfiguration#s3_destination}
   */
-  readonly s3Destination: AwsMacie2ClassificationExportConfiguration.S3DestinationProperty;
+  readonly s3Destination: TfClassificationExportConfiguration.S3DestinationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_export_configuration aws_macie2_classification_export_configuration}
 */
-export class AwsMacie2ClassificationExportConfiguration extends cdktn.TerraformResource {
+export class TfClassificationExportConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -41,11 +41,11 @@ export class AwsMacie2ClassificationExportConfiguration extends cdktn.TerraformR
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsMacie2ClassificationExportConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfClassificationExportConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsMacie2ClassificationExportConfiguration to import
-  * @param importFromId The id of the existing AwsMacie2ClassificationExportConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_export_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsMacie2ClassificationExportConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the TfClassificationExportConfiguration to import
+  * @param importFromId The id of the existing TfClassificationExportConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_export_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfClassificationExportConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_macie2_classification_export_configuration", importId: importFromId, provider });
@@ -60,9 +60,9 @@ export class AwsMacie2ClassificationExportConfiguration extends cdktn.TerraformR
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsMacie2ClassificationExportConfigurationConfig
+  * @param options TfClassificationExportConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsMacie2ClassificationExportConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: TfClassificationExportConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_macie2_classification_export_configuration',
       terraformGeneratorMetadata: {
@@ -120,11 +120,11 @@ export class AwsMacie2ClassificationExportConfiguration extends cdktn.TerraformR
   }
 
   // s3_destination - computed: false, optional: false, required: true
-  private _s3Destination = new AwsMacie2ClassificationExportConfiguration.S3DestinationPropertyOutputReference(this, "s3_destination");
+  private _s3Destination = new TfClassificationExportConfiguration.S3DestinationPropertyOutputReference(this, "s3_destination");
   public get s3Destination() {
     return this._s3Destination;
   }
-  public putS3Destination(value: AwsMacie2ClassificationExportConfiguration.S3DestinationProperty) {
+  public putS3Destination(value: TfClassificationExportConfiguration.S3DestinationProperty) {
     this._s3Destination.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -140,7 +140,7 @@ export class AwsMacie2ClassificationExportConfiguration extends cdktn.TerraformR
     return {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      s3_destination: awsMacie2ClassificationExportConfigurationS3DestinationPropertyToTerraform(this._s3Destination.internalValue),
+      s3_destination: tfClassificationExportConfigurationS3DestinationPropertyToTerraform(this._s3Destination.internalValue),
     };
   }
 
@@ -159,10 +159,10 @@ export class AwsMacie2ClassificationExportConfiguration extends cdktn.TerraformR
         storageClassType: "string",
       },
       s3_destination: {
-        value: awsMacie2ClassificationExportConfigurationS3DestinationPropertyToHclTerraform(this._s3Destination.internalValue),
+        value: tfClassificationExportConfigurationS3DestinationPropertyToHclTerraform(this._s3Destination.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsMacie2ClassificationExportConfiguration.S3DestinationPropertyList",
+        storageClassType: "TfClassificationExportConfiguration.S3DestinationPropertyList",
       },
     };
 
@@ -171,7 +171,7 @@ export class AwsMacie2ClassificationExportConfiguration extends cdktn.TerraformR
   }
 }
 
-export function awsMacie2ClassificationExportConfigurationS3DestinationPropertyToTerraform(struct?: AwsMacie2ClassificationExportConfiguration.S3DestinationPropertyOutputReference | AwsMacie2ClassificationExportConfiguration.S3DestinationProperty): any {
+export function tfClassificationExportConfigurationS3DestinationPropertyToTerraform(struct?: TfClassificationExportConfiguration.S3DestinationPropertyOutputReference | TfClassificationExportConfiguration.S3DestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -184,7 +184,7 @@ export function awsMacie2ClassificationExportConfigurationS3DestinationPropertyT
 }
 
 
-export function awsMacie2ClassificationExportConfigurationS3DestinationPropertyToHclTerraform(struct?: AwsMacie2ClassificationExportConfiguration.S3DestinationPropertyOutputReference | AwsMacie2ClassificationExportConfiguration.S3DestinationProperty): any {
+export function tfClassificationExportConfigurationS3DestinationPropertyToHclTerraform(struct?: TfClassificationExportConfiguration.S3DestinationPropertyOutputReference | TfClassificationExportConfiguration.S3DestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -215,18 +215,18 @@ export function awsMacie2ClassificationExportConfigurationS3DestinationPropertyT
 }
 
 
-export namespace AwsMacie2ClassificationExportConfiguration {
+export namespace TfClassificationExportConfiguration {
 export interface S3DestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_export_configuration#bucket_name AwsMacie2ClassificationExportConfiguration#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_export_configuration#bucket_name TfClassificationExportConfiguration#bucket_name}
   */
   readonly bucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_export_configuration#key_prefix AwsMacie2ClassificationExportConfiguration#key_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_export_configuration#key_prefix TfClassificationExportConfiguration#key_prefix}
   */
   readonly keyPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_export_configuration#kms_key_arn AwsMacie2ClassificationExportConfiguration#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_export_configuration#kms_key_arn TfClassificationExportConfiguration#kms_key_arn}
   */
   readonly kmsKeyArn: string;
 }

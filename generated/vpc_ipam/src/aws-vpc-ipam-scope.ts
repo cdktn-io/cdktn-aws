@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsVpcIpamScopeConfig extends cdktn.TerraformMetaArguments {
+export interface TfScopeConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_scope#description AwsVpcIpamScope#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_scope#description TfScope#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_scope#id AwsVpcIpamScope#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_scope#id TfScope#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_scope#ipam_id AwsVpcIpamScope#ipam_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_scope#ipam_id TfScope#ipam_id}
   */
   readonly ipamId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_scope#region AwsVpcIpamScope#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_scope#region TfScope#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_scope#tags AwsVpcIpamScope#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_scope#tags TfScope#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_scope#tags_all AwsVpcIpamScope#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_scope#tags_all TfScope#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_scope#timeouts AwsVpcIpamScope#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_scope#timeouts TfScope#timeouts}
   */
-  readonly timeouts?: AwsVpcIpamScope.TimeoutsProperty;
+  readonly timeouts?: TfScope.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_scope aws_vpc_ipam_scope}
 */
-export class AwsVpcIpamScope extends cdktn.TerraformResource {
+export class TfScope extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class AwsVpcIpamScope extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsVpcIpamScope resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfScope resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsVpcIpamScope to import
-  * @param importFromId The id of the existing AwsVpcIpamScope that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_scope#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsVpcIpamScope to import is found
+  * @param importToId The construct id used in the generated config for the TfScope to import
+  * @param importFromId The id of the existing TfScope that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_scope#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfScope to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpc_ipam_scope", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class AwsVpcIpamScope extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsVpcIpamScopeConfig
+  * @param options TfScopeConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsVpcIpamScopeConfig) {
+  public constructor(scope: Construct, id: string, config: TfScopeConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpc_ipam_scope',
       terraformGeneratorMetadata: {
@@ -226,11 +226,11 @@ export class AwsVpcIpamScope extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsVpcIpamScope.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfScope.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsVpcIpamScope.TimeoutsProperty) {
+  public putTimeouts(value: TfScope.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -253,7 +253,7 @@ export class AwsVpcIpamScope extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: awsVpcIpamScopeTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfScopeTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -296,10 +296,10 @@ export class AwsVpcIpamScope extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsVpcIpamScopeTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfScopeTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsVpcIpamScope.TimeoutsProperty",
+        storageClassType: "TfScope.TimeoutsProperty",
       },
     };
 
@@ -308,7 +308,7 @@ export class AwsVpcIpamScope extends cdktn.TerraformResource {
   }
 }
 
-export function awsVpcIpamScopeTimeoutsPropertyToTerraform(struct?: AwsVpcIpamScope.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfScopeTimeoutsPropertyToTerraform(struct?: TfScope.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -321,7 +321,7 @@ export function awsVpcIpamScopeTimeoutsPropertyToTerraform(struct?: AwsVpcIpamSc
 }
 
 
-export function awsVpcIpamScopeTimeoutsPropertyToHclTerraform(struct?: AwsVpcIpamScope.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfScopeTimeoutsPropertyToHclTerraform(struct?: TfScope.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -352,18 +352,18 @@ export function awsVpcIpamScopeTimeoutsPropertyToHclTerraform(struct?: AwsVpcIpa
 }
 
 
-export namespace AwsVpcIpamScope {
+export namespace TfScope {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_scope#create AwsVpcIpamScope#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_scope#create TfScope#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_scope#delete AwsVpcIpamScope#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_scope#delete TfScope#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_scope#update AwsVpcIpamScope#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_scope#update TfScope#update}
   */
   readonly update?: string;
 }

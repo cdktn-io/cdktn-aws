@@ -5,40 +5,40 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsNetworkInterfaceSgAttachmentConfig extends cdktn.TerraformMetaArguments {
+export interface TfNetworkInterfaceSgAttachmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_sg_attachment#id AwsNetworkInterfaceSgAttachment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_sg_attachment#id TfNetworkInterfaceSgAttachment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_sg_attachment#network_interface_id AwsNetworkInterfaceSgAttachment#network_interface_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_sg_attachment#network_interface_id TfNetworkInterfaceSgAttachment#network_interface_id}
   */
   readonly networkInterfaceId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_sg_attachment#region AwsNetworkInterfaceSgAttachment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_sg_attachment#region TfNetworkInterfaceSgAttachment#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_sg_attachment#security_group_id AwsNetworkInterfaceSgAttachment#security_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_sg_attachment#security_group_id TfNetworkInterfaceSgAttachment#security_group_id}
   */
   readonly securityGroupId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_sg_attachment#timeouts AwsNetworkInterfaceSgAttachment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_sg_attachment#timeouts TfNetworkInterfaceSgAttachment#timeouts}
   */
-  readonly timeouts?: AwsNetworkInterfaceSgAttachment.TimeoutsProperty;
+  readonly timeouts?: TfNetworkInterfaceSgAttachment.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_sg_attachment aws_network_interface_sg_attachment}
 */
-export class AwsNetworkInterfaceSgAttachment extends cdktn.TerraformResource {
+export class TfNetworkInterfaceSgAttachment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class AwsNetworkInterfaceSgAttachment extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsNetworkInterfaceSgAttachment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfNetworkInterfaceSgAttachment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsNetworkInterfaceSgAttachment to import
-  * @param importFromId The id of the existing AwsNetworkInterfaceSgAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_sg_attachment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsNetworkInterfaceSgAttachment to import is found
+  * @param importToId The construct id used in the generated config for the TfNetworkInterfaceSgAttachment to import
+  * @param importFromId The id of the existing TfNetworkInterfaceSgAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_sg_attachment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfNetworkInterfaceSgAttachment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_network_interface_sg_attachment", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class AwsNetworkInterfaceSgAttachment extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsNetworkInterfaceSgAttachmentConfig
+  * @param options TfNetworkInterfaceSgAttachmentConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsNetworkInterfaceSgAttachmentConfig) {
+  public constructor(scope: Construct, id: string, config: TfNetworkInterfaceSgAttachmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_network_interface_sg_attachment',
       terraformGeneratorMetadata: {
@@ -156,11 +156,11 @@ export class AwsNetworkInterfaceSgAttachment extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsNetworkInterfaceSgAttachment.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfNetworkInterfaceSgAttachment.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsNetworkInterfaceSgAttachment.TimeoutsProperty) {
+  public putTimeouts(value: TfNetworkInterfaceSgAttachment.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -181,7 +181,7 @@ export class AwsNetworkInterfaceSgAttachment extends cdktn.TerraformResource {
       network_interface_id: cdktn.stringToTerraform(this._networkInterfaceId),
       region: cdktn.stringToTerraform(this._region),
       security_group_id: cdktn.stringToTerraform(this._securityGroupId),
-      timeouts: awsNetworkInterfaceSgAttachmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfNetworkInterfaceSgAttachmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -212,10 +212,10 @@ export class AwsNetworkInterfaceSgAttachment extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsNetworkInterfaceSgAttachmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfNetworkInterfaceSgAttachmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsNetworkInterfaceSgAttachment.TimeoutsProperty",
+        storageClassType: "TfNetworkInterfaceSgAttachment.TimeoutsProperty",
       },
     };
 
@@ -224,7 +224,7 @@ export class AwsNetworkInterfaceSgAttachment extends cdktn.TerraformResource {
   }
 }
 
-export function awsNetworkInterfaceSgAttachmentTimeoutsPropertyToTerraform(struct?: AwsNetworkInterfaceSgAttachment.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfNetworkInterfaceSgAttachmentTimeoutsPropertyToTerraform(struct?: TfNetworkInterfaceSgAttachment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -237,7 +237,7 @@ export function awsNetworkInterfaceSgAttachmentTimeoutsPropertyToTerraform(struc
 }
 
 
-export function awsNetworkInterfaceSgAttachmentTimeoutsPropertyToHclTerraform(struct?: AwsNetworkInterfaceSgAttachment.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfNetworkInterfaceSgAttachmentTimeoutsPropertyToHclTerraform(struct?: TfNetworkInterfaceSgAttachment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -268,18 +268,18 @@ export function awsNetworkInterfaceSgAttachmentTimeoutsPropertyToHclTerraform(st
 }
 
 
-export namespace AwsNetworkInterfaceSgAttachment {
+export namespace TfNetworkInterfaceSgAttachment {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_sg_attachment#create AwsNetworkInterfaceSgAttachment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_sg_attachment#create TfNetworkInterfaceSgAttachment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_sg_attachment#delete AwsNetworkInterfaceSgAttachment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_sg_attachment#delete TfNetworkInterfaceSgAttachment#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_sg_attachment#read AwsNetworkInterfaceSgAttachment#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface_sg_attachment#read TfNetworkInterfaceSgAttachment#read}
   */
   readonly read?: string;
 }

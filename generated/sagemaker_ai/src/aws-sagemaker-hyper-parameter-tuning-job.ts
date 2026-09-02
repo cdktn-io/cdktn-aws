@@ -5,63 +5,63 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSagemakerHyperParameterTuningJobConfig extends cdktn.TerraformMetaArguments {
+export interface TfHyperParameterTuningJobConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#name AwsSagemakerHyperParameterTuningJob#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#name TfHyperParameterTuningJob#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#region AwsSagemakerHyperParameterTuningJob#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#region TfHyperParameterTuningJob#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#tags AwsSagemakerHyperParameterTuningJob#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#tags TfHyperParameterTuningJob#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * autotune block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#autotune AwsSagemakerHyperParameterTuningJob#autotune}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#autotune TfHyperParameterTuningJob#autotune}
   */
-  readonly autotune?: AwsSagemakerHyperParameterTuningJob.AutotuneProperty[] | cdktn.IResolvable;
+  readonly autotune?: TfHyperParameterTuningJob.AutotuneProperty[] | cdktn.IResolvable;
   /**
   * config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#config AwsSagemakerHyperParameterTuningJob#config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#config TfHyperParameterTuningJob#config}
   */
-  readonly config?: AwsSagemakerHyperParameterTuningJob.ConfigProperty[] | cdktn.IResolvable;
+  readonly config?: TfHyperParameterTuningJob.ConfigProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#timeouts AwsSagemakerHyperParameterTuningJob#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#timeouts TfHyperParameterTuningJob#timeouts}
   */
-  readonly timeouts?: AwsSagemakerHyperParameterTuningJob.TimeoutsProperty;
+  readonly timeouts?: TfHyperParameterTuningJob.TimeoutsProperty;
   /**
   * training_job_definition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#training_job_definition AwsSagemakerHyperParameterTuningJob#training_job_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#training_job_definition TfHyperParameterTuningJob#training_job_definition}
   */
-  readonly trainingJobDefinition?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionProperty[] | cdktn.IResolvable;
+  readonly trainingJobDefinition?: TfHyperParameterTuningJob.TrainingJobDefinitionProperty[] | cdktn.IResolvable;
   /**
   * training_job_definitions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#training_job_definitions AwsSagemakerHyperParameterTuningJob#training_job_definitions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#training_job_definitions TfHyperParameterTuningJob#training_job_definitions}
   */
-  readonly trainingJobDefinitions?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsProperty[] | cdktn.IResolvable;
+  readonly trainingJobDefinitions?: TfHyperParameterTuningJob.TrainingJobDefinitionsProperty[] | cdktn.IResolvable;
   /**
   * warm_start_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#warm_start_config AwsSagemakerHyperParameterTuningJob#warm_start_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#warm_start_config TfHyperParameterTuningJob#warm_start_config}
   */
-  readonly warmStartConfig?: AwsSagemakerHyperParameterTuningJob.WarmStartConfigProperty[] | cdktn.IResolvable;
+  readonly warmStartConfig?: TfHyperParameterTuningJob.WarmStartConfigProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job aws_sagemaker_hyper_parameter_tuning_job}
 */
-export class AwsSagemakerHyperParameterTuningJob extends cdktn.TerraformResource {
+export class TfHyperParameterTuningJob extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -72,11 +72,11 @@ export class AwsSagemakerHyperParameterTuningJob extends cdktn.TerraformResource
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSagemakerHyperParameterTuningJob resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfHyperParameterTuningJob resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSagemakerHyperParameterTuningJob to import
-  * @param importFromId The id of the existing AwsSagemakerHyperParameterTuningJob that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSagemakerHyperParameterTuningJob to import is found
+  * @param importToId The construct id used in the generated config for the TfHyperParameterTuningJob to import
+  * @param importFromId The id of the existing TfHyperParameterTuningJob that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfHyperParameterTuningJob to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sagemaker_hyper_parameter_tuning_job", importId: importFromId, provider });
@@ -91,9 +91,9 @@ export class AwsSagemakerHyperParameterTuningJob extends cdktn.TerraformResource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSagemakerHyperParameterTuningJobConfig
+  * @param options TfHyperParameterTuningJobConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSagemakerHyperParameterTuningJobConfig) {
+  public constructor(scope: Construct, id: string, config: TfHyperParameterTuningJobConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sagemaker_hyper_parameter_tuning_job',
       terraformGeneratorMetadata: {
@@ -191,11 +191,11 @@ export class AwsSagemakerHyperParameterTuningJob extends cdktn.TerraformResource
   }
 
   // autotune - computed: false, optional: true, required: false
-  private _autotune = new AwsSagemakerHyperParameterTuningJob.AutotunePropertyList(this, "autotune", false);
+  private _autotune = new TfHyperParameterTuningJob.AutotunePropertyList(this, "autotune", false);
   public get autotune() {
     return this._autotune;
   }
-  public putAutotune(value: AwsSagemakerHyperParameterTuningJob.AutotuneProperty[] | cdktn.IResolvable) {
+  public putAutotune(value: TfHyperParameterTuningJob.AutotuneProperty[] | cdktn.IResolvable) {
     this._autotune.internalValue = value;
   }
   public resetAutotune() {
@@ -207,11 +207,11 @@ export class AwsSagemakerHyperParameterTuningJob extends cdktn.TerraformResource
   }
 
   // config - computed: false, optional: true, required: false
-  private _config = new AwsSagemakerHyperParameterTuningJob.ConfigPropertyList(this, "config", false);
+  private _config = new TfHyperParameterTuningJob.ConfigPropertyList(this, "config", false);
   public get config() {
     return this._config;
   }
-  public putConfig(value: AwsSagemakerHyperParameterTuningJob.ConfigProperty[] | cdktn.IResolvable) {
+  public putConfig(value: TfHyperParameterTuningJob.ConfigProperty[] | cdktn.IResolvable) {
     this._config.internalValue = value;
   }
   public resetConfig() {
@@ -223,11 +223,11 @@ export class AwsSagemakerHyperParameterTuningJob extends cdktn.TerraformResource
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsSagemakerHyperParameterTuningJob.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfHyperParameterTuningJob.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsSagemakerHyperParameterTuningJob.TimeoutsProperty) {
+  public putTimeouts(value: TfHyperParameterTuningJob.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -239,11 +239,11 @@ export class AwsSagemakerHyperParameterTuningJob extends cdktn.TerraformResource
   }
 
   // training_job_definition - computed: false, optional: true, required: false
-  private _trainingJobDefinition = new AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionPropertyList(this, "training_job_definition", false);
+  private _trainingJobDefinition = new TfHyperParameterTuningJob.TrainingJobDefinitionPropertyList(this, "training_job_definition", false);
   public get trainingJobDefinition() {
     return this._trainingJobDefinition;
   }
-  public putTrainingJobDefinition(value: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionProperty[] | cdktn.IResolvable) {
+  public putTrainingJobDefinition(value: TfHyperParameterTuningJob.TrainingJobDefinitionProperty[] | cdktn.IResolvable) {
     this._trainingJobDefinition.internalValue = value;
   }
   public resetTrainingJobDefinition() {
@@ -255,11 +255,11 @@ export class AwsSagemakerHyperParameterTuningJob extends cdktn.TerraformResource
   }
 
   // training_job_definitions - computed: false, optional: true, required: false
-  private _trainingJobDefinitions = new AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsPropertyList(this, "training_job_definitions", false);
+  private _trainingJobDefinitions = new TfHyperParameterTuningJob.TrainingJobDefinitionsPropertyList(this, "training_job_definitions", false);
   public get trainingJobDefinitions() {
     return this._trainingJobDefinitions;
   }
-  public putTrainingJobDefinitions(value: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsProperty[] | cdktn.IResolvable) {
+  public putTrainingJobDefinitions(value: TfHyperParameterTuningJob.TrainingJobDefinitionsProperty[] | cdktn.IResolvable) {
     this._trainingJobDefinitions.internalValue = value;
   }
   public resetTrainingJobDefinitions() {
@@ -271,11 +271,11 @@ export class AwsSagemakerHyperParameterTuningJob extends cdktn.TerraformResource
   }
 
   // warm_start_config - computed: false, optional: true, required: false
-  private _warmStartConfig = new AwsSagemakerHyperParameterTuningJob.WarmStartConfigPropertyList(this, "warm_start_config", false);
+  private _warmStartConfig = new TfHyperParameterTuningJob.WarmStartConfigPropertyList(this, "warm_start_config", false);
   public get warmStartConfig() {
     return this._warmStartConfig;
   }
-  public putWarmStartConfig(value: AwsSagemakerHyperParameterTuningJob.WarmStartConfigProperty[] | cdktn.IResolvable) {
+  public putWarmStartConfig(value: TfHyperParameterTuningJob.WarmStartConfigProperty[] | cdktn.IResolvable) {
     this._warmStartConfig.internalValue = value;
   }
   public resetWarmStartConfig() {
@@ -295,12 +295,12 @@ export class AwsSagemakerHyperParameterTuningJob extends cdktn.TerraformResource
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      autotune: cdktn.listMapper(awsSagemakerHyperParameterTuningJobAutotunePropertyToTerraform, true)(this._autotune.internalValue),
-      config: cdktn.listMapper(awsSagemakerHyperParameterTuningJobConfigPropertyToTerraform, true)(this._config.internalValue),
-      timeouts: awsSagemakerHyperParameterTuningJobTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      training_job_definition: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionPropertyToTerraform, true)(this._trainingJobDefinition.internalValue),
-      training_job_definitions: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsPropertyToTerraform, true)(this._trainingJobDefinitions.internalValue),
-      warm_start_config: cdktn.listMapper(awsSagemakerHyperParameterTuningJobWarmStartConfigPropertyToTerraform, true)(this._warmStartConfig.internalValue),
+      autotune: cdktn.listMapper(tfHyperParameterTuningJobAutotunePropertyToTerraform, true)(this._autotune.internalValue),
+      config: cdktn.listMapper(tfHyperParameterTuningJobConfigPropertyToTerraform, true)(this._config.internalValue),
+      timeouts: tfHyperParameterTuningJobTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      training_job_definition: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionPropertyToTerraform, true)(this._trainingJobDefinition.internalValue),
+      training_job_definitions: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionsPropertyToTerraform, true)(this._trainingJobDefinitions.internalValue),
+      warm_start_config: cdktn.listMapper(tfHyperParameterTuningJobWarmStartConfigPropertyToTerraform, true)(this._warmStartConfig.internalValue),
     };
   }
 
@@ -325,40 +325,40 @@ export class AwsSagemakerHyperParameterTuningJob extends cdktn.TerraformResource
         storageClassType: "stringMap",
       },
       autotune: {
-        value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobAutotunePropertyToHclTerraform, true)(this._autotune.internalValue),
+        value: cdktn.listMapperHcl(tfHyperParameterTuningJobAutotunePropertyToHclTerraform, true)(this._autotune.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSagemakerHyperParameterTuningJob.AutotunePropertyList",
+        storageClassType: "TfHyperParameterTuningJob.AutotunePropertyList",
       },
       config: {
-        value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobConfigPropertyToHclTerraform, true)(this._config.internalValue),
+        value: cdktn.listMapperHcl(tfHyperParameterTuningJobConfigPropertyToHclTerraform, true)(this._config.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSagemakerHyperParameterTuningJob.ConfigPropertyList",
+        storageClassType: "TfHyperParameterTuningJob.ConfigPropertyList",
       },
       timeouts: {
-        value: awsSagemakerHyperParameterTuningJobTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfHyperParameterTuningJobTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsSagemakerHyperParameterTuningJob.TimeoutsProperty",
+        storageClassType: "TfHyperParameterTuningJob.TimeoutsProperty",
       },
       training_job_definition: {
-        value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionPropertyToHclTerraform, true)(this._trainingJobDefinition.internalValue),
+        value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionPropertyToHclTerraform, true)(this._trainingJobDefinition.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionPropertyList",
+        storageClassType: "TfHyperParameterTuningJob.TrainingJobDefinitionPropertyList",
       },
       training_job_definitions: {
-        value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsPropertyToHclTerraform, true)(this._trainingJobDefinitions.internalValue),
+        value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionsPropertyToHclTerraform, true)(this._trainingJobDefinitions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsPropertyList",
+        storageClassType: "TfHyperParameterTuningJob.TrainingJobDefinitionsPropertyList",
       },
       warm_start_config: {
-        value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobWarmStartConfigPropertyToHclTerraform, true)(this._warmStartConfig.internalValue),
+        value: cdktn.listMapperHcl(tfHyperParameterTuningJobWarmStartConfigPropertyToHclTerraform, true)(this._warmStartConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSagemakerHyperParameterTuningJob.WarmStartConfigPropertyList",
+        storageClassType: "TfHyperParameterTuningJob.WarmStartConfigPropertyList",
       },
     };
 
@@ -367,7 +367,7 @@ export class AwsSagemakerHyperParameterTuningJob extends cdktn.TerraformResource
   }
 }
 
-export function awsSagemakerHyperParameterTuningJobAutotunePropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.AutotuneProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobAutotunePropertyToTerraform(struct?: TfHyperParameterTuningJob.AutotuneProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -378,7 +378,7 @@ export function awsSagemakerHyperParameterTuningJobAutotunePropertyToTerraform(s
 }
 
 
-export function awsSagemakerHyperParameterTuningJobAutotunePropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.AutotuneProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobAutotunePropertyToHclTerraform(struct?: TfHyperParameterTuningJob.AutotuneProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -397,7 +397,7 @@ export function awsSagemakerHyperParameterTuningJobAutotunePropertyToHclTerrafor
 }
 
 
-export function awsSagemakerHyperParameterTuningJobObjectivePropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.ObjectiveProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobObjectivePropertyToTerraform(struct?: TfHyperParameterTuningJob.ObjectiveProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -409,7 +409,7 @@ export function awsSagemakerHyperParameterTuningJobObjectivePropertyToTerraform(
 }
 
 
-export function awsSagemakerHyperParameterTuningJobObjectivePropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.ObjectiveProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobObjectivePropertyToHclTerraform(struct?: TfHyperParameterTuningJob.ObjectiveProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -434,7 +434,7 @@ export function awsSagemakerHyperParameterTuningJobObjectivePropertyToHclTerrafo
 }
 
 
-export function awsSagemakerHyperParameterTuningJobConfigParameterRangesAutoParametersPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.ConfigParameterRangesAutoParametersProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobConfigParameterRangesAutoParametersPropertyToTerraform(struct?: TfHyperParameterTuningJob.ConfigParameterRangesAutoParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -446,7 +446,7 @@ export function awsSagemakerHyperParameterTuningJobConfigParameterRangesAutoPara
 }
 
 
-export function awsSagemakerHyperParameterTuningJobConfigParameterRangesAutoParametersPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.ConfigParameterRangesAutoParametersProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobConfigParameterRangesAutoParametersPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.ConfigParameterRangesAutoParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -471,7 +471,7 @@ export function awsSagemakerHyperParameterTuningJobConfigParameterRangesAutoPara
 }
 
 
-export function awsSagemakerHyperParameterTuningJobConfigParameterRangesCategoricalParameterRangesPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.ConfigParameterRangesCategoricalParameterRangesProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobConfigParameterRangesCategoricalParameterRangesPropertyToTerraform(struct?: TfHyperParameterTuningJob.ConfigParameterRangesCategoricalParameterRangesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -483,7 +483,7 @@ export function awsSagemakerHyperParameterTuningJobConfigParameterRangesCategori
 }
 
 
-export function awsSagemakerHyperParameterTuningJobConfigParameterRangesCategoricalParameterRangesPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.ConfigParameterRangesCategoricalParameterRangesProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobConfigParameterRangesCategoricalParameterRangesPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.ConfigParameterRangesCategoricalParameterRangesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -508,7 +508,7 @@ export function awsSagemakerHyperParameterTuningJobConfigParameterRangesCategori
 }
 
 
-export function awsSagemakerHyperParameterTuningJobConfigParameterRangesContinuousParameterRangesPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.ConfigParameterRangesContinuousParameterRangesProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobConfigParameterRangesContinuousParameterRangesPropertyToTerraform(struct?: TfHyperParameterTuningJob.ConfigParameterRangesContinuousParameterRangesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -522,7 +522,7 @@ export function awsSagemakerHyperParameterTuningJobConfigParameterRangesContinuo
 }
 
 
-export function awsSagemakerHyperParameterTuningJobConfigParameterRangesContinuousParameterRangesPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.ConfigParameterRangesContinuousParameterRangesProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobConfigParameterRangesContinuousParameterRangesPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.ConfigParameterRangesContinuousParameterRangesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -559,7 +559,7 @@ export function awsSagemakerHyperParameterTuningJobConfigParameterRangesContinuo
 }
 
 
-export function awsSagemakerHyperParameterTuningJobConfigParameterRangesIntegerParameterRangesPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.ConfigParameterRangesIntegerParameterRangesProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobConfigParameterRangesIntegerParameterRangesPropertyToTerraform(struct?: TfHyperParameterTuningJob.ConfigParameterRangesIntegerParameterRangesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -573,7 +573,7 @@ export function awsSagemakerHyperParameterTuningJobConfigParameterRangesIntegerP
 }
 
 
-export function awsSagemakerHyperParameterTuningJobConfigParameterRangesIntegerParameterRangesPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.ConfigParameterRangesIntegerParameterRangesProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobConfigParameterRangesIntegerParameterRangesPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.ConfigParameterRangesIntegerParameterRangesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -610,46 +610,46 @@ export function awsSagemakerHyperParameterTuningJobConfigParameterRangesIntegerP
 }
 
 
-export function awsSagemakerHyperParameterTuningJobParameterRangesPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.ParameterRangesProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobParameterRangesPropertyToTerraform(struct?: TfHyperParameterTuningJob.ParameterRangesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    auto_parameters: cdktn.listMapper(awsSagemakerHyperParameterTuningJobConfigParameterRangesAutoParametersPropertyToTerraform, true)(struct!.autoParameters),
-    categorical_parameter_ranges: cdktn.listMapper(awsSagemakerHyperParameterTuningJobConfigParameterRangesCategoricalParameterRangesPropertyToTerraform, true)(struct!.categoricalParameterRanges),
-    continuous_parameter_ranges: cdktn.listMapper(awsSagemakerHyperParameterTuningJobConfigParameterRangesContinuousParameterRangesPropertyToTerraform, true)(struct!.continuousParameterRanges),
-    integer_parameter_ranges: cdktn.listMapper(awsSagemakerHyperParameterTuningJobConfigParameterRangesIntegerParameterRangesPropertyToTerraform, true)(struct!.integerParameterRanges),
+    auto_parameters: cdktn.listMapper(tfHyperParameterTuningJobConfigParameterRangesAutoParametersPropertyToTerraform, true)(struct!.autoParameters),
+    categorical_parameter_ranges: cdktn.listMapper(tfHyperParameterTuningJobConfigParameterRangesCategoricalParameterRangesPropertyToTerraform, true)(struct!.categoricalParameterRanges),
+    continuous_parameter_ranges: cdktn.listMapper(tfHyperParameterTuningJobConfigParameterRangesContinuousParameterRangesPropertyToTerraform, true)(struct!.continuousParameterRanges),
+    integer_parameter_ranges: cdktn.listMapper(tfHyperParameterTuningJobConfigParameterRangesIntegerParameterRangesPropertyToTerraform, true)(struct!.integerParameterRanges),
   }
 }
 
 
-export function awsSagemakerHyperParameterTuningJobParameterRangesPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.ParameterRangesProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobParameterRangesPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.ParameterRangesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     auto_parameters: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobConfigParameterRangesAutoParametersPropertyToHclTerraform, true)(struct!.autoParameters),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobConfigParameterRangesAutoParametersPropertyToHclTerraform, true)(struct!.autoParameters),
       isBlock: true,
       type: "list",
       storageClassType: "ConfigParameterRangesAutoParametersPropertyList",
     },
     categorical_parameter_ranges: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobConfigParameterRangesCategoricalParameterRangesPropertyToHclTerraform, true)(struct!.categoricalParameterRanges),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobConfigParameterRangesCategoricalParameterRangesPropertyToHclTerraform, true)(struct!.categoricalParameterRanges),
       isBlock: true,
       type: "list",
       storageClassType: "ConfigParameterRangesCategoricalParameterRangesPropertyList",
     },
     continuous_parameter_ranges: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobConfigParameterRangesContinuousParameterRangesPropertyToHclTerraform, true)(struct!.continuousParameterRanges),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobConfigParameterRangesContinuousParameterRangesPropertyToHclTerraform, true)(struct!.continuousParameterRanges),
       isBlock: true,
       type: "list",
       storageClassType: "ConfigParameterRangesContinuousParameterRangesPropertyList",
     },
     integer_parameter_ranges: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobConfigParameterRangesIntegerParameterRangesPropertyToHclTerraform, true)(struct!.integerParameterRanges),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobConfigParameterRangesIntegerParameterRangesPropertyToHclTerraform, true)(struct!.integerParameterRanges),
       isBlock: true,
       type: "list",
       storageClassType: "ConfigParameterRangesIntegerParameterRangesPropertyList",
@@ -661,7 +661,7 @@ export function awsSagemakerHyperParameterTuningJobParameterRangesPropertyToHclT
 }
 
 
-export function awsSagemakerHyperParameterTuningJobResourceLimitsPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.ResourceLimitsProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobResourceLimitsPropertyToTerraform(struct?: TfHyperParameterTuningJob.ResourceLimitsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -674,7 +674,7 @@ export function awsSagemakerHyperParameterTuningJobResourceLimitsPropertyToTerra
 }
 
 
-export function awsSagemakerHyperParameterTuningJobResourceLimitsPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.ResourceLimitsProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobResourceLimitsPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.ResourceLimitsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -705,7 +705,7 @@ export function awsSagemakerHyperParameterTuningJobResourceLimitsPropertyToHclTe
 }
 
 
-export function awsSagemakerHyperParameterTuningJobHyperbandStrategyConfigPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.HyperbandStrategyConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobHyperbandStrategyConfigPropertyToTerraform(struct?: TfHyperParameterTuningJob.HyperbandStrategyConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -717,7 +717,7 @@ export function awsSagemakerHyperParameterTuningJobHyperbandStrategyConfigProper
 }
 
 
-export function awsSagemakerHyperParameterTuningJobHyperbandStrategyConfigPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.HyperbandStrategyConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobHyperbandStrategyConfigPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.HyperbandStrategyConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -742,25 +742,25 @@ export function awsSagemakerHyperParameterTuningJobHyperbandStrategyConfigProper
 }
 
 
-export function awsSagemakerHyperParameterTuningJobStrategyConfigPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.StrategyConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobStrategyConfigPropertyToTerraform(struct?: TfHyperParameterTuningJob.StrategyConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    hyperband_strategy_config: cdktn.listMapper(awsSagemakerHyperParameterTuningJobHyperbandStrategyConfigPropertyToTerraform, true)(struct!.hyperbandStrategyConfig),
+    hyperband_strategy_config: cdktn.listMapper(tfHyperParameterTuningJobHyperbandStrategyConfigPropertyToTerraform, true)(struct!.hyperbandStrategyConfig),
   }
 }
 
 
-export function awsSagemakerHyperParameterTuningJobStrategyConfigPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.StrategyConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobStrategyConfigPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.StrategyConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     hyperband_strategy_config: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobHyperbandStrategyConfigPropertyToHclTerraform, true)(struct!.hyperbandStrategyConfig),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobHyperbandStrategyConfigPropertyToHclTerraform, true)(struct!.hyperbandStrategyConfig),
       isBlock: true,
       type: "list",
       storageClassType: "HyperbandStrategyConfigPropertyList",
@@ -772,7 +772,7 @@ export function awsSagemakerHyperParameterTuningJobStrategyConfigPropertyToHclTe
 }
 
 
-export function awsSagemakerHyperParameterTuningJobBestObjectiveNotImprovingPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.BestObjectiveNotImprovingProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobBestObjectiveNotImprovingPropertyToTerraform(struct?: TfHyperParameterTuningJob.BestObjectiveNotImprovingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -783,7 +783,7 @@ export function awsSagemakerHyperParameterTuningJobBestObjectiveNotImprovingProp
 }
 
 
-export function awsSagemakerHyperParameterTuningJobBestObjectiveNotImprovingPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.BestObjectiveNotImprovingProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobBestObjectiveNotImprovingPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.BestObjectiveNotImprovingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -802,7 +802,7 @@ export function awsSagemakerHyperParameterTuningJobBestObjectiveNotImprovingProp
 }
 
 
-export function awsSagemakerHyperParameterTuningJobConvergenceDetectedPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.ConvergenceDetectedProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobConvergenceDetectedPropertyToTerraform(struct?: TfHyperParameterTuningJob.ConvergenceDetectedProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -813,7 +813,7 @@ export function awsSagemakerHyperParameterTuningJobConvergenceDetectedPropertyTo
 }
 
 
-export function awsSagemakerHyperParameterTuningJobConvergenceDetectedPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.ConvergenceDetectedProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobConvergenceDetectedPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.ConvergenceDetectedProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -832,20 +832,20 @@ export function awsSagemakerHyperParameterTuningJobConvergenceDetectedPropertyTo
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTuningJobCompletionCriteriaPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TuningJobCompletionCriteriaProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTuningJobCompletionCriteriaPropertyToTerraform(struct?: TfHyperParameterTuningJob.TuningJobCompletionCriteriaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     target_objective_metric_value: cdktn.numberToTerraform(struct!.targetObjectiveMetricValue),
-    best_objective_not_improving: cdktn.listMapper(awsSagemakerHyperParameterTuningJobBestObjectiveNotImprovingPropertyToTerraform, true)(struct!.bestObjectiveNotImproving),
-    convergence_detected: cdktn.listMapper(awsSagemakerHyperParameterTuningJobConvergenceDetectedPropertyToTerraform, true)(struct!.convergenceDetected),
+    best_objective_not_improving: cdktn.listMapper(tfHyperParameterTuningJobBestObjectiveNotImprovingPropertyToTerraform, true)(struct!.bestObjectiveNotImproving),
+    convergence_detected: cdktn.listMapper(tfHyperParameterTuningJobConvergenceDetectedPropertyToTerraform, true)(struct!.convergenceDetected),
   }
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTuningJobCompletionCriteriaPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TuningJobCompletionCriteriaProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTuningJobCompletionCriteriaPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TuningJobCompletionCriteriaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -858,13 +858,13 @@ export function awsSagemakerHyperParameterTuningJobTuningJobCompletionCriteriaPr
       storageClassType: "number",
     },
     best_objective_not_improving: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobBestObjectiveNotImprovingPropertyToHclTerraform, true)(struct!.bestObjectiveNotImproving),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobBestObjectiveNotImprovingPropertyToHclTerraform, true)(struct!.bestObjectiveNotImproving),
       isBlock: true,
       type: "list",
       storageClassType: "BestObjectiveNotImprovingPropertyList",
     },
     convergence_detected: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobConvergenceDetectedPropertyToHclTerraform, true)(struct!.convergenceDetected),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobConvergenceDetectedPropertyToHclTerraform, true)(struct!.convergenceDetected),
       isBlock: true,
       type: "list",
       storageClassType: "ConvergenceDetectedPropertyList",
@@ -876,7 +876,7 @@ export function awsSagemakerHyperParameterTuningJobTuningJobCompletionCriteriaPr
 }
 
 
-export function awsSagemakerHyperParameterTuningJobConfigPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.ConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobConfigPropertyToTerraform(struct?: TfHyperParameterTuningJob.ConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -885,16 +885,16 @@ export function awsSagemakerHyperParameterTuningJobConfigPropertyToTerraform(str
     random_seed: cdktn.numberToTerraform(struct!.randomSeed),
     strategy: cdktn.stringToTerraform(struct!.strategy),
     training_job_early_stopping_type: cdktn.stringToTerraform(struct!.trainingJobEarlyStoppingType),
-    objective: cdktn.listMapper(awsSagemakerHyperParameterTuningJobObjectivePropertyToTerraform, true)(struct!.objective),
-    parameter_ranges: cdktn.listMapper(awsSagemakerHyperParameterTuningJobParameterRangesPropertyToTerraform, true)(struct!.parameterRanges),
-    resource_limits: cdktn.listMapper(awsSagemakerHyperParameterTuningJobResourceLimitsPropertyToTerraform, true)(struct!.resourceLimits),
-    strategy_config: cdktn.listMapper(awsSagemakerHyperParameterTuningJobStrategyConfigPropertyToTerraform, true)(struct!.strategyConfig),
-    tuning_job_completion_criteria: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTuningJobCompletionCriteriaPropertyToTerraform, true)(struct!.tuningJobCompletionCriteria),
+    objective: cdktn.listMapper(tfHyperParameterTuningJobObjectivePropertyToTerraform, true)(struct!.objective),
+    parameter_ranges: cdktn.listMapper(tfHyperParameterTuningJobParameterRangesPropertyToTerraform, true)(struct!.parameterRanges),
+    resource_limits: cdktn.listMapper(tfHyperParameterTuningJobResourceLimitsPropertyToTerraform, true)(struct!.resourceLimits),
+    strategy_config: cdktn.listMapper(tfHyperParameterTuningJobStrategyConfigPropertyToTerraform, true)(struct!.strategyConfig),
+    tuning_job_completion_criteria: cdktn.listMapper(tfHyperParameterTuningJobTuningJobCompletionCriteriaPropertyToTerraform, true)(struct!.tuningJobCompletionCriteria),
   }
 }
 
 
-export function awsSagemakerHyperParameterTuningJobConfigPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.ConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobConfigPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.ConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -919,31 +919,31 @@ export function awsSagemakerHyperParameterTuningJobConfigPropertyToHclTerraform(
       storageClassType: "string",
     },
     objective: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobObjectivePropertyToHclTerraform, true)(struct!.objective),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobObjectivePropertyToHclTerraform, true)(struct!.objective),
       isBlock: true,
       type: "list",
       storageClassType: "ObjectivePropertyList",
     },
     parameter_ranges: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobParameterRangesPropertyToHclTerraform, true)(struct!.parameterRanges),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobParameterRangesPropertyToHclTerraform, true)(struct!.parameterRanges),
       isBlock: true,
       type: "list",
       storageClassType: "ParameterRangesPropertyList",
     },
     resource_limits: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobResourceLimitsPropertyToHclTerraform, true)(struct!.resourceLimits),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobResourceLimitsPropertyToHclTerraform, true)(struct!.resourceLimits),
       isBlock: true,
       type: "list",
       storageClassType: "ResourceLimitsPropertyList",
     },
     strategy_config: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobStrategyConfigPropertyToHclTerraform, true)(struct!.strategyConfig),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobStrategyConfigPropertyToHclTerraform, true)(struct!.strategyConfig),
       isBlock: true,
       type: "list",
       storageClassType: "StrategyConfigPropertyList",
     },
     tuning_job_completion_criteria: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTuningJobCompletionCriteriaPropertyToHclTerraform, true)(struct!.tuningJobCompletionCriteria),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTuningJobCompletionCriteriaPropertyToHclTerraform, true)(struct!.tuningJobCompletionCriteria),
       isBlock: true,
       type: "list",
       storageClassType: "TuningJobCompletionCriteriaPropertyList",
@@ -955,7 +955,7 @@ export function awsSagemakerHyperParameterTuningJobConfigPropertyToHclTerraform(
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTimeoutsPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTimeoutsPropertyToTerraform(struct?: TfHyperParameterTuningJob.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -967,7 +967,7 @@ export function awsSagemakerHyperParameterTuningJobTimeoutsPropertyToTerraform(s
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTimeoutsPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTimeoutsPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -992,7 +992,7 @@ export function awsSagemakerHyperParameterTuningJobTimeoutsPropertyToHclTerrafor
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionRetryStrategyPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionRetryStrategyProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionRetryStrategyPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionRetryStrategyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1003,7 +1003,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionRetryStr
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionRetryStrategyPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionRetryStrategyProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionRetryStrategyPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionRetryStrategyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1022,7 +1022,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionRetryStr
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionAlgorithmSpecificationMetricDefinitionsPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionAlgorithmSpecificationMetricDefinitionsProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionAlgorithmSpecificationMetricDefinitionsPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionAlgorithmSpecificationMetricDefinitionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1034,7 +1034,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionAlgorith
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionAlgorithmSpecificationMetricDefinitionsPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionAlgorithmSpecificationMetricDefinitionsProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionAlgorithmSpecificationMetricDefinitionsPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionAlgorithmSpecificationMetricDefinitionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1059,7 +1059,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionAlgorith
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionAlgorithmSpecificationPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionAlgorithmSpecificationProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionAlgorithmSpecificationPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionAlgorithmSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1068,12 +1068,12 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionAlgorith
     algorithm_name: cdktn.stringToTerraform(struct!.algorithmName),
     training_image: cdktn.stringToTerraform(struct!.trainingImage),
     training_input_mode: cdktn.stringToTerraform(struct!.trainingInputMode),
-    metric_definitions: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionAlgorithmSpecificationMetricDefinitionsPropertyToTerraform, true)(struct!.metricDefinitions),
+    metric_definitions: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionAlgorithmSpecificationMetricDefinitionsPropertyToTerraform, true)(struct!.metricDefinitions),
   }
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionAlgorithmSpecificationPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionAlgorithmSpecificationProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionAlgorithmSpecificationPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionAlgorithmSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1098,7 +1098,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionAlgorith
       storageClassType: "string",
     },
     metric_definitions: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionAlgorithmSpecificationMetricDefinitionsPropertyToHclTerraform, true)(struct!.metricDefinitions),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionAlgorithmSpecificationMetricDefinitionsPropertyToHclTerraform, true)(struct!.metricDefinitions),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionAlgorithmSpecificationMetricDefinitionsPropertyList",
@@ -1110,7 +1110,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionAlgorith
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionCheckpointConfigPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionCheckpointConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionCheckpointConfigPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionCheckpointConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1122,7 +1122,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionCheckpoi
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionCheckpointConfigPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionCheckpointConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionCheckpointConfigPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionCheckpointConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1147,7 +1147,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionCheckpoi
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesAutoParametersPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionHyperParameterRangesAutoParametersProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesAutoParametersPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionHyperParameterRangesAutoParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1159,7 +1159,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperPar
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesAutoParametersPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionHyperParameterRangesAutoParametersProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesAutoParametersPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionHyperParameterRangesAutoParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1184,7 +1184,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperPar
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesCategoricalParameterRangesPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionHyperParameterRangesCategoricalParameterRangesProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesCategoricalParameterRangesPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionHyperParameterRangesCategoricalParameterRangesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1196,7 +1196,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperPar
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesCategoricalParameterRangesPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionHyperParameterRangesCategoricalParameterRangesProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesCategoricalParameterRangesPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionHyperParameterRangesCategoricalParameterRangesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1221,7 +1221,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperPar
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesContinuousParameterRangesPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionHyperParameterRangesContinuousParameterRangesProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesContinuousParameterRangesPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionHyperParameterRangesContinuousParameterRangesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1235,7 +1235,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperPar
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesContinuousParameterRangesPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionHyperParameterRangesContinuousParameterRangesProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesContinuousParameterRangesPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionHyperParameterRangesContinuousParameterRangesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1272,7 +1272,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperPar
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesIntegerParameterRangesPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionHyperParameterRangesIntegerParameterRangesProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesIntegerParameterRangesPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionHyperParameterRangesIntegerParameterRangesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1286,7 +1286,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperPar
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesIntegerParameterRangesPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionHyperParameterRangesIntegerParameterRangesProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesIntegerParameterRangesPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionHyperParameterRangesIntegerParameterRangesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1323,46 +1323,46 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperPar
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionHyperParameterRangesProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionHyperParameterRangesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    auto_parameters: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesAutoParametersPropertyToTerraform, true)(struct!.autoParameters),
-    categorical_parameter_ranges: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesCategoricalParameterRangesPropertyToTerraform, true)(struct!.categoricalParameterRanges),
-    continuous_parameter_ranges: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesContinuousParameterRangesPropertyToTerraform, true)(struct!.continuousParameterRanges),
-    integer_parameter_ranges: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesIntegerParameterRangesPropertyToTerraform, true)(struct!.integerParameterRanges),
+    auto_parameters: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesAutoParametersPropertyToTerraform, true)(struct!.autoParameters),
+    categorical_parameter_ranges: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesCategoricalParameterRangesPropertyToTerraform, true)(struct!.categoricalParameterRanges),
+    continuous_parameter_ranges: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesContinuousParameterRangesPropertyToTerraform, true)(struct!.continuousParameterRanges),
+    integer_parameter_ranges: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesIntegerParameterRangesPropertyToTerraform, true)(struct!.integerParameterRanges),
   }
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionHyperParameterRangesProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionHyperParameterRangesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     auto_parameters: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesAutoParametersPropertyToHclTerraform, true)(struct!.autoParameters),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesAutoParametersPropertyToHclTerraform, true)(struct!.autoParameters),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionHyperParameterRangesAutoParametersPropertyList",
     },
     categorical_parameter_ranges: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesCategoricalParameterRangesPropertyToHclTerraform, true)(struct!.categoricalParameterRanges),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesCategoricalParameterRangesPropertyToHclTerraform, true)(struct!.categoricalParameterRanges),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionHyperParameterRangesCategoricalParameterRangesPropertyList",
     },
     continuous_parameter_ranges: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesContinuousParameterRangesPropertyToHclTerraform, true)(struct!.continuousParameterRanges),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesContinuousParameterRangesPropertyToHclTerraform, true)(struct!.continuousParameterRanges),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionHyperParameterRangesContinuousParameterRangesPropertyList",
     },
     integer_parameter_ranges: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesIntegerParameterRangesPropertyToHclTerraform, true)(struct!.integerParameterRanges),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesIntegerParameterRangesPropertyToHclTerraform, true)(struct!.integerParameterRanges),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionHyperParameterRangesIntegerParameterRangesPropertyList",
@@ -1374,7 +1374,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperPar
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperParameterTuningResourceConfigInstanceConfigsPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionHyperParameterTuningResourceConfigInstanceConfigsProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionHyperParameterTuningResourceConfigInstanceConfigsPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionHyperParameterTuningResourceConfigInstanceConfigsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1387,7 +1387,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperPar
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperParameterTuningResourceConfigInstanceConfigsPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionHyperParameterTuningResourceConfigInstanceConfigsProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionHyperParameterTuningResourceConfigInstanceConfigsPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionHyperParameterTuningResourceConfigInstanceConfigsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1418,7 +1418,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperPar
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperParameterTuningResourceConfigPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionHyperParameterTuningResourceConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionHyperParameterTuningResourceConfigPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionHyperParameterTuningResourceConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1429,12 +1429,12 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperPar
     instance_type: cdktn.stringToTerraform(struct!.instanceType),
     volume_kms_key_id: cdktn.stringToTerraform(struct!.volumeKmsKeyId),
     volume_size_in_gb: cdktn.numberToTerraform(struct!.volumeSizeInGb),
-    instance_configs: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperParameterTuningResourceConfigInstanceConfigsPropertyToTerraform, true)(struct!.instanceConfigs),
+    instance_configs: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionHyperParameterTuningResourceConfigInstanceConfigsPropertyToTerraform, true)(struct!.instanceConfigs),
   }
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperParameterTuningResourceConfigPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionHyperParameterTuningResourceConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionHyperParameterTuningResourceConfigPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionHyperParameterTuningResourceConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1471,7 +1471,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperPar
       storageClassType: "number",
     },
     instance_configs: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperParameterTuningResourceConfigInstanceConfigsPropertyToHclTerraform, true)(struct!.instanceConfigs),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionHyperParameterTuningResourceConfigInstanceConfigsPropertyToHclTerraform, true)(struct!.instanceConfigs),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionHyperParameterTuningResourceConfigInstanceConfigsPropertyList",
@@ -1483,7 +1483,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperPar
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourceFileSystemDataSourcePropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionInputDataConfigDataSourceFileSystemDataSourceProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourceFileSystemDataSourcePropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionInputDataConfigDataSourceFileSystemDataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1497,7 +1497,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDat
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourceFileSystemDataSourcePropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionInputDataConfigDataSourceFileSystemDataSourceProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourceFileSystemDataSourcePropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionInputDataConfigDataSourceFileSystemDataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1534,7 +1534,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDat
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceHubAccessConfigPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionInputDataConfigDataSourceS3DataSourceHubAccessConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceHubAccessConfigPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionInputDataConfigDataSourceS3DataSourceHubAccessConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1545,7 +1545,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDat
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceHubAccessConfigPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionInputDataConfigDataSourceS3DataSourceHubAccessConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceHubAccessConfigPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionInputDataConfigDataSourceS3DataSourceHubAccessConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1564,7 +1564,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDat
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceModelAccessConfigPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionInputDataConfigDataSourceS3DataSourceModelAccessConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceModelAccessConfigPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionInputDataConfigDataSourceS3DataSourceModelAccessConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1575,7 +1575,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDat
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceModelAccessConfigPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionInputDataConfigDataSourceS3DataSourceModelAccessConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceModelAccessConfigPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionInputDataConfigDataSourceS3DataSourceModelAccessConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1594,7 +1594,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDat
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourceS3DataSourcePropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionInputDataConfigDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourceS3DataSourcePropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionInputDataConfigDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1605,13 +1605,13 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDat
     s3_data_distribution_type: cdktn.stringToTerraform(struct!.s3DataDistributionType),
     s3_data_type: cdktn.stringToTerraform(struct!.s3DataType),
     s3_uri: cdktn.stringToTerraform(struct!.s3Uri),
-    hub_access_config: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceHubAccessConfigPropertyToTerraform, true)(struct!.hubAccessConfig),
-    model_access_config: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceModelAccessConfigPropertyToTerraform, true)(struct!.modelAccessConfig),
+    hub_access_config: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceHubAccessConfigPropertyToTerraform, true)(struct!.hubAccessConfig),
+    model_access_config: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceModelAccessConfigPropertyToTerraform, true)(struct!.modelAccessConfig),
   }
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourceS3DataSourcePropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionInputDataConfigDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourceS3DataSourcePropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionInputDataConfigDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1648,13 +1648,13 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDat
       storageClassType: "string",
     },
     hub_access_config: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceHubAccessConfigPropertyToHclTerraform, true)(struct!.hubAccessConfig),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceHubAccessConfigPropertyToHclTerraform, true)(struct!.hubAccessConfig),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionInputDataConfigDataSourceS3DataSourceHubAccessConfigPropertyList",
     },
     model_access_config: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceModelAccessConfigPropertyToHclTerraform, true)(struct!.modelAccessConfig),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceModelAccessConfigPropertyToHclTerraform, true)(struct!.modelAccessConfig),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionInputDataConfigDataSourceS3DataSourceModelAccessConfigPropertyList",
@@ -1666,32 +1666,32 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDat
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourcePropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionInputDataConfigDataSourceProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourcePropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionInputDataConfigDataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    file_system_data_source: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourceFileSystemDataSourcePropertyToTerraform, true)(struct!.fileSystemDataSource),
-    s3_data_source: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourceS3DataSourcePropertyToTerraform, true)(struct!.s3DataSource),
+    file_system_data_source: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourceFileSystemDataSourcePropertyToTerraform, true)(struct!.fileSystemDataSource),
+    s3_data_source: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourceS3DataSourcePropertyToTerraform, true)(struct!.s3DataSource),
   }
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourcePropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionInputDataConfigDataSourceProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourcePropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionInputDataConfigDataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     file_system_data_source: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourceFileSystemDataSourcePropertyToHclTerraform, true)(struct!.fileSystemDataSource),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourceFileSystemDataSourcePropertyToHclTerraform, true)(struct!.fileSystemDataSource),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionInputDataConfigDataSourceFileSystemDataSourcePropertyList",
     },
     s3_data_source: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourceS3DataSourcePropertyToHclTerraform, true)(struct!.s3DataSource),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourceS3DataSourcePropertyToHclTerraform, true)(struct!.s3DataSource),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionInputDataConfigDataSourceS3DataSourcePropertyList",
@@ -1703,7 +1703,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDat
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDataConfigShuffleConfigPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionInputDataConfigShuffleConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionInputDataConfigShuffleConfigPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionInputDataConfigShuffleConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1714,7 +1714,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDat
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDataConfigShuffleConfigPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionInputDataConfigShuffleConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionInputDataConfigShuffleConfigPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionInputDataConfigShuffleConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1733,7 +1733,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDat
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDataConfigPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionInputDataConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionInputDataConfigPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionInputDataConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1744,13 +1744,13 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDat
     content_type: cdktn.stringToTerraform(struct!.contentType),
     input_mode: cdktn.stringToTerraform(struct!.inputMode),
     record_wrapper_type: cdktn.stringToTerraform(struct!.recordWrapperType),
-    data_source: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourcePropertyToTerraform, true)(struct!.dataSource),
-    shuffle_config: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDataConfigShuffleConfigPropertyToTerraform, true)(struct!.shuffleConfig),
+    data_source: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourcePropertyToTerraform, true)(struct!.dataSource),
+    shuffle_config: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionInputDataConfigShuffleConfigPropertyToTerraform, true)(struct!.shuffleConfig),
   }
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDataConfigPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionInputDataConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionInputDataConfigPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionInputDataConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1787,13 +1787,13 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDat
       storageClassType: "string",
     },
     data_source: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourcePropertyToHclTerraform, true)(struct!.dataSource),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionInputDataConfigDataSourcePropertyToHclTerraform, true)(struct!.dataSource),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionInputDataConfigDataSourcePropertyList",
     },
     shuffle_config: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDataConfigShuffleConfigPropertyToHclTerraform, true)(struct!.shuffleConfig),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionInputDataConfigShuffleConfigPropertyToHclTerraform, true)(struct!.shuffleConfig),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionInputDataConfigShuffleConfigPropertyList",
@@ -1805,7 +1805,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDat
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionOutputDataConfigPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionOutputDataConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionOutputDataConfigPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionOutputDataConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1818,7 +1818,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionOutputDa
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionOutputDataConfigPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionOutputDataConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionOutputDataConfigPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionOutputDataConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1849,7 +1849,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionOutputDa
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionResourceConfigInstanceGroupsPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionResourceConfigInstanceGroupsProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionResourceConfigInstanceGroupsPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionResourceConfigInstanceGroupsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1862,7 +1862,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionResource
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionResourceConfigInstanceGroupsPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionResourceConfigInstanceGroupsProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionResourceConfigInstanceGroupsPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionResourceConfigInstanceGroupsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1893,7 +1893,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionResource
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionResourceConfigInstancePlacementConfigPlacementSpecificationsPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionResourceConfigInstancePlacementConfigPlacementSpecificationsProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionResourceConfigInstancePlacementConfigPlacementSpecificationsPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionResourceConfigInstancePlacementConfigPlacementSpecificationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1905,7 +1905,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionResource
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionResourceConfigInstancePlacementConfigPlacementSpecificationsPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionResourceConfigInstancePlacementConfigPlacementSpecificationsProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionResourceConfigInstancePlacementConfigPlacementSpecificationsPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionResourceConfigInstancePlacementConfigPlacementSpecificationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1930,19 +1930,19 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionResource
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionResourceConfigInstancePlacementConfigPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionResourceConfigInstancePlacementConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionResourceConfigInstancePlacementConfigPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionResourceConfigInstancePlacementConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     enable_multiple_jobs: cdktn.booleanToTerraform(struct!.enableMultipleJobs),
-    placement_specifications: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionResourceConfigInstancePlacementConfigPlacementSpecificationsPropertyToTerraform, true)(struct!.placementSpecifications),
+    placement_specifications: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionResourceConfigInstancePlacementConfigPlacementSpecificationsPropertyToTerraform, true)(struct!.placementSpecifications),
   }
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionResourceConfigInstancePlacementConfigPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionResourceConfigInstancePlacementConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionResourceConfigInstancePlacementConfigPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionResourceConfigInstancePlacementConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1955,7 +1955,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionResource
       storageClassType: "boolean",
     },
     placement_specifications: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionResourceConfigInstancePlacementConfigPlacementSpecificationsPropertyToHclTerraform, true)(struct!.placementSpecifications),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionResourceConfigInstancePlacementConfigPlacementSpecificationsPropertyToHclTerraform, true)(struct!.placementSpecifications),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionResourceConfigInstancePlacementConfigPlacementSpecificationsPropertyList",
@@ -1967,7 +1967,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionResource
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionResourceConfigPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionResourceConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionResourceConfigPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionResourceConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1979,13 +1979,13 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionResource
     training_plan_arn: cdktn.stringToTerraform(struct!.trainingPlanArn),
     volume_kms_key_id: cdktn.stringToTerraform(struct!.volumeKmsKeyId),
     volume_size_in_gb: cdktn.numberToTerraform(struct!.volumeSizeInGb),
-    instance_groups: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionResourceConfigInstanceGroupsPropertyToTerraform, true)(struct!.instanceGroups),
-    instance_placement_config: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionResourceConfigInstancePlacementConfigPropertyToTerraform, true)(struct!.instancePlacementConfig),
+    instance_groups: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionResourceConfigInstanceGroupsPropertyToTerraform, true)(struct!.instanceGroups),
+    instance_placement_config: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionResourceConfigInstancePlacementConfigPropertyToTerraform, true)(struct!.instancePlacementConfig),
   }
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionResourceConfigPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionResourceConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionResourceConfigPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionResourceConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2028,13 +2028,13 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionResource
       storageClassType: "number",
     },
     instance_groups: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionResourceConfigInstanceGroupsPropertyToHclTerraform, true)(struct!.instanceGroups),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionResourceConfigInstanceGroupsPropertyToHclTerraform, true)(struct!.instanceGroups),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionResourceConfigInstanceGroupsPropertyList",
     },
     instance_placement_config: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionResourceConfigInstancePlacementConfigPropertyToHclTerraform, true)(struct!.instancePlacementConfig),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionResourceConfigInstancePlacementConfigPropertyToHclTerraform, true)(struct!.instancePlacementConfig),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionResourceConfigInstancePlacementConfigPropertyList",
@@ -2046,7 +2046,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionResource
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionStoppingConditionPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionStoppingConditionProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionStoppingConditionPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionStoppingConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2059,7 +2059,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionStopping
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionStoppingConditionPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionStoppingConditionProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionStoppingConditionPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionStoppingConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2090,7 +2090,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionStopping
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionTuningObjectivePropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionTuningObjectiveProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionTuningObjectivePropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionTuningObjectiveProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2102,7 +2102,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionTuningOb
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionTuningObjectivePropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionTuningObjectiveProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionTuningObjectivePropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionTuningObjectiveProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2127,7 +2127,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionTuningOb
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionVpcConfigPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionVpcConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionVpcConfigPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionVpcConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2139,7 +2139,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionVpcConfi
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionVpcConfigPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionVpcConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionVpcConfigPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionVpcConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2164,7 +2164,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionVpcConfi
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2175,24 +2175,24 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionProperty
     enable_managed_spot_training: cdktn.booleanToTerraform(struct!.enableManagedSpotTraining),
     enable_network_isolation: cdktn.booleanToTerraform(struct!.enableNetworkIsolation),
     environment: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.environment),
-    retry_strategy: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionRetryStrategyPropertyToTerraform, false)(struct!.retryStrategy),
+    retry_strategy: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionRetryStrategyPropertyToTerraform, false)(struct!.retryStrategy),
     role_arn: cdktn.stringToTerraform(struct!.roleArn),
     static_hyper_parameters: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.staticHyperParameters),
-    algorithm_specification: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionAlgorithmSpecificationPropertyToTerraform, true)(struct!.algorithmSpecification),
-    checkpoint_config: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionCheckpointConfigPropertyToTerraform, true)(struct!.checkpointConfig),
-    hyper_parameter_ranges: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesPropertyToTerraform, true)(struct!.hyperParameterRanges),
-    hyper_parameter_tuning_resource_config: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperParameterTuningResourceConfigPropertyToTerraform, true)(struct!.hyperParameterTuningResourceConfig),
-    input_data_config: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDataConfigPropertyToTerraform, true)(struct!.inputDataConfig),
-    output_data_config: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionOutputDataConfigPropertyToTerraform, true)(struct!.outputDataConfig),
-    resource_config: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionResourceConfigPropertyToTerraform, true)(struct!.resourceConfig),
-    stopping_condition: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionStoppingConditionPropertyToTerraform, true)(struct!.stoppingCondition),
-    tuning_objective: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionTuningObjectivePropertyToTerraform, true)(struct!.tuningObjective),
-    vpc_config: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionVpcConfigPropertyToTerraform, true)(struct!.vpcConfig),
+    algorithm_specification: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionAlgorithmSpecificationPropertyToTerraform, true)(struct!.algorithmSpecification),
+    checkpoint_config: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionCheckpointConfigPropertyToTerraform, true)(struct!.checkpointConfig),
+    hyper_parameter_ranges: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesPropertyToTerraform, true)(struct!.hyperParameterRanges),
+    hyper_parameter_tuning_resource_config: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionHyperParameterTuningResourceConfigPropertyToTerraform, true)(struct!.hyperParameterTuningResourceConfig),
+    input_data_config: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionInputDataConfigPropertyToTerraform, true)(struct!.inputDataConfig),
+    output_data_config: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionOutputDataConfigPropertyToTerraform, true)(struct!.outputDataConfig),
+    resource_config: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionResourceConfigPropertyToTerraform, true)(struct!.resourceConfig),
+    stopping_condition: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionStoppingConditionPropertyToTerraform, true)(struct!.stoppingCondition),
+    tuning_objective: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionTuningObjectivePropertyToTerraform, true)(struct!.tuningObjective),
+    vpc_config: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionVpcConfigPropertyToTerraform, true)(struct!.vpcConfig),
   }
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2229,7 +2229,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionProperty
       storageClassType: "stringMap",
     },
     retry_strategy: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionRetryStrategyPropertyToHclTerraform, false)(struct!.retryStrategy),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionRetryStrategyPropertyToHclTerraform, false)(struct!.retryStrategy),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionRetryStrategyPropertyList",
@@ -2247,61 +2247,61 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionProperty
       storageClassType: "stringMap",
     },
     algorithm_specification: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionAlgorithmSpecificationPropertyToHclTerraform, true)(struct!.algorithmSpecification),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionAlgorithmSpecificationPropertyToHclTerraform, true)(struct!.algorithmSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionAlgorithmSpecificationPropertyList",
     },
     checkpoint_config: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionCheckpointConfigPropertyToHclTerraform, true)(struct!.checkpointConfig),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionCheckpointConfigPropertyToHclTerraform, true)(struct!.checkpointConfig),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionCheckpointConfigPropertyList",
     },
     hyper_parameter_ranges: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesPropertyToHclTerraform, true)(struct!.hyperParameterRanges),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionHyperParameterRangesPropertyToHclTerraform, true)(struct!.hyperParameterRanges),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionHyperParameterRangesPropertyList",
     },
     hyper_parameter_tuning_resource_config: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionHyperParameterTuningResourceConfigPropertyToHclTerraform, true)(struct!.hyperParameterTuningResourceConfig),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionHyperParameterTuningResourceConfigPropertyToHclTerraform, true)(struct!.hyperParameterTuningResourceConfig),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionHyperParameterTuningResourceConfigPropertyList",
     },
     input_data_config: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionInputDataConfigPropertyToHclTerraform, true)(struct!.inputDataConfig),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionInputDataConfigPropertyToHclTerraform, true)(struct!.inputDataConfig),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionInputDataConfigPropertyList",
     },
     output_data_config: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionOutputDataConfigPropertyToHclTerraform, true)(struct!.outputDataConfig),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionOutputDataConfigPropertyToHclTerraform, true)(struct!.outputDataConfig),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionOutputDataConfigPropertyList",
     },
     resource_config: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionResourceConfigPropertyToHclTerraform, true)(struct!.resourceConfig),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionResourceConfigPropertyToHclTerraform, true)(struct!.resourceConfig),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionResourceConfigPropertyList",
     },
     stopping_condition: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionStoppingConditionPropertyToHclTerraform, true)(struct!.stoppingCondition),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionStoppingConditionPropertyToHclTerraform, true)(struct!.stoppingCondition),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionStoppingConditionPropertyList",
     },
     tuning_objective: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionTuningObjectivePropertyToHclTerraform, true)(struct!.tuningObjective),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionTuningObjectivePropertyToHclTerraform, true)(struct!.tuningObjective),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionTuningObjectivePropertyList",
     },
     vpc_config: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionVpcConfigPropertyToHclTerraform, true)(struct!.vpcConfig),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionVpcConfigPropertyToHclTerraform, true)(struct!.vpcConfig),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionVpcConfigPropertyList",
@@ -2313,7 +2313,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionProperty
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsRetryStrategyPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsRetryStrategyProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsRetryStrategyPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsRetryStrategyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2324,7 +2324,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsRetrySt
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsRetryStrategyPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsRetryStrategyProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsRetryStrategyPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsRetryStrategyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2343,7 +2343,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsRetrySt
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsAlgorithmSpecificationMetricDefinitionsPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsAlgorithmSpecificationMetricDefinitionsProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsAlgorithmSpecificationMetricDefinitionsPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsAlgorithmSpecificationMetricDefinitionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2355,7 +2355,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsAlgorit
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsAlgorithmSpecificationMetricDefinitionsPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsAlgorithmSpecificationMetricDefinitionsProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsAlgorithmSpecificationMetricDefinitionsPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsAlgorithmSpecificationMetricDefinitionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2380,7 +2380,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsAlgorit
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsAlgorithmSpecificationPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsAlgorithmSpecificationProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsAlgorithmSpecificationPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsAlgorithmSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2389,12 +2389,12 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsAlgorit
     algorithm_name: cdktn.stringToTerraform(struct!.algorithmName),
     training_image: cdktn.stringToTerraform(struct!.trainingImage),
     training_input_mode: cdktn.stringToTerraform(struct!.trainingInputMode),
-    metric_definitions: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsAlgorithmSpecificationMetricDefinitionsPropertyToTerraform, true)(struct!.metricDefinitions),
+    metric_definitions: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionsAlgorithmSpecificationMetricDefinitionsPropertyToTerraform, true)(struct!.metricDefinitions),
   }
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsAlgorithmSpecificationPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsAlgorithmSpecificationProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsAlgorithmSpecificationPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsAlgorithmSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2419,7 +2419,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsAlgorit
       storageClassType: "string",
     },
     metric_definitions: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsAlgorithmSpecificationMetricDefinitionsPropertyToHclTerraform, true)(struct!.metricDefinitions),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionsAlgorithmSpecificationMetricDefinitionsPropertyToHclTerraform, true)(struct!.metricDefinitions),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionsAlgorithmSpecificationMetricDefinitionsPropertyList",
@@ -2431,7 +2431,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsAlgorit
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsCheckpointConfigPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsCheckpointConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsCheckpointConfigPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsCheckpointConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2443,7 +2443,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsCheckpo
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsCheckpointConfigPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsCheckpointConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsCheckpointConfigPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsCheckpointConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2468,7 +2468,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsCheckpo
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesAutoParametersPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsHyperParameterRangesAutoParametersProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesAutoParametersPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsHyperParameterRangesAutoParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2480,7 +2480,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperPa
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesAutoParametersPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsHyperParameterRangesAutoParametersProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesAutoParametersPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsHyperParameterRangesAutoParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2505,7 +2505,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperPa
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesCategoricalParameterRangesPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsHyperParameterRangesCategoricalParameterRangesProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesCategoricalParameterRangesPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsHyperParameterRangesCategoricalParameterRangesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2517,7 +2517,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperPa
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesCategoricalParameterRangesPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsHyperParameterRangesCategoricalParameterRangesProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesCategoricalParameterRangesPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsHyperParameterRangesCategoricalParameterRangesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2542,7 +2542,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperPa
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesContinuousParameterRangesPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsHyperParameterRangesContinuousParameterRangesProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesContinuousParameterRangesPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsHyperParameterRangesContinuousParameterRangesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2556,7 +2556,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperPa
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesContinuousParameterRangesPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsHyperParameterRangesContinuousParameterRangesProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesContinuousParameterRangesPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsHyperParameterRangesContinuousParameterRangesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2593,7 +2593,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperPa
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesIntegerParameterRangesPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsHyperParameterRangesIntegerParameterRangesProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesIntegerParameterRangesPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsHyperParameterRangesIntegerParameterRangesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2607,7 +2607,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperPa
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesIntegerParameterRangesPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsHyperParameterRangesIntegerParameterRangesProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesIntegerParameterRangesPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsHyperParameterRangesIntegerParameterRangesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2644,46 +2644,46 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperPa
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsHyperParameterRangesProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsHyperParameterRangesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    auto_parameters: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesAutoParametersPropertyToTerraform, true)(struct!.autoParameters),
-    categorical_parameter_ranges: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesCategoricalParameterRangesPropertyToTerraform, true)(struct!.categoricalParameterRanges),
-    continuous_parameter_ranges: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesContinuousParameterRangesPropertyToTerraform, true)(struct!.continuousParameterRanges),
-    integer_parameter_ranges: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesIntegerParameterRangesPropertyToTerraform, true)(struct!.integerParameterRanges),
+    auto_parameters: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesAutoParametersPropertyToTerraform, true)(struct!.autoParameters),
+    categorical_parameter_ranges: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesCategoricalParameterRangesPropertyToTerraform, true)(struct!.categoricalParameterRanges),
+    continuous_parameter_ranges: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesContinuousParameterRangesPropertyToTerraform, true)(struct!.continuousParameterRanges),
+    integer_parameter_ranges: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesIntegerParameterRangesPropertyToTerraform, true)(struct!.integerParameterRanges),
   }
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsHyperParameterRangesProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsHyperParameterRangesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     auto_parameters: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesAutoParametersPropertyToHclTerraform, true)(struct!.autoParameters),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesAutoParametersPropertyToHclTerraform, true)(struct!.autoParameters),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionsHyperParameterRangesAutoParametersPropertyList",
     },
     categorical_parameter_ranges: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesCategoricalParameterRangesPropertyToHclTerraform, true)(struct!.categoricalParameterRanges),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesCategoricalParameterRangesPropertyToHclTerraform, true)(struct!.categoricalParameterRanges),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionsHyperParameterRangesCategoricalParameterRangesPropertyList",
     },
     continuous_parameter_ranges: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesContinuousParameterRangesPropertyToHclTerraform, true)(struct!.continuousParameterRanges),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesContinuousParameterRangesPropertyToHclTerraform, true)(struct!.continuousParameterRanges),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionsHyperParameterRangesContinuousParameterRangesPropertyList",
     },
     integer_parameter_ranges: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesIntegerParameterRangesPropertyToHclTerraform, true)(struct!.integerParameterRanges),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesIntegerParameterRangesPropertyToHclTerraform, true)(struct!.integerParameterRanges),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionsHyperParameterRangesIntegerParameterRangesPropertyList",
@@ -2695,7 +2695,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperPa
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperParameterTuningResourceConfigInstanceConfigsPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsHyperParameterTuningResourceConfigInstanceConfigsProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsHyperParameterTuningResourceConfigInstanceConfigsPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsHyperParameterTuningResourceConfigInstanceConfigsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2708,7 +2708,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperPa
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperParameterTuningResourceConfigInstanceConfigsPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsHyperParameterTuningResourceConfigInstanceConfigsProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsHyperParameterTuningResourceConfigInstanceConfigsPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsHyperParameterTuningResourceConfigInstanceConfigsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2739,7 +2739,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperPa
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperParameterTuningResourceConfigPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsHyperParameterTuningResourceConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsHyperParameterTuningResourceConfigPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsHyperParameterTuningResourceConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2750,12 +2750,12 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperPa
     instance_type: cdktn.stringToTerraform(struct!.instanceType),
     volume_kms_key_id: cdktn.stringToTerraform(struct!.volumeKmsKeyId),
     volume_size_in_gb: cdktn.numberToTerraform(struct!.volumeSizeInGb),
-    instance_configs: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperParameterTuningResourceConfigInstanceConfigsPropertyToTerraform, true)(struct!.instanceConfigs),
+    instance_configs: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionsHyperParameterTuningResourceConfigInstanceConfigsPropertyToTerraform, true)(struct!.instanceConfigs),
   }
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperParameterTuningResourceConfigPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsHyperParameterTuningResourceConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsHyperParameterTuningResourceConfigPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsHyperParameterTuningResourceConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2792,7 +2792,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperPa
       storageClassType: "number",
     },
     instance_configs: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperParameterTuningResourceConfigInstanceConfigsPropertyToHclTerraform, true)(struct!.instanceConfigs),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionsHyperParameterTuningResourceConfigInstanceConfigsPropertyToHclTerraform, true)(struct!.instanceConfigs),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionsHyperParameterTuningResourceConfigInstanceConfigsPropertyList",
@@ -2804,7 +2804,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperPa
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourceFileSystemDataSourcePropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsInputDataConfigDataSourceFileSystemDataSourceProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourceFileSystemDataSourcePropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsInputDataConfigDataSourceFileSystemDataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2818,7 +2818,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDa
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourceFileSystemDataSourcePropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsInputDataConfigDataSourceFileSystemDataSourceProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourceFileSystemDataSourcePropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsInputDataConfigDataSourceFileSystemDataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2855,7 +2855,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDa
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceHubAccessConfigPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceHubAccessConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceHubAccessConfigPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceHubAccessConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2866,7 +2866,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDa
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceHubAccessConfigPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceHubAccessConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceHubAccessConfigPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceHubAccessConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2885,7 +2885,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDa
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceModelAccessConfigPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceModelAccessConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceModelAccessConfigPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceModelAccessConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2896,7 +2896,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDa
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceModelAccessConfigPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceModelAccessConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceModelAccessConfigPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceModelAccessConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2915,7 +2915,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDa
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourceS3DataSourcePropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourceS3DataSourcePropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2926,13 +2926,13 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDa
     s3_data_distribution_type: cdktn.stringToTerraform(struct!.s3DataDistributionType),
     s3_data_type: cdktn.stringToTerraform(struct!.s3DataType),
     s3_uri: cdktn.stringToTerraform(struct!.s3Uri),
-    hub_access_config: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceHubAccessConfigPropertyToTerraform, true)(struct!.hubAccessConfig),
-    model_access_config: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceModelAccessConfigPropertyToTerraform, true)(struct!.modelAccessConfig),
+    hub_access_config: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceHubAccessConfigPropertyToTerraform, true)(struct!.hubAccessConfig),
+    model_access_config: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceModelAccessConfigPropertyToTerraform, true)(struct!.modelAccessConfig),
   }
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourceS3DataSourcePropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourceS3DataSourcePropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2969,13 +2969,13 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDa
       storageClassType: "string",
     },
     hub_access_config: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceHubAccessConfigPropertyToHclTerraform, true)(struct!.hubAccessConfig),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceHubAccessConfigPropertyToHclTerraform, true)(struct!.hubAccessConfig),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceHubAccessConfigPropertyList",
     },
     model_access_config: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceModelAccessConfigPropertyToHclTerraform, true)(struct!.modelAccessConfig),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceModelAccessConfigPropertyToHclTerraform, true)(struct!.modelAccessConfig),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceModelAccessConfigPropertyList",
@@ -2987,32 +2987,32 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDa
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourcePropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsInputDataConfigDataSourceProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourcePropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsInputDataConfigDataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    file_system_data_source: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourceFileSystemDataSourcePropertyToTerraform, true)(struct!.fileSystemDataSource),
-    s3_data_source: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourceS3DataSourcePropertyToTerraform, true)(struct!.s3DataSource),
+    file_system_data_source: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourceFileSystemDataSourcePropertyToTerraform, true)(struct!.fileSystemDataSource),
+    s3_data_source: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourceS3DataSourcePropertyToTerraform, true)(struct!.s3DataSource),
   }
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourcePropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsInputDataConfigDataSourceProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourcePropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsInputDataConfigDataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     file_system_data_source: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourceFileSystemDataSourcePropertyToHclTerraform, true)(struct!.fileSystemDataSource),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourceFileSystemDataSourcePropertyToHclTerraform, true)(struct!.fileSystemDataSource),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionsInputDataConfigDataSourceFileSystemDataSourcePropertyList",
     },
     s3_data_source: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourceS3DataSourcePropertyToHclTerraform, true)(struct!.s3DataSource),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourceS3DataSourcePropertyToHclTerraform, true)(struct!.s3DataSource),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionsInputDataConfigDataSourceS3DataSourcePropertyList",
@@ -3024,7 +3024,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDa
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigShuffleConfigPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsInputDataConfigShuffleConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigShuffleConfigPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsInputDataConfigShuffleConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3035,7 +3035,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDa
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigShuffleConfigPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsInputDataConfigShuffleConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigShuffleConfigPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsInputDataConfigShuffleConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3054,7 +3054,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDa
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsInputDataConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsInputDataConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3065,13 +3065,13 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDa
     content_type: cdktn.stringToTerraform(struct!.contentType),
     input_mode: cdktn.stringToTerraform(struct!.inputMode),
     record_wrapper_type: cdktn.stringToTerraform(struct!.recordWrapperType),
-    data_source: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourcePropertyToTerraform, true)(struct!.dataSource),
-    shuffle_config: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigShuffleConfigPropertyToTerraform, true)(struct!.shuffleConfig),
+    data_source: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourcePropertyToTerraform, true)(struct!.dataSource),
+    shuffle_config: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigShuffleConfigPropertyToTerraform, true)(struct!.shuffleConfig),
   }
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsInputDataConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsInputDataConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3108,13 +3108,13 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDa
       storageClassType: "string",
     },
     data_source: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourcePropertyToHclTerraform, true)(struct!.dataSource),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigDataSourcePropertyToHclTerraform, true)(struct!.dataSource),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionsInputDataConfigDataSourcePropertyList",
     },
     shuffle_config: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigShuffleConfigPropertyToHclTerraform, true)(struct!.shuffleConfig),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigShuffleConfigPropertyToHclTerraform, true)(struct!.shuffleConfig),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionsInputDataConfigShuffleConfigPropertyList",
@@ -3126,7 +3126,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDa
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsOutputDataConfigPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsOutputDataConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsOutputDataConfigPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsOutputDataConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3139,7 +3139,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsOutputD
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsOutputDataConfigPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsOutputDataConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsOutputDataConfigPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsOutputDataConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3170,7 +3170,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsOutputD
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsResourceConfigInstanceGroupsPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsResourceConfigInstanceGroupsProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsResourceConfigInstanceGroupsPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsResourceConfigInstanceGroupsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3183,7 +3183,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsResourc
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsResourceConfigInstanceGroupsPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsResourceConfigInstanceGroupsProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsResourceConfigInstanceGroupsPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsResourceConfigInstanceGroupsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3214,7 +3214,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsResourc
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsResourceConfigInstancePlacementConfigPlacementSpecificationsPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsResourceConfigInstancePlacementConfigPlacementSpecificationsProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsResourceConfigInstancePlacementConfigPlacementSpecificationsPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsResourceConfigInstancePlacementConfigPlacementSpecificationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3226,7 +3226,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsResourc
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsResourceConfigInstancePlacementConfigPlacementSpecificationsPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsResourceConfigInstancePlacementConfigPlacementSpecificationsProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsResourceConfigInstancePlacementConfigPlacementSpecificationsPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsResourceConfigInstancePlacementConfigPlacementSpecificationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3251,19 +3251,19 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsResourc
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsResourceConfigInstancePlacementConfigPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsResourceConfigInstancePlacementConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsResourceConfigInstancePlacementConfigPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsResourceConfigInstancePlacementConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     enable_multiple_jobs: cdktn.booleanToTerraform(struct!.enableMultipleJobs),
-    placement_specifications: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsResourceConfigInstancePlacementConfigPlacementSpecificationsPropertyToTerraform, true)(struct!.placementSpecifications),
+    placement_specifications: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionsResourceConfigInstancePlacementConfigPlacementSpecificationsPropertyToTerraform, true)(struct!.placementSpecifications),
   }
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsResourceConfigInstancePlacementConfigPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsResourceConfigInstancePlacementConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsResourceConfigInstancePlacementConfigPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsResourceConfigInstancePlacementConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3276,7 +3276,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsResourc
       storageClassType: "boolean",
     },
     placement_specifications: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsResourceConfigInstancePlacementConfigPlacementSpecificationsPropertyToHclTerraform, true)(struct!.placementSpecifications),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionsResourceConfigInstancePlacementConfigPlacementSpecificationsPropertyToHclTerraform, true)(struct!.placementSpecifications),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionsResourceConfigInstancePlacementConfigPlacementSpecificationsPropertyList",
@@ -3288,7 +3288,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsResourc
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsResourceConfigPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsResourceConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsResourceConfigPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsResourceConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3300,13 +3300,13 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsResourc
     training_plan_arn: cdktn.stringToTerraform(struct!.trainingPlanArn),
     volume_kms_key_id: cdktn.stringToTerraform(struct!.volumeKmsKeyId),
     volume_size_in_gb: cdktn.numberToTerraform(struct!.volumeSizeInGb),
-    instance_groups: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsResourceConfigInstanceGroupsPropertyToTerraform, true)(struct!.instanceGroups),
-    instance_placement_config: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsResourceConfigInstancePlacementConfigPropertyToTerraform, true)(struct!.instancePlacementConfig),
+    instance_groups: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionsResourceConfigInstanceGroupsPropertyToTerraform, true)(struct!.instanceGroups),
+    instance_placement_config: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionsResourceConfigInstancePlacementConfigPropertyToTerraform, true)(struct!.instancePlacementConfig),
   }
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsResourceConfigPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsResourceConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsResourceConfigPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsResourceConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3349,13 +3349,13 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsResourc
       storageClassType: "number",
     },
     instance_groups: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsResourceConfigInstanceGroupsPropertyToHclTerraform, true)(struct!.instanceGroups),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionsResourceConfigInstanceGroupsPropertyToHclTerraform, true)(struct!.instanceGroups),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionsResourceConfigInstanceGroupsPropertyList",
     },
     instance_placement_config: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsResourceConfigInstancePlacementConfigPropertyToHclTerraform, true)(struct!.instancePlacementConfig),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionsResourceConfigInstancePlacementConfigPropertyToHclTerraform, true)(struct!.instancePlacementConfig),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionsResourceConfigInstancePlacementConfigPropertyList",
@@ -3367,7 +3367,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsResourc
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsStoppingConditionPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsStoppingConditionProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsStoppingConditionPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsStoppingConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3380,7 +3380,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsStoppin
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsStoppingConditionPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsStoppingConditionProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsStoppingConditionPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsStoppingConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3411,7 +3411,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsStoppin
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsTuningObjectivePropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsTuningObjectiveProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsTuningObjectivePropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsTuningObjectiveProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3423,7 +3423,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsTuningO
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsTuningObjectivePropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsTuningObjectiveProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsTuningObjectivePropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsTuningObjectiveProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3448,7 +3448,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsTuningO
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsVpcConfigPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsVpcConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsVpcConfigPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsVpcConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3460,7 +3460,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsVpcConf
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsVpcConfigPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsVpcConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsVpcConfigPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsVpcConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3485,7 +3485,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsVpcConf
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsPropertyToTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3496,24 +3496,24 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsPropert
     enable_managed_spot_training: cdktn.booleanToTerraform(struct!.enableManagedSpotTraining),
     enable_network_isolation: cdktn.booleanToTerraform(struct!.enableNetworkIsolation),
     environment: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.environment),
-    retry_strategy: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsRetryStrategyPropertyToTerraform, false)(struct!.retryStrategy),
+    retry_strategy: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionsRetryStrategyPropertyToTerraform, false)(struct!.retryStrategy),
     role_arn: cdktn.stringToTerraform(struct!.roleArn),
     static_hyper_parameters: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.staticHyperParameters),
-    algorithm_specification: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsAlgorithmSpecificationPropertyToTerraform, true)(struct!.algorithmSpecification),
-    checkpoint_config: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsCheckpointConfigPropertyToTerraform, true)(struct!.checkpointConfig),
-    hyper_parameter_ranges: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesPropertyToTerraform, true)(struct!.hyperParameterRanges),
-    hyper_parameter_tuning_resource_config: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperParameterTuningResourceConfigPropertyToTerraform, true)(struct!.hyperParameterTuningResourceConfig),
-    input_data_config: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigPropertyToTerraform, true)(struct!.inputDataConfig),
-    output_data_config: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsOutputDataConfigPropertyToTerraform, true)(struct!.outputDataConfig),
-    resource_config: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsResourceConfigPropertyToTerraform, true)(struct!.resourceConfig),
-    stopping_condition: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsStoppingConditionPropertyToTerraform, true)(struct!.stoppingCondition),
-    tuning_objective: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsTuningObjectivePropertyToTerraform, true)(struct!.tuningObjective),
-    vpc_config: cdktn.listMapper(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsVpcConfigPropertyToTerraform, true)(struct!.vpcConfig),
+    algorithm_specification: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionsAlgorithmSpecificationPropertyToTerraform, true)(struct!.algorithmSpecification),
+    checkpoint_config: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionsCheckpointConfigPropertyToTerraform, true)(struct!.checkpointConfig),
+    hyper_parameter_ranges: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesPropertyToTerraform, true)(struct!.hyperParameterRanges),
+    hyper_parameter_tuning_resource_config: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionsHyperParameterTuningResourceConfigPropertyToTerraform, true)(struct!.hyperParameterTuningResourceConfig),
+    input_data_config: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigPropertyToTerraform, true)(struct!.inputDataConfig),
+    output_data_config: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionsOutputDataConfigPropertyToTerraform, true)(struct!.outputDataConfig),
+    resource_config: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionsResourceConfigPropertyToTerraform, true)(struct!.resourceConfig),
+    stopping_condition: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionsStoppingConditionPropertyToTerraform, true)(struct!.stoppingCondition),
+    tuning_objective: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionsTuningObjectivePropertyToTerraform, true)(struct!.tuningObjective),
+    vpc_config: cdktn.listMapper(tfHyperParameterTuningJobTrainingJobDefinitionsVpcConfigPropertyToTerraform, true)(struct!.vpcConfig),
   }
 }
 
 
-export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.TrainingJobDefinitionsProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobTrainingJobDefinitionsPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.TrainingJobDefinitionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3550,7 +3550,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsPropert
       storageClassType: "stringMap",
     },
     retry_strategy: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsRetryStrategyPropertyToHclTerraform, false)(struct!.retryStrategy),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionsRetryStrategyPropertyToHclTerraform, false)(struct!.retryStrategy),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionsRetryStrategyPropertyList",
@@ -3568,61 +3568,61 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsPropert
       storageClassType: "stringMap",
     },
     algorithm_specification: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsAlgorithmSpecificationPropertyToHclTerraform, true)(struct!.algorithmSpecification),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionsAlgorithmSpecificationPropertyToHclTerraform, true)(struct!.algorithmSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionsAlgorithmSpecificationPropertyList",
     },
     checkpoint_config: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsCheckpointConfigPropertyToHclTerraform, true)(struct!.checkpointConfig),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionsCheckpointConfigPropertyToHclTerraform, true)(struct!.checkpointConfig),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionsCheckpointConfigPropertyList",
     },
     hyper_parameter_ranges: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesPropertyToHclTerraform, true)(struct!.hyperParameterRanges),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionsHyperParameterRangesPropertyToHclTerraform, true)(struct!.hyperParameterRanges),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionsHyperParameterRangesPropertyList",
     },
     hyper_parameter_tuning_resource_config: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsHyperParameterTuningResourceConfigPropertyToHclTerraform, true)(struct!.hyperParameterTuningResourceConfig),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionsHyperParameterTuningResourceConfigPropertyToHclTerraform, true)(struct!.hyperParameterTuningResourceConfig),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionsHyperParameterTuningResourceConfigPropertyList",
     },
     input_data_config: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigPropertyToHclTerraform, true)(struct!.inputDataConfig),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionsInputDataConfigPropertyToHclTerraform, true)(struct!.inputDataConfig),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionsInputDataConfigPropertyList",
     },
     output_data_config: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsOutputDataConfigPropertyToHclTerraform, true)(struct!.outputDataConfig),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionsOutputDataConfigPropertyToHclTerraform, true)(struct!.outputDataConfig),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionsOutputDataConfigPropertyList",
     },
     resource_config: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsResourceConfigPropertyToHclTerraform, true)(struct!.resourceConfig),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionsResourceConfigPropertyToHclTerraform, true)(struct!.resourceConfig),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionsResourceConfigPropertyList",
     },
     stopping_condition: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsStoppingConditionPropertyToHclTerraform, true)(struct!.stoppingCondition),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionsStoppingConditionPropertyToHclTerraform, true)(struct!.stoppingCondition),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionsStoppingConditionPropertyList",
     },
     tuning_objective: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsTuningObjectivePropertyToHclTerraform, true)(struct!.tuningObjective),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionsTuningObjectivePropertyToHclTerraform, true)(struct!.tuningObjective),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionsTuningObjectivePropertyList",
     },
     vpc_config: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsVpcConfigPropertyToHclTerraform, true)(struct!.vpcConfig),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobTrainingJobDefinitionsVpcConfigPropertyToHclTerraform, true)(struct!.vpcConfig),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionsVpcConfigPropertyList",
@@ -3634,7 +3634,7 @@ export function awsSagemakerHyperParameterTuningJobTrainingJobDefinitionsPropert
 }
 
 
-export function awsSagemakerHyperParameterTuningJobParentHyperParameterTuningJobsPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.ParentHyperParameterTuningJobsProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobParentHyperParameterTuningJobsPropertyToTerraform(struct?: TfHyperParameterTuningJob.ParentHyperParameterTuningJobsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3645,7 +3645,7 @@ export function awsSagemakerHyperParameterTuningJobParentHyperParameterTuningJob
 }
 
 
-export function awsSagemakerHyperParameterTuningJobParentHyperParameterTuningJobsPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.ParentHyperParameterTuningJobsProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobParentHyperParameterTuningJobsPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.ParentHyperParameterTuningJobsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3664,19 +3664,19 @@ export function awsSagemakerHyperParameterTuningJobParentHyperParameterTuningJob
 }
 
 
-export function awsSagemakerHyperParameterTuningJobWarmStartConfigPropertyToTerraform(struct?: AwsSagemakerHyperParameterTuningJob.WarmStartConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobWarmStartConfigPropertyToTerraform(struct?: TfHyperParameterTuningJob.WarmStartConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     warm_start_type: cdktn.stringToTerraform(struct!.warmStartType),
-    parent_hyper_parameter_tuning_jobs: cdktn.listMapper(awsSagemakerHyperParameterTuningJobParentHyperParameterTuningJobsPropertyToTerraform, true)(struct!.parentHyperParameterTuningJobs),
+    parent_hyper_parameter_tuning_jobs: cdktn.listMapper(tfHyperParameterTuningJobParentHyperParameterTuningJobsPropertyToTerraform, true)(struct!.parentHyperParameterTuningJobs),
   }
 }
 
 
-export function awsSagemakerHyperParameterTuningJobWarmStartConfigPropertyToHclTerraform(struct?: AwsSagemakerHyperParameterTuningJob.WarmStartConfigProperty | cdktn.IResolvable): any {
+export function tfHyperParameterTuningJobWarmStartConfigPropertyToHclTerraform(struct?: TfHyperParameterTuningJob.WarmStartConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3689,7 +3689,7 @@ export function awsSagemakerHyperParameterTuningJobWarmStartConfigPropertyToHclT
       storageClassType: "string",
     },
     parent_hyper_parameter_tuning_jobs: {
-      value: cdktn.listMapperHcl(awsSagemakerHyperParameterTuningJobParentHyperParameterTuningJobsPropertyToHclTerraform, true)(struct!.parentHyperParameterTuningJobs),
+      value: cdktn.listMapperHcl(tfHyperParameterTuningJobParentHyperParameterTuningJobsPropertyToHclTerraform, true)(struct!.parentHyperParameterTuningJobs),
       isBlock: true,
       type: "list",
       storageClassType: "ParentHyperParameterTuningJobsPropertyList",
@@ -3701,10 +3701,10 @@ export function awsSagemakerHyperParameterTuningJobWarmStartConfigPropertyToHclT
 }
 
 
-export namespace AwsSagemakerHyperParameterTuningJob {
+export namespace TfHyperParameterTuningJob {
 export interface AutotuneProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#mode AwsSagemakerHyperParameterTuningJob#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#mode TfHyperParameterTuningJob#mode}
   */
   readonly mode: string;
 }
@@ -3787,11 +3787,11 @@ export class AutotunePropertyList extends cdktn.ComplexList {
 }
 export interface ObjectiveProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#metric_name AwsSagemakerHyperParameterTuningJob#metric_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#metric_name TfHyperParameterTuningJob#metric_name}
   */
   readonly metricName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#type AwsSagemakerHyperParameterTuningJob#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#type TfHyperParameterTuningJob#type}
   */
   readonly type: string;
 }
@@ -3893,11 +3893,11 @@ export class ObjectivePropertyList extends cdktn.ComplexList {
 }
 export interface ConfigParameterRangesAutoParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#name AwsSagemakerHyperParameterTuningJob#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#name TfHyperParameterTuningJob#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#value_hint AwsSagemakerHyperParameterTuningJob#value_hint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#value_hint TfHyperParameterTuningJob#value_hint}
   */
   readonly valueHint: string;
 }
@@ -3999,11 +3999,11 @@ export class ConfigParameterRangesAutoParametersPropertyList extends cdktn.Compl
 }
 export interface ConfigParameterRangesCategoricalParameterRangesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#name AwsSagemakerHyperParameterTuningJob#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#name TfHyperParameterTuningJob#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#values AwsSagemakerHyperParameterTuningJob#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#values TfHyperParameterTuningJob#values}
   */
   readonly values: string[];
 }
@@ -4105,19 +4105,19 @@ export class ConfigParameterRangesCategoricalParameterRangesPropertyList extends
 }
 export interface ConfigParameterRangesContinuousParameterRangesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_value AwsSagemakerHyperParameterTuningJob#max_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_value TfHyperParameterTuningJob#max_value}
   */
   readonly maxValue: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#min_value AwsSagemakerHyperParameterTuningJob#min_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#min_value TfHyperParameterTuningJob#min_value}
   */
   readonly minValue: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#name AwsSagemakerHyperParameterTuningJob#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#name TfHyperParameterTuningJob#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#scaling_type AwsSagemakerHyperParameterTuningJob#scaling_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#scaling_type TfHyperParameterTuningJob#scaling_type}
   */
   readonly scalingType?: string;
 }
@@ -4260,19 +4260,19 @@ export class ConfigParameterRangesContinuousParameterRangesPropertyList extends 
 }
 export interface ConfigParameterRangesIntegerParameterRangesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_value AwsSagemakerHyperParameterTuningJob#max_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_value TfHyperParameterTuningJob#max_value}
   */
   readonly maxValue: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#min_value AwsSagemakerHyperParameterTuningJob#min_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#min_value TfHyperParameterTuningJob#min_value}
   */
   readonly minValue: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#name AwsSagemakerHyperParameterTuningJob#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#name TfHyperParameterTuningJob#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#scaling_type AwsSagemakerHyperParameterTuningJob#scaling_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#scaling_type TfHyperParameterTuningJob#scaling_type}
   */
   readonly scalingType?: string;
 }
@@ -4417,25 +4417,25 @@ export interface ParameterRangesProperty {
   /**
   * auto_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#auto_parameters AwsSagemakerHyperParameterTuningJob#auto_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#auto_parameters TfHyperParameterTuningJob#auto_parameters}
   */
   readonly autoParameters?: ConfigParameterRangesAutoParametersProperty[] | cdktn.IResolvable;
   /**
   * categorical_parameter_ranges block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#categorical_parameter_ranges AwsSagemakerHyperParameterTuningJob#categorical_parameter_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#categorical_parameter_ranges TfHyperParameterTuningJob#categorical_parameter_ranges}
   */
   readonly categoricalParameterRanges?: ConfigParameterRangesCategoricalParameterRangesProperty[] | cdktn.IResolvable;
   /**
   * continuous_parameter_ranges block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#continuous_parameter_ranges AwsSagemakerHyperParameterTuningJob#continuous_parameter_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#continuous_parameter_ranges TfHyperParameterTuningJob#continuous_parameter_ranges}
   */
   readonly continuousParameterRanges?: ConfigParameterRangesContinuousParameterRangesProperty[] | cdktn.IResolvable;
   /**
   * integer_parameter_ranges block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#integer_parameter_ranges AwsSagemakerHyperParameterTuningJob#integer_parameter_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#integer_parameter_ranges TfHyperParameterTuningJob#integer_parameter_ranges}
   */
   readonly integerParameterRanges?: ConfigParameterRangesIntegerParameterRangesProperty[] | cdktn.IResolvable;
 }
@@ -4587,15 +4587,15 @@ export class ParameterRangesPropertyList extends cdktn.ComplexList {
 }
 export interface ResourceLimitsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_number_of_training_jobs AwsSagemakerHyperParameterTuningJob#max_number_of_training_jobs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_number_of_training_jobs TfHyperParameterTuningJob#max_number_of_training_jobs}
   */
   readonly maxNumberOfTrainingJobs?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_parallel_training_jobs AwsSagemakerHyperParameterTuningJob#max_parallel_training_jobs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_parallel_training_jobs TfHyperParameterTuningJob#max_parallel_training_jobs}
   */
   readonly maxParallelTrainingJobs: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_runtime_in_seconds AwsSagemakerHyperParameterTuningJob#max_runtime_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_runtime_in_seconds TfHyperParameterTuningJob#max_runtime_in_seconds}
   */
   readonly maxRuntimeInSeconds?: number;
 }
@@ -4722,11 +4722,11 @@ export class ResourceLimitsPropertyList extends cdktn.ComplexList {
 }
 export interface HyperbandStrategyConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_resource AwsSagemakerHyperParameterTuningJob#max_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_resource TfHyperParameterTuningJob#max_resource}
   */
   readonly maxResource?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#min_resource AwsSagemakerHyperParameterTuningJob#min_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#min_resource TfHyperParameterTuningJob#min_resource}
   */
   readonly minResource?: number;
 }
@@ -4836,7 +4836,7 @@ export interface StrategyConfigProperty {
   /**
   * hyperband_strategy_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#hyperband_strategy_config AwsSagemakerHyperParameterTuningJob#hyperband_strategy_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#hyperband_strategy_config TfHyperParameterTuningJob#hyperband_strategy_config}
   */
   readonly hyperbandStrategyConfig?: HyperbandStrategyConfigProperty[] | cdktn.IResolvable;
 }
@@ -4922,7 +4922,7 @@ export class StrategyConfigPropertyList extends cdktn.ComplexList {
 }
 export interface BestObjectiveNotImprovingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_number_of_training_jobs_not_improving AwsSagemakerHyperParameterTuningJob#max_number_of_training_jobs_not_improving}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_number_of_training_jobs_not_improving TfHyperParameterTuningJob#max_number_of_training_jobs_not_improving}
   */
   readonly maxNumberOfTrainingJobsNotImproving?: number;
 }
@@ -5008,7 +5008,7 @@ export class BestObjectiveNotImprovingPropertyList extends cdktn.ComplexList {
 }
 export interface ConvergenceDetectedProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#complete_on_convergence AwsSagemakerHyperParameterTuningJob#complete_on_convergence}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#complete_on_convergence TfHyperParameterTuningJob#complete_on_convergence}
   */
   readonly completeOnConvergence?: string;
 }
@@ -5094,19 +5094,19 @@ export class ConvergenceDetectedPropertyList extends cdktn.ComplexList {
 }
 export interface TuningJobCompletionCriteriaProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#target_objective_metric_value AwsSagemakerHyperParameterTuningJob#target_objective_metric_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#target_objective_metric_value TfHyperParameterTuningJob#target_objective_metric_value}
   */
   readonly targetObjectiveMetricValue?: number;
   /**
   * best_objective_not_improving block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#best_objective_not_improving AwsSagemakerHyperParameterTuningJob#best_objective_not_improving}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#best_objective_not_improving TfHyperParameterTuningJob#best_objective_not_improving}
   */
   readonly bestObjectiveNotImproving?: BestObjectiveNotImprovingProperty[] | cdktn.IResolvable;
   /**
   * convergence_detected block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#convergence_detected AwsSagemakerHyperParameterTuningJob#convergence_detected}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#convergence_detected TfHyperParameterTuningJob#convergence_detected}
   */
   readonly convergenceDetected?: ConvergenceDetectedProperty[] | cdktn.IResolvable;
 }
@@ -5236,45 +5236,45 @@ export class TuningJobCompletionCriteriaPropertyList extends cdktn.ComplexList {
 }
 export interface ConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#random_seed AwsSagemakerHyperParameterTuningJob#random_seed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#random_seed TfHyperParameterTuningJob#random_seed}
   */
   readonly randomSeed?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#strategy AwsSagemakerHyperParameterTuningJob#strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#strategy TfHyperParameterTuningJob#strategy}
   */
   readonly strategy: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#training_job_early_stopping_type AwsSagemakerHyperParameterTuningJob#training_job_early_stopping_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#training_job_early_stopping_type TfHyperParameterTuningJob#training_job_early_stopping_type}
   */
   readonly trainingJobEarlyStoppingType?: string;
   /**
   * objective block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#objective AwsSagemakerHyperParameterTuningJob#objective}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#objective TfHyperParameterTuningJob#objective}
   */
   readonly objective?: ObjectiveProperty[] | cdktn.IResolvable;
   /**
   * parameter_ranges block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#parameter_ranges AwsSagemakerHyperParameterTuningJob#parameter_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#parameter_ranges TfHyperParameterTuningJob#parameter_ranges}
   */
   readonly parameterRanges?: ParameterRangesProperty[] | cdktn.IResolvable;
   /**
   * resource_limits block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#resource_limits AwsSagemakerHyperParameterTuningJob#resource_limits}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#resource_limits TfHyperParameterTuningJob#resource_limits}
   */
   readonly resourceLimits?: ResourceLimitsProperty[] | cdktn.IResolvable;
   /**
   * strategy_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#strategy_config AwsSagemakerHyperParameterTuningJob#strategy_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#strategy_config TfHyperParameterTuningJob#strategy_config}
   */
   readonly strategyConfig?: StrategyConfigProperty[] | cdktn.IResolvable;
   /**
   * tuning_job_completion_criteria block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#tuning_job_completion_criteria AwsSagemakerHyperParameterTuningJob#tuning_job_completion_criteria}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#tuning_job_completion_criteria TfHyperParameterTuningJob#tuning_job_completion_criteria}
   */
   readonly tuningJobCompletionCriteria?: TuningJobCompletionCriteriaProperty[] | cdktn.IResolvable;
 }
@@ -5513,13 +5513,13 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#create AwsSagemakerHyperParameterTuningJob#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#create TfHyperParameterTuningJob#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#delete AwsSagemakerHyperParameterTuningJob#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#delete TfHyperParameterTuningJob#delete}
   */
   readonly delete?: string;
 }
@@ -5605,7 +5605,7 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TrainingJobDefinitionRetryStrategyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#maximum_retry_attempts AwsSagemakerHyperParameterTuningJob#maximum_retry_attempts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#maximum_retry_attempts TfHyperParameterTuningJob#maximum_retry_attempts}
   */
   readonly maximumRetryAttempts?: number;
 }
@@ -5691,11 +5691,11 @@ export class TrainingJobDefinitionRetryStrategyPropertyList extends cdktn.Comple
 }
 export interface TrainingJobDefinitionAlgorithmSpecificationMetricDefinitionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#name AwsSagemakerHyperParameterTuningJob#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#name TfHyperParameterTuningJob#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#regex AwsSagemakerHyperParameterTuningJob#regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#regex TfHyperParameterTuningJob#regex}
   */
   readonly regex: string;
 }
@@ -5797,21 +5797,21 @@ export class TrainingJobDefinitionAlgorithmSpecificationMetricDefinitionsPropert
 }
 export interface TrainingJobDefinitionAlgorithmSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#algorithm_name AwsSagemakerHyperParameterTuningJob#algorithm_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#algorithm_name TfHyperParameterTuningJob#algorithm_name}
   */
   readonly algorithmName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#training_image AwsSagemakerHyperParameterTuningJob#training_image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#training_image TfHyperParameterTuningJob#training_image}
   */
   readonly trainingImage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#training_input_mode AwsSagemakerHyperParameterTuningJob#training_input_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#training_input_mode TfHyperParameterTuningJob#training_input_mode}
   */
   readonly trainingInputMode: string;
   /**
   * metric_definitions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#metric_definitions AwsSagemakerHyperParameterTuningJob#metric_definitions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#metric_definitions TfHyperParameterTuningJob#metric_definitions}
   */
   readonly metricDefinitions?: TrainingJobDefinitionAlgorithmSpecificationMetricDefinitionsProperty[] | cdktn.IResolvable;
 }
@@ -5960,11 +5960,11 @@ export class TrainingJobDefinitionAlgorithmSpecificationPropertyList extends cdk
 }
 export interface TrainingJobDefinitionCheckpointConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#local_path AwsSagemakerHyperParameterTuningJob#local_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#local_path TfHyperParameterTuningJob#local_path}
   */
   readonly localPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#s3_uri AwsSagemakerHyperParameterTuningJob#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#s3_uri TfHyperParameterTuningJob#s3_uri}
   */
   readonly s3Uri: string;
 }
@@ -6069,11 +6069,11 @@ export class TrainingJobDefinitionCheckpointConfigPropertyList extends cdktn.Com
 }
 export interface TrainingJobDefinitionHyperParameterRangesAutoParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#name AwsSagemakerHyperParameterTuningJob#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#name TfHyperParameterTuningJob#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#value_hint AwsSagemakerHyperParameterTuningJob#value_hint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#value_hint TfHyperParameterTuningJob#value_hint}
   */
   readonly valueHint: string;
 }
@@ -6175,11 +6175,11 @@ export class TrainingJobDefinitionHyperParameterRangesAutoParametersPropertyList
 }
 export interface TrainingJobDefinitionHyperParameterRangesCategoricalParameterRangesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#name AwsSagemakerHyperParameterTuningJob#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#name TfHyperParameterTuningJob#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#values AwsSagemakerHyperParameterTuningJob#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#values TfHyperParameterTuningJob#values}
   */
   readonly values: string[];
 }
@@ -6281,19 +6281,19 @@ export class TrainingJobDefinitionHyperParameterRangesCategoricalParameterRanges
 }
 export interface TrainingJobDefinitionHyperParameterRangesContinuousParameterRangesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_value AwsSagemakerHyperParameterTuningJob#max_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_value TfHyperParameterTuningJob#max_value}
   */
   readonly maxValue: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#min_value AwsSagemakerHyperParameterTuningJob#min_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#min_value TfHyperParameterTuningJob#min_value}
   */
   readonly minValue: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#name AwsSagemakerHyperParameterTuningJob#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#name TfHyperParameterTuningJob#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#scaling_type AwsSagemakerHyperParameterTuningJob#scaling_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#scaling_type TfHyperParameterTuningJob#scaling_type}
   */
   readonly scalingType?: string;
 }
@@ -6436,19 +6436,19 @@ export class TrainingJobDefinitionHyperParameterRangesContinuousParameterRangesP
 }
 export interface TrainingJobDefinitionHyperParameterRangesIntegerParameterRangesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_value AwsSagemakerHyperParameterTuningJob#max_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_value TfHyperParameterTuningJob#max_value}
   */
   readonly maxValue: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#min_value AwsSagemakerHyperParameterTuningJob#min_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#min_value TfHyperParameterTuningJob#min_value}
   */
   readonly minValue: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#name AwsSagemakerHyperParameterTuningJob#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#name TfHyperParameterTuningJob#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#scaling_type AwsSagemakerHyperParameterTuningJob#scaling_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#scaling_type TfHyperParameterTuningJob#scaling_type}
   */
   readonly scalingType?: string;
 }
@@ -6593,25 +6593,25 @@ export interface TrainingJobDefinitionHyperParameterRangesProperty {
   /**
   * auto_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#auto_parameters AwsSagemakerHyperParameterTuningJob#auto_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#auto_parameters TfHyperParameterTuningJob#auto_parameters}
   */
   readonly autoParameters?: TrainingJobDefinitionHyperParameterRangesAutoParametersProperty[] | cdktn.IResolvable;
   /**
   * categorical_parameter_ranges block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#categorical_parameter_ranges AwsSagemakerHyperParameterTuningJob#categorical_parameter_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#categorical_parameter_ranges TfHyperParameterTuningJob#categorical_parameter_ranges}
   */
   readonly categoricalParameterRanges?: TrainingJobDefinitionHyperParameterRangesCategoricalParameterRangesProperty[] | cdktn.IResolvable;
   /**
   * continuous_parameter_ranges block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#continuous_parameter_ranges AwsSagemakerHyperParameterTuningJob#continuous_parameter_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#continuous_parameter_ranges TfHyperParameterTuningJob#continuous_parameter_ranges}
   */
   readonly continuousParameterRanges?: TrainingJobDefinitionHyperParameterRangesContinuousParameterRangesProperty[] | cdktn.IResolvable;
   /**
   * integer_parameter_ranges block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#integer_parameter_ranges AwsSagemakerHyperParameterTuningJob#integer_parameter_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#integer_parameter_ranges TfHyperParameterTuningJob#integer_parameter_ranges}
   */
   readonly integerParameterRanges?: TrainingJobDefinitionHyperParameterRangesIntegerParameterRangesProperty[] | cdktn.IResolvable;
 }
@@ -6763,15 +6763,15 @@ export class TrainingJobDefinitionHyperParameterRangesPropertyList extends cdktn
 }
 export interface TrainingJobDefinitionHyperParameterTuningResourceConfigInstanceConfigsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_count AwsSagemakerHyperParameterTuningJob#instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_count TfHyperParameterTuningJob#instance_count}
   */
   readonly instanceCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_type AwsSagemakerHyperParameterTuningJob#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_type TfHyperParameterTuningJob#instance_type}
   */
   readonly instanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#volume_size_in_gb AwsSagemakerHyperParameterTuningJob#volume_size_in_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#volume_size_in_gb TfHyperParameterTuningJob#volume_size_in_gb}
   */
   readonly volumeSizeInGb?: number;
 }
@@ -6901,29 +6901,29 @@ export class TrainingJobDefinitionHyperParameterTuningResourceConfigInstanceConf
 }
 export interface TrainingJobDefinitionHyperParameterTuningResourceConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#allocation_strategy AwsSagemakerHyperParameterTuningJob#allocation_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#allocation_strategy TfHyperParameterTuningJob#allocation_strategy}
   */
   readonly allocationStrategy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_count AwsSagemakerHyperParameterTuningJob#instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_count TfHyperParameterTuningJob#instance_count}
   */
   readonly instanceCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_type AwsSagemakerHyperParameterTuningJob#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_type TfHyperParameterTuningJob#instance_type}
   */
   readonly instanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#volume_kms_key_id AwsSagemakerHyperParameterTuningJob#volume_kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#volume_kms_key_id TfHyperParameterTuningJob#volume_kms_key_id}
   */
   readonly volumeKmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#volume_size_in_gb AwsSagemakerHyperParameterTuningJob#volume_size_in_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#volume_size_in_gb TfHyperParameterTuningJob#volume_size_in_gb}
   */
   readonly volumeSizeInGb?: number;
   /**
   * instance_configs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_configs AwsSagemakerHyperParameterTuningJob#instance_configs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_configs TfHyperParameterTuningJob#instance_configs}
   */
   readonly instanceConfigs?: TrainingJobDefinitionHyperParameterTuningResourceConfigInstanceConfigsProperty[] | cdktn.IResolvable;
 }
@@ -7119,19 +7119,19 @@ export class TrainingJobDefinitionHyperParameterTuningResourceConfigPropertyList
 }
 export interface TrainingJobDefinitionInputDataConfigDataSourceFileSystemDataSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#directory_path AwsSagemakerHyperParameterTuningJob#directory_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#directory_path TfHyperParameterTuningJob#directory_path}
   */
   readonly directoryPath: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#file_system_access_mode AwsSagemakerHyperParameterTuningJob#file_system_access_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#file_system_access_mode TfHyperParameterTuningJob#file_system_access_mode}
   */
   readonly fileSystemAccessMode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#file_system_id AwsSagemakerHyperParameterTuningJob#file_system_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#file_system_id TfHyperParameterTuningJob#file_system_id}
   */
   readonly fileSystemId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#file_system_type AwsSagemakerHyperParameterTuningJob#file_system_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#file_system_type TfHyperParameterTuningJob#file_system_type}
   */
   readonly fileSystemType: string;
 }
@@ -7271,7 +7271,7 @@ export class TrainingJobDefinitionInputDataConfigDataSourceFileSystemDataSourceP
 }
 export interface TrainingJobDefinitionInputDataConfigDataSourceS3DataSourceHubAccessConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#hub_content_arn AwsSagemakerHyperParameterTuningJob#hub_content_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#hub_content_arn TfHyperParameterTuningJob#hub_content_arn}
   */
   readonly hubContentArn: string;
 }
@@ -7354,7 +7354,7 @@ export class TrainingJobDefinitionInputDataConfigDataSourceS3DataSourceHubAccess
 }
 export interface TrainingJobDefinitionInputDataConfigDataSourceS3DataSourceModelAccessConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#accept_eula AwsSagemakerHyperParameterTuningJob#accept_eula}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#accept_eula TfHyperParameterTuningJob#accept_eula}
   */
   readonly acceptEula: boolean | cdktn.IResolvable;
 }
@@ -7437,35 +7437,35 @@ export class TrainingJobDefinitionInputDataConfigDataSourceS3DataSourceModelAcce
 }
 export interface TrainingJobDefinitionInputDataConfigDataSourceS3DataSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#attribute_names AwsSagemakerHyperParameterTuningJob#attribute_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#attribute_names TfHyperParameterTuningJob#attribute_names}
   */
   readonly attributeNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_group_names AwsSagemakerHyperParameterTuningJob#instance_group_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_group_names TfHyperParameterTuningJob#instance_group_names}
   */
   readonly instanceGroupNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#s3_data_distribution_type AwsSagemakerHyperParameterTuningJob#s3_data_distribution_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#s3_data_distribution_type TfHyperParameterTuningJob#s3_data_distribution_type}
   */
   readonly s3DataDistributionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#s3_data_type AwsSagemakerHyperParameterTuningJob#s3_data_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#s3_data_type TfHyperParameterTuningJob#s3_data_type}
   */
   readonly s3DataType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#s3_uri AwsSagemakerHyperParameterTuningJob#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#s3_uri TfHyperParameterTuningJob#s3_uri}
   */
   readonly s3Uri: string;
   /**
   * hub_access_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#hub_access_config AwsSagemakerHyperParameterTuningJob#hub_access_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#hub_access_config TfHyperParameterTuningJob#hub_access_config}
   */
   readonly hubAccessConfig?: TrainingJobDefinitionInputDataConfigDataSourceS3DataSourceHubAccessConfigProperty[] | cdktn.IResolvable;
   /**
   * model_access_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#model_access_config AwsSagemakerHyperParameterTuningJob#model_access_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#model_access_config TfHyperParameterTuningJob#model_access_config}
   */
   readonly modelAccessConfig?: TrainingJobDefinitionInputDataConfigDataSourceS3DataSourceModelAccessConfigProperty[] | cdktn.IResolvable;
 }
@@ -7679,13 +7679,13 @@ export interface TrainingJobDefinitionInputDataConfigDataSourceProperty {
   /**
   * file_system_data_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#file_system_data_source AwsSagemakerHyperParameterTuningJob#file_system_data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#file_system_data_source TfHyperParameterTuningJob#file_system_data_source}
   */
   readonly fileSystemDataSource?: TrainingJobDefinitionInputDataConfigDataSourceFileSystemDataSourceProperty[] | cdktn.IResolvable;
   /**
   * s3_data_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#s3_data_source AwsSagemakerHyperParameterTuningJob#s3_data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#s3_data_source TfHyperParameterTuningJob#s3_data_source}
   */
   readonly s3DataSource?: TrainingJobDefinitionInputDataConfigDataSourceS3DataSourceProperty[] | cdktn.IResolvable;
 }
@@ -7793,7 +7793,7 @@ export class TrainingJobDefinitionInputDataConfigDataSourcePropertyList extends 
 }
 export interface TrainingJobDefinitionInputDataConfigShuffleConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#seed AwsSagemakerHyperParameterTuningJob#seed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#seed TfHyperParameterTuningJob#seed}
   */
   readonly seed: number;
 }
@@ -7876,35 +7876,35 @@ export class TrainingJobDefinitionInputDataConfigShuffleConfigPropertyList exten
 }
 export interface TrainingJobDefinitionInputDataConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#channel_name AwsSagemakerHyperParameterTuningJob#channel_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#channel_name TfHyperParameterTuningJob#channel_name}
   */
   readonly channelName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#compression_type AwsSagemakerHyperParameterTuningJob#compression_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#compression_type TfHyperParameterTuningJob#compression_type}
   */
   readonly compressionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#content_type AwsSagemakerHyperParameterTuningJob#content_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#content_type TfHyperParameterTuningJob#content_type}
   */
   readonly contentType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#input_mode AwsSagemakerHyperParameterTuningJob#input_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#input_mode TfHyperParameterTuningJob#input_mode}
   */
   readonly inputMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#record_wrapper_type AwsSagemakerHyperParameterTuningJob#record_wrapper_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#record_wrapper_type TfHyperParameterTuningJob#record_wrapper_type}
   */
   readonly recordWrapperType?: string;
   /**
   * data_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#data_source AwsSagemakerHyperParameterTuningJob#data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#data_source TfHyperParameterTuningJob#data_source}
   */
   readonly dataSource?: TrainingJobDefinitionInputDataConfigDataSourceProperty[] | cdktn.IResolvable;
   /**
   * shuffle_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#shuffle_config AwsSagemakerHyperParameterTuningJob#shuffle_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#shuffle_config TfHyperParameterTuningJob#shuffle_config}
   */
   readonly shuffleConfig?: TrainingJobDefinitionInputDataConfigShuffleConfigProperty[] | cdktn.IResolvable;
 }
@@ -8119,15 +8119,15 @@ export class TrainingJobDefinitionInputDataConfigPropertyList extends cdktn.Comp
 }
 export interface TrainingJobDefinitionOutputDataConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#compression_type AwsSagemakerHyperParameterTuningJob#compression_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#compression_type TfHyperParameterTuningJob#compression_type}
   */
   readonly compressionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#kms_key_id AwsSagemakerHyperParameterTuningJob#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#kms_key_id TfHyperParameterTuningJob#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#s3_output_path AwsSagemakerHyperParameterTuningJob#s3_output_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#s3_output_path TfHyperParameterTuningJob#s3_output_path}
   */
   readonly s3OutputPath: string;
 }
@@ -8254,15 +8254,15 @@ export class TrainingJobDefinitionOutputDataConfigPropertyList extends cdktn.Com
 }
 export interface TrainingJobDefinitionResourceConfigInstanceGroupsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_count AwsSagemakerHyperParameterTuningJob#instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_count TfHyperParameterTuningJob#instance_count}
   */
   readonly instanceCount: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_group_name AwsSagemakerHyperParameterTuningJob#instance_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_group_name TfHyperParameterTuningJob#instance_group_name}
   */
   readonly instanceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_type AwsSagemakerHyperParameterTuningJob#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_type TfHyperParameterTuningJob#instance_type}
   */
   readonly instanceType: string;
 }
@@ -8383,11 +8383,11 @@ export class TrainingJobDefinitionResourceConfigInstanceGroupsPropertyList exten
 }
 export interface TrainingJobDefinitionResourceConfigInstancePlacementConfigPlacementSpecificationsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_count AwsSagemakerHyperParameterTuningJob#instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_count TfHyperParameterTuningJob#instance_count}
   */
   readonly instanceCount: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#ultra_server_id AwsSagemakerHyperParameterTuningJob#ultra_server_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#ultra_server_id TfHyperParameterTuningJob#ultra_server_id}
   */
   readonly ultraServerId?: string;
 }
@@ -8492,13 +8492,13 @@ export class TrainingJobDefinitionResourceConfigInstancePlacementConfigPlacement
 }
 export interface TrainingJobDefinitionResourceConfigInstancePlacementConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#enable_multiple_jobs AwsSagemakerHyperParameterTuningJob#enable_multiple_jobs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#enable_multiple_jobs TfHyperParameterTuningJob#enable_multiple_jobs}
   */
   readonly enableMultipleJobs?: boolean | cdktn.IResolvable;
   /**
   * placement_specifications block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#placement_specifications AwsSagemakerHyperParameterTuningJob#placement_specifications}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#placement_specifications TfHyperParameterTuningJob#placement_specifications}
   */
   readonly placementSpecifications?: TrainingJobDefinitionResourceConfigInstancePlacementConfigPlacementSpecificationsProperty[] | cdktn.IResolvable;
 }
@@ -8606,39 +8606,39 @@ export class TrainingJobDefinitionResourceConfigInstancePlacementConfigPropertyL
 }
 export interface TrainingJobDefinitionResourceConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_count AwsSagemakerHyperParameterTuningJob#instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_count TfHyperParameterTuningJob#instance_count}
   */
   readonly instanceCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_type AwsSagemakerHyperParameterTuningJob#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_type TfHyperParameterTuningJob#instance_type}
   */
   readonly instanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#keep_alive_period_in_seconds AwsSagemakerHyperParameterTuningJob#keep_alive_period_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#keep_alive_period_in_seconds TfHyperParameterTuningJob#keep_alive_period_in_seconds}
   */
   readonly keepAlivePeriodInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#training_plan_arn AwsSagemakerHyperParameterTuningJob#training_plan_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#training_plan_arn TfHyperParameterTuningJob#training_plan_arn}
   */
   readonly trainingPlanArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#volume_kms_key_id AwsSagemakerHyperParameterTuningJob#volume_kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#volume_kms_key_id TfHyperParameterTuningJob#volume_kms_key_id}
   */
   readonly volumeKmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#volume_size_in_gb AwsSagemakerHyperParameterTuningJob#volume_size_in_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#volume_size_in_gb TfHyperParameterTuningJob#volume_size_in_gb}
   */
   readonly volumeSizeInGb?: number;
   /**
   * instance_groups block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_groups AwsSagemakerHyperParameterTuningJob#instance_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_groups TfHyperParameterTuningJob#instance_groups}
   */
   readonly instanceGroups?: TrainingJobDefinitionResourceConfigInstanceGroupsProperty[] | cdktn.IResolvable;
   /**
   * instance_placement_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_placement_config AwsSagemakerHyperParameterTuningJob#instance_placement_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_placement_config TfHyperParameterTuningJob#instance_placement_config}
   */
   readonly instancePlacementConfig?: TrainingJobDefinitionResourceConfigInstancePlacementConfigProperty[] | cdktn.IResolvable;
 }
@@ -8878,15 +8878,15 @@ export class TrainingJobDefinitionResourceConfigPropertyList extends cdktn.Compl
 }
 export interface TrainingJobDefinitionStoppingConditionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_pending_time_in_seconds AwsSagemakerHyperParameterTuningJob#max_pending_time_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_pending_time_in_seconds TfHyperParameterTuningJob#max_pending_time_in_seconds}
   */
   readonly maxPendingTimeInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_runtime_in_seconds AwsSagemakerHyperParameterTuningJob#max_runtime_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_runtime_in_seconds TfHyperParameterTuningJob#max_runtime_in_seconds}
   */
   readonly maxRuntimeInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_wait_time_in_seconds AwsSagemakerHyperParameterTuningJob#max_wait_time_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_wait_time_in_seconds TfHyperParameterTuningJob#max_wait_time_in_seconds}
   */
   readonly maxWaitTimeInSeconds?: number;
 }
@@ -9016,11 +9016,11 @@ export class TrainingJobDefinitionStoppingConditionPropertyList extends cdktn.Co
 }
 export interface TrainingJobDefinitionTuningObjectiveProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#metric_name AwsSagemakerHyperParameterTuningJob#metric_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#metric_name TfHyperParameterTuningJob#metric_name}
   */
   readonly metricName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#type AwsSagemakerHyperParameterTuningJob#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#type TfHyperParameterTuningJob#type}
   */
   readonly type: string;
 }
@@ -9122,11 +9122,11 @@ export class TrainingJobDefinitionTuningObjectivePropertyList extends cdktn.Comp
 }
 export interface TrainingJobDefinitionVpcConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#security_group_ids AwsSagemakerHyperParameterTuningJob#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#security_group_ids TfHyperParameterTuningJob#security_group_ids}
   */
   readonly securityGroupIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#subnets AwsSagemakerHyperParameterTuningJob#subnets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#subnets TfHyperParameterTuningJob#subnets}
   */
   readonly subnets: string[];
 }
@@ -9228,95 +9228,95 @@ export class TrainingJobDefinitionVpcConfigPropertyList extends cdktn.ComplexLis
 }
 export interface TrainingJobDefinitionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#definition_name AwsSagemakerHyperParameterTuningJob#definition_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#definition_name TfHyperParameterTuningJob#definition_name}
   */
   readonly definitionName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#enable_inter_container_traffic_encryption AwsSagemakerHyperParameterTuningJob#enable_inter_container_traffic_encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#enable_inter_container_traffic_encryption TfHyperParameterTuningJob#enable_inter_container_traffic_encryption}
   */
   readonly enableInterContainerTrafficEncryption?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#enable_managed_spot_training AwsSagemakerHyperParameterTuningJob#enable_managed_spot_training}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#enable_managed_spot_training TfHyperParameterTuningJob#enable_managed_spot_training}
   */
   readonly enableManagedSpotTraining?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#enable_network_isolation AwsSagemakerHyperParameterTuningJob#enable_network_isolation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#enable_network_isolation TfHyperParameterTuningJob#enable_network_isolation}
   */
   readonly enableNetworkIsolation?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#environment AwsSagemakerHyperParameterTuningJob#environment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#environment TfHyperParameterTuningJob#environment}
   */
   readonly environment?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#retry_strategy AwsSagemakerHyperParameterTuningJob#retry_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#retry_strategy TfHyperParameterTuningJob#retry_strategy}
   */
   readonly retryStrategy?: TrainingJobDefinitionRetryStrategyProperty[] | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#role_arn AwsSagemakerHyperParameterTuningJob#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#role_arn TfHyperParameterTuningJob#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#static_hyper_parameters AwsSagemakerHyperParameterTuningJob#static_hyper_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#static_hyper_parameters TfHyperParameterTuningJob#static_hyper_parameters}
   */
   readonly staticHyperParameters?: { [key: string]: string };
   /**
   * algorithm_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#algorithm_specification AwsSagemakerHyperParameterTuningJob#algorithm_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#algorithm_specification TfHyperParameterTuningJob#algorithm_specification}
   */
   readonly algorithmSpecification?: TrainingJobDefinitionAlgorithmSpecificationProperty[] | cdktn.IResolvable;
   /**
   * checkpoint_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#checkpoint_config AwsSagemakerHyperParameterTuningJob#checkpoint_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#checkpoint_config TfHyperParameterTuningJob#checkpoint_config}
   */
   readonly checkpointConfig?: TrainingJobDefinitionCheckpointConfigProperty[] | cdktn.IResolvable;
   /**
   * hyper_parameter_ranges block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#hyper_parameter_ranges AwsSagemakerHyperParameterTuningJob#hyper_parameter_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#hyper_parameter_ranges TfHyperParameterTuningJob#hyper_parameter_ranges}
   */
   readonly hyperParameterRanges?: TrainingJobDefinitionHyperParameterRangesProperty[] | cdktn.IResolvable;
   /**
   * hyper_parameter_tuning_resource_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#hyper_parameter_tuning_resource_config AwsSagemakerHyperParameterTuningJob#hyper_parameter_tuning_resource_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#hyper_parameter_tuning_resource_config TfHyperParameterTuningJob#hyper_parameter_tuning_resource_config}
   */
   readonly hyperParameterTuningResourceConfig?: TrainingJobDefinitionHyperParameterTuningResourceConfigProperty[] | cdktn.IResolvable;
   /**
   * input_data_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#input_data_config AwsSagemakerHyperParameterTuningJob#input_data_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#input_data_config TfHyperParameterTuningJob#input_data_config}
   */
   readonly inputDataConfig?: TrainingJobDefinitionInputDataConfigProperty[] | cdktn.IResolvable;
   /**
   * output_data_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#output_data_config AwsSagemakerHyperParameterTuningJob#output_data_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#output_data_config TfHyperParameterTuningJob#output_data_config}
   */
   readonly outputDataConfig?: TrainingJobDefinitionOutputDataConfigProperty[] | cdktn.IResolvable;
   /**
   * resource_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#resource_config AwsSagemakerHyperParameterTuningJob#resource_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#resource_config TfHyperParameterTuningJob#resource_config}
   */
   readonly resourceConfig?: TrainingJobDefinitionResourceConfigProperty[] | cdktn.IResolvable;
   /**
   * stopping_condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#stopping_condition AwsSagemakerHyperParameterTuningJob#stopping_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#stopping_condition TfHyperParameterTuningJob#stopping_condition}
   */
   readonly stoppingCondition?: TrainingJobDefinitionStoppingConditionProperty[] | cdktn.IResolvable;
   /**
   * tuning_objective block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#tuning_objective AwsSagemakerHyperParameterTuningJob#tuning_objective}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#tuning_objective TfHyperParameterTuningJob#tuning_objective}
   */
   readonly tuningObjective?: TrainingJobDefinitionTuningObjectiveProperty[] | cdktn.IResolvable;
   /**
   * vpc_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#vpc_config AwsSagemakerHyperParameterTuningJob#vpc_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#vpc_config TfHyperParameterTuningJob#vpc_config}
   */
   readonly vpcConfig?: TrainingJobDefinitionVpcConfigProperty[] | cdktn.IResolvable;
 }
@@ -9773,7 +9773,7 @@ export class TrainingJobDefinitionPropertyList extends cdktn.ComplexList {
 }
 export interface TrainingJobDefinitionsRetryStrategyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#maximum_retry_attempts AwsSagemakerHyperParameterTuningJob#maximum_retry_attempts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#maximum_retry_attempts TfHyperParameterTuningJob#maximum_retry_attempts}
   */
   readonly maximumRetryAttempts?: number;
 }
@@ -9859,11 +9859,11 @@ export class TrainingJobDefinitionsRetryStrategyPropertyList extends cdktn.Compl
 }
 export interface TrainingJobDefinitionsAlgorithmSpecificationMetricDefinitionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#name AwsSagemakerHyperParameterTuningJob#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#name TfHyperParameterTuningJob#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#regex AwsSagemakerHyperParameterTuningJob#regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#regex TfHyperParameterTuningJob#regex}
   */
   readonly regex: string;
 }
@@ -9965,21 +9965,21 @@ export class TrainingJobDefinitionsAlgorithmSpecificationMetricDefinitionsProper
 }
 export interface TrainingJobDefinitionsAlgorithmSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#algorithm_name AwsSagemakerHyperParameterTuningJob#algorithm_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#algorithm_name TfHyperParameterTuningJob#algorithm_name}
   */
   readonly algorithmName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#training_image AwsSagemakerHyperParameterTuningJob#training_image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#training_image TfHyperParameterTuningJob#training_image}
   */
   readonly trainingImage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#training_input_mode AwsSagemakerHyperParameterTuningJob#training_input_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#training_input_mode TfHyperParameterTuningJob#training_input_mode}
   */
   readonly trainingInputMode: string;
   /**
   * metric_definitions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#metric_definitions AwsSagemakerHyperParameterTuningJob#metric_definitions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#metric_definitions TfHyperParameterTuningJob#metric_definitions}
   */
   readonly metricDefinitions?: TrainingJobDefinitionsAlgorithmSpecificationMetricDefinitionsProperty[] | cdktn.IResolvable;
 }
@@ -10128,11 +10128,11 @@ export class TrainingJobDefinitionsAlgorithmSpecificationPropertyList extends cd
 }
 export interface TrainingJobDefinitionsCheckpointConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#local_path AwsSagemakerHyperParameterTuningJob#local_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#local_path TfHyperParameterTuningJob#local_path}
   */
   readonly localPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#s3_uri AwsSagemakerHyperParameterTuningJob#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#s3_uri TfHyperParameterTuningJob#s3_uri}
   */
   readonly s3Uri: string;
 }
@@ -10237,11 +10237,11 @@ export class TrainingJobDefinitionsCheckpointConfigPropertyList extends cdktn.Co
 }
 export interface TrainingJobDefinitionsHyperParameterRangesAutoParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#name AwsSagemakerHyperParameterTuningJob#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#name TfHyperParameterTuningJob#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#value_hint AwsSagemakerHyperParameterTuningJob#value_hint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#value_hint TfHyperParameterTuningJob#value_hint}
   */
   readonly valueHint: string;
 }
@@ -10343,11 +10343,11 @@ export class TrainingJobDefinitionsHyperParameterRangesAutoParametersPropertyLis
 }
 export interface TrainingJobDefinitionsHyperParameterRangesCategoricalParameterRangesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#name AwsSagemakerHyperParameterTuningJob#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#name TfHyperParameterTuningJob#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#values AwsSagemakerHyperParameterTuningJob#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#values TfHyperParameterTuningJob#values}
   */
   readonly values: string[];
 }
@@ -10449,19 +10449,19 @@ export class TrainingJobDefinitionsHyperParameterRangesCategoricalParameterRange
 }
 export interface TrainingJobDefinitionsHyperParameterRangesContinuousParameterRangesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_value AwsSagemakerHyperParameterTuningJob#max_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_value TfHyperParameterTuningJob#max_value}
   */
   readonly maxValue: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#min_value AwsSagemakerHyperParameterTuningJob#min_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#min_value TfHyperParameterTuningJob#min_value}
   */
   readonly minValue: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#name AwsSagemakerHyperParameterTuningJob#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#name TfHyperParameterTuningJob#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#scaling_type AwsSagemakerHyperParameterTuningJob#scaling_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#scaling_type TfHyperParameterTuningJob#scaling_type}
   */
   readonly scalingType?: string;
 }
@@ -10604,19 +10604,19 @@ export class TrainingJobDefinitionsHyperParameterRangesContinuousParameterRanges
 }
 export interface TrainingJobDefinitionsHyperParameterRangesIntegerParameterRangesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_value AwsSagemakerHyperParameterTuningJob#max_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_value TfHyperParameterTuningJob#max_value}
   */
   readonly maxValue: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#min_value AwsSagemakerHyperParameterTuningJob#min_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#min_value TfHyperParameterTuningJob#min_value}
   */
   readonly minValue: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#name AwsSagemakerHyperParameterTuningJob#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#name TfHyperParameterTuningJob#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#scaling_type AwsSagemakerHyperParameterTuningJob#scaling_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#scaling_type TfHyperParameterTuningJob#scaling_type}
   */
   readonly scalingType?: string;
 }
@@ -10761,25 +10761,25 @@ export interface TrainingJobDefinitionsHyperParameterRangesProperty {
   /**
   * auto_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#auto_parameters AwsSagemakerHyperParameterTuningJob#auto_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#auto_parameters TfHyperParameterTuningJob#auto_parameters}
   */
   readonly autoParameters?: TrainingJobDefinitionsHyperParameterRangesAutoParametersProperty[] | cdktn.IResolvable;
   /**
   * categorical_parameter_ranges block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#categorical_parameter_ranges AwsSagemakerHyperParameterTuningJob#categorical_parameter_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#categorical_parameter_ranges TfHyperParameterTuningJob#categorical_parameter_ranges}
   */
   readonly categoricalParameterRanges?: TrainingJobDefinitionsHyperParameterRangesCategoricalParameterRangesProperty[] | cdktn.IResolvable;
   /**
   * continuous_parameter_ranges block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#continuous_parameter_ranges AwsSagemakerHyperParameterTuningJob#continuous_parameter_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#continuous_parameter_ranges TfHyperParameterTuningJob#continuous_parameter_ranges}
   */
   readonly continuousParameterRanges?: TrainingJobDefinitionsHyperParameterRangesContinuousParameterRangesProperty[] | cdktn.IResolvable;
   /**
   * integer_parameter_ranges block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#integer_parameter_ranges AwsSagemakerHyperParameterTuningJob#integer_parameter_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#integer_parameter_ranges TfHyperParameterTuningJob#integer_parameter_ranges}
   */
   readonly integerParameterRanges?: TrainingJobDefinitionsHyperParameterRangesIntegerParameterRangesProperty[] | cdktn.IResolvable;
 }
@@ -10931,15 +10931,15 @@ export class TrainingJobDefinitionsHyperParameterRangesPropertyList extends cdkt
 }
 export interface TrainingJobDefinitionsHyperParameterTuningResourceConfigInstanceConfigsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_count AwsSagemakerHyperParameterTuningJob#instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_count TfHyperParameterTuningJob#instance_count}
   */
   readonly instanceCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_type AwsSagemakerHyperParameterTuningJob#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_type TfHyperParameterTuningJob#instance_type}
   */
   readonly instanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#volume_size_in_gb AwsSagemakerHyperParameterTuningJob#volume_size_in_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#volume_size_in_gb TfHyperParameterTuningJob#volume_size_in_gb}
   */
   readonly volumeSizeInGb?: number;
 }
@@ -11069,29 +11069,29 @@ export class TrainingJobDefinitionsHyperParameterTuningResourceConfigInstanceCon
 }
 export interface TrainingJobDefinitionsHyperParameterTuningResourceConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#allocation_strategy AwsSagemakerHyperParameterTuningJob#allocation_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#allocation_strategy TfHyperParameterTuningJob#allocation_strategy}
   */
   readonly allocationStrategy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_count AwsSagemakerHyperParameterTuningJob#instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_count TfHyperParameterTuningJob#instance_count}
   */
   readonly instanceCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_type AwsSagemakerHyperParameterTuningJob#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_type TfHyperParameterTuningJob#instance_type}
   */
   readonly instanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#volume_kms_key_id AwsSagemakerHyperParameterTuningJob#volume_kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#volume_kms_key_id TfHyperParameterTuningJob#volume_kms_key_id}
   */
   readonly volumeKmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#volume_size_in_gb AwsSagemakerHyperParameterTuningJob#volume_size_in_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#volume_size_in_gb TfHyperParameterTuningJob#volume_size_in_gb}
   */
   readonly volumeSizeInGb?: number;
   /**
   * instance_configs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_configs AwsSagemakerHyperParameterTuningJob#instance_configs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_configs TfHyperParameterTuningJob#instance_configs}
   */
   readonly instanceConfigs?: TrainingJobDefinitionsHyperParameterTuningResourceConfigInstanceConfigsProperty[] | cdktn.IResolvable;
 }
@@ -11287,19 +11287,19 @@ export class TrainingJobDefinitionsHyperParameterTuningResourceConfigPropertyLis
 }
 export interface TrainingJobDefinitionsInputDataConfigDataSourceFileSystemDataSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#directory_path AwsSagemakerHyperParameterTuningJob#directory_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#directory_path TfHyperParameterTuningJob#directory_path}
   */
   readonly directoryPath: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#file_system_access_mode AwsSagemakerHyperParameterTuningJob#file_system_access_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#file_system_access_mode TfHyperParameterTuningJob#file_system_access_mode}
   */
   readonly fileSystemAccessMode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#file_system_id AwsSagemakerHyperParameterTuningJob#file_system_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#file_system_id TfHyperParameterTuningJob#file_system_id}
   */
   readonly fileSystemId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#file_system_type AwsSagemakerHyperParameterTuningJob#file_system_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#file_system_type TfHyperParameterTuningJob#file_system_type}
   */
   readonly fileSystemType: string;
 }
@@ -11439,7 +11439,7 @@ export class TrainingJobDefinitionsInputDataConfigDataSourceFileSystemDataSource
 }
 export interface TrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceHubAccessConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#hub_content_arn AwsSagemakerHyperParameterTuningJob#hub_content_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#hub_content_arn TfHyperParameterTuningJob#hub_content_arn}
   */
   readonly hubContentArn: string;
 }
@@ -11522,7 +11522,7 @@ export class TrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceHubAcces
 }
 export interface TrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceModelAccessConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#accept_eula AwsSagemakerHyperParameterTuningJob#accept_eula}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#accept_eula TfHyperParameterTuningJob#accept_eula}
   */
   readonly acceptEula: boolean | cdktn.IResolvable;
 }
@@ -11605,35 +11605,35 @@ export class TrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceModelAcc
 }
 export interface TrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#attribute_names AwsSagemakerHyperParameterTuningJob#attribute_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#attribute_names TfHyperParameterTuningJob#attribute_names}
   */
   readonly attributeNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_group_names AwsSagemakerHyperParameterTuningJob#instance_group_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_group_names TfHyperParameterTuningJob#instance_group_names}
   */
   readonly instanceGroupNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#s3_data_distribution_type AwsSagemakerHyperParameterTuningJob#s3_data_distribution_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#s3_data_distribution_type TfHyperParameterTuningJob#s3_data_distribution_type}
   */
   readonly s3DataDistributionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#s3_data_type AwsSagemakerHyperParameterTuningJob#s3_data_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#s3_data_type TfHyperParameterTuningJob#s3_data_type}
   */
   readonly s3DataType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#s3_uri AwsSagemakerHyperParameterTuningJob#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#s3_uri TfHyperParameterTuningJob#s3_uri}
   */
   readonly s3Uri: string;
   /**
   * hub_access_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#hub_access_config AwsSagemakerHyperParameterTuningJob#hub_access_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#hub_access_config TfHyperParameterTuningJob#hub_access_config}
   */
   readonly hubAccessConfig?: TrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceHubAccessConfigProperty[] | cdktn.IResolvable;
   /**
   * model_access_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#model_access_config AwsSagemakerHyperParameterTuningJob#model_access_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#model_access_config TfHyperParameterTuningJob#model_access_config}
   */
   readonly modelAccessConfig?: TrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceModelAccessConfigProperty[] | cdktn.IResolvable;
 }
@@ -11847,13 +11847,13 @@ export interface TrainingJobDefinitionsInputDataConfigDataSourceProperty {
   /**
   * file_system_data_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#file_system_data_source AwsSagemakerHyperParameterTuningJob#file_system_data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#file_system_data_source TfHyperParameterTuningJob#file_system_data_source}
   */
   readonly fileSystemDataSource?: TrainingJobDefinitionsInputDataConfigDataSourceFileSystemDataSourceProperty[] | cdktn.IResolvable;
   /**
   * s3_data_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#s3_data_source AwsSagemakerHyperParameterTuningJob#s3_data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#s3_data_source TfHyperParameterTuningJob#s3_data_source}
   */
   readonly s3DataSource?: TrainingJobDefinitionsInputDataConfigDataSourceS3DataSourceProperty[] | cdktn.IResolvable;
 }
@@ -11961,7 +11961,7 @@ export class TrainingJobDefinitionsInputDataConfigDataSourcePropertyList extends
 }
 export interface TrainingJobDefinitionsInputDataConfigShuffleConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#seed AwsSagemakerHyperParameterTuningJob#seed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#seed TfHyperParameterTuningJob#seed}
   */
   readonly seed: number;
 }
@@ -12044,35 +12044,35 @@ export class TrainingJobDefinitionsInputDataConfigShuffleConfigPropertyList exte
 }
 export interface TrainingJobDefinitionsInputDataConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#channel_name AwsSagemakerHyperParameterTuningJob#channel_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#channel_name TfHyperParameterTuningJob#channel_name}
   */
   readonly channelName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#compression_type AwsSagemakerHyperParameterTuningJob#compression_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#compression_type TfHyperParameterTuningJob#compression_type}
   */
   readonly compressionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#content_type AwsSagemakerHyperParameterTuningJob#content_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#content_type TfHyperParameterTuningJob#content_type}
   */
   readonly contentType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#input_mode AwsSagemakerHyperParameterTuningJob#input_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#input_mode TfHyperParameterTuningJob#input_mode}
   */
   readonly inputMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#record_wrapper_type AwsSagemakerHyperParameterTuningJob#record_wrapper_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#record_wrapper_type TfHyperParameterTuningJob#record_wrapper_type}
   */
   readonly recordWrapperType?: string;
   /**
   * data_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#data_source AwsSagemakerHyperParameterTuningJob#data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#data_source TfHyperParameterTuningJob#data_source}
   */
   readonly dataSource?: TrainingJobDefinitionsInputDataConfigDataSourceProperty[] | cdktn.IResolvable;
   /**
   * shuffle_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#shuffle_config AwsSagemakerHyperParameterTuningJob#shuffle_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#shuffle_config TfHyperParameterTuningJob#shuffle_config}
   */
   readonly shuffleConfig?: TrainingJobDefinitionsInputDataConfigShuffleConfigProperty[] | cdktn.IResolvable;
 }
@@ -12287,15 +12287,15 @@ export class TrainingJobDefinitionsInputDataConfigPropertyList extends cdktn.Com
 }
 export interface TrainingJobDefinitionsOutputDataConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#compression_type AwsSagemakerHyperParameterTuningJob#compression_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#compression_type TfHyperParameterTuningJob#compression_type}
   */
   readonly compressionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#kms_key_id AwsSagemakerHyperParameterTuningJob#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#kms_key_id TfHyperParameterTuningJob#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#s3_output_path AwsSagemakerHyperParameterTuningJob#s3_output_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#s3_output_path TfHyperParameterTuningJob#s3_output_path}
   */
   readonly s3OutputPath: string;
 }
@@ -12422,15 +12422,15 @@ export class TrainingJobDefinitionsOutputDataConfigPropertyList extends cdktn.Co
 }
 export interface TrainingJobDefinitionsResourceConfigInstanceGroupsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_count AwsSagemakerHyperParameterTuningJob#instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_count TfHyperParameterTuningJob#instance_count}
   */
   readonly instanceCount: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_group_name AwsSagemakerHyperParameterTuningJob#instance_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_group_name TfHyperParameterTuningJob#instance_group_name}
   */
   readonly instanceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_type AwsSagemakerHyperParameterTuningJob#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_type TfHyperParameterTuningJob#instance_type}
   */
   readonly instanceType: string;
 }
@@ -12551,11 +12551,11 @@ export class TrainingJobDefinitionsResourceConfigInstanceGroupsPropertyList exte
 }
 export interface TrainingJobDefinitionsResourceConfigInstancePlacementConfigPlacementSpecificationsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_count AwsSagemakerHyperParameterTuningJob#instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_count TfHyperParameterTuningJob#instance_count}
   */
   readonly instanceCount: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#ultra_server_id AwsSagemakerHyperParameterTuningJob#ultra_server_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#ultra_server_id TfHyperParameterTuningJob#ultra_server_id}
   */
   readonly ultraServerId?: string;
 }
@@ -12660,13 +12660,13 @@ export class TrainingJobDefinitionsResourceConfigInstancePlacementConfigPlacemen
 }
 export interface TrainingJobDefinitionsResourceConfigInstancePlacementConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#enable_multiple_jobs AwsSagemakerHyperParameterTuningJob#enable_multiple_jobs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#enable_multiple_jobs TfHyperParameterTuningJob#enable_multiple_jobs}
   */
   readonly enableMultipleJobs?: boolean | cdktn.IResolvable;
   /**
   * placement_specifications block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#placement_specifications AwsSagemakerHyperParameterTuningJob#placement_specifications}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#placement_specifications TfHyperParameterTuningJob#placement_specifications}
   */
   readonly placementSpecifications?: TrainingJobDefinitionsResourceConfigInstancePlacementConfigPlacementSpecificationsProperty[] | cdktn.IResolvable;
 }
@@ -12774,39 +12774,39 @@ export class TrainingJobDefinitionsResourceConfigInstancePlacementConfigProperty
 }
 export interface TrainingJobDefinitionsResourceConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_count AwsSagemakerHyperParameterTuningJob#instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_count TfHyperParameterTuningJob#instance_count}
   */
   readonly instanceCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_type AwsSagemakerHyperParameterTuningJob#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_type TfHyperParameterTuningJob#instance_type}
   */
   readonly instanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#keep_alive_period_in_seconds AwsSagemakerHyperParameterTuningJob#keep_alive_period_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#keep_alive_period_in_seconds TfHyperParameterTuningJob#keep_alive_period_in_seconds}
   */
   readonly keepAlivePeriodInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#training_plan_arn AwsSagemakerHyperParameterTuningJob#training_plan_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#training_plan_arn TfHyperParameterTuningJob#training_plan_arn}
   */
   readonly trainingPlanArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#volume_kms_key_id AwsSagemakerHyperParameterTuningJob#volume_kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#volume_kms_key_id TfHyperParameterTuningJob#volume_kms_key_id}
   */
   readonly volumeKmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#volume_size_in_gb AwsSagemakerHyperParameterTuningJob#volume_size_in_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#volume_size_in_gb TfHyperParameterTuningJob#volume_size_in_gb}
   */
   readonly volumeSizeInGb?: number;
   /**
   * instance_groups block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_groups AwsSagemakerHyperParameterTuningJob#instance_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_groups TfHyperParameterTuningJob#instance_groups}
   */
   readonly instanceGroups?: TrainingJobDefinitionsResourceConfigInstanceGroupsProperty[] | cdktn.IResolvable;
   /**
   * instance_placement_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_placement_config AwsSagemakerHyperParameterTuningJob#instance_placement_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#instance_placement_config TfHyperParameterTuningJob#instance_placement_config}
   */
   readonly instancePlacementConfig?: TrainingJobDefinitionsResourceConfigInstancePlacementConfigProperty[] | cdktn.IResolvable;
 }
@@ -13046,15 +13046,15 @@ export class TrainingJobDefinitionsResourceConfigPropertyList extends cdktn.Comp
 }
 export interface TrainingJobDefinitionsStoppingConditionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_pending_time_in_seconds AwsSagemakerHyperParameterTuningJob#max_pending_time_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_pending_time_in_seconds TfHyperParameterTuningJob#max_pending_time_in_seconds}
   */
   readonly maxPendingTimeInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_runtime_in_seconds AwsSagemakerHyperParameterTuningJob#max_runtime_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_runtime_in_seconds TfHyperParameterTuningJob#max_runtime_in_seconds}
   */
   readonly maxRuntimeInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_wait_time_in_seconds AwsSagemakerHyperParameterTuningJob#max_wait_time_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#max_wait_time_in_seconds TfHyperParameterTuningJob#max_wait_time_in_seconds}
   */
   readonly maxWaitTimeInSeconds?: number;
 }
@@ -13184,11 +13184,11 @@ export class TrainingJobDefinitionsStoppingConditionPropertyList extends cdktn.C
 }
 export interface TrainingJobDefinitionsTuningObjectiveProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#metric_name AwsSagemakerHyperParameterTuningJob#metric_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#metric_name TfHyperParameterTuningJob#metric_name}
   */
   readonly metricName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#type AwsSagemakerHyperParameterTuningJob#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#type TfHyperParameterTuningJob#type}
   */
   readonly type: string;
 }
@@ -13290,11 +13290,11 @@ export class TrainingJobDefinitionsTuningObjectivePropertyList extends cdktn.Com
 }
 export interface TrainingJobDefinitionsVpcConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#security_group_ids AwsSagemakerHyperParameterTuningJob#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#security_group_ids TfHyperParameterTuningJob#security_group_ids}
   */
   readonly securityGroupIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#subnets AwsSagemakerHyperParameterTuningJob#subnets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#subnets TfHyperParameterTuningJob#subnets}
   */
   readonly subnets: string[];
 }
@@ -13396,95 +13396,95 @@ export class TrainingJobDefinitionsVpcConfigPropertyList extends cdktn.ComplexLi
 }
 export interface TrainingJobDefinitionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#definition_name AwsSagemakerHyperParameterTuningJob#definition_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#definition_name TfHyperParameterTuningJob#definition_name}
   */
   readonly definitionName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#enable_inter_container_traffic_encryption AwsSagemakerHyperParameterTuningJob#enable_inter_container_traffic_encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#enable_inter_container_traffic_encryption TfHyperParameterTuningJob#enable_inter_container_traffic_encryption}
   */
   readonly enableInterContainerTrafficEncryption?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#enable_managed_spot_training AwsSagemakerHyperParameterTuningJob#enable_managed_spot_training}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#enable_managed_spot_training TfHyperParameterTuningJob#enable_managed_spot_training}
   */
   readonly enableManagedSpotTraining?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#enable_network_isolation AwsSagemakerHyperParameterTuningJob#enable_network_isolation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#enable_network_isolation TfHyperParameterTuningJob#enable_network_isolation}
   */
   readonly enableNetworkIsolation?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#environment AwsSagemakerHyperParameterTuningJob#environment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#environment TfHyperParameterTuningJob#environment}
   */
   readonly environment?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#retry_strategy AwsSagemakerHyperParameterTuningJob#retry_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#retry_strategy TfHyperParameterTuningJob#retry_strategy}
   */
   readonly retryStrategy?: TrainingJobDefinitionsRetryStrategyProperty[] | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#role_arn AwsSagemakerHyperParameterTuningJob#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#role_arn TfHyperParameterTuningJob#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#static_hyper_parameters AwsSagemakerHyperParameterTuningJob#static_hyper_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#static_hyper_parameters TfHyperParameterTuningJob#static_hyper_parameters}
   */
   readonly staticHyperParameters?: { [key: string]: string };
   /**
   * algorithm_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#algorithm_specification AwsSagemakerHyperParameterTuningJob#algorithm_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#algorithm_specification TfHyperParameterTuningJob#algorithm_specification}
   */
   readonly algorithmSpecification?: TrainingJobDefinitionsAlgorithmSpecificationProperty[] | cdktn.IResolvable;
   /**
   * checkpoint_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#checkpoint_config AwsSagemakerHyperParameterTuningJob#checkpoint_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#checkpoint_config TfHyperParameterTuningJob#checkpoint_config}
   */
   readonly checkpointConfig?: TrainingJobDefinitionsCheckpointConfigProperty[] | cdktn.IResolvable;
   /**
   * hyper_parameter_ranges block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#hyper_parameter_ranges AwsSagemakerHyperParameterTuningJob#hyper_parameter_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#hyper_parameter_ranges TfHyperParameterTuningJob#hyper_parameter_ranges}
   */
   readonly hyperParameterRanges?: TrainingJobDefinitionsHyperParameterRangesProperty[] | cdktn.IResolvable;
   /**
   * hyper_parameter_tuning_resource_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#hyper_parameter_tuning_resource_config AwsSagemakerHyperParameterTuningJob#hyper_parameter_tuning_resource_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#hyper_parameter_tuning_resource_config TfHyperParameterTuningJob#hyper_parameter_tuning_resource_config}
   */
   readonly hyperParameterTuningResourceConfig?: TrainingJobDefinitionsHyperParameterTuningResourceConfigProperty[] | cdktn.IResolvable;
   /**
   * input_data_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#input_data_config AwsSagemakerHyperParameterTuningJob#input_data_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#input_data_config TfHyperParameterTuningJob#input_data_config}
   */
   readonly inputDataConfig?: TrainingJobDefinitionsInputDataConfigProperty[] | cdktn.IResolvable;
   /**
   * output_data_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#output_data_config AwsSagemakerHyperParameterTuningJob#output_data_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#output_data_config TfHyperParameterTuningJob#output_data_config}
   */
   readonly outputDataConfig?: TrainingJobDefinitionsOutputDataConfigProperty[] | cdktn.IResolvable;
   /**
   * resource_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#resource_config AwsSagemakerHyperParameterTuningJob#resource_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#resource_config TfHyperParameterTuningJob#resource_config}
   */
   readonly resourceConfig?: TrainingJobDefinitionsResourceConfigProperty[] | cdktn.IResolvable;
   /**
   * stopping_condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#stopping_condition AwsSagemakerHyperParameterTuningJob#stopping_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#stopping_condition TfHyperParameterTuningJob#stopping_condition}
   */
   readonly stoppingCondition?: TrainingJobDefinitionsStoppingConditionProperty[] | cdktn.IResolvable;
   /**
   * tuning_objective block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#tuning_objective AwsSagemakerHyperParameterTuningJob#tuning_objective}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#tuning_objective TfHyperParameterTuningJob#tuning_objective}
   */
   readonly tuningObjective?: TrainingJobDefinitionsTuningObjectiveProperty[] | cdktn.IResolvable;
   /**
   * vpc_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#vpc_config AwsSagemakerHyperParameterTuningJob#vpc_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#vpc_config TfHyperParameterTuningJob#vpc_config}
   */
   readonly vpcConfig?: TrainingJobDefinitionsVpcConfigProperty[] | cdktn.IResolvable;
 }
@@ -13941,7 +13941,7 @@ export class TrainingJobDefinitionsPropertyList extends cdktn.ComplexList {
 }
 export interface ParentHyperParameterTuningJobsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#name AwsSagemakerHyperParameterTuningJob#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#name TfHyperParameterTuningJob#name}
   */
   readonly name: string;
 }
@@ -14024,13 +14024,13 @@ export class ParentHyperParameterTuningJobsPropertyList extends cdktn.ComplexLis
 }
 export interface WarmStartConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#warm_start_type AwsSagemakerHyperParameterTuningJob#warm_start_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#warm_start_type TfHyperParameterTuningJob#warm_start_type}
   */
   readonly warmStartType?: string;
   /**
   * parent_hyper_parameter_tuning_jobs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#parent_hyper_parameter_tuning_jobs AwsSagemakerHyperParameterTuningJob#parent_hyper_parameter_tuning_jobs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hyper_parameter_tuning_job#parent_hyper_parameter_tuning_jobs TfHyperParameterTuningJob#parent_hyper_parameter_tuning_jobs}
   */
   readonly parentHyperParameterTuningJobs?: ParentHyperParameterTuningJobsProperty[] | cdktn.IResolvable;
 }

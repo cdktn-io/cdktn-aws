@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsElasticacheClusterConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataClusterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_cluster#cluster_id DataAwsElasticacheCluster#cluster_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_cluster#cluster_id TfDataCluster#cluster_id}
   */
   readonly clusterId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_cluster#id DataAwsElasticacheCluster#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_cluster#id TfDataCluster#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,11 +20,11 @@ export interface DataAwsElasticacheClusterConfig extends cdktn.TerraformMetaArgu
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_cluster#region DataAwsElasticacheCluster#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_cluster#region TfDataCluster#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_cluster#tags DataAwsElasticacheCluster#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_cluster#tags TfDataCluster#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -32,7 +32,7 @@ export interface DataAwsElasticacheClusterConfig extends cdktn.TerraformMetaArgu
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_cluster aws_elasticache_cluster}
 */
-export class DataAwsElasticacheCluster extends cdktn.TerraformDataSource {
+export class TfDataCluster extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class DataAwsElasticacheCluster extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsElasticacheCluster resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataCluster resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsElasticacheCluster to import
-  * @param importFromId The id of the existing DataAwsElasticacheCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_cluster#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsElasticacheCluster to import is found
+  * @param importToId The construct id used in the generated config for the TfDataCluster to import
+  * @param importFromId The id of the existing TfDataCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_cluster#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_elasticache_cluster", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class DataAwsElasticacheCluster extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsElasticacheClusterConfig
+  * @param options TfDataClusterConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsElasticacheClusterConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_elasticache_cluster',
       terraformGeneratorMetadata: {
@@ -101,7 +101,7 @@ export class DataAwsElasticacheCluster extends cdktn.TerraformDataSource {
   }
 
   // cache_nodes - computed: true, optional: false, required: false
-  private _cacheNodes = new DataAwsElasticacheCluster.CacheNodesPropertyList(this, "cache_nodes", false);
+  private _cacheNodes = new TfDataCluster.CacheNodesPropertyList(this, "cache_nodes", false);
   public get cacheNodes() {
     return this._cacheNodes;
   }
@@ -161,7 +161,7 @@ export class DataAwsElasticacheCluster extends cdktn.TerraformDataSource {
   }
 
   // log_delivery_configuration - computed: true, optional: false, required: false
-  private _logDeliveryConfiguration = new DataAwsElasticacheCluster.LogDeliveryConfigurationPropertyList(this, "log_delivery_configuration", true);
+  private _logDeliveryConfiguration = new TfDataCluster.LogDeliveryConfigurationPropertyList(this, "log_delivery_configuration", true);
   public get logDeliveryConfiguration() {
     return this._logDeliveryConfiguration;
   }
@@ -309,7 +309,7 @@ export class DataAwsElasticacheCluster extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsElasticacheClusterCacheNodesPropertyToTerraform(struct?: DataAwsElasticacheCluster.CacheNodesProperty): any {
+export function tfDataClusterCacheNodesPropertyToTerraform(struct?: TfDataCluster.CacheNodesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -319,7 +319,7 @@ export function dataAwsElasticacheClusterCacheNodesPropertyToTerraform(struct?: 
 }
 
 
-export function dataAwsElasticacheClusterCacheNodesPropertyToHclTerraform(struct?: DataAwsElasticacheCluster.CacheNodesProperty): any {
+export function tfDataClusterCacheNodesPropertyToHclTerraform(struct?: TfDataCluster.CacheNodesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -330,7 +330,7 @@ export function dataAwsElasticacheClusterCacheNodesPropertyToHclTerraform(struct
 }
 
 
-export function dataAwsElasticacheClusterLogDeliveryConfigurationPropertyToTerraform(struct?: DataAwsElasticacheCluster.LogDeliveryConfigurationProperty): any {
+export function tfDataClusterLogDeliveryConfigurationPropertyToTerraform(struct?: TfDataCluster.LogDeliveryConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -340,7 +340,7 @@ export function dataAwsElasticacheClusterLogDeliveryConfigurationPropertyToTerra
 }
 
 
-export function dataAwsElasticacheClusterLogDeliveryConfigurationPropertyToHclTerraform(struct?: DataAwsElasticacheCluster.LogDeliveryConfigurationProperty): any {
+export function tfDataClusterLogDeliveryConfigurationPropertyToHclTerraform(struct?: TfDataCluster.LogDeliveryConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -351,7 +351,7 @@ export function dataAwsElasticacheClusterLogDeliveryConfigurationPropertyToHclTe
 }
 
 
-export namespace DataAwsElasticacheCluster {
+export namespace TfDataCluster {
 export interface CacheNodesProperty {
 }
 export class CacheNodesPropertyOutputReference extends cdktn.ComplexObject {

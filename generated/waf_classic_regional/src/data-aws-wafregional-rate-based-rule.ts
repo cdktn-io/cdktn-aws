@@ -5,22 +5,22 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsWafregionalRateBasedRuleConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataRateBasedRuleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/wafregional_rate_based_rule#id DataAwsWafregionalRateBasedRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/wafregional_rate_based_rule#id TfDataRateBasedRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/wafregional_rate_based_rule#name DataAwsWafregionalRateBasedRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/wafregional_rate_based_rule#name TfDataRateBasedRule#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/wafregional_rate_based_rule#region DataAwsWafregionalRateBasedRule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/wafregional_rate_based_rule#region TfDataRateBasedRule#region}
   */
   readonly region?: string;
 }
@@ -28,7 +28,7 @@ export interface DataAwsWafregionalRateBasedRuleConfig extends cdktn.TerraformMe
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/wafregional_rate_based_rule aws_wafregional_rate_based_rule}
 */
-export class DataAwsWafregionalRateBasedRule extends cdktn.TerraformDataSource {
+export class TfDataRateBasedRule extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class DataAwsWafregionalRateBasedRule extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsWafregionalRateBasedRule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataRateBasedRule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsWafregionalRateBasedRule to import
-  * @param importFromId The id of the existing DataAwsWafregionalRateBasedRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/wafregional_rate_based_rule#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsWafregionalRateBasedRule to import is found
+  * @param importToId The construct id used in the generated config for the TfDataRateBasedRule to import
+  * @param importFromId The id of the existing TfDataRateBasedRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/wafregional_rate_based_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataRateBasedRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_wafregional_rate_based_rule", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class DataAwsWafregionalRateBasedRule extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsWafregionalRateBasedRuleConfig
+  * @param options TfDataRateBasedRuleConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsWafregionalRateBasedRuleConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataRateBasedRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_wafregional_rate_based_rule',
       terraformGeneratorMetadata: {

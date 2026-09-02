@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsGuarddutyDetectorConfig extends cdktn.TerraformMetaArguments {
+export interface TfDetectorConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#enable AwsGuarddutyDetector#enable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#enable TfDetector#enable}
   */
   readonly enable?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#finding_publishing_frequency AwsGuarddutyDetector#finding_publishing_frequency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#finding_publishing_frequency TfDetector#finding_publishing_frequency}
   */
   readonly findingPublishingFrequency?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#id AwsGuarddutyDetector#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#id TfDetector#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,29 +24,29 @@ export interface AwsGuarddutyDetectorConfig extends cdktn.TerraformMetaArguments
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#region AwsGuarddutyDetector#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#region TfDetector#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#tags AwsGuarddutyDetector#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#tags TfDetector#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#tags_all AwsGuarddutyDetector#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#tags_all TfDetector#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * datasources block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#datasources AwsGuarddutyDetector#datasources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#datasources TfDetector#datasources}
   */
-  readonly datasources?: AwsGuarddutyDetector.DatasourcesProperty;
+  readonly datasources?: TfDetector.DatasourcesProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector aws_guardduty_detector}
 */
-export class AwsGuarddutyDetector extends cdktn.TerraformResource {
+export class TfDetector extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class AwsGuarddutyDetector extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsGuarddutyDetector resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDetector resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsGuarddutyDetector to import
-  * @param importFromId The id of the existing AwsGuarddutyDetector that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsGuarddutyDetector to import is found
+  * @param importToId The construct id used in the generated config for the TfDetector to import
+  * @param importFromId The id of the existing TfDetector that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDetector to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_guardduty_detector", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class AwsGuarddutyDetector extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsGuarddutyDetectorConfig = {}
+  * @param options TfDetectorConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsGuarddutyDetectorConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDetectorConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_guardduty_detector',
       terraformGeneratorMetadata: {
@@ -214,11 +214,11 @@ export class AwsGuarddutyDetector extends cdktn.TerraformResource {
   }
 
   // datasources - computed: false, optional: true, required: false
-  private _datasources = new AwsGuarddutyDetector.DatasourcesPropertyOutputReference(this, "datasources");
+  private _datasources = new TfDetector.DatasourcesPropertyOutputReference(this, "datasources");
   public get datasources() {
     return this._datasources;
   }
-  public putDatasources(value: AwsGuarddutyDetector.DatasourcesProperty) {
+  public putDatasources(value: TfDetector.DatasourcesProperty) {
     this._datasources.internalValue = value;
   }
   public resetDatasources() {
@@ -241,7 +241,7 @@ export class AwsGuarddutyDetector extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      datasources: awsGuarddutyDetectorDatasourcesPropertyToTerraform(this._datasources.internalValue),
+      datasources: tfDetectorDatasourcesPropertyToTerraform(this._datasources.internalValue),
     };
   }
 
@@ -284,10 +284,10 @@ export class AwsGuarddutyDetector extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       datasources: {
-        value: awsGuarddutyDetectorDatasourcesPropertyToHclTerraform(this._datasources.internalValue),
+        value: tfDetectorDatasourcesPropertyToHclTerraform(this._datasources.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGuarddutyDetector.DatasourcesPropertyList",
+        storageClassType: "TfDetector.DatasourcesPropertyList",
       },
     };
 
@@ -296,7 +296,7 @@ export class AwsGuarddutyDetector extends cdktn.TerraformResource {
   }
 }
 
-export function awsGuarddutyDetectorAuditLogsPropertyToTerraform(struct?: AwsGuarddutyDetector.AuditLogsPropertyOutputReference | AwsGuarddutyDetector.AuditLogsProperty): any {
+export function tfDetectorAuditLogsPropertyToTerraform(struct?: TfDetector.AuditLogsPropertyOutputReference | TfDetector.AuditLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -307,7 +307,7 @@ export function awsGuarddutyDetectorAuditLogsPropertyToTerraform(struct?: AwsGua
 }
 
 
-export function awsGuarddutyDetectorAuditLogsPropertyToHclTerraform(struct?: AwsGuarddutyDetector.AuditLogsPropertyOutputReference | AwsGuarddutyDetector.AuditLogsProperty): any {
+export function tfDetectorAuditLogsPropertyToHclTerraform(struct?: TfDetector.AuditLogsPropertyOutputReference | TfDetector.AuditLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -326,25 +326,25 @@ export function awsGuarddutyDetectorAuditLogsPropertyToHclTerraform(struct?: Aws
 }
 
 
-export function awsGuarddutyDetectorKubernetesPropertyToTerraform(struct?: AwsGuarddutyDetector.KubernetesPropertyOutputReference | AwsGuarddutyDetector.KubernetesProperty): any {
+export function tfDetectorKubernetesPropertyToTerraform(struct?: TfDetector.KubernetesPropertyOutputReference | TfDetector.KubernetesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    audit_logs: awsGuarddutyDetectorAuditLogsPropertyToTerraform(struct!.auditLogs),
+    audit_logs: tfDetectorAuditLogsPropertyToTerraform(struct!.auditLogs),
   }
 }
 
 
-export function awsGuarddutyDetectorKubernetesPropertyToHclTerraform(struct?: AwsGuarddutyDetector.KubernetesPropertyOutputReference | AwsGuarddutyDetector.KubernetesProperty): any {
+export function tfDetectorKubernetesPropertyToHclTerraform(struct?: TfDetector.KubernetesPropertyOutputReference | TfDetector.KubernetesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     audit_logs: {
-      value: awsGuarddutyDetectorAuditLogsPropertyToHclTerraform(struct!.auditLogs),
+      value: tfDetectorAuditLogsPropertyToHclTerraform(struct!.auditLogs),
       isBlock: true,
       type: "list",
       storageClassType: "AuditLogsPropertyList",
@@ -356,7 +356,7 @@ export function awsGuarddutyDetectorKubernetesPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsGuarddutyDetectorEbsVolumesPropertyToTerraform(struct?: AwsGuarddutyDetector.EbsVolumesPropertyOutputReference | AwsGuarddutyDetector.EbsVolumesProperty): any {
+export function tfDetectorEbsVolumesPropertyToTerraform(struct?: TfDetector.EbsVolumesPropertyOutputReference | TfDetector.EbsVolumesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -367,7 +367,7 @@ export function awsGuarddutyDetectorEbsVolumesPropertyToTerraform(struct?: AwsGu
 }
 
 
-export function awsGuarddutyDetectorEbsVolumesPropertyToHclTerraform(struct?: AwsGuarddutyDetector.EbsVolumesPropertyOutputReference | AwsGuarddutyDetector.EbsVolumesProperty): any {
+export function tfDetectorEbsVolumesPropertyToHclTerraform(struct?: TfDetector.EbsVolumesPropertyOutputReference | TfDetector.EbsVolumesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -386,25 +386,25 @@ export function awsGuarddutyDetectorEbsVolumesPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsGuarddutyDetectorScanEc2InstanceWithFindingsPropertyToTerraform(struct?: AwsGuarddutyDetector.ScanEc2InstanceWithFindingsPropertyOutputReference | AwsGuarddutyDetector.ScanEc2InstanceWithFindingsProperty): any {
+export function tfDetectorScanEc2InstanceWithFindingsPropertyToTerraform(struct?: TfDetector.ScanEc2InstanceWithFindingsPropertyOutputReference | TfDetector.ScanEc2InstanceWithFindingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    ebs_volumes: awsGuarddutyDetectorEbsVolumesPropertyToTerraform(struct!.ebsVolumes),
+    ebs_volumes: tfDetectorEbsVolumesPropertyToTerraform(struct!.ebsVolumes),
   }
 }
 
 
-export function awsGuarddutyDetectorScanEc2InstanceWithFindingsPropertyToHclTerraform(struct?: AwsGuarddutyDetector.ScanEc2InstanceWithFindingsPropertyOutputReference | AwsGuarddutyDetector.ScanEc2InstanceWithFindingsProperty): any {
+export function tfDetectorScanEc2InstanceWithFindingsPropertyToHclTerraform(struct?: TfDetector.ScanEc2InstanceWithFindingsPropertyOutputReference | TfDetector.ScanEc2InstanceWithFindingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     ebs_volumes: {
-      value: awsGuarddutyDetectorEbsVolumesPropertyToHclTerraform(struct!.ebsVolumes),
+      value: tfDetectorEbsVolumesPropertyToHclTerraform(struct!.ebsVolumes),
       isBlock: true,
       type: "list",
       storageClassType: "EbsVolumesPropertyList",
@@ -416,25 +416,25 @@ export function awsGuarddutyDetectorScanEc2InstanceWithFindingsPropertyToHclTerr
 }
 
 
-export function awsGuarddutyDetectorMalwareProtectionPropertyToTerraform(struct?: AwsGuarddutyDetector.MalwareProtectionPropertyOutputReference | AwsGuarddutyDetector.MalwareProtectionProperty): any {
+export function tfDetectorMalwareProtectionPropertyToTerraform(struct?: TfDetector.MalwareProtectionPropertyOutputReference | TfDetector.MalwareProtectionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    scan_ec2_instance_with_findings: awsGuarddutyDetectorScanEc2InstanceWithFindingsPropertyToTerraform(struct!.scanEc2InstanceWithFindings),
+    scan_ec2_instance_with_findings: tfDetectorScanEc2InstanceWithFindingsPropertyToTerraform(struct!.scanEc2InstanceWithFindings),
   }
 }
 
 
-export function awsGuarddutyDetectorMalwareProtectionPropertyToHclTerraform(struct?: AwsGuarddutyDetector.MalwareProtectionPropertyOutputReference | AwsGuarddutyDetector.MalwareProtectionProperty): any {
+export function tfDetectorMalwareProtectionPropertyToHclTerraform(struct?: TfDetector.MalwareProtectionPropertyOutputReference | TfDetector.MalwareProtectionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     scan_ec2_instance_with_findings: {
-      value: awsGuarddutyDetectorScanEc2InstanceWithFindingsPropertyToHclTerraform(struct!.scanEc2InstanceWithFindings),
+      value: tfDetectorScanEc2InstanceWithFindingsPropertyToHclTerraform(struct!.scanEc2InstanceWithFindings),
       isBlock: true,
       type: "list",
       storageClassType: "ScanEc2InstanceWithFindingsPropertyList",
@@ -446,7 +446,7 @@ export function awsGuarddutyDetectorMalwareProtectionPropertyToHclTerraform(stru
 }
 
 
-export function awsGuarddutyDetectorS3LogsPropertyToTerraform(struct?: AwsGuarddutyDetector.S3LogsPropertyOutputReference | AwsGuarddutyDetector.S3LogsProperty): any {
+export function tfDetectorS3LogsPropertyToTerraform(struct?: TfDetector.S3LogsPropertyOutputReference | TfDetector.S3LogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -457,7 +457,7 @@ export function awsGuarddutyDetectorS3LogsPropertyToTerraform(struct?: AwsGuardd
 }
 
 
-export function awsGuarddutyDetectorS3LogsPropertyToHclTerraform(struct?: AwsGuarddutyDetector.S3LogsPropertyOutputReference | AwsGuarddutyDetector.S3LogsProperty): any {
+export function tfDetectorS3LogsPropertyToHclTerraform(struct?: TfDetector.S3LogsPropertyOutputReference | TfDetector.S3LogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -476,39 +476,39 @@ export function awsGuarddutyDetectorS3LogsPropertyToHclTerraform(struct?: AwsGua
 }
 
 
-export function awsGuarddutyDetectorDatasourcesPropertyToTerraform(struct?: AwsGuarddutyDetector.DatasourcesPropertyOutputReference | AwsGuarddutyDetector.DatasourcesProperty): any {
+export function tfDetectorDatasourcesPropertyToTerraform(struct?: TfDetector.DatasourcesPropertyOutputReference | TfDetector.DatasourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    kubernetes: awsGuarddutyDetectorKubernetesPropertyToTerraform(struct!.kubernetes),
-    malware_protection: awsGuarddutyDetectorMalwareProtectionPropertyToTerraform(struct!.malwareProtection),
-    s3_logs: awsGuarddutyDetectorS3LogsPropertyToTerraform(struct!.s3Logs),
+    kubernetes: tfDetectorKubernetesPropertyToTerraform(struct!.kubernetes),
+    malware_protection: tfDetectorMalwareProtectionPropertyToTerraform(struct!.malwareProtection),
+    s3_logs: tfDetectorS3LogsPropertyToTerraform(struct!.s3Logs),
   }
 }
 
 
-export function awsGuarddutyDetectorDatasourcesPropertyToHclTerraform(struct?: AwsGuarddutyDetector.DatasourcesPropertyOutputReference | AwsGuarddutyDetector.DatasourcesProperty): any {
+export function tfDetectorDatasourcesPropertyToHclTerraform(struct?: TfDetector.DatasourcesPropertyOutputReference | TfDetector.DatasourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     kubernetes: {
-      value: awsGuarddutyDetectorKubernetesPropertyToHclTerraform(struct!.kubernetes),
+      value: tfDetectorKubernetesPropertyToHclTerraform(struct!.kubernetes),
       isBlock: true,
       type: "list",
       storageClassType: "KubernetesPropertyList",
     },
     malware_protection: {
-      value: awsGuarddutyDetectorMalwareProtectionPropertyToHclTerraform(struct!.malwareProtection),
+      value: tfDetectorMalwareProtectionPropertyToHclTerraform(struct!.malwareProtection),
       isBlock: true,
       type: "list",
       storageClassType: "MalwareProtectionPropertyList",
     },
     s3_logs: {
-      value: awsGuarddutyDetectorS3LogsPropertyToHclTerraform(struct!.s3Logs),
+      value: tfDetectorS3LogsPropertyToHclTerraform(struct!.s3Logs),
       isBlock: true,
       type: "list",
       storageClassType: "S3LogsPropertyList",
@@ -520,10 +520,10 @@ export function awsGuarddutyDetectorDatasourcesPropertyToHclTerraform(struct?: A
 }
 
 
-export namespace AwsGuarddutyDetector {
+export namespace TfDetector {
 export interface AuditLogsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#enable AwsGuarddutyDetector#enable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#enable TfDetector#enable}
   */
   readonly enable: boolean | cdktn.IResolvable;
 }
@@ -576,7 +576,7 @@ export interface KubernetesProperty {
   /**
   * audit_logs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#audit_logs AwsGuarddutyDetector#audit_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#audit_logs TfDetector#audit_logs}
   */
   readonly auditLogs: AuditLogsProperty;
 }
@@ -627,7 +627,7 @@ export class KubernetesPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface EbsVolumesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#enable AwsGuarddutyDetector#enable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#enable TfDetector#enable}
   */
   readonly enable: boolean | cdktn.IResolvable;
 }
@@ -680,7 +680,7 @@ export interface ScanEc2InstanceWithFindingsProperty {
   /**
   * ebs_volumes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#ebs_volumes AwsGuarddutyDetector#ebs_volumes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#ebs_volumes TfDetector#ebs_volumes}
   */
   readonly ebsVolumes: EbsVolumesProperty;
 }
@@ -733,7 +733,7 @@ export interface MalwareProtectionProperty {
   /**
   * scan_ec2_instance_with_findings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#scan_ec2_instance_with_findings AwsGuarddutyDetector#scan_ec2_instance_with_findings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#scan_ec2_instance_with_findings TfDetector#scan_ec2_instance_with_findings}
   */
   readonly scanEc2InstanceWithFindings: ScanEc2InstanceWithFindingsProperty;
 }
@@ -784,7 +784,7 @@ export class MalwareProtectionPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface S3LogsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#enable AwsGuarddutyDetector#enable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#enable TfDetector#enable}
   */
   readonly enable: boolean | cdktn.IResolvable;
 }
@@ -837,19 +837,19 @@ export interface DatasourcesProperty {
   /**
   * kubernetes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#kubernetes AwsGuarddutyDetector#kubernetes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#kubernetes TfDetector#kubernetes}
   */
   readonly kubernetes?: KubernetesProperty;
   /**
   * malware_protection block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#malware_protection AwsGuarddutyDetector#malware_protection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#malware_protection TfDetector#malware_protection}
   */
   readonly malwareProtection?: MalwareProtectionProperty;
   /**
   * s3_logs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#s3_logs AwsGuarddutyDetector#s3_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector#s3_logs TfDetector#s3_logs}
   */
   readonly s3Logs?: S3LogsProperty;
 }

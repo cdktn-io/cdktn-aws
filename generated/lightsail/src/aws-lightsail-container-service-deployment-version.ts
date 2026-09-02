@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsLightsailContainerServiceDeploymentVersionConfig extends cdktn.TerraformMetaArguments {
+export interface TfContainerServiceDeploymentVersionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#id AwsLightsailContainerServiceDeploymentVersion#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#id TfContainerServiceDeploymentVersion#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,37 +16,37 @@ export interface AwsLightsailContainerServiceDeploymentVersionConfig extends cdk
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#region AwsLightsailContainerServiceDeploymentVersion#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#region TfContainerServiceDeploymentVersion#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#service_name AwsLightsailContainerServiceDeploymentVersion#service_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#service_name TfContainerServiceDeploymentVersion#service_name}
   */
   readonly serviceName: string;
   /**
   * container block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#container AwsLightsailContainerServiceDeploymentVersion#container}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#container TfContainerServiceDeploymentVersion#container}
   */
-  readonly container: AwsLightsailContainerServiceDeploymentVersion.ContainerProperty[] | cdktn.IResolvable;
+  readonly container: TfContainerServiceDeploymentVersion.ContainerProperty[] | cdktn.IResolvable;
   /**
   * public_endpoint block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#public_endpoint AwsLightsailContainerServiceDeploymentVersion#public_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#public_endpoint TfContainerServiceDeploymentVersion#public_endpoint}
   */
-  readonly publicEndpoint?: AwsLightsailContainerServiceDeploymentVersion.PublicEndpointProperty;
+  readonly publicEndpoint?: TfContainerServiceDeploymentVersion.PublicEndpointProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#timeouts AwsLightsailContainerServiceDeploymentVersion#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#timeouts TfContainerServiceDeploymentVersion#timeouts}
   */
-  readonly timeouts?: AwsLightsailContainerServiceDeploymentVersion.TimeoutsProperty;
+  readonly timeouts?: TfContainerServiceDeploymentVersion.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version aws_lightsail_container_service_deployment_version}
 */
-export class AwsLightsailContainerServiceDeploymentVersion extends cdktn.TerraformResource {
+export class TfContainerServiceDeploymentVersion extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class AwsLightsailContainerServiceDeploymentVersion extends cdktn.Terrafo
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsLightsailContainerServiceDeploymentVersion resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfContainerServiceDeploymentVersion resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsLightsailContainerServiceDeploymentVersion to import
-  * @param importFromId The id of the existing AwsLightsailContainerServiceDeploymentVersion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsLightsailContainerServiceDeploymentVersion to import is found
+  * @param importToId The construct id used in the generated config for the TfContainerServiceDeploymentVersion to import
+  * @param importFromId The id of the existing TfContainerServiceDeploymentVersion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfContainerServiceDeploymentVersion to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lightsail_container_service_deployment_version", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class AwsLightsailContainerServiceDeploymentVersion extends cdktn.Terrafo
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsLightsailContainerServiceDeploymentVersionConfig
+  * @param options TfContainerServiceDeploymentVersionConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsLightsailContainerServiceDeploymentVersionConfig) {
+  public constructor(scope: Construct, id: string, config: TfContainerServiceDeploymentVersionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lightsail_container_service_deployment_version',
       terraformGeneratorMetadata: {
@@ -167,11 +167,11 @@ export class AwsLightsailContainerServiceDeploymentVersion extends cdktn.Terrafo
   }
 
   // container - computed: false, optional: false, required: true
-  private _container = new AwsLightsailContainerServiceDeploymentVersion.ContainerPropertyList(this, "container", true);
+  private _container = new TfContainerServiceDeploymentVersion.ContainerPropertyList(this, "container", true);
   public get container() {
     return this._container;
   }
-  public putContainer(value: AwsLightsailContainerServiceDeploymentVersion.ContainerProperty[] | cdktn.IResolvable) {
+  public putContainer(value: TfContainerServiceDeploymentVersion.ContainerProperty[] | cdktn.IResolvable) {
     this._container.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -180,11 +180,11 @@ export class AwsLightsailContainerServiceDeploymentVersion extends cdktn.Terrafo
   }
 
   // public_endpoint - computed: false, optional: true, required: false
-  private _publicEndpoint = new AwsLightsailContainerServiceDeploymentVersion.PublicEndpointPropertyOutputReference(this, "public_endpoint");
+  private _publicEndpoint = new TfContainerServiceDeploymentVersion.PublicEndpointPropertyOutputReference(this, "public_endpoint");
   public get publicEndpoint() {
     return this._publicEndpoint;
   }
-  public putPublicEndpoint(value: AwsLightsailContainerServiceDeploymentVersion.PublicEndpointProperty) {
+  public putPublicEndpoint(value: TfContainerServiceDeploymentVersion.PublicEndpointProperty) {
     this._publicEndpoint.internalValue = value;
   }
   public resetPublicEndpoint() {
@@ -196,11 +196,11 @@ export class AwsLightsailContainerServiceDeploymentVersion extends cdktn.Terrafo
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsLightsailContainerServiceDeploymentVersion.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfContainerServiceDeploymentVersion.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsLightsailContainerServiceDeploymentVersion.TimeoutsProperty) {
+  public putTimeouts(value: TfContainerServiceDeploymentVersion.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -220,9 +220,9 @@ export class AwsLightsailContainerServiceDeploymentVersion extends cdktn.Terrafo
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       service_name: cdktn.stringToTerraform(this._serviceName),
-      container: cdktn.listMapper(awsLightsailContainerServiceDeploymentVersionContainerPropertyToTerraform, true)(this._container.internalValue),
-      public_endpoint: awsLightsailContainerServiceDeploymentVersionPublicEndpointPropertyToTerraform(this._publicEndpoint.internalValue),
-      timeouts: awsLightsailContainerServiceDeploymentVersionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      container: cdktn.listMapper(tfContainerServiceDeploymentVersionContainerPropertyToTerraform, true)(this._container.internalValue),
+      public_endpoint: tfContainerServiceDeploymentVersionPublicEndpointPropertyToTerraform(this._publicEndpoint.internalValue),
+      timeouts: tfContainerServiceDeploymentVersionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -247,22 +247,22 @@ export class AwsLightsailContainerServiceDeploymentVersion extends cdktn.Terrafo
         storageClassType: "string",
       },
       container: {
-        value: cdktn.listMapperHcl(awsLightsailContainerServiceDeploymentVersionContainerPropertyToHclTerraform, true)(this._container.internalValue),
+        value: cdktn.listMapperHcl(tfContainerServiceDeploymentVersionContainerPropertyToHclTerraform, true)(this._container.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsLightsailContainerServiceDeploymentVersion.ContainerPropertyList",
+        storageClassType: "TfContainerServiceDeploymentVersion.ContainerPropertyList",
       },
       public_endpoint: {
-        value: awsLightsailContainerServiceDeploymentVersionPublicEndpointPropertyToHclTerraform(this._publicEndpoint.internalValue),
+        value: tfContainerServiceDeploymentVersionPublicEndpointPropertyToHclTerraform(this._publicEndpoint.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLightsailContainerServiceDeploymentVersion.PublicEndpointPropertyList",
+        storageClassType: "TfContainerServiceDeploymentVersion.PublicEndpointPropertyList",
       },
       timeouts: {
-        value: awsLightsailContainerServiceDeploymentVersionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfContainerServiceDeploymentVersionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsLightsailContainerServiceDeploymentVersion.TimeoutsProperty",
+        storageClassType: "TfContainerServiceDeploymentVersion.TimeoutsProperty",
       },
     };
 
@@ -271,7 +271,7 @@ export class AwsLightsailContainerServiceDeploymentVersion extends cdktn.Terrafo
   }
 }
 
-export function awsLightsailContainerServiceDeploymentVersionContainerPropertyToTerraform(struct?: AwsLightsailContainerServiceDeploymentVersion.ContainerProperty | cdktn.IResolvable): any {
+export function tfContainerServiceDeploymentVersionContainerPropertyToTerraform(struct?: TfContainerServiceDeploymentVersion.ContainerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -286,7 +286,7 @@ export function awsLightsailContainerServiceDeploymentVersionContainerPropertyTo
 }
 
 
-export function awsLightsailContainerServiceDeploymentVersionContainerPropertyToHclTerraform(struct?: AwsLightsailContainerServiceDeploymentVersion.ContainerProperty | cdktn.IResolvable): any {
+export function tfContainerServiceDeploymentVersionContainerPropertyToHclTerraform(struct?: TfContainerServiceDeploymentVersion.ContainerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -329,7 +329,7 @@ export function awsLightsailContainerServiceDeploymentVersionContainerPropertyTo
 }
 
 
-export function awsLightsailContainerServiceDeploymentVersionHealthCheckPropertyToTerraform(struct?: AwsLightsailContainerServiceDeploymentVersion.HealthCheckPropertyOutputReference | AwsLightsailContainerServiceDeploymentVersion.HealthCheckProperty): any {
+export function tfContainerServiceDeploymentVersionHealthCheckPropertyToTerraform(struct?: TfContainerServiceDeploymentVersion.HealthCheckPropertyOutputReference | TfContainerServiceDeploymentVersion.HealthCheckProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -345,7 +345,7 @@ export function awsLightsailContainerServiceDeploymentVersionHealthCheckProperty
 }
 
 
-export function awsLightsailContainerServiceDeploymentVersionHealthCheckPropertyToHclTerraform(struct?: AwsLightsailContainerServiceDeploymentVersion.HealthCheckPropertyOutputReference | AwsLightsailContainerServiceDeploymentVersion.HealthCheckProperty): any {
+export function tfContainerServiceDeploymentVersionHealthCheckPropertyToHclTerraform(struct?: TfContainerServiceDeploymentVersion.HealthCheckPropertyOutputReference | TfContainerServiceDeploymentVersion.HealthCheckProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -394,7 +394,7 @@ export function awsLightsailContainerServiceDeploymentVersionHealthCheckProperty
 }
 
 
-export function awsLightsailContainerServiceDeploymentVersionPublicEndpointPropertyToTerraform(struct?: AwsLightsailContainerServiceDeploymentVersion.PublicEndpointPropertyOutputReference | AwsLightsailContainerServiceDeploymentVersion.PublicEndpointProperty): any {
+export function tfContainerServiceDeploymentVersionPublicEndpointPropertyToTerraform(struct?: TfContainerServiceDeploymentVersion.PublicEndpointPropertyOutputReference | TfContainerServiceDeploymentVersion.PublicEndpointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -402,12 +402,12 @@ export function awsLightsailContainerServiceDeploymentVersionPublicEndpointPrope
   return {
     container_name: cdktn.stringToTerraform(struct!.containerName),
     container_port: cdktn.numberToTerraform(struct!.containerPort),
-    health_check: awsLightsailContainerServiceDeploymentVersionHealthCheckPropertyToTerraform(struct!.healthCheck),
+    health_check: tfContainerServiceDeploymentVersionHealthCheckPropertyToTerraform(struct!.healthCheck),
   }
 }
 
 
-export function awsLightsailContainerServiceDeploymentVersionPublicEndpointPropertyToHclTerraform(struct?: AwsLightsailContainerServiceDeploymentVersion.PublicEndpointPropertyOutputReference | AwsLightsailContainerServiceDeploymentVersion.PublicEndpointProperty): any {
+export function tfContainerServiceDeploymentVersionPublicEndpointPropertyToHclTerraform(struct?: TfContainerServiceDeploymentVersion.PublicEndpointPropertyOutputReference | TfContainerServiceDeploymentVersion.PublicEndpointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -426,7 +426,7 @@ export function awsLightsailContainerServiceDeploymentVersionPublicEndpointPrope
       storageClassType: "number",
     },
     health_check: {
-      value: awsLightsailContainerServiceDeploymentVersionHealthCheckPropertyToHclTerraform(struct!.healthCheck),
+      value: tfContainerServiceDeploymentVersionHealthCheckPropertyToHclTerraform(struct!.healthCheck),
       isBlock: true,
       type: "list",
       storageClassType: "HealthCheckPropertyList",
@@ -438,7 +438,7 @@ export function awsLightsailContainerServiceDeploymentVersionPublicEndpointPrope
 }
 
 
-export function awsLightsailContainerServiceDeploymentVersionTimeoutsPropertyToTerraform(struct?: AwsLightsailContainerServiceDeploymentVersion.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfContainerServiceDeploymentVersionTimeoutsPropertyToTerraform(struct?: TfContainerServiceDeploymentVersion.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -449,7 +449,7 @@ export function awsLightsailContainerServiceDeploymentVersionTimeoutsPropertyToT
 }
 
 
-export function awsLightsailContainerServiceDeploymentVersionTimeoutsPropertyToHclTerraform(struct?: AwsLightsailContainerServiceDeploymentVersion.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfContainerServiceDeploymentVersionTimeoutsPropertyToHclTerraform(struct?: TfContainerServiceDeploymentVersion.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -468,26 +468,26 @@ export function awsLightsailContainerServiceDeploymentVersionTimeoutsPropertyToH
 }
 
 
-export namespace AwsLightsailContainerServiceDeploymentVersion {
+export namespace TfContainerServiceDeploymentVersion {
 export interface ContainerProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#command AwsLightsailContainerServiceDeploymentVersion#command}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#command TfContainerServiceDeploymentVersion#command}
   */
   readonly command?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#container_name AwsLightsailContainerServiceDeploymentVersion#container_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#container_name TfContainerServiceDeploymentVersion#container_name}
   */
   readonly containerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#environment AwsLightsailContainerServiceDeploymentVersion#environment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#environment TfContainerServiceDeploymentVersion#environment}
   */
   readonly environment?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#image AwsLightsailContainerServiceDeploymentVersion#image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#image TfContainerServiceDeploymentVersion#image}
   */
   readonly image: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#ports AwsLightsailContainerServiceDeploymentVersion#ports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#ports TfContainerServiceDeploymentVersion#ports}
   */
   readonly ports?: { [key: string]: string };
 }
@@ -655,27 +655,27 @@ export class ContainerPropertyList extends cdktn.ComplexList {
 }
 export interface HealthCheckProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#healthy_threshold AwsLightsailContainerServiceDeploymentVersion#healthy_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#healthy_threshold TfContainerServiceDeploymentVersion#healthy_threshold}
   */
   readonly healthyThreshold?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#interval_seconds AwsLightsailContainerServiceDeploymentVersion#interval_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#interval_seconds TfContainerServiceDeploymentVersion#interval_seconds}
   */
   readonly intervalSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#path AwsLightsailContainerServiceDeploymentVersion#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#path TfContainerServiceDeploymentVersion#path}
   */
   readonly path?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#success_codes AwsLightsailContainerServiceDeploymentVersion#success_codes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#success_codes TfContainerServiceDeploymentVersion#success_codes}
   */
   readonly successCodes?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#timeout_seconds AwsLightsailContainerServiceDeploymentVersion#timeout_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#timeout_seconds TfContainerServiceDeploymentVersion#timeout_seconds}
   */
   readonly timeoutSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#unhealthy_threshold AwsLightsailContainerServiceDeploymentVersion#unhealthy_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#unhealthy_threshold TfContainerServiceDeploymentVersion#unhealthy_threshold}
   */
   readonly unhealthyThreshold?: number;
 }
@@ -839,17 +839,17 @@ export class HealthCheckPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface PublicEndpointProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#container_name AwsLightsailContainerServiceDeploymentVersion#container_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#container_name TfContainerServiceDeploymentVersion#container_name}
   */
   readonly containerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#container_port AwsLightsailContainerServiceDeploymentVersion#container_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#container_port TfContainerServiceDeploymentVersion#container_port}
   */
   readonly containerPort: number;
   /**
   * health_check block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#health_check AwsLightsailContainerServiceDeploymentVersion#health_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#health_check TfContainerServiceDeploymentVersion#health_check}
   */
   readonly healthCheck: HealthCheckProperty;
 }
@@ -938,7 +938,7 @@ export class PublicEndpointPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#create AwsLightsailContainerServiceDeploymentVersion#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service_deployment_version#create TfContainerServiceDeploymentVersion#create}
   */
   readonly create?: string;
 }

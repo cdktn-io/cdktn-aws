@@ -5,12 +5,12 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsTimestreaminfluxdbDbClusterConfig extends cdktn.TerraformMetaArguments {
+export interface TfDbClusterConfig extends cdktn.TerraformMetaArguments {
   /**
   * The amount of storage to allocate for your DB storage type in GiB (gibibytes).
   * 					This field is forbidden for InfluxDB V3 clusters (when using an InfluxDB V3 db parameter group).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#allocated_storage AwsTimestreaminfluxdbDbCluster#allocated_storage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#allocated_storage TfDbCluster#allocated_storage}
   */
   readonly allocatedStorage?: number;
   /**
@@ -21,13 +21,13 @@ export interface AwsTimestreaminfluxdbDbClusterConfig extends cdktn.TerraformMet
   * 					influx_auth_parameters_secret_arn attribute. This field is forbidden for InfluxDB V3 clusters
   * 					(when using an InfluxDB V3 db parameter group).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#bucket AwsTimestreaminfluxdbDbCluster#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#bucket TfDbCluster#bucket}
   */
   readonly bucket?: string;
   /**
   * The Timestream for InfluxDB DB instance type to run InfluxDB on.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#db_instance_type AwsTimestreaminfluxdbDbCluster#db_instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#db_instance_type TfDbCluster#db_instance_type}
   */
   readonly dbInstanceType: string;
   /**
@@ -35,7 +35,7 @@ export interface AwsTimestreaminfluxdbDbClusterConfig extends cdktn.TerraformMet
   * 					DB parameter groups specify how the database is configured. For example, DB parameter groups 
   * 					can specify the limit for query concurrency.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#db_parameter_group_identifier AwsTimestreaminfluxdbDbCluster#db_parameter_group_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#db_parameter_group_identifier TfDbCluster#db_parameter_group_identifier}
   */
   readonly dbParameterGroupIdentifier?: string;
   /**
@@ -44,21 +44,21 @@ export interface AwsTimestreaminfluxdbDbClusterConfig extends cdktn.TerraformMet
   * 					to your workloads requirements: Influx IO Included 3000 IOPS, Influx IO Included 12000 IOPS, 
   * 					Influx IO Included 16000 IOPS.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#db_storage_type AwsTimestreaminfluxdbDbCluster#db_storage_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#db_storage_type TfDbCluster#db_storage_type}
   */
   readonly dbStorageType?: string;
   /**
   * Specifies the type of cluster to create. This field is forbidden for InfluxDB V3 clusters
   * 					(when using an InfluxDB V3 db parameter group).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#deployment_type AwsTimestreaminfluxdbDbCluster#deployment_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#deployment_type TfDbCluster#deployment_type}
   */
   readonly deploymentType?: string;
   /**
   * Specifies the behavior of failure recovery when the primary node of the cluster
   * 					fails.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#failover_mode AwsTimestreaminfluxdbDbCluster#failover_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#failover_mode TfDbCluster#failover_mode}
   */
   readonly failoverMode?: string;
   /**
@@ -67,7 +67,7 @@ export interface AwsTimestreaminfluxdbDbClusterConfig extends cdktn.TerraformMet
   * 					prefix included in the endpoint. DB cluster names must be unique per customer 
   * 					and per region.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#name AwsTimestreaminfluxdbDbCluster#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#name TfDbCluster#name}
   */
   readonly name: string;
   /**
@@ -75,7 +75,7 @@ export interface AwsTimestreaminfluxdbDbClusterConfig extends cdktn.TerraformMet
   * 					IPV4, which can communicate over IPv4 protocol only, or DUAL, which can communicate 
   * 					over both IPv4 and IPv6 protocols.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#network_type AwsTimestreaminfluxdbDbCluster#network_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#network_type TfDbCluster#network_type}
   */
   readonly networkType?: string;
   /**
@@ -85,7 +85,7 @@ export interface AwsTimestreaminfluxdbDbClusterConfig extends cdktn.TerraformMet
   * 					influx_auth_parameters_secret_arn attribute. This field is forbidden for InfluxDB V3 clusters
   * 					(when using an InfluxDB V3 db parameter group).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#organization AwsTimestreaminfluxdbDbCluster#organization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#organization TfDbCluster#organization}
   */
   readonly organization?: string;
   /**
@@ -96,29 +96,29 @@ export interface AwsTimestreaminfluxdbDbClusterConfig extends cdktn.TerraformMet
   * 					influx_auth_parameters_secret_arn attribute. This field is forbidden for InfluxDB V3 clusters
   * 					(when using an InfluxDB V3 db parameter group) as the AWS API rejects it.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#password AwsTimestreaminfluxdbDbCluster#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#password TfDbCluster#password}
   */
   readonly password?: string;
   /**
   * The port number on which InfluxDB accepts connections.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#port AwsTimestreaminfluxdbDbCluster#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#port TfDbCluster#port}
   */
   readonly port?: number;
   /**
   * Configures the Timestream for InfluxDB cluster with a public IP to facilitate access.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#publicly_accessible AwsTimestreaminfluxdbDbCluster#publicly_accessible}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#publicly_accessible TfDbCluster#publicly_accessible}
   */
   readonly publiclyAccessible?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#region AwsTimestreaminfluxdbDbCluster#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#region TfDbCluster#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#tags AwsTimestreaminfluxdbDbCluster#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#tags TfDbCluster#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
@@ -129,46 +129,46 @@ export interface AwsTimestreaminfluxdbDbClusterConfig extends cdktn.TerraformMet
   * 					this argument will be stored in the secret referred to by the influx_auth_parameters_secret_arn
   * 					attribute. This field is forbidden for InfluxDB V3 clusters (when using an InfluxDB V3 db parameter group).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#username AwsTimestreaminfluxdbDbCluster#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#username TfDbCluster#username}
   */
   readonly username?: string;
   /**
   * A list of VPC security group IDs to associate with the Timestream for InfluxDB cluster.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#vpc_security_group_ids AwsTimestreaminfluxdbDbCluster#vpc_security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#vpc_security_group_ids TfDbCluster#vpc_security_group_ids}
   */
   readonly vpcSecurityGroupIds: string[];
   /**
   * A list of VPC subnet IDs to associate with the DB cluster. Provide at least 
   * 					two VPC subnet IDs in different availability zones when deploying with a Multi-AZ standby.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#vpc_subnet_ids AwsTimestreaminfluxdbDbCluster#vpc_subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#vpc_subnet_ids TfDbCluster#vpc_subnet_ids}
   */
   readonly vpcSubnetIds: string[];
   /**
   * log_delivery_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#log_delivery_configuration AwsTimestreaminfluxdbDbCluster#log_delivery_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#log_delivery_configuration TfDbCluster#log_delivery_configuration}
   */
-  readonly logDeliveryConfiguration?: AwsTimestreaminfluxdbDbCluster.LogDeliveryConfigurationProperty[] | cdktn.IResolvable;
+  readonly logDeliveryConfiguration?: TfDbCluster.LogDeliveryConfigurationProperty[] | cdktn.IResolvable;
   /**
   * maintenance_schedule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#maintenance_schedule AwsTimestreaminfluxdbDbCluster#maintenance_schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#maintenance_schedule TfDbCluster#maintenance_schedule}
   */
-  readonly maintenanceSchedule?: AwsTimestreaminfluxdbDbCluster.MaintenanceScheduleProperty[] | cdktn.IResolvable;
+  readonly maintenanceSchedule?: TfDbCluster.MaintenanceScheduleProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#timeouts AwsTimestreaminfluxdbDbCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#timeouts TfDbCluster#timeouts}
   */
-  readonly timeouts?: AwsTimestreaminfluxdbDbCluster.TimeoutsProperty;
+  readonly timeouts?: TfDbCluster.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster aws_timestreaminfluxdb_db_cluster}
 */
-export class AwsTimestreaminfluxdbDbCluster extends cdktn.TerraformResource {
+export class TfDbCluster extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -179,11 +179,11 @@ export class AwsTimestreaminfluxdbDbCluster extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsTimestreaminfluxdbDbCluster resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDbCluster resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsTimestreaminfluxdbDbCluster to import
-  * @param importFromId The id of the existing AwsTimestreaminfluxdbDbCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsTimestreaminfluxdbDbCluster to import is found
+  * @param importToId The construct id used in the generated config for the TfDbCluster to import
+  * @param importFromId The id of the existing TfDbCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDbCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_timestreaminfluxdb_db_cluster", importId: importFromId, provider });
@@ -198,9 +198,9 @@ export class AwsTimestreaminfluxdbDbCluster extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsTimestreaminfluxdbDbClusterConfig
+  * @param options TfDbClusterConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsTimestreaminfluxdbDbClusterConfig) {
+  public constructor(scope: Construct, id: string, config: TfDbClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_timestreaminfluxdb_db_cluster',
       terraformGeneratorMetadata: {
@@ -556,11 +556,11 @@ export class AwsTimestreaminfluxdbDbCluster extends cdktn.TerraformResource {
   }
 
   // log_delivery_configuration - computed: false, optional: true, required: false
-  private _logDeliveryConfiguration = new AwsTimestreaminfluxdbDbCluster.LogDeliveryConfigurationPropertyList(this, "log_delivery_configuration", false);
+  private _logDeliveryConfiguration = new TfDbCluster.LogDeliveryConfigurationPropertyList(this, "log_delivery_configuration", false);
   public get logDeliveryConfiguration() {
     return this._logDeliveryConfiguration;
   }
-  public putLogDeliveryConfiguration(value: AwsTimestreaminfluxdbDbCluster.LogDeliveryConfigurationProperty[] | cdktn.IResolvable) {
+  public putLogDeliveryConfiguration(value: TfDbCluster.LogDeliveryConfigurationProperty[] | cdktn.IResolvable) {
     this._logDeliveryConfiguration.internalValue = value;
   }
   public resetLogDeliveryConfiguration() {
@@ -572,11 +572,11 @@ export class AwsTimestreaminfluxdbDbCluster extends cdktn.TerraformResource {
   }
 
   // maintenance_schedule - computed: false, optional: true, required: false
-  private _maintenanceSchedule = new AwsTimestreaminfluxdbDbCluster.MaintenanceSchedulePropertyList(this, "maintenance_schedule", false);
+  private _maintenanceSchedule = new TfDbCluster.MaintenanceSchedulePropertyList(this, "maintenance_schedule", false);
   public get maintenanceSchedule() {
     return this._maintenanceSchedule;
   }
-  public putMaintenanceSchedule(value: AwsTimestreaminfluxdbDbCluster.MaintenanceScheduleProperty[] | cdktn.IResolvable) {
+  public putMaintenanceSchedule(value: TfDbCluster.MaintenanceScheduleProperty[] | cdktn.IResolvable) {
     this._maintenanceSchedule.internalValue = value;
   }
   public resetMaintenanceSchedule() {
@@ -588,11 +588,11 @@ export class AwsTimestreaminfluxdbDbCluster extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsTimestreaminfluxdbDbCluster.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfDbCluster.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsTimestreaminfluxdbDbCluster.TimeoutsProperty) {
+  public putTimeouts(value: TfDbCluster.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -627,9 +627,9 @@ export class AwsTimestreaminfluxdbDbCluster extends cdktn.TerraformResource {
       username: cdktn.stringToTerraform(this._username),
       vpc_security_group_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._vpcSecurityGroupIds),
       vpc_subnet_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._vpcSubnetIds),
-      log_delivery_configuration: cdktn.listMapper(awsTimestreaminfluxdbDbClusterLogDeliveryConfigurationPropertyToTerraform, true)(this._logDeliveryConfiguration.internalValue),
-      maintenance_schedule: cdktn.listMapper(awsTimestreaminfluxdbDbClusterMaintenanceSchedulePropertyToTerraform, true)(this._maintenanceSchedule.internalValue),
-      timeouts: awsTimestreaminfluxdbDbClusterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      log_delivery_configuration: cdktn.listMapper(tfDbClusterLogDeliveryConfigurationPropertyToTerraform, true)(this._logDeliveryConfiguration.internalValue),
+      maintenance_schedule: cdktn.listMapper(tfDbClusterMaintenanceSchedulePropertyToTerraform, true)(this._maintenanceSchedule.internalValue),
+      timeouts: tfDbClusterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -744,22 +744,22 @@ export class AwsTimestreaminfluxdbDbCluster extends cdktn.TerraformResource {
         storageClassType: "stringList",
       },
       log_delivery_configuration: {
-        value: cdktn.listMapperHcl(awsTimestreaminfluxdbDbClusterLogDeliveryConfigurationPropertyToHclTerraform, true)(this._logDeliveryConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfDbClusterLogDeliveryConfigurationPropertyToHclTerraform, true)(this._logDeliveryConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsTimestreaminfluxdbDbCluster.LogDeliveryConfigurationPropertyList",
+        storageClassType: "TfDbCluster.LogDeliveryConfigurationPropertyList",
       },
       maintenance_schedule: {
-        value: cdktn.listMapperHcl(awsTimestreaminfluxdbDbClusterMaintenanceSchedulePropertyToHclTerraform, true)(this._maintenanceSchedule.internalValue),
+        value: cdktn.listMapperHcl(tfDbClusterMaintenanceSchedulePropertyToHclTerraform, true)(this._maintenanceSchedule.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsTimestreaminfluxdbDbCluster.MaintenanceSchedulePropertyList",
+        storageClassType: "TfDbCluster.MaintenanceSchedulePropertyList",
       },
       timeouts: {
-        value: awsTimestreaminfluxdbDbClusterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfDbClusterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsTimestreaminfluxdbDbCluster.TimeoutsProperty",
+        storageClassType: "TfDbCluster.TimeoutsProperty",
       },
     };
 
@@ -768,7 +768,7 @@ export class AwsTimestreaminfluxdbDbCluster extends cdktn.TerraformResource {
   }
 }
 
-export function awsTimestreaminfluxdbDbClusterS3ConfigurationPropertyToTerraform(struct?: AwsTimestreaminfluxdbDbCluster.S3ConfigurationProperty | cdktn.IResolvable): any {
+export function tfDbClusterS3ConfigurationPropertyToTerraform(struct?: TfDbCluster.S3ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -780,7 +780,7 @@ export function awsTimestreaminfluxdbDbClusterS3ConfigurationPropertyToTerraform
 }
 
 
-export function awsTimestreaminfluxdbDbClusterS3ConfigurationPropertyToHclTerraform(struct?: AwsTimestreaminfluxdbDbCluster.S3ConfigurationProperty | cdktn.IResolvable): any {
+export function tfDbClusterS3ConfigurationPropertyToHclTerraform(struct?: TfDbCluster.S3ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -805,25 +805,25 @@ export function awsTimestreaminfluxdbDbClusterS3ConfigurationPropertyToHclTerraf
 }
 
 
-export function awsTimestreaminfluxdbDbClusterLogDeliveryConfigurationPropertyToTerraform(struct?: AwsTimestreaminfluxdbDbCluster.LogDeliveryConfigurationProperty | cdktn.IResolvable): any {
+export function tfDbClusterLogDeliveryConfigurationPropertyToTerraform(struct?: TfDbCluster.LogDeliveryConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    s3_configuration: cdktn.listMapper(awsTimestreaminfluxdbDbClusterS3ConfigurationPropertyToTerraform, true)(struct!.s3Configuration),
+    s3_configuration: cdktn.listMapper(tfDbClusterS3ConfigurationPropertyToTerraform, true)(struct!.s3Configuration),
   }
 }
 
 
-export function awsTimestreaminfluxdbDbClusterLogDeliveryConfigurationPropertyToHclTerraform(struct?: AwsTimestreaminfluxdbDbCluster.LogDeliveryConfigurationProperty | cdktn.IResolvable): any {
+export function tfDbClusterLogDeliveryConfigurationPropertyToHclTerraform(struct?: TfDbCluster.LogDeliveryConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     s3_configuration: {
-      value: cdktn.listMapperHcl(awsTimestreaminfluxdbDbClusterS3ConfigurationPropertyToHclTerraform, true)(struct!.s3Configuration),
+      value: cdktn.listMapperHcl(tfDbClusterS3ConfigurationPropertyToHclTerraform, true)(struct!.s3Configuration),
       isBlock: true,
       type: "list",
       storageClassType: "S3ConfigurationPropertyList",
@@ -835,7 +835,7 @@ export function awsTimestreaminfluxdbDbClusterLogDeliveryConfigurationPropertyTo
 }
 
 
-export function awsTimestreaminfluxdbDbClusterMaintenanceSchedulePropertyToTerraform(struct?: AwsTimestreaminfluxdbDbCluster.MaintenanceScheduleProperty | cdktn.IResolvable): any {
+export function tfDbClusterMaintenanceSchedulePropertyToTerraform(struct?: TfDbCluster.MaintenanceScheduleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -847,7 +847,7 @@ export function awsTimestreaminfluxdbDbClusterMaintenanceSchedulePropertyToTerra
 }
 
 
-export function awsTimestreaminfluxdbDbClusterMaintenanceSchedulePropertyToHclTerraform(struct?: AwsTimestreaminfluxdbDbCluster.MaintenanceScheduleProperty | cdktn.IResolvable): any {
+export function tfDbClusterMaintenanceSchedulePropertyToHclTerraform(struct?: TfDbCluster.MaintenanceScheduleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -872,7 +872,7 @@ export function awsTimestreaminfluxdbDbClusterMaintenanceSchedulePropertyToHclTe
 }
 
 
-export function awsTimestreaminfluxdbDbClusterTimeoutsPropertyToTerraform(struct?: AwsTimestreaminfluxdbDbCluster.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDbClusterTimeoutsPropertyToTerraform(struct?: TfDbCluster.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -885,7 +885,7 @@ export function awsTimestreaminfluxdbDbClusterTimeoutsPropertyToTerraform(struct
 }
 
 
-export function awsTimestreaminfluxdbDbClusterTimeoutsPropertyToHclTerraform(struct?: AwsTimestreaminfluxdbDbCluster.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDbClusterTimeoutsPropertyToHclTerraform(struct?: TfDbCluster.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -916,18 +916,18 @@ export function awsTimestreaminfluxdbDbClusterTimeoutsPropertyToHclTerraform(str
 }
 
 
-export namespace AwsTimestreaminfluxdbDbCluster {
+export namespace TfDbCluster {
 export interface S3ConfigurationProperty {
   /**
   * The name of the S3 bucket to deliver logs to.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#bucket_name AwsTimestreaminfluxdbDbCluster#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#bucket_name TfDbCluster#bucket_name}
   */
   readonly bucketName: string;
   /**
   * Indicates whether log delivery to the S3 bucket is enabled.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#enabled AwsTimestreaminfluxdbDbCluster#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#enabled TfDbCluster#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
 }
@@ -1031,7 +1031,7 @@ export interface LogDeliveryConfigurationProperty {
   /**
   * s3_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#s3_configuration AwsTimestreaminfluxdbDbCluster#s3_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#s3_configuration TfDbCluster#s3_configuration}
   */
   readonly s3Configuration?: S3ConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -1121,14 +1121,14 @@ export interface MaintenanceScheduleProperty {
   * 								Day must be one of Mon, Tue, Wed, Thu, Fri, Sat, or Sun. Provide an empty
   * 								string to let the system choose a window.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#preferred_maintenance_window AwsTimestreaminfluxdbDbCluster#preferred_maintenance_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#preferred_maintenance_window TfDbCluster#preferred_maintenance_window}
   */
   readonly preferredMaintenanceWindow: string;
   /**
   * The IANA timezone identifier for the maintenance window. For
   * 								example, America/New_York or UTC.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#timezone AwsTimestreaminfluxdbDbCluster#timezone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#timezone TfDbCluster#timezone}
   */
   readonly timezone: string;
 }
@@ -1232,19 +1232,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#create AwsTimestreaminfluxdbDbCluster#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#create TfDbCluster#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#delete AwsTimestreaminfluxdbDbCluster#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#delete TfDbCluster#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#update AwsTimestreaminfluxdbDbCluster#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#update TfDbCluster#update}
   */
   readonly update?: string;
 }

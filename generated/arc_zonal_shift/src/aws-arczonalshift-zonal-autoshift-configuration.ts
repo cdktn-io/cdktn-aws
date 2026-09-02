@@ -5,61 +5,61 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsArczonalshiftZonalAutoshiftConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface TfZonalAutoshiftConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
   * List of time windows during which practice runs are allowed, in the format `Day:HH:MM-Day:HH:MM` (e.g., `Mon:09:00-Mon:17:00`). Cannot be used together with `blocked_windows`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_zonal_autoshift_configuration#allowed_windows AwsArczonalshiftZonalAutoshiftConfiguration#allowed_windows}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_zonal_autoshift_configuration#allowed_windows TfZonalAutoshiftConfiguration#allowed_windows}
   */
   readonly allowedWindows?: string[];
   /**
   * List of dates when practice runs should not be started, in the format `YYYY-MM-DD`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_zonal_autoshift_configuration#blocked_dates AwsArczonalshiftZonalAutoshiftConfiguration#blocked_dates}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_zonal_autoshift_configuration#blocked_dates TfZonalAutoshiftConfiguration#blocked_dates}
   */
   readonly blockedDates?: string[];
   /**
   * List of time windows during which practice runs should not be started, in the format `Day:HH:MM-Day:HH:MM` (e.g., `Mon:00:00-Mon:08:00`). Cannot be used together with `allowed_windows`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_zonal_autoshift_configuration#blocked_windows AwsArczonalshiftZonalAutoshiftConfiguration#blocked_windows}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_zonal_autoshift_configuration#blocked_windows TfZonalAutoshiftConfiguration#blocked_windows}
   */
   readonly blockedWindows?: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_zonal_autoshift_configuration#region AwsArczonalshiftZonalAutoshiftConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_zonal_autoshift_configuration#region TfZonalAutoshiftConfiguration#region}
   */
   readonly region?: string;
   /**
   * The ARN of the managed resource to configure zonal autoshift for (e.g., an Application Load Balancer). Changing this creates a new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_zonal_autoshift_configuration#resource_arn AwsArczonalshiftZonalAutoshiftConfiguration#resource_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_zonal_autoshift_configuration#resource_arn TfZonalAutoshiftConfiguration#resource_arn}
   */
   readonly resourceArn: string;
   /**
   * The status of zonal autoshift. Valid values: `ENABLED`, `DISABLED`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_zonal_autoshift_configuration#zonal_autoshift_status AwsArczonalshiftZonalAutoshiftConfiguration#zonal_autoshift_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_zonal_autoshift_configuration#zonal_autoshift_status TfZonalAutoshiftConfiguration#zonal_autoshift_status}
   */
   readonly zonalAutoshiftStatus: string;
   /**
   * blocking_alarms block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_zonal_autoshift_configuration#blocking_alarms AwsArczonalshiftZonalAutoshiftConfiguration#blocking_alarms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_zonal_autoshift_configuration#blocking_alarms TfZonalAutoshiftConfiguration#blocking_alarms}
   */
-  readonly blockingAlarms?: AwsArczonalshiftZonalAutoshiftConfiguration.BlockingAlarmsProperty[] | cdktn.IResolvable;
+  readonly blockingAlarms?: TfZonalAutoshiftConfiguration.BlockingAlarmsProperty[] | cdktn.IResolvable;
   /**
   * outcome_alarms block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_zonal_autoshift_configuration#outcome_alarms AwsArczonalshiftZonalAutoshiftConfiguration#outcome_alarms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_zonal_autoshift_configuration#outcome_alarms TfZonalAutoshiftConfiguration#outcome_alarms}
   */
-  readonly outcomeAlarms?: AwsArczonalshiftZonalAutoshiftConfiguration.OutcomeAlarmsProperty[] | cdktn.IResolvable;
+  readonly outcomeAlarms?: TfZonalAutoshiftConfiguration.OutcomeAlarmsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_zonal_autoshift_configuration aws_arczonalshift_zonal_autoshift_configuration}
 */
-export class AwsArczonalshiftZonalAutoshiftConfiguration extends cdktn.TerraformResource {
+export class TfZonalAutoshiftConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -70,11 +70,11 @@ export class AwsArczonalshiftZonalAutoshiftConfiguration extends cdktn.Terraform
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsArczonalshiftZonalAutoshiftConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfZonalAutoshiftConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsArczonalshiftZonalAutoshiftConfiguration to import
-  * @param importFromId The id of the existing AwsArczonalshiftZonalAutoshiftConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_zonal_autoshift_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsArczonalshiftZonalAutoshiftConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the TfZonalAutoshiftConfiguration to import
+  * @param importFromId The id of the existing TfZonalAutoshiftConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_zonal_autoshift_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfZonalAutoshiftConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_arczonalshift_zonal_autoshift_configuration", importId: importFromId, provider });
@@ -89,9 +89,9 @@ export class AwsArczonalshiftZonalAutoshiftConfiguration extends cdktn.Terraform
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsArczonalshiftZonalAutoshiftConfigurationConfig
+  * @param options TfZonalAutoshiftConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsArczonalshiftZonalAutoshiftConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: TfZonalAutoshiftConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_arczonalshift_zonal_autoshift_configuration',
       terraformGeneratorMetadata: {
@@ -212,11 +212,11 @@ export class AwsArczonalshiftZonalAutoshiftConfiguration extends cdktn.Terraform
   }
 
   // blocking_alarms - computed: false, optional: true, required: false
-  private _blockingAlarms = new AwsArczonalshiftZonalAutoshiftConfiguration.BlockingAlarmsPropertyList(this, "blocking_alarms", false);
+  private _blockingAlarms = new TfZonalAutoshiftConfiguration.BlockingAlarmsPropertyList(this, "blocking_alarms", false);
   public get blockingAlarms() {
     return this._blockingAlarms;
   }
-  public putBlockingAlarms(value: AwsArczonalshiftZonalAutoshiftConfiguration.BlockingAlarmsProperty[] | cdktn.IResolvable) {
+  public putBlockingAlarms(value: TfZonalAutoshiftConfiguration.BlockingAlarmsProperty[] | cdktn.IResolvable) {
     this._blockingAlarms.internalValue = value;
   }
   public resetBlockingAlarms() {
@@ -228,11 +228,11 @@ export class AwsArczonalshiftZonalAutoshiftConfiguration extends cdktn.Terraform
   }
 
   // outcome_alarms - computed: false, optional: true, required: false
-  private _outcomeAlarms = new AwsArczonalshiftZonalAutoshiftConfiguration.OutcomeAlarmsPropertyList(this, "outcome_alarms", false);
+  private _outcomeAlarms = new TfZonalAutoshiftConfiguration.OutcomeAlarmsPropertyList(this, "outcome_alarms", false);
   public get outcomeAlarms() {
     return this._outcomeAlarms;
   }
-  public putOutcomeAlarms(value: AwsArczonalshiftZonalAutoshiftConfiguration.OutcomeAlarmsProperty[] | cdktn.IResolvable) {
+  public putOutcomeAlarms(value: TfZonalAutoshiftConfiguration.OutcomeAlarmsProperty[] | cdktn.IResolvable) {
     this._outcomeAlarms.internalValue = value;
   }
   public resetOutcomeAlarms() {
@@ -255,8 +255,8 @@ export class AwsArczonalshiftZonalAutoshiftConfiguration extends cdktn.Terraform
       region: cdktn.stringToTerraform(this._region),
       resource_arn: cdktn.stringToTerraform(this._resourceArn),
       zonal_autoshift_status: cdktn.stringToTerraform(this._zonalAutoshiftStatus),
-      blocking_alarms: cdktn.listMapper(awsArczonalshiftZonalAutoshiftConfigurationBlockingAlarmsPropertyToTerraform, true)(this._blockingAlarms.internalValue),
-      outcome_alarms: cdktn.listMapper(awsArczonalshiftZonalAutoshiftConfigurationOutcomeAlarmsPropertyToTerraform, true)(this._outcomeAlarms.internalValue),
+      blocking_alarms: cdktn.listMapper(tfZonalAutoshiftConfigurationBlockingAlarmsPropertyToTerraform, true)(this._blockingAlarms.internalValue),
+      outcome_alarms: cdktn.listMapper(tfZonalAutoshiftConfigurationOutcomeAlarmsPropertyToTerraform, true)(this._outcomeAlarms.internalValue),
     };
   }
 
@@ -299,16 +299,16 @@ export class AwsArczonalshiftZonalAutoshiftConfiguration extends cdktn.Terraform
         storageClassType: "string",
       },
       blocking_alarms: {
-        value: cdktn.listMapperHcl(awsArczonalshiftZonalAutoshiftConfigurationBlockingAlarmsPropertyToHclTerraform, true)(this._blockingAlarms.internalValue),
+        value: cdktn.listMapperHcl(tfZonalAutoshiftConfigurationBlockingAlarmsPropertyToHclTerraform, true)(this._blockingAlarms.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsArczonalshiftZonalAutoshiftConfiguration.BlockingAlarmsPropertyList",
+        storageClassType: "TfZonalAutoshiftConfiguration.BlockingAlarmsPropertyList",
       },
       outcome_alarms: {
-        value: cdktn.listMapperHcl(awsArczonalshiftZonalAutoshiftConfigurationOutcomeAlarmsPropertyToHclTerraform, true)(this._outcomeAlarms.internalValue),
+        value: cdktn.listMapperHcl(tfZonalAutoshiftConfigurationOutcomeAlarmsPropertyToHclTerraform, true)(this._outcomeAlarms.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsArczonalshiftZonalAutoshiftConfiguration.OutcomeAlarmsPropertyList",
+        storageClassType: "TfZonalAutoshiftConfiguration.OutcomeAlarmsPropertyList",
       },
     };
 
@@ -317,7 +317,7 @@ export class AwsArczonalshiftZonalAutoshiftConfiguration extends cdktn.Terraform
   }
 }
 
-export function awsArczonalshiftZonalAutoshiftConfigurationBlockingAlarmsPropertyToTerraform(struct?: AwsArczonalshiftZonalAutoshiftConfiguration.BlockingAlarmsProperty | cdktn.IResolvable): any {
+export function tfZonalAutoshiftConfigurationBlockingAlarmsPropertyToTerraform(struct?: TfZonalAutoshiftConfiguration.BlockingAlarmsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -329,7 +329,7 @@ export function awsArczonalshiftZonalAutoshiftConfigurationBlockingAlarmsPropert
 }
 
 
-export function awsArczonalshiftZonalAutoshiftConfigurationBlockingAlarmsPropertyToHclTerraform(struct?: AwsArczonalshiftZonalAutoshiftConfiguration.BlockingAlarmsProperty | cdktn.IResolvable): any {
+export function tfZonalAutoshiftConfigurationBlockingAlarmsPropertyToHclTerraform(struct?: TfZonalAutoshiftConfiguration.BlockingAlarmsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -354,7 +354,7 @@ export function awsArczonalshiftZonalAutoshiftConfigurationBlockingAlarmsPropert
 }
 
 
-export function awsArczonalshiftZonalAutoshiftConfigurationOutcomeAlarmsPropertyToTerraform(struct?: AwsArczonalshiftZonalAutoshiftConfiguration.OutcomeAlarmsProperty | cdktn.IResolvable): any {
+export function tfZonalAutoshiftConfigurationOutcomeAlarmsPropertyToTerraform(struct?: TfZonalAutoshiftConfiguration.OutcomeAlarmsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -366,7 +366,7 @@ export function awsArczonalshiftZonalAutoshiftConfigurationOutcomeAlarmsProperty
 }
 
 
-export function awsArczonalshiftZonalAutoshiftConfigurationOutcomeAlarmsPropertyToHclTerraform(struct?: AwsArczonalshiftZonalAutoshiftConfiguration.OutcomeAlarmsProperty | cdktn.IResolvable): any {
+export function tfZonalAutoshiftConfigurationOutcomeAlarmsPropertyToHclTerraform(struct?: TfZonalAutoshiftConfiguration.OutcomeAlarmsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -391,18 +391,18 @@ export function awsArczonalshiftZonalAutoshiftConfigurationOutcomeAlarmsProperty
 }
 
 
-export namespace AwsArczonalshiftZonalAutoshiftConfiguration {
+export namespace TfZonalAutoshiftConfiguration {
 export interface BlockingAlarmsProperty {
   /**
   * ARN of the CloudWatch alarm.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_zonal_autoshift_configuration#alarm_identifier AwsArczonalshiftZonalAutoshiftConfiguration#alarm_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_zonal_autoshift_configuration#alarm_identifier TfZonalAutoshiftConfiguration#alarm_identifier}
   */
   readonly alarmIdentifier: string;
   /**
   * Type of control condition. Valid value: `CLOUDWATCH`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_zonal_autoshift_configuration#type AwsArczonalshiftZonalAutoshiftConfiguration#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_zonal_autoshift_configuration#type TfZonalAutoshiftConfiguration#type}
   */
   readonly type: string;
 }
@@ -506,13 +506,13 @@ export interface OutcomeAlarmsProperty {
   /**
   * ARN of the CloudWatch alarm.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_zonal_autoshift_configuration#alarm_identifier AwsArczonalshiftZonalAutoshiftConfiguration#alarm_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_zonal_autoshift_configuration#alarm_identifier TfZonalAutoshiftConfiguration#alarm_identifier}
   */
   readonly alarmIdentifier: string;
   /**
   * Type of control condition. Valid value: `CLOUDWATCH`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_zonal_autoshift_configuration#type AwsArczonalshiftZonalAutoshiftConfiguration#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_zonal_autoshift_configuration#type TfZonalAutoshiftConfiguration#type}
   */
   readonly type: string;
 }

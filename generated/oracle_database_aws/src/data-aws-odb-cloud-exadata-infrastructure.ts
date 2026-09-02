@@ -5,11 +5,11 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsOdbCloudExadataInfrastructureConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataCloudExadataInfrastructureConfig extends cdktn.TerraformMetaArguments {
   /**
   * The unique identifier of the Exadata infrastructure.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_cloud_exadata_infrastructure#id DataAwsOdbCloudExadataInfrastructure#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_cloud_exadata_infrastructure#id TfDataCloudExadataInfrastructure#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -18,7 +18,7 @@ export interface DataAwsOdbCloudExadataInfrastructureConfig extends cdktn.Terraf
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_cloud_exadata_infrastructure#region DataAwsOdbCloudExadataInfrastructure#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_cloud_exadata_infrastructure#region TfDataCloudExadataInfrastructure#region}
   */
   readonly region?: string;
 }
@@ -26,7 +26,7 @@ export interface DataAwsOdbCloudExadataInfrastructureConfig extends cdktn.Terraf
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_cloud_exadata_infrastructure aws_odb_cloud_exadata_infrastructure}
 */
-export class DataAwsOdbCloudExadataInfrastructure extends cdktn.TerraformDataSource {
+export class TfDataCloudExadataInfrastructure extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -37,11 +37,11 @@ export class DataAwsOdbCloudExadataInfrastructure extends cdktn.TerraformDataSou
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsOdbCloudExadataInfrastructure resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataCloudExadataInfrastructure resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsOdbCloudExadataInfrastructure to import
-  * @param importFromId The id of the existing DataAwsOdbCloudExadataInfrastructure that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_cloud_exadata_infrastructure#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsOdbCloudExadataInfrastructure to import is found
+  * @param importToId The construct id used in the generated config for the TfDataCloudExadataInfrastructure to import
+  * @param importFromId The id of the existing TfDataCloudExadataInfrastructure that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_cloud_exadata_infrastructure#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataCloudExadataInfrastructure to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_odb_cloud_exadata_infrastructure", importId: importFromId, provider });
@@ -56,9 +56,9 @@ export class DataAwsOdbCloudExadataInfrastructure extends cdktn.TerraformDataSou
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsOdbCloudExadataInfrastructureConfig
+  * @param options TfDataCloudExadataInfrastructureConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsOdbCloudExadataInfrastructureConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataCloudExadataInfrastructureConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_odb_cloud_exadata_infrastructure',
       terraformGeneratorMetadata: {
@@ -133,7 +133,7 @@ export class DataAwsOdbCloudExadataInfrastructure extends cdktn.TerraformDataSou
   }
 
   // customer_contacts_to_send_to_oci - computed: true, optional: false, required: false
-  private _customerContactsToSendToOci = new DataAwsOdbCloudExadataInfrastructure.CustomerContactsToSendToOciPropertyList(this, "customer_contacts_to_send_to_oci", true);
+  private _customerContactsToSendToOci = new TfDataCloudExadataInfrastructure.CustomerContactsToSendToOciPropertyList(this, "customer_contacts_to_send_to_oci", true);
   public get customerContactsToSendToOci() {
     return this._customerContactsToSendToOci;
   }
@@ -182,7 +182,7 @@ export class DataAwsOdbCloudExadataInfrastructure extends cdktn.TerraformDataSou
   }
 
   // maintenance_window - computed: true, optional: false, required: false
-  private _maintenanceWindow = new DataAwsOdbCloudExadataInfrastructure.MaintenanceWindowPropertyList(this, "maintenance_window", false);
+  private _maintenanceWindow = new TfDataCloudExadataInfrastructure.MaintenanceWindowPropertyList(this, "maintenance_window", false);
   public get maintenanceWindow() {
     return this._maintenanceWindow;
   }
@@ -336,7 +336,7 @@ export class DataAwsOdbCloudExadataInfrastructure extends cdktn.TerraformDataSou
   }
 }
 
-export function dataAwsOdbCloudExadataInfrastructureCustomerContactsToSendToOciPropertyToTerraform(struct?: DataAwsOdbCloudExadataInfrastructure.CustomerContactsToSendToOciProperty): any {
+export function tfDataCloudExadataInfrastructureCustomerContactsToSendToOciPropertyToTerraform(struct?: TfDataCloudExadataInfrastructure.CustomerContactsToSendToOciProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -346,7 +346,7 @@ export function dataAwsOdbCloudExadataInfrastructureCustomerContactsToSendToOciP
 }
 
 
-export function dataAwsOdbCloudExadataInfrastructureCustomerContactsToSendToOciPropertyToHclTerraform(struct?: DataAwsOdbCloudExadataInfrastructure.CustomerContactsToSendToOciProperty): any {
+export function tfDataCloudExadataInfrastructureCustomerContactsToSendToOciPropertyToHclTerraform(struct?: TfDataCloudExadataInfrastructure.CustomerContactsToSendToOciProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -357,7 +357,7 @@ export function dataAwsOdbCloudExadataInfrastructureCustomerContactsToSendToOciP
 }
 
 
-export function dataAwsOdbCloudExadataInfrastructureDaysOfWeekPropertyToTerraform(struct?: DataAwsOdbCloudExadataInfrastructure.DaysOfWeekProperty): any {
+export function tfDataCloudExadataInfrastructureDaysOfWeekPropertyToTerraform(struct?: TfDataCloudExadataInfrastructure.DaysOfWeekProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -367,7 +367,7 @@ export function dataAwsOdbCloudExadataInfrastructureDaysOfWeekPropertyToTerrafor
 }
 
 
-export function dataAwsOdbCloudExadataInfrastructureDaysOfWeekPropertyToHclTerraform(struct?: DataAwsOdbCloudExadataInfrastructure.DaysOfWeekProperty): any {
+export function tfDataCloudExadataInfrastructureDaysOfWeekPropertyToHclTerraform(struct?: TfDataCloudExadataInfrastructure.DaysOfWeekProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -378,7 +378,7 @@ export function dataAwsOdbCloudExadataInfrastructureDaysOfWeekPropertyToHclTerra
 }
 
 
-export function dataAwsOdbCloudExadataInfrastructureMonthsPropertyToTerraform(struct?: DataAwsOdbCloudExadataInfrastructure.MonthsProperty): any {
+export function tfDataCloudExadataInfrastructureMonthsPropertyToTerraform(struct?: TfDataCloudExadataInfrastructure.MonthsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -388,7 +388,7 @@ export function dataAwsOdbCloudExadataInfrastructureMonthsPropertyToTerraform(st
 }
 
 
-export function dataAwsOdbCloudExadataInfrastructureMonthsPropertyToHclTerraform(struct?: DataAwsOdbCloudExadataInfrastructure.MonthsProperty): any {
+export function tfDataCloudExadataInfrastructureMonthsPropertyToHclTerraform(struct?: TfDataCloudExadataInfrastructure.MonthsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -399,7 +399,7 @@ export function dataAwsOdbCloudExadataInfrastructureMonthsPropertyToHclTerraform
 }
 
 
-export function dataAwsOdbCloudExadataInfrastructureMaintenanceWindowPropertyToTerraform(struct?: DataAwsOdbCloudExadataInfrastructure.MaintenanceWindowProperty): any {
+export function tfDataCloudExadataInfrastructureMaintenanceWindowPropertyToTerraform(struct?: TfDataCloudExadataInfrastructure.MaintenanceWindowProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -409,7 +409,7 @@ export function dataAwsOdbCloudExadataInfrastructureMaintenanceWindowPropertyToT
 }
 
 
-export function dataAwsOdbCloudExadataInfrastructureMaintenanceWindowPropertyToHclTerraform(struct?: DataAwsOdbCloudExadataInfrastructure.MaintenanceWindowProperty): any {
+export function tfDataCloudExadataInfrastructureMaintenanceWindowPropertyToHclTerraform(struct?: TfDataCloudExadataInfrastructure.MaintenanceWindowProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -420,7 +420,7 @@ export function dataAwsOdbCloudExadataInfrastructureMaintenanceWindowPropertyToH
 }
 
 
-export namespace DataAwsOdbCloudExadataInfrastructure {
+export namespace TfDataCloudExadataInfrastructure {
 export interface CustomerContactsToSendToOciProperty {
 }
 export class CustomerContactsToSendToOciPropertyOutputReference extends cdktn.ComplexObject {

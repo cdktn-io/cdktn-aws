@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsLambdaFunctionUrlConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataFunctionUrlConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_function_url#function_name DataAwsLambdaFunctionUrl#function_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_function_url#function_name TfDataFunctionUrl#function_name}
   */
   readonly functionName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_function_url#id DataAwsLambdaFunctionUrl#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_function_url#id TfDataFunctionUrl#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_function_url#qualifier DataAwsLambdaFunctionUrl#qualifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_function_url#qualifier TfDataFunctionUrl#qualifier}
   */
   readonly qualifier?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_function_url#region DataAwsLambdaFunctionUrl#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_function_url#region TfDataFunctionUrl#region}
   */
   readonly region?: string;
 }
@@ -32,7 +32,7 @@ export interface DataAwsLambdaFunctionUrlConfig extends cdktn.TerraformMetaArgum
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_function_url aws_lambda_function_url}
 */
-export class DataAwsLambdaFunctionUrl extends cdktn.TerraformDataSource {
+export class TfDataFunctionUrl extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class DataAwsLambdaFunctionUrl extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsLambdaFunctionUrl resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataFunctionUrl resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsLambdaFunctionUrl to import
-  * @param importFromId The id of the existing DataAwsLambdaFunctionUrl that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_function_url#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsLambdaFunctionUrl to import is found
+  * @param importToId The construct id used in the generated config for the TfDataFunctionUrl to import
+  * @param importFromId The id of the existing TfDataFunctionUrl that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_function_url#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataFunctionUrl to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lambda_function_url", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class DataAwsLambdaFunctionUrl extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsLambdaFunctionUrlConfig
+  * @param options TfDataFunctionUrlConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsLambdaFunctionUrlConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataFunctionUrlConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lambda_function_url',
       terraformGeneratorMetadata: {
@@ -96,7 +96,7 @@ export class DataAwsLambdaFunctionUrl extends cdktn.TerraformDataSource {
   }
 
   // cors - computed: true, optional: false, required: false
-  private _cors = new DataAwsLambdaFunctionUrl.CorsPropertyList(this, "cors", false);
+  private _cors = new TfDataFunctionUrl.CorsPropertyList(this, "cors", false);
   public get cors() {
     return this._cors;
   }
@@ -238,7 +238,7 @@ export class DataAwsLambdaFunctionUrl extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsLambdaFunctionUrlCorsPropertyToTerraform(struct?: DataAwsLambdaFunctionUrl.CorsProperty): any {
+export function tfDataFunctionUrlCorsPropertyToTerraform(struct?: TfDataFunctionUrl.CorsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -248,7 +248,7 @@ export function dataAwsLambdaFunctionUrlCorsPropertyToTerraform(struct?: DataAws
 }
 
 
-export function dataAwsLambdaFunctionUrlCorsPropertyToHclTerraform(struct?: DataAwsLambdaFunctionUrl.CorsProperty): any {
+export function tfDataFunctionUrlCorsPropertyToHclTerraform(struct?: TfDataFunctionUrl.CorsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -259,7 +259,7 @@ export function dataAwsLambdaFunctionUrlCorsPropertyToHclTerraform(struct?: Data
 }
 
 
-export namespace DataAwsLambdaFunctionUrl {
+export namespace TfDataFunctionUrl {
 export interface CorsProperty {
 }
 export class CorsPropertyOutputReference extends cdktn.ComplexObject {

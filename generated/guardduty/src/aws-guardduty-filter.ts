@@ -5,60 +5,60 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsGuarddutyFilterConfig extends cdktn.TerraformMetaArguments {
+export interface TfFilterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#action AwsGuarddutyFilter#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#action TfFilter#action}
   */
   readonly action: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#description AwsGuarddutyFilter#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#description TfFilter#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#detector_id AwsGuarddutyFilter#detector_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#detector_id TfFilter#detector_id}
   */
   readonly detectorId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#id AwsGuarddutyFilter#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#id TfFilter#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#name AwsGuarddutyFilter#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#name TfFilter#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#rank AwsGuarddutyFilter#rank}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#rank TfFilter#rank}
   */
   readonly rank: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#region AwsGuarddutyFilter#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#region TfFilter#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#tags AwsGuarddutyFilter#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#tags TfFilter#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#tags_all AwsGuarddutyFilter#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#tags_all TfFilter#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * finding_criteria block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#finding_criteria AwsGuarddutyFilter#finding_criteria}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#finding_criteria TfFilter#finding_criteria}
   */
-  readonly findingCriteria: AwsGuarddutyFilter.FindingCriteriaProperty;
+  readonly findingCriteria: TfFilter.FindingCriteriaProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter aws_guardduty_filter}
 */
-export class AwsGuarddutyFilter extends cdktn.TerraformResource {
+export class TfFilter extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -69,11 +69,11 @@ export class AwsGuarddutyFilter extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsGuarddutyFilter resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfFilter resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsGuarddutyFilter to import
-  * @param importFromId The id of the existing AwsGuarddutyFilter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsGuarddutyFilter to import is found
+  * @param importToId The construct id used in the generated config for the TfFilter to import
+  * @param importFromId The id of the existing TfFilter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfFilter to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_guardduty_filter", importId: importFromId, provider });
@@ -88,9 +88,9 @@ export class AwsGuarddutyFilter extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsGuarddutyFilterConfig
+  * @param options TfFilterConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsGuarddutyFilterConfig) {
+  public constructor(scope: Construct, id: string, config: TfFilterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_guardduty_filter',
       terraformGeneratorMetadata: {
@@ -260,11 +260,11 @@ export class AwsGuarddutyFilter extends cdktn.TerraformResource {
   }
 
   // finding_criteria - computed: false, optional: false, required: true
-  private _findingCriteria = new AwsGuarddutyFilter.FindingCriteriaPropertyOutputReference(this, "finding_criteria");
+  private _findingCriteria = new TfFilter.FindingCriteriaPropertyOutputReference(this, "finding_criteria");
   public get findingCriteria() {
     return this._findingCriteria;
   }
-  public putFindingCriteria(value: AwsGuarddutyFilter.FindingCriteriaProperty) {
+  public putFindingCriteria(value: TfFilter.FindingCriteriaProperty) {
     this._findingCriteria.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -287,7 +287,7 @@ export class AwsGuarddutyFilter extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      finding_criteria: awsGuarddutyFilterFindingCriteriaPropertyToTerraform(this._findingCriteria.internalValue),
+      finding_criteria: tfFilterFindingCriteriaPropertyToTerraform(this._findingCriteria.internalValue),
     };
   }
 
@@ -348,10 +348,10 @@ export class AwsGuarddutyFilter extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       finding_criteria: {
-        value: awsGuarddutyFilterFindingCriteriaPropertyToHclTerraform(this._findingCriteria.internalValue),
+        value: tfFilterFindingCriteriaPropertyToHclTerraform(this._findingCriteria.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGuarddutyFilter.FindingCriteriaPropertyList",
+        storageClassType: "TfFilter.FindingCriteriaPropertyList",
       },
     };
 
@@ -360,7 +360,7 @@ export class AwsGuarddutyFilter extends cdktn.TerraformResource {
   }
 }
 
-export function awsGuarddutyFilterCriterionPropertyToTerraform(struct?: AwsGuarddutyFilter.CriterionProperty | cdktn.IResolvable): any {
+export function tfFilterCriterionPropertyToTerraform(struct?: TfFilter.CriterionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -379,7 +379,7 @@ export function awsGuarddutyFilterCriterionPropertyToTerraform(struct?: AwsGuard
 }
 
 
-export function awsGuarddutyFilterCriterionPropertyToHclTerraform(struct?: AwsGuarddutyFilter.CriterionProperty | cdktn.IResolvable): any {
+export function tfFilterCriterionPropertyToHclTerraform(struct?: TfFilter.CriterionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -446,25 +446,25 @@ export function awsGuarddutyFilterCriterionPropertyToHclTerraform(struct?: AwsGu
 }
 
 
-export function awsGuarddutyFilterFindingCriteriaPropertyToTerraform(struct?: AwsGuarddutyFilter.FindingCriteriaPropertyOutputReference | AwsGuarddutyFilter.FindingCriteriaProperty): any {
+export function tfFilterFindingCriteriaPropertyToTerraform(struct?: TfFilter.FindingCriteriaPropertyOutputReference | TfFilter.FindingCriteriaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    criterion: cdktn.listMapper(awsGuarddutyFilterCriterionPropertyToTerraform, true)(struct!.criterion),
+    criterion: cdktn.listMapper(tfFilterCriterionPropertyToTerraform, true)(struct!.criterion),
   }
 }
 
 
-export function awsGuarddutyFilterFindingCriteriaPropertyToHclTerraform(struct?: AwsGuarddutyFilter.FindingCriteriaPropertyOutputReference | AwsGuarddutyFilter.FindingCriteriaProperty): any {
+export function tfFilterFindingCriteriaPropertyToHclTerraform(struct?: TfFilter.FindingCriteriaPropertyOutputReference | TfFilter.FindingCriteriaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     criterion: {
-      value: cdktn.listMapperHcl(awsGuarddutyFilterCriterionPropertyToHclTerraform, true)(struct!.criterion),
+      value: cdktn.listMapperHcl(tfFilterCriterionPropertyToHclTerraform, true)(struct!.criterion),
       isBlock: true,
       type: "set",
       storageClassType: "CriterionPropertyList",
@@ -476,42 +476,42 @@ export function awsGuarddutyFilterFindingCriteriaPropertyToHclTerraform(struct?:
 }
 
 
-export namespace AwsGuarddutyFilter {
+export namespace TfFilter {
 export interface CriterionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#equals AwsGuarddutyFilter#equals}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#equals TfFilter#equals}
   */
   readonly equalTo?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#field AwsGuarddutyFilter#field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#field TfFilter#field}
   */
   readonly field: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#greater_than AwsGuarddutyFilter#greater_than}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#greater_than TfFilter#greater_than}
   */
   readonly greaterThan?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#greater_than_or_equal AwsGuarddutyFilter#greater_than_or_equal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#greater_than_or_equal TfFilter#greater_than_or_equal}
   */
   readonly greaterThanOrEqual?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#less_than AwsGuarddutyFilter#less_than}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#less_than TfFilter#less_than}
   */
   readonly lessThan?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#less_than_or_equal AwsGuarddutyFilter#less_than_or_equal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#less_than_or_equal TfFilter#less_than_or_equal}
   */
   readonly lessThanOrEqual?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#matches AwsGuarddutyFilter#matches}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#matches TfFilter#matches}
   */
   readonly matches?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#not_equals AwsGuarddutyFilter#not_equals}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#not_equals TfFilter#not_equals}
   */
   readonly notEquals?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#not_matches AwsGuarddutyFilter#not_matches}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#not_matches TfFilter#not_matches}
   */
   readonly notMatches?: string[];
 }
@@ -772,7 +772,7 @@ export interface FindingCriteriaProperty {
   /**
   * criterion block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#criterion AwsGuarddutyFilter#criterion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_filter#criterion TfFilter#criterion}
   */
   readonly criterion: CriterionProperty[] | cdktn.IResolvable;
 }

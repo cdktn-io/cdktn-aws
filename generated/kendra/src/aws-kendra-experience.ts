@@ -5,54 +5,54 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsKendraExperienceConfig extends cdktn.TerraformMetaArguments {
+export interface TfExperienceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#description AwsKendraExperience#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#description TfExperience#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#id AwsKendraExperience#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#id TfExperience#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#index_id AwsKendraExperience#index_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#index_id TfExperience#index_id}
   */
   readonly indexId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#name AwsKendraExperience#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#name TfExperience#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#region AwsKendraExperience#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#region TfExperience#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#role_arn AwsKendraExperience#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#role_arn TfExperience#role_arn}
   */
   readonly roleArn: string;
   /**
   * configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#configuration AwsKendraExperience#configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#configuration TfExperience#configuration}
   */
-  readonly configuration?: AwsKendraExperience.ConfigurationProperty;
+  readonly configuration?: TfExperience.ConfigurationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#timeouts AwsKendraExperience#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#timeouts TfExperience#timeouts}
   */
-  readonly timeouts?: AwsKendraExperience.TimeoutsProperty;
+  readonly timeouts?: TfExperience.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience aws_kendra_experience}
 */
-export class AwsKendraExperience extends cdktn.TerraformResource {
+export class TfExperience extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -63,11 +63,11 @@ export class AwsKendraExperience extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsKendraExperience resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfExperience resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsKendraExperience to import
-  * @param importFromId The id of the existing AwsKendraExperience that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsKendraExperience to import is found
+  * @param importToId The construct id used in the generated config for the TfExperience to import
+  * @param importFromId The id of the existing TfExperience that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfExperience to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_kendra_experience", importId: importFromId, provider });
@@ -82,9 +82,9 @@ export class AwsKendraExperience extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsKendraExperienceConfig
+  * @param options TfExperienceConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsKendraExperienceConfig) {
+  public constructor(scope: Construct, id: string, config: TfExperienceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_kendra_experience',
       terraformGeneratorMetadata: {
@@ -136,7 +136,7 @@ export class AwsKendraExperience extends cdktn.TerraformResource {
   }
 
   // endpoints - computed: true, optional: false, required: false
-  private _endpoints = new AwsKendraExperience.EndpointsPropertyList(this, "endpoints", true);
+  private _endpoints = new TfExperience.EndpointsPropertyList(this, "endpoints", true);
   public get endpoints() {
     return this._endpoints;
   }
@@ -223,11 +223,11 @@ export class AwsKendraExperience extends cdktn.TerraformResource {
   }
 
   // configuration - computed: false, optional: true, required: false
-  private _configuration = new AwsKendraExperience.ConfigurationPropertyOutputReference(this, "configuration");
+  private _configuration = new TfExperience.ConfigurationPropertyOutputReference(this, "configuration");
   public get configuration() {
     return this._configuration;
   }
-  public putConfiguration(value: AwsKendraExperience.ConfigurationProperty) {
+  public putConfiguration(value: TfExperience.ConfigurationProperty) {
     this._configuration.internalValue = value;
   }
   public resetConfiguration() {
@@ -239,11 +239,11 @@ export class AwsKendraExperience extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsKendraExperience.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfExperience.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsKendraExperience.TimeoutsProperty) {
+  public putTimeouts(value: TfExperience.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -266,8 +266,8 @@ export class AwsKendraExperience extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       role_arn: cdktn.stringToTerraform(this._roleArn),
-      configuration: awsKendraExperienceConfigurationPropertyToTerraform(this._configuration.internalValue),
-      timeouts: awsKendraExperienceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      configuration: tfExperienceConfigurationPropertyToTerraform(this._configuration.internalValue),
+      timeouts: tfExperienceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -310,16 +310,16 @@ export class AwsKendraExperience extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       configuration: {
-        value: awsKendraExperienceConfigurationPropertyToHclTerraform(this._configuration.internalValue),
+        value: tfExperienceConfigurationPropertyToHclTerraform(this._configuration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsKendraExperience.ConfigurationPropertyList",
+        storageClassType: "TfExperience.ConfigurationPropertyList",
       },
       timeouts: {
-        value: awsKendraExperienceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfExperienceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsKendraExperience.TimeoutsProperty",
+        storageClassType: "TfExperience.TimeoutsProperty",
       },
     };
 
@@ -328,7 +328,7 @@ export class AwsKendraExperience extends cdktn.TerraformResource {
   }
 }
 
-export function awsKendraExperienceEndpointsPropertyToTerraform(struct?: AwsKendraExperience.EndpointsProperty): any {
+export function tfExperienceEndpointsPropertyToTerraform(struct?: TfExperience.EndpointsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -338,7 +338,7 @@ export function awsKendraExperienceEndpointsPropertyToTerraform(struct?: AwsKend
 }
 
 
-export function awsKendraExperienceEndpointsPropertyToHclTerraform(struct?: AwsKendraExperience.EndpointsProperty): any {
+export function tfExperienceEndpointsPropertyToHclTerraform(struct?: TfExperience.EndpointsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -349,7 +349,7 @@ export function awsKendraExperienceEndpointsPropertyToHclTerraform(struct?: AwsK
 }
 
 
-export function awsKendraExperienceContentSourceConfigurationPropertyToTerraform(struct?: AwsKendraExperience.ContentSourceConfigurationPropertyOutputReference | AwsKendraExperience.ContentSourceConfigurationProperty): any {
+export function tfExperienceContentSourceConfigurationPropertyToTerraform(struct?: TfExperience.ContentSourceConfigurationPropertyOutputReference | TfExperience.ContentSourceConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -362,7 +362,7 @@ export function awsKendraExperienceContentSourceConfigurationPropertyToTerraform
 }
 
 
-export function awsKendraExperienceContentSourceConfigurationPropertyToHclTerraform(struct?: AwsKendraExperience.ContentSourceConfigurationPropertyOutputReference | AwsKendraExperience.ContentSourceConfigurationProperty): any {
+export function tfExperienceContentSourceConfigurationPropertyToHclTerraform(struct?: TfExperience.ContentSourceConfigurationPropertyOutputReference | TfExperience.ContentSourceConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -393,7 +393,7 @@ export function awsKendraExperienceContentSourceConfigurationPropertyToHclTerraf
 }
 
 
-export function awsKendraExperienceUserIdentityConfigurationPropertyToTerraform(struct?: AwsKendraExperience.UserIdentityConfigurationPropertyOutputReference | AwsKendraExperience.UserIdentityConfigurationProperty): any {
+export function tfExperienceUserIdentityConfigurationPropertyToTerraform(struct?: TfExperience.UserIdentityConfigurationPropertyOutputReference | TfExperience.UserIdentityConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -404,7 +404,7 @@ export function awsKendraExperienceUserIdentityConfigurationPropertyToTerraform(
 }
 
 
-export function awsKendraExperienceUserIdentityConfigurationPropertyToHclTerraform(struct?: AwsKendraExperience.UserIdentityConfigurationPropertyOutputReference | AwsKendraExperience.UserIdentityConfigurationProperty): any {
+export function tfExperienceUserIdentityConfigurationPropertyToHclTerraform(struct?: TfExperience.UserIdentityConfigurationPropertyOutputReference | TfExperience.UserIdentityConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -423,32 +423,32 @@ export function awsKendraExperienceUserIdentityConfigurationPropertyToHclTerrafo
 }
 
 
-export function awsKendraExperienceConfigurationPropertyToTerraform(struct?: AwsKendraExperience.ConfigurationPropertyOutputReference | AwsKendraExperience.ConfigurationProperty): any {
+export function tfExperienceConfigurationPropertyToTerraform(struct?: TfExperience.ConfigurationPropertyOutputReference | TfExperience.ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    content_source_configuration: awsKendraExperienceContentSourceConfigurationPropertyToTerraform(struct!.contentSourceConfiguration),
-    user_identity_configuration: awsKendraExperienceUserIdentityConfigurationPropertyToTerraform(struct!.userIdentityConfiguration),
+    content_source_configuration: tfExperienceContentSourceConfigurationPropertyToTerraform(struct!.contentSourceConfiguration),
+    user_identity_configuration: tfExperienceUserIdentityConfigurationPropertyToTerraform(struct!.userIdentityConfiguration),
   }
 }
 
 
-export function awsKendraExperienceConfigurationPropertyToHclTerraform(struct?: AwsKendraExperience.ConfigurationPropertyOutputReference | AwsKendraExperience.ConfigurationProperty): any {
+export function tfExperienceConfigurationPropertyToHclTerraform(struct?: TfExperience.ConfigurationPropertyOutputReference | TfExperience.ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     content_source_configuration: {
-      value: awsKendraExperienceContentSourceConfigurationPropertyToHclTerraform(struct!.contentSourceConfiguration),
+      value: tfExperienceContentSourceConfigurationPropertyToHclTerraform(struct!.contentSourceConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ContentSourceConfigurationPropertyList",
     },
     user_identity_configuration: {
-      value: awsKendraExperienceUserIdentityConfigurationPropertyToHclTerraform(struct!.userIdentityConfiguration),
+      value: tfExperienceUserIdentityConfigurationPropertyToHclTerraform(struct!.userIdentityConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "UserIdentityConfigurationPropertyList",
@@ -460,7 +460,7 @@ export function awsKendraExperienceConfigurationPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsKendraExperienceTimeoutsPropertyToTerraform(struct?: AwsKendraExperience.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfExperienceTimeoutsPropertyToTerraform(struct?: TfExperience.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -473,7 +473,7 @@ export function awsKendraExperienceTimeoutsPropertyToTerraform(struct?: AwsKendr
 }
 
 
-export function awsKendraExperienceTimeoutsPropertyToHclTerraform(struct?: AwsKendraExperience.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfExperienceTimeoutsPropertyToHclTerraform(struct?: TfExperience.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -504,7 +504,7 @@ export function awsKendraExperienceTimeoutsPropertyToHclTerraform(struct?: AwsKe
 }
 
 
-export namespace AwsKendraExperience {
+export namespace TfExperience {
 export interface EndpointsProperty {
 }
 export class EndpointsPropertyOutputReference extends cdktn.ComplexObject {
@@ -566,15 +566,15 @@ export class EndpointsPropertyList extends cdktn.ComplexList {
 }
 export interface ContentSourceConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#data_source_ids AwsKendraExperience#data_source_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#data_source_ids TfExperience#data_source_ids}
   */
   readonly dataSourceIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#direct_put_content AwsKendraExperience#direct_put_content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#direct_put_content TfExperience#direct_put_content}
   */
   readonly directPutContent?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#faq_ids AwsKendraExperience#faq_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#faq_ids TfExperience#faq_ids}
   */
   readonly faqIds?: string[];
 }
@@ -672,7 +672,7 @@ export class ContentSourceConfigurationPropertyOutputReference extends cdktn.Com
 }
 export interface UserIdentityConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#identity_attribute_name AwsKendraExperience#identity_attribute_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#identity_attribute_name TfExperience#identity_attribute_name}
   */
   readonly identityAttributeName: string;
 }
@@ -725,13 +725,13 @@ export interface ConfigurationProperty {
   /**
   * content_source_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#content_source_configuration AwsKendraExperience#content_source_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#content_source_configuration TfExperience#content_source_configuration}
   */
   readonly contentSourceConfiguration?: ContentSourceConfigurationProperty;
   /**
   * user_identity_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#user_identity_configuration AwsKendraExperience#user_identity_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#user_identity_configuration TfExperience#user_identity_configuration}
   */
   readonly userIdentityConfiguration?: UserIdentityConfigurationProperty;
 }
@@ -807,15 +807,15 @@ export class ConfigurationPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#create AwsKendraExperience#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#create TfExperience#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#delete AwsKendraExperience#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#delete TfExperience#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#update AwsKendraExperience#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_experience#update TfExperience#update}
   */
   readonly update?: string;
 }

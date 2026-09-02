@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsWafRegexMatchSetConfig extends cdktn.TerraformMetaArguments {
+export interface TfRegexMatchSetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_regex_match_set#id AwsWafRegexMatchSet#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_regex_match_set#id TfRegexMatchSet#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_regex_match_set#name AwsWafRegexMatchSet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_regex_match_set#name TfRegexMatchSet#name}
   */
   readonly name: string;
   /**
   * regex_match_tuple block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_regex_match_set#regex_match_tuple AwsWafRegexMatchSet#regex_match_tuple}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_regex_match_set#regex_match_tuple TfRegexMatchSet#regex_match_tuple}
   */
-  readonly regexMatchTuple?: AwsWafRegexMatchSet.RegexMatchTupleProperty[] | cdktn.IResolvable;
+  readonly regexMatchTuple?: TfRegexMatchSet.RegexMatchTupleProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_regex_match_set aws_waf_regex_match_set}
 */
-export class AwsWafRegexMatchSet extends cdktn.TerraformResource {
+export class TfRegexMatchSet extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class AwsWafRegexMatchSet extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsWafRegexMatchSet resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfRegexMatchSet resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsWafRegexMatchSet to import
-  * @param importFromId The id of the existing AwsWafRegexMatchSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_regex_match_set#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsWafRegexMatchSet to import is found
+  * @param importToId The construct id used in the generated config for the TfRegexMatchSet to import
+  * @param importFromId The id of the existing TfRegexMatchSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_regex_match_set#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfRegexMatchSet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_waf_regex_match_set", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class AwsWafRegexMatchSet extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsWafRegexMatchSetConfig
+  * @param options TfRegexMatchSetConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsWafRegexMatchSetConfig) {
+  public constructor(scope: Construct, id: string, config: TfRegexMatchSetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_waf_regex_match_set',
       terraformGeneratorMetadata: {
@@ -120,11 +120,11 @@ export class AwsWafRegexMatchSet extends cdktn.TerraformResource {
   }
 
   // regex_match_tuple - computed: false, optional: true, required: false
-  private _regexMatchTuple = new AwsWafRegexMatchSet.RegexMatchTuplePropertyList(this, "regex_match_tuple", true);
+  private _regexMatchTuple = new TfRegexMatchSet.RegexMatchTuplePropertyList(this, "regex_match_tuple", true);
   public get regexMatchTuple() {
     return this._regexMatchTuple;
   }
-  public putRegexMatchTuple(value: AwsWafRegexMatchSet.RegexMatchTupleProperty[] | cdktn.IResolvable) {
+  public putRegexMatchTuple(value: TfRegexMatchSet.RegexMatchTupleProperty[] | cdktn.IResolvable) {
     this._regexMatchTuple.internalValue = value;
   }
   public resetRegexMatchTuple() {
@@ -143,7 +143,7 @@ export class AwsWafRegexMatchSet extends cdktn.TerraformResource {
     return {
       id: cdktn.stringToTerraform(this._id),
       name: cdktn.stringToTerraform(this._name),
-      regex_match_tuple: cdktn.listMapper(awsWafRegexMatchSetRegexMatchTuplePropertyToTerraform, true)(this._regexMatchTuple.internalValue),
+      regex_match_tuple: cdktn.listMapper(tfRegexMatchSetRegexMatchTuplePropertyToTerraform, true)(this._regexMatchTuple.internalValue),
     };
   }
 
@@ -162,10 +162,10 @@ export class AwsWafRegexMatchSet extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       regex_match_tuple: {
-        value: cdktn.listMapperHcl(awsWafRegexMatchSetRegexMatchTuplePropertyToHclTerraform, true)(this._regexMatchTuple.internalValue),
+        value: cdktn.listMapperHcl(tfRegexMatchSetRegexMatchTuplePropertyToHclTerraform, true)(this._regexMatchTuple.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsWafRegexMatchSet.RegexMatchTuplePropertyList",
+        storageClassType: "TfRegexMatchSet.RegexMatchTuplePropertyList",
       },
     };
 
@@ -174,7 +174,7 @@ export class AwsWafRegexMatchSet extends cdktn.TerraformResource {
   }
 }
 
-export function awsWafRegexMatchSetFieldToMatchPropertyToTerraform(struct?: AwsWafRegexMatchSet.FieldToMatchPropertyOutputReference | AwsWafRegexMatchSet.FieldToMatchProperty): any {
+export function tfRegexMatchSetFieldToMatchPropertyToTerraform(struct?: TfRegexMatchSet.FieldToMatchPropertyOutputReference | TfRegexMatchSet.FieldToMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -186,7 +186,7 @@ export function awsWafRegexMatchSetFieldToMatchPropertyToTerraform(struct?: AwsW
 }
 
 
-export function awsWafRegexMatchSetFieldToMatchPropertyToHclTerraform(struct?: AwsWafRegexMatchSet.FieldToMatchPropertyOutputReference | AwsWafRegexMatchSet.FieldToMatchProperty): any {
+export function tfRegexMatchSetFieldToMatchPropertyToHclTerraform(struct?: TfRegexMatchSet.FieldToMatchPropertyOutputReference | TfRegexMatchSet.FieldToMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -211,7 +211,7 @@ export function awsWafRegexMatchSetFieldToMatchPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsWafRegexMatchSetRegexMatchTuplePropertyToTerraform(struct?: AwsWafRegexMatchSet.RegexMatchTupleProperty | cdktn.IResolvable): any {
+export function tfRegexMatchSetRegexMatchTuplePropertyToTerraform(struct?: TfRegexMatchSet.RegexMatchTupleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -219,12 +219,12 @@ export function awsWafRegexMatchSetRegexMatchTuplePropertyToTerraform(struct?: A
   return {
     regex_pattern_set_id: cdktn.stringToTerraform(struct!.regexPatternSetId),
     text_transformation: cdktn.stringToTerraform(struct!.textTransformation),
-    field_to_match: awsWafRegexMatchSetFieldToMatchPropertyToTerraform(struct!.fieldToMatch),
+    field_to_match: tfRegexMatchSetFieldToMatchPropertyToTerraform(struct!.fieldToMatch),
   }
 }
 
 
-export function awsWafRegexMatchSetRegexMatchTuplePropertyToHclTerraform(struct?: AwsWafRegexMatchSet.RegexMatchTupleProperty | cdktn.IResolvable): any {
+export function tfRegexMatchSetRegexMatchTuplePropertyToHclTerraform(struct?: TfRegexMatchSet.RegexMatchTupleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -243,7 +243,7 @@ export function awsWafRegexMatchSetRegexMatchTuplePropertyToHclTerraform(struct?
       storageClassType: "string",
     },
     field_to_match: {
-      value: awsWafRegexMatchSetFieldToMatchPropertyToHclTerraform(struct!.fieldToMatch),
+      value: tfRegexMatchSetFieldToMatchPropertyToHclTerraform(struct!.fieldToMatch),
       isBlock: true,
       type: "list",
       storageClassType: "FieldToMatchPropertyList",
@@ -255,14 +255,14 @@ export function awsWafRegexMatchSetRegexMatchTuplePropertyToHclTerraform(struct?
 }
 
 
-export namespace AwsWafRegexMatchSet {
+export namespace TfRegexMatchSet {
 export interface FieldToMatchProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_regex_match_set#data AwsWafRegexMatchSet#data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_regex_match_set#data TfRegexMatchSet#data}
   */
   readonly data?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_regex_match_set#type AwsWafRegexMatchSet#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_regex_match_set#type TfRegexMatchSet#type}
   */
   readonly type: string;
 }
@@ -335,17 +335,17 @@ export class FieldToMatchPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RegexMatchTupleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_regex_match_set#regex_pattern_set_id AwsWafRegexMatchSet#regex_pattern_set_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_regex_match_set#regex_pattern_set_id TfRegexMatchSet#regex_pattern_set_id}
   */
   readonly regexPatternSetId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_regex_match_set#text_transformation AwsWafRegexMatchSet#text_transformation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_regex_match_set#text_transformation TfRegexMatchSet#text_transformation}
   */
   readonly textTransformation: string;
   /**
   * field_to_match block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_regex_match_set#field_to_match AwsWafRegexMatchSet#field_to_match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_regex_match_set#field_to_match TfRegexMatchSet#field_to_match}
   */
   readonly fieldToMatch: FieldToMatchProperty;
 }

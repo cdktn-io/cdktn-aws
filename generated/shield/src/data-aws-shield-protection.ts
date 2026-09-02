@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsShieldProtectionConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataProtectionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/shield_protection#protection_id DataAwsShieldProtection#protection_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/shield_protection#protection_id TfDataProtection#protection_id}
   */
   readonly protectionId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/shield_protection#resource_arn DataAwsShieldProtection#resource_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/shield_protection#resource_arn TfDataProtection#resource_arn}
   */
   readonly resourceArn?: string;
 }
@@ -19,7 +19,7 @@ export interface DataAwsShieldProtectionConfig extends cdktn.TerraformMetaArgume
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/shield_protection aws_shield_protection}
 */
-export class DataAwsShieldProtection extends cdktn.TerraformDataSource {
+export class TfDataProtection extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -30,11 +30,11 @@ export class DataAwsShieldProtection extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsShieldProtection resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataProtection resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsShieldProtection to import
-  * @param importFromId The id of the existing DataAwsShieldProtection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/shield_protection#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsShieldProtection to import is found
+  * @param importToId The construct id used in the generated config for the TfDataProtection to import
+  * @param importFromId The id of the existing TfDataProtection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/shield_protection#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataProtection to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_shield_protection", importId: importFromId, provider });
@@ -49,9 +49,9 @@ export class DataAwsShieldProtection extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsShieldProtectionConfig = {}
+  * @param options TfDataProtectionConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsShieldProtectionConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDataProtectionConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_shield_protection',
       terraformGeneratorMetadata: {

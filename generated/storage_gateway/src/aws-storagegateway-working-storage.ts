@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsStoragegatewayWorkingStorageConfig extends cdktn.TerraformMetaArguments {
+export interface TfWorkingStorageConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_working_storage#disk_id AwsStoragegatewayWorkingStorage#disk_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_working_storage#disk_id TfWorkingStorage#disk_id}
   */
   readonly diskId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_working_storage#gateway_arn AwsStoragegatewayWorkingStorage#gateway_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_working_storage#gateway_arn TfWorkingStorage#gateway_arn}
   */
   readonly gatewayArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_working_storage#id AwsStoragegatewayWorkingStorage#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_working_storage#id TfWorkingStorage#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,7 +24,7 @@ export interface AwsStoragegatewayWorkingStorageConfig extends cdktn.TerraformMe
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_working_storage#region AwsStoragegatewayWorkingStorage#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_working_storage#region TfWorkingStorage#region}
   */
   readonly region?: string;
 }
@@ -32,7 +32,7 @@ export interface AwsStoragegatewayWorkingStorageConfig extends cdktn.TerraformMe
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_working_storage aws_storagegateway_working_storage}
 */
-export class AwsStoragegatewayWorkingStorage extends cdktn.TerraformResource {
+export class TfWorkingStorage extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class AwsStoragegatewayWorkingStorage extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsStoragegatewayWorkingStorage resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfWorkingStorage resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsStoragegatewayWorkingStorage to import
-  * @param importFromId The id of the existing AwsStoragegatewayWorkingStorage that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_working_storage#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsStoragegatewayWorkingStorage to import is found
+  * @param importToId The construct id used in the generated config for the TfWorkingStorage to import
+  * @param importFromId The id of the existing TfWorkingStorage that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_working_storage#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfWorkingStorage to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_storagegateway_working_storage", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class AwsStoragegatewayWorkingStorage extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsStoragegatewayWorkingStorageConfig
+  * @param options TfWorkingStorageConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsStoragegatewayWorkingStorageConfig) {
+  public constructor(scope: Construct, id: string, config: TfWorkingStorageConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_storagegateway_working_storage',
       terraformGeneratorMetadata: {

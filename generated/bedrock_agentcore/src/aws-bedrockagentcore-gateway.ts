@@ -5,81 +5,81 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsBedrockagentcoreGatewayConfig extends cdktn.TerraformMetaArguments {
+export interface TfGatewayConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#authorizer_type AwsBedrockagentcoreGateway#authorizer_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#authorizer_type TfGateway#authorizer_type}
   */
   readonly authorizerType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#description AwsBedrockagentcoreGateway#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#description TfGateway#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#exception_level AwsBedrockagentcoreGateway#exception_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#exception_level TfGateway#exception_level}
   */
   readonly exceptionLevel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#kms_key_arn AwsBedrockagentcoreGateway#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#kms_key_arn TfGateway#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#name AwsBedrockagentcoreGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#name TfGateway#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#protocol_type AwsBedrockagentcoreGateway#protocol_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#protocol_type TfGateway#protocol_type}
   */
   readonly protocolType?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#region AwsBedrockagentcoreGateway#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#region TfGateway#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#role_arn AwsBedrockagentcoreGateway#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#role_arn TfGateway#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#tags AwsBedrockagentcoreGateway#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#tags TfGateway#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * authorizer_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#authorizer_configuration AwsBedrockagentcoreGateway#authorizer_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#authorizer_configuration TfGateway#authorizer_configuration}
   */
-  readonly authorizerConfiguration?: AwsBedrockagentcoreGateway.AuthorizerConfigurationProperty[] | cdktn.IResolvable;
+  readonly authorizerConfiguration?: TfGateway.AuthorizerConfigurationProperty[] | cdktn.IResolvable;
   /**
   * interceptor_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#interceptor_configuration AwsBedrockagentcoreGateway#interceptor_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#interceptor_configuration TfGateway#interceptor_configuration}
   */
-  readonly interceptorConfiguration?: AwsBedrockagentcoreGateway.InterceptorConfigurationProperty[] | cdktn.IResolvable;
+  readonly interceptorConfiguration?: TfGateway.InterceptorConfigurationProperty[] | cdktn.IResolvable;
   /**
   * policy_engine_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#policy_engine_configuration AwsBedrockagentcoreGateway#policy_engine_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#policy_engine_configuration TfGateway#policy_engine_configuration}
   */
-  readonly policyEngineConfiguration?: AwsBedrockagentcoreGateway.PolicyEngineConfigurationProperty[] | cdktn.IResolvable;
+  readonly policyEngineConfiguration?: TfGateway.PolicyEngineConfigurationProperty[] | cdktn.IResolvable;
   /**
   * protocol_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#protocol_configuration AwsBedrockagentcoreGateway#protocol_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#protocol_configuration TfGateway#protocol_configuration}
   */
-  readonly protocolConfiguration?: AwsBedrockagentcoreGateway.ProtocolConfigurationProperty[] | cdktn.IResolvable;
+  readonly protocolConfiguration?: TfGateway.ProtocolConfigurationProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#timeouts AwsBedrockagentcoreGateway#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#timeouts TfGateway#timeouts}
   */
-  readonly timeouts?: AwsBedrockagentcoreGateway.TimeoutsProperty;
+  readonly timeouts?: TfGateway.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway aws_bedrockagentcore_gateway}
 */
-export class AwsBedrockagentcoreGateway extends cdktn.TerraformResource {
+export class TfGateway extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -90,11 +90,11 @@ export class AwsBedrockagentcoreGateway extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsBedrockagentcoreGateway resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfGateway resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsBedrockagentcoreGateway to import
-  * @param importFromId The id of the existing AwsBedrockagentcoreGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsBedrockagentcoreGateway to import is found
+  * @param importToId The construct id used in the generated config for the TfGateway to import
+  * @param importFromId The id of the existing TfGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfGateway to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrockagentcore_gateway", importId: importFromId, provider });
@@ -109,9 +109,9 @@ export class AwsBedrockagentcoreGateway extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsBedrockagentcoreGatewayConfig
+  * @param options TfGatewayConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsBedrockagentcoreGatewayConfig) {
+  public constructor(scope: Construct, id: string, config: TfGatewayConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrockagentcore_gateway',
       terraformGeneratorMetadata: {
@@ -304,17 +304,17 @@ export class AwsBedrockagentcoreGateway extends cdktn.TerraformResource {
   }
 
   // workload_identity_details - computed: true, optional: false, required: false
-  private _workloadIdentityDetails = new AwsBedrockagentcoreGateway.WorkloadIdentityDetailsPropertyList(this, "workload_identity_details", false);
+  private _workloadIdentityDetails = new TfGateway.WorkloadIdentityDetailsPropertyList(this, "workload_identity_details", false);
   public get workloadIdentityDetails() {
     return this._workloadIdentityDetails;
   }
 
   // authorizer_configuration - computed: false, optional: true, required: false
-  private _authorizerConfiguration = new AwsBedrockagentcoreGateway.AuthorizerConfigurationPropertyList(this, "authorizer_configuration", false);
+  private _authorizerConfiguration = new TfGateway.AuthorizerConfigurationPropertyList(this, "authorizer_configuration", false);
   public get authorizerConfiguration() {
     return this._authorizerConfiguration;
   }
-  public putAuthorizerConfiguration(value: AwsBedrockagentcoreGateway.AuthorizerConfigurationProperty[] | cdktn.IResolvable) {
+  public putAuthorizerConfiguration(value: TfGateway.AuthorizerConfigurationProperty[] | cdktn.IResolvable) {
     this._authorizerConfiguration.internalValue = value;
   }
   public resetAuthorizerConfiguration() {
@@ -326,11 +326,11 @@ export class AwsBedrockagentcoreGateway extends cdktn.TerraformResource {
   }
 
   // interceptor_configuration - computed: false, optional: true, required: false
-  private _interceptorConfiguration = new AwsBedrockagentcoreGateway.InterceptorConfigurationPropertyList(this, "interceptor_configuration", false);
+  private _interceptorConfiguration = new TfGateway.InterceptorConfigurationPropertyList(this, "interceptor_configuration", false);
   public get interceptorConfiguration() {
     return this._interceptorConfiguration;
   }
-  public putInterceptorConfiguration(value: AwsBedrockagentcoreGateway.InterceptorConfigurationProperty[] | cdktn.IResolvable) {
+  public putInterceptorConfiguration(value: TfGateway.InterceptorConfigurationProperty[] | cdktn.IResolvable) {
     this._interceptorConfiguration.internalValue = value;
   }
   public resetInterceptorConfiguration() {
@@ -342,11 +342,11 @@ export class AwsBedrockagentcoreGateway extends cdktn.TerraformResource {
   }
 
   // policy_engine_configuration - computed: false, optional: true, required: false
-  private _policyEngineConfiguration = new AwsBedrockagentcoreGateway.PolicyEngineConfigurationPropertyList(this, "policy_engine_configuration", false);
+  private _policyEngineConfiguration = new TfGateway.PolicyEngineConfigurationPropertyList(this, "policy_engine_configuration", false);
   public get policyEngineConfiguration() {
     return this._policyEngineConfiguration;
   }
-  public putPolicyEngineConfiguration(value: AwsBedrockagentcoreGateway.PolicyEngineConfigurationProperty[] | cdktn.IResolvable) {
+  public putPolicyEngineConfiguration(value: TfGateway.PolicyEngineConfigurationProperty[] | cdktn.IResolvable) {
     this._policyEngineConfiguration.internalValue = value;
   }
   public resetPolicyEngineConfiguration() {
@@ -358,11 +358,11 @@ export class AwsBedrockagentcoreGateway extends cdktn.TerraformResource {
   }
 
   // protocol_configuration - computed: false, optional: true, required: false
-  private _protocolConfiguration = new AwsBedrockagentcoreGateway.ProtocolConfigurationPropertyList(this, "protocol_configuration", false);
+  private _protocolConfiguration = new TfGateway.ProtocolConfigurationPropertyList(this, "protocol_configuration", false);
   public get protocolConfiguration() {
     return this._protocolConfiguration;
   }
-  public putProtocolConfiguration(value: AwsBedrockagentcoreGateway.ProtocolConfigurationProperty[] | cdktn.IResolvable) {
+  public putProtocolConfiguration(value: TfGateway.ProtocolConfigurationProperty[] | cdktn.IResolvable) {
     this._protocolConfiguration.internalValue = value;
   }
   public resetProtocolConfiguration() {
@@ -374,11 +374,11 @@ export class AwsBedrockagentcoreGateway extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsBedrockagentcoreGateway.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfGateway.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsBedrockagentcoreGateway.TimeoutsProperty) {
+  public putTimeouts(value: TfGateway.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -404,11 +404,11 @@ export class AwsBedrockagentcoreGateway extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       role_arn: cdktn.stringToTerraform(this._roleArn),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      authorizer_configuration: cdktn.listMapper(awsBedrockagentcoreGatewayAuthorizerConfigurationPropertyToTerraform, true)(this._authorizerConfiguration.internalValue),
-      interceptor_configuration: cdktn.listMapper(awsBedrockagentcoreGatewayInterceptorConfigurationPropertyToTerraform, true)(this._interceptorConfiguration.internalValue),
-      policy_engine_configuration: cdktn.listMapper(awsBedrockagentcoreGatewayPolicyEngineConfigurationPropertyToTerraform, true)(this._policyEngineConfiguration.internalValue),
-      protocol_configuration: cdktn.listMapper(awsBedrockagentcoreGatewayProtocolConfigurationPropertyToTerraform, true)(this._protocolConfiguration.internalValue),
-      timeouts: awsBedrockagentcoreGatewayTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      authorizer_configuration: cdktn.listMapper(tfGatewayAuthorizerConfigurationPropertyToTerraform, true)(this._authorizerConfiguration.internalValue),
+      interceptor_configuration: cdktn.listMapper(tfGatewayInterceptorConfigurationPropertyToTerraform, true)(this._interceptorConfiguration.internalValue),
+      policy_engine_configuration: cdktn.listMapper(tfGatewayPolicyEngineConfigurationPropertyToTerraform, true)(this._policyEngineConfiguration.internalValue),
+      protocol_configuration: cdktn.listMapper(tfGatewayProtocolConfigurationPropertyToTerraform, true)(this._protocolConfiguration.internalValue),
+      timeouts: tfGatewayTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -469,34 +469,34 @@ export class AwsBedrockagentcoreGateway extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       authorizer_configuration: {
-        value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayAuthorizerConfigurationPropertyToHclTerraform, true)(this._authorizerConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfGatewayAuthorizerConfigurationPropertyToHclTerraform, true)(this._authorizerConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentcoreGateway.AuthorizerConfigurationPropertyList",
+        storageClassType: "TfGateway.AuthorizerConfigurationPropertyList",
       },
       interceptor_configuration: {
-        value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayInterceptorConfigurationPropertyToHclTerraform, true)(this._interceptorConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfGatewayInterceptorConfigurationPropertyToHclTerraform, true)(this._interceptorConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentcoreGateway.InterceptorConfigurationPropertyList",
+        storageClassType: "TfGateway.InterceptorConfigurationPropertyList",
       },
       policy_engine_configuration: {
-        value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayPolicyEngineConfigurationPropertyToHclTerraform, true)(this._policyEngineConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfGatewayPolicyEngineConfigurationPropertyToHclTerraform, true)(this._policyEngineConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentcoreGateway.PolicyEngineConfigurationPropertyList",
+        storageClassType: "TfGateway.PolicyEngineConfigurationPropertyList",
       },
       protocol_configuration: {
-        value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayProtocolConfigurationPropertyToHclTerraform, true)(this._protocolConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfGatewayProtocolConfigurationPropertyToHclTerraform, true)(this._protocolConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentcoreGateway.ProtocolConfigurationPropertyList",
+        storageClassType: "TfGateway.ProtocolConfigurationPropertyList",
       },
       timeouts: {
-        value: awsBedrockagentcoreGatewayTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfGatewayTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsBedrockagentcoreGateway.TimeoutsProperty",
+        storageClassType: "TfGateway.TimeoutsProperty",
       },
     };
 
@@ -505,7 +505,7 @@ export class AwsBedrockagentcoreGateway extends cdktn.TerraformResource {
   }
 }
 
-export function awsBedrockagentcoreGatewayWorkloadIdentityDetailsPropertyToTerraform(struct?: AwsBedrockagentcoreGateway.WorkloadIdentityDetailsProperty): any {
+export function tfGatewayWorkloadIdentityDetailsPropertyToTerraform(struct?: TfGateway.WorkloadIdentityDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -515,7 +515,7 @@ export function awsBedrockagentcoreGatewayWorkloadIdentityDetailsPropertyToTerra
 }
 
 
-export function awsBedrockagentcoreGatewayWorkloadIdentityDetailsPropertyToHclTerraform(struct?: AwsBedrockagentcoreGateway.WorkloadIdentityDetailsProperty): any {
+export function tfGatewayWorkloadIdentityDetailsPropertyToHclTerraform(struct?: TfGateway.WorkloadIdentityDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -526,7 +526,7 @@ export function awsBedrockagentcoreGatewayWorkloadIdentityDetailsPropertyToHclTe
 }
 
 
-export function awsBedrockagentcoreGatewayHostingEnvironmentPropertyToTerraform(struct?: AwsBedrockagentcoreGateway.HostingEnvironmentProperty | cdktn.IResolvable): any {
+export function tfGatewayHostingEnvironmentPropertyToTerraform(struct?: TfGateway.HostingEnvironmentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -537,7 +537,7 @@ export function awsBedrockagentcoreGatewayHostingEnvironmentPropertyToTerraform(
 }
 
 
-export function awsBedrockagentcoreGatewayHostingEnvironmentPropertyToHclTerraform(struct?: AwsBedrockagentcoreGateway.HostingEnvironmentProperty | cdktn.IResolvable): any {
+export function tfGatewayHostingEnvironmentPropertyToHclTerraform(struct?: TfGateway.HostingEnvironmentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -556,19 +556,19 @@ export function awsBedrockagentcoreGatewayHostingEnvironmentPropertyToHclTerrafo
 }
 
 
-export function awsBedrockagentcoreGatewayAllowedWorkloadConfigurationPropertyToTerraform(struct?: AwsBedrockagentcoreGateway.AllowedWorkloadConfigurationProperty | cdktn.IResolvable): any {
+export function tfGatewayAllowedWorkloadConfigurationPropertyToTerraform(struct?: TfGateway.AllowedWorkloadConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     workload_identities: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.workloadIdentities),
-    hosting_environment: cdktn.listMapper(awsBedrockagentcoreGatewayHostingEnvironmentPropertyToTerraform, true)(struct!.hostingEnvironment),
+    hosting_environment: cdktn.listMapper(tfGatewayHostingEnvironmentPropertyToTerraform, true)(struct!.hostingEnvironment),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayAllowedWorkloadConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentcoreGateway.AllowedWorkloadConfigurationProperty | cdktn.IResolvable): any {
+export function tfGatewayAllowedWorkloadConfigurationPropertyToHclTerraform(struct?: TfGateway.AllowedWorkloadConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -581,7 +581,7 @@ export function awsBedrockagentcoreGatewayAllowedWorkloadConfigurationPropertyTo
       storageClassType: "stringList",
     },
     hosting_environment: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayHostingEnvironmentPropertyToHclTerraform, true)(struct!.hostingEnvironment),
+      value: cdktn.listMapperHcl(tfGatewayHostingEnvironmentPropertyToHclTerraform, true)(struct!.hostingEnvironment),
       isBlock: true,
       type: "list",
       storageClassType: "HostingEnvironmentPropertyList",
@@ -593,7 +593,7 @@ export function awsBedrockagentcoreGatewayAllowedWorkloadConfigurationPropertyTo
 }
 
 
-export function awsBedrockagentcoreGatewayClaimMatchValuePropertyToTerraform(struct?: AwsBedrockagentcoreGateway.ClaimMatchValueProperty | cdktn.IResolvable): any {
+export function tfGatewayClaimMatchValuePropertyToTerraform(struct?: TfGateway.ClaimMatchValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -605,7 +605,7 @@ export function awsBedrockagentcoreGatewayClaimMatchValuePropertyToTerraform(str
 }
 
 
-export function awsBedrockagentcoreGatewayClaimMatchValuePropertyToHclTerraform(struct?: AwsBedrockagentcoreGateway.ClaimMatchValueProperty | cdktn.IResolvable): any {
+export function tfGatewayClaimMatchValuePropertyToHclTerraform(struct?: TfGateway.ClaimMatchValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -630,19 +630,19 @@ export function awsBedrockagentcoreGatewayClaimMatchValuePropertyToHclTerraform(
 }
 
 
-export function awsBedrockagentcoreGatewayAuthorizingClaimMatchValuePropertyToTerraform(struct?: AwsBedrockagentcoreGateway.AuthorizingClaimMatchValueProperty | cdktn.IResolvable): any {
+export function tfGatewayAuthorizingClaimMatchValuePropertyToTerraform(struct?: TfGateway.AuthorizingClaimMatchValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     claim_match_operator: cdktn.stringToTerraform(struct!.claimMatchOperator),
-    claim_match_value: cdktn.listMapper(awsBedrockagentcoreGatewayClaimMatchValuePropertyToTerraform, true)(struct!.claimMatchValue),
+    claim_match_value: cdktn.listMapper(tfGatewayClaimMatchValuePropertyToTerraform, true)(struct!.claimMatchValue),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayAuthorizingClaimMatchValuePropertyToHclTerraform(struct?: AwsBedrockagentcoreGateway.AuthorizingClaimMatchValueProperty | cdktn.IResolvable): any {
+export function tfGatewayAuthorizingClaimMatchValuePropertyToHclTerraform(struct?: TfGateway.AuthorizingClaimMatchValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -655,7 +655,7 @@ export function awsBedrockagentcoreGatewayAuthorizingClaimMatchValuePropertyToHc
       storageClassType: "string",
     },
     claim_match_value: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayClaimMatchValuePropertyToHclTerraform, true)(struct!.claimMatchValue),
+      value: cdktn.listMapperHcl(tfGatewayClaimMatchValuePropertyToHclTerraform, true)(struct!.claimMatchValue),
       isBlock: true,
       type: "list",
       storageClassType: "ClaimMatchValuePropertyList",
@@ -667,7 +667,7 @@ export function awsBedrockagentcoreGatewayAuthorizingClaimMatchValuePropertyToHc
 }
 
 
-export function awsBedrockagentcoreGatewayCustomClaimPropertyToTerraform(struct?: AwsBedrockagentcoreGateway.CustomClaimProperty | cdktn.IResolvable): any {
+export function tfGatewayCustomClaimPropertyToTerraform(struct?: TfGateway.CustomClaimProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -675,12 +675,12 @@ export function awsBedrockagentcoreGatewayCustomClaimPropertyToTerraform(struct?
   return {
     inbound_token_claim_name: cdktn.stringToTerraform(struct!.inboundTokenClaimName),
     inbound_token_claim_value_type: cdktn.stringToTerraform(struct!.inboundTokenClaimValueType),
-    authorizing_claim_match_value: cdktn.listMapper(awsBedrockagentcoreGatewayAuthorizingClaimMatchValuePropertyToTerraform, true)(struct!.authorizingClaimMatchValue),
+    authorizing_claim_match_value: cdktn.listMapper(tfGatewayAuthorizingClaimMatchValuePropertyToTerraform, true)(struct!.authorizingClaimMatchValue),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayCustomClaimPropertyToHclTerraform(struct?: AwsBedrockagentcoreGateway.CustomClaimProperty | cdktn.IResolvable): any {
+export function tfGatewayCustomClaimPropertyToHclTerraform(struct?: TfGateway.CustomClaimProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -699,7 +699,7 @@ export function awsBedrockagentcoreGatewayCustomClaimPropertyToHclTerraform(stru
       storageClassType: "string",
     },
     authorizing_claim_match_value: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayAuthorizingClaimMatchValuePropertyToHclTerraform, true)(struct!.authorizingClaimMatchValue),
+      value: cdktn.listMapperHcl(tfGatewayAuthorizingClaimMatchValuePropertyToHclTerraform, true)(struct!.authorizingClaimMatchValue),
       isBlock: true,
       type: "list",
       storageClassType: "AuthorizingClaimMatchValuePropertyList",
@@ -711,7 +711,7 @@ export function awsBedrockagentcoreGatewayCustomClaimPropertyToHclTerraform(stru
 }
 
 
-export function awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourcePropertyToTerraform(struct?: AwsBedrockagentcoreGateway.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourceProperty | cdktn.IResolvable): any {
+export function tfGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourcePropertyToTerraform(struct?: TfGateway.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -727,7 +727,7 @@ export function awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthor
 }
 
 
-export function awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourcePropertyToHclTerraform(struct?: AwsBedrockagentcoreGateway.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourceProperty | cdktn.IResolvable): any {
+export function tfGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourcePropertyToHclTerraform(struct?: TfGateway.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -776,7 +776,7 @@ export function awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthor
 }
 
 
-export function awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourcePropertyToTerraform(struct?: AwsBedrockagentcoreGateway.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourceProperty | cdktn.IResolvable): any {
+export function tfGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourcePropertyToTerraform(struct?: TfGateway.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -787,7 +787,7 @@ export function awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthor
 }
 
 
-export function awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourcePropertyToHclTerraform(struct?: AwsBedrockagentcoreGateway.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourceProperty | cdktn.IResolvable): any {
+export function tfGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourcePropertyToHclTerraform(struct?: TfGateway.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -806,32 +806,32 @@ export function awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthor
 }
 
 
-export function awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointPropertyToTerraform(struct?: AwsBedrockagentcoreGateway.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointProperty | cdktn.IResolvable): any {
+export function tfGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointPropertyToTerraform(struct?: TfGateway.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    managed_vpc_resource: cdktn.listMapper(awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourcePropertyToTerraform, true)(struct!.managedVpcResource),
-    self_managed_lattice_resource: cdktn.listMapper(awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourcePropertyToTerraform, true)(struct!.selfManagedLatticeResource),
+    managed_vpc_resource: cdktn.listMapper(tfGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourcePropertyToTerraform, true)(struct!.managedVpcResource),
+    self_managed_lattice_resource: cdktn.listMapper(tfGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourcePropertyToTerraform, true)(struct!.selfManagedLatticeResource),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointPropertyToHclTerraform(struct?: AwsBedrockagentcoreGateway.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointProperty | cdktn.IResolvable): any {
+export function tfGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointPropertyToHclTerraform(struct?: TfGateway.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     managed_vpc_resource: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourcePropertyToHclTerraform, true)(struct!.managedVpcResource),
+      value: cdktn.listMapperHcl(tfGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourcePropertyToHclTerraform, true)(struct!.managedVpcResource),
       isBlock: true,
       type: "list",
       storageClassType: "AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourcePropertyList",
     },
     self_managed_lattice_resource: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourcePropertyToHclTerraform, true)(struct!.selfManagedLatticeResource),
+      value: cdktn.listMapperHcl(tfGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourcePropertyToHclTerraform, true)(struct!.selfManagedLatticeResource),
       isBlock: true,
       type: "list",
       storageClassType: "AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourcePropertyList",
@@ -843,7 +843,7 @@ export function awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthor
 }
 
 
-export function awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourcePropertyToTerraform(struct?: AwsBedrockagentcoreGateway.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourceProperty | cdktn.IResolvable): any {
+export function tfGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourcePropertyToTerraform(struct?: TfGateway.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -859,7 +859,7 @@ export function awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthor
 }
 
 
-export function awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourcePropertyToHclTerraform(struct?: AwsBedrockagentcoreGateway.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourceProperty | cdktn.IResolvable): any {
+export function tfGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourcePropertyToHclTerraform(struct?: TfGateway.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -908,7 +908,7 @@ export function awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthor
 }
 
 
-export function awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourcePropertyToTerraform(struct?: AwsBedrockagentcoreGateway.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourceProperty | cdktn.IResolvable): any {
+export function tfGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourcePropertyToTerraform(struct?: TfGateway.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -919,7 +919,7 @@ export function awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthor
 }
 
 
-export function awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourcePropertyToHclTerraform(struct?: AwsBedrockagentcoreGateway.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourceProperty | cdktn.IResolvable): any {
+export function tfGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourcePropertyToHclTerraform(struct?: TfGateway.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -938,32 +938,32 @@ export function awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthor
 }
 
 
-export function awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointPropertyToTerraform(struct?: AwsBedrockagentcoreGateway.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointProperty | cdktn.IResolvable): any {
+export function tfGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointPropertyToTerraform(struct?: TfGateway.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    managed_vpc_resource: cdktn.listMapper(awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourcePropertyToTerraform, true)(struct!.managedVpcResource),
-    self_managed_lattice_resource: cdktn.listMapper(awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourcePropertyToTerraform, true)(struct!.selfManagedLatticeResource),
+    managed_vpc_resource: cdktn.listMapper(tfGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourcePropertyToTerraform, true)(struct!.managedVpcResource),
+    self_managed_lattice_resource: cdktn.listMapper(tfGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourcePropertyToTerraform, true)(struct!.selfManagedLatticeResource),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointPropertyToHclTerraform(struct?: AwsBedrockagentcoreGateway.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointProperty | cdktn.IResolvable): any {
+export function tfGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointPropertyToHclTerraform(struct?: TfGateway.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     managed_vpc_resource: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourcePropertyToHclTerraform, true)(struct!.managedVpcResource),
+      value: cdktn.listMapperHcl(tfGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourcePropertyToHclTerraform, true)(struct!.managedVpcResource),
       isBlock: true,
       type: "list",
       storageClassType: "AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourcePropertyList",
     },
     self_managed_lattice_resource: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourcePropertyToHclTerraform, true)(struct!.selfManagedLatticeResource),
+      value: cdktn.listMapperHcl(tfGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourcePropertyToHclTerraform, true)(struct!.selfManagedLatticeResource),
       isBlock: true,
       type: "list",
       storageClassType: "AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourcePropertyList",
@@ -975,19 +975,19 @@ export function awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthor
 }
 
 
-export function awsBedrockagentcoreGatewayPrivateEndpointOverridesPropertyToTerraform(struct?: AwsBedrockagentcoreGateway.PrivateEndpointOverridesProperty | cdktn.IResolvable): any {
+export function tfGatewayPrivateEndpointOverridesPropertyToTerraform(struct?: TfGateway.PrivateEndpointOverridesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     domain: cdktn.stringToTerraform(struct!.domain),
-    private_endpoint: cdktn.listMapper(awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointPropertyToTerraform, true)(struct!.privateEndpoint),
+    private_endpoint: cdktn.listMapper(tfGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointPropertyToTerraform, true)(struct!.privateEndpoint),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayPrivateEndpointOverridesPropertyToHclTerraform(struct?: AwsBedrockagentcoreGateway.PrivateEndpointOverridesProperty | cdktn.IResolvable): any {
+export function tfGatewayPrivateEndpointOverridesPropertyToHclTerraform(struct?: TfGateway.PrivateEndpointOverridesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1000,7 +1000,7 @@ export function awsBedrockagentcoreGatewayPrivateEndpointOverridesPropertyToHclT
       storageClassType: "string",
     },
     private_endpoint: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointPropertyToHclTerraform, true)(struct!.privateEndpoint),
+      value: cdktn.listMapperHcl(tfGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointPropertyToHclTerraform, true)(struct!.privateEndpoint),
       isBlock: true,
       type: "list",
       storageClassType: "AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointPropertyList",
@@ -1012,7 +1012,7 @@ export function awsBedrockagentcoreGatewayPrivateEndpointOverridesPropertyToHclT
 }
 
 
-export function awsBedrockagentcoreGatewayCustomJwtAuthorizerPropertyToTerraform(struct?: AwsBedrockagentcoreGateway.CustomJwtAuthorizerProperty | cdktn.IResolvable): any {
+export function tfGatewayCustomJwtAuthorizerPropertyToTerraform(struct?: TfGateway.CustomJwtAuthorizerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1022,15 +1022,15 @@ export function awsBedrockagentcoreGatewayCustomJwtAuthorizerPropertyToTerraform
     allowed_clients: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.allowedClients),
     allowed_scopes: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.allowedScopes),
     discovery_url: cdktn.stringToTerraform(struct!.discoveryUrl),
-    allowed_workload_configuration: cdktn.listMapper(awsBedrockagentcoreGatewayAllowedWorkloadConfigurationPropertyToTerraform, true)(struct!.allowedWorkloadConfiguration),
-    custom_claim: cdktn.listMapper(awsBedrockagentcoreGatewayCustomClaimPropertyToTerraform, true)(struct!.customClaim),
-    private_endpoint: cdktn.listMapper(awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointPropertyToTerraform, true)(struct!.privateEndpoint),
-    private_endpoint_overrides: cdktn.listMapper(awsBedrockagentcoreGatewayPrivateEndpointOverridesPropertyToTerraform, true)(struct!.privateEndpointOverrides),
+    allowed_workload_configuration: cdktn.listMapper(tfGatewayAllowedWorkloadConfigurationPropertyToTerraform, true)(struct!.allowedWorkloadConfiguration),
+    custom_claim: cdktn.listMapper(tfGatewayCustomClaimPropertyToTerraform, true)(struct!.customClaim),
+    private_endpoint: cdktn.listMapper(tfGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointPropertyToTerraform, true)(struct!.privateEndpoint),
+    private_endpoint_overrides: cdktn.listMapper(tfGatewayPrivateEndpointOverridesPropertyToTerraform, true)(struct!.privateEndpointOverrides),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayCustomJwtAuthorizerPropertyToHclTerraform(struct?: AwsBedrockagentcoreGateway.CustomJwtAuthorizerProperty | cdktn.IResolvable): any {
+export function tfGatewayCustomJwtAuthorizerPropertyToHclTerraform(struct?: TfGateway.CustomJwtAuthorizerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1061,25 +1061,25 @@ export function awsBedrockagentcoreGatewayCustomJwtAuthorizerPropertyToHclTerraf
       storageClassType: "string",
     },
     allowed_workload_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayAllowedWorkloadConfigurationPropertyToHclTerraform, true)(struct!.allowedWorkloadConfiguration),
+      value: cdktn.listMapperHcl(tfGatewayAllowedWorkloadConfigurationPropertyToHclTerraform, true)(struct!.allowedWorkloadConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "AllowedWorkloadConfigurationPropertyList",
     },
     custom_claim: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayCustomClaimPropertyToHclTerraform, true)(struct!.customClaim),
+      value: cdktn.listMapperHcl(tfGatewayCustomClaimPropertyToHclTerraform, true)(struct!.customClaim),
       isBlock: true,
       type: "set",
       storageClassType: "CustomClaimPropertyList",
     },
     private_endpoint: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointPropertyToHclTerraform, true)(struct!.privateEndpoint),
+      value: cdktn.listMapperHcl(tfGatewayAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointPropertyToHclTerraform, true)(struct!.privateEndpoint),
       isBlock: true,
       type: "list",
       storageClassType: "AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointPropertyList",
     },
     private_endpoint_overrides: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayPrivateEndpointOverridesPropertyToHclTerraform, true)(struct!.privateEndpointOverrides),
+      value: cdktn.listMapperHcl(tfGatewayPrivateEndpointOverridesPropertyToHclTerraform, true)(struct!.privateEndpointOverrides),
       isBlock: true,
       type: "list",
       storageClassType: "PrivateEndpointOverridesPropertyList",
@@ -1091,25 +1091,25 @@ export function awsBedrockagentcoreGatewayCustomJwtAuthorizerPropertyToHclTerraf
 }
 
 
-export function awsBedrockagentcoreGatewayAuthorizerConfigurationPropertyToTerraform(struct?: AwsBedrockagentcoreGateway.AuthorizerConfigurationProperty | cdktn.IResolvable): any {
+export function tfGatewayAuthorizerConfigurationPropertyToTerraform(struct?: TfGateway.AuthorizerConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_jwt_authorizer: cdktn.listMapper(awsBedrockagentcoreGatewayCustomJwtAuthorizerPropertyToTerraform, true)(struct!.customJwtAuthorizer),
+    custom_jwt_authorizer: cdktn.listMapper(tfGatewayCustomJwtAuthorizerPropertyToTerraform, true)(struct!.customJwtAuthorizer),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayAuthorizerConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentcoreGateway.AuthorizerConfigurationProperty | cdktn.IResolvable): any {
+export function tfGatewayAuthorizerConfigurationPropertyToHclTerraform(struct?: TfGateway.AuthorizerConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_jwt_authorizer: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayCustomJwtAuthorizerPropertyToHclTerraform, true)(struct!.customJwtAuthorizer),
+      value: cdktn.listMapperHcl(tfGatewayCustomJwtAuthorizerPropertyToHclTerraform, true)(struct!.customJwtAuthorizer),
       isBlock: true,
       type: "list",
       storageClassType: "CustomJwtAuthorizerPropertyList",
@@ -1121,7 +1121,7 @@ export function awsBedrockagentcoreGatewayAuthorizerConfigurationPropertyToHclTe
 }
 
 
-export function awsBedrockagentcoreGatewayInputConfigurationPropertyToTerraform(struct?: AwsBedrockagentcoreGateway.InputConfigurationProperty | cdktn.IResolvable): any {
+export function tfGatewayInputConfigurationPropertyToTerraform(struct?: TfGateway.InputConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1132,7 +1132,7 @@ export function awsBedrockagentcoreGatewayInputConfigurationPropertyToTerraform(
 }
 
 
-export function awsBedrockagentcoreGatewayInputConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentcoreGateway.InputConfigurationProperty | cdktn.IResolvable): any {
+export function tfGatewayInputConfigurationPropertyToHclTerraform(struct?: TfGateway.InputConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1151,7 +1151,7 @@ export function awsBedrockagentcoreGatewayInputConfigurationPropertyToHclTerrafo
 }
 
 
-export function awsBedrockagentcoreGatewayLambdaPropertyToTerraform(struct?: AwsBedrockagentcoreGateway.LambdaProperty | cdktn.IResolvable): any {
+export function tfGatewayLambdaPropertyToTerraform(struct?: TfGateway.LambdaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1162,7 +1162,7 @@ export function awsBedrockagentcoreGatewayLambdaPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsBedrockagentcoreGatewayLambdaPropertyToHclTerraform(struct?: AwsBedrockagentcoreGateway.LambdaProperty | cdktn.IResolvable): any {
+export function tfGatewayLambdaPropertyToHclTerraform(struct?: TfGateway.LambdaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1181,25 +1181,25 @@ export function awsBedrockagentcoreGatewayLambdaPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsBedrockagentcoreGatewayInterceptorPropertyToTerraform(struct?: AwsBedrockagentcoreGateway.InterceptorProperty | cdktn.IResolvable): any {
+export function tfGatewayInterceptorPropertyToTerraform(struct?: TfGateway.InterceptorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    lambda: cdktn.listMapper(awsBedrockagentcoreGatewayLambdaPropertyToTerraform, true)(struct!.lambda),
+    lambda: cdktn.listMapper(tfGatewayLambdaPropertyToTerraform, true)(struct!.lambda),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayInterceptorPropertyToHclTerraform(struct?: AwsBedrockagentcoreGateway.InterceptorProperty | cdktn.IResolvable): any {
+export function tfGatewayInterceptorPropertyToHclTerraform(struct?: TfGateway.InterceptorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     lambda: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayLambdaPropertyToHclTerraform, true)(struct!.lambda),
+      value: cdktn.listMapperHcl(tfGatewayLambdaPropertyToHclTerraform, true)(struct!.lambda),
       isBlock: true,
       type: "list",
       storageClassType: "LambdaPropertyList",
@@ -1211,20 +1211,20 @@ export function awsBedrockagentcoreGatewayInterceptorPropertyToHclTerraform(stru
 }
 
 
-export function awsBedrockagentcoreGatewayInterceptorConfigurationPropertyToTerraform(struct?: AwsBedrockagentcoreGateway.InterceptorConfigurationProperty | cdktn.IResolvable): any {
+export function tfGatewayInterceptorConfigurationPropertyToTerraform(struct?: TfGateway.InterceptorConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     interception_points: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.interceptionPoints),
-    input_configuration: cdktn.listMapper(awsBedrockagentcoreGatewayInputConfigurationPropertyToTerraform, true)(struct!.inputConfiguration),
-    interceptor: cdktn.listMapper(awsBedrockagentcoreGatewayInterceptorPropertyToTerraform, true)(struct!.interceptor),
+    input_configuration: cdktn.listMapper(tfGatewayInputConfigurationPropertyToTerraform, true)(struct!.inputConfiguration),
+    interceptor: cdktn.listMapper(tfGatewayInterceptorPropertyToTerraform, true)(struct!.interceptor),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayInterceptorConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentcoreGateway.InterceptorConfigurationProperty | cdktn.IResolvable): any {
+export function tfGatewayInterceptorConfigurationPropertyToHclTerraform(struct?: TfGateway.InterceptorConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1237,13 +1237,13 @@ export function awsBedrockagentcoreGatewayInterceptorConfigurationPropertyToHclT
       storageClassType: "stringList",
     },
     input_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayInputConfigurationPropertyToHclTerraform, true)(struct!.inputConfiguration),
+      value: cdktn.listMapperHcl(tfGatewayInputConfigurationPropertyToHclTerraform, true)(struct!.inputConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "InputConfigurationPropertyList",
     },
     interceptor: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayInterceptorPropertyToHclTerraform, true)(struct!.interceptor),
+      value: cdktn.listMapperHcl(tfGatewayInterceptorPropertyToHclTerraform, true)(struct!.interceptor),
       isBlock: true,
       type: "list",
       storageClassType: "InterceptorPropertyList",
@@ -1255,7 +1255,7 @@ export function awsBedrockagentcoreGatewayInterceptorConfigurationPropertyToHclT
 }
 
 
-export function awsBedrockagentcoreGatewayPolicyEngineConfigurationPropertyToTerraform(struct?: AwsBedrockagentcoreGateway.PolicyEngineConfigurationProperty | cdktn.IResolvable): any {
+export function tfGatewayPolicyEngineConfigurationPropertyToTerraform(struct?: TfGateway.PolicyEngineConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1267,7 +1267,7 @@ export function awsBedrockagentcoreGatewayPolicyEngineConfigurationPropertyToTer
 }
 
 
-export function awsBedrockagentcoreGatewayPolicyEngineConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentcoreGateway.PolicyEngineConfigurationProperty | cdktn.IResolvable): any {
+export function tfGatewayPolicyEngineConfigurationPropertyToHclTerraform(struct?: TfGateway.PolicyEngineConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1292,7 +1292,7 @@ export function awsBedrockagentcoreGatewayPolicyEngineConfigurationPropertyToHcl
 }
 
 
-export function awsBedrockagentcoreGatewaySessionConfigurationPropertyToTerraform(struct?: AwsBedrockagentcoreGateway.SessionConfigurationProperty | cdktn.IResolvable): any {
+export function tfGatewaySessionConfigurationPropertyToTerraform(struct?: TfGateway.SessionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1303,7 +1303,7 @@ export function awsBedrockagentcoreGatewaySessionConfigurationPropertyToTerrafor
 }
 
 
-export function awsBedrockagentcoreGatewaySessionConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentcoreGateway.SessionConfigurationProperty | cdktn.IResolvable): any {
+export function tfGatewaySessionConfigurationPropertyToHclTerraform(struct?: TfGateway.SessionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1322,7 +1322,7 @@ export function awsBedrockagentcoreGatewaySessionConfigurationPropertyToHclTerra
 }
 
 
-export function awsBedrockagentcoreGatewayStreamingConfigurationPropertyToTerraform(struct?: AwsBedrockagentcoreGateway.StreamingConfigurationProperty | cdktn.IResolvable): any {
+export function tfGatewayStreamingConfigurationPropertyToTerraform(struct?: TfGateway.StreamingConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1333,7 +1333,7 @@ export function awsBedrockagentcoreGatewayStreamingConfigurationPropertyToTerraf
 }
 
 
-export function awsBedrockagentcoreGatewayStreamingConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentcoreGateway.StreamingConfigurationProperty | cdktn.IResolvable): any {
+export function tfGatewayStreamingConfigurationPropertyToHclTerraform(struct?: TfGateway.StreamingConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1352,7 +1352,7 @@ export function awsBedrockagentcoreGatewayStreamingConfigurationPropertyToHclTer
 }
 
 
-export function awsBedrockagentcoreGatewayMcpPropertyToTerraform(struct?: AwsBedrockagentcoreGateway.McpProperty | cdktn.IResolvable): any {
+export function tfGatewayMcpPropertyToTerraform(struct?: TfGateway.McpProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1361,13 +1361,13 @@ export function awsBedrockagentcoreGatewayMcpPropertyToTerraform(struct?: AwsBed
     instructions: cdktn.stringToTerraform(struct!.instructions),
     search_type: cdktn.stringToTerraform(struct!.searchType),
     supported_versions: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.supportedVersions),
-    session_configuration: cdktn.listMapper(awsBedrockagentcoreGatewaySessionConfigurationPropertyToTerraform, true)(struct!.sessionConfiguration),
-    streaming_configuration: cdktn.listMapper(awsBedrockagentcoreGatewayStreamingConfigurationPropertyToTerraform, true)(struct!.streamingConfiguration),
+    session_configuration: cdktn.listMapper(tfGatewaySessionConfigurationPropertyToTerraform, true)(struct!.sessionConfiguration),
+    streaming_configuration: cdktn.listMapper(tfGatewayStreamingConfigurationPropertyToTerraform, true)(struct!.streamingConfiguration),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayMcpPropertyToHclTerraform(struct?: AwsBedrockagentcoreGateway.McpProperty | cdktn.IResolvable): any {
+export function tfGatewayMcpPropertyToHclTerraform(struct?: TfGateway.McpProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1392,13 +1392,13 @@ export function awsBedrockagentcoreGatewayMcpPropertyToHclTerraform(struct?: Aws
       storageClassType: "stringList",
     },
     session_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewaySessionConfigurationPropertyToHclTerraform, true)(struct!.sessionConfiguration),
+      value: cdktn.listMapperHcl(tfGatewaySessionConfigurationPropertyToHclTerraform, true)(struct!.sessionConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "SessionConfigurationPropertyList",
     },
     streaming_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayStreamingConfigurationPropertyToHclTerraform, true)(struct!.streamingConfiguration),
+      value: cdktn.listMapperHcl(tfGatewayStreamingConfigurationPropertyToHclTerraform, true)(struct!.streamingConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "StreamingConfigurationPropertyList",
@@ -1410,25 +1410,25 @@ export function awsBedrockagentcoreGatewayMcpPropertyToHclTerraform(struct?: Aws
 }
 
 
-export function awsBedrockagentcoreGatewayProtocolConfigurationPropertyToTerraform(struct?: AwsBedrockagentcoreGateway.ProtocolConfigurationProperty | cdktn.IResolvable): any {
+export function tfGatewayProtocolConfigurationPropertyToTerraform(struct?: TfGateway.ProtocolConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    mcp: cdktn.listMapper(awsBedrockagentcoreGatewayMcpPropertyToTerraform, true)(struct!.mcp),
+    mcp: cdktn.listMapper(tfGatewayMcpPropertyToTerraform, true)(struct!.mcp),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayProtocolConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentcoreGateway.ProtocolConfigurationProperty | cdktn.IResolvable): any {
+export function tfGatewayProtocolConfigurationPropertyToHclTerraform(struct?: TfGateway.ProtocolConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     mcp: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayMcpPropertyToHclTerraform, true)(struct!.mcp),
+      value: cdktn.listMapperHcl(tfGatewayMcpPropertyToHclTerraform, true)(struct!.mcp),
       isBlock: true,
       type: "list",
       storageClassType: "McpPropertyList",
@@ -1440,7 +1440,7 @@ export function awsBedrockagentcoreGatewayProtocolConfigurationPropertyToHclTerr
 }
 
 
-export function awsBedrockagentcoreGatewayTimeoutsPropertyToTerraform(struct?: AwsBedrockagentcoreGateway.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfGatewayTimeoutsPropertyToTerraform(struct?: TfGateway.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1453,7 +1453,7 @@ export function awsBedrockagentcoreGatewayTimeoutsPropertyToTerraform(struct?: A
 }
 
 
-export function awsBedrockagentcoreGatewayTimeoutsPropertyToHclTerraform(struct?: AwsBedrockagentcoreGateway.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfGatewayTimeoutsPropertyToHclTerraform(struct?: TfGateway.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1484,7 +1484,7 @@ export function awsBedrockagentcoreGatewayTimeoutsPropertyToHclTerraform(struct?
 }
 
 
-export namespace AwsBedrockagentcoreGateway {
+export namespace TfGateway {
 export interface WorkloadIdentityDetailsProperty {
 }
 export class WorkloadIdentityDetailsPropertyOutputReference extends cdktn.ComplexObject {
@@ -1541,7 +1541,7 @@ export class WorkloadIdentityDetailsPropertyList extends cdktn.ComplexList {
 }
 export interface HostingEnvironmentProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#arn AwsBedrockagentcoreGateway#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#arn TfGateway#arn}
   */
   readonly arn: string;
 }
@@ -1624,13 +1624,13 @@ export class HostingEnvironmentPropertyList extends cdktn.ComplexList {
 }
 export interface AllowedWorkloadConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#workload_identities AwsBedrockagentcoreGateway#workload_identities}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#workload_identities TfGateway#workload_identities}
   */
   readonly workloadIdentities?: string[];
   /**
   * hosting_environment block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#hosting_environment AwsBedrockagentcoreGateway#hosting_environment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#hosting_environment TfGateway#hosting_environment}
   */
   readonly hostingEnvironment?: HostingEnvironmentProperty[] | cdktn.IResolvable;
 }
@@ -1738,11 +1738,11 @@ export class AllowedWorkloadConfigurationPropertyList extends cdktn.ComplexList 
 }
 export interface ClaimMatchValueProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#match_value_string AwsBedrockagentcoreGateway#match_value_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#match_value_string TfGateway#match_value_string}
   */
   readonly matchValueString?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#match_value_string_list AwsBedrockagentcoreGateway#match_value_string_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#match_value_string_list TfGateway#match_value_string_list}
   */
   readonly matchValueStringList?: string[];
 }
@@ -1850,13 +1850,13 @@ export class ClaimMatchValuePropertyList extends cdktn.ComplexList {
 }
 export interface AuthorizingClaimMatchValueProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#claim_match_operator AwsBedrockagentcoreGateway#claim_match_operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#claim_match_operator TfGateway#claim_match_operator}
   */
   readonly claimMatchOperator: string;
   /**
   * claim_match_value block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#claim_match_value AwsBedrockagentcoreGateway#claim_match_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#claim_match_value TfGateway#claim_match_value}
   */
   readonly claimMatchValue?: ClaimMatchValueProperty[] | cdktn.IResolvable;
 }
@@ -1961,17 +1961,17 @@ export class AuthorizingClaimMatchValuePropertyList extends cdktn.ComplexList {
 }
 export interface CustomClaimProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#inbound_token_claim_name AwsBedrockagentcoreGateway#inbound_token_claim_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#inbound_token_claim_name TfGateway#inbound_token_claim_name}
   */
   readonly inboundTokenClaimName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#inbound_token_claim_value_type AwsBedrockagentcoreGateway#inbound_token_claim_value_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#inbound_token_claim_value_type TfGateway#inbound_token_claim_value_type}
   */
   readonly inboundTokenClaimValueType: string;
   /**
   * authorizing_claim_match_value block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#authorizing_claim_match_value AwsBedrockagentcoreGateway#authorizing_claim_match_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#authorizing_claim_match_value TfGateway#authorizing_claim_match_value}
   */
   readonly authorizingClaimMatchValue?: AuthorizingClaimMatchValueProperty[] | cdktn.IResolvable;
 }
@@ -2095,27 +2095,27 @@ export class CustomClaimPropertyList extends cdktn.ComplexList {
 }
 export interface AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#endpoint_ip_address_type AwsBedrockagentcoreGateway#endpoint_ip_address_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#endpoint_ip_address_type TfGateway#endpoint_ip_address_type}
   */
   readonly endpointIpAddressType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#routing_domain AwsBedrockagentcoreGateway#routing_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#routing_domain TfGateway#routing_domain}
   */
   readonly routingDomain?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#security_group_ids AwsBedrockagentcoreGateway#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#security_group_ids TfGateway#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#subnet_ids AwsBedrockagentcoreGateway#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#subnet_ids TfGateway#subnet_ids}
   */
   readonly subnetIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#tags AwsBedrockagentcoreGateway#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#tags TfGateway#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#vpc_identifier AwsBedrockagentcoreGateway#vpc_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#vpc_identifier TfGateway#vpc_identifier}
   */
   readonly vpcIdentifier: string;
 }
@@ -2302,7 +2302,7 @@ export class AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpc
 }
 export interface AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#resource_configuration_identifier AwsBedrockagentcoreGateway#resource_configuration_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#resource_configuration_identifier TfGateway#resource_configuration_identifier}
   */
   readonly resourceConfigurationIdentifier: string;
 }
@@ -2387,13 +2387,13 @@ export interface AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointProper
   /**
   * managed_vpc_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#managed_vpc_resource AwsBedrockagentcoreGateway#managed_vpc_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#managed_vpc_resource TfGateway#managed_vpc_resource}
   */
   readonly managedVpcResource?: AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourceProperty[] | cdktn.IResolvable;
   /**
   * self_managed_lattice_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#self_managed_lattice_resource AwsBedrockagentcoreGateway#self_managed_lattice_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#self_managed_lattice_resource TfGateway#self_managed_lattice_resource}
   */
   readonly selfManagedLatticeResource?: AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourceProperty[] | cdktn.IResolvable;
 }
@@ -2501,27 +2501,27 @@ export class AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointPropertyLi
 }
 export interface AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#endpoint_ip_address_type AwsBedrockagentcoreGateway#endpoint_ip_address_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#endpoint_ip_address_type TfGateway#endpoint_ip_address_type}
   */
   readonly endpointIpAddressType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#routing_domain AwsBedrockagentcoreGateway#routing_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#routing_domain TfGateway#routing_domain}
   */
   readonly routingDomain?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#security_group_ids AwsBedrockagentcoreGateway#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#security_group_ids TfGateway#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#subnet_ids AwsBedrockagentcoreGateway#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#subnet_ids TfGateway#subnet_ids}
   */
   readonly subnetIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#tags AwsBedrockagentcoreGateway#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#tags TfGateway#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#vpc_identifier AwsBedrockagentcoreGateway#vpc_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#vpc_identifier TfGateway#vpc_identifier}
   */
   readonly vpcIdentifier: string;
 }
@@ -2708,7 +2708,7 @@ export class AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesP
 }
 export interface AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#resource_configuration_identifier AwsBedrockagentcoreGateway#resource_configuration_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#resource_configuration_identifier TfGateway#resource_configuration_identifier}
   */
   readonly resourceConfigurationIdentifier: string;
 }
@@ -2793,13 +2793,13 @@ export interface AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverri
   /**
   * managed_vpc_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#managed_vpc_resource AwsBedrockagentcoreGateway#managed_vpc_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#managed_vpc_resource TfGateway#managed_vpc_resource}
   */
   readonly managedVpcResource?: AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourceProperty[] | cdktn.IResolvable;
   /**
   * self_managed_lattice_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#self_managed_lattice_resource AwsBedrockagentcoreGateway#self_managed_lattice_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#self_managed_lattice_resource TfGateway#self_managed_lattice_resource}
   */
   readonly selfManagedLatticeResource?: AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourceProperty[] | cdktn.IResolvable;
 }
@@ -2907,13 +2907,13 @@ export class AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesP
 }
 export interface PrivateEndpointOverridesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#domain AwsBedrockagentcoreGateway#domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#domain TfGateway#domain}
   */
   readonly domain: string;
   /**
   * private_endpoint block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#private_endpoint AwsBedrockagentcoreGateway#private_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#private_endpoint TfGateway#private_endpoint}
   */
   readonly privateEndpoint?: AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointProperty[] | cdktn.IResolvable;
 }
@@ -3018,43 +3018,43 @@ export class PrivateEndpointOverridesPropertyList extends cdktn.ComplexList {
 }
 export interface CustomJwtAuthorizerProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#allowed_audience AwsBedrockagentcoreGateway#allowed_audience}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#allowed_audience TfGateway#allowed_audience}
   */
   readonly allowedAudience?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#allowed_clients AwsBedrockagentcoreGateway#allowed_clients}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#allowed_clients TfGateway#allowed_clients}
   */
   readonly allowedClients?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#allowed_scopes AwsBedrockagentcoreGateway#allowed_scopes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#allowed_scopes TfGateway#allowed_scopes}
   */
   readonly allowedScopes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#discovery_url AwsBedrockagentcoreGateway#discovery_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#discovery_url TfGateway#discovery_url}
   */
   readonly discoveryUrl: string;
   /**
   * allowed_workload_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#allowed_workload_configuration AwsBedrockagentcoreGateway#allowed_workload_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#allowed_workload_configuration TfGateway#allowed_workload_configuration}
   */
   readonly allowedWorkloadConfiguration?: AllowedWorkloadConfigurationProperty[] | cdktn.IResolvable;
   /**
   * custom_claim block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#custom_claim AwsBedrockagentcoreGateway#custom_claim}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#custom_claim TfGateway#custom_claim}
   */
   readonly customClaim?: CustomClaimProperty[] | cdktn.IResolvable;
   /**
   * private_endpoint block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#private_endpoint AwsBedrockagentcoreGateway#private_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#private_endpoint TfGateway#private_endpoint}
   */
   readonly privateEndpoint?: AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointProperty[] | cdktn.IResolvable;
   /**
   * private_endpoint_overrides block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#private_endpoint_overrides AwsBedrockagentcoreGateway#private_endpoint_overrides}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#private_endpoint_overrides TfGateway#private_endpoint_overrides}
   */
   readonly privateEndpointOverrides?: PrivateEndpointOverridesProperty[] | cdktn.IResolvable;
 }
@@ -3293,7 +3293,7 @@ export interface AuthorizerConfigurationProperty {
   /**
   * custom_jwt_authorizer block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#custom_jwt_authorizer AwsBedrockagentcoreGateway#custom_jwt_authorizer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#custom_jwt_authorizer TfGateway#custom_jwt_authorizer}
   */
   readonly customJwtAuthorizer?: CustomJwtAuthorizerProperty[] | cdktn.IResolvable;
 }
@@ -3379,7 +3379,7 @@ export class AuthorizerConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface InputConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#pass_request_headers AwsBedrockagentcoreGateway#pass_request_headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#pass_request_headers TfGateway#pass_request_headers}
   */
   readonly passRequestHeaders: boolean | cdktn.IResolvable;
 }
@@ -3462,7 +3462,7 @@ export class InputConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface LambdaProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#arn AwsBedrockagentcoreGateway#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#arn TfGateway#arn}
   */
   readonly arn: string;
 }
@@ -3547,7 +3547,7 @@ export interface InterceptorProperty {
   /**
   * lambda block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#lambda AwsBedrockagentcoreGateway#lambda}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#lambda TfGateway#lambda}
   */
   readonly lambda?: LambdaProperty[] | cdktn.IResolvable;
 }
@@ -3633,19 +3633,19 @@ export class InterceptorPropertyList extends cdktn.ComplexList {
 }
 export interface InterceptorConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#interception_points AwsBedrockagentcoreGateway#interception_points}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#interception_points TfGateway#interception_points}
   */
   readonly interceptionPoints: string[];
   /**
   * input_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#input_configuration AwsBedrockagentcoreGateway#input_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#input_configuration TfGateway#input_configuration}
   */
   readonly inputConfiguration?: InputConfigurationProperty[] | cdktn.IResolvable;
   /**
   * interceptor block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#interceptor AwsBedrockagentcoreGateway#interceptor}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#interceptor TfGateway#interceptor}
   */
   readonly interceptor?: InterceptorProperty[] | cdktn.IResolvable;
 }
@@ -3772,11 +3772,11 @@ export class InterceptorConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface PolicyEngineConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#arn AwsBedrockagentcoreGateway#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#arn TfGateway#arn}
   */
   readonly arn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#mode AwsBedrockagentcoreGateway#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#mode TfGateway#mode}
   */
   readonly mode: string;
 }
@@ -3878,7 +3878,7 @@ export class PolicyEngineConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface SessionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#session_timeout_in_seconds AwsBedrockagentcoreGateway#session_timeout_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#session_timeout_in_seconds TfGateway#session_timeout_in_seconds}
   */
   readonly sessionTimeoutInSeconds?: number;
 }
@@ -3964,7 +3964,7 @@ export class SessionConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface StreamingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#enable_response_streaming AwsBedrockagentcoreGateway#enable_response_streaming}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#enable_response_streaming TfGateway#enable_response_streaming}
   */
   readonly enableResponseStreaming?: boolean | cdktn.IResolvable;
 }
@@ -4050,27 +4050,27 @@ export class StreamingConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface McpProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#instructions AwsBedrockagentcoreGateway#instructions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#instructions TfGateway#instructions}
   */
   readonly instructions?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#search_type AwsBedrockagentcoreGateway#search_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#search_type TfGateway#search_type}
   */
   readonly searchType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#supported_versions AwsBedrockagentcoreGateway#supported_versions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#supported_versions TfGateway#supported_versions}
   */
   readonly supportedVersions?: string[];
   /**
   * session_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#session_configuration AwsBedrockagentcoreGateway#session_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#session_configuration TfGateway#session_configuration}
   */
   readonly sessionConfiguration?: SessionConfigurationProperty[] | cdktn.IResolvable;
   /**
   * streaming_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#streaming_configuration AwsBedrockagentcoreGateway#streaming_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#streaming_configuration TfGateway#streaming_configuration}
   */
   readonly streamingConfiguration?: StreamingConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -4246,7 +4246,7 @@ export interface ProtocolConfigurationProperty {
   /**
   * mcp block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#mcp AwsBedrockagentcoreGateway#mcp}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#mcp TfGateway#mcp}
   */
   readonly mcp?: McpProperty[] | cdktn.IResolvable;
 }
@@ -4334,19 +4334,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#create AwsBedrockagentcoreGateway#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#create TfGateway#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#delete AwsBedrockagentcoreGateway#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#delete TfGateway#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#update AwsBedrockagentcoreGateway#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway#update TfGateway#update}
   */
   readonly update?: string;
 }

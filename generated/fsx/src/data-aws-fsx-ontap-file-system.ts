@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsFsxOntapFileSystemConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataOntapFileSystemConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_file_system#id DataAwsFsxOntapFileSystem#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_file_system#id TfDataOntapFileSystem#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,11 +16,11 @@ export interface DataAwsFsxOntapFileSystemConfig extends cdktn.TerraformMetaArgu
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_file_system#region DataAwsFsxOntapFileSystem#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_file_system#region TfDataOntapFileSystem#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_file_system#tags DataAwsFsxOntapFileSystem#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_file_system#tags TfDataOntapFileSystem#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -28,7 +28,7 @@ export interface DataAwsFsxOntapFileSystemConfig extends cdktn.TerraformMetaArgu
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_file_system aws_fsx_ontap_file_system}
 */
-export class DataAwsFsxOntapFileSystem extends cdktn.TerraformDataSource {
+export class TfDataOntapFileSystem extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class DataAwsFsxOntapFileSystem extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsFsxOntapFileSystem resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataOntapFileSystem resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsFsxOntapFileSystem to import
-  * @param importFromId The id of the existing DataAwsFsxOntapFileSystem that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_file_system#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsFsxOntapFileSystem to import is found
+  * @param importToId The construct id used in the generated config for the TfDataOntapFileSystem to import
+  * @param importFromId The id of the existing TfDataOntapFileSystem that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_ontap_file_system#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataOntapFileSystem to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_fsx_ontap_file_system", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class DataAwsFsxOntapFileSystem extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsFsxOntapFileSystemConfig
+  * @param options TfDataOntapFileSystemConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsFsxOntapFileSystemConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataOntapFileSystemConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_fsx_ontap_file_system',
       terraformGeneratorMetadata: {
@@ -106,7 +106,7 @@ export class DataAwsFsxOntapFileSystem extends cdktn.TerraformDataSource {
   }
 
   // disk_iops_configuration - computed: true, optional: false, required: false
-  private _diskIopsConfiguration = new DataAwsFsxOntapFileSystem.DiskIopsConfigurationPropertyList(this, "disk_iops_configuration", false);
+  private _diskIopsConfiguration = new TfDataOntapFileSystem.DiskIopsConfigurationPropertyList(this, "disk_iops_configuration", false);
   public get diskIopsConfiguration() {
     return this._diskIopsConfiguration;
   }
@@ -122,7 +122,7 @@ export class DataAwsFsxOntapFileSystem extends cdktn.TerraformDataSource {
   }
 
   // endpoints - computed: true, optional: false, required: false
-  private _endpoints = new DataAwsFsxOntapFileSystem.EndpointsPropertyList(this, "endpoints", false);
+  private _endpoints = new TfDataOntapFileSystem.EndpointsPropertyList(this, "endpoints", false);
   public get endpoints() {
     return this._endpoints;
   }
@@ -281,7 +281,7 @@ export class DataAwsFsxOntapFileSystem extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsFsxOntapFileSystemDiskIopsConfigurationPropertyToTerraform(struct?: DataAwsFsxOntapFileSystem.DiskIopsConfigurationProperty): any {
+export function tfDataOntapFileSystemDiskIopsConfigurationPropertyToTerraform(struct?: TfDataOntapFileSystem.DiskIopsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -291,7 +291,7 @@ export function dataAwsFsxOntapFileSystemDiskIopsConfigurationPropertyToTerrafor
 }
 
 
-export function dataAwsFsxOntapFileSystemDiskIopsConfigurationPropertyToHclTerraform(struct?: DataAwsFsxOntapFileSystem.DiskIopsConfigurationProperty): any {
+export function tfDataOntapFileSystemDiskIopsConfigurationPropertyToHclTerraform(struct?: TfDataOntapFileSystem.DiskIopsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -302,7 +302,7 @@ export function dataAwsFsxOntapFileSystemDiskIopsConfigurationPropertyToHclTerra
 }
 
 
-export function dataAwsFsxOntapFileSystemInterclusterPropertyToTerraform(struct?: DataAwsFsxOntapFileSystem.InterclusterProperty): any {
+export function tfDataOntapFileSystemInterclusterPropertyToTerraform(struct?: TfDataOntapFileSystem.InterclusterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -312,7 +312,7 @@ export function dataAwsFsxOntapFileSystemInterclusterPropertyToTerraform(struct?
 }
 
 
-export function dataAwsFsxOntapFileSystemInterclusterPropertyToHclTerraform(struct?: DataAwsFsxOntapFileSystem.InterclusterProperty): any {
+export function tfDataOntapFileSystemInterclusterPropertyToHclTerraform(struct?: TfDataOntapFileSystem.InterclusterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -323,7 +323,7 @@ export function dataAwsFsxOntapFileSystemInterclusterPropertyToHclTerraform(stru
 }
 
 
-export function dataAwsFsxOntapFileSystemManagementPropertyToTerraform(struct?: DataAwsFsxOntapFileSystem.ManagementProperty): any {
+export function tfDataOntapFileSystemManagementPropertyToTerraform(struct?: TfDataOntapFileSystem.ManagementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -333,7 +333,7 @@ export function dataAwsFsxOntapFileSystemManagementPropertyToTerraform(struct?: 
 }
 
 
-export function dataAwsFsxOntapFileSystemManagementPropertyToHclTerraform(struct?: DataAwsFsxOntapFileSystem.ManagementProperty): any {
+export function tfDataOntapFileSystemManagementPropertyToHclTerraform(struct?: TfDataOntapFileSystem.ManagementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -344,7 +344,7 @@ export function dataAwsFsxOntapFileSystemManagementPropertyToHclTerraform(struct
 }
 
 
-export function dataAwsFsxOntapFileSystemEndpointsPropertyToTerraform(struct?: DataAwsFsxOntapFileSystem.EndpointsProperty): any {
+export function tfDataOntapFileSystemEndpointsPropertyToTerraform(struct?: TfDataOntapFileSystem.EndpointsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -354,7 +354,7 @@ export function dataAwsFsxOntapFileSystemEndpointsPropertyToTerraform(struct?: D
 }
 
 
-export function dataAwsFsxOntapFileSystemEndpointsPropertyToHclTerraform(struct?: DataAwsFsxOntapFileSystem.EndpointsProperty): any {
+export function tfDataOntapFileSystemEndpointsPropertyToHclTerraform(struct?: TfDataOntapFileSystem.EndpointsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -365,7 +365,7 @@ export function dataAwsFsxOntapFileSystemEndpointsPropertyToHclTerraform(struct?
 }
 
 
-export namespace DataAwsFsxOntapFileSystem {
+export namespace TfDataOntapFileSystem {
 export interface DiskIopsConfigurationProperty {
 }
 export class DiskIopsConfigurationPropertyOutputReference extends cdktn.ComplexObject {

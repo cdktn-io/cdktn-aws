@@ -5,33 +5,33 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsBedrockFoundationModelAgreementConfig extends cdktn.TerraformMetaArguments {
+export interface TfFoundationModelAgreementConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_foundation_model_agreement#model_id AwsBedrockFoundationModelAgreement#model_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_foundation_model_agreement#model_id TfFoundationModelAgreement#model_id}
   */
   readonly modelId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_foundation_model_agreement#offer_token AwsBedrockFoundationModelAgreement#offer_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_foundation_model_agreement#offer_token TfFoundationModelAgreement#offer_token}
   */
   readonly offerToken: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_foundation_model_agreement#region AwsBedrockFoundationModelAgreement#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_foundation_model_agreement#region TfFoundationModelAgreement#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_foundation_model_agreement#timeouts AwsBedrockFoundationModelAgreement#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_foundation_model_agreement#timeouts TfFoundationModelAgreement#timeouts}
   */
-  readonly timeouts?: AwsBedrockFoundationModelAgreement.TimeoutsProperty;
+  readonly timeouts?: TfFoundationModelAgreement.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_foundation_model_agreement aws_bedrock_foundation_model_agreement}
 */
-export class AwsBedrockFoundationModelAgreement extends cdktn.TerraformResource {
+export class TfFoundationModelAgreement extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -42,11 +42,11 @@ export class AwsBedrockFoundationModelAgreement extends cdktn.TerraformResource 
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsBedrockFoundationModelAgreement resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfFoundationModelAgreement resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsBedrockFoundationModelAgreement to import
-  * @param importFromId The id of the existing AwsBedrockFoundationModelAgreement that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_foundation_model_agreement#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsBedrockFoundationModelAgreement to import is found
+  * @param importToId The construct id used in the generated config for the TfFoundationModelAgreement to import
+  * @param importFromId The id of the existing TfFoundationModelAgreement that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_foundation_model_agreement#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfFoundationModelAgreement to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrock_foundation_model_agreement", importId: importFromId, provider });
@@ -61,9 +61,9 @@ export class AwsBedrockFoundationModelAgreement extends cdktn.TerraformResource 
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsBedrockFoundationModelAgreementConfig
+  * @param options TfFoundationModelAgreementConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsBedrockFoundationModelAgreementConfig) {
+  public constructor(scope: Construct, id: string, config: TfFoundationModelAgreementConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrock_foundation_model_agreement',
       terraformGeneratorMetadata: {
@@ -132,11 +132,11 @@ export class AwsBedrockFoundationModelAgreement extends cdktn.TerraformResource 
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsBedrockFoundationModelAgreement.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfFoundationModelAgreement.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsBedrockFoundationModelAgreement.TimeoutsProperty) {
+  public putTimeouts(value: TfFoundationModelAgreement.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -156,7 +156,7 @@ export class AwsBedrockFoundationModelAgreement extends cdktn.TerraformResource 
       model_id: cdktn.stringToTerraform(this._modelId),
       offer_token: cdktn.stringToTerraform(this._offerToken),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: awsBedrockFoundationModelAgreementTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfFoundationModelAgreementTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -181,10 +181,10 @@ export class AwsBedrockFoundationModelAgreement extends cdktn.TerraformResource 
         storageClassType: "string",
       },
       timeouts: {
-        value: awsBedrockFoundationModelAgreementTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfFoundationModelAgreementTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsBedrockFoundationModelAgreement.TimeoutsProperty",
+        storageClassType: "TfFoundationModelAgreement.TimeoutsProperty",
       },
     };
 
@@ -193,7 +193,7 @@ export class AwsBedrockFoundationModelAgreement extends cdktn.TerraformResource 
   }
 }
 
-export function awsBedrockFoundationModelAgreementTimeoutsPropertyToTerraform(struct?: AwsBedrockFoundationModelAgreement.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfFoundationModelAgreementTimeoutsPropertyToTerraform(struct?: TfFoundationModelAgreement.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -205,7 +205,7 @@ export function awsBedrockFoundationModelAgreementTimeoutsPropertyToTerraform(st
 }
 
 
-export function awsBedrockFoundationModelAgreementTimeoutsPropertyToHclTerraform(struct?: AwsBedrockFoundationModelAgreement.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfFoundationModelAgreementTimeoutsPropertyToHclTerraform(struct?: TfFoundationModelAgreement.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -230,18 +230,18 @@ export function awsBedrockFoundationModelAgreementTimeoutsPropertyToHclTerraform
 }
 
 
-export namespace AwsBedrockFoundationModelAgreement {
+export namespace TfFoundationModelAgreement {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_foundation_model_agreement#create AwsBedrockFoundationModelAgreement#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_foundation_model_agreement#create TfFoundationModelAgreement#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_foundation_model_agreement#delete AwsBedrockFoundationModelAgreement#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_foundation_model_agreement#delete TfFoundationModelAgreement#delete}
   */
   readonly delete?: string;
 }

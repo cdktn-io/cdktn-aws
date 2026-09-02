@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsLightsailLbStickinessPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface TfLbStickinessPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_stickiness_policy#cookie_duration AwsLightsailLbStickinessPolicy#cookie_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_stickiness_policy#cookie_duration TfLbStickinessPolicy#cookie_duration}
   */
   readonly cookieDuration: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_stickiness_policy#enabled AwsLightsailLbStickinessPolicy#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_stickiness_policy#enabled TfLbStickinessPolicy#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_stickiness_policy#id AwsLightsailLbStickinessPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_stickiness_policy#id TfLbStickinessPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_stickiness_policy#lb_name AwsLightsailLbStickinessPolicy#lb_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_stickiness_policy#lb_name TfLbStickinessPolicy#lb_name}
   */
   readonly lbName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_stickiness_policy#region AwsLightsailLbStickinessPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_stickiness_policy#region TfLbStickinessPolicy#region}
   */
   readonly region?: string;
 }
@@ -36,7 +36,7 @@ export interface AwsLightsailLbStickinessPolicyConfig extends cdktn.TerraformMet
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_stickiness_policy aws_lightsail_lb_stickiness_policy}
 */
-export class AwsLightsailLbStickinessPolicy extends cdktn.TerraformResource {
+export class TfLbStickinessPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class AwsLightsailLbStickinessPolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsLightsailLbStickinessPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfLbStickinessPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsLightsailLbStickinessPolicy to import
-  * @param importFromId The id of the existing AwsLightsailLbStickinessPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_stickiness_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsLightsailLbStickinessPolicy to import is found
+  * @param importToId The construct id used in the generated config for the TfLbStickinessPolicy to import
+  * @param importFromId The id of the existing TfLbStickinessPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_stickiness_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfLbStickinessPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lightsail_lb_stickiness_policy", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class AwsLightsailLbStickinessPolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsLightsailLbStickinessPolicyConfig
+  * @param options TfLbStickinessPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsLightsailLbStickinessPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: TfLbStickinessPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lightsail_lb_stickiness_policy',
       terraformGeneratorMetadata: {

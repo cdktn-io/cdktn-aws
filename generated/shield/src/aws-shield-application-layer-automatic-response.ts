@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsShieldApplicationLayerAutomaticResponseConfig extends cdktn.TerraformMetaArguments {
+export interface TfApplicationLayerAutomaticResponseConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_application_layer_automatic_response#action AwsShieldApplicationLayerAutomaticResponse#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_application_layer_automatic_response#action TfApplicationLayerAutomaticResponse#action}
   */
   readonly action: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_application_layer_automatic_response#resource_arn AwsShieldApplicationLayerAutomaticResponse#resource_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_application_layer_automatic_response#resource_arn TfApplicationLayerAutomaticResponse#resource_arn}
   */
   readonly resourceArn: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_application_layer_automatic_response#timeouts AwsShieldApplicationLayerAutomaticResponse#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_application_layer_automatic_response#timeouts TfApplicationLayerAutomaticResponse#timeouts}
   */
-  readonly timeouts?: AwsShieldApplicationLayerAutomaticResponse.TimeoutsProperty;
+  readonly timeouts?: TfApplicationLayerAutomaticResponse.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_application_layer_automatic_response aws_shield_application_layer_automatic_response}
 */
-export class AwsShieldApplicationLayerAutomaticResponse extends cdktn.TerraformResource {
+export class TfApplicationLayerAutomaticResponse extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -36,11 +36,11 @@ export class AwsShieldApplicationLayerAutomaticResponse extends cdktn.TerraformR
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsShieldApplicationLayerAutomaticResponse resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfApplicationLayerAutomaticResponse resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsShieldApplicationLayerAutomaticResponse to import
-  * @param importFromId The id of the existing AwsShieldApplicationLayerAutomaticResponse that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_application_layer_automatic_response#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsShieldApplicationLayerAutomaticResponse to import is found
+  * @param importToId The construct id used in the generated config for the TfApplicationLayerAutomaticResponse to import
+  * @param importFromId The id of the existing TfApplicationLayerAutomaticResponse that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_application_layer_automatic_response#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfApplicationLayerAutomaticResponse to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_shield_application_layer_automatic_response", importId: importFromId, provider });
@@ -55,9 +55,9 @@ export class AwsShieldApplicationLayerAutomaticResponse extends cdktn.TerraformR
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsShieldApplicationLayerAutomaticResponseConfig
+  * @param options TfApplicationLayerAutomaticResponseConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsShieldApplicationLayerAutomaticResponseConfig) {
+  public constructor(scope: Construct, id: string, config: TfApplicationLayerAutomaticResponseConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_shield_application_layer_automatic_response',
       terraformGeneratorMetadata: {
@@ -114,11 +114,11 @@ export class AwsShieldApplicationLayerAutomaticResponse extends cdktn.TerraformR
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsShieldApplicationLayerAutomaticResponse.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfApplicationLayerAutomaticResponse.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsShieldApplicationLayerAutomaticResponse.TimeoutsProperty) {
+  public putTimeouts(value: TfApplicationLayerAutomaticResponse.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -137,7 +137,7 @@ export class AwsShieldApplicationLayerAutomaticResponse extends cdktn.TerraformR
     return {
       action: cdktn.stringToTerraform(this._action),
       resource_arn: cdktn.stringToTerraform(this._resourceArn),
-      timeouts: awsShieldApplicationLayerAutomaticResponseTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfApplicationLayerAutomaticResponseTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -156,10 +156,10 @@ export class AwsShieldApplicationLayerAutomaticResponse extends cdktn.TerraformR
         storageClassType: "string",
       },
       timeouts: {
-        value: awsShieldApplicationLayerAutomaticResponseTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfApplicationLayerAutomaticResponseTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsShieldApplicationLayerAutomaticResponse.TimeoutsProperty",
+        storageClassType: "TfApplicationLayerAutomaticResponse.TimeoutsProperty",
       },
     };
 
@@ -168,7 +168,7 @@ export class AwsShieldApplicationLayerAutomaticResponse extends cdktn.TerraformR
   }
 }
 
-export function awsShieldApplicationLayerAutomaticResponseTimeoutsPropertyToTerraform(struct?: AwsShieldApplicationLayerAutomaticResponse.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfApplicationLayerAutomaticResponseTimeoutsPropertyToTerraform(struct?: TfApplicationLayerAutomaticResponse.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -181,7 +181,7 @@ export function awsShieldApplicationLayerAutomaticResponseTimeoutsPropertyToTerr
 }
 
 
-export function awsShieldApplicationLayerAutomaticResponseTimeoutsPropertyToHclTerraform(struct?: AwsShieldApplicationLayerAutomaticResponse.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfApplicationLayerAutomaticResponseTimeoutsPropertyToHclTerraform(struct?: TfApplicationLayerAutomaticResponse.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -212,24 +212,24 @@ export function awsShieldApplicationLayerAutomaticResponseTimeoutsPropertyToHclT
 }
 
 
-export namespace AwsShieldApplicationLayerAutomaticResponse {
+export namespace TfApplicationLayerAutomaticResponse {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_application_layer_automatic_response#create AwsShieldApplicationLayerAutomaticResponse#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_application_layer_automatic_response#create TfApplicationLayerAutomaticResponse#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_application_layer_automatic_response#delete AwsShieldApplicationLayerAutomaticResponse#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_application_layer_automatic_response#delete TfApplicationLayerAutomaticResponse#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_application_layer_automatic_response#update AwsShieldApplicationLayerAutomaticResponse#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_application_layer_automatic_response#update TfApplicationLayerAutomaticResponse#update}
   */
   readonly update?: string;
 }

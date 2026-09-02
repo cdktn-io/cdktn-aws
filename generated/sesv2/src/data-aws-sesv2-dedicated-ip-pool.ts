@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsSesv2DedicatedIpPoolConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataDedicatedIpPoolConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sesv2_dedicated_ip_pool#id DataAwsSesv2DedicatedIpPool#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sesv2_dedicated_ip_pool#id TfDataDedicatedIpPool#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sesv2_dedicated_ip_pool#pool_name DataAwsSesv2DedicatedIpPool#pool_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sesv2_dedicated_ip_pool#pool_name TfDataDedicatedIpPool#pool_name}
   */
   readonly poolName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sesv2_dedicated_ip_pool#region DataAwsSesv2DedicatedIpPool#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sesv2_dedicated_ip_pool#region TfDataDedicatedIpPool#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sesv2_dedicated_ip_pool#tags DataAwsSesv2DedicatedIpPool#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sesv2_dedicated_ip_pool#tags TfDataDedicatedIpPool#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -32,7 +32,7 @@ export interface DataAwsSesv2DedicatedIpPoolConfig extends cdktn.TerraformMetaAr
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sesv2_dedicated_ip_pool aws_sesv2_dedicated_ip_pool}
 */
-export class DataAwsSesv2DedicatedIpPool extends cdktn.TerraformDataSource {
+export class TfDataDedicatedIpPool extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class DataAwsSesv2DedicatedIpPool extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsSesv2DedicatedIpPool resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataDedicatedIpPool resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsSesv2DedicatedIpPool to import
-  * @param importFromId The id of the existing DataAwsSesv2DedicatedIpPool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sesv2_dedicated_ip_pool#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsSesv2DedicatedIpPool to import is found
+  * @param importToId The construct id used in the generated config for the TfDataDedicatedIpPool to import
+  * @param importFromId The id of the existing TfDataDedicatedIpPool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sesv2_dedicated_ip_pool#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataDedicatedIpPool to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sesv2_dedicated_ip_pool", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class DataAwsSesv2DedicatedIpPool extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsSesv2DedicatedIpPoolConfig
+  * @param options TfDataDedicatedIpPoolConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsSesv2DedicatedIpPoolConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataDedicatedIpPoolConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sesv2_dedicated_ip_pool',
       terraformGeneratorMetadata: {
@@ -96,7 +96,7 @@ export class DataAwsSesv2DedicatedIpPool extends cdktn.TerraformDataSource {
   }
 
   // dedicated_ips - computed: true, optional: false, required: false
-  private _dedicatedIps = new DataAwsSesv2DedicatedIpPool.DedicatedIpsPropertyList(this, "dedicated_ips", false);
+  private _dedicatedIps = new TfDataDedicatedIpPool.DedicatedIpsPropertyList(this, "dedicated_ips", false);
   public get dedicatedIps() {
     return this._dedicatedIps;
   }
@@ -213,7 +213,7 @@ export class DataAwsSesv2DedicatedIpPool extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsSesv2DedicatedIpPoolDedicatedIpsPropertyToTerraform(struct?: DataAwsSesv2DedicatedIpPool.DedicatedIpsProperty): any {
+export function tfDataDedicatedIpPoolDedicatedIpsPropertyToTerraform(struct?: TfDataDedicatedIpPool.DedicatedIpsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -223,7 +223,7 @@ export function dataAwsSesv2DedicatedIpPoolDedicatedIpsPropertyToTerraform(struc
 }
 
 
-export function dataAwsSesv2DedicatedIpPoolDedicatedIpsPropertyToHclTerraform(struct?: DataAwsSesv2DedicatedIpPool.DedicatedIpsProperty): any {
+export function tfDataDedicatedIpPoolDedicatedIpsPropertyToHclTerraform(struct?: TfDataDedicatedIpPool.DedicatedIpsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -234,7 +234,7 @@ export function dataAwsSesv2DedicatedIpPoolDedicatedIpsPropertyToHclTerraform(st
 }
 
 
-export namespace DataAwsSesv2DedicatedIpPool {
+export namespace TfDataDedicatedIpPool {
 export interface DedicatedIpsProperty {
 }
 export class DedicatedIpsPropertyOutputReference extends cdktn.ComplexObject {

@@ -5,66 +5,66 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsQuicksightFolderConfig extends cdktn.TerraformMetaArguments {
+export interface TfFolderConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#aws_account_id AwsQuicksightFolder#aws_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#aws_account_id TfFolder#aws_account_id}
   */
   readonly awsAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#folder_id AwsQuicksightFolder#folder_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#folder_id TfFolder#folder_id}
   */
   readonly folderId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#folder_type AwsQuicksightFolder#folder_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#folder_type TfFolder#folder_type}
   */
   readonly folderType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#id AwsQuicksightFolder#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#id TfFolder#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#name AwsQuicksightFolder#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#name TfFolder#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#parent_folder_arn AwsQuicksightFolder#parent_folder_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#parent_folder_arn TfFolder#parent_folder_arn}
   */
   readonly parentFolderArn?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#region AwsQuicksightFolder#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#region TfFolder#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#tags AwsQuicksightFolder#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#tags TfFolder#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#tags_all AwsQuicksightFolder#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#tags_all TfFolder#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * permissions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#permissions AwsQuicksightFolder#permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#permissions TfFolder#permissions}
   */
-  readonly permissions?: AwsQuicksightFolder.PermissionsProperty[] | cdktn.IResolvable;
+  readonly permissions?: TfFolder.PermissionsProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#timeouts AwsQuicksightFolder#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#timeouts TfFolder#timeouts}
   */
-  readonly timeouts?: AwsQuicksightFolder.TimeoutsProperty;
+  readonly timeouts?: TfFolder.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder aws_quicksight_folder}
 */
-export class AwsQuicksightFolder extends cdktn.TerraformResource {
+export class TfFolder extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -75,11 +75,11 @@ export class AwsQuicksightFolder extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsQuicksightFolder resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfFolder resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsQuicksightFolder to import
-  * @param importFromId The id of the existing AwsQuicksightFolder that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsQuicksightFolder to import is found
+  * @param importToId The construct id used in the generated config for the TfFolder to import
+  * @param importFromId The id of the existing TfFolder that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfFolder to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_quicksight_folder", importId: importFromId, provider });
@@ -94,9 +94,9 @@ export class AwsQuicksightFolder extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsQuicksightFolderConfig
+  * @param options TfFolderConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsQuicksightFolderConfig) {
+  public constructor(scope: Construct, id: string, config: TfFolderConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_quicksight_folder',
       terraformGeneratorMetadata: {
@@ -291,11 +291,11 @@ export class AwsQuicksightFolder extends cdktn.TerraformResource {
   }
 
   // permissions - computed: false, optional: true, required: false
-  private _permissions = new AwsQuicksightFolder.PermissionsPropertyList(this, "permissions", true);
+  private _permissions = new TfFolder.PermissionsPropertyList(this, "permissions", true);
   public get permissions() {
     return this._permissions;
   }
-  public putPermissions(value: AwsQuicksightFolder.PermissionsProperty[] | cdktn.IResolvable) {
+  public putPermissions(value: TfFolder.PermissionsProperty[] | cdktn.IResolvable) {
     this._permissions.internalValue = value;
   }
   public resetPermissions() {
@@ -307,11 +307,11 @@ export class AwsQuicksightFolder extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsQuicksightFolder.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfFolder.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsQuicksightFolder.TimeoutsProperty) {
+  public putTimeouts(value: TfFolder.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -337,8 +337,8 @@ export class AwsQuicksightFolder extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      permissions: cdktn.listMapper(awsQuicksightFolderPermissionsPropertyToTerraform, true)(this._permissions.internalValue),
-      timeouts: awsQuicksightFolderTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      permissions: cdktn.listMapper(tfFolderPermissionsPropertyToTerraform, true)(this._permissions.internalValue),
+      timeouts: tfFolderTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -399,16 +399,16 @@ export class AwsQuicksightFolder extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       permissions: {
-        value: cdktn.listMapperHcl(awsQuicksightFolderPermissionsPropertyToHclTerraform, true)(this._permissions.internalValue),
+        value: cdktn.listMapperHcl(tfFolderPermissionsPropertyToHclTerraform, true)(this._permissions.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsQuicksightFolder.PermissionsPropertyList",
+        storageClassType: "TfFolder.PermissionsPropertyList",
       },
       timeouts: {
-        value: awsQuicksightFolderTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfFolderTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsQuicksightFolder.TimeoutsProperty",
+        storageClassType: "TfFolder.TimeoutsProperty",
       },
     };
 
@@ -417,7 +417,7 @@ export class AwsQuicksightFolder extends cdktn.TerraformResource {
   }
 }
 
-export function awsQuicksightFolderPermissionsPropertyToTerraform(struct?: AwsQuicksightFolder.PermissionsProperty | cdktn.IResolvable): any {
+export function tfFolderPermissionsPropertyToTerraform(struct?: TfFolder.PermissionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -429,7 +429,7 @@ export function awsQuicksightFolderPermissionsPropertyToTerraform(struct?: AwsQu
 }
 
 
-export function awsQuicksightFolderPermissionsPropertyToHclTerraform(struct?: AwsQuicksightFolder.PermissionsProperty | cdktn.IResolvable): any {
+export function tfFolderPermissionsPropertyToHclTerraform(struct?: TfFolder.PermissionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -454,7 +454,7 @@ export function awsQuicksightFolderPermissionsPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsQuicksightFolderTimeoutsPropertyToTerraform(struct?: AwsQuicksightFolder.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfFolderTimeoutsPropertyToTerraform(struct?: TfFolder.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -468,7 +468,7 @@ export function awsQuicksightFolderTimeoutsPropertyToTerraform(struct?: AwsQuick
 }
 
 
-export function awsQuicksightFolderTimeoutsPropertyToHclTerraform(struct?: AwsQuicksightFolder.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfFolderTimeoutsPropertyToHclTerraform(struct?: TfFolder.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -505,14 +505,14 @@ export function awsQuicksightFolderTimeoutsPropertyToHclTerraform(struct?: AwsQu
 }
 
 
-export namespace AwsQuicksightFolder {
+export namespace TfFolder {
 export interface PermissionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#actions AwsQuicksightFolder#actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#actions TfFolder#actions}
   */
   readonly actions: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#principal AwsQuicksightFolder#principal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#principal TfFolder#principal}
   */
   readonly principal: string;
 }
@@ -614,19 +614,19 @@ export class PermissionsPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#create AwsQuicksightFolder#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#create TfFolder#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#delete AwsQuicksightFolder#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#delete TfFolder#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#read AwsQuicksightFolder#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#read TfFolder#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#update AwsQuicksightFolder#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder#update TfFolder#update}
   */
   readonly update?: string;
 }

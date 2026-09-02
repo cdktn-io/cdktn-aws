@@ -5,53 +5,53 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsBedrockagentcoreCodeInterpreterConfig extends cdktn.TerraformMetaArguments {
+export interface TfCodeInterpreterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#description AwsBedrockagentcoreCodeInterpreter#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#description TfCodeInterpreter#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#execution_role_arn AwsBedrockagentcoreCodeInterpreter#execution_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#execution_role_arn TfCodeInterpreter#execution_role_arn}
   */
   readonly executionRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#name AwsBedrockagentcoreCodeInterpreter#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#name TfCodeInterpreter#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#region AwsBedrockagentcoreCodeInterpreter#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#region TfCodeInterpreter#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#tags AwsBedrockagentcoreCodeInterpreter#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#tags TfCodeInterpreter#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * certificate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#certificate AwsBedrockagentcoreCodeInterpreter#certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#certificate TfCodeInterpreter#certificate}
   */
-  readonly certificate?: AwsBedrockagentcoreCodeInterpreter.CertificateProperty[] | cdktn.IResolvable;
+  readonly certificate?: TfCodeInterpreter.CertificateProperty[] | cdktn.IResolvable;
   /**
   * network_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#network_configuration AwsBedrockagentcoreCodeInterpreter#network_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#network_configuration TfCodeInterpreter#network_configuration}
   */
-  readonly networkConfiguration?: AwsBedrockagentcoreCodeInterpreter.NetworkConfigurationProperty[] | cdktn.IResolvable;
+  readonly networkConfiguration?: TfCodeInterpreter.NetworkConfigurationProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#timeouts AwsBedrockagentcoreCodeInterpreter#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#timeouts TfCodeInterpreter#timeouts}
   */
-  readonly timeouts?: AwsBedrockagentcoreCodeInterpreter.TimeoutsProperty;
+  readonly timeouts?: TfCodeInterpreter.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter aws_bedrockagentcore_code_interpreter}
 */
-export class AwsBedrockagentcoreCodeInterpreter extends cdktn.TerraformResource {
+export class TfCodeInterpreter extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -62,11 +62,11 @@ export class AwsBedrockagentcoreCodeInterpreter extends cdktn.TerraformResource 
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsBedrockagentcoreCodeInterpreter resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfCodeInterpreter resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsBedrockagentcoreCodeInterpreter to import
-  * @param importFromId The id of the existing AwsBedrockagentcoreCodeInterpreter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsBedrockagentcoreCodeInterpreter to import is found
+  * @param importToId The construct id used in the generated config for the TfCodeInterpreter to import
+  * @param importFromId The id of the existing TfCodeInterpreter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfCodeInterpreter to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrockagentcore_code_interpreter", importId: importFromId, provider });
@@ -81,9 +81,9 @@ export class AwsBedrockagentcoreCodeInterpreter extends cdktn.TerraformResource 
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsBedrockagentcoreCodeInterpreterConfig
+  * @param options TfCodeInterpreterConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsBedrockagentcoreCodeInterpreterConfig) {
+  public constructor(scope: Construct, id: string, config: TfCodeInterpreterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrockagentcore_code_interpreter',
       terraformGeneratorMetadata: {
@@ -207,11 +207,11 @@ export class AwsBedrockagentcoreCodeInterpreter extends cdktn.TerraformResource 
   }
 
   // certificate - computed: false, optional: true, required: false
-  private _certificate = new AwsBedrockagentcoreCodeInterpreter.CertificatePropertyList(this, "certificate", false);
+  private _certificate = new TfCodeInterpreter.CertificatePropertyList(this, "certificate", false);
   public get certificate() {
     return this._certificate;
   }
-  public putCertificate(value: AwsBedrockagentcoreCodeInterpreter.CertificateProperty[] | cdktn.IResolvable) {
+  public putCertificate(value: TfCodeInterpreter.CertificateProperty[] | cdktn.IResolvable) {
     this._certificate.internalValue = value;
   }
   public resetCertificate() {
@@ -223,11 +223,11 @@ export class AwsBedrockagentcoreCodeInterpreter extends cdktn.TerraformResource 
   }
 
   // network_configuration - computed: false, optional: true, required: false
-  private _networkConfiguration = new AwsBedrockagentcoreCodeInterpreter.NetworkConfigurationPropertyList(this, "network_configuration", false);
+  private _networkConfiguration = new TfCodeInterpreter.NetworkConfigurationPropertyList(this, "network_configuration", false);
   public get networkConfiguration() {
     return this._networkConfiguration;
   }
-  public putNetworkConfiguration(value: AwsBedrockagentcoreCodeInterpreter.NetworkConfigurationProperty[] | cdktn.IResolvable) {
+  public putNetworkConfiguration(value: TfCodeInterpreter.NetworkConfigurationProperty[] | cdktn.IResolvable) {
     this._networkConfiguration.internalValue = value;
   }
   public resetNetworkConfiguration() {
@@ -239,11 +239,11 @@ export class AwsBedrockagentcoreCodeInterpreter extends cdktn.TerraformResource 
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsBedrockagentcoreCodeInterpreter.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfCodeInterpreter.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsBedrockagentcoreCodeInterpreter.TimeoutsProperty) {
+  public putTimeouts(value: TfCodeInterpreter.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -265,9 +265,9 @@ export class AwsBedrockagentcoreCodeInterpreter extends cdktn.TerraformResource 
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      certificate: cdktn.listMapper(awsBedrockagentcoreCodeInterpreterCertificatePropertyToTerraform, true)(this._certificate.internalValue),
-      network_configuration: cdktn.listMapper(awsBedrockagentcoreCodeInterpreterNetworkConfigurationPropertyToTerraform, true)(this._networkConfiguration.internalValue),
-      timeouts: awsBedrockagentcoreCodeInterpreterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      certificate: cdktn.listMapper(tfCodeInterpreterCertificatePropertyToTerraform, true)(this._certificate.internalValue),
+      network_configuration: cdktn.listMapper(tfCodeInterpreterNetworkConfigurationPropertyToTerraform, true)(this._networkConfiguration.internalValue),
+      timeouts: tfCodeInterpreterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -304,22 +304,22 @@ export class AwsBedrockagentcoreCodeInterpreter extends cdktn.TerraformResource 
         storageClassType: "stringMap",
       },
       certificate: {
-        value: cdktn.listMapperHcl(awsBedrockagentcoreCodeInterpreterCertificatePropertyToHclTerraform, true)(this._certificate.internalValue),
+        value: cdktn.listMapperHcl(tfCodeInterpreterCertificatePropertyToHclTerraform, true)(this._certificate.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentcoreCodeInterpreter.CertificatePropertyList",
+        storageClassType: "TfCodeInterpreter.CertificatePropertyList",
       },
       network_configuration: {
-        value: cdktn.listMapperHcl(awsBedrockagentcoreCodeInterpreterNetworkConfigurationPropertyToHclTerraform, true)(this._networkConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfCodeInterpreterNetworkConfigurationPropertyToHclTerraform, true)(this._networkConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentcoreCodeInterpreter.NetworkConfigurationPropertyList",
+        storageClassType: "TfCodeInterpreter.NetworkConfigurationPropertyList",
       },
       timeouts: {
-        value: awsBedrockagentcoreCodeInterpreterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfCodeInterpreterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsBedrockagentcoreCodeInterpreter.TimeoutsProperty",
+        storageClassType: "TfCodeInterpreter.TimeoutsProperty",
       },
     };
 
@@ -328,7 +328,7 @@ export class AwsBedrockagentcoreCodeInterpreter extends cdktn.TerraformResource 
   }
 }
 
-export function awsBedrockagentcoreCodeInterpreterSecretsManagerPropertyToTerraform(struct?: AwsBedrockagentcoreCodeInterpreter.SecretsManagerProperty | cdktn.IResolvable): any {
+export function tfCodeInterpreterSecretsManagerPropertyToTerraform(struct?: TfCodeInterpreter.SecretsManagerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -339,7 +339,7 @@ export function awsBedrockagentcoreCodeInterpreterSecretsManagerPropertyToTerraf
 }
 
 
-export function awsBedrockagentcoreCodeInterpreterSecretsManagerPropertyToHclTerraform(struct?: AwsBedrockagentcoreCodeInterpreter.SecretsManagerProperty | cdktn.IResolvable): any {
+export function tfCodeInterpreterSecretsManagerPropertyToHclTerraform(struct?: TfCodeInterpreter.SecretsManagerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -358,25 +358,25 @@ export function awsBedrockagentcoreCodeInterpreterSecretsManagerPropertyToHclTer
 }
 
 
-export function awsBedrockagentcoreCodeInterpreterLocationPropertyToTerraform(struct?: AwsBedrockagentcoreCodeInterpreter.LocationProperty | cdktn.IResolvable): any {
+export function tfCodeInterpreterLocationPropertyToTerraform(struct?: TfCodeInterpreter.LocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    secrets_manager: cdktn.listMapper(awsBedrockagentcoreCodeInterpreterSecretsManagerPropertyToTerraform, true)(struct!.secretsManager),
+    secrets_manager: cdktn.listMapper(tfCodeInterpreterSecretsManagerPropertyToTerraform, true)(struct!.secretsManager),
   }
 }
 
 
-export function awsBedrockagentcoreCodeInterpreterLocationPropertyToHclTerraform(struct?: AwsBedrockagentcoreCodeInterpreter.LocationProperty | cdktn.IResolvable): any {
+export function tfCodeInterpreterLocationPropertyToHclTerraform(struct?: TfCodeInterpreter.LocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     secrets_manager: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreCodeInterpreterSecretsManagerPropertyToHclTerraform, true)(struct!.secretsManager),
+      value: cdktn.listMapperHcl(tfCodeInterpreterSecretsManagerPropertyToHclTerraform, true)(struct!.secretsManager),
       isBlock: true,
       type: "list",
       storageClassType: "SecretsManagerPropertyList",
@@ -388,25 +388,25 @@ export function awsBedrockagentcoreCodeInterpreterLocationPropertyToHclTerraform
 }
 
 
-export function awsBedrockagentcoreCodeInterpreterCertificatePropertyToTerraform(struct?: AwsBedrockagentcoreCodeInterpreter.CertificateProperty | cdktn.IResolvable): any {
+export function tfCodeInterpreterCertificatePropertyToTerraform(struct?: TfCodeInterpreter.CertificateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    location: cdktn.listMapper(awsBedrockagentcoreCodeInterpreterLocationPropertyToTerraform, true)(struct!.location),
+    location: cdktn.listMapper(tfCodeInterpreterLocationPropertyToTerraform, true)(struct!.location),
   }
 }
 
 
-export function awsBedrockagentcoreCodeInterpreterCertificatePropertyToHclTerraform(struct?: AwsBedrockagentcoreCodeInterpreter.CertificateProperty | cdktn.IResolvable): any {
+export function tfCodeInterpreterCertificatePropertyToHclTerraform(struct?: TfCodeInterpreter.CertificateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     location: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreCodeInterpreterLocationPropertyToHclTerraform, true)(struct!.location),
+      value: cdktn.listMapperHcl(tfCodeInterpreterLocationPropertyToHclTerraform, true)(struct!.location),
       isBlock: true,
       type: "list",
       storageClassType: "LocationPropertyList",
@@ -418,7 +418,7 @@ export function awsBedrockagentcoreCodeInterpreterCertificatePropertyToHclTerraf
 }
 
 
-export function awsBedrockagentcoreCodeInterpreterVpcConfigPropertyToTerraform(struct?: AwsBedrockagentcoreCodeInterpreter.VpcConfigProperty | cdktn.IResolvable): any {
+export function tfCodeInterpreterVpcConfigPropertyToTerraform(struct?: TfCodeInterpreter.VpcConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -430,7 +430,7 @@ export function awsBedrockagentcoreCodeInterpreterVpcConfigPropertyToTerraform(s
 }
 
 
-export function awsBedrockagentcoreCodeInterpreterVpcConfigPropertyToHclTerraform(struct?: AwsBedrockagentcoreCodeInterpreter.VpcConfigProperty | cdktn.IResolvable): any {
+export function tfCodeInterpreterVpcConfigPropertyToHclTerraform(struct?: TfCodeInterpreter.VpcConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -455,19 +455,19 @@ export function awsBedrockagentcoreCodeInterpreterVpcConfigPropertyToHclTerrafor
 }
 
 
-export function awsBedrockagentcoreCodeInterpreterNetworkConfigurationPropertyToTerraform(struct?: AwsBedrockagentcoreCodeInterpreter.NetworkConfigurationProperty | cdktn.IResolvable): any {
+export function tfCodeInterpreterNetworkConfigurationPropertyToTerraform(struct?: TfCodeInterpreter.NetworkConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     network_mode: cdktn.stringToTerraform(struct!.networkMode),
-    vpc_config: cdktn.listMapper(awsBedrockagentcoreCodeInterpreterVpcConfigPropertyToTerraform, true)(struct!.vpcConfig),
+    vpc_config: cdktn.listMapper(tfCodeInterpreterVpcConfigPropertyToTerraform, true)(struct!.vpcConfig),
   }
 }
 
 
-export function awsBedrockagentcoreCodeInterpreterNetworkConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentcoreCodeInterpreter.NetworkConfigurationProperty | cdktn.IResolvable): any {
+export function tfCodeInterpreterNetworkConfigurationPropertyToHclTerraform(struct?: TfCodeInterpreter.NetworkConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -480,7 +480,7 @@ export function awsBedrockagentcoreCodeInterpreterNetworkConfigurationPropertyTo
       storageClassType: "string",
     },
     vpc_config: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreCodeInterpreterVpcConfigPropertyToHclTerraform, true)(struct!.vpcConfig),
+      value: cdktn.listMapperHcl(tfCodeInterpreterVpcConfigPropertyToHclTerraform, true)(struct!.vpcConfig),
       isBlock: true,
       type: "list",
       storageClassType: "VpcConfigPropertyList",
@@ -492,7 +492,7 @@ export function awsBedrockagentcoreCodeInterpreterNetworkConfigurationPropertyTo
 }
 
 
-export function awsBedrockagentcoreCodeInterpreterTimeoutsPropertyToTerraform(struct?: AwsBedrockagentcoreCodeInterpreter.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfCodeInterpreterTimeoutsPropertyToTerraform(struct?: TfCodeInterpreter.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -504,7 +504,7 @@ export function awsBedrockagentcoreCodeInterpreterTimeoutsPropertyToTerraform(st
 }
 
 
-export function awsBedrockagentcoreCodeInterpreterTimeoutsPropertyToHclTerraform(struct?: AwsBedrockagentcoreCodeInterpreter.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfCodeInterpreterTimeoutsPropertyToHclTerraform(struct?: TfCodeInterpreter.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -529,10 +529,10 @@ export function awsBedrockagentcoreCodeInterpreterTimeoutsPropertyToHclTerraform
 }
 
 
-export namespace AwsBedrockagentcoreCodeInterpreter {
+export namespace TfCodeInterpreter {
 export interface SecretsManagerProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#secret_arn AwsBedrockagentcoreCodeInterpreter#secret_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#secret_arn TfCodeInterpreter#secret_arn}
   */
   readonly secretArn: string;
 }
@@ -617,7 +617,7 @@ export interface LocationProperty {
   /**
   * secrets_manager block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#secrets_manager AwsBedrockagentcoreCodeInterpreter#secrets_manager}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#secrets_manager TfCodeInterpreter#secrets_manager}
   */
   readonly secretsManager?: SecretsManagerProperty[] | cdktn.IResolvable;
 }
@@ -705,7 +705,7 @@ export interface CertificateProperty {
   /**
   * location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#location AwsBedrockagentcoreCodeInterpreter#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#location TfCodeInterpreter#location}
   */
   readonly location?: LocationProperty[] | cdktn.IResolvable;
 }
@@ -791,11 +791,11 @@ export class CertificatePropertyList extends cdktn.ComplexList {
 }
 export interface VpcConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#security_groups AwsBedrockagentcoreCodeInterpreter#security_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#security_groups TfCodeInterpreter#security_groups}
   */
   readonly securityGroups: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#subnets AwsBedrockagentcoreCodeInterpreter#subnets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#subnets TfCodeInterpreter#subnets}
   */
   readonly subnets: string[];
 }
@@ -897,13 +897,13 @@ export class VpcConfigPropertyList extends cdktn.ComplexList {
 }
 export interface NetworkConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#network_mode AwsBedrockagentcoreCodeInterpreter#network_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#network_mode TfCodeInterpreter#network_mode}
   */
   readonly networkMode: string;
   /**
   * vpc_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#vpc_config AwsBedrockagentcoreCodeInterpreter#vpc_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#vpc_config TfCodeInterpreter#vpc_config}
   */
   readonly vpcConfig?: VpcConfigProperty[] | cdktn.IResolvable;
 }
@@ -1010,13 +1010,13 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#create AwsBedrockagentcoreCodeInterpreter#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#create TfCodeInterpreter#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#delete AwsBedrockagentcoreCodeInterpreter#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_code_interpreter#delete TfCodeInterpreter#delete}
   */
   readonly delete?: string;
 }

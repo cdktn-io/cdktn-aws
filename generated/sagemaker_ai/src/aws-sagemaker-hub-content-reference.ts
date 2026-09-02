@@ -5,53 +5,53 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSagemakerHubContentReferenceConfig extends cdktn.TerraformMetaArguments {
+export interface TfHubContentReferenceConfig extends cdktn.TerraformMetaArguments {
   /**
   * Name of the hub content reference.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub_content_reference#hub_content_name AwsSagemakerHubContentReference#hub_content_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub_content_reference#hub_content_name TfHubContentReference#hub_content_name}
   */
   readonly hubContentName: string;
   /**
   * Name of the private SageMaker Hub to add the content reference to.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub_content_reference#hub_name AwsSagemakerHubContentReference#hub_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub_content_reference#hub_name TfHubContentReference#hub_name}
   */
   readonly hubName: string;
   /**
   * Minimum version of the hub content to reference. Use "1.0.0" to support all versions. Changing this value to an empty string forces replacement of the resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub_content_reference#min_version AwsSagemakerHubContentReference#min_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub_content_reference#min_version TfHubContentReference#min_version}
   */
   readonly minVersion?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub_content_reference#region AwsSagemakerHubContentReference#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub_content_reference#region TfHubContentReference#region}
   */
   readonly region?: string;
   /**
   * ARN of the public SageMaker JumpStart hub content to reference. The ARN must not include a version suffix.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub_content_reference#sagemaker_public_hub_content_arn AwsSagemakerHubContentReference#sagemaker_public_hub_content_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub_content_reference#sagemaker_public_hub_content_arn TfHubContentReference#sagemaker_public_hub_content_arn}
   */
   readonly sagemakerPublicHubContentArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub_content_reference#tags AwsSagemakerHubContentReference#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub_content_reference#tags TfHubContentReference#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub_content_reference#timeouts AwsSagemakerHubContentReference#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub_content_reference#timeouts TfHubContentReference#timeouts}
   */
-  readonly timeouts?: AwsSagemakerHubContentReference.TimeoutsProperty;
+  readonly timeouts?: TfHubContentReference.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub_content_reference aws_sagemaker_hub_content_reference}
 */
-export class AwsSagemakerHubContentReference extends cdktn.TerraformResource {
+export class TfHubContentReference extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -62,11 +62,11 @@ export class AwsSagemakerHubContentReference extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSagemakerHubContentReference resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfHubContentReference resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSagemakerHubContentReference to import
-  * @param importFromId The id of the existing AwsSagemakerHubContentReference that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub_content_reference#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSagemakerHubContentReference to import is found
+  * @param importToId The construct id used in the generated config for the TfHubContentReference to import
+  * @param importFromId The id of the existing TfHubContentReference that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub_content_reference#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfHubContentReference to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sagemaker_hub_content_reference", importId: importFromId, provider });
@@ -81,9 +81,9 @@ export class AwsSagemakerHubContentReference extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSagemakerHubContentReferenceConfig
+  * @param options TfHubContentReferenceConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSagemakerHubContentReferenceConfig) {
+  public constructor(scope: Construct, id: string, config: TfHubContentReferenceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sagemaker_hub_content_reference',
       terraformGeneratorMetadata: {
@@ -226,11 +226,11 @@ export class AwsSagemakerHubContentReference extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsSagemakerHubContentReference.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfHubContentReference.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsSagemakerHubContentReference.TimeoutsProperty) {
+  public putTimeouts(value: TfHubContentReference.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -253,7 +253,7 @@ export class AwsSagemakerHubContentReference extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       sagemaker_public_hub_content_arn: cdktn.stringToTerraform(this._sagemakerPublicHubContentArn),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      timeouts: awsSagemakerHubContentReferenceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfHubContentReferenceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -296,10 +296,10 @@ export class AwsSagemakerHubContentReference extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsSagemakerHubContentReferenceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfHubContentReferenceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsSagemakerHubContentReference.TimeoutsProperty",
+        storageClassType: "TfHubContentReference.TimeoutsProperty",
       },
     };
 
@@ -308,7 +308,7 @@ export class AwsSagemakerHubContentReference extends cdktn.TerraformResource {
   }
 }
 
-export function awsSagemakerHubContentReferenceTimeoutsPropertyToTerraform(struct?: AwsSagemakerHubContentReference.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfHubContentReferenceTimeoutsPropertyToTerraform(struct?: TfHubContentReference.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -321,7 +321,7 @@ export function awsSagemakerHubContentReferenceTimeoutsPropertyToTerraform(struc
 }
 
 
-export function awsSagemakerHubContentReferenceTimeoutsPropertyToHclTerraform(struct?: AwsSagemakerHubContentReference.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfHubContentReferenceTimeoutsPropertyToHclTerraform(struct?: TfHubContentReference.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -352,24 +352,24 @@ export function awsSagemakerHubContentReferenceTimeoutsPropertyToHclTerraform(st
 }
 
 
-export namespace AwsSagemakerHubContentReference {
+export namespace TfHubContentReference {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub_content_reference#create AwsSagemakerHubContentReference#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub_content_reference#create TfHubContentReference#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub_content_reference#delete AwsSagemakerHubContentReference#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub_content_reference#delete TfHubContentReference#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub_content_reference#update AwsSagemakerHubContentReference#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_hub_content_reference#update TfHubContentReference#update}
   */
   readonly update?: string;
 }

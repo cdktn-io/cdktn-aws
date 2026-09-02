@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsAppconfigEnvironmentConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataEnvironmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appconfig_environment#application_id DataAwsAppconfigEnvironment#application_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appconfig_environment#application_id TfDataEnvironment#application_id}
   */
   readonly applicationId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appconfig_environment#environment_id DataAwsAppconfigEnvironment#environment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appconfig_environment#environment_id TfDataEnvironment#environment_id}
   */
   readonly environmentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appconfig_environment#id DataAwsAppconfigEnvironment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appconfig_environment#id TfDataEnvironment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,11 +24,11 @@ export interface DataAwsAppconfigEnvironmentConfig extends cdktn.TerraformMetaAr
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appconfig_environment#region DataAwsAppconfigEnvironment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appconfig_environment#region TfDataEnvironment#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appconfig_environment#tags DataAwsAppconfigEnvironment#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appconfig_environment#tags TfDataEnvironment#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -36,7 +36,7 @@ export interface DataAwsAppconfigEnvironmentConfig extends cdktn.TerraformMetaAr
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appconfig_environment aws_appconfig_environment}
 */
-export class DataAwsAppconfigEnvironment extends cdktn.TerraformDataSource {
+export class TfDataEnvironment extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class DataAwsAppconfigEnvironment extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsAppconfigEnvironment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataEnvironment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsAppconfigEnvironment to import
-  * @param importFromId The id of the existing DataAwsAppconfigEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appconfig_environment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsAppconfigEnvironment to import is found
+  * @param importToId The construct id used in the generated config for the TfDataEnvironment to import
+  * @param importFromId The id of the existing TfDataEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appconfig_environment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataEnvironment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appconfig_environment", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class DataAwsAppconfigEnvironment extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsAppconfigEnvironmentConfig
+  * @param options TfDataEnvironmentConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsAppconfigEnvironmentConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataEnvironmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appconfig_environment',
       terraformGeneratorMetadata: {
@@ -148,7 +148,7 @@ export class DataAwsAppconfigEnvironment extends cdktn.TerraformDataSource {
   }
 
   // monitor - computed: true, optional: false, required: false
-  private _monitor = new DataAwsAppconfigEnvironment.MonitorPropertyList(this, "monitor", true);
+  private _monitor = new TfDataEnvironment.MonitorPropertyList(this, "monitor", true);
   public get monitor() {
     return this._monitor;
   }
@@ -248,7 +248,7 @@ export class DataAwsAppconfigEnvironment extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsAppconfigEnvironmentMonitorPropertyToTerraform(struct?: DataAwsAppconfigEnvironment.MonitorProperty): any {
+export function tfDataEnvironmentMonitorPropertyToTerraform(struct?: TfDataEnvironment.MonitorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -258,7 +258,7 @@ export function dataAwsAppconfigEnvironmentMonitorPropertyToTerraform(struct?: D
 }
 
 
-export function dataAwsAppconfigEnvironmentMonitorPropertyToHclTerraform(struct?: DataAwsAppconfigEnvironment.MonitorProperty): any {
+export function tfDataEnvironmentMonitorPropertyToHclTerraform(struct?: TfDataEnvironment.MonitorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -269,7 +269,7 @@ export function dataAwsAppconfigEnvironmentMonitorPropertyToHclTerraform(struct?
 }
 
 
-export namespace DataAwsAppconfigEnvironment {
+export namespace TfDataEnvironment {
 export interface MonitorProperty {
 }
 export class MonitorPropertyOutputReference extends cdktn.ComplexObject {

@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsIamGroupConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_group#group_name DataAwsIamGroup#group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_group#group_name TfDataGroup#group_name}
   */
   readonly groupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_group#id DataAwsIamGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_group#id TfDataGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,7 +22,7 @@ export interface DataAwsIamGroupConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_group aws_iam_group}
 */
-export class DataAwsIamGroup extends cdktn.TerraformDataSource {
+export class TfDataGroup extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -33,11 +33,11 @@ export class DataAwsIamGroup extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsIamGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsIamGroup to import
-  * @param importFromId The id of the existing DataAwsIamGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsIamGroup to import is found
+  * @param importToId The construct id used in the generated config for the TfDataGroup to import
+  * @param importFromId The id of the existing TfDataGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iam_group", importId: importFromId, provider });
@@ -52,9 +52,9 @@ export class DataAwsIamGroup extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsIamGroupConfig
+  * @param options TfDataGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsIamGroupConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iam_group',
       terraformGeneratorMetadata: {
@@ -123,7 +123,7 @@ export class DataAwsIamGroup extends cdktn.TerraformDataSource {
   }
 
   // users - computed: true, optional: false, required: false
-  private _users = new DataAwsIamGroup.UsersPropertyList(this, "users", false);
+  private _users = new TfDataGroup.UsersPropertyList(this, "users", false);
   public get users() {
     return this._users;
   }
@@ -160,7 +160,7 @@ export class DataAwsIamGroup extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsIamGroupUsersPropertyToTerraform(struct?: DataAwsIamGroup.UsersProperty): any {
+export function tfDataGroupUsersPropertyToTerraform(struct?: TfDataGroup.UsersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -170,7 +170,7 @@ export function dataAwsIamGroupUsersPropertyToTerraform(struct?: DataAwsIamGroup
 }
 
 
-export function dataAwsIamGroupUsersPropertyToHclTerraform(struct?: DataAwsIamGroup.UsersProperty): any {
+export function tfDataGroupUsersPropertyToHclTerraform(struct?: TfDataGroup.UsersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -181,7 +181,7 @@ export function dataAwsIamGroupUsersPropertyToHclTerraform(struct?: DataAwsIamGr
 }
 
 
-export namespace DataAwsIamGroup {
+export namespace TfDataGroup {
 export interface UsersProperty {
 }
 export class UsersPropertyOutputReference extends cdktn.ComplexObject {

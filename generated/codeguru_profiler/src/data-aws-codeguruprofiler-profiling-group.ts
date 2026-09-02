@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsCodeguruprofilerProfilingGroupConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataProfilingGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeguruprofiler_profiling_group#name DataAwsCodeguruprofilerProfilingGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeguruprofiler_profiling_group#name TfDataProfilingGroup#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeguruprofiler_profiling_group#region DataAwsCodeguruprofilerProfilingGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeguruprofiler_profiling_group#region TfDataProfilingGroup#region}
   */
   readonly region?: string;
 }
@@ -21,7 +21,7 @@ export interface DataAwsCodeguruprofilerProfilingGroupConfig extends cdktn.Terra
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeguruprofiler_profiling_group aws_codeguruprofiler_profiling_group}
 */
-export class DataAwsCodeguruprofilerProfilingGroup extends cdktn.TerraformDataSource {
+export class TfDataProfilingGroup extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class DataAwsCodeguruprofilerProfilingGroup extends cdktn.TerraformDataSo
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsCodeguruprofilerProfilingGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataProfilingGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsCodeguruprofilerProfilingGroup to import
-  * @param importFromId The id of the existing DataAwsCodeguruprofilerProfilingGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeguruprofiler_profiling_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsCodeguruprofilerProfilingGroup to import is found
+  * @param importToId The construct id used in the generated config for the TfDataProfilingGroup to import
+  * @param importFromId The id of the existing TfDataProfilingGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeguruprofiler_profiling_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataProfilingGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_codeguruprofiler_profiling_group", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class DataAwsCodeguruprofilerProfilingGroup extends cdktn.TerraformDataSo
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsCodeguruprofilerProfilingGroupConfig
+  * @param options TfDataProfilingGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsCodeguruprofilerProfilingGroupConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataProfilingGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_codeguruprofiler_profiling_group',
       terraformGeneratorMetadata: {
@@ -78,7 +78,7 @@ export class DataAwsCodeguruprofilerProfilingGroup extends cdktn.TerraformDataSo
   // ==========
 
   // agent_orchestration_config - computed: true, optional: false, required: false
-  private _agentOrchestrationConfig = new DataAwsCodeguruprofilerProfilingGroup.AgentOrchestrationConfigPropertyList(this, "agent_orchestration_config", false);
+  private _agentOrchestrationConfig = new TfDataProfilingGroup.AgentOrchestrationConfigPropertyList(this, "agent_orchestration_config", false);
   public get agentOrchestrationConfig() {
     return this._agentOrchestrationConfig;
   }
@@ -117,7 +117,7 @@ export class DataAwsCodeguruprofilerProfilingGroup extends cdktn.TerraformDataSo
   }
 
   // profiling_status - computed: true, optional: false, required: false
-  private _profilingStatus = new DataAwsCodeguruprofilerProfilingGroup.ProfilingStatusPropertyList(this, "profiling_status", false);
+  private _profilingStatus = new TfDataProfilingGroup.ProfilingStatusPropertyList(this, "profiling_status", false);
   public get profilingStatus() {
     return this._profilingStatus;
   }
@@ -181,7 +181,7 @@ export class DataAwsCodeguruprofilerProfilingGroup extends cdktn.TerraformDataSo
   }
 }
 
-export function dataAwsCodeguruprofilerProfilingGroupAgentOrchestrationConfigPropertyToTerraform(struct?: DataAwsCodeguruprofilerProfilingGroup.AgentOrchestrationConfigProperty): any {
+export function tfDataProfilingGroupAgentOrchestrationConfigPropertyToTerraform(struct?: TfDataProfilingGroup.AgentOrchestrationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -191,7 +191,7 @@ export function dataAwsCodeguruprofilerProfilingGroupAgentOrchestrationConfigPro
 }
 
 
-export function dataAwsCodeguruprofilerProfilingGroupAgentOrchestrationConfigPropertyToHclTerraform(struct?: DataAwsCodeguruprofilerProfilingGroup.AgentOrchestrationConfigProperty): any {
+export function tfDataProfilingGroupAgentOrchestrationConfigPropertyToHclTerraform(struct?: TfDataProfilingGroup.AgentOrchestrationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -202,7 +202,7 @@ export function dataAwsCodeguruprofilerProfilingGroupAgentOrchestrationConfigPro
 }
 
 
-export function dataAwsCodeguruprofilerProfilingGroupLatestAggregatedProfilePropertyToTerraform(struct?: DataAwsCodeguruprofilerProfilingGroup.LatestAggregatedProfileProperty): any {
+export function tfDataProfilingGroupLatestAggregatedProfilePropertyToTerraform(struct?: TfDataProfilingGroup.LatestAggregatedProfileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -212,7 +212,7 @@ export function dataAwsCodeguruprofilerProfilingGroupLatestAggregatedProfileProp
 }
 
 
-export function dataAwsCodeguruprofilerProfilingGroupLatestAggregatedProfilePropertyToHclTerraform(struct?: DataAwsCodeguruprofilerProfilingGroup.LatestAggregatedProfileProperty): any {
+export function tfDataProfilingGroupLatestAggregatedProfilePropertyToHclTerraform(struct?: TfDataProfilingGroup.LatestAggregatedProfileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -223,7 +223,7 @@ export function dataAwsCodeguruprofilerProfilingGroupLatestAggregatedProfileProp
 }
 
 
-export function dataAwsCodeguruprofilerProfilingGroupProfilingStatusPropertyToTerraform(struct?: DataAwsCodeguruprofilerProfilingGroup.ProfilingStatusProperty): any {
+export function tfDataProfilingGroupProfilingStatusPropertyToTerraform(struct?: TfDataProfilingGroup.ProfilingStatusProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -233,7 +233,7 @@ export function dataAwsCodeguruprofilerProfilingGroupProfilingStatusPropertyToTe
 }
 
 
-export function dataAwsCodeguruprofilerProfilingGroupProfilingStatusPropertyToHclTerraform(struct?: DataAwsCodeguruprofilerProfilingGroup.ProfilingStatusProperty): any {
+export function tfDataProfilingGroupProfilingStatusPropertyToHclTerraform(struct?: TfDataProfilingGroup.ProfilingStatusProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -244,7 +244,7 @@ export function dataAwsCodeguruprofilerProfilingGroupProfilingStatusPropertyToHc
 }
 
 
-export namespace DataAwsCodeguruprofilerProfilingGroup {
+export namespace TfDataProfilingGroup {
 export interface AgentOrchestrationConfigProperty {
 }
 export class AgentOrchestrationConfigPropertyOutputReference extends cdktn.ComplexObject {

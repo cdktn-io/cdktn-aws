@@ -5,43 +5,43 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsBedrockInferenceProfileConfig extends cdktn.TerraformMetaArguments {
+export interface TfInferenceProfileConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_inference_profile#description AwsBedrockInferenceProfile#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_inference_profile#description TfInferenceProfile#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_inference_profile#name AwsBedrockInferenceProfile#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_inference_profile#name TfInferenceProfile#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_inference_profile#region AwsBedrockInferenceProfile#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_inference_profile#region TfInferenceProfile#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_inference_profile#tags AwsBedrockInferenceProfile#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_inference_profile#tags TfInferenceProfile#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * model_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_inference_profile#model_source AwsBedrockInferenceProfile#model_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_inference_profile#model_source TfInferenceProfile#model_source}
   */
-  readonly modelSource?: AwsBedrockInferenceProfile.ModelSourceProperty[] | cdktn.IResolvable;
+  readonly modelSource?: TfInferenceProfile.ModelSourceProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_inference_profile#timeouts AwsBedrockInferenceProfile#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_inference_profile#timeouts TfInferenceProfile#timeouts}
   */
-  readonly timeouts?: AwsBedrockInferenceProfile.TimeoutsProperty;
+  readonly timeouts?: TfInferenceProfile.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_inference_profile aws_bedrock_inference_profile}
 */
-export class AwsBedrockInferenceProfile extends cdktn.TerraformResource {
+export class TfInferenceProfile extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -52,11 +52,11 @@ export class AwsBedrockInferenceProfile extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsBedrockInferenceProfile resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfInferenceProfile resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsBedrockInferenceProfile to import
-  * @param importFromId The id of the existing AwsBedrockInferenceProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_inference_profile#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsBedrockInferenceProfile to import is found
+  * @param importToId The construct id used in the generated config for the TfInferenceProfile to import
+  * @param importFromId The id of the existing TfInferenceProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_inference_profile#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfInferenceProfile to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrock_inference_profile", importId: importFromId, provider });
@@ -71,9 +71,9 @@ export class AwsBedrockInferenceProfile extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsBedrockInferenceProfileConfig
+  * @param options TfInferenceProfileConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsBedrockInferenceProfileConfig) {
+  public constructor(scope: Construct, id: string, config: TfInferenceProfileConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrock_inference_profile',
       terraformGeneratorMetadata: {
@@ -133,7 +133,7 @@ export class AwsBedrockInferenceProfile extends cdktn.TerraformResource {
   }
 
   // models - computed: true, optional: false, required: false
-  private _models = new AwsBedrockInferenceProfile.ModelsPropertyList(this, "models", false);
+  private _models = new TfInferenceProfile.ModelsPropertyList(this, "models", false);
   public get models() {
     return this._models;
   }
@@ -205,11 +205,11 @@ export class AwsBedrockInferenceProfile extends cdktn.TerraformResource {
   }
 
   // model_source - computed: false, optional: true, required: false
-  private _modelSource = new AwsBedrockInferenceProfile.ModelSourcePropertyList(this, "model_source", false);
+  private _modelSource = new TfInferenceProfile.ModelSourcePropertyList(this, "model_source", false);
   public get modelSource() {
     return this._modelSource;
   }
-  public putModelSource(value: AwsBedrockInferenceProfile.ModelSourceProperty[] | cdktn.IResolvable) {
+  public putModelSource(value: TfInferenceProfile.ModelSourceProperty[] | cdktn.IResolvable) {
     this._modelSource.internalValue = value;
   }
   public resetModelSource() {
@@ -221,11 +221,11 @@ export class AwsBedrockInferenceProfile extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsBedrockInferenceProfile.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfInferenceProfile.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsBedrockInferenceProfile.TimeoutsProperty) {
+  public putTimeouts(value: TfInferenceProfile.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -246,8 +246,8 @@ export class AwsBedrockInferenceProfile extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      model_source: cdktn.listMapper(awsBedrockInferenceProfileModelSourcePropertyToTerraform, true)(this._modelSource.internalValue),
-      timeouts: awsBedrockInferenceProfileTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      model_source: cdktn.listMapper(tfInferenceProfileModelSourcePropertyToTerraform, true)(this._modelSource.internalValue),
+      timeouts: tfInferenceProfileTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -278,16 +278,16 @@ export class AwsBedrockInferenceProfile extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       model_source: {
-        value: cdktn.listMapperHcl(awsBedrockInferenceProfileModelSourcePropertyToHclTerraform, true)(this._modelSource.internalValue),
+        value: cdktn.listMapperHcl(tfInferenceProfileModelSourcePropertyToHclTerraform, true)(this._modelSource.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockInferenceProfile.ModelSourcePropertyList",
+        storageClassType: "TfInferenceProfile.ModelSourcePropertyList",
       },
       timeouts: {
-        value: awsBedrockInferenceProfileTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfInferenceProfileTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsBedrockInferenceProfile.TimeoutsProperty",
+        storageClassType: "TfInferenceProfile.TimeoutsProperty",
       },
     };
 
@@ -296,7 +296,7 @@ export class AwsBedrockInferenceProfile extends cdktn.TerraformResource {
   }
 }
 
-export function awsBedrockInferenceProfileModelsPropertyToTerraform(struct?: AwsBedrockInferenceProfile.ModelsProperty): any {
+export function tfInferenceProfileModelsPropertyToTerraform(struct?: TfInferenceProfile.ModelsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -306,7 +306,7 @@ export function awsBedrockInferenceProfileModelsPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsBedrockInferenceProfileModelsPropertyToHclTerraform(struct?: AwsBedrockInferenceProfile.ModelsProperty): any {
+export function tfInferenceProfileModelsPropertyToHclTerraform(struct?: TfInferenceProfile.ModelsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -317,7 +317,7 @@ export function awsBedrockInferenceProfileModelsPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsBedrockInferenceProfileModelSourcePropertyToTerraform(struct?: AwsBedrockInferenceProfile.ModelSourceProperty | cdktn.IResolvable): any {
+export function tfInferenceProfileModelSourcePropertyToTerraform(struct?: TfInferenceProfile.ModelSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -328,7 +328,7 @@ export function awsBedrockInferenceProfileModelSourcePropertyToTerraform(struct?
 }
 
 
-export function awsBedrockInferenceProfileModelSourcePropertyToHclTerraform(struct?: AwsBedrockInferenceProfile.ModelSourceProperty | cdktn.IResolvable): any {
+export function tfInferenceProfileModelSourcePropertyToHclTerraform(struct?: TfInferenceProfile.ModelSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -347,7 +347,7 @@ export function awsBedrockInferenceProfileModelSourcePropertyToHclTerraform(stru
 }
 
 
-export function awsBedrockInferenceProfileTimeoutsPropertyToTerraform(struct?: AwsBedrockInferenceProfile.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfInferenceProfileTimeoutsPropertyToTerraform(struct?: TfInferenceProfile.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -360,7 +360,7 @@ export function awsBedrockInferenceProfileTimeoutsPropertyToTerraform(struct?: A
 }
 
 
-export function awsBedrockInferenceProfileTimeoutsPropertyToHclTerraform(struct?: AwsBedrockInferenceProfile.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfInferenceProfileTimeoutsPropertyToHclTerraform(struct?: TfInferenceProfile.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -391,7 +391,7 @@ export function awsBedrockInferenceProfileTimeoutsPropertyToHclTerraform(struct?
 }
 
 
-export namespace AwsBedrockInferenceProfile {
+export namespace TfInferenceProfile {
 export interface ModelsProperty {
 }
 export class ModelsPropertyOutputReference extends cdktn.ComplexObject {
@@ -448,7 +448,7 @@ export class ModelsPropertyList extends cdktn.ComplexList {
 }
 export interface ModelSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_inference_profile#copy_from AwsBedrockInferenceProfile#copy_from}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_inference_profile#copy_from TfInferenceProfile#copy_from}
   */
   readonly copyFrom: string;
 }
@@ -533,19 +533,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_inference_profile#create AwsBedrockInferenceProfile#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_inference_profile#create TfInferenceProfile#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_inference_profile#delete AwsBedrockInferenceProfile#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_inference_profile#delete TfInferenceProfile#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_inference_profile#update AwsBedrockInferenceProfile#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_inference_profile#update TfInferenceProfile#update}
   */
   readonly update?: string;
 }

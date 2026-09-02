@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsMskBrokerNodesConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataBrokerNodesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/msk_broker_nodes#cluster_arn DataAwsMskBrokerNodes#cluster_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/msk_broker_nodes#cluster_arn TfDataBrokerNodes#cluster_arn}
   */
   readonly clusterArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/msk_broker_nodes#id DataAwsMskBrokerNodes#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/msk_broker_nodes#id TfDataBrokerNodes#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,7 +20,7 @@ export interface DataAwsMskBrokerNodesConfig extends cdktn.TerraformMetaArgument
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/msk_broker_nodes#region DataAwsMskBrokerNodes#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/msk_broker_nodes#region TfDataBrokerNodes#region}
   */
   readonly region?: string;
 }
@@ -28,7 +28,7 @@ export interface DataAwsMskBrokerNodesConfig extends cdktn.TerraformMetaArgument
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/msk_broker_nodes aws_msk_broker_nodes}
 */
-export class DataAwsMskBrokerNodes extends cdktn.TerraformDataSource {
+export class TfDataBrokerNodes extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class DataAwsMskBrokerNodes extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsMskBrokerNodes resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataBrokerNodes resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsMskBrokerNodes to import
-  * @param importFromId The id of the existing DataAwsMskBrokerNodes that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/msk_broker_nodes#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsMskBrokerNodes to import is found
+  * @param importToId The construct id used in the generated config for the TfDataBrokerNodes to import
+  * @param importFromId The id of the existing TfDataBrokerNodes that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/msk_broker_nodes#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataBrokerNodes to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_msk_broker_nodes", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class DataAwsMskBrokerNodes extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsMskBrokerNodesConfig
+  * @param options TfDataBrokerNodesConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsMskBrokerNodesConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataBrokerNodesConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_msk_broker_nodes',
       terraformGeneratorMetadata: {
@@ -115,7 +115,7 @@ export class DataAwsMskBrokerNodes extends cdktn.TerraformDataSource {
   }
 
   // node_info_list - computed: true, optional: false, required: false
-  private _nodeInfoList = new DataAwsMskBrokerNodes.NodeInfoListPropertyList(this, "node_info_list", false);
+  private _nodeInfoList = new TfDataBrokerNodes.NodeInfoListPropertyList(this, "node_info_list", false);
   public get nodeInfoList() {
     return this._nodeInfoList;
   }
@@ -175,7 +175,7 @@ export class DataAwsMskBrokerNodes extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsMskBrokerNodesNodeInfoListPropertyToTerraform(struct?: DataAwsMskBrokerNodes.NodeInfoListProperty): any {
+export function tfDataBrokerNodesNodeInfoListPropertyToTerraform(struct?: TfDataBrokerNodes.NodeInfoListProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -185,7 +185,7 @@ export function dataAwsMskBrokerNodesNodeInfoListPropertyToTerraform(struct?: Da
 }
 
 
-export function dataAwsMskBrokerNodesNodeInfoListPropertyToHclTerraform(struct?: DataAwsMskBrokerNodes.NodeInfoListProperty): any {
+export function tfDataBrokerNodesNodeInfoListPropertyToHclTerraform(struct?: TfDataBrokerNodes.NodeInfoListProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -196,7 +196,7 @@ export function dataAwsMskBrokerNodesNodeInfoListPropertyToHclTerraform(struct?:
 }
 
 
-export namespace DataAwsMskBrokerNodes {
+export namespace TfDataBrokerNodes {
 export interface NodeInfoListProperty {
 }
 export class NodeInfoListPropertyOutputReference extends cdktn.ComplexObject {

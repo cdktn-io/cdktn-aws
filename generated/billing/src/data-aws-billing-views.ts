@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsBillingViewsConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataViewsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/billing_views#billing_view_types DataAwsBillingViews#billing_view_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/billing_views#billing_view_types TfDataViews#billing_view_types}
   */
   readonly billingViewTypes?: string[];
 }
@@ -15,7 +15,7 @@ export interface DataAwsBillingViewsConfig extends cdktn.TerraformMetaArguments 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/billing_views aws_billing_views}
 */
-export class DataAwsBillingViews extends cdktn.TerraformDataSource {
+export class TfDataViews extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -26,11 +26,11 @@ export class DataAwsBillingViews extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsBillingViews resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataViews resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsBillingViews to import
-  * @param importFromId The id of the existing DataAwsBillingViews that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/billing_views#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsBillingViews to import is found
+  * @param importToId The construct id used in the generated config for the TfDataViews to import
+  * @param importFromId The id of the existing TfDataViews that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/billing_views#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataViews to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_billing_views", importId: importFromId, provider });
@@ -45,9 +45,9 @@ export class DataAwsBillingViews extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsBillingViewsConfig = {}
+  * @param options TfDataViewsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsBillingViewsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDataViewsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_billing_views',
       terraformGeneratorMetadata: {
@@ -71,7 +71,7 @@ export class DataAwsBillingViews extends cdktn.TerraformDataSource {
   // ==========
 
   // billing_view - computed: true, optional: false, required: false
-  private _billingView = new DataAwsBillingViews.BillingViewPropertyList(this, "billing_view", false);
+  private _billingView = new TfDataViews.BillingViewPropertyList(this, "billing_view", false);
   public get billingView() {
     return this._billingView;
   }
@@ -117,7 +117,7 @@ export class DataAwsBillingViews extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsBillingViewsBillingViewPropertyToTerraform(struct?: DataAwsBillingViews.BillingViewProperty): any {
+export function tfDataViewsBillingViewPropertyToTerraform(struct?: TfDataViews.BillingViewProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -127,7 +127,7 @@ export function dataAwsBillingViewsBillingViewPropertyToTerraform(struct?: DataA
 }
 
 
-export function dataAwsBillingViewsBillingViewPropertyToHclTerraform(struct?: DataAwsBillingViews.BillingViewProperty): any {
+export function tfDataViewsBillingViewPropertyToHclTerraform(struct?: TfDataViews.BillingViewProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -138,7 +138,7 @@ export function dataAwsBillingViewsBillingViewPropertyToHclTerraform(struct?: Da
 }
 
 
-export namespace DataAwsBillingViews {
+export namespace TfDataViews {
 export interface BillingViewProperty {
 }
 export class BillingViewPropertyOutputReference extends cdktn.ComplexObject {

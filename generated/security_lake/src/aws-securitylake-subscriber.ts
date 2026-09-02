@@ -5,53 +5,53 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSecuritylakeSubscriberConfig extends cdktn.TerraformMetaArguments {
+export interface TfSubscriberConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#access_type AwsSecuritylakeSubscriber#access_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#access_type TfSubscriber#access_type}
   */
   readonly accessType?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#region AwsSecuritylakeSubscriber#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#region TfSubscriber#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#subscriber_description AwsSecuritylakeSubscriber#subscriber_description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#subscriber_description TfSubscriber#subscriber_description}
   */
   readonly subscriberDescription?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#subscriber_name AwsSecuritylakeSubscriber#subscriber_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#subscriber_name TfSubscriber#subscriber_name}
   */
   readonly subscriberName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#tags AwsSecuritylakeSubscriber#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#tags TfSubscriber#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#source AwsSecuritylakeSubscriber#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#source TfSubscriber#source}
   */
-  readonly source?: AwsSecuritylakeSubscriber.SourceProperty[] | cdktn.IResolvable;
+  readonly source?: TfSubscriber.SourceProperty[] | cdktn.IResolvable;
   /**
   * subscriber_identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#subscriber_identity AwsSecuritylakeSubscriber#subscriber_identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#subscriber_identity TfSubscriber#subscriber_identity}
   */
-  readonly subscriberIdentity?: AwsSecuritylakeSubscriber.SubscriberIdentityProperty[] | cdktn.IResolvable;
+  readonly subscriberIdentity?: TfSubscriber.SubscriberIdentityProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#timeouts AwsSecuritylakeSubscriber#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#timeouts TfSubscriber#timeouts}
   */
-  readonly timeouts?: AwsSecuritylakeSubscriber.TimeoutsProperty;
+  readonly timeouts?: TfSubscriber.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber aws_securitylake_subscriber}
 */
-export class AwsSecuritylakeSubscriber extends cdktn.TerraformResource {
+export class TfSubscriber extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -62,11 +62,11 @@ export class AwsSecuritylakeSubscriber extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSecuritylakeSubscriber resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfSubscriber resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSecuritylakeSubscriber to import
-  * @param importFromId The id of the existing AwsSecuritylakeSubscriber that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSecuritylakeSubscriber to import is found
+  * @param importToId The construct id used in the generated config for the TfSubscriber to import
+  * @param importFromId The id of the existing TfSubscriber that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfSubscriber to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_securitylake_subscriber", importId: importFromId, provider });
@@ -81,9 +81,9 @@ export class AwsSecuritylakeSubscriber extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSecuritylakeSubscriberConfig = {}
+  * @param options TfSubscriberConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsSecuritylakeSubscriberConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfSubscriberConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_securitylake_subscriber',
       terraformGeneratorMetadata: {
@@ -240,11 +240,11 @@ export class AwsSecuritylakeSubscriber extends cdktn.TerraformResource {
   }
 
   // source - computed: false, optional: true, required: false
-  private _source = new AwsSecuritylakeSubscriber.SourcePropertyList(this, "source", true);
+  private _source = new TfSubscriber.SourcePropertyList(this, "source", true);
   public get source() {
     return this._source;
   }
-  public putSource(value: AwsSecuritylakeSubscriber.SourceProperty[] | cdktn.IResolvable) {
+  public putSource(value: TfSubscriber.SourceProperty[] | cdktn.IResolvable) {
     this._source.internalValue = value;
   }
   public resetSource() {
@@ -256,11 +256,11 @@ export class AwsSecuritylakeSubscriber extends cdktn.TerraformResource {
   }
 
   // subscriber_identity - computed: false, optional: true, required: false
-  private _subscriberIdentity = new AwsSecuritylakeSubscriber.SubscriberIdentityPropertyList(this, "subscriber_identity", false);
+  private _subscriberIdentity = new TfSubscriber.SubscriberIdentityPropertyList(this, "subscriber_identity", false);
   public get subscriberIdentity() {
     return this._subscriberIdentity;
   }
-  public putSubscriberIdentity(value: AwsSecuritylakeSubscriber.SubscriberIdentityProperty[] | cdktn.IResolvable) {
+  public putSubscriberIdentity(value: TfSubscriber.SubscriberIdentityProperty[] | cdktn.IResolvable) {
     this._subscriberIdentity.internalValue = value;
   }
   public resetSubscriberIdentity() {
@@ -272,11 +272,11 @@ export class AwsSecuritylakeSubscriber extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsSecuritylakeSubscriber.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfSubscriber.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsSecuritylakeSubscriber.TimeoutsProperty) {
+  public putTimeouts(value: TfSubscriber.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -298,9 +298,9 @@ export class AwsSecuritylakeSubscriber extends cdktn.TerraformResource {
       subscriber_description: cdktn.stringToTerraform(this._subscriberDescription),
       subscriber_name: cdktn.stringToTerraform(this._subscriberName),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      source: cdktn.listMapper(awsSecuritylakeSubscriberSourcePropertyToTerraform, true)(this._source.internalValue),
-      subscriber_identity: cdktn.listMapper(awsSecuritylakeSubscriberSubscriberIdentityPropertyToTerraform, true)(this._subscriberIdentity.internalValue),
-      timeouts: awsSecuritylakeSubscriberTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      source: cdktn.listMapper(tfSubscriberSourcePropertyToTerraform, true)(this._source.internalValue),
+      subscriber_identity: cdktn.listMapper(tfSubscriberSubscriberIdentityPropertyToTerraform, true)(this._subscriberIdentity.internalValue),
+      timeouts: tfSubscriberTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -337,22 +337,22 @@ export class AwsSecuritylakeSubscriber extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       source: {
-        value: cdktn.listMapperHcl(awsSecuritylakeSubscriberSourcePropertyToHclTerraform, true)(this._source.internalValue),
+        value: cdktn.listMapperHcl(tfSubscriberSourcePropertyToHclTerraform, true)(this._source.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsSecuritylakeSubscriber.SourcePropertyList",
+        storageClassType: "TfSubscriber.SourcePropertyList",
       },
       subscriber_identity: {
-        value: cdktn.listMapperHcl(awsSecuritylakeSubscriberSubscriberIdentityPropertyToHclTerraform, true)(this._subscriberIdentity.internalValue),
+        value: cdktn.listMapperHcl(tfSubscriberSubscriberIdentityPropertyToHclTerraform, true)(this._subscriberIdentity.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSecuritylakeSubscriber.SubscriberIdentityPropertyList",
+        storageClassType: "TfSubscriber.SubscriberIdentityPropertyList",
       },
       timeouts: {
-        value: awsSecuritylakeSubscriberTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfSubscriberTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsSecuritylakeSubscriber.TimeoutsProperty",
+        storageClassType: "TfSubscriber.TimeoutsProperty",
       },
     };
 
@@ -361,7 +361,7 @@ export class AwsSecuritylakeSubscriber extends cdktn.TerraformResource {
   }
 }
 
-export function awsSecuritylakeSubscriberAwsLogSourceResourcePropertyToTerraform(struct?: AwsSecuritylakeSubscriber.AwsLogSourceResourceProperty | cdktn.IResolvable): any {
+export function tfSubscriberAwsLogSourceResourcePropertyToTerraform(struct?: TfSubscriber.AwsLogSourceResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -373,7 +373,7 @@ export function awsSecuritylakeSubscriberAwsLogSourceResourcePropertyToTerraform
 }
 
 
-export function awsSecuritylakeSubscriberAwsLogSourceResourcePropertyToHclTerraform(struct?: AwsSecuritylakeSubscriber.AwsLogSourceResourceProperty | cdktn.IResolvable): any {
+export function tfSubscriberAwsLogSourceResourcePropertyToHclTerraform(struct?: TfSubscriber.AwsLogSourceResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -398,7 +398,7 @@ export function awsSecuritylakeSubscriberAwsLogSourceResourcePropertyToHclTerraf
 }
 
 
-export function awsSecuritylakeSubscriberAttributesPropertyToTerraform(struct?: AwsSecuritylakeSubscriber.AttributesProperty): any {
+export function tfSubscriberAttributesPropertyToTerraform(struct?: TfSubscriber.AttributesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -408,7 +408,7 @@ export function awsSecuritylakeSubscriberAttributesPropertyToTerraform(struct?: 
 }
 
 
-export function awsSecuritylakeSubscriberAttributesPropertyToHclTerraform(struct?: AwsSecuritylakeSubscriber.AttributesProperty): any {
+export function tfSubscriberAttributesPropertyToHclTerraform(struct?: TfSubscriber.AttributesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -419,7 +419,7 @@ export function awsSecuritylakeSubscriberAttributesPropertyToHclTerraform(struct
 }
 
 
-export function awsSecuritylakeSubscriberProviderPropertyToTerraform(struct?: AwsSecuritylakeSubscriber.ProviderProperty): any {
+export function tfSubscriberProviderPropertyToTerraform(struct?: TfSubscriber.ProviderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -429,7 +429,7 @@ export function awsSecuritylakeSubscriberProviderPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsSecuritylakeSubscriberProviderPropertyToHclTerraform(struct?: AwsSecuritylakeSubscriber.ProviderProperty): any {
+export function tfSubscriberProviderPropertyToHclTerraform(struct?: TfSubscriber.ProviderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -440,7 +440,7 @@ export function awsSecuritylakeSubscriberProviderPropertyToHclTerraform(struct?:
 }
 
 
-export function awsSecuritylakeSubscriberCustomLogSourceResourcePropertyToTerraform(struct?: AwsSecuritylakeSubscriber.CustomLogSourceResourceProperty | cdktn.IResolvable): any {
+export function tfSubscriberCustomLogSourceResourcePropertyToTerraform(struct?: TfSubscriber.CustomLogSourceResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -452,7 +452,7 @@ export function awsSecuritylakeSubscriberCustomLogSourceResourcePropertyToTerraf
 }
 
 
-export function awsSecuritylakeSubscriberCustomLogSourceResourcePropertyToHclTerraform(struct?: AwsSecuritylakeSubscriber.CustomLogSourceResourceProperty | cdktn.IResolvable): any {
+export function tfSubscriberCustomLogSourceResourcePropertyToHclTerraform(struct?: TfSubscriber.CustomLogSourceResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -477,32 +477,32 @@ export function awsSecuritylakeSubscriberCustomLogSourceResourcePropertyToHclTer
 }
 
 
-export function awsSecuritylakeSubscriberSourcePropertyToTerraform(struct?: AwsSecuritylakeSubscriber.SourceProperty | cdktn.IResolvable): any {
+export function tfSubscriberSourcePropertyToTerraform(struct?: TfSubscriber.SourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    aws_log_source_resource: cdktn.listMapper(awsSecuritylakeSubscriberAwsLogSourceResourcePropertyToTerraform, true)(struct!.awsLogSourceResource),
-    custom_log_source_resource: cdktn.listMapper(awsSecuritylakeSubscriberCustomLogSourceResourcePropertyToTerraform, true)(struct!.customLogSourceResource),
+    aws_log_source_resource: cdktn.listMapper(tfSubscriberAwsLogSourceResourcePropertyToTerraform, true)(struct!.awsLogSourceResource),
+    custom_log_source_resource: cdktn.listMapper(tfSubscriberCustomLogSourceResourcePropertyToTerraform, true)(struct!.customLogSourceResource),
   }
 }
 
 
-export function awsSecuritylakeSubscriberSourcePropertyToHclTerraform(struct?: AwsSecuritylakeSubscriber.SourceProperty | cdktn.IResolvable): any {
+export function tfSubscriberSourcePropertyToHclTerraform(struct?: TfSubscriber.SourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     aws_log_source_resource: {
-      value: cdktn.listMapperHcl(awsSecuritylakeSubscriberAwsLogSourceResourcePropertyToHclTerraform, true)(struct!.awsLogSourceResource),
+      value: cdktn.listMapperHcl(tfSubscriberAwsLogSourceResourcePropertyToHclTerraform, true)(struct!.awsLogSourceResource),
       isBlock: true,
       type: "list",
       storageClassType: "AwsLogSourceResourcePropertyList",
     },
     custom_log_source_resource: {
-      value: cdktn.listMapperHcl(awsSecuritylakeSubscriberCustomLogSourceResourcePropertyToHclTerraform, true)(struct!.customLogSourceResource),
+      value: cdktn.listMapperHcl(tfSubscriberCustomLogSourceResourcePropertyToHclTerraform, true)(struct!.customLogSourceResource),
       isBlock: true,
       type: "list",
       storageClassType: "CustomLogSourceResourcePropertyList",
@@ -514,7 +514,7 @@ export function awsSecuritylakeSubscriberSourcePropertyToHclTerraform(struct?: A
 }
 
 
-export function awsSecuritylakeSubscriberSubscriberIdentityPropertyToTerraform(struct?: AwsSecuritylakeSubscriber.SubscriberIdentityProperty | cdktn.IResolvable): any {
+export function tfSubscriberSubscriberIdentityPropertyToTerraform(struct?: TfSubscriber.SubscriberIdentityProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -526,7 +526,7 @@ export function awsSecuritylakeSubscriberSubscriberIdentityPropertyToTerraform(s
 }
 
 
-export function awsSecuritylakeSubscriberSubscriberIdentityPropertyToHclTerraform(struct?: AwsSecuritylakeSubscriber.SubscriberIdentityProperty | cdktn.IResolvable): any {
+export function tfSubscriberSubscriberIdentityPropertyToHclTerraform(struct?: TfSubscriber.SubscriberIdentityProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -551,7 +551,7 @@ export function awsSecuritylakeSubscriberSubscriberIdentityPropertyToHclTerrafor
 }
 
 
-export function awsSecuritylakeSubscriberTimeoutsPropertyToTerraform(struct?: AwsSecuritylakeSubscriber.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfSubscriberTimeoutsPropertyToTerraform(struct?: TfSubscriber.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -564,7 +564,7 @@ export function awsSecuritylakeSubscriberTimeoutsPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsSecuritylakeSubscriberTimeoutsPropertyToHclTerraform(struct?: AwsSecuritylakeSubscriber.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfSubscriberTimeoutsPropertyToHclTerraform(struct?: TfSubscriber.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -595,14 +595,14 @@ export function awsSecuritylakeSubscriberTimeoutsPropertyToHclTerraform(struct?:
 }
 
 
-export namespace AwsSecuritylakeSubscriber {
+export namespace TfSubscriber {
 export interface AwsLogSourceResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#source_name AwsSecuritylakeSubscriber#source_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#source_name TfSubscriber#source_name}
   */
   readonly sourceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#source_version AwsSecuritylakeSubscriber#source_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#source_version TfSubscriber#source_version}
   */
   readonly sourceVersion?: string;
 }
@@ -830,11 +830,11 @@ export class ProviderPropertyList extends cdktn.ComplexList {
 }
 export interface CustomLogSourceResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#source_name AwsSecuritylakeSubscriber#source_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#source_name TfSubscriber#source_name}
   */
   readonly sourceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#source_version AwsSecuritylakeSubscriber#source_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#source_version TfSubscriber#source_version}
   */
   readonly sourceVersion?: string;
 }
@@ -953,13 +953,13 @@ export interface SourceProperty {
   /**
   * aws_log_source_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#aws_log_source_resource AwsSecuritylakeSubscriber#aws_log_source_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#aws_log_source_resource TfSubscriber#aws_log_source_resource}
   */
   readonly awsLogSourceResource?: AwsLogSourceResourceProperty[] | cdktn.IResolvable;
   /**
   * custom_log_source_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#custom_log_source_resource AwsSecuritylakeSubscriber#custom_log_source_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#custom_log_source_resource TfSubscriber#custom_log_source_resource}
   */
   readonly customLogSourceResource?: CustomLogSourceResourceProperty[] | cdktn.IResolvable;
 }
@@ -1067,11 +1067,11 @@ export class SourcePropertyList extends cdktn.ComplexList {
 }
 export interface SubscriberIdentityProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#external_id AwsSecuritylakeSubscriber#external_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#external_id TfSubscriber#external_id}
   */
   readonly externalId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#principal AwsSecuritylakeSubscriber#principal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#principal TfSubscriber#principal}
   */
   readonly principal: string;
 }
@@ -1175,19 +1175,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#create AwsSecuritylakeSubscriber#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#create TfSubscriber#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#delete AwsSecuritylakeSubscriber#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#delete TfSubscriber#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#update AwsSecuritylakeSubscriber#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber#update TfSubscriber#update}
   */
   readonly update?: string;
 }

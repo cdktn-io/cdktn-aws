@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsApprunnerVpcConnectorConfig extends cdktn.TerraformMetaArguments {
+export interface TfVpcConnectorConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_connector#id AwsApprunnerVpcConnector#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_connector#id TfVpcConnector#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,27 +16,27 @@ export interface AwsApprunnerVpcConnectorConfig extends cdktn.TerraformMetaArgum
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_connector#region AwsApprunnerVpcConnector#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_connector#region TfVpcConnector#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_connector#security_groups AwsApprunnerVpcConnector#security_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_connector#security_groups TfVpcConnector#security_groups}
   */
   readonly securityGroups: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_connector#subnets AwsApprunnerVpcConnector#subnets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_connector#subnets TfVpcConnector#subnets}
   */
   readonly subnets: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_connector#tags AwsApprunnerVpcConnector#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_connector#tags TfVpcConnector#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_connector#tags_all AwsApprunnerVpcConnector#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_connector#tags_all TfVpcConnector#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_connector#vpc_connector_name AwsApprunnerVpcConnector#vpc_connector_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_connector#vpc_connector_name TfVpcConnector#vpc_connector_name}
   */
   readonly vpcConnectorName: string;
 }
@@ -44,7 +44,7 @@ export interface AwsApprunnerVpcConnectorConfig extends cdktn.TerraformMetaArgum
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_connector aws_apprunner_vpc_connector}
 */
-export class AwsApprunnerVpcConnector extends cdktn.TerraformResource {
+export class TfVpcConnector extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class AwsApprunnerVpcConnector extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsApprunnerVpcConnector resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfVpcConnector resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsApprunnerVpcConnector to import
-  * @param importFromId The id of the existing AwsApprunnerVpcConnector that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_connector#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsApprunnerVpcConnector to import is found
+  * @param importToId The construct id used in the generated config for the TfVpcConnector to import
+  * @param importFromId The id of the existing TfVpcConnector that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_connector#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfVpcConnector to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_apprunner_vpc_connector", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class AwsApprunnerVpcConnector extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsApprunnerVpcConnectorConfig
+  * @param options TfVpcConnectorConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsApprunnerVpcConnectorConfig) {
+  public constructor(scope: Construct, id: string, config: TfVpcConnectorConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_apprunner_vpc_connector',
       terraformGeneratorMetadata: {

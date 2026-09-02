@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEcrAccountSettingConfig extends cdktn.TerraformMetaArguments {
+export interface TfAccountSettingConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_account_setting#name AwsEcrAccountSetting#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_account_setting#name TfAccountSetting#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_account_setting#region AwsEcrAccountSetting#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_account_setting#region TfAccountSetting#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_account_setting#value AwsEcrAccountSetting#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_account_setting#value TfAccountSetting#value}
   */
   readonly value: string;
 }
@@ -25,7 +25,7 @@ export interface AwsEcrAccountSettingConfig extends cdktn.TerraformMetaArguments
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_account_setting aws_ecr_account_setting}
 */
-export class AwsEcrAccountSetting extends cdktn.TerraformResource {
+export class TfAccountSetting extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -36,11 +36,11 @@ export class AwsEcrAccountSetting extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEcrAccountSetting resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAccountSetting resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEcrAccountSetting to import
-  * @param importFromId The id of the existing AwsEcrAccountSetting that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_account_setting#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEcrAccountSetting to import is found
+  * @param importToId The construct id used in the generated config for the TfAccountSetting to import
+  * @param importFromId The id of the existing TfAccountSetting that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_account_setting#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAccountSetting to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ecr_account_setting", importId: importFromId, provider });
@@ -55,9 +55,9 @@ export class AwsEcrAccountSetting extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEcrAccountSettingConfig
+  * @param options TfAccountSettingConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEcrAccountSettingConfig) {
+  public constructor(scope: Construct, id: string, config: TfAccountSettingConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ecr_account_setting',
       terraformGeneratorMetadata: {

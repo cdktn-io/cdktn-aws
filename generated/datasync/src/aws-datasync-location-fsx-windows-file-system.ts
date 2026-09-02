@@ -5,50 +5,50 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDatasyncLocationFsxWindowsFileSystemConfig extends cdktn.TerraformMetaArguments {
+export interface TfLocationFsxWindowsFileSystemConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_windows_file_system#domain AwsDatasyncLocationFsxWindowsFileSystem#domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_windows_file_system#domain TfLocationFsxWindowsFileSystem#domain}
   */
   readonly domain?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_windows_file_system#fsx_filesystem_arn AwsDatasyncLocationFsxWindowsFileSystem#fsx_filesystem_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_windows_file_system#fsx_filesystem_arn TfLocationFsxWindowsFileSystem#fsx_filesystem_arn}
   */
   readonly fsxFilesystemArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_windows_file_system#id AwsDatasyncLocationFsxWindowsFileSystem#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_windows_file_system#id TfLocationFsxWindowsFileSystem#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_windows_file_system#password AwsDatasyncLocationFsxWindowsFileSystem#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_windows_file_system#password TfLocationFsxWindowsFileSystem#password}
   */
   readonly password: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_windows_file_system#region AwsDatasyncLocationFsxWindowsFileSystem#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_windows_file_system#region TfLocationFsxWindowsFileSystem#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_windows_file_system#security_group_arns AwsDatasyncLocationFsxWindowsFileSystem#security_group_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_windows_file_system#security_group_arns TfLocationFsxWindowsFileSystem#security_group_arns}
   */
   readonly securityGroupArns: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_windows_file_system#subdirectory AwsDatasyncLocationFsxWindowsFileSystem#subdirectory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_windows_file_system#subdirectory TfLocationFsxWindowsFileSystem#subdirectory}
   */
   readonly subdirectory?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_windows_file_system#tags AwsDatasyncLocationFsxWindowsFileSystem#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_windows_file_system#tags TfLocationFsxWindowsFileSystem#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_windows_file_system#tags_all AwsDatasyncLocationFsxWindowsFileSystem#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_windows_file_system#tags_all TfLocationFsxWindowsFileSystem#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_windows_file_system#user AwsDatasyncLocationFsxWindowsFileSystem#user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_windows_file_system#user TfLocationFsxWindowsFileSystem#user}
   */
   readonly user: string;
 }
@@ -56,7 +56,7 @@ export interface AwsDatasyncLocationFsxWindowsFileSystemConfig extends cdktn.Ter
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_windows_file_system aws_datasync_location_fsx_windows_file_system}
 */
-export class AwsDatasyncLocationFsxWindowsFileSystem extends cdktn.TerraformResource {
+export class TfLocationFsxWindowsFileSystem extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -67,11 +67,11 @@ export class AwsDatasyncLocationFsxWindowsFileSystem extends cdktn.TerraformReso
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDatasyncLocationFsxWindowsFileSystem resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfLocationFsxWindowsFileSystem resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDatasyncLocationFsxWindowsFileSystem to import
-  * @param importFromId The id of the existing AwsDatasyncLocationFsxWindowsFileSystem that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_windows_file_system#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDatasyncLocationFsxWindowsFileSystem to import is found
+  * @param importToId The construct id used in the generated config for the TfLocationFsxWindowsFileSystem to import
+  * @param importFromId The id of the existing TfLocationFsxWindowsFileSystem that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_windows_file_system#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfLocationFsxWindowsFileSystem to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_datasync_location_fsx_windows_file_system", importId: importFromId, provider });
@@ -86,9 +86,9 @@ export class AwsDatasyncLocationFsxWindowsFileSystem extends cdktn.TerraformReso
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDatasyncLocationFsxWindowsFileSystemConfig
+  * @param options TfLocationFsxWindowsFileSystemConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDatasyncLocationFsxWindowsFileSystemConfig) {
+  public constructor(scope: Construct, id: string, config: TfLocationFsxWindowsFileSystemConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_datasync_location_fsx_windows_file_system',
       terraformGeneratorMetadata: {

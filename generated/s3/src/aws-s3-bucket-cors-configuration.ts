@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsS3BucketCorsConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface TfBucketCorsConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_cors_configuration#bucket AwsS3BucketCorsConfiguration#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_cors_configuration#bucket TfBucketCorsConfiguration#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_cors_configuration#expected_bucket_owner AwsS3BucketCorsConfiguration#expected_bucket_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_cors_configuration#expected_bucket_owner TfBucketCorsConfiguration#expected_bucket_owner}
   */
   readonly expectedBucketOwner?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_cors_configuration#id AwsS3BucketCorsConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_cors_configuration#id TfBucketCorsConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,21 +24,21 @@ export interface AwsS3BucketCorsConfigurationConfig extends cdktn.TerraformMetaA
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_cors_configuration#region AwsS3BucketCorsConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_cors_configuration#region TfBucketCorsConfiguration#region}
   */
   readonly region?: string;
   /**
   * cors_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_cors_configuration#cors_rule AwsS3BucketCorsConfiguration#cors_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_cors_configuration#cors_rule TfBucketCorsConfiguration#cors_rule}
   */
-  readonly corsRule: AwsS3BucketCorsConfiguration.CorsRuleProperty[] | cdktn.IResolvable;
+  readonly corsRule: TfBucketCorsConfiguration.CorsRuleProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_cors_configuration aws_s3_bucket_cors_configuration}
 */
-export class AwsS3BucketCorsConfiguration extends cdktn.TerraformResource {
+export class TfBucketCorsConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class AwsS3BucketCorsConfiguration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsS3BucketCorsConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfBucketCorsConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsS3BucketCorsConfiguration to import
-  * @param importFromId The id of the existing AwsS3BucketCorsConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_cors_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsS3BucketCorsConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the TfBucketCorsConfiguration to import
+  * @param importFromId The id of the existing TfBucketCorsConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_cors_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfBucketCorsConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3_bucket_cors_configuration", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class AwsS3BucketCorsConfiguration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsS3BucketCorsConfigurationConfig
+  * @param options TfBucketCorsConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsS3BucketCorsConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: TfBucketCorsConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3_bucket_cors_configuration',
       terraformGeneratorMetadata: {
@@ -159,11 +159,11 @@ export class AwsS3BucketCorsConfiguration extends cdktn.TerraformResource {
   }
 
   // cors_rule - computed: false, optional: false, required: true
-  private _corsRule = new AwsS3BucketCorsConfiguration.CorsRulePropertyList(this, "cors_rule", true);
+  private _corsRule = new TfBucketCorsConfiguration.CorsRulePropertyList(this, "cors_rule", true);
   public get corsRule() {
     return this._corsRule;
   }
-  public putCorsRule(value: AwsS3BucketCorsConfiguration.CorsRuleProperty[] | cdktn.IResolvable) {
+  public putCorsRule(value: TfBucketCorsConfiguration.CorsRuleProperty[] | cdktn.IResolvable) {
     this._corsRule.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -181,7 +181,7 @@ export class AwsS3BucketCorsConfiguration extends cdktn.TerraformResource {
       expected_bucket_owner: cdktn.stringToTerraform(this._expectedBucketOwner),
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      cors_rule: cdktn.listMapper(awsS3BucketCorsConfigurationCorsRulePropertyToTerraform, true)(this._corsRule.internalValue),
+      cors_rule: cdktn.listMapper(tfBucketCorsConfigurationCorsRulePropertyToTerraform, true)(this._corsRule.internalValue),
     };
   }
 
@@ -212,10 +212,10 @@ export class AwsS3BucketCorsConfiguration extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       cors_rule: {
-        value: cdktn.listMapperHcl(awsS3BucketCorsConfigurationCorsRulePropertyToHclTerraform, true)(this._corsRule.internalValue),
+        value: cdktn.listMapperHcl(tfBucketCorsConfigurationCorsRulePropertyToHclTerraform, true)(this._corsRule.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsS3BucketCorsConfiguration.CorsRulePropertyList",
+        storageClassType: "TfBucketCorsConfiguration.CorsRulePropertyList",
       },
     };
 
@@ -224,7 +224,7 @@ export class AwsS3BucketCorsConfiguration extends cdktn.TerraformResource {
   }
 }
 
-export function awsS3BucketCorsConfigurationCorsRulePropertyToTerraform(struct?: AwsS3BucketCorsConfiguration.CorsRuleProperty | cdktn.IResolvable): any {
+export function tfBucketCorsConfigurationCorsRulePropertyToTerraform(struct?: TfBucketCorsConfiguration.CorsRuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -240,7 +240,7 @@ export function awsS3BucketCorsConfigurationCorsRulePropertyToTerraform(struct?:
 }
 
 
-export function awsS3BucketCorsConfigurationCorsRulePropertyToHclTerraform(struct?: AwsS3BucketCorsConfiguration.CorsRuleProperty | cdktn.IResolvable): any {
+export function tfBucketCorsConfigurationCorsRulePropertyToHclTerraform(struct?: TfBucketCorsConfiguration.CorsRuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -289,33 +289,33 @@ export function awsS3BucketCorsConfigurationCorsRulePropertyToHclTerraform(struc
 }
 
 
-export namespace AwsS3BucketCorsConfiguration {
+export namespace TfBucketCorsConfiguration {
 export interface CorsRuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_cors_configuration#allowed_headers AwsS3BucketCorsConfiguration#allowed_headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_cors_configuration#allowed_headers TfBucketCorsConfiguration#allowed_headers}
   */
   readonly allowedHeaders?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_cors_configuration#allowed_methods AwsS3BucketCorsConfiguration#allowed_methods}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_cors_configuration#allowed_methods TfBucketCorsConfiguration#allowed_methods}
   */
   readonly allowedMethods: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_cors_configuration#allowed_origins AwsS3BucketCorsConfiguration#allowed_origins}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_cors_configuration#allowed_origins TfBucketCorsConfiguration#allowed_origins}
   */
   readonly allowedOrigins: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_cors_configuration#expose_headers AwsS3BucketCorsConfiguration#expose_headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_cors_configuration#expose_headers TfBucketCorsConfiguration#expose_headers}
   */
   readonly exposeHeaders?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_cors_configuration#id AwsS3BucketCorsConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_cors_configuration#id TfBucketCorsConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_cors_configuration#max_age_seconds AwsS3BucketCorsConfiguration#max_age_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_cors_configuration#max_age_seconds TfBucketCorsConfiguration#max_age_seconds}
   */
   readonly maxAgeSeconds?: number;
 }

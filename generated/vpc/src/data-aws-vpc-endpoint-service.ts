@@ -5,52 +5,52 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsVpcEndpointServiceConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataEndpointServiceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint_service#id DataAwsVpcEndpointService#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint_service#id TfDataEndpointService#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint_service#service DataAwsVpcEndpointService#service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint_service#service TfDataEndpointService#service}
   */
   readonly service?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint_service#service_name DataAwsVpcEndpointService#service_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint_service#service_name TfDataEndpointService#service_name}
   */
   readonly serviceName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint_service#service_regions DataAwsVpcEndpointService#service_regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint_service#service_regions TfDataEndpointService#service_regions}
   */
   readonly serviceRegions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint_service#service_type DataAwsVpcEndpointService#service_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint_service#service_type TfDataEndpointService#service_type}
   */
   readonly serviceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint_service#tags DataAwsVpcEndpointService#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint_service#tags TfDataEndpointService#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint_service#filter DataAwsVpcEndpointService#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint_service#filter TfDataEndpointService#filter}
   */
-  readonly filter?: DataAwsVpcEndpointService.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: TfDataEndpointService.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint_service#timeouts DataAwsVpcEndpointService#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint_service#timeouts TfDataEndpointService#timeouts}
   */
-  readonly timeouts?: DataAwsVpcEndpointService.TimeoutsProperty;
+  readonly timeouts?: TfDataEndpointService.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint_service aws_vpc_endpoint_service}
 */
-export class DataAwsVpcEndpointService extends cdktn.TerraformDataSource {
+export class TfDataEndpointService extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class DataAwsVpcEndpointService extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsVpcEndpointService resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataEndpointService resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsVpcEndpointService to import
-  * @param importFromId The id of the existing DataAwsVpcEndpointService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint_service#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsVpcEndpointService to import is found
+  * @param importToId The construct id used in the generated config for the TfDataEndpointService to import
+  * @param importFromId The id of the existing TfDataEndpointService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint_service#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataEndpointService to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpc_endpoint_service", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class DataAwsVpcEndpointService extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsVpcEndpointServiceConfig = {}
+  * @param options TfDataEndpointServiceConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsVpcEndpointServiceConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDataEndpointServiceConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_vpc_endpoint_service',
       terraformGeneratorMetadata: {
@@ -274,11 +274,11 @@ export class DataAwsVpcEndpointService extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataAwsVpcEndpointService.FilterPropertyList(this, "filter", true);
+  private _filter = new TfDataEndpointService.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataAwsVpcEndpointService.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: TfDataEndpointService.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -290,11 +290,11 @@ export class DataAwsVpcEndpointService extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAwsVpcEndpointService.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfDataEndpointService.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: DataAwsVpcEndpointService.TimeoutsProperty) {
+  public putTimeouts(value: TfDataEndpointService.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -317,8 +317,8 @@ export class DataAwsVpcEndpointService extends cdktn.TerraformDataSource {
       service_regions: cdktn.listMapper(cdktn.stringToTerraform, false)(this._serviceRegions),
       service_type: cdktn.stringToTerraform(this._serviceType),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      filter: cdktn.listMapper(dataAwsVpcEndpointServiceFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: dataAwsVpcEndpointServiceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(tfDataEndpointServiceFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: tfDataEndpointServiceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -361,16 +361,16 @@ export class DataAwsVpcEndpointService extends cdktn.TerraformDataSource {
         storageClassType: "stringMap",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataAwsVpcEndpointServiceFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(tfDataEndpointServiceFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataAwsVpcEndpointService.FilterPropertyList",
+        storageClassType: "TfDataEndpointService.FilterPropertyList",
       },
       timeouts: {
-        value: dataAwsVpcEndpointServiceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfDataEndpointServiceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "DataAwsVpcEndpointService.TimeoutsProperty",
+        storageClassType: "TfDataEndpointService.TimeoutsProperty",
       },
     };
 
@@ -379,7 +379,7 @@ export class DataAwsVpcEndpointService extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsVpcEndpointServiceFilterPropertyToTerraform(struct?: DataAwsVpcEndpointService.FilterProperty | cdktn.IResolvable): any {
+export function tfDataEndpointServiceFilterPropertyToTerraform(struct?: TfDataEndpointService.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -391,7 +391,7 @@ export function dataAwsVpcEndpointServiceFilterPropertyToTerraform(struct?: Data
 }
 
 
-export function dataAwsVpcEndpointServiceFilterPropertyToHclTerraform(struct?: DataAwsVpcEndpointService.FilterProperty | cdktn.IResolvable): any {
+export function tfDataEndpointServiceFilterPropertyToHclTerraform(struct?: TfDataEndpointService.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -416,7 +416,7 @@ export function dataAwsVpcEndpointServiceFilterPropertyToHclTerraform(struct?: D
 }
 
 
-export function dataAwsVpcEndpointServiceTimeoutsPropertyToTerraform(struct?: DataAwsVpcEndpointService.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDataEndpointServiceTimeoutsPropertyToTerraform(struct?: TfDataEndpointService.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -427,7 +427,7 @@ export function dataAwsVpcEndpointServiceTimeoutsPropertyToTerraform(struct?: Da
 }
 
 
-export function dataAwsVpcEndpointServiceTimeoutsPropertyToHclTerraform(struct?: DataAwsVpcEndpointService.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDataEndpointServiceTimeoutsPropertyToHclTerraform(struct?: TfDataEndpointService.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -446,14 +446,14 @@ export function dataAwsVpcEndpointServiceTimeoutsPropertyToHclTerraform(struct?:
 }
 
 
-export namespace DataAwsVpcEndpointService {
+export namespace TfDataEndpointService {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint_service#name DataAwsVpcEndpointService#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint_service#name TfDataEndpointService#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint_service#values DataAwsVpcEndpointService#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint_service#values TfDataEndpointService#values}
   */
   readonly values: string[];
 }
@@ -555,7 +555,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint_service#read DataAwsVpcEndpointService#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint_service#read TfDataEndpointService#read}
   */
   readonly read?: string;
 }

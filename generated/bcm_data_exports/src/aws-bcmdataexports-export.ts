@@ -5,29 +5,29 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsBcmdataexportsExportConfig extends cdktn.TerraformMetaArguments {
+export interface TfExportConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#tags AwsBcmdataexportsExport#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#tags TfExport#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * export block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#export AwsBcmdataexportsExport#export}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#export TfExport#export}
   */
-  readonly export?: AwsBcmdataexportsExport.ExportProperty[] | cdktn.IResolvable;
+  readonly export?: TfExport.ExportProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#timeouts AwsBcmdataexportsExport#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#timeouts TfExport#timeouts}
   */
-  readonly timeouts?: AwsBcmdataexportsExport.TimeoutsProperty;
+  readonly timeouts?: TfExport.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export aws_bcmdataexports_export}
 */
-export class AwsBcmdataexportsExport extends cdktn.TerraformResource {
+export class TfExport extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -38,11 +38,11 @@ export class AwsBcmdataexportsExport extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsBcmdataexportsExport resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfExport resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsBcmdataexportsExport to import
-  * @param importFromId The id of the existing AwsBcmdataexportsExport that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsBcmdataexportsExport to import is found
+  * @param importToId The construct id used in the generated config for the TfExport to import
+  * @param importFromId The id of the existing TfExport that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfExport to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bcmdataexports_export", importId: importFromId, provider });
@@ -57,9 +57,9 @@ export class AwsBcmdataexportsExport extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsBcmdataexportsExportConfig = {}
+  * @param options TfExportConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsBcmdataexportsExportConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfExportConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_bcmdataexports_export',
       terraformGeneratorMetadata: {
@@ -117,11 +117,11 @@ export class AwsBcmdataexportsExport extends cdktn.TerraformResource {
   }
 
   // export - computed: false, optional: true, required: false
-  private _export = new AwsBcmdataexportsExport.ExportPropertyList(this, "export", false);
+  private _export = new TfExport.ExportPropertyList(this, "export", false);
   public get export() {
     return this._export;
   }
-  public putExport(value: AwsBcmdataexportsExport.ExportProperty[] | cdktn.IResolvable) {
+  public putExport(value: TfExport.ExportProperty[] | cdktn.IResolvable) {
     this._export.internalValue = value;
   }
   public resetExport() {
@@ -133,11 +133,11 @@ export class AwsBcmdataexportsExport extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsBcmdataexportsExport.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfExport.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsBcmdataexportsExport.TimeoutsProperty) {
+  public putTimeouts(value: TfExport.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -155,8 +155,8 @@ export class AwsBcmdataexportsExport extends cdktn.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      export: cdktn.listMapper(awsBcmdataexportsExportExportPropertyToTerraform, true)(this._export.internalValue),
-      timeouts: awsBcmdataexportsExportTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      export: cdktn.listMapper(tfExportExportPropertyToTerraform, true)(this._export.internalValue),
+      timeouts: tfExportTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -169,16 +169,16 @@ export class AwsBcmdataexportsExport extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       export: {
-        value: cdktn.listMapperHcl(awsBcmdataexportsExportExportPropertyToHclTerraform, true)(this._export.internalValue),
+        value: cdktn.listMapperHcl(tfExportExportPropertyToHclTerraform, true)(this._export.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBcmdataexportsExport.ExportPropertyList",
+        storageClassType: "TfExport.ExportPropertyList",
       },
       timeouts: {
-        value: awsBcmdataexportsExportTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfExportTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsBcmdataexportsExport.TimeoutsProperty",
+        storageClassType: "TfExport.TimeoutsProperty",
       },
     };
 
@@ -187,7 +187,7 @@ export class AwsBcmdataexportsExport extends cdktn.TerraformResource {
   }
 }
 
-export function awsBcmdataexportsExportDataQueryPropertyToTerraform(struct?: AwsBcmdataexportsExport.DataQueryProperty | cdktn.IResolvable): any {
+export function tfExportDataQueryPropertyToTerraform(struct?: TfExport.DataQueryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -199,7 +199,7 @@ export function awsBcmdataexportsExportDataQueryPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsBcmdataexportsExportDataQueryPropertyToHclTerraform(struct?: AwsBcmdataexportsExport.DataQueryProperty | cdktn.IResolvable): any {
+export function tfExportDataQueryPropertyToHclTerraform(struct?: TfExport.DataQueryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -224,7 +224,7 @@ export function awsBcmdataexportsExportDataQueryPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsBcmdataexportsExportS3OutputConfigurationsPropertyToTerraform(struct?: AwsBcmdataexportsExport.S3OutputConfigurationsProperty | cdktn.IResolvable): any {
+export function tfExportS3OutputConfigurationsPropertyToTerraform(struct?: TfExport.S3OutputConfigurationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -238,7 +238,7 @@ export function awsBcmdataexportsExportS3OutputConfigurationsPropertyToTerraform
 }
 
 
-export function awsBcmdataexportsExportS3OutputConfigurationsPropertyToHclTerraform(struct?: AwsBcmdataexportsExport.S3OutputConfigurationsProperty | cdktn.IResolvable): any {
+export function tfExportS3OutputConfigurationsPropertyToHclTerraform(struct?: TfExport.S3OutputConfigurationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -275,7 +275,7 @@ export function awsBcmdataexportsExportS3OutputConfigurationsPropertyToHclTerraf
 }
 
 
-export function awsBcmdataexportsExportS3DestinationPropertyToTerraform(struct?: AwsBcmdataexportsExport.S3DestinationProperty | cdktn.IResolvable): any {
+export function tfExportS3DestinationPropertyToTerraform(struct?: TfExport.S3DestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -284,12 +284,12 @@ export function awsBcmdataexportsExportS3DestinationPropertyToTerraform(struct?:
     s3_bucket: cdktn.stringToTerraform(struct!.s3Bucket),
     s3_prefix: cdktn.stringToTerraform(struct!.s3Prefix),
     s3_region: cdktn.stringToTerraform(struct!.s3Region),
-    s3_output_configurations: cdktn.listMapper(awsBcmdataexportsExportS3OutputConfigurationsPropertyToTerraform, true)(struct!.s3OutputConfigurations),
+    s3_output_configurations: cdktn.listMapper(tfExportS3OutputConfigurationsPropertyToTerraform, true)(struct!.s3OutputConfigurations),
   }
 }
 
 
-export function awsBcmdataexportsExportS3DestinationPropertyToHclTerraform(struct?: AwsBcmdataexportsExport.S3DestinationProperty | cdktn.IResolvable): any {
+export function tfExportS3DestinationPropertyToHclTerraform(struct?: TfExport.S3DestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -314,7 +314,7 @@ export function awsBcmdataexportsExportS3DestinationPropertyToHclTerraform(struc
       storageClassType: "string",
     },
     s3_output_configurations: {
-      value: cdktn.listMapperHcl(awsBcmdataexportsExportS3OutputConfigurationsPropertyToHclTerraform, true)(struct!.s3OutputConfigurations),
+      value: cdktn.listMapperHcl(tfExportS3OutputConfigurationsPropertyToHclTerraform, true)(struct!.s3OutputConfigurations),
       isBlock: true,
       type: "list",
       storageClassType: "S3OutputConfigurationsPropertyList",
@@ -326,25 +326,25 @@ export function awsBcmdataexportsExportS3DestinationPropertyToHclTerraform(struc
 }
 
 
-export function awsBcmdataexportsExportDestinationConfigurationsPropertyToTerraform(struct?: AwsBcmdataexportsExport.DestinationConfigurationsProperty | cdktn.IResolvable): any {
+export function tfExportDestinationConfigurationsPropertyToTerraform(struct?: TfExport.DestinationConfigurationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    s3_destination: cdktn.listMapper(awsBcmdataexportsExportS3DestinationPropertyToTerraform, true)(struct!.s3Destination),
+    s3_destination: cdktn.listMapper(tfExportS3DestinationPropertyToTerraform, true)(struct!.s3Destination),
   }
 }
 
 
-export function awsBcmdataexportsExportDestinationConfigurationsPropertyToHclTerraform(struct?: AwsBcmdataexportsExport.DestinationConfigurationsProperty | cdktn.IResolvable): any {
+export function tfExportDestinationConfigurationsPropertyToHclTerraform(struct?: TfExport.DestinationConfigurationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     s3_destination: {
-      value: cdktn.listMapperHcl(awsBcmdataexportsExportS3DestinationPropertyToHclTerraform, true)(struct!.s3Destination),
+      value: cdktn.listMapperHcl(tfExportS3DestinationPropertyToHclTerraform, true)(struct!.s3Destination),
       isBlock: true,
       type: "list",
       storageClassType: "S3DestinationPropertyList",
@@ -356,7 +356,7 @@ export function awsBcmdataexportsExportDestinationConfigurationsPropertyToHclTer
 }
 
 
-export function awsBcmdataexportsExportRefreshCadencePropertyToTerraform(struct?: AwsBcmdataexportsExport.RefreshCadenceProperty | cdktn.IResolvable): any {
+export function tfExportRefreshCadencePropertyToTerraform(struct?: TfExport.RefreshCadenceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -367,7 +367,7 @@ export function awsBcmdataexportsExportRefreshCadencePropertyToTerraform(struct?
 }
 
 
-export function awsBcmdataexportsExportRefreshCadencePropertyToHclTerraform(struct?: AwsBcmdataexportsExport.RefreshCadenceProperty | cdktn.IResolvable): any {
+export function tfExportRefreshCadencePropertyToHclTerraform(struct?: TfExport.RefreshCadenceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -386,7 +386,7 @@ export function awsBcmdataexportsExportRefreshCadencePropertyToHclTerraform(stru
 }
 
 
-export function awsBcmdataexportsExportExportPropertyToTerraform(struct?: AwsBcmdataexportsExport.ExportProperty | cdktn.IResolvable): any {
+export function tfExportExportPropertyToTerraform(struct?: TfExport.ExportProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -394,14 +394,14 @@ export function awsBcmdataexportsExportExportPropertyToTerraform(struct?: AwsBcm
   return {
     description: cdktn.stringToTerraform(struct!.description),
     name: cdktn.stringToTerraform(struct!.name),
-    data_query: cdktn.listMapper(awsBcmdataexportsExportDataQueryPropertyToTerraform, true)(struct!.dataQuery),
-    destination_configurations: cdktn.listMapper(awsBcmdataexportsExportDestinationConfigurationsPropertyToTerraform, true)(struct!.destinationConfigurations),
-    refresh_cadence: cdktn.listMapper(awsBcmdataexportsExportRefreshCadencePropertyToTerraform, true)(struct!.refreshCadence),
+    data_query: cdktn.listMapper(tfExportDataQueryPropertyToTerraform, true)(struct!.dataQuery),
+    destination_configurations: cdktn.listMapper(tfExportDestinationConfigurationsPropertyToTerraform, true)(struct!.destinationConfigurations),
+    refresh_cadence: cdktn.listMapper(tfExportRefreshCadencePropertyToTerraform, true)(struct!.refreshCadence),
   }
 }
 
 
-export function awsBcmdataexportsExportExportPropertyToHclTerraform(struct?: AwsBcmdataexportsExport.ExportProperty | cdktn.IResolvable): any {
+export function tfExportExportPropertyToHclTerraform(struct?: TfExport.ExportProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -420,19 +420,19 @@ export function awsBcmdataexportsExportExportPropertyToHclTerraform(struct?: Aws
       storageClassType: "string",
     },
     data_query: {
-      value: cdktn.listMapperHcl(awsBcmdataexportsExportDataQueryPropertyToHclTerraform, true)(struct!.dataQuery),
+      value: cdktn.listMapperHcl(tfExportDataQueryPropertyToHclTerraform, true)(struct!.dataQuery),
       isBlock: true,
       type: "list",
       storageClassType: "DataQueryPropertyList",
     },
     destination_configurations: {
-      value: cdktn.listMapperHcl(awsBcmdataexportsExportDestinationConfigurationsPropertyToHclTerraform, true)(struct!.destinationConfigurations),
+      value: cdktn.listMapperHcl(tfExportDestinationConfigurationsPropertyToHclTerraform, true)(struct!.destinationConfigurations),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationConfigurationsPropertyList",
     },
     refresh_cadence: {
-      value: cdktn.listMapperHcl(awsBcmdataexportsExportRefreshCadencePropertyToHclTerraform, true)(struct!.refreshCadence),
+      value: cdktn.listMapperHcl(tfExportRefreshCadencePropertyToHclTerraform, true)(struct!.refreshCadence),
       isBlock: true,
       type: "list",
       storageClassType: "RefreshCadencePropertyList",
@@ -444,7 +444,7 @@ export function awsBcmdataexportsExportExportPropertyToHclTerraform(struct?: Aws
 }
 
 
-export function awsBcmdataexportsExportTimeoutsPropertyToTerraform(struct?: AwsBcmdataexportsExport.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfExportTimeoutsPropertyToTerraform(struct?: TfExport.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -456,7 +456,7 @@ export function awsBcmdataexportsExportTimeoutsPropertyToTerraform(struct?: AwsB
 }
 
 
-export function awsBcmdataexportsExportTimeoutsPropertyToHclTerraform(struct?: AwsBcmdataexportsExport.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfExportTimeoutsPropertyToHclTerraform(struct?: TfExport.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -481,14 +481,14 @@ export function awsBcmdataexportsExportTimeoutsPropertyToHclTerraform(struct?: A
 }
 
 
-export namespace AwsBcmdataexportsExport {
+export namespace TfExport {
 export interface DataQueryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#query_statement AwsBcmdataexportsExport#query_statement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#query_statement TfExport#query_statement}
   */
   readonly queryStatement: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#table_configurations AwsBcmdataexportsExport#table_configurations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#table_configurations TfExport#table_configurations}
   */
   readonly tableConfigurations?: { [key: string]: { [key: string]: string } } | cdktn.IResolvable;
 }
@@ -593,19 +593,19 @@ export class DataQueryPropertyList extends cdktn.ComplexList {
 }
 export interface S3OutputConfigurationsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#compression AwsBcmdataexportsExport#compression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#compression TfExport#compression}
   */
   readonly compression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#format AwsBcmdataexportsExport#format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#format TfExport#format}
   */
   readonly format: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#output_type AwsBcmdataexportsExport#output_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#output_type TfExport#output_type}
   */
   readonly outputType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#overwrite AwsBcmdataexportsExport#overwrite}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#overwrite TfExport#overwrite}
   */
   readonly overwrite: string;
 }
@@ -745,21 +745,21 @@ export class S3OutputConfigurationsPropertyList extends cdktn.ComplexList {
 }
 export interface S3DestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#s3_bucket AwsBcmdataexportsExport#s3_bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#s3_bucket TfExport#s3_bucket}
   */
   readonly s3Bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#s3_prefix AwsBcmdataexportsExport#s3_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#s3_prefix TfExport#s3_prefix}
   */
   readonly s3Prefix: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#s3_region AwsBcmdataexportsExport#s3_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#s3_region TfExport#s3_region}
   */
   readonly s3Region: string;
   /**
   * s3_output_configurations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#s3_output_configurations AwsBcmdataexportsExport#s3_output_configurations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#s3_output_configurations TfExport#s3_output_configurations}
   */
   readonly s3OutputConfigurations?: S3OutputConfigurationsProperty[] | cdktn.IResolvable;
 }
@@ -904,7 +904,7 @@ export interface DestinationConfigurationsProperty {
   /**
   * s3_destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#s3_destination AwsBcmdataexportsExport#s3_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#s3_destination TfExport#s3_destination}
   */
   readonly s3Destination?: S3DestinationProperty[] | cdktn.IResolvable;
 }
@@ -990,7 +990,7 @@ export class DestinationConfigurationsPropertyList extends cdktn.ComplexList {
 }
 export interface RefreshCadenceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#frequency AwsBcmdataexportsExport#frequency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#frequency TfExport#frequency}
   */
   readonly frequency: string;
 }
@@ -1073,29 +1073,29 @@ export class RefreshCadencePropertyList extends cdktn.ComplexList {
 }
 export interface ExportProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#description AwsBcmdataexportsExport#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#description TfExport#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#name AwsBcmdataexportsExport#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#name TfExport#name}
   */
   readonly name: string;
   /**
   * data_query block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#data_query AwsBcmdataexportsExport#data_query}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#data_query TfExport#data_query}
   */
   readonly dataQuery?: DataQueryProperty[] | cdktn.IResolvable;
   /**
   * destination_configurations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#destination_configurations AwsBcmdataexportsExport#destination_configurations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#destination_configurations TfExport#destination_configurations}
   */
   readonly destinationConfigurations?: DestinationConfigurationsProperty[] | cdktn.IResolvable;
   /**
   * refresh_cadence block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#refresh_cadence AwsBcmdataexportsExport#refresh_cadence}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#refresh_cadence TfExport#refresh_cadence}
   */
   readonly refreshCadence?: RefreshCadenceProperty[] | cdktn.IResolvable;
 }
@@ -1273,13 +1273,13 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#create AwsBcmdataexportsExport#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#create TfExport#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#update AwsBcmdataexportsExport#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bcmdataexports_export#update TfExport#update}
   */
   readonly update?: string;
 }

@@ -5,72 +5,72 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsQuicksightThemeConfig extends cdktn.TerraformMetaArguments {
+export interface TfThemeConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#aws_account_id AwsQuicksightTheme#aws_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#aws_account_id TfTheme#aws_account_id}
   */
   readonly awsAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#base_theme_id AwsQuicksightTheme#base_theme_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#base_theme_id TfTheme#base_theme_id}
   */
   readonly baseThemeId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#id AwsQuicksightTheme#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#id TfTheme#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#name AwsQuicksightTheme#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#name TfTheme#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#region AwsQuicksightTheme#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#region TfTheme#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#tags AwsQuicksightTheme#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#tags TfTheme#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#tags_all AwsQuicksightTheme#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#tags_all TfTheme#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#theme_id AwsQuicksightTheme#theme_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#theme_id TfTheme#theme_id}
   */
   readonly themeId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#version_description AwsQuicksightTheme#version_description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#version_description TfTheme#version_description}
   */
   readonly versionDescription?: string;
   /**
   * configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#configuration AwsQuicksightTheme#configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#configuration TfTheme#configuration}
   */
-  readonly configuration?: AwsQuicksightTheme.ConfigurationProperty;
+  readonly configuration?: TfTheme.ConfigurationProperty;
   /**
   * permissions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#permissions AwsQuicksightTheme#permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#permissions TfTheme#permissions}
   */
-  readonly permissions?: AwsQuicksightTheme.PermissionsProperty[] | cdktn.IResolvable;
+  readonly permissions?: TfTheme.PermissionsProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#timeouts AwsQuicksightTheme#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#timeouts TfTheme#timeouts}
   */
-  readonly timeouts?: AwsQuicksightTheme.TimeoutsProperty;
+  readonly timeouts?: TfTheme.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme aws_quicksight_theme}
 */
-export class AwsQuicksightTheme extends cdktn.TerraformResource {
+export class TfTheme extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -81,11 +81,11 @@ export class AwsQuicksightTheme extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsQuicksightTheme resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfTheme resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsQuicksightTheme to import
-  * @param importFromId The id of the existing AwsQuicksightTheme that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsQuicksightTheme to import is found
+  * @param importToId The construct id used in the generated config for the TfTheme to import
+  * @param importFromId The id of the existing TfTheme that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfTheme to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_quicksight_theme", importId: importFromId, provider });
@@ -100,9 +100,9 @@ export class AwsQuicksightTheme extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsQuicksightThemeConfig
+  * @param options TfThemeConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsQuicksightThemeConfig) {
+  public constructor(scope: Construct, id: string, config: TfThemeConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_quicksight_theme',
       terraformGeneratorMetadata: {
@@ -297,11 +297,11 @@ export class AwsQuicksightTheme extends cdktn.TerraformResource {
   }
 
   // configuration - computed: false, optional: true, required: false
-  private _configuration = new AwsQuicksightTheme.ConfigurationPropertyOutputReference(this, "configuration");
+  private _configuration = new TfTheme.ConfigurationPropertyOutputReference(this, "configuration");
   public get configuration() {
     return this._configuration;
   }
-  public putConfiguration(value: AwsQuicksightTheme.ConfigurationProperty) {
+  public putConfiguration(value: TfTheme.ConfigurationProperty) {
     this._configuration.internalValue = value;
   }
   public resetConfiguration() {
@@ -313,11 +313,11 @@ export class AwsQuicksightTheme extends cdktn.TerraformResource {
   }
 
   // permissions - computed: false, optional: true, required: false
-  private _permissions = new AwsQuicksightTheme.PermissionsPropertyList(this, "permissions", true);
+  private _permissions = new TfTheme.PermissionsPropertyList(this, "permissions", true);
   public get permissions() {
     return this._permissions;
   }
-  public putPermissions(value: AwsQuicksightTheme.PermissionsProperty[] | cdktn.IResolvable) {
+  public putPermissions(value: TfTheme.PermissionsProperty[] | cdktn.IResolvable) {
     this._permissions.internalValue = value;
   }
   public resetPermissions() {
@@ -329,11 +329,11 @@ export class AwsQuicksightTheme extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsQuicksightTheme.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfTheme.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsQuicksightTheme.TimeoutsProperty) {
+  public putTimeouts(value: TfTheme.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -359,9 +359,9 @@ export class AwsQuicksightTheme extends cdktn.TerraformResource {
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       theme_id: cdktn.stringToTerraform(this._themeId),
       version_description: cdktn.stringToTerraform(this._versionDescription),
-      configuration: awsQuicksightThemeConfigurationPropertyToTerraform(this._configuration.internalValue),
-      permissions: cdktn.listMapper(awsQuicksightThemePermissionsPropertyToTerraform, true)(this._permissions.internalValue),
-      timeouts: awsQuicksightThemeTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      configuration: tfThemeConfigurationPropertyToTerraform(this._configuration.internalValue),
+      permissions: cdktn.listMapper(tfThemePermissionsPropertyToTerraform, true)(this._permissions.internalValue),
+      timeouts: tfThemeTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -422,22 +422,22 @@ export class AwsQuicksightTheme extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       configuration: {
-        value: awsQuicksightThemeConfigurationPropertyToHclTerraform(this._configuration.internalValue),
+        value: tfThemeConfigurationPropertyToHclTerraform(this._configuration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsQuicksightTheme.ConfigurationPropertyList",
+        storageClassType: "TfTheme.ConfigurationPropertyList",
       },
       permissions: {
-        value: cdktn.listMapperHcl(awsQuicksightThemePermissionsPropertyToHclTerraform, true)(this._permissions.internalValue),
+        value: cdktn.listMapperHcl(tfThemePermissionsPropertyToHclTerraform, true)(this._permissions.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsQuicksightTheme.PermissionsPropertyList",
+        storageClassType: "TfTheme.PermissionsPropertyList",
       },
       timeouts: {
-        value: awsQuicksightThemeTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfThemeTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsQuicksightTheme.TimeoutsProperty",
+        storageClassType: "TfTheme.TimeoutsProperty",
       },
     };
 
@@ -446,7 +446,7 @@ export class AwsQuicksightTheme extends cdktn.TerraformResource {
   }
 }
 
-export function awsQuicksightThemeDataColorPalettePropertyToTerraform(struct?: AwsQuicksightTheme.DataColorPalettePropertyOutputReference | AwsQuicksightTheme.DataColorPaletteProperty): any {
+export function tfThemeDataColorPalettePropertyToTerraform(struct?: TfTheme.DataColorPalettePropertyOutputReference | TfTheme.DataColorPaletteProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -459,7 +459,7 @@ export function awsQuicksightThemeDataColorPalettePropertyToTerraform(struct?: A
 }
 
 
-export function awsQuicksightThemeDataColorPalettePropertyToHclTerraform(struct?: AwsQuicksightTheme.DataColorPalettePropertyOutputReference | AwsQuicksightTheme.DataColorPaletteProperty): any {
+export function tfThemeDataColorPalettePropertyToHclTerraform(struct?: TfTheme.DataColorPalettePropertyOutputReference | TfTheme.DataColorPaletteProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -490,7 +490,7 @@ export function awsQuicksightThemeDataColorPalettePropertyToHclTerraform(struct?
 }
 
 
-export function awsQuicksightThemeBorderPropertyToTerraform(struct?: AwsQuicksightTheme.BorderPropertyOutputReference | AwsQuicksightTheme.BorderProperty): any {
+export function tfThemeBorderPropertyToTerraform(struct?: TfTheme.BorderPropertyOutputReference | TfTheme.BorderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -501,7 +501,7 @@ export function awsQuicksightThemeBorderPropertyToTerraform(struct?: AwsQuicksig
 }
 
 
-export function awsQuicksightThemeBorderPropertyToHclTerraform(struct?: AwsQuicksightTheme.BorderPropertyOutputReference | AwsQuicksightTheme.BorderProperty): any {
+export function tfThemeBorderPropertyToHclTerraform(struct?: TfTheme.BorderPropertyOutputReference | TfTheme.BorderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -520,25 +520,25 @@ export function awsQuicksightThemeBorderPropertyToHclTerraform(struct?: AwsQuick
 }
 
 
-export function awsQuicksightThemeTilePropertyToTerraform(struct?: AwsQuicksightTheme.TilePropertyOutputReference | AwsQuicksightTheme.TileProperty): any {
+export function tfThemeTilePropertyToTerraform(struct?: TfTheme.TilePropertyOutputReference | TfTheme.TileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    border: awsQuicksightThemeBorderPropertyToTerraform(struct!.border),
+    border: tfThemeBorderPropertyToTerraform(struct!.border),
   }
 }
 
 
-export function awsQuicksightThemeTilePropertyToHclTerraform(struct?: AwsQuicksightTheme.TilePropertyOutputReference | AwsQuicksightTheme.TileProperty): any {
+export function tfThemeTilePropertyToHclTerraform(struct?: TfTheme.TilePropertyOutputReference | TfTheme.TileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     border: {
-      value: awsQuicksightThemeBorderPropertyToHclTerraform(struct!.border),
+      value: tfThemeBorderPropertyToHclTerraform(struct!.border),
       isBlock: true,
       type: "list",
       storageClassType: "BorderPropertyList",
@@ -550,7 +550,7 @@ export function awsQuicksightThemeTilePropertyToHclTerraform(struct?: AwsQuicksi
 }
 
 
-export function awsQuicksightThemeGutterPropertyToTerraform(struct?: AwsQuicksightTheme.GutterPropertyOutputReference | AwsQuicksightTheme.GutterProperty): any {
+export function tfThemeGutterPropertyToTerraform(struct?: TfTheme.GutterPropertyOutputReference | TfTheme.GutterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -561,7 +561,7 @@ export function awsQuicksightThemeGutterPropertyToTerraform(struct?: AwsQuicksig
 }
 
 
-export function awsQuicksightThemeGutterPropertyToHclTerraform(struct?: AwsQuicksightTheme.GutterPropertyOutputReference | AwsQuicksightTheme.GutterProperty): any {
+export function tfThemeGutterPropertyToHclTerraform(struct?: TfTheme.GutterPropertyOutputReference | TfTheme.GutterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -580,7 +580,7 @@ export function awsQuicksightThemeGutterPropertyToHclTerraform(struct?: AwsQuick
 }
 
 
-export function awsQuicksightThemeMarginPropertyToTerraform(struct?: AwsQuicksightTheme.MarginPropertyOutputReference | AwsQuicksightTheme.MarginProperty): any {
+export function tfThemeMarginPropertyToTerraform(struct?: TfTheme.MarginPropertyOutputReference | TfTheme.MarginProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -591,7 +591,7 @@ export function awsQuicksightThemeMarginPropertyToTerraform(struct?: AwsQuicksig
 }
 
 
-export function awsQuicksightThemeMarginPropertyToHclTerraform(struct?: AwsQuicksightTheme.MarginPropertyOutputReference | AwsQuicksightTheme.MarginProperty): any {
+export function tfThemeMarginPropertyToHclTerraform(struct?: TfTheme.MarginPropertyOutputReference | TfTheme.MarginProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -610,32 +610,32 @@ export function awsQuicksightThemeMarginPropertyToHclTerraform(struct?: AwsQuick
 }
 
 
-export function awsQuicksightThemeTileLayoutPropertyToTerraform(struct?: AwsQuicksightTheme.TileLayoutPropertyOutputReference | AwsQuicksightTheme.TileLayoutProperty): any {
+export function tfThemeTileLayoutPropertyToTerraform(struct?: TfTheme.TileLayoutPropertyOutputReference | TfTheme.TileLayoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    gutter: awsQuicksightThemeGutterPropertyToTerraform(struct!.gutter),
-    margin: awsQuicksightThemeMarginPropertyToTerraform(struct!.margin),
+    gutter: tfThemeGutterPropertyToTerraform(struct!.gutter),
+    margin: tfThemeMarginPropertyToTerraform(struct!.margin),
   }
 }
 
 
-export function awsQuicksightThemeTileLayoutPropertyToHclTerraform(struct?: AwsQuicksightTheme.TileLayoutPropertyOutputReference | AwsQuicksightTheme.TileLayoutProperty): any {
+export function tfThemeTileLayoutPropertyToHclTerraform(struct?: TfTheme.TileLayoutPropertyOutputReference | TfTheme.TileLayoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     gutter: {
-      value: awsQuicksightThemeGutterPropertyToHclTerraform(struct!.gutter),
+      value: tfThemeGutterPropertyToHclTerraform(struct!.gutter),
       isBlock: true,
       type: "list",
       storageClassType: "GutterPropertyList",
     },
     margin: {
-      value: awsQuicksightThemeMarginPropertyToHclTerraform(struct!.margin),
+      value: tfThemeMarginPropertyToHclTerraform(struct!.margin),
       isBlock: true,
       type: "list",
       storageClassType: "MarginPropertyList",
@@ -647,32 +647,32 @@ export function awsQuicksightThemeTileLayoutPropertyToHclTerraform(struct?: AwsQ
 }
 
 
-export function awsQuicksightThemeSheetPropertyToTerraform(struct?: AwsQuicksightTheme.SheetPropertyOutputReference | AwsQuicksightTheme.SheetProperty): any {
+export function tfThemeSheetPropertyToTerraform(struct?: TfTheme.SheetPropertyOutputReference | TfTheme.SheetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    tile: awsQuicksightThemeTilePropertyToTerraform(struct!.tile),
-    tile_layout: awsQuicksightThemeTileLayoutPropertyToTerraform(struct!.tileLayout),
+    tile: tfThemeTilePropertyToTerraform(struct!.tile),
+    tile_layout: tfThemeTileLayoutPropertyToTerraform(struct!.tileLayout),
   }
 }
 
 
-export function awsQuicksightThemeSheetPropertyToHclTerraform(struct?: AwsQuicksightTheme.SheetPropertyOutputReference | AwsQuicksightTheme.SheetProperty): any {
+export function tfThemeSheetPropertyToHclTerraform(struct?: TfTheme.SheetPropertyOutputReference | TfTheme.SheetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     tile: {
-      value: awsQuicksightThemeTilePropertyToHclTerraform(struct!.tile),
+      value: tfThemeTilePropertyToHclTerraform(struct!.tile),
       isBlock: true,
       type: "list",
       storageClassType: "TilePropertyList",
     },
     tile_layout: {
-      value: awsQuicksightThemeTileLayoutPropertyToHclTerraform(struct!.tileLayout),
+      value: tfThemeTileLayoutPropertyToHclTerraform(struct!.tileLayout),
       isBlock: true,
       type: "list",
       storageClassType: "TileLayoutPropertyList",
@@ -684,7 +684,7 @@ export function awsQuicksightThemeSheetPropertyToHclTerraform(struct?: AwsQuicks
 }
 
 
-export function awsQuicksightThemeFontFamiliesPropertyToTerraform(struct?: AwsQuicksightTheme.FontFamiliesProperty | cdktn.IResolvable): any {
+export function tfThemeFontFamiliesPropertyToTerraform(struct?: TfTheme.FontFamiliesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -695,7 +695,7 @@ export function awsQuicksightThemeFontFamiliesPropertyToTerraform(struct?: AwsQu
 }
 
 
-export function awsQuicksightThemeFontFamiliesPropertyToHclTerraform(struct?: AwsQuicksightTheme.FontFamiliesProperty | cdktn.IResolvable): any {
+export function tfThemeFontFamiliesPropertyToHclTerraform(struct?: TfTheme.FontFamiliesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -714,25 +714,25 @@ export function awsQuicksightThemeFontFamiliesPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsQuicksightThemeTypographyPropertyToTerraform(struct?: AwsQuicksightTheme.TypographyPropertyOutputReference | AwsQuicksightTheme.TypographyProperty): any {
+export function tfThemeTypographyPropertyToTerraform(struct?: TfTheme.TypographyPropertyOutputReference | TfTheme.TypographyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    font_families: cdktn.listMapper(awsQuicksightThemeFontFamiliesPropertyToTerraform, true)(struct!.fontFamilies),
+    font_families: cdktn.listMapper(tfThemeFontFamiliesPropertyToTerraform, true)(struct!.fontFamilies),
   }
 }
 
 
-export function awsQuicksightThemeTypographyPropertyToHclTerraform(struct?: AwsQuicksightTheme.TypographyPropertyOutputReference | AwsQuicksightTheme.TypographyProperty): any {
+export function tfThemeTypographyPropertyToHclTerraform(struct?: TfTheme.TypographyPropertyOutputReference | TfTheme.TypographyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     font_families: {
-      value: cdktn.listMapperHcl(awsQuicksightThemeFontFamiliesPropertyToHclTerraform, true)(struct!.fontFamilies),
+      value: cdktn.listMapperHcl(tfThemeFontFamiliesPropertyToHclTerraform, true)(struct!.fontFamilies),
       isBlock: true,
       type: "list",
       storageClassType: "FontFamiliesPropertyList",
@@ -744,7 +744,7 @@ export function awsQuicksightThemeTypographyPropertyToHclTerraform(struct?: AwsQ
 }
 
 
-export function awsQuicksightThemeUiColorPalettePropertyToTerraform(struct?: AwsQuicksightTheme.UiColorPalettePropertyOutputReference | AwsQuicksightTheme.UiColorPaletteProperty): any {
+export function tfThemeUiColorPalettePropertyToTerraform(struct?: TfTheme.UiColorPalettePropertyOutputReference | TfTheme.UiColorPaletteProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -770,7 +770,7 @@ export function awsQuicksightThemeUiColorPalettePropertyToTerraform(struct?: Aws
 }
 
 
-export function awsQuicksightThemeUiColorPalettePropertyToHclTerraform(struct?: AwsQuicksightTheme.UiColorPalettePropertyOutputReference | AwsQuicksightTheme.UiColorPaletteProperty): any {
+export function tfThemeUiColorPalettePropertyToHclTerraform(struct?: TfTheme.UiColorPalettePropertyOutputReference | TfTheme.UiColorPaletteProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -879,46 +879,46 @@ export function awsQuicksightThemeUiColorPalettePropertyToHclTerraform(struct?: 
 }
 
 
-export function awsQuicksightThemeConfigurationPropertyToTerraform(struct?: AwsQuicksightTheme.ConfigurationPropertyOutputReference | AwsQuicksightTheme.ConfigurationProperty): any {
+export function tfThemeConfigurationPropertyToTerraform(struct?: TfTheme.ConfigurationPropertyOutputReference | TfTheme.ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    data_color_palette: awsQuicksightThemeDataColorPalettePropertyToTerraform(struct!.dataColorPalette),
-    sheet: awsQuicksightThemeSheetPropertyToTerraform(struct!.sheet),
-    typography: awsQuicksightThemeTypographyPropertyToTerraform(struct!.typography),
-    ui_color_palette: awsQuicksightThemeUiColorPalettePropertyToTerraform(struct!.uiColorPalette),
+    data_color_palette: tfThemeDataColorPalettePropertyToTerraform(struct!.dataColorPalette),
+    sheet: tfThemeSheetPropertyToTerraform(struct!.sheet),
+    typography: tfThemeTypographyPropertyToTerraform(struct!.typography),
+    ui_color_palette: tfThemeUiColorPalettePropertyToTerraform(struct!.uiColorPalette),
   }
 }
 
 
-export function awsQuicksightThemeConfigurationPropertyToHclTerraform(struct?: AwsQuicksightTheme.ConfigurationPropertyOutputReference | AwsQuicksightTheme.ConfigurationProperty): any {
+export function tfThemeConfigurationPropertyToHclTerraform(struct?: TfTheme.ConfigurationPropertyOutputReference | TfTheme.ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     data_color_palette: {
-      value: awsQuicksightThemeDataColorPalettePropertyToHclTerraform(struct!.dataColorPalette),
+      value: tfThemeDataColorPalettePropertyToHclTerraform(struct!.dataColorPalette),
       isBlock: true,
       type: "list",
       storageClassType: "DataColorPalettePropertyList",
     },
     sheet: {
-      value: awsQuicksightThemeSheetPropertyToHclTerraform(struct!.sheet),
+      value: tfThemeSheetPropertyToHclTerraform(struct!.sheet),
       isBlock: true,
       type: "list",
       storageClassType: "SheetPropertyList",
     },
     typography: {
-      value: awsQuicksightThemeTypographyPropertyToHclTerraform(struct!.typography),
+      value: tfThemeTypographyPropertyToHclTerraform(struct!.typography),
       isBlock: true,
       type: "list",
       storageClassType: "TypographyPropertyList",
     },
     ui_color_palette: {
-      value: awsQuicksightThemeUiColorPalettePropertyToHclTerraform(struct!.uiColorPalette),
+      value: tfThemeUiColorPalettePropertyToHclTerraform(struct!.uiColorPalette),
       isBlock: true,
       type: "list",
       storageClassType: "UiColorPalettePropertyList",
@@ -930,7 +930,7 @@ export function awsQuicksightThemeConfigurationPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsQuicksightThemePermissionsPropertyToTerraform(struct?: AwsQuicksightTheme.PermissionsProperty | cdktn.IResolvable): any {
+export function tfThemePermissionsPropertyToTerraform(struct?: TfTheme.PermissionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -942,7 +942,7 @@ export function awsQuicksightThemePermissionsPropertyToTerraform(struct?: AwsQui
 }
 
 
-export function awsQuicksightThemePermissionsPropertyToHclTerraform(struct?: AwsQuicksightTheme.PermissionsProperty | cdktn.IResolvable): any {
+export function tfThemePermissionsPropertyToHclTerraform(struct?: TfTheme.PermissionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -967,7 +967,7 @@ export function awsQuicksightThemePermissionsPropertyToHclTerraform(struct?: Aws
 }
 
 
-export function awsQuicksightThemeTimeoutsPropertyToTerraform(struct?: AwsQuicksightTheme.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfThemeTimeoutsPropertyToTerraform(struct?: TfTheme.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -980,7 +980,7 @@ export function awsQuicksightThemeTimeoutsPropertyToTerraform(struct?: AwsQuicks
 }
 
 
-export function awsQuicksightThemeTimeoutsPropertyToHclTerraform(struct?: AwsQuicksightTheme.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfThemeTimeoutsPropertyToHclTerraform(struct?: TfTheme.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1011,18 +1011,18 @@ export function awsQuicksightThemeTimeoutsPropertyToHclTerraform(struct?: AwsQui
 }
 
 
-export namespace AwsQuicksightTheme {
+export namespace TfTheme {
 export interface DataColorPaletteProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#colors AwsQuicksightTheme#colors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#colors TfTheme#colors}
   */
   readonly colors?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#empty_fill_color AwsQuicksightTheme#empty_fill_color}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#empty_fill_color TfTheme#empty_fill_color}
   */
   readonly emptyFillColor?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#min_max_gradient AwsQuicksightTheme#min_max_gradient}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#min_max_gradient TfTheme#min_max_gradient}
   */
   readonly minMaxGradient?: string[];
 }
@@ -1120,7 +1120,7 @@ export class DataColorPalettePropertyOutputReference extends cdktn.ComplexObject
 }
 export interface BorderProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#show AwsQuicksightTheme#show}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#show TfTheme#show}
   */
   readonly show?: boolean | cdktn.IResolvable;
 }
@@ -1176,7 +1176,7 @@ export interface TileProperty {
   /**
   * border block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#border AwsQuicksightTheme#border}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#border TfTheme#border}
   */
   readonly border?: BorderProperty;
 }
@@ -1230,7 +1230,7 @@ export class TilePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface GutterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#show AwsQuicksightTheme#show}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#show TfTheme#show}
   */
   readonly show?: boolean | cdktn.IResolvable;
 }
@@ -1284,7 +1284,7 @@ export class GutterPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface MarginProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#show AwsQuicksightTheme#show}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#show TfTheme#show}
   */
   readonly show?: boolean | cdktn.IResolvable;
 }
@@ -1340,13 +1340,13 @@ export interface TileLayoutProperty {
   /**
   * gutter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#gutter AwsQuicksightTheme#gutter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#gutter TfTheme#gutter}
   */
   readonly gutter?: GutterProperty;
   /**
   * margin block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#margin AwsQuicksightTheme#margin}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#margin TfTheme#margin}
   */
   readonly margin?: MarginProperty;
 }
@@ -1424,13 +1424,13 @@ export interface SheetProperty {
   /**
   * tile block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#tile AwsQuicksightTheme#tile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#tile TfTheme#tile}
   */
   readonly tile?: TileProperty;
   /**
   * tile_layout block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#tile_layout AwsQuicksightTheme#tile_layout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#tile_layout TfTheme#tile_layout}
   */
   readonly tileLayout?: TileLayoutProperty;
 }
@@ -1506,7 +1506,7 @@ export class SheetPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface FontFamiliesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#font_family AwsQuicksightTheme#font_family}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#font_family TfTheme#font_family}
   */
   readonly fontFamily?: string;
 }
@@ -1594,7 +1594,7 @@ export interface TypographyProperty {
   /**
   * font_families block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#font_families AwsQuicksightTheme#font_families}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#font_families TfTheme#font_families}
   */
   readonly fontFamilies?: FontFamiliesProperty[] | cdktn.IResolvable;
 }
@@ -1648,67 +1648,67 @@ export class TypographyPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface UiColorPaletteProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#accent AwsQuicksightTheme#accent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#accent TfTheme#accent}
   */
   readonly accent?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#accent_foreground AwsQuicksightTheme#accent_foreground}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#accent_foreground TfTheme#accent_foreground}
   */
   readonly accentForeground?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#danger AwsQuicksightTheme#danger}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#danger TfTheme#danger}
   */
   readonly danger?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#danger_foreground AwsQuicksightTheme#danger_foreground}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#danger_foreground TfTheme#danger_foreground}
   */
   readonly dangerForeground?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#dimension AwsQuicksightTheme#dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#dimension TfTheme#dimension}
   */
   readonly dimension?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#dimension_foreground AwsQuicksightTheme#dimension_foreground}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#dimension_foreground TfTheme#dimension_foreground}
   */
   readonly dimensionForeground?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#measure AwsQuicksightTheme#measure}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#measure TfTheme#measure}
   */
   readonly measure?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#measure_foreground AwsQuicksightTheme#measure_foreground}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#measure_foreground TfTheme#measure_foreground}
   */
   readonly measureForeground?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#primary_background AwsQuicksightTheme#primary_background}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#primary_background TfTheme#primary_background}
   */
   readonly primaryBackground?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#primary_foreground AwsQuicksightTheme#primary_foreground}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#primary_foreground TfTheme#primary_foreground}
   */
   readonly primaryForeground?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#secondary_background AwsQuicksightTheme#secondary_background}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#secondary_background TfTheme#secondary_background}
   */
   readonly secondaryBackground?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#secondary_foreground AwsQuicksightTheme#secondary_foreground}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#secondary_foreground TfTheme#secondary_foreground}
   */
   readonly secondaryForeground?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#success AwsQuicksightTheme#success}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#success TfTheme#success}
   */
   readonly success?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#success_foreground AwsQuicksightTheme#success_foreground}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#success_foreground TfTheme#success_foreground}
   */
   readonly successForeground?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#warning AwsQuicksightTheme#warning}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#warning TfTheme#warning}
   */
   readonly warning?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#warning_foreground AwsQuicksightTheme#warning_foreground}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#warning_foreground TfTheme#warning_foreground}
   */
   readonly warningForeground?: string;
 }
@@ -2094,25 +2094,25 @@ export interface ConfigurationProperty {
   /**
   * data_color_palette block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#data_color_palette AwsQuicksightTheme#data_color_palette}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#data_color_palette TfTheme#data_color_palette}
   */
   readonly dataColorPalette?: DataColorPaletteProperty;
   /**
   * sheet block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#sheet AwsQuicksightTheme#sheet}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#sheet TfTheme#sheet}
   */
   readonly sheet?: SheetProperty;
   /**
   * typography block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#typography AwsQuicksightTheme#typography}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#typography TfTheme#typography}
   */
   readonly typography?: TypographyProperty;
   /**
   * ui_color_palette block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#ui_color_palette AwsQuicksightTheme#ui_color_palette}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#ui_color_palette TfTheme#ui_color_palette}
   */
   readonly uiColorPalette?: UiColorPaletteProperty;
 }
@@ -2232,11 +2232,11 @@ export class ConfigurationPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface PermissionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#actions AwsQuicksightTheme#actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#actions TfTheme#actions}
   */
   readonly actions: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#principal AwsQuicksightTheme#principal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#principal TfTheme#principal}
   */
   readonly principal: string;
 }
@@ -2338,15 +2338,15 @@ export class PermissionsPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#create AwsQuicksightTheme#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#create TfTheme#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#delete AwsQuicksightTheme#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#delete TfTheme#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#update AwsQuicksightTheme#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_theme#update TfTheme#update}
   */
   readonly update?: string;
 }

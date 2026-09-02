@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsServicequotasServiceQuotaConfig extends cdktn.TerraformMetaArguments {
+export interface TfServiceQuotaConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_service_quota#id AwsServicequotasServiceQuota#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_service_quota#id TfServiceQuota#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_service_quota#quota_code AwsServicequotasServiceQuota#quota_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_service_quota#quota_code TfServiceQuota#quota_code}
   */
   readonly quotaCode: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_service_quota#region AwsServicequotasServiceQuota#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_service_quota#region TfServiceQuota#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_service_quota#service_code AwsServicequotasServiceQuota#service_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_service_quota#service_code TfServiceQuota#service_code}
   */
   readonly serviceCode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_service_quota#value AwsServicequotasServiceQuota#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_service_quota#value TfServiceQuota#value}
   */
   readonly value: number;
 }
@@ -36,7 +36,7 @@ export interface AwsServicequotasServiceQuotaConfig extends cdktn.TerraformMetaA
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_service_quota aws_servicequotas_service_quota}
 */
-export class AwsServicequotasServiceQuota extends cdktn.TerraformResource {
+export class TfServiceQuota extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class AwsServicequotasServiceQuota extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsServicequotasServiceQuota resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfServiceQuota resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsServicequotasServiceQuota to import
-  * @param importFromId The id of the existing AwsServicequotasServiceQuota that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_service_quota#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsServicequotasServiceQuota to import is found
+  * @param importToId The construct id used in the generated config for the TfServiceQuota to import
+  * @param importFromId The id of the existing TfServiceQuota that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_service_quota#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfServiceQuota to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_servicequotas_service_quota", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class AwsServicequotasServiceQuota extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsServicequotasServiceQuotaConfig
+  * @param options TfServiceQuotaConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsServicequotasServiceQuotaConfig) {
+  public constructor(scope: Construct, id: string, config: TfServiceQuotaConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_servicequotas_service_quota',
       terraformGeneratorMetadata: {
@@ -189,7 +189,7 @@ export class AwsServicequotasServiceQuota extends cdktn.TerraformResource {
   }
 
   // usage_metric - computed: true, optional: false, required: false
-  private _usageMetric = new AwsServicequotasServiceQuota.UsageMetricPropertyList(this, "usage_metric", false);
+  private _usageMetric = new TfServiceQuota.UsageMetricPropertyList(this, "usage_metric", false);
   public get usageMetric() {
     return this._usageMetric;
   }
@@ -260,7 +260,7 @@ export class AwsServicequotasServiceQuota extends cdktn.TerraformResource {
   }
 }
 
-export function awsServicequotasServiceQuotaMetricDimensionsPropertyToTerraform(struct?: AwsServicequotasServiceQuota.MetricDimensionsProperty): any {
+export function tfServiceQuotaMetricDimensionsPropertyToTerraform(struct?: TfServiceQuota.MetricDimensionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -270,7 +270,7 @@ export function awsServicequotasServiceQuotaMetricDimensionsPropertyToTerraform(
 }
 
 
-export function awsServicequotasServiceQuotaMetricDimensionsPropertyToHclTerraform(struct?: AwsServicequotasServiceQuota.MetricDimensionsProperty): any {
+export function tfServiceQuotaMetricDimensionsPropertyToHclTerraform(struct?: TfServiceQuota.MetricDimensionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -281,7 +281,7 @@ export function awsServicequotasServiceQuotaMetricDimensionsPropertyToHclTerrafo
 }
 
 
-export function awsServicequotasServiceQuotaUsageMetricPropertyToTerraform(struct?: AwsServicequotasServiceQuota.UsageMetricProperty): any {
+export function tfServiceQuotaUsageMetricPropertyToTerraform(struct?: TfServiceQuota.UsageMetricProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -291,7 +291,7 @@ export function awsServicequotasServiceQuotaUsageMetricPropertyToTerraform(struc
 }
 
 
-export function awsServicequotasServiceQuotaUsageMetricPropertyToHclTerraform(struct?: AwsServicequotasServiceQuota.UsageMetricProperty): any {
+export function tfServiceQuotaUsageMetricPropertyToHclTerraform(struct?: TfServiceQuota.UsageMetricProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -302,7 +302,7 @@ export function awsServicequotasServiceQuotaUsageMetricPropertyToHclTerraform(st
 }
 
 
-export namespace AwsServicequotasServiceQuota {
+export namespace TfServiceQuota {
 export interface MetricDimensionsProperty {
 }
 export class MetricDimensionsPropertyOutputReference extends cdktn.ComplexObject {

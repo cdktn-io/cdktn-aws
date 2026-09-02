@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsIamAccountAliasConfig extends cdktn.TerraformMetaArguments {
+export interface TfAccountAliasConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_alias#account_alias AwsIamAccountAlias#account_alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_alias#account_alias TfAccountAlias#account_alias}
   */
   readonly accountAlias: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_alias#id AwsIamAccountAlias#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_alias#id TfAccountAlias#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,7 +22,7 @@ export interface AwsIamAccountAliasConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_alias aws_iam_account_alias}
 */
-export class AwsIamAccountAlias extends cdktn.TerraformResource {
+export class TfAccountAlias extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -33,11 +33,11 @@ export class AwsIamAccountAlias extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsIamAccountAlias resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAccountAlias resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsIamAccountAlias to import
-  * @param importFromId The id of the existing AwsIamAccountAlias that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_alias#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsIamAccountAlias to import is found
+  * @param importToId The construct id used in the generated config for the TfAccountAlias to import
+  * @param importFromId The id of the existing TfAccountAlias that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_alias#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAccountAlias to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iam_account_alias", importId: importFromId, provider });
@@ -52,9 +52,9 @@ export class AwsIamAccountAlias extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsIamAccountAliasConfig
+  * @param options TfAccountAliasConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsIamAccountAliasConfig) {
+  public constructor(scope: Construct, id: string, config: TfAccountAliasConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iam_account_alias',
       terraformGeneratorMetadata: {

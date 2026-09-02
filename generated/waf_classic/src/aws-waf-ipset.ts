@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsWafIpsetConfig extends cdktn.TerraformMetaArguments {
+export interface TfIpsetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_ipset#id AwsWafIpset#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_ipset#id TfIpset#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_ipset#name AwsWafIpset#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_ipset#name TfIpset#name}
   */
   readonly name: string;
   /**
   * ip_set_descriptors block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_ipset#ip_set_descriptors AwsWafIpset#ip_set_descriptors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_ipset#ip_set_descriptors TfIpset#ip_set_descriptors}
   */
-  readonly ipSetDescriptors?: AwsWafIpset.IpSetDescriptorsProperty[] | cdktn.IResolvable;
+  readonly ipSetDescriptors?: TfIpset.IpSetDescriptorsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_ipset aws_waf_ipset}
 */
-export class AwsWafIpset extends cdktn.TerraformResource {
+export class TfIpset extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class AwsWafIpset extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsWafIpset resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfIpset resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsWafIpset to import
-  * @param importFromId The id of the existing AwsWafIpset that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_ipset#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsWafIpset to import is found
+  * @param importToId The construct id used in the generated config for the TfIpset to import
+  * @param importFromId The id of the existing TfIpset that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_ipset#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfIpset to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_waf_ipset", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class AwsWafIpset extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsWafIpsetConfig
+  * @param options TfIpsetConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsWafIpsetConfig) {
+  public constructor(scope: Construct, id: string, config: TfIpsetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_waf_ipset',
       terraformGeneratorMetadata: {
@@ -120,11 +120,11 @@ export class AwsWafIpset extends cdktn.TerraformResource {
   }
 
   // ip_set_descriptors - computed: false, optional: true, required: false
-  private _ipSetDescriptors = new AwsWafIpset.IpSetDescriptorsPropertyList(this, "ip_set_descriptors", true);
+  private _ipSetDescriptors = new TfIpset.IpSetDescriptorsPropertyList(this, "ip_set_descriptors", true);
   public get ipSetDescriptors() {
     return this._ipSetDescriptors;
   }
-  public putIpSetDescriptors(value: AwsWafIpset.IpSetDescriptorsProperty[] | cdktn.IResolvable) {
+  public putIpSetDescriptors(value: TfIpset.IpSetDescriptorsProperty[] | cdktn.IResolvable) {
     this._ipSetDescriptors.internalValue = value;
   }
   public resetIpSetDescriptors() {
@@ -143,7 +143,7 @@ export class AwsWafIpset extends cdktn.TerraformResource {
     return {
       id: cdktn.stringToTerraform(this._id),
       name: cdktn.stringToTerraform(this._name),
-      ip_set_descriptors: cdktn.listMapper(awsWafIpsetIpSetDescriptorsPropertyToTerraform, true)(this._ipSetDescriptors.internalValue),
+      ip_set_descriptors: cdktn.listMapper(tfIpsetIpSetDescriptorsPropertyToTerraform, true)(this._ipSetDescriptors.internalValue),
     };
   }
 
@@ -162,10 +162,10 @@ export class AwsWafIpset extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       ip_set_descriptors: {
-        value: cdktn.listMapperHcl(awsWafIpsetIpSetDescriptorsPropertyToHclTerraform, true)(this._ipSetDescriptors.internalValue),
+        value: cdktn.listMapperHcl(tfIpsetIpSetDescriptorsPropertyToHclTerraform, true)(this._ipSetDescriptors.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsWafIpset.IpSetDescriptorsPropertyList",
+        storageClassType: "TfIpset.IpSetDescriptorsPropertyList",
       },
     };
 
@@ -174,7 +174,7 @@ export class AwsWafIpset extends cdktn.TerraformResource {
   }
 }
 
-export function awsWafIpsetIpSetDescriptorsPropertyToTerraform(struct?: AwsWafIpset.IpSetDescriptorsProperty | cdktn.IResolvable): any {
+export function tfIpsetIpSetDescriptorsPropertyToTerraform(struct?: TfIpset.IpSetDescriptorsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -186,7 +186,7 @@ export function awsWafIpsetIpSetDescriptorsPropertyToTerraform(struct?: AwsWafIp
 }
 
 
-export function awsWafIpsetIpSetDescriptorsPropertyToHclTerraform(struct?: AwsWafIpset.IpSetDescriptorsProperty | cdktn.IResolvable): any {
+export function tfIpsetIpSetDescriptorsPropertyToHclTerraform(struct?: TfIpset.IpSetDescriptorsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -211,14 +211,14 @@ export function awsWafIpsetIpSetDescriptorsPropertyToHclTerraform(struct?: AwsWa
 }
 
 
-export namespace AwsWafIpset {
+export namespace TfIpset {
 export interface IpSetDescriptorsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_ipset#type AwsWafIpset#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_ipset#type TfIpset#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_ipset#value AwsWafIpset#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_ipset#value TfIpset#value}
   */
   readonly value: string;
 }

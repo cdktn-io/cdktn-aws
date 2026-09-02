@@ -5,23 +5,23 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsVpnConcentratorConfig extends cdktn.TerraformMetaArguments {
+export interface TfConcentratorConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_concentrator#region AwsVpnConcentrator#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_concentrator#region TfConcentrator#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_concentrator#tags AwsVpnConcentrator#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_concentrator#tags TfConcentrator#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_concentrator#transit_gateway_id AwsVpnConcentrator#transit_gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_concentrator#transit_gateway_id TfConcentrator#transit_gateway_id}
   */
   readonly transitGatewayId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_concentrator#type AwsVpnConcentrator#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_concentrator#type TfConcentrator#type}
   */
   readonly type: string;
 }
@@ -29,7 +29,7 @@ export interface AwsVpnConcentratorConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_concentrator aws_vpn_concentrator}
 */
-export class AwsVpnConcentrator extends cdktn.TerraformResource {
+export class TfConcentrator extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -40,11 +40,11 @@ export class AwsVpnConcentrator extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsVpnConcentrator resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfConcentrator resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsVpnConcentrator to import
-  * @param importFromId The id of the existing AwsVpnConcentrator that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_concentrator#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsVpnConcentrator to import is found
+  * @param importToId The construct id used in the generated config for the TfConcentrator to import
+  * @param importFromId The id of the existing TfConcentrator that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_concentrator#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfConcentrator to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpn_concentrator", importId: importFromId, provider });
@@ -59,9 +59,9 @@ export class AwsVpnConcentrator extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsVpnConcentratorConfig
+  * @param options TfConcentratorConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsVpnConcentratorConfig) {
+  public constructor(scope: Construct, id: string, config: TfConcentratorConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpn_concentrator',
       terraformGeneratorMetadata: {

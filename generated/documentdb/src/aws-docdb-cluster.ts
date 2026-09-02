@@ -5,172 +5,172 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDocdbClusterConfig extends cdktn.TerraformMetaArguments {
+export interface TfClusterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#allow_major_version_upgrade AwsDocdbCluster#allow_major_version_upgrade}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#allow_major_version_upgrade TfCluster#allow_major_version_upgrade}
   */
   readonly allowMajorVersionUpgrade?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#apply_immediately AwsDocdbCluster#apply_immediately}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#apply_immediately TfCluster#apply_immediately}
   */
   readonly applyImmediately?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#availability_zones AwsDocdbCluster#availability_zones}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#availability_zones TfCluster#availability_zones}
   */
   readonly availabilityZones?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#backup_retention_period AwsDocdbCluster#backup_retention_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#backup_retention_period TfCluster#backup_retention_period}
   */
   readonly backupRetentionPeriod?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#cluster_identifier AwsDocdbCluster#cluster_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#cluster_identifier TfCluster#cluster_identifier}
   */
   readonly clusterIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#cluster_identifier_prefix AwsDocdbCluster#cluster_identifier_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#cluster_identifier_prefix TfCluster#cluster_identifier_prefix}
   */
   readonly clusterIdentifierPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#cluster_members AwsDocdbCluster#cluster_members}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#cluster_members TfCluster#cluster_members}
   */
   readonly clusterMembers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#db_cluster_parameter_group_name AwsDocdbCluster#db_cluster_parameter_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#db_cluster_parameter_group_name TfCluster#db_cluster_parameter_group_name}
   */
   readonly dbClusterParameterGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#db_subnet_group_name AwsDocdbCluster#db_subnet_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#db_subnet_group_name TfCluster#db_subnet_group_name}
   */
   readonly dbSubnetGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#deletion_protection AwsDocdbCluster#deletion_protection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#deletion_protection TfCluster#deletion_protection}
   */
   readonly deletionProtection?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#enabled_cloudwatch_logs_exports AwsDocdbCluster#enabled_cloudwatch_logs_exports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#enabled_cloudwatch_logs_exports TfCluster#enabled_cloudwatch_logs_exports}
   */
   readonly enabledCloudwatchLogsExports?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#engine AwsDocdbCluster#engine}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#engine TfCluster#engine}
   */
   readonly engine?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#engine_version AwsDocdbCluster#engine_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#engine_version TfCluster#engine_version}
   */
   readonly engineVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#final_snapshot_identifier AwsDocdbCluster#final_snapshot_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#final_snapshot_identifier TfCluster#final_snapshot_identifier}
   */
   readonly finalSnapshotIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#global_cluster_identifier AwsDocdbCluster#global_cluster_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#global_cluster_identifier TfCluster#global_cluster_identifier}
   */
   readonly globalClusterIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#id AwsDocdbCluster#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#id TfCluster#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#kms_key_id AwsDocdbCluster#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#kms_key_id TfCluster#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#manage_master_user_password AwsDocdbCluster#manage_master_user_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#manage_master_user_password TfCluster#manage_master_user_password}
   */
   readonly manageMasterUserPassword?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#master_password AwsDocdbCluster#master_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#master_password TfCluster#master_password}
   */
   readonly masterPassword?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#master_password_wo AwsDocdbCluster#master_password_wo}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#master_password_wo TfCluster#master_password_wo}
   */
   readonly masterPasswordWo?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#master_password_wo_version AwsDocdbCluster#master_password_wo_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#master_password_wo_version TfCluster#master_password_wo_version}
   */
   readonly masterPasswordWoVersion?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#master_username AwsDocdbCluster#master_username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#master_username TfCluster#master_username}
   */
   readonly masterUsername?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#network_type AwsDocdbCluster#network_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#network_type TfCluster#network_type}
   */
   readonly networkType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#port AwsDocdbCluster#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#port TfCluster#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#preferred_backup_window AwsDocdbCluster#preferred_backup_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#preferred_backup_window TfCluster#preferred_backup_window}
   */
   readonly preferredBackupWindow?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#preferred_maintenance_window AwsDocdbCluster#preferred_maintenance_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#preferred_maintenance_window TfCluster#preferred_maintenance_window}
   */
   readonly preferredMaintenanceWindow?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#region AwsDocdbCluster#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#region TfCluster#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#skip_final_snapshot AwsDocdbCluster#skip_final_snapshot}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#skip_final_snapshot TfCluster#skip_final_snapshot}
   */
   readonly skipFinalSnapshot?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#snapshot_identifier AwsDocdbCluster#snapshot_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#snapshot_identifier TfCluster#snapshot_identifier}
   */
   readonly snapshotIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#storage_encrypted AwsDocdbCluster#storage_encrypted}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#storage_encrypted TfCluster#storage_encrypted}
   */
   readonly storageEncrypted?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#storage_type AwsDocdbCluster#storage_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#storage_type TfCluster#storage_type}
   */
   readonly storageType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#tags AwsDocdbCluster#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#tags TfCluster#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#tags_all AwsDocdbCluster#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#tags_all TfCluster#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#vpc_security_group_ids AwsDocdbCluster#vpc_security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#vpc_security_group_ids TfCluster#vpc_security_group_ids}
   */
   readonly vpcSecurityGroupIds?: string[];
   /**
   * restore_to_point_in_time block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#restore_to_point_in_time AwsDocdbCluster#restore_to_point_in_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#restore_to_point_in_time TfCluster#restore_to_point_in_time}
   */
-  readonly restoreToPointInTime?: AwsDocdbCluster.RestoreToPointInTimeProperty;
+  readonly restoreToPointInTime?: TfCluster.RestoreToPointInTimeProperty;
   /**
   * serverless_v2_scaling_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#serverless_v2_scaling_configuration AwsDocdbCluster#serverless_v2_scaling_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#serverless_v2_scaling_configuration TfCluster#serverless_v2_scaling_configuration}
   */
-  readonly serverlessV2ScalingConfiguration?: AwsDocdbCluster.ServerlessV2ScalingConfigurationProperty;
+  readonly serverlessV2ScalingConfiguration?: TfCluster.ServerlessV2ScalingConfigurationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#timeouts AwsDocdbCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#timeouts TfCluster#timeouts}
   */
-  readonly timeouts?: AwsDocdbCluster.TimeoutsProperty;
+  readonly timeouts?: TfCluster.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster aws_docdb_cluster}
 */
-export class AwsDocdbCluster extends cdktn.TerraformResource {
+export class TfCluster extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -181,11 +181,11 @@ export class AwsDocdbCluster extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDocdbCluster resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfCluster resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDocdbCluster to import
-  * @param importFromId The id of the existing AwsDocdbCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDocdbCluster to import is found
+  * @param importToId The construct id used in the generated config for the TfCluster to import
+  * @param importFromId The id of the existing TfCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_docdb_cluster", importId: importFromId, provider });
@@ -200,9 +200,9 @@ export class AwsDocdbCluster extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDocdbClusterConfig = {}
+  * @param options TfClusterConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsDocdbClusterConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfClusterConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_docdb_cluster',
       terraformGeneratorMetadata: {
@@ -621,7 +621,7 @@ export class AwsDocdbCluster extends cdktn.TerraformResource {
   }
 
   // master_user_secret - computed: true, optional: false, required: false
-  private _masterUserSecret = new AwsDocdbCluster.MasterUserSecretPropertyList(this, "master_user_secret", false);
+  private _masterUserSecret = new TfCluster.MasterUserSecretPropertyList(this, "master_user_secret", false);
   public get masterUserSecret() {
     return this._masterUserSecret;
   }
@@ -840,11 +840,11 @@ export class AwsDocdbCluster extends cdktn.TerraformResource {
   }
 
   // restore_to_point_in_time - computed: false, optional: true, required: false
-  private _restoreToPointInTime = new AwsDocdbCluster.RestoreToPointInTimePropertyOutputReference(this, "restore_to_point_in_time");
+  private _restoreToPointInTime = new TfCluster.RestoreToPointInTimePropertyOutputReference(this, "restore_to_point_in_time");
   public get restoreToPointInTime() {
     return this._restoreToPointInTime;
   }
-  public putRestoreToPointInTime(value: AwsDocdbCluster.RestoreToPointInTimeProperty) {
+  public putRestoreToPointInTime(value: TfCluster.RestoreToPointInTimeProperty) {
     this._restoreToPointInTime.internalValue = value;
   }
   public resetRestoreToPointInTime() {
@@ -856,11 +856,11 @@ export class AwsDocdbCluster extends cdktn.TerraformResource {
   }
 
   // serverless_v2_scaling_configuration - computed: false, optional: true, required: false
-  private _serverlessV2ScalingConfiguration = new AwsDocdbCluster.ServerlessV2ScalingConfigurationPropertyOutputReference(this, "serverless_v2_scaling_configuration");
+  private _serverlessV2ScalingConfiguration = new TfCluster.ServerlessV2ScalingConfigurationPropertyOutputReference(this, "serverless_v2_scaling_configuration");
   public get serverlessV2ScalingConfiguration() {
     return this._serverlessV2ScalingConfiguration;
   }
-  public putServerlessV2ScalingConfiguration(value: AwsDocdbCluster.ServerlessV2ScalingConfigurationProperty) {
+  public putServerlessV2ScalingConfiguration(value: TfCluster.ServerlessV2ScalingConfigurationProperty) {
     this._serverlessV2ScalingConfiguration.internalValue = value;
   }
   public resetServerlessV2ScalingConfiguration() {
@@ -872,11 +872,11 @@ export class AwsDocdbCluster extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsDocdbCluster.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfCluster.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsDocdbCluster.TimeoutsProperty) {
+  public putTimeouts(value: TfCluster.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -927,9 +927,9 @@ export class AwsDocdbCluster extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       vpc_security_group_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._vpcSecurityGroupIds),
-      restore_to_point_in_time: awsDocdbClusterRestoreToPointInTimePropertyToTerraform(this._restoreToPointInTime.internalValue),
-      serverless_v2_scaling_configuration: awsDocdbClusterServerlessV2ScalingConfigurationPropertyToTerraform(this._serverlessV2ScalingConfiguration.internalValue),
-      timeouts: awsDocdbClusterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      restore_to_point_in_time: tfClusterRestoreToPointInTimePropertyToTerraform(this._restoreToPointInTime.internalValue),
+      serverless_v2_scaling_configuration: tfClusterServerlessV2ScalingConfigurationPropertyToTerraform(this._serverlessV2ScalingConfiguration.internalValue),
+      timeouts: tfClusterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -1140,22 +1140,22 @@ export class AwsDocdbCluster extends cdktn.TerraformResource {
         storageClassType: "stringList",
       },
       restore_to_point_in_time: {
-        value: awsDocdbClusterRestoreToPointInTimePropertyToHclTerraform(this._restoreToPointInTime.internalValue),
+        value: tfClusterRestoreToPointInTimePropertyToHclTerraform(this._restoreToPointInTime.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDocdbCluster.RestoreToPointInTimePropertyList",
+        storageClassType: "TfCluster.RestoreToPointInTimePropertyList",
       },
       serverless_v2_scaling_configuration: {
-        value: awsDocdbClusterServerlessV2ScalingConfigurationPropertyToHclTerraform(this._serverlessV2ScalingConfiguration.internalValue),
+        value: tfClusterServerlessV2ScalingConfigurationPropertyToHclTerraform(this._serverlessV2ScalingConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDocdbCluster.ServerlessV2ScalingConfigurationPropertyList",
+        storageClassType: "TfCluster.ServerlessV2ScalingConfigurationPropertyList",
       },
       timeouts: {
-        value: awsDocdbClusterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfClusterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsDocdbCluster.TimeoutsProperty",
+        storageClassType: "TfCluster.TimeoutsProperty",
       },
     };
 
@@ -1164,7 +1164,7 @@ export class AwsDocdbCluster extends cdktn.TerraformResource {
   }
 }
 
-export function awsDocdbClusterMasterUserSecretPropertyToTerraform(struct?: AwsDocdbCluster.MasterUserSecretProperty): any {
+export function tfClusterMasterUserSecretPropertyToTerraform(struct?: TfCluster.MasterUserSecretProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1174,7 +1174,7 @@ export function awsDocdbClusterMasterUserSecretPropertyToTerraform(struct?: AwsD
 }
 
 
-export function awsDocdbClusterMasterUserSecretPropertyToHclTerraform(struct?: AwsDocdbCluster.MasterUserSecretProperty): any {
+export function tfClusterMasterUserSecretPropertyToHclTerraform(struct?: TfCluster.MasterUserSecretProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1185,7 +1185,7 @@ export function awsDocdbClusterMasterUserSecretPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsDocdbClusterRestoreToPointInTimePropertyToTerraform(struct?: AwsDocdbCluster.RestoreToPointInTimePropertyOutputReference | AwsDocdbCluster.RestoreToPointInTimeProperty): any {
+export function tfClusterRestoreToPointInTimePropertyToTerraform(struct?: TfCluster.RestoreToPointInTimePropertyOutputReference | TfCluster.RestoreToPointInTimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1199,7 +1199,7 @@ export function awsDocdbClusterRestoreToPointInTimePropertyToTerraform(struct?: 
 }
 
 
-export function awsDocdbClusterRestoreToPointInTimePropertyToHclTerraform(struct?: AwsDocdbCluster.RestoreToPointInTimePropertyOutputReference | AwsDocdbCluster.RestoreToPointInTimeProperty): any {
+export function tfClusterRestoreToPointInTimePropertyToHclTerraform(struct?: TfCluster.RestoreToPointInTimePropertyOutputReference | TfCluster.RestoreToPointInTimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1236,7 +1236,7 @@ export function awsDocdbClusterRestoreToPointInTimePropertyToHclTerraform(struct
 }
 
 
-export function awsDocdbClusterServerlessV2ScalingConfigurationPropertyToTerraform(struct?: AwsDocdbCluster.ServerlessV2ScalingConfigurationPropertyOutputReference | AwsDocdbCluster.ServerlessV2ScalingConfigurationProperty): any {
+export function tfClusterServerlessV2ScalingConfigurationPropertyToTerraform(struct?: TfCluster.ServerlessV2ScalingConfigurationPropertyOutputReference | TfCluster.ServerlessV2ScalingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1248,7 +1248,7 @@ export function awsDocdbClusterServerlessV2ScalingConfigurationPropertyToTerrafo
 }
 
 
-export function awsDocdbClusterServerlessV2ScalingConfigurationPropertyToHclTerraform(struct?: AwsDocdbCluster.ServerlessV2ScalingConfigurationPropertyOutputReference | AwsDocdbCluster.ServerlessV2ScalingConfigurationProperty): any {
+export function tfClusterServerlessV2ScalingConfigurationPropertyToHclTerraform(struct?: TfCluster.ServerlessV2ScalingConfigurationPropertyOutputReference | TfCluster.ServerlessV2ScalingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1273,7 +1273,7 @@ export function awsDocdbClusterServerlessV2ScalingConfigurationPropertyToHclTerr
 }
 
 
-export function awsDocdbClusterTimeoutsPropertyToTerraform(struct?: AwsDocdbCluster.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfClusterTimeoutsPropertyToTerraform(struct?: TfCluster.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1286,7 +1286,7 @@ export function awsDocdbClusterTimeoutsPropertyToTerraform(struct?: AwsDocdbClus
 }
 
 
-export function awsDocdbClusterTimeoutsPropertyToHclTerraform(struct?: AwsDocdbCluster.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfClusterTimeoutsPropertyToHclTerraform(struct?: TfCluster.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1317,7 +1317,7 @@ export function awsDocdbClusterTimeoutsPropertyToHclTerraform(struct?: AwsDocdbC
 }
 
 
-export namespace AwsDocdbCluster {
+export namespace TfCluster {
 export interface MasterUserSecretProperty {
 }
 export class MasterUserSecretPropertyOutputReference extends cdktn.ComplexObject {
@@ -1384,19 +1384,19 @@ export class MasterUserSecretPropertyList extends cdktn.ComplexList {
 }
 export interface RestoreToPointInTimeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#restore_to_time AwsDocdbCluster#restore_to_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#restore_to_time TfCluster#restore_to_time}
   */
   readonly restoreToTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#restore_type AwsDocdbCluster#restore_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#restore_type TfCluster#restore_type}
   */
   readonly restoreType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#source_cluster_identifier AwsDocdbCluster#source_cluster_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#source_cluster_identifier TfCluster#source_cluster_identifier}
   */
   readonly sourceClusterIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#use_latest_restorable_time AwsDocdbCluster#use_latest_restorable_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#use_latest_restorable_time TfCluster#use_latest_restorable_time}
   */
   readonly useLatestRestorableTime?: boolean | cdktn.IResolvable;
 }
@@ -1513,11 +1513,11 @@ export class RestoreToPointInTimePropertyOutputReference extends cdktn.ComplexOb
 }
 export interface ServerlessV2ScalingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#max_capacity AwsDocdbCluster#max_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#max_capacity TfCluster#max_capacity}
   */
   readonly maxCapacity: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#min_capacity AwsDocdbCluster#min_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#min_capacity TfCluster#min_capacity}
   */
   readonly minCapacity: number;
 }
@@ -1587,15 +1587,15 @@ export class ServerlessV2ScalingConfigurationPropertyOutputReference extends cdk
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#create AwsDocdbCluster#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#create TfCluster#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#delete AwsDocdbCluster#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#delete TfCluster#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#update AwsDocdbCluster#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/docdb_cluster#update TfCluster#update}
   */
   readonly update?: string;
 }

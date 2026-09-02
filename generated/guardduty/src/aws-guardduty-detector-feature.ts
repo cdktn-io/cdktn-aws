@@ -5,44 +5,44 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsGuarddutyDetectorFeatureConfig extends cdktn.TerraformMetaArguments {
+export interface TfDetectorFeatureConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector_feature#detector_id AwsGuarddutyDetectorFeature#detector_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector_feature#detector_id TfDetectorFeature#detector_id}
   */
   readonly detectorId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector_feature#id AwsGuarddutyDetectorFeature#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector_feature#id TfDetectorFeature#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector_feature#name AwsGuarddutyDetectorFeature#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector_feature#name TfDetectorFeature#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector_feature#region AwsGuarddutyDetectorFeature#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector_feature#region TfDetectorFeature#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector_feature#status AwsGuarddutyDetectorFeature#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector_feature#status TfDetectorFeature#status}
   */
   readonly status: string;
   /**
   * additional_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector_feature#additional_configuration AwsGuarddutyDetectorFeature#additional_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector_feature#additional_configuration TfDetectorFeature#additional_configuration}
   */
-  readonly additionalConfiguration?: AwsGuarddutyDetectorFeature.AdditionalConfigurationProperty[] | cdktn.IResolvable;
+  readonly additionalConfiguration?: TfDetectorFeature.AdditionalConfigurationProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector_feature aws_guardduty_detector_feature}
 */
-export class AwsGuarddutyDetectorFeature extends cdktn.TerraformResource {
+export class TfDetectorFeature extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class AwsGuarddutyDetectorFeature extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsGuarddutyDetectorFeature resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDetectorFeature resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsGuarddutyDetectorFeature to import
-  * @param importFromId The id of the existing AwsGuarddutyDetectorFeature that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector_feature#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsGuarddutyDetectorFeature to import is found
+  * @param importToId The construct id used in the generated config for the TfDetectorFeature to import
+  * @param importFromId The id of the existing TfDetectorFeature that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector_feature#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDetectorFeature to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_guardduty_detector_feature", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class AwsGuarddutyDetectorFeature extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsGuarddutyDetectorFeatureConfig
+  * @param options TfDetectorFeatureConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsGuarddutyDetectorFeatureConfig) {
+  public constructor(scope: Construct, id: string, config: TfDetectorFeatureConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_guardduty_detector_feature',
       terraformGeneratorMetadata: {
@@ -174,11 +174,11 @@ export class AwsGuarddutyDetectorFeature extends cdktn.TerraformResource {
   }
 
   // additional_configuration - computed: false, optional: true, required: false
-  private _additionalConfiguration = new AwsGuarddutyDetectorFeature.AdditionalConfigurationPropertyList(this, "additional_configuration", true);
+  private _additionalConfiguration = new TfDetectorFeature.AdditionalConfigurationPropertyList(this, "additional_configuration", true);
   public get additionalConfiguration() {
     return this._additionalConfiguration;
   }
-  public putAdditionalConfiguration(value: AwsGuarddutyDetectorFeature.AdditionalConfigurationProperty[] | cdktn.IResolvable) {
+  public putAdditionalConfiguration(value: TfDetectorFeature.AdditionalConfigurationProperty[] | cdktn.IResolvable) {
     this._additionalConfiguration.internalValue = value;
   }
   public resetAdditionalConfiguration() {
@@ -200,7 +200,7 @@ export class AwsGuarddutyDetectorFeature extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       status: cdktn.stringToTerraform(this._status),
-      additional_configuration: cdktn.listMapper(awsGuarddutyDetectorFeatureAdditionalConfigurationPropertyToTerraform, true)(this._additionalConfiguration.internalValue),
+      additional_configuration: cdktn.listMapper(tfDetectorFeatureAdditionalConfigurationPropertyToTerraform, true)(this._additionalConfiguration.internalValue),
     };
   }
 
@@ -237,10 +237,10 @@ export class AwsGuarddutyDetectorFeature extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       additional_configuration: {
-        value: cdktn.listMapperHcl(awsGuarddutyDetectorFeatureAdditionalConfigurationPropertyToHclTerraform, true)(this._additionalConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfDetectorFeatureAdditionalConfigurationPropertyToHclTerraform, true)(this._additionalConfiguration.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsGuarddutyDetectorFeature.AdditionalConfigurationPropertyList",
+        storageClassType: "TfDetectorFeature.AdditionalConfigurationPropertyList",
       },
     };
 
@@ -249,7 +249,7 @@ export class AwsGuarddutyDetectorFeature extends cdktn.TerraformResource {
   }
 }
 
-export function awsGuarddutyDetectorFeatureAdditionalConfigurationPropertyToTerraform(struct?: AwsGuarddutyDetectorFeature.AdditionalConfigurationProperty | cdktn.IResolvable): any {
+export function tfDetectorFeatureAdditionalConfigurationPropertyToTerraform(struct?: TfDetectorFeature.AdditionalConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -261,7 +261,7 @@ export function awsGuarddutyDetectorFeatureAdditionalConfigurationPropertyToTerr
 }
 
 
-export function awsGuarddutyDetectorFeatureAdditionalConfigurationPropertyToHclTerraform(struct?: AwsGuarddutyDetectorFeature.AdditionalConfigurationProperty | cdktn.IResolvable): any {
+export function tfDetectorFeatureAdditionalConfigurationPropertyToHclTerraform(struct?: TfDetectorFeature.AdditionalConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -286,14 +286,14 @@ export function awsGuarddutyDetectorFeatureAdditionalConfigurationPropertyToHclT
 }
 
 
-export namespace AwsGuarddutyDetectorFeature {
+export namespace TfDetectorFeature {
 export interface AdditionalConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector_feature#name AwsGuarddutyDetectorFeature#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector_feature#name TfDetectorFeature#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector_feature#status AwsGuarddutyDetectorFeature#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_detector_feature#status TfDetectorFeature#status}
   */
   readonly status: string;
 }

@@ -5,34 +5,34 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsSsoadminPermissionSetConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataPermissionSetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_permission_set#arn DataAwsSsoadminPermissionSet#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_permission_set#arn TfDataPermissionSet#arn}
   */
   readonly arn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_permission_set#id DataAwsSsoadminPermissionSet#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_permission_set#id TfDataPermissionSet#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_permission_set#instance_arn DataAwsSsoadminPermissionSet#instance_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_permission_set#instance_arn TfDataPermissionSet#instance_arn}
   */
   readonly instanceArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_permission_set#name DataAwsSsoadminPermissionSet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_permission_set#name TfDataPermissionSet#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_permission_set#region DataAwsSsoadminPermissionSet#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_permission_set#region TfDataPermissionSet#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_permission_set#tags DataAwsSsoadminPermissionSet#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_permission_set#tags TfDataPermissionSet#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -40,7 +40,7 @@ export interface DataAwsSsoadminPermissionSetConfig extends cdktn.TerraformMetaA
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_permission_set aws_ssoadmin_permission_set}
 */
-export class DataAwsSsoadminPermissionSet extends cdktn.TerraformDataSource {
+export class TfDataPermissionSet extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class DataAwsSsoadminPermissionSet extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsSsoadminPermissionSet resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataPermissionSet resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsSsoadminPermissionSet to import
-  * @param importFromId The id of the existing DataAwsSsoadminPermissionSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_permission_set#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsSsoadminPermissionSet to import is found
+  * @param importToId The construct id used in the generated config for the TfDataPermissionSet to import
+  * @param importFromId The id of the existing TfDataPermissionSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_permission_set#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataPermissionSet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssoadmin_permission_set", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class DataAwsSsoadminPermissionSet extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsSsoadminPermissionSetConfig
+  * @param options TfDataPermissionSetConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsSsoadminPermissionSetConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataPermissionSetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ssoadmin_permission_set',
       terraformGeneratorMetadata: {

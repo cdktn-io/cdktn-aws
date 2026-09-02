@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsChimeVoiceConnectorOriginationConfig extends cdktn.TerraformMetaArguments {
+export interface TfVoiceConnectorOriginationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_origination#disabled AwsChimeVoiceConnectorOrigination#disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_origination#disabled TfVoiceConnectorOrigination#disabled}
   */
   readonly disabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_origination#id AwsChimeVoiceConnectorOrigination#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_origination#id TfVoiceConnectorOrigination#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,25 +20,25 @@ export interface AwsChimeVoiceConnectorOriginationConfig extends cdktn.Terraform
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_origination#region AwsChimeVoiceConnectorOrigination#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_origination#region TfVoiceConnectorOrigination#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_origination#voice_connector_id AwsChimeVoiceConnectorOrigination#voice_connector_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_origination#voice_connector_id TfVoiceConnectorOrigination#voice_connector_id}
   */
   readonly voiceConnectorId: string;
   /**
   * route block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_origination#route AwsChimeVoiceConnectorOrigination#route}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_origination#route TfVoiceConnectorOrigination#route}
   */
-  readonly route: AwsChimeVoiceConnectorOrigination.RouteProperty[] | cdktn.IResolvable;
+  readonly route: TfVoiceConnectorOrigination.RouteProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_origination aws_chime_voice_connector_origination}
 */
-export class AwsChimeVoiceConnectorOrigination extends cdktn.TerraformResource {
+export class TfVoiceConnectorOrigination extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class AwsChimeVoiceConnectorOrigination extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsChimeVoiceConnectorOrigination resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfVoiceConnectorOrigination resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsChimeVoiceConnectorOrigination to import
-  * @param importFromId The id of the existing AwsChimeVoiceConnectorOrigination that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_origination#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsChimeVoiceConnectorOrigination to import is found
+  * @param importToId The construct id used in the generated config for the TfVoiceConnectorOrigination to import
+  * @param importFromId The id of the existing TfVoiceConnectorOrigination that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_origination#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfVoiceConnectorOrigination to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_chime_voice_connector_origination", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class AwsChimeVoiceConnectorOrigination extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsChimeVoiceConnectorOriginationConfig
+  * @param options TfVoiceConnectorOriginationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsChimeVoiceConnectorOriginationConfig) {
+  public constructor(scope: Construct, id: string, config: TfVoiceConnectorOriginationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_chime_voice_connector_origination',
       terraformGeneratorMetadata: {
@@ -159,11 +159,11 @@ export class AwsChimeVoiceConnectorOrigination extends cdktn.TerraformResource {
   }
 
   // route - computed: false, optional: false, required: true
-  private _route = new AwsChimeVoiceConnectorOrigination.RoutePropertyList(this, "route", true);
+  private _route = new TfVoiceConnectorOrigination.RoutePropertyList(this, "route", true);
   public get route() {
     return this._route;
   }
-  public putRoute(value: AwsChimeVoiceConnectorOrigination.RouteProperty[] | cdktn.IResolvable) {
+  public putRoute(value: TfVoiceConnectorOrigination.RouteProperty[] | cdktn.IResolvable) {
     this._route.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -181,7 +181,7 @@ export class AwsChimeVoiceConnectorOrigination extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       voice_connector_id: cdktn.stringToTerraform(this._voiceConnectorId),
-      route: cdktn.listMapper(awsChimeVoiceConnectorOriginationRoutePropertyToTerraform, true)(this._route.internalValue),
+      route: cdktn.listMapper(tfVoiceConnectorOriginationRoutePropertyToTerraform, true)(this._route.internalValue),
     };
   }
 
@@ -212,10 +212,10 @@ export class AwsChimeVoiceConnectorOrigination extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       route: {
-        value: cdktn.listMapperHcl(awsChimeVoiceConnectorOriginationRoutePropertyToHclTerraform, true)(this._route.internalValue),
+        value: cdktn.listMapperHcl(tfVoiceConnectorOriginationRoutePropertyToHclTerraform, true)(this._route.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsChimeVoiceConnectorOrigination.RoutePropertyList",
+        storageClassType: "TfVoiceConnectorOrigination.RoutePropertyList",
       },
     };
 
@@ -224,7 +224,7 @@ export class AwsChimeVoiceConnectorOrigination extends cdktn.TerraformResource {
   }
 }
 
-export function awsChimeVoiceConnectorOriginationRoutePropertyToTerraform(struct?: AwsChimeVoiceConnectorOrigination.RouteProperty | cdktn.IResolvable): any {
+export function tfVoiceConnectorOriginationRoutePropertyToTerraform(struct?: TfVoiceConnectorOrigination.RouteProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -239,7 +239,7 @@ export function awsChimeVoiceConnectorOriginationRoutePropertyToTerraform(struct
 }
 
 
-export function awsChimeVoiceConnectorOriginationRoutePropertyToHclTerraform(struct?: AwsChimeVoiceConnectorOrigination.RouteProperty | cdktn.IResolvable): any {
+export function tfVoiceConnectorOriginationRoutePropertyToHclTerraform(struct?: TfVoiceConnectorOrigination.RouteProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -282,26 +282,26 @@ export function awsChimeVoiceConnectorOriginationRoutePropertyToHclTerraform(str
 }
 
 
-export namespace AwsChimeVoiceConnectorOrigination {
+export namespace TfVoiceConnectorOrigination {
 export interface RouteProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_origination#host AwsChimeVoiceConnectorOrigination#host}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_origination#host TfVoiceConnectorOrigination#host}
   */
   readonly host: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_origination#port AwsChimeVoiceConnectorOrigination#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_origination#port TfVoiceConnectorOrigination#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_origination#priority AwsChimeVoiceConnectorOrigination#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_origination#priority TfVoiceConnectorOrigination#priority}
   */
   readonly priority: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_origination#protocol AwsChimeVoiceConnectorOrigination#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_origination#protocol TfVoiceConnectorOrigination#protocol}
   */
   readonly protocol: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_origination#weight AwsChimeVoiceConnectorOrigination#weight}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_origination#weight TfVoiceConnectorOrigination#weight}
   */
   readonly weight: number;
 }

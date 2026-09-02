@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsCognitoUserGroupConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataUserGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_group#name DataAwsCognitoUserGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_group#name TfDataUserGroup#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_group#region DataAwsCognitoUserGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_group#region TfDataUserGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_group#user_pool_id DataAwsCognitoUserGroup#user_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_group#user_pool_id TfDataUserGroup#user_pool_id}
   */
   readonly userPoolId: string;
 }
@@ -25,7 +25,7 @@ export interface DataAwsCognitoUserGroupConfig extends cdktn.TerraformMetaArgume
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_group aws_cognito_user_group}
 */
-export class DataAwsCognitoUserGroup extends cdktn.TerraformDataSource {
+export class TfDataUserGroup extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -36,11 +36,11 @@ export class DataAwsCognitoUserGroup extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsCognitoUserGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataUserGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsCognitoUserGroup to import
-  * @param importFromId The id of the existing DataAwsCognitoUserGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsCognitoUserGroup to import is found
+  * @param importToId The construct id used in the generated config for the TfDataUserGroup to import
+  * @param importFromId The id of the existing TfDataUserGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataUserGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cognito_user_group", importId: importFromId, provider });
@@ -55,9 +55,9 @@ export class DataAwsCognitoUserGroup extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsCognitoUserGroupConfig
+  * @param options TfDataUserGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsCognitoUserGroupConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataUserGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cognito_user_group',
       terraformGeneratorMetadata: {

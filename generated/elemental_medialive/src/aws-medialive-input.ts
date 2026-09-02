@@ -5,86 +5,86 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsMedialiveInputConfig extends cdktn.TerraformMetaArguments {
+export interface TfInputConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#id AwsMedialiveInput#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#id TfInput#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#input_security_groups AwsMedialiveInput#input_security_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#input_security_groups TfInput#input_security_groups}
   */
   readonly inputSecurityGroups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#name AwsMedialiveInput#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#name TfInput#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#region AwsMedialiveInput#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#region TfInput#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#role_arn AwsMedialiveInput#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#role_arn TfInput#role_arn}
   */
   readonly roleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#tags AwsMedialiveInput#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#tags TfInput#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#tags_all AwsMedialiveInput#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#tags_all TfInput#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#type AwsMedialiveInput#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#type TfInput#type}
   */
   readonly type: string;
   /**
   * destinations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#destinations AwsMedialiveInput#destinations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#destinations TfInput#destinations}
   */
-  readonly destinations?: AwsMedialiveInput.DestinationsProperty[] | cdktn.IResolvable;
+  readonly destinations?: TfInput.DestinationsProperty[] | cdktn.IResolvable;
   /**
   * input_devices block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#input_devices AwsMedialiveInput#input_devices}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#input_devices TfInput#input_devices}
   */
-  readonly inputDevices?: AwsMedialiveInput.InputDevicesProperty[] | cdktn.IResolvable;
+  readonly inputDevices?: TfInput.InputDevicesProperty[] | cdktn.IResolvable;
   /**
   * media_connect_flows block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#media_connect_flows AwsMedialiveInput#media_connect_flows}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#media_connect_flows TfInput#media_connect_flows}
   */
-  readonly mediaConnectFlows?: AwsMedialiveInput.MediaConnectFlowsProperty[] | cdktn.IResolvable;
+  readonly mediaConnectFlows?: TfInput.MediaConnectFlowsProperty[] | cdktn.IResolvable;
   /**
   * sources block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#sources AwsMedialiveInput#sources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#sources TfInput#sources}
   */
-  readonly sources?: AwsMedialiveInput.SourcesProperty[] | cdktn.IResolvable;
+  readonly sources?: TfInput.SourcesProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#timeouts AwsMedialiveInput#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#timeouts TfInput#timeouts}
   */
-  readonly timeouts?: AwsMedialiveInput.TimeoutsProperty;
+  readonly timeouts?: TfInput.TimeoutsProperty;
   /**
   * vpc block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#vpc AwsMedialiveInput#vpc}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#vpc TfInput#vpc}
   */
-  readonly vpc?: AwsMedialiveInput.VpcProperty;
+  readonly vpc?: TfInput.VpcProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input aws_medialive_input}
 */
-export class AwsMedialiveInput extends cdktn.TerraformResource {
+export class TfInput extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -95,11 +95,11 @@ export class AwsMedialiveInput extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsMedialiveInput resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfInput resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsMedialiveInput to import
-  * @param importFromId The id of the existing AwsMedialiveInput that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsMedialiveInput to import is found
+  * @param importToId The construct id used in the generated config for the TfInput to import
+  * @param importFromId The id of the existing TfInput that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfInput to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_medialive_input", importId: importFromId, provider });
@@ -114,9 +114,9 @@ export class AwsMedialiveInput extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsMedialiveInputConfig
+  * @param options TfInputConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsMedialiveInputConfig) {
+  public constructor(scope: Construct, id: string, config: TfInputConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_medialive_input',
       terraformGeneratorMetadata: {
@@ -300,11 +300,11 @@ export class AwsMedialiveInput extends cdktn.TerraformResource {
   }
 
   // destinations - computed: false, optional: true, required: false
-  private _destinations = new AwsMedialiveInput.DestinationsPropertyList(this, "destinations", true);
+  private _destinations = new TfInput.DestinationsPropertyList(this, "destinations", true);
   public get destinations() {
     return this._destinations;
   }
-  public putDestinations(value: AwsMedialiveInput.DestinationsProperty[] | cdktn.IResolvable) {
+  public putDestinations(value: TfInput.DestinationsProperty[] | cdktn.IResolvable) {
     this._destinations.internalValue = value;
   }
   public resetDestinations() {
@@ -316,11 +316,11 @@ export class AwsMedialiveInput extends cdktn.TerraformResource {
   }
 
   // input_devices - computed: false, optional: true, required: false
-  private _inputDevices = new AwsMedialiveInput.InputDevicesPropertyList(this, "input_devices", true);
+  private _inputDevices = new TfInput.InputDevicesPropertyList(this, "input_devices", true);
   public get inputDevices() {
     return this._inputDevices;
   }
-  public putInputDevices(value: AwsMedialiveInput.InputDevicesProperty[] | cdktn.IResolvable) {
+  public putInputDevices(value: TfInput.InputDevicesProperty[] | cdktn.IResolvable) {
     this._inputDevices.internalValue = value;
   }
   public resetInputDevices() {
@@ -332,11 +332,11 @@ export class AwsMedialiveInput extends cdktn.TerraformResource {
   }
 
   // media_connect_flows - computed: false, optional: true, required: false
-  private _mediaConnectFlows = new AwsMedialiveInput.MediaConnectFlowsPropertyList(this, "media_connect_flows", true);
+  private _mediaConnectFlows = new TfInput.MediaConnectFlowsPropertyList(this, "media_connect_flows", true);
   public get mediaConnectFlows() {
     return this._mediaConnectFlows;
   }
-  public putMediaConnectFlows(value: AwsMedialiveInput.MediaConnectFlowsProperty[] | cdktn.IResolvable) {
+  public putMediaConnectFlows(value: TfInput.MediaConnectFlowsProperty[] | cdktn.IResolvable) {
     this._mediaConnectFlows.internalValue = value;
   }
   public resetMediaConnectFlows() {
@@ -348,11 +348,11 @@ export class AwsMedialiveInput extends cdktn.TerraformResource {
   }
 
   // sources - computed: false, optional: true, required: false
-  private _sources = new AwsMedialiveInput.SourcesPropertyList(this, "sources", true);
+  private _sources = new TfInput.SourcesPropertyList(this, "sources", true);
   public get sources() {
     return this._sources;
   }
-  public putSources(value: AwsMedialiveInput.SourcesProperty[] | cdktn.IResolvable) {
+  public putSources(value: TfInput.SourcesProperty[] | cdktn.IResolvable) {
     this._sources.internalValue = value;
   }
   public resetSources() {
@@ -364,11 +364,11 @@ export class AwsMedialiveInput extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsMedialiveInput.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfInput.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsMedialiveInput.TimeoutsProperty) {
+  public putTimeouts(value: TfInput.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -380,11 +380,11 @@ export class AwsMedialiveInput extends cdktn.TerraformResource {
   }
 
   // vpc - computed: false, optional: true, required: false
-  private _vpc = new AwsMedialiveInput.VpcPropertyOutputReference(this, "vpc");
+  private _vpc = new TfInput.VpcPropertyOutputReference(this, "vpc");
   public get vpc() {
     return this._vpc;
   }
-  public putVpc(value: AwsMedialiveInput.VpcProperty) {
+  public putVpc(value: TfInput.VpcProperty) {
     this._vpc.internalValue = value;
   }
   public resetVpc() {
@@ -409,12 +409,12 @@ export class AwsMedialiveInput extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       type: cdktn.stringToTerraform(this._type),
-      destinations: cdktn.listMapper(awsMedialiveInputDestinationsPropertyToTerraform, true)(this._destinations.internalValue),
-      input_devices: cdktn.listMapper(awsMedialiveInputInputDevicesPropertyToTerraform, true)(this._inputDevices.internalValue),
-      media_connect_flows: cdktn.listMapper(awsMedialiveInputMediaConnectFlowsPropertyToTerraform, true)(this._mediaConnectFlows.internalValue),
-      sources: cdktn.listMapper(awsMedialiveInputSourcesPropertyToTerraform, true)(this._sources.internalValue),
-      timeouts: awsMedialiveInputTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      vpc: awsMedialiveInputVpcPropertyToTerraform(this._vpc.internalValue),
+      destinations: cdktn.listMapper(tfInputDestinationsPropertyToTerraform, true)(this._destinations.internalValue),
+      input_devices: cdktn.listMapper(tfInputInputDevicesPropertyToTerraform, true)(this._inputDevices.internalValue),
+      media_connect_flows: cdktn.listMapper(tfInputMediaConnectFlowsPropertyToTerraform, true)(this._mediaConnectFlows.internalValue),
+      sources: cdktn.listMapper(tfInputSourcesPropertyToTerraform, true)(this._sources.internalValue),
+      timeouts: tfInputTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      vpc: tfInputVpcPropertyToTerraform(this._vpc.internalValue),
     };
   }
 
@@ -469,40 +469,40 @@ export class AwsMedialiveInput extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       destinations: {
-        value: cdktn.listMapperHcl(awsMedialiveInputDestinationsPropertyToHclTerraform, true)(this._destinations.internalValue),
+        value: cdktn.listMapperHcl(tfInputDestinationsPropertyToHclTerraform, true)(this._destinations.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsMedialiveInput.DestinationsPropertyList",
+        storageClassType: "TfInput.DestinationsPropertyList",
       },
       input_devices: {
-        value: cdktn.listMapperHcl(awsMedialiveInputInputDevicesPropertyToHclTerraform, true)(this._inputDevices.internalValue),
+        value: cdktn.listMapperHcl(tfInputInputDevicesPropertyToHclTerraform, true)(this._inputDevices.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsMedialiveInput.InputDevicesPropertyList",
+        storageClassType: "TfInput.InputDevicesPropertyList",
       },
       media_connect_flows: {
-        value: cdktn.listMapperHcl(awsMedialiveInputMediaConnectFlowsPropertyToHclTerraform, true)(this._mediaConnectFlows.internalValue),
+        value: cdktn.listMapperHcl(tfInputMediaConnectFlowsPropertyToHclTerraform, true)(this._mediaConnectFlows.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsMedialiveInput.MediaConnectFlowsPropertyList",
+        storageClassType: "TfInput.MediaConnectFlowsPropertyList",
       },
       sources: {
-        value: cdktn.listMapperHcl(awsMedialiveInputSourcesPropertyToHclTerraform, true)(this._sources.internalValue),
+        value: cdktn.listMapperHcl(tfInputSourcesPropertyToHclTerraform, true)(this._sources.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsMedialiveInput.SourcesPropertyList",
+        storageClassType: "TfInput.SourcesPropertyList",
       },
       timeouts: {
-        value: awsMedialiveInputTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfInputTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsMedialiveInput.TimeoutsProperty",
+        storageClassType: "TfInput.TimeoutsProperty",
       },
       vpc: {
-        value: awsMedialiveInputVpcPropertyToHclTerraform(this._vpc.internalValue),
+        value: tfInputVpcPropertyToHclTerraform(this._vpc.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsMedialiveInput.VpcPropertyList",
+        storageClassType: "TfInput.VpcPropertyList",
       },
     };
 
@@ -511,7 +511,7 @@ export class AwsMedialiveInput extends cdktn.TerraformResource {
   }
 }
 
-export function awsMedialiveInputDestinationsPropertyToTerraform(struct?: AwsMedialiveInput.DestinationsProperty | cdktn.IResolvable): any {
+export function tfInputDestinationsPropertyToTerraform(struct?: TfInput.DestinationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -522,7 +522,7 @@ export function awsMedialiveInputDestinationsPropertyToTerraform(struct?: AwsMed
 }
 
 
-export function awsMedialiveInputDestinationsPropertyToHclTerraform(struct?: AwsMedialiveInput.DestinationsProperty | cdktn.IResolvable): any {
+export function tfInputDestinationsPropertyToHclTerraform(struct?: TfInput.DestinationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -541,7 +541,7 @@ export function awsMedialiveInputDestinationsPropertyToHclTerraform(struct?: Aws
 }
 
 
-export function awsMedialiveInputInputDevicesPropertyToTerraform(struct?: AwsMedialiveInput.InputDevicesProperty | cdktn.IResolvable): any {
+export function tfInputInputDevicesPropertyToTerraform(struct?: TfInput.InputDevicesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -552,7 +552,7 @@ export function awsMedialiveInputInputDevicesPropertyToTerraform(struct?: AwsMed
 }
 
 
-export function awsMedialiveInputInputDevicesPropertyToHclTerraform(struct?: AwsMedialiveInput.InputDevicesProperty | cdktn.IResolvable): any {
+export function tfInputInputDevicesPropertyToHclTerraform(struct?: TfInput.InputDevicesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -571,7 +571,7 @@ export function awsMedialiveInputInputDevicesPropertyToHclTerraform(struct?: Aws
 }
 
 
-export function awsMedialiveInputMediaConnectFlowsPropertyToTerraform(struct?: AwsMedialiveInput.MediaConnectFlowsProperty | cdktn.IResolvable): any {
+export function tfInputMediaConnectFlowsPropertyToTerraform(struct?: TfInput.MediaConnectFlowsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -582,7 +582,7 @@ export function awsMedialiveInputMediaConnectFlowsPropertyToTerraform(struct?: A
 }
 
 
-export function awsMedialiveInputMediaConnectFlowsPropertyToHclTerraform(struct?: AwsMedialiveInput.MediaConnectFlowsProperty | cdktn.IResolvable): any {
+export function tfInputMediaConnectFlowsPropertyToHclTerraform(struct?: TfInput.MediaConnectFlowsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -601,7 +601,7 @@ export function awsMedialiveInputMediaConnectFlowsPropertyToHclTerraform(struct?
 }
 
 
-export function awsMedialiveInputSourcesPropertyToTerraform(struct?: AwsMedialiveInput.SourcesProperty | cdktn.IResolvable): any {
+export function tfInputSourcesPropertyToTerraform(struct?: TfInput.SourcesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -614,7 +614,7 @@ export function awsMedialiveInputSourcesPropertyToTerraform(struct?: AwsMedialiv
 }
 
 
-export function awsMedialiveInputSourcesPropertyToHclTerraform(struct?: AwsMedialiveInput.SourcesProperty | cdktn.IResolvable): any {
+export function tfInputSourcesPropertyToHclTerraform(struct?: TfInput.SourcesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -645,7 +645,7 @@ export function awsMedialiveInputSourcesPropertyToHclTerraform(struct?: AwsMedia
 }
 
 
-export function awsMedialiveInputTimeoutsPropertyToTerraform(struct?: AwsMedialiveInput.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfInputTimeoutsPropertyToTerraform(struct?: TfInput.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -658,7 +658,7 @@ export function awsMedialiveInputTimeoutsPropertyToTerraform(struct?: AwsMediali
 }
 
 
-export function awsMedialiveInputTimeoutsPropertyToHclTerraform(struct?: AwsMedialiveInput.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfInputTimeoutsPropertyToHclTerraform(struct?: TfInput.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -689,7 +689,7 @@ export function awsMedialiveInputTimeoutsPropertyToHclTerraform(struct?: AwsMedi
 }
 
 
-export function awsMedialiveInputVpcPropertyToTerraform(struct?: AwsMedialiveInput.VpcPropertyOutputReference | AwsMedialiveInput.VpcProperty): any {
+export function tfInputVpcPropertyToTerraform(struct?: TfInput.VpcPropertyOutputReference | TfInput.VpcProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -701,7 +701,7 @@ export function awsMedialiveInputVpcPropertyToTerraform(struct?: AwsMedialiveInp
 }
 
 
-export function awsMedialiveInputVpcPropertyToHclTerraform(struct?: AwsMedialiveInput.VpcPropertyOutputReference | AwsMedialiveInput.VpcProperty): any {
+export function tfInputVpcPropertyToHclTerraform(struct?: TfInput.VpcPropertyOutputReference | TfInput.VpcProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -726,10 +726,10 @@ export function awsMedialiveInputVpcPropertyToHclTerraform(struct?: AwsMedialive
 }
 
 
-export namespace AwsMedialiveInput {
+export namespace TfInput {
 export interface DestinationsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#stream_name AwsMedialiveInput#stream_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#stream_name TfInput#stream_name}
   */
   readonly streamName: string;
 }
@@ -812,7 +812,7 @@ export class DestinationsPropertyList extends cdktn.ComplexList {
 }
 export interface InputDevicesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#id AwsMedialiveInput#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#id TfInput#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -898,7 +898,7 @@ export class InputDevicesPropertyList extends cdktn.ComplexList {
 }
 export interface MediaConnectFlowsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#flow_arn AwsMedialiveInput#flow_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#flow_arn TfInput#flow_arn}
   */
   readonly flowArn: string;
 }
@@ -981,15 +981,15 @@ export class MediaConnectFlowsPropertyList extends cdktn.ComplexList {
 }
 export interface SourcesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#password_param AwsMedialiveInput#password_param}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#password_param TfInput#password_param}
   */
   readonly passwordParam: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#url AwsMedialiveInput#url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#url TfInput#url}
   */
   readonly url: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#username AwsMedialiveInput#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#username TfInput#username}
   */
   readonly username: string;
 }
@@ -1110,15 +1110,15 @@ export class SourcesPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#create AwsMedialiveInput#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#create TfInput#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#delete AwsMedialiveInput#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#delete TfInput#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#update AwsMedialiveInput#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#update TfInput#update}
   */
   readonly update?: string;
 }
@@ -1226,11 +1226,11 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VpcProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#security_group_ids AwsMedialiveInput#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#security_group_ids TfInput#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#subnet_ids AwsMedialiveInput#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input#subnet_ids TfInput#subnet_ids}
   */
   readonly subnetIds: string[];
 }

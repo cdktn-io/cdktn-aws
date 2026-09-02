@@ -5,80 +5,80 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsConnectInstanceConfig extends cdktn.TerraformMetaArguments {
+export interface TfInstanceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#auto_resolve_best_voices_enabled AwsConnectInstance#auto_resolve_best_voices_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#auto_resolve_best_voices_enabled TfInstance#auto_resolve_best_voices_enabled}
   */
   readonly autoResolveBestVoicesEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#contact_flow_logs_enabled AwsConnectInstance#contact_flow_logs_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#contact_flow_logs_enabled TfInstance#contact_flow_logs_enabled}
   */
   readonly contactFlowLogsEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#contact_lens_enabled AwsConnectInstance#contact_lens_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#contact_lens_enabled TfInstance#contact_lens_enabled}
   */
   readonly contactLensEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#directory_id AwsConnectInstance#directory_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#directory_id TfInstance#directory_id}
   */
   readonly directoryId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#early_media_enabled AwsConnectInstance#early_media_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#early_media_enabled TfInstance#early_media_enabled}
   */
   readonly earlyMediaEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#id AwsConnectInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#id TfInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#identity_management_type AwsConnectInstance#identity_management_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#identity_management_type TfInstance#identity_management_type}
   */
   readonly identityManagementType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#inbound_calls_enabled AwsConnectInstance#inbound_calls_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#inbound_calls_enabled TfInstance#inbound_calls_enabled}
   */
   readonly inboundCallsEnabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#instance_alias AwsConnectInstance#instance_alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#instance_alias TfInstance#instance_alias}
   */
   readonly instanceAlias?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#multi_party_conference_enabled AwsConnectInstance#multi_party_conference_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#multi_party_conference_enabled TfInstance#multi_party_conference_enabled}
   */
   readonly multiPartyConferenceEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#outbound_calls_enabled AwsConnectInstance#outbound_calls_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#outbound_calls_enabled TfInstance#outbound_calls_enabled}
   */
   readonly outboundCallsEnabled: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#region AwsConnectInstance#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#region TfInstance#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#tags AwsConnectInstance#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#tags TfInstance#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#tags_all AwsConnectInstance#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#tags_all TfInstance#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#timeouts AwsConnectInstance#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#timeouts TfInstance#timeouts}
   */
-  readonly timeouts?: AwsConnectInstance.TimeoutsProperty;
+  readonly timeouts?: TfInstance.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance aws_connect_instance}
 */
-export class AwsConnectInstance extends cdktn.TerraformResource {
+export class TfInstance extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -89,11 +89,11 @@ export class AwsConnectInstance extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsConnectInstance resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfInstance resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsConnectInstance to import
-  * @param importFromId The id of the existing AwsConnectInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsConnectInstance to import is found
+  * @param importToId The construct id used in the generated config for the TfInstance to import
+  * @param importFromId The id of the existing TfInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfInstance to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_connect_instance", importId: importFromId, provider });
@@ -108,9 +108,9 @@ export class AwsConnectInstance extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsConnectInstanceConfig
+  * @param options TfInstanceConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsConnectInstanceConfig) {
+  public constructor(scope: Construct, id: string, config: TfInstanceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_connect_instance',
       terraformGeneratorMetadata: {
@@ -383,11 +383,11 @@ export class AwsConnectInstance extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsConnectInstance.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfInstance.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsConnectInstance.TimeoutsProperty) {
+  public putTimeouts(value: TfInstance.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -418,7 +418,7 @@ export class AwsConnectInstance extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: awsConnectInstanceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfInstanceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -509,10 +509,10 @@ export class AwsConnectInstance extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsConnectInstanceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfInstanceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsConnectInstance.TimeoutsProperty",
+        storageClassType: "TfInstance.TimeoutsProperty",
       },
     };
 
@@ -521,7 +521,7 @@ export class AwsConnectInstance extends cdktn.TerraformResource {
   }
 }
 
-export function awsConnectInstanceTimeoutsPropertyToTerraform(struct?: AwsConnectInstance.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfInstanceTimeoutsPropertyToTerraform(struct?: TfInstance.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -533,7 +533,7 @@ export function awsConnectInstanceTimeoutsPropertyToTerraform(struct?: AwsConnec
 }
 
 
-export function awsConnectInstanceTimeoutsPropertyToHclTerraform(struct?: AwsConnectInstance.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfInstanceTimeoutsPropertyToHclTerraform(struct?: TfInstance.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -558,14 +558,14 @@ export function awsConnectInstanceTimeoutsPropertyToHclTerraform(struct?: AwsCon
 }
 
 
-export namespace AwsConnectInstance {
+export namespace TfInstance {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#create AwsConnectInstance#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#create TfInstance#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#delete AwsConnectInstance#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance#delete TfInstance#delete}
   */
   readonly delete?: string;
 }

@@ -5,36 +5,36 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsRoute53ZoneConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataZoneConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_zone#enable_accelerated_recovery DataAwsRoute53Zone#enable_accelerated_recovery}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_zone#enable_accelerated_recovery TfDataZone#enable_accelerated_recovery}
   */
   readonly enableAcceleratedRecovery?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_zone#id DataAwsRoute53Zone#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_zone#id TfDataZone#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_zone#name DataAwsRoute53Zone#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_zone#name TfDataZone#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_zone#private_zone DataAwsRoute53Zone#private_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_zone#private_zone TfDataZone#private_zone}
   */
   readonly privateZone?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_zone#tags DataAwsRoute53Zone#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_zone#tags TfDataZone#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_zone#vpc_id DataAwsRoute53Zone#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_zone#vpc_id TfDataZone#vpc_id}
   */
   readonly vpcId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_zone#zone_id DataAwsRoute53Zone#zone_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_zone#zone_id TfDataZone#zone_id}
   */
   readonly zoneId?: string;
 }
@@ -42,7 +42,7 @@ export interface DataAwsRoute53ZoneConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_zone aws_route53_zone}
 */
-export class DataAwsRoute53Zone extends cdktn.TerraformDataSource {
+export class TfDataZone extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class DataAwsRoute53Zone extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsRoute53Zone resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataZone resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsRoute53Zone to import
-  * @param importFromId The id of the existing DataAwsRoute53Zone that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_zone#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsRoute53Zone to import is found
+  * @param importToId The construct id used in the generated config for the TfDataZone to import
+  * @param importFromId The id of the existing TfDataZone that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_zone#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataZone to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route53_zone", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class DataAwsRoute53Zone extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsRoute53ZoneConfig = {}
+  * @param options TfDataZoneConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsRoute53ZoneConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDataZoneConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_route53_zone',
       terraformGeneratorMetadata: {

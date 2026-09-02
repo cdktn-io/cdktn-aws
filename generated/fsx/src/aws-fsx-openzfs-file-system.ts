@@ -5,138 +5,138 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsFsxOpenzfsFileSystemConfig extends cdktn.TerraformMetaArguments {
+export interface TfOpenzfsFileSystemConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#automatic_backup_retention_days AwsFsxOpenzfsFileSystem#automatic_backup_retention_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#automatic_backup_retention_days TfOpenzfsFileSystem#automatic_backup_retention_days}
   */
   readonly automaticBackupRetentionDays?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#backup_id AwsFsxOpenzfsFileSystem#backup_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#backup_id TfOpenzfsFileSystem#backup_id}
   */
   readonly backupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#copy_tags_to_backups AwsFsxOpenzfsFileSystem#copy_tags_to_backups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#copy_tags_to_backups TfOpenzfsFileSystem#copy_tags_to_backups}
   */
   readonly copyTagsToBackups?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#copy_tags_to_volumes AwsFsxOpenzfsFileSystem#copy_tags_to_volumes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#copy_tags_to_volumes TfOpenzfsFileSystem#copy_tags_to_volumes}
   */
   readonly copyTagsToVolumes?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#daily_automatic_backup_start_time AwsFsxOpenzfsFileSystem#daily_automatic_backup_start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#daily_automatic_backup_start_time TfOpenzfsFileSystem#daily_automatic_backup_start_time}
   */
   readonly dailyAutomaticBackupStartTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#delete_options AwsFsxOpenzfsFileSystem#delete_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#delete_options TfOpenzfsFileSystem#delete_options}
   */
   readonly deleteOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#deployment_type AwsFsxOpenzfsFileSystem#deployment_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#deployment_type TfOpenzfsFileSystem#deployment_type}
   */
   readonly deploymentType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#endpoint_ip_address_range AwsFsxOpenzfsFileSystem#endpoint_ip_address_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#endpoint_ip_address_range TfOpenzfsFileSystem#endpoint_ip_address_range}
   */
   readonly endpointIpAddressRange?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#final_backup_tags AwsFsxOpenzfsFileSystem#final_backup_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#final_backup_tags TfOpenzfsFileSystem#final_backup_tags}
   */
   readonly finalBackupTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#id AwsFsxOpenzfsFileSystem#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#id TfOpenzfsFileSystem#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#kms_key_id AwsFsxOpenzfsFileSystem#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#kms_key_id TfOpenzfsFileSystem#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#network_type AwsFsxOpenzfsFileSystem#network_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#network_type TfOpenzfsFileSystem#network_type}
   */
   readonly networkType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#preferred_subnet_id AwsFsxOpenzfsFileSystem#preferred_subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#preferred_subnet_id TfOpenzfsFileSystem#preferred_subnet_id}
   */
   readonly preferredSubnetId?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#region AwsFsxOpenzfsFileSystem#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#region TfOpenzfsFileSystem#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#route_table_ids AwsFsxOpenzfsFileSystem#route_table_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#route_table_ids TfOpenzfsFileSystem#route_table_ids}
   */
   readonly routeTableIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#security_group_ids AwsFsxOpenzfsFileSystem#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#security_group_ids TfOpenzfsFileSystem#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#skip_final_backup AwsFsxOpenzfsFileSystem#skip_final_backup}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#skip_final_backup TfOpenzfsFileSystem#skip_final_backup}
   */
   readonly skipFinalBackup?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#storage_capacity AwsFsxOpenzfsFileSystem#storage_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#storage_capacity TfOpenzfsFileSystem#storage_capacity}
   */
   readonly storageCapacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#storage_type AwsFsxOpenzfsFileSystem#storage_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#storage_type TfOpenzfsFileSystem#storage_type}
   */
   readonly storageType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#subnet_ids AwsFsxOpenzfsFileSystem#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#subnet_ids TfOpenzfsFileSystem#subnet_ids}
   */
   readonly subnetIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#tags AwsFsxOpenzfsFileSystem#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#tags TfOpenzfsFileSystem#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#tags_all AwsFsxOpenzfsFileSystem#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#tags_all TfOpenzfsFileSystem#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#throughput_capacity AwsFsxOpenzfsFileSystem#throughput_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#throughput_capacity TfOpenzfsFileSystem#throughput_capacity}
   */
   readonly throughputCapacity: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#weekly_maintenance_start_time AwsFsxOpenzfsFileSystem#weekly_maintenance_start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#weekly_maintenance_start_time TfOpenzfsFileSystem#weekly_maintenance_start_time}
   */
   readonly weeklyMaintenanceStartTime?: string;
   /**
   * disk_iops_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#disk_iops_configuration AwsFsxOpenzfsFileSystem#disk_iops_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#disk_iops_configuration TfOpenzfsFileSystem#disk_iops_configuration}
   */
-  readonly diskIopsConfiguration?: AwsFsxOpenzfsFileSystem.DiskIopsConfigurationProperty;
+  readonly diskIopsConfiguration?: TfOpenzfsFileSystem.DiskIopsConfigurationProperty;
   /**
   * read_cache_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#read_cache_configuration AwsFsxOpenzfsFileSystem#read_cache_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#read_cache_configuration TfOpenzfsFileSystem#read_cache_configuration}
   */
-  readonly readCacheConfiguration?: AwsFsxOpenzfsFileSystem.ReadCacheConfigurationProperty;
+  readonly readCacheConfiguration?: TfOpenzfsFileSystem.ReadCacheConfigurationProperty;
   /**
   * root_volume_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#root_volume_configuration AwsFsxOpenzfsFileSystem#root_volume_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#root_volume_configuration TfOpenzfsFileSystem#root_volume_configuration}
   */
-  readonly rootVolumeConfiguration?: AwsFsxOpenzfsFileSystem.RootVolumeConfigurationProperty;
+  readonly rootVolumeConfiguration?: TfOpenzfsFileSystem.RootVolumeConfigurationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#timeouts AwsFsxOpenzfsFileSystem#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#timeouts TfOpenzfsFileSystem#timeouts}
   */
-  readonly timeouts?: AwsFsxOpenzfsFileSystem.TimeoutsProperty;
+  readonly timeouts?: TfOpenzfsFileSystem.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system aws_fsx_openzfs_file_system}
 */
-export class AwsFsxOpenzfsFileSystem extends cdktn.TerraformResource {
+export class TfOpenzfsFileSystem extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -147,11 +147,11 @@ export class AwsFsxOpenzfsFileSystem extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsFsxOpenzfsFileSystem resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfOpenzfsFileSystem resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsFsxOpenzfsFileSystem to import
-  * @param importFromId The id of the existing AwsFsxOpenzfsFileSystem that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsFsxOpenzfsFileSystem to import is found
+  * @param importToId The construct id used in the generated config for the TfOpenzfsFileSystem to import
+  * @param importFromId The id of the existing TfOpenzfsFileSystem that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfOpenzfsFileSystem to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_fsx_openzfs_file_system", importId: importFromId, provider });
@@ -166,9 +166,9 @@ export class AwsFsxOpenzfsFileSystem extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsFsxOpenzfsFileSystemConfig
+  * @param options TfOpenzfsFileSystemConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsFsxOpenzfsFileSystemConfig) {
+  public constructor(scope: Construct, id: string, config: TfOpenzfsFileSystemConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_fsx_openzfs_file_system',
       terraformGeneratorMetadata: {
@@ -629,11 +629,11 @@ export class AwsFsxOpenzfsFileSystem extends cdktn.TerraformResource {
   }
 
   // disk_iops_configuration - computed: false, optional: true, required: false
-  private _diskIopsConfiguration = new AwsFsxOpenzfsFileSystem.DiskIopsConfigurationPropertyOutputReference(this, "disk_iops_configuration");
+  private _diskIopsConfiguration = new TfOpenzfsFileSystem.DiskIopsConfigurationPropertyOutputReference(this, "disk_iops_configuration");
   public get diskIopsConfiguration() {
     return this._diskIopsConfiguration;
   }
-  public putDiskIopsConfiguration(value: AwsFsxOpenzfsFileSystem.DiskIopsConfigurationProperty) {
+  public putDiskIopsConfiguration(value: TfOpenzfsFileSystem.DiskIopsConfigurationProperty) {
     this._diskIopsConfiguration.internalValue = value;
   }
   public resetDiskIopsConfiguration() {
@@ -645,11 +645,11 @@ export class AwsFsxOpenzfsFileSystem extends cdktn.TerraformResource {
   }
 
   // read_cache_configuration - computed: false, optional: true, required: false
-  private _readCacheConfiguration = new AwsFsxOpenzfsFileSystem.ReadCacheConfigurationPropertyOutputReference(this, "read_cache_configuration");
+  private _readCacheConfiguration = new TfOpenzfsFileSystem.ReadCacheConfigurationPropertyOutputReference(this, "read_cache_configuration");
   public get readCacheConfiguration() {
     return this._readCacheConfiguration;
   }
-  public putReadCacheConfiguration(value: AwsFsxOpenzfsFileSystem.ReadCacheConfigurationProperty) {
+  public putReadCacheConfiguration(value: TfOpenzfsFileSystem.ReadCacheConfigurationProperty) {
     this._readCacheConfiguration.internalValue = value;
   }
   public resetReadCacheConfiguration() {
@@ -661,11 +661,11 @@ export class AwsFsxOpenzfsFileSystem extends cdktn.TerraformResource {
   }
 
   // root_volume_configuration - computed: false, optional: true, required: false
-  private _rootVolumeConfiguration = new AwsFsxOpenzfsFileSystem.RootVolumeConfigurationPropertyOutputReference(this, "root_volume_configuration");
+  private _rootVolumeConfiguration = new TfOpenzfsFileSystem.RootVolumeConfigurationPropertyOutputReference(this, "root_volume_configuration");
   public get rootVolumeConfiguration() {
     return this._rootVolumeConfiguration;
   }
-  public putRootVolumeConfiguration(value: AwsFsxOpenzfsFileSystem.RootVolumeConfigurationProperty) {
+  public putRootVolumeConfiguration(value: TfOpenzfsFileSystem.RootVolumeConfigurationProperty) {
     this._rootVolumeConfiguration.internalValue = value;
   }
   public resetRootVolumeConfiguration() {
@@ -677,11 +677,11 @@ export class AwsFsxOpenzfsFileSystem extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsFsxOpenzfsFileSystem.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfOpenzfsFileSystem.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsFsxOpenzfsFileSystem.TimeoutsProperty) {
+  public putTimeouts(value: TfOpenzfsFileSystem.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -722,10 +722,10 @@ export class AwsFsxOpenzfsFileSystem extends cdktn.TerraformResource {
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       throughput_capacity: cdktn.numberToTerraform(this._throughputCapacity),
       weekly_maintenance_start_time: cdktn.stringToTerraform(this._weeklyMaintenanceStartTime),
-      disk_iops_configuration: awsFsxOpenzfsFileSystemDiskIopsConfigurationPropertyToTerraform(this._diskIopsConfiguration.internalValue),
-      read_cache_configuration: awsFsxOpenzfsFileSystemReadCacheConfigurationPropertyToTerraform(this._readCacheConfiguration.internalValue),
-      root_volume_configuration: awsFsxOpenzfsFileSystemRootVolumeConfigurationPropertyToTerraform(this._rootVolumeConfiguration.internalValue),
-      timeouts: awsFsxOpenzfsFileSystemTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      disk_iops_configuration: tfOpenzfsFileSystemDiskIopsConfigurationPropertyToTerraform(this._diskIopsConfiguration.internalValue),
+      read_cache_configuration: tfOpenzfsFileSystemReadCacheConfigurationPropertyToTerraform(this._readCacheConfiguration.internalValue),
+      root_volume_configuration: tfOpenzfsFileSystemRootVolumeConfigurationPropertyToTerraform(this._rootVolumeConfiguration.internalValue),
+      timeouts: tfOpenzfsFileSystemTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -876,28 +876,28 @@ export class AwsFsxOpenzfsFileSystem extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       disk_iops_configuration: {
-        value: awsFsxOpenzfsFileSystemDiskIopsConfigurationPropertyToHclTerraform(this._diskIopsConfiguration.internalValue),
+        value: tfOpenzfsFileSystemDiskIopsConfigurationPropertyToHclTerraform(this._diskIopsConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsFsxOpenzfsFileSystem.DiskIopsConfigurationPropertyList",
+        storageClassType: "TfOpenzfsFileSystem.DiskIopsConfigurationPropertyList",
       },
       read_cache_configuration: {
-        value: awsFsxOpenzfsFileSystemReadCacheConfigurationPropertyToHclTerraform(this._readCacheConfiguration.internalValue),
+        value: tfOpenzfsFileSystemReadCacheConfigurationPropertyToHclTerraform(this._readCacheConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsFsxOpenzfsFileSystem.ReadCacheConfigurationPropertyList",
+        storageClassType: "TfOpenzfsFileSystem.ReadCacheConfigurationPropertyList",
       },
       root_volume_configuration: {
-        value: awsFsxOpenzfsFileSystemRootVolumeConfigurationPropertyToHclTerraform(this._rootVolumeConfiguration.internalValue),
+        value: tfOpenzfsFileSystemRootVolumeConfigurationPropertyToHclTerraform(this._rootVolumeConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsFsxOpenzfsFileSystem.RootVolumeConfigurationPropertyList",
+        storageClassType: "TfOpenzfsFileSystem.RootVolumeConfigurationPropertyList",
       },
       timeouts: {
-        value: awsFsxOpenzfsFileSystemTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfOpenzfsFileSystemTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsFsxOpenzfsFileSystem.TimeoutsProperty",
+        storageClassType: "TfOpenzfsFileSystem.TimeoutsProperty",
       },
     };
 
@@ -906,7 +906,7 @@ export class AwsFsxOpenzfsFileSystem extends cdktn.TerraformResource {
   }
 }
 
-export function awsFsxOpenzfsFileSystemDiskIopsConfigurationPropertyToTerraform(struct?: AwsFsxOpenzfsFileSystem.DiskIopsConfigurationPropertyOutputReference | AwsFsxOpenzfsFileSystem.DiskIopsConfigurationProperty): any {
+export function tfOpenzfsFileSystemDiskIopsConfigurationPropertyToTerraform(struct?: TfOpenzfsFileSystem.DiskIopsConfigurationPropertyOutputReference | TfOpenzfsFileSystem.DiskIopsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -918,7 +918,7 @@ export function awsFsxOpenzfsFileSystemDiskIopsConfigurationPropertyToTerraform(
 }
 
 
-export function awsFsxOpenzfsFileSystemDiskIopsConfigurationPropertyToHclTerraform(struct?: AwsFsxOpenzfsFileSystem.DiskIopsConfigurationPropertyOutputReference | AwsFsxOpenzfsFileSystem.DiskIopsConfigurationProperty): any {
+export function tfOpenzfsFileSystemDiskIopsConfigurationPropertyToHclTerraform(struct?: TfOpenzfsFileSystem.DiskIopsConfigurationPropertyOutputReference | TfOpenzfsFileSystem.DiskIopsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -943,7 +943,7 @@ export function awsFsxOpenzfsFileSystemDiskIopsConfigurationPropertyToHclTerrafo
 }
 
 
-export function awsFsxOpenzfsFileSystemReadCacheConfigurationPropertyToTerraform(struct?: AwsFsxOpenzfsFileSystem.ReadCacheConfigurationPropertyOutputReference | AwsFsxOpenzfsFileSystem.ReadCacheConfigurationProperty): any {
+export function tfOpenzfsFileSystemReadCacheConfigurationPropertyToTerraform(struct?: TfOpenzfsFileSystem.ReadCacheConfigurationPropertyOutputReference | TfOpenzfsFileSystem.ReadCacheConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -955,7 +955,7 @@ export function awsFsxOpenzfsFileSystemReadCacheConfigurationPropertyToTerraform
 }
 
 
-export function awsFsxOpenzfsFileSystemReadCacheConfigurationPropertyToHclTerraform(struct?: AwsFsxOpenzfsFileSystem.ReadCacheConfigurationPropertyOutputReference | AwsFsxOpenzfsFileSystem.ReadCacheConfigurationProperty): any {
+export function tfOpenzfsFileSystemReadCacheConfigurationPropertyToHclTerraform(struct?: TfOpenzfsFileSystem.ReadCacheConfigurationPropertyOutputReference | TfOpenzfsFileSystem.ReadCacheConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -980,7 +980,7 @@ export function awsFsxOpenzfsFileSystemReadCacheConfigurationPropertyToHclTerraf
 }
 
 
-export function awsFsxOpenzfsFileSystemClientConfigurationsPropertyToTerraform(struct?: AwsFsxOpenzfsFileSystem.ClientConfigurationsProperty | cdktn.IResolvable): any {
+export function tfOpenzfsFileSystemClientConfigurationsPropertyToTerraform(struct?: TfOpenzfsFileSystem.ClientConfigurationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -992,7 +992,7 @@ export function awsFsxOpenzfsFileSystemClientConfigurationsPropertyToTerraform(s
 }
 
 
-export function awsFsxOpenzfsFileSystemClientConfigurationsPropertyToHclTerraform(struct?: AwsFsxOpenzfsFileSystem.ClientConfigurationsProperty | cdktn.IResolvable): any {
+export function tfOpenzfsFileSystemClientConfigurationsPropertyToHclTerraform(struct?: TfOpenzfsFileSystem.ClientConfigurationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1017,25 +1017,25 @@ export function awsFsxOpenzfsFileSystemClientConfigurationsPropertyToHclTerrafor
 }
 
 
-export function awsFsxOpenzfsFileSystemNfsExportsPropertyToTerraform(struct?: AwsFsxOpenzfsFileSystem.NfsExportsPropertyOutputReference | AwsFsxOpenzfsFileSystem.NfsExportsProperty): any {
+export function tfOpenzfsFileSystemNfsExportsPropertyToTerraform(struct?: TfOpenzfsFileSystem.NfsExportsPropertyOutputReference | TfOpenzfsFileSystem.NfsExportsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    client_configurations: cdktn.listMapper(awsFsxOpenzfsFileSystemClientConfigurationsPropertyToTerraform, true)(struct!.clientConfigurations),
+    client_configurations: cdktn.listMapper(tfOpenzfsFileSystemClientConfigurationsPropertyToTerraform, true)(struct!.clientConfigurations),
   }
 }
 
 
-export function awsFsxOpenzfsFileSystemNfsExportsPropertyToHclTerraform(struct?: AwsFsxOpenzfsFileSystem.NfsExportsPropertyOutputReference | AwsFsxOpenzfsFileSystem.NfsExportsProperty): any {
+export function tfOpenzfsFileSystemNfsExportsPropertyToHclTerraform(struct?: TfOpenzfsFileSystem.NfsExportsPropertyOutputReference | TfOpenzfsFileSystem.NfsExportsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     client_configurations: {
-      value: cdktn.listMapperHcl(awsFsxOpenzfsFileSystemClientConfigurationsPropertyToHclTerraform, true)(struct!.clientConfigurations),
+      value: cdktn.listMapperHcl(tfOpenzfsFileSystemClientConfigurationsPropertyToHclTerraform, true)(struct!.clientConfigurations),
       isBlock: true,
       type: "set",
       storageClassType: "ClientConfigurationsPropertyList",
@@ -1047,7 +1047,7 @@ export function awsFsxOpenzfsFileSystemNfsExportsPropertyToHclTerraform(struct?:
 }
 
 
-export function awsFsxOpenzfsFileSystemUserAndGroupQuotasPropertyToTerraform(struct?: AwsFsxOpenzfsFileSystem.UserAndGroupQuotasProperty | cdktn.IResolvable): any {
+export function tfOpenzfsFileSystemUserAndGroupQuotasPropertyToTerraform(struct?: TfOpenzfsFileSystem.UserAndGroupQuotasProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1060,7 +1060,7 @@ export function awsFsxOpenzfsFileSystemUserAndGroupQuotasPropertyToTerraform(str
 }
 
 
-export function awsFsxOpenzfsFileSystemUserAndGroupQuotasPropertyToHclTerraform(struct?: AwsFsxOpenzfsFileSystem.UserAndGroupQuotasProperty | cdktn.IResolvable): any {
+export function tfOpenzfsFileSystemUserAndGroupQuotasPropertyToHclTerraform(struct?: TfOpenzfsFileSystem.UserAndGroupQuotasProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1091,7 +1091,7 @@ export function awsFsxOpenzfsFileSystemUserAndGroupQuotasPropertyToHclTerraform(
 }
 
 
-export function awsFsxOpenzfsFileSystemRootVolumeConfigurationPropertyToTerraform(struct?: AwsFsxOpenzfsFileSystem.RootVolumeConfigurationPropertyOutputReference | AwsFsxOpenzfsFileSystem.RootVolumeConfigurationProperty): any {
+export function tfOpenzfsFileSystemRootVolumeConfigurationPropertyToTerraform(struct?: TfOpenzfsFileSystem.RootVolumeConfigurationPropertyOutputReference | TfOpenzfsFileSystem.RootVolumeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1101,13 +1101,13 @@ export function awsFsxOpenzfsFileSystemRootVolumeConfigurationPropertyToTerrafor
     data_compression_type: cdktn.stringToTerraform(struct!.dataCompressionType),
     read_only: cdktn.booleanToTerraform(struct!.readOnly),
     record_size_kib: cdktn.numberToTerraform(struct!.recordSizeKib),
-    nfs_exports: awsFsxOpenzfsFileSystemNfsExportsPropertyToTerraform(struct!.nfsExports),
-    user_and_group_quotas: cdktn.listMapper(awsFsxOpenzfsFileSystemUserAndGroupQuotasPropertyToTerraform, true)(struct!.userAndGroupQuotas),
+    nfs_exports: tfOpenzfsFileSystemNfsExportsPropertyToTerraform(struct!.nfsExports),
+    user_and_group_quotas: cdktn.listMapper(tfOpenzfsFileSystemUserAndGroupQuotasPropertyToTerraform, true)(struct!.userAndGroupQuotas),
   }
 }
 
 
-export function awsFsxOpenzfsFileSystemRootVolumeConfigurationPropertyToHclTerraform(struct?: AwsFsxOpenzfsFileSystem.RootVolumeConfigurationPropertyOutputReference | AwsFsxOpenzfsFileSystem.RootVolumeConfigurationProperty): any {
+export function tfOpenzfsFileSystemRootVolumeConfigurationPropertyToHclTerraform(struct?: TfOpenzfsFileSystem.RootVolumeConfigurationPropertyOutputReference | TfOpenzfsFileSystem.RootVolumeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1138,13 +1138,13 @@ export function awsFsxOpenzfsFileSystemRootVolumeConfigurationPropertyToHclTerra
       storageClassType: "number",
     },
     nfs_exports: {
-      value: awsFsxOpenzfsFileSystemNfsExportsPropertyToHclTerraform(struct!.nfsExports),
+      value: tfOpenzfsFileSystemNfsExportsPropertyToHclTerraform(struct!.nfsExports),
       isBlock: true,
       type: "list",
       storageClassType: "NfsExportsPropertyList",
     },
     user_and_group_quotas: {
-      value: cdktn.listMapperHcl(awsFsxOpenzfsFileSystemUserAndGroupQuotasPropertyToHclTerraform, true)(struct!.userAndGroupQuotas),
+      value: cdktn.listMapperHcl(tfOpenzfsFileSystemUserAndGroupQuotasPropertyToHclTerraform, true)(struct!.userAndGroupQuotas),
       isBlock: true,
       type: "set",
       storageClassType: "UserAndGroupQuotasPropertyList",
@@ -1156,7 +1156,7 @@ export function awsFsxOpenzfsFileSystemRootVolumeConfigurationPropertyToHclTerra
 }
 
 
-export function awsFsxOpenzfsFileSystemTimeoutsPropertyToTerraform(struct?: AwsFsxOpenzfsFileSystem.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfOpenzfsFileSystemTimeoutsPropertyToTerraform(struct?: TfOpenzfsFileSystem.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1169,7 +1169,7 @@ export function awsFsxOpenzfsFileSystemTimeoutsPropertyToTerraform(struct?: AwsF
 }
 
 
-export function awsFsxOpenzfsFileSystemTimeoutsPropertyToHclTerraform(struct?: AwsFsxOpenzfsFileSystem.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfOpenzfsFileSystemTimeoutsPropertyToHclTerraform(struct?: TfOpenzfsFileSystem.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1200,14 +1200,14 @@ export function awsFsxOpenzfsFileSystemTimeoutsPropertyToHclTerraform(struct?: A
 }
 
 
-export namespace AwsFsxOpenzfsFileSystem {
+export namespace TfOpenzfsFileSystem {
 export interface DiskIopsConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#iops AwsFsxOpenzfsFileSystem#iops}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#iops TfOpenzfsFileSystem#iops}
   */
   readonly iops?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#mode AwsFsxOpenzfsFileSystem#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#mode TfOpenzfsFileSystem#mode}
   */
   readonly mode?: string;
 }
@@ -1283,11 +1283,11 @@ export class DiskIopsConfigurationPropertyOutputReference extends cdktn.ComplexO
 }
 export interface ReadCacheConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#size AwsFsxOpenzfsFileSystem#size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#size TfOpenzfsFileSystem#size}
   */
   readonly size?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#sizing_mode AwsFsxOpenzfsFileSystem#sizing_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#sizing_mode TfOpenzfsFileSystem#sizing_mode}
   */
   readonly sizingMode?: string;
 }
@@ -1363,11 +1363,11 @@ export class ReadCacheConfigurationPropertyOutputReference extends cdktn.Complex
 }
 export interface ClientConfigurationsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#clients AwsFsxOpenzfsFileSystem#clients}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#clients TfOpenzfsFileSystem#clients}
   */
   readonly clients: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#options AwsFsxOpenzfsFileSystem#options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#options TfOpenzfsFileSystem#options}
   */
   readonly options: string[];
 }
@@ -1471,7 +1471,7 @@ export interface NfsExportsProperty {
   /**
   * client_configurations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#client_configurations AwsFsxOpenzfsFileSystem#client_configurations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#client_configurations TfOpenzfsFileSystem#client_configurations}
   */
   readonly clientConfigurations: ClientConfigurationsProperty[] | cdktn.IResolvable;
 }
@@ -1522,18 +1522,18 @@ export class NfsExportsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface UserAndGroupQuotasProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#id AwsFsxOpenzfsFileSystem#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#id TfOpenzfsFileSystem#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#storage_capacity_quota_gib AwsFsxOpenzfsFileSystem#storage_capacity_quota_gib}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#storage_capacity_quota_gib TfOpenzfsFileSystem#storage_capacity_quota_gib}
   */
   readonly storageCapacityQuotaGib: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#type AwsFsxOpenzfsFileSystem#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#type TfOpenzfsFileSystem#type}
   */
   readonly type: string;
 }
@@ -1654,31 +1654,31 @@ export class UserAndGroupQuotasPropertyList extends cdktn.ComplexList {
 }
 export interface RootVolumeConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#copy_tags_to_snapshots AwsFsxOpenzfsFileSystem#copy_tags_to_snapshots}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#copy_tags_to_snapshots TfOpenzfsFileSystem#copy_tags_to_snapshots}
   */
   readonly copyTagsToSnapshots?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#data_compression_type AwsFsxOpenzfsFileSystem#data_compression_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#data_compression_type TfOpenzfsFileSystem#data_compression_type}
   */
   readonly dataCompressionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#read_only AwsFsxOpenzfsFileSystem#read_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#read_only TfOpenzfsFileSystem#read_only}
   */
   readonly readOnly?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#record_size_kib AwsFsxOpenzfsFileSystem#record_size_kib}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#record_size_kib TfOpenzfsFileSystem#record_size_kib}
   */
   readonly recordSizeKib?: number;
   /**
   * nfs_exports block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#nfs_exports AwsFsxOpenzfsFileSystem#nfs_exports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#nfs_exports TfOpenzfsFileSystem#nfs_exports}
   */
   readonly nfsExports?: NfsExportsProperty;
   /**
   * user_and_group_quotas block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#user_and_group_quotas AwsFsxOpenzfsFileSystem#user_and_group_quotas}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#user_and_group_quotas TfOpenzfsFileSystem#user_and_group_quotas}
   */
   readonly userAndGroupQuotas?: UserAndGroupQuotasProperty[] | cdktn.IResolvable;
 }
@@ -1842,15 +1842,15 @@ export class RootVolumeConfigurationPropertyOutputReference extends cdktn.Comple
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#create AwsFsxOpenzfsFileSystem#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#create TfOpenzfsFileSystem#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#delete AwsFsxOpenzfsFileSystem#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#delete TfOpenzfsFileSystem#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#update AwsFsxOpenzfsFileSystem#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_file_system#update TfOpenzfsFileSystem#update}
   */
   readonly update?: string;
 }

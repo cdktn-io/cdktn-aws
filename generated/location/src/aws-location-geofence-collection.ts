@@ -5,52 +5,52 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsLocationGeofenceCollectionConfig extends cdktn.TerraformMetaArguments {
+export interface TfGeofenceCollectionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_geofence_collection#collection_name AwsLocationGeofenceCollection#collection_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_geofence_collection#collection_name TfGeofenceCollection#collection_name}
   */
   readonly collectionName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_geofence_collection#description AwsLocationGeofenceCollection#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_geofence_collection#description TfGeofenceCollection#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_geofence_collection#id AwsLocationGeofenceCollection#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_geofence_collection#id TfGeofenceCollection#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_geofence_collection#kms_key_id AwsLocationGeofenceCollection#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_geofence_collection#kms_key_id TfGeofenceCollection#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_geofence_collection#region AwsLocationGeofenceCollection#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_geofence_collection#region TfGeofenceCollection#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_geofence_collection#tags AwsLocationGeofenceCollection#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_geofence_collection#tags TfGeofenceCollection#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_geofence_collection#tags_all AwsLocationGeofenceCollection#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_geofence_collection#tags_all TfGeofenceCollection#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_geofence_collection#timeouts AwsLocationGeofenceCollection#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_geofence_collection#timeouts TfGeofenceCollection#timeouts}
   */
-  readonly timeouts?: AwsLocationGeofenceCollection.TimeoutsProperty;
+  readonly timeouts?: TfGeofenceCollection.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_geofence_collection aws_location_geofence_collection}
 */
-export class AwsLocationGeofenceCollection extends cdktn.TerraformResource {
+export class TfGeofenceCollection extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class AwsLocationGeofenceCollection extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsLocationGeofenceCollection resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfGeofenceCollection resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsLocationGeofenceCollection to import
-  * @param importFromId The id of the existing AwsLocationGeofenceCollection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_geofence_collection#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsLocationGeofenceCollection to import is found
+  * @param importToId The construct id used in the generated config for the TfGeofenceCollection to import
+  * @param importFromId The id of the existing TfGeofenceCollection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_geofence_collection#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfGeofenceCollection to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_location_geofence_collection", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class AwsLocationGeofenceCollection extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsLocationGeofenceCollectionConfig
+  * @param options TfGeofenceCollectionConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsLocationGeofenceCollectionConfig) {
+  public constructor(scope: Construct, id: string, config: TfGeofenceCollectionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_location_geofence_collection',
       terraformGeneratorMetadata: {
@@ -237,11 +237,11 @@ export class AwsLocationGeofenceCollection extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsLocationGeofenceCollection.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfGeofenceCollection.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsLocationGeofenceCollection.TimeoutsProperty) {
+  public putTimeouts(value: TfGeofenceCollection.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -265,7 +265,7 @@ export class AwsLocationGeofenceCollection extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: awsLocationGeofenceCollectionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfGeofenceCollectionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -314,10 +314,10 @@ export class AwsLocationGeofenceCollection extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsLocationGeofenceCollectionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfGeofenceCollectionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsLocationGeofenceCollection.TimeoutsProperty",
+        storageClassType: "TfGeofenceCollection.TimeoutsProperty",
       },
     };
 
@@ -326,7 +326,7 @@ export class AwsLocationGeofenceCollection extends cdktn.TerraformResource {
   }
 }
 
-export function awsLocationGeofenceCollectionTimeoutsPropertyToTerraform(struct?: AwsLocationGeofenceCollection.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfGeofenceCollectionTimeoutsPropertyToTerraform(struct?: TfGeofenceCollection.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -339,7 +339,7 @@ export function awsLocationGeofenceCollectionTimeoutsPropertyToTerraform(struct?
 }
 
 
-export function awsLocationGeofenceCollectionTimeoutsPropertyToHclTerraform(struct?: AwsLocationGeofenceCollection.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfGeofenceCollectionTimeoutsPropertyToHclTerraform(struct?: TfGeofenceCollection.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -370,18 +370,18 @@ export function awsLocationGeofenceCollectionTimeoutsPropertyToHclTerraform(stru
 }
 
 
-export namespace AwsLocationGeofenceCollection {
+export namespace TfGeofenceCollection {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_geofence_collection#create AwsLocationGeofenceCollection#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_geofence_collection#create TfGeofenceCollection#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_geofence_collection#delete AwsLocationGeofenceCollection#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_geofence_collection#delete TfGeofenceCollection#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_geofence_collection#update AwsLocationGeofenceCollection#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_geofence_collection#update TfGeofenceCollection#update}
   */
   readonly update?: string;
 }

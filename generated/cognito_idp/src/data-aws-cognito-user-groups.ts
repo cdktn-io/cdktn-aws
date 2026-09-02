@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsCognitoUserGroupsConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataUserGroupsConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_groups#region DataAwsCognitoUserGroups#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_groups#region TfDataUserGroups#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_groups#user_pool_id DataAwsCognitoUserGroups#user_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_groups#user_pool_id TfDataUserGroups#user_pool_id}
   */
   readonly userPoolId: string;
 }
@@ -21,7 +21,7 @@ export interface DataAwsCognitoUserGroupsConfig extends cdktn.TerraformMetaArgum
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_groups aws_cognito_user_groups}
 */
-export class DataAwsCognitoUserGroups extends cdktn.TerraformDataSource {
+export class TfDataUserGroups extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class DataAwsCognitoUserGroups extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsCognitoUserGroups resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataUserGroups resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsCognitoUserGroups to import
-  * @param importFromId The id of the existing DataAwsCognitoUserGroups that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_groups#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsCognitoUserGroups to import is found
+  * @param importToId The construct id used in the generated config for the TfDataUserGroups to import
+  * @param importFromId The id of the existing TfDataUserGroups that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_groups#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataUserGroups to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cognito_user_groups", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class DataAwsCognitoUserGroups extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsCognitoUserGroupsConfig
+  * @param options TfDataUserGroupsConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsCognitoUserGroupsConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataUserGroupsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cognito_user_groups',
       terraformGeneratorMetadata: {
@@ -78,7 +78,7 @@ export class DataAwsCognitoUserGroups extends cdktn.TerraformDataSource {
   // ==========
 
   // groups - computed: true, optional: false, required: false
-  private _groups = new DataAwsCognitoUserGroups.GroupsPropertyList(this, "groups", false);
+  private _groups = new TfDataUserGroups.GroupsPropertyList(this, "groups", false);
   public get groups() {
     return this._groups;
   }
@@ -149,7 +149,7 @@ export class DataAwsCognitoUserGroups extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsCognitoUserGroupsGroupsPropertyToTerraform(struct?: DataAwsCognitoUserGroups.GroupsProperty): any {
+export function tfDataUserGroupsGroupsPropertyToTerraform(struct?: TfDataUserGroups.GroupsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -159,7 +159,7 @@ export function dataAwsCognitoUserGroupsGroupsPropertyToTerraform(struct?: DataA
 }
 
 
-export function dataAwsCognitoUserGroupsGroupsPropertyToHclTerraform(struct?: DataAwsCognitoUserGroups.GroupsProperty): any {
+export function tfDataUserGroupsGroupsPropertyToHclTerraform(struct?: TfDataUserGroups.GroupsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -170,7 +170,7 @@ export function dataAwsCognitoUserGroupsGroupsPropertyToHclTerraform(struct?: Da
 }
 
 
-export namespace DataAwsCognitoUserGroups {
+export namespace TfDataUserGroups {
 export interface GroupsProperty {
 }
 export class GroupsPropertyOutputReference extends cdktn.ComplexObject {

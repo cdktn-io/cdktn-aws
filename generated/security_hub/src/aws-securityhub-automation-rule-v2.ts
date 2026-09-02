@@ -5,59 +5,59 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSecurityhubAutomationRuleV2Config extends cdktn.TerraformMetaArguments {
+export interface TfAutomationRuleV2Config extends cdktn.TerraformMetaArguments {
   /**
   * A description of the automation rule.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#description AwsSecurityhubAutomationRuleV2#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#description TfAutomationRuleV2#description}
   */
   readonly description: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#region AwsSecurityhubAutomationRuleV2#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#region TfAutomationRuleV2#region}
   */
   readonly region?: string;
   /**
   * The name of the automation rule.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#rule_name AwsSecurityhubAutomationRuleV2#rule_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#rule_name TfAutomationRuleV2#rule_name}
   */
   readonly ruleName: string;
   /**
   * The priority of the rule (lower values = higher priority).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#rule_order AwsSecurityhubAutomationRuleV2#rule_order}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#rule_order TfAutomationRuleV2#rule_order}
   */
   readonly ruleOrder: number;
   /**
   * The status of the rule: ENABLED or DISABLED.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#rule_status AwsSecurityhubAutomationRuleV2#rule_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#rule_status TfAutomationRuleV2#rule_status}
   */
   readonly ruleStatus?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#tags AwsSecurityhubAutomationRuleV2#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#tags TfAutomationRuleV2#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#action AwsSecurityhubAutomationRuleV2#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#action TfAutomationRuleV2#action}
   */
-  readonly action?: AwsSecurityhubAutomationRuleV2.ActionProperty[] | cdktn.IResolvable;
+  readonly action?: TfAutomationRuleV2.ActionProperty[] | cdktn.IResolvable;
   /**
   * criteria block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#criteria AwsSecurityhubAutomationRuleV2#criteria}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#criteria TfAutomationRuleV2#criteria}
   */
-  readonly criteria?: AwsSecurityhubAutomationRuleV2.CriteriaProperty[] | cdktn.IResolvable;
+  readonly criteria?: TfAutomationRuleV2.CriteriaProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2 aws_securityhub_automation_rule_v2}
 */
-export class AwsSecurityhubAutomationRuleV2 extends cdktn.TerraformResource {
+export class TfAutomationRuleV2 extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -68,11 +68,11 @@ export class AwsSecurityhubAutomationRuleV2 extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSecurityhubAutomationRuleV2 resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAutomationRuleV2 resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSecurityhubAutomationRuleV2 to import
-  * @param importFromId The id of the existing AwsSecurityhubAutomationRuleV2 that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSecurityhubAutomationRuleV2 to import is found
+  * @param importToId The construct id used in the generated config for the TfAutomationRuleV2 to import
+  * @param importFromId The id of the existing TfAutomationRuleV2 that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAutomationRuleV2 to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_securityhub_automation_rule_v2", importId: importFromId, provider });
@@ -87,9 +87,9 @@ export class AwsSecurityhubAutomationRuleV2 extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSecurityhubAutomationRuleV2Config
+  * @param options TfAutomationRuleV2Config
   */
-  public constructor(scope: Construct, id: string, config: AwsSecurityhubAutomationRuleV2Config) {
+  public constructor(scope: Construct, id: string, config: TfAutomationRuleV2Config) {
     super(scope, id, {
       terraformResourceType: 'aws_securityhub_automation_rule_v2',
       terraformGeneratorMetadata: {
@@ -223,11 +223,11 @@ export class AwsSecurityhubAutomationRuleV2 extends cdktn.TerraformResource {
   }
 
   // action - computed: false, optional: true, required: false
-  private _action = new AwsSecurityhubAutomationRuleV2.ActionPropertyList(this, "action", false);
+  private _action = new TfAutomationRuleV2.ActionPropertyList(this, "action", false);
   public get action() {
     return this._action;
   }
-  public putAction(value: AwsSecurityhubAutomationRuleV2.ActionProperty[] | cdktn.IResolvable) {
+  public putAction(value: TfAutomationRuleV2.ActionProperty[] | cdktn.IResolvable) {
     this._action.internalValue = value;
   }
   public resetAction() {
@@ -239,11 +239,11 @@ export class AwsSecurityhubAutomationRuleV2 extends cdktn.TerraformResource {
   }
 
   // criteria - computed: false, optional: true, required: false
-  private _criteria = new AwsSecurityhubAutomationRuleV2.CriteriaPropertyList(this, "criteria", false);
+  private _criteria = new TfAutomationRuleV2.CriteriaPropertyList(this, "criteria", false);
   public get criteria() {
     return this._criteria;
   }
-  public putCriteria(value: AwsSecurityhubAutomationRuleV2.CriteriaProperty[] | cdktn.IResolvable) {
+  public putCriteria(value: TfAutomationRuleV2.CriteriaProperty[] | cdktn.IResolvable) {
     this._criteria.internalValue = value;
   }
   public resetCriteria() {
@@ -266,8 +266,8 @@ export class AwsSecurityhubAutomationRuleV2 extends cdktn.TerraformResource {
       rule_order: cdktn.numberToTerraform(this._ruleOrder),
       rule_status: cdktn.stringToTerraform(this._ruleStatus),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      action: cdktn.listMapper(awsSecurityhubAutomationRuleV2ActionPropertyToTerraform, true)(this._action.internalValue),
-      criteria: cdktn.listMapper(awsSecurityhubAutomationRuleV2CriteriaPropertyToTerraform, true)(this._criteria.internalValue),
+      action: cdktn.listMapper(tfAutomationRuleV2ActionPropertyToTerraform, true)(this._action.internalValue),
+      criteria: cdktn.listMapper(tfAutomationRuleV2CriteriaPropertyToTerraform, true)(this._criteria.internalValue),
     };
   }
 
@@ -310,16 +310,16 @@ export class AwsSecurityhubAutomationRuleV2 extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       action: {
-        value: cdktn.listMapperHcl(awsSecurityhubAutomationRuleV2ActionPropertyToHclTerraform, true)(this._action.internalValue),
+        value: cdktn.listMapperHcl(tfAutomationRuleV2ActionPropertyToHclTerraform, true)(this._action.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSecurityhubAutomationRuleV2.ActionPropertyList",
+        storageClassType: "TfAutomationRuleV2.ActionPropertyList",
       },
       criteria: {
-        value: cdktn.listMapperHcl(awsSecurityhubAutomationRuleV2CriteriaPropertyToHclTerraform, true)(this._criteria.internalValue),
+        value: cdktn.listMapperHcl(tfAutomationRuleV2CriteriaPropertyToHclTerraform, true)(this._criteria.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSecurityhubAutomationRuleV2.CriteriaPropertyList",
+        storageClassType: "TfAutomationRuleV2.CriteriaPropertyList",
       },
     };
 
@@ -328,7 +328,7 @@ export class AwsSecurityhubAutomationRuleV2 extends cdktn.TerraformResource {
   }
 }
 
-export function awsSecurityhubAutomationRuleV2ExternalIntegrationConfigurationPropertyToTerraform(struct?: AwsSecurityhubAutomationRuleV2.ExternalIntegrationConfigurationProperty | cdktn.IResolvable): any {
+export function tfAutomationRuleV2ExternalIntegrationConfigurationPropertyToTerraform(struct?: TfAutomationRuleV2.ExternalIntegrationConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -339,7 +339,7 @@ export function awsSecurityhubAutomationRuleV2ExternalIntegrationConfigurationPr
 }
 
 
-export function awsSecurityhubAutomationRuleV2ExternalIntegrationConfigurationPropertyToHclTerraform(struct?: AwsSecurityhubAutomationRuleV2.ExternalIntegrationConfigurationProperty | cdktn.IResolvable): any {
+export function tfAutomationRuleV2ExternalIntegrationConfigurationPropertyToHclTerraform(struct?: TfAutomationRuleV2.ExternalIntegrationConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -358,7 +358,7 @@ export function awsSecurityhubAutomationRuleV2ExternalIntegrationConfigurationPr
 }
 
 
-export function awsSecurityhubAutomationRuleV2FindingFieldsUpdatePropertyToTerraform(struct?: AwsSecurityhubAutomationRuleV2.FindingFieldsUpdateProperty | cdktn.IResolvable): any {
+export function tfAutomationRuleV2FindingFieldsUpdatePropertyToTerraform(struct?: TfAutomationRuleV2.FindingFieldsUpdateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -371,7 +371,7 @@ export function awsSecurityhubAutomationRuleV2FindingFieldsUpdatePropertyToTerra
 }
 
 
-export function awsSecurityhubAutomationRuleV2FindingFieldsUpdatePropertyToHclTerraform(struct?: AwsSecurityhubAutomationRuleV2.FindingFieldsUpdateProperty | cdktn.IResolvable): any {
+export function tfAutomationRuleV2FindingFieldsUpdatePropertyToHclTerraform(struct?: TfAutomationRuleV2.FindingFieldsUpdateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -402,20 +402,20 @@ export function awsSecurityhubAutomationRuleV2FindingFieldsUpdatePropertyToHclTe
 }
 
 
-export function awsSecurityhubAutomationRuleV2ActionPropertyToTerraform(struct?: AwsSecurityhubAutomationRuleV2.ActionProperty | cdktn.IResolvable): any {
+export function tfAutomationRuleV2ActionPropertyToTerraform(struct?: TfAutomationRuleV2.ActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     type: cdktn.stringToTerraform(struct!.type),
-    external_integration_configuration: cdktn.listMapper(awsSecurityhubAutomationRuleV2ExternalIntegrationConfigurationPropertyToTerraform, true)(struct!.externalIntegrationConfiguration),
-    finding_fields_update: cdktn.listMapper(awsSecurityhubAutomationRuleV2FindingFieldsUpdatePropertyToTerraform, true)(struct!.findingFieldsUpdate),
+    external_integration_configuration: cdktn.listMapper(tfAutomationRuleV2ExternalIntegrationConfigurationPropertyToTerraform, true)(struct!.externalIntegrationConfiguration),
+    finding_fields_update: cdktn.listMapper(tfAutomationRuleV2FindingFieldsUpdatePropertyToTerraform, true)(struct!.findingFieldsUpdate),
   }
 }
 
 
-export function awsSecurityhubAutomationRuleV2ActionPropertyToHclTerraform(struct?: AwsSecurityhubAutomationRuleV2.ActionProperty | cdktn.IResolvable): any {
+export function tfAutomationRuleV2ActionPropertyToHclTerraform(struct?: TfAutomationRuleV2.ActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -428,13 +428,13 @@ export function awsSecurityhubAutomationRuleV2ActionPropertyToHclTerraform(struc
       storageClassType: "string",
     },
     external_integration_configuration: {
-      value: cdktn.listMapperHcl(awsSecurityhubAutomationRuleV2ExternalIntegrationConfigurationPropertyToHclTerraform, true)(struct!.externalIntegrationConfiguration),
+      value: cdktn.listMapperHcl(tfAutomationRuleV2ExternalIntegrationConfigurationPropertyToHclTerraform, true)(struct!.externalIntegrationConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ExternalIntegrationConfigurationPropertyList",
     },
     finding_fields_update: {
-      value: cdktn.listMapperHcl(awsSecurityhubAutomationRuleV2FindingFieldsUpdatePropertyToHclTerraform, true)(struct!.findingFieldsUpdate),
+      value: cdktn.listMapperHcl(tfAutomationRuleV2FindingFieldsUpdatePropertyToHclTerraform, true)(struct!.findingFieldsUpdate),
       isBlock: true,
       type: "list",
       storageClassType: "FindingFieldsUpdatePropertyList",
@@ -446,7 +446,7 @@ export function awsSecurityhubAutomationRuleV2ActionPropertyToHclTerraform(struc
 }
 
 
-export function awsSecurityhubAutomationRuleV2CriteriaPropertyToTerraform(struct?: AwsSecurityhubAutomationRuleV2.CriteriaProperty | cdktn.IResolvable): any {
+export function tfAutomationRuleV2CriteriaPropertyToTerraform(struct?: TfAutomationRuleV2.CriteriaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -457,7 +457,7 @@ export function awsSecurityhubAutomationRuleV2CriteriaPropertyToTerraform(struct
 }
 
 
-export function awsSecurityhubAutomationRuleV2CriteriaPropertyToHclTerraform(struct?: AwsSecurityhubAutomationRuleV2.CriteriaProperty | cdktn.IResolvable): any {
+export function tfAutomationRuleV2CriteriaPropertyToHclTerraform(struct?: TfAutomationRuleV2.CriteriaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -476,12 +476,12 @@ export function awsSecurityhubAutomationRuleV2CriteriaPropertyToHclTerraform(str
 }
 
 
-export namespace AwsSecurityhubAutomationRuleV2 {
+export namespace TfAutomationRuleV2 {
 export interface ExternalIntegrationConfigurationProperty {
   /**
   * The ARN of the connector.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#connector_arn AwsSecurityhubAutomationRuleV2#connector_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#connector_arn TfAutomationRuleV2#connector_arn}
   */
   readonly connectorArn: string;
 }
@@ -566,19 +566,19 @@ export interface FindingFieldsUpdateProperty {
   /**
   * A comment for the finding.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#comment AwsSecurityhubAutomationRuleV2#comment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#comment TfAutomationRuleV2#comment}
   */
   readonly comment?: string;
   /**
   * The severity ID to assign.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#severity_id AwsSecurityhubAutomationRuleV2#severity_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#severity_id TfAutomationRuleV2#severity_id}
   */
   readonly severityId?: number;
   /**
   * The status ID to assign.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#status_id AwsSecurityhubAutomationRuleV2#status_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#status_id TfAutomationRuleV2#status_id}
   */
   readonly statusId?: number;
 }
@@ -710,19 +710,19 @@ export interface ActionProperty {
   /**
   * The action type: FINDING_FIELDS_UPDATE or EXTERNAL_INTEGRATION.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#type AwsSecurityhubAutomationRuleV2#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#type TfAutomationRuleV2#type}
   */
   readonly type: string;
   /**
   * external_integration_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#external_integration_configuration AwsSecurityhubAutomationRuleV2#external_integration_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#external_integration_configuration TfAutomationRuleV2#external_integration_configuration}
   */
   readonly externalIntegrationConfiguration?: ExternalIntegrationConfigurationProperty[] | cdktn.IResolvable;
   /**
   * finding_fields_update block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#finding_fields_update AwsSecurityhubAutomationRuleV2#finding_fields_update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#finding_fields_update TfAutomationRuleV2#finding_fields_update}
   */
   readonly findingFieldsUpdate?: FindingFieldsUpdateProperty[] | cdktn.IResolvable;
 }
@@ -851,7 +851,7 @@ export interface CriteriaProperty {
   /**
   * JSON-encoded OCSF finding criteria for the rule.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#ocsf_finding_criteria_json AwsSecurityhubAutomationRuleV2#ocsf_finding_criteria_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_automation_rule_v2#ocsf_finding_criteria_json TfAutomationRuleV2#ocsf_finding_criteria_json}
   */
   readonly ocsfFindingCriteriaJson: string;
 }

@@ -5,50 +5,50 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsLicensemanagerLicenseConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface TfLicenseConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_license_configuration#description AwsLicensemanagerLicenseConfiguration#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_license_configuration#description TfLicenseConfiguration#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_license_configuration#id AwsLicensemanagerLicenseConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_license_configuration#id TfLicenseConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_license_configuration#license_count AwsLicensemanagerLicenseConfiguration#license_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_license_configuration#license_count TfLicenseConfiguration#license_count}
   */
   readonly licenseCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_license_configuration#license_count_hard_limit AwsLicensemanagerLicenseConfiguration#license_count_hard_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_license_configuration#license_count_hard_limit TfLicenseConfiguration#license_count_hard_limit}
   */
   readonly licenseCountHardLimit?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_license_configuration#license_counting_type AwsLicensemanagerLicenseConfiguration#license_counting_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_license_configuration#license_counting_type TfLicenseConfiguration#license_counting_type}
   */
   readonly licenseCountingType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_license_configuration#license_rules AwsLicensemanagerLicenseConfiguration#license_rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_license_configuration#license_rules TfLicenseConfiguration#license_rules}
   */
   readonly licenseRules?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_license_configuration#name AwsLicensemanagerLicenseConfiguration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_license_configuration#name TfLicenseConfiguration#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_license_configuration#region AwsLicensemanagerLicenseConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_license_configuration#region TfLicenseConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_license_configuration#tags AwsLicensemanagerLicenseConfiguration#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_license_configuration#tags TfLicenseConfiguration#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_license_configuration#tags_all AwsLicensemanagerLicenseConfiguration#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_license_configuration#tags_all TfLicenseConfiguration#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -56,7 +56,7 @@ export interface AwsLicensemanagerLicenseConfigurationConfig extends cdktn.Terra
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_license_configuration aws_licensemanager_license_configuration}
 */
-export class AwsLicensemanagerLicenseConfiguration extends cdktn.TerraformResource {
+export class TfLicenseConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -67,11 +67,11 @@ export class AwsLicensemanagerLicenseConfiguration extends cdktn.TerraformResour
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsLicensemanagerLicenseConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfLicenseConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsLicensemanagerLicenseConfiguration to import
-  * @param importFromId The id of the existing AwsLicensemanagerLicenseConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_license_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsLicensemanagerLicenseConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the TfLicenseConfiguration to import
+  * @param importFromId The id of the existing TfLicenseConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_license_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfLicenseConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_licensemanager_license_configuration", importId: importFromId, provider });
@@ -86,9 +86,9 @@ export class AwsLicensemanagerLicenseConfiguration extends cdktn.TerraformResour
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsLicensemanagerLicenseConfigurationConfig
+  * @param options TfLicenseConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsLicensemanagerLicenseConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: TfLicenseConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_licensemanager_license_configuration',
       terraformGeneratorMetadata: {

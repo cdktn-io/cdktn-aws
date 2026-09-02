@@ -5,38 +5,38 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsRoute53VpcAssociationAuthorizationConfig extends cdktn.TerraformMetaArguments {
+export interface TfVpcAssociationAuthorizationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_vpc_association_authorization#id AwsRoute53VpcAssociationAuthorization#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_vpc_association_authorization#id TfVpcAssociationAuthorization#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_vpc_association_authorization#vpc_id AwsRoute53VpcAssociationAuthorization#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_vpc_association_authorization#vpc_id TfVpcAssociationAuthorization#vpc_id}
   */
   readonly vpcId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_vpc_association_authorization#vpc_region AwsRoute53VpcAssociationAuthorization#vpc_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_vpc_association_authorization#vpc_region TfVpcAssociationAuthorization#vpc_region}
   */
   readonly vpcRegion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_vpc_association_authorization#zone_id AwsRoute53VpcAssociationAuthorization#zone_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_vpc_association_authorization#zone_id TfVpcAssociationAuthorization#zone_id}
   */
   readonly zoneId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_vpc_association_authorization#timeouts AwsRoute53VpcAssociationAuthorization#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_vpc_association_authorization#timeouts TfVpcAssociationAuthorization#timeouts}
   */
-  readonly timeouts?: AwsRoute53VpcAssociationAuthorization.TimeoutsProperty;
+  readonly timeouts?: TfVpcAssociationAuthorization.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_vpc_association_authorization aws_route53_vpc_association_authorization}
 */
-export class AwsRoute53VpcAssociationAuthorization extends cdktn.TerraformResource {
+export class TfVpcAssociationAuthorization extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class AwsRoute53VpcAssociationAuthorization extends cdktn.TerraformResour
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsRoute53VpcAssociationAuthorization resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfVpcAssociationAuthorization resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsRoute53VpcAssociationAuthorization to import
-  * @param importFromId The id of the existing AwsRoute53VpcAssociationAuthorization that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_vpc_association_authorization#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsRoute53VpcAssociationAuthorization to import is found
+  * @param importToId The construct id used in the generated config for the TfVpcAssociationAuthorization to import
+  * @param importFromId The id of the existing TfVpcAssociationAuthorization that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_vpc_association_authorization#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfVpcAssociationAuthorization to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route53_vpc_association_authorization", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class AwsRoute53VpcAssociationAuthorization extends cdktn.TerraformResour
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsRoute53VpcAssociationAuthorizationConfig
+  * @param options TfVpcAssociationAuthorizationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsRoute53VpcAssociationAuthorizationConfig) {
+  public constructor(scope: Construct, id: string, config: TfVpcAssociationAuthorizationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_route53_vpc_association_authorization',
       terraformGeneratorMetadata: {
@@ -154,11 +154,11 @@ export class AwsRoute53VpcAssociationAuthorization extends cdktn.TerraformResour
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsRoute53VpcAssociationAuthorization.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfVpcAssociationAuthorization.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsRoute53VpcAssociationAuthorization.TimeoutsProperty) {
+  public putTimeouts(value: TfVpcAssociationAuthorization.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -179,7 +179,7 @@ export class AwsRoute53VpcAssociationAuthorization extends cdktn.TerraformResour
       vpc_id: cdktn.stringToTerraform(this._vpcId),
       vpc_region: cdktn.stringToTerraform(this._vpcRegion),
       zone_id: cdktn.stringToTerraform(this._zoneId),
-      timeouts: awsRoute53VpcAssociationAuthorizationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfVpcAssociationAuthorizationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -210,10 +210,10 @@ export class AwsRoute53VpcAssociationAuthorization extends cdktn.TerraformResour
         storageClassType: "string",
       },
       timeouts: {
-        value: awsRoute53VpcAssociationAuthorizationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfVpcAssociationAuthorizationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsRoute53VpcAssociationAuthorization.TimeoutsProperty",
+        storageClassType: "TfVpcAssociationAuthorization.TimeoutsProperty",
       },
     };
 
@@ -222,7 +222,7 @@ export class AwsRoute53VpcAssociationAuthorization extends cdktn.TerraformResour
   }
 }
 
-export function awsRoute53VpcAssociationAuthorizationTimeoutsPropertyToTerraform(struct?: AwsRoute53VpcAssociationAuthorization.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfVpcAssociationAuthorizationTimeoutsPropertyToTerraform(struct?: TfVpcAssociationAuthorization.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -235,7 +235,7 @@ export function awsRoute53VpcAssociationAuthorizationTimeoutsPropertyToTerraform
 }
 
 
-export function awsRoute53VpcAssociationAuthorizationTimeoutsPropertyToHclTerraform(struct?: AwsRoute53VpcAssociationAuthorization.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfVpcAssociationAuthorizationTimeoutsPropertyToHclTerraform(struct?: TfVpcAssociationAuthorization.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -266,18 +266,18 @@ export function awsRoute53VpcAssociationAuthorizationTimeoutsPropertyToHclTerraf
 }
 
 
-export namespace AwsRoute53VpcAssociationAuthorization {
+export namespace TfVpcAssociationAuthorization {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_vpc_association_authorization#create AwsRoute53VpcAssociationAuthorization#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_vpc_association_authorization#create TfVpcAssociationAuthorization#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_vpc_association_authorization#delete AwsRoute53VpcAssociationAuthorization#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_vpc_association_authorization#delete TfVpcAssociationAuthorization#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_vpc_association_authorization#read AwsRoute53VpcAssociationAuthorization#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_vpc_association_authorization#read TfVpcAssociationAuthorization#read}
   */
   readonly read?: string;
 }

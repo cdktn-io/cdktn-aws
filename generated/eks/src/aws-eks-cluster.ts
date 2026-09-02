@@ -5,152 +5,152 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEksClusterConfig extends cdktn.TerraformMetaArguments {
+export interface TfClusterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#bootstrap_self_managed_addons AwsEksCluster#bootstrap_self_managed_addons}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#bootstrap_self_managed_addons TfCluster#bootstrap_self_managed_addons}
   */
   readonly bootstrapSelfManagedAddons?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#deletion_protection AwsEksCluster#deletion_protection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#deletion_protection TfCluster#deletion_protection}
   */
   readonly deletionProtection?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#enabled_cluster_log_types AwsEksCluster#enabled_cluster_log_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#enabled_cluster_log_types TfCluster#enabled_cluster_log_types}
   */
   readonly enabledClusterLogTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#force_update_version AwsEksCluster#force_update_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#force_update_version TfCluster#force_update_version}
   */
   readonly forceUpdateVersion?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#id AwsEksCluster#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#id TfCluster#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#name AwsEksCluster#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#name TfCluster#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#region AwsEksCluster#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#region TfCluster#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#role_arn AwsEksCluster#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#role_arn TfCluster#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#tags AwsEksCluster#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#tags TfCluster#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#tags_all AwsEksCluster#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#tags_all TfCluster#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#version AwsEksCluster#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#version TfCluster#version}
   */
   readonly version?: string;
   /**
   * access_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#access_config AwsEksCluster#access_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#access_config TfCluster#access_config}
   */
-  readonly accessConfig?: AwsEksCluster.AccessConfigProperty;
+  readonly accessConfig?: TfCluster.AccessConfigProperty;
   /**
   * compute_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#compute_config AwsEksCluster#compute_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#compute_config TfCluster#compute_config}
   */
-  readonly computeConfig?: AwsEksCluster.ComputeConfigProperty;
+  readonly computeConfig?: TfCluster.ComputeConfigProperty;
   /**
   * control_plane_scaling_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#control_plane_scaling_config AwsEksCluster#control_plane_scaling_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#control_plane_scaling_config TfCluster#control_plane_scaling_config}
   */
-  readonly controlPlaneScalingConfig?: AwsEksCluster.ControlPlaneScalingConfigProperty;
+  readonly controlPlaneScalingConfig?: TfCluster.ControlPlaneScalingConfigProperty;
   /**
   * encryption_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#encryption_config AwsEksCluster#encryption_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#encryption_config TfCluster#encryption_config}
   */
-  readonly encryptionConfig?: AwsEksCluster.EncryptionConfigProperty;
+  readonly encryptionConfig?: TfCluster.EncryptionConfigProperty;
   /**
   * kube_api_server_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#kube_api_server_config AwsEksCluster#kube_api_server_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#kube_api_server_config TfCluster#kube_api_server_config}
   */
-  readonly kubeApiServerConfig?: AwsEksCluster.KubeApiServerConfigProperty;
+  readonly kubeApiServerConfig?: TfCluster.KubeApiServerConfigProperty;
   /**
   * kube_controller_manager_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#kube_controller_manager_config AwsEksCluster#kube_controller_manager_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#kube_controller_manager_config TfCluster#kube_controller_manager_config}
   */
-  readonly kubeControllerManagerConfig?: AwsEksCluster.KubeControllerManagerConfigProperty;
+  readonly kubeControllerManagerConfig?: TfCluster.KubeControllerManagerConfigProperty;
   /**
   * kube_scheduler_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#kube_scheduler_config AwsEksCluster#kube_scheduler_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#kube_scheduler_config TfCluster#kube_scheduler_config}
   */
-  readonly kubeSchedulerConfig?: AwsEksCluster.KubeSchedulerConfigProperty;
+  readonly kubeSchedulerConfig?: TfCluster.KubeSchedulerConfigProperty;
   /**
   * kubernetes_network_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#kubernetes_network_config AwsEksCluster#kubernetes_network_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#kubernetes_network_config TfCluster#kubernetes_network_config}
   */
-  readonly kubernetesNetworkConfig?: AwsEksCluster.KubernetesNetworkConfigProperty;
+  readonly kubernetesNetworkConfig?: TfCluster.KubernetesNetworkConfigProperty;
   /**
   * outpost_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#outpost_config AwsEksCluster#outpost_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#outpost_config TfCluster#outpost_config}
   */
-  readonly outpostConfig?: AwsEksCluster.OutpostConfigProperty;
+  readonly outpostConfig?: TfCluster.OutpostConfigProperty;
   /**
   * remote_network_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#remote_network_config AwsEksCluster#remote_network_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#remote_network_config TfCluster#remote_network_config}
   */
-  readonly remoteNetworkConfig?: AwsEksCluster.RemoteNetworkConfigProperty;
+  readonly remoteNetworkConfig?: TfCluster.RemoteNetworkConfigProperty;
   /**
   * storage_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#storage_config AwsEksCluster#storage_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#storage_config TfCluster#storage_config}
   */
-  readonly storageConfig?: AwsEksCluster.StorageConfigProperty;
+  readonly storageConfig?: TfCluster.StorageConfigProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#timeouts AwsEksCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#timeouts TfCluster#timeouts}
   */
-  readonly timeouts?: AwsEksCluster.TimeoutsProperty;
+  readonly timeouts?: TfCluster.TimeoutsProperty;
   /**
   * upgrade_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#upgrade_policy AwsEksCluster#upgrade_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#upgrade_policy TfCluster#upgrade_policy}
   */
-  readonly upgradePolicy?: AwsEksCluster.UpgradePolicyProperty;
+  readonly upgradePolicy?: TfCluster.UpgradePolicyProperty;
   /**
   * vpc_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#vpc_config AwsEksCluster#vpc_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#vpc_config TfCluster#vpc_config}
   */
-  readonly vpcConfig: AwsEksCluster.VpcConfigProperty;
+  readonly vpcConfig: TfCluster.VpcConfigProperty;
   /**
   * zonal_shift_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#zonal_shift_config AwsEksCluster#zonal_shift_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#zonal_shift_config TfCluster#zonal_shift_config}
   */
-  readonly zonalShiftConfig?: AwsEksCluster.ZonalShiftConfigProperty;
+  readonly zonalShiftConfig?: TfCluster.ZonalShiftConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster aws_eks_cluster}
 */
-export class AwsEksCluster extends cdktn.TerraformResource {
+export class TfCluster extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -161,11 +161,11 @@ export class AwsEksCluster extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEksCluster resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfCluster resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEksCluster to import
-  * @param importFromId The id of the existing AwsEksCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEksCluster to import is found
+  * @param importToId The construct id used in the generated config for the TfCluster to import
+  * @param importFromId The id of the existing TfCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_eks_cluster", importId: importFromId, provider });
@@ -180,9 +180,9 @@ export class AwsEksCluster extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEksClusterConfig
+  * @param options TfClusterConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEksClusterConfig) {
+  public constructor(scope: Construct, id: string, config: TfClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_eks_cluster',
       terraformGeneratorMetadata: {
@@ -252,7 +252,7 @@ export class AwsEksCluster extends cdktn.TerraformResource {
   }
 
   // certificate_authority - computed: true, optional: false, required: false
-  private _certificateAuthority = new AwsEksCluster.CertificateAuthorityPropertyList(this, "certificate_authority", false);
+  private _certificateAuthority = new TfCluster.CertificateAuthorityPropertyList(this, "certificate_authority", false);
   public get certificateAuthority() {
     return this._certificateAuthority;
   }
@@ -337,7 +337,7 @@ export class AwsEksCluster extends cdktn.TerraformResource {
   }
 
   // identity - computed: true, optional: false, required: false
-  private _identity = new AwsEksCluster.IdentityPropertyList(this, "identity", false);
+  private _identity = new TfCluster.IdentityPropertyList(this, "identity", false);
   public get identity() {
     return this._identity;
   }
@@ -443,11 +443,11 @@ export class AwsEksCluster extends cdktn.TerraformResource {
   }
 
   // access_config - computed: false, optional: true, required: false
-  private _accessConfig = new AwsEksCluster.AccessConfigPropertyOutputReference(this, "access_config");
+  private _accessConfig = new TfCluster.AccessConfigPropertyOutputReference(this, "access_config");
   public get accessConfig() {
     return this._accessConfig;
   }
-  public putAccessConfig(value: AwsEksCluster.AccessConfigProperty) {
+  public putAccessConfig(value: TfCluster.AccessConfigProperty) {
     this._accessConfig.internalValue = value;
   }
   public resetAccessConfig() {
@@ -459,11 +459,11 @@ export class AwsEksCluster extends cdktn.TerraformResource {
   }
 
   // compute_config - computed: false, optional: true, required: false
-  private _computeConfig = new AwsEksCluster.ComputeConfigPropertyOutputReference(this, "compute_config");
+  private _computeConfig = new TfCluster.ComputeConfigPropertyOutputReference(this, "compute_config");
   public get computeConfig() {
     return this._computeConfig;
   }
-  public putComputeConfig(value: AwsEksCluster.ComputeConfigProperty) {
+  public putComputeConfig(value: TfCluster.ComputeConfigProperty) {
     this._computeConfig.internalValue = value;
   }
   public resetComputeConfig() {
@@ -475,11 +475,11 @@ export class AwsEksCluster extends cdktn.TerraformResource {
   }
 
   // control_plane_scaling_config - computed: false, optional: true, required: false
-  private _controlPlaneScalingConfig = new AwsEksCluster.ControlPlaneScalingConfigPropertyOutputReference(this, "control_plane_scaling_config");
+  private _controlPlaneScalingConfig = new TfCluster.ControlPlaneScalingConfigPropertyOutputReference(this, "control_plane_scaling_config");
   public get controlPlaneScalingConfig() {
     return this._controlPlaneScalingConfig;
   }
-  public putControlPlaneScalingConfig(value: AwsEksCluster.ControlPlaneScalingConfigProperty) {
+  public putControlPlaneScalingConfig(value: TfCluster.ControlPlaneScalingConfigProperty) {
     this._controlPlaneScalingConfig.internalValue = value;
   }
   public resetControlPlaneScalingConfig() {
@@ -491,11 +491,11 @@ export class AwsEksCluster extends cdktn.TerraformResource {
   }
 
   // encryption_config - computed: false, optional: true, required: false
-  private _encryptionConfig = new AwsEksCluster.EncryptionConfigPropertyOutputReference(this, "encryption_config");
+  private _encryptionConfig = new TfCluster.EncryptionConfigPropertyOutputReference(this, "encryption_config");
   public get encryptionConfig() {
     return this._encryptionConfig;
   }
-  public putEncryptionConfig(value: AwsEksCluster.EncryptionConfigProperty) {
+  public putEncryptionConfig(value: TfCluster.EncryptionConfigProperty) {
     this._encryptionConfig.internalValue = value;
   }
   public resetEncryptionConfig() {
@@ -507,11 +507,11 @@ export class AwsEksCluster extends cdktn.TerraformResource {
   }
 
   // kube_api_server_config - computed: false, optional: true, required: false
-  private _kubeApiServerConfig = new AwsEksCluster.KubeApiServerConfigPropertyOutputReference(this, "kube_api_server_config");
+  private _kubeApiServerConfig = new TfCluster.KubeApiServerConfigPropertyOutputReference(this, "kube_api_server_config");
   public get kubeApiServerConfig() {
     return this._kubeApiServerConfig;
   }
-  public putKubeApiServerConfig(value: AwsEksCluster.KubeApiServerConfigProperty) {
+  public putKubeApiServerConfig(value: TfCluster.KubeApiServerConfigProperty) {
     this._kubeApiServerConfig.internalValue = value;
   }
   public resetKubeApiServerConfig() {
@@ -523,11 +523,11 @@ export class AwsEksCluster extends cdktn.TerraformResource {
   }
 
   // kube_controller_manager_config - computed: false, optional: true, required: false
-  private _kubeControllerManagerConfig = new AwsEksCluster.KubeControllerManagerConfigPropertyOutputReference(this, "kube_controller_manager_config");
+  private _kubeControllerManagerConfig = new TfCluster.KubeControllerManagerConfigPropertyOutputReference(this, "kube_controller_manager_config");
   public get kubeControllerManagerConfig() {
     return this._kubeControllerManagerConfig;
   }
-  public putKubeControllerManagerConfig(value: AwsEksCluster.KubeControllerManagerConfigProperty) {
+  public putKubeControllerManagerConfig(value: TfCluster.KubeControllerManagerConfigProperty) {
     this._kubeControllerManagerConfig.internalValue = value;
   }
   public resetKubeControllerManagerConfig() {
@@ -539,11 +539,11 @@ export class AwsEksCluster extends cdktn.TerraformResource {
   }
 
   // kube_scheduler_config - computed: false, optional: true, required: false
-  private _kubeSchedulerConfig = new AwsEksCluster.KubeSchedulerConfigPropertyOutputReference(this, "kube_scheduler_config");
+  private _kubeSchedulerConfig = new TfCluster.KubeSchedulerConfigPropertyOutputReference(this, "kube_scheduler_config");
   public get kubeSchedulerConfig() {
     return this._kubeSchedulerConfig;
   }
-  public putKubeSchedulerConfig(value: AwsEksCluster.KubeSchedulerConfigProperty) {
+  public putKubeSchedulerConfig(value: TfCluster.KubeSchedulerConfigProperty) {
     this._kubeSchedulerConfig.internalValue = value;
   }
   public resetKubeSchedulerConfig() {
@@ -555,11 +555,11 @@ export class AwsEksCluster extends cdktn.TerraformResource {
   }
 
   // kubernetes_network_config - computed: false, optional: true, required: false
-  private _kubernetesNetworkConfig = new AwsEksCluster.KubernetesNetworkConfigPropertyOutputReference(this, "kubernetes_network_config");
+  private _kubernetesNetworkConfig = new TfCluster.KubernetesNetworkConfigPropertyOutputReference(this, "kubernetes_network_config");
   public get kubernetesNetworkConfig() {
     return this._kubernetesNetworkConfig;
   }
-  public putKubernetesNetworkConfig(value: AwsEksCluster.KubernetesNetworkConfigProperty) {
+  public putKubernetesNetworkConfig(value: TfCluster.KubernetesNetworkConfigProperty) {
     this._kubernetesNetworkConfig.internalValue = value;
   }
   public resetKubernetesNetworkConfig() {
@@ -571,11 +571,11 @@ export class AwsEksCluster extends cdktn.TerraformResource {
   }
 
   // outpost_config - computed: false, optional: true, required: false
-  private _outpostConfig = new AwsEksCluster.OutpostConfigPropertyOutputReference(this, "outpost_config");
+  private _outpostConfig = new TfCluster.OutpostConfigPropertyOutputReference(this, "outpost_config");
   public get outpostConfig() {
     return this._outpostConfig;
   }
-  public putOutpostConfig(value: AwsEksCluster.OutpostConfigProperty) {
+  public putOutpostConfig(value: TfCluster.OutpostConfigProperty) {
     this._outpostConfig.internalValue = value;
   }
   public resetOutpostConfig() {
@@ -587,11 +587,11 @@ export class AwsEksCluster extends cdktn.TerraformResource {
   }
 
   // remote_network_config - computed: false, optional: true, required: false
-  private _remoteNetworkConfig = new AwsEksCluster.RemoteNetworkConfigPropertyOutputReference(this, "remote_network_config");
+  private _remoteNetworkConfig = new TfCluster.RemoteNetworkConfigPropertyOutputReference(this, "remote_network_config");
   public get remoteNetworkConfig() {
     return this._remoteNetworkConfig;
   }
-  public putRemoteNetworkConfig(value: AwsEksCluster.RemoteNetworkConfigProperty) {
+  public putRemoteNetworkConfig(value: TfCluster.RemoteNetworkConfigProperty) {
     this._remoteNetworkConfig.internalValue = value;
   }
   public resetRemoteNetworkConfig() {
@@ -603,11 +603,11 @@ export class AwsEksCluster extends cdktn.TerraformResource {
   }
 
   // storage_config - computed: false, optional: true, required: false
-  private _storageConfig = new AwsEksCluster.StorageConfigPropertyOutputReference(this, "storage_config");
+  private _storageConfig = new TfCluster.StorageConfigPropertyOutputReference(this, "storage_config");
   public get storageConfig() {
     return this._storageConfig;
   }
-  public putStorageConfig(value: AwsEksCluster.StorageConfigProperty) {
+  public putStorageConfig(value: TfCluster.StorageConfigProperty) {
     this._storageConfig.internalValue = value;
   }
   public resetStorageConfig() {
@@ -619,11 +619,11 @@ export class AwsEksCluster extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsEksCluster.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfCluster.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsEksCluster.TimeoutsProperty) {
+  public putTimeouts(value: TfCluster.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -635,11 +635,11 @@ export class AwsEksCluster extends cdktn.TerraformResource {
   }
 
   // upgrade_policy - computed: false, optional: true, required: false
-  private _upgradePolicy = new AwsEksCluster.UpgradePolicyPropertyOutputReference(this, "upgrade_policy");
+  private _upgradePolicy = new TfCluster.UpgradePolicyPropertyOutputReference(this, "upgrade_policy");
   public get upgradePolicy() {
     return this._upgradePolicy;
   }
-  public putUpgradePolicy(value: AwsEksCluster.UpgradePolicyProperty) {
+  public putUpgradePolicy(value: TfCluster.UpgradePolicyProperty) {
     this._upgradePolicy.internalValue = value;
   }
   public resetUpgradePolicy() {
@@ -651,11 +651,11 @@ export class AwsEksCluster extends cdktn.TerraformResource {
   }
 
   // vpc_config - computed: false, optional: false, required: true
-  private _vpcConfig = new AwsEksCluster.VpcConfigPropertyOutputReference(this, "vpc_config");
+  private _vpcConfig = new TfCluster.VpcConfigPropertyOutputReference(this, "vpc_config");
   public get vpcConfig() {
     return this._vpcConfig;
   }
-  public putVpcConfig(value: AwsEksCluster.VpcConfigProperty) {
+  public putVpcConfig(value: TfCluster.VpcConfigProperty) {
     this._vpcConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -664,11 +664,11 @@ export class AwsEksCluster extends cdktn.TerraformResource {
   }
 
   // zonal_shift_config - computed: false, optional: true, required: false
-  private _zonalShiftConfig = new AwsEksCluster.ZonalShiftConfigPropertyOutputReference(this, "zonal_shift_config");
+  private _zonalShiftConfig = new TfCluster.ZonalShiftConfigPropertyOutputReference(this, "zonal_shift_config");
   public get zonalShiftConfig() {
     return this._zonalShiftConfig;
   }
-  public putZonalShiftConfig(value: AwsEksCluster.ZonalShiftConfigProperty) {
+  public putZonalShiftConfig(value: TfCluster.ZonalShiftConfigProperty) {
     this._zonalShiftConfig.internalValue = value;
   }
   public resetZonalShiftConfig() {
@@ -696,21 +696,21 @@ export class AwsEksCluster extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       version: cdktn.stringToTerraform(this._version),
-      access_config: awsEksClusterAccessConfigPropertyToTerraform(this._accessConfig.internalValue),
-      compute_config: awsEksClusterComputeConfigPropertyToTerraform(this._computeConfig.internalValue),
-      control_plane_scaling_config: awsEksClusterControlPlaneScalingConfigPropertyToTerraform(this._controlPlaneScalingConfig.internalValue),
-      encryption_config: awsEksClusterEncryptionConfigPropertyToTerraform(this._encryptionConfig.internalValue),
-      kube_api_server_config: awsEksClusterKubeApiServerConfigPropertyToTerraform(this._kubeApiServerConfig.internalValue),
-      kube_controller_manager_config: awsEksClusterKubeControllerManagerConfigPropertyToTerraform(this._kubeControllerManagerConfig.internalValue),
-      kube_scheduler_config: awsEksClusterKubeSchedulerConfigPropertyToTerraform(this._kubeSchedulerConfig.internalValue),
-      kubernetes_network_config: awsEksClusterKubernetesNetworkConfigPropertyToTerraform(this._kubernetesNetworkConfig.internalValue),
-      outpost_config: awsEksClusterOutpostConfigPropertyToTerraform(this._outpostConfig.internalValue),
-      remote_network_config: awsEksClusterRemoteNetworkConfigPropertyToTerraform(this._remoteNetworkConfig.internalValue),
-      storage_config: awsEksClusterStorageConfigPropertyToTerraform(this._storageConfig.internalValue),
-      timeouts: awsEksClusterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      upgrade_policy: awsEksClusterUpgradePolicyPropertyToTerraform(this._upgradePolicy.internalValue),
-      vpc_config: awsEksClusterVpcConfigPropertyToTerraform(this._vpcConfig.internalValue),
-      zonal_shift_config: awsEksClusterZonalShiftConfigPropertyToTerraform(this._zonalShiftConfig.internalValue),
+      access_config: tfClusterAccessConfigPropertyToTerraform(this._accessConfig.internalValue),
+      compute_config: tfClusterComputeConfigPropertyToTerraform(this._computeConfig.internalValue),
+      control_plane_scaling_config: tfClusterControlPlaneScalingConfigPropertyToTerraform(this._controlPlaneScalingConfig.internalValue),
+      encryption_config: tfClusterEncryptionConfigPropertyToTerraform(this._encryptionConfig.internalValue),
+      kube_api_server_config: tfClusterKubeApiServerConfigPropertyToTerraform(this._kubeApiServerConfig.internalValue),
+      kube_controller_manager_config: tfClusterKubeControllerManagerConfigPropertyToTerraform(this._kubeControllerManagerConfig.internalValue),
+      kube_scheduler_config: tfClusterKubeSchedulerConfigPropertyToTerraform(this._kubeSchedulerConfig.internalValue),
+      kubernetes_network_config: tfClusterKubernetesNetworkConfigPropertyToTerraform(this._kubernetesNetworkConfig.internalValue),
+      outpost_config: tfClusterOutpostConfigPropertyToTerraform(this._outpostConfig.internalValue),
+      remote_network_config: tfClusterRemoteNetworkConfigPropertyToTerraform(this._remoteNetworkConfig.internalValue),
+      storage_config: tfClusterStorageConfigPropertyToTerraform(this._storageConfig.internalValue),
+      timeouts: tfClusterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      upgrade_policy: tfClusterUpgradePolicyPropertyToTerraform(this._upgradePolicy.internalValue),
+      vpc_config: tfClusterVpcConfigPropertyToTerraform(this._vpcConfig.internalValue),
+      zonal_shift_config: tfClusterZonalShiftConfigPropertyToTerraform(this._zonalShiftConfig.internalValue),
     };
   }
 
@@ -783,94 +783,94 @@ export class AwsEksCluster extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       access_config: {
-        value: awsEksClusterAccessConfigPropertyToHclTerraform(this._accessConfig.internalValue),
+        value: tfClusterAccessConfigPropertyToHclTerraform(this._accessConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEksCluster.AccessConfigPropertyList",
+        storageClassType: "TfCluster.AccessConfigPropertyList",
       },
       compute_config: {
-        value: awsEksClusterComputeConfigPropertyToHclTerraform(this._computeConfig.internalValue),
+        value: tfClusterComputeConfigPropertyToHclTerraform(this._computeConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEksCluster.ComputeConfigPropertyList",
+        storageClassType: "TfCluster.ComputeConfigPropertyList",
       },
       control_plane_scaling_config: {
-        value: awsEksClusterControlPlaneScalingConfigPropertyToHclTerraform(this._controlPlaneScalingConfig.internalValue),
+        value: tfClusterControlPlaneScalingConfigPropertyToHclTerraform(this._controlPlaneScalingConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEksCluster.ControlPlaneScalingConfigPropertyList",
+        storageClassType: "TfCluster.ControlPlaneScalingConfigPropertyList",
       },
       encryption_config: {
-        value: awsEksClusterEncryptionConfigPropertyToHclTerraform(this._encryptionConfig.internalValue),
+        value: tfClusterEncryptionConfigPropertyToHclTerraform(this._encryptionConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEksCluster.EncryptionConfigPropertyList",
+        storageClassType: "TfCluster.EncryptionConfigPropertyList",
       },
       kube_api_server_config: {
-        value: awsEksClusterKubeApiServerConfigPropertyToHclTerraform(this._kubeApiServerConfig.internalValue),
+        value: tfClusterKubeApiServerConfigPropertyToHclTerraform(this._kubeApiServerConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEksCluster.KubeApiServerConfigPropertyList",
+        storageClassType: "TfCluster.KubeApiServerConfigPropertyList",
       },
       kube_controller_manager_config: {
-        value: awsEksClusterKubeControllerManagerConfigPropertyToHclTerraform(this._kubeControllerManagerConfig.internalValue),
+        value: tfClusterKubeControllerManagerConfigPropertyToHclTerraform(this._kubeControllerManagerConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEksCluster.KubeControllerManagerConfigPropertyList",
+        storageClassType: "TfCluster.KubeControllerManagerConfigPropertyList",
       },
       kube_scheduler_config: {
-        value: awsEksClusterKubeSchedulerConfigPropertyToHclTerraform(this._kubeSchedulerConfig.internalValue),
+        value: tfClusterKubeSchedulerConfigPropertyToHclTerraform(this._kubeSchedulerConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEksCluster.KubeSchedulerConfigPropertyList",
+        storageClassType: "TfCluster.KubeSchedulerConfigPropertyList",
       },
       kubernetes_network_config: {
-        value: awsEksClusterKubernetesNetworkConfigPropertyToHclTerraform(this._kubernetesNetworkConfig.internalValue),
+        value: tfClusterKubernetesNetworkConfigPropertyToHclTerraform(this._kubernetesNetworkConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEksCluster.KubernetesNetworkConfigPropertyList",
+        storageClassType: "TfCluster.KubernetesNetworkConfigPropertyList",
       },
       outpost_config: {
-        value: awsEksClusterOutpostConfigPropertyToHclTerraform(this._outpostConfig.internalValue),
+        value: tfClusterOutpostConfigPropertyToHclTerraform(this._outpostConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEksCluster.OutpostConfigPropertyList",
+        storageClassType: "TfCluster.OutpostConfigPropertyList",
       },
       remote_network_config: {
-        value: awsEksClusterRemoteNetworkConfigPropertyToHclTerraform(this._remoteNetworkConfig.internalValue),
+        value: tfClusterRemoteNetworkConfigPropertyToHclTerraform(this._remoteNetworkConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEksCluster.RemoteNetworkConfigPropertyList",
+        storageClassType: "TfCluster.RemoteNetworkConfigPropertyList",
       },
       storage_config: {
-        value: awsEksClusterStorageConfigPropertyToHclTerraform(this._storageConfig.internalValue),
+        value: tfClusterStorageConfigPropertyToHclTerraform(this._storageConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEksCluster.StorageConfigPropertyList",
+        storageClassType: "TfCluster.StorageConfigPropertyList",
       },
       timeouts: {
-        value: awsEksClusterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfClusterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsEksCluster.TimeoutsProperty",
+        storageClassType: "TfCluster.TimeoutsProperty",
       },
       upgrade_policy: {
-        value: awsEksClusterUpgradePolicyPropertyToHclTerraform(this._upgradePolicy.internalValue),
+        value: tfClusterUpgradePolicyPropertyToHclTerraform(this._upgradePolicy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEksCluster.UpgradePolicyPropertyList",
+        storageClassType: "TfCluster.UpgradePolicyPropertyList",
       },
       vpc_config: {
-        value: awsEksClusterVpcConfigPropertyToHclTerraform(this._vpcConfig.internalValue),
+        value: tfClusterVpcConfigPropertyToHclTerraform(this._vpcConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEksCluster.VpcConfigPropertyList",
+        storageClassType: "TfCluster.VpcConfigPropertyList",
       },
       zonal_shift_config: {
-        value: awsEksClusterZonalShiftConfigPropertyToHclTerraform(this._zonalShiftConfig.internalValue),
+        value: tfClusterZonalShiftConfigPropertyToHclTerraform(this._zonalShiftConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEksCluster.ZonalShiftConfigPropertyList",
+        storageClassType: "TfCluster.ZonalShiftConfigPropertyList",
       },
     };
 
@@ -879,7 +879,7 @@ export class AwsEksCluster extends cdktn.TerraformResource {
   }
 }
 
-export function awsEksClusterCertificateAuthorityPropertyToTerraform(struct?: AwsEksCluster.CertificateAuthorityProperty): any {
+export function tfClusterCertificateAuthorityPropertyToTerraform(struct?: TfCluster.CertificateAuthorityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -889,7 +889,7 @@ export function awsEksClusterCertificateAuthorityPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsEksClusterCertificateAuthorityPropertyToHclTerraform(struct?: AwsEksCluster.CertificateAuthorityProperty): any {
+export function tfClusterCertificateAuthorityPropertyToHclTerraform(struct?: TfCluster.CertificateAuthorityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -900,7 +900,7 @@ export function awsEksClusterCertificateAuthorityPropertyToHclTerraform(struct?:
 }
 
 
-export function awsEksClusterOidcPropertyToTerraform(struct?: AwsEksCluster.OidcProperty): any {
+export function tfClusterOidcPropertyToTerraform(struct?: TfCluster.OidcProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -910,7 +910,7 @@ export function awsEksClusterOidcPropertyToTerraform(struct?: AwsEksCluster.Oidc
 }
 
 
-export function awsEksClusterOidcPropertyToHclTerraform(struct?: AwsEksCluster.OidcProperty): any {
+export function tfClusterOidcPropertyToHclTerraform(struct?: TfCluster.OidcProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -921,7 +921,7 @@ export function awsEksClusterOidcPropertyToHclTerraform(struct?: AwsEksCluster.O
 }
 
 
-export function awsEksClusterIdentityPropertyToTerraform(struct?: AwsEksCluster.IdentityProperty): any {
+export function tfClusterIdentityPropertyToTerraform(struct?: TfCluster.IdentityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -931,7 +931,7 @@ export function awsEksClusterIdentityPropertyToTerraform(struct?: AwsEksCluster.
 }
 
 
-export function awsEksClusterIdentityPropertyToHclTerraform(struct?: AwsEksCluster.IdentityProperty): any {
+export function tfClusterIdentityPropertyToHclTerraform(struct?: TfCluster.IdentityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -942,7 +942,7 @@ export function awsEksClusterIdentityPropertyToHclTerraform(struct?: AwsEksClust
 }
 
 
-export function awsEksClusterAccessConfigPropertyToTerraform(struct?: AwsEksCluster.AccessConfigPropertyOutputReference | AwsEksCluster.AccessConfigProperty): any {
+export function tfClusterAccessConfigPropertyToTerraform(struct?: TfCluster.AccessConfigPropertyOutputReference | TfCluster.AccessConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -954,7 +954,7 @@ export function awsEksClusterAccessConfigPropertyToTerraform(struct?: AwsEksClus
 }
 
 
-export function awsEksClusterAccessConfigPropertyToHclTerraform(struct?: AwsEksCluster.AccessConfigPropertyOutputReference | AwsEksCluster.AccessConfigProperty): any {
+export function tfClusterAccessConfigPropertyToHclTerraform(struct?: TfCluster.AccessConfigPropertyOutputReference | TfCluster.AccessConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -979,7 +979,7 @@ export function awsEksClusterAccessConfigPropertyToHclTerraform(struct?: AwsEksC
 }
 
 
-export function awsEksClusterComputeConfigPropertyToTerraform(struct?: AwsEksCluster.ComputeConfigPropertyOutputReference | AwsEksCluster.ComputeConfigProperty): any {
+export function tfClusterComputeConfigPropertyToTerraform(struct?: TfCluster.ComputeConfigPropertyOutputReference | TfCluster.ComputeConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -992,7 +992,7 @@ export function awsEksClusterComputeConfigPropertyToTerraform(struct?: AwsEksClu
 }
 
 
-export function awsEksClusterComputeConfigPropertyToHclTerraform(struct?: AwsEksCluster.ComputeConfigPropertyOutputReference | AwsEksCluster.ComputeConfigProperty): any {
+export function tfClusterComputeConfigPropertyToHclTerraform(struct?: TfCluster.ComputeConfigPropertyOutputReference | TfCluster.ComputeConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1023,7 +1023,7 @@ export function awsEksClusterComputeConfigPropertyToHclTerraform(struct?: AwsEks
 }
 
 
-export function awsEksClusterControlPlaneScalingConfigPropertyToTerraform(struct?: AwsEksCluster.ControlPlaneScalingConfigPropertyOutputReference | AwsEksCluster.ControlPlaneScalingConfigProperty): any {
+export function tfClusterControlPlaneScalingConfigPropertyToTerraform(struct?: TfCluster.ControlPlaneScalingConfigPropertyOutputReference | TfCluster.ControlPlaneScalingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1034,7 +1034,7 @@ export function awsEksClusterControlPlaneScalingConfigPropertyToTerraform(struct
 }
 
 
-export function awsEksClusterControlPlaneScalingConfigPropertyToHclTerraform(struct?: AwsEksCluster.ControlPlaneScalingConfigPropertyOutputReference | AwsEksCluster.ControlPlaneScalingConfigProperty): any {
+export function tfClusterControlPlaneScalingConfigPropertyToHclTerraform(struct?: TfCluster.ControlPlaneScalingConfigPropertyOutputReference | TfCluster.ControlPlaneScalingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1053,7 +1053,7 @@ export function awsEksClusterControlPlaneScalingConfigPropertyToHclTerraform(str
 }
 
 
-export function awsEksClusterProviderPropertyToTerraform(struct?: AwsEksCluster.ProviderPropertyOutputReference | AwsEksCluster.ProviderProperty): any {
+export function tfClusterProviderPropertyToTerraform(struct?: TfCluster.ProviderPropertyOutputReference | TfCluster.ProviderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1064,7 +1064,7 @@ export function awsEksClusterProviderPropertyToTerraform(struct?: AwsEksCluster.
 }
 
 
-export function awsEksClusterProviderPropertyToHclTerraform(struct?: AwsEksCluster.ProviderPropertyOutputReference | AwsEksCluster.ProviderProperty): any {
+export function tfClusterProviderPropertyToHclTerraform(struct?: TfCluster.ProviderPropertyOutputReference | TfCluster.ProviderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1083,19 +1083,19 @@ export function awsEksClusterProviderPropertyToHclTerraform(struct?: AwsEksClust
 }
 
 
-export function awsEksClusterEncryptionConfigPropertyToTerraform(struct?: AwsEksCluster.EncryptionConfigPropertyOutputReference | AwsEksCluster.EncryptionConfigProperty): any {
+export function tfClusterEncryptionConfigPropertyToTerraform(struct?: TfCluster.EncryptionConfigPropertyOutputReference | TfCluster.EncryptionConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     resources: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.resources),
-    provider: awsEksClusterProviderPropertyToTerraform(struct!.provider),
+    provider: tfClusterProviderPropertyToTerraform(struct!.provider),
   }
 }
 
 
-export function awsEksClusterEncryptionConfigPropertyToHclTerraform(struct?: AwsEksCluster.EncryptionConfigPropertyOutputReference | AwsEksCluster.EncryptionConfigProperty): any {
+export function tfClusterEncryptionConfigPropertyToHclTerraform(struct?: TfCluster.EncryptionConfigPropertyOutputReference | TfCluster.EncryptionConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1108,7 +1108,7 @@ export function awsEksClusterEncryptionConfigPropertyToHclTerraform(struct?: Aws
       storageClassType: "stringList",
     },
     provider: {
-      value: awsEksClusterProviderPropertyToHclTerraform(struct!.provider),
+      value: tfClusterProviderPropertyToHclTerraform(struct!.provider),
       isBlock: true,
       type: "list",
       storageClassType: "ProviderPropertyList",
@@ -1120,7 +1120,7 @@ export function awsEksClusterEncryptionConfigPropertyToHclTerraform(struct?: Aws
 }
 
 
-export function awsEksClusterServiceNodePortRangePropertyToTerraform(struct?: AwsEksCluster.ServiceNodePortRangePropertyOutputReference | AwsEksCluster.ServiceNodePortRangeProperty): any {
+export function tfClusterServiceNodePortRangePropertyToTerraform(struct?: TfCluster.ServiceNodePortRangePropertyOutputReference | TfCluster.ServiceNodePortRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1132,7 +1132,7 @@ export function awsEksClusterServiceNodePortRangePropertyToTerraform(struct?: Aw
 }
 
 
-export function awsEksClusterServiceNodePortRangePropertyToHclTerraform(struct?: AwsEksCluster.ServiceNodePortRangePropertyOutputReference | AwsEksCluster.ServiceNodePortRangeProperty): any {
+export function tfClusterServiceNodePortRangePropertyToHclTerraform(struct?: TfCluster.ServiceNodePortRangePropertyOutputReference | TfCluster.ServiceNodePortRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1157,19 +1157,19 @@ export function awsEksClusterServiceNodePortRangePropertyToHclTerraform(struct?:
 }
 
 
-export function awsEksClusterKubeApiServerConfigPropertyToTerraform(struct?: AwsEksCluster.KubeApiServerConfigPropertyOutputReference | AwsEksCluster.KubeApiServerConfigProperty): any {
+export function tfClusterKubeApiServerConfigPropertyToTerraform(struct?: TfCluster.KubeApiServerConfigPropertyOutputReference | TfCluster.KubeApiServerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     event_ttl: cdktn.stringToTerraform(struct!.eventTtl),
-    service_node_port_range: awsEksClusterServiceNodePortRangePropertyToTerraform(struct!.serviceNodePortRange),
+    service_node_port_range: tfClusterServiceNodePortRangePropertyToTerraform(struct!.serviceNodePortRange),
   }
 }
 
 
-export function awsEksClusterKubeApiServerConfigPropertyToHclTerraform(struct?: AwsEksCluster.KubeApiServerConfigPropertyOutputReference | AwsEksCluster.KubeApiServerConfigProperty): any {
+export function tfClusterKubeApiServerConfigPropertyToHclTerraform(struct?: TfCluster.KubeApiServerConfigPropertyOutputReference | TfCluster.KubeApiServerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1182,7 +1182,7 @@ export function awsEksClusterKubeApiServerConfigPropertyToHclTerraform(struct?: 
       storageClassType: "string",
     },
     service_node_port_range: {
-      value: awsEksClusterServiceNodePortRangePropertyToHclTerraform(struct!.serviceNodePortRange),
+      value: tfClusterServiceNodePortRangePropertyToHclTerraform(struct!.serviceNodePortRange),
       isBlock: true,
       type: "list",
       storageClassType: "ServiceNodePortRangePropertyList",
@@ -1194,7 +1194,7 @@ export function awsEksClusterKubeApiServerConfigPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsEksClusterHorizontalPodAutoscalerControllerConfigPropertyToTerraform(struct?: AwsEksCluster.HorizontalPodAutoscalerControllerConfigPropertyOutputReference | AwsEksCluster.HorizontalPodAutoscalerControllerConfigProperty): any {
+export function tfClusterHorizontalPodAutoscalerControllerConfigPropertyToTerraform(struct?: TfCluster.HorizontalPodAutoscalerControllerConfigPropertyOutputReference | TfCluster.HorizontalPodAutoscalerControllerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1205,7 +1205,7 @@ export function awsEksClusterHorizontalPodAutoscalerControllerConfigPropertyToTe
 }
 
 
-export function awsEksClusterHorizontalPodAutoscalerControllerConfigPropertyToHclTerraform(struct?: AwsEksCluster.HorizontalPodAutoscalerControllerConfigPropertyOutputReference | AwsEksCluster.HorizontalPodAutoscalerControllerConfigProperty): any {
+export function tfClusterHorizontalPodAutoscalerControllerConfigPropertyToHclTerraform(struct?: TfCluster.HorizontalPodAutoscalerControllerConfigPropertyOutputReference | TfCluster.HorizontalPodAutoscalerControllerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1224,25 +1224,25 @@ export function awsEksClusterHorizontalPodAutoscalerControllerConfigPropertyToHc
 }
 
 
-export function awsEksClusterKubeControllerManagerConfigPropertyToTerraform(struct?: AwsEksCluster.KubeControllerManagerConfigPropertyOutputReference | AwsEksCluster.KubeControllerManagerConfigProperty): any {
+export function tfClusterKubeControllerManagerConfigPropertyToTerraform(struct?: TfCluster.KubeControllerManagerConfigPropertyOutputReference | TfCluster.KubeControllerManagerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    horizontal_pod_autoscaler_controller_config: awsEksClusterHorizontalPodAutoscalerControllerConfigPropertyToTerraform(struct!.horizontalPodAutoscalerControllerConfig),
+    horizontal_pod_autoscaler_controller_config: tfClusterHorizontalPodAutoscalerControllerConfigPropertyToTerraform(struct!.horizontalPodAutoscalerControllerConfig),
   }
 }
 
 
-export function awsEksClusterKubeControllerManagerConfigPropertyToHclTerraform(struct?: AwsEksCluster.KubeControllerManagerConfigPropertyOutputReference | AwsEksCluster.KubeControllerManagerConfigProperty): any {
+export function tfClusterKubeControllerManagerConfigPropertyToHclTerraform(struct?: TfCluster.KubeControllerManagerConfigPropertyOutputReference | TfCluster.KubeControllerManagerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     horizontal_pod_autoscaler_controller_config: {
-      value: awsEksClusterHorizontalPodAutoscalerControllerConfigPropertyToHclTerraform(struct!.horizontalPodAutoscalerControllerConfig),
+      value: tfClusterHorizontalPodAutoscalerControllerConfigPropertyToHclTerraform(struct!.horizontalPodAutoscalerControllerConfig),
       isBlock: true,
       type: "list",
       storageClassType: "HorizontalPodAutoscalerControllerConfigPropertyList",
@@ -1254,7 +1254,7 @@ export function awsEksClusterKubeControllerManagerConfigPropertyToHclTerraform(s
 }
 
 
-export function awsEksClusterResourcePropertyToTerraform(struct?: AwsEksCluster.ResourceProperty | cdktn.IResolvable): any {
+export function tfClusterResourcePropertyToTerraform(struct?: TfCluster.ResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1266,7 +1266,7 @@ export function awsEksClusterResourcePropertyToTerraform(struct?: AwsEksCluster.
 }
 
 
-export function awsEksClusterResourcePropertyToHclTerraform(struct?: AwsEksCluster.ResourceProperty | cdktn.IResolvable): any {
+export function tfClusterResourcePropertyToHclTerraform(struct?: TfCluster.ResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1291,19 +1291,19 @@ export function awsEksClusterResourcePropertyToHclTerraform(struct?: AwsEksClust
 }
 
 
-export function awsEksClusterScoringStrategyPropertyToTerraform(struct?: AwsEksCluster.ScoringStrategyPropertyOutputReference | AwsEksCluster.ScoringStrategyProperty): any {
+export function tfClusterScoringStrategyPropertyToTerraform(struct?: TfCluster.ScoringStrategyPropertyOutputReference | TfCluster.ScoringStrategyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     type: cdktn.stringToTerraform(struct!.type),
-    resource: cdktn.listMapper(awsEksClusterResourcePropertyToTerraform, true)(struct!.resource),
+    resource: cdktn.listMapper(tfClusterResourcePropertyToTerraform, true)(struct!.resource),
   }
 }
 
 
-export function awsEksClusterScoringStrategyPropertyToHclTerraform(struct?: AwsEksCluster.ScoringStrategyPropertyOutputReference | AwsEksCluster.ScoringStrategyProperty): any {
+export function tfClusterScoringStrategyPropertyToHclTerraform(struct?: TfCluster.ScoringStrategyPropertyOutputReference | TfCluster.ScoringStrategyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1316,7 +1316,7 @@ export function awsEksClusterScoringStrategyPropertyToHclTerraform(struct?: AwsE
       storageClassType: "string",
     },
     resource: {
-      value: cdktn.listMapperHcl(awsEksClusterResourcePropertyToHclTerraform, true)(struct!.resource),
+      value: cdktn.listMapperHcl(tfClusterResourcePropertyToHclTerraform, true)(struct!.resource),
       isBlock: true,
       type: "list",
       storageClassType: "ResourcePropertyList",
@@ -1328,25 +1328,25 @@ export function awsEksClusterScoringStrategyPropertyToHclTerraform(struct?: AwsE
 }
 
 
-export function awsEksClusterNodeResourcesFitPropertyToTerraform(struct?: AwsEksCluster.NodeResourcesFitPropertyOutputReference | AwsEksCluster.NodeResourcesFitProperty): any {
+export function tfClusterNodeResourcesFitPropertyToTerraform(struct?: TfCluster.NodeResourcesFitPropertyOutputReference | TfCluster.NodeResourcesFitProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    scoring_strategy: awsEksClusterScoringStrategyPropertyToTerraform(struct!.scoringStrategy),
+    scoring_strategy: tfClusterScoringStrategyPropertyToTerraform(struct!.scoringStrategy),
   }
 }
 
 
-export function awsEksClusterNodeResourcesFitPropertyToHclTerraform(struct?: AwsEksCluster.NodeResourcesFitPropertyOutputReference | AwsEksCluster.NodeResourcesFitProperty): any {
+export function tfClusterNodeResourcesFitPropertyToHclTerraform(struct?: TfCluster.NodeResourcesFitPropertyOutputReference | TfCluster.NodeResourcesFitProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     scoring_strategy: {
-      value: awsEksClusterScoringStrategyPropertyToHclTerraform(struct!.scoringStrategy),
+      value: tfClusterScoringStrategyPropertyToHclTerraform(struct!.scoringStrategy),
       isBlock: true,
       type: "list",
       storageClassType: "ScoringStrategyPropertyList",
@@ -1358,25 +1358,25 @@ export function awsEksClusterNodeResourcesFitPropertyToHclTerraform(struct?: Aws
 }
 
 
-export function awsEksClusterKubeSchedulerConfigPropertyToTerraform(struct?: AwsEksCluster.KubeSchedulerConfigPropertyOutputReference | AwsEksCluster.KubeSchedulerConfigProperty): any {
+export function tfClusterKubeSchedulerConfigPropertyToTerraform(struct?: TfCluster.KubeSchedulerConfigPropertyOutputReference | TfCluster.KubeSchedulerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    node_resources_fit: awsEksClusterNodeResourcesFitPropertyToTerraform(struct!.nodeResourcesFit),
+    node_resources_fit: tfClusterNodeResourcesFitPropertyToTerraform(struct!.nodeResourcesFit),
   }
 }
 
 
-export function awsEksClusterKubeSchedulerConfigPropertyToHclTerraform(struct?: AwsEksCluster.KubeSchedulerConfigPropertyOutputReference | AwsEksCluster.KubeSchedulerConfigProperty): any {
+export function tfClusterKubeSchedulerConfigPropertyToHclTerraform(struct?: TfCluster.KubeSchedulerConfigPropertyOutputReference | TfCluster.KubeSchedulerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     node_resources_fit: {
-      value: awsEksClusterNodeResourcesFitPropertyToHclTerraform(struct!.nodeResourcesFit),
+      value: tfClusterNodeResourcesFitPropertyToHclTerraform(struct!.nodeResourcesFit),
       isBlock: true,
       type: "list",
       storageClassType: "NodeResourcesFitPropertyList",
@@ -1388,7 +1388,7 @@ export function awsEksClusterKubeSchedulerConfigPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsEksClusterElasticLoadBalancingPropertyToTerraform(struct?: AwsEksCluster.ElasticLoadBalancingPropertyOutputReference | AwsEksCluster.ElasticLoadBalancingProperty): any {
+export function tfClusterElasticLoadBalancingPropertyToTerraform(struct?: TfCluster.ElasticLoadBalancingPropertyOutputReference | TfCluster.ElasticLoadBalancingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1399,7 +1399,7 @@ export function awsEksClusterElasticLoadBalancingPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsEksClusterElasticLoadBalancingPropertyToHclTerraform(struct?: AwsEksCluster.ElasticLoadBalancingPropertyOutputReference | AwsEksCluster.ElasticLoadBalancingProperty): any {
+export function tfClusterElasticLoadBalancingPropertyToHclTerraform(struct?: TfCluster.ElasticLoadBalancingPropertyOutputReference | TfCluster.ElasticLoadBalancingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1418,7 +1418,7 @@ export function awsEksClusterElasticLoadBalancingPropertyToHclTerraform(struct?:
 }
 
 
-export function awsEksClusterKubernetesNetworkConfigPropertyToTerraform(struct?: AwsEksCluster.KubernetesNetworkConfigPropertyOutputReference | AwsEksCluster.KubernetesNetworkConfigProperty): any {
+export function tfClusterKubernetesNetworkConfigPropertyToTerraform(struct?: TfCluster.KubernetesNetworkConfigPropertyOutputReference | TfCluster.KubernetesNetworkConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1426,12 +1426,12 @@ export function awsEksClusterKubernetesNetworkConfigPropertyToTerraform(struct?:
   return {
     ip_family: cdktn.stringToTerraform(struct!.ipFamily),
     service_ipv4_cidr: cdktn.stringToTerraform(struct!.serviceIpv4Cidr),
-    elastic_load_balancing: awsEksClusterElasticLoadBalancingPropertyToTerraform(struct!.elasticLoadBalancing),
+    elastic_load_balancing: tfClusterElasticLoadBalancingPropertyToTerraform(struct!.elasticLoadBalancing),
   }
 }
 
 
-export function awsEksClusterKubernetesNetworkConfigPropertyToHclTerraform(struct?: AwsEksCluster.KubernetesNetworkConfigPropertyOutputReference | AwsEksCluster.KubernetesNetworkConfigProperty): any {
+export function tfClusterKubernetesNetworkConfigPropertyToHclTerraform(struct?: TfCluster.KubernetesNetworkConfigPropertyOutputReference | TfCluster.KubernetesNetworkConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1450,7 +1450,7 @@ export function awsEksClusterKubernetesNetworkConfigPropertyToHclTerraform(struc
       storageClassType: "string",
     },
     elastic_load_balancing: {
-      value: awsEksClusterElasticLoadBalancingPropertyToHclTerraform(struct!.elasticLoadBalancing),
+      value: tfClusterElasticLoadBalancingPropertyToHclTerraform(struct!.elasticLoadBalancing),
       isBlock: true,
       type: "list",
       storageClassType: "ElasticLoadBalancingPropertyList",
@@ -1462,7 +1462,7 @@ export function awsEksClusterKubernetesNetworkConfigPropertyToHclTerraform(struc
 }
 
 
-export function awsEksClusterControlPlanePlacementPropertyToTerraform(struct?: AwsEksCluster.ControlPlanePlacementPropertyOutputReference | AwsEksCluster.ControlPlanePlacementProperty): any {
+export function tfClusterControlPlanePlacementPropertyToTerraform(struct?: TfCluster.ControlPlanePlacementPropertyOutputReference | TfCluster.ControlPlanePlacementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1474,7 +1474,7 @@ export function awsEksClusterControlPlanePlacementPropertyToTerraform(struct?: A
 }
 
 
-export function awsEksClusterControlPlanePlacementPropertyToHclTerraform(struct?: AwsEksCluster.ControlPlanePlacementPropertyOutputReference | AwsEksCluster.ControlPlanePlacementProperty): any {
+export function tfClusterControlPlanePlacementPropertyToHclTerraform(struct?: TfCluster.ControlPlanePlacementPropertyOutputReference | TfCluster.ControlPlanePlacementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1499,7 +1499,7 @@ export function awsEksClusterControlPlanePlacementPropertyToHclTerraform(struct?
 }
 
 
-export function awsEksClusterEtcdPlacementPropertyToTerraform(struct?: AwsEksCluster.EtcdPlacementPropertyOutputReference | AwsEksCluster.EtcdPlacementProperty): any {
+export function tfClusterEtcdPlacementPropertyToTerraform(struct?: TfCluster.EtcdPlacementPropertyOutputReference | TfCluster.EtcdPlacementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1510,7 +1510,7 @@ export function awsEksClusterEtcdPlacementPropertyToTerraform(struct?: AwsEksClu
 }
 
 
-export function awsEksClusterEtcdPlacementPropertyToHclTerraform(struct?: AwsEksCluster.EtcdPlacementPropertyOutputReference | AwsEksCluster.EtcdPlacementProperty): any {
+export function tfClusterEtcdPlacementPropertyToHclTerraform(struct?: TfCluster.EtcdPlacementPropertyOutputReference | TfCluster.EtcdPlacementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1529,7 +1529,7 @@ export function awsEksClusterEtcdPlacementPropertyToHclTerraform(struct?: AwsEks
 }
 
 
-export function awsEksClusterOutpostConfigPropertyToTerraform(struct?: AwsEksCluster.OutpostConfigPropertyOutputReference | AwsEksCluster.OutpostConfigProperty): any {
+export function tfClusterOutpostConfigPropertyToTerraform(struct?: TfCluster.OutpostConfigPropertyOutputReference | TfCluster.OutpostConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1538,13 +1538,13 @@ export function awsEksClusterOutpostConfigPropertyToTerraform(struct?: AwsEksClu
     control_plane_instance_type: cdktn.stringToTerraform(struct!.controlPlaneInstanceType),
     etcd_instance_type: cdktn.stringToTerraform(struct!.etcdInstanceType),
     outpost_arns: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.outpostArns),
-    control_plane_placement: awsEksClusterControlPlanePlacementPropertyToTerraform(struct!.controlPlanePlacement),
-    etcd_placement: awsEksClusterEtcdPlacementPropertyToTerraform(struct!.etcdPlacement),
+    control_plane_placement: tfClusterControlPlanePlacementPropertyToTerraform(struct!.controlPlanePlacement),
+    etcd_placement: tfClusterEtcdPlacementPropertyToTerraform(struct!.etcdPlacement),
   }
 }
 
 
-export function awsEksClusterOutpostConfigPropertyToHclTerraform(struct?: AwsEksCluster.OutpostConfigPropertyOutputReference | AwsEksCluster.OutpostConfigProperty): any {
+export function tfClusterOutpostConfigPropertyToHclTerraform(struct?: TfCluster.OutpostConfigPropertyOutputReference | TfCluster.OutpostConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1569,13 +1569,13 @@ export function awsEksClusterOutpostConfigPropertyToHclTerraform(struct?: AwsEks
       storageClassType: "stringList",
     },
     control_plane_placement: {
-      value: awsEksClusterControlPlanePlacementPropertyToHclTerraform(struct!.controlPlanePlacement),
+      value: tfClusterControlPlanePlacementPropertyToHclTerraform(struct!.controlPlanePlacement),
       isBlock: true,
       type: "list",
       storageClassType: "ControlPlanePlacementPropertyList",
     },
     etcd_placement: {
-      value: awsEksClusterEtcdPlacementPropertyToHclTerraform(struct!.etcdPlacement),
+      value: tfClusterEtcdPlacementPropertyToHclTerraform(struct!.etcdPlacement),
       isBlock: true,
       type: "list",
       storageClassType: "EtcdPlacementPropertyList",
@@ -1587,7 +1587,7 @@ export function awsEksClusterOutpostConfigPropertyToHclTerraform(struct?: AwsEks
 }
 
 
-export function awsEksClusterRemoteNodeNetworksPropertyToTerraform(struct?: AwsEksCluster.RemoteNodeNetworksPropertyOutputReference | AwsEksCluster.RemoteNodeNetworksProperty): any {
+export function tfClusterRemoteNodeNetworksPropertyToTerraform(struct?: TfCluster.RemoteNodeNetworksPropertyOutputReference | TfCluster.RemoteNodeNetworksProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1598,7 +1598,7 @@ export function awsEksClusterRemoteNodeNetworksPropertyToTerraform(struct?: AwsE
 }
 
 
-export function awsEksClusterRemoteNodeNetworksPropertyToHclTerraform(struct?: AwsEksCluster.RemoteNodeNetworksPropertyOutputReference | AwsEksCluster.RemoteNodeNetworksProperty): any {
+export function tfClusterRemoteNodeNetworksPropertyToHclTerraform(struct?: TfCluster.RemoteNodeNetworksPropertyOutputReference | TfCluster.RemoteNodeNetworksProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1617,7 +1617,7 @@ export function awsEksClusterRemoteNodeNetworksPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsEksClusterRemotePodNetworksPropertyToTerraform(struct?: AwsEksCluster.RemotePodNetworksPropertyOutputReference | AwsEksCluster.RemotePodNetworksProperty): any {
+export function tfClusterRemotePodNetworksPropertyToTerraform(struct?: TfCluster.RemotePodNetworksPropertyOutputReference | TfCluster.RemotePodNetworksProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1628,7 +1628,7 @@ export function awsEksClusterRemotePodNetworksPropertyToTerraform(struct?: AwsEk
 }
 
 
-export function awsEksClusterRemotePodNetworksPropertyToHclTerraform(struct?: AwsEksCluster.RemotePodNetworksPropertyOutputReference | AwsEksCluster.RemotePodNetworksProperty): any {
+export function tfClusterRemotePodNetworksPropertyToHclTerraform(struct?: TfCluster.RemotePodNetworksPropertyOutputReference | TfCluster.RemotePodNetworksProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1647,32 +1647,32 @@ export function awsEksClusterRemotePodNetworksPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsEksClusterRemoteNetworkConfigPropertyToTerraform(struct?: AwsEksCluster.RemoteNetworkConfigPropertyOutputReference | AwsEksCluster.RemoteNetworkConfigProperty): any {
+export function tfClusterRemoteNetworkConfigPropertyToTerraform(struct?: TfCluster.RemoteNetworkConfigPropertyOutputReference | TfCluster.RemoteNetworkConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    remote_node_networks: awsEksClusterRemoteNodeNetworksPropertyToTerraform(struct!.remoteNodeNetworks),
-    remote_pod_networks: awsEksClusterRemotePodNetworksPropertyToTerraform(struct!.remotePodNetworks),
+    remote_node_networks: tfClusterRemoteNodeNetworksPropertyToTerraform(struct!.remoteNodeNetworks),
+    remote_pod_networks: tfClusterRemotePodNetworksPropertyToTerraform(struct!.remotePodNetworks),
   }
 }
 
 
-export function awsEksClusterRemoteNetworkConfigPropertyToHclTerraform(struct?: AwsEksCluster.RemoteNetworkConfigPropertyOutputReference | AwsEksCluster.RemoteNetworkConfigProperty): any {
+export function tfClusterRemoteNetworkConfigPropertyToHclTerraform(struct?: TfCluster.RemoteNetworkConfigPropertyOutputReference | TfCluster.RemoteNetworkConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     remote_node_networks: {
-      value: awsEksClusterRemoteNodeNetworksPropertyToHclTerraform(struct!.remoteNodeNetworks),
+      value: tfClusterRemoteNodeNetworksPropertyToHclTerraform(struct!.remoteNodeNetworks),
       isBlock: true,
       type: "list",
       storageClassType: "RemoteNodeNetworksPropertyList",
     },
     remote_pod_networks: {
-      value: awsEksClusterRemotePodNetworksPropertyToHclTerraform(struct!.remotePodNetworks),
+      value: tfClusterRemotePodNetworksPropertyToHclTerraform(struct!.remotePodNetworks),
       isBlock: true,
       type: "list",
       storageClassType: "RemotePodNetworksPropertyList",
@@ -1684,7 +1684,7 @@ export function awsEksClusterRemoteNetworkConfigPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsEksClusterBlockStoragePropertyToTerraform(struct?: AwsEksCluster.BlockStoragePropertyOutputReference | AwsEksCluster.BlockStorageProperty): any {
+export function tfClusterBlockStoragePropertyToTerraform(struct?: TfCluster.BlockStoragePropertyOutputReference | TfCluster.BlockStorageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1695,7 +1695,7 @@ export function awsEksClusterBlockStoragePropertyToTerraform(struct?: AwsEksClus
 }
 
 
-export function awsEksClusterBlockStoragePropertyToHclTerraform(struct?: AwsEksCluster.BlockStoragePropertyOutputReference | AwsEksCluster.BlockStorageProperty): any {
+export function tfClusterBlockStoragePropertyToHclTerraform(struct?: TfCluster.BlockStoragePropertyOutputReference | TfCluster.BlockStorageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1714,25 +1714,25 @@ export function awsEksClusterBlockStoragePropertyToHclTerraform(struct?: AwsEksC
 }
 
 
-export function awsEksClusterStorageConfigPropertyToTerraform(struct?: AwsEksCluster.StorageConfigPropertyOutputReference | AwsEksCluster.StorageConfigProperty): any {
+export function tfClusterStorageConfigPropertyToTerraform(struct?: TfCluster.StorageConfigPropertyOutputReference | TfCluster.StorageConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    block_storage: awsEksClusterBlockStoragePropertyToTerraform(struct!.blockStorage),
+    block_storage: tfClusterBlockStoragePropertyToTerraform(struct!.blockStorage),
   }
 }
 
 
-export function awsEksClusterStorageConfigPropertyToHclTerraform(struct?: AwsEksCluster.StorageConfigPropertyOutputReference | AwsEksCluster.StorageConfigProperty): any {
+export function tfClusterStorageConfigPropertyToHclTerraform(struct?: TfCluster.StorageConfigPropertyOutputReference | TfCluster.StorageConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     block_storage: {
-      value: awsEksClusterBlockStoragePropertyToHclTerraform(struct!.blockStorage),
+      value: tfClusterBlockStoragePropertyToHclTerraform(struct!.blockStorage),
       isBlock: true,
       type: "list",
       storageClassType: "BlockStoragePropertyList",
@@ -1744,7 +1744,7 @@ export function awsEksClusterStorageConfigPropertyToHclTerraform(struct?: AwsEks
 }
 
 
-export function awsEksClusterTimeoutsPropertyToTerraform(struct?: AwsEksCluster.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfClusterTimeoutsPropertyToTerraform(struct?: TfCluster.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1757,7 +1757,7 @@ export function awsEksClusterTimeoutsPropertyToTerraform(struct?: AwsEksCluster.
 }
 
 
-export function awsEksClusterTimeoutsPropertyToHclTerraform(struct?: AwsEksCluster.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfClusterTimeoutsPropertyToHclTerraform(struct?: TfCluster.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1788,7 +1788,7 @@ export function awsEksClusterTimeoutsPropertyToHclTerraform(struct?: AwsEksClust
 }
 
 
-export function awsEksClusterUpgradePolicyPropertyToTerraform(struct?: AwsEksCluster.UpgradePolicyPropertyOutputReference | AwsEksCluster.UpgradePolicyProperty): any {
+export function tfClusterUpgradePolicyPropertyToTerraform(struct?: TfCluster.UpgradePolicyPropertyOutputReference | TfCluster.UpgradePolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1799,7 +1799,7 @@ export function awsEksClusterUpgradePolicyPropertyToTerraform(struct?: AwsEksClu
 }
 
 
-export function awsEksClusterUpgradePolicyPropertyToHclTerraform(struct?: AwsEksCluster.UpgradePolicyPropertyOutputReference | AwsEksCluster.UpgradePolicyProperty): any {
+export function tfClusterUpgradePolicyPropertyToHclTerraform(struct?: TfCluster.UpgradePolicyPropertyOutputReference | TfCluster.UpgradePolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1818,7 +1818,7 @@ export function awsEksClusterUpgradePolicyPropertyToHclTerraform(struct?: AwsEks
 }
 
 
-export function awsEksClusterVpcConfigPropertyToTerraform(struct?: AwsEksCluster.VpcConfigPropertyOutputReference | AwsEksCluster.VpcConfigProperty): any {
+export function tfClusterVpcConfigPropertyToTerraform(struct?: TfCluster.VpcConfigPropertyOutputReference | TfCluster.VpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1834,7 +1834,7 @@ export function awsEksClusterVpcConfigPropertyToTerraform(struct?: AwsEksCluster
 }
 
 
-export function awsEksClusterVpcConfigPropertyToHclTerraform(struct?: AwsEksCluster.VpcConfigPropertyOutputReference | AwsEksCluster.VpcConfigProperty): any {
+export function tfClusterVpcConfigPropertyToHclTerraform(struct?: TfCluster.VpcConfigPropertyOutputReference | TfCluster.VpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1883,7 +1883,7 @@ export function awsEksClusterVpcConfigPropertyToHclTerraform(struct?: AwsEksClus
 }
 
 
-export function awsEksClusterZonalShiftConfigPropertyToTerraform(struct?: AwsEksCluster.ZonalShiftConfigPropertyOutputReference | AwsEksCluster.ZonalShiftConfigProperty): any {
+export function tfClusterZonalShiftConfigPropertyToTerraform(struct?: TfCluster.ZonalShiftConfigPropertyOutputReference | TfCluster.ZonalShiftConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1894,7 +1894,7 @@ export function awsEksClusterZonalShiftConfigPropertyToTerraform(struct?: AwsEks
 }
 
 
-export function awsEksClusterZonalShiftConfigPropertyToHclTerraform(struct?: AwsEksCluster.ZonalShiftConfigPropertyOutputReference | AwsEksCluster.ZonalShiftConfigProperty): any {
+export function tfClusterZonalShiftConfigPropertyToHclTerraform(struct?: TfCluster.ZonalShiftConfigPropertyOutputReference | TfCluster.ZonalShiftConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1913,7 +1913,7 @@ export function awsEksClusterZonalShiftConfigPropertyToHclTerraform(struct?: Aws
 }
 
 
-export namespace AwsEksCluster {
+export namespace TfCluster {
 export interface CertificateAuthorityProperty {
 }
 export class CertificateAuthorityPropertyOutputReference extends cdktn.ComplexObject {
@@ -2079,11 +2079,11 @@ export class IdentityPropertyList extends cdktn.ComplexList {
 }
 export interface AccessConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#authentication_mode AwsEksCluster#authentication_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#authentication_mode TfCluster#authentication_mode}
   */
   readonly authenticationMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#bootstrap_cluster_creator_admin_permissions AwsEksCluster#bootstrap_cluster_creator_admin_permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#bootstrap_cluster_creator_admin_permissions TfCluster#bootstrap_cluster_creator_admin_permissions}
   */
   readonly bootstrapClusterCreatorAdminPermissions?: boolean | cdktn.IResolvable;
 }
@@ -2159,15 +2159,15 @@ export class AccessConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ComputeConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#enabled AwsEksCluster#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#enabled TfCluster#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#node_pools AwsEksCluster#node_pools}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#node_pools TfCluster#node_pools}
   */
   readonly nodePools?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#node_role_arn AwsEksCluster#node_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#node_role_arn TfCluster#node_role_arn}
   */
   readonly nodeRoleArn?: string;
 }
@@ -2265,7 +2265,7 @@ export class ComputeConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ControlPlaneScalingConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#tier AwsEksCluster#tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#tier TfCluster#tier}
   */
   readonly tier?: string;
 }
@@ -2319,7 +2319,7 @@ export class ControlPlaneScalingConfigPropertyOutputReference extends cdktn.Comp
 }
 export interface ProviderProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#key_arn AwsEksCluster#key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#key_arn TfCluster#key_arn}
   */
   readonly keyArn: string;
 }
@@ -2370,13 +2370,13 @@ export class ProviderPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface EncryptionConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#resources AwsEksCluster#resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#resources TfCluster#resources}
   */
   readonly resources: string[];
   /**
   * provider block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#provider AwsEksCluster#provider}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#provider TfCluster#provider}
   */
   readonly provider: ProviderProperty;
 }
@@ -2446,11 +2446,11 @@ export class EncryptionConfigPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface ServiceNodePortRangeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#max_port AwsEksCluster#max_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#max_port TfCluster#max_port}
   */
   readonly maxPort?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#min_port AwsEksCluster#min_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#min_port TfCluster#min_port}
   */
   readonly minPort?: number;
 }
@@ -2526,13 +2526,13 @@ export class ServiceNodePortRangePropertyOutputReference extends cdktn.ComplexOb
 }
 export interface KubeApiServerConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#event_ttl AwsEksCluster#event_ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#event_ttl TfCluster#event_ttl}
   */
   readonly eventTtl?: string;
   /**
   * service_node_port_range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#service_node_port_range AwsEksCluster#service_node_port_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#service_node_port_range TfCluster#service_node_port_range}
   */
   readonly serviceNodePortRange?: ServiceNodePortRangeProperty;
 }
@@ -2608,7 +2608,7 @@ export class KubeApiServerConfigPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface HorizontalPodAutoscalerControllerConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#horizontal_pod_autoscaler_sync_period AwsEksCluster#horizontal_pod_autoscaler_sync_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#horizontal_pod_autoscaler_sync_period TfCluster#horizontal_pod_autoscaler_sync_period}
   */
   readonly horizontalPodAutoscalerSyncPeriod?: string;
 }
@@ -2664,7 +2664,7 @@ export interface KubeControllerManagerConfigProperty {
   /**
   * horizontal_pod_autoscaler_controller_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#horizontal_pod_autoscaler_controller_config AwsEksCluster#horizontal_pod_autoscaler_controller_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#horizontal_pod_autoscaler_controller_config TfCluster#horizontal_pod_autoscaler_controller_config}
   */
   readonly horizontalPodAutoscalerControllerConfig?: HorizontalPodAutoscalerControllerConfigProperty;
 }
@@ -2718,11 +2718,11 @@ export class KubeControllerManagerConfigPropertyOutputReference extends cdktn.Co
 }
 export interface ResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#name AwsEksCluster#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#name TfCluster#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#weight AwsEksCluster#weight}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#weight TfCluster#weight}
   */
   readonly weight?: number;
 }
@@ -2830,13 +2830,13 @@ export class ResourcePropertyList extends cdktn.ComplexList {
 }
 export interface ScoringStrategyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#type AwsEksCluster#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#type TfCluster#type}
   */
   readonly type?: string;
   /**
   * resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#resource AwsEksCluster#resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#resource TfCluster#resource}
   */
   readonly resource?: ResourceProperty[] | cdktn.IResolvable;
 }
@@ -2914,7 +2914,7 @@ export interface NodeResourcesFitProperty {
   /**
   * scoring_strategy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#scoring_strategy AwsEksCluster#scoring_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#scoring_strategy TfCluster#scoring_strategy}
   */
   readonly scoringStrategy?: ScoringStrategyProperty;
 }
@@ -2970,7 +2970,7 @@ export interface KubeSchedulerConfigProperty {
   /**
   * node_resources_fit block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#node_resources_fit AwsEksCluster#node_resources_fit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#node_resources_fit TfCluster#node_resources_fit}
   */
   readonly nodeResourcesFit?: NodeResourcesFitProperty;
 }
@@ -3024,7 +3024,7 @@ export class KubeSchedulerConfigPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface ElasticLoadBalancingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#enabled AwsEksCluster#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#enabled TfCluster#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
 }
@@ -3078,17 +3078,17 @@ export class ElasticLoadBalancingPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface KubernetesNetworkConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#ip_family AwsEksCluster#ip_family}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#ip_family TfCluster#ip_family}
   */
   readonly ipFamily?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#service_ipv4_cidr AwsEksCluster#service_ipv4_cidr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#service_ipv4_cidr TfCluster#service_ipv4_cidr}
   */
   readonly serviceIpv4Cidr?: string;
   /**
   * elastic_load_balancing block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#elastic_load_balancing AwsEksCluster#elastic_load_balancing}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#elastic_load_balancing TfCluster#elastic_load_balancing}
   */
   readonly elasticLoadBalancing?: ElasticLoadBalancingProperty;
 }
@@ -3191,11 +3191,11 @@ export class KubernetesNetworkConfigPropertyOutputReference extends cdktn.Comple
 }
 export interface ControlPlanePlacementProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#group_name AwsEksCluster#group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#group_name TfCluster#group_name}
   */
   readonly groupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#spread_level AwsEksCluster#spread_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#spread_level TfCluster#spread_level}
   */
   readonly spreadLevel?: string;
 }
@@ -3271,7 +3271,7 @@ export class ControlPlanePlacementPropertyOutputReference extends cdktn.ComplexO
 }
 export interface EtcdPlacementProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#spread_level AwsEksCluster#spread_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#spread_level TfCluster#spread_level}
   */
   readonly spreadLevel?: string;
 }
@@ -3325,27 +3325,27 @@ export class EtcdPlacementPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface OutpostConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#control_plane_instance_type AwsEksCluster#control_plane_instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#control_plane_instance_type TfCluster#control_plane_instance_type}
   */
   readonly controlPlaneInstanceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#etcd_instance_type AwsEksCluster#etcd_instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#etcd_instance_type TfCluster#etcd_instance_type}
   */
   readonly etcdInstanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#outpost_arns AwsEksCluster#outpost_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#outpost_arns TfCluster#outpost_arns}
   */
   readonly outpostArns: string[];
   /**
   * control_plane_placement block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#control_plane_placement AwsEksCluster#control_plane_placement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#control_plane_placement TfCluster#control_plane_placement}
   */
   readonly controlPlanePlacement?: ControlPlanePlacementProperty;
   /**
   * etcd_placement block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#etcd_placement AwsEksCluster#etcd_placement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#etcd_placement TfCluster#etcd_placement}
   */
   readonly etcdPlacement?: EtcdPlacementProperty;
 }
@@ -3481,7 +3481,7 @@ export class OutpostConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RemoteNodeNetworksProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#cidrs AwsEksCluster#cidrs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#cidrs TfCluster#cidrs}
   */
   readonly cidrs?: string[];
 }
@@ -3535,7 +3535,7 @@ export class RemoteNodeNetworksPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface RemotePodNetworksProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#cidrs AwsEksCluster#cidrs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#cidrs TfCluster#cidrs}
   */
   readonly cidrs?: string[];
 }
@@ -3591,13 +3591,13 @@ export interface RemoteNetworkConfigProperty {
   /**
   * remote_node_networks block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#remote_node_networks AwsEksCluster#remote_node_networks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#remote_node_networks TfCluster#remote_node_networks}
   */
   readonly remoteNodeNetworks?: RemoteNodeNetworksProperty;
   /**
   * remote_pod_networks block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#remote_pod_networks AwsEksCluster#remote_pod_networks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#remote_pod_networks TfCluster#remote_pod_networks}
   */
   readonly remotePodNetworks?: RemotePodNetworksProperty;
 }
@@ -3673,7 +3673,7 @@ export class RemoteNetworkConfigPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface BlockStorageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#enabled AwsEksCluster#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#enabled TfCluster#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
 }
@@ -3729,7 +3729,7 @@ export interface StorageConfigProperty {
   /**
   * block_storage block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#block_storage AwsEksCluster#block_storage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#block_storage TfCluster#block_storage}
   */
   readonly blockStorage?: BlockStorageProperty;
 }
@@ -3783,15 +3783,15 @@ export class StorageConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#create AwsEksCluster#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#create TfCluster#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#delete AwsEksCluster#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#delete TfCluster#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#update AwsEksCluster#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#update TfCluster#update}
   */
   readonly update?: string;
 }
@@ -3899,7 +3899,7 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface UpgradePolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#support_type AwsEksCluster#support_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#support_type TfCluster#support_type}
   */
   readonly supportType?: string;
 }
@@ -3953,27 +3953,27 @@ export class UpgradePolicyPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VpcConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#control_plane_egress_mode AwsEksCluster#control_plane_egress_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#control_plane_egress_mode TfCluster#control_plane_egress_mode}
   */
   readonly controlPlaneEgressMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#endpoint_private_access AwsEksCluster#endpoint_private_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#endpoint_private_access TfCluster#endpoint_private_access}
   */
   readonly endpointPrivateAccess?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#endpoint_public_access AwsEksCluster#endpoint_public_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#endpoint_public_access TfCluster#endpoint_public_access}
   */
   readonly endpointPublicAccess?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#public_access_cidrs AwsEksCluster#public_access_cidrs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#public_access_cidrs TfCluster#public_access_cidrs}
   */
   readonly publicAccessCidrs?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#security_group_ids AwsEksCluster#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#security_group_ids TfCluster#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#subnet_ids AwsEksCluster#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#subnet_ids TfCluster#subnet_ids}
   */
   readonly subnetIds: string[];
 }
@@ -4144,7 +4144,7 @@ export class VpcConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ZonalShiftConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#enabled AwsEksCluster#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster#enabled TfCluster#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
 }

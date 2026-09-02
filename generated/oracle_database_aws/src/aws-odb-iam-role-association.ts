@@ -5,37 +5,37 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsOdbIamRoleAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface TfIamRoleAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_iam_role_association#aws_integration AwsOdbIamRoleAssociation#aws_integration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_iam_role_association#aws_integration TfIamRoleAssociation#aws_integration}
   */
   readonly awsIntegration: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_iam_role_association#iam_role_arn AwsOdbIamRoleAssociation#iam_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_iam_role_association#iam_role_arn TfIamRoleAssociation#iam_role_arn}
   */
   readonly iamRoleArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_iam_role_association#region AwsOdbIamRoleAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_iam_role_association#region TfIamRoleAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_iam_role_association#resource_arn AwsOdbIamRoleAssociation#resource_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_iam_role_association#resource_arn TfIamRoleAssociation#resource_arn}
   */
   readonly resourceArn: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_iam_role_association#timeouts AwsOdbIamRoleAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_iam_role_association#timeouts TfIamRoleAssociation#timeouts}
   */
-  readonly timeouts?: AwsOdbIamRoleAssociation.TimeoutsProperty;
+  readonly timeouts?: TfIamRoleAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_iam_role_association aws_odb_iam_role_association}
 */
-export class AwsOdbIamRoleAssociation extends cdktn.TerraformResource {
+export class TfIamRoleAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -46,11 +46,11 @@ export class AwsOdbIamRoleAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsOdbIamRoleAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfIamRoleAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsOdbIamRoleAssociation to import
-  * @param importFromId The id of the existing AwsOdbIamRoleAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_iam_role_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsOdbIamRoleAssociation to import is found
+  * @param importToId The construct id used in the generated config for the TfIamRoleAssociation to import
+  * @param importFromId The id of the existing TfIamRoleAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_iam_role_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfIamRoleAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_odb_iam_role_association", importId: importFromId, provider });
@@ -65,9 +65,9 @@ export class AwsOdbIamRoleAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsOdbIamRoleAssociationConfig
+  * @param options TfIamRoleAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsOdbIamRoleAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: TfIamRoleAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_odb_iam_role_association',
       terraformGeneratorMetadata: {
@@ -160,11 +160,11 @@ export class AwsOdbIamRoleAssociation extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsOdbIamRoleAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfIamRoleAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsOdbIamRoleAssociation.TimeoutsProperty) {
+  public putTimeouts(value: TfIamRoleAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -185,7 +185,7 @@ export class AwsOdbIamRoleAssociation extends cdktn.TerraformResource {
       iam_role_arn: cdktn.stringToTerraform(this._iamRoleArn),
       region: cdktn.stringToTerraform(this._region),
       resource_arn: cdktn.stringToTerraform(this._resourceArn),
-      timeouts: awsOdbIamRoleAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfIamRoleAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -216,10 +216,10 @@ export class AwsOdbIamRoleAssociation extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsOdbIamRoleAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfIamRoleAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsOdbIamRoleAssociation.TimeoutsProperty",
+        storageClassType: "TfIamRoleAssociation.TimeoutsProperty",
       },
     };
 
@@ -228,7 +228,7 @@ export class AwsOdbIamRoleAssociation extends cdktn.TerraformResource {
   }
 }
 
-export function awsOdbIamRoleAssociationTimeoutsPropertyToTerraform(struct?: AwsOdbIamRoleAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfIamRoleAssociationTimeoutsPropertyToTerraform(struct?: TfIamRoleAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -241,7 +241,7 @@ export function awsOdbIamRoleAssociationTimeoutsPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsOdbIamRoleAssociationTimeoutsPropertyToHclTerraform(struct?: AwsOdbIamRoleAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfIamRoleAssociationTimeoutsPropertyToHclTerraform(struct?: TfIamRoleAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -272,24 +272,24 @@ export function awsOdbIamRoleAssociationTimeoutsPropertyToHclTerraform(struct?: 
 }
 
 
-export namespace AwsOdbIamRoleAssociation {
+export namespace TfIamRoleAssociation {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_iam_role_association#create AwsOdbIamRoleAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_iam_role_association#create TfIamRoleAssociation#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_iam_role_association#delete AwsOdbIamRoleAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_iam_role_association#delete TfIamRoleAssociation#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_iam_role_association#update AwsOdbIamRoleAssociation#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_iam_role_association#update TfIamRoleAssociation#update}
   */
   readonly update?: string;
 }

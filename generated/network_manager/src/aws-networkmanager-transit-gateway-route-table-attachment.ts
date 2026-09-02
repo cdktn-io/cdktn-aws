@@ -5,46 +5,46 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsNetworkmanagerTransitGatewayRouteTableAttachmentConfig extends cdktn.TerraformMetaArguments {
+export interface TfTransitGatewayRouteTableAttachmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_route_table_attachment#id AwsNetworkmanagerTransitGatewayRouteTableAttachment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_route_table_attachment#id TfTransitGatewayRouteTableAttachment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_route_table_attachment#peering_id AwsNetworkmanagerTransitGatewayRouteTableAttachment#peering_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_route_table_attachment#peering_id TfTransitGatewayRouteTableAttachment#peering_id}
   */
   readonly peeringId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_route_table_attachment#routing_policy_label AwsNetworkmanagerTransitGatewayRouteTableAttachment#routing_policy_label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_route_table_attachment#routing_policy_label TfTransitGatewayRouteTableAttachment#routing_policy_label}
   */
   readonly routingPolicyLabel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_route_table_attachment#tags AwsNetworkmanagerTransitGatewayRouteTableAttachment#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_route_table_attachment#tags TfTransitGatewayRouteTableAttachment#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_route_table_attachment#tags_all AwsNetworkmanagerTransitGatewayRouteTableAttachment#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_route_table_attachment#tags_all TfTransitGatewayRouteTableAttachment#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_route_table_attachment#transit_gateway_route_table_arn AwsNetworkmanagerTransitGatewayRouteTableAttachment#transit_gateway_route_table_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_route_table_attachment#transit_gateway_route_table_arn TfTransitGatewayRouteTableAttachment#transit_gateway_route_table_arn}
   */
   readonly transitGatewayRouteTableArn: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_route_table_attachment#timeouts AwsNetworkmanagerTransitGatewayRouteTableAttachment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_route_table_attachment#timeouts TfTransitGatewayRouteTableAttachment#timeouts}
   */
-  readonly timeouts?: AwsNetworkmanagerTransitGatewayRouteTableAttachment.TimeoutsProperty;
+  readonly timeouts?: TfTransitGatewayRouteTableAttachment.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_route_table_attachment aws_networkmanager_transit_gateway_route_table_attachment}
 */
-export class AwsNetworkmanagerTransitGatewayRouteTableAttachment extends cdktn.TerraformResource {
+export class TfTransitGatewayRouteTableAttachment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class AwsNetworkmanagerTransitGatewayRouteTableAttachment extends cdktn.T
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsNetworkmanagerTransitGatewayRouteTableAttachment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfTransitGatewayRouteTableAttachment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsNetworkmanagerTransitGatewayRouteTableAttachment to import
-  * @param importFromId The id of the existing AwsNetworkmanagerTransitGatewayRouteTableAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_route_table_attachment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsNetworkmanagerTransitGatewayRouteTableAttachment to import is found
+  * @param importToId The construct id used in the generated config for the TfTransitGatewayRouteTableAttachment to import
+  * @param importFromId The id of the existing TfTransitGatewayRouteTableAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_route_table_attachment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfTransitGatewayRouteTableAttachment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkmanager_transit_gateway_route_table_attachment", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class AwsNetworkmanagerTransitGatewayRouteTableAttachment extends cdktn.T
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsNetworkmanagerTransitGatewayRouteTableAttachmentConfig
+  * @param options TfTransitGatewayRouteTableAttachmentConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsNetworkmanagerTransitGatewayRouteTableAttachmentConfig) {
+  public constructor(scope: Construct, id: string, config: TfTransitGatewayRouteTableAttachmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_networkmanager_transit_gateway_route_table_attachment',
       terraformGeneratorMetadata: {
@@ -246,11 +246,11 @@ export class AwsNetworkmanagerTransitGatewayRouteTableAttachment extends cdktn.T
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsNetworkmanagerTransitGatewayRouteTableAttachment.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfTransitGatewayRouteTableAttachment.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsNetworkmanagerTransitGatewayRouteTableAttachment.TimeoutsProperty) {
+  public putTimeouts(value: TfTransitGatewayRouteTableAttachment.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -273,7 +273,7 @@ export class AwsNetworkmanagerTransitGatewayRouteTableAttachment extends cdktn.T
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       transit_gateway_route_table_arn: cdktn.stringToTerraform(this._transitGatewayRouteTableArn),
-      timeouts: awsNetworkmanagerTransitGatewayRouteTableAttachmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfTransitGatewayRouteTableAttachmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -316,10 +316,10 @@ export class AwsNetworkmanagerTransitGatewayRouteTableAttachment extends cdktn.T
         storageClassType: "string",
       },
       timeouts: {
-        value: awsNetworkmanagerTransitGatewayRouteTableAttachmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfTransitGatewayRouteTableAttachmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsNetworkmanagerTransitGatewayRouteTableAttachment.TimeoutsProperty",
+        storageClassType: "TfTransitGatewayRouteTableAttachment.TimeoutsProperty",
       },
     };
 
@@ -328,7 +328,7 @@ export class AwsNetworkmanagerTransitGatewayRouteTableAttachment extends cdktn.T
   }
 }
 
-export function awsNetworkmanagerTransitGatewayRouteTableAttachmentTimeoutsPropertyToTerraform(struct?: AwsNetworkmanagerTransitGatewayRouteTableAttachment.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfTransitGatewayRouteTableAttachmentTimeoutsPropertyToTerraform(struct?: TfTransitGatewayRouteTableAttachment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -340,7 +340,7 @@ export function awsNetworkmanagerTransitGatewayRouteTableAttachmentTimeoutsPrope
 }
 
 
-export function awsNetworkmanagerTransitGatewayRouteTableAttachmentTimeoutsPropertyToHclTerraform(struct?: AwsNetworkmanagerTransitGatewayRouteTableAttachment.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfTransitGatewayRouteTableAttachmentTimeoutsPropertyToHclTerraform(struct?: TfTransitGatewayRouteTableAttachment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -365,14 +365,14 @@ export function awsNetworkmanagerTransitGatewayRouteTableAttachmentTimeoutsPrope
 }
 
 
-export namespace AwsNetworkmanagerTransitGatewayRouteTableAttachment {
+export namespace TfTransitGatewayRouteTableAttachment {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_route_table_attachment#create AwsNetworkmanagerTransitGatewayRouteTableAttachment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_route_table_attachment#create TfTransitGatewayRouteTableAttachment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_route_table_attachment#delete AwsNetworkmanagerTransitGatewayRouteTableAttachment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_route_table_attachment#delete TfTransitGatewayRouteTableAttachment#delete}
   */
   readonly delete?: string;
 }

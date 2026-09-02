@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsResiliencehubv2PolicyConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resiliencehubv2_policy#arn DataAwsResiliencehubv2Policy#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resiliencehubv2_policy#arn TfDataPolicy#arn}
   */
   readonly arn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resiliencehubv2_policy#region DataAwsResiliencehubv2Policy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resiliencehubv2_policy#region TfDataPolicy#region}
   */
   readonly region?: string;
 }
@@ -21,7 +21,7 @@ export interface DataAwsResiliencehubv2PolicyConfig extends cdktn.TerraformMetaA
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resiliencehubv2_policy aws_resiliencehubv2_policy}
 */
-export class DataAwsResiliencehubv2Policy extends cdktn.TerraformDataSource {
+export class TfDataPolicy extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class DataAwsResiliencehubv2Policy extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsResiliencehubv2Policy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsResiliencehubv2Policy to import
-  * @param importFromId The id of the existing DataAwsResiliencehubv2Policy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resiliencehubv2_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsResiliencehubv2Policy to import is found
+  * @param importToId The construct id used in the generated config for the TfDataPolicy to import
+  * @param importFromId The id of the existing TfDataPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resiliencehubv2_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_resiliencehubv2_policy", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class DataAwsResiliencehubv2Policy extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsResiliencehubv2PolicyConfig
+  * @param options TfDataPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsResiliencehubv2PolicyConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_resiliencehubv2_policy',
       terraformGeneratorMetadata: {
@@ -91,13 +91,13 @@ export class DataAwsResiliencehubv2Policy extends cdktn.TerraformDataSource {
   }
 
   // availability_slo - computed: true, optional: false, required: false
-  private _availabilitySlo = new DataAwsResiliencehubv2Policy.AvailabilitySloPropertyList(this, "availability_slo", false);
+  private _availabilitySlo = new TfDataPolicy.AvailabilitySloPropertyList(this, "availability_slo", false);
   public get availabilitySlo() {
     return this._availabilitySlo;
   }
 
   // data_recovery - computed: true, optional: false, required: false
-  private _dataRecovery = new DataAwsResiliencehubv2Policy.DataRecoveryPropertyList(this, "data_recovery", false);
+  private _dataRecovery = new TfDataPolicy.DataRecoveryPropertyList(this, "data_recovery", false);
   public get dataRecovery() {
     return this._dataRecovery;
   }
@@ -113,13 +113,13 @@ export class DataAwsResiliencehubv2Policy extends cdktn.TerraformDataSource {
   }
 
   // multi_az - computed: true, optional: false, required: false
-  private _multiAz = new DataAwsResiliencehubv2Policy.MultiAzPropertyList(this, "multi_az", false);
+  private _multiAz = new TfDataPolicy.MultiAzPropertyList(this, "multi_az", false);
   public get multiAz() {
     return this._multiAz;
   }
 
   // multi_region - computed: true, optional: false, required: false
-  private _multiRegion = new DataAwsResiliencehubv2Policy.MultiRegionPropertyList(this, "multi_region", false);
+  private _multiRegion = new TfDataPolicy.MultiRegionPropertyList(this, "multi_region", false);
   public get multiRegion() {
     return this._multiRegion;
   }
@@ -183,7 +183,7 @@ export class DataAwsResiliencehubv2Policy extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsResiliencehubv2PolicyAvailabilitySloPropertyToTerraform(struct?: DataAwsResiliencehubv2Policy.AvailabilitySloProperty): any {
+export function tfDataPolicyAvailabilitySloPropertyToTerraform(struct?: TfDataPolicy.AvailabilitySloProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -193,7 +193,7 @@ export function dataAwsResiliencehubv2PolicyAvailabilitySloPropertyToTerraform(s
 }
 
 
-export function dataAwsResiliencehubv2PolicyAvailabilitySloPropertyToHclTerraform(struct?: DataAwsResiliencehubv2Policy.AvailabilitySloProperty): any {
+export function tfDataPolicyAvailabilitySloPropertyToHclTerraform(struct?: TfDataPolicy.AvailabilitySloProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -204,7 +204,7 @@ export function dataAwsResiliencehubv2PolicyAvailabilitySloPropertyToHclTerrafor
 }
 
 
-export function dataAwsResiliencehubv2PolicyDataRecoveryPropertyToTerraform(struct?: DataAwsResiliencehubv2Policy.DataRecoveryProperty): any {
+export function tfDataPolicyDataRecoveryPropertyToTerraform(struct?: TfDataPolicy.DataRecoveryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -214,7 +214,7 @@ export function dataAwsResiliencehubv2PolicyDataRecoveryPropertyToTerraform(stru
 }
 
 
-export function dataAwsResiliencehubv2PolicyDataRecoveryPropertyToHclTerraform(struct?: DataAwsResiliencehubv2Policy.DataRecoveryProperty): any {
+export function tfDataPolicyDataRecoveryPropertyToHclTerraform(struct?: TfDataPolicy.DataRecoveryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -225,7 +225,7 @@ export function dataAwsResiliencehubv2PolicyDataRecoveryPropertyToHclTerraform(s
 }
 
 
-export function dataAwsResiliencehubv2PolicyMultiAzPropertyToTerraform(struct?: DataAwsResiliencehubv2Policy.MultiAzProperty): any {
+export function tfDataPolicyMultiAzPropertyToTerraform(struct?: TfDataPolicy.MultiAzProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -235,7 +235,7 @@ export function dataAwsResiliencehubv2PolicyMultiAzPropertyToTerraform(struct?: 
 }
 
 
-export function dataAwsResiliencehubv2PolicyMultiAzPropertyToHclTerraform(struct?: DataAwsResiliencehubv2Policy.MultiAzProperty): any {
+export function tfDataPolicyMultiAzPropertyToHclTerraform(struct?: TfDataPolicy.MultiAzProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -246,7 +246,7 @@ export function dataAwsResiliencehubv2PolicyMultiAzPropertyToHclTerraform(struct
 }
 
 
-export function dataAwsResiliencehubv2PolicyMultiRegionPropertyToTerraform(struct?: DataAwsResiliencehubv2Policy.MultiRegionProperty): any {
+export function tfDataPolicyMultiRegionPropertyToTerraform(struct?: TfDataPolicy.MultiRegionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -256,7 +256,7 @@ export function dataAwsResiliencehubv2PolicyMultiRegionPropertyToTerraform(struc
 }
 
 
-export function dataAwsResiliencehubv2PolicyMultiRegionPropertyToHclTerraform(struct?: DataAwsResiliencehubv2Policy.MultiRegionProperty): any {
+export function tfDataPolicyMultiRegionPropertyToHclTerraform(struct?: TfDataPolicy.MultiRegionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -267,7 +267,7 @@ export function dataAwsResiliencehubv2PolicyMultiRegionPropertyToHclTerraform(st
 }
 
 
-export namespace DataAwsResiliencehubv2Policy {
+export namespace TfDataPolicy {
 export interface AvailabilitySloProperty {
 }
 export class AvailabilitySloPropertyOutputReference extends cdktn.ComplexObject {

@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsMskSingleScramSecretAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface TfSingleScramSecretAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_single_scram_secret_association#cluster_arn AwsMskSingleScramSecretAssociation#cluster_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_single_scram_secret_association#cluster_arn TfSingleScramSecretAssociation#cluster_arn}
   */
   readonly clusterArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_single_scram_secret_association#region AwsMskSingleScramSecretAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_single_scram_secret_association#region TfSingleScramSecretAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_single_scram_secret_association#secret_arn AwsMskSingleScramSecretAssociation#secret_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_single_scram_secret_association#secret_arn TfSingleScramSecretAssociation#secret_arn}
   */
   readonly secretArn: string;
 }
@@ -25,7 +25,7 @@ export interface AwsMskSingleScramSecretAssociationConfig extends cdktn.Terrafor
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_single_scram_secret_association aws_msk_single_scram_secret_association}
 */
-export class AwsMskSingleScramSecretAssociation extends cdktn.TerraformResource {
+export class TfSingleScramSecretAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -36,11 +36,11 @@ export class AwsMskSingleScramSecretAssociation extends cdktn.TerraformResource 
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsMskSingleScramSecretAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfSingleScramSecretAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsMskSingleScramSecretAssociation to import
-  * @param importFromId The id of the existing AwsMskSingleScramSecretAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_single_scram_secret_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsMskSingleScramSecretAssociation to import is found
+  * @param importToId The construct id used in the generated config for the TfSingleScramSecretAssociation to import
+  * @param importFromId The id of the existing TfSingleScramSecretAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_single_scram_secret_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfSingleScramSecretAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_msk_single_scram_secret_association", importId: importFromId, provider });
@@ -55,9 +55,9 @@ export class AwsMskSingleScramSecretAssociation extends cdktn.TerraformResource 
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsMskSingleScramSecretAssociationConfig
+  * @param options TfSingleScramSecretAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsMskSingleScramSecretAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: TfSingleScramSecretAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_msk_single_scram_secret_association',
       terraformGeneratorMetadata: {

@@ -5,118 +5,118 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsFsxOntapVolumeConfig extends cdktn.TerraformMetaArguments {
+export interface TfOntapVolumeConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#bypass_snaplock_enterprise_retention AwsFsxOntapVolume#bypass_snaplock_enterprise_retention}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#bypass_snaplock_enterprise_retention TfOntapVolume#bypass_snaplock_enterprise_retention}
   */
   readonly bypassSnaplockEnterpriseRetention?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#copy_tags_to_backups AwsFsxOntapVolume#copy_tags_to_backups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#copy_tags_to_backups TfOntapVolume#copy_tags_to_backups}
   */
   readonly copyTagsToBackups?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#final_backup_tags AwsFsxOntapVolume#final_backup_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#final_backup_tags TfOntapVolume#final_backup_tags}
   */
   readonly finalBackupTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#id AwsFsxOntapVolume#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#id TfOntapVolume#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#junction_path AwsFsxOntapVolume#junction_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#junction_path TfOntapVolume#junction_path}
   */
   readonly junctionPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#name AwsFsxOntapVolume#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#name TfOntapVolume#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#ontap_volume_type AwsFsxOntapVolume#ontap_volume_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#ontap_volume_type TfOntapVolume#ontap_volume_type}
   */
   readonly ontapVolumeType?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#region AwsFsxOntapVolume#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#region TfOntapVolume#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#security_style AwsFsxOntapVolume#security_style}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#security_style TfOntapVolume#security_style}
   */
   readonly securityStyle?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#size_in_bytes AwsFsxOntapVolume#size_in_bytes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#size_in_bytes TfOntapVolume#size_in_bytes}
   */
   readonly sizeInBytes?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#size_in_megabytes AwsFsxOntapVolume#size_in_megabytes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#size_in_megabytes TfOntapVolume#size_in_megabytes}
   */
   readonly sizeInMegabytes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#skip_final_backup AwsFsxOntapVolume#skip_final_backup}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#skip_final_backup TfOntapVolume#skip_final_backup}
   */
   readonly skipFinalBackup?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#snapshot_policy AwsFsxOntapVolume#snapshot_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#snapshot_policy TfOntapVolume#snapshot_policy}
   */
   readonly snapshotPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#storage_efficiency_enabled AwsFsxOntapVolume#storage_efficiency_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#storage_efficiency_enabled TfOntapVolume#storage_efficiency_enabled}
   */
   readonly storageEfficiencyEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#storage_virtual_machine_id AwsFsxOntapVolume#storage_virtual_machine_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#storage_virtual_machine_id TfOntapVolume#storage_virtual_machine_id}
   */
   readonly storageVirtualMachineId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#tags AwsFsxOntapVolume#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#tags TfOntapVolume#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#tags_all AwsFsxOntapVolume#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#tags_all TfOntapVolume#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#volume_style AwsFsxOntapVolume#volume_style}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#volume_style TfOntapVolume#volume_style}
   */
   readonly volumeStyle?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#volume_type AwsFsxOntapVolume#volume_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#volume_type TfOntapVolume#volume_type}
   */
   readonly volumeType?: string;
   /**
   * aggregate_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#aggregate_configuration AwsFsxOntapVolume#aggregate_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#aggregate_configuration TfOntapVolume#aggregate_configuration}
   */
-  readonly aggregateConfiguration?: AwsFsxOntapVolume.AggregateConfigurationProperty;
+  readonly aggregateConfiguration?: TfOntapVolume.AggregateConfigurationProperty;
   /**
   * snaplock_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#snaplock_configuration AwsFsxOntapVolume#snaplock_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#snaplock_configuration TfOntapVolume#snaplock_configuration}
   */
-  readonly snaplockConfiguration?: AwsFsxOntapVolume.SnaplockConfigurationProperty;
+  readonly snaplockConfiguration?: TfOntapVolume.SnaplockConfigurationProperty;
   /**
   * tiering_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#tiering_policy AwsFsxOntapVolume#tiering_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#tiering_policy TfOntapVolume#tiering_policy}
   */
-  readonly tieringPolicy?: AwsFsxOntapVolume.TieringPolicyProperty;
+  readonly tieringPolicy?: TfOntapVolume.TieringPolicyProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#timeouts AwsFsxOntapVolume#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#timeouts TfOntapVolume#timeouts}
   */
-  readonly timeouts?: AwsFsxOntapVolume.TimeoutsProperty;
+  readonly timeouts?: TfOntapVolume.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume aws_fsx_ontap_volume}
 */
-export class AwsFsxOntapVolume extends cdktn.TerraformResource {
+export class TfOntapVolume extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -127,11 +127,11 @@ export class AwsFsxOntapVolume extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsFsxOntapVolume resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfOntapVolume resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsFsxOntapVolume to import
-  * @param importFromId The id of the existing AwsFsxOntapVolume that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsFsxOntapVolume to import is found
+  * @param importToId The construct id used in the generated config for the TfOntapVolume to import
+  * @param importFromId The id of the existing TfOntapVolume that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfOntapVolume to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_fsx_ontap_volume", importId: importFromId, provider });
@@ -146,9 +146,9 @@ export class AwsFsxOntapVolume extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsFsxOntapVolumeConfig
+  * @param options TfOntapVolumeConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsFsxOntapVolumeConfig) {
+  public constructor(scope: Construct, id: string, config: TfOntapVolumeConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_fsx_ontap_volume',
       terraformGeneratorMetadata: {
@@ -512,11 +512,11 @@ export class AwsFsxOntapVolume extends cdktn.TerraformResource {
   }
 
   // aggregate_configuration - computed: false, optional: true, required: false
-  private _aggregateConfiguration = new AwsFsxOntapVolume.AggregateConfigurationPropertyOutputReference(this, "aggregate_configuration");
+  private _aggregateConfiguration = new TfOntapVolume.AggregateConfigurationPropertyOutputReference(this, "aggregate_configuration");
   public get aggregateConfiguration() {
     return this._aggregateConfiguration;
   }
-  public putAggregateConfiguration(value: AwsFsxOntapVolume.AggregateConfigurationProperty) {
+  public putAggregateConfiguration(value: TfOntapVolume.AggregateConfigurationProperty) {
     this._aggregateConfiguration.internalValue = value;
   }
   public resetAggregateConfiguration() {
@@ -528,11 +528,11 @@ export class AwsFsxOntapVolume extends cdktn.TerraformResource {
   }
 
   // snaplock_configuration - computed: false, optional: true, required: false
-  private _snaplockConfiguration = new AwsFsxOntapVolume.SnaplockConfigurationPropertyOutputReference(this, "snaplock_configuration");
+  private _snaplockConfiguration = new TfOntapVolume.SnaplockConfigurationPropertyOutputReference(this, "snaplock_configuration");
   public get snaplockConfiguration() {
     return this._snaplockConfiguration;
   }
-  public putSnaplockConfiguration(value: AwsFsxOntapVolume.SnaplockConfigurationProperty) {
+  public putSnaplockConfiguration(value: TfOntapVolume.SnaplockConfigurationProperty) {
     this._snaplockConfiguration.internalValue = value;
   }
   public resetSnaplockConfiguration() {
@@ -544,11 +544,11 @@ export class AwsFsxOntapVolume extends cdktn.TerraformResource {
   }
 
   // tiering_policy - computed: false, optional: true, required: false
-  private _tieringPolicy = new AwsFsxOntapVolume.TieringPolicyPropertyOutputReference(this, "tiering_policy");
+  private _tieringPolicy = new TfOntapVolume.TieringPolicyPropertyOutputReference(this, "tiering_policy");
   public get tieringPolicy() {
     return this._tieringPolicy;
   }
-  public putTieringPolicy(value: AwsFsxOntapVolume.TieringPolicyProperty) {
+  public putTieringPolicy(value: TfOntapVolume.TieringPolicyProperty) {
     this._tieringPolicy.internalValue = value;
   }
   public resetTieringPolicy() {
@@ -560,11 +560,11 @@ export class AwsFsxOntapVolume extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsFsxOntapVolume.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfOntapVolume.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsFsxOntapVolume.TimeoutsProperty) {
+  public putTimeouts(value: TfOntapVolume.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -600,10 +600,10 @@ export class AwsFsxOntapVolume extends cdktn.TerraformResource {
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       volume_style: cdktn.stringToTerraform(this._volumeStyle),
       volume_type: cdktn.stringToTerraform(this._volumeType),
-      aggregate_configuration: awsFsxOntapVolumeAggregateConfigurationPropertyToTerraform(this._aggregateConfiguration.internalValue),
-      snaplock_configuration: awsFsxOntapVolumeSnaplockConfigurationPropertyToTerraform(this._snaplockConfiguration.internalValue),
-      tiering_policy: awsFsxOntapVolumeTieringPolicyPropertyToTerraform(this._tieringPolicy.internalValue),
-      timeouts: awsFsxOntapVolumeTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      aggregate_configuration: tfOntapVolumeAggregateConfigurationPropertyToTerraform(this._aggregateConfiguration.internalValue),
+      snaplock_configuration: tfOntapVolumeSnaplockConfigurationPropertyToTerraform(this._snaplockConfiguration.internalValue),
+      tiering_policy: tfOntapVolumeTieringPolicyPropertyToTerraform(this._tieringPolicy.internalValue),
+      timeouts: tfOntapVolumeTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -724,28 +724,28 @@ export class AwsFsxOntapVolume extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       aggregate_configuration: {
-        value: awsFsxOntapVolumeAggregateConfigurationPropertyToHclTerraform(this._aggregateConfiguration.internalValue),
+        value: tfOntapVolumeAggregateConfigurationPropertyToHclTerraform(this._aggregateConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsFsxOntapVolume.AggregateConfigurationPropertyList",
+        storageClassType: "TfOntapVolume.AggregateConfigurationPropertyList",
       },
       snaplock_configuration: {
-        value: awsFsxOntapVolumeSnaplockConfigurationPropertyToHclTerraform(this._snaplockConfiguration.internalValue),
+        value: tfOntapVolumeSnaplockConfigurationPropertyToHclTerraform(this._snaplockConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsFsxOntapVolume.SnaplockConfigurationPropertyList",
+        storageClassType: "TfOntapVolume.SnaplockConfigurationPropertyList",
       },
       tiering_policy: {
-        value: awsFsxOntapVolumeTieringPolicyPropertyToHclTerraform(this._tieringPolicy.internalValue),
+        value: tfOntapVolumeTieringPolicyPropertyToHclTerraform(this._tieringPolicy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsFsxOntapVolume.TieringPolicyPropertyList",
+        storageClassType: "TfOntapVolume.TieringPolicyPropertyList",
       },
       timeouts: {
-        value: awsFsxOntapVolumeTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfOntapVolumeTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsFsxOntapVolume.TimeoutsProperty",
+        storageClassType: "TfOntapVolume.TimeoutsProperty",
       },
     };
 
@@ -754,7 +754,7 @@ export class AwsFsxOntapVolume extends cdktn.TerraformResource {
   }
 }
 
-export function awsFsxOntapVolumeAggregateConfigurationPropertyToTerraform(struct?: AwsFsxOntapVolume.AggregateConfigurationPropertyOutputReference | AwsFsxOntapVolume.AggregateConfigurationProperty): any {
+export function tfOntapVolumeAggregateConfigurationPropertyToTerraform(struct?: TfOntapVolume.AggregateConfigurationPropertyOutputReference | TfOntapVolume.AggregateConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -766,7 +766,7 @@ export function awsFsxOntapVolumeAggregateConfigurationPropertyToTerraform(struc
 }
 
 
-export function awsFsxOntapVolumeAggregateConfigurationPropertyToHclTerraform(struct?: AwsFsxOntapVolume.AggregateConfigurationPropertyOutputReference | AwsFsxOntapVolume.AggregateConfigurationProperty): any {
+export function tfOntapVolumeAggregateConfigurationPropertyToHclTerraform(struct?: TfOntapVolume.AggregateConfigurationPropertyOutputReference | TfOntapVolume.AggregateConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -791,7 +791,7 @@ export function awsFsxOntapVolumeAggregateConfigurationPropertyToHclTerraform(st
 }
 
 
-export function awsFsxOntapVolumeAutocommitPeriodPropertyToTerraform(struct?: AwsFsxOntapVolume.AutocommitPeriodPropertyOutputReference | AwsFsxOntapVolume.AutocommitPeriodProperty): any {
+export function tfOntapVolumeAutocommitPeriodPropertyToTerraform(struct?: TfOntapVolume.AutocommitPeriodPropertyOutputReference | TfOntapVolume.AutocommitPeriodProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -803,7 +803,7 @@ export function awsFsxOntapVolumeAutocommitPeriodPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsFsxOntapVolumeAutocommitPeriodPropertyToHclTerraform(struct?: AwsFsxOntapVolume.AutocommitPeriodPropertyOutputReference | AwsFsxOntapVolume.AutocommitPeriodProperty): any {
+export function tfOntapVolumeAutocommitPeriodPropertyToHclTerraform(struct?: TfOntapVolume.AutocommitPeriodPropertyOutputReference | TfOntapVolume.AutocommitPeriodProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -828,7 +828,7 @@ export function awsFsxOntapVolumeAutocommitPeriodPropertyToHclTerraform(struct?:
 }
 
 
-export function awsFsxOntapVolumeDefaultRetentionPropertyToTerraform(struct?: AwsFsxOntapVolume.DefaultRetentionPropertyOutputReference | AwsFsxOntapVolume.DefaultRetentionProperty): any {
+export function tfOntapVolumeDefaultRetentionPropertyToTerraform(struct?: TfOntapVolume.DefaultRetentionPropertyOutputReference | TfOntapVolume.DefaultRetentionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -840,7 +840,7 @@ export function awsFsxOntapVolumeDefaultRetentionPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsFsxOntapVolumeDefaultRetentionPropertyToHclTerraform(struct?: AwsFsxOntapVolume.DefaultRetentionPropertyOutputReference | AwsFsxOntapVolume.DefaultRetentionProperty): any {
+export function tfOntapVolumeDefaultRetentionPropertyToHclTerraform(struct?: TfOntapVolume.DefaultRetentionPropertyOutputReference | TfOntapVolume.DefaultRetentionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -865,7 +865,7 @@ export function awsFsxOntapVolumeDefaultRetentionPropertyToHclTerraform(struct?:
 }
 
 
-export function awsFsxOntapVolumeMaximumRetentionPropertyToTerraform(struct?: AwsFsxOntapVolume.MaximumRetentionPropertyOutputReference | AwsFsxOntapVolume.MaximumRetentionProperty): any {
+export function tfOntapVolumeMaximumRetentionPropertyToTerraform(struct?: TfOntapVolume.MaximumRetentionPropertyOutputReference | TfOntapVolume.MaximumRetentionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -877,7 +877,7 @@ export function awsFsxOntapVolumeMaximumRetentionPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsFsxOntapVolumeMaximumRetentionPropertyToHclTerraform(struct?: AwsFsxOntapVolume.MaximumRetentionPropertyOutputReference | AwsFsxOntapVolume.MaximumRetentionProperty): any {
+export function tfOntapVolumeMaximumRetentionPropertyToHclTerraform(struct?: TfOntapVolume.MaximumRetentionPropertyOutputReference | TfOntapVolume.MaximumRetentionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -902,7 +902,7 @@ export function awsFsxOntapVolumeMaximumRetentionPropertyToHclTerraform(struct?:
 }
 
 
-export function awsFsxOntapVolumeMinimumRetentionPropertyToTerraform(struct?: AwsFsxOntapVolume.MinimumRetentionPropertyOutputReference | AwsFsxOntapVolume.MinimumRetentionProperty): any {
+export function tfOntapVolumeMinimumRetentionPropertyToTerraform(struct?: TfOntapVolume.MinimumRetentionPropertyOutputReference | TfOntapVolume.MinimumRetentionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -914,7 +914,7 @@ export function awsFsxOntapVolumeMinimumRetentionPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsFsxOntapVolumeMinimumRetentionPropertyToHclTerraform(struct?: AwsFsxOntapVolume.MinimumRetentionPropertyOutputReference | AwsFsxOntapVolume.MinimumRetentionProperty): any {
+export function tfOntapVolumeMinimumRetentionPropertyToHclTerraform(struct?: TfOntapVolume.MinimumRetentionPropertyOutputReference | TfOntapVolume.MinimumRetentionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -939,39 +939,39 @@ export function awsFsxOntapVolumeMinimumRetentionPropertyToHclTerraform(struct?:
 }
 
 
-export function awsFsxOntapVolumeRetentionPeriodPropertyToTerraform(struct?: AwsFsxOntapVolume.RetentionPeriodPropertyOutputReference | AwsFsxOntapVolume.RetentionPeriodProperty): any {
+export function tfOntapVolumeRetentionPeriodPropertyToTerraform(struct?: TfOntapVolume.RetentionPeriodPropertyOutputReference | TfOntapVolume.RetentionPeriodProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    default_retention: awsFsxOntapVolumeDefaultRetentionPropertyToTerraform(struct!.defaultRetention),
-    maximum_retention: awsFsxOntapVolumeMaximumRetentionPropertyToTerraform(struct!.maximumRetention),
-    minimum_retention: awsFsxOntapVolumeMinimumRetentionPropertyToTerraform(struct!.minimumRetention),
+    default_retention: tfOntapVolumeDefaultRetentionPropertyToTerraform(struct!.defaultRetention),
+    maximum_retention: tfOntapVolumeMaximumRetentionPropertyToTerraform(struct!.maximumRetention),
+    minimum_retention: tfOntapVolumeMinimumRetentionPropertyToTerraform(struct!.minimumRetention),
   }
 }
 
 
-export function awsFsxOntapVolumeRetentionPeriodPropertyToHclTerraform(struct?: AwsFsxOntapVolume.RetentionPeriodPropertyOutputReference | AwsFsxOntapVolume.RetentionPeriodProperty): any {
+export function tfOntapVolumeRetentionPeriodPropertyToHclTerraform(struct?: TfOntapVolume.RetentionPeriodPropertyOutputReference | TfOntapVolume.RetentionPeriodProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     default_retention: {
-      value: awsFsxOntapVolumeDefaultRetentionPropertyToHclTerraform(struct!.defaultRetention),
+      value: tfOntapVolumeDefaultRetentionPropertyToHclTerraform(struct!.defaultRetention),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultRetentionPropertyList",
     },
     maximum_retention: {
-      value: awsFsxOntapVolumeMaximumRetentionPropertyToHclTerraform(struct!.maximumRetention),
+      value: tfOntapVolumeMaximumRetentionPropertyToHclTerraform(struct!.maximumRetention),
       isBlock: true,
       type: "list",
       storageClassType: "MaximumRetentionPropertyList",
     },
     minimum_retention: {
-      value: awsFsxOntapVolumeMinimumRetentionPropertyToHclTerraform(struct!.minimumRetention),
+      value: tfOntapVolumeMinimumRetentionPropertyToHclTerraform(struct!.minimumRetention),
       isBlock: true,
       type: "list",
       storageClassType: "MinimumRetentionPropertyList",
@@ -983,7 +983,7 @@ export function awsFsxOntapVolumeRetentionPeriodPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsFsxOntapVolumeSnaplockConfigurationPropertyToTerraform(struct?: AwsFsxOntapVolume.SnaplockConfigurationPropertyOutputReference | AwsFsxOntapVolume.SnaplockConfigurationProperty): any {
+export function tfOntapVolumeSnaplockConfigurationPropertyToTerraform(struct?: TfOntapVolume.SnaplockConfigurationPropertyOutputReference | TfOntapVolume.SnaplockConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -993,13 +993,13 @@ export function awsFsxOntapVolumeSnaplockConfigurationPropertyToTerraform(struct
     privileged_delete: cdktn.stringToTerraform(struct!.privilegedDelete),
     snaplock_type: cdktn.stringToTerraform(struct!.snaplockType),
     volume_append_mode_enabled: cdktn.booleanToTerraform(struct!.volumeAppendModeEnabled),
-    autocommit_period: awsFsxOntapVolumeAutocommitPeriodPropertyToTerraform(struct!.autocommitPeriod),
-    retention_period: awsFsxOntapVolumeRetentionPeriodPropertyToTerraform(struct!.retentionPeriod),
+    autocommit_period: tfOntapVolumeAutocommitPeriodPropertyToTerraform(struct!.autocommitPeriod),
+    retention_period: tfOntapVolumeRetentionPeriodPropertyToTerraform(struct!.retentionPeriod),
   }
 }
 
 
-export function awsFsxOntapVolumeSnaplockConfigurationPropertyToHclTerraform(struct?: AwsFsxOntapVolume.SnaplockConfigurationPropertyOutputReference | AwsFsxOntapVolume.SnaplockConfigurationProperty): any {
+export function tfOntapVolumeSnaplockConfigurationPropertyToHclTerraform(struct?: TfOntapVolume.SnaplockConfigurationPropertyOutputReference | TfOntapVolume.SnaplockConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1030,13 +1030,13 @@ export function awsFsxOntapVolumeSnaplockConfigurationPropertyToHclTerraform(str
       storageClassType: "boolean",
     },
     autocommit_period: {
-      value: awsFsxOntapVolumeAutocommitPeriodPropertyToHclTerraform(struct!.autocommitPeriod),
+      value: tfOntapVolumeAutocommitPeriodPropertyToHclTerraform(struct!.autocommitPeriod),
       isBlock: true,
       type: "list",
       storageClassType: "AutocommitPeriodPropertyList",
     },
     retention_period: {
-      value: awsFsxOntapVolumeRetentionPeriodPropertyToHclTerraform(struct!.retentionPeriod),
+      value: tfOntapVolumeRetentionPeriodPropertyToHclTerraform(struct!.retentionPeriod),
       isBlock: true,
       type: "list",
       storageClassType: "RetentionPeriodPropertyList",
@@ -1048,7 +1048,7 @@ export function awsFsxOntapVolumeSnaplockConfigurationPropertyToHclTerraform(str
 }
 
 
-export function awsFsxOntapVolumeTieringPolicyPropertyToTerraform(struct?: AwsFsxOntapVolume.TieringPolicyPropertyOutputReference | AwsFsxOntapVolume.TieringPolicyProperty): any {
+export function tfOntapVolumeTieringPolicyPropertyToTerraform(struct?: TfOntapVolume.TieringPolicyPropertyOutputReference | TfOntapVolume.TieringPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1060,7 +1060,7 @@ export function awsFsxOntapVolumeTieringPolicyPropertyToTerraform(struct?: AwsFs
 }
 
 
-export function awsFsxOntapVolumeTieringPolicyPropertyToHclTerraform(struct?: AwsFsxOntapVolume.TieringPolicyPropertyOutputReference | AwsFsxOntapVolume.TieringPolicyProperty): any {
+export function tfOntapVolumeTieringPolicyPropertyToHclTerraform(struct?: TfOntapVolume.TieringPolicyPropertyOutputReference | TfOntapVolume.TieringPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1085,7 +1085,7 @@ export function awsFsxOntapVolumeTieringPolicyPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsFsxOntapVolumeTimeoutsPropertyToTerraform(struct?: AwsFsxOntapVolume.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfOntapVolumeTimeoutsPropertyToTerraform(struct?: TfOntapVolume.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1098,7 +1098,7 @@ export function awsFsxOntapVolumeTimeoutsPropertyToTerraform(struct?: AwsFsxOnta
 }
 
 
-export function awsFsxOntapVolumeTimeoutsPropertyToHclTerraform(struct?: AwsFsxOntapVolume.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfOntapVolumeTimeoutsPropertyToHclTerraform(struct?: TfOntapVolume.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1129,14 +1129,14 @@ export function awsFsxOntapVolumeTimeoutsPropertyToHclTerraform(struct?: AwsFsxO
 }
 
 
-export namespace AwsFsxOntapVolume {
+export namespace TfOntapVolume {
 export interface AggregateConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#aggregates AwsFsxOntapVolume#aggregates}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#aggregates TfOntapVolume#aggregates}
   */
   readonly aggregates?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#constituents_per_aggregate AwsFsxOntapVolume#constituents_per_aggregate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#constituents_per_aggregate TfOntapVolume#constituents_per_aggregate}
   */
   readonly constituentsPerAggregate?: number;
 }
@@ -1217,11 +1217,11 @@ export class AggregateConfigurationPropertyOutputReference extends cdktn.Complex
 }
 export interface AutocommitPeriodProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#type AwsFsxOntapVolume#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#type TfOntapVolume#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#value AwsFsxOntapVolume#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#value TfOntapVolume#value}
   */
   readonly value?: number;
 }
@@ -1297,11 +1297,11 @@ export class AutocommitPeriodPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface DefaultRetentionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#type AwsFsxOntapVolume#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#type TfOntapVolume#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#value AwsFsxOntapVolume#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#value TfOntapVolume#value}
   */
   readonly value?: number;
 }
@@ -1377,11 +1377,11 @@ export class DefaultRetentionPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface MaximumRetentionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#type AwsFsxOntapVolume#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#type TfOntapVolume#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#value AwsFsxOntapVolume#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#value TfOntapVolume#value}
   */
   readonly value?: number;
 }
@@ -1457,11 +1457,11 @@ export class MaximumRetentionPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface MinimumRetentionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#type AwsFsxOntapVolume#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#type TfOntapVolume#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#value AwsFsxOntapVolume#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#value TfOntapVolume#value}
   */
   readonly value?: number;
 }
@@ -1539,19 +1539,19 @@ export interface RetentionPeriodProperty {
   /**
   * default_retention block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#default_retention AwsFsxOntapVolume#default_retention}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#default_retention TfOntapVolume#default_retention}
   */
   readonly defaultRetention?: DefaultRetentionProperty;
   /**
   * maximum_retention block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#maximum_retention AwsFsxOntapVolume#maximum_retention}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#maximum_retention TfOntapVolume#maximum_retention}
   */
   readonly maximumRetention?: MaximumRetentionProperty;
   /**
   * minimum_retention block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#minimum_retention AwsFsxOntapVolume#minimum_retention}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#minimum_retention TfOntapVolume#minimum_retention}
   */
   readonly minimumRetention?: MinimumRetentionProperty;
 }
@@ -1649,31 +1649,31 @@ export class RetentionPeriodPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface SnaplockConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#audit_log_volume AwsFsxOntapVolume#audit_log_volume}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#audit_log_volume TfOntapVolume#audit_log_volume}
   */
   readonly auditLogVolume?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#privileged_delete AwsFsxOntapVolume#privileged_delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#privileged_delete TfOntapVolume#privileged_delete}
   */
   readonly privilegedDelete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#snaplock_type AwsFsxOntapVolume#snaplock_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#snaplock_type TfOntapVolume#snaplock_type}
   */
   readonly snaplockType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#volume_append_mode_enabled AwsFsxOntapVolume#volume_append_mode_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#volume_append_mode_enabled TfOntapVolume#volume_append_mode_enabled}
   */
   readonly volumeAppendModeEnabled?: boolean | cdktn.IResolvable;
   /**
   * autocommit_period block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#autocommit_period AwsFsxOntapVolume#autocommit_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#autocommit_period TfOntapVolume#autocommit_period}
   */
   readonly autocommitPeriod?: AutocommitPeriodProperty;
   /**
   * retention_period block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#retention_period AwsFsxOntapVolume#retention_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#retention_period TfOntapVolume#retention_period}
   */
   readonly retentionPeriod?: RetentionPeriodProperty;
 }
@@ -1834,11 +1834,11 @@ export class SnaplockConfigurationPropertyOutputReference extends cdktn.ComplexO
 }
 export interface TieringPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#cooling_period AwsFsxOntapVolume#cooling_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#cooling_period TfOntapVolume#cooling_period}
   */
   readonly coolingPeriod?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#name AwsFsxOntapVolume#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#name TfOntapVolume#name}
   */
   readonly name?: string;
 }
@@ -1914,15 +1914,15 @@ export class TieringPolicyPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#create AwsFsxOntapVolume#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#create TfOntapVolume#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#delete AwsFsxOntapVolume#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#delete TfOntapVolume#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#update AwsFsxOntapVolume#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_volume#update TfOntapVolume#update}
   */
   readonly update?: string;
 }

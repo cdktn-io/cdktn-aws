@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsRegionsConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataRegionsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/regions#all_regions DataAwsRegions#all_regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/regions#all_regions TfDataRegions#all_regions}
   */
   readonly allRegions?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/regions#id DataAwsRegions#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/regions#id TfDataRegions#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,15 +20,15 @@ export interface DataAwsRegionsConfig extends cdktn.TerraformMetaArguments {
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/regions#filter DataAwsRegions#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/regions#filter TfDataRegions#filter}
   */
-  readonly filter?: DataAwsRegions.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: TfDataRegions.FilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/regions aws_regions}
 */
-export class DataAwsRegions extends cdktn.TerraformDataSource {
+export class TfDataRegions extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class DataAwsRegions extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsRegions resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataRegions resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsRegions to import
-  * @param importFromId The id of the existing DataAwsRegions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/regions#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsRegions to import is found
+  * @param importToId The construct id used in the generated config for the TfDataRegions to import
+  * @param importFromId The id of the existing TfDataRegions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/regions#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataRegions to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_regions", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class DataAwsRegions extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsRegionsConfig = {}
+  * @param options TfDataRegionsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsRegionsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDataRegionsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_regions',
       terraformGeneratorMetadata: {
@@ -123,11 +123,11 @@ export class DataAwsRegions extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataAwsRegions.FilterPropertyList(this, "filter", true);
+  private _filter = new TfDataRegions.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataAwsRegions.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: TfDataRegions.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -146,7 +146,7 @@ export class DataAwsRegions extends cdktn.TerraformDataSource {
     return {
       all_regions: cdktn.booleanToTerraform(this._allRegions),
       id: cdktn.stringToTerraform(this._id),
-      filter: cdktn.listMapper(dataAwsRegionsFilterPropertyToTerraform, true)(this._filter.internalValue),
+      filter: cdktn.listMapper(tfDataRegionsFilterPropertyToTerraform, true)(this._filter.internalValue),
     };
   }
 
@@ -165,10 +165,10 @@ export class DataAwsRegions extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataAwsRegionsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(tfDataRegionsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataAwsRegions.FilterPropertyList",
+        storageClassType: "TfDataRegions.FilterPropertyList",
       },
     };
 
@@ -177,7 +177,7 @@ export class DataAwsRegions extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsRegionsFilterPropertyToTerraform(struct?: DataAwsRegions.FilterProperty | cdktn.IResolvable): any {
+export function tfDataRegionsFilterPropertyToTerraform(struct?: TfDataRegions.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -189,7 +189,7 @@ export function dataAwsRegionsFilterPropertyToTerraform(struct?: DataAwsRegions.
 }
 
 
-export function dataAwsRegionsFilterPropertyToHclTerraform(struct?: DataAwsRegions.FilterProperty | cdktn.IResolvable): any {
+export function tfDataRegionsFilterPropertyToHclTerraform(struct?: TfDataRegions.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -214,14 +214,14 @@ export function dataAwsRegionsFilterPropertyToHclTerraform(struct?: DataAwsRegio
 }
 
 
-export namespace DataAwsRegions {
+export namespace TfDataRegions {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/regions#name DataAwsRegions#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/regions#name TfDataRegions#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/regions#values DataAwsRegions#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/regions#values TfDataRegions#values}
   */
   readonly values: string[];
 }

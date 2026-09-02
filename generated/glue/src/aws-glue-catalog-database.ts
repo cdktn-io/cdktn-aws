@@ -5,72 +5,72 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsGlueCatalogDatabaseConfig extends cdktn.TerraformMetaArguments {
+export interface TfCatalogDatabaseConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#catalog_id AwsGlueCatalogDatabase#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#catalog_id TfCatalogDatabase#catalog_id}
   */
   readonly catalogId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#description AwsGlueCatalogDatabase#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#description TfCatalogDatabase#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#id AwsGlueCatalogDatabase#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#id TfCatalogDatabase#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#location_uri AwsGlueCatalogDatabase#location_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#location_uri TfCatalogDatabase#location_uri}
   */
   readonly locationUri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#name AwsGlueCatalogDatabase#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#name TfCatalogDatabase#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#parameters AwsGlueCatalogDatabase#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#parameters TfCatalogDatabase#parameters}
   */
   readonly parameters?: { [key: string]: string };
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#region AwsGlueCatalogDatabase#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#region TfCatalogDatabase#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#tags AwsGlueCatalogDatabase#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#tags TfCatalogDatabase#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#tags_all AwsGlueCatalogDatabase#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#tags_all TfCatalogDatabase#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * create_table_default_permission block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#create_table_default_permission AwsGlueCatalogDatabase#create_table_default_permission}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#create_table_default_permission TfCatalogDatabase#create_table_default_permission}
   */
-  readonly createTableDefaultPermission?: AwsGlueCatalogDatabase.CreateTableDefaultPermissionProperty[] | cdktn.IResolvable;
+  readonly createTableDefaultPermission?: TfCatalogDatabase.CreateTableDefaultPermissionProperty[] | cdktn.IResolvable;
   /**
   * federated_database block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#federated_database AwsGlueCatalogDatabase#federated_database}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#federated_database TfCatalogDatabase#federated_database}
   */
-  readonly federatedDatabase?: AwsGlueCatalogDatabase.FederatedDatabaseProperty;
+  readonly federatedDatabase?: TfCatalogDatabase.FederatedDatabaseProperty;
   /**
   * target_database block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#target_database AwsGlueCatalogDatabase#target_database}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#target_database TfCatalogDatabase#target_database}
   */
-  readonly targetDatabase?: AwsGlueCatalogDatabase.TargetDatabaseProperty;
+  readonly targetDatabase?: TfCatalogDatabase.TargetDatabaseProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database aws_glue_catalog_database}
 */
-export class AwsGlueCatalogDatabase extends cdktn.TerraformResource {
+export class TfCatalogDatabase extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -81,11 +81,11 @@ export class AwsGlueCatalogDatabase extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsGlueCatalogDatabase resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfCatalogDatabase resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsGlueCatalogDatabase to import
-  * @param importFromId The id of the existing AwsGlueCatalogDatabase that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsGlueCatalogDatabase to import is found
+  * @param importToId The construct id used in the generated config for the TfCatalogDatabase to import
+  * @param importFromId The id of the existing TfCatalogDatabase that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfCatalogDatabase to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_glue_catalog_database", importId: importFromId, provider });
@@ -100,9 +100,9 @@ export class AwsGlueCatalogDatabase extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsGlueCatalogDatabaseConfig
+  * @param options TfCatalogDatabaseConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsGlueCatalogDatabaseConfig) {
+  public constructor(scope: Construct, id: string, config: TfCatalogDatabaseConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_glue_catalog_database',
       terraformGeneratorMetadata: {
@@ -283,11 +283,11 @@ export class AwsGlueCatalogDatabase extends cdktn.TerraformResource {
   }
 
   // create_table_default_permission - computed: false, optional: true, required: false
-  private _createTableDefaultPermission = new AwsGlueCatalogDatabase.CreateTableDefaultPermissionPropertyList(this, "create_table_default_permission", false);
+  private _createTableDefaultPermission = new TfCatalogDatabase.CreateTableDefaultPermissionPropertyList(this, "create_table_default_permission", false);
   public get createTableDefaultPermission() {
     return this._createTableDefaultPermission;
   }
-  public putCreateTableDefaultPermission(value: AwsGlueCatalogDatabase.CreateTableDefaultPermissionProperty[] | cdktn.IResolvable) {
+  public putCreateTableDefaultPermission(value: TfCatalogDatabase.CreateTableDefaultPermissionProperty[] | cdktn.IResolvable) {
     this._createTableDefaultPermission.internalValue = value;
   }
   public resetCreateTableDefaultPermission() {
@@ -299,11 +299,11 @@ export class AwsGlueCatalogDatabase extends cdktn.TerraformResource {
   }
 
   // federated_database - computed: false, optional: true, required: false
-  private _federatedDatabase = new AwsGlueCatalogDatabase.FederatedDatabasePropertyOutputReference(this, "federated_database");
+  private _federatedDatabase = new TfCatalogDatabase.FederatedDatabasePropertyOutputReference(this, "federated_database");
   public get federatedDatabase() {
     return this._federatedDatabase;
   }
-  public putFederatedDatabase(value: AwsGlueCatalogDatabase.FederatedDatabaseProperty) {
+  public putFederatedDatabase(value: TfCatalogDatabase.FederatedDatabaseProperty) {
     this._federatedDatabase.internalValue = value;
   }
   public resetFederatedDatabase() {
@@ -315,11 +315,11 @@ export class AwsGlueCatalogDatabase extends cdktn.TerraformResource {
   }
 
   // target_database - computed: false, optional: true, required: false
-  private _targetDatabase = new AwsGlueCatalogDatabase.TargetDatabasePropertyOutputReference(this, "target_database");
+  private _targetDatabase = new TfCatalogDatabase.TargetDatabasePropertyOutputReference(this, "target_database");
   public get targetDatabase() {
     return this._targetDatabase;
   }
-  public putTargetDatabase(value: AwsGlueCatalogDatabase.TargetDatabaseProperty) {
+  public putTargetDatabase(value: TfCatalogDatabase.TargetDatabaseProperty) {
     this._targetDatabase.internalValue = value;
   }
   public resetTargetDatabase() {
@@ -345,9 +345,9 @@ export class AwsGlueCatalogDatabase extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      create_table_default_permission: cdktn.listMapper(awsGlueCatalogDatabaseCreateTableDefaultPermissionPropertyToTerraform, true)(this._createTableDefaultPermission.internalValue),
-      federated_database: awsGlueCatalogDatabaseFederatedDatabasePropertyToTerraform(this._federatedDatabase.internalValue),
-      target_database: awsGlueCatalogDatabaseTargetDatabasePropertyToTerraform(this._targetDatabase.internalValue),
+      create_table_default_permission: cdktn.listMapper(tfCatalogDatabaseCreateTableDefaultPermissionPropertyToTerraform, true)(this._createTableDefaultPermission.internalValue),
+      federated_database: tfCatalogDatabaseFederatedDatabasePropertyToTerraform(this._federatedDatabase.internalValue),
+      target_database: tfCatalogDatabaseTargetDatabasePropertyToTerraform(this._targetDatabase.internalValue),
     };
   }
 
@@ -408,22 +408,22 @@ export class AwsGlueCatalogDatabase extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       create_table_default_permission: {
-        value: cdktn.listMapperHcl(awsGlueCatalogDatabaseCreateTableDefaultPermissionPropertyToHclTerraform, true)(this._createTableDefaultPermission.internalValue),
+        value: cdktn.listMapperHcl(tfCatalogDatabaseCreateTableDefaultPermissionPropertyToHclTerraform, true)(this._createTableDefaultPermission.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGlueCatalogDatabase.CreateTableDefaultPermissionPropertyList",
+        storageClassType: "TfCatalogDatabase.CreateTableDefaultPermissionPropertyList",
       },
       federated_database: {
-        value: awsGlueCatalogDatabaseFederatedDatabasePropertyToHclTerraform(this._federatedDatabase.internalValue),
+        value: tfCatalogDatabaseFederatedDatabasePropertyToHclTerraform(this._federatedDatabase.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGlueCatalogDatabase.FederatedDatabasePropertyList",
+        storageClassType: "TfCatalogDatabase.FederatedDatabasePropertyList",
       },
       target_database: {
-        value: awsGlueCatalogDatabaseTargetDatabasePropertyToHclTerraform(this._targetDatabase.internalValue),
+        value: tfCatalogDatabaseTargetDatabasePropertyToHclTerraform(this._targetDatabase.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGlueCatalogDatabase.TargetDatabasePropertyList",
+        storageClassType: "TfCatalogDatabase.TargetDatabasePropertyList",
       },
     };
 
@@ -432,7 +432,7 @@ export class AwsGlueCatalogDatabase extends cdktn.TerraformResource {
   }
 }
 
-export function awsGlueCatalogDatabasePrincipalPropertyToTerraform(struct?: AwsGlueCatalogDatabase.PrincipalPropertyOutputReference | AwsGlueCatalogDatabase.PrincipalProperty): any {
+export function tfCatalogDatabasePrincipalPropertyToTerraform(struct?: TfCatalogDatabase.PrincipalPropertyOutputReference | TfCatalogDatabase.PrincipalProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -443,7 +443,7 @@ export function awsGlueCatalogDatabasePrincipalPropertyToTerraform(struct?: AwsG
 }
 
 
-export function awsGlueCatalogDatabasePrincipalPropertyToHclTerraform(struct?: AwsGlueCatalogDatabase.PrincipalPropertyOutputReference | AwsGlueCatalogDatabase.PrincipalProperty): any {
+export function tfCatalogDatabasePrincipalPropertyToHclTerraform(struct?: TfCatalogDatabase.PrincipalPropertyOutputReference | TfCatalogDatabase.PrincipalProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -462,19 +462,19 @@ export function awsGlueCatalogDatabasePrincipalPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsGlueCatalogDatabaseCreateTableDefaultPermissionPropertyToTerraform(struct?: AwsGlueCatalogDatabase.CreateTableDefaultPermissionProperty | cdktn.IResolvable): any {
+export function tfCatalogDatabaseCreateTableDefaultPermissionPropertyToTerraform(struct?: TfCatalogDatabase.CreateTableDefaultPermissionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     permissions: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.permissions),
-    principal: awsGlueCatalogDatabasePrincipalPropertyToTerraform(struct!.principal),
+    principal: tfCatalogDatabasePrincipalPropertyToTerraform(struct!.principal),
   }
 }
 
 
-export function awsGlueCatalogDatabaseCreateTableDefaultPermissionPropertyToHclTerraform(struct?: AwsGlueCatalogDatabase.CreateTableDefaultPermissionProperty | cdktn.IResolvable): any {
+export function tfCatalogDatabaseCreateTableDefaultPermissionPropertyToHclTerraform(struct?: TfCatalogDatabase.CreateTableDefaultPermissionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -487,7 +487,7 @@ export function awsGlueCatalogDatabaseCreateTableDefaultPermissionPropertyToHclT
       storageClassType: "stringList",
     },
     principal: {
-      value: awsGlueCatalogDatabasePrincipalPropertyToHclTerraform(struct!.principal),
+      value: tfCatalogDatabasePrincipalPropertyToHclTerraform(struct!.principal),
       isBlock: true,
       type: "list",
       storageClassType: "PrincipalPropertyList",
@@ -499,7 +499,7 @@ export function awsGlueCatalogDatabaseCreateTableDefaultPermissionPropertyToHclT
 }
 
 
-export function awsGlueCatalogDatabaseFederatedDatabasePropertyToTerraform(struct?: AwsGlueCatalogDatabase.FederatedDatabasePropertyOutputReference | AwsGlueCatalogDatabase.FederatedDatabaseProperty): any {
+export function tfCatalogDatabaseFederatedDatabasePropertyToTerraform(struct?: TfCatalogDatabase.FederatedDatabasePropertyOutputReference | TfCatalogDatabase.FederatedDatabaseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -511,7 +511,7 @@ export function awsGlueCatalogDatabaseFederatedDatabasePropertyToTerraform(struc
 }
 
 
-export function awsGlueCatalogDatabaseFederatedDatabasePropertyToHclTerraform(struct?: AwsGlueCatalogDatabase.FederatedDatabasePropertyOutputReference | AwsGlueCatalogDatabase.FederatedDatabaseProperty): any {
+export function tfCatalogDatabaseFederatedDatabasePropertyToHclTerraform(struct?: TfCatalogDatabase.FederatedDatabasePropertyOutputReference | TfCatalogDatabase.FederatedDatabaseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -536,7 +536,7 @@ export function awsGlueCatalogDatabaseFederatedDatabasePropertyToHclTerraform(st
 }
 
 
-export function awsGlueCatalogDatabaseTargetDatabasePropertyToTerraform(struct?: AwsGlueCatalogDatabase.TargetDatabasePropertyOutputReference | AwsGlueCatalogDatabase.TargetDatabaseProperty): any {
+export function tfCatalogDatabaseTargetDatabasePropertyToTerraform(struct?: TfCatalogDatabase.TargetDatabasePropertyOutputReference | TfCatalogDatabase.TargetDatabaseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -549,7 +549,7 @@ export function awsGlueCatalogDatabaseTargetDatabasePropertyToTerraform(struct?:
 }
 
 
-export function awsGlueCatalogDatabaseTargetDatabasePropertyToHclTerraform(struct?: AwsGlueCatalogDatabase.TargetDatabasePropertyOutputReference | AwsGlueCatalogDatabase.TargetDatabaseProperty): any {
+export function tfCatalogDatabaseTargetDatabasePropertyToHclTerraform(struct?: TfCatalogDatabase.TargetDatabasePropertyOutputReference | TfCatalogDatabase.TargetDatabaseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -580,10 +580,10 @@ export function awsGlueCatalogDatabaseTargetDatabasePropertyToHclTerraform(struc
 }
 
 
-export namespace AwsGlueCatalogDatabase {
+export namespace TfCatalogDatabase {
 export interface PrincipalProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#data_lake_principal_identifier AwsGlueCatalogDatabase#data_lake_principal_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#data_lake_principal_identifier TfCatalogDatabase#data_lake_principal_identifier}
   */
   readonly dataLakePrincipalIdentifier?: string;
 }
@@ -637,13 +637,13 @@ export class PrincipalPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface CreateTableDefaultPermissionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#permissions AwsGlueCatalogDatabase#permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#permissions TfCatalogDatabase#permissions}
   */
   readonly permissions?: string[];
   /**
   * principal block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#principal AwsGlueCatalogDatabase#principal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#principal TfCatalogDatabase#principal}
   */
   readonly principal?: PrincipalProperty;
 }
@@ -751,11 +751,11 @@ export class CreateTableDefaultPermissionPropertyList extends cdktn.ComplexList 
 }
 export interface FederatedDatabaseProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#connection_name AwsGlueCatalogDatabase#connection_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#connection_name TfCatalogDatabase#connection_name}
   */
   readonly connectionName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#identifier AwsGlueCatalogDatabase#identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#identifier TfCatalogDatabase#identifier}
   */
   readonly identifier?: string;
 }
@@ -831,15 +831,15 @@ export class FederatedDatabasePropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface TargetDatabaseProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#catalog_id AwsGlueCatalogDatabase#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#catalog_id TfCatalogDatabase#catalog_id}
   */
   readonly catalogId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#database_name AwsGlueCatalogDatabase#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#database_name TfCatalogDatabase#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#region AwsGlueCatalogDatabase#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_database#region TfCatalogDatabase#region}
   */
   readonly region?: string;
 }

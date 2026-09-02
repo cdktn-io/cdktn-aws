@@ -5,23 +5,23 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsNetworkmonitorMonitorConfig extends cdktn.TerraformMetaArguments {
+export interface TfMonitorConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmonitor_monitor#aggregation_period AwsNetworkmonitorMonitor#aggregation_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmonitor_monitor#aggregation_period TfMonitor#aggregation_period}
   */
   readonly aggregationPeriod?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmonitor_monitor#monitor_name AwsNetworkmonitorMonitor#monitor_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmonitor_monitor#monitor_name TfMonitor#monitor_name}
   */
   readonly monitorName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmonitor_monitor#region AwsNetworkmonitorMonitor#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmonitor_monitor#region TfMonitor#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmonitor_monitor#tags AwsNetworkmonitorMonitor#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmonitor_monitor#tags TfMonitor#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -29,7 +29,7 @@ export interface AwsNetworkmonitorMonitorConfig extends cdktn.TerraformMetaArgum
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmonitor_monitor aws_networkmonitor_monitor}
 */
-export class AwsNetworkmonitorMonitor extends cdktn.TerraformResource {
+export class TfMonitor extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -40,11 +40,11 @@ export class AwsNetworkmonitorMonitor extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsNetworkmonitorMonitor resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfMonitor resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsNetworkmonitorMonitor to import
-  * @param importFromId The id of the existing AwsNetworkmonitorMonitor that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmonitor_monitor#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsNetworkmonitorMonitor to import is found
+  * @param importToId The construct id used in the generated config for the TfMonitor to import
+  * @param importFromId The id of the existing TfMonitor that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmonitor_monitor#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfMonitor to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkmonitor_monitor", importId: importFromId, provider });
@@ -59,9 +59,9 @@ export class AwsNetworkmonitorMonitor extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsNetworkmonitorMonitorConfig
+  * @param options TfMonitorConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsNetworkmonitorMonitorConfig) {
+  public constructor(scope: Construct, id: string, config: TfMonitorConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_networkmonitor_monitor',
       terraformGeneratorMetadata: {

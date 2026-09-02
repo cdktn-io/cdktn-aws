@@ -5,37 +5,37 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsPollyVoicesConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataVoicesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/polly_voices#engine DataAwsPollyVoices#engine}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/polly_voices#engine TfDataVoices#engine}
   */
   readonly engine?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/polly_voices#include_additional_language_codes DataAwsPollyVoices#include_additional_language_codes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/polly_voices#include_additional_language_codes TfDataVoices#include_additional_language_codes}
   */
   readonly includeAdditionalLanguageCodes?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/polly_voices#language_code DataAwsPollyVoices#language_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/polly_voices#language_code TfDataVoices#language_code}
   */
   readonly languageCode?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/polly_voices#region DataAwsPollyVoices#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/polly_voices#region TfDataVoices#region}
   */
   readonly region?: string;
   /**
   * voices block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/polly_voices#voices DataAwsPollyVoices#voices}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/polly_voices#voices TfDataVoices#voices}
   */
-  readonly voices?: DataAwsPollyVoices.VoicesProperty[] | cdktn.IResolvable;
+  readonly voices?: TfDataVoices.VoicesProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/polly_voices aws_polly_voices}
 */
-export class DataAwsPollyVoices extends cdktn.TerraformDataSource {
+export class TfDataVoices extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -46,11 +46,11 @@ export class DataAwsPollyVoices extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsPollyVoices resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataVoices resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsPollyVoices to import
-  * @param importFromId The id of the existing DataAwsPollyVoices that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/polly_voices#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsPollyVoices to import is found
+  * @param importToId The construct id used in the generated config for the TfDataVoices to import
+  * @param importFromId The id of the existing TfDataVoices that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/polly_voices#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataVoices to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_polly_voices", importId: importFromId, provider });
@@ -65,9 +65,9 @@ export class DataAwsPollyVoices extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsPollyVoicesConfig = {}
+  * @param options TfDataVoicesConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsPollyVoicesConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDataVoicesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_polly_voices',
       terraformGeneratorMetadata: {
@@ -164,11 +164,11 @@ export class DataAwsPollyVoices extends cdktn.TerraformDataSource {
   }
 
   // voices - computed: false, optional: true, required: false
-  private _voices = new DataAwsPollyVoices.VoicesPropertyList(this, "voices", false);
+  private _voices = new TfDataVoices.VoicesPropertyList(this, "voices", false);
   public get voices() {
     return this._voices;
   }
-  public putVoices(value: DataAwsPollyVoices.VoicesProperty[] | cdktn.IResolvable) {
+  public putVoices(value: TfDataVoices.VoicesProperty[] | cdktn.IResolvable) {
     this._voices.internalValue = value;
   }
   public resetVoices() {
@@ -189,7 +189,7 @@ export class DataAwsPollyVoices extends cdktn.TerraformDataSource {
       include_additional_language_codes: cdktn.booleanToTerraform(this._includeAdditionalLanguageCodes),
       language_code: cdktn.stringToTerraform(this._languageCode),
       region: cdktn.stringToTerraform(this._region),
-      voices: cdktn.listMapper(dataAwsPollyVoicesVoicesPropertyToTerraform, true)(this._voices.internalValue),
+      voices: cdktn.listMapper(tfDataVoicesVoicesPropertyToTerraform, true)(this._voices.internalValue),
     };
   }
 
@@ -220,10 +220,10 @@ export class DataAwsPollyVoices extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       voices: {
-        value: cdktn.listMapperHcl(dataAwsPollyVoicesVoicesPropertyToHclTerraform, true)(this._voices.internalValue),
+        value: cdktn.listMapperHcl(tfDataVoicesVoicesPropertyToHclTerraform, true)(this._voices.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "DataAwsPollyVoices.VoicesPropertyList",
+        storageClassType: "TfDataVoices.VoicesPropertyList",
       },
     };
 
@@ -232,7 +232,7 @@ export class DataAwsPollyVoices extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsPollyVoicesVoicesPropertyToTerraform(struct?: DataAwsPollyVoices.VoicesProperty | cdktn.IResolvable): any {
+export function tfDataVoicesVoicesPropertyToTerraform(struct?: TfDataVoices.VoicesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -242,7 +242,7 @@ export function dataAwsPollyVoicesVoicesPropertyToTerraform(struct?: DataAwsPoll
 }
 
 
-export function dataAwsPollyVoicesVoicesPropertyToHclTerraform(struct?: DataAwsPollyVoices.VoicesProperty | cdktn.IResolvable): any {
+export function tfDataVoicesVoicesPropertyToHclTerraform(struct?: TfDataVoices.VoicesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -253,7 +253,7 @@ export function dataAwsPollyVoicesVoicesPropertyToHclTerraform(struct?: DataAwsP
 }
 
 
-export namespace DataAwsPollyVoices {
+export namespace TfDataVoices {
 export interface VoicesProperty {
 }
 export class VoicesPropertyOutputReference extends cdktn.ComplexObject {

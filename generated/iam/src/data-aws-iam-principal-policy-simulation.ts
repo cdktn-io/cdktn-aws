@@ -5,73 +5,73 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsIamPrincipalPolicySimulationConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataPrincipalPolicySimulationConfig extends cdktn.TerraformMetaArguments {
   /**
   * One or more names of actions, like "iam:CreateUser", that should be included in the simulation.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_principal_policy_simulation#action_names DataAwsIamPrincipalPolicySimulation#action_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_principal_policy_simulation#action_names TfDataPrincipalPolicySimulation#action_names}
   */
   readonly actionNames: string[];
   /**
   * Additional principal-based policies to use in the simulation.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_principal_policy_simulation#additional_policies_json DataAwsIamPrincipalPolicySimulation#additional_policies_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_principal_policy_simulation#additional_policies_json TfDataPrincipalPolicySimulation#additional_policies_json}
   */
   readonly additionalPoliciesJson?: string[];
   /**
   * ARN of a user to use as the caller of the simulated requests. If not specified, defaults to the principal specified in policy_source_arn, if it is a user ARN.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_principal_policy_simulation#caller_arn DataAwsIamPrincipalPolicySimulation#caller_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_principal_policy_simulation#caller_arn TfDataPrincipalPolicySimulation#caller_arn}
   */
   readonly callerArn?: string;
   /**
   * Additional permission boundary policies to use in the simulation.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_principal_policy_simulation#permissions_boundary_policies_json DataAwsIamPrincipalPolicySimulation#permissions_boundary_policies_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_principal_policy_simulation#permissions_boundary_policies_json TfDataPrincipalPolicySimulation#permissions_boundary_policies_json}
   */
   readonly permissionsBoundaryPoliciesJson?: string[];
   /**
   * ARN of the principal (e.g. user, role) whose existing configured access policies will be used as the basis for the simulation. If you specify a role ARN here, you can also set caller_arn to simulate a particular user acting with the given role.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_principal_policy_simulation#policy_source_arn DataAwsIamPrincipalPolicySimulation#policy_source_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_principal_policy_simulation#policy_source_arn TfDataPrincipalPolicySimulation#policy_source_arn}
   */
   readonly policySourceArn: string;
   /**
   * ARNs of specific resources to use as the targets of the specified actions during simulation. If not specified, the simulator assumes "*" which represents general access across all resources.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_principal_policy_simulation#resource_arns DataAwsIamPrincipalPolicySimulation#resource_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_principal_policy_simulation#resource_arns TfDataPrincipalPolicySimulation#resource_arns}
   */
   readonly resourceArns?: string[];
   /**
   * Specifies the type of simulation to run. Some API operations need a particular resource handling option in order to produce a correct reesult.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_principal_policy_simulation#resource_handling_option DataAwsIamPrincipalPolicySimulation#resource_handling_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_principal_policy_simulation#resource_handling_option TfDataPrincipalPolicySimulation#resource_handling_option}
   */
   readonly resourceHandlingOption?: string;
   /**
   * An AWS account ID to use as the simulated owner for any resource whose ARN does not include a specific owner account ID. Defaults to the account given as part of caller_arn.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_principal_policy_simulation#resource_owner_account_id DataAwsIamPrincipalPolicySimulation#resource_owner_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_principal_policy_simulation#resource_owner_account_id TfDataPrincipalPolicySimulation#resource_owner_account_id}
   */
   readonly resourceOwnerAccountId?: string;
   /**
   * A resource policy to associate with all of the target resources for simulation purposes. The policy simulator does not automatically retrieve resource-level policies, so if a resource policy is crucial to your test then you must specify here the same policy document associated with your target resource(s).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_principal_policy_simulation#resource_policy_json DataAwsIamPrincipalPolicySimulation#resource_policy_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_principal_policy_simulation#resource_policy_json TfDataPrincipalPolicySimulation#resource_policy_json}
   */
   readonly resourcePolicyJson?: string;
   /**
   * context block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_principal_policy_simulation#context DataAwsIamPrincipalPolicySimulation#context}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_principal_policy_simulation#context TfDataPrincipalPolicySimulation#context}
   */
-  readonly context?: DataAwsIamPrincipalPolicySimulation.ContextProperty[] | cdktn.IResolvable;
+  readonly context?: TfDataPrincipalPolicySimulation.ContextProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_principal_policy_simulation aws_iam_principal_policy_simulation}
 */
-export class DataAwsIamPrincipalPolicySimulation extends cdktn.TerraformDataSource {
+export class TfDataPrincipalPolicySimulation extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -82,11 +82,11 @@ export class DataAwsIamPrincipalPolicySimulation extends cdktn.TerraformDataSour
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsIamPrincipalPolicySimulation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataPrincipalPolicySimulation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsIamPrincipalPolicySimulation to import
-  * @param importFromId The id of the existing DataAwsIamPrincipalPolicySimulation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_principal_policy_simulation#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsIamPrincipalPolicySimulation to import is found
+  * @param importToId The construct id used in the generated config for the TfDataPrincipalPolicySimulation to import
+  * @param importFromId The id of the existing TfDataPrincipalPolicySimulation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_principal_policy_simulation#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataPrincipalPolicySimulation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iam_principal_policy_simulation", importId: importFromId, provider });
@@ -101,9 +101,9 @@ export class DataAwsIamPrincipalPolicySimulation extends cdktn.TerraformDataSour
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsIamPrincipalPolicySimulationConfig
+  * @param options TfDataPrincipalPolicySimulationConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsIamPrincipalPolicySimulationConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataPrincipalPolicySimulationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iam_principal_policy_simulation',
       terraformGeneratorMetadata: {
@@ -284,17 +284,17 @@ export class DataAwsIamPrincipalPolicySimulation extends cdktn.TerraformDataSour
   }
 
   // results - computed: true, optional: false, required: false
-  private _results = new DataAwsIamPrincipalPolicySimulation.ResultsPropertyList(this, "results", true);
+  private _results = new TfDataPrincipalPolicySimulation.ResultsPropertyList(this, "results", true);
   public get results() {
     return this._results;
   }
 
   // context - computed: false, optional: true, required: false
-  private _context = new DataAwsIamPrincipalPolicySimulation.ContextPropertyList(this, "context", true);
+  private _context = new TfDataPrincipalPolicySimulation.ContextPropertyList(this, "context", true);
   public get context() {
     return this._context;
   }
-  public putContext(value: DataAwsIamPrincipalPolicySimulation.ContextProperty[] | cdktn.IResolvable) {
+  public putContext(value: TfDataPrincipalPolicySimulation.ContextProperty[] | cdktn.IResolvable) {
     this._context.internalValue = value;
   }
   public resetContext() {
@@ -320,7 +320,7 @@ export class DataAwsIamPrincipalPolicySimulation extends cdktn.TerraformDataSour
       resource_handling_option: cdktn.stringToTerraform(this._resourceHandlingOption),
       resource_owner_account_id: cdktn.stringToTerraform(this._resourceOwnerAccountId),
       resource_policy_json: cdktn.stringToTerraform(this._resourcePolicyJson),
-      context: cdktn.listMapper(dataAwsIamPrincipalPolicySimulationContextPropertyToTerraform, true)(this._context.internalValue),
+      context: cdktn.listMapper(tfDataPrincipalPolicySimulationContextPropertyToTerraform, true)(this._context.internalValue),
     };
   }
 
@@ -381,10 +381,10 @@ export class DataAwsIamPrincipalPolicySimulation extends cdktn.TerraformDataSour
         storageClassType: "string",
       },
       context: {
-        value: cdktn.listMapperHcl(dataAwsIamPrincipalPolicySimulationContextPropertyToHclTerraform, true)(this._context.internalValue),
+        value: cdktn.listMapperHcl(tfDataPrincipalPolicySimulationContextPropertyToHclTerraform, true)(this._context.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataAwsIamPrincipalPolicySimulation.ContextPropertyList",
+        storageClassType: "TfDataPrincipalPolicySimulation.ContextPropertyList",
       },
     };
 
@@ -393,7 +393,7 @@ export class DataAwsIamPrincipalPolicySimulation extends cdktn.TerraformDataSour
   }
 }
 
-export function dataAwsIamPrincipalPolicySimulationMatchedStatementsPropertyToTerraform(struct?: DataAwsIamPrincipalPolicySimulation.MatchedStatementsProperty): any {
+export function tfDataPrincipalPolicySimulationMatchedStatementsPropertyToTerraform(struct?: TfDataPrincipalPolicySimulation.MatchedStatementsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -403,7 +403,7 @@ export function dataAwsIamPrincipalPolicySimulationMatchedStatementsPropertyToTe
 }
 
 
-export function dataAwsIamPrincipalPolicySimulationMatchedStatementsPropertyToHclTerraform(struct?: DataAwsIamPrincipalPolicySimulation.MatchedStatementsProperty): any {
+export function tfDataPrincipalPolicySimulationMatchedStatementsPropertyToHclTerraform(struct?: TfDataPrincipalPolicySimulation.MatchedStatementsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -414,7 +414,7 @@ export function dataAwsIamPrincipalPolicySimulationMatchedStatementsPropertyToHc
 }
 
 
-export function dataAwsIamPrincipalPolicySimulationResultsPropertyToTerraform(struct?: DataAwsIamPrincipalPolicySimulation.ResultsProperty): any {
+export function tfDataPrincipalPolicySimulationResultsPropertyToTerraform(struct?: TfDataPrincipalPolicySimulation.ResultsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -424,7 +424,7 @@ export function dataAwsIamPrincipalPolicySimulationResultsPropertyToTerraform(st
 }
 
 
-export function dataAwsIamPrincipalPolicySimulationResultsPropertyToHclTerraform(struct?: DataAwsIamPrincipalPolicySimulation.ResultsProperty): any {
+export function tfDataPrincipalPolicySimulationResultsPropertyToHclTerraform(struct?: TfDataPrincipalPolicySimulation.ResultsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -435,7 +435,7 @@ export function dataAwsIamPrincipalPolicySimulationResultsPropertyToHclTerraform
 }
 
 
-export function dataAwsIamPrincipalPolicySimulationContextPropertyToTerraform(struct?: DataAwsIamPrincipalPolicySimulation.ContextProperty | cdktn.IResolvable): any {
+export function tfDataPrincipalPolicySimulationContextPropertyToTerraform(struct?: TfDataPrincipalPolicySimulation.ContextProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -448,7 +448,7 @@ export function dataAwsIamPrincipalPolicySimulationContextPropertyToTerraform(st
 }
 
 
-export function dataAwsIamPrincipalPolicySimulationContextPropertyToHclTerraform(struct?: DataAwsIamPrincipalPolicySimulation.ContextProperty | cdktn.IResolvable): any {
+export function tfDataPrincipalPolicySimulationContextPropertyToHclTerraform(struct?: TfDataPrincipalPolicySimulation.ContextProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -479,7 +479,7 @@ export function dataAwsIamPrincipalPolicySimulationContextPropertyToHclTerraform
 }
 
 
-export namespace DataAwsIamPrincipalPolicySimulation {
+export namespace TfDataPrincipalPolicySimulation {
 export interface MatchedStatementsProperty {
 }
 export class MatchedStatementsPropertyOutputReference extends cdktn.ComplexObject {
@@ -629,19 +629,19 @@ export interface ContextProperty {
   /**
   * The key name of the context entry, such as "aws:CurrentTime".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_principal_policy_simulation#key DataAwsIamPrincipalPolicySimulation#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_principal_policy_simulation#key TfDataPrincipalPolicySimulation#key}
   */
   readonly key: string;
   /**
   * The type that the simulator should use to interpret the strings given in argument "values".
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_principal_policy_simulation#type DataAwsIamPrincipalPolicySimulation#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_principal_policy_simulation#type TfDataPrincipalPolicySimulation#type}
   */
   readonly type: string;
   /**
   * One or more values to assign to the context key, given as a string in a syntax appropriate for the selected value type.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_principal_policy_simulation#values DataAwsIamPrincipalPolicySimulation#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_principal_policy_simulation#values TfDataPrincipalPolicySimulation#values}
   */
   readonly values: string[];
 }

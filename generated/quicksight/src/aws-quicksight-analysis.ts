@@ -5,84 +5,84 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsQuicksightAnalysisConfig extends cdktn.TerraformMetaArguments {
+export interface TfAnalysisConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#analysis_id AwsQuicksightAnalysis#analysis_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#analysis_id TfAnalysis#analysis_id}
   */
   readonly analysisId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#aws_account_id AwsQuicksightAnalysis#aws_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#aws_account_id TfAnalysis#aws_account_id}
   */
   readonly awsAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#id AwsQuicksightAnalysis#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#id TfAnalysis#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#name AwsQuicksightAnalysis#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#name TfAnalysis#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#recovery_window_in_days AwsQuicksightAnalysis#recovery_window_in_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#recovery_window_in_days TfAnalysis#recovery_window_in_days}
   */
   readonly recoveryWindowInDays?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#region AwsQuicksightAnalysis#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#region TfAnalysis#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#tags AwsQuicksightAnalysis#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#tags TfAnalysis#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#tags_all AwsQuicksightAnalysis#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#tags_all TfAnalysis#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#theme_arn AwsQuicksightAnalysis#theme_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#theme_arn TfAnalysis#theme_arn}
   */
   readonly themeArn?: string;
   /**
   * definition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#definition AwsQuicksightAnalysis#definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#definition TfAnalysis#definition}
   */
   readonly definition?: any;
   /**
   * parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#parameters AwsQuicksightAnalysis#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#parameters TfAnalysis#parameters}
   */
-  readonly parameters?: AwsQuicksightAnalysis.ParametersProperty;
+  readonly parameters?: TfAnalysis.ParametersProperty;
   /**
   * permissions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#permissions AwsQuicksightAnalysis#permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#permissions TfAnalysis#permissions}
   */
-  readonly permissions?: AwsQuicksightAnalysis.PermissionsProperty[] | cdktn.IResolvable;
+  readonly permissions?: TfAnalysis.PermissionsProperty[] | cdktn.IResolvable;
   /**
   * source_entity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#source_entity AwsQuicksightAnalysis#source_entity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#source_entity TfAnalysis#source_entity}
   */
-  readonly sourceEntity?: AwsQuicksightAnalysis.SourceEntityProperty;
+  readonly sourceEntity?: TfAnalysis.SourceEntityProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#timeouts AwsQuicksightAnalysis#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#timeouts TfAnalysis#timeouts}
   */
-  readonly timeouts?: AwsQuicksightAnalysis.TimeoutsProperty;
+  readonly timeouts?: TfAnalysis.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis aws_quicksight_analysis}
 */
-export class AwsQuicksightAnalysis extends cdktn.TerraformResource {
+export class TfAnalysis extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -93,11 +93,11 @@ export class AwsQuicksightAnalysis extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsQuicksightAnalysis resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAnalysis resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsQuicksightAnalysis to import
-  * @param importFromId The id of the existing AwsQuicksightAnalysis that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsQuicksightAnalysis to import is found
+  * @param importToId The construct id used in the generated config for the TfAnalysis to import
+  * @param importFromId The id of the existing TfAnalysis that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAnalysis to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_quicksight_analysis", importId: importFromId, provider });
@@ -112,9 +112,9 @@ export class AwsQuicksightAnalysis extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsQuicksightAnalysisConfig
+  * @param options TfAnalysisConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsQuicksightAnalysisConfig) {
+  public constructor(scope: Construct, id: string, config: TfAnalysisConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_quicksight_analysis',
       terraformGeneratorMetadata: {
@@ -330,11 +330,11 @@ export class AwsQuicksightAnalysis extends cdktn.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters = new AwsQuicksightAnalysis.ParametersPropertyOutputReference(this, "parameters");
+  private _parameters = new TfAnalysis.ParametersPropertyOutputReference(this, "parameters");
   public get parameters() {
     return this._parameters;
   }
-  public putParameters(value: AwsQuicksightAnalysis.ParametersProperty) {
+  public putParameters(value: TfAnalysis.ParametersProperty) {
     this._parameters.internalValue = value;
   }
   public resetParameters() {
@@ -346,11 +346,11 @@ export class AwsQuicksightAnalysis extends cdktn.TerraformResource {
   }
 
   // permissions - computed: false, optional: true, required: false
-  private _permissions = new AwsQuicksightAnalysis.PermissionsPropertyList(this, "permissions", true);
+  private _permissions = new TfAnalysis.PermissionsPropertyList(this, "permissions", true);
   public get permissions() {
     return this._permissions;
   }
-  public putPermissions(value: AwsQuicksightAnalysis.PermissionsProperty[] | cdktn.IResolvable) {
+  public putPermissions(value: TfAnalysis.PermissionsProperty[] | cdktn.IResolvable) {
     this._permissions.internalValue = value;
   }
   public resetPermissions() {
@@ -362,11 +362,11 @@ export class AwsQuicksightAnalysis extends cdktn.TerraformResource {
   }
 
   // source_entity - computed: false, optional: true, required: false
-  private _sourceEntity = new AwsQuicksightAnalysis.SourceEntityPropertyOutputReference(this, "source_entity");
+  private _sourceEntity = new TfAnalysis.SourceEntityPropertyOutputReference(this, "source_entity");
   public get sourceEntity() {
     return this._sourceEntity;
   }
-  public putSourceEntity(value: AwsQuicksightAnalysis.SourceEntityProperty) {
+  public putSourceEntity(value: TfAnalysis.SourceEntityProperty) {
     this._sourceEntity.internalValue = value;
   }
   public resetSourceEntity() {
@@ -378,11 +378,11 @@ export class AwsQuicksightAnalysis extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsQuicksightAnalysis.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfAnalysis.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsQuicksightAnalysis.TimeoutsProperty) {
+  public putTimeouts(value: TfAnalysis.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -409,10 +409,10 @@ export class AwsQuicksightAnalysis extends cdktn.TerraformResource {
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       theme_arn: cdktn.stringToTerraform(this._themeArn),
       definition: cdktn.anyToTerraform(this._definition),
-      parameters: awsQuicksightAnalysisParametersPropertyToTerraform(this._parameters.internalValue),
-      permissions: cdktn.listMapper(awsQuicksightAnalysisPermissionsPropertyToTerraform, true)(this._permissions.internalValue),
-      source_entity: awsQuicksightAnalysisSourceEntityPropertyToTerraform(this._sourceEntity.internalValue),
-      timeouts: awsQuicksightAnalysisTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      parameters: tfAnalysisParametersPropertyToTerraform(this._parameters.internalValue),
+      permissions: cdktn.listMapper(tfAnalysisPermissionsPropertyToTerraform, true)(this._permissions.internalValue),
+      source_entity: tfAnalysisSourceEntityPropertyToTerraform(this._sourceEntity.internalValue),
+      timeouts: tfAnalysisTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -479,28 +479,28 @@ export class AwsQuicksightAnalysis extends cdktn.TerraformResource {
         storageClassType: "any",
       },
       parameters: {
-        value: awsQuicksightAnalysisParametersPropertyToHclTerraform(this._parameters.internalValue),
+        value: tfAnalysisParametersPropertyToHclTerraform(this._parameters.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsQuicksightAnalysis.ParametersPropertyList",
+        storageClassType: "TfAnalysis.ParametersPropertyList",
       },
       permissions: {
-        value: cdktn.listMapperHcl(awsQuicksightAnalysisPermissionsPropertyToHclTerraform, true)(this._permissions.internalValue),
+        value: cdktn.listMapperHcl(tfAnalysisPermissionsPropertyToHclTerraform, true)(this._permissions.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsQuicksightAnalysis.PermissionsPropertyList",
+        storageClassType: "TfAnalysis.PermissionsPropertyList",
       },
       source_entity: {
-        value: awsQuicksightAnalysisSourceEntityPropertyToHclTerraform(this._sourceEntity.internalValue),
+        value: tfAnalysisSourceEntityPropertyToHclTerraform(this._sourceEntity.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsQuicksightAnalysis.SourceEntityPropertyList",
+        storageClassType: "TfAnalysis.SourceEntityPropertyList",
       },
       timeouts: {
-        value: awsQuicksightAnalysisTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfAnalysisTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsQuicksightAnalysis.TimeoutsProperty",
+        storageClassType: "TfAnalysis.TimeoutsProperty",
       },
     };
 
@@ -509,7 +509,7 @@ export class AwsQuicksightAnalysis extends cdktn.TerraformResource {
   }
 }
 
-export function awsQuicksightAnalysisDateTimeParametersPropertyToTerraform(struct?: AwsQuicksightAnalysis.DateTimeParametersProperty | cdktn.IResolvable): any {
+export function tfAnalysisDateTimeParametersPropertyToTerraform(struct?: TfAnalysis.DateTimeParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -521,7 +521,7 @@ export function awsQuicksightAnalysisDateTimeParametersPropertyToTerraform(struc
 }
 
 
-export function awsQuicksightAnalysisDateTimeParametersPropertyToHclTerraform(struct?: AwsQuicksightAnalysis.DateTimeParametersProperty | cdktn.IResolvable): any {
+export function tfAnalysisDateTimeParametersPropertyToHclTerraform(struct?: TfAnalysis.DateTimeParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -546,7 +546,7 @@ export function awsQuicksightAnalysisDateTimeParametersPropertyToHclTerraform(st
 }
 
 
-export function awsQuicksightAnalysisDecimalParametersPropertyToTerraform(struct?: AwsQuicksightAnalysis.DecimalParametersProperty | cdktn.IResolvable): any {
+export function tfAnalysisDecimalParametersPropertyToTerraform(struct?: TfAnalysis.DecimalParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -558,7 +558,7 @@ export function awsQuicksightAnalysisDecimalParametersPropertyToTerraform(struct
 }
 
 
-export function awsQuicksightAnalysisDecimalParametersPropertyToHclTerraform(struct?: AwsQuicksightAnalysis.DecimalParametersProperty | cdktn.IResolvable): any {
+export function tfAnalysisDecimalParametersPropertyToHclTerraform(struct?: TfAnalysis.DecimalParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -583,7 +583,7 @@ export function awsQuicksightAnalysisDecimalParametersPropertyToHclTerraform(str
 }
 
 
-export function awsQuicksightAnalysisIntegerParametersPropertyToTerraform(struct?: AwsQuicksightAnalysis.IntegerParametersProperty | cdktn.IResolvable): any {
+export function tfAnalysisIntegerParametersPropertyToTerraform(struct?: TfAnalysis.IntegerParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -595,7 +595,7 @@ export function awsQuicksightAnalysisIntegerParametersPropertyToTerraform(struct
 }
 
 
-export function awsQuicksightAnalysisIntegerParametersPropertyToHclTerraform(struct?: AwsQuicksightAnalysis.IntegerParametersProperty | cdktn.IResolvable): any {
+export function tfAnalysisIntegerParametersPropertyToHclTerraform(struct?: TfAnalysis.IntegerParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -620,7 +620,7 @@ export function awsQuicksightAnalysisIntegerParametersPropertyToHclTerraform(str
 }
 
 
-export function awsQuicksightAnalysisStringParametersPropertyToTerraform(struct?: AwsQuicksightAnalysis.StringParametersProperty | cdktn.IResolvable): any {
+export function tfAnalysisStringParametersPropertyToTerraform(struct?: TfAnalysis.StringParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -632,7 +632,7 @@ export function awsQuicksightAnalysisStringParametersPropertyToTerraform(struct?
 }
 
 
-export function awsQuicksightAnalysisStringParametersPropertyToHclTerraform(struct?: AwsQuicksightAnalysis.StringParametersProperty | cdktn.IResolvable): any {
+export function tfAnalysisStringParametersPropertyToHclTerraform(struct?: TfAnalysis.StringParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -657,46 +657,46 @@ export function awsQuicksightAnalysisStringParametersPropertyToHclTerraform(stru
 }
 
 
-export function awsQuicksightAnalysisParametersPropertyToTerraform(struct?: AwsQuicksightAnalysis.ParametersPropertyOutputReference | AwsQuicksightAnalysis.ParametersProperty): any {
+export function tfAnalysisParametersPropertyToTerraform(struct?: TfAnalysis.ParametersPropertyOutputReference | TfAnalysis.ParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    date_time_parameters: cdktn.listMapper(awsQuicksightAnalysisDateTimeParametersPropertyToTerraform, true)(struct!.dateTimeParameters),
-    decimal_parameters: cdktn.listMapper(awsQuicksightAnalysisDecimalParametersPropertyToTerraform, true)(struct!.decimalParameters),
-    integer_parameters: cdktn.listMapper(awsQuicksightAnalysisIntegerParametersPropertyToTerraform, true)(struct!.integerParameters),
-    string_parameters: cdktn.listMapper(awsQuicksightAnalysisStringParametersPropertyToTerraform, true)(struct!.stringParameters),
+    date_time_parameters: cdktn.listMapper(tfAnalysisDateTimeParametersPropertyToTerraform, true)(struct!.dateTimeParameters),
+    decimal_parameters: cdktn.listMapper(tfAnalysisDecimalParametersPropertyToTerraform, true)(struct!.decimalParameters),
+    integer_parameters: cdktn.listMapper(tfAnalysisIntegerParametersPropertyToTerraform, true)(struct!.integerParameters),
+    string_parameters: cdktn.listMapper(tfAnalysisStringParametersPropertyToTerraform, true)(struct!.stringParameters),
   }
 }
 
 
-export function awsQuicksightAnalysisParametersPropertyToHclTerraform(struct?: AwsQuicksightAnalysis.ParametersPropertyOutputReference | AwsQuicksightAnalysis.ParametersProperty): any {
+export function tfAnalysisParametersPropertyToHclTerraform(struct?: TfAnalysis.ParametersPropertyOutputReference | TfAnalysis.ParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     date_time_parameters: {
-      value: cdktn.listMapperHcl(awsQuicksightAnalysisDateTimeParametersPropertyToHclTerraform, true)(struct!.dateTimeParameters),
+      value: cdktn.listMapperHcl(tfAnalysisDateTimeParametersPropertyToHclTerraform, true)(struct!.dateTimeParameters),
       isBlock: true,
       type: "list",
       storageClassType: "DateTimeParametersPropertyList",
     },
     decimal_parameters: {
-      value: cdktn.listMapperHcl(awsQuicksightAnalysisDecimalParametersPropertyToHclTerraform, true)(struct!.decimalParameters),
+      value: cdktn.listMapperHcl(tfAnalysisDecimalParametersPropertyToHclTerraform, true)(struct!.decimalParameters),
       isBlock: true,
       type: "list",
       storageClassType: "DecimalParametersPropertyList",
     },
     integer_parameters: {
-      value: cdktn.listMapperHcl(awsQuicksightAnalysisIntegerParametersPropertyToHclTerraform, true)(struct!.integerParameters),
+      value: cdktn.listMapperHcl(tfAnalysisIntegerParametersPropertyToHclTerraform, true)(struct!.integerParameters),
       isBlock: true,
       type: "list",
       storageClassType: "IntegerParametersPropertyList",
     },
     string_parameters: {
-      value: cdktn.listMapperHcl(awsQuicksightAnalysisStringParametersPropertyToHclTerraform, true)(struct!.stringParameters),
+      value: cdktn.listMapperHcl(tfAnalysisStringParametersPropertyToHclTerraform, true)(struct!.stringParameters),
       isBlock: true,
       type: "list",
       storageClassType: "StringParametersPropertyList",
@@ -708,7 +708,7 @@ export function awsQuicksightAnalysisParametersPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsQuicksightAnalysisPermissionsPropertyToTerraform(struct?: AwsQuicksightAnalysis.PermissionsProperty | cdktn.IResolvable): any {
+export function tfAnalysisPermissionsPropertyToTerraform(struct?: TfAnalysis.PermissionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -720,7 +720,7 @@ export function awsQuicksightAnalysisPermissionsPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsQuicksightAnalysisPermissionsPropertyToHclTerraform(struct?: AwsQuicksightAnalysis.PermissionsProperty | cdktn.IResolvable): any {
+export function tfAnalysisPermissionsPropertyToHclTerraform(struct?: TfAnalysis.PermissionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -745,7 +745,7 @@ export function awsQuicksightAnalysisPermissionsPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsQuicksightAnalysisDataSetReferencesPropertyToTerraform(struct?: AwsQuicksightAnalysis.DataSetReferencesProperty | cdktn.IResolvable): any {
+export function tfAnalysisDataSetReferencesPropertyToTerraform(struct?: TfAnalysis.DataSetReferencesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -757,7 +757,7 @@ export function awsQuicksightAnalysisDataSetReferencesPropertyToTerraform(struct
 }
 
 
-export function awsQuicksightAnalysisDataSetReferencesPropertyToHclTerraform(struct?: AwsQuicksightAnalysis.DataSetReferencesProperty | cdktn.IResolvable): any {
+export function tfAnalysisDataSetReferencesPropertyToHclTerraform(struct?: TfAnalysis.DataSetReferencesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -782,19 +782,19 @@ export function awsQuicksightAnalysisDataSetReferencesPropertyToHclTerraform(str
 }
 
 
-export function awsQuicksightAnalysisSourceTemplatePropertyToTerraform(struct?: AwsQuicksightAnalysis.SourceTemplatePropertyOutputReference | AwsQuicksightAnalysis.SourceTemplateProperty): any {
+export function tfAnalysisSourceTemplatePropertyToTerraform(struct?: TfAnalysis.SourceTemplatePropertyOutputReference | TfAnalysis.SourceTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     arn: cdktn.stringToTerraform(struct!.arn),
-    data_set_references: cdktn.listMapper(awsQuicksightAnalysisDataSetReferencesPropertyToTerraform, true)(struct!.dataSetReferences),
+    data_set_references: cdktn.listMapper(tfAnalysisDataSetReferencesPropertyToTerraform, true)(struct!.dataSetReferences),
   }
 }
 
 
-export function awsQuicksightAnalysisSourceTemplatePropertyToHclTerraform(struct?: AwsQuicksightAnalysis.SourceTemplatePropertyOutputReference | AwsQuicksightAnalysis.SourceTemplateProperty): any {
+export function tfAnalysisSourceTemplatePropertyToHclTerraform(struct?: TfAnalysis.SourceTemplatePropertyOutputReference | TfAnalysis.SourceTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -807,7 +807,7 @@ export function awsQuicksightAnalysisSourceTemplatePropertyToHclTerraform(struct
       storageClassType: "string",
     },
     data_set_references: {
-      value: cdktn.listMapperHcl(awsQuicksightAnalysisDataSetReferencesPropertyToHclTerraform, true)(struct!.dataSetReferences),
+      value: cdktn.listMapperHcl(tfAnalysisDataSetReferencesPropertyToHclTerraform, true)(struct!.dataSetReferences),
       isBlock: true,
       type: "list",
       storageClassType: "DataSetReferencesPropertyList",
@@ -819,25 +819,25 @@ export function awsQuicksightAnalysisSourceTemplatePropertyToHclTerraform(struct
 }
 
 
-export function awsQuicksightAnalysisSourceEntityPropertyToTerraform(struct?: AwsQuicksightAnalysis.SourceEntityPropertyOutputReference | AwsQuicksightAnalysis.SourceEntityProperty): any {
+export function tfAnalysisSourceEntityPropertyToTerraform(struct?: TfAnalysis.SourceEntityPropertyOutputReference | TfAnalysis.SourceEntityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    source_template: awsQuicksightAnalysisSourceTemplatePropertyToTerraform(struct!.sourceTemplate),
+    source_template: tfAnalysisSourceTemplatePropertyToTerraform(struct!.sourceTemplate),
   }
 }
 
 
-export function awsQuicksightAnalysisSourceEntityPropertyToHclTerraform(struct?: AwsQuicksightAnalysis.SourceEntityPropertyOutputReference | AwsQuicksightAnalysis.SourceEntityProperty): any {
+export function tfAnalysisSourceEntityPropertyToHclTerraform(struct?: TfAnalysis.SourceEntityPropertyOutputReference | TfAnalysis.SourceEntityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     source_template: {
-      value: awsQuicksightAnalysisSourceTemplatePropertyToHclTerraform(struct!.sourceTemplate),
+      value: tfAnalysisSourceTemplatePropertyToHclTerraform(struct!.sourceTemplate),
       isBlock: true,
       type: "list",
       storageClassType: "SourceTemplatePropertyList",
@@ -849,7 +849,7 @@ export function awsQuicksightAnalysisSourceEntityPropertyToHclTerraform(struct?:
 }
 
 
-export function awsQuicksightAnalysisTimeoutsPropertyToTerraform(struct?: AwsQuicksightAnalysis.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfAnalysisTimeoutsPropertyToTerraform(struct?: TfAnalysis.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -862,7 +862,7 @@ export function awsQuicksightAnalysisTimeoutsPropertyToTerraform(struct?: AwsQui
 }
 
 
-export function awsQuicksightAnalysisTimeoutsPropertyToHclTerraform(struct?: AwsQuicksightAnalysis.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfAnalysisTimeoutsPropertyToHclTerraform(struct?: TfAnalysis.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -893,14 +893,14 @@ export function awsQuicksightAnalysisTimeoutsPropertyToHclTerraform(struct?: Aws
 }
 
 
-export namespace AwsQuicksightAnalysis {
+export namespace TfAnalysis {
 export interface DateTimeParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#name AwsQuicksightAnalysis#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#name TfAnalysis#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#values AwsQuicksightAnalysis#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#values TfAnalysis#values}
   */
   readonly values: string[];
 }
@@ -1002,11 +1002,11 @@ export class DateTimeParametersPropertyList extends cdktn.ComplexList {
 }
 export interface DecimalParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#name AwsQuicksightAnalysis#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#name TfAnalysis#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#values AwsQuicksightAnalysis#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#values TfAnalysis#values}
   */
   readonly values: number[];
 }
@@ -1108,11 +1108,11 @@ export class DecimalParametersPropertyList extends cdktn.ComplexList {
 }
 export interface IntegerParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#name AwsQuicksightAnalysis#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#name TfAnalysis#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#values AwsQuicksightAnalysis#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#values TfAnalysis#values}
   */
   readonly values: number[];
 }
@@ -1214,11 +1214,11 @@ export class IntegerParametersPropertyList extends cdktn.ComplexList {
 }
 export interface StringParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#name AwsQuicksightAnalysis#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#name TfAnalysis#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#values AwsQuicksightAnalysis#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#values TfAnalysis#values}
   */
   readonly values: string[];
 }
@@ -1322,25 +1322,25 @@ export interface ParametersProperty {
   /**
   * date_time_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#date_time_parameters AwsQuicksightAnalysis#date_time_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#date_time_parameters TfAnalysis#date_time_parameters}
   */
   readonly dateTimeParameters?: DateTimeParametersProperty[] | cdktn.IResolvable;
   /**
   * decimal_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#decimal_parameters AwsQuicksightAnalysis#decimal_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#decimal_parameters TfAnalysis#decimal_parameters}
   */
   readonly decimalParameters?: DecimalParametersProperty[] | cdktn.IResolvable;
   /**
   * integer_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#integer_parameters AwsQuicksightAnalysis#integer_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#integer_parameters TfAnalysis#integer_parameters}
   */
   readonly integerParameters?: IntegerParametersProperty[] | cdktn.IResolvable;
   /**
   * string_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#string_parameters AwsQuicksightAnalysis#string_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#string_parameters TfAnalysis#string_parameters}
   */
   readonly stringParameters?: StringParametersProperty[] | cdktn.IResolvable;
 }
@@ -1460,11 +1460,11 @@ export class ParametersPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface PermissionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#actions AwsQuicksightAnalysis#actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#actions TfAnalysis#actions}
   */
   readonly actions: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#principal AwsQuicksightAnalysis#principal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#principal TfAnalysis#principal}
   */
   readonly principal: string;
 }
@@ -1566,11 +1566,11 @@ export class PermissionsPropertyList extends cdktn.ComplexList {
 }
 export interface DataSetReferencesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#data_set_arn AwsQuicksightAnalysis#data_set_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#data_set_arn TfAnalysis#data_set_arn}
   */
   readonly dataSetArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#data_set_placeholder AwsQuicksightAnalysis#data_set_placeholder}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#data_set_placeholder TfAnalysis#data_set_placeholder}
   */
   readonly dataSetPlaceholder: string;
 }
@@ -1672,13 +1672,13 @@ export class DataSetReferencesPropertyList extends cdktn.ComplexList {
 }
 export interface SourceTemplateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#arn AwsQuicksightAnalysis#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#arn TfAnalysis#arn}
   */
   readonly arn: string;
   /**
   * data_set_references block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#data_set_references AwsQuicksightAnalysis#data_set_references}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#data_set_references TfAnalysis#data_set_references}
   */
   readonly dataSetReferences: DataSetReferencesProperty[] | cdktn.IResolvable;
 }
@@ -1750,7 +1750,7 @@ export interface SourceEntityProperty {
   /**
   * source_template block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#source_template AwsQuicksightAnalysis#source_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#source_template TfAnalysis#source_template}
   */
   readonly sourceTemplate?: SourceTemplateProperty;
 }
@@ -1804,15 +1804,15 @@ export class SourceEntityPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#create AwsQuicksightAnalysis#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#create TfAnalysis#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#delete AwsQuicksightAnalysis#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#delete TfAnalysis#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#update AwsQuicksightAnalysis#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_analysis#update TfAnalysis#update}
   */
   readonly update?: string;
 }

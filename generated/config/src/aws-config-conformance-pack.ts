@@ -5,52 +5,52 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsConfigConformancePackConfig extends cdktn.TerraformMetaArguments {
+export interface TfConformancePackConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_conformance_pack#delivery_s3_bucket AwsConfigConformancePack#delivery_s3_bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_conformance_pack#delivery_s3_bucket TfConformancePack#delivery_s3_bucket}
   */
   readonly deliveryS3Bucket?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_conformance_pack#delivery_s3_key_prefix AwsConfigConformancePack#delivery_s3_key_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_conformance_pack#delivery_s3_key_prefix TfConformancePack#delivery_s3_key_prefix}
   */
   readonly deliveryS3KeyPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_conformance_pack#id AwsConfigConformancePack#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_conformance_pack#id TfConformancePack#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_conformance_pack#name AwsConfigConformancePack#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_conformance_pack#name TfConformancePack#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_conformance_pack#region AwsConfigConformancePack#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_conformance_pack#region TfConformancePack#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_conformance_pack#template_body AwsConfigConformancePack#template_body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_conformance_pack#template_body TfConformancePack#template_body}
   */
   readonly templateBody?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_conformance_pack#template_s3_uri AwsConfigConformancePack#template_s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_conformance_pack#template_s3_uri TfConformancePack#template_s3_uri}
   */
   readonly templateS3Uri?: string;
   /**
   * input_parameter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_conformance_pack#input_parameter AwsConfigConformancePack#input_parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_conformance_pack#input_parameter TfConformancePack#input_parameter}
   */
-  readonly inputParameter?: AwsConfigConformancePack.InputParameterProperty[] | cdktn.IResolvable;
+  readonly inputParameter?: TfConformancePack.InputParameterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_conformance_pack aws_config_conformance_pack}
 */
-export class AwsConfigConformancePack extends cdktn.TerraformResource {
+export class TfConformancePack extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class AwsConfigConformancePack extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsConfigConformancePack resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfConformancePack resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsConfigConformancePack to import
-  * @param importFromId The id of the existing AwsConfigConformancePack that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_conformance_pack#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsConfigConformancePack to import is found
+  * @param importToId The construct id used in the generated config for the TfConformancePack to import
+  * @param importFromId The id of the existing TfConformancePack that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_conformance_pack#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfConformancePack to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_config_conformance_pack", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class AwsConfigConformancePack extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsConfigConformancePackConfig
+  * @param options TfConformancePackConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsConfigConformancePackConfig) {
+  public constructor(scope: Construct, id: string, config: TfConformancePackConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_config_conformance_pack',
       terraformGeneratorMetadata: {
@@ -227,11 +227,11 @@ export class AwsConfigConformancePack extends cdktn.TerraformResource {
   }
 
   // input_parameter - computed: false, optional: true, required: false
-  private _inputParameter = new AwsConfigConformancePack.InputParameterPropertyList(this, "input_parameter", true);
+  private _inputParameter = new TfConformancePack.InputParameterPropertyList(this, "input_parameter", true);
   public get inputParameter() {
     return this._inputParameter;
   }
-  public putInputParameter(value: AwsConfigConformancePack.InputParameterProperty[] | cdktn.IResolvable) {
+  public putInputParameter(value: TfConformancePack.InputParameterProperty[] | cdktn.IResolvable) {
     this._inputParameter.internalValue = value;
   }
   public resetInputParameter() {
@@ -255,7 +255,7 @@ export class AwsConfigConformancePack extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       template_body: cdktn.stringToTerraform(this._templateBody),
       template_s3_uri: cdktn.stringToTerraform(this._templateS3Uri),
-      input_parameter: cdktn.listMapper(awsConfigConformancePackInputParameterPropertyToTerraform, true)(this._inputParameter.internalValue),
+      input_parameter: cdktn.listMapper(tfConformancePackInputParameterPropertyToTerraform, true)(this._inputParameter.internalValue),
     };
   }
 
@@ -304,10 +304,10 @@ export class AwsConfigConformancePack extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       input_parameter: {
-        value: cdktn.listMapperHcl(awsConfigConformancePackInputParameterPropertyToHclTerraform, true)(this._inputParameter.internalValue),
+        value: cdktn.listMapperHcl(tfConformancePackInputParameterPropertyToHclTerraform, true)(this._inputParameter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsConfigConformancePack.InputParameterPropertyList",
+        storageClassType: "TfConformancePack.InputParameterPropertyList",
       },
     };
 
@@ -316,7 +316,7 @@ export class AwsConfigConformancePack extends cdktn.TerraformResource {
   }
 }
 
-export function awsConfigConformancePackInputParameterPropertyToTerraform(struct?: AwsConfigConformancePack.InputParameterProperty | cdktn.IResolvable): any {
+export function tfConformancePackInputParameterPropertyToTerraform(struct?: TfConformancePack.InputParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -328,7 +328,7 @@ export function awsConfigConformancePackInputParameterPropertyToTerraform(struct
 }
 
 
-export function awsConfigConformancePackInputParameterPropertyToHclTerraform(struct?: AwsConfigConformancePack.InputParameterProperty | cdktn.IResolvable): any {
+export function tfConformancePackInputParameterPropertyToHclTerraform(struct?: TfConformancePack.InputParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -353,14 +353,14 @@ export function awsConfigConformancePackInputParameterPropertyToHclTerraform(str
 }
 
 
-export namespace AwsConfigConformancePack {
+export namespace TfConformancePack {
 export interface InputParameterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_conformance_pack#parameter_name AwsConfigConformancePack#parameter_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_conformance_pack#parameter_name TfConformancePack#parameter_name}
   */
   readonly parameterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_conformance_pack#parameter_value AwsConfigConformancePack#parameter_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_conformance_pack#parameter_value TfConformancePack#parameter_value}
   */
   readonly parameterValue: string;
 }

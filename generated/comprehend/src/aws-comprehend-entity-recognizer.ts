@@ -5,80 +5,80 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsComprehendEntityRecognizerConfig extends cdktn.TerraformMetaArguments {
+export interface TfEntityRecognizerConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#data_access_role_arn AwsComprehendEntityRecognizer#data_access_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#data_access_role_arn TfEntityRecognizer#data_access_role_arn}
   */
   readonly dataAccessRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#id AwsComprehendEntityRecognizer#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#id TfEntityRecognizer#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#language_code AwsComprehendEntityRecognizer#language_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#language_code TfEntityRecognizer#language_code}
   */
   readonly languageCode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#model_kms_key_id AwsComprehendEntityRecognizer#model_kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#model_kms_key_id TfEntityRecognizer#model_kms_key_id}
   */
   readonly modelKmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#name AwsComprehendEntityRecognizer#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#name TfEntityRecognizer#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#region AwsComprehendEntityRecognizer#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#region TfEntityRecognizer#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#tags AwsComprehendEntityRecognizer#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#tags TfEntityRecognizer#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#tags_all AwsComprehendEntityRecognizer#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#tags_all TfEntityRecognizer#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#version_name AwsComprehendEntityRecognizer#version_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#version_name TfEntityRecognizer#version_name}
   */
   readonly versionName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#version_name_prefix AwsComprehendEntityRecognizer#version_name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#version_name_prefix TfEntityRecognizer#version_name_prefix}
   */
   readonly versionNamePrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#volume_kms_key_id AwsComprehendEntityRecognizer#volume_kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#volume_kms_key_id TfEntityRecognizer#volume_kms_key_id}
   */
   readonly volumeKmsKeyId?: string;
   /**
   * input_data_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#input_data_config AwsComprehendEntityRecognizer#input_data_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#input_data_config TfEntityRecognizer#input_data_config}
   */
-  readonly inputDataConfig: AwsComprehendEntityRecognizer.InputDataConfigProperty;
+  readonly inputDataConfig: TfEntityRecognizer.InputDataConfigProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#timeouts AwsComprehendEntityRecognizer#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#timeouts TfEntityRecognizer#timeouts}
   */
-  readonly timeouts?: AwsComprehendEntityRecognizer.TimeoutsProperty;
+  readonly timeouts?: TfEntityRecognizer.TimeoutsProperty;
   /**
   * vpc_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#vpc_config AwsComprehendEntityRecognizer#vpc_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#vpc_config TfEntityRecognizer#vpc_config}
   */
-  readonly vpcConfig?: AwsComprehendEntityRecognizer.VpcConfigProperty;
+  readonly vpcConfig?: TfEntityRecognizer.VpcConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer aws_comprehend_entity_recognizer}
 */
-export class AwsComprehendEntityRecognizer extends cdktn.TerraformResource {
+export class TfEntityRecognizer extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -89,11 +89,11 @@ export class AwsComprehendEntityRecognizer extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsComprehendEntityRecognizer resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfEntityRecognizer resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsComprehendEntityRecognizer to import
-  * @param importFromId The id of the existing AwsComprehendEntityRecognizer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsComprehendEntityRecognizer to import is found
+  * @param importToId The construct id used in the generated config for the TfEntityRecognizer to import
+  * @param importFromId The id of the existing TfEntityRecognizer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfEntityRecognizer to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_comprehend_entity_recognizer", importId: importFromId, provider });
@@ -108,9 +108,9 @@ export class AwsComprehendEntityRecognizer extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsComprehendEntityRecognizerConfig
+  * @param options TfEntityRecognizerConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsComprehendEntityRecognizerConfig) {
+  public constructor(scope: Construct, id: string, config: TfEntityRecognizerConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_comprehend_entity_recognizer',
       terraformGeneratorMetadata: {
@@ -319,11 +319,11 @@ export class AwsComprehendEntityRecognizer extends cdktn.TerraformResource {
   }
 
   // input_data_config - computed: false, optional: false, required: true
-  private _inputDataConfig = new AwsComprehendEntityRecognizer.InputDataConfigPropertyOutputReference(this, "input_data_config");
+  private _inputDataConfig = new TfEntityRecognizer.InputDataConfigPropertyOutputReference(this, "input_data_config");
   public get inputDataConfig() {
     return this._inputDataConfig;
   }
-  public putInputDataConfig(value: AwsComprehendEntityRecognizer.InputDataConfigProperty) {
+  public putInputDataConfig(value: TfEntityRecognizer.InputDataConfigProperty) {
     this._inputDataConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -332,11 +332,11 @@ export class AwsComprehendEntityRecognizer extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsComprehendEntityRecognizer.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfEntityRecognizer.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsComprehendEntityRecognizer.TimeoutsProperty) {
+  public putTimeouts(value: TfEntityRecognizer.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -348,11 +348,11 @@ export class AwsComprehendEntityRecognizer extends cdktn.TerraformResource {
   }
 
   // vpc_config - computed: false, optional: true, required: false
-  private _vpcConfig = new AwsComprehendEntityRecognizer.VpcConfigPropertyOutputReference(this, "vpc_config");
+  private _vpcConfig = new TfEntityRecognizer.VpcConfigPropertyOutputReference(this, "vpc_config");
   public get vpcConfig() {
     return this._vpcConfig;
   }
-  public putVpcConfig(value: AwsComprehendEntityRecognizer.VpcConfigProperty) {
+  public putVpcConfig(value: TfEntityRecognizer.VpcConfigProperty) {
     this._vpcConfig.internalValue = value;
   }
   public resetVpcConfig() {
@@ -380,9 +380,9 @@ export class AwsComprehendEntityRecognizer extends cdktn.TerraformResource {
       version_name: cdktn.stringToTerraform(this._versionName),
       version_name_prefix: cdktn.stringToTerraform(this._versionNamePrefix),
       volume_kms_key_id: cdktn.stringToTerraform(this._volumeKmsKeyId),
-      input_data_config: awsComprehendEntityRecognizerInputDataConfigPropertyToTerraform(this._inputDataConfig.internalValue),
-      timeouts: awsComprehendEntityRecognizerTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      vpc_config: awsComprehendEntityRecognizerVpcConfigPropertyToTerraform(this._vpcConfig.internalValue),
+      input_data_config: tfEntityRecognizerInputDataConfigPropertyToTerraform(this._inputDataConfig.internalValue),
+      timeouts: tfEntityRecognizerTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      vpc_config: tfEntityRecognizerVpcConfigPropertyToTerraform(this._vpcConfig.internalValue),
     };
   }
 
@@ -455,22 +455,22 @@ export class AwsComprehendEntityRecognizer extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       input_data_config: {
-        value: awsComprehendEntityRecognizerInputDataConfigPropertyToHclTerraform(this._inputDataConfig.internalValue),
+        value: tfEntityRecognizerInputDataConfigPropertyToHclTerraform(this._inputDataConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsComprehendEntityRecognizer.InputDataConfigPropertyList",
+        storageClassType: "TfEntityRecognizer.InputDataConfigPropertyList",
       },
       timeouts: {
-        value: awsComprehendEntityRecognizerTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfEntityRecognizerTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsComprehendEntityRecognizer.TimeoutsProperty",
+        storageClassType: "TfEntityRecognizer.TimeoutsProperty",
       },
       vpc_config: {
-        value: awsComprehendEntityRecognizerVpcConfigPropertyToHclTerraform(this._vpcConfig.internalValue),
+        value: tfEntityRecognizerVpcConfigPropertyToHclTerraform(this._vpcConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsComprehendEntityRecognizer.VpcConfigPropertyList",
+        storageClassType: "TfEntityRecognizer.VpcConfigPropertyList",
       },
     };
 
@@ -479,7 +479,7 @@ export class AwsComprehendEntityRecognizer extends cdktn.TerraformResource {
   }
 }
 
-export function awsComprehendEntityRecognizerAnnotationsPropertyToTerraform(struct?: AwsComprehendEntityRecognizer.AnnotationsPropertyOutputReference | AwsComprehendEntityRecognizer.AnnotationsProperty): any {
+export function tfEntityRecognizerAnnotationsPropertyToTerraform(struct?: TfEntityRecognizer.AnnotationsPropertyOutputReference | TfEntityRecognizer.AnnotationsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -491,7 +491,7 @@ export function awsComprehendEntityRecognizerAnnotationsPropertyToTerraform(stru
 }
 
 
-export function awsComprehendEntityRecognizerAnnotationsPropertyToHclTerraform(struct?: AwsComprehendEntityRecognizer.AnnotationsPropertyOutputReference | AwsComprehendEntityRecognizer.AnnotationsProperty): any {
+export function tfEntityRecognizerAnnotationsPropertyToHclTerraform(struct?: TfEntityRecognizer.AnnotationsPropertyOutputReference | TfEntityRecognizer.AnnotationsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -516,7 +516,7 @@ export function awsComprehendEntityRecognizerAnnotationsPropertyToHclTerraform(s
 }
 
 
-export function awsComprehendEntityRecognizerAugmentedManifestsPropertyToTerraform(struct?: AwsComprehendEntityRecognizer.AugmentedManifestsProperty | cdktn.IResolvable): any {
+export function tfEntityRecognizerAugmentedManifestsPropertyToTerraform(struct?: TfEntityRecognizer.AugmentedManifestsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -532,7 +532,7 @@ export function awsComprehendEntityRecognizerAugmentedManifestsPropertyToTerrafo
 }
 
 
-export function awsComprehendEntityRecognizerAugmentedManifestsPropertyToHclTerraform(struct?: AwsComprehendEntityRecognizer.AugmentedManifestsProperty | cdktn.IResolvable): any {
+export function tfEntityRecognizerAugmentedManifestsPropertyToHclTerraform(struct?: TfEntityRecognizer.AugmentedManifestsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -581,7 +581,7 @@ export function awsComprehendEntityRecognizerAugmentedManifestsPropertyToHclTerr
 }
 
 
-export function awsComprehendEntityRecognizerDocumentsPropertyToTerraform(struct?: AwsComprehendEntityRecognizer.DocumentsPropertyOutputReference | AwsComprehendEntityRecognizer.DocumentsProperty): any {
+export function tfEntityRecognizerDocumentsPropertyToTerraform(struct?: TfEntityRecognizer.DocumentsPropertyOutputReference | TfEntityRecognizer.DocumentsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -594,7 +594,7 @@ export function awsComprehendEntityRecognizerDocumentsPropertyToTerraform(struct
 }
 
 
-export function awsComprehendEntityRecognizerDocumentsPropertyToHclTerraform(struct?: AwsComprehendEntityRecognizer.DocumentsPropertyOutputReference | AwsComprehendEntityRecognizer.DocumentsProperty): any {
+export function tfEntityRecognizerDocumentsPropertyToHclTerraform(struct?: TfEntityRecognizer.DocumentsPropertyOutputReference | TfEntityRecognizer.DocumentsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -625,7 +625,7 @@ export function awsComprehendEntityRecognizerDocumentsPropertyToHclTerraform(str
 }
 
 
-export function awsComprehendEntityRecognizerEntityListPropertyToTerraform(struct?: AwsComprehendEntityRecognizer.EntityListPropertyOutputReference | AwsComprehendEntityRecognizer.EntityListProperty): any {
+export function tfEntityRecognizerEntityListPropertyToTerraform(struct?: TfEntityRecognizer.EntityListPropertyOutputReference | TfEntityRecognizer.EntityListProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -636,7 +636,7 @@ export function awsComprehendEntityRecognizerEntityListPropertyToTerraform(struc
 }
 
 
-export function awsComprehendEntityRecognizerEntityListPropertyToHclTerraform(struct?: AwsComprehendEntityRecognizer.EntityListPropertyOutputReference | AwsComprehendEntityRecognizer.EntityListProperty): any {
+export function tfEntityRecognizerEntityListPropertyToHclTerraform(struct?: TfEntityRecognizer.EntityListPropertyOutputReference | TfEntityRecognizer.EntityListProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -655,7 +655,7 @@ export function awsComprehendEntityRecognizerEntityListPropertyToHclTerraform(st
 }
 
 
-export function awsComprehendEntityRecognizerEntityTypesPropertyToTerraform(struct?: AwsComprehendEntityRecognizer.EntityTypesProperty | cdktn.IResolvable): any {
+export function tfEntityRecognizerEntityTypesPropertyToTerraform(struct?: TfEntityRecognizer.EntityTypesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -666,7 +666,7 @@ export function awsComprehendEntityRecognizerEntityTypesPropertyToTerraform(stru
 }
 
 
-export function awsComprehendEntityRecognizerEntityTypesPropertyToHclTerraform(struct?: AwsComprehendEntityRecognizer.EntityTypesProperty | cdktn.IResolvable): any {
+export function tfEntityRecognizerEntityTypesPropertyToHclTerraform(struct?: TfEntityRecognizer.EntityTypesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -685,23 +685,23 @@ export function awsComprehendEntityRecognizerEntityTypesPropertyToHclTerraform(s
 }
 
 
-export function awsComprehendEntityRecognizerInputDataConfigPropertyToTerraform(struct?: AwsComprehendEntityRecognizer.InputDataConfigPropertyOutputReference | AwsComprehendEntityRecognizer.InputDataConfigProperty): any {
+export function tfEntityRecognizerInputDataConfigPropertyToTerraform(struct?: TfEntityRecognizer.InputDataConfigPropertyOutputReference | TfEntityRecognizer.InputDataConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     data_format: cdktn.stringToTerraform(struct!.dataFormat),
-    annotations: awsComprehendEntityRecognizerAnnotationsPropertyToTerraform(struct!.annotations),
-    augmented_manifests: cdktn.listMapper(awsComprehendEntityRecognizerAugmentedManifestsPropertyToTerraform, true)(struct!.augmentedManifests),
-    documents: awsComprehendEntityRecognizerDocumentsPropertyToTerraform(struct!.documents),
-    entity_list: awsComprehendEntityRecognizerEntityListPropertyToTerraform(struct!.entityList),
-    entity_types: cdktn.listMapper(awsComprehendEntityRecognizerEntityTypesPropertyToTerraform, true)(struct!.entityTypes),
+    annotations: tfEntityRecognizerAnnotationsPropertyToTerraform(struct!.annotations),
+    augmented_manifests: cdktn.listMapper(tfEntityRecognizerAugmentedManifestsPropertyToTerraform, true)(struct!.augmentedManifests),
+    documents: tfEntityRecognizerDocumentsPropertyToTerraform(struct!.documents),
+    entity_list: tfEntityRecognizerEntityListPropertyToTerraform(struct!.entityList),
+    entity_types: cdktn.listMapper(tfEntityRecognizerEntityTypesPropertyToTerraform, true)(struct!.entityTypes),
   }
 }
 
 
-export function awsComprehendEntityRecognizerInputDataConfigPropertyToHclTerraform(struct?: AwsComprehendEntityRecognizer.InputDataConfigPropertyOutputReference | AwsComprehendEntityRecognizer.InputDataConfigProperty): any {
+export function tfEntityRecognizerInputDataConfigPropertyToHclTerraform(struct?: TfEntityRecognizer.InputDataConfigPropertyOutputReference | TfEntityRecognizer.InputDataConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -714,31 +714,31 @@ export function awsComprehendEntityRecognizerInputDataConfigPropertyToHclTerrafo
       storageClassType: "string",
     },
     annotations: {
-      value: awsComprehendEntityRecognizerAnnotationsPropertyToHclTerraform(struct!.annotations),
+      value: tfEntityRecognizerAnnotationsPropertyToHclTerraform(struct!.annotations),
       isBlock: true,
       type: "list",
       storageClassType: "AnnotationsPropertyList",
     },
     augmented_manifests: {
-      value: cdktn.listMapperHcl(awsComprehendEntityRecognizerAugmentedManifestsPropertyToHclTerraform, true)(struct!.augmentedManifests),
+      value: cdktn.listMapperHcl(tfEntityRecognizerAugmentedManifestsPropertyToHclTerraform, true)(struct!.augmentedManifests),
       isBlock: true,
       type: "set",
       storageClassType: "AugmentedManifestsPropertyList",
     },
     documents: {
-      value: awsComprehendEntityRecognizerDocumentsPropertyToHclTerraform(struct!.documents),
+      value: tfEntityRecognizerDocumentsPropertyToHclTerraform(struct!.documents),
       isBlock: true,
       type: "list",
       storageClassType: "DocumentsPropertyList",
     },
     entity_list: {
-      value: awsComprehendEntityRecognizerEntityListPropertyToHclTerraform(struct!.entityList),
+      value: tfEntityRecognizerEntityListPropertyToHclTerraform(struct!.entityList),
       isBlock: true,
       type: "list",
       storageClassType: "EntityListPropertyList",
     },
     entity_types: {
-      value: cdktn.listMapperHcl(awsComprehendEntityRecognizerEntityTypesPropertyToHclTerraform, true)(struct!.entityTypes),
+      value: cdktn.listMapperHcl(tfEntityRecognizerEntityTypesPropertyToHclTerraform, true)(struct!.entityTypes),
       isBlock: true,
       type: "set",
       storageClassType: "EntityTypesPropertyList",
@@ -750,7 +750,7 @@ export function awsComprehendEntityRecognizerInputDataConfigPropertyToHclTerrafo
 }
 
 
-export function awsComprehendEntityRecognizerTimeoutsPropertyToTerraform(struct?: AwsComprehendEntityRecognizer.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfEntityRecognizerTimeoutsPropertyToTerraform(struct?: TfEntityRecognizer.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -763,7 +763,7 @@ export function awsComprehendEntityRecognizerTimeoutsPropertyToTerraform(struct?
 }
 
 
-export function awsComprehendEntityRecognizerTimeoutsPropertyToHclTerraform(struct?: AwsComprehendEntityRecognizer.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfEntityRecognizerTimeoutsPropertyToHclTerraform(struct?: TfEntityRecognizer.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -794,7 +794,7 @@ export function awsComprehendEntityRecognizerTimeoutsPropertyToHclTerraform(stru
 }
 
 
-export function awsComprehendEntityRecognizerVpcConfigPropertyToTerraform(struct?: AwsComprehendEntityRecognizer.VpcConfigPropertyOutputReference | AwsComprehendEntityRecognizer.VpcConfigProperty): any {
+export function tfEntityRecognizerVpcConfigPropertyToTerraform(struct?: TfEntityRecognizer.VpcConfigPropertyOutputReference | TfEntityRecognizer.VpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -806,7 +806,7 @@ export function awsComprehendEntityRecognizerVpcConfigPropertyToTerraform(struct
 }
 
 
-export function awsComprehendEntityRecognizerVpcConfigPropertyToHclTerraform(struct?: AwsComprehendEntityRecognizer.VpcConfigPropertyOutputReference | AwsComprehendEntityRecognizer.VpcConfigProperty): any {
+export function tfEntityRecognizerVpcConfigPropertyToHclTerraform(struct?: TfEntityRecognizer.VpcConfigPropertyOutputReference | TfEntityRecognizer.VpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -831,14 +831,14 @@ export function awsComprehendEntityRecognizerVpcConfigPropertyToHclTerraform(str
 }
 
 
-export namespace AwsComprehendEntityRecognizer {
+export namespace TfEntityRecognizer {
 export interface AnnotationsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#s3_uri AwsComprehendEntityRecognizer#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#s3_uri TfEntityRecognizer#s3_uri}
   */
   readonly s3Uri: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#test_s3_uri AwsComprehendEntityRecognizer#test_s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#test_s3_uri TfEntityRecognizer#test_s3_uri}
   */
   readonly testS3Uri?: string;
 }
@@ -911,27 +911,27 @@ export class AnnotationsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface AugmentedManifestsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#annotation_data_s3_uri AwsComprehendEntityRecognizer#annotation_data_s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#annotation_data_s3_uri TfEntityRecognizer#annotation_data_s3_uri}
   */
   readonly annotationDataS3Uri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#attribute_names AwsComprehendEntityRecognizer#attribute_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#attribute_names TfEntityRecognizer#attribute_names}
   */
   readonly attributeNames: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#document_type AwsComprehendEntityRecognizer#document_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#document_type TfEntityRecognizer#document_type}
   */
   readonly documentType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#s3_uri AwsComprehendEntityRecognizer#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#s3_uri TfEntityRecognizer#s3_uri}
   */
   readonly s3Uri: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#source_documents_s3_uri AwsComprehendEntityRecognizer#source_documents_s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#source_documents_s3_uri TfEntityRecognizer#source_documents_s3_uri}
   */
   readonly sourceDocumentsS3Uri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#split AwsComprehendEntityRecognizer#split}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#split TfEntityRecognizer#split}
   */
   readonly split?: string;
 }
@@ -1121,15 +1121,15 @@ export class AugmentedManifestsPropertyList extends cdktn.ComplexList {
 }
 export interface DocumentsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#input_format AwsComprehendEntityRecognizer#input_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#input_format TfEntityRecognizer#input_format}
   */
   readonly inputFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#s3_uri AwsComprehendEntityRecognizer#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#s3_uri TfEntityRecognizer#s3_uri}
   */
   readonly s3Uri: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#test_s3_uri AwsComprehendEntityRecognizer#test_s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#test_s3_uri TfEntityRecognizer#test_s3_uri}
   */
   readonly testS3Uri?: string;
 }
@@ -1224,7 +1224,7 @@ export class DocumentsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface EntityListProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#s3_uri AwsComprehendEntityRecognizer#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#s3_uri TfEntityRecognizer#s3_uri}
   */
   readonly s3Uri: string;
 }
@@ -1275,7 +1275,7 @@ export class EntityListPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface EntityTypesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#type AwsComprehendEntityRecognizer#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#type TfEntityRecognizer#type}
   */
   readonly type: string;
 }
@@ -1358,37 +1358,37 @@ export class EntityTypesPropertyList extends cdktn.ComplexList {
 }
 export interface InputDataConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#data_format AwsComprehendEntityRecognizer#data_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#data_format TfEntityRecognizer#data_format}
   */
   readonly dataFormat?: string;
   /**
   * annotations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#annotations AwsComprehendEntityRecognizer#annotations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#annotations TfEntityRecognizer#annotations}
   */
   readonly annotations?: AnnotationsProperty;
   /**
   * augmented_manifests block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#augmented_manifests AwsComprehendEntityRecognizer#augmented_manifests}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#augmented_manifests TfEntityRecognizer#augmented_manifests}
   */
   readonly augmentedManifests?: AugmentedManifestsProperty[] | cdktn.IResolvable;
   /**
   * documents block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#documents AwsComprehendEntityRecognizer#documents}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#documents TfEntityRecognizer#documents}
   */
   readonly documents?: DocumentsProperty;
   /**
   * entity_list block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#entity_list AwsComprehendEntityRecognizer#entity_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#entity_list TfEntityRecognizer#entity_list}
   */
   readonly entityList?: EntityListProperty;
   /**
   * entity_types block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#entity_types AwsComprehendEntityRecognizer#entity_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#entity_types TfEntityRecognizer#entity_types}
   */
   readonly entityTypes: EntityTypesProperty[] | cdktn.IResolvable;
 }
@@ -1549,15 +1549,15 @@ export class InputDataConfigPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#create AwsComprehendEntityRecognizer#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#create TfEntityRecognizer#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#delete AwsComprehendEntityRecognizer#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#delete TfEntityRecognizer#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#update AwsComprehendEntityRecognizer#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#update TfEntityRecognizer#update}
   */
   readonly update?: string;
 }
@@ -1665,11 +1665,11 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VpcConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#security_group_ids AwsComprehendEntityRecognizer#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#security_group_ids TfEntityRecognizer#security_group_ids}
   */
   readonly securityGroupIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#subnets AwsComprehendEntityRecognizer#subnets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#subnets TfEntityRecognizer#subnets}
   */
   readonly subnets: string[];
 }

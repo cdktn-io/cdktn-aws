@@ -5,42 +5,42 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDxGatewayConfig extends cdktn.TerraformMetaArguments {
+export interface TfGatewayConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway#amazon_side_asn AwsDxGateway#amazon_side_asn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway#amazon_side_asn TfGateway#amazon_side_asn}
   */
   readonly amazonSideAsn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway#id AwsDxGateway#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway#id TfGateway#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway#name AwsDxGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway#name TfGateway#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway#tags AwsDxGateway#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway#tags TfGateway#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway#tags_all AwsDxGateway#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway#tags_all TfGateway#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway#timeouts AwsDxGateway#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway#timeouts TfGateway#timeouts}
   */
-  readonly timeouts?: AwsDxGateway.TimeoutsProperty;
+  readonly timeouts?: TfGateway.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway aws_dx_gateway}
 */
-export class AwsDxGateway extends cdktn.TerraformResource {
+export class TfGateway extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class AwsDxGateway extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDxGateway resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfGateway resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDxGateway to import
-  * @param importFromId The id of the existing AwsDxGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDxGateway to import is found
+  * @param importToId The construct id used in the generated config for the TfGateway to import
+  * @param importFromId The id of the existing TfGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfGateway to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_dx_gateway", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class AwsDxGateway extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDxGatewayConfig
+  * @param options TfGatewayConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDxGatewayConfig) {
+  public constructor(scope: Construct, id: string, config: TfGatewayConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_dx_gateway',
       terraformGeneratorMetadata: {
@@ -185,11 +185,11 @@ export class AwsDxGateway extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsDxGateway.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfGateway.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsDxGateway.TimeoutsProperty) {
+  public putTimeouts(value: TfGateway.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -211,7 +211,7 @@ export class AwsDxGateway extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: awsDxGatewayTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfGatewayTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -248,10 +248,10 @@ export class AwsDxGateway extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsDxGatewayTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfGatewayTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsDxGateway.TimeoutsProperty",
+        storageClassType: "TfGateway.TimeoutsProperty",
       },
     };
 
@@ -260,7 +260,7 @@ export class AwsDxGateway extends cdktn.TerraformResource {
   }
 }
 
-export function awsDxGatewayTimeoutsPropertyToTerraform(struct?: AwsDxGateway.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfGatewayTimeoutsPropertyToTerraform(struct?: TfGateway.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -272,7 +272,7 @@ export function awsDxGatewayTimeoutsPropertyToTerraform(struct?: AwsDxGateway.Ti
 }
 
 
-export function awsDxGatewayTimeoutsPropertyToHclTerraform(struct?: AwsDxGateway.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfGatewayTimeoutsPropertyToHclTerraform(struct?: TfGateway.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -297,14 +297,14 @@ export function awsDxGatewayTimeoutsPropertyToHclTerraform(struct?: AwsDxGateway
 }
 
 
-export namespace AwsDxGateway {
+export namespace TfGateway {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway#create AwsDxGateway#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway#create TfGateway#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway#delete AwsDxGateway#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway#delete TfGateway#delete}
   */
   readonly delete?: string;
 }

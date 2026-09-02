@@ -5,52 +5,52 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsRouteTableConfig extends cdktn.TerraformMetaArguments {
+export interface TfRouteTableConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#id AwsRouteTable#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#id TfRouteTable#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#propagating_vgws AwsRouteTable#propagating_vgws}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#propagating_vgws TfRouteTable#propagating_vgws}
   */
   readonly propagatingVgws?: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#region AwsRouteTable#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#region TfRouteTable#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#route AwsRouteTable#route}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#route TfRouteTable#route}
   */
-  readonly route?: AwsRouteTable.RouteProperty[] | cdktn.IResolvable;
+  readonly route?: TfRouteTable.RouteProperty[] | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#tags AwsRouteTable#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#tags TfRouteTable#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#tags_all AwsRouteTable#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#tags_all TfRouteTable#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#vpc_id AwsRouteTable#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#vpc_id TfRouteTable#vpc_id}
   */
   readonly vpcId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#timeouts AwsRouteTable#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#timeouts TfRouteTable#timeouts}
   */
-  readonly timeouts?: AwsRouteTable.TimeoutsProperty;
+  readonly timeouts?: TfRouteTable.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table aws_route_table}
 */
-export class AwsRouteTable extends cdktn.TerraformResource {
+export class TfRouteTable extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class AwsRouteTable extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsRouteTable resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfRouteTable resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsRouteTable to import
-  * @param importFromId The id of the existing AwsRouteTable that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsRouteTable to import is found
+  * @param importToId The construct id used in the generated config for the TfRouteTable to import
+  * @param importFromId The id of the existing TfRouteTable that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfRouteTable to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route_table", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class AwsRouteTable extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsRouteTableConfig
+  * @param options TfRouteTableConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsRouteTableConfig) {
+  public constructor(scope: Construct, id: string, config: TfRouteTableConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_route_table',
       terraformGeneratorMetadata: {
@@ -171,11 +171,11 @@ export class AwsRouteTable extends cdktn.TerraformResource {
   }
 
   // route - computed: true, optional: true, required: false
-  private _route = new AwsRouteTable.RoutePropertyList(this, "route", true);
+  private _route = new TfRouteTable.RoutePropertyList(this, "route", true);
   public get route() {
     return this._route;
   }
-  public putRoute(value: AwsRouteTable.RouteProperty[] | cdktn.IResolvable) {
+  public putRoute(value: TfRouteTable.RouteProperty[] | cdktn.IResolvable) {
     this._route.internalValue = value;
   }
   public resetRoute() {
@@ -232,11 +232,11 @@ export class AwsRouteTable extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsRouteTable.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfRouteTable.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsRouteTable.TimeoutsProperty) {
+  public putTimeouts(value: TfRouteTable.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -256,11 +256,11 @@ export class AwsRouteTable extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       propagating_vgws: cdktn.listMapper(cdktn.stringToTerraform, false)(this._propagatingVgws),
       region: cdktn.stringToTerraform(this._region),
-      route: cdktn.listMapper(awsRouteTableRoutePropertyToTerraform, false)(this._route.internalValue),
+      route: cdktn.listMapper(tfRouteTableRoutePropertyToTerraform, false)(this._route.internalValue),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       vpc_id: cdktn.stringToTerraform(this._vpcId),
-      timeouts: awsRouteTableTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfRouteTableTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -285,10 +285,10 @@ export class AwsRouteTable extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       route: {
-        value: cdktn.listMapperHcl(awsRouteTableRoutePropertyToHclTerraform, false)(this._route.internalValue),
+        value: cdktn.listMapperHcl(tfRouteTableRoutePropertyToHclTerraform, false)(this._route.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsRouteTable.RoutePropertyList",
+        storageClassType: "TfRouteTable.RoutePropertyList",
       },
       tags: {
         value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
@@ -309,10 +309,10 @@ export class AwsRouteTable extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsRouteTableTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfRouteTableTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsRouteTable.TimeoutsProperty",
+        storageClassType: "TfRouteTable.TimeoutsProperty",
       },
     };
 
@@ -321,7 +321,7 @@ export class AwsRouteTable extends cdktn.TerraformResource {
   }
 }
 
-export function awsRouteTableRoutePropertyToTerraform(struct?: AwsRouteTable.RouteProperty | cdktn.IResolvable): any {
+export function tfRouteTableRoutePropertyToTerraform(struct?: TfRouteTable.RouteProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -345,7 +345,7 @@ export function awsRouteTableRoutePropertyToTerraform(struct?: AwsRouteTable.Rou
 }
 
 
-export function awsRouteTableRoutePropertyToHclTerraform(struct?: AwsRouteTable.RouteProperty | cdktn.IResolvable): any {
+export function tfRouteTableRoutePropertyToHclTerraform(struct?: TfRouteTable.RouteProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -442,7 +442,7 @@ export function awsRouteTableRoutePropertyToHclTerraform(struct?: AwsRouteTable.
 }
 
 
-export function awsRouteTableTimeoutsPropertyToTerraform(struct?: AwsRouteTable.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfRouteTableTimeoutsPropertyToTerraform(struct?: TfRouteTable.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -455,7 +455,7 @@ export function awsRouteTableTimeoutsPropertyToTerraform(struct?: AwsRouteTable.
 }
 
 
-export function awsRouteTableTimeoutsPropertyToHclTerraform(struct?: AwsRouteTable.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfRouteTableTimeoutsPropertyToHclTerraform(struct?: TfRouteTable.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -486,62 +486,62 @@ export function awsRouteTableTimeoutsPropertyToHclTerraform(struct?: AwsRouteTab
 }
 
 
-export namespace AwsRouteTable {
+export namespace TfRouteTable {
 export interface RouteProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#carrier_gateway_id AwsRouteTable#carrier_gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#carrier_gateway_id TfRouteTable#carrier_gateway_id}
   */
   readonly carrierGatewayId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#cidr_block AwsRouteTable#cidr_block}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#cidr_block TfRouteTable#cidr_block}
   */
   readonly cidrBlock?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#core_network_arn AwsRouteTable#core_network_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#core_network_arn TfRouteTable#core_network_arn}
   */
   readonly coreNetworkArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#destination_prefix_list_id AwsRouteTable#destination_prefix_list_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#destination_prefix_list_id TfRouteTable#destination_prefix_list_id}
   */
   readonly destinationPrefixListId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#egress_only_gateway_id AwsRouteTable#egress_only_gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#egress_only_gateway_id TfRouteTable#egress_only_gateway_id}
   */
   readonly egressOnlyGatewayId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#gateway_id AwsRouteTable#gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#gateway_id TfRouteTable#gateway_id}
   */
   readonly gatewayId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#ipv6_cidr_block AwsRouteTable#ipv6_cidr_block}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#ipv6_cidr_block TfRouteTable#ipv6_cidr_block}
   */
   readonly ipv6CidrBlock?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#local_gateway_id AwsRouteTable#local_gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#local_gateway_id TfRouteTable#local_gateway_id}
   */
   readonly localGatewayId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#nat_gateway_id AwsRouteTable#nat_gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#nat_gateway_id TfRouteTable#nat_gateway_id}
   */
   readonly natGatewayId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#network_interface_id AwsRouteTable#network_interface_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#network_interface_id TfRouteTable#network_interface_id}
   */
   readonly networkInterfaceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#odb_network_arn AwsRouteTable#odb_network_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#odb_network_arn TfRouteTable#odb_network_arn}
   */
   readonly odbNetworkArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#transit_gateway_id AwsRouteTable#transit_gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#transit_gateway_id TfRouteTable#transit_gateway_id}
   */
   readonly transitGatewayId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#vpc_endpoint_id AwsRouteTable#vpc_endpoint_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#vpc_endpoint_id TfRouteTable#vpc_endpoint_id}
   */
   readonly vpcEndpointId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#vpc_peering_connection_id AwsRouteTable#vpc_peering_connection_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#vpc_peering_connection_id TfRouteTable#vpc_peering_connection_id}
   */
   readonly vpcPeeringConnectionId?: string;
 }
@@ -913,15 +913,15 @@ export class RoutePropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#create AwsRouteTable#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#create TfRouteTable#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#delete AwsRouteTable#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#delete TfRouteTable#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#update AwsRouteTable#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route_table#update TfRouteTable#update}
   */
   readonly update?: string;
 }

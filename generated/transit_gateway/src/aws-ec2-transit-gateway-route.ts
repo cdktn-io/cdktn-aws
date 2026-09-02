@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEc2TransitGatewayRouteConfig extends cdktn.TerraformMetaArguments {
+export interface TfTransitGatewayRouteConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route#blackhole AwsEc2TransitGatewayRoute#blackhole}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route#blackhole TfTransitGatewayRoute#blackhole}
   */
   readonly blackhole?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route#destination_cidr_block AwsEc2TransitGatewayRoute#destination_cidr_block}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route#destination_cidr_block TfTransitGatewayRoute#destination_cidr_block}
   */
   readonly destinationCidrBlock: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route#id AwsEc2TransitGatewayRoute#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route#id TfTransitGatewayRoute#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,15 +24,15 @@ export interface AwsEc2TransitGatewayRouteConfig extends cdktn.TerraformMetaArgu
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route#region AwsEc2TransitGatewayRoute#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route#region TfTransitGatewayRoute#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route#transit_gateway_attachment_id AwsEc2TransitGatewayRoute#transit_gateway_attachment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route#transit_gateway_attachment_id TfTransitGatewayRoute#transit_gateway_attachment_id}
   */
   readonly transitGatewayAttachmentId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route#transit_gateway_route_table_id AwsEc2TransitGatewayRoute#transit_gateway_route_table_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route#transit_gateway_route_table_id TfTransitGatewayRoute#transit_gateway_route_table_id}
   */
   readonly transitGatewayRouteTableId: string;
 }
@@ -40,7 +40,7 @@ export interface AwsEc2TransitGatewayRouteConfig extends cdktn.TerraformMetaArgu
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route aws_ec2_transit_gateway_route}
 */
-export class AwsEc2TransitGatewayRoute extends cdktn.TerraformResource {
+export class TfTransitGatewayRoute extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class AwsEc2TransitGatewayRoute extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEc2TransitGatewayRoute resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfTransitGatewayRoute resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEc2TransitGatewayRoute to import
-  * @param importFromId The id of the existing AwsEc2TransitGatewayRoute that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEc2TransitGatewayRoute to import is found
+  * @param importToId The construct id used in the generated config for the TfTransitGatewayRoute to import
+  * @param importFromId The id of the existing TfTransitGatewayRoute that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfTransitGatewayRoute to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_transit_gateway_route", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class AwsEc2TransitGatewayRoute extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEc2TransitGatewayRouteConfig
+  * @param options TfTransitGatewayRouteConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEc2TransitGatewayRouteConfig) {
+  public constructor(scope: Construct, id: string, config: TfTransitGatewayRouteConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_transit_gateway_route',
       terraformGeneratorMetadata: {

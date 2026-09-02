@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsPinpointsmsvoicev2OptOutListConfig extends cdktn.TerraformMetaArguments {
+export interface TfOptOutListConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_opt_out_list#name AwsPinpointsmsvoicev2OptOutList#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_opt_out_list#name TfOptOutList#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_opt_out_list#region AwsPinpointsmsvoicev2OptOutList#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_opt_out_list#region TfOptOutList#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_opt_out_list#tags AwsPinpointsmsvoicev2OptOutList#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_opt_out_list#tags TfOptOutList#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -25,7 +25,7 @@ export interface AwsPinpointsmsvoicev2OptOutListConfig extends cdktn.TerraformMe
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_opt_out_list aws_pinpointsmsvoicev2_opt_out_list}
 */
-export class AwsPinpointsmsvoicev2OptOutList extends cdktn.TerraformResource {
+export class TfOptOutList extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -36,11 +36,11 @@ export class AwsPinpointsmsvoicev2OptOutList extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsPinpointsmsvoicev2OptOutList resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfOptOutList resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsPinpointsmsvoicev2OptOutList to import
-  * @param importFromId The id of the existing AwsPinpointsmsvoicev2OptOutList that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_opt_out_list#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsPinpointsmsvoicev2OptOutList to import is found
+  * @param importToId The construct id used in the generated config for the TfOptOutList to import
+  * @param importFromId The id of the existing TfOptOutList that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_opt_out_list#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfOptOutList to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_pinpointsmsvoicev2_opt_out_list", importId: importFromId, provider });
@@ -55,9 +55,9 @@ export class AwsPinpointsmsvoicev2OptOutList extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsPinpointsmsvoicev2OptOutListConfig
+  * @param options TfOptOutListConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsPinpointsmsvoicev2OptOutListConfig) {
+  public constructor(scope: Construct, id: string, config: TfOptOutListConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_pinpointsmsvoicev2_opt_out_list',
       terraformGeneratorMetadata: {

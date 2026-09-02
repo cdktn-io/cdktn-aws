@@ -5,47 +5,47 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDatazoneAssetTypeConfig extends cdktn.TerraformMetaArguments {
+export interface TfAssetTypeConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#description AwsDatazoneAssetType#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#description TfAssetType#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#domain_identifier AwsDatazoneAssetType#domain_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#domain_identifier TfAssetType#domain_identifier}
   */
   readonly domainIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#name AwsDatazoneAssetType#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#name TfAssetType#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#owning_project_identifier AwsDatazoneAssetType#owning_project_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#owning_project_identifier TfAssetType#owning_project_identifier}
   */
   readonly owningProjectIdentifier: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#region AwsDatazoneAssetType#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#region TfAssetType#region}
   */
   readonly region?: string;
   /**
   * forms_input block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#forms_input AwsDatazoneAssetType#forms_input}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#forms_input TfAssetType#forms_input}
   */
-  readonly formsInput?: AwsDatazoneAssetType.FormsInputProperty[] | cdktn.IResolvable;
+  readonly formsInput?: TfAssetType.FormsInputProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#timeouts AwsDatazoneAssetType#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#timeouts TfAssetType#timeouts}
   */
-  readonly timeouts?: AwsDatazoneAssetType.TimeoutsProperty;
+  readonly timeouts?: TfAssetType.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type aws_datazone_asset_type}
 */
-export class AwsDatazoneAssetType extends cdktn.TerraformResource {
+export class TfAssetType extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -56,11 +56,11 @@ export class AwsDatazoneAssetType extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDatazoneAssetType resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAssetType resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDatazoneAssetType to import
-  * @param importFromId The id of the existing AwsDatazoneAssetType that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDatazoneAssetType to import is found
+  * @param importToId The construct id used in the generated config for the TfAssetType to import
+  * @param importFromId The id of the existing TfAssetType that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAssetType to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_datazone_asset_type", importId: importFromId, provider });
@@ -75,9 +75,9 @@ export class AwsDatazoneAssetType extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDatazoneAssetTypeConfig
+  * @param options TfAssetTypeConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDatazoneAssetTypeConfig) {
+  public constructor(scope: Construct, id: string, config: TfAssetTypeConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_datazone_asset_type',
       terraformGeneratorMetadata: {
@@ -193,11 +193,11 @@ export class AwsDatazoneAssetType extends cdktn.TerraformResource {
   }
 
   // forms_input - computed: false, optional: true, required: false
-  private _formsInput = new AwsDatazoneAssetType.FormsInputPropertyList(this, "forms_input", true);
+  private _formsInput = new TfAssetType.FormsInputPropertyList(this, "forms_input", true);
   public get formsInput() {
     return this._formsInput;
   }
-  public putFormsInput(value: AwsDatazoneAssetType.FormsInputProperty[] | cdktn.IResolvable) {
+  public putFormsInput(value: TfAssetType.FormsInputProperty[] | cdktn.IResolvable) {
     this._formsInput.internalValue = value;
   }
   public resetFormsInput() {
@@ -209,11 +209,11 @@ export class AwsDatazoneAssetType extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsDatazoneAssetType.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfAssetType.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsDatazoneAssetType.TimeoutsProperty) {
+  public putTimeouts(value: TfAssetType.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -235,8 +235,8 @@ export class AwsDatazoneAssetType extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       owning_project_identifier: cdktn.stringToTerraform(this._owningProjectIdentifier),
       region: cdktn.stringToTerraform(this._region),
-      forms_input: cdktn.listMapper(awsDatazoneAssetTypeFormsInputPropertyToTerraform, true)(this._formsInput.internalValue),
-      timeouts: awsDatazoneAssetTypeTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      forms_input: cdktn.listMapper(tfAssetTypeFormsInputPropertyToTerraform, true)(this._formsInput.internalValue),
+      timeouts: tfAssetTypeTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -273,16 +273,16 @@ export class AwsDatazoneAssetType extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       forms_input: {
-        value: cdktn.listMapperHcl(awsDatazoneAssetTypeFormsInputPropertyToHclTerraform, true)(this._formsInput.internalValue),
+        value: cdktn.listMapperHcl(tfAssetTypeFormsInputPropertyToHclTerraform, true)(this._formsInput.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsDatazoneAssetType.FormsInputPropertyList",
+        storageClassType: "TfAssetType.FormsInputPropertyList",
       },
       timeouts: {
-        value: awsDatazoneAssetTypeTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfAssetTypeTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsDatazoneAssetType.TimeoutsProperty",
+        storageClassType: "TfAssetType.TimeoutsProperty",
       },
     };
 
@@ -291,7 +291,7 @@ export class AwsDatazoneAssetType extends cdktn.TerraformResource {
   }
 }
 
-export function awsDatazoneAssetTypeFormsInputPropertyToTerraform(struct?: AwsDatazoneAssetType.FormsInputProperty | cdktn.IResolvable): any {
+export function tfAssetTypeFormsInputPropertyToTerraform(struct?: TfAssetType.FormsInputProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -305,7 +305,7 @@ export function awsDatazoneAssetTypeFormsInputPropertyToTerraform(struct?: AwsDa
 }
 
 
-export function awsDatazoneAssetTypeFormsInputPropertyToHclTerraform(struct?: AwsDatazoneAssetType.FormsInputProperty | cdktn.IResolvable): any {
+export function tfAssetTypeFormsInputPropertyToHclTerraform(struct?: TfAssetType.FormsInputProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -342,7 +342,7 @@ export function awsDatazoneAssetTypeFormsInputPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsDatazoneAssetTypeTimeoutsPropertyToTerraform(struct?: AwsDatazoneAssetType.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfAssetTypeTimeoutsPropertyToTerraform(struct?: TfAssetType.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -353,7 +353,7 @@ export function awsDatazoneAssetTypeTimeoutsPropertyToTerraform(struct?: AwsData
 }
 
 
-export function awsDatazoneAssetTypeTimeoutsPropertyToHclTerraform(struct?: AwsDatazoneAssetType.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfAssetTypeTimeoutsPropertyToHclTerraform(struct?: TfAssetType.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -372,22 +372,22 @@ export function awsDatazoneAssetTypeTimeoutsPropertyToHclTerraform(struct?: AwsD
 }
 
 
-export namespace AwsDatazoneAssetType {
+export namespace TfAssetType {
 export interface FormsInputProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#map_block_key AwsDatazoneAssetType#map_block_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#map_block_key TfAssetType#map_block_key}
   */
   readonly mapBlockKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#required AwsDatazoneAssetType#required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#required TfAssetType#required}
   */
   readonly required?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#type_identifier AwsDatazoneAssetType#type_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#type_identifier TfAssetType#type_identifier}
   */
   readonly typeIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#type_revision AwsDatazoneAssetType#type_revision}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#type_revision TfAssetType#type_revision}
   */
   readonly typeRevision: string;
 }
@@ -532,7 +532,7 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#create AwsDatazoneAssetType#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#create TfAssetType#create}
   */
   readonly create?: string;
 }

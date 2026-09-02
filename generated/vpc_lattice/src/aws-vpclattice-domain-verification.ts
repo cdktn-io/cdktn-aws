@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsVpclatticeDomainVerificationConfig extends cdktn.TerraformMetaArguments {
+export interface TfDomainVerificationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_domain_verification#domain_name AwsVpclatticeDomainVerification#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_domain_verification#domain_name TfDomainVerification#domain_name}
   */
   readonly domainName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_domain_verification#region AwsVpclatticeDomainVerification#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_domain_verification#region TfDomainVerification#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_domain_verification#tags AwsVpclatticeDomainVerification#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_domain_verification#tags TfDomainVerification#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -25,7 +25,7 @@ export interface AwsVpclatticeDomainVerificationConfig extends cdktn.TerraformMe
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_domain_verification aws_vpclattice_domain_verification}
 */
-export class AwsVpclatticeDomainVerification extends cdktn.TerraformResource {
+export class TfDomainVerification extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -36,11 +36,11 @@ export class AwsVpclatticeDomainVerification extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsVpclatticeDomainVerification resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDomainVerification resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsVpclatticeDomainVerification to import
-  * @param importFromId The id of the existing AwsVpclatticeDomainVerification that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_domain_verification#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsVpclatticeDomainVerification to import is found
+  * @param importToId The construct id used in the generated config for the TfDomainVerification to import
+  * @param importFromId The id of the existing TfDomainVerification that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_domain_verification#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDomainVerification to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpclattice_domain_verification", importId: importFromId, provider });
@@ -55,9 +55,9 @@ export class AwsVpclatticeDomainVerification extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsVpclatticeDomainVerificationConfig
+  * @param options TfDomainVerificationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsVpclatticeDomainVerificationConfig) {
+  public constructor(scope: Construct, id: string, config: TfDomainVerificationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpclattice_domain_verification',
       terraformGeneratorMetadata: {

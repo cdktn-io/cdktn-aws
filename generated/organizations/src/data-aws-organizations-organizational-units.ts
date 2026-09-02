@@ -5,16 +5,16 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsOrganizationsOrganizationalUnitsConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataOrganizationalUnitsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_organizational_units#id DataAwsOrganizationsOrganizationalUnits#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_organizational_units#id TfDataOrganizationalUnits#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_organizational_units#parent_id DataAwsOrganizationsOrganizationalUnits#parent_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_organizational_units#parent_id TfDataOrganizationalUnits#parent_id}
   */
   readonly parentId: string;
 }
@@ -22,7 +22,7 @@ export interface DataAwsOrganizationsOrganizationalUnitsConfig extends cdktn.Ter
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_organizational_units aws_organizations_organizational_units}
 */
-export class DataAwsOrganizationsOrganizationalUnits extends cdktn.TerraformDataSource {
+export class TfDataOrganizationalUnits extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -33,11 +33,11 @@ export class DataAwsOrganizationsOrganizationalUnits extends cdktn.TerraformData
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsOrganizationsOrganizationalUnits resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataOrganizationalUnits resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsOrganizationsOrganizationalUnits to import
-  * @param importFromId The id of the existing DataAwsOrganizationsOrganizationalUnits that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_organizational_units#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsOrganizationsOrganizationalUnits to import is found
+  * @param importToId The construct id used in the generated config for the TfDataOrganizationalUnits to import
+  * @param importFromId The id of the existing TfDataOrganizationalUnits that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_organizational_units#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataOrganizationalUnits to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_organizations_organizational_units", importId: importFromId, provider });
@@ -52,9 +52,9 @@ export class DataAwsOrganizationsOrganizationalUnits extends cdktn.TerraformData
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsOrganizationsOrganizationalUnitsConfig
+  * @param options TfDataOrganizationalUnitsConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsOrganizationsOrganizationalUnitsConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataOrganizationalUnitsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_organizations_organizational_units',
       terraformGeneratorMetadata: {
@@ -79,7 +79,7 @@ export class DataAwsOrganizationsOrganizationalUnits extends cdktn.TerraformData
   // ==========
 
   // children - computed: true, optional: false, required: false
-  private _children = new DataAwsOrganizationsOrganizationalUnits.ChildrenPropertyList(this, "children", false);
+  private _children = new TfDataOrganizationalUnits.ChildrenPropertyList(this, "children", false);
   public get children() {
     return this._children;
   }
@@ -145,7 +145,7 @@ export class DataAwsOrganizationsOrganizationalUnits extends cdktn.TerraformData
   }
 }
 
-export function dataAwsOrganizationsOrganizationalUnitsChildrenPropertyToTerraform(struct?: DataAwsOrganizationsOrganizationalUnits.ChildrenProperty): any {
+export function tfDataOrganizationalUnitsChildrenPropertyToTerraform(struct?: TfDataOrganizationalUnits.ChildrenProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -155,7 +155,7 @@ export function dataAwsOrganizationsOrganizationalUnitsChildrenPropertyToTerrafo
 }
 
 
-export function dataAwsOrganizationsOrganizationalUnitsChildrenPropertyToHclTerraform(struct?: DataAwsOrganizationsOrganizationalUnits.ChildrenProperty): any {
+export function tfDataOrganizationalUnitsChildrenPropertyToHclTerraform(struct?: TfDataOrganizationalUnits.ChildrenProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -166,7 +166,7 @@ export function dataAwsOrganizationsOrganizationalUnitsChildrenPropertyToHclTerr
 }
 
 
-export namespace DataAwsOrganizationsOrganizationalUnits {
+export namespace TfDataOrganizationalUnits {
 export interface ChildrenProperty {
 }
 export class ChildrenPropertyOutputReference extends cdktn.ComplexObject {

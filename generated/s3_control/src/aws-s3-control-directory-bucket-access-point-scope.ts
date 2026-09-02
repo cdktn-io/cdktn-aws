@@ -5,33 +5,33 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsS3ControlDirectoryBucketAccessPointScopeConfig extends cdktn.TerraformMetaArguments {
+export interface TfDirectoryBucketAccessPointScopeConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_directory_bucket_access_point_scope#account_id AwsS3ControlDirectoryBucketAccessPointScope#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_directory_bucket_access_point_scope#account_id TfDirectoryBucketAccessPointScope#account_id}
   */
   readonly accountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_directory_bucket_access_point_scope#name AwsS3ControlDirectoryBucketAccessPointScope#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_directory_bucket_access_point_scope#name TfDirectoryBucketAccessPointScope#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_directory_bucket_access_point_scope#region AwsS3ControlDirectoryBucketAccessPointScope#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_directory_bucket_access_point_scope#region TfDirectoryBucketAccessPointScope#region}
   */
   readonly region?: string;
   /**
   * scope block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_directory_bucket_access_point_scope#scope AwsS3ControlDirectoryBucketAccessPointScope#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_directory_bucket_access_point_scope#scope TfDirectoryBucketAccessPointScope#scope}
   */
-  readonly scope?: AwsS3ControlDirectoryBucketAccessPointScope.ScopeProperty[] | cdktn.IResolvable;
+  readonly scope?: TfDirectoryBucketAccessPointScope.ScopeProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_directory_bucket_access_point_scope aws_s3control_directory_bucket_access_point_scope}
 */
-export class AwsS3ControlDirectoryBucketAccessPointScope extends cdktn.TerraformResource {
+export class TfDirectoryBucketAccessPointScope extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -42,11 +42,11 @@ export class AwsS3ControlDirectoryBucketAccessPointScope extends cdktn.Terraform
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsS3ControlDirectoryBucketAccessPointScope resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDirectoryBucketAccessPointScope resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsS3ControlDirectoryBucketAccessPointScope to import
-  * @param importFromId The id of the existing AwsS3ControlDirectoryBucketAccessPointScope that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_directory_bucket_access_point_scope#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsS3ControlDirectoryBucketAccessPointScope to import is found
+  * @param importToId The construct id used in the generated config for the TfDirectoryBucketAccessPointScope to import
+  * @param importFromId The id of the existing TfDirectoryBucketAccessPointScope that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_directory_bucket_access_point_scope#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDirectoryBucketAccessPointScope to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3control_directory_bucket_access_point_scope", importId: importFromId, provider });
@@ -61,9 +61,9 @@ export class AwsS3ControlDirectoryBucketAccessPointScope extends cdktn.Terraform
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsS3ControlDirectoryBucketAccessPointScopeConfig
+  * @param options TfDirectoryBucketAccessPointScopeConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsS3ControlDirectoryBucketAccessPointScopeConfig) {
+  public constructor(scope: Construct, id: string, config: TfDirectoryBucketAccessPointScopeConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3control_directory_bucket_access_point_scope',
       terraformGeneratorMetadata: {
@@ -132,11 +132,11 @@ export class AwsS3ControlDirectoryBucketAccessPointScope extends cdktn.Terraform
   }
 
   // scope - computed: false, optional: true, required: false
-  private _scope = new AwsS3ControlDirectoryBucketAccessPointScope.ScopePropertyList(this, "scope", false);
+  private _scope = new TfDirectoryBucketAccessPointScope.ScopePropertyList(this, "scope", false);
   public get scope() {
     return this._scope;
   }
-  public putScope(value: AwsS3ControlDirectoryBucketAccessPointScope.ScopeProperty[] | cdktn.IResolvable) {
+  public putScope(value: TfDirectoryBucketAccessPointScope.ScopeProperty[] | cdktn.IResolvable) {
     this._scope.internalValue = value;
   }
   public resetScope() {
@@ -156,7 +156,7 @@ export class AwsS3ControlDirectoryBucketAccessPointScope extends cdktn.Terraform
       account_id: cdktn.stringToTerraform(this._accountId),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
-      scope: cdktn.listMapper(awsS3ControlDirectoryBucketAccessPointScopeScopePropertyToTerraform, true)(this._scope.internalValue),
+      scope: cdktn.listMapper(tfDirectoryBucketAccessPointScopeScopePropertyToTerraform, true)(this._scope.internalValue),
     };
   }
 
@@ -181,10 +181,10 @@ export class AwsS3ControlDirectoryBucketAccessPointScope extends cdktn.Terraform
         storageClassType: "string",
       },
       scope: {
-        value: cdktn.listMapperHcl(awsS3ControlDirectoryBucketAccessPointScopeScopePropertyToHclTerraform, true)(this._scope.internalValue),
+        value: cdktn.listMapperHcl(tfDirectoryBucketAccessPointScopeScopePropertyToHclTerraform, true)(this._scope.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsS3ControlDirectoryBucketAccessPointScope.ScopePropertyList",
+        storageClassType: "TfDirectoryBucketAccessPointScope.ScopePropertyList",
       },
     };
 
@@ -193,7 +193,7 @@ export class AwsS3ControlDirectoryBucketAccessPointScope extends cdktn.Terraform
   }
 }
 
-export function awsS3ControlDirectoryBucketAccessPointScopeScopePropertyToTerraform(struct?: AwsS3ControlDirectoryBucketAccessPointScope.ScopeProperty | cdktn.IResolvable): any {
+export function tfDirectoryBucketAccessPointScopeScopePropertyToTerraform(struct?: TfDirectoryBucketAccessPointScope.ScopeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -205,7 +205,7 @@ export function awsS3ControlDirectoryBucketAccessPointScopeScopePropertyToTerraf
 }
 
 
-export function awsS3ControlDirectoryBucketAccessPointScopeScopePropertyToHclTerraform(struct?: AwsS3ControlDirectoryBucketAccessPointScope.ScopeProperty | cdktn.IResolvable): any {
+export function tfDirectoryBucketAccessPointScopeScopePropertyToHclTerraform(struct?: TfDirectoryBucketAccessPointScope.ScopeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -230,14 +230,14 @@ export function awsS3ControlDirectoryBucketAccessPointScopeScopePropertyToHclTer
 }
 
 
-export namespace AwsS3ControlDirectoryBucketAccessPointScope {
+export namespace TfDirectoryBucketAccessPointScope {
 export interface ScopeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_directory_bucket_access_point_scope#permissions AwsS3ControlDirectoryBucketAccessPointScope#permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_directory_bucket_access_point_scope#permissions TfDirectoryBucketAccessPointScope#permissions}
   */
   readonly permissions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_directory_bucket_access_point_scope#prefixes AwsS3ControlDirectoryBucketAccessPointScope#prefixes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_directory_bucket_access_point_scope#prefixes TfDirectoryBucketAccessPointScope#prefixes}
   */
   readonly prefixes?: string[];
 }

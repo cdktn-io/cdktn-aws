@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsOamSinkConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataSinkConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/oam_sink#id DataAwsOamSink#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/oam_sink#id TfDataSink#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,15 +16,15 @@ export interface DataAwsOamSinkConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/oam_sink#region DataAwsOamSink#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/oam_sink#region TfDataSink#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/oam_sink#sink_identifier DataAwsOamSink#sink_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/oam_sink#sink_identifier TfDataSink#sink_identifier}
   */
   readonly sinkIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/oam_sink#tags DataAwsOamSink#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/oam_sink#tags TfDataSink#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -32,7 +32,7 @@ export interface DataAwsOamSinkConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/oam_sink aws_oam_sink}
 */
-export class DataAwsOamSink extends cdktn.TerraformDataSource {
+export class TfDataSink extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class DataAwsOamSink extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsOamSink resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataSink resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsOamSink to import
-  * @param importFromId The id of the existing DataAwsOamSink that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/oam_sink#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsOamSink to import is found
+  * @param importToId The construct id used in the generated config for the TfDataSink to import
+  * @param importFromId The id of the existing TfDataSink that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/oam_sink#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataSink to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_oam_sink", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class DataAwsOamSink extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsOamSinkConfig
+  * @param options TfDataSinkConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsOamSinkConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataSinkConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_oam_sink',
       terraformGeneratorMetadata: {

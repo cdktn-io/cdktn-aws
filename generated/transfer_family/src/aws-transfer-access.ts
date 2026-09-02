@@ -5,62 +5,62 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsTransferAccessConfig extends cdktn.TerraformMetaArguments {
+export interface TfAccessConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_access#external_id AwsTransferAccess#external_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_access#external_id TfAccess#external_id}
   */
   readonly externalId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_access#home_directory AwsTransferAccess#home_directory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_access#home_directory TfAccess#home_directory}
   */
   readonly homeDirectory?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_access#home_directory_type AwsTransferAccess#home_directory_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_access#home_directory_type TfAccess#home_directory_type}
   */
   readonly homeDirectoryType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_access#id AwsTransferAccess#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_access#id TfAccess#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_access#policy AwsTransferAccess#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_access#policy TfAccess#policy}
   */
   readonly policy?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_access#region AwsTransferAccess#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_access#region TfAccess#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_access#role AwsTransferAccess#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_access#role TfAccess#role}
   */
   readonly role?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_access#server_id AwsTransferAccess#server_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_access#server_id TfAccess#server_id}
   */
   readonly serverId: string;
   /**
   * home_directory_mappings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_access#home_directory_mappings AwsTransferAccess#home_directory_mappings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_access#home_directory_mappings TfAccess#home_directory_mappings}
   */
-  readonly homeDirectoryMappings?: AwsTransferAccess.HomeDirectoryMappingsProperty[] | cdktn.IResolvable;
+  readonly homeDirectoryMappings?: TfAccess.HomeDirectoryMappingsProperty[] | cdktn.IResolvable;
   /**
   * posix_profile block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_access#posix_profile AwsTransferAccess#posix_profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_access#posix_profile TfAccess#posix_profile}
   */
-  readonly posixProfile?: AwsTransferAccess.PosixProfileProperty;
+  readonly posixProfile?: TfAccess.PosixProfileProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_access aws_transfer_access}
 */
-export class AwsTransferAccess extends cdktn.TerraformResource {
+export class TfAccess extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -71,11 +71,11 @@ export class AwsTransferAccess extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsTransferAccess resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAccess resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsTransferAccess to import
-  * @param importFromId The id of the existing AwsTransferAccess that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_access#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsTransferAccess to import is found
+  * @param importToId The construct id used in the generated config for the TfAccess to import
+  * @param importFromId The id of the existing TfAccess that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_access#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAccess to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_transfer_access", importId: importFromId, provider });
@@ -90,9 +90,9 @@ export class AwsTransferAccess extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsTransferAccessConfig
+  * @param options TfAccessConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsTransferAccessConfig) {
+  public constructor(scope: Construct, id: string, config: TfAccessConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_transfer_access',
       terraformGeneratorMetadata: {
@@ -247,11 +247,11 @@ export class AwsTransferAccess extends cdktn.TerraformResource {
   }
 
   // home_directory_mappings - computed: false, optional: true, required: false
-  private _homeDirectoryMappings = new AwsTransferAccess.HomeDirectoryMappingsPropertyList(this, "home_directory_mappings", false);
+  private _homeDirectoryMappings = new TfAccess.HomeDirectoryMappingsPropertyList(this, "home_directory_mappings", false);
   public get homeDirectoryMappings() {
     return this._homeDirectoryMappings;
   }
-  public putHomeDirectoryMappings(value: AwsTransferAccess.HomeDirectoryMappingsProperty[] | cdktn.IResolvable) {
+  public putHomeDirectoryMappings(value: TfAccess.HomeDirectoryMappingsProperty[] | cdktn.IResolvable) {
     this._homeDirectoryMappings.internalValue = value;
   }
   public resetHomeDirectoryMappings() {
@@ -263,11 +263,11 @@ export class AwsTransferAccess extends cdktn.TerraformResource {
   }
 
   // posix_profile - computed: false, optional: true, required: false
-  private _posixProfile = new AwsTransferAccess.PosixProfilePropertyOutputReference(this, "posix_profile");
+  private _posixProfile = new TfAccess.PosixProfilePropertyOutputReference(this, "posix_profile");
   public get posixProfile() {
     return this._posixProfile;
   }
-  public putPosixProfile(value: AwsTransferAccess.PosixProfileProperty) {
+  public putPosixProfile(value: TfAccess.PosixProfileProperty) {
     this._posixProfile.internalValue = value;
   }
   public resetPosixProfile() {
@@ -292,8 +292,8 @@ export class AwsTransferAccess extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       role: cdktn.stringToTerraform(this._role),
       server_id: cdktn.stringToTerraform(this._serverId),
-      home_directory_mappings: cdktn.listMapper(awsTransferAccessHomeDirectoryMappingsPropertyToTerraform, true)(this._homeDirectoryMappings.internalValue),
-      posix_profile: awsTransferAccessPosixProfilePropertyToTerraform(this._posixProfile.internalValue),
+      home_directory_mappings: cdktn.listMapper(tfAccessHomeDirectoryMappingsPropertyToTerraform, true)(this._homeDirectoryMappings.internalValue),
+      posix_profile: tfAccessPosixProfilePropertyToTerraform(this._posixProfile.internalValue),
     };
   }
 
@@ -348,16 +348,16 @@ export class AwsTransferAccess extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       home_directory_mappings: {
-        value: cdktn.listMapperHcl(awsTransferAccessHomeDirectoryMappingsPropertyToHclTerraform, true)(this._homeDirectoryMappings.internalValue),
+        value: cdktn.listMapperHcl(tfAccessHomeDirectoryMappingsPropertyToHclTerraform, true)(this._homeDirectoryMappings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsTransferAccess.HomeDirectoryMappingsPropertyList",
+        storageClassType: "TfAccess.HomeDirectoryMappingsPropertyList",
       },
       posix_profile: {
-        value: awsTransferAccessPosixProfilePropertyToHclTerraform(this._posixProfile.internalValue),
+        value: tfAccessPosixProfilePropertyToHclTerraform(this._posixProfile.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsTransferAccess.PosixProfilePropertyList",
+        storageClassType: "TfAccess.PosixProfilePropertyList",
       },
     };
 
@@ -366,7 +366,7 @@ export class AwsTransferAccess extends cdktn.TerraformResource {
   }
 }
 
-export function awsTransferAccessHomeDirectoryMappingsPropertyToTerraform(struct?: AwsTransferAccess.HomeDirectoryMappingsProperty | cdktn.IResolvable): any {
+export function tfAccessHomeDirectoryMappingsPropertyToTerraform(struct?: TfAccess.HomeDirectoryMappingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -378,7 +378,7 @@ export function awsTransferAccessHomeDirectoryMappingsPropertyToTerraform(struct
 }
 
 
-export function awsTransferAccessHomeDirectoryMappingsPropertyToHclTerraform(struct?: AwsTransferAccess.HomeDirectoryMappingsProperty | cdktn.IResolvable): any {
+export function tfAccessHomeDirectoryMappingsPropertyToHclTerraform(struct?: TfAccess.HomeDirectoryMappingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -403,7 +403,7 @@ export function awsTransferAccessHomeDirectoryMappingsPropertyToHclTerraform(str
 }
 
 
-export function awsTransferAccessPosixProfilePropertyToTerraform(struct?: AwsTransferAccess.PosixProfilePropertyOutputReference | AwsTransferAccess.PosixProfileProperty): any {
+export function tfAccessPosixProfilePropertyToTerraform(struct?: TfAccess.PosixProfilePropertyOutputReference | TfAccess.PosixProfileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -416,7 +416,7 @@ export function awsTransferAccessPosixProfilePropertyToTerraform(struct?: AwsTra
 }
 
 
-export function awsTransferAccessPosixProfilePropertyToHclTerraform(struct?: AwsTransferAccess.PosixProfilePropertyOutputReference | AwsTransferAccess.PosixProfileProperty): any {
+export function tfAccessPosixProfilePropertyToHclTerraform(struct?: TfAccess.PosixProfilePropertyOutputReference | TfAccess.PosixProfileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -447,14 +447,14 @@ export function awsTransferAccessPosixProfilePropertyToHclTerraform(struct?: Aws
 }
 
 
-export namespace AwsTransferAccess {
+export namespace TfAccess {
 export interface HomeDirectoryMappingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_access#entry AwsTransferAccess#entry}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_access#entry TfAccess#entry}
   */
   readonly entry: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_access#target AwsTransferAccess#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_access#target TfAccess#target}
   */
   readonly target: string;
 }
@@ -556,15 +556,15 @@ export class HomeDirectoryMappingsPropertyList extends cdktn.ComplexList {
 }
 export interface PosixProfileProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_access#gid AwsTransferAccess#gid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_access#gid TfAccess#gid}
   */
   readonly gid: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_access#secondary_gids AwsTransferAccess#secondary_gids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_access#secondary_gids TfAccess#secondary_gids}
   */
   readonly secondaryGids?: number[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_access#uid AwsTransferAccess#uid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_access#uid TfAccess#uid}
   */
   readonly uid: number;
 }

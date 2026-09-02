@@ -5,22 +5,22 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsRoute53ProfilesProfileConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataProfileConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53profiles_profile#id DataAwsRoute53ProfilesProfile#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53profiles_profile#id TfDataProfile#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53profiles_profile#name DataAwsRoute53ProfilesProfile#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53profiles_profile#name TfDataProfile#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53profiles_profile#region DataAwsRoute53ProfilesProfile#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53profiles_profile#region TfDataProfile#region}
   */
   readonly region?: string;
 }
@@ -28,7 +28,7 @@ export interface DataAwsRoute53ProfilesProfileConfig extends cdktn.TerraformMeta
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53profiles_profile aws_route53profiles_profile}
 */
-export class DataAwsRoute53ProfilesProfile extends cdktn.TerraformDataSource {
+export class TfDataProfile extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class DataAwsRoute53ProfilesProfile extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsRoute53ProfilesProfile resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataProfile resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsRoute53ProfilesProfile to import
-  * @param importFromId The id of the existing DataAwsRoute53ProfilesProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53profiles_profile#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsRoute53ProfilesProfile to import is found
+  * @param importToId The construct id used in the generated config for the TfDataProfile to import
+  * @param importFromId The id of the existing TfDataProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53profiles_profile#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataProfile to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route53profiles_profile", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class DataAwsRoute53ProfilesProfile extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsRoute53ProfilesProfileConfig = {}
+  * @param options TfDataProfileConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsRoute53ProfilesProfileConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDataProfileConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_route53profiles_profile',
       terraformGeneratorMetadata: {

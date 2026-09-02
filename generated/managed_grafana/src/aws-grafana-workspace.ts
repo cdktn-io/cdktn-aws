@@ -5,108 +5,108 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsGrafanaWorkspaceConfig extends cdktn.TerraformMetaArguments {
+export interface TfWorkspaceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#account_access_type AwsGrafanaWorkspace#account_access_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#account_access_type TfWorkspace#account_access_type}
   */
   readonly accountAccessType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#authentication_providers AwsGrafanaWorkspace#authentication_providers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#authentication_providers TfWorkspace#authentication_providers}
   */
   readonly authenticationProviders: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#configuration AwsGrafanaWorkspace#configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#configuration TfWorkspace#configuration}
   */
   readonly configuration?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#data_sources AwsGrafanaWorkspace#data_sources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#data_sources TfWorkspace#data_sources}
   */
   readonly dataSources?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#description AwsGrafanaWorkspace#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#description TfWorkspace#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#grafana_version AwsGrafanaWorkspace#grafana_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#grafana_version TfWorkspace#grafana_version}
   */
   readonly grafanaVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#id AwsGrafanaWorkspace#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#id TfWorkspace#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#kms_key_id AwsGrafanaWorkspace#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#kms_key_id TfWorkspace#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#name AwsGrafanaWorkspace#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#name TfWorkspace#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#notification_destinations AwsGrafanaWorkspace#notification_destinations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#notification_destinations TfWorkspace#notification_destinations}
   */
   readonly notificationDestinations?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#organization_role_name AwsGrafanaWorkspace#organization_role_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#organization_role_name TfWorkspace#organization_role_name}
   */
   readonly organizationRoleName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#organizational_units AwsGrafanaWorkspace#organizational_units}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#organizational_units TfWorkspace#organizational_units}
   */
   readonly organizationalUnits?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#permission_type AwsGrafanaWorkspace#permission_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#permission_type TfWorkspace#permission_type}
   */
   readonly permissionType: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#region AwsGrafanaWorkspace#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#region TfWorkspace#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#role_arn AwsGrafanaWorkspace#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#role_arn TfWorkspace#role_arn}
   */
   readonly roleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#stack_set_name AwsGrafanaWorkspace#stack_set_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#stack_set_name TfWorkspace#stack_set_name}
   */
   readonly stackSetName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#tags AwsGrafanaWorkspace#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#tags TfWorkspace#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#tags_all AwsGrafanaWorkspace#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#tags_all TfWorkspace#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * network_access_control block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#network_access_control AwsGrafanaWorkspace#network_access_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#network_access_control TfWorkspace#network_access_control}
   */
-  readonly networkAccessControl?: AwsGrafanaWorkspace.NetworkAccessControlProperty;
+  readonly networkAccessControl?: TfWorkspace.NetworkAccessControlProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#timeouts AwsGrafanaWorkspace#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#timeouts TfWorkspace#timeouts}
   */
-  readonly timeouts?: AwsGrafanaWorkspace.TimeoutsProperty;
+  readonly timeouts?: TfWorkspace.TimeoutsProperty;
   /**
   * vpc_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#vpc_configuration AwsGrafanaWorkspace#vpc_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#vpc_configuration TfWorkspace#vpc_configuration}
   */
-  readonly vpcConfiguration?: AwsGrafanaWorkspace.VpcConfigurationProperty;
+  readonly vpcConfiguration?: TfWorkspace.VpcConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace aws_grafana_workspace}
 */
-export class AwsGrafanaWorkspace extends cdktn.TerraformResource {
+export class TfWorkspace extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -117,11 +117,11 @@ export class AwsGrafanaWorkspace extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsGrafanaWorkspace resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfWorkspace resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsGrafanaWorkspace to import
-  * @param importFromId The id of the existing AwsGrafanaWorkspace that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsGrafanaWorkspace to import is found
+  * @param importToId The construct id used in the generated config for the TfWorkspace to import
+  * @param importFromId The id of the existing TfWorkspace that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfWorkspace to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_grafana_workspace", importId: importFromId, provider });
@@ -136,9 +136,9 @@ export class AwsGrafanaWorkspace extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsGrafanaWorkspaceConfig
+  * @param options TfWorkspaceConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsGrafanaWorkspaceConfig) {
+  public constructor(scope: Construct, id: string, config: TfWorkspaceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_grafana_workspace',
       terraformGeneratorMetadata: {
@@ -476,11 +476,11 @@ export class AwsGrafanaWorkspace extends cdktn.TerraformResource {
   }
 
   // network_access_control - computed: false, optional: true, required: false
-  private _networkAccessControl = new AwsGrafanaWorkspace.NetworkAccessControlPropertyOutputReference(this, "network_access_control");
+  private _networkAccessControl = new TfWorkspace.NetworkAccessControlPropertyOutputReference(this, "network_access_control");
   public get networkAccessControl() {
     return this._networkAccessControl;
   }
-  public putNetworkAccessControl(value: AwsGrafanaWorkspace.NetworkAccessControlProperty) {
+  public putNetworkAccessControl(value: TfWorkspace.NetworkAccessControlProperty) {
     this._networkAccessControl.internalValue = value;
   }
   public resetNetworkAccessControl() {
@@ -492,11 +492,11 @@ export class AwsGrafanaWorkspace extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsGrafanaWorkspace.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfWorkspace.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsGrafanaWorkspace.TimeoutsProperty) {
+  public putTimeouts(value: TfWorkspace.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -508,11 +508,11 @@ export class AwsGrafanaWorkspace extends cdktn.TerraformResource {
   }
 
   // vpc_configuration - computed: false, optional: true, required: false
-  private _vpcConfiguration = new AwsGrafanaWorkspace.VpcConfigurationPropertyOutputReference(this, "vpc_configuration");
+  private _vpcConfiguration = new TfWorkspace.VpcConfigurationPropertyOutputReference(this, "vpc_configuration");
   public get vpcConfiguration() {
     return this._vpcConfiguration;
   }
-  public putVpcConfiguration(value: AwsGrafanaWorkspace.VpcConfigurationProperty) {
+  public putVpcConfiguration(value: TfWorkspace.VpcConfigurationProperty) {
     this._vpcConfiguration.internalValue = value;
   }
   public resetVpcConfiguration() {
@@ -547,9 +547,9 @@ export class AwsGrafanaWorkspace extends cdktn.TerraformResource {
       stack_set_name: cdktn.stringToTerraform(this._stackSetName),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      network_access_control: awsGrafanaWorkspaceNetworkAccessControlPropertyToTerraform(this._networkAccessControl.internalValue),
-      timeouts: awsGrafanaWorkspaceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      vpc_configuration: awsGrafanaWorkspaceVpcConfigurationPropertyToTerraform(this._vpcConfiguration.internalValue),
+      network_access_control: tfWorkspaceNetworkAccessControlPropertyToTerraform(this._networkAccessControl.internalValue),
+      timeouts: tfWorkspaceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      vpc_configuration: tfWorkspaceVpcConfigurationPropertyToTerraform(this._vpcConfiguration.internalValue),
     };
   }
 
@@ -664,22 +664,22 @@ export class AwsGrafanaWorkspace extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       network_access_control: {
-        value: awsGrafanaWorkspaceNetworkAccessControlPropertyToHclTerraform(this._networkAccessControl.internalValue),
+        value: tfWorkspaceNetworkAccessControlPropertyToHclTerraform(this._networkAccessControl.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGrafanaWorkspace.NetworkAccessControlPropertyList",
+        storageClassType: "TfWorkspace.NetworkAccessControlPropertyList",
       },
       timeouts: {
-        value: awsGrafanaWorkspaceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfWorkspaceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsGrafanaWorkspace.TimeoutsProperty",
+        storageClassType: "TfWorkspace.TimeoutsProperty",
       },
       vpc_configuration: {
-        value: awsGrafanaWorkspaceVpcConfigurationPropertyToHclTerraform(this._vpcConfiguration.internalValue),
+        value: tfWorkspaceVpcConfigurationPropertyToHclTerraform(this._vpcConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGrafanaWorkspace.VpcConfigurationPropertyList",
+        storageClassType: "TfWorkspace.VpcConfigurationPropertyList",
       },
     };
 
@@ -688,7 +688,7 @@ export class AwsGrafanaWorkspace extends cdktn.TerraformResource {
   }
 }
 
-export function awsGrafanaWorkspaceNetworkAccessControlPropertyToTerraform(struct?: AwsGrafanaWorkspace.NetworkAccessControlPropertyOutputReference | AwsGrafanaWorkspace.NetworkAccessControlProperty): any {
+export function tfWorkspaceNetworkAccessControlPropertyToTerraform(struct?: TfWorkspace.NetworkAccessControlPropertyOutputReference | TfWorkspace.NetworkAccessControlProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -700,7 +700,7 @@ export function awsGrafanaWorkspaceNetworkAccessControlPropertyToTerraform(struc
 }
 
 
-export function awsGrafanaWorkspaceNetworkAccessControlPropertyToHclTerraform(struct?: AwsGrafanaWorkspace.NetworkAccessControlPropertyOutputReference | AwsGrafanaWorkspace.NetworkAccessControlProperty): any {
+export function tfWorkspaceNetworkAccessControlPropertyToHclTerraform(struct?: TfWorkspace.NetworkAccessControlPropertyOutputReference | TfWorkspace.NetworkAccessControlProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -725,7 +725,7 @@ export function awsGrafanaWorkspaceNetworkAccessControlPropertyToHclTerraform(st
 }
 
 
-export function awsGrafanaWorkspaceTimeoutsPropertyToTerraform(struct?: AwsGrafanaWorkspace.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfWorkspaceTimeoutsPropertyToTerraform(struct?: TfWorkspace.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -737,7 +737,7 @@ export function awsGrafanaWorkspaceTimeoutsPropertyToTerraform(struct?: AwsGrafa
 }
 
 
-export function awsGrafanaWorkspaceTimeoutsPropertyToHclTerraform(struct?: AwsGrafanaWorkspace.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfWorkspaceTimeoutsPropertyToHclTerraform(struct?: TfWorkspace.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -762,7 +762,7 @@ export function awsGrafanaWorkspaceTimeoutsPropertyToHclTerraform(struct?: AwsGr
 }
 
 
-export function awsGrafanaWorkspaceVpcConfigurationPropertyToTerraform(struct?: AwsGrafanaWorkspace.VpcConfigurationPropertyOutputReference | AwsGrafanaWorkspace.VpcConfigurationProperty): any {
+export function tfWorkspaceVpcConfigurationPropertyToTerraform(struct?: TfWorkspace.VpcConfigurationPropertyOutputReference | TfWorkspace.VpcConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -774,7 +774,7 @@ export function awsGrafanaWorkspaceVpcConfigurationPropertyToTerraform(struct?: 
 }
 
 
-export function awsGrafanaWorkspaceVpcConfigurationPropertyToHclTerraform(struct?: AwsGrafanaWorkspace.VpcConfigurationPropertyOutputReference | AwsGrafanaWorkspace.VpcConfigurationProperty): any {
+export function tfWorkspaceVpcConfigurationPropertyToHclTerraform(struct?: TfWorkspace.VpcConfigurationPropertyOutputReference | TfWorkspace.VpcConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -799,14 +799,14 @@ export function awsGrafanaWorkspaceVpcConfigurationPropertyToHclTerraform(struct
 }
 
 
-export namespace AwsGrafanaWorkspace {
+export namespace TfWorkspace {
 export interface NetworkAccessControlProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#prefix_list_ids AwsGrafanaWorkspace#prefix_list_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#prefix_list_ids TfWorkspace#prefix_list_ids}
   */
   readonly prefixListIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#vpce_ids AwsGrafanaWorkspace#vpce_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#vpce_ids TfWorkspace#vpce_ids}
   */
   readonly vpceIds: string[];
 }
@@ -876,11 +876,11 @@ export class NetworkAccessControlPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#create AwsGrafanaWorkspace#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#create TfWorkspace#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#update AwsGrafanaWorkspace#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#update TfWorkspace#update}
   */
   readonly update?: string;
 }
@@ -966,11 +966,11 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VpcConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#security_group_ids AwsGrafanaWorkspace#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#security_group_ids TfWorkspace#security_group_ids}
   */
   readonly securityGroupIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#subnet_ids AwsGrafanaWorkspace#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace#subnet_ids TfWorkspace#subnet_ids}
   */
   readonly subnetIds: string[];
 }

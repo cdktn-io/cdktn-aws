@@ -5,45 +5,45 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsWorkspaceswebIpAccessSettingsConfig extends cdktn.TerraformMetaArguments {
+export interface TfIpAccessSettingsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_ip_access_settings#additional_encryption_context AwsWorkspaceswebIpAccessSettings#additional_encryption_context}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_ip_access_settings#additional_encryption_context TfIpAccessSettings#additional_encryption_context}
   */
   readonly additionalEncryptionContext?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_ip_access_settings#customer_managed_key AwsWorkspaceswebIpAccessSettings#customer_managed_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_ip_access_settings#customer_managed_key TfIpAccessSettings#customer_managed_key}
   */
   readonly customerManagedKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_ip_access_settings#description AwsWorkspaceswebIpAccessSettings#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_ip_access_settings#description TfIpAccessSettings#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_ip_access_settings#display_name AwsWorkspaceswebIpAccessSettings#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_ip_access_settings#display_name TfIpAccessSettings#display_name}
   */
   readonly displayName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_ip_access_settings#region AwsWorkspaceswebIpAccessSettings#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_ip_access_settings#region TfIpAccessSettings#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_ip_access_settings#tags AwsWorkspaceswebIpAccessSettings#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_ip_access_settings#tags TfIpAccessSettings#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * ip_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_ip_access_settings#ip_rule AwsWorkspaceswebIpAccessSettings#ip_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_ip_access_settings#ip_rule TfIpAccessSettings#ip_rule}
   */
-  readonly ipRule?: AwsWorkspaceswebIpAccessSettings.IpRuleProperty[] | cdktn.IResolvable;
+  readonly ipRule?: TfIpAccessSettings.IpRuleProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_ip_access_settings aws_workspacesweb_ip_access_settings}
 */
-export class AwsWorkspaceswebIpAccessSettings extends cdktn.TerraformResource {
+export class TfIpAccessSettings extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -54,11 +54,11 @@ export class AwsWorkspaceswebIpAccessSettings extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsWorkspaceswebIpAccessSettings resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfIpAccessSettings resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsWorkspaceswebIpAccessSettings to import
-  * @param importFromId The id of the existing AwsWorkspaceswebIpAccessSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_ip_access_settings#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsWorkspaceswebIpAccessSettings to import is found
+  * @param importToId The construct id used in the generated config for the TfIpAccessSettings to import
+  * @param importFromId The id of the existing TfIpAccessSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_ip_access_settings#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfIpAccessSettings to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_workspacesweb_ip_access_settings", importId: importFromId, provider });
@@ -73,9 +73,9 @@ export class AwsWorkspaceswebIpAccessSettings extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsWorkspaceswebIpAccessSettingsConfig
+  * @param options TfIpAccessSettingsConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsWorkspaceswebIpAccessSettingsConfig) {
+  public constructor(scope: Construct, id: string, config: TfIpAccessSettingsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_workspacesweb_ip_access_settings',
       terraformGeneratorMetadata: {
@@ -214,11 +214,11 @@ export class AwsWorkspaceswebIpAccessSettings extends cdktn.TerraformResource {
   }
 
   // ip_rule - computed: false, optional: true, required: false
-  private _ipRule = new AwsWorkspaceswebIpAccessSettings.IpRulePropertyList(this, "ip_rule", false);
+  private _ipRule = new TfIpAccessSettings.IpRulePropertyList(this, "ip_rule", false);
   public get ipRule() {
     return this._ipRule;
   }
-  public putIpRule(value: AwsWorkspaceswebIpAccessSettings.IpRuleProperty[] | cdktn.IResolvable) {
+  public putIpRule(value: TfIpAccessSettings.IpRuleProperty[] | cdktn.IResolvable) {
     this._ipRule.internalValue = value;
   }
   public resetIpRule() {
@@ -241,7 +241,7 @@ export class AwsWorkspaceswebIpAccessSettings extends cdktn.TerraformResource {
       display_name: cdktn.stringToTerraform(this._displayName),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      ip_rule: cdktn.listMapper(awsWorkspaceswebIpAccessSettingsIpRulePropertyToTerraform, true)(this._ipRule.internalValue),
+      ip_rule: cdktn.listMapper(tfIpAccessSettingsIpRulePropertyToTerraform, true)(this._ipRule.internalValue),
     };
   }
 
@@ -284,10 +284,10 @@ export class AwsWorkspaceswebIpAccessSettings extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       ip_rule: {
-        value: cdktn.listMapperHcl(awsWorkspaceswebIpAccessSettingsIpRulePropertyToHclTerraform, true)(this._ipRule.internalValue),
+        value: cdktn.listMapperHcl(tfIpAccessSettingsIpRulePropertyToHclTerraform, true)(this._ipRule.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsWorkspaceswebIpAccessSettings.IpRulePropertyList",
+        storageClassType: "TfIpAccessSettings.IpRulePropertyList",
       },
     };
 
@@ -296,7 +296,7 @@ export class AwsWorkspaceswebIpAccessSettings extends cdktn.TerraformResource {
   }
 }
 
-export function awsWorkspaceswebIpAccessSettingsIpRulePropertyToTerraform(struct?: AwsWorkspaceswebIpAccessSettings.IpRuleProperty | cdktn.IResolvable): any {
+export function tfIpAccessSettingsIpRulePropertyToTerraform(struct?: TfIpAccessSettings.IpRuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -308,7 +308,7 @@ export function awsWorkspaceswebIpAccessSettingsIpRulePropertyToTerraform(struct
 }
 
 
-export function awsWorkspaceswebIpAccessSettingsIpRulePropertyToHclTerraform(struct?: AwsWorkspaceswebIpAccessSettings.IpRuleProperty | cdktn.IResolvable): any {
+export function tfIpAccessSettingsIpRulePropertyToHclTerraform(struct?: TfIpAccessSettings.IpRuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -333,14 +333,14 @@ export function awsWorkspaceswebIpAccessSettingsIpRulePropertyToHclTerraform(str
 }
 
 
-export namespace AwsWorkspaceswebIpAccessSettings {
+export namespace TfIpAccessSettings {
 export interface IpRuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_ip_access_settings#description AwsWorkspaceswebIpAccessSettings#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_ip_access_settings#description TfIpAccessSettings#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_ip_access_settings#ip_range AwsWorkspaceswebIpAccessSettings#ip_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_ip_access_settings#ip_range TfIpAccessSettings#ip_range}
   */
   readonly ipRange: string;
 }

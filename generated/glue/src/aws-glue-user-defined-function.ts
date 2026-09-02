@@ -5,56 +5,56 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsGlueUserDefinedFunctionConfig extends cdktn.TerraformMetaArguments {
+export interface TfUserDefinedFunctionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_user_defined_function#catalog_id AwsGlueUserDefinedFunction#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_user_defined_function#catalog_id TfUserDefinedFunction#catalog_id}
   */
   readonly catalogId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_user_defined_function#class_name AwsGlueUserDefinedFunction#class_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_user_defined_function#class_name TfUserDefinedFunction#class_name}
   */
   readonly className: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_user_defined_function#database_name AwsGlueUserDefinedFunction#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_user_defined_function#database_name TfUserDefinedFunction#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_user_defined_function#id AwsGlueUserDefinedFunction#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_user_defined_function#id TfUserDefinedFunction#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_user_defined_function#name AwsGlueUserDefinedFunction#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_user_defined_function#name TfUserDefinedFunction#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_user_defined_function#owner_name AwsGlueUserDefinedFunction#owner_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_user_defined_function#owner_name TfUserDefinedFunction#owner_name}
   */
   readonly ownerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_user_defined_function#owner_type AwsGlueUserDefinedFunction#owner_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_user_defined_function#owner_type TfUserDefinedFunction#owner_type}
   */
   readonly ownerType: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_user_defined_function#region AwsGlueUserDefinedFunction#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_user_defined_function#region TfUserDefinedFunction#region}
   */
   readonly region?: string;
   /**
   * resource_uris block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_user_defined_function#resource_uris AwsGlueUserDefinedFunction#resource_uris}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_user_defined_function#resource_uris TfUserDefinedFunction#resource_uris}
   */
-  readonly resourceUris?: AwsGlueUserDefinedFunction.ResourceUrisProperty[] | cdktn.IResolvable;
+  readonly resourceUris?: TfUserDefinedFunction.ResourceUrisProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_user_defined_function aws_glue_user_defined_function}
 */
-export class AwsGlueUserDefinedFunction extends cdktn.TerraformResource {
+export class TfUserDefinedFunction extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class AwsGlueUserDefinedFunction extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsGlueUserDefinedFunction resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfUserDefinedFunction resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsGlueUserDefinedFunction to import
-  * @param importFromId The id of the existing AwsGlueUserDefinedFunction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_user_defined_function#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsGlueUserDefinedFunction to import is found
+  * @param importToId The construct id used in the generated config for the TfUserDefinedFunction to import
+  * @param importFromId The id of the existing TfUserDefinedFunction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_user_defined_function#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfUserDefinedFunction to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_glue_user_defined_function", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class AwsGlueUserDefinedFunction extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsGlueUserDefinedFunctionConfig
+  * @param options TfUserDefinedFunctionConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsGlueUserDefinedFunctionConfig) {
+  public constructor(scope: Construct, id: string, config: TfUserDefinedFunctionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_glue_user_defined_function',
       terraformGeneratorMetadata: {
@@ -241,11 +241,11 @@ export class AwsGlueUserDefinedFunction extends cdktn.TerraformResource {
   }
 
   // resource_uris - computed: false, optional: true, required: false
-  private _resourceUris = new AwsGlueUserDefinedFunction.ResourceUrisPropertyList(this, "resource_uris", true);
+  private _resourceUris = new TfUserDefinedFunction.ResourceUrisPropertyList(this, "resource_uris", true);
   public get resourceUris() {
     return this._resourceUris;
   }
-  public putResourceUris(value: AwsGlueUserDefinedFunction.ResourceUrisProperty[] | cdktn.IResolvable) {
+  public putResourceUris(value: TfUserDefinedFunction.ResourceUrisProperty[] | cdktn.IResolvable) {
     this._resourceUris.internalValue = value;
   }
   public resetResourceUris() {
@@ -270,7 +270,7 @@ export class AwsGlueUserDefinedFunction extends cdktn.TerraformResource {
       owner_name: cdktn.stringToTerraform(this._ownerName),
       owner_type: cdktn.stringToTerraform(this._ownerType),
       region: cdktn.stringToTerraform(this._region),
-      resource_uris: cdktn.listMapper(awsGlueUserDefinedFunctionResourceUrisPropertyToTerraform, true)(this._resourceUris.internalValue),
+      resource_uris: cdktn.listMapper(tfUserDefinedFunctionResourceUrisPropertyToTerraform, true)(this._resourceUris.internalValue),
     };
   }
 
@@ -325,10 +325,10 @@ export class AwsGlueUserDefinedFunction extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       resource_uris: {
-        value: cdktn.listMapperHcl(awsGlueUserDefinedFunctionResourceUrisPropertyToHclTerraform, true)(this._resourceUris.internalValue),
+        value: cdktn.listMapperHcl(tfUserDefinedFunctionResourceUrisPropertyToHclTerraform, true)(this._resourceUris.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsGlueUserDefinedFunction.ResourceUrisPropertyList",
+        storageClassType: "TfUserDefinedFunction.ResourceUrisPropertyList",
       },
     };
 
@@ -337,7 +337,7 @@ export class AwsGlueUserDefinedFunction extends cdktn.TerraformResource {
   }
 }
 
-export function awsGlueUserDefinedFunctionResourceUrisPropertyToTerraform(struct?: AwsGlueUserDefinedFunction.ResourceUrisProperty | cdktn.IResolvable): any {
+export function tfUserDefinedFunctionResourceUrisPropertyToTerraform(struct?: TfUserDefinedFunction.ResourceUrisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -349,7 +349,7 @@ export function awsGlueUserDefinedFunctionResourceUrisPropertyToTerraform(struct
 }
 
 
-export function awsGlueUserDefinedFunctionResourceUrisPropertyToHclTerraform(struct?: AwsGlueUserDefinedFunction.ResourceUrisProperty | cdktn.IResolvable): any {
+export function tfUserDefinedFunctionResourceUrisPropertyToHclTerraform(struct?: TfUserDefinedFunction.ResourceUrisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -374,14 +374,14 @@ export function awsGlueUserDefinedFunctionResourceUrisPropertyToHclTerraform(str
 }
 
 
-export namespace AwsGlueUserDefinedFunction {
+export namespace TfUserDefinedFunction {
 export interface ResourceUrisProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_user_defined_function#resource_type AwsGlueUserDefinedFunction#resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_user_defined_function#resource_type TfUserDefinedFunction#resource_type}
   */
   readonly resourceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_user_defined_function#uri AwsGlueUserDefinedFunction#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_user_defined_function#uri TfUserDefinedFunction#uri}
   */
   readonly uri: string;
 }

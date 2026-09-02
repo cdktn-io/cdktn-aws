@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsOdbDbServersConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataDbServersConfig extends cdktn.TerraformMetaArguments {
   /**
   * The cloud exadata infrastructure ID. Mandatory field.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_db_servers#cloud_exadata_infrastructure_id DataAwsOdbDbServers#cloud_exadata_infrastructure_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_db_servers#cloud_exadata_infrastructure_id TfDataDbServers#cloud_exadata_infrastructure_id}
   */
   readonly cloudExadataInfrastructureId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_db_servers#region DataAwsOdbDbServers#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_db_servers#region TfDataDbServers#region}
   */
   readonly region?: string;
 }
@@ -23,7 +23,7 @@ export interface DataAwsOdbDbServersConfig extends cdktn.TerraformMetaArguments 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_db_servers aws_odb_db_servers}
 */
-export class DataAwsOdbDbServers extends cdktn.TerraformDataSource {
+export class TfDataDbServers extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -34,11 +34,11 @@ export class DataAwsOdbDbServers extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsOdbDbServers resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataDbServers resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsOdbDbServers to import
-  * @param importFromId The id of the existing DataAwsOdbDbServers that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_db_servers#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsOdbDbServers to import is found
+  * @param importToId The construct id used in the generated config for the TfDataDbServers to import
+  * @param importFromId The id of the existing TfDataDbServers that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_db_servers#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataDbServers to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_odb_db_servers", importId: importFromId, provider });
@@ -53,9 +53,9 @@ export class DataAwsOdbDbServers extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsOdbDbServersConfig
+  * @param options TfDataDbServersConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsOdbDbServersConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataDbServersConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_odb_db_servers',
       terraformGeneratorMetadata: {
@@ -93,7 +93,7 @@ export class DataAwsOdbDbServers extends cdktn.TerraformDataSource {
   }
 
   // db_servers - computed: true, optional: false, required: false
-  private _dbServers = new DataAwsOdbDbServers.DbServersPropertyList(this, "db_servers", false);
+  private _dbServers = new TfDataDbServers.DbServersPropertyList(this, "db_servers", false);
   public get dbServers() {
     return this._dbServers;
   }
@@ -146,7 +146,7 @@ export class DataAwsOdbDbServers extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsOdbDbServersDbServerPatchingDetailsPropertyToTerraform(struct?: DataAwsOdbDbServers.DbServerPatchingDetailsProperty): any {
+export function tfDataDbServersDbServerPatchingDetailsPropertyToTerraform(struct?: TfDataDbServers.DbServerPatchingDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -156,7 +156,7 @@ export function dataAwsOdbDbServersDbServerPatchingDetailsPropertyToTerraform(st
 }
 
 
-export function dataAwsOdbDbServersDbServerPatchingDetailsPropertyToHclTerraform(struct?: DataAwsOdbDbServers.DbServerPatchingDetailsProperty): any {
+export function tfDataDbServersDbServerPatchingDetailsPropertyToHclTerraform(struct?: TfDataDbServers.DbServerPatchingDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -167,7 +167,7 @@ export function dataAwsOdbDbServersDbServerPatchingDetailsPropertyToHclTerraform
 }
 
 
-export function dataAwsOdbDbServersDbServersPropertyToTerraform(struct?: DataAwsOdbDbServers.DbServersProperty): any {
+export function tfDataDbServersDbServersPropertyToTerraform(struct?: TfDataDbServers.DbServersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -177,7 +177,7 @@ export function dataAwsOdbDbServersDbServersPropertyToTerraform(struct?: DataAws
 }
 
 
-export function dataAwsOdbDbServersDbServersPropertyToHclTerraform(struct?: DataAwsOdbDbServers.DbServersProperty): any {
+export function tfDataDbServersDbServersPropertyToHclTerraform(struct?: TfDataDbServers.DbServersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -188,7 +188,7 @@ export function dataAwsOdbDbServersDbServersPropertyToHclTerraform(struct?: Data
 }
 
 
-export namespace DataAwsOdbDbServers {
+export namespace TfDataDbServers {
 export interface DbServerPatchingDetailsProperty {
 }
 export class DbServerPatchingDetailsPropertyOutputReference extends cdktn.ComplexObject {

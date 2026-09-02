@@ -5,23 +5,23 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSsoadminApplicationAccessScopeConfig extends cdktn.TerraformMetaArguments {
+export interface TfApplicationAccessScopeConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application_access_scope#application_arn AwsSsoadminApplicationAccessScope#application_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application_access_scope#application_arn TfApplicationAccessScope#application_arn}
   */
   readonly applicationArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application_access_scope#authorized_targets AwsSsoadminApplicationAccessScope#authorized_targets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application_access_scope#authorized_targets TfApplicationAccessScope#authorized_targets}
   */
   readonly authorizedTargets?: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application_access_scope#region AwsSsoadminApplicationAccessScope#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application_access_scope#region TfApplicationAccessScope#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application_access_scope#scope AwsSsoadminApplicationAccessScope#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application_access_scope#scope TfApplicationAccessScope#scope}
   */
   readonly scope: string;
 }
@@ -29,7 +29,7 @@ export interface AwsSsoadminApplicationAccessScopeConfig extends cdktn.Terraform
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application_access_scope aws_ssoadmin_application_access_scope}
 */
-export class AwsSsoadminApplicationAccessScope extends cdktn.TerraformResource {
+export class TfApplicationAccessScope extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -40,11 +40,11 @@ export class AwsSsoadminApplicationAccessScope extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSsoadminApplicationAccessScope resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfApplicationAccessScope resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSsoadminApplicationAccessScope to import
-  * @param importFromId The id of the existing AwsSsoadminApplicationAccessScope that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application_access_scope#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSsoadminApplicationAccessScope to import is found
+  * @param importToId The construct id used in the generated config for the TfApplicationAccessScope to import
+  * @param importFromId The id of the existing TfApplicationAccessScope that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application_access_scope#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfApplicationAccessScope to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssoadmin_application_access_scope", importId: importFromId, provider });
@@ -59,9 +59,9 @@ export class AwsSsoadminApplicationAccessScope extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSsoadminApplicationAccessScopeConfig
+  * @param options TfApplicationAccessScopeConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSsoadminApplicationAccessScopeConfig) {
+  public constructor(scope: Construct, id: string, config: TfApplicationAccessScopeConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ssoadmin_application_access_scope',
       terraformGeneratorMetadata: {

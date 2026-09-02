@@ -5,37 +5,37 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCodeguruprofilerProfilingGroupConfig extends cdktn.TerraformMetaArguments {
+export interface TfProfilingGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeguruprofiler_profiling_group#compute_platform AwsCodeguruprofilerProfilingGroup#compute_platform}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeguruprofiler_profiling_group#compute_platform TfProfilingGroup#compute_platform}
   */
   readonly computePlatform?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeguruprofiler_profiling_group#name AwsCodeguruprofilerProfilingGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeguruprofiler_profiling_group#name TfProfilingGroup#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeguruprofiler_profiling_group#region AwsCodeguruprofilerProfilingGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeguruprofiler_profiling_group#region TfProfilingGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeguruprofiler_profiling_group#tags AwsCodeguruprofilerProfilingGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeguruprofiler_profiling_group#tags TfProfilingGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * agent_orchestration_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeguruprofiler_profiling_group#agent_orchestration_config AwsCodeguruprofilerProfilingGroup#agent_orchestration_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeguruprofiler_profiling_group#agent_orchestration_config TfProfilingGroup#agent_orchestration_config}
   */
-  readonly agentOrchestrationConfig?: AwsCodeguruprofilerProfilingGroup.AgentOrchestrationConfigProperty[] | cdktn.IResolvable;
+  readonly agentOrchestrationConfig?: TfProfilingGroup.AgentOrchestrationConfigProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeguruprofiler_profiling_group aws_codeguruprofiler_profiling_group}
 */
-export class AwsCodeguruprofilerProfilingGroup extends cdktn.TerraformResource {
+export class TfProfilingGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -46,11 +46,11 @@ export class AwsCodeguruprofilerProfilingGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCodeguruprofilerProfilingGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfProfilingGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCodeguruprofilerProfilingGroup to import
-  * @param importFromId The id of the existing AwsCodeguruprofilerProfilingGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeguruprofiler_profiling_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCodeguruprofilerProfilingGroup to import is found
+  * @param importToId The construct id used in the generated config for the TfProfilingGroup to import
+  * @param importFromId The id of the existing TfProfilingGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeguruprofiler_profiling_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfProfilingGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_codeguruprofiler_profiling_group", importId: importFromId, provider });
@@ -65,9 +65,9 @@ export class AwsCodeguruprofilerProfilingGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCodeguruprofilerProfilingGroupConfig
+  * @param options TfProfilingGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCodeguruprofilerProfilingGroupConfig) {
+  public constructor(scope: Construct, id: string, config: TfProfilingGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_codeguruprofiler_profiling_group',
       terraformGeneratorMetadata: {
@@ -172,11 +172,11 @@ export class AwsCodeguruprofilerProfilingGroup extends cdktn.TerraformResource {
   }
 
   // agent_orchestration_config - computed: false, optional: true, required: false
-  private _agentOrchestrationConfig = new AwsCodeguruprofilerProfilingGroup.AgentOrchestrationConfigPropertyList(this, "agent_orchestration_config", false);
+  private _agentOrchestrationConfig = new TfProfilingGroup.AgentOrchestrationConfigPropertyList(this, "agent_orchestration_config", false);
   public get agentOrchestrationConfig() {
     return this._agentOrchestrationConfig;
   }
-  public putAgentOrchestrationConfig(value: AwsCodeguruprofilerProfilingGroup.AgentOrchestrationConfigProperty[] | cdktn.IResolvable) {
+  public putAgentOrchestrationConfig(value: TfProfilingGroup.AgentOrchestrationConfigProperty[] | cdktn.IResolvable) {
     this._agentOrchestrationConfig.internalValue = value;
   }
   public resetAgentOrchestrationConfig() {
@@ -197,7 +197,7 @@ export class AwsCodeguruprofilerProfilingGroup extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      agent_orchestration_config: cdktn.listMapper(awsCodeguruprofilerProfilingGroupAgentOrchestrationConfigPropertyToTerraform, true)(this._agentOrchestrationConfig.internalValue),
+      agent_orchestration_config: cdktn.listMapper(tfProfilingGroupAgentOrchestrationConfigPropertyToTerraform, true)(this._agentOrchestrationConfig.internalValue),
     };
   }
 
@@ -228,10 +228,10 @@ export class AwsCodeguruprofilerProfilingGroup extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       agent_orchestration_config: {
-        value: cdktn.listMapperHcl(awsCodeguruprofilerProfilingGroupAgentOrchestrationConfigPropertyToHclTerraform, true)(this._agentOrchestrationConfig.internalValue),
+        value: cdktn.listMapperHcl(tfProfilingGroupAgentOrchestrationConfigPropertyToHclTerraform, true)(this._agentOrchestrationConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCodeguruprofilerProfilingGroup.AgentOrchestrationConfigPropertyList",
+        storageClassType: "TfProfilingGroup.AgentOrchestrationConfigPropertyList",
       },
     };
 
@@ -240,7 +240,7 @@ export class AwsCodeguruprofilerProfilingGroup extends cdktn.TerraformResource {
   }
 }
 
-export function awsCodeguruprofilerProfilingGroupAgentOrchestrationConfigPropertyToTerraform(struct?: AwsCodeguruprofilerProfilingGroup.AgentOrchestrationConfigProperty | cdktn.IResolvable): any {
+export function tfProfilingGroupAgentOrchestrationConfigPropertyToTerraform(struct?: TfProfilingGroup.AgentOrchestrationConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -251,7 +251,7 @@ export function awsCodeguruprofilerProfilingGroupAgentOrchestrationConfigPropert
 }
 
 
-export function awsCodeguruprofilerProfilingGroupAgentOrchestrationConfigPropertyToHclTerraform(struct?: AwsCodeguruprofilerProfilingGroup.AgentOrchestrationConfigProperty | cdktn.IResolvable): any {
+export function tfProfilingGroupAgentOrchestrationConfigPropertyToHclTerraform(struct?: TfProfilingGroup.AgentOrchestrationConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -270,10 +270,10 @@ export function awsCodeguruprofilerProfilingGroupAgentOrchestrationConfigPropert
 }
 
 
-export namespace AwsCodeguruprofilerProfilingGroup {
+export namespace TfProfilingGroup {
 export interface AgentOrchestrationConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeguruprofiler_profiling_group#profiling_enabled AwsCodeguruprofilerProfilingGroup#profiling_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeguruprofiler_profiling_group#profiling_enabled TfProfilingGroup#profiling_enabled}
   */
   readonly profilingEnabled: boolean | cdktn.IResolvable;
 }

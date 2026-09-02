@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsEc2TransitGatewayMulticastDomainConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataTransitGatewayMulticastDomainConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_multicast_domain#id DataAwsEc2TransitGatewayMulticastDomain#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_multicast_domain#id TfDataTransitGatewayMulticastDomain#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,35 +16,35 @@ export interface DataAwsEc2TransitGatewayMulticastDomainConfig extends cdktn.Ter
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_multicast_domain#region DataAwsEc2TransitGatewayMulticastDomain#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_multicast_domain#region TfDataTransitGatewayMulticastDomain#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_multicast_domain#tags DataAwsEc2TransitGatewayMulticastDomain#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_multicast_domain#tags TfDataTransitGatewayMulticastDomain#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_multicast_domain#transit_gateway_multicast_domain_id DataAwsEc2TransitGatewayMulticastDomain#transit_gateway_multicast_domain_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_multicast_domain#transit_gateway_multicast_domain_id TfDataTransitGatewayMulticastDomain#transit_gateway_multicast_domain_id}
   */
   readonly transitGatewayMulticastDomainId?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_multicast_domain#filter DataAwsEc2TransitGatewayMulticastDomain#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_multicast_domain#filter TfDataTransitGatewayMulticastDomain#filter}
   */
-  readonly filter?: DataAwsEc2TransitGatewayMulticastDomain.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: TfDataTransitGatewayMulticastDomain.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_multicast_domain#timeouts DataAwsEc2TransitGatewayMulticastDomain#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_multicast_domain#timeouts TfDataTransitGatewayMulticastDomain#timeouts}
   */
-  readonly timeouts?: DataAwsEc2TransitGatewayMulticastDomain.TimeoutsProperty;
+  readonly timeouts?: TfDataTransitGatewayMulticastDomain.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_multicast_domain aws_ec2_transit_gateway_multicast_domain}
 */
-export class DataAwsEc2TransitGatewayMulticastDomain extends cdktn.TerraformDataSource {
+export class TfDataTransitGatewayMulticastDomain extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class DataAwsEc2TransitGatewayMulticastDomain extends cdktn.TerraformData
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsEc2TransitGatewayMulticastDomain resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataTransitGatewayMulticastDomain resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsEc2TransitGatewayMulticastDomain to import
-  * @param importFromId The id of the existing DataAwsEc2TransitGatewayMulticastDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_multicast_domain#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsEc2TransitGatewayMulticastDomain to import is found
+  * @param importToId The construct id used in the generated config for the TfDataTransitGatewayMulticastDomain to import
+  * @param importFromId The id of the existing TfDataTransitGatewayMulticastDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_multicast_domain#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataTransitGatewayMulticastDomain to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_transit_gateway_multicast_domain", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class DataAwsEc2TransitGatewayMulticastDomain extends cdktn.TerraformData
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsEc2TransitGatewayMulticastDomainConfig = {}
+  * @param options TfDataTransitGatewayMulticastDomainConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsEc2TransitGatewayMulticastDomainConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDataTransitGatewayMulticastDomainConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_transit_gateway_multicast_domain',
       terraformGeneratorMetadata: {
@@ -110,7 +110,7 @@ export class DataAwsEc2TransitGatewayMulticastDomain extends cdktn.TerraformData
   }
 
   // associations - computed: true, optional: false, required: false
-  private _associations = new DataAwsEc2TransitGatewayMulticastDomain.AssociationsPropertyList(this, "associations", false);
+  private _associations = new TfDataTransitGatewayMulticastDomain.AssociationsPropertyList(this, "associations", false);
   public get associations() {
     return this._associations;
   }
@@ -142,7 +142,7 @@ export class DataAwsEc2TransitGatewayMulticastDomain extends cdktn.TerraformData
   }
 
   // members - computed: true, optional: false, required: false
-  private _members = new DataAwsEc2TransitGatewayMulticastDomain.MembersPropertyList(this, "members", false);
+  private _members = new TfDataTransitGatewayMulticastDomain.MembersPropertyList(this, "members", false);
   public get members() {
     return this._members;
   }
@@ -169,7 +169,7 @@ export class DataAwsEc2TransitGatewayMulticastDomain extends cdktn.TerraformData
   }
 
   // sources - computed: true, optional: false, required: false
-  private _sources = new DataAwsEc2TransitGatewayMulticastDomain.SourcesPropertyList(this, "sources", false);
+  private _sources = new TfDataTransitGatewayMulticastDomain.SourcesPropertyList(this, "sources", false);
   public get sources() {
     return this._sources;
   }
@@ -227,11 +227,11 @@ export class DataAwsEc2TransitGatewayMulticastDomain extends cdktn.TerraformData
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataAwsEc2TransitGatewayMulticastDomain.FilterPropertyList(this, "filter", true);
+  private _filter = new TfDataTransitGatewayMulticastDomain.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataAwsEc2TransitGatewayMulticastDomain.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: TfDataTransitGatewayMulticastDomain.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -243,11 +243,11 @@ export class DataAwsEc2TransitGatewayMulticastDomain extends cdktn.TerraformData
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAwsEc2TransitGatewayMulticastDomain.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfDataTransitGatewayMulticastDomain.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: DataAwsEc2TransitGatewayMulticastDomain.TimeoutsProperty) {
+  public putTimeouts(value: TfDataTransitGatewayMulticastDomain.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -268,8 +268,8 @@ export class DataAwsEc2TransitGatewayMulticastDomain extends cdktn.TerraformData
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       transit_gateway_multicast_domain_id: cdktn.stringToTerraform(this._transitGatewayMulticastDomainId),
-      filter: cdktn.listMapper(dataAwsEc2TransitGatewayMulticastDomainFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: dataAwsEc2TransitGatewayMulticastDomainTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(tfDataTransitGatewayMulticastDomainFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: tfDataTransitGatewayMulticastDomainTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -300,16 +300,16 @@ export class DataAwsEc2TransitGatewayMulticastDomain extends cdktn.TerraformData
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataAwsEc2TransitGatewayMulticastDomainFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(tfDataTransitGatewayMulticastDomainFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataAwsEc2TransitGatewayMulticastDomain.FilterPropertyList",
+        storageClassType: "TfDataTransitGatewayMulticastDomain.FilterPropertyList",
       },
       timeouts: {
-        value: dataAwsEc2TransitGatewayMulticastDomainTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfDataTransitGatewayMulticastDomainTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "DataAwsEc2TransitGatewayMulticastDomain.TimeoutsProperty",
+        storageClassType: "TfDataTransitGatewayMulticastDomain.TimeoutsProperty",
       },
     };
 
@@ -318,7 +318,7 @@ export class DataAwsEc2TransitGatewayMulticastDomain extends cdktn.TerraformData
   }
 }
 
-export function dataAwsEc2TransitGatewayMulticastDomainAssociationsPropertyToTerraform(struct?: DataAwsEc2TransitGatewayMulticastDomain.AssociationsProperty): any {
+export function tfDataTransitGatewayMulticastDomainAssociationsPropertyToTerraform(struct?: TfDataTransitGatewayMulticastDomain.AssociationsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -328,7 +328,7 @@ export function dataAwsEc2TransitGatewayMulticastDomainAssociationsPropertyToTer
 }
 
 
-export function dataAwsEc2TransitGatewayMulticastDomainAssociationsPropertyToHclTerraform(struct?: DataAwsEc2TransitGatewayMulticastDomain.AssociationsProperty): any {
+export function tfDataTransitGatewayMulticastDomainAssociationsPropertyToHclTerraform(struct?: TfDataTransitGatewayMulticastDomain.AssociationsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -339,7 +339,7 @@ export function dataAwsEc2TransitGatewayMulticastDomainAssociationsPropertyToHcl
 }
 
 
-export function dataAwsEc2TransitGatewayMulticastDomainMembersPropertyToTerraform(struct?: DataAwsEc2TransitGatewayMulticastDomain.MembersProperty): any {
+export function tfDataTransitGatewayMulticastDomainMembersPropertyToTerraform(struct?: TfDataTransitGatewayMulticastDomain.MembersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -349,7 +349,7 @@ export function dataAwsEc2TransitGatewayMulticastDomainMembersPropertyToTerrafor
 }
 
 
-export function dataAwsEc2TransitGatewayMulticastDomainMembersPropertyToHclTerraform(struct?: DataAwsEc2TransitGatewayMulticastDomain.MembersProperty): any {
+export function tfDataTransitGatewayMulticastDomainMembersPropertyToHclTerraform(struct?: TfDataTransitGatewayMulticastDomain.MembersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -360,7 +360,7 @@ export function dataAwsEc2TransitGatewayMulticastDomainMembersPropertyToHclTerra
 }
 
 
-export function dataAwsEc2TransitGatewayMulticastDomainSourcesPropertyToTerraform(struct?: DataAwsEc2TransitGatewayMulticastDomain.SourcesProperty): any {
+export function tfDataTransitGatewayMulticastDomainSourcesPropertyToTerraform(struct?: TfDataTransitGatewayMulticastDomain.SourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -370,7 +370,7 @@ export function dataAwsEc2TransitGatewayMulticastDomainSourcesPropertyToTerrafor
 }
 
 
-export function dataAwsEc2TransitGatewayMulticastDomainSourcesPropertyToHclTerraform(struct?: DataAwsEc2TransitGatewayMulticastDomain.SourcesProperty): any {
+export function tfDataTransitGatewayMulticastDomainSourcesPropertyToHclTerraform(struct?: TfDataTransitGatewayMulticastDomain.SourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -381,7 +381,7 @@ export function dataAwsEc2TransitGatewayMulticastDomainSourcesPropertyToHclTerra
 }
 
 
-export function dataAwsEc2TransitGatewayMulticastDomainFilterPropertyToTerraform(struct?: DataAwsEc2TransitGatewayMulticastDomain.FilterProperty | cdktn.IResolvable): any {
+export function tfDataTransitGatewayMulticastDomainFilterPropertyToTerraform(struct?: TfDataTransitGatewayMulticastDomain.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -393,7 +393,7 @@ export function dataAwsEc2TransitGatewayMulticastDomainFilterPropertyToTerraform
 }
 
 
-export function dataAwsEc2TransitGatewayMulticastDomainFilterPropertyToHclTerraform(struct?: DataAwsEc2TransitGatewayMulticastDomain.FilterProperty | cdktn.IResolvable): any {
+export function tfDataTransitGatewayMulticastDomainFilterPropertyToHclTerraform(struct?: TfDataTransitGatewayMulticastDomain.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -418,7 +418,7 @@ export function dataAwsEc2TransitGatewayMulticastDomainFilterPropertyToHclTerraf
 }
 
 
-export function dataAwsEc2TransitGatewayMulticastDomainTimeoutsPropertyToTerraform(struct?: DataAwsEc2TransitGatewayMulticastDomain.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDataTransitGatewayMulticastDomainTimeoutsPropertyToTerraform(struct?: TfDataTransitGatewayMulticastDomain.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -429,7 +429,7 @@ export function dataAwsEc2TransitGatewayMulticastDomainTimeoutsPropertyToTerrafo
 }
 
 
-export function dataAwsEc2TransitGatewayMulticastDomainTimeoutsPropertyToHclTerraform(struct?: DataAwsEc2TransitGatewayMulticastDomain.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDataTransitGatewayMulticastDomainTimeoutsPropertyToHclTerraform(struct?: TfDataTransitGatewayMulticastDomain.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -448,7 +448,7 @@ export function dataAwsEc2TransitGatewayMulticastDomainTimeoutsPropertyToHclTerr
 }
 
 
-export namespace DataAwsEc2TransitGatewayMulticastDomain {
+export namespace TfDataTransitGatewayMulticastDomain {
 export interface AssociationsProperty {
 }
 export class AssociationsPropertyOutputReference extends cdktn.ComplexObject {
@@ -628,11 +628,11 @@ export class SourcesPropertyList extends cdktn.ComplexList {
 }
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_multicast_domain#name DataAwsEc2TransitGatewayMulticastDomain#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_multicast_domain#name TfDataTransitGatewayMulticastDomain#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_multicast_domain#values DataAwsEc2TransitGatewayMulticastDomain#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_multicast_domain#values TfDataTransitGatewayMulticastDomain#values}
   */
   readonly values: string[];
 }
@@ -734,7 +734,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_multicast_domain#read DataAwsEc2TransitGatewayMulticastDomain#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_multicast_domain#read TfDataTransitGatewayMulticastDomain#read}
   */
   readonly read?: string;
 }

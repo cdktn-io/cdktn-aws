@@ -5,58 +5,58 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsRoute53RecoverycontrolconfigSafetyRuleConfig extends cdktn.TerraformMetaArguments {
+export interface TfSafetyRuleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#asserted_controls AwsRoute53RecoverycontrolconfigSafetyRule#asserted_controls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#asserted_controls TfSafetyRule#asserted_controls}
   */
   readonly assertedControls?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#control_panel_arn AwsRoute53RecoverycontrolconfigSafetyRule#control_panel_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#control_panel_arn TfSafetyRule#control_panel_arn}
   */
   readonly controlPanelArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#gating_controls AwsRoute53RecoverycontrolconfigSafetyRule#gating_controls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#gating_controls TfSafetyRule#gating_controls}
   */
   readonly gatingControls?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#id AwsRoute53RecoverycontrolconfigSafetyRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#id TfSafetyRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#name AwsRoute53RecoverycontrolconfigSafetyRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#name TfSafetyRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#tags AwsRoute53RecoverycontrolconfigSafetyRule#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#tags TfSafetyRule#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#tags_all AwsRoute53RecoverycontrolconfigSafetyRule#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#tags_all TfSafetyRule#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#target_controls AwsRoute53RecoverycontrolconfigSafetyRule#target_controls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#target_controls TfSafetyRule#target_controls}
   */
   readonly targetControls?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#wait_period_ms AwsRoute53RecoverycontrolconfigSafetyRule#wait_period_ms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#wait_period_ms TfSafetyRule#wait_period_ms}
   */
   readonly waitPeriodMs: number;
   /**
   * rule_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#rule_config AwsRoute53RecoverycontrolconfigSafetyRule#rule_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#rule_config TfSafetyRule#rule_config}
   */
-  readonly ruleConfig: AwsRoute53RecoverycontrolconfigSafetyRule.RuleConfigProperty;
+  readonly ruleConfig: TfSafetyRule.RuleConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule aws_route53recoverycontrolconfig_safety_rule}
 */
-export class AwsRoute53RecoverycontrolconfigSafetyRule extends cdktn.TerraformResource {
+export class TfSafetyRule extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -67,11 +67,11 @@ export class AwsRoute53RecoverycontrolconfigSafetyRule extends cdktn.TerraformRe
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsRoute53RecoverycontrolconfigSafetyRule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfSafetyRule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsRoute53RecoverycontrolconfigSafetyRule to import
-  * @param importFromId The id of the existing AwsRoute53RecoverycontrolconfigSafetyRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsRoute53RecoverycontrolconfigSafetyRule to import is found
+  * @param importToId The construct id used in the generated config for the TfSafetyRule to import
+  * @param importFromId The id of the existing TfSafetyRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfSafetyRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route53recoverycontrolconfig_safety_rule", importId: importFromId, provider });
@@ -86,9 +86,9 @@ export class AwsRoute53RecoverycontrolconfigSafetyRule extends cdktn.TerraformRe
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsRoute53RecoverycontrolconfigSafetyRuleConfig
+  * @param options TfSafetyRuleConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsRoute53RecoverycontrolconfigSafetyRuleConfig) {
+  public constructor(scope: Construct, id: string, config: TfSafetyRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_route53recoverycontrolconfig_safety_rule',
       terraformGeneratorMetadata: {
@@ -266,11 +266,11 @@ export class AwsRoute53RecoverycontrolconfigSafetyRule extends cdktn.TerraformRe
   }
 
   // rule_config - computed: false, optional: false, required: true
-  private _ruleConfig = new AwsRoute53RecoverycontrolconfigSafetyRule.RuleConfigPropertyOutputReference(this, "rule_config");
+  private _ruleConfig = new TfSafetyRule.RuleConfigPropertyOutputReference(this, "rule_config");
   public get ruleConfig() {
     return this._ruleConfig;
   }
-  public putRuleConfig(value: AwsRoute53RecoverycontrolconfigSafetyRule.RuleConfigProperty) {
+  public putRuleConfig(value: TfSafetyRule.RuleConfigProperty) {
     this._ruleConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -293,7 +293,7 @@ export class AwsRoute53RecoverycontrolconfigSafetyRule extends cdktn.TerraformRe
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       target_controls: cdktn.listMapper(cdktn.stringToTerraform, false)(this._targetControls),
       wait_period_ms: cdktn.numberToTerraform(this._waitPeriodMs),
-      rule_config: awsRoute53RecoverycontrolconfigSafetyRuleRuleConfigPropertyToTerraform(this._ruleConfig.internalValue),
+      rule_config: tfSafetyRuleRuleConfigPropertyToTerraform(this._ruleConfig.internalValue),
     };
   }
 
@@ -354,10 +354,10 @@ export class AwsRoute53RecoverycontrolconfigSafetyRule extends cdktn.TerraformRe
         storageClassType: "number",
       },
       rule_config: {
-        value: awsRoute53RecoverycontrolconfigSafetyRuleRuleConfigPropertyToHclTerraform(this._ruleConfig.internalValue),
+        value: tfSafetyRuleRuleConfigPropertyToHclTerraform(this._ruleConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsRoute53RecoverycontrolconfigSafetyRule.RuleConfigPropertyList",
+        storageClassType: "TfSafetyRule.RuleConfigPropertyList",
       },
     };
 
@@ -366,7 +366,7 @@ export class AwsRoute53RecoverycontrolconfigSafetyRule extends cdktn.TerraformRe
   }
 }
 
-export function awsRoute53RecoverycontrolconfigSafetyRuleRuleConfigPropertyToTerraform(struct?: AwsRoute53RecoverycontrolconfigSafetyRule.RuleConfigPropertyOutputReference | AwsRoute53RecoverycontrolconfigSafetyRule.RuleConfigProperty): any {
+export function tfSafetyRuleRuleConfigPropertyToTerraform(struct?: TfSafetyRule.RuleConfigPropertyOutputReference | TfSafetyRule.RuleConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -379,7 +379,7 @@ export function awsRoute53RecoverycontrolconfigSafetyRuleRuleConfigPropertyToTer
 }
 
 
-export function awsRoute53RecoverycontrolconfigSafetyRuleRuleConfigPropertyToHclTerraform(struct?: AwsRoute53RecoverycontrolconfigSafetyRule.RuleConfigPropertyOutputReference | AwsRoute53RecoverycontrolconfigSafetyRule.RuleConfigProperty): any {
+export function tfSafetyRuleRuleConfigPropertyToHclTerraform(struct?: TfSafetyRule.RuleConfigPropertyOutputReference | TfSafetyRule.RuleConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -410,18 +410,18 @@ export function awsRoute53RecoverycontrolconfigSafetyRuleRuleConfigPropertyToHcl
 }
 
 
-export namespace AwsRoute53RecoverycontrolconfigSafetyRule {
+export namespace TfSafetyRule {
 export interface RuleConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#inverted AwsRoute53RecoverycontrolconfigSafetyRule#inverted}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#inverted TfSafetyRule#inverted}
   */
   readonly inverted: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#threshold AwsRoute53RecoverycontrolconfigSafetyRule#threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#threshold TfSafetyRule#threshold}
   */
   readonly threshold: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#type AwsRoute53RecoverycontrolconfigSafetyRule#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#type TfSafetyRule#type}
   */
   readonly type: string;
 }

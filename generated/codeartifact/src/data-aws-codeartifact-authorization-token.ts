@@ -5,21 +5,21 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsCodeartifactAuthorizationTokenConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataAuthorizationTokenConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeartifact_authorization_token#domain DataAwsCodeartifactAuthorizationToken#domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeartifact_authorization_token#domain TfDataAuthorizationToken#domain}
   */
   readonly domain: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeartifact_authorization_token#domain_owner DataAwsCodeartifactAuthorizationToken#domain_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeartifact_authorization_token#domain_owner TfDataAuthorizationToken#domain_owner}
   */
   readonly domainOwner?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeartifact_authorization_token#duration_seconds DataAwsCodeartifactAuthorizationToken#duration_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeartifact_authorization_token#duration_seconds TfDataAuthorizationToken#duration_seconds}
   */
   readonly durationSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeartifact_authorization_token#id DataAwsCodeartifactAuthorizationToken#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeartifact_authorization_token#id TfDataAuthorizationToken#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,7 +28,7 @@ export interface DataAwsCodeartifactAuthorizationTokenConfig extends cdktn.Terra
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeartifact_authorization_token#region DataAwsCodeartifactAuthorizationToken#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeartifact_authorization_token#region TfDataAuthorizationToken#region}
   */
   readonly region?: string;
 }
@@ -36,7 +36,7 @@ export interface DataAwsCodeartifactAuthorizationTokenConfig extends cdktn.Terra
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeartifact_authorization_token aws_codeartifact_authorization_token}
 */
-export class DataAwsCodeartifactAuthorizationToken extends cdktn.TerraformDataSource {
+export class TfDataAuthorizationToken extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class DataAwsCodeartifactAuthorizationToken extends cdktn.TerraformDataSo
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsCodeartifactAuthorizationToken resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataAuthorizationToken resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsCodeartifactAuthorizationToken to import
-  * @param importFromId The id of the existing DataAwsCodeartifactAuthorizationToken that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeartifact_authorization_token#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsCodeartifactAuthorizationToken to import is found
+  * @param importToId The construct id used in the generated config for the TfDataAuthorizationToken to import
+  * @param importFromId The id of the existing TfDataAuthorizationToken that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeartifact_authorization_token#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataAuthorizationToken to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_codeartifact_authorization_token", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class DataAwsCodeartifactAuthorizationToken extends cdktn.TerraformDataSo
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsCodeartifactAuthorizationTokenConfig
+  * @param options TfDataAuthorizationTokenConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsCodeartifactAuthorizationTokenConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataAuthorizationTokenConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_codeartifact_authorization_token',
       terraformGeneratorMetadata: {

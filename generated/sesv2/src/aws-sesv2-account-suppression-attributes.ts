@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSesv2AccountSuppressionAttributesConfig extends cdktn.TerraformMetaArguments {
+export interface TfAccountSuppressionAttributesConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_account_suppression_attributes#region AwsSesv2AccountSuppressionAttributes#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_account_suppression_attributes#region TfAccountSuppressionAttributes#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_account_suppression_attributes#suppressed_reasons AwsSesv2AccountSuppressionAttributes#suppressed_reasons}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_account_suppression_attributes#suppressed_reasons TfAccountSuppressionAttributes#suppressed_reasons}
   */
   readonly suppressedReasons: string[];
 }
@@ -21,7 +21,7 @@ export interface AwsSesv2AccountSuppressionAttributesConfig extends cdktn.Terraf
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_account_suppression_attributes aws_sesv2_account_suppression_attributes}
 */
-export class AwsSesv2AccountSuppressionAttributes extends cdktn.TerraformResource {
+export class TfAccountSuppressionAttributes extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class AwsSesv2AccountSuppressionAttributes extends cdktn.TerraformResourc
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSesv2AccountSuppressionAttributes resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAccountSuppressionAttributes resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSesv2AccountSuppressionAttributes to import
-  * @param importFromId The id of the existing AwsSesv2AccountSuppressionAttributes that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_account_suppression_attributes#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSesv2AccountSuppressionAttributes to import is found
+  * @param importToId The construct id used in the generated config for the TfAccountSuppressionAttributes to import
+  * @param importFromId The id of the existing TfAccountSuppressionAttributes that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_account_suppression_attributes#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAccountSuppressionAttributes to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sesv2_account_suppression_attributes", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class AwsSesv2AccountSuppressionAttributes extends cdktn.TerraformResourc
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSesv2AccountSuppressionAttributesConfig
+  * @param options TfAccountSuppressionAttributesConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSesv2AccountSuppressionAttributesConfig) {
+  public constructor(scope: Construct, id: string, config: TfAccountSuppressionAttributesConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sesv2_account_suppression_attributes',
       terraformGeneratorMetadata: {

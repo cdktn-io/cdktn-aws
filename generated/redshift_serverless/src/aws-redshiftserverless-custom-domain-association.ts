@@ -5,23 +5,23 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsRedshiftserverlessCustomDomainAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface TfCustomDomainAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_custom_domain_association#custom_domain_certificate_arn AwsRedshiftserverlessCustomDomainAssociation#custom_domain_certificate_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_custom_domain_association#custom_domain_certificate_arn TfCustomDomainAssociation#custom_domain_certificate_arn}
   */
   readonly customDomainCertificateArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_custom_domain_association#custom_domain_name AwsRedshiftserverlessCustomDomainAssociation#custom_domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_custom_domain_association#custom_domain_name TfCustomDomainAssociation#custom_domain_name}
   */
   readonly customDomainName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_custom_domain_association#region AwsRedshiftserverlessCustomDomainAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_custom_domain_association#region TfCustomDomainAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_custom_domain_association#workgroup_name AwsRedshiftserverlessCustomDomainAssociation#workgroup_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_custom_domain_association#workgroup_name TfCustomDomainAssociation#workgroup_name}
   */
   readonly workgroupName: string;
 }
@@ -29,7 +29,7 @@ export interface AwsRedshiftserverlessCustomDomainAssociationConfig extends cdkt
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_custom_domain_association aws_redshiftserverless_custom_domain_association}
 */
-export class AwsRedshiftserverlessCustomDomainAssociation extends cdktn.TerraformResource {
+export class TfCustomDomainAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -40,11 +40,11 @@ export class AwsRedshiftserverlessCustomDomainAssociation extends cdktn.Terrafor
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsRedshiftserverlessCustomDomainAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfCustomDomainAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsRedshiftserverlessCustomDomainAssociation to import
-  * @param importFromId The id of the existing AwsRedshiftserverlessCustomDomainAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_custom_domain_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsRedshiftserverlessCustomDomainAssociation to import is found
+  * @param importToId The construct id used in the generated config for the TfCustomDomainAssociation to import
+  * @param importFromId The id of the existing TfCustomDomainAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_custom_domain_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfCustomDomainAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_redshiftserverless_custom_domain_association", importId: importFromId, provider });
@@ -59,9 +59,9 @@ export class AwsRedshiftserverlessCustomDomainAssociation extends cdktn.Terrafor
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsRedshiftserverlessCustomDomainAssociationConfig
+  * @param options TfCustomDomainAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsRedshiftserverlessCustomDomainAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: TfCustomDomainAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_redshiftserverless_custom_domain_association',
       terraformGeneratorMetadata: {

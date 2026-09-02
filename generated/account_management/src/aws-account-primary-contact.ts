@@ -5,64 +5,64 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsAccountPrimaryContactConfig extends cdktn.TerraformMetaArguments {
+export interface TfPrimaryContactConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_primary_contact#account_id AwsAccountPrimaryContact#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_primary_contact#account_id TfPrimaryContact#account_id}
   */
   readonly accountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_primary_contact#address_line_1 AwsAccountPrimaryContact#address_line_1}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_primary_contact#address_line_1 TfPrimaryContact#address_line_1}
   */
   readonly addressLine1: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_primary_contact#address_line_2 AwsAccountPrimaryContact#address_line_2}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_primary_contact#address_line_2 TfPrimaryContact#address_line_2}
   */
   readonly addressLine2?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_primary_contact#address_line_3 AwsAccountPrimaryContact#address_line_3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_primary_contact#address_line_3 TfPrimaryContact#address_line_3}
   */
   readonly addressLine3?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_primary_contact#city AwsAccountPrimaryContact#city}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_primary_contact#city TfPrimaryContact#city}
   */
   readonly city: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_primary_contact#company_name AwsAccountPrimaryContact#company_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_primary_contact#company_name TfPrimaryContact#company_name}
   */
   readonly companyName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_primary_contact#country_code AwsAccountPrimaryContact#country_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_primary_contact#country_code TfPrimaryContact#country_code}
   */
   readonly countryCode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_primary_contact#district_or_county AwsAccountPrimaryContact#district_or_county}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_primary_contact#district_or_county TfPrimaryContact#district_or_county}
   */
   readonly districtOrCounty?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_primary_contact#full_name AwsAccountPrimaryContact#full_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_primary_contact#full_name TfPrimaryContact#full_name}
   */
   readonly fullName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_primary_contact#id AwsAccountPrimaryContact#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_primary_contact#id TfPrimaryContact#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_primary_contact#phone_number AwsAccountPrimaryContact#phone_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_primary_contact#phone_number TfPrimaryContact#phone_number}
   */
   readonly phoneNumber: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_primary_contact#postal_code AwsAccountPrimaryContact#postal_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_primary_contact#postal_code TfPrimaryContact#postal_code}
   */
   readonly postalCode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_primary_contact#state_or_region AwsAccountPrimaryContact#state_or_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_primary_contact#state_or_region TfPrimaryContact#state_or_region}
   */
   readonly stateOrRegion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_primary_contact#website_url AwsAccountPrimaryContact#website_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_primary_contact#website_url TfPrimaryContact#website_url}
   */
   readonly websiteUrl?: string;
 }
@@ -70,7 +70,7 @@ export interface AwsAccountPrimaryContactConfig extends cdktn.TerraformMetaArgum
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_primary_contact aws_account_primary_contact}
 */
-export class AwsAccountPrimaryContact extends cdktn.TerraformResource {
+export class TfPrimaryContact extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -81,11 +81,11 @@ export class AwsAccountPrimaryContact extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsAccountPrimaryContact resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfPrimaryContact resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsAccountPrimaryContact to import
-  * @param importFromId The id of the existing AwsAccountPrimaryContact that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_primary_contact#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsAccountPrimaryContact to import is found
+  * @param importToId The construct id used in the generated config for the TfPrimaryContact to import
+  * @param importFromId The id of the existing TfPrimaryContact that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_primary_contact#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfPrimaryContact to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_account_primary_contact", importId: importFromId, provider });
@@ -100,9 +100,9 @@ export class AwsAccountPrimaryContact extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsAccountPrimaryContactConfig
+  * @param options TfPrimaryContactConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsAccountPrimaryContactConfig) {
+  public constructor(scope: Construct, id: string, config: TfPrimaryContactConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_account_primary_contact',
       terraformGeneratorMetadata: {

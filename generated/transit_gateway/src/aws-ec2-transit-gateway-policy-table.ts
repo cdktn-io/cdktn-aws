@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEc2TransitGatewayPolicyTableConfig extends cdktn.TerraformMetaArguments {
+export interface TfTransitGatewayPolicyTableConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_policy_table#id AwsEc2TransitGatewayPolicyTable#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_policy_table#id TfTransitGatewayPolicyTable#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,19 +16,19 @@ export interface AwsEc2TransitGatewayPolicyTableConfig extends cdktn.TerraformMe
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_policy_table#region AwsEc2TransitGatewayPolicyTable#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_policy_table#region TfTransitGatewayPolicyTable#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_policy_table#tags AwsEc2TransitGatewayPolicyTable#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_policy_table#tags TfTransitGatewayPolicyTable#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_policy_table#tags_all AwsEc2TransitGatewayPolicyTable#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_policy_table#tags_all TfTransitGatewayPolicyTable#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_policy_table#transit_gateway_id AwsEc2TransitGatewayPolicyTable#transit_gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_policy_table#transit_gateway_id TfTransitGatewayPolicyTable#transit_gateway_id}
   */
   readonly transitGatewayId: string;
 }
@@ -36,7 +36,7 @@ export interface AwsEc2TransitGatewayPolicyTableConfig extends cdktn.TerraformMe
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_policy_table aws_ec2_transit_gateway_policy_table}
 */
-export class AwsEc2TransitGatewayPolicyTable extends cdktn.TerraformResource {
+export class TfTransitGatewayPolicyTable extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class AwsEc2TransitGatewayPolicyTable extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEc2TransitGatewayPolicyTable resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfTransitGatewayPolicyTable resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEc2TransitGatewayPolicyTable to import
-  * @param importFromId The id of the existing AwsEc2TransitGatewayPolicyTable that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_policy_table#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEc2TransitGatewayPolicyTable to import is found
+  * @param importToId The construct id used in the generated config for the TfTransitGatewayPolicyTable to import
+  * @param importFromId The id of the existing TfTransitGatewayPolicyTable that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_policy_table#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfTransitGatewayPolicyTable to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_transit_gateway_policy_table", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class AwsEc2TransitGatewayPolicyTable extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEc2TransitGatewayPolicyTableConfig
+  * @param options TfTransitGatewayPolicyTableConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEc2TransitGatewayPolicyTableConfig) {
+  public constructor(scope: Construct, id: string, config: TfTransitGatewayPolicyTableConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_transit_gateway_policy_table',
       terraformGeneratorMetadata: {

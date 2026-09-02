@@ -5,220 +5,220 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsLambdaFunctionConfig extends cdktn.TerraformMetaArguments {
+export interface TfFunctionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#architectures AwsLambdaFunction#architectures}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#architectures TfFunction#architectures}
   */
   readonly architectures?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#code_sha256 AwsLambdaFunction#code_sha256}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#code_sha256 TfFunction#code_sha256}
   */
   readonly codeSha256?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#code_signing_config_arn AwsLambdaFunction#code_signing_config_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#code_signing_config_arn TfFunction#code_signing_config_arn}
   */
   readonly codeSigningConfigArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#description AwsLambdaFunction#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#description TfFunction#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#filename AwsLambdaFunction#filename}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#filename TfFunction#filename}
   */
   readonly filename?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#function_name AwsLambdaFunction#function_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#function_name TfFunction#function_name}
   */
   readonly functionName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#handler AwsLambdaFunction#handler}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#handler TfFunction#handler}
   */
   readonly handler?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#id AwsLambdaFunction#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#id TfFunction#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#image_uri AwsLambdaFunction#image_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#image_uri TfFunction#image_uri}
   */
   readonly imageUri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#kms_key_arn AwsLambdaFunction#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#kms_key_arn TfFunction#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#layers AwsLambdaFunction#layers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#layers TfFunction#layers}
   */
   readonly layers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#memory_size AwsLambdaFunction#memory_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#memory_size TfFunction#memory_size}
   */
   readonly memorySize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#package_type AwsLambdaFunction#package_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#package_type TfFunction#package_type}
   */
   readonly packageType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#publish AwsLambdaFunction#publish}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#publish TfFunction#publish}
   */
   readonly publish?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#publish_to AwsLambdaFunction#publish_to}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#publish_to TfFunction#publish_to}
   */
   readonly publishTo?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#region AwsLambdaFunction#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#region TfFunction#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#replace_security_groups_on_destroy AwsLambdaFunction#replace_security_groups_on_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#replace_security_groups_on_destroy TfFunction#replace_security_groups_on_destroy}
   */
   readonly replaceSecurityGroupsOnDestroy?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#replacement_security_group_ids AwsLambdaFunction#replacement_security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#replacement_security_group_ids TfFunction#replacement_security_group_ids}
   */
   readonly replacementSecurityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#reserved_concurrent_executions AwsLambdaFunction#reserved_concurrent_executions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#reserved_concurrent_executions TfFunction#reserved_concurrent_executions}
   */
   readonly reservedConcurrentExecutions?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#role AwsLambdaFunction#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#role TfFunction#role}
   */
   readonly role: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#runtime AwsLambdaFunction#runtime}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#runtime TfFunction#runtime}
   */
   readonly runtime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#s3_bucket AwsLambdaFunction#s3_bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#s3_bucket TfFunction#s3_bucket}
   */
   readonly s3Bucket?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#s3_key AwsLambdaFunction#s3_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#s3_key TfFunction#s3_key}
   */
   readonly s3Key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#s3_object_version AwsLambdaFunction#s3_object_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#s3_object_version TfFunction#s3_object_version}
   */
   readonly s3ObjectVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#skip_destroy AwsLambdaFunction#skip_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#skip_destroy TfFunction#skip_destroy}
   */
   readonly skipDestroy?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#source_code_hash AwsLambdaFunction#source_code_hash}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#source_code_hash TfFunction#source_code_hash}
   */
   readonly sourceCodeHash?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#source_kms_key_arn AwsLambdaFunction#source_kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#source_kms_key_arn TfFunction#source_kms_key_arn}
   */
   readonly sourceKmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#tags AwsLambdaFunction#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#tags TfFunction#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#tags_all AwsLambdaFunction#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#tags_all TfFunction#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#timeout AwsLambdaFunction#timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#timeout TfFunction#timeout}
   */
   readonly timeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#use_resource_timeout_for_propagation AwsLambdaFunction#use_resource_timeout_for_propagation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#use_resource_timeout_for_propagation TfFunction#use_resource_timeout_for_propagation}
   */
   readonly useResourceTimeoutForPropagation?: boolean | cdktn.IResolvable;
   /**
   * capacity_provider_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#capacity_provider_config AwsLambdaFunction#capacity_provider_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#capacity_provider_config TfFunction#capacity_provider_config}
   */
-  readonly capacityProviderConfig?: AwsLambdaFunction.CapacityProviderConfigProperty;
+  readonly capacityProviderConfig?: TfFunction.CapacityProviderConfigProperty;
   /**
   * dead_letter_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#dead_letter_config AwsLambdaFunction#dead_letter_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#dead_letter_config TfFunction#dead_letter_config}
   */
-  readonly deadLetterConfig?: AwsLambdaFunction.DeadLetterConfigProperty;
+  readonly deadLetterConfig?: TfFunction.DeadLetterConfigProperty;
   /**
   * durable_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#durable_config AwsLambdaFunction#durable_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#durable_config TfFunction#durable_config}
   */
-  readonly durableConfig?: AwsLambdaFunction.DurableConfigProperty;
+  readonly durableConfig?: TfFunction.DurableConfigProperty;
   /**
   * environment block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#environment AwsLambdaFunction#environment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#environment TfFunction#environment}
   */
-  readonly environment?: AwsLambdaFunction.EnvironmentProperty;
+  readonly environment?: TfFunction.EnvironmentProperty;
   /**
   * ephemeral_storage block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#ephemeral_storage AwsLambdaFunction#ephemeral_storage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#ephemeral_storage TfFunction#ephemeral_storage}
   */
-  readonly ephemeralStorage?: AwsLambdaFunction.EphemeralStorageProperty;
+  readonly ephemeralStorage?: TfFunction.EphemeralStorageProperty;
   /**
   * file_system_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#file_system_config AwsLambdaFunction#file_system_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#file_system_config TfFunction#file_system_config}
   */
-  readonly fileSystemConfig?: AwsLambdaFunction.FileSystemConfigProperty;
+  readonly fileSystemConfig?: TfFunction.FileSystemConfigProperty;
   /**
   * image_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#image_config AwsLambdaFunction#image_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#image_config TfFunction#image_config}
   */
-  readonly imageConfig?: AwsLambdaFunction.ImageConfigProperty;
+  readonly imageConfig?: TfFunction.ImageConfigProperty;
   /**
   * logging_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#logging_config AwsLambdaFunction#logging_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#logging_config TfFunction#logging_config}
   */
-  readonly loggingConfig?: AwsLambdaFunction.LoggingConfigProperty;
+  readonly loggingConfig?: TfFunction.LoggingConfigProperty;
   /**
   * snap_start block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#snap_start AwsLambdaFunction#snap_start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#snap_start TfFunction#snap_start}
   */
-  readonly snapStart?: AwsLambdaFunction.SnapStartProperty;
+  readonly snapStart?: TfFunction.SnapStartProperty;
   /**
   * tenancy_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#tenancy_config AwsLambdaFunction#tenancy_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#tenancy_config TfFunction#tenancy_config}
   */
-  readonly tenancyConfig?: AwsLambdaFunction.TenancyConfigProperty;
+  readonly tenancyConfig?: TfFunction.TenancyConfigProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#timeouts AwsLambdaFunction#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#timeouts TfFunction#timeouts}
   */
-  readonly timeouts?: AwsLambdaFunction.TimeoutsProperty;
+  readonly timeouts?: TfFunction.TimeoutsProperty;
   /**
   * tracing_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#tracing_config AwsLambdaFunction#tracing_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#tracing_config TfFunction#tracing_config}
   */
-  readonly tracingConfig?: AwsLambdaFunction.TracingConfigProperty;
+  readonly tracingConfig?: TfFunction.TracingConfigProperty;
   /**
   * vpc_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#vpc_config AwsLambdaFunction#vpc_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#vpc_config TfFunction#vpc_config}
   */
-  readonly vpcConfig?: AwsLambdaFunction.VpcConfigProperty;
+  readonly vpcConfig?: TfFunction.VpcConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function aws_lambda_function}
 */
-export class AwsLambdaFunction extends cdktn.TerraformResource {
+export class TfFunction extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -229,11 +229,11 @@ export class AwsLambdaFunction extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsLambdaFunction resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfFunction resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsLambdaFunction to import
-  * @param importFromId The id of the existing AwsLambdaFunction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsLambdaFunction to import is found
+  * @param importToId The construct id used in the generated config for the TfFunction to import
+  * @param importFromId The id of the existing TfFunction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfFunction to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lambda_function", importId: importFromId, provider });
@@ -248,9 +248,9 @@ export class AwsLambdaFunction extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsLambdaFunctionConfig
+  * @param options TfFunctionConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsLambdaFunctionConfig) {
+  public constructor(scope: Construct, id: string, config: TfFunctionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lambda_function',
       terraformGeneratorMetadata: {
@@ -857,11 +857,11 @@ export class AwsLambdaFunction extends cdktn.TerraformResource {
   }
 
   // capacity_provider_config - computed: false, optional: true, required: false
-  private _capacityProviderConfig = new AwsLambdaFunction.CapacityProviderConfigPropertyOutputReference(this, "capacity_provider_config");
+  private _capacityProviderConfig = new TfFunction.CapacityProviderConfigPropertyOutputReference(this, "capacity_provider_config");
   public get capacityProviderConfig() {
     return this._capacityProviderConfig;
   }
-  public putCapacityProviderConfig(value: AwsLambdaFunction.CapacityProviderConfigProperty) {
+  public putCapacityProviderConfig(value: TfFunction.CapacityProviderConfigProperty) {
     this._capacityProviderConfig.internalValue = value;
   }
   public resetCapacityProviderConfig() {
@@ -873,11 +873,11 @@ export class AwsLambdaFunction extends cdktn.TerraformResource {
   }
 
   // dead_letter_config - computed: false, optional: true, required: false
-  private _deadLetterConfig = new AwsLambdaFunction.DeadLetterConfigPropertyOutputReference(this, "dead_letter_config");
+  private _deadLetterConfig = new TfFunction.DeadLetterConfigPropertyOutputReference(this, "dead_letter_config");
   public get deadLetterConfig() {
     return this._deadLetterConfig;
   }
-  public putDeadLetterConfig(value: AwsLambdaFunction.DeadLetterConfigProperty) {
+  public putDeadLetterConfig(value: TfFunction.DeadLetterConfigProperty) {
     this._deadLetterConfig.internalValue = value;
   }
   public resetDeadLetterConfig() {
@@ -889,11 +889,11 @@ export class AwsLambdaFunction extends cdktn.TerraformResource {
   }
 
   // durable_config - computed: false, optional: true, required: false
-  private _durableConfig = new AwsLambdaFunction.DurableConfigPropertyOutputReference(this, "durable_config");
+  private _durableConfig = new TfFunction.DurableConfigPropertyOutputReference(this, "durable_config");
   public get durableConfig() {
     return this._durableConfig;
   }
-  public putDurableConfig(value: AwsLambdaFunction.DurableConfigProperty) {
+  public putDurableConfig(value: TfFunction.DurableConfigProperty) {
     this._durableConfig.internalValue = value;
   }
   public resetDurableConfig() {
@@ -905,11 +905,11 @@ export class AwsLambdaFunction extends cdktn.TerraformResource {
   }
 
   // environment - computed: false, optional: true, required: false
-  private _environment = new AwsLambdaFunction.EnvironmentPropertyOutputReference(this, "environment");
+  private _environment = new TfFunction.EnvironmentPropertyOutputReference(this, "environment");
   public get environment() {
     return this._environment;
   }
-  public putEnvironment(value: AwsLambdaFunction.EnvironmentProperty) {
+  public putEnvironment(value: TfFunction.EnvironmentProperty) {
     this._environment.internalValue = value;
   }
   public resetEnvironment() {
@@ -921,11 +921,11 @@ export class AwsLambdaFunction extends cdktn.TerraformResource {
   }
 
   // ephemeral_storage - computed: false, optional: true, required: false
-  private _ephemeralStorage = new AwsLambdaFunction.EphemeralStoragePropertyOutputReference(this, "ephemeral_storage");
+  private _ephemeralStorage = new TfFunction.EphemeralStoragePropertyOutputReference(this, "ephemeral_storage");
   public get ephemeralStorage() {
     return this._ephemeralStorage;
   }
-  public putEphemeralStorage(value: AwsLambdaFunction.EphemeralStorageProperty) {
+  public putEphemeralStorage(value: TfFunction.EphemeralStorageProperty) {
     this._ephemeralStorage.internalValue = value;
   }
   public resetEphemeralStorage() {
@@ -937,11 +937,11 @@ export class AwsLambdaFunction extends cdktn.TerraformResource {
   }
 
   // file_system_config - computed: false, optional: true, required: false
-  private _fileSystemConfig = new AwsLambdaFunction.FileSystemConfigPropertyOutputReference(this, "file_system_config");
+  private _fileSystemConfig = new TfFunction.FileSystemConfigPropertyOutputReference(this, "file_system_config");
   public get fileSystemConfig() {
     return this._fileSystemConfig;
   }
-  public putFileSystemConfig(value: AwsLambdaFunction.FileSystemConfigProperty) {
+  public putFileSystemConfig(value: TfFunction.FileSystemConfigProperty) {
     this._fileSystemConfig.internalValue = value;
   }
   public resetFileSystemConfig() {
@@ -953,11 +953,11 @@ export class AwsLambdaFunction extends cdktn.TerraformResource {
   }
 
   // image_config - computed: false, optional: true, required: false
-  private _imageConfig = new AwsLambdaFunction.ImageConfigPropertyOutputReference(this, "image_config");
+  private _imageConfig = new TfFunction.ImageConfigPropertyOutputReference(this, "image_config");
   public get imageConfig() {
     return this._imageConfig;
   }
-  public putImageConfig(value: AwsLambdaFunction.ImageConfigProperty) {
+  public putImageConfig(value: TfFunction.ImageConfigProperty) {
     this._imageConfig.internalValue = value;
   }
   public resetImageConfig() {
@@ -969,11 +969,11 @@ export class AwsLambdaFunction extends cdktn.TerraformResource {
   }
 
   // logging_config - computed: false, optional: true, required: false
-  private _loggingConfig = new AwsLambdaFunction.LoggingConfigPropertyOutputReference(this, "logging_config");
+  private _loggingConfig = new TfFunction.LoggingConfigPropertyOutputReference(this, "logging_config");
   public get loggingConfig() {
     return this._loggingConfig;
   }
-  public putLoggingConfig(value: AwsLambdaFunction.LoggingConfigProperty) {
+  public putLoggingConfig(value: TfFunction.LoggingConfigProperty) {
     this._loggingConfig.internalValue = value;
   }
   public resetLoggingConfig() {
@@ -985,11 +985,11 @@ export class AwsLambdaFunction extends cdktn.TerraformResource {
   }
 
   // snap_start - computed: false, optional: true, required: false
-  private _snapStart = new AwsLambdaFunction.SnapStartPropertyOutputReference(this, "snap_start");
+  private _snapStart = new TfFunction.SnapStartPropertyOutputReference(this, "snap_start");
   public get snapStart() {
     return this._snapStart;
   }
-  public putSnapStart(value: AwsLambdaFunction.SnapStartProperty) {
+  public putSnapStart(value: TfFunction.SnapStartProperty) {
     this._snapStart.internalValue = value;
   }
   public resetSnapStart() {
@@ -1001,11 +1001,11 @@ export class AwsLambdaFunction extends cdktn.TerraformResource {
   }
 
   // tenancy_config - computed: false, optional: true, required: false
-  private _tenancyConfig = new AwsLambdaFunction.TenancyConfigPropertyOutputReference(this, "tenancy_config");
+  private _tenancyConfig = new TfFunction.TenancyConfigPropertyOutputReference(this, "tenancy_config");
   public get tenancyConfig() {
     return this._tenancyConfig;
   }
-  public putTenancyConfig(value: AwsLambdaFunction.TenancyConfigProperty) {
+  public putTenancyConfig(value: TfFunction.TenancyConfigProperty) {
     this._tenancyConfig.internalValue = value;
   }
   public resetTenancyConfig() {
@@ -1017,11 +1017,11 @@ export class AwsLambdaFunction extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsLambdaFunction.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfFunction.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsLambdaFunction.TimeoutsProperty) {
+  public putTimeouts(value: TfFunction.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -1033,11 +1033,11 @@ export class AwsLambdaFunction extends cdktn.TerraformResource {
   }
 
   // tracing_config - computed: false, optional: true, required: false
-  private _tracingConfig = new AwsLambdaFunction.TracingConfigPropertyOutputReference(this, "tracing_config");
+  private _tracingConfig = new TfFunction.TracingConfigPropertyOutputReference(this, "tracing_config");
   public get tracingConfig() {
     return this._tracingConfig;
   }
-  public putTracingConfig(value: AwsLambdaFunction.TracingConfigProperty) {
+  public putTracingConfig(value: TfFunction.TracingConfigProperty) {
     this._tracingConfig.internalValue = value;
   }
   public resetTracingConfig() {
@@ -1049,11 +1049,11 @@ export class AwsLambdaFunction extends cdktn.TerraformResource {
   }
 
   // vpc_config - computed: false, optional: true, required: false
-  private _vpcConfig = new AwsLambdaFunction.VpcConfigPropertyOutputReference(this, "vpc_config");
+  private _vpcConfig = new TfFunction.VpcConfigPropertyOutputReference(this, "vpc_config");
   public get vpcConfig() {
     return this._vpcConfig;
   }
-  public putVpcConfig(value: AwsLambdaFunction.VpcConfigProperty) {
+  public putVpcConfig(value: TfFunction.VpcConfigProperty) {
     this._vpcConfig.internalValue = value;
   }
   public resetVpcConfig() {
@@ -1101,19 +1101,19 @@ export class AwsLambdaFunction extends cdktn.TerraformResource {
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       timeout: cdktn.numberToTerraform(this._timeout),
       use_resource_timeout_for_propagation: cdktn.booleanToTerraform(this._useResourceTimeoutForPropagation),
-      capacity_provider_config: awsLambdaFunctionCapacityProviderConfigPropertyToTerraform(this._capacityProviderConfig.internalValue),
-      dead_letter_config: awsLambdaFunctionDeadLetterConfigPropertyToTerraform(this._deadLetterConfig.internalValue),
-      durable_config: awsLambdaFunctionDurableConfigPropertyToTerraform(this._durableConfig.internalValue),
-      environment: awsLambdaFunctionEnvironmentPropertyToTerraform(this._environment.internalValue),
-      ephemeral_storage: awsLambdaFunctionEphemeralStoragePropertyToTerraform(this._ephemeralStorage.internalValue),
-      file_system_config: awsLambdaFunctionFileSystemConfigPropertyToTerraform(this._fileSystemConfig.internalValue),
-      image_config: awsLambdaFunctionImageConfigPropertyToTerraform(this._imageConfig.internalValue),
-      logging_config: awsLambdaFunctionLoggingConfigPropertyToTerraform(this._loggingConfig.internalValue),
-      snap_start: awsLambdaFunctionSnapStartPropertyToTerraform(this._snapStart.internalValue),
-      tenancy_config: awsLambdaFunctionTenancyConfigPropertyToTerraform(this._tenancyConfig.internalValue),
-      timeouts: awsLambdaFunctionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      tracing_config: awsLambdaFunctionTracingConfigPropertyToTerraform(this._tracingConfig.internalValue),
-      vpc_config: awsLambdaFunctionVpcConfigPropertyToTerraform(this._vpcConfig.internalValue),
+      capacity_provider_config: tfFunctionCapacityProviderConfigPropertyToTerraform(this._capacityProviderConfig.internalValue),
+      dead_letter_config: tfFunctionDeadLetterConfigPropertyToTerraform(this._deadLetterConfig.internalValue),
+      durable_config: tfFunctionDurableConfigPropertyToTerraform(this._durableConfig.internalValue),
+      environment: tfFunctionEnvironmentPropertyToTerraform(this._environment.internalValue),
+      ephemeral_storage: tfFunctionEphemeralStoragePropertyToTerraform(this._ephemeralStorage.internalValue),
+      file_system_config: tfFunctionFileSystemConfigPropertyToTerraform(this._fileSystemConfig.internalValue),
+      image_config: tfFunctionImageConfigPropertyToTerraform(this._imageConfig.internalValue),
+      logging_config: tfFunctionLoggingConfigPropertyToTerraform(this._loggingConfig.internalValue),
+      snap_start: tfFunctionSnapStartPropertyToTerraform(this._snapStart.internalValue),
+      tenancy_config: tfFunctionTenancyConfigPropertyToTerraform(this._tenancyConfig.internalValue),
+      timeouts: tfFunctionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      tracing_config: tfFunctionTracingConfigPropertyToTerraform(this._tracingConfig.internalValue),
+      vpc_config: tfFunctionVpcConfigPropertyToTerraform(this._vpcConfig.internalValue),
     };
   }
 
@@ -1306,82 +1306,82 @@ export class AwsLambdaFunction extends cdktn.TerraformResource {
         storageClassType: "boolean",
       },
       capacity_provider_config: {
-        value: awsLambdaFunctionCapacityProviderConfigPropertyToHclTerraform(this._capacityProviderConfig.internalValue),
+        value: tfFunctionCapacityProviderConfigPropertyToHclTerraform(this._capacityProviderConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLambdaFunction.CapacityProviderConfigPropertyList",
+        storageClassType: "TfFunction.CapacityProviderConfigPropertyList",
       },
       dead_letter_config: {
-        value: awsLambdaFunctionDeadLetterConfigPropertyToHclTerraform(this._deadLetterConfig.internalValue),
+        value: tfFunctionDeadLetterConfigPropertyToHclTerraform(this._deadLetterConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLambdaFunction.DeadLetterConfigPropertyList",
+        storageClassType: "TfFunction.DeadLetterConfigPropertyList",
       },
       durable_config: {
-        value: awsLambdaFunctionDurableConfigPropertyToHclTerraform(this._durableConfig.internalValue),
+        value: tfFunctionDurableConfigPropertyToHclTerraform(this._durableConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLambdaFunction.DurableConfigPropertyList",
+        storageClassType: "TfFunction.DurableConfigPropertyList",
       },
       environment: {
-        value: awsLambdaFunctionEnvironmentPropertyToHclTerraform(this._environment.internalValue),
+        value: tfFunctionEnvironmentPropertyToHclTerraform(this._environment.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLambdaFunction.EnvironmentPropertyList",
+        storageClassType: "TfFunction.EnvironmentPropertyList",
       },
       ephemeral_storage: {
-        value: awsLambdaFunctionEphemeralStoragePropertyToHclTerraform(this._ephemeralStorage.internalValue),
+        value: tfFunctionEphemeralStoragePropertyToHclTerraform(this._ephemeralStorage.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLambdaFunction.EphemeralStoragePropertyList",
+        storageClassType: "TfFunction.EphemeralStoragePropertyList",
       },
       file_system_config: {
-        value: awsLambdaFunctionFileSystemConfigPropertyToHclTerraform(this._fileSystemConfig.internalValue),
+        value: tfFunctionFileSystemConfigPropertyToHclTerraform(this._fileSystemConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLambdaFunction.FileSystemConfigPropertyList",
+        storageClassType: "TfFunction.FileSystemConfigPropertyList",
       },
       image_config: {
-        value: awsLambdaFunctionImageConfigPropertyToHclTerraform(this._imageConfig.internalValue),
+        value: tfFunctionImageConfigPropertyToHclTerraform(this._imageConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLambdaFunction.ImageConfigPropertyList",
+        storageClassType: "TfFunction.ImageConfigPropertyList",
       },
       logging_config: {
-        value: awsLambdaFunctionLoggingConfigPropertyToHclTerraform(this._loggingConfig.internalValue),
+        value: tfFunctionLoggingConfigPropertyToHclTerraform(this._loggingConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLambdaFunction.LoggingConfigPropertyList",
+        storageClassType: "TfFunction.LoggingConfigPropertyList",
       },
       snap_start: {
-        value: awsLambdaFunctionSnapStartPropertyToHclTerraform(this._snapStart.internalValue),
+        value: tfFunctionSnapStartPropertyToHclTerraform(this._snapStart.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLambdaFunction.SnapStartPropertyList",
+        storageClassType: "TfFunction.SnapStartPropertyList",
       },
       tenancy_config: {
-        value: awsLambdaFunctionTenancyConfigPropertyToHclTerraform(this._tenancyConfig.internalValue),
+        value: tfFunctionTenancyConfigPropertyToHclTerraform(this._tenancyConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLambdaFunction.TenancyConfigPropertyList",
+        storageClassType: "TfFunction.TenancyConfigPropertyList",
       },
       timeouts: {
-        value: awsLambdaFunctionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfFunctionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsLambdaFunction.TimeoutsProperty",
+        storageClassType: "TfFunction.TimeoutsProperty",
       },
       tracing_config: {
-        value: awsLambdaFunctionTracingConfigPropertyToHclTerraform(this._tracingConfig.internalValue),
+        value: tfFunctionTracingConfigPropertyToHclTerraform(this._tracingConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLambdaFunction.TracingConfigPropertyList",
+        storageClassType: "TfFunction.TracingConfigPropertyList",
       },
       vpc_config: {
-        value: awsLambdaFunctionVpcConfigPropertyToHclTerraform(this._vpcConfig.internalValue),
+        value: tfFunctionVpcConfigPropertyToHclTerraform(this._vpcConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLambdaFunction.VpcConfigPropertyList",
+        storageClassType: "TfFunction.VpcConfigPropertyList",
       },
     };
 
@@ -1390,7 +1390,7 @@ export class AwsLambdaFunction extends cdktn.TerraformResource {
   }
 }
 
-export function awsLambdaFunctionLambdaManagedInstancesCapacityProviderConfigPropertyToTerraform(struct?: AwsLambdaFunction.LambdaManagedInstancesCapacityProviderConfigPropertyOutputReference | AwsLambdaFunction.LambdaManagedInstancesCapacityProviderConfigProperty): any {
+export function tfFunctionLambdaManagedInstancesCapacityProviderConfigPropertyToTerraform(struct?: TfFunction.LambdaManagedInstancesCapacityProviderConfigPropertyOutputReference | TfFunction.LambdaManagedInstancesCapacityProviderConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1403,7 +1403,7 @@ export function awsLambdaFunctionLambdaManagedInstancesCapacityProviderConfigPro
 }
 
 
-export function awsLambdaFunctionLambdaManagedInstancesCapacityProviderConfigPropertyToHclTerraform(struct?: AwsLambdaFunction.LambdaManagedInstancesCapacityProviderConfigPropertyOutputReference | AwsLambdaFunction.LambdaManagedInstancesCapacityProviderConfigProperty): any {
+export function tfFunctionLambdaManagedInstancesCapacityProviderConfigPropertyToHclTerraform(struct?: TfFunction.LambdaManagedInstancesCapacityProviderConfigPropertyOutputReference | TfFunction.LambdaManagedInstancesCapacityProviderConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1434,25 +1434,25 @@ export function awsLambdaFunctionLambdaManagedInstancesCapacityProviderConfigPro
 }
 
 
-export function awsLambdaFunctionCapacityProviderConfigPropertyToTerraform(struct?: AwsLambdaFunction.CapacityProviderConfigPropertyOutputReference | AwsLambdaFunction.CapacityProviderConfigProperty): any {
+export function tfFunctionCapacityProviderConfigPropertyToTerraform(struct?: TfFunction.CapacityProviderConfigPropertyOutputReference | TfFunction.CapacityProviderConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    lambda_managed_instances_capacity_provider_config: awsLambdaFunctionLambdaManagedInstancesCapacityProviderConfigPropertyToTerraform(struct!.lambdaManagedInstancesCapacityProviderConfig),
+    lambda_managed_instances_capacity_provider_config: tfFunctionLambdaManagedInstancesCapacityProviderConfigPropertyToTerraform(struct!.lambdaManagedInstancesCapacityProviderConfig),
   }
 }
 
 
-export function awsLambdaFunctionCapacityProviderConfigPropertyToHclTerraform(struct?: AwsLambdaFunction.CapacityProviderConfigPropertyOutputReference | AwsLambdaFunction.CapacityProviderConfigProperty): any {
+export function tfFunctionCapacityProviderConfigPropertyToHclTerraform(struct?: TfFunction.CapacityProviderConfigPropertyOutputReference | TfFunction.CapacityProviderConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     lambda_managed_instances_capacity_provider_config: {
-      value: awsLambdaFunctionLambdaManagedInstancesCapacityProviderConfigPropertyToHclTerraform(struct!.lambdaManagedInstancesCapacityProviderConfig),
+      value: tfFunctionLambdaManagedInstancesCapacityProviderConfigPropertyToHclTerraform(struct!.lambdaManagedInstancesCapacityProviderConfig),
       isBlock: true,
       type: "list",
       storageClassType: "LambdaManagedInstancesCapacityProviderConfigPropertyList",
@@ -1464,7 +1464,7 @@ export function awsLambdaFunctionCapacityProviderConfigPropertyToHclTerraform(st
 }
 
 
-export function awsLambdaFunctionDeadLetterConfigPropertyToTerraform(struct?: AwsLambdaFunction.DeadLetterConfigPropertyOutputReference | AwsLambdaFunction.DeadLetterConfigProperty): any {
+export function tfFunctionDeadLetterConfigPropertyToTerraform(struct?: TfFunction.DeadLetterConfigPropertyOutputReference | TfFunction.DeadLetterConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1475,7 +1475,7 @@ export function awsLambdaFunctionDeadLetterConfigPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsLambdaFunctionDeadLetterConfigPropertyToHclTerraform(struct?: AwsLambdaFunction.DeadLetterConfigPropertyOutputReference | AwsLambdaFunction.DeadLetterConfigProperty): any {
+export function tfFunctionDeadLetterConfigPropertyToHclTerraform(struct?: TfFunction.DeadLetterConfigPropertyOutputReference | TfFunction.DeadLetterConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1494,7 +1494,7 @@ export function awsLambdaFunctionDeadLetterConfigPropertyToHclTerraform(struct?:
 }
 
 
-export function awsLambdaFunctionDurableConfigPropertyToTerraform(struct?: AwsLambdaFunction.DurableConfigPropertyOutputReference | AwsLambdaFunction.DurableConfigProperty): any {
+export function tfFunctionDurableConfigPropertyToTerraform(struct?: TfFunction.DurableConfigPropertyOutputReference | TfFunction.DurableConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1506,7 +1506,7 @@ export function awsLambdaFunctionDurableConfigPropertyToTerraform(struct?: AwsLa
 }
 
 
-export function awsLambdaFunctionDurableConfigPropertyToHclTerraform(struct?: AwsLambdaFunction.DurableConfigPropertyOutputReference | AwsLambdaFunction.DurableConfigProperty): any {
+export function tfFunctionDurableConfigPropertyToHclTerraform(struct?: TfFunction.DurableConfigPropertyOutputReference | TfFunction.DurableConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1531,7 +1531,7 @@ export function awsLambdaFunctionDurableConfigPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsLambdaFunctionEnvironmentPropertyToTerraform(struct?: AwsLambdaFunction.EnvironmentPropertyOutputReference | AwsLambdaFunction.EnvironmentProperty): any {
+export function tfFunctionEnvironmentPropertyToTerraform(struct?: TfFunction.EnvironmentPropertyOutputReference | TfFunction.EnvironmentProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1542,7 +1542,7 @@ export function awsLambdaFunctionEnvironmentPropertyToTerraform(struct?: AwsLamb
 }
 
 
-export function awsLambdaFunctionEnvironmentPropertyToHclTerraform(struct?: AwsLambdaFunction.EnvironmentPropertyOutputReference | AwsLambdaFunction.EnvironmentProperty): any {
+export function tfFunctionEnvironmentPropertyToHclTerraform(struct?: TfFunction.EnvironmentPropertyOutputReference | TfFunction.EnvironmentProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1561,7 +1561,7 @@ export function awsLambdaFunctionEnvironmentPropertyToHclTerraform(struct?: AwsL
 }
 
 
-export function awsLambdaFunctionEphemeralStoragePropertyToTerraform(struct?: AwsLambdaFunction.EphemeralStoragePropertyOutputReference | AwsLambdaFunction.EphemeralStorageProperty): any {
+export function tfFunctionEphemeralStoragePropertyToTerraform(struct?: TfFunction.EphemeralStoragePropertyOutputReference | TfFunction.EphemeralStorageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1572,7 +1572,7 @@ export function awsLambdaFunctionEphemeralStoragePropertyToTerraform(struct?: Aw
 }
 
 
-export function awsLambdaFunctionEphemeralStoragePropertyToHclTerraform(struct?: AwsLambdaFunction.EphemeralStoragePropertyOutputReference | AwsLambdaFunction.EphemeralStorageProperty): any {
+export function tfFunctionEphemeralStoragePropertyToHclTerraform(struct?: TfFunction.EphemeralStoragePropertyOutputReference | TfFunction.EphemeralStorageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1591,7 +1591,7 @@ export function awsLambdaFunctionEphemeralStoragePropertyToHclTerraform(struct?:
 }
 
 
-export function awsLambdaFunctionFileSystemConfigPropertyToTerraform(struct?: AwsLambdaFunction.FileSystemConfigPropertyOutputReference | AwsLambdaFunction.FileSystemConfigProperty): any {
+export function tfFunctionFileSystemConfigPropertyToTerraform(struct?: TfFunction.FileSystemConfigPropertyOutputReference | TfFunction.FileSystemConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1603,7 +1603,7 @@ export function awsLambdaFunctionFileSystemConfigPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsLambdaFunctionFileSystemConfigPropertyToHclTerraform(struct?: AwsLambdaFunction.FileSystemConfigPropertyOutputReference | AwsLambdaFunction.FileSystemConfigProperty): any {
+export function tfFunctionFileSystemConfigPropertyToHclTerraform(struct?: TfFunction.FileSystemConfigPropertyOutputReference | TfFunction.FileSystemConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1628,7 +1628,7 @@ export function awsLambdaFunctionFileSystemConfigPropertyToHclTerraform(struct?:
 }
 
 
-export function awsLambdaFunctionImageConfigPropertyToTerraform(struct?: AwsLambdaFunction.ImageConfigPropertyOutputReference | AwsLambdaFunction.ImageConfigProperty): any {
+export function tfFunctionImageConfigPropertyToTerraform(struct?: TfFunction.ImageConfigPropertyOutputReference | TfFunction.ImageConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1641,7 +1641,7 @@ export function awsLambdaFunctionImageConfigPropertyToTerraform(struct?: AwsLamb
 }
 
 
-export function awsLambdaFunctionImageConfigPropertyToHclTerraform(struct?: AwsLambdaFunction.ImageConfigPropertyOutputReference | AwsLambdaFunction.ImageConfigProperty): any {
+export function tfFunctionImageConfigPropertyToHclTerraform(struct?: TfFunction.ImageConfigPropertyOutputReference | TfFunction.ImageConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1672,7 +1672,7 @@ export function awsLambdaFunctionImageConfigPropertyToHclTerraform(struct?: AwsL
 }
 
 
-export function awsLambdaFunctionLoggingConfigPropertyToTerraform(struct?: AwsLambdaFunction.LoggingConfigPropertyOutputReference | AwsLambdaFunction.LoggingConfigProperty): any {
+export function tfFunctionLoggingConfigPropertyToTerraform(struct?: TfFunction.LoggingConfigPropertyOutputReference | TfFunction.LoggingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1686,7 +1686,7 @@ export function awsLambdaFunctionLoggingConfigPropertyToTerraform(struct?: AwsLa
 }
 
 
-export function awsLambdaFunctionLoggingConfigPropertyToHclTerraform(struct?: AwsLambdaFunction.LoggingConfigPropertyOutputReference | AwsLambdaFunction.LoggingConfigProperty): any {
+export function tfFunctionLoggingConfigPropertyToHclTerraform(struct?: TfFunction.LoggingConfigPropertyOutputReference | TfFunction.LoggingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1723,7 +1723,7 @@ export function awsLambdaFunctionLoggingConfigPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsLambdaFunctionSnapStartPropertyToTerraform(struct?: AwsLambdaFunction.SnapStartPropertyOutputReference | AwsLambdaFunction.SnapStartProperty): any {
+export function tfFunctionSnapStartPropertyToTerraform(struct?: TfFunction.SnapStartPropertyOutputReference | TfFunction.SnapStartProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1734,7 +1734,7 @@ export function awsLambdaFunctionSnapStartPropertyToTerraform(struct?: AwsLambda
 }
 
 
-export function awsLambdaFunctionSnapStartPropertyToHclTerraform(struct?: AwsLambdaFunction.SnapStartPropertyOutputReference | AwsLambdaFunction.SnapStartProperty): any {
+export function tfFunctionSnapStartPropertyToHclTerraform(struct?: TfFunction.SnapStartPropertyOutputReference | TfFunction.SnapStartProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1753,7 +1753,7 @@ export function awsLambdaFunctionSnapStartPropertyToHclTerraform(struct?: AwsLam
 }
 
 
-export function awsLambdaFunctionTenancyConfigPropertyToTerraform(struct?: AwsLambdaFunction.TenancyConfigPropertyOutputReference | AwsLambdaFunction.TenancyConfigProperty): any {
+export function tfFunctionTenancyConfigPropertyToTerraform(struct?: TfFunction.TenancyConfigPropertyOutputReference | TfFunction.TenancyConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1764,7 +1764,7 @@ export function awsLambdaFunctionTenancyConfigPropertyToTerraform(struct?: AwsLa
 }
 
 
-export function awsLambdaFunctionTenancyConfigPropertyToHclTerraform(struct?: AwsLambdaFunction.TenancyConfigPropertyOutputReference | AwsLambdaFunction.TenancyConfigProperty): any {
+export function tfFunctionTenancyConfigPropertyToHclTerraform(struct?: TfFunction.TenancyConfigPropertyOutputReference | TfFunction.TenancyConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1783,7 +1783,7 @@ export function awsLambdaFunctionTenancyConfigPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsLambdaFunctionTimeoutsPropertyToTerraform(struct?: AwsLambdaFunction.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfFunctionTimeoutsPropertyToTerraform(struct?: TfFunction.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1796,7 +1796,7 @@ export function awsLambdaFunctionTimeoutsPropertyToTerraform(struct?: AwsLambdaF
 }
 
 
-export function awsLambdaFunctionTimeoutsPropertyToHclTerraform(struct?: AwsLambdaFunction.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfFunctionTimeoutsPropertyToHclTerraform(struct?: TfFunction.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1827,7 +1827,7 @@ export function awsLambdaFunctionTimeoutsPropertyToHclTerraform(struct?: AwsLamb
 }
 
 
-export function awsLambdaFunctionTracingConfigPropertyToTerraform(struct?: AwsLambdaFunction.TracingConfigPropertyOutputReference | AwsLambdaFunction.TracingConfigProperty): any {
+export function tfFunctionTracingConfigPropertyToTerraform(struct?: TfFunction.TracingConfigPropertyOutputReference | TfFunction.TracingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1838,7 +1838,7 @@ export function awsLambdaFunctionTracingConfigPropertyToTerraform(struct?: AwsLa
 }
 
 
-export function awsLambdaFunctionTracingConfigPropertyToHclTerraform(struct?: AwsLambdaFunction.TracingConfigPropertyOutputReference | AwsLambdaFunction.TracingConfigProperty): any {
+export function tfFunctionTracingConfigPropertyToHclTerraform(struct?: TfFunction.TracingConfigPropertyOutputReference | TfFunction.TracingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1857,7 +1857,7 @@ export function awsLambdaFunctionTracingConfigPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsLambdaFunctionVpcConfigPropertyToTerraform(struct?: AwsLambdaFunction.VpcConfigPropertyOutputReference | AwsLambdaFunction.VpcConfigProperty): any {
+export function tfFunctionVpcConfigPropertyToTerraform(struct?: TfFunction.VpcConfigPropertyOutputReference | TfFunction.VpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1870,7 +1870,7 @@ export function awsLambdaFunctionVpcConfigPropertyToTerraform(struct?: AwsLambda
 }
 
 
-export function awsLambdaFunctionVpcConfigPropertyToHclTerraform(struct?: AwsLambdaFunction.VpcConfigPropertyOutputReference | AwsLambdaFunction.VpcConfigProperty): any {
+export function tfFunctionVpcConfigPropertyToHclTerraform(struct?: TfFunction.VpcConfigPropertyOutputReference | TfFunction.VpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1901,18 +1901,18 @@ export function awsLambdaFunctionVpcConfigPropertyToHclTerraform(struct?: AwsLam
 }
 
 
-export namespace AwsLambdaFunction {
+export namespace TfFunction {
 export interface LambdaManagedInstancesCapacityProviderConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#capacity_provider_arn AwsLambdaFunction#capacity_provider_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#capacity_provider_arn TfFunction#capacity_provider_arn}
   */
   readonly capacityProviderArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#execution_environment_memory_gib_per_vcpu AwsLambdaFunction#execution_environment_memory_gib_per_vcpu}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#execution_environment_memory_gib_per_vcpu TfFunction#execution_environment_memory_gib_per_vcpu}
   */
   readonly executionEnvironmentMemoryGibPerVcpu?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#per_execution_environment_max_concurrency AwsLambdaFunction#per_execution_environment_max_concurrency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#per_execution_environment_max_concurrency TfFunction#per_execution_environment_max_concurrency}
   */
   readonly perExecutionEnvironmentMaxConcurrency?: number;
 }
@@ -2009,7 +2009,7 @@ export interface CapacityProviderConfigProperty {
   /**
   * lambda_managed_instances_capacity_provider_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#lambda_managed_instances_capacity_provider_config AwsLambdaFunction#lambda_managed_instances_capacity_provider_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#lambda_managed_instances_capacity_provider_config TfFunction#lambda_managed_instances_capacity_provider_config}
   */
   readonly lambdaManagedInstancesCapacityProviderConfig: LambdaManagedInstancesCapacityProviderConfigProperty;
 }
@@ -2060,7 +2060,7 @@ export class CapacityProviderConfigPropertyOutputReference extends cdktn.Complex
 }
 export interface DeadLetterConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#target_arn AwsLambdaFunction#target_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#target_arn TfFunction#target_arn}
   */
   readonly targetArn: string;
 }
@@ -2111,11 +2111,11 @@ export class DeadLetterConfigPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface DurableConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#execution_timeout AwsLambdaFunction#execution_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#execution_timeout TfFunction#execution_timeout}
   */
   readonly executionTimeout: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#retention_period AwsLambdaFunction#retention_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#retention_period TfFunction#retention_period}
   */
   readonly retentionPeriod?: number;
 }
@@ -2188,7 +2188,7 @@ export class DurableConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface EnvironmentProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#variables AwsLambdaFunction#variables}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#variables TfFunction#variables}
   */
   readonly variables?: { [key: string]: string };
 }
@@ -2242,7 +2242,7 @@ export class EnvironmentPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface EphemeralStorageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#size AwsLambdaFunction#size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#size TfFunction#size}
   */
   readonly size?: number;
 }
@@ -2296,11 +2296,11 @@ export class EphemeralStoragePropertyOutputReference extends cdktn.ComplexObject
 }
 export interface FileSystemConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#arn AwsLambdaFunction#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#arn TfFunction#arn}
   */
   readonly arn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#local_mount_path AwsLambdaFunction#local_mount_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#local_mount_path TfFunction#local_mount_path}
   */
   readonly localMountPath: string;
 }
@@ -2370,15 +2370,15 @@ export class FileSystemConfigPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface ImageConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#command AwsLambdaFunction#command}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#command TfFunction#command}
   */
   readonly command?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#entry_point AwsLambdaFunction#entry_point}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#entry_point TfFunction#entry_point}
   */
   readonly entryPoint?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#working_directory AwsLambdaFunction#working_directory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#working_directory TfFunction#working_directory}
   */
   readonly workingDirectory?: string;
 }
@@ -2476,19 +2476,19 @@ export class ImageConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface LoggingConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#application_log_level AwsLambdaFunction#application_log_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#application_log_level TfFunction#application_log_level}
   */
   readonly applicationLogLevel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#log_format AwsLambdaFunction#log_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#log_format TfFunction#log_format}
   */
   readonly logFormat: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#log_group AwsLambdaFunction#log_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#log_group TfFunction#log_group}
   */
   readonly logGroup?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#system_log_level AwsLambdaFunction#system_log_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#system_log_level TfFunction#system_log_level}
   */
   readonly systemLogLevel?: string;
 }
@@ -2605,7 +2605,7 @@ export class LoggingConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SnapStartProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#apply_on AwsLambdaFunction#apply_on}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#apply_on TfFunction#apply_on}
   */
   readonly applyOn: string;
 }
@@ -2661,7 +2661,7 @@ export class SnapStartPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TenancyConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#tenant_isolation_mode AwsLambdaFunction#tenant_isolation_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#tenant_isolation_mode TfFunction#tenant_isolation_mode}
   */
   readonly tenantIsolationMode: string;
 }
@@ -2712,15 +2712,15 @@ export class TenancyConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#create AwsLambdaFunction#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#create TfFunction#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#delete AwsLambdaFunction#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#delete TfFunction#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#update AwsLambdaFunction#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#update TfFunction#update}
   */
   readonly update?: string;
 }
@@ -2828,7 +2828,7 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TracingConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#mode AwsLambdaFunction#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#mode TfFunction#mode}
   */
   readonly mode: string;
 }
@@ -2879,15 +2879,15 @@ export class TracingConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VpcConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#ipv6_allowed_for_dual_stack AwsLambdaFunction#ipv6_allowed_for_dual_stack}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#ipv6_allowed_for_dual_stack TfFunction#ipv6_allowed_for_dual_stack}
   */
   readonly ipv6AllowedForDualStack?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#security_group_ids AwsLambdaFunction#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#security_group_ids TfFunction#security_group_ids}
   */
   readonly securityGroupIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#subnet_ids AwsLambdaFunction#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_function#subnet_ids TfFunction#subnet_ids}
   */
   readonly subnetIds: string[];
 }

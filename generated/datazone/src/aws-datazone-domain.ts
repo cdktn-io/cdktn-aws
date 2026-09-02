@@ -5,63 +5,63 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDatazoneDomainConfig extends cdktn.TerraformMetaArguments {
+export interface TfDomainConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#description AwsDatazoneDomain#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#description TfDomain#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#domain_execution_role AwsDatazoneDomain#domain_execution_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#domain_execution_role TfDomain#domain_execution_role}
   */
   readonly domainExecutionRole: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#domain_version AwsDatazoneDomain#domain_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#domain_version TfDomain#domain_version}
   */
   readonly domainVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#kms_key_identifier AwsDatazoneDomain#kms_key_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#kms_key_identifier TfDomain#kms_key_identifier}
   */
   readonly kmsKeyIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#name AwsDatazoneDomain#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#name TfDomain#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#region AwsDatazoneDomain#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#region TfDomain#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#service_role AwsDatazoneDomain#service_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#service_role TfDomain#service_role}
   */
   readonly serviceRole?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#skip_deletion_check AwsDatazoneDomain#skip_deletion_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#skip_deletion_check TfDomain#skip_deletion_check}
   */
   readonly skipDeletionCheck?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#tags AwsDatazoneDomain#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#tags TfDomain#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * single_sign_on block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#single_sign_on AwsDatazoneDomain#single_sign_on}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#single_sign_on TfDomain#single_sign_on}
   */
-  readonly singleSignOn?: AwsDatazoneDomain.SingleSignOnProperty[] | cdktn.IResolvable;
+  readonly singleSignOn?: TfDomain.SingleSignOnProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#timeouts AwsDatazoneDomain#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#timeouts TfDomain#timeouts}
   */
-  readonly timeouts?: AwsDatazoneDomain.TimeoutsProperty;
+  readonly timeouts?: TfDomain.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain aws_datazone_domain}
 */
-export class AwsDatazoneDomain extends cdktn.TerraformResource {
+export class TfDomain extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -72,11 +72,11 @@ export class AwsDatazoneDomain extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDatazoneDomain resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDomain resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDatazoneDomain to import
-  * @param importFromId The id of the existing AwsDatazoneDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDatazoneDomain to import is found
+  * @param importToId The construct id used in the generated config for the TfDomain to import
+  * @param importFromId The id of the existing TfDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDomain to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_datazone_domain", importId: importFromId, provider });
@@ -91,9 +91,9 @@ export class AwsDatazoneDomain extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDatazoneDomainConfig
+  * @param options TfDomainConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDatazoneDomainConfig) {
+  public constructor(scope: Construct, id: string, config: TfDomainConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_datazone_domain',
       terraformGeneratorMetadata: {
@@ -291,11 +291,11 @@ export class AwsDatazoneDomain extends cdktn.TerraformResource {
   }
 
   // single_sign_on - computed: false, optional: true, required: false
-  private _singleSignOn = new AwsDatazoneDomain.SingleSignOnPropertyList(this, "single_sign_on", false);
+  private _singleSignOn = new TfDomain.SingleSignOnPropertyList(this, "single_sign_on", false);
   public get singleSignOn() {
     return this._singleSignOn;
   }
-  public putSingleSignOn(value: AwsDatazoneDomain.SingleSignOnProperty[] | cdktn.IResolvable) {
+  public putSingleSignOn(value: TfDomain.SingleSignOnProperty[] | cdktn.IResolvable) {
     this._singleSignOn.internalValue = value;
   }
   public resetSingleSignOn() {
@@ -307,11 +307,11 @@ export class AwsDatazoneDomain extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsDatazoneDomain.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfDomain.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsDatazoneDomain.TimeoutsProperty) {
+  public putTimeouts(value: TfDomain.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -337,8 +337,8 @@ export class AwsDatazoneDomain extends cdktn.TerraformResource {
       service_role: cdktn.stringToTerraform(this._serviceRole),
       skip_deletion_check: cdktn.booleanToTerraform(this._skipDeletionCheck),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      single_sign_on: cdktn.listMapper(awsDatazoneDomainSingleSignOnPropertyToTerraform, true)(this._singleSignOn.internalValue),
-      timeouts: awsDatazoneDomainTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      single_sign_on: cdktn.listMapper(tfDomainSingleSignOnPropertyToTerraform, true)(this._singleSignOn.internalValue),
+      timeouts: tfDomainTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -399,16 +399,16 @@ export class AwsDatazoneDomain extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       single_sign_on: {
-        value: cdktn.listMapperHcl(awsDatazoneDomainSingleSignOnPropertyToHclTerraform, true)(this._singleSignOn.internalValue),
+        value: cdktn.listMapperHcl(tfDomainSingleSignOnPropertyToHclTerraform, true)(this._singleSignOn.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDatazoneDomain.SingleSignOnPropertyList",
+        storageClassType: "TfDomain.SingleSignOnPropertyList",
       },
       timeouts: {
-        value: awsDatazoneDomainTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfDomainTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsDatazoneDomain.TimeoutsProperty",
+        storageClassType: "TfDomain.TimeoutsProperty",
       },
     };
 
@@ -417,7 +417,7 @@ export class AwsDatazoneDomain extends cdktn.TerraformResource {
   }
 }
 
-export function awsDatazoneDomainSingleSignOnPropertyToTerraform(struct?: AwsDatazoneDomain.SingleSignOnProperty | cdktn.IResolvable): any {
+export function tfDomainSingleSignOnPropertyToTerraform(struct?: TfDomain.SingleSignOnProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -429,7 +429,7 @@ export function awsDatazoneDomainSingleSignOnPropertyToTerraform(struct?: AwsDat
 }
 
 
-export function awsDatazoneDomainSingleSignOnPropertyToHclTerraform(struct?: AwsDatazoneDomain.SingleSignOnProperty | cdktn.IResolvable): any {
+export function tfDomainSingleSignOnPropertyToHclTerraform(struct?: TfDomain.SingleSignOnProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -454,7 +454,7 @@ export function awsDatazoneDomainSingleSignOnPropertyToHclTerraform(struct?: Aws
 }
 
 
-export function awsDatazoneDomainTimeoutsPropertyToTerraform(struct?: AwsDatazoneDomain.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDomainTimeoutsPropertyToTerraform(struct?: TfDomain.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -466,7 +466,7 @@ export function awsDatazoneDomainTimeoutsPropertyToTerraform(struct?: AwsDatazon
 }
 
 
-export function awsDatazoneDomainTimeoutsPropertyToHclTerraform(struct?: AwsDatazoneDomain.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDomainTimeoutsPropertyToHclTerraform(struct?: TfDomain.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -491,14 +491,14 @@ export function awsDatazoneDomainTimeoutsPropertyToHclTerraform(struct?: AwsData
 }
 
 
-export namespace AwsDatazoneDomain {
+export namespace TfDomain {
 export interface SingleSignOnProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#type AwsDatazoneDomain#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#type TfDomain#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#user_assignment AwsDatazoneDomain#user_assignment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#user_assignment TfDomain#user_assignment}
   */
   readonly userAssignment?: string;
 }
@@ -608,13 +608,13 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#create AwsDatazoneDomain#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#create TfDomain#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#delete AwsDatazoneDomain#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#delete TfDomain#delete}
   */
   readonly delete?: string;
 }

@@ -5,62 +5,62 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsConnectRoutingProfileConfig extends cdktn.TerraformMetaArguments {
+export interface TfRoutingProfileConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#default_outbound_queue_id AwsConnectRoutingProfile#default_outbound_queue_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#default_outbound_queue_id TfRoutingProfile#default_outbound_queue_id}
   */
   readonly defaultOutboundQueueId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#description AwsConnectRoutingProfile#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#description TfRoutingProfile#description}
   */
   readonly description: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#id AwsConnectRoutingProfile#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#id TfRoutingProfile#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#instance_id AwsConnectRoutingProfile#instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#instance_id TfRoutingProfile#instance_id}
   */
   readonly instanceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#name AwsConnectRoutingProfile#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#name TfRoutingProfile#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#region AwsConnectRoutingProfile#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#region TfRoutingProfile#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#tags AwsConnectRoutingProfile#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#tags TfRoutingProfile#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#tags_all AwsConnectRoutingProfile#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#tags_all TfRoutingProfile#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * media_concurrencies block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#media_concurrencies AwsConnectRoutingProfile#media_concurrencies}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#media_concurrencies TfRoutingProfile#media_concurrencies}
   */
-  readonly mediaConcurrencies: AwsConnectRoutingProfile.MediaConcurrenciesProperty[] | cdktn.IResolvable;
+  readonly mediaConcurrencies: TfRoutingProfile.MediaConcurrenciesProperty[] | cdktn.IResolvable;
   /**
   * queue_configs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#queue_configs AwsConnectRoutingProfile#queue_configs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#queue_configs TfRoutingProfile#queue_configs}
   */
-  readonly queueConfigs?: AwsConnectRoutingProfile.QueueConfigsProperty[] | cdktn.IResolvable;
+  readonly queueConfigs?: TfRoutingProfile.QueueConfigsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile aws_connect_routing_profile}
 */
-export class AwsConnectRoutingProfile extends cdktn.TerraformResource {
+export class TfRoutingProfile extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -71,11 +71,11 @@ export class AwsConnectRoutingProfile extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsConnectRoutingProfile resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfRoutingProfile resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsConnectRoutingProfile to import
-  * @param importFromId The id of the existing AwsConnectRoutingProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsConnectRoutingProfile to import is found
+  * @param importToId The construct id used in the generated config for the TfRoutingProfile to import
+  * @param importFromId The id of the existing TfRoutingProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfRoutingProfile to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_connect_routing_profile", importId: importFromId, provider });
@@ -90,9 +90,9 @@ export class AwsConnectRoutingProfile extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsConnectRoutingProfileConfig
+  * @param options TfRoutingProfileConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsConnectRoutingProfileConfig) {
+  public constructor(scope: Construct, id: string, config: TfRoutingProfileConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_connect_routing_profile',
       terraformGeneratorMetadata: {
@@ -251,11 +251,11 @@ export class AwsConnectRoutingProfile extends cdktn.TerraformResource {
   }
 
   // media_concurrencies - computed: false, optional: false, required: true
-  private _mediaConcurrencies = new AwsConnectRoutingProfile.MediaConcurrenciesPropertyList(this, "media_concurrencies", true);
+  private _mediaConcurrencies = new TfRoutingProfile.MediaConcurrenciesPropertyList(this, "media_concurrencies", true);
   public get mediaConcurrencies() {
     return this._mediaConcurrencies;
   }
-  public putMediaConcurrencies(value: AwsConnectRoutingProfile.MediaConcurrenciesProperty[] | cdktn.IResolvable) {
+  public putMediaConcurrencies(value: TfRoutingProfile.MediaConcurrenciesProperty[] | cdktn.IResolvable) {
     this._mediaConcurrencies.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -264,11 +264,11 @@ export class AwsConnectRoutingProfile extends cdktn.TerraformResource {
   }
 
   // queue_configs - computed: false, optional: true, required: false
-  private _queueConfigs = new AwsConnectRoutingProfile.QueueConfigsPropertyList(this, "queue_configs", true);
+  private _queueConfigs = new TfRoutingProfile.QueueConfigsPropertyList(this, "queue_configs", true);
   public get queueConfigs() {
     return this._queueConfigs;
   }
-  public putQueueConfigs(value: AwsConnectRoutingProfile.QueueConfigsProperty[] | cdktn.IResolvable) {
+  public putQueueConfigs(value: TfRoutingProfile.QueueConfigsProperty[] | cdktn.IResolvable) {
     this._queueConfigs.internalValue = value;
   }
   public resetQueueConfigs() {
@@ -293,8 +293,8 @@ export class AwsConnectRoutingProfile extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      media_concurrencies: cdktn.listMapper(awsConnectRoutingProfileMediaConcurrenciesPropertyToTerraform, true)(this._mediaConcurrencies.internalValue),
-      queue_configs: cdktn.listMapper(awsConnectRoutingProfileQueueConfigsPropertyToTerraform, true)(this._queueConfigs.internalValue),
+      media_concurrencies: cdktn.listMapper(tfRoutingProfileMediaConcurrenciesPropertyToTerraform, true)(this._mediaConcurrencies.internalValue),
+      queue_configs: cdktn.listMapper(tfRoutingProfileQueueConfigsPropertyToTerraform, true)(this._queueConfigs.internalValue),
     };
   }
 
@@ -349,16 +349,16 @@ export class AwsConnectRoutingProfile extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       media_concurrencies: {
-        value: cdktn.listMapperHcl(awsConnectRoutingProfileMediaConcurrenciesPropertyToHclTerraform, true)(this._mediaConcurrencies.internalValue),
+        value: cdktn.listMapperHcl(tfRoutingProfileMediaConcurrenciesPropertyToHclTerraform, true)(this._mediaConcurrencies.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsConnectRoutingProfile.MediaConcurrenciesPropertyList",
+        storageClassType: "TfRoutingProfile.MediaConcurrenciesPropertyList",
       },
       queue_configs: {
-        value: cdktn.listMapperHcl(awsConnectRoutingProfileQueueConfigsPropertyToHclTerraform, true)(this._queueConfigs.internalValue),
+        value: cdktn.listMapperHcl(tfRoutingProfileQueueConfigsPropertyToHclTerraform, true)(this._queueConfigs.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsConnectRoutingProfile.QueueConfigsPropertyList",
+        storageClassType: "TfRoutingProfile.QueueConfigsPropertyList",
       },
     };
 
@@ -367,7 +367,7 @@ export class AwsConnectRoutingProfile extends cdktn.TerraformResource {
   }
 }
 
-export function awsConnectRoutingProfileCrossChannelBehaviorPropertyToTerraform(struct?: AwsConnectRoutingProfile.CrossChannelBehaviorPropertyOutputReference | AwsConnectRoutingProfile.CrossChannelBehaviorProperty): any {
+export function tfRoutingProfileCrossChannelBehaviorPropertyToTerraform(struct?: TfRoutingProfile.CrossChannelBehaviorPropertyOutputReference | TfRoutingProfile.CrossChannelBehaviorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -378,7 +378,7 @@ export function awsConnectRoutingProfileCrossChannelBehaviorPropertyToTerraform(
 }
 
 
-export function awsConnectRoutingProfileCrossChannelBehaviorPropertyToHclTerraform(struct?: AwsConnectRoutingProfile.CrossChannelBehaviorPropertyOutputReference | AwsConnectRoutingProfile.CrossChannelBehaviorProperty): any {
+export function tfRoutingProfileCrossChannelBehaviorPropertyToHclTerraform(struct?: TfRoutingProfile.CrossChannelBehaviorPropertyOutputReference | TfRoutingProfile.CrossChannelBehaviorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -397,7 +397,7 @@ export function awsConnectRoutingProfileCrossChannelBehaviorPropertyToHclTerrafo
 }
 
 
-export function awsConnectRoutingProfileMediaConcurrenciesPropertyToTerraform(struct?: AwsConnectRoutingProfile.MediaConcurrenciesProperty | cdktn.IResolvable): any {
+export function tfRoutingProfileMediaConcurrenciesPropertyToTerraform(struct?: TfRoutingProfile.MediaConcurrenciesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -405,12 +405,12 @@ export function awsConnectRoutingProfileMediaConcurrenciesPropertyToTerraform(st
   return {
     channel: cdktn.stringToTerraform(struct!.channel),
     concurrency: cdktn.numberToTerraform(struct!.concurrency),
-    cross_channel_behavior: awsConnectRoutingProfileCrossChannelBehaviorPropertyToTerraform(struct!.crossChannelBehavior),
+    cross_channel_behavior: tfRoutingProfileCrossChannelBehaviorPropertyToTerraform(struct!.crossChannelBehavior),
   }
 }
 
 
-export function awsConnectRoutingProfileMediaConcurrenciesPropertyToHclTerraform(struct?: AwsConnectRoutingProfile.MediaConcurrenciesProperty | cdktn.IResolvable): any {
+export function tfRoutingProfileMediaConcurrenciesPropertyToHclTerraform(struct?: TfRoutingProfile.MediaConcurrenciesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -429,7 +429,7 @@ export function awsConnectRoutingProfileMediaConcurrenciesPropertyToHclTerraform
       storageClassType: "number",
     },
     cross_channel_behavior: {
-      value: awsConnectRoutingProfileCrossChannelBehaviorPropertyToHclTerraform(struct!.crossChannelBehavior),
+      value: tfRoutingProfileCrossChannelBehaviorPropertyToHclTerraform(struct!.crossChannelBehavior),
       isBlock: true,
       type: "list",
       storageClassType: "CrossChannelBehaviorPropertyList",
@@ -441,7 +441,7 @@ export function awsConnectRoutingProfileMediaConcurrenciesPropertyToHclTerraform
 }
 
 
-export function awsConnectRoutingProfileQueueConfigsPropertyToTerraform(struct?: AwsConnectRoutingProfile.QueueConfigsProperty | cdktn.IResolvable): any {
+export function tfRoutingProfileQueueConfigsPropertyToTerraform(struct?: TfRoutingProfile.QueueConfigsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -455,7 +455,7 @@ export function awsConnectRoutingProfileQueueConfigsPropertyToTerraform(struct?:
 }
 
 
-export function awsConnectRoutingProfileQueueConfigsPropertyToHclTerraform(struct?: AwsConnectRoutingProfile.QueueConfigsProperty | cdktn.IResolvable): any {
+export function tfRoutingProfileQueueConfigsPropertyToHclTerraform(struct?: TfRoutingProfile.QueueConfigsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -492,10 +492,10 @@ export function awsConnectRoutingProfileQueueConfigsPropertyToHclTerraform(struc
 }
 
 
-export namespace AwsConnectRoutingProfile {
+export namespace TfRoutingProfile {
 export interface CrossChannelBehaviorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#behavior_type AwsConnectRoutingProfile#behavior_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#behavior_type TfRoutingProfile#behavior_type}
   */
   readonly behaviorType: string;
 }
@@ -546,17 +546,17 @@ export class CrossChannelBehaviorPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface MediaConcurrenciesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#channel AwsConnectRoutingProfile#channel}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#channel TfRoutingProfile#channel}
   */
   readonly channel: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#concurrency AwsConnectRoutingProfile#concurrency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#concurrency TfRoutingProfile#concurrency}
   */
   readonly concurrency: number;
   /**
   * cross_channel_behavior block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#cross_channel_behavior AwsConnectRoutingProfile#cross_channel_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#cross_channel_behavior TfRoutingProfile#cross_channel_behavior}
   */
   readonly crossChannelBehavior?: CrossChannelBehaviorProperty;
 }
@@ -680,19 +680,19 @@ export class MediaConcurrenciesPropertyList extends cdktn.ComplexList {
 }
 export interface QueueConfigsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#channel AwsConnectRoutingProfile#channel}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#channel TfRoutingProfile#channel}
   */
   readonly channel: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#delay AwsConnectRoutingProfile#delay}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#delay TfRoutingProfile#delay}
   */
   readonly delay: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#priority AwsConnectRoutingProfile#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#priority TfRoutingProfile#priority}
   */
   readonly priority: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#queue_id AwsConnectRoutingProfile#queue_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_routing_profile#queue_id TfRoutingProfile#queue_id}
   */
   readonly queueId: string;
 }

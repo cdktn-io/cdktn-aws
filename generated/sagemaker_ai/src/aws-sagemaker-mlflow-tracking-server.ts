@@ -5,54 +5,54 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSagemakerMlflowTrackingServerConfig extends cdktn.TerraformMetaArguments {
+export interface TfMlflowTrackingServerConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_tracking_server#artifact_store_uri AwsSagemakerMlflowTrackingServer#artifact_store_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_tracking_server#artifact_store_uri TfMlflowTrackingServer#artifact_store_uri}
   */
   readonly artifactStoreUri: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_tracking_server#automatic_model_registration AwsSagemakerMlflowTrackingServer#automatic_model_registration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_tracking_server#automatic_model_registration TfMlflowTrackingServer#automatic_model_registration}
   */
   readonly automaticModelRegistration?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_tracking_server#id AwsSagemakerMlflowTrackingServer#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_tracking_server#id TfMlflowTrackingServer#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_tracking_server#mlflow_version AwsSagemakerMlflowTrackingServer#mlflow_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_tracking_server#mlflow_version TfMlflowTrackingServer#mlflow_version}
   */
   readonly mlflowVersion?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_tracking_server#region AwsSagemakerMlflowTrackingServer#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_tracking_server#region TfMlflowTrackingServer#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_tracking_server#role_arn AwsSagemakerMlflowTrackingServer#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_tracking_server#role_arn TfMlflowTrackingServer#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_tracking_server#tags AwsSagemakerMlflowTrackingServer#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_tracking_server#tags TfMlflowTrackingServer#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_tracking_server#tags_all AwsSagemakerMlflowTrackingServer#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_tracking_server#tags_all TfMlflowTrackingServer#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_tracking_server#tracking_server_name AwsSagemakerMlflowTrackingServer#tracking_server_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_tracking_server#tracking_server_name TfMlflowTrackingServer#tracking_server_name}
   */
   readonly trackingServerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_tracking_server#tracking_server_size AwsSagemakerMlflowTrackingServer#tracking_server_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_tracking_server#tracking_server_size TfMlflowTrackingServer#tracking_server_size}
   */
   readonly trackingServerSize?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_tracking_server#weekly_maintenance_window_start AwsSagemakerMlflowTrackingServer#weekly_maintenance_window_start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_tracking_server#weekly_maintenance_window_start TfMlflowTrackingServer#weekly_maintenance_window_start}
   */
   readonly weeklyMaintenanceWindowStart?: string;
 }
@@ -60,7 +60,7 @@ export interface AwsSagemakerMlflowTrackingServerConfig extends cdktn.TerraformM
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_tracking_server aws_sagemaker_mlflow_tracking_server}
 */
-export class AwsSagemakerMlflowTrackingServer extends cdktn.TerraformResource {
+export class TfMlflowTrackingServer extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -71,11 +71,11 @@ export class AwsSagemakerMlflowTrackingServer extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSagemakerMlflowTrackingServer resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfMlflowTrackingServer resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSagemakerMlflowTrackingServer to import
-  * @param importFromId The id of the existing AwsSagemakerMlflowTrackingServer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_tracking_server#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSagemakerMlflowTrackingServer to import is found
+  * @param importToId The construct id used in the generated config for the TfMlflowTrackingServer to import
+  * @param importFromId The id of the existing TfMlflowTrackingServer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_mlflow_tracking_server#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfMlflowTrackingServer to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sagemaker_mlflow_tracking_server", importId: importFromId, provider });
@@ -90,9 +90,9 @@ export class AwsSagemakerMlflowTrackingServer extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSagemakerMlflowTrackingServerConfig
+  * @param options TfMlflowTrackingServerConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSagemakerMlflowTrackingServerConfig) {
+  public constructor(scope: Construct, id: string, config: TfMlflowTrackingServerConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sagemaker_mlflow_tracking_server',
       terraformGeneratorMetadata: {

@@ -5,37 +5,37 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsAppsyncApiConfig extends cdktn.TerraformMetaArguments {
+export interface TfApiConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#name AwsAppsyncApi#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#name TfApi#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#owner_contact AwsAppsyncApi#owner_contact}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#owner_contact TfApi#owner_contact}
   */
   readonly ownerContact?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#region AwsAppsyncApi#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#region TfApi#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#tags AwsAppsyncApi#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#tags TfApi#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * event_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#event_config AwsAppsyncApi#event_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#event_config TfApi#event_config}
   */
-  readonly eventConfig?: AwsAppsyncApi.EventConfigProperty[] | cdktn.IResolvable;
+  readonly eventConfig?: TfApi.EventConfigProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api aws_appsync_api}
 */
-export class AwsAppsyncApi extends cdktn.TerraformResource {
+export class TfApi extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -46,11 +46,11 @@ export class AwsAppsyncApi extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsAppsyncApi resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfApi resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsAppsyncApi to import
-  * @param importFromId The id of the existing AwsAppsyncApi that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsAppsyncApi to import is found
+  * @param importToId The construct id used in the generated config for the TfApi to import
+  * @param importFromId The id of the existing TfApi that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfApi to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appsync_api", importId: importFromId, provider });
@@ -65,9 +65,9 @@ export class AwsAppsyncApi extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsAppsyncApiConfig
+  * @param options TfApiConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsAppsyncApiConfig) {
+  public constructor(scope: Construct, id: string, config: TfApiConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appsync_api',
       terraformGeneratorMetadata: {
@@ -188,11 +188,11 @@ export class AwsAppsyncApi extends cdktn.TerraformResource {
   }
 
   // event_config - computed: false, optional: true, required: false
-  private _eventConfig = new AwsAppsyncApi.EventConfigPropertyList(this, "event_config", false);
+  private _eventConfig = new TfApi.EventConfigPropertyList(this, "event_config", false);
   public get eventConfig() {
     return this._eventConfig;
   }
-  public putEventConfig(value: AwsAppsyncApi.EventConfigProperty[] | cdktn.IResolvable) {
+  public putEventConfig(value: TfApi.EventConfigProperty[] | cdktn.IResolvable) {
     this._eventConfig.internalValue = value;
   }
   public resetEventConfig() {
@@ -213,7 +213,7 @@ export class AwsAppsyncApi extends cdktn.TerraformResource {
       owner_contact: cdktn.stringToTerraform(this._ownerContact),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      event_config: cdktn.listMapper(awsAppsyncApiEventConfigPropertyToTerraform, true)(this._eventConfig.internalValue),
+      event_config: cdktn.listMapper(tfApiEventConfigPropertyToTerraform, true)(this._eventConfig.internalValue),
     };
   }
 
@@ -244,10 +244,10 @@ export class AwsAppsyncApi extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       event_config: {
-        value: cdktn.listMapperHcl(awsAppsyncApiEventConfigPropertyToHclTerraform, true)(this._eventConfig.internalValue),
+        value: cdktn.listMapperHcl(tfApiEventConfigPropertyToHclTerraform, true)(this._eventConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAppsyncApi.EventConfigPropertyList",
+        storageClassType: "TfApi.EventConfigPropertyList",
       },
     };
 
@@ -256,7 +256,7 @@ export class AwsAppsyncApi extends cdktn.TerraformResource {
   }
 }
 
-export function awsAppsyncApiCognitoConfigPropertyToTerraform(struct?: AwsAppsyncApi.CognitoConfigProperty | cdktn.IResolvable): any {
+export function tfApiCognitoConfigPropertyToTerraform(struct?: TfApi.CognitoConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -269,7 +269,7 @@ export function awsAppsyncApiCognitoConfigPropertyToTerraform(struct?: AwsAppsyn
 }
 
 
-export function awsAppsyncApiCognitoConfigPropertyToHclTerraform(struct?: AwsAppsyncApi.CognitoConfigProperty | cdktn.IResolvable): any {
+export function tfApiCognitoConfigPropertyToHclTerraform(struct?: TfApi.CognitoConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -300,7 +300,7 @@ export function awsAppsyncApiCognitoConfigPropertyToHclTerraform(struct?: AwsApp
 }
 
 
-export function awsAppsyncApiLambdaAuthorizerConfigPropertyToTerraform(struct?: AwsAppsyncApi.LambdaAuthorizerConfigProperty | cdktn.IResolvable): any {
+export function tfApiLambdaAuthorizerConfigPropertyToTerraform(struct?: TfApi.LambdaAuthorizerConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -313,7 +313,7 @@ export function awsAppsyncApiLambdaAuthorizerConfigPropertyToTerraform(struct?: 
 }
 
 
-export function awsAppsyncApiLambdaAuthorizerConfigPropertyToHclTerraform(struct?: AwsAppsyncApi.LambdaAuthorizerConfigProperty | cdktn.IResolvable): any {
+export function tfApiLambdaAuthorizerConfigPropertyToHclTerraform(struct?: TfApi.LambdaAuthorizerConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -344,7 +344,7 @@ export function awsAppsyncApiLambdaAuthorizerConfigPropertyToHclTerraform(struct
 }
 
 
-export function awsAppsyncApiOpenidConnectConfigPropertyToTerraform(struct?: AwsAppsyncApi.OpenidConnectConfigProperty | cdktn.IResolvable): any {
+export function tfApiOpenidConnectConfigPropertyToTerraform(struct?: TfApi.OpenidConnectConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -358,7 +358,7 @@ export function awsAppsyncApiOpenidConnectConfigPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsAppsyncApiOpenidConnectConfigPropertyToHclTerraform(struct?: AwsAppsyncApi.OpenidConnectConfigProperty | cdktn.IResolvable): any {
+export function tfApiOpenidConnectConfigPropertyToHclTerraform(struct?: TfApi.OpenidConnectConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -395,21 +395,21 @@ export function awsAppsyncApiOpenidConnectConfigPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsAppsyncApiAuthProviderPropertyToTerraform(struct?: AwsAppsyncApi.AuthProviderProperty | cdktn.IResolvable): any {
+export function tfApiAuthProviderPropertyToTerraform(struct?: TfApi.AuthProviderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     auth_type: cdktn.stringToTerraform(struct!.authType),
-    cognito_config: cdktn.listMapper(awsAppsyncApiCognitoConfigPropertyToTerraform, true)(struct!.cognitoConfig),
-    lambda_authorizer_config: cdktn.listMapper(awsAppsyncApiLambdaAuthorizerConfigPropertyToTerraform, true)(struct!.lambdaAuthorizerConfig),
-    openid_connect_config: cdktn.listMapper(awsAppsyncApiOpenidConnectConfigPropertyToTerraform, true)(struct!.openidConnectConfig),
+    cognito_config: cdktn.listMapper(tfApiCognitoConfigPropertyToTerraform, true)(struct!.cognitoConfig),
+    lambda_authorizer_config: cdktn.listMapper(tfApiLambdaAuthorizerConfigPropertyToTerraform, true)(struct!.lambdaAuthorizerConfig),
+    openid_connect_config: cdktn.listMapper(tfApiOpenidConnectConfigPropertyToTerraform, true)(struct!.openidConnectConfig),
   }
 }
 
 
-export function awsAppsyncApiAuthProviderPropertyToHclTerraform(struct?: AwsAppsyncApi.AuthProviderProperty | cdktn.IResolvable): any {
+export function tfApiAuthProviderPropertyToHclTerraform(struct?: TfApi.AuthProviderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -422,19 +422,19 @@ export function awsAppsyncApiAuthProviderPropertyToHclTerraform(struct?: AwsApps
       storageClassType: "string",
     },
     cognito_config: {
-      value: cdktn.listMapperHcl(awsAppsyncApiCognitoConfigPropertyToHclTerraform, true)(struct!.cognitoConfig),
+      value: cdktn.listMapperHcl(tfApiCognitoConfigPropertyToHclTerraform, true)(struct!.cognitoConfig),
       isBlock: true,
       type: "list",
       storageClassType: "CognitoConfigPropertyList",
     },
     lambda_authorizer_config: {
-      value: cdktn.listMapperHcl(awsAppsyncApiLambdaAuthorizerConfigPropertyToHclTerraform, true)(struct!.lambdaAuthorizerConfig),
+      value: cdktn.listMapperHcl(tfApiLambdaAuthorizerConfigPropertyToHclTerraform, true)(struct!.lambdaAuthorizerConfig),
       isBlock: true,
       type: "list",
       storageClassType: "LambdaAuthorizerConfigPropertyList",
     },
     openid_connect_config: {
-      value: cdktn.listMapperHcl(awsAppsyncApiOpenidConnectConfigPropertyToHclTerraform, true)(struct!.openidConnectConfig),
+      value: cdktn.listMapperHcl(tfApiOpenidConnectConfigPropertyToHclTerraform, true)(struct!.openidConnectConfig),
       isBlock: true,
       type: "list",
       storageClassType: "OpenidConnectConfigPropertyList",
@@ -446,7 +446,7 @@ export function awsAppsyncApiAuthProviderPropertyToHclTerraform(struct?: AwsApps
 }
 
 
-export function awsAppsyncApiConnectionAuthModePropertyToTerraform(struct?: AwsAppsyncApi.ConnectionAuthModeProperty | cdktn.IResolvable): any {
+export function tfApiConnectionAuthModePropertyToTerraform(struct?: TfApi.ConnectionAuthModeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -457,7 +457,7 @@ export function awsAppsyncApiConnectionAuthModePropertyToTerraform(struct?: AwsA
 }
 
 
-export function awsAppsyncApiConnectionAuthModePropertyToHclTerraform(struct?: AwsAppsyncApi.ConnectionAuthModeProperty | cdktn.IResolvable): any {
+export function tfApiConnectionAuthModePropertyToHclTerraform(struct?: TfApi.ConnectionAuthModeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -476,7 +476,7 @@ export function awsAppsyncApiConnectionAuthModePropertyToHclTerraform(struct?: A
 }
 
 
-export function awsAppsyncApiDefaultPublishAuthModePropertyToTerraform(struct?: AwsAppsyncApi.DefaultPublishAuthModeProperty | cdktn.IResolvable): any {
+export function tfApiDefaultPublishAuthModePropertyToTerraform(struct?: TfApi.DefaultPublishAuthModeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -487,7 +487,7 @@ export function awsAppsyncApiDefaultPublishAuthModePropertyToTerraform(struct?: 
 }
 
 
-export function awsAppsyncApiDefaultPublishAuthModePropertyToHclTerraform(struct?: AwsAppsyncApi.DefaultPublishAuthModeProperty | cdktn.IResolvable): any {
+export function tfApiDefaultPublishAuthModePropertyToHclTerraform(struct?: TfApi.DefaultPublishAuthModeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -506,7 +506,7 @@ export function awsAppsyncApiDefaultPublishAuthModePropertyToHclTerraform(struct
 }
 
 
-export function awsAppsyncApiDefaultSubscribeAuthModePropertyToTerraform(struct?: AwsAppsyncApi.DefaultSubscribeAuthModeProperty | cdktn.IResolvable): any {
+export function tfApiDefaultSubscribeAuthModePropertyToTerraform(struct?: TfApi.DefaultSubscribeAuthModeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -517,7 +517,7 @@ export function awsAppsyncApiDefaultSubscribeAuthModePropertyToTerraform(struct?
 }
 
 
-export function awsAppsyncApiDefaultSubscribeAuthModePropertyToHclTerraform(struct?: AwsAppsyncApi.DefaultSubscribeAuthModeProperty | cdktn.IResolvable): any {
+export function tfApiDefaultSubscribeAuthModePropertyToHclTerraform(struct?: TfApi.DefaultSubscribeAuthModeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -536,7 +536,7 @@ export function awsAppsyncApiDefaultSubscribeAuthModePropertyToHclTerraform(stru
 }
 
 
-export function awsAppsyncApiLogConfigPropertyToTerraform(struct?: AwsAppsyncApi.LogConfigProperty | cdktn.IResolvable): any {
+export function tfApiLogConfigPropertyToTerraform(struct?: TfApi.LogConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -548,7 +548,7 @@ export function awsAppsyncApiLogConfigPropertyToTerraform(struct?: AwsAppsyncApi
 }
 
 
-export function awsAppsyncApiLogConfigPropertyToHclTerraform(struct?: AwsAppsyncApi.LogConfigProperty | cdktn.IResolvable): any {
+export function tfApiLogConfigPropertyToHclTerraform(struct?: TfApi.LogConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -573,53 +573,53 @@ export function awsAppsyncApiLogConfigPropertyToHclTerraform(struct?: AwsAppsync
 }
 
 
-export function awsAppsyncApiEventConfigPropertyToTerraform(struct?: AwsAppsyncApi.EventConfigProperty | cdktn.IResolvable): any {
+export function tfApiEventConfigPropertyToTerraform(struct?: TfApi.EventConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    auth_provider: cdktn.listMapper(awsAppsyncApiAuthProviderPropertyToTerraform, true)(struct!.authProvider),
-    connection_auth_mode: cdktn.listMapper(awsAppsyncApiConnectionAuthModePropertyToTerraform, true)(struct!.connectionAuthMode),
-    default_publish_auth_mode: cdktn.listMapper(awsAppsyncApiDefaultPublishAuthModePropertyToTerraform, true)(struct!.defaultPublishAuthMode),
-    default_subscribe_auth_mode: cdktn.listMapper(awsAppsyncApiDefaultSubscribeAuthModePropertyToTerraform, true)(struct!.defaultSubscribeAuthMode),
-    log_config: cdktn.listMapper(awsAppsyncApiLogConfigPropertyToTerraform, true)(struct!.logConfig),
+    auth_provider: cdktn.listMapper(tfApiAuthProviderPropertyToTerraform, true)(struct!.authProvider),
+    connection_auth_mode: cdktn.listMapper(tfApiConnectionAuthModePropertyToTerraform, true)(struct!.connectionAuthMode),
+    default_publish_auth_mode: cdktn.listMapper(tfApiDefaultPublishAuthModePropertyToTerraform, true)(struct!.defaultPublishAuthMode),
+    default_subscribe_auth_mode: cdktn.listMapper(tfApiDefaultSubscribeAuthModePropertyToTerraform, true)(struct!.defaultSubscribeAuthMode),
+    log_config: cdktn.listMapper(tfApiLogConfigPropertyToTerraform, true)(struct!.logConfig),
   }
 }
 
 
-export function awsAppsyncApiEventConfigPropertyToHclTerraform(struct?: AwsAppsyncApi.EventConfigProperty | cdktn.IResolvable): any {
+export function tfApiEventConfigPropertyToHclTerraform(struct?: TfApi.EventConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     auth_provider: {
-      value: cdktn.listMapperHcl(awsAppsyncApiAuthProviderPropertyToHclTerraform, true)(struct!.authProvider),
+      value: cdktn.listMapperHcl(tfApiAuthProviderPropertyToHclTerraform, true)(struct!.authProvider),
       isBlock: true,
       type: "list",
       storageClassType: "AuthProviderPropertyList",
     },
     connection_auth_mode: {
-      value: cdktn.listMapperHcl(awsAppsyncApiConnectionAuthModePropertyToHclTerraform, true)(struct!.connectionAuthMode),
+      value: cdktn.listMapperHcl(tfApiConnectionAuthModePropertyToHclTerraform, true)(struct!.connectionAuthMode),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectionAuthModePropertyList",
     },
     default_publish_auth_mode: {
-      value: cdktn.listMapperHcl(awsAppsyncApiDefaultPublishAuthModePropertyToHclTerraform, true)(struct!.defaultPublishAuthMode),
+      value: cdktn.listMapperHcl(tfApiDefaultPublishAuthModePropertyToHclTerraform, true)(struct!.defaultPublishAuthMode),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultPublishAuthModePropertyList",
     },
     default_subscribe_auth_mode: {
-      value: cdktn.listMapperHcl(awsAppsyncApiDefaultSubscribeAuthModePropertyToHclTerraform, true)(struct!.defaultSubscribeAuthMode),
+      value: cdktn.listMapperHcl(tfApiDefaultSubscribeAuthModePropertyToHclTerraform, true)(struct!.defaultSubscribeAuthMode),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultSubscribeAuthModePropertyList",
     },
     log_config: {
-      value: cdktn.listMapperHcl(awsAppsyncApiLogConfigPropertyToHclTerraform, true)(struct!.logConfig),
+      value: cdktn.listMapperHcl(tfApiLogConfigPropertyToHclTerraform, true)(struct!.logConfig),
       isBlock: true,
       type: "list",
       storageClassType: "LogConfigPropertyList",
@@ -631,18 +631,18 @@ export function awsAppsyncApiEventConfigPropertyToHclTerraform(struct?: AwsAppsy
 }
 
 
-export namespace AwsAppsyncApi {
+export namespace TfApi {
 export interface CognitoConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#app_id_client_regex AwsAppsyncApi#app_id_client_regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#app_id_client_regex TfApi#app_id_client_regex}
   */
   readonly appIdClientRegex?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#aws_region AwsAppsyncApi#aws_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#aws_region TfApi#aws_region}
   */
   readonly awsRegion: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#user_pool_id AwsAppsyncApi#user_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#user_pool_id TfApi#user_pool_id}
   */
   readonly userPoolId: string;
 }
@@ -766,15 +766,15 @@ export class CognitoConfigPropertyList extends cdktn.ComplexList {
 }
 export interface LambdaAuthorizerConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#authorizer_result_ttl_in_seconds AwsAppsyncApi#authorizer_result_ttl_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#authorizer_result_ttl_in_seconds TfApi#authorizer_result_ttl_in_seconds}
   */
   readonly authorizerResultTtlInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#authorizer_uri AwsAppsyncApi#authorizer_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#authorizer_uri TfApi#authorizer_uri}
   */
   readonly authorizerUri: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#identity_validation_expression AwsAppsyncApi#identity_validation_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#identity_validation_expression TfApi#identity_validation_expression}
   */
   readonly identityValidationExpression?: string;
 }
@@ -901,19 +901,19 @@ export class LambdaAuthorizerConfigPropertyList extends cdktn.ComplexList {
 }
 export interface OpenidConnectConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#auth_ttl AwsAppsyncApi#auth_ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#auth_ttl TfApi#auth_ttl}
   */
   readonly authTtl?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#client_id AwsAppsyncApi#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#client_id TfApi#client_id}
   */
   readonly clientId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#iat_ttl AwsAppsyncApi#iat_ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#iat_ttl TfApi#iat_ttl}
   */
   readonly iatTtl?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#issuer AwsAppsyncApi#issuer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#issuer TfApi#issuer}
   */
   readonly issuer: string;
 }
@@ -1062,25 +1062,25 @@ export class OpenidConnectConfigPropertyList extends cdktn.ComplexList {
 }
 export interface AuthProviderProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#auth_type AwsAppsyncApi#auth_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#auth_type TfApi#auth_type}
   */
   readonly authType: string;
   /**
   * cognito_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#cognito_config AwsAppsyncApi#cognito_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#cognito_config TfApi#cognito_config}
   */
   readonly cognitoConfig?: CognitoConfigProperty[] | cdktn.IResolvable;
   /**
   * lambda_authorizer_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#lambda_authorizer_config AwsAppsyncApi#lambda_authorizer_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#lambda_authorizer_config TfApi#lambda_authorizer_config}
   */
   readonly lambdaAuthorizerConfig?: LambdaAuthorizerConfigProperty[] | cdktn.IResolvable;
   /**
   * openid_connect_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#openid_connect_config AwsAppsyncApi#openid_connect_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#openid_connect_config TfApi#openid_connect_config}
   */
   readonly openidConnectConfig?: OpenidConnectConfigProperty[] | cdktn.IResolvable;
 }
@@ -1229,7 +1229,7 @@ export class AuthProviderPropertyList extends cdktn.ComplexList {
 }
 export interface ConnectionAuthModeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#auth_type AwsAppsyncApi#auth_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#auth_type TfApi#auth_type}
   */
   readonly authType: string;
 }
@@ -1312,7 +1312,7 @@ export class ConnectionAuthModePropertyList extends cdktn.ComplexList {
 }
 export interface DefaultPublishAuthModeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#auth_type AwsAppsyncApi#auth_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#auth_type TfApi#auth_type}
   */
   readonly authType: string;
 }
@@ -1395,7 +1395,7 @@ export class DefaultPublishAuthModePropertyList extends cdktn.ComplexList {
 }
 export interface DefaultSubscribeAuthModeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#auth_type AwsAppsyncApi#auth_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#auth_type TfApi#auth_type}
   */
   readonly authType: string;
 }
@@ -1478,11 +1478,11 @@ export class DefaultSubscribeAuthModePropertyList extends cdktn.ComplexList {
 }
 export interface LogConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#cloudwatch_logs_role_arn AwsAppsyncApi#cloudwatch_logs_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#cloudwatch_logs_role_arn TfApi#cloudwatch_logs_role_arn}
   */
   readonly cloudwatchLogsRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#log_level AwsAppsyncApi#log_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#log_level TfApi#log_level}
   */
   readonly logLevel: string;
 }
@@ -1586,31 +1586,31 @@ export interface EventConfigProperty {
   /**
   * auth_provider block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#auth_provider AwsAppsyncApi#auth_provider}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#auth_provider TfApi#auth_provider}
   */
   readonly authProvider?: AuthProviderProperty[] | cdktn.IResolvable;
   /**
   * connection_auth_mode block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#connection_auth_mode AwsAppsyncApi#connection_auth_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#connection_auth_mode TfApi#connection_auth_mode}
   */
   readonly connectionAuthMode?: ConnectionAuthModeProperty[] | cdktn.IResolvable;
   /**
   * default_publish_auth_mode block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#default_publish_auth_mode AwsAppsyncApi#default_publish_auth_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#default_publish_auth_mode TfApi#default_publish_auth_mode}
   */
   readonly defaultPublishAuthMode?: DefaultPublishAuthModeProperty[] | cdktn.IResolvable;
   /**
   * default_subscribe_auth_mode block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#default_subscribe_auth_mode AwsAppsyncApi#default_subscribe_auth_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#default_subscribe_auth_mode TfApi#default_subscribe_auth_mode}
   */
   readonly defaultSubscribeAuthMode?: DefaultSubscribeAuthModeProperty[] | cdktn.IResolvable;
   /**
   * log_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#log_config AwsAppsyncApi#log_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_api#log_config TfApi#log_config}
   */
   readonly logConfig?: LogConfigProperty[] | cdktn.IResolvable;
 }

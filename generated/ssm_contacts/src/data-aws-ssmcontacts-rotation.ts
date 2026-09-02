@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsSsmcontactsRotationConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataRotationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmcontacts_rotation#arn DataAwsSsmcontactsRotation#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmcontacts_rotation#arn TfDataRotation#arn}
   */
   readonly arn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmcontacts_rotation#region DataAwsSsmcontactsRotation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmcontacts_rotation#region TfDataRotation#region}
   */
   readonly region?: string;
 }
@@ -21,7 +21,7 @@ export interface DataAwsSsmcontactsRotationConfig extends cdktn.TerraformMetaArg
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmcontacts_rotation aws_ssmcontacts_rotation}
 */
-export class DataAwsSsmcontactsRotation extends cdktn.TerraformDataSource {
+export class TfDataRotation extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class DataAwsSsmcontactsRotation extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsSsmcontactsRotation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataRotation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsSsmcontactsRotation to import
-  * @param importFromId The id of the existing DataAwsSsmcontactsRotation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmcontacts_rotation#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsSsmcontactsRotation to import is found
+  * @param importToId The construct id used in the generated config for the TfDataRotation to import
+  * @param importFromId The id of the existing TfDataRotation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssmcontacts_rotation#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataRotation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssmcontacts_rotation", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class DataAwsSsmcontactsRotation extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsSsmcontactsRotationConfig
+  * @param options TfDataRotationConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsSsmcontactsRotationConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataRotationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ssmcontacts_rotation',
       terraformGeneratorMetadata: {
@@ -106,7 +106,7 @@ export class DataAwsSsmcontactsRotation extends cdktn.TerraformDataSource {
   }
 
   // recurrence - computed: true, optional: false, required: false
-  private _recurrence = new DataAwsSsmcontactsRotation.RecurrencePropertyList(this, "recurrence", false);
+  private _recurrence = new TfDataRotation.RecurrencePropertyList(this, "recurrence", false);
   public get recurrence() {
     return this._recurrence;
   }
@@ -175,7 +175,7 @@ export class DataAwsSsmcontactsRotation extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsSsmcontactsRotationDailySettingsPropertyToTerraform(struct?: DataAwsSsmcontactsRotation.DailySettingsProperty): any {
+export function tfDataRotationDailySettingsPropertyToTerraform(struct?: TfDataRotation.DailySettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -185,7 +185,7 @@ export function dataAwsSsmcontactsRotationDailySettingsPropertyToTerraform(struc
 }
 
 
-export function dataAwsSsmcontactsRotationDailySettingsPropertyToHclTerraform(struct?: DataAwsSsmcontactsRotation.DailySettingsProperty): any {
+export function tfDataRotationDailySettingsPropertyToHclTerraform(struct?: TfDataRotation.DailySettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -196,7 +196,7 @@ export function dataAwsSsmcontactsRotationDailySettingsPropertyToHclTerraform(st
 }
 
 
-export function dataAwsSsmcontactsRotationRecurrenceMonthlySettingsHandOffTimePropertyToTerraform(struct?: DataAwsSsmcontactsRotation.RecurrenceMonthlySettingsHandOffTimeProperty): any {
+export function tfDataRotationRecurrenceMonthlySettingsHandOffTimePropertyToTerraform(struct?: TfDataRotation.RecurrenceMonthlySettingsHandOffTimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -206,7 +206,7 @@ export function dataAwsSsmcontactsRotationRecurrenceMonthlySettingsHandOffTimePr
 }
 
 
-export function dataAwsSsmcontactsRotationRecurrenceMonthlySettingsHandOffTimePropertyToHclTerraform(struct?: DataAwsSsmcontactsRotation.RecurrenceMonthlySettingsHandOffTimeProperty): any {
+export function tfDataRotationRecurrenceMonthlySettingsHandOffTimePropertyToHclTerraform(struct?: TfDataRotation.RecurrenceMonthlySettingsHandOffTimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -217,7 +217,7 @@ export function dataAwsSsmcontactsRotationRecurrenceMonthlySettingsHandOffTimePr
 }
 
 
-export function dataAwsSsmcontactsRotationMonthlySettingsPropertyToTerraform(struct?: DataAwsSsmcontactsRotation.MonthlySettingsProperty): any {
+export function tfDataRotationMonthlySettingsPropertyToTerraform(struct?: TfDataRotation.MonthlySettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -227,7 +227,7 @@ export function dataAwsSsmcontactsRotationMonthlySettingsPropertyToTerraform(str
 }
 
 
-export function dataAwsSsmcontactsRotationMonthlySettingsPropertyToHclTerraform(struct?: DataAwsSsmcontactsRotation.MonthlySettingsProperty): any {
+export function tfDataRotationMonthlySettingsPropertyToHclTerraform(struct?: TfDataRotation.MonthlySettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -238,7 +238,7 @@ export function dataAwsSsmcontactsRotationMonthlySettingsPropertyToHclTerraform(
 }
 
 
-export function dataAwsSsmcontactsRotationEndPropertyToTerraform(struct?: DataAwsSsmcontactsRotation.EndProperty): any {
+export function tfDataRotationEndPropertyToTerraform(struct?: TfDataRotation.EndProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -248,7 +248,7 @@ export function dataAwsSsmcontactsRotationEndPropertyToTerraform(struct?: DataAw
 }
 
 
-export function dataAwsSsmcontactsRotationEndPropertyToHclTerraform(struct?: DataAwsSsmcontactsRotation.EndProperty): any {
+export function tfDataRotationEndPropertyToHclTerraform(struct?: TfDataRotation.EndProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -259,7 +259,7 @@ export function dataAwsSsmcontactsRotationEndPropertyToHclTerraform(struct?: Dat
 }
 
 
-export function dataAwsSsmcontactsRotationStartPropertyToTerraform(struct?: DataAwsSsmcontactsRotation.StartProperty): any {
+export function tfDataRotationStartPropertyToTerraform(struct?: TfDataRotation.StartProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -269,7 +269,7 @@ export function dataAwsSsmcontactsRotationStartPropertyToTerraform(struct?: Data
 }
 
 
-export function dataAwsSsmcontactsRotationStartPropertyToHclTerraform(struct?: DataAwsSsmcontactsRotation.StartProperty): any {
+export function tfDataRotationStartPropertyToHclTerraform(struct?: TfDataRotation.StartProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -280,7 +280,7 @@ export function dataAwsSsmcontactsRotationStartPropertyToHclTerraform(struct?: D
 }
 
 
-export function dataAwsSsmcontactsRotationCoverageTimesPropertyToTerraform(struct?: DataAwsSsmcontactsRotation.CoverageTimesProperty): any {
+export function tfDataRotationCoverageTimesPropertyToTerraform(struct?: TfDataRotation.CoverageTimesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -290,7 +290,7 @@ export function dataAwsSsmcontactsRotationCoverageTimesPropertyToTerraform(struc
 }
 
 
-export function dataAwsSsmcontactsRotationCoverageTimesPropertyToHclTerraform(struct?: DataAwsSsmcontactsRotation.CoverageTimesProperty): any {
+export function tfDataRotationCoverageTimesPropertyToHclTerraform(struct?: TfDataRotation.CoverageTimesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -301,7 +301,7 @@ export function dataAwsSsmcontactsRotationCoverageTimesPropertyToHclTerraform(st
 }
 
 
-export function dataAwsSsmcontactsRotationShiftCoveragesPropertyToTerraform(struct?: DataAwsSsmcontactsRotation.ShiftCoveragesProperty): any {
+export function tfDataRotationShiftCoveragesPropertyToTerraform(struct?: TfDataRotation.ShiftCoveragesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -311,7 +311,7 @@ export function dataAwsSsmcontactsRotationShiftCoveragesPropertyToTerraform(stru
 }
 
 
-export function dataAwsSsmcontactsRotationShiftCoveragesPropertyToHclTerraform(struct?: DataAwsSsmcontactsRotation.ShiftCoveragesProperty): any {
+export function tfDataRotationShiftCoveragesPropertyToHclTerraform(struct?: TfDataRotation.ShiftCoveragesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -322,7 +322,7 @@ export function dataAwsSsmcontactsRotationShiftCoveragesPropertyToHclTerraform(s
 }
 
 
-export function dataAwsSsmcontactsRotationRecurrenceWeeklySettingsHandOffTimePropertyToTerraform(struct?: DataAwsSsmcontactsRotation.RecurrenceWeeklySettingsHandOffTimeProperty): any {
+export function tfDataRotationRecurrenceWeeklySettingsHandOffTimePropertyToTerraform(struct?: TfDataRotation.RecurrenceWeeklySettingsHandOffTimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -332,7 +332,7 @@ export function dataAwsSsmcontactsRotationRecurrenceWeeklySettingsHandOffTimePro
 }
 
 
-export function dataAwsSsmcontactsRotationRecurrenceWeeklySettingsHandOffTimePropertyToHclTerraform(struct?: DataAwsSsmcontactsRotation.RecurrenceWeeklySettingsHandOffTimeProperty): any {
+export function tfDataRotationRecurrenceWeeklySettingsHandOffTimePropertyToHclTerraform(struct?: TfDataRotation.RecurrenceWeeklySettingsHandOffTimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -343,7 +343,7 @@ export function dataAwsSsmcontactsRotationRecurrenceWeeklySettingsHandOffTimePro
 }
 
 
-export function dataAwsSsmcontactsRotationWeeklySettingsPropertyToTerraform(struct?: DataAwsSsmcontactsRotation.WeeklySettingsProperty): any {
+export function tfDataRotationWeeklySettingsPropertyToTerraform(struct?: TfDataRotation.WeeklySettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -353,7 +353,7 @@ export function dataAwsSsmcontactsRotationWeeklySettingsPropertyToTerraform(stru
 }
 
 
-export function dataAwsSsmcontactsRotationWeeklySettingsPropertyToHclTerraform(struct?: DataAwsSsmcontactsRotation.WeeklySettingsProperty): any {
+export function tfDataRotationWeeklySettingsPropertyToHclTerraform(struct?: TfDataRotation.WeeklySettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -364,7 +364,7 @@ export function dataAwsSsmcontactsRotationWeeklySettingsPropertyToHclTerraform(s
 }
 
 
-export function dataAwsSsmcontactsRotationRecurrencePropertyToTerraform(struct?: DataAwsSsmcontactsRotation.RecurrenceProperty): any {
+export function tfDataRotationRecurrencePropertyToTerraform(struct?: TfDataRotation.RecurrenceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -374,7 +374,7 @@ export function dataAwsSsmcontactsRotationRecurrencePropertyToTerraform(struct?:
 }
 
 
-export function dataAwsSsmcontactsRotationRecurrencePropertyToHclTerraform(struct?: DataAwsSsmcontactsRotation.RecurrenceProperty): any {
+export function tfDataRotationRecurrencePropertyToHclTerraform(struct?: TfDataRotation.RecurrenceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -385,7 +385,7 @@ export function dataAwsSsmcontactsRotationRecurrencePropertyToHclTerraform(struc
 }
 
 
-export namespace DataAwsSsmcontactsRotation {
+export namespace TfDataRotation {
 export interface DailySettingsProperty {
 }
 export class DailySettingsPropertyOutputReference extends cdktn.ComplexObject {

@@ -5,44 +5,44 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSfnActivityConfig extends cdktn.TerraformMetaArguments {
+export interface TfActivityConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_activity#id AwsSfnActivity#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_activity#id TfActivity#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_activity#name AwsSfnActivity#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_activity#name TfActivity#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_activity#region AwsSfnActivity#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_activity#region TfActivity#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_activity#tags AwsSfnActivity#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_activity#tags TfActivity#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_activity#tags_all AwsSfnActivity#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_activity#tags_all TfActivity#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * encryption_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_activity#encryption_configuration AwsSfnActivity#encryption_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_activity#encryption_configuration TfActivity#encryption_configuration}
   */
-  readonly encryptionConfiguration?: AwsSfnActivity.EncryptionConfigurationProperty;
+  readonly encryptionConfiguration?: TfActivity.EncryptionConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_activity aws_sfn_activity}
 */
-export class AwsSfnActivity extends cdktn.TerraformResource {
+export class TfActivity extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class AwsSfnActivity extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSfnActivity resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfActivity resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSfnActivity to import
-  * @param importFromId The id of the existing AwsSfnActivity that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_activity#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSfnActivity to import is found
+  * @param importToId The construct id used in the generated config for the TfActivity to import
+  * @param importFromId The id of the existing TfActivity that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_activity#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfActivity to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sfn_activity", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class AwsSfnActivity extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSfnActivityConfig
+  * @param options TfActivityConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSfnActivityConfig) {
+  public constructor(scope: Construct, id: string, config: TfActivityConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sfn_activity',
       terraformGeneratorMetadata: {
@@ -190,11 +190,11 @@ export class AwsSfnActivity extends cdktn.TerraformResource {
   }
 
   // encryption_configuration - computed: false, optional: true, required: false
-  private _encryptionConfiguration = new AwsSfnActivity.EncryptionConfigurationPropertyOutputReference(this, "encryption_configuration");
+  private _encryptionConfiguration = new TfActivity.EncryptionConfigurationPropertyOutputReference(this, "encryption_configuration");
   public get encryptionConfiguration() {
     return this._encryptionConfiguration;
   }
-  public putEncryptionConfiguration(value: AwsSfnActivity.EncryptionConfigurationProperty) {
+  public putEncryptionConfiguration(value: TfActivity.EncryptionConfigurationProperty) {
     this._encryptionConfiguration.internalValue = value;
   }
   public resetEncryptionConfiguration() {
@@ -216,7 +216,7 @@ export class AwsSfnActivity extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      encryption_configuration: awsSfnActivityEncryptionConfigurationPropertyToTerraform(this._encryptionConfiguration.internalValue),
+      encryption_configuration: tfActivityEncryptionConfigurationPropertyToTerraform(this._encryptionConfiguration.internalValue),
     };
   }
 
@@ -253,10 +253,10 @@ export class AwsSfnActivity extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       encryption_configuration: {
-        value: awsSfnActivityEncryptionConfigurationPropertyToHclTerraform(this._encryptionConfiguration.internalValue),
+        value: tfActivityEncryptionConfigurationPropertyToHclTerraform(this._encryptionConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSfnActivity.EncryptionConfigurationPropertyList",
+        storageClassType: "TfActivity.EncryptionConfigurationPropertyList",
       },
     };
 
@@ -265,7 +265,7 @@ export class AwsSfnActivity extends cdktn.TerraformResource {
   }
 }
 
-export function awsSfnActivityEncryptionConfigurationPropertyToTerraform(struct?: AwsSfnActivity.EncryptionConfigurationPropertyOutputReference | AwsSfnActivity.EncryptionConfigurationProperty): any {
+export function tfActivityEncryptionConfigurationPropertyToTerraform(struct?: TfActivity.EncryptionConfigurationPropertyOutputReference | TfActivity.EncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -278,7 +278,7 @@ export function awsSfnActivityEncryptionConfigurationPropertyToTerraform(struct?
 }
 
 
-export function awsSfnActivityEncryptionConfigurationPropertyToHclTerraform(struct?: AwsSfnActivity.EncryptionConfigurationPropertyOutputReference | AwsSfnActivity.EncryptionConfigurationProperty): any {
+export function tfActivityEncryptionConfigurationPropertyToHclTerraform(struct?: TfActivity.EncryptionConfigurationPropertyOutputReference | TfActivity.EncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -309,18 +309,18 @@ export function awsSfnActivityEncryptionConfigurationPropertyToHclTerraform(stru
 }
 
 
-export namespace AwsSfnActivity {
+export namespace TfActivity {
 export interface EncryptionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_activity#kms_data_key_reuse_period_seconds AwsSfnActivity#kms_data_key_reuse_period_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_activity#kms_data_key_reuse_period_seconds TfActivity#kms_data_key_reuse_period_seconds}
   */
   readonly kmsDataKeyReusePeriodSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_activity#kms_key_id AwsSfnActivity#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_activity#kms_key_id TfActivity#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_activity#type AwsSfnActivity#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sfn_activity#type TfActivity#type}
   */
   readonly type?: string;
 }

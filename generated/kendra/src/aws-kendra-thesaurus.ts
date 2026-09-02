@@ -5,62 +5,62 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsKendraThesaurusConfig extends cdktn.TerraformMetaArguments {
+export interface TfThesaurusConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_thesaurus#description AwsKendraThesaurus#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_thesaurus#description TfThesaurus#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_thesaurus#id AwsKendraThesaurus#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_thesaurus#id TfThesaurus#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_thesaurus#index_id AwsKendraThesaurus#index_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_thesaurus#index_id TfThesaurus#index_id}
   */
   readonly indexId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_thesaurus#name AwsKendraThesaurus#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_thesaurus#name TfThesaurus#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_thesaurus#region AwsKendraThesaurus#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_thesaurus#region TfThesaurus#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_thesaurus#role_arn AwsKendraThesaurus#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_thesaurus#role_arn TfThesaurus#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_thesaurus#tags AwsKendraThesaurus#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_thesaurus#tags TfThesaurus#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_thesaurus#tags_all AwsKendraThesaurus#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_thesaurus#tags_all TfThesaurus#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * source_s3_path block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_thesaurus#source_s3_path AwsKendraThesaurus#source_s3_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_thesaurus#source_s3_path TfThesaurus#source_s3_path}
   */
-  readonly sourceS3Path: AwsKendraThesaurus.SourceS3PathProperty;
+  readonly sourceS3Path: TfThesaurus.SourceS3PathProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_thesaurus#timeouts AwsKendraThesaurus#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_thesaurus#timeouts TfThesaurus#timeouts}
   */
-  readonly timeouts?: AwsKendraThesaurus.TimeoutsProperty;
+  readonly timeouts?: TfThesaurus.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_thesaurus aws_kendra_thesaurus}
 */
-export class AwsKendraThesaurus extends cdktn.TerraformResource {
+export class TfThesaurus extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -71,11 +71,11 @@ export class AwsKendraThesaurus extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsKendraThesaurus resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfThesaurus resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsKendraThesaurus to import
-  * @param importFromId The id of the existing AwsKendraThesaurus that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_thesaurus#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsKendraThesaurus to import is found
+  * @param importToId The construct id used in the generated config for the TfThesaurus to import
+  * @param importFromId The id of the existing TfThesaurus that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_thesaurus#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfThesaurus to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_kendra_thesaurus", importId: importFromId, provider });
@@ -90,9 +90,9 @@ export class AwsKendraThesaurus extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsKendraThesaurusConfig
+  * @param options TfThesaurusConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsKendraThesaurusConfig) {
+  public constructor(scope: Construct, id: string, config: TfThesaurusConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_kendra_thesaurus',
       terraformGeneratorMetadata: {
@@ -259,11 +259,11 @@ export class AwsKendraThesaurus extends cdktn.TerraformResource {
   }
 
   // source_s3_path - computed: false, optional: false, required: true
-  private _sourceS3Path = new AwsKendraThesaurus.SourceS3PathPropertyOutputReference(this, "source_s3_path");
+  private _sourceS3Path = new TfThesaurus.SourceS3PathPropertyOutputReference(this, "source_s3_path");
   public get sourceS3Path() {
     return this._sourceS3Path;
   }
-  public putSourceS3Path(value: AwsKendraThesaurus.SourceS3PathProperty) {
+  public putSourceS3Path(value: TfThesaurus.SourceS3PathProperty) {
     this._sourceS3Path.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -272,11 +272,11 @@ export class AwsKendraThesaurus extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsKendraThesaurus.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfThesaurus.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsKendraThesaurus.TimeoutsProperty) {
+  public putTimeouts(value: TfThesaurus.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -301,8 +301,8 @@ export class AwsKendraThesaurus extends cdktn.TerraformResource {
       role_arn: cdktn.stringToTerraform(this._roleArn),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      source_s3_path: awsKendraThesaurusSourceS3PathPropertyToTerraform(this._sourceS3Path.internalValue),
-      timeouts: awsKendraThesaurusTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      source_s3_path: tfThesaurusSourceS3PathPropertyToTerraform(this._sourceS3Path.internalValue),
+      timeouts: tfThesaurusTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -357,16 +357,16 @@ export class AwsKendraThesaurus extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       source_s3_path: {
-        value: awsKendraThesaurusSourceS3PathPropertyToHclTerraform(this._sourceS3Path.internalValue),
+        value: tfThesaurusSourceS3PathPropertyToHclTerraform(this._sourceS3Path.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsKendraThesaurus.SourceS3PathPropertyList",
+        storageClassType: "TfThesaurus.SourceS3PathPropertyList",
       },
       timeouts: {
-        value: awsKendraThesaurusTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfThesaurusTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsKendraThesaurus.TimeoutsProperty",
+        storageClassType: "TfThesaurus.TimeoutsProperty",
       },
     };
 
@@ -375,7 +375,7 @@ export class AwsKendraThesaurus extends cdktn.TerraformResource {
   }
 }
 
-export function awsKendraThesaurusSourceS3PathPropertyToTerraform(struct?: AwsKendraThesaurus.SourceS3PathPropertyOutputReference | AwsKendraThesaurus.SourceS3PathProperty): any {
+export function tfThesaurusSourceS3PathPropertyToTerraform(struct?: TfThesaurus.SourceS3PathPropertyOutputReference | TfThesaurus.SourceS3PathProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -387,7 +387,7 @@ export function awsKendraThesaurusSourceS3PathPropertyToTerraform(struct?: AwsKe
 }
 
 
-export function awsKendraThesaurusSourceS3PathPropertyToHclTerraform(struct?: AwsKendraThesaurus.SourceS3PathPropertyOutputReference | AwsKendraThesaurus.SourceS3PathProperty): any {
+export function tfThesaurusSourceS3PathPropertyToHclTerraform(struct?: TfThesaurus.SourceS3PathPropertyOutputReference | TfThesaurus.SourceS3PathProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -412,7 +412,7 @@ export function awsKendraThesaurusSourceS3PathPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsKendraThesaurusTimeoutsPropertyToTerraform(struct?: AwsKendraThesaurus.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfThesaurusTimeoutsPropertyToTerraform(struct?: TfThesaurus.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -425,7 +425,7 @@ export function awsKendraThesaurusTimeoutsPropertyToTerraform(struct?: AwsKendra
 }
 
 
-export function awsKendraThesaurusTimeoutsPropertyToHclTerraform(struct?: AwsKendraThesaurus.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfThesaurusTimeoutsPropertyToHclTerraform(struct?: TfThesaurus.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -456,14 +456,14 @@ export function awsKendraThesaurusTimeoutsPropertyToHclTerraform(struct?: AwsKen
 }
 
 
-export namespace AwsKendraThesaurus {
+export namespace TfThesaurus {
 export interface SourceS3PathProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_thesaurus#bucket AwsKendraThesaurus#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_thesaurus#bucket TfThesaurus#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_thesaurus#key AwsKendraThesaurus#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_thesaurus#key TfThesaurus#key}
   */
   readonly key: string;
 }
@@ -533,15 +533,15 @@ export class SourceS3PathPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_thesaurus#create AwsKendraThesaurus#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_thesaurus#create TfThesaurus#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_thesaurus#delete AwsKendraThesaurus#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_thesaurus#delete TfThesaurus#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_thesaurus#update AwsKendraThesaurus#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_thesaurus#update TfThesaurus#update}
   */
   readonly update?: string;
 }

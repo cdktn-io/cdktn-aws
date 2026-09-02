@@ -5,98 +5,98 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsApiGatewayRestApiConfig extends cdktn.TerraformMetaArguments {
+export interface TfRestApiConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#api_key_source AwsApiGatewayRestApi#api_key_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#api_key_source TfRestApi#api_key_source}
   */
   readonly apiKeySource?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#binary_media_types AwsApiGatewayRestApi#binary_media_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#binary_media_types TfRestApi#binary_media_types}
   */
   readonly binaryMediaTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#body AwsApiGatewayRestApi#body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#body TfRestApi#body}
   */
   readonly body?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#description AwsApiGatewayRestApi#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#description TfRestApi#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#disable_execute_api_endpoint AwsApiGatewayRestApi#disable_execute_api_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#disable_execute_api_endpoint TfRestApi#disable_execute_api_endpoint}
   */
   readonly disableExecuteApiEndpoint?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#endpoint_access_mode AwsApiGatewayRestApi#endpoint_access_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#endpoint_access_mode TfRestApi#endpoint_access_mode}
   */
   readonly endpointAccessMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#fail_on_warnings AwsApiGatewayRestApi#fail_on_warnings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#fail_on_warnings TfRestApi#fail_on_warnings}
   */
   readonly failOnWarnings?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#id AwsApiGatewayRestApi#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#id TfRestApi#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#minimum_compression_size AwsApiGatewayRestApi#minimum_compression_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#minimum_compression_size TfRestApi#minimum_compression_size}
   */
   readonly minimumCompressionSize?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#name AwsApiGatewayRestApi#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#name TfRestApi#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#parameters AwsApiGatewayRestApi#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#parameters TfRestApi#parameters}
   */
   readonly parameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#policy AwsApiGatewayRestApi#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#policy TfRestApi#policy}
   */
   readonly policy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#put_rest_api_mode AwsApiGatewayRestApi#put_rest_api_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#put_rest_api_mode TfRestApi#put_rest_api_mode}
   */
   readonly putRestApiMode?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#region AwsApiGatewayRestApi#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#region TfRestApi#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#security_policy AwsApiGatewayRestApi#security_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#security_policy TfRestApi#security_policy}
   */
   readonly securityPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#tags AwsApiGatewayRestApi#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#tags TfRestApi#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#tags_all AwsApiGatewayRestApi#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#tags_all TfRestApi#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * endpoint_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#endpoint_configuration AwsApiGatewayRestApi#endpoint_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#endpoint_configuration TfRestApi#endpoint_configuration}
   */
-  readonly endpointConfiguration?: AwsApiGatewayRestApi.EndpointConfigurationProperty;
+  readonly endpointConfiguration?: TfRestApi.EndpointConfigurationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#timeouts AwsApiGatewayRestApi#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#timeouts TfRestApi#timeouts}
   */
-  readonly timeouts?: AwsApiGatewayRestApi.TimeoutsProperty;
+  readonly timeouts?: TfRestApi.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api aws_api_gateway_rest_api}
 */
-export class AwsApiGatewayRestApi extends cdktn.TerraformResource {
+export class TfRestApi extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -107,11 +107,11 @@ export class AwsApiGatewayRestApi extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsApiGatewayRestApi resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfRestApi resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsApiGatewayRestApi to import
-  * @param importFromId The id of the existing AwsApiGatewayRestApi that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsApiGatewayRestApi to import is found
+  * @param importToId The construct id used in the generated config for the TfRestApi to import
+  * @param importFromId The id of the existing TfRestApi that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfRestApi to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_api_gateway_rest_api", importId: importFromId, provider });
@@ -126,9 +126,9 @@ export class AwsApiGatewayRestApi extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsApiGatewayRestApiConfig
+  * @param options TfRestApiConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsApiGatewayRestApiConfig) {
+  public constructor(scope: Construct, id: string, config: TfRestApiConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_api_gateway_rest_api',
       terraformGeneratorMetadata: {
@@ -459,11 +459,11 @@ export class AwsApiGatewayRestApi extends cdktn.TerraformResource {
   }
 
   // endpoint_configuration - computed: false, optional: true, required: false
-  private _endpointConfiguration = new AwsApiGatewayRestApi.EndpointConfigurationPropertyOutputReference(this, "endpoint_configuration");
+  private _endpointConfiguration = new TfRestApi.EndpointConfigurationPropertyOutputReference(this, "endpoint_configuration");
   public get endpointConfiguration() {
     return this._endpointConfiguration;
   }
-  public putEndpointConfiguration(value: AwsApiGatewayRestApi.EndpointConfigurationProperty) {
+  public putEndpointConfiguration(value: TfRestApi.EndpointConfigurationProperty) {
     this._endpointConfiguration.internalValue = value;
   }
   public resetEndpointConfiguration() {
@@ -475,11 +475,11 @@ export class AwsApiGatewayRestApi extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsApiGatewayRestApi.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfRestApi.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsApiGatewayRestApi.TimeoutsProperty) {
+  public putTimeouts(value: TfRestApi.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -513,8 +513,8 @@ export class AwsApiGatewayRestApi extends cdktn.TerraformResource {
       security_policy: cdktn.stringToTerraform(this._securityPolicy),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      endpoint_configuration: awsApiGatewayRestApiEndpointConfigurationPropertyToTerraform(this._endpointConfiguration.internalValue),
-      timeouts: awsApiGatewayRestApiTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      endpoint_configuration: tfRestApiEndpointConfigurationPropertyToTerraform(this._endpointConfiguration.internalValue),
+      timeouts: tfRestApiTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -623,16 +623,16 @@ export class AwsApiGatewayRestApi extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       endpoint_configuration: {
-        value: awsApiGatewayRestApiEndpointConfigurationPropertyToHclTerraform(this._endpointConfiguration.internalValue),
+        value: tfRestApiEndpointConfigurationPropertyToHclTerraform(this._endpointConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsApiGatewayRestApi.EndpointConfigurationPropertyList",
+        storageClassType: "TfRestApi.EndpointConfigurationPropertyList",
       },
       timeouts: {
-        value: awsApiGatewayRestApiTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfRestApiTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsApiGatewayRestApi.TimeoutsProperty",
+        storageClassType: "TfRestApi.TimeoutsProperty",
       },
     };
 
@@ -641,7 +641,7 @@ export class AwsApiGatewayRestApi extends cdktn.TerraformResource {
   }
 }
 
-export function awsApiGatewayRestApiEndpointConfigurationPropertyToTerraform(struct?: AwsApiGatewayRestApi.EndpointConfigurationPropertyOutputReference | AwsApiGatewayRestApi.EndpointConfigurationProperty): any {
+export function tfRestApiEndpointConfigurationPropertyToTerraform(struct?: TfRestApi.EndpointConfigurationPropertyOutputReference | TfRestApi.EndpointConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -654,7 +654,7 @@ export function awsApiGatewayRestApiEndpointConfigurationPropertyToTerraform(str
 }
 
 
-export function awsApiGatewayRestApiEndpointConfigurationPropertyToHclTerraform(struct?: AwsApiGatewayRestApi.EndpointConfigurationPropertyOutputReference | AwsApiGatewayRestApi.EndpointConfigurationProperty): any {
+export function tfRestApiEndpointConfigurationPropertyToHclTerraform(struct?: TfRestApi.EndpointConfigurationPropertyOutputReference | TfRestApi.EndpointConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -685,7 +685,7 @@ export function awsApiGatewayRestApiEndpointConfigurationPropertyToHclTerraform(
 }
 
 
-export function awsApiGatewayRestApiTimeoutsPropertyToTerraform(struct?: AwsApiGatewayRestApi.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfRestApiTimeoutsPropertyToTerraform(struct?: TfRestApi.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -698,7 +698,7 @@ export function awsApiGatewayRestApiTimeoutsPropertyToTerraform(struct?: AwsApiG
 }
 
 
-export function awsApiGatewayRestApiTimeoutsPropertyToHclTerraform(struct?: AwsApiGatewayRestApi.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfRestApiTimeoutsPropertyToHclTerraform(struct?: TfRestApi.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -729,18 +729,18 @@ export function awsApiGatewayRestApiTimeoutsPropertyToHclTerraform(struct?: AwsA
 }
 
 
-export namespace AwsApiGatewayRestApi {
+export namespace TfRestApi {
 export interface EndpointConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#ip_address_type AwsApiGatewayRestApi#ip_address_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#ip_address_type TfRestApi#ip_address_type}
   */
   readonly ipAddressType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#types AwsApiGatewayRestApi#types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#types TfRestApi#types}
   */
   readonly types: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#vpc_endpoint_ids AwsApiGatewayRestApi#vpc_endpoint_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#vpc_endpoint_ids TfRestApi#vpc_endpoint_ids}
   */
   readonly vpcEndpointIds?: string[];
 }
@@ -835,15 +835,15 @@ export class EndpointConfigurationPropertyOutputReference extends cdktn.ComplexO
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#create AwsApiGatewayRestApi#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#create TfRestApi#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#delete AwsApiGatewayRestApi#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#delete TfRestApi#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#update AwsApiGatewayRestApi#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_rest_api#update TfRestApi#update}
   */
   readonly update?: string;
 }

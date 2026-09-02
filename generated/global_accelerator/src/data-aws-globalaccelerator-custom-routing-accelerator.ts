@@ -5,24 +5,24 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsGlobalacceleratorCustomRoutingAcceleratorConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataCustomRoutingAcceleratorConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/globalaccelerator_custom_routing_accelerator#arn DataAwsGlobalacceleratorCustomRoutingAccelerator#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/globalaccelerator_custom_routing_accelerator#arn TfDataCustomRoutingAccelerator#arn}
   */
   readonly arn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/globalaccelerator_custom_routing_accelerator#id DataAwsGlobalacceleratorCustomRoutingAccelerator#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/globalaccelerator_custom_routing_accelerator#id TfDataCustomRoutingAccelerator#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/globalaccelerator_custom_routing_accelerator#name DataAwsGlobalacceleratorCustomRoutingAccelerator#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/globalaccelerator_custom_routing_accelerator#name TfDataCustomRoutingAccelerator#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/globalaccelerator_custom_routing_accelerator#tags DataAwsGlobalacceleratorCustomRoutingAccelerator#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/globalaccelerator_custom_routing_accelerator#tags TfDataCustomRoutingAccelerator#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -30,7 +30,7 @@ export interface DataAwsGlobalacceleratorCustomRoutingAcceleratorConfig extends 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/globalaccelerator_custom_routing_accelerator aws_globalaccelerator_custom_routing_accelerator}
 */
-export class DataAwsGlobalacceleratorCustomRoutingAccelerator extends cdktn.TerraformDataSource {
+export class TfDataCustomRoutingAccelerator extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -41,11 +41,11 @@ export class DataAwsGlobalacceleratorCustomRoutingAccelerator extends cdktn.Terr
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsGlobalacceleratorCustomRoutingAccelerator resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataCustomRoutingAccelerator resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsGlobalacceleratorCustomRoutingAccelerator to import
-  * @param importFromId The id of the existing DataAwsGlobalacceleratorCustomRoutingAccelerator that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/globalaccelerator_custom_routing_accelerator#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsGlobalacceleratorCustomRoutingAccelerator to import is found
+  * @param importToId The construct id used in the generated config for the TfDataCustomRoutingAccelerator to import
+  * @param importFromId The id of the existing TfDataCustomRoutingAccelerator that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/globalaccelerator_custom_routing_accelerator#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataCustomRoutingAccelerator to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_globalaccelerator_custom_routing_accelerator", importId: importFromId, provider });
@@ -60,9 +60,9 @@ export class DataAwsGlobalacceleratorCustomRoutingAccelerator extends cdktn.Terr
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsGlobalacceleratorCustomRoutingAcceleratorConfig = {}
+  * @param options TfDataCustomRoutingAcceleratorConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsGlobalacceleratorCustomRoutingAcceleratorConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDataCustomRoutingAcceleratorConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_globalaccelerator_custom_routing_accelerator',
       terraformGeneratorMetadata: {
@@ -105,7 +105,7 @@ export class DataAwsGlobalacceleratorCustomRoutingAccelerator extends cdktn.Terr
   }
 
   // attributes - computed: true, optional: false, required: false
-  private _attributes = new DataAwsGlobalacceleratorCustomRoutingAccelerator.AttributesPropertyList(this, "attributes", false);
+  private _attributes = new TfDataCustomRoutingAccelerator.AttributesPropertyList(this, "attributes", false);
   public get attributes() {
     return this._attributes;
   }
@@ -147,7 +147,7 @@ export class DataAwsGlobalacceleratorCustomRoutingAccelerator extends cdktn.Terr
   }
 
   // ip_sets - computed: true, optional: false, required: false
-  private _ipSets = new DataAwsGlobalacceleratorCustomRoutingAccelerator.IpSetsPropertyList(this, "ip_sets", false);
+  private _ipSets = new TfDataCustomRoutingAccelerator.IpSetsPropertyList(this, "ip_sets", false);
   public get ipSets() {
     return this._ipSets;
   }
@@ -230,7 +230,7 @@ export class DataAwsGlobalacceleratorCustomRoutingAccelerator extends cdktn.Terr
   }
 }
 
-export function dataAwsGlobalacceleratorCustomRoutingAcceleratorAttributesPropertyToTerraform(struct?: DataAwsGlobalacceleratorCustomRoutingAccelerator.AttributesProperty): any {
+export function tfDataCustomRoutingAcceleratorAttributesPropertyToTerraform(struct?: TfDataCustomRoutingAccelerator.AttributesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -240,7 +240,7 @@ export function dataAwsGlobalacceleratorCustomRoutingAcceleratorAttributesProper
 }
 
 
-export function dataAwsGlobalacceleratorCustomRoutingAcceleratorAttributesPropertyToHclTerraform(struct?: DataAwsGlobalacceleratorCustomRoutingAccelerator.AttributesProperty): any {
+export function tfDataCustomRoutingAcceleratorAttributesPropertyToHclTerraform(struct?: TfDataCustomRoutingAccelerator.AttributesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -251,7 +251,7 @@ export function dataAwsGlobalacceleratorCustomRoutingAcceleratorAttributesProper
 }
 
 
-export function dataAwsGlobalacceleratorCustomRoutingAcceleratorIpSetsPropertyToTerraform(struct?: DataAwsGlobalacceleratorCustomRoutingAccelerator.IpSetsProperty): any {
+export function tfDataCustomRoutingAcceleratorIpSetsPropertyToTerraform(struct?: TfDataCustomRoutingAccelerator.IpSetsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -261,7 +261,7 @@ export function dataAwsGlobalacceleratorCustomRoutingAcceleratorIpSetsPropertyTo
 }
 
 
-export function dataAwsGlobalacceleratorCustomRoutingAcceleratorIpSetsPropertyToHclTerraform(struct?: DataAwsGlobalacceleratorCustomRoutingAccelerator.IpSetsProperty): any {
+export function tfDataCustomRoutingAcceleratorIpSetsPropertyToHclTerraform(struct?: TfDataCustomRoutingAccelerator.IpSetsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -272,7 +272,7 @@ export function dataAwsGlobalacceleratorCustomRoutingAcceleratorIpSetsPropertyTo
 }
 
 
-export namespace DataAwsGlobalacceleratorCustomRoutingAccelerator {
+export namespace TfDataCustomRoutingAccelerator {
 export interface AttributesProperty {
 }
 export class AttributesPropertyOutputReference extends cdktn.ComplexObject {

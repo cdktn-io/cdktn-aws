@@ -5,23 +5,23 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsShieldDrtAccessRoleArnAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface TfDrtAccessRoleArnAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_drt_access_role_arn_association#role_arn AwsShieldDrtAccessRoleArnAssociation#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_drt_access_role_arn_association#role_arn TfDrtAccessRoleArnAssociation#role_arn}
   */
   readonly roleArn: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_drt_access_role_arn_association#timeouts AwsShieldDrtAccessRoleArnAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_drt_access_role_arn_association#timeouts TfDrtAccessRoleArnAssociation#timeouts}
   */
-  readonly timeouts?: AwsShieldDrtAccessRoleArnAssociation.TimeoutsProperty;
+  readonly timeouts?: TfDrtAccessRoleArnAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_drt_access_role_arn_association aws_shield_drt_access_role_arn_association}
 */
-export class AwsShieldDrtAccessRoleArnAssociation extends cdktn.TerraformResource {
+export class TfDrtAccessRoleArnAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class AwsShieldDrtAccessRoleArnAssociation extends cdktn.TerraformResourc
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsShieldDrtAccessRoleArnAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDrtAccessRoleArnAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsShieldDrtAccessRoleArnAssociation to import
-  * @param importFromId The id of the existing AwsShieldDrtAccessRoleArnAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_drt_access_role_arn_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsShieldDrtAccessRoleArnAssociation to import is found
+  * @param importToId The construct id used in the generated config for the TfDrtAccessRoleArnAssociation to import
+  * @param importFromId The id of the existing TfDrtAccessRoleArnAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_drt_access_role_arn_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDrtAccessRoleArnAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_shield_drt_access_role_arn_association", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class AwsShieldDrtAccessRoleArnAssociation extends cdktn.TerraformResourc
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsShieldDrtAccessRoleArnAssociationConfig
+  * @param options TfDrtAccessRoleArnAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsShieldDrtAccessRoleArnAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: TfDrtAccessRoleArnAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_shield_drt_access_role_arn_association',
       terraformGeneratorMetadata: {
@@ -96,11 +96,11 @@ export class AwsShieldDrtAccessRoleArnAssociation extends cdktn.TerraformResourc
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsShieldDrtAccessRoleArnAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfDrtAccessRoleArnAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsShieldDrtAccessRoleArnAssociation.TimeoutsProperty) {
+  public putTimeouts(value: TfDrtAccessRoleArnAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -118,7 +118,7 @@ export class AwsShieldDrtAccessRoleArnAssociation extends cdktn.TerraformResourc
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       role_arn: cdktn.stringToTerraform(this._roleArn),
-      timeouts: awsShieldDrtAccessRoleArnAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfDrtAccessRoleArnAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -131,10 +131,10 @@ export class AwsShieldDrtAccessRoleArnAssociation extends cdktn.TerraformResourc
         storageClassType: "string",
       },
       timeouts: {
-        value: awsShieldDrtAccessRoleArnAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfDrtAccessRoleArnAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsShieldDrtAccessRoleArnAssociation.TimeoutsProperty",
+        storageClassType: "TfDrtAccessRoleArnAssociation.TimeoutsProperty",
       },
     };
 
@@ -143,7 +143,7 @@ export class AwsShieldDrtAccessRoleArnAssociation extends cdktn.TerraformResourc
   }
 }
 
-export function awsShieldDrtAccessRoleArnAssociationTimeoutsPropertyToTerraform(struct?: AwsShieldDrtAccessRoleArnAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDrtAccessRoleArnAssociationTimeoutsPropertyToTerraform(struct?: TfDrtAccessRoleArnAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -156,7 +156,7 @@ export function awsShieldDrtAccessRoleArnAssociationTimeoutsPropertyToTerraform(
 }
 
 
-export function awsShieldDrtAccessRoleArnAssociationTimeoutsPropertyToHclTerraform(struct?: AwsShieldDrtAccessRoleArnAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDrtAccessRoleArnAssociationTimeoutsPropertyToHclTerraform(struct?: TfDrtAccessRoleArnAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -187,24 +187,24 @@ export function awsShieldDrtAccessRoleArnAssociationTimeoutsPropertyToHclTerrafo
 }
 
 
-export namespace AwsShieldDrtAccessRoleArnAssociation {
+export namespace TfDrtAccessRoleArnAssociation {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_drt_access_role_arn_association#create AwsShieldDrtAccessRoleArnAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_drt_access_role_arn_association#create TfDrtAccessRoleArnAssociation#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_drt_access_role_arn_association#delete AwsShieldDrtAccessRoleArnAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_drt_access_role_arn_association#delete TfDrtAccessRoleArnAssociation#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_drt_access_role_arn_association#update AwsShieldDrtAccessRoleArnAssociation#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_drt_access_role_arn_association#update TfDrtAccessRoleArnAssociation#update}
   */
   readonly update?: string;
 }

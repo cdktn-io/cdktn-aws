@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSagemakerWorkteamConfig extends cdktn.TerraformMetaArguments {
+export interface TfWorkteamConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#description AwsSagemakerWorkteam#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#description TfWorkteam#description}
   */
   readonly description: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#id AwsSagemakerWorkteam#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#id TfWorkteam#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,49 +20,49 @@ export interface AwsSagemakerWorkteamConfig extends cdktn.TerraformMetaArguments
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#region AwsSagemakerWorkteam#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#region TfWorkteam#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#tags AwsSagemakerWorkteam#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#tags TfWorkteam#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#tags_all AwsSagemakerWorkteam#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#tags_all TfWorkteam#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#workforce_name AwsSagemakerWorkteam#workforce_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#workforce_name TfWorkteam#workforce_name}
   */
   readonly workforceName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#workteam_name AwsSagemakerWorkteam#workteam_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#workteam_name TfWorkteam#workteam_name}
   */
   readonly workteamName: string;
   /**
   * member_definition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#member_definition AwsSagemakerWorkteam#member_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#member_definition TfWorkteam#member_definition}
   */
-  readonly memberDefinition: AwsSagemakerWorkteam.MemberDefinitionProperty[] | cdktn.IResolvable;
+  readonly memberDefinition: TfWorkteam.MemberDefinitionProperty[] | cdktn.IResolvable;
   /**
   * notification_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#notification_configuration AwsSagemakerWorkteam#notification_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#notification_configuration TfWorkteam#notification_configuration}
   */
-  readonly notificationConfiguration?: AwsSagemakerWorkteam.NotificationConfigurationProperty;
+  readonly notificationConfiguration?: TfWorkteam.NotificationConfigurationProperty;
   /**
   * worker_access_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#worker_access_configuration AwsSagemakerWorkteam#worker_access_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#worker_access_configuration TfWorkteam#worker_access_configuration}
   */
-  readonly workerAccessConfiguration?: AwsSagemakerWorkteam.WorkerAccessConfigurationProperty;
+  readonly workerAccessConfiguration?: TfWorkteam.WorkerAccessConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam aws_sagemaker_workteam}
 */
-export class AwsSagemakerWorkteam extends cdktn.TerraformResource {
+export class TfWorkteam extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -73,11 +73,11 @@ export class AwsSagemakerWorkteam extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSagemakerWorkteam resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfWorkteam resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSagemakerWorkteam to import
-  * @param importFromId The id of the existing AwsSagemakerWorkteam that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSagemakerWorkteam to import is found
+  * @param importToId The construct id used in the generated config for the TfWorkteam to import
+  * @param importFromId The id of the existing TfWorkteam that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfWorkteam to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sagemaker_workteam", importId: importFromId, provider });
@@ -92,9 +92,9 @@ export class AwsSagemakerWorkteam extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSagemakerWorkteamConfig
+  * @param options TfWorkteamConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSagemakerWorkteamConfig) {
+  public constructor(scope: Construct, id: string, config: TfWorkteamConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sagemaker_workteam',
       terraformGeneratorMetadata: {
@@ -243,11 +243,11 @@ export class AwsSagemakerWorkteam extends cdktn.TerraformResource {
   }
 
   // member_definition - computed: false, optional: false, required: true
-  private _memberDefinition = new AwsSagemakerWorkteam.MemberDefinitionPropertyList(this, "member_definition", false);
+  private _memberDefinition = new TfWorkteam.MemberDefinitionPropertyList(this, "member_definition", false);
   public get memberDefinition() {
     return this._memberDefinition;
   }
-  public putMemberDefinition(value: AwsSagemakerWorkteam.MemberDefinitionProperty[] | cdktn.IResolvable) {
+  public putMemberDefinition(value: TfWorkteam.MemberDefinitionProperty[] | cdktn.IResolvable) {
     this._memberDefinition.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -256,11 +256,11 @@ export class AwsSagemakerWorkteam extends cdktn.TerraformResource {
   }
 
   // notification_configuration - computed: false, optional: true, required: false
-  private _notificationConfiguration = new AwsSagemakerWorkteam.NotificationConfigurationPropertyOutputReference(this, "notification_configuration");
+  private _notificationConfiguration = new TfWorkteam.NotificationConfigurationPropertyOutputReference(this, "notification_configuration");
   public get notificationConfiguration() {
     return this._notificationConfiguration;
   }
-  public putNotificationConfiguration(value: AwsSagemakerWorkteam.NotificationConfigurationProperty) {
+  public putNotificationConfiguration(value: TfWorkteam.NotificationConfigurationProperty) {
     this._notificationConfiguration.internalValue = value;
   }
   public resetNotificationConfiguration() {
@@ -272,11 +272,11 @@ export class AwsSagemakerWorkteam extends cdktn.TerraformResource {
   }
 
   // worker_access_configuration - computed: false, optional: true, required: false
-  private _workerAccessConfiguration = new AwsSagemakerWorkteam.WorkerAccessConfigurationPropertyOutputReference(this, "worker_access_configuration");
+  private _workerAccessConfiguration = new TfWorkteam.WorkerAccessConfigurationPropertyOutputReference(this, "worker_access_configuration");
   public get workerAccessConfiguration() {
     return this._workerAccessConfiguration;
   }
-  public putWorkerAccessConfiguration(value: AwsSagemakerWorkteam.WorkerAccessConfigurationProperty) {
+  public putWorkerAccessConfiguration(value: TfWorkteam.WorkerAccessConfigurationProperty) {
     this._workerAccessConfiguration.internalValue = value;
   }
   public resetWorkerAccessConfiguration() {
@@ -300,9 +300,9 @@ export class AwsSagemakerWorkteam extends cdktn.TerraformResource {
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       workforce_name: cdktn.stringToTerraform(this._workforceName),
       workteam_name: cdktn.stringToTerraform(this._workteamName),
-      member_definition: cdktn.listMapper(awsSagemakerWorkteamMemberDefinitionPropertyToTerraform, true)(this._memberDefinition.internalValue),
-      notification_configuration: awsSagemakerWorkteamNotificationConfigurationPropertyToTerraform(this._notificationConfiguration.internalValue),
-      worker_access_configuration: awsSagemakerWorkteamWorkerAccessConfigurationPropertyToTerraform(this._workerAccessConfiguration.internalValue),
+      member_definition: cdktn.listMapper(tfWorkteamMemberDefinitionPropertyToTerraform, true)(this._memberDefinition.internalValue),
+      notification_configuration: tfWorkteamNotificationConfigurationPropertyToTerraform(this._notificationConfiguration.internalValue),
+      worker_access_configuration: tfWorkteamWorkerAccessConfigurationPropertyToTerraform(this._workerAccessConfiguration.internalValue),
     };
   }
 
@@ -351,22 +351,22 @@ export class AwsSagemakerWorkteam extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       member_definition: {
-        value: cdktn.listMapperHcl(awsSagemakerWorkteamMemberDefinitionPropertyToHclTerraform, true)(this._memberDefinition.internalValue),
+        value: cdktn.listMapperHcl(tfWorkteamMemberDefinitionPropertyToHclTerraform, true)(this._memberDefinition.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSagemakerWorkteam.MemberDefinitionPropertyList",
+        storageClassType: "TfWorkteam.MemberDefinitionPropertyList",
       },
       notification_configuration: {
-        value: awsSagemakerWorkteamNotificationConfigurationPropertyToHclTerraform(this._notificationConfiguration.internalValue),
+        value: tfWorkteamNotificationConfigurationPropertyToHclTerraform(this._notificationConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSagemakerWorkteam.NotificationConfigurationPropertyList",
+        storageClassType: "TfWorkteam.NotificationConfigurationPropertyList",
       },
       worker_access_configuration: {
-        value: awsSagemakerWorkteamWorkerAccessConfigurationPropertyToHclTerraform(this._workerAccessConfiguration.internalValue),
+        value: tfWorkteamWorkerAccessConfigurationPropertyToHclTerraform(this._workerAccessConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSagemakerWorkteam.WorkerAccessConfigurationPropertyList",
+        storageClassType: "TfWorkteam.WorkerAccessConfigurationPropertyList",
       },
     };
 
@@ -375,7 +375,7 @@ export class AwsSagemakerWorkteam extends cdktn.TerraformResource {
   }
 }
 
-export function awsSagemakerWorkteamCognitoMemberDefinitionPropertyToTerraform(struct?: AwsSagemakerWorkteam.CognitoMemberDefinitionPropertyOutputReference | AwsSagemakerWorkteam.CognitoMemberDefinitionProperty): any {
+export function tfWorkteamCognitoMemberDefinitionPropertyToTerraform(struct?: TfWorkteam.CognitoMemberDefinitionPropertyOutputReference | TfWorkteam.CognitoMemberDefinitionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -388,7 +388,7 @@ export function awsSagemakerWorkteamCognitoMemberDefinitionPropertyToTerraform(s
 }
 
 
-export function awsSagemakerWorkteamCognitoMemberDefinitionPropertyToHclTerraform(struct?: AwsSagemakerWorkteam.CognitoMemberDefinitionPropertyOutputReference | AwsSagemakerWorkteam.CognitoMemberDefinitionProperty): any {
+export function tfWorkteamCognitoMemberDefinitionPropertyToHclTerraform(struct?: TfWorkteam.CognitoMemberDefinitionPropertyOutputReference | TfWorkteam.CognitoMemberDefinitionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -419,7 +419,7 @@ export function awsSagemakerWorkteamCognitoMemberDefinitionPropertyToHclTerrafor
 }
 
 
-export function awsSagemakerWorkteamOidcMemberDefinitionPropertyToTerraform(struct?: AwsSagemakerWorkteam.OidcMemberDefinitionPropertyOutputReference | AwsSagemakerWorkteam.OidcMemberDefinitionProperty): any {
+export function tfWorkteamOidcMemberDefinitionPropertyToTerraform(struct?: TfWorkteam.OidcMemberDefinitionPropertyOutputReference | TfWorkteam.OidcMemberDefinitionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -430,7 +430,7 @@ export function awsSagemakerWorkteamOidcMemberDefinitionPropertyToTerraform(stru
 }
 
 
-export function awsSagemakerWorkteamOidcMemberDefinitionPropertyToHclTerraform(struct?: AwsSagemakerWorkteam.OidcMemberDefinitionPropertyOutputReference | AwsSagemakerWorkteam.OidcMemberDefinitionProperty): any {
+export function tfWorkteamOidcMemberDefinitionPropertyToHclTerraform(struct?: TfWorkteam.OidcMemberDefinitionPropertyOutputReference | TfWorkteam.OidcMemberDefinitionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -449,32 +449,32 @@ export function awsSagemakerWorkteamOidcMemberDefinitionPropertyToHclTerraform(s
 }
 
 
-export function awsSagemakerWorkteamMemberDefinitionPropertyToTerraform(struct?: AwsSagemakerWorkteam.MemberDefinitionProperty | cdktn.IResolvable): any {
+export function tfWorkteamMemberDefinitionPropertyToTerraform(struct?: TfWorkteam.MemberDefinitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cognito_member_definition: awsSagemakerWorkteamCognitoMemberDefinitionPropertyToTerraform(struct!.cognitoMemberDefinition),
-    oidc_member_definition: awsSagemakerWorkteamOidcMemberDefinitionPropertyToTerraform(struct!.oidcMemberDefinition),
+    cognito_member_definition: tfWorkteamCognitoMemberDefinitionPropertyToTerraform(struct!.cognitoMemberDefinition),
+    oidc_member_definition: tfWorkteamOidcMemberDefinitionPropertyToTerraform(struct!.oidcMemberDefinition),
   }
 }
 
 
-export function awsSagemakerWorkteamMemberDefinitionPropertyToHclTerraform(struct?: AwsSagemakerWorkteam.MemberDefinitionProperty | cdktn.IResolvable): any {
+export function tfWorkteamMemberDefinitionPropertyToHclTerraform(struct?: TfWorkteam.MemberDefinitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cognito_member_definition: {
-      value: awsSagemakerWorkteamCognitoMemberDefinitionPropertyToHclTerraform(struct!.cognitoMemberDefinition),
+      value: tfWorkteamCognitoMemberDefinitionPropertyToHclTerraform(struct!.cognitoMemberDefinition),
       isBlock: true,
       type: "list",
       storageClassType: "CognitoMemberDefinitionPropertyList",
     },
     oidc_member_definition: {
-      value: awsSagemakerWorkteamOidcMemberDefinitionPropertyToHclTerraform(struct!.oidcMemberDefinition),
+      value: tfWorkteamOidcMemberDefinitionPropertyToHclTerraform(struct!.oidcMemberDefinition),
       isBlock: true,
       type: "list",
       storageClassType: "OidcMemberDefinitionPropertyList",
@@ -486,7 +486,7 @@ export function awsSagemakerWorkteamMemberDefinitionPropertyToHclTerraform(struc
 }
 
 
-export function awsSagemakerWorkteamNotificationConfigurationPropertyToTerraform(struct?: AwsSagemakerWorkteam.NotificationConfigurationPropertyOutputReference | AwsSagemakerWorkteam.NotificationConfigurationProperty): any {
+export function tfWorkteamNotificationConfigurationPropertyToTerraform(struct?: TfWorkteam.NotificationConfigurationPropertyOutputReference | TfWorkteam.NotificationConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -497,7 +497,7 @@ export function awsSagemakerWorkteamNotificationConfigurationPropertyToTerraform
 }
 
 
-export function awsSagemakerWorkteamNotificationConfigurationPropertyToHclTerraform(struct?: AwsSagemakerWorkteam.NotificationConfigurationPropertyOutputReference | AwsSagemakerWorkteam.NotificationConfigurationProperty): any {
+export function tfWorkteamNotificationConfigurationPropertyToHclTerraform(struct?: TfWorkteam.NotificationConfigurationPropertyOutputReference | TfWorkteam.NotificationConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -516,7 +516,7 @@ export function awsSagemakerWorkteamNotificationConfigurationPropertyToHclTerraf
 }
 
 
-export function awsSagemakerWorkteamIamPolicyConstraintsPropertyToTerraform(struct?: AwsSagemakerWorkteam.IamPolicyConstraintsPropertyOutputReference | AwsSagemakerWorkteam.IamPolicyConstraintsProperty): any {
+export function tfWorkteamIamPolicyConstraintsPropertyToTerraform(struct?: TfWorkteam.IamPolicyConstraintsPropertyOutputReference | TfWorkteam.IamPolicyConstraintsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -528,7 +528,7 @@ export function awsSagemakerWorkteamIamPolicyConstraintsPropertyToTerraform(stru
 }
 
 
-export function awsSagemakerWorkteamIamPolicyConstraintsPropertyToHclTerraform(struct?: AwsSagemakerWorkteam.IamPolicyConstraintsPropertyOutputReference | AwsSagemakerWorkteam.IamPolicyConstraintsProperty): any {
+export function tfWorkteamIamPolicyConstraintsPropertyToHclTerraform(struct?: TfWorkteam.IamPolicyConstraintsPropertyOutputReference | TfWorkteam.IamPolicyConstraintsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -553,25 +553,25 @@ export function awsSagemakerWorkteamIamPolicyConstraintsPropertyToHclTerraform(s
 }
 
 
-export function awsSagemakerWorkteamS3PresignPropertyToTerraform(struct?: AwsSagemakerWorkteam.S3PresignPropertyOutputReference | AwsSagemakerWorkteam.S3PresignProperty): any {
+export function tfWorkteamS3PresignPropertyToTerraform(struct?: TfWorkteam.S3PresignPropertyOutputReference | TfWorkteam.S3PresignProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    iam_policy_constraints: awsSagemakerWorkteamIamPolicyConstraintsPropertyToTerraform(struct!.iamPolicyConstraints),
+    iam_policy_constraints: tfWorkteamIamPolicyConstraintsPropertyToTerraform(struct!.iamPolicyConstraints),
   }
 }
 
 
-export function awsSagemakerWorkteamS3PresignPropertyToHclTerraform(struct?: AwsSagemakerWorkteam.S3PresignPropertyOutputReference | AwsSagemakerWorkteam.S3PresignProperty): any {
+export function tfWorkteamS3PresignPropertyToHclTerraform(struct?: TfWorkteam.S3PresignPropertyOutputReference | TfWorkteam.S3PresignProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     iam_policy_constraints: {
-      value: awsSagemakerWorkteamIamPolicyConstraintsPropertyToHclTerraform(struct!.iamPolicyConstraints),
+      value: tfWorkteamIamPolicyConstraintsPropertyToHclTerraform(struct!.iamPolicyConstraints),
       isBlock: true,
       type: "list",
       storageClassType: "IamPolicyConstraintsPropertyList",
@@ -583,25 +583,25 @@ export function awsSagemakerWorkteamS3PresignPropertyToHclTerraform(struct?: Aws
 }
 
 
-export function awsSagemakerWorkteamWorkerAccessConfigurationPropertyToTerraform(struct?: AwsSagemakerWorkteam.WorkerAccessConfigurationPropertyOutputReference | AwsSagemakerWorkteam.WorkerAccessConfigurationProperty): any {
+export function tfWorkteamWorkerAccessConfigurationPropertyToTerraform(struct?: TfWorkteam.WorkerAccessConfigurationPropertyOutputReference | TfWorkteam.WorkerAccessConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    s3_presign: awsSagemakerWorkteamS3PresignPropertyToTerraform(struct!.s3Presign),
+    s3_presign: tfWorkteamS3PresignPropertyToTerraform(struct!.s3Presign),
   }
 }
 
 
-export function awsSagemakerWorkteamWorkerAccessConfigurationPropertyToHclTerraform(struct?: AwsSagemakerWorkteam.WorkerAccessConfigurationPropertyOutputReference | AwsSagemakerWorkteam.WorkerAccessConfigurationProperty): any {
+export function tfWorkteamWorkerAccessConfigurationPropertyToHclTerraform(struct?: TfWorkteam.WorkerAccessConfigurationPropertyOutputReference | TfWorkteam.WorkerAccessConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     s3_presign: {
-      value: awsSagemakerWorkteamS3PresignPropertyToHclTerraform(struct!.s3Presign),
+      value: tfWorkteamS3PresignPropertyToHclTerraform(struct!.s3Presign),
       isBlock: true,
       type: "list",
       storageClassType: "S3PresignPropertyList",
@@ -613,18 +613,18 @@ export function awsSagemakerWorkteamWorkerAccessConfigurationPropertyToHclTerraf
 }
 
 
-export namespace AwsSagemakerWorkteam {
+export namespace TfWorkteam {
 export interface CognitoMemberDefinitionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#client_id AwsSagemakerWorkteam#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#client_id TfWorkteam#client_id}
   */
   readonly clientId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#user_group AwsSagemakerWorkteam#user_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#user_group TfWorkteam#user_group}
   */
   readonly userGroup: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#user_pool AwsSagemakerWorkteam#user_pool}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#user_pool TfWorkteam#user_pool}
   */
   readonly userPool: string;
 }
@@ -713,7 +713,7 @@ export class CognitoMemberDefinitionPropertyOutputReference extends cdktn.Comple
 }
 export interface OidcMemberDefinitionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#groups AwsSagemakerWorkteam#groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#groups TfWorkteam#groups}
   */
   readonly groups: string[];
 }
@@ -766,13 +766,13 @@ export interface MemberDefinitionProperty {
   /**
   * cognito_member_definition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#cognito_member_definition AwsSagemakerWorkteam#cognito_member_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#cognito_member_definition TfWorkteam#cognito_member_definition}
   */
   readonly cognitoMemberDefinition?: CognitoMemberDefinitionProperty;
   /**
   * oidc_member_definition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#oidc_member_definition AwsSagemakerWorkteam#oidc_member_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#oidc_member_definition TfWorkteam#oidc_member_definition}
   */
   readonly oidcMemberDefinition?: OidcMemberDefinitionProperty;
 }
@@ -880,7 +880,7 @@ export class MemberDefinitionPropertyList extends cdktn.ComplexList {
 }
 export interface NotificationConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#notification_topic_arn AwsSagemakerWorkteam#notification_topic_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#notification_topic_arn TfWorkteam#notification_topic_arn}
   */
   readonly notificationTopicArn?: string;
 }
@@ -934,11 +934,11 @@ export class NotificationConfigurationPropertyOutputReference extends cdktn.Comp
 }
 export interface IamPolicyConstraintsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#source_ip AwsSagemakerWorkteam#source_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#source_ip TfWorkteam#source_ip}
   */
   readonly sourceIp?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#vpc_source_ip AwsSagemakerWorkteam#vpc_source_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#vpc_source_ip TfWorkteam#vpc_source_ip}
   */
   readonly vpcSourceIp?: string;
 }
@@ -1016,7 +1016,7 @@ export interface S3PresignProperty {
   /**
   * iam_policy_constraints block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#iam_policy_constraints AwsSagemakerWorkteam#iam_policy_constraints}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#iam_policy_constraints TfWorkteam#iam_policy_constraints}
   */
   readonly iamPolicyConstraints?: IamPolicyConstraintsProperty;
 }
@@ -1072,7 +1072,7 @@ export interface WorkerAccessConfigurationProperty {
   /**
   * s3_presign block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#s3_presign AwsSagemakerWorkteam#s3_presign}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_workteam#s3_presign TfWorkteam#s3_presign}
   */
   readonly s3Presign?: S3PresignProperty;
 }

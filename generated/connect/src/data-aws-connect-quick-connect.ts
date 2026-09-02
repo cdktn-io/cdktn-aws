@@ -5,34 +5,34 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsConnectQuickConnectConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataQuickConnectConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_quick_connect#id DataAwsConnectQuickConnect#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_quick_connect#id TfDataQuickConnect#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_quick_connect#instance_id DataAwsConnectQuickConnect#instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_quick_connect#instance_id TfDataQuickConnect#instance_id}
   */
   readonly instanceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_quick_connect#name DataAwsConnectQuickConnect#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_quick_connect#name TfDataQuickConnect#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_quick_connect#quick_connect_id DataAwsConnectQuickConnect#quick_connect_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_quick_connect#quick_connect_id TfDataQuickConnect#quick_connect_id}
   */
   readonly quickConnectId?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_quick_connect#region DataAwsConnectQuickConnect#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_quick_connect#region TfDataQuickConnect#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_quick_connect#tags DataAwsConnectQuickConnect#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_quick_connect#tags TfDataQuickConnect#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -40,7 +40,7 @@ export interface DataAwsConnectQuickConnectConfig extends cdktn.TerraformMetaArg
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_quick_connect aws_connect_quick_connect}
 */
-export class DataAwsConnectQuickConnect extends cdktn.TerraformDataSource {
+export class TfDataQuickConnect extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class DataAwsConnectQuickConnect extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsConnectQuickConnect resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataQuickConnect resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsConnectQuickConnect to import
-  * @param importFromId The id of the existing DataAwsConnectQuickConnect that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_quick_connect#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsConnectQuickConnect to import is found
+  * @param importToId The construct id used in the generated config for the TfDataQuickConnect to import
+  * @param importFromId The id of the existing TfDataQuickConnect that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_quick_connect#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataQuickConnect to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_connect_quick_connect", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class DataAwsConnectQuickConnect extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsConnectQuickConnectConfig
+  * @param options TfDataQuickConnectConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsConnectQuickConnectConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataQuickConnectConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_connect_quick_connect',
       terraformGeneratorMetadata: {
@@ -156,7 +156,7 @@ export class DataAwsConnectQuickConnect extends cdktn.TerraformDataSource {
   }
 
   // quick_connect_config - computed: true, optional: false, required: false
-  private _quickConnectConfig = new DataAwsConnectQuickConnect.QuickConnectConfigPropertyList(this, "quick_connect_config", false);
+  private _quickConnectConfig = new TfDataQuickConnect.QuickConnectConfigPropertyList(this, "quick_connect_config", false);
   public get quickConnectConfig() {
     return this._quickConnectConfig;
   }
@@ -269,7 +269,7 @@ export class DataAwsConnectQuickConnect extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsConnectQuickConnectPhoneConfigPropertyToTerraform(struct?: DataAwsConnectQuickConnect.PhoneConfigProperty): any {
+export function tfDataQuickConnectPhoneConfigPropertyToTerraform(struct?: TfDataQuickConnect.PhoneConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -279,7 +279,7 @@ export function dataAwsConnectQuickConnectPhoneConfigPropertyToTerraform(struct?
 }
 
 
-export function dataAwsConnectQuickConnectPhoneConfigPropertyToHclTerraform(struct?: DataAwsConnectQuickConnect.PhoneConfigProperty): any {
+export function tfDataQuickConnectPhoneConfigPropertyToHclTerraform(struct?: TfDataQuickConnect.PhoneConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -290,7 +290,7 @@ export function dataAwsConnectQuickConnectPhoneConfigPropertyToHclTerraform(stru
 }
 
 
-export function dataAwsConnectQuickConnectQueueConfigPropertyToTerraform(struct?: DataAwsConnectQuickConnect.QueueConfigProperty): any {
+export function tfDataQuickConnectQueueConfigPropertyToTerraform(struct?: TfDataQuickConnect.QueueConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -300,7 +300,7 @@ export function dataAwsConnectQuickConnectQueueConfigPropertyToTerraform(struct?
 }
 
 
-export function dataAwsConnectQuickConnectQueueConfigPropertyToHclTerraform(struct?: DataAwsConnectQuickConnect.QueueConfigProperty): any {
+export function tfDataQuickConnectQueueConfigPropertyToHclTerraform(struct?: TfDataQuickConnect.QueueConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -311,7 +311,7 @@ export function dataAwsConnectQuickConnectQueueConfigPropertyToHclTerraform(stru
 }
 
 
-export function dataAwsConnectQuickConnectUserConfigPropertyToTerraform(struct?: DataAwsConnectQuickConnect.UserConfigProperty): any {
+export function tfDataQuickConnectUserConfigPropertyToTerraform(struct?: TfDataQuickConnect.UserConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -321,7 +321,7 @@ export function dataAwsConnectQuickConnectUserConfigPropertyToTerraform(struct?:
 }
 
 
-export function dataAwsConnectQuickConnectUserConfigPropertyToHclTerraform(struct?: DataAwsConnectQuickConnect.UserConfigProperty): any {
+export function tfDataQuickConnectUserConfigPropertyToHclTerraform(struct?: TfDataQuickConnect.UserConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -332,7 +332,7 @@ export function dataAwsConnectQuickConnectUserConfigPropertyToHclTerraform(struc
 }
 
 
-export function dataAwsConnectQuickConnectQuickConnectConfigPropertyToTerraform(struct?: DataAwsConnectQuickConnect.QuickConnectConfigProperty): any {
+export function tfDataQuickConnectQuickConnectConfigPropertyToTerraform(struct?: TfDataQuickConnect.QuickConnectConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -342,7 +342,7 @@ export function dataAwsConnectQuickConnectQuickConnectConfigPropertyToTerraform(
 }
 
 
-export function dataAwsConnectQuickConnectQuickConnectConfigPropertyToHclTerraform(struct?: DataAwsConnectQuickConnect.QuickConnectConfigProperty): any {
+export function tfDataQuickConnectQuickConnectConfigPropertyToHclTerraform(struct?: TfDataQuickConnect.QuickConnectConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -353,7 +353,7 @@ export function dataAwsConnectQuickConnectQuickConnectConfigPropertyToHclTerrafo
 }
 
 
-export namespace DataAwsConnectQuickConnect {
+export namespace TfDataQuickConnect {
 export interface PhoneConfigProperty {
 }
 export class PhoneConfigPropertyOutputReference extends cdktn.ComplexObject {

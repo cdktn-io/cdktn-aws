@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSesv2ContactListConfig extends cdktn.TerraformMetaArguments {
+export interface TfContactListConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_contact_list#contact_list_name AwsSesv2ContactList#contact_list_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_contact_list#contact_list_name TfContactList#contact_list_name}
   */
   readonly contactListName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_contact_list#description AwsSesv2ContactList#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_contact_list#description TfContactList#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_contact_list#id AwsSesv2ContactList#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_contact_list#id TfContactList#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,29 +24,29 @@ export interface AwsSesv2ContactListConfig extends cdktn.TerraformMetaArguments 
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_contact_list#region AwsSesv2ContactList#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_contact_list#region TfContactList#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_contact_list#tags AwsSesv2ContactList#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_contact_list#tags TfContactList#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_contact_list#tags_all AwsSesv2ContactList#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_contact_list#tags_all TfContactList#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * topic block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_contact_list#topic AwsSesv2ContactList#topic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_contact_list#topic TfContactList#topic}
   */
-  readonly topic?: AwsSesv2ContactList.TopicProperty[] | cdktn.IResolvable;
+  readonly topic?: TfContactList.TopicProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_contact_list aws_sesv2_contact_list}
 */
-export class AwsSesv2ContactList extends cdktn.TerraformResource {
+export class TfContactList extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class AwsSesv2ContactList extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSesv2ContactList resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfContactList resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSesv2ContactList to import
-  * @param importFromId The id of the existing AwsSesv2ContactList that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_contact_list#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSesv2ContactList to import is found
+  * @param importToId The construct id used in the generated config for the TfContactList to import
+  * @param importFromId The id of the existing TfContactList that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_contact_list#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfContactList to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sesv2_contact_list", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class AwsSesv2ContactList extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSesv2ContactListConfig
+  * @param options TfContactListConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSesv2ContactListConfig) {
+  public constructor(scope: Construct, id: string, config: TfContactListConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sesv2_contact_list',
       terraformGeneratorMetadata: {
@@ -216,11 +216,11 @@ export class AwsSesv2ContactList extends cdktn.TerraformResource {
   }
 
   // topic - computed: false, optional: true, required: false
-  private _topic = new AwsSesv2ContactList.TopicPropertyList(this, "topic", true);
+  private _topic = new TfContactList.TopicPropertyList(this, "topic", true);
   public get topic() {
     return this._topic;
   }
-  public putTopic(value: AwsSesv2ContactList.TopicProperty[] | cdktn.IResolvable) {
+  public putTopic(value: TfContactList.TopicProperty[] | cdktn.IResolvable) {
     this._topic.internalValue = value;
   }
   public resetTopic() {
@@ -243,7 +243,7 @@ export class AwsSesv2ContactList extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      topic: cdktn.listMapper(awsSesv2ContactListTopicPropertyToTerraform, true)(this._topic.internalValue),
+      topic: cdktn.listMapper(tfContactListTopicPropertyToTerraform, true)(this._topic.internalValue),
     };
   }
 
@@ -286,10 +286,10 @@ export class AwsSesv2ContactList extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       topic: {
-        value: cdktn.listMapperHcl(awsSesv2ContactListTopicPropertyToHclTerraform, true)(this._topic.internalValue),
+        value: cdktn.listMapperHcl(tfContactListTopicPropertyToHclTerraform, true)(this._topic.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsSesv2ContactList.TopicPropertyList",
+        storageClassType: "TfContactList.TopicPropertyList",
       },
     };
 
@@ -298,7 +298,7 @@ export class AwsSesv2ContactList extends cdktn.TerraformResource {
   }
 }
 
-export function awsSesv2ContactListTopicPropertyToTerraform(struct?: AwsSesv2ContactList.TopicProperty | cdktn.IResolvable): any {
+export function tfContactListTopicPropertyToTerraform(struct?: TfContactList.TopicProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -312,7 +312,7 @@ export function awsSesv2ContactListTopicPropertyToTerraform(struct?: AwsSesv2Con
 }
 
 
-export function awsSesv2ContactListTopicPropertyToHclTerraform(struct?: AwsSesv2ContactList.TopicProperty | cdktn.IResolvable): any {
+export function tfContactListTopicPropertyToHclTerraform(struct?: TfContactList.TopicProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -349,22 +349,22 @@ export function awsSesv2ContactListTopicPropertyToHclTerraform(struct?: AwsSesv2
 }
 
 
-export namespace AwsSesv2ContactList {
+export namespace TfContactList {
 export interface TopicProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_contact_list#default_subscription_status AwsSesv2ContactList#default_subscription_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_contact_list#default_subscription_status TfContactList#default_subscription_status}
   */
   readonly defaultSubscriptionStatus: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_contact_list#description AwsSesv2ContactList#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_contact_list#description TfContactList#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_contact_list#display_name AwsSesv2ContactList#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_contact_list#display_name TfContactList#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_contact_list#topic_name AwsSesv2ContactList#topic_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_contact_list#topic_name TfContactList#topic_name}
   */
   readonly topicName: string;
 }

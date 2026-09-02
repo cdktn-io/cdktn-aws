@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsMacie2OrganizationConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface TfOrganizationConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
   * Whether to enable Amazon Macie automatically for accounts that are added to the organization in AWS Organizations
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_organization_configuration#auto_enable AwsMacie2OrganizationConfiguration#auto_enable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_organization_configuration#auto_enable TfOrganizationConfiguration#auto_enable}
   */
   readonly autoEnable: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_organization_configuration#region AwsMacie2OrganizationConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_organization_configuration#region TfOrganizationConfiguration#region}
   */
   readonly region?: string;
 }
@@ -23,7 +23,7 @@ export interface AwsMacie2OrganizationConfigurationConfig extends cdktn.Terrafor
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_organization_configuration aws_macie2_organization_configuration}
 */
-export class AwsMacie2OrganizationConfiguration extends cdktn.TerraformResource {
+export class TfOrganizationConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -34,11 +34,11 @@ export class AwsMacie2OrganizationConfiguration extends cdktn.TerraformResource 
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsMacie2OrganizationConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfOrganizationConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsMacie2OrganizationConfiguration to import
-  * @param importFromId The id of the existing AwsMacie2OrganizationConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_organization_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsMacie2OrganizationConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the TfOrganizationConfiguration to import
+  * @param importFromId The id of the existing TfOrganizationConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_organization_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfOrganizationConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_macie2_organization_configuration", importId: importFromId, provider });
@@ -53,9 +53,9 @@ export class AwsMacie2OrganizationConfiguration extends cdktn.TerraformResource 
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsMacie2OrganizationConfigurationConfig
+  * @param options TfOrganizationConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsMacie2OrganizationConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: TfOrganizationConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_macie2_organization_configuration',
       terraformGeneratorMetadata: {

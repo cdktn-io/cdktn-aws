@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsPinpointsmsvoicev2ConfigurationSetConfig extends cdktn.TerraformMetaArguments {
+export interface TfConfigurationSetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_configuration_set#default_message_type AwsPinpointsmsvoicev2ConfigurationSet#default_message_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_configuration_set#default_message_type TfConfigurationSet#default_message_type}
   */
   readonly defaultMessageType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_configuration_set#default_sender_id AwsPinpointsmsvoicev2ConfigurationSet#default_sender_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_configuration_set#default_sender_id TfConfigurationSet#default_sender_id}
   */
   readonly defaultSenderId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_configuration_set#name AwsPinpointsmsvoicev2ConfigurationSet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_configuration_set#name TfConfigurationSet#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_configuration_set#region AwsPinpointsmsvoicev2ConfigurationSet#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_configuration_set#region TfConfigurationSet#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_configuration_set#tags AwsPinpointsmsvoicev2ConfigurationSet#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_configuration_set#tags TfConfigurationSet#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -33,7 +33,7 @@ export interface AwsPinpointsmsvoicev2ConfigurationSetConfig extends cdktn.Terra
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_configuration_set aws_pinpointsmsvoicev2_configuration_set}
 */
-export class AwsPinpointsmsvoicev2ConfigurationSet extends cdktn.TerraformResource {
+export class TfConfigurationSet extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class AwsPinpointsmsvoicev2ConfigurationSet extends cdktn.TerraformResour
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsPinpointsmsvoicev2ConfigurationSet resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfConfigurationSet resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsPinpointsmsvoicev2ConfigurationSet to import
-  * @param importFromId The id of the existing AwsPinpointsmsvoicev2ConfigurationSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_configuration_set#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsPinpointsmsvoicev2ConfigurationSet to import is found
+  * @param importToId The construct id used in the generated config for the TfConfigurationSet to import
+  * @param importFromId The id of the existing TfConfigurationSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_configuration_set#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfConfigurationSet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_pinpointsmsvoicev2_configuration_set", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class AwsPinpointsmsvoicev2ConfigurationSet extends cdktn.TerraformResour
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsPinpointsmsvoicev2ConfigurationSetConfig
+  * @param options TfConfigurationSetConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsPinpointsmsvoicev2ConfigurationSetConfig) {
+  public constructor(scope: Construct, id: string, config: TfConfigurationSetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_pinpointsmsvoicev2_configuration_set',
       terraformGeneratorMetadata: {

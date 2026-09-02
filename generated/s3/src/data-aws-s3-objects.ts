@@ -5,50 +5,50 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsS3ObjectsConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataObjectsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_objects#bucket DataAwsS3Objects#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_objects#bucket TfDataObjects#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_objects#delimiter DataAwsS3Objects#delimiter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_objects#delimiter TfDataObjects#delimiter}
   */
   readonly delimiter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_objects#encoding_type DataAwsS3Objects#encoding_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_objects#encoding_type TfDataObjects#encoding_type}
   */
   readonly encodingType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_objects#fetch_owner DataAwsS3Objects#fetch_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_objects#fetch_owner TfDataObjects#fetch_owner}
   */
   readonly fetchOwner?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_objects#id DataAwsS3Objects#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_objects#id TfDataObjects#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_objects#max_keys DataAwsS3Objects#max_keys}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_objects#max_keys TfDataObjects#max_keys}
   */
   readonly maxKeys?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_objects#prefix DataAwsS3Objects#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_objects#prefix TfDataObjects#prefix}
   */
   readonly prefix?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_objects#region DataAwsS3Objects#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_objects#region TfDataObjects#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_objects#request_payer DataAwsS3Objects#request_payer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_objects#request_payer TfDataObjects#request_payer}
   */
   readonly requestPayer?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_objects#start_after DataAwsS3Objects#start_after}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_objects#start_after TfDataObjects#start_after}
   */
   readonly startAfter?: string;
 }
@@ -56,7 +56,7 @@ export interface DataAwsS3ObjectsConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_objects aws_s3_objects}
 */
-export class DataAwsS3Objects extends cdktn.TerraformDataSource {
+export class TfDataObjects extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -67,11 +67,11 @@ export class DataAwsS3Objects extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsS3Objects resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataObjects resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsS3Objects to import
-  * @param importFromId The id of the existing DataAwsS3Objects that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_objects#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsS3Objects to import is found
+  * @param importToId The construct id used in the generated config for the TfDataObjects to import
+  * @param importFromId The id of the existing TfDataObjects that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_objects#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataObjects to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3_objects", importId: importFromId, provider });
@@ -86,9 +86,9 @@ export class DataAwsS3Objects extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsS3ObjectsConfig
+  * @param options TfDataObjectsConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsS3ObjectsConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataObjectsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3_objects',
       terraformGeneratorMetadata: {

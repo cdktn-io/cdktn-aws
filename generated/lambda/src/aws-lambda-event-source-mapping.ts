@@ -5,168 +5,168 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsLambdaEventSourceMappingConfig extends cdktn.TerraformMetaArguments {
+export interface TfEventSourceMappingConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#batch_size AwsLambdaEventSourceMapping#batch_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#batch_size TfEventSourceMapping#batch_size}
   */
   readonly batchSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#bisect_batch_on_function_error AwsLambdaEventSourceMapping#bisect_batch_on_function_error}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#bisect_batch_on_function_error TfEventSourceMapping#bisect_batch_on_function_error}
   */
   readonly bisectBatchOnFunctionError?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#enabled AwsLambdaEventSourceMapping#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#enabled TfEventSourceMapping#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#event_source_arn AwsLambdaEventSourceMapping#event_source_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#event_source_arn TfEventSourceMapping#event_source_arn}
   */
   readonly eventSourceArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#function_name AwsLambdaEventSourceMapping#function_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#function_name TfEventSourceMapping#function_name}
   */
   readonly functionName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#function_response_types AwsLambdaEventSourceMapping#function_response_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#function_response_types TfEventSourceMapping#function_response_types}
   */
   readonly functionResponseTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#id AwsLambdaEventSourceMapping#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#id TfEventSourceMapping#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#kms_key_arn AwsLambdaEventSourceMapping#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#kms_key_arn TfEventSourceMapping#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#maximum_batching_window_in_seconds AwsLambdaEventSourceMapping#maximum_batching_window_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#maximum_batching_window_in_seconds TfEventSourceMapping#maximum_batching_window_in_seconds}
   */
   readonly maximumBatchingWindowInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#maximum_record_age_in_seconds AwsLambdaEventSourceMapping#maximum_record_age_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#maximum_record_age_in_seconds TfEventSourceMapping#maximum_record_age_in_seconds}
   */
   readonly maximumRecordAgeInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#maximum_retry_attempts AwsLambdaEventSourceMapping#maximum_retry_attempts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#maximum_retry_attempts TfEventSourceMapping#maximum_retry_attempts}
   */
   readonly maximumRetryAttempts?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#parallelization_factor AwsLambdaEventSourceMapping#parallelization_factor}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#parallelization_factor TfEventSourceMapping#parallelization_factor}
   */
   readonly parallelizationFactor?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#queues AwsLambdaEventSourceMapping#queues}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#queues TfEventSourceMapping#queues}
   */
   readonly queues?: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#region AwsLambdaEventSourceMapping#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#region TfEventSourceMapping#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#starting_position AwsLambdaEventSourceMapping#starting_position}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#starting_position TfEventSourceMapping#starting_position}
   */
   readonly startingPosition?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#starting_position_timestamp AwsLambdaEventSourceMapping#starting_position_timestamp}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#starting_position_timestamp TfEventSourceMapping#starting_position_timestamp}
   */
   readonly startingPositionTimestamp?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#tags AwsLambdaEventSourceMapping#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#tags TfEventSourceMapping#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#tags_all AwsLambdaEventSourceMapping#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#tags_all TfEventSourceMapping#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#topics AwsLambdaEventSourceMapping#topics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#topics TfEventSourceMapping#topics}
   */
   readonly topics?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#tumbling_window_in_seconds AwsLambdaEventSourceMapping#tumbling_window_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#tumbling_window_in_seconds TfEventSourceMapping#tumbling_window_in_seconds}
   */
   readonly tumblingWindowInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#use_resource_timeout_for_propagation AwsLambdaEventSourceMapping#use_resource_timeout_for_propagation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#use_resource_timeout_for_propagation TfEventSourceMapping#use_resource_timeout_for_propagation}
   */
   readonly useResourceTimeoutForPropagation?: boolean | cdktn.IResolvable;
   /**
   * amazon_managed_kafka_event_source_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#amazon_managed_kafka_event_source_config AwsLambdaEventSourceMapping#amazon_managed_kafka_event_source_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#amazon_managed_kafka_event_source_config TfEventSourceMapping#amazon_managed_kafka_event_source_config}
   */
-  readonly amazonManagedKafkaEventSourceConfig?: AwsLambdaEventSourceMapping.AmazonManagedKafkaEventSourceConfigProperty;
+  readonly amazonManagedKafkaEventSourceConfig?: TfEventSourceMapping.AmazonManagedKafkaEventSourceConfigProperty;
   /**
   * destination_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#destination_config AwsLambdaEventSourceMapping#destination_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#destination_config TfEventSourceMapping#destination_config}
   */
-  readonly destinationConfig?: AwsLambdaEventSourceMapping.DestinationConfigProperty;
+  readonly destinationConfig?: TfEventSourceMapping.DestinationConfigProperty;
   /**
   * document_db_event_source_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#document_db_event_source_config AwsLambdaEventSourceMapping#document_db_event_source_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#document_db_event_source_config TfEventSourceMapping#document_db_event_source_config}
   */
-  readonly documentDbEventSourceConfig?: AwsLambdaEventSourceMapping.DocumentDbEventSourceConfigProperty;
+  readonly documentDbEventSourceConfig?: TfEventSourceMapping.DocumentDbEventSourceConfigProperty;
   /**
   * filter_criteria block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#filter_criteria AwsLambdaEventSourceMapping#filter_criteria}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#filter_criteria TfEventSourceMapping#filter_criteria}
   */
-  readonly filterCriteria?: AwsLambdaEventSourceMapping.FilterCriteriaProperty;
+  readonly filterCriteria?: TfEventSourceMapping.FilterCriteriaProperty;
   /**
   * metrics_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#metrics_config AwsLambdaEventSourceMapping#metrics_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#metrics_config TfEventSourceMapping#metrics_config}
   */
-  readonly metricsConfig?: AwsLambdaEventSourceMapping.MetricsConfigProperty;
+  readonly metricsConfig?: TfEventSourceMapping.MetricsConfigProperty;
   /**
   * provisioned_poller_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#provisioned_poller_config AwsLambdaEventSourceMapping#provisioned_poller_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#provisioned_poller_config TfEventSourceMapping#provisioned_poller_config}
   */
-  readonly provisionedPollerConfig?: AwsLambdaEventSourceMapping.ProvisionedPollerConfigProperty;
+  readonly provisionedPollerConfig?: TfEventSourceMapping.ProvisionedPollerConfigProperty;
   /**
   * scaling_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#scaling_config AwsLambdaEventSourceMapping#scaling_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#scaling_config TfEventSourceMapping#scaling_config}
   */
-  readonly scalingConfig?: AwsLambdaEventSourceMapping.ScalingConfigProperty;
+  readonly scalingConfig?: TfEventSourceMapping.ScalingConfigProperty;
   /**
   * self_managed_event_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#self_managed_event_source AwsLambdaEventSourceMapping#self_managed_event_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#self_managed_event_source TfEventSourceMapping#self_managed_event_source}
   */
-  readonly selfManagedEventSource?: AwsLambdaEventSourceMapping.SelfManagedEventSourceProperty;
+  readonly selfManagedEventSource?: TfEventSourceMapping.SelfManagedEventSourceProperty;
   /**
   * self_managed_kafka_event_source_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#self_managed_kafka_event_source_config AwsLambdaEventSourceMapping#self_managed_kafka_event_source_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#self_managed_kafka_event_source_config TfEventSourceMapping#self_managed_kafka_event_source_config}
   */
-  readonly selfManagedKafkaEventSourceConfig?: AwsLambdaEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty;
+  readonly selfManagedKafkaEventSourceConfig?: TfEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty;
   /**
   * source_access_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#source_access_configuration AwsLambdaEventSourceMapping#source_access_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#source_access_configuration TfEventSourceMapping#source_access_configuration}
   */
-  readonly sourceAccessConfiguration?: AwsLambdaEventSourceMapping.SourceAccessConfigurationProperty[] | cdktn.IResolvable;
+  readonly sourceAccessConfiguration?: TfEventSourceMapping.SourceAccessConfigurationProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#timeouts AwsLambdaEventSourceMapping#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#timeouts TfEventSourceMapping#timeouts}
   */
-  readonly timeouts?: AwsLambdaEventSourceMapping.TimeoutsProperty;
+  readonly timeouts?: TfEventSourceMapping.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping aws_lambda_event_source_mapping}
 */
-export class AwsLambdaEventSourceMapping extends cdktn.TerraformResource {
+export class TfEventSourceMapping extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -177,11 +177,11 @@ export class AwsLambdaEventSourceMapping extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsLambdaEventSourceMapping resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfEventSourceMapping resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsLambdaEventSourceMapping to import
-  * @param importFromId The id of the existing AwsLambdaEventSourceMapping that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsLambdaEventSourceMapping to import is found
+  * @param importToId The construct id used in the generated config for the TfEventSourceMapping to import
+  * @param importFromId The id of the existing TfEventSourceMapping that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfEventSourceMapping to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lambda_event_source_mapping", importId: importFromId, provider });
@@ -196,9 +196,9 @@ export class AwsLambdaEventSourceMapping extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsLambdaEventSourceMappingConfig
+  * @param options TfEventSourceMappingConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsLambdaEventSourceMappingConfig) {
+  public constructor(scope: Construct, id: string, config: TfEventSourceMappingConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lambda_event_source_mapping',
       terraformGeneratorMetadata: {
@@ -621,11 +621,11 @@ export class AwsLambdaEventSourceMapping extends cdktn.TerraformResource {
   }
 
   // amazon_managed_kafka_event_source_config - computed: false, optional: true, required: false
-  private _amazonManagedKafkaEventSourceConfig = new AwsLambdaEventSourceMapping.AmazonManagedKafkaEventSourceConfigPropertyOutputReference(this, "amazon_managed_kafka_event_source_config");
+  private _amazonManagedKafkaEventSourceConfig = new TfEventSourceMapping.AmazonManagedKafkaEventSourceConfigPropertyOutputReference(this, "amazon_managed_kafka_event_source_config");
   public get amazonManagedKafkaEventSourceConfig() {
     return this._amazonManagedKafkaEventSourceConfig;
   }
-  public putAmazonManagedKafkaEventSourceConfig(value: AwsLambdaEventSourceMapping.AmazonManagedKafkaEventSourceConfigProperty) {
+  public putAmazonManagedKafkaEventSourceConfig(value: TfEventSourceMapping.AmazonManagedKafkaEventSourceConfigProperty) {
     this._amazonManagedKafkaEventSourceConfig.internalValue = value;
   }
   public resetAmazonManagedKafkaEventSourceConfig() {
@@ -637,11 +637,11 @@ export class AwsLambdaEventSourceMapping extends cdktn.TerraformResource {
   }
 
   // destination_config - computed: false, optional: true, required: false
-  private _destinationConfig = new AwsLambdaEventSourceMapping.DestinationConfigPropertyOutputReference(this, "destination_config");
+  private _destinationConfig = new TfEventSourceMapping.DestinationConfigPropertyOutputReference(this, "destination_config");
   public get destinationConfig() {
     return this._destinationConfig;
   }
-  public putDestinationConfig(value: AwsLambdaEventSourceMapping.DestinationConfigProperty) {
+  public putDestinationConfig(value: TfEventSourceMapping.DestinationConfigProperty) {
     this._destinationConfig.internalValue = value;
   }
   public resetDestinationConfig() {
@@ -653,11 +653,11 @@ export class AwsLambdaEventSourceMapping extends cdktn.TerraformResource {
   }
 
   // document_db_event_source_config - computed: false, optional: true, required: false
-  private _documentDbEventSourceConfig = new AwsLambdaEventSourceMapping.DocumentDbEventSourceConfigPropertyOutputReference(this, "document_db_event_source_config");
+  private _documentDbEventSourceConfig = new TfEventSourceMapping.DocumentDbEventSourceConfigPropertyOutputReference(this, "document_db_event_source_config");
   public get documentDbEventSourceConfig() {
     return this._documentDbEventSourceConfig;
   }
-  public putDocumentDbEventSourceConfig(value: AwsLambdaEventSourceMapping.DocumentDbEventSourceConfigProperty) {
+  public putDocumentDbEventSourceConfig(value: TfEventSourceMapping.DocumentDbEventSourceConfigProperty) {
     this._documentDbEventSourceConfig.internalValue = value;
   }
   public resetDocumentDbEventSourceConfig() {
@@ -669,11 +669,11 @@ export class AwsLambdaEventSourceMapping extends cdktn.TerraformResource {
   }
 
   // filter_criteria - computed: false, optional: true, required: false
-  private _filterCriteria = new AwsLambdaEventSourceMapping.FilterCriteriaPropertyOutputReference(this, "filter_criteria");
+  private _filterCriteria = new TfEventSourceMapping.FilterCriteriaPropertyOutputReference(this, "filter_criteria");
   public get filterCriteria() {
     return this._filterCriteria;
   }
-  public putFilterCriteria(value: AwsLambdaEventSourceMapping.FilterCriteriaProperty) {
+  public putFilterCriteria(value: TfEventSourceMapping.FilterCriteriaProperty) {
     this._filterCriteria.internalValue = value;
   }
   public resetFilterCriteria() {
@@ -685,11 +685,11 @@ export class AwsLambdaEventSourceMapping extends cdktn.TerraformResource {
   }
 
   // metrics_config - computed: false, optional: true, required: false
-  private _metricsConfig = new AwsLambdaEventSourceMapping.MetricsConfigPropertyOutputReference(this, "metrics_config");
+  private _metricsConfig = new TfEventSourceMapping.MetricsConfigPropertyOutputReference(this, "metrics_config");
   public get metricsConfig() {
     return this._metricsConfig;
   }
-  public putMetricsConfig(value: AwsLambdaEventSourceMapping.MetricsConfigProperty) {
+  public putMetricsConfig(value: TfEventSourceMapping.MetricsConfigProperty) {
     this._metricsConfig.internalValue = value;
   }
   public resetMetricsConfig() {
@@ -701,11 +701,11 @@ export class AwsLambdaEventSourceMapping extends cdktn.TerraformResource {
   }
 
   // provisioned_poller_config - computed: false, optional: true, required: false
-  private _provisionedPollerConfig = new AwsLambdaEventSourceMapping.ProvisionedPollerConfigPropertyOutputReference(this, "provisioned_poller_config");
+  private _provisionedPollerConfig = new TfEventSourceMapping.ProvisionedPollerConfigPropertyOutputReference(this, "provisioned_poller_config");
   public get provisionedPollerConfig() {
     return this._provisionedPollerConfig;
   }
-  public putProvisionedPollerConfig(value: AwsLambdaEventSourceMapping.ProvisionedPollerConfigProperty) {
+  public putProvisionedPollerConfig(value: TfEventSourceMapping.ProvisionedPollerConfigProperty) {
     this._provisionedPollerConfig.internalValue = value;
   }
   public resetProvisionedPollerConfig() {
@@ -717,11 +717,11 @@ export class AwsLambdaEventSourceMapping extends cdktn.TerraformResource {
   }
 
   // scaling_config - computed: false, optional: true, required: false
-  private _scalingConfig = new AwsLambdaEventSourceMapping.ScalingConfigPropertyOutputReference(this, "scaling_config");
+  private _scalingConfig = new TfEventSourceMapping.ScalingConfigPropertyOutputReference(this, "scaling_config");
   public get scalingConfig() {
     return this._scalingConfig;
   }
-  public putScalingConfig(value: AwsLambdaEventSourceMapping.ScalingConfigProperty) {
+  public putScalingConfig(value: TfEventSourceMapping.ScalingConfigProperty) {
     this._scalingConfig.internalValue = value;
   }
   public resetScalingConfig() {
@@ -733,11 +733,11 @@ export class AwsLambdaEventSourceMapping extends cdktn.TerraformResource {
   }
 
   // self_managed_event_source - computed: false, optional: true, required: false
-  private _selfManagedEventSource = new AwsLambdaEventSourceMapping.SelfManagedEventSourcePropertyOutputReference(this, "self_managed_event_source");
+  private _selfManagedEventSource = new TfEventSourceMapping.SelfManagedEventSourcePropertyOutputReference(this, "self_managed_event_source");
   public get selfManagedEventSource() {
     return this._selfManagedEventSource;
   }
-  public putSelfManagedEventSource(value: AwsLambdaEventSourceMapping.SelfManagedEventSourceProperty) {
+  public putSelfManagedEventSource(value: TfEventSourceMapping.SelfManagedEventSourceProperty) {
     this._selfManagedEventSource.internalValue = value;
   }
   public resetSelfManagedEventSource() {
@@ -749,11 +749,11 @@ export class AwsLambdaEventSourceMapping extends cdktn.TerraformResource {
   }
 
   // self_managed_kafka_event_source_config - computed: false, optional: true, required: false
-  private _selfManagedKafkaEventSourceConfig = new AwsLambdaEventSourceMapping.SelfManagedKafkaEventSourceConfigPropertyOutputReference(this, "self_managed_kafka_event_source_config");
+  private _selfManagedKafkaEventSourceConfig = new TfEventSourceMapping.SelfManagedKafkaEventSourceConfigPropertyOutputReference(this, "self_managed_kafka_event_source_config");
   public get selfManagedKafkaEventSourceConfig() {
     return this._selfManagedKafkaEventSourceConfig;
   }
-  public putSelfManagedKafkaEventSourceConfig(value: AwsLambdaEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty) {
+  public putSelfManagedKafkaEventSourceConfig(value: TfEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty) {
     this._selfManagedKafkaEventSourceConfig.internalValue = value;
   }
   public resetSelfManagedKafkaEventSourceConfig() {
@@ -765,11 +765,11 @@ export class AwsLambdaEventSourceMapping extends cdktn.TerraformResource {
   }
 
   // source_access_configuration - computed: false, optional: true, required: false
-  private _sourceAccessConfiguration = new AwsLambdaEventSourceMapping.SourceAccessConfigurationPropertyList(this, "source_access_configuration", true);
+  private _sourceAccessConfiguration = new TfEventSourceMapping.SourceAccessConfigurationPropertyList(this, "source_access_configuration", true);
   public get sourceAccessConfiguration() {
     return this._sourceAccessConfiguration;
   }
-  public putSourceAccessConfiguration(value: AwsLambdaEventSourceMapping.SourceAccessConfigurationProperty[] | cdktn.IResolvable) {
+  public putSourceAccessConfiguration(value: TfEventSourceMapping.SourceAccessConfigurationProperty[] | cdktn.IResolvable) {
     this._sourceAccessConfiguration.internalValue = value;
   }
   public resetSourceAccessConfiguration() {
@@ -781,11 +781,11 @@ export class AwsLambdaEventSourceMapping extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsLambdaEventSourceMapping.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfEventSourceMapping.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsLambdaEventSourceMapping.TimeoutsProperty) {
+  public putTimeouts(value: TfEventSourceMapping.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -823,17 +823,17 @@ export class AwsLambdaEventSourceMapping extends cdktn.TerraformResource {
       topics: cdktn.listMapper(cdktn.stringToTerraform, false)(this._topics),
       tumbling_window_in_seconds: cdktn.numberToTerraform(this._tumblingWindowInSeconds),
       use_resource_timeout_for_propagation: cdktn.booleanToTerraform(this._useResourceTimeoutForPropagation),
-      amazon_managed_kafka_event_source_config: awsLambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigPropertyToTerraform(this._amazonManagedKafkaEventSourceConfig.internalValue),
-      destination_config: awsLambdaEventSourceMappingDestinationConfigPropertyToTerraform(this._destinationConfig.internalValue),
-      document_db_event_source_config: awsLambdaEventSourceMappingDocumentDbEventSourceConfigPropertyToTerraform(this._documentDbEventSourceConfig.internalValue),
-      filter_criteria: awsLambdaEventSourceMappingFilterCriteriaPropertyToTerraform(this._filterCriteria.internalValue),
-      metrics_config: awsLambdaEventSourceMappingMetricsConfigPropertyToTerraform(this._metricsConfig.internalValue),
-      provisioned_poller_config: awsLambdaEventSourceMappingProvisionedPollerConfigPropertyToTerraform(this._provisionedPollerConfig.internalValue),
-      scaling_config: awsLambdaEventSourceMappingScalingConfigPropertyToTerraform(this._scalingConfig.internalValue),
-      self_managed_event_source: awsLambdaEventSourceMappingSelfManagedEventSourcePropertyToTerraform(this._selfManagedEventSource.internalValue),
-      self_managed_kafka_event_source_config: awsLambdaEventSourceMappingSelfManagedKafkaEventSourceConfigPropertyToTerraform(this._selfManagedKafkaEventSourceConfig.internalValue),
-      source_access_configuration: cdktn.listMapper(awsLambdaEventSourceMappingSourceAccessConfigurationPropertyToTerraform, true)(this._sourceAccessConfiguration.internalValue),
-      timeouts: awsLambdaEventSourceMappingTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      amazon_managed_kafka_event_source_config: tfEventSourceMappingAmazonManagedKafkaEventSourceConfigPropertyToTerraform(this._amazonManagedKafkaEventSourceConfig.internalValue),
+      destination_config: tfEventSourceMappingDestinationConfigPropertyToTerraform(this._destinationConfig.internalValue),
+      document_db_event_source_config: tfEventSourceMappingDocumentDbEventSourceConfigPropertyToTerraform(this._documentDbEventSourceConfig.internalValue),
+      filter_criteria: tfEventSourceMappingFilterCriteriaPropertyToTerraform(this._filterCriteria.internalValue),
+      metrics_config: tfEventSourceMappingMetricsConfigPropertyToTerraform(this._metricsConfig.internalValue),
+      provisioned_poller_config: tfEventSourceMappingProvisionedPollerConfigPropertyToTerraform(this._provisionedPollerConfig.internalValue),
+      scaling_config: tfEventSourceMappingScalingConfigPropertyToTerraform(this._scalingConfig.internalValue),
+      self_managed_event_source: tfEventSourceMappingSelfManagedEventSourcePropertyToTerraform(this._selfManagedEventSource.internalValue),
+      self_managed_kafka_event_source_config: tfEventSourceMappingSelfManagedKafkaEventSourceConfigPropertyToTerraform(this._selfManagedKafkaEventSourceConfig.internalValue),
+      source_access_configuration: cdktn.listMapper(tfEventSourceMappingSourceAccessConfigurationPropertyToTerraform, true)(this._sourceAccessConfiguration.internalValue),
+      timeouts: tfEventSourceMappingTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -966,70 +966,70 @@ export class AwsLambdaEventSourceMapping extends cdktn.TerraformResource {
         storageClassType: "boolean",
       },
       amazon_managed_kafka_event_source_config: {
-        value: awsLambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigPropertyToHclTerraform(this._amazonManagedKafkaEventSourceConfig.internalValue),
+        value: tfEventSourceMappingAmazonManagedKafkaEventSourceConfigPropertyToHclTerraform(this._amazonManagedKafkaEventSourceConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLambdaEventSourceMapping.AmazonManagedKafkaEventSourceConfigPropertyList",
+        storageClassType: "TfEventSourceMapping.AmazonManagedKafkaEventSourceConfigPropertyList",
       },
       destination_config: {
-        value: awsLambdaEventSourceMappingDestinationConfigPropertyToHclTerraform(this._destinationConfig.internalValue),
+        value: tfEventSourceMappingDestinationConfigPropertyToHclTerraform(this._destinationConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLambdaEventSourceMapping.DestinationConfigPropertyList",
+        storageClassType: "TfEventSourceMapping.DestinationConfigPropertyList",
       },
       document_db_event_source_config: {
-        value: awsLambdaEventSourceMappingDocumentDbEventSourceConfigPropertyToHclTerraform(this._documentDbEventSourceConfig.internalValue),
+        value: tfEventSourceMappingDocumentDbEventSourceConfigPropertyToHclTerraform(this._documentDbEventSourceConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLambdaEventSourceMapping.DocumentDbEventSourceConfigPropertyList",
+        storageClassType: "TfEventSourceMapping.DocumentDbEventSourceConfigPropertyList",
       },
       filter_criteria: {
-        value: awsLambdaEventSourceMappingFilterCriteriaPropertyToHclTerraform(this._filterCriteria.internalValue),
+        value: tfEventSourceMappingFilterCriteriaPropertyToHclTerraform(this._filterCriteria.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLambdaEventSourceMapping.FilterCriteriaPropertyList",
+        storageClassType: "TfEventSourceMapping.FilterCriteriaPropertyList",
       },
       metrics_config: {
-        value: awsLambdaEventSourceMappingMetricsConfigPropertyToHclTerraform(this._metricsConfig.internalValue),
+        value: tfEventSourceMappingMetricsConfigPropertyToHclTerraform(this._metricsConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLambdaEventSourceMapping.MetricsConfigPropertyList",
+        storageClassType: "TfEventSourceMapping.MetricsConfigPropertyList",
       },
       provisioned_poller_config: {
-        value: awsLambdaEventSourceMappingProvisionedPollerConfigPropertyToHclTerraform(this._provisionedPollerConfig.internalValue),
+        value: tfEventSourceMappingProvisionedPollerConfigPropertyToHclTerraform(this._provisionedPollerConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLambdaEventSourceMapping.ProvisionedPollerConfigPropertyList",
+        storageClassType: "TfEventSourceMapping.ProvisionedPollerConfigPropertyList",
       },
       scaling_config: {
-        value: awsLambdaEventSourceMappingScalingConfigPropertyToHclTerraform(this._scalingConfig.internalValue),
+        value: tfEventSourceMappingScalingConfigPropertyToHclTerraform(this._scalingConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLambdaEventSourceMapping.ScalingConfigPropertyList",
+        storageClassType: "TfEventSourceMapping.ScalingConfigPropertyList",
       },
       self_managed_event_source: {
-        value: awsLambdaEventSourceMappingSelfManagedEventSourcePropertyToHclTerraform(this._selfManagedEventSource.internalValue),
+        value: tfEventSourceMappingSelfManagedEventSourcePropertyToHclTerraform(this._selfManagedEventSource.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLambdaEventSourceMapping.SelfManagedEventSourcePropertyList",
+        storageClassType: "TfEventSourceMapping.SelfManagedEventSourcePropertyList",
       },
       self_managed_kafka_event_source_config: {
-        value: awsLambdaEventSourceMappingSelfManagedKafkaEventSourceConfigPropertyToHclTerraform(this._selfManagedKafkaEventSourceConfig.internalValue),
+        value: tfEventSourceMappingSelfManagedKafkaEventSourceConfigPropertyToHclTerraform(this._selfManagedKafkaEventSourceConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLambdaEventSourceMapping.SelfManagedKafkaEventSourceConfigPropertyList",
+        storageClassType: "TfEventSourceMapping.SelfManagedKafkaEventSourceConfigPropertyList",
       },
       source_access_configuration: {
-        value: cdktn.listMapperHcl(awsLambdaEventSourceMappingSourceAccessConfigurationPropertyToHclTerraform, true)(this._sourceAccessConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfEventSourceMappingSourceAccessConfigurationPropertyToHclTerraform, true)(this._sourceAccessConfiguration.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsLambdaEventSourceMapping.SourceAccessConfigurationPropertyList",
+        storageClassType: "TfEventSourceMapping.SourceAccessConfigurationPropertyList",
       },
       timeouts: {
-        value: awsLambdaEventSourceMappingTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfEventSourceMappingTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsLambdaEventSourceMapping.TimeoutsProperty",
+        storageClassType: "TfEventSourceMapping.TimeoutsProperty",
       },
     };
 
@@ -1038,7 +1038,7 @@ export class AwsLambdaEventSourceMapping extends cdktn.TerraformResource {
   }
 }
 
-export function awsLambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigSchemaRegistryConfigAccessConfigPropertyToTerraform(struct?: AwsLambdaEventSourceMapping.AmazonManagedKafkaEventSourceConfigSchemaRegistryConfigAccessConfigProperty | cdktn.IResolvable): any {
+export function tfEventSourceMappingAmazonManagedKafkaEventSourceConfigSchemaRegistryConfigAccessConfigPropertyToTerraform(struct?: TfEventSourceMapping.AmazonManagedKafkaEventSourceConfigSchemaRegistryConfigAccessConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1050,7 +1050,7 @@ export function awsLambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigSc
 }
 
 
-export function awsLambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigSchemaRegistryConfigAccessConfigPropertyToHclTerraform(struct?: AwsLambdaEventSourceMapping.AmazonManagedKafkaEventSourceConfigSchemaRegistryConfigAccessConfigProperty | cdktn.IResolvable): any {
+export function tfEventSourceMappingAmazonManagedKafkaEventSourceConfigSchemaRegistryConfigAccessConfigPropertyToHclTerraform(struct?: TfEventSourceMapping.AmazonManagedKafkaEventSourceConfigSchemaRegistryConfigAccessConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1075,7 +1075,7 @@ export function awsLambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigSc
 }
 
 
-export function awsLambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigSchemaRegistryConfigSchemaValidationConfigPropertyToTerraform(struct?: AwsLambdaEventSourceMapping.AmazonManagedKafkaEventSourceConfigSchemaRegistryConfigSchemaValidationConfigProperty | cdktn.IResolvable): any {
+export function tfEventSourceMappingAmazonManagedKafkaEventSourceConfigSchemaRegistryConfigSchemaValidationConfigPropertyToTerraform(struct?: TfEventSourceMapping.AmazonManagedKafkaEventSourceConfigSchemaRegistryConfigSchemaValidationConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1086,7 +1086,7 @@ export function awsLambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigSc
 }
 
 
-export function awsLambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigSchemaRegistryConfigSchemaValidationConfigPropertyToHclTerraform(struct?: AwsLambdaEventSourceMapping.AmazonManagedKafkaEventSourceConfigSchemaRegistryConfigSchemaValidationConfigProperty | cdktn.IResolvable): any {
+export function tfEventSourceMappingAmazonManagedKafkaEventSourceConfigSchemaRegistryConfigSchemaValidationConfigPropertyToHclTerraform(struct?: TfEventSourceMapping.AmazonManagedKafkaEventSourceConfigSchemaRegistryConfigSchemaValidationConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1105,7 +1105,7 @@ export function awsLambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigSc
 }
 
 
-export function awsLambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigSchemaRegistryConfigPropertyToTerraform(struct?: AwsLambdaEventSourceMapping.AmazonManagedKafkaEventSourceConfigSchemaRegistryConfigPropertyOutputReference | AwsLambdaEventSourceMapping.AmazonManagedKafkaEventSourceConfigSchemaRegistryConfigProperty): any {
+export function tfEventSourceMappingAmazonManagedKafkaEventSourceConfigSchemaRegistryConfigPropertyToTerraform(struct?: TfEventSourceMapping.AmazonManagedKafkaEventSourceConfigSchemaRegistryConfigPropertyOutputReference | TfEventSourceMapping.AmazonManagedKafkaEventSourceConfigSchemaRegistryConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1113,13 +1113,13 @@ export function awsLambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigSc
   return {
     event_record_format: cdktn.stringToTerraform(struct!.eventRecordFormat),
     schema_registry_uri: cdktn.stringToTerraform(struct!.schemaRegistryUri),
-    access_config: cdktn.listMapper(awsLambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigSchemaRegistryConfigAccessConfigPropertyToTerraform, true)(struct!.accessConfig),
-    schema_validation_config: cdktn.listMapper(awsLambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigSchemaRegistryConfigSchemaValidationConfigPropertyToTerraform, true)(struct!.schemaValidationConfig),
+    access_config: cdktn.listMapper(tfEventSourceMappingAmazonManagedKafkaEventSourceConfigSchemaRegistryConfigAccessConfigPropertyToTerraform, true)(struct!.accessConfig),
+    schema_validation_config: cdktn.listMapper(tfEventSourceMappingAmazonManagedKafkaEventSourceConfigSchemaRegistryConfigSchemaValidationConfigPropertyToTerraform, true)(struct!.schemaValidationConfig),
   }
 }
 
 
-export function awsLambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigSchemaRegistryConfigPropertyToHclTerraform(struct?: AwsLambdaEventSourceMapping.AmazonManagedKafkaEventSourceConfigSchemaRegistryConfigPropertyOutputReference | AwsLambdaEventSourceMapping.AmazonManagedKafkaEventSourceConfigSchemaRegistryConfigProperty): any {
+export function tfEventSourceMappingAmazonManagedKafkaEventSourceConfigSchemaRegistryConfigPropertyToHclTerraform(struct?: TfEventSourceMapping.AmazonManagedKafkaEventSourceConfigSchemaRegistryConfigPropertyOutputReference | TfEventSourceMapping.AmazonManagedKafkaEventSourceConfigSchemaRegistryConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1138,13 +1138,13 @@ export function awsLambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigSc
       storageClassType: "string",
     },
     access_config: {
-      value: cdktn.listMapperHcl(awsLambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigSchemaRegistryConfigAccessConfigPropertyToHclTerraform, true)(struct!.accessConfig),
+      value: cdktn.listMapperHcl(tfEventSourceMappingAmazonManagedKafkaEventSourceConfigSchemaRegistryConfigAccessConfigPropertyToHclTerraform, true)(struct!.accessConfig),
       isBlock: true,
       type: "set",
       storageClassType: "AmazonManagedKafkaEventSourceConfigSchemaRegistryConfigAccessConfigPropertyList",
     },
     schema_validation_config: {
-      value: cdktn.listMapperHcl(awsLambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigSchemaRegistryConfigSchemaValidationConfigPropertyToHclTerraform, true)(struct!.schemaValidationConfig),
+      value: cdktn.listMapperHcl(tfEventSourceMappingAmazonManagedKafkaEventSourceConfigSchemaRegistryConfigSchemaValidationConfigPropertyToHclTerraform, true)(struct!.schemaValidationConfig),
       isBlock: true,
       type: "set",
       storageClassType: "AmazonManagedKafkaEventSourceConfigSchemaRegistryConfigSchemaValidationConfigPropertyList",
@@ -1156,19 +1156,19 @@ export function awsLambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigSc
 }
 
 
-export function awsLambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigPropertyToTerraform(struct?: AwsLambdaEventSourceMapping.AmazonManagedKafkaEventSourceConfigPropertyOutputReference | AwsLambdaEventSourceMapping.AmazonManagedKafkaEventSourceConfigProperty): any {
+export function tfEventSourceMappingAmazonManagedKafkaEventSourceConfigPropertyToTerraform(struct?: TfEventSourceMapping.AmazonManagedKafkaEventSourceConfigPropertyOutputReference | TfEventSourceMapping.AmazonManagedKafkaEventSourceConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     consumer_group_id: cdktn.stringToTerraform(struct!.consumerGroupId),
-    schema_registry_config: awsLambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigSchemaRegistryConfigPropertyToTerraform(struct!.schemaRegistryConfig),
+    schema_registry_config: tfEventSourceMappingAmazonManagedKafkaEventSourceConfigSchemaRegistryConfigPropertyToTerraform(struct!.schemaRegistryConfig),
   }
 }
 
 
-export function awsLambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigPropertyToHclTerraform(struct?: AwsLambdaEventSourceMapping.AmazonManagedKafkaEventSourceConfigPropertyOutputReference | AwsLambdaEventSourceMapping.AmazonManagedKafkaEventSourceConfigProperty): any {
+export function tfEventSourceMappingAmazonManagedKafkaEventSourceConfigPropertyToHclTerraform(struct?: TfEventSourceMapping.AmazonManagedKafkaEventSourceConfigPropertyOutputReference | TfEventSourceMapping.AmazonManagedKafkaEventSourceConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1181,7 +1181,7 @@ export function awsLambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigPr
       storageClassType: "string",
     },
     schema_registry_config: {
-      value: awsLambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigSchemaRegistryConfigPropertyToHclTerraform(struct!.schemaRegistryConfig),
+      value: tfEventSourceMappingAmazonManagedKafkaEventSourceConfigSchemaRegistryConfigPropertyToHclTerraform(struct!.schemaRegistryConfig),
       isBlock: true,
       type: "list",
       storageClassType: "AmazonManagedKafkaEventSourceConfigSchemaRegistryConfigPropertyList",
@@ -1193,7 +1193,7 @@ export function awsLambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigPr
 }
 
 
-export function awsLambdaEventSourceMappingOnFailurePropertyToTerraform(struct?: AwsLambdaEventSourceMapping.OnFailurePropertyOutputReference | AwsLambdaEventSourceMapping.OnFailureProperty): any {
+export function tfEventSourceMappingOnFailurePropertyToTerraform(struct?: TfEventSourceMapping.OnFailurePropertyOutputReference | TfEventSourceMapping.OnFailureProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1204,7 +1204,7 @@ export function awsLambdaEventSourceMappingOnFailurePropertyToTerraform(struct?:
 }
 
 
-export function awsLambdaEventSourceMappingOnFailurePropertyToHclTerraform(struct?: AwsLambdaEventSourceMapping.OnFailurePropertyOutputReference | AwsLambdaEventSourceMapping.OnFailureProperty): any {
+export function tfEventSourceMappingOnFailurePropertyToHclTerraform(struct?: TfEventSourceMapping.OnFailurePropertyOutputReference | TfEventSourceMapping.OnFailureProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1223,25 +1223,25 @@ export function awsLambdaEventSourceMappingOnFailurePropertyToHclTerraform(struc
 }
 
 
-export function awsLambdaEventSourceMappingDestinationConfigPropertyToTerraform(struct?: AwsLambdaEventSourceMapping.DestinationConfigPropertyOutputReference | AwsLambdaEventSourceMapping.DestinationConfigProperty): any {
+export function tfEventSourceMappingDestinationConfigPropertyToTerraform(struct?: TfEventSourceMapping.DestinationConfigPropertyOutputReference | TfEventSourceMapping.DestinationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    on_failure: awsLambdaEventSourceMappingOnFailurePropertyToTerraform(struct!.onFailure),
+    on_failure: tfEventSourceMappingOnFailurePropertyToTerraform(struct!.onFailure),
   }
 }
 
 
-export function awsLambdaEventSourceMappingDestinationConfigPropertyToHclTerraform(struct?: AwsLambdaEventSourceMapping.DestinationConfigPropertyOutputReference | AwsLambdaEventSourceMapping.DestinationConfigProperty): any {
+export function tfEventSourceMappingDestinationConfigPropertyToHclTerraform(struct?: TfEventSourceMapping.DestinationConfigPropertyOutputReference | TfEventSourceMapping.DestinationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     on_failure: {
-      value: awsLambdaEventSourceMappingOnFailurePropertyToHclTerraform(struct!.onFailure),
+      value: tfEventSourceMappingOnFailurePropertyToHclTerraform(struct!.onFailure),
       isBlock: true,
       type: "list",
       storageClassType: "OnFailurePropertyList",
@@ -1253,7 +1253,7 @@ export function awsLambdaEventSourceMappingDestinationConfigPropertyToHclTerrafo
 }
 
 
-export function awsLambdaEventSourceMappingDocumentDbEventSourceConfigPropertyToTerraform(struct?: AwsLambdaEventSourceMapping.DocumentDbEventSourceConfigPropertyOutputReference | AwsLambdaEventSourceMapping.DocumentDbEventSourceConfigProperty): any {
+export function tfEventSourceMappingDocumentDbEventSourceConfigPropertyToTerraform(struct?: TfEventSourceMapping.DocumentDbEventSourceConfigPropertyOutputReference | TfEventSourceMapping.DocumentDbEventSourceConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1266,7 +1266,7 @@ export function awsLambdaEventSourceMappingDocumentDbEventSourceConfigPropertyTo
 }
 
 
-export function awsLambdaEventSourceMappingDocumentDbEventSourceConfigPropertyToHclTerraform(struct?: AwsLambdaEventSourceMapping.DocumentDbEventSourceConfigPropertyOutputReference | AwsLambdaEventSourceMapping.DocumentDbEventSourceConfigProperty): any {
+export function tfEventSourceMappingDocumentDbEventSourceConfigPropertyToHclTerraform(struct?: TfEventSourceMapping.DocumentDbEventSourceConfigPropertyOutputReference | TfEventSourceMapping.DocumentDbEventSourceConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1297,7 +1297,7 @@ export function awsLambdaEventSourceMappingDocumentDbEventSourceConfigPropertyTo
 }
 
 
-export function awsLambdaEventSourceMappingFilterPropertyToTerraform(struct?: AwsLambdaEventSourceMapping.FilterProperty | cdktn.IResolvable): any {
+export function tfEventSourceMappingFilterPropertyToTerraform(struct?: TfEventSourceMapping.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1308,7 +1308,7 @@ export function awsLambdaEventSourceMappingFilterPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsLambdaEventSourceMappingFilterPropertyToHclTerraform(struct?: AwsLambdaEventSourceMapping.FilterProperty | cdktn.IResolvable): any {
+export function tfEventSourceMappingFilterPropertyToHclTerraform(struct?: TfEventSourceMapping.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1327,25 +1327,25 @@ export function awsLambdaEventSourceMappingFilterPropertyToHclTerraform(struct?:
 }
 
 
-export function awsLambdaEventSourceMappingFilterCriteriaPropertyToTerraform(struct?: AwsLambdaEventSourceMapping.FilterCriteriaPropertyOutputReference | AwsLambdaEventSourceMapping.FilterCriteriaProperty): any {
+export function tfEventSourceMappingFilterCriteriaPropertyToTerraform(struct?: TfEventSourceMapping.FilterCriteriaPropertyOutputReference | TfEventSourceMapping.FilterCriteriaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    filter: cdktn.listMapper(awsLambdaEventSourceMappingFilterPropertyToTerraform, true)(struct!.filter),
+    filter: cdktn.listMapper(tfEventSourceMappingFilterPropertyToTerraform, true)(struct!.filter),
   }
 }
 
 
-export function awsLambdaEventSourceMappingFilterCriteriaPropertyToHclTerraform(struct?: AwsLambdaEventSourceMapping.FilterCriteriaPropertyOutputReference | AwsLambdaEventSourceMapping.FilterCriteriaProperty): any {
+export function tfEventSourceMappingFilterCriteriaPropertyToHclTerraform(struct?: TfEventSourceMapping.FilterCriteriaPropertyOutputReference | TfEventSourceMapping.FilterCriteriaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     filter: {
-      value: cdktn.listMapperHcl(awsLambdaEventSourceMappingFilterPropertyToHclTerraform, true)(struct!.filter),
+      value: cdktn.listMapperHcl(tfEventSourceMappingFilterPropertyToHclTerraform, true)(struct!.filter),
       isBlock: true,
       type: "set",
       storageClassType: "FilterPropertyList",
@@ -1357,7 +1357,7 @@ export function awsLambdaEventSourceMappingFilterCriteriaPropertyToHclTerraform(
 }
 
 
-export function awsLambdaEventSourceMappingMetricsConfigPropertyToTerraform(struct?: AwsLambdaEventSourceMapping.MetricsConfigPropertyOutputReference | AwsLambdaEventSourceMapping.MetricsConfigProperty): any {
+export function tfEventSourceMappingMetricsConfigPropertyToTerraform(struct?: TfEventSourceMapping.MetricsConfigPropertyOutputReference | TfEventSourceMapping.MetricsConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1368,7 +1368,7 @@ export function awsLambdaEventSourceMappingMetricsConfigPropertyToTerraform(stru
 }
 
 
-export function awsLambdaEventSourceMappingMetricsConfigPropertyToHclTerraform(struct?: AwsLambdaEventSourceMapping.MetricsConfigPropertyOutputReference | AwsLambdaEventSourceMapping.MetricsConfigProperty): any {
+export function tfEventSourceMappingMetricsConfigPropertyToHclTerraform(struct?: TfEventSourceMapping.MetricsConfigPropertyOutputReference | TfEventSourceMapping.MetricsConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1387,7 +1387,7 @@ export function awsLambdaEventSourceMappingMetricsConfigPropertyToHclTerraform(s
 }
 
 
-export function awsLambdaEventSourceMappingProvisionedPollerConfigPropertyToTerraform(struct?: AwsLambdaEventSourceMapping.ProvisionedPollerConfigPropertyOutputReference | AwsLambdaEventSourceMapping.ProvisionedPollerConfigProperty): any {
+export function tfEventSourceMappingProvisionedPollerConfigPropertyToTerraform(struct?: TfEventSourceMapping.ProvisionedPollerConfigPropertyOutputReference | TfEventSourceMapping.ProvisionedPollerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1400,7 +1400,7 @@ export function awsLambdaEventSourceMappingProvisionedPollerConfigPropertyToTerr
 }
 
 
-export function awsLambdaEventSourceMappingProvisionedPollerConfigPropertyToHclTerraform(struct?: AwsLambdaEventSourceMapping.ProvisionedPollerConfigPropertyOutputReference | AwsLambdaEventSourceMapping.ProvisionedPollerConfigProperty): any {
+export function tfEventSourceMappingProvisionedPollerConfigPropertyToHclTerraform(struct?: TfEventSourceMapping.ProvisionedPollerConfigPropertyOutputReference | TfEventSourceMapping.ProvisionedPollerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1431,7 +1431,7 @@ export function awsLambdaEventSourceMappingProvisionedPollerConfigPropertyToHclT
 }
 
 
-export function awsLambdaEventSourceMappingScalingConfigPropertyToTerraform(struct?: AwsLambdaEventSourceMapping.ScalingConfigPropertyOutputReference | AwsLambdaEventSourceMapping.ScalingConfigProperty): any {
+export function tfEventSourceMappingScalingConfigPropertyToTerraform(struct?: TfEventSourceMapping.ScalingConfigPropertyOutputReference | TfEventSourceMapping.ScalingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1442,7 +1442,7 @@ export function awsLambdaEventSourceMappingScalingConfigPropertyToTerraform(stru
 }
 
 
-export function awsLambdaEventSourceMappingScalingConfigPropertyToHclTerraform(struct?: AwsLambdaEventSourceMapping.ScalingConfigPropertyOutputReference | AwsLambdaEventSourceMapping.ScalingConfigProperty): any {
+export function tfEventSourceMappingScalingConfigPropertyToHclTerraform(struct?: TfEventSourceMapping.ScalingConfigPropertyOutputReference | TfEventSourceMapping.ScalingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1461,7 +1461,7 @@ export function awsLambdaEventSourceMappingScalingConfigPropertyToHclTerraform(s
 }
 
 
-export function awsLambdaEventSourceMappingSelfManagedEventSourcePropertyToTerraform(struct?: AwsLambdaEventSourceMapping.SelfManagedEventSourcePropertyOutputReference | AwsLambdaEventSourceMapping.SelfManagedEventSourceProperty): any {
+export function tfEventSourceMappingSelfManagedEventSourcePropertyToTerraform(struct?: TfEventSourceMapping.SelfManagedEventSourcePropertyOutputReference | TfEventSourceMapping.SelfManagedEventSourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1472,7 +1472,7 @@ export function awsLambdaEventSourceMappingSelfManagedEventSourcePropertyToTerra
 }
 
 
-export function awsLambdaEventSourceMappingSelfManagedEventSourcePropertyToHclTerraform(struct?: AwsLambdaEventSourceMapping.SelfManagedEventSourcePropertyOutputReference | AwsLambdaEventSourceMapping.SelfManagedEventSourceProperty): any {
+export function tfEventSourceMappingSelfManagedEventSourcePropertyToHclTerraform(struct?: TfEventSourceMapping.SelfManagedEventSourcePropertyOutputReference | TfEventSourceMapping.SelfManagedEventSourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1491,7 +1491,7 @@ export function awsLambdaEventSourceMappingSelfManagedEventSourcePropertyToHclTe
 }
 
 
-export function awsLambdaEventSourceMappingSelfManagedKafkaEventSourceConfigSchemaRegistryConfigAccessConfigPropertyToTerraform(struct?: AwsLambdaEventSourceMapping.SelfManagedKafkaEventSourceConfigSchemaRegistryConfigAccessConfigProperty | cdktn.IResolvable): any {
+export function tfEventSourceMappingSelfManagedKafkaEventSourceConfigSchemaRegistryConfigAccessConfigPropertyToTerraform(struct?: TfEventSourceMapping.SelfManagedKafkaEventSourceConfigSchemaRegistryConfigAccessConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1503,7 +1503,7 @@ export function awsLambdaEventSourceMappingSelfManagedKafkaEventSourceConfigSche
 }
 
 
-export function awsLambdaEventSourceMappingSelfManagedKafkaEventSourceConfigSchemaRegistryConfigAccessConfigPropertyToHclTerraform(struct?: AwsLambdaEventSourceMapping.SelfManagedKafkaEventSourceConfigSchemaRegistryConfigAccessConfigProperty | cdktn.IResolvable): any {
+export function tfEventSourceMappingSelfManagedKafkaEventSourceConfigSchemaRegistryConfigAccessConfigPropertyToHclTerraform(struct?: TfEventSourceMapping.SelfManagedKafkaEventSourceConfigSchemaRegistryConfigAccessConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1528,7 +1528,7 @@ export function awsLambdaEventSourceMappingSelfManagedKafkaEventSourceConfigSche
 }
 
 
-export function awsLambdaEventSourceMappingSelfManagedKafkaEventSourceConfigSchemaRegistryConfigSchemaValidationConfigPropertyToTerraform(struct?: AwsLambdaEventSourceMapping.SelfManagedKafkaEventSourceConfigSchemaRegistryConfigSchemaValidationConfigProperty | cdktn.IResolvable): any {
+export function tfEventSourceMappingSelfManagedKafkaEventSourceConfigSchemaRegistryConfigSchemaValidationConfigPropertyToTerraform(struct?: TfEventSourceMapping.SelfManagedKafkaEventSourceConfigSchemaRegistryConfigSchemaValidationConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1539,7 +1539,7 @@ export function awsLambdaEventSourceMappingSelfManagedKafkaEventSourceConfigSche
 }
 
 
-export function awsLambdaEventSourceMappingSelfManagedKafkaEventSourceConfigSchemaRegistryConfigSchemaValidationConfigPropertyToHclTerraform(struct?: AwsLambdaEventSourceMapping.SelfManagedKafkaEventSourceConfigSchemaRegistryConfigSchemaValidationConfigProperty | cdktn.IResolvable): any {
+export function tfEventSourceMappingSelfManagedKafkaEventSourceConfigSchemaRegistryConfigSchemaValidationConfigPropertyToHclTerraform(struct?: TfEventSourceMapping.SelfManagedKafkaEventSourceConfigSchemaRegistryConfigSchemaValidationConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1558,7 +1558,7 @@ export function awsLambdaEventSourceMappingSelfManagedKafkaEventSourceConfigSche
 }
 
 
-export function awsLambdaEventSourceMappingSelfManagedKafkaEventSourceConfigSchemaRegistryConfigPropertyToTerraform(struct?: AwsLambdaEventSourceMapping.SelfManagedKafkaEventSourceConfigSchemaRegistryConfigPropertyOutputReference | AwsLambdaEventSourceMapping.SelfManagedKafkaEventSourceConfigSchemaRegistryConfigProperty): any {
+export function tfEventSourceMappingSelfManagedKafkaEventSourceConfigSchemaRegistryConfigPropertyToTerraform(struct?: TfEventSourceMapping.SelfManagedKafkaEventSourceConfigSchemaRegistryConfigPropertyOutputReference | TfEventSourceMapping.SelfManagedKafkaEventSourceConfigSchemaRegistryConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1566,13 +1566,13 @@ export function awsLambdaEventSourceMappingSelfManagedKafkaEventSourceConfigSche
   return {
     event_record_format: cdktn.stringToTerraform(struct!.eventRecordFormat),
     schema_registry_uri: cdktn.stringToTerraform(struct!.schemaRegistryUri),
-    access_config: cdktn.listMapper(awsLambdaEventSourceMappingSelfManagedKafkaEventSourceConfigSchemaRegistryConfigAccessConfigPropertyToTerraform, true)(struct!.accessConfig),
-    schema_validation_config: cdktn.listMapper(awsLambdaEventSourceMappingSelfManagedKafkaEventSourceConfigSchemaRegistryConfigSchemaValidationConfigPropertyToTerraform, true)(struct!.schemaValidationConfig),
+    access_config: cdktn.listMapper(tfEventSourceMappingSelfManagedKafkaEventSourceConfigSchemaRegistryConfigAccessConfigPropertyToTerraform, true)(struct!.accessConfig),
+    schema_validation_config: cdktn.listMapper(tfEventSourceMappingSelfManagedKafkaEventSourceConfigSchemaRegistryConfigSchemaValidationConfigPropertyToTerraform, true)(struct!.schemaValidationConfig),
   }
 }
 
 
-export function awsLambdaEventSourceMappingSelfManagedKafkaEventSourceConfigSchemaRegistryConfigPropertyToHclTerraform(struct?: AwsLambdaEventSourceMapping.SelfManagedKafkaEventSourceConfigSchemaRegistryConfigPropertyOutputReference | AwsLambdaEventSourceMapping.SelfManagedKafkaEventSourceConfigSchemaRegistryConfigProperty): any {
+export function tfEventSourceMappingSelfManagedKafkaEventSourceConfigSchemaRegistryConfigPropertyToHclTerraform(struct?: TfEventSourceMapping.SelfManagedKafkaEventSourceConfigSchemaRegistryConfigPropertyOutputReference | TfEventSourceMapping.SelfManagedKafkaEventSourceConfigSchemaRegistryConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1591,13 +1591,13 @@ export function awsLambdaEventSourceMappingSelfManagedKafkaEventSourceConfigSche
       storageClassType: "string",
     },
     access_config: {
-      value: cdktn.listMapperHcl(awsLambdaEventSourceMappingSelfManagedKafkaEventSourceConfigSchemaRegistryConfigAccessConfigPropertyToHclTerraform, true)(struct!.accessConfig),
+      value: cdktn.listMapperHcl(tfEventSourceMappingSelfManagedKafkaEventSourceConfigSchemaRegistryConfigAccessConfigPropertyToHclTerraform, true)(struct!.accessConfig),
       isBlock: true,
       type: "set",
       storageClassType: "SelfManagedKafkaEventSourceConfigSchemaRegistryConfigAccessConfigPropertyList",
     },
     schema_validation_config: {
-      value: cdktn.listMapperHcl(awsLambdaEventSourceMappingSelfManagedKafkaEventSourceConfigSchemaRegistryConfigSchemaValidationConfigPropertyToHclTerraform, true)(struct!.schemaValidationConfig),
+      value: cdktn.listMapperHcl(tfEventSourceMappingSelfManagedKafkaEventSourceConfigSchemaRegistryConfigSchemaValidationConfigPropertyToHclTerraform, true)(struct!.schemaValidationConfig),
       isBlock: true,
       type: "set",
       storageClassType: "SelfManagedKafkaEventSourceConfigSchemaRegistryConfigSchemaValidationConfigPropertyList",
@@ -1609,19 +1609,19 @@ export function awsLambdaEventSourceMappingSelfManagedKafkaEventSourceConfigSche
 }
 
 
-export function awsLambdaEventSourceMappingSelfManagedKafkaEventSourceConfigPropertyToTerraform(struct?: AwsLambdaEventSourceMapping.SelfManagedKafkaEventSourceConfigPropertyOutputReference | AwsLambdaEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty): any {
+export function tfEventSourceMappingSelfManagedKafkaEventSourceConfigPropertyToTerraform(struct?: TfEventSourceMapping.SelfManagedKafkaEventSourceConfigPropertyOutputReference | TfEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     consumer_group_id: cdktn.stringToTerraform(struct!.consumerGroupId),
-    schema_registry_config: awsLambdaEventSourceMappingSelfManagedKafkaEventSourceConfigSchemaRegistryConfigPropertyToTerraform(struct!.schemaRegistryConfig),
+    schema_registry_config: tfEventSourceMappingSelfManagedKafkaEventSourceConfigSchemaRegistryConfigPropertyToTerraform(struct!.schemaRegistryConfig),
   }
 }
 
 
-export function awsLambdaEventSourceMappingSelfManagedKafkaEventSourceConfigPropertyToHclTerraform(struct?: AwsLambdaEventSourceMapping.SelfManagedKafkaEventSourceConfigPropertyOutputReference | AwsLambdaEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty): any {
+export function tfEventSourceMappingSelfManagedKafkaEventSourceConfigPropertyToHclTerraform(struct?: TfEventSourceMapping.SelfManagedKafkaEventSourceConfigPropertyOutputReference | TfEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1634,7 +1634,7 @@ export function awsLambdaEventSourceMappingSelfManagedKafkaEventSourceConfigProp
       storageClassType: "string",
     },
     schema_registry_config: {
-      value: awsLambdaEventSourceMappingSelfManagedKafkaEventSourceConfigSchemaRegistryConfigPropertyToHclTerraform(struct!.schemaRegistryConfig),
+      value: tfEventSourceMappingSelfManagedKafkaEventSourceConfigSchemaRegistryConfigPropertyToHclTerraform(struct!.schemaRegistryConfig),
       isBlock: true,
       type: "list",
       storageClassType: "SelfManagedKafkaEventSourceConfigSchemaRegistryConfigPropertyList",
@@ -1646,7 +1646,7 @@ export function awsLambdaEventSourceMappingSelfManagedKafkaEventSourceConfigProp
 }
 
 
-export function awsLambdaEventSourceMappingSourceAccessConfigurationPropertyToTerraform(struct?: AwsLambdaEventSourceMapping.SourceAccessConfigurationProperty | cdktn.IResolvable): any {
+export function tfEventSourceMappingSourceAccessConfigurationPropertyToTerraform(struct?: TfEventSourceMapping.SourceAccessConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1658,7 +1658,7 @@ export function awsLambdaEventSourceMappingSourceAccessConfigurationPropertyToTe
 }
 
 
-export function awsLambdaEventSourceMappingSourceAccessConfigurationPropertyToHclTerraform(struct?: AwsLambdaEventSourceMapping.SourceAccessConfigurationProperty | cdktn.IResolvable): any {
+export function tfEventSourceMappingSourceAccessConfigurationPropertyToHclTerraform(struct?: TfEventSourceMapping.SourceAccessConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1683,7 +1683,7 @@ export function awsLambdaEventSourceMappingSourceAccessConfigurationPropertyToHc
 }
 
 
-export function awsLambdaEventSourceMappingTimeoutsPropertyToTerraform(struct?: AwsLambdaEventSourceMapping.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfEventSourceMappingTimeoutsPropertyToTerraform(struct?: TfEventSourceMapping.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1696,7 +1696,7 @@ export function awsLambdaEventSourceMappingTimeoutsPropertyToTerraform(struct?: 
 }
 
 
-export function awsLambdaEventSourceMappingTimeoutsPropertyToHclTerraform(struct?: AwsLambdaEventSourceMapping.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfEventSourceMappingTimeoutsPropertyToHclTerraform(struct?: TfEventSourceMapping.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1727,14 +1727,14 @@ export function awsLambdaEventSourceMappingTimeoutsPropertyToHclTerraform(struct
 }
 
 
-export namespace AwsLambdaEventSourceMapping {
+export namespace TfEventSourceMapping {
 export interface AmazonManagedKafkaEventSourceConfigSchemaRegistryConfigAccessConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#type AwsLambdaEventSourceMapping#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#type TfEventSourceMapping#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#uri AwsLambdaEventSourceMapping#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#uri TfEventSourceMapping#uri}
   */
   readonly uri?: string;
 }
@@ -1842,7 +1842,7 @@ export class AmazonManagedKafkaEventSourceConfigSchemaRegistryConfigAccessConfig
 }
 export interface AmazonManagedKafkaEventSourceConfigSchemaRegistryConfigSchemaValidationConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#attribute AwsLambdaEventSourceMapping#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#attribute TfEventSourceMapping#attribute}
   */
   readonly attribute?: string;
 }
@@ -1928,23 +1928,23 @@ export class AmazonManagedKafkaEventSourceConfigSchemaRegistryConfigSchemaValida
 }
 export interface AmazonManagedKafkaEventSourceConfigSchemaRegistryConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#event_record_format AwsLambdaEventSourceMapping#event_record_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#event_record_format TfEventSourceMapping#event_record_format}
   */
   readonly eventRecordFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#schema_registry_uri AwsLambdaEventSourceMapping#schema_registry_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#schema_registry_uri TfEventSourceMapping#schema_registry_uri}
   */
   readonly schemaRegistryUri?: string;
   /**
   * access_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#access_config AwsLambdaEventSourceMapping#access_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#access_config TfEventSourceMapping#access_config}
   */
   readonly accessConfig?: AmazonManagedKafkaEventSourceConfigSchemaRegistryConfigAccessConfigProperty[] | cdktn.IResolvable;
   /**
   * schema_validation_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#schema_validation_config AwsLambdaEventSourceMapping#schema_validation_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#schema_validation_config TfEventSourceMapping#schema_validation_config}
   */
   readonly schemaValidationConfig?: AmazonManagedKafkaEventSourceConfigSchemaRegistryConfigSchemaValidationConfigProperty[] | cdktn.IResolvable;
 }
@@ -2064,13 +2064,13 @@ export class AmazonManagedKafkaEventSourceConfigSchemaRegistryConfigPropertyOutp
 }
 export interface AmazonManagedKafkaEventSourceConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#consumer_group_id AwsLambdaEventSourceMapping#consumer_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#consumer_group_id TfEventSourceMapping#consumer_group_id}
   */
   readonly consumerGroupId?: string;
   /**
   * schema_registry_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#schema_registry_config AwsLambdaEventSourceMapping#schema_registry_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#schema_registry_config TfEventSourceMapping#schema_registry_config}
   */
   readonly schemaRegistryConfig?: AmazonManagedKafkaEventSourceConfigSchemaRegistryConfigProperty;
 }
@@ -2146,7 +2146,7 @@ export class AmazonManagedKafkaEventSourceConfigPropertyOutputReference extends 
 }
 export interface OnFailureProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#destination_arn AwsLambdaEventSourceMapping#destination_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#destination_arn TfEventSourceMapping#destination_arn}
   */
   readonly destinationArn: string;
 }
@@ -2199,7 +2199,7 @@ export interface DestinationConfigProperty {
   /**
   * on_failure block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#on_failure AwsLambdaEventSourceMapping#on_failure}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#on_failure TfEventSourceMapping#on_failure}
   */
   readonly onFailure?: OnFailureProperty;
 }
@@ -2253,15 +2253,15 @@ export class DestinationConfigPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface DocumentDbEventSourceConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#collection_name AwsLambdaEventSourceMapping#collection_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#collection_name TfEventSourceMapping#collection_name}
   */
   readonly collectionName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#database_name AwsLambdaEventSourceMapping#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#database_name TfEventSourceMapping#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#full_document AwsLambdaEventSourceMapping#full_document}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#full_document TfEventSourceMapping#full_document}
   */
   readonly fullDocument?: string;
 }
@@ -2356,7 +2356,7 @@ export class DocumentDbEventSourceConfigPropertyOutputReference extends cdktn.Co
 }
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#pattern AwsLambdaEventSourceMapping#pattern}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#pattern TfEventSourceMapping#pattern}
   */
   readonly pattern?: string;
 }
@@ -2444,7 +2444,7 @@ export interface FilterCriteriaProperty {
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#filter AwsLambdaEventSourceMapping#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#filter TfEventSourceMapping#filter}
   */
   readonly filter?: FilterProperty[] | cdktn.IResolvable;
 }
@@ -2498,7 +2498,7 @@ export class FilterCriteriaPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface MetricsConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#metrics AwsLambdaEventSourceMapping#metrics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#metrics TfEventSourceMapping#metrics}
   */
   readonly metrics: string[];
 }
@@ -2549,15 +2549,15 @@ export class MetricsConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ProvisionedPollerConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#maximum_pollers AwsLambdaEventSourceMapping#maximum_pollers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#maximum_pollers TfEventSourceMapping#maximum_pollers}
   */
   readonly maximumPollers?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#minimum_pollers AwsLambdaEventSourceMapping#minimum_pollers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#minimum_pollers TfEventSourceMapping#minimum_pollers}
   */
   readonly minimumPollers?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#poller_group_name AwsLambdaEventSourceMapping#poller_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#poller_group_name TfEventSourceMapping#poller_group_name}
   */
   readonly pollerGroupName?: string;
 }
@@ -2655,7 +2655,7 @@ export class ProvisionedPollerConfigPropertyOutputReference extends cdktn.Comple
 }
 export interface ScalingConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#maximum_concurrency AwsLambdaEventSourceMapping#maximum_concurrency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#maximum_concurrency TfEventSourceMapping#maximum_concurrency}
   */
   readonly maximumConcurrency?: number;
 }
@@ -2709,7 +2709,7 @@ export class ScalingConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SelfManagedEventSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#endpoints AwsLambdaEventSourceMapping#endpoints}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#endpoints TfEventSourceMapping#endpoints}
   */
   readonly endpoints: { [key: string]: string };
 }
@@ -2760,11 +2760,11 @@ export class SelfManagedEventSourcePropertyOutputReference extends cdktn.Complex
 }
 export interface SelfManagedKafkaEventSourceConfigSchemaRegistryConfigAccessConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#type AwsLambdaEventSourceMapping#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#type TfEventSourceMapping#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#uri AwsLambdaEventSourceMapping#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#uri TfEventSourceMapping#uri}
   */
   readonly uri?: string;
 }
@@ -2872,7 +2872,7 @@ export class SelfManagedKafkaEventSourceConfigSchemaRegistryConfigAccessConfigPr
 }
 export interface SelfManagedKafkaEventSourceConfigSchemaRegistryConfigSchemaValidationConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#attribute AwsLambdaEventSourceMapping#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#attribute TfEventSourceMapping#attribute}
   */
   readonly attribute?: string;
 }
@@ -2958,23 +2958,23 @@ export class SelfManagedKafkaEventSourceConfigSchemaRegistryConfigSchemaValidati
 }
 export interface SelfManagedKafkaEventSourceConfigSchemaRegistryConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#event_record_format AwsLambdaEventSourceMapping#event_record_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#event_record_format TfEventSourceMapping#event_record_format}
   */
   readonly eventRecordFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#schema_registry_uri AwsLambdaEventSourceMapping#schema_registry_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#schema_registry_uri TfEventSourceMapping#schema_registry_uri}
   */
   readonly schemaRegistryUri?: string;
   /**
   * access_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#access_config AwsLambdaEventSourceMapping#access_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#access_config TfEventSourceMapping#access_config}
   */
   readonly accessConfig?: SelfManagedKafkaEventSourceConfigSchemaRegistryConfigAccessConfigProperty[] | cdktn.IResolvable;
   /**
   * schema_validation_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#schema_validation_config AwsLambdaEventSourceMapping#schema_validation_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#schema_validation_config TfEventSourceMapping#schema_validation_config}
   */
   readonly schemaValidationConfig?: SelfManagedKafkaEventSourceConfigSchemaRegistryConfigSchemaValidationConfigProperty[] | cdktn.IResolvable;
 }
@@ -3094,13 +3094,13 @@ export class SelfManagedKafkaEventSourceConfigSchemaRegistryConfigPropertyOutput
 }
 export interface SelfManagedKafkaEventSourceConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#consumer_group_id AwsLambdaEventSourceMapping#consumer_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#consumer_group_id TfEventSourceMapping#consumer_group_id}
   */
   readonly consumerGroupId?: string;
   /**
   * schema_registry_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#schema_registry_config AwsLambdaEventSourceMapping#schema_registry_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#schema_registry_config TfEventSourceMapping#schema_registry_config}
   */
   readonly schemaRegistryConfig?: SelfManagedKafkaEventSourceConfigSchemaRegistryConfigProperty;
 }
@@ -3176,11 +3176,11 @@ export class SelfManagedKafkaEventSourceConfigPropertyOutputReference extends cd
 }
 export interface SourceAccessConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#type AwsLambdaEventSourceMapping#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#type TfEventSourceMapping#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#uri AwsLambdaEventSourceMapping#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#uri TfEventSourceMapping#uri}
   */
   readonly uri: string;
 }
@@ -3282,15 +3282,15 @@ export class SourceAccessConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#create AwsLambdaEventSourceMapping#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#create TfEventSourceMapping#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#delete AwsLambdaEventSourceMapping#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#delete TfEventSourceMapping#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#update AwsLambdaEventSourceMapping#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_event_source_mapping#update TfEventSourceMapping#update}
   */
   readonly update?: string;
 }

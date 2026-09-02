@@ -5,40 +5,40 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCognitoIdentityPoolRolesAttachmentConfig extends cdktn.TerraformMetaArguments {
+export interface TfPoolRolesAttachmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_roles_attachment#id AwsCognitoIdentityPoolRolesAttachment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_roles_attachment#id TfPoolRolesAttachment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_roles_attachment#identity_pool_id AwsCognitoIdentityPoolRolesAttachment#identity_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_roles_attachment#identity_pool_id TfPoolRolesAttachment#identity_pool_id}
   */
   readonly identityPoolId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_roles_attachment#region AwsCognitoIdentityPoolRolesAttachment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_roles_attachment#region TfPoolRolesAttachment#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_roles_attachment#roles AwsCognitoIdentityPoolRolesAttachment#roles}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_roles_attachment#roles TfPoolRolesAttachment#roles}
   */
   readonly roles: { [key: string]: string };
   /**
   * role_mapping block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_roles_attachment#role_mapping AwsCognitoIdentityPoolRolesAttachment#role_mapping}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_roles_attachment#role_mapping TfPoolRolesAttachment#role_mapping}
   */
-  readonly roleMapping?: AwsCognitoIdentityPoolRolesAttachment.RoleMappingProperty[] | cdktn.IResolvable;
+  readonly roleMapping?: TfPoolRolesAttachment.RoleMappingProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_roles_attachment aws_cognito_identity_pool_roles_attachment}
 */
-export class AwsCognitoIdentityPoolRolesAttachment extends cdktn.TerraformResource {
+export class TfPoolRolesAttachment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class AwsCognitoIdentityPoolRolesAttachment extends cdktn.TerraformResour
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCognitoIdentityPoolRolesAttachment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfPoolRolesAttachment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCognitoIdentityPoolRolesAttachment to import
-  * @param importFromId The id of the existing AwsCognitoIdentityPoolRolesAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_roles_attachment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCognitoIdentityPoolRolesAttachment to import is found
+  * @param importToId The construct id used in the generated config for the TfPoolRolesAttachment to import
+  * @param importFromId The id of the existing TfPoolRolesAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_roles_attachment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfPoolRolesAttachment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cognito_identity_pool_roles_attachment", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class AwsCognitoIdentityPoolRolesAttachment extends cdktn.TerraformResour
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCognitoIdentityPoolRolesAttachmentConfig
+  * @param options TfPoolRolesAttachmentConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCognitoIdentityPoolRolesAttachmentConfig) {
+  public constructor(scope: Construct, id: string, config: TfPoolRolesAttachmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cognito_identity_pool_roles_attachment',
       terraformGeneratorMetadata: {
@@ -156,11 +156,11 @@ export class AwsCognitoIdentityPoolRolesAttachment extends cdktn.TerraformResour
   }
 
   // role_mapping - computed: false, optional: true, required: false
-  private _roleMapping = new AwsCognitoIdentityPoolRolesAttachment.RoleMappingPropertyList(this, "role_mapping", true);
+  private _roleMapping = new TfPoolRolesAttachment.RoleMappingPropertyList(this, "role_mapping", true);
   public get roleMapping() {
     return this._roleMapping;
   }
-  public putRoleMapping(value: AwsCognitoIdentityPoolRolesAttachment.RoleMappingProperty[] | cdktn.IResolvable) {
+  public putRoleMapping(value: TfPoolRolesAttachment.RoleMappingProperty[] | cdktn.IResolvable) {
     this._roleMapping.internalValue = value;
   }
   public resetRoleMapping() {
@@ -181,7 +181,7 @@ export class AwsCognitoIdentityPoolRolesAttachment extends cdktn.TerraformResour
       identity_pool_id: cdktn.stringToTerraform(this._identityPoolId),
       region: cdktn.stringToTerraform(this._region),
       roles: cdktn.hashMapper(cdktn.stringToTerraform)(this._roles),
-      role_mapping: cdktn.listMapper(awsCognitoIdentityPoolRolesAttachmentRoleMappingPropertyToTerraform, true)(this._roleMapping.internalValue),
+      role_mapping: cdktn.listMapper(tfPoolRolesAttachmentRoleMappingPropertyToTerraform, true)(this._roleMapping.internalValue),
     };
   }
 
@@ -212,10 +212,10 @@ export class AwsCognitoIdentityPoolRolesAttachment extends cdktn.TerraformResour
         storageClassType: "stringMap",
       },
       role_mapping: {
-        value: cdktn.listMapperHcl(awsCognitoIdentityPoolRolesAttachmentRoleMappingPropertyToHclTerraform, true)(this._roleMapping.internalValue),
+        value: cdktn.listMapperHcl(tfPoolRolesAttachmentRoleMappingPropertyToHclTerraform, true)(this._roleMapping.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsCognitoIdentityPoolRolesAttachment.RoleMappingPropertyList",
+        storageClassType: "TfPoolRolesAttachment.RoleMappingPropertyList",
       },
     };
 
@@ -224,7 +224,7 @@ export class AwsCognitoIdentityPoolRolesAttachment extends cdktn.TerraformResour
   }
 }
 
-export function awsCognitoIdentityPoolRolesAttachmentMappingRulePropertyToTerraform(struct?: AwsCognitoIdentityPoolRolesAttachment.MappingRuleProperty | cdktn.IResolvable): any {
+export function tfPoolRolesAttachmentMappingRulePropertyToTerraform(struct?: TfPoolRolesAttachment.MappingRuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -238,7 +238,7 @@ export function awsCognitoIdentityPoolRolesAttachmentMappingRulePropertyToTerraf
 }
 
 
-export function awsCognitoIdentityPoolRolesAttachmentMappingRulePropertyToHclTerraform(struct?: AwsCognitoIdentityPoolRolesAttachment.MappingRuleProperty | cdktn.IResolvable): any {
+export function tfPoolRolesAttachmentMappingRulePropertyToHclTerraform(struct?: TfPoolRolesAttachment.MappingRuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -275,7 +275,7 @@ export function awsCognitoIdentityPoolRolesAttachmentMappingRulePropertyToHclTer
 }
 
 
-export function awsCognitoIdentityPoolRolesAttachmentRoleMappingPropertyToTerraform(struct?: AwsCognitoIdentityPoolRolesAttachment.RoleMappingProperty | cdktn.IResolvable): any {
+export function tfPoolRolesAttachmentRoleMappingPropertyToTerraform(struct?: TfPoolRolesAttachment.RoleMappingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -284,12 +284,12 @@ export function awsCognitoIdentityPoolRolesAttachmentRoleMappingPropertyToTerraf
     ambiguous_role_resolution: cdktn.stringToTerraform(struct!.ambiguousRoleResolution),
     identity_provider: cdktn.stringToTerraform(struct!.identityProvider),
     type: cdktn.stringToTerraform(struct!.type),
-    mapping_rule: cdktn.listMapper(awsCognitoIdentityPoolRolesAttachmentMappingRulePropertyToTerraform, true)(struct!.mappingRule),
+    mapping_rule: cdktn.listMapper(tfPoolRolesAttachmentMappingRulePropertyToTerraform, true)(struct!.mappingRule),
   }
 }
 
 
-export function awsCognitoIdentityPoolRolesAttachmentRoleMappingPropertyToHclTerraform(struct?: AwsCognitoIdentityPoolRolesAttachment.RoleMappingProperty | cdktn.IResolvable): any {
+export function tfPoolRolesAttachmentRoleMappingPropertyToHclTerraform(struct?: TfPoolRolesAttachment.RoleMappingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -314,7 +314,7 @@ export function awsCognitoIdentityPoolRolesAttachmentRoleMappingPropertyToHclTer
       storageClassType: "string",
     },
     mapping_rule: {
-      value: cdktn.listMapperHcl(awsCognitoIdentityPoolRolesAttachmentMappingRulePropertyToHclTerraform, true)(struct!.mappingRule),
+      value: cdktn.listMapperHcl(tfPoolRolesAttachmentMappingRulePropertyToHclTerraform, true)(struct!.mappingRule),
       isBlock: true,
       type: "list",
       storageClassType: "MappingRulePropertyList",
@@ -326,22 +326,22 @@ export function awsCognitoIdentityPoolRolesAttachmentRoleMappingPropertyToHclTer
 }
 
 
-export namespace AwsCognitoIdentityPoolRolesAttachment {
+export namespace TfPoolRolesAttachment {
 export interface MappingRuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_roles_attachment#claim AwsCognitoIdentityPoolRolesAttachment#claim}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_roles_attachment#claim TfPoolRolesAttachment#claim}
   */
   readonly claim: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_roles_attachment#match_type AwsCognitoIdentityPoolRolesAttachment#match_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_roles_attachment#match_type TfPoolRolesAttachment#match_type}
   */
   readonly matchType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_roles_attachment#role_arn AwsCognitoIdentityPoolRolesAttachment#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_roles_attachment#role_arn TfPoolRolesAttachment#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_roles_attachment#value AwsCognitoIdentityPoolRolesAttachment#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_roles_attachment#value TfPoolRolesAttachment#value}
   */
   readonly value: string;
 }
@@ -481,21 +481,21 @@ export class MappingRulePropertyList extends cdktn.ComplexList {
 }
 export interface RoleMappingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_roles_attachment#ambiguous_role_resolution AwsCognitoIdentityPoolRolesAttachment#ambiguous_role_resolution}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_roles_attachment#ambiguous_role_resolution TfPoolRolesAttachment#ambiguous_role_resolution}
   */
   readonly ambiguousRoleResolution?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_roles_attachment#identity_provider AwsCognitoIdentityPoolRolesAttachment#identity_provider}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_roles_attachment#identity_provider TfPoolRolesAttachment#identity_provider}
   */
   readonly identityProvider: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_roles_attachment#type AwsCognitoIdentityPoolRolesAttachment#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_roles_attachment#type TfPoolRolesAttachment#type}
   */
   readonly type: string;
   /**
   * mapping_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_roles_attachment#mapping_rule AwsCognitoIdentityPoolRolesAttachment#mapping_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_identity_pool_roles_attachment#mapping_rule TfPoolRolesAttachment#mapping_rule}
   */
   readonly mappingRule?: MappingRuleProperty[] | cdktn.IResolvable;
 }

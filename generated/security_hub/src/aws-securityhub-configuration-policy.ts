@@ -5,40 +5,40 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSecurityhubConfigurationPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface TfConfigurationPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#description AwsSecurityhubConfigurationPolicy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#description TfConfigurationPolicy#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#id AwsSecurityhubConfigurationPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#id TfConfigurationPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#name AwsSecurityhubConfigurationPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#name TfConfigurationPolicy#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#region AwsSecurityhubConfigurationPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#region TfConfigurationPolicy#region}
   */
   readonly region?: string;
   /**
   * configuration_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#configuration_policy AwsSecurityhubConfigurationPolicy#configuration_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#configuration_policy TfConfigurationPolicy#configuration_policy}
   */
-  readonly configurationPolicy: AwsSecurityhubConfigurationPolicy.ConfigurationPolicyProperty;
+  readonly configurationPolicy: TfConfigurationPolicy.ConfigurationPolicyProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy aws_securityhub_configuration_policy}
 */
-export class AwsSecurityhubConfigurationPolicy extends cdktn.TerraformResource {
+export class TfConfigurationPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class AwsSecurityhubConfigurationPolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSecurityhubConfigurationPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfConfigurationPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSecurityhubConfigurationPolicy to import
-  * @param importFromId The id of the existing AwsSecurityhubConfigurationPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSecurityhubConfigurationPolicy to import is found
+  * @param importToId The construct id used in the generated config for the TfConfigurationPolicy to import
+  * @param importFromId The id of the existing TfConfigurationPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfConfigurationPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_securityhub_configuration_policy", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class AwsSecurityhubConfigurationPolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSecurityhubConfigurationPolicyConfig
+  * @param options TfConfigurationPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSecurityhubConfigurationPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: TfConfigurationPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_securityhub_configuration_policy',
       terraformGeneratorMetadata: {
@@ -164,11 +164,11 @@ export class AwsSecurityhubConfigurationPolicy extends cdktn.TerraformResource {
   }
 
   // configuration_policy - computed: false, optional: false, required: true
-  private _configurationPolicy = new AwsSecurityhubConfigurationPolicy.ConfigurationPolicyPropertyOutputReference(this, "configuration_policy");
+  private _configurationPolicy = new TfConfigurationPolicy.ConfigurationPolicyPropertyOutputReference(this, "configuration_policy");
   public get configurationPolicy() {
     return this._configurationPolicy;
   }
-  public putConfigurationPolicy(value: AwsSecurityhubConfigurationPolicy.ConfigurationPolicyProperty) {
+  public putConfigurationPolicy(value: TfConfigurationPolicy.ConfigurationPolicyProperty) {
     this._configurationPolicy.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -186,7 +186,7 @@ export class AwsSecurityhubConfigurationPolicy extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
-      configuration_policy: awsSecurityhubConfigurationPolicyConfigurationPolicyPropertyToTerraform(this._configurationPolicy.internalValue),
+      configuration_policy: tfConfigurationPolicyConfigurationPolicyPropertyToTerraform(this._configurationPolicy.internalValue),
     };
   }
 
@@ -217,10 +217,10 @@ export class AwsSecurityhubConfigurationPolicy extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       configuration_policy: {
-        value: awsSecurityhubConfigurationPolicyConfigurationPolicyPropertyToHclTerraform(this._configurationPolicy.internalValue),
+        value: tfConfigurationPolicyConfigurationPolicyPropertyToHclTerraform(this._configurationPolicy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSecurityhubConfigurationPolicy.ConfigurationPolicyPropertyList",
+        storageClassType: "TfConfigurationPolicy.ConfigurationPolicyPropertyList",
       },
     };
 
@@ -229,7 +229,7 @@ export class AwsSecurityhubConfigurationPolicy extends cdktn.TerraformResource {
   }
 }
 
-export function awsSecurityhubConfigurationPolicyBoolPropertyToTerraform(struct?: AwsSecurityhubConfigurationPolicy.BoolPropertyOutputReference | AwsSecurityhubConfigurationPolicy.BoolProperty): any {
+export function tfConfigurationPolicyBoolPropertyToTerraform(struct?: TfConfigurationPolicy.BoolPropertyOutputReference | TfConfigurationPolicy.BoolProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -240,7 +240,7 @@ export function awsSecurityhubConfigurationPolicyBoolPropertyToTerraform(struct?
 }
 
 
-export function awsSecurityhubConfigurationPolicyBoolPropertyToHclTerraform(struct?: AwsSecurityhubConfigurationPolicy.BoolPropertyOutputReference | AwsSecurityhubConfigurationPolicy.BoolProperty): any {
+export function tfConfigurationPolicyBoolPropertyToHclTerraform(struct?: TfConfigurationPolicy.BoolPropertyOutputReference | TfConfigurationPolicy.BoolProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -259,7 +259,7 @@ export function awsSecurityhubConfigurationPolicyBoolPropertyToHclTerraform(stru
 }
 
 
-export function awsSecurityhubConfigurationPolicyDoublePropertyToTerraform(struct?: AwsSecurityhubConfigurationPolicy.DoublePropertyOutputReference | AwsSecurityhubConfigurationPolicy.DoubleProperty): any {
+export function tfConfigurationPolicyDoublePropertyToTerraform(struct?: TfConfigurationPolicy.DoublePropertyOutputReference | TfConfigurationPolicy.DoubleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -270,7 +270,7 @@ export function awsSecurityhubConfigurationPolicyDoublePropertyToTerraform(struc
 }
 
 
-export function awsSecurityhubConfigurationPolicyDoublePropertyToHclTerraform(struct?: AwsSecurityhubConfigurationPolicy.DoublePropertyOutputReference | AwsSecurityhubConfigurationPolicy.DoubleProperty): any {
+export function tfConfigurationPolicyDoublePropertyToHclTerraform(struct?: TfConfigurationPolicy.DoublePropertyOutputReference | TfConfigurationPolicy.DoubleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -289,7 +289,7 @@ export function awsSecurityhubConfigurationPolicyDoublePropertyToHclTerraform(st
 }
 
 
-export function awsSecurityhubConfigurationPolicyEnumPropertyToTerraform(struct?: AwsSecurityhubConfigurationPolicy.EnumPropertyOutputReference | AwsSecurityhubConfigurationPolicy.EnumProperty): any {
+export function tfConfigurationPolicyEnumPropertyToTerraform(struct?: TfConfigurationPolicy.EnumPropertyOutputReference | TfConfigurationPolicy.EnumProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -300,7 +300,7 @@ export function awsSecurityhubConfigurationPolicyEnumPropertyToTerraform(struct?
 }
 
 
-export function awsSecurityhubConfigurationPolicyEnumPropertyToHclTerraform(struct?: AwsSecurityhubConfigurationPolicy.EnumPropertyOutputReference | AwsSecurityhubConfigurationPolicy.EnumProperty): any {
+export function tfConfigurationPolicyEnumPropertyToHclTerraform(struct?: TfConfigurationPolicy.EnumPropertyOutputReference | TfConfigurationPolicy.EnumProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -319,7 +319,7 @@ export function awsSecurityhubConfigurationPolicyEnumPropertyToHclTerraform(stru
 }
 
 
-export function awsSecurityhubConfigurationPolicyEnumListPropertyToTerraform(struct?: AwsSecurityhubConfigurationPolicy.EnumListPropertyOutputReference | AwsSecurityhubConfigurationPolicy.EnumListProperty): any {
+export function tfConfigurationPolicyEnumListPropertyToTerraform(struct?: TfConfigurationPolicy.EnumListPropertyOutputReference | TfConfigurationPolicy.EnumListProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -330,7 +330,7 @@ export function awsSecurityhubConfigurationPolicyEnumListPropertyToTerraform(str
 }
 
 
-export function awsSecurityhubConfigurationPolicyEnumListPropertyToHclTerraform(struct?: AwsSecurityhubConfigurationPolicy.EnumListPropertyOutputReference | AwsSecurityhubConfigurationPolicy.EnumListProperty): any {
+export function tfConfigurationPolicyEnumListPropertyToHclTerraform(struct?: TfConfigurationPolicy.EnumListPropertyOutputReference | TfConfigurationPolicy.EnumListProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -349,7 +349,7 @@ export function awsSecurityhubConfigurationPolicyEnumListPropertyToHclTerraform(
 }
 
 
-export function awsSecurityhubConfigurationPolicyIntPropertyToTerraform(struct?: AwsSecurityhubConfigurationPolicy.IntPropertyOutputReference | AwsSecurityhubConfigurationPolicy.IntProperty): any {
+export function tfConfigurationPolicyIntPropertyToTerraform(struct?: TfConfigurationPolicy.IntPropertyOutputReference | TfConfigurationPolicy.IntProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -360,7 +360,7 @@ export function awsSecurityhubConfigurationPolicyIntPropertyToTerraform(struct?:
 }
 
 
-export function awsSecurityhubConfigurationPolicyIntPropertyToHclTerraform(struct?: AwsSecurityhubConfigurationPolicy.IntPropertyOutputReference | AwsSecurityhubConfigurationPolicy.IntProperty): any {
+export function tfConfigurationPolicyIntPropertyToHclTerraform(struct?: TfConfigurationPolicy.IntPropertyOutputReference | TfConfigurationPolicy.IntProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -379,7 +379,7 @@ export function awsSecurityhubConfigurationPolicyIntPropertyToHclTerraform(struc
 }
 
 
-export function awsSecurityhubConfigurationPolicyIntListPropertyToTerraform(struct?: AwsSecurityhubConfigurationPolicy.IntListPropertyOutputReference | AwsSecurityhubConfigurationPolicy.IntListProperty): any {
+export function tfConfigurationPolicyIntListPropertyToTerraform(struct?: TfConfigurationPolicy.IntListPropertyOutputReference | TfConfigurationPolicy.IntListProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -390,7 +390,7 @@ export function awsSecurityhubConfigurationPolicyIntListPropertyToTerraform(stru
 }
 
 
-export function awsSecurityhubConfigurationPolicyIntListPropertyToHclTerraform(struct?: AwsSecurityhubConfigurationPolicy.IntListPropertyOutputReference | AwsSecurityhubConfigurationPolicy.IntListProperty): any {
+export function tfConfigurationPolicyIntListPropertyToHclTerraform(struct?: TfConfigurationPolicy.IntListPropertyOutputReference | TfConfigurationPolicy.IntListProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -409,7 +409,7 @@ export function awsSecurityhubConfigurationPolicyIntListPropertyToHclTerraform(s
 }
 
 
-export function awsSecurityhubConfigurationPolicyStringPropertyToTerraform(struct?: AwsSecurityhubConfigurationPolicy.StringPropertyOutputReference | AwsSecurityhubConfigurationPolicy.StringProperty): any {
+export function tfConfigurationPolicyStringPropertyToTerraform(struct?: TfConfigurationPolicy.StringPropertyOutputReference | TfConfigurationPolicy.StringProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -420,7 +420,7 @@ export function awsSecurityhubConfigurationPolicyStringPropertyToTerraform(struc
 }
 
 
-export function awsSecurityhubConfigurationPolicyStringPropertyToHclTerraform(struct?: AwsSecurityhubConfigurationPolicy.StringPropertyOutputReference | AwsSecurityhubConfigurationPolicy.StringProperty): any {
+export function tfConfigurationPolicyStringPropertyToHclTerraform(struct?: TfConfigurationPolicy.StringPropertyOutputReference | TfConfigurationPolicy.StringProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -439,7 +439,7 @@ export function awsSecurityhubConfigurationPolicyStringPropertyToHclTerraform(st
 }
 
 
-export function awsSecurityhubConfigurationPolicyStringListPropertyToTerraform(struct?: AwsSecurityhubConfigurationPolicy.StringListPropertyOutputReference | AwsSecurityhubConfigurationPolicy.StringListProperty): any {
+export function tfConfigurationPolicyStringListPropertyToTerraform(struct?: TfConfigurationPolicy.StringListPropertyOutputReference | TfConfigurationPolicy.StringListProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -450,7 +450,7 @@ export function awsSecurityhubConfigurationPolicyStringListPropertyToTerraform(s
 }
 
 
-export function awsSecurityhubConfigurationPolicyStringListPropertyToHclTerraform(struct?: AwsSecurityhubConfigurationPolicy.StringListPropertyOutputReference | AwsSecurityhubConfigurationPolicy.StringListProperty): any {
+export function tfConfigurationPolicyStringListPropertyToHclTerraform(struct?: TfConfigurationPolicy.StringListPropertyOutputReference | TfConfigurationPolicy.StringListProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -469,7 +469,7 @@ export function awsSecurityhubConfigurationPolicyStringListPropertyToHclTerrafor
 }
 
 
-export function awsSecurityhubConfigurationPolicyParameterPropertyToTerraform(struct?: AwsSecurityhubConfigurationPolicy.ParameterProperty | cdktn.IResolvable): any {
+export function tfConfigurationPolicyParameterPropertyToTerraform(struct?: TfConfigurationPolicy.ParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -477,19 +477,19 @@ export function awsSecurityhubConfigurationPolicyParameterPropertyToTerraform(st
   return {
     name: cdktn.stringToTerraform(struct!.name),
     value_type: cdktn.stringToTerraform(struct!.valueType),
-    bool: awsSecurityhubConfigurationPolicyBoolPropertyToTerraform(struct!.bool),
-    double: awsSecurityhubConfigurationPolicyDoublePropertyToTerraform(struct!.double),
-    enum: awsSecurityhubConfigurationPolicyEnumPropertyToTerraform(struct!.enum),
-    enum_list: awsSecurityhubConfigurationPolicyEnumListPropertyToTerraform(struct!.enumList),
-    int: awsSecurityhubConfigurationPolicyIntPropertyToTerraform(struct!.int),
-    int_list: awsSecurityhubConfigurationPolicyIntListPropertyToTerraform(struct!.intList),
-    string: awsSecurityhubConfigurationPolicyStringPropertyToTerraform(struct!.string),
-    string_list: awsSecurityhubConfigurationPolicyStringListPropertyToTerraform(struct!.stringList),
+    bool: tfConfigurationPolicyBoolPropertyToTerraform(struct!.bool),
+    double: tfConfigurationPolicyDoublePropertyToTerraform(struct!.double),
+    enum: tfConfigurationPolicyEnumPropertyToTerraform(struct!.enum),
+    enum_list: tfConfigurationPolicyEnumListPropertyToTerraform(struct!.enumList),
+    int: tfConfigurationPolicyIntPropertyToTerraform(struct!.int),
+    int_list: tfConfigurationPolicyIntListPropertyToTerraform(struct!.intList),
+    string: tfConfigurationPolicyStringPropertyToTerraform(struct!.string),
+    string_list: tfConfigurationPolicyStringListPropertyToTerraform(struct!.stringList),
   }
 }
 
 
-export function awsSecurityhubConfigurationPolicyParameterPropertyToHclTerraform(struct?: AwsSecurityhubConfigurationPolicy.ParameterProperty | cdktn.IResolvable): any {
+export function tfConfigurationPolicyParameterPropertyToHclTerraform(struct?: TfConfigurationPolicy.ParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -508,49 +508,49 @@ export function awsSecurityhubConfigurationPolicyParameterPropertyToHclTerraform
       storageClassType: "string",
     },
     bool: {
-      value: awsSecurityhubConfigurationPolicyBoolPropertyToHclTerraform(struct!.bool),
+      value: tfConfigurationPolicyBoolPropertyToHclTerraform(struct!.bool),
       isBlock: true,
       type: "list",
       storageClassType: "BoolPropertyList",
     },
     double: {
-      value: awsSecurityhubConfigurationPolicyDoublePropertyToHclTerraform(struct!.double),
+      value: tfConfigurationPolicyDoublePropertyToHclTerraform(struct!.double),
       isBlock: true,
       type: "list",
       storageClassType: "DoublePropertyList",
     },
     enum: {
-      value: awsSecurityhubConfigurationPolicyEnumPropertyToHclTerraform(struct!.enum),
+      value: tfConfigurationPolicyEnumPropertyToHclTerraform(struct!.enum),
       isBlock: true,
       type: "list",
       storageClassType: "EnumPropertyList",
     },
     enum_list: {
-      value: awsSecurityhubConfigurationPolicyEnumListPropertyToHclTerraform(struct!.enumList),
+      value: tfConfigurationPolicyEnumListPropertyToHclTerraform(struct!.enumList),
       isBlock: true,
       type: "list",
       storageClassType: "EnumListPropertyList",
     },
     int: {
-      value: awsSecurityhubConfigurationPolicyIntPropertyToHclTerraform(struct!.int),
+      value: tfConfigurationPolicyIntPropertyToHclTerraform(struct!.int),
       isBlock: true,
       type: "list",
       storageClassType: "IntPropertyList",
     },
     int_list: {
-      value: awsSecurityhubConfigurationPolicyIntListPropertyToHclTerraform(struct!.intList),
+      value: tfConfigurationPolicyIntListPropertyToHclTerraform(struct!.intList),
       isBlock: true,
       type: "list",
       storageClassType: "IntListPropertyList",
     },
     string: {
-      value: awsSecurityhubConfigurationPolicyStringPropertyToHclTerraform(struct!.string),
+      value: tfConfigurationPolicyStringPropertyToHclTerraform(struct!.string),
       isBlock: true,
       type: "list",
       storageClassType: "StringPropertyList",
     },
     string_list: {
-      value: awsSecurityhubConfigurationPolicyStringListPropertyToHclTerraform(struct!.stringList),
+      value: tfConfigurationPolicyStringListPropertyToHclTerraform(struct!.stringList),
       isBlock: true,
       type: "list",
       storageClassType: "StringListPropertyList",
@@ -562,19 +562,19 @@ export function awsSecurityhubConfigurationPolicyParameterPropertyToHclTerraform
 }
 
 
-export function awsSecurityhubConfigurationPolicySecurityControlCustomParameterPropertyToTerraform(struct?: AwsSecurityhubConfigurationPolicy.SecurityControlCustomParameterProperty | cdktn.IResolvable): any {
+export function tfConfigurationPolicySecurityControlCustomParameterPropertyToTerraform(struct?: TfConfigurationPolicy.SecurityControlCustomParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     security_control_id: cdktn.stringToTerraform(struct!.securityControlId),
-    parameter: cdktn.listMapper(awsSecurityhubConfigurationPolicyParameterPropertyToTerraform, true)(struct!.parameter),
+    parameter: cdktn.listMapper(tfConfigurationPolicyParameterPropertyToTerraform, true)(struct!.parameter),
   }
 }
 
 
-export function awsSecurityhubConfigurationPolicySecurityControlCustomParameterPropertyToHclTerraform(struct?: AwsSecurityhubConfigurationPolicy.SecurityControlCustomParameterProperty | cdktn.IResolvable): any {
+export function tfConfigurationPolicySecurityControlCustomParameterPropertyToHclTerraform(struct?: TfConfigurationPolicy.SecurityControlCustomParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -587,7 +587,7 @@ export function awsSecurityhubConfigurationPolicySecurityControlCustomParameterP
       storageClassType: "string",
     },
     parameter: {
-      value: cdktn.listMapperHcl(awsSecurityhubConfigurationPolicyParameterPropertyToHclTerraform, true)(struct!.parameter),
+      value: cdktn.listMapperHcl(tfConfigurationPolicyParameterPropertyToHclTerraform, true)(struct!.parameter),
       isBlock: true,
       type: "set",
       storageClassType: "ParameterPropertyList",
@@ -599,7 +599,7 @@ export function awsSecurityhubConfigurationPolicySecurityControlCustomParameterP
 }
 
 
-export function awsSecurityhubConfigurationPolicySecurityControlsConfigurationPropertyToTerraform(struct?: AwsSecurityhubConfigurationPolicy.SecurityControlsConfigurationPropertyOutputReference | AwsSecurityhubConfigurationPolicy.SecurityControlsConfigurationProperty): any {
+export function tfConfigurationPolicySecurityControlsConfigurationPropertyToTerraform(struct?: TfConfigurationPolicy.SecurityControlsConfigurationPropertyOutputReference | TfConfigurationPolicy.SecurityControlsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -607,12 +607,12 @@ export function awsSecurityhubConfigurationPolicySecurityControlsConfigurationPr
   return {
     disabled_control_identifiers: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.disabledControlIdentifiers),
     enabled_control_identifiers: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.enabledControlIdentifiers),
-    security_control_custom_parameter: cdktn.listMapper(awsSecurityhubConfigurationPolicySecurityControlCustomParameterPropertyToTerraform, true)(struct!.securityControlCustomParameter),
+    security_control_custom_parameter: cdktn.listMapper(tfConfigurationPolicySecurityControlCustomParameterPropertyToTerraform, true)(struct!.securityControlCustomParameter),
   }
 }
 
 
-export function awsSecurityhubConfigurationPolicySecurityControlsConfigurationPropertyToHclTerraform(struct?: AwsSecurityhubConfigurationPolicy.SecurityControlsConfigurationPropertyOutputReference | AwsSecurityhubConfigurationPolicy.SecurityControlsConfigurationProperty): any {
+export function tfConfigurationPolicySecurityControlsConfigurationPropertyToHclTerraform(struct?: TfConfigurationPolicy.SecurityControlsConfigurationPropertyOutputReference | TfConfigurationPolicy.SecurityControlsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -631,7 +631,7 @@ export function awsSecurityhubConfigurationPolicySecurityControlsConfigurationPr
       storageClassType: "stringList",
     },
     security_control_custom_parameter: {
-      value: cdktn.listMapperHcl(awsSecurityhubConfigurationPolicySecurityControlCustomParameterPropertyToHclTerraform, true)(struct!.securityControlCustomParameter),
+      value: cdktn.listMapperHcl(tfConfigurationPolicySecurityControlCustomParameterPropertyToHclTerraform, true)(struct!.securityControlCustomParameter),
       isBlock: true,
       type: "list",
       storageClassType: "SecurityControlCustomParameterPropertyList",
@@ -643,7 +643,7 @@ export function awsSecurityhubConfigurationPolicySecurityControlsConfigurationPr
 }
 
 
-export function awsSecurityhubConfigurationPolicyConfigurationPolicyPropertyToTerraform(struct?: AwsSecurityhubConfigurationPolicy.ConfigurationPolicyPropertyOutputReference | AwsSecurityhubConfigurationPolicy.ConfigurationPolicyProperty): any {
+export function tfConfigurationPolicyConfigurationPolicyPropertyToTerraform(struct?: TfConfigurationPolicy.ConfigurationPolicyPropertyOutputReference | TfConfigurationPolicy.ConfigurationPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -651,12 +651,12 @@ export function awsSecurityhubConfigurationPolicyConfigurationPolicyPropertyToTe
   return {
     enabled_standard_arns: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.enabledStandardArns),
     service_enabled: cdktn.booleanToTerraform(struct!.serviceEnabled),
-    security_controls_configuration: awsSecurityhubConfigurationPolicySecurityControlsConfigurationPropertyToTerraform(struct!.securityControlsConfiguration),
+    security_controls_configuration: tfConfigurationPolicySecurityControlsConfigurationPropertyToTerraform(struct!.securityControlsConfiguration),
   }
 }
 
 
-export function awsSecurityhubConfigurationPolicyConfigurationPolicyPropertyToHclTerraform(struct?: AwsSecurityhubConfigurationPolicy.ConfigurationPolicyPropertyOutputReference | AwsSecurityhubConfigurationPolicy.ConfigurationPolicyProperty): any {
+export function tfConfigurationPolicyConfigurationPolicyPropertyToHclTerraform(struct?: TfConfigurationPolicy.ConfigurationPolicyPropertyOutputReference | TfConfigurationPolicy.ConfigurationPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -675,7 +675,7 @@ export function awsSecurityhubConfigurationPolicyConfigurationPolicyPropertyToHc
       storageClassType: "boolean",
     },
     security_controls_configuration: {
-      value: awsSecurityhubConfigurationPolicySecurityControlsConfigurationPropertyToHclTerraform(struct!.securityControlsConfiguration),
+      value: tfConfigurationPolicySecurityControlsConfigurationPropertyToHclTerraform(struct!.securityControlsConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "SecurityControlsConfigurationPropertyList",
@@ -687,10 +687,10 @@ export function awsSecurityhubConfigurationPolicyConfigurationPolicyPropertyToHc
 }
 
 
-export namespace AwsSecurityhubConfigurationPolicy {
+export namespace TfConfigurationPolicy {
 export interface BoolProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#value AwsSecurityhubConfigurationPolicy#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#value TfConfigurationPolicy#value}
   */
   readonly value: boolean | cdktn.IResolvable;
 }
@@ -741,7 +741,7 @@ export class BoolPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface DoubleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#value AwsSecurityhubConfigurationPolicy#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#value TfConfigurationPolicy#value}
   */
   readonly value: number;
 }
@@ -792,7 +792,7 @@ export class DoublePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface EnumProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#value AwsSecurityhubConfigurationPolicy#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#value TfConfigurationPolicy#value}
   */
   readonly value: string;
 }
@@ -843,7 +843,7 @@ export class EnumPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface EnumListProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#value AwsSecurityhubConfigurationPolicy#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#value TfConfigurationPolicy#value}
   */
   readonly value: string[];
 }
@@ -894,7 +894,7 @@ export class EnumListPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface IntProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#value AwsSecurityhubConfigurationPolicy#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#value TfConfigurationPolicy#value}
   */
   readonly value: number;
 }
@@ -945,7 +945,7 @@ export class IntPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface IntListProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#value AwsSecurityhubConfigurationPolicy#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#value TfConfigurationPolicy#value}
   */
   readonly value: number[];
 }
@@ -996,7 +996,7 @@ export class IntListPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface StringProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#value AwsSecurityhubConfigurationPolicy#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#value TfConfigurationPolicy#value}
   */
   readonly value: string;
 }
@@ -1047,7 +1047,7 @@ export class StringPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface StringListProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#value AwsSecurityhubConfigurationPolicy#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#value TfConfigurationPolicy#value}
   */
   readonly value: string[];
 }
@@ -1098,59 +1098,59 @@ export class StringListPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ParameterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#name AwsSecurityhubConfigurationPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#name TfConfigurationPolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#value_type AwsSecurityhubConfigurationPolicy#value_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#value_type TfConfigurationPolicy#value_type}
   */
   readonly valueType: string;
   /**
   * bool block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#bool AwsSecurityhubConfigurationPolicy#bool}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#bool TfConfigurationPolicy#bool}
   */
   readonly bool?: BoolProperty;
   /**
   * double block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#double AwsSecurityhubConfigurationPolicy#double}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#double TfConfigurationPolicy#double}
   */
   readonly double?: DoubleProperty;
   /**
   * enum block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#enum AwsSecurityhubConfigurationPolicy#enum}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#enum TfConfigurationPolicy#enum}
   */
   readonly enum?: EnumProperty;
   /**
   * enum_list block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#enum_list AwsSecurityhubConfigurationPolicy#enum_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#enum_list TfConfigurationPolicy#enum_list}
   */
   readonly enumList?: EnumListProperty;
   /**
   * int block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#int AwsSecurityhubConfigurationPolicy#int}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#int TfConfigurationPolicy#int}
   */
   readonly int?: IntProperty;
   /**
   * int_list block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#int_list AwsSecurityhubConfigurationPolicy#int_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#int_list TfConfigurationPolicy#int_list}
   */
   readonly intList?: IntListProperty;
   /**
   * string block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#string AwsSecurityhubConfigurationPolicy#string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#string TfConfigurationPolicy#string}
   */
   readonly string?: StringProperty;
   /**
   * string_list block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#string_list AwsSecurityhubConfigurationPolicy#string_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#string_list TfConfigurationPolicy#string_list}
   */
   readonly stringList?: StringListProperty;
 }
@@ -1428,13 +1428,13 @@ export class ParameterPropertyList extends cdktn.ComplexList {
 }
 export interface SecurityControlCustomParameterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#security_control_id AwsSecurityhubConfigurationPolicy#security_control_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#security_control_id TfConfigurationPolicy#security_control_id}
   */
   readonly securityControlId: string;
   /**
   * parameter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#parameter AwsSecurityhubConfigurationPolicy#parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#parameter TfConfigurationPolicy#parameter}
   */
   readonly parameter: ParameterProperty[] | cdktn.IResolvable;
 }
@@ -1536,17 +1536,17 @@ export class SecurityControlCustomParameterPropertyList extends cdktn.ComplexLis
 }
 export interface SecurityControlsConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#disabled_control_identifiers AwsSecurityhubConfigurationPolicy#disabled_control_identifiers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#disabled_control_identifiers TfConfigurationPolicy#disabled_control_identifiers}
   */
   readonly disabledControlIdentifiers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#enabled_control_identifiers AwsSecurityhubConfigurationPolicy#enabled_control_identifiers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#enabled_control_identifiers TfConfigurationPolicy#enabled_control_identifiers}
   */
   readonly enabledControlIdentifiers?: string[];
   /**
   * security_control_custom_parameter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#security_control_custom_parameter AwsSecurityhubConfigurationPolicy#security_control_custom_parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#security_control_custom_parameter TfConfigurationPolicy#security_control_custom_parameter}
   */
   readonly securityControlCustomParameter?: SecurityControlCustomParameterProperty[] | cdktn.IResolvable;
 }
@@ -1644,17 +1644,17 @@ export class SecurityControlsConfigurationPropertyOutputReference extends cdktn.
 }
 export interface ConfigurationPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#enabled_standard_arns AwsSecurityhubConfigurationPolicy#enabled_standard_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#enabled_standard_arns TfConfigurationPolicy#enabled_standard_arns}
   */
   readonly enabledStandardArns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#service_enabled AwsSecurityhubConfigurationPolicy#service_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#service_enabled TfConfigurationPolicy#service_enabled}
   */
   readonly serviceEnabled: boolean | cdktn.IResolvable;
   /**
   * security_controls_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#security_controls_configuration AwsSecurityhubConfigurationPolicy#security_controls_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy#security_controls_configuration TfConfigurationPolicy#security_controls_configuration}
   */
   readonly securityControlsConfiguration?: SecurityControlsConfigurationProperty;
 }

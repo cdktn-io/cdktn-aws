@@ -5,132 +5,132 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsKinesisFirehoseDeliveryStreamConfig extends cdktn.TerraformMetaArguments {
+export interface TfDeliveryStreamConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#arn AwsKinesisFirehoseDeliveryStream#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#arn TfDeliveryStream#arn}
   */
   readonly arn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#destination AwsKinesisFirehoseDeliveryStream#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#destination TfDeliveryStream#destination}
   */
   readonly destination: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#destination_id AwsKinesisFirehoseDeliveryStream#destination_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#destination_id TfDeliveryStream#destination_id}
   */
   readonly destinationId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#id AwsKinesisFirehoseDeliveryStream#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#id TfDeliveryStream#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#name AwsKinesisFirehoseDeliveryStream#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#name TfDeliveryStream#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#region AwsKinesisFirehoseDeliveryStream#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#region TfDeliveryStream#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#tags AwsKinesisFirehoseDeliveryStream#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#tags TfDeliveryStream#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#tags_all AwsKinesisFirehoseDeliveryStream#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#tags_all TfDeliveryStream#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#version_id AwsKinesisFirehoseDeliveryStream#version_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#version_id TfDeliveryStream#version_id}
   */
   readonly versionId?: string;
   /**
   * elasticsearch_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#elasticsearch_configuration AwsKinesisFirehoseDeliveryStream#elasticsearch_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#elasticsearch_configuration TfDeliveryStream#elasticsearch_configuration}
   */
-  readonly elasticsearchConfiguration?: AwsKinesisFirehoseDeliveryStream.ElasticsearchConfigurationProperty;
+  readonly elasticsearchConfiguration?: TfDeliveryStream.ElasticsearchConfigurationProperty;
   /**
   * extended_s3_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#extended_s3_configuration AwsKinesisFirehoseDeliveryStream#extended_s3_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#extended_s3_configuration TfDeliveryStream#extended_s3_configuration}
   */
-  readonly extendedS3Configuration?: AwsKinesisFirehoseDeliveryStream.ExtendedS3ConfigurationProperty;
+  readonly extendedS3Configuration?: TfDeliveryStream.ExtendedS3ConfigurationProperty;
   /**
   * http_endpoint_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#http_endpoint_configuration AwsKinesisFirehoseDeliveryStream#http_endpoint_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#http_endpoint_configuration TfDeliveryStream#http_endpoint_configuration}
   */
-  readonly httpEndpointConfiguration?: AwsKinesisFirehoseDeliveryStream.HttpEndpointConfigurationProperty;
+  readonly httpEndpointConfiguration?: TfDeliveryStream.HttpEndpointConfigurationProperty;
   /**
   * iceberg_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#iceberg_configuration AwsKinesisFirehoseDeliveryStream#iceberg_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#iceberg_configuration TfDeliveryStream#iceberg_configuration}
   */
-  readonly icebergConfiguration?: AwsKinesisFirehoseDeliveryStream.IcebergConfigurationProperty;
+  readonly icebergConfiguration?: TfDeliveryStream.IcebergConfigurationProperty;
   /**
   * kinesis_source_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#kinesis_source_configuration AwsKinesisFirehoseDeliveryStream#kinesis_source_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#kinesis_source_configuration TfDeliveryStream#kinesis_source_configuration}
   */
-  readonly kinesisSourceConfiguration?: AwsKinesisFirehoseDeliveryStream.KinesisSourceConfigurationProperty;
+  readonly kinesisSourceConfiguration?: TfDeliveryStream.KinesisSourceConfigurationProperty;
   /**
   * msk_source_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#msk_source_configuration AwsKinesisFirehoseDeliveryStream#msk_source_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#msk_source_configuration TfDeliveryStream#msk_source_configuration}
   */
-  readonly mskSourceConfiguration?: AwsKinesisFirehoseDeliveryStream.MskSourceConfigurationProperty;
+  readonly mskSourceConfiguration?: TfDeliveryStream.MskSourceConfigurationProperty;
   /**
   * opensearch_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#opensearch_configuration AwsKinesisFirehoseDeliveryStream#opensearch_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#opensearch_configuration TfDeliveryStream#opensearch_configuration}
   */
-  readonly opensearchConfiguration?: AwsKinesisFirehoseDeliveryStream.OpensearchConfigurationProperty;
+  readonly opensearchConfiguration?: TfDeliveryStream.OpensearchConfigurationProperty;
   /**
   * opensearchserverless_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#opensearchserverless_configuration AwsKinesisFirehoseDeliveryStream#opensearchserverless_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#opensearchserverless_configuration TfDeliveryStream#opensearchserverless_configuration}
   */
-  readonly opensearchserverlessConfiguration?: AwsKinesisFirehoseDeliveryStream.OpensearchserverlessConfigurationProperty;
+  readonly opensearchserverlessConfiguration?: TfDeliveryStream.OpensearchserverlessConfigurationProperty;
   /**
   * redshift_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#redshift_configuration AwsKinesisFirehoseDeliveryStream#redshift_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#redshift_configuration TfDeliveryStream#redshift_configuration}
   */
-  readonly redshiftConfiguration?: AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationProperty;
+  readonly redshiftConfiguration?: TfDeliveryStream.RedshiftConfigurationProperty;
   /**
   * server_side_encryption block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#server_side_encryption AwsKinesisFirehoseDeliveryStream#server_side_encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#server_side_encryption TfDeliveryStream#server_side_encryption}
   */
-  readonly serverSideEncryption?: AwsKinesisFirehoseDeliveryStream.ServerSideEncryptionProperty;
+  readonly serverSideEncryption?: TfDeliveryStream.ServerSideEncryptionProperty;
   /**
   * snowflake_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#snowflake_configuration AwsKinesisFirehoseDeliveryStream#snowflake_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#snowflake_configuration TfDeliveryStream#snowflake_configuration}
   */
-  readonly snowflakeConfiguration?: AwsKinesisFirehoseDeliveryStream.SnowflakeConfigurationProperty;
+  readonly snowflakeConfiguration?: TfDeliveryStream.SnowflakeConfigurationProperty;
   /**
   * splunk_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#splunk_configuration AwsKinesisFirehoseDeliveryStream#splunk_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#splunk_configuration TfDeliveryStream#splunk_configuration}
   */
-  readonly splunkConfiguration?: AwsKinesisFirehoseDeliveryStream.SplunkConfigurationProperty;
+  readonly splunkConfiguration?: TfDeliveryStream.SplunkConfigurationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#timeouts AwsKinesisFirehoseDeliveryStream#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#timeouts TfDeliveryStream#timeouts}
   */
-  readonly timeouts?: AwsKinesisFirehoseDeliveryStream.TimeoutsProperty;
+  readonly timeouts?: TfDeliveryStream.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream aws_kinesis_firehose_delivery_stream}
 */
-export class AwsKinesisFirehoseDeliveryStream extends cdktn.TerraformResource {
+export class TfDeliveryStream extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -141,11 +141,11 @@ export class AwsKinesisFirehoseDeliveryStream extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsKinesisFirehoseDeliveryStream resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDeliveryStream resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsKinesisFirehoseDeliveryStream to import
-  * @param importFromId The id of the existing AwsKinesisFirehoseDeliveryStream that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsKinesisFirehoseDeliveryStream to import is found
+  * @param importToId The construct id used in the generated config for the TfDeliveryStream to import
+  * @param importFromId The id of the existing TfDeliveryStream that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDeliveryStream to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_kinesis_firehose_delivery_stream", importId: importFromId, provider });
@@ -160,9 +160,9 @@ export class AwsKinesisFirehoseDeliveryStream extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsKinesisFirehoseDeliveryStreamConfig
+  * @param options TfDeliveryStreamConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsKinesisFirehoseDeliveryStreamConfig) {
+  public constructor(scope: Construct, id: string, config: TfDeliveryStreamConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_kinesis_firehose_delivery_stream',
       terraformGeneratorMetadata: {
@@ -345,11 +345,11 @@ export class AwsKinesisFirehoseDeliveryStream extends cdktn.TerraformResource {
   }
 
   // elasticsearch_configuration - computed: false, optional: true, required: false
-  private _elasticsearchConfiguration = new AwsKinesisFirehoseDeliveryStream.ElasticsearchConfigurationPropertyOutputReference(this, "elasticsearch_configuration");
+  private _elasticsearchConfiguration = new TfDeliveryStream.ElasticsearchConfigurationPropertyOutputReference(this, "elasticsearch_configuration");
   public get elasticsearchConfiguration() {
     return this._elasticsearchConfiguration;
   }
-  public putElasticsearchConfiguration(value: AwsKinesisFirehoseDeliveryStream.ElasticsearchConfigurationProperty) {
+  public putElasticsearchConfiguration(value: TfDeliveryStream.ElasticsearchConfigurationProperty) {
     this._elasticsearchConfiguration.internalValue = value;
   }
   public resetElasticsearchConfiguration() {
@@ -361,11 +361,11 @@ export class AwsKinesisFirehoseDeliveryStream extends cdktn.TerraformResource {
   }
 
   // extended_s3_configuration - computed: false, optional: true, required: false
-  private _extendedS3Configuration = new AwsKinesisFirehoseDeliveryStream.ExtendedS3ConfigurationPropertyOutputReference(this, "extended_s3_configuration");
+  private _extendedS3Configuration = new TfDeliveryStream.ExtendedS3ConfigurationPropertyOutputReference(this, "extended_s3_configuration");
   public get extendedS3Configuration() {
     return this._extendedS3Configuration;
   }
-  public putExtendedS3Configuration(value: AwsKinesisFirehoseDeliveryStream.ExtendedS3ConfigurationProperty) {
+  public putExtendedS3Configuration(value: TfDeliveryStream.ExtendedS3ConfigurationProperty) {
     this._extendedS3Configuration.internalValue = value;
   }
   public resetExtendedS3Configuration() {
@@ -377,11 +377,11 @@ export class AwsKinesisFirehoseDeliveryStream extends cdktn.TerraformResource {
   }
 
   // http_endpoint_configuration - computed: false, optional: true, required: false
-  private _httpEndpointConfiguration = new AwsKinesisFirehoseDeliveryStream.HttpEndpointConfigurationPropertyOutputReference(this, "http_endpoint_configuration");
+  private _httpEndpointConfiguration = new TfDeliveryStream.HttpEndpointConfigurationPropertyOutputReference(this, "http_endpoint_configuration");
   public get httpEndpointConfiguration() {
     return this._httpEndpointConfiguration;
   }
-  public putHttpEndpointConfiguration(value: AwsKinesisFirehoseDeliveryStream.HttpEndpointConfigurationProperty) {
+  public putHttpEndpointConfiguration(value: TfDeliveryStream.HttpEndpointConfigurationProperty) {
     this._httpEndpointConfiguration.internalValue = value;
   }
   public resetHttpEndpointConfiguration() {
@@ -393,11 +393,11 @@ export class AwsKinesisFirehoseDeliveryStream extends cdktn.TerraformResource {
   }
 
   // iceberg_configuration - computed: false, optional: true, required: false
-  private _icebergConfiguration = new AwsKinesisFirehoseDeliveryStream.IcebergConfigurationPropertyOutputReference(this, "iceberg_configuration");
+  private _icebergConfiguration = new TfDeliveryStream.IcebergConfigurationPropertyOutputReference(this, "iceberg_configuration");
   public get icebergConfiguration() {
     return this._icebergConfiguration;
   }
-  public putIcebergConfiguration(value: AwsKinesisFirehoseDeliveryStream.IcebergConfigurationProperty) {
+  public putIcebergConfiguration(value: TfDeliveryStream.IcebergConfigurationProperty) {
     this._icebergConfiguration.internalValue = value;
   }
   public resetIcebergConfiguration() {
@@ -409,11 +409,11 @@ export class AwsKinesisFirehoseDeliveryStream extends cdktn.TerraformResource {
   }
 
   // kinesis_source_configuration - computed: false, optional: true, required: false
-  private _kinesisSourceConfiguration = new AwsKinesisFirehoseDeliveryStream.KinesisSourceConfigurationPropertyOutputReference(this, "kinesis_source_configuration");
+  private _kinesisSourceConfiguration = new TfDeliveryStream.KinesisSourceConfigurationPropertyOutputReference(this, "kinesis_source_configuration");
   public get kinesisSourceConfiguration() {
     return this._kinesisSourceConfiguration;
   }
-  public putKinesisSourceConfiguration(value: AwsKinesisFirehoseDeliveryStream.KinesisSourceConfigurationProperty) {
+  public putKinesisSourceConfiguration(value: TfDeliveryStream.KinesisSourceConfigurationProperty) {
     this._kinesisSourceConfiguration.internalValue = value;
   }
   public resetKinesisSourceConfiguration() {
@@ -425,11 +425,11 @@ export class AwsKinesisFirehoseDeliveryStream extends cdktn.TerraformResource {
   }
 
   // msk_source_configuration - computed: false, optional: true, required: false
-  private _mskSourceConfiguration = new AwsKinesisFirehoseDeliveryStream.MskSourceConfigurationPropertyOutputReference(this, "msk_source_configuration");
+  private _mskSourceConfiguration = new TfDeliveryStream.MskSourceConfigurationPropertyOutputReference(this, "msk_source_configuration");
   public get mskSourceConfiguration() {
     return this._mskSourceConfiguration;
   }
-  public putMskSourceConfiguration(value: AwsKinesisFirehoseDeliveryStream.MskSourceConfigurationProperty) {
+  public putMskSourceConfiguration(value: TfDeliveryStream.MskSourceConfigurationProperty) {
     this._mskSourceConfiguration.internalValue = value;
   }
   public resetMskSourceConfiguration() {
@@ -441,11 +441,11 @@ export class AwsKinesisFirehoseDeliveryStream extends cdktn.TerraformResource {
   }
 
   // opensearch_configuration - computed: false, optional: true, required: false
-  private _opensearchConfiguration = new AwsKinesisFirehoseDeliveryStream.OpensearchConfigurationPropertyOutputReference(this, "opensearch_configuration");
+  private _opensearchConfiguration = new TfDeliveryStream.OpensearchConfigurationPropertyOutputReference(this, "opensearch_configuration");
   public get opensearchConfiguration() {
     return this._opensearchConfiguration;
   }
-  public putOpensearchConfiguration(value: AwsKinesisFirehoseDeliveryStream.OpensearchConfigurationProperty) {
+  public putOpensearchConfiguration(value: TfDeliveryStream.OpensearchConfigurationProperty) {
     this._opensearchConfiguration.internalValue = value;
   }
   public resetOpensearchConfiguration() {
@@ -457,11 +457,11 @@ export class AwsKinesisFirehoseDeliveryStream extends cdktn.TerraformResource {
   }
 
   // opensearchserverless_configuration - computed: false, optional: true, required: false
-  private _opensearchserverlessConfiguration = new AwsKinesisFirehoseDeliveryStream.OpensearchserverlessConfigurationPropertyOutputReference(this, "opensearchserverless_configuration");
+  private _opensearchserverlessConfiguration = new TfDeliveryStream.OpensearchserverlessConfigurationPropertyOutputReference(this, "opensearchserverless_configuration");
   public get opensearchserverlessConfiguration() {
     return this._opensearchserverlessConfiguration;
   }
-  public putOpensearchserverlessConfiguration(value: AwsKinesisFirehoseDeliveryStream.OpensearchserverlessConfigurationProperty) {
+  public putOpensearchserverlessConfiguration(value: TfDeliveryStream.OpensearchserverlessConfigurationProperty) {
     this._opensearchserverlessConfiguration.internalValue = value;
   }
   public resetOpensearchserverlessConfiguration() {
@@ -473,11 +473,11 @@ export class AwsKinesisFirehoseDeliveryStream extends cdktn.TerraformResource {
   }
 
   // redshift_configuration - computed: false, optional: true, required: false
-  private _redshiftConfiguration = new AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationPropertyOutputReference(this, "redshift_configuration");
+  private _redshiftConfiguration = new TfDeliveryStream.RedshiftConfigurationPropertyOutputReference(this, "redshift_configuration");
   public get redshiftConfiguration() {
     return this._redshiftConfiguration;
   }
-  public putRedshiftConfiguration(value: AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationProperty) {
+  public putRedshiftConfiguration(value: TfDeliveryStream.RedshiftConfigurationProperty) {
     this._redshiftConfiguration.internalValue = value;
   }
   public resetRedshiftConfiguration() {
@@ -489,11 +489,11 @@ export class AwsKinesisFirehoseDeliveryStream extends cdktn.TerraformResource {
   }
 
   // server_side_encryption - computed: false, optional: true, required: false
-  private _serverSideEncryption = new AwsKinesisFirehoseDeliveryStream.ServerSideEncryptionPropertyOutputReference(this, "server_side_encryption");
+  private _serverSideEncryption = new TfDeliveryStream.ServerSideEncryptionPropertyOutputReference(this, "server_side_encryption");
   public get serverSideEncryption() {
     return this._serverSideEncryption;
   }
-  public putServerSideEncryption(value: AwsKinesisFirehoseDeliveryStream.ServerSideEncryptionProperty) {
+  public putServerSideEncryption(value: TfDeliveryStream.ServerSideEncryptionProperty) {
     this._serverSideEncryption.internalValue = value;
   }
   public resetServerSideEncryption() {
@@ -505,11 +505,11 @@ export class AwsKinesisFirehoseDeliveryStream extends cdktn.TerraformResource {
   }
 
   // snowflake_configuration - computed: false, optional: true, required: false
-  private _snowflakeConfiguration = new AwsKinesisFirehoseDeliveryStream.SnowflakeConfigurationPropertyOutputReference(this, "snowflake_configuration");
+  private _snowflakeConfiguration = new TfDeliveryStream.SnowflakeConfigurationPropertyOutputReference(this, "snowflake_configuration");
   public get snowflakeConfiguration() {
     return this._snowflakeConfiguration;
   }
-  public putSnowflakeConfiguration(value: AwsKinesisFirehoseDeliveryStream.SnowflakeConfigurationProperty) {
+  public putSnowflakeConfiguration(value: TfDeliveryStream.SnowflakeConfigurationProperty) {
     this._snowflakeConfiguration.internalValue = value;
   }
   public resetSnowflakeConfiguration() {
@@ -521,11 +521,11 @@ export class AwsKinesisFirehoseDeliveryStream extends cdktn.TerraformResource {
   }
 
   // splunk_configuration - computed: false, optional: true, required: false
-  private _splunkConfiguration = new AwsKinesisFirehoseDeliveryStream.SplunkConfigurationPropertyOutputReference(this, "splunk_configuration");
+  private _splunkConfiguration = new TfDeliveryStream.SplunkConfigurationPropertyOutputReference(this, "splunk_configuration");
   public get splunkConfiguration() {
     return this._splunkConfiguration;
   }
-  public putSplunkConfiguration(value: AwsKinesisFirehoseDeliveryStream.SplunkConfigurationProperty) {
+  public putSplunkConfiguration(value: TfDeliveryStream.SplunkConfigurationProperty) {
     this._splunkConfiguration.internalValue = value;
   }
   public resetSplunkConfiguration() {
@@ -537,11 +537,11 @@ export class AwsKinesisFirehoseDeliveryStream extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsKinesisFirehoseDeliveryStream.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfDeliveryStream.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsKinesisFirehoseDeliveryStream.TimeoutsProperty) {
+  public putTimeouts(value: TfDeliveryStream.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -567,19 +567,19 @@ export class AwsKinesisFirehoseDeliveryStream extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       version_id: cdktn.stringToTerraform(this._versionId),
-      elasticsearch_configuration: awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationPropertyToTerraform(this._elasticsearchConfiguration.internalValue),
-      extended_s3_configuration: awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationPropertyToTerraform(this._extendedS3Configuration.internalValue),
-      http_endpoint_configuration: awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationPropertyToTerraform(this._httpEndpointConfiguration.internalValue),
-      iceberg_configuration: awsKinesisFirehoseDeliveryStreamIcebergConfigurationPropertyToTerraform(this._icebergConfiguration.internalValue),
-      kinesis_source_configuration: awsKinesisFirehoseDeliveryStreamKinesisSourceConfigurationPropertyToTerraform(this._kinesisSourceConfiguration.internalValue),
-      msk_source_configuration: awsKinesisFirehoseDeliveryStreamMskSourceConfigurationPropertyToTerraform(this._mskSourceConfiguration.internalValue),
-      opensearch_configuration: awsKinesisFirehoseDeliveryStreamOpensearchConfigurationPropertyToTerraform(this._opensearchConfiguration.internalValue),
-      opensearchserverless_configuration: awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfigurationPropertyToTerraform(this._opensearchserverlessConfiguration.internalValue),
-      redshift_configuration: awsKinesisFirehoseDeliveryStreamRedshiftConfigurationPropertyToTerraform(this._redshiftConfiguration.internalValue),
-      server_side_encryption: awsKinesisFirehoseDeliveryStreamServerSideEncryptionPropertyToTerraform(this._serverSideEncryption.internalValue),
-      snowflake_configuration: awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationPropertyToTerraform(this._snowflakeConfiguration.internalValue),
-      splunk_configuration: awsKinesisFirehoseDeliveryStreamSplunkConfigurationPropertyToTerraform(this._splunkConfiguration.internalValue),
-      timeouts: awsKinesisFirehoseDeliveryStreamTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      elasticsearch_configuration: tfDeliveryStreamElasticsearchConfigurationPropertyToTerraform(this._elasticsearchConfiguration.internalValue),
+      extended_s3_configuration: tfDeliveryStreamExtendedS3ConfigurationPropertyToTerraform(this._extendedS3Configuration.internalValue),
+      http_endpoint_configuration: tfDeliveryStreamHttpEndpointConfigurationPropertyToTerraform(this._httpEndpointConfiguration.internalValue),
+      iceberg_configuration: tfDeliveryStreamIcebergConfigurationPropertyToTerraform(this._icebergConfiguration.internalValue),
+      kinesis_source_configuration: tfDeliveryStreamKinesisSourceConfigurationPropertyToTerraform(this._kinesisSourceConfiguration.internalValue),
+      msk_source_configuration: tfDeliveryStreamMskSourceConfigurationPropertyToTerraform(this._mskSourceConfiguration.internalValue),
+      opensearch_configuration: tfDeliveryStreamOpensearchConfigurationPropertyToTerraform(this._opensearchConfiguration.internalValue),
+      opensearchserverless_configuration: tfDeliveryStreamOpensearchserverlessConfigurationPropertyToTerraform(this._opensearchserverlessConfiguration.internalValue),
+      redshift_configuration: tfDeliveryStreamRedshiftConfigurationPropertyToTerraform(this._redshiftConfiguration.internalValue),
+      server_side_encryption: tfDeliveryStreamServerSideEncryptionPropertyToTerraform(this._serverSideEncryption.internalValue),
+      snowflake_configuration: tfDeliveryStreamSnowflakeConfigurationPropertyToTerraform(this._snowflakeConfiguration.internalValue),
+      splunk_configuration: tfDeliveryStreamSplunkConfigurationPropertyToTerraform(this._splunkConfiguration.internalValue),
+      timeouts: tfDeliveryStreamTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -640,82 +640,82 @@ export class AwsKinesisFirehoseDeliveryStream extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       elasticsearch_configuration: {
-        value: awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationPropertyToHclTerraform(this._elasticsearchConfiguration.internalValue),
+        value: tfDeliveryStreamElasticsearchConfigurationPropertyToHclTerraform(this._elasticsearchConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsKinesisFirehoseDeliveryStream.ElasticsearchConfigurationPropertyList",
+        storageClassType: "TfDeliveryStream.ElasticsearchConfigurationPropertyList",
       },
       extended_s3_configuration: {
-        value: awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationPropertyToHclTerraform(this._extendedS3Configuration.internalValue),
+        value: tfDeliveryStreamExtendedS3ConfigurationPropertyToHclTerraform(this._extendedS3Configuration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsKinesisFirehoseDeliveryStream.ExtendedS3ConfigurationPropertyList",
+        storageClassType: "TfDeliveryStream.ExtendedS3ConfigurationPropertyList",
       },
       http_endpoint_configuration: {
-        value: awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationPropertyToHclTerraform(this._httpEndpointConfiguration.internalValue),
+        value: tfDeliveryStreamHttpEndpointConfigurationPropertyToHclTerraform(this._httpEndpointConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsKinesisFirehoseDeliveryStream.HttpEndpointConfigurationPropertyList",
+        storageClassType: "TfDeliveryStream.HttpEndpointConfigurationPropertyList",
       },
       iceberg_configuration: {
-        value: awsKinesisFirehoseDeliveryStreamIcebergConfigurationPropertyToHclTerraform(this._icebergConfiguration.internalValue),
+        value: tfDeliveryStreamIcebergConfigurationPropertyToHclTerraform(this._icebergConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsKinesisFirehoseDeliveryStream.IcebergConfigurationPropertyList",
+        storageClassType: "TfDeliveryStream.IcebergConfigurationPropertyList",
       },
       kinesis_source_configuration: {
-        value: awsKinesisFirehoseDeliveryStreamKinesisSourceConfigurationPropertyToHclTerraform(this._kinesisSourceConfiguration.internalValue),
+        value: tfDeliveryStreamKinesisSourceConfigurationPropertyToHclTerraform(this._kinesisSourceConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsKinesisFirehoseDeliveryStream.KinesisSourceConfigurationPropertyList",
+        storageClassType: "TfDeliveryStream.KinesisSourceConfigurationPropertyList",
       },
       msk_source_configuration: {
-        value: awsKinesisFirehoseDeliveryStreamMskSourceConfigurationPropertyToHclTerraform(this._mskSourceConfiguration.internalValue),
+        value: tfDeliveryStreamMskSourceConfigurationPropertyToHclTerraform(this._mskSourceConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsKinesisFirehoseDeliveryStream.MskSourceConfigurationPropertyList",
+        storageClassType: "TfDeliveryStream.MskSourceConfigurationPropertyList",
       },
       opensearch_configuration: {
-        value: awsKinesisFirehoseDeliveryStreamOpensearchConfigurationPropertyToHclTerraform(this._opensearchConfiguration.internalValue),
+        value: tfDeliveryStreamOpensearchConfigurationPropertyToHclTerraform(this._opensearchConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsKinesisFirehoseDeliveryStream.OpensearchConfigurationPropertyList",
+        storageClassType: "TfDeliveryStream.OpensearchConfigurationPropertyList",
       },
       opensearchserverless_configuration: {
-        value: awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfigurationPropertyToHclTerraform(this._opensearchserverlessConfiguration.internalValue),
+        value: tfDeliveryStreamOpensearchserverlessConfigurationPropertyToHclTerraform(this._opensearchserverlessConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsKinesisFirehoseDeliveryStream.OpensearchserverlessConfigurationPropertyList",
+        storageClassType: "TfDeliveryStream.OpensearchserverlessConfigurationPropertyList",
       },
       redshift_configuration: {
-        value: awsKinesisFirehoseDeliveryStreamRedshiftConfigurationPropertyToHclTerraform(this._redshiftConfiguration.internalValue),
+        value: tfDeliveryStreamRedshiftConfigurationPropertyToHclTerraform(this._redshiftConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationPropertyList",
+        storageClassType: "TfDeliveryStream.RedshiftConfigurationPropertyList",
       },
       server_side_encryption: {
-        value: awsKinesisFirehoseDeliveryStreamServerSideEncryptionPropertyToHclTerraform(this._serverSideEncryption.internalValue),
+        value: tfDeliveryStreamServerSideEncryptionPropertyToHclTerraform(this._serverSideEncryption.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsKinesisFirehoseDeliveryStream.ServerSideEncryptionPropertyList",
+        storageClassType: "TfDeliveryStream.ServerSideEncryptionPropertyList",
       },
       snowflake_configuration: {
-        value: awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationPropertyToHclTerraform(this._snowflakeConfiguration.internalValue),
+        value: tfDeliveryStreamSnowflakeConfigurationPropertyToHclTerraform(this._snowflakeConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsKinesisFirehoseDeliveryStream.SnowflakeConfigurationPropertyList",
+        storageClassType: "TfDeliveryStream.SnowflakeConfigurationPropertyList",
       },
       splunk_configuration: {
-        value: awsKinesisFirehoseDeliveryStreamSplunkConfigurationPropertyToHclTerraform(this._splunkConfiguration.internalValue),
+        value: tfDeliveryStreamSplunkConfigurationPropertyToHclTerraform(this._splunkConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsKinesisFirehoseDeliveryStream.SplunkConfigurationPropertyList",
+        storageClassType: "TfDeliveryStream.SplunkConfigurationPropertyList",
       },
       timeouts: {
-        value: awsKinesisFirehoseDeliveryStreamTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfDeliveryStreamTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsKinesisFirehoseDeliveryStream.TimeoutsProperty",
+        storageClassType: "TfDeliveryStream.TimeoutsProperty",
       },
     };
 
@@ -724,7 +724,7 @@ export class AwsKinesisFirehoseDeliveryStream extends cdktn.TerraformResource {
   }
 }
 
-export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ElasticsearchConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.ElasticsearchConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: TfDeliveryStream.ElasticsearchConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.ElasticsearchConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -737,7 +737,7 @@ export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationCloudw
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ElasticsearchConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.ElasticsearchConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: TfDeliveryStream.ElasticsearchConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.ElasticsearchConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -768,7 +768,7 @@ export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationCloudw
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ElasticsearchConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform(struct?: TfDeliveryStream.ElasticsearchConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -780,7 +780,7 @@ export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationProces
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ElasticsearchConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform(struct?: TfDeliveryStream.ElasticsearchConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -805,19 +805,19 @@ export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationProces
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorsPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ElasticsearchConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorsPropertyToTerraform(struct?: TfDeliveryStream.ElasticsearchConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     type: cdktn.stringToTerraform(struct!.type),
-    parameters: cdktn.listMapper(awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform, true)(struct!.parameters),
+    parameters: cdktn.listMapper(tfDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform, true)(struct!.parameters),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ElasticsearchConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform(struct?: TfDeliveryStream.ElasticsearchConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -830,7 +830,7 @@ export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationProces
       storageClassType: "string",
     },
     parameters: {
-      value: cdktn.listMapperHcl(awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform, true)(struct!.parameters),
+      value: cdktn.listMapperHcl(tfDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform, true)(struct!.parameters),
       isBlock: true,
       type: "set",
       storageClassType: "ElasticsearchConfigurationProcessingConfigurationProcessorsParametersPropertyList",
@@ -842,19 +842,19 @@ export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationProces
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ElasticsearchConfigurationProcessingConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.ElasticsearchConfigurationProcessingConfigurationProperty): any {
+export function tfDeliveryStreamElasticsearchConfigurationProcessingConfigurationPropertyToTerraform(struct?: TfDeliveryStream.ElasticsearchConfigurationProcessingConfigurationPropertyOutputReference | TfDeliveryStream.ElasticsearchConfigurationProcessingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     enabled: cdktn.booleanToTerraform(struct!.enabled),
-    processors: cdktn.listMapper(awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorsPropertyToTerraform, true)(struct!.processors),
+    processors: cdktn.listMapper(tfDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorsPropertyToTerraform, true)(struct!.processors),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ElasticsearchConfigurationProcessingConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.ElasticsearchConfigurationProcessingConfigurationProperty): any {
+export function tfDeliveryStreamElasticsearchConfigurationProcessingConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.ElasticsearchConfigurationProcessingConfigurationPropertyOutputReference | TfDeliveryStream.ElasticsearchConfigurationProcessingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -867,7 +867,7 @@ export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationProces
       storageClassType: "boolean",
     },
     processors: {
-      value: cdktn.listMapperHcl(awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform, true)(struct!.processors),
+      value: cdktn.listMapperHcl(tfDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform, true)(struct!.processors),
       isBlock: true,
       type: "list",
       storageClassType: "ElasticsearchConfigurationProcessingConfigurationProcessorsPropertyList",
@@ -879,7 +879,7 @@ export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationProces
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ElasticsearchConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.ElasticsearchConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamElasticsearchConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: TfDeliveryStream.ElasticsearchConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.ElasticsearchConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -892,7 +892,7 @@ export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationS3Conf
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ElasticsearchConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.ElasticsearchConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamElasticsearchConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: TfDeliveryStream.ElasticsearchConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.ElasticsearchConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -923,7 +923,7 @@ export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationS3Conf
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationS3ConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ElasticsearchConfigurationS3ConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.ElasticsearchConfigurationS3ConfigurationProperty): any {
+export function tfDeliveryStreamElasticsearchConfigurationS3ConfigurationPropertyToTerraform(struct?: TfDeliveryStream.ElasticsearchConfigurationS3ConfigurationPropertyOutputReference | TfDeliveryStream.ElasticsearchConfigurationS3ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -937,12 +937,12 @@ export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationS3Conf
     kms_key_arn: cdktn.stringToTerraform(struct!.kmsKeyArn),
     prefix: cdktn.stringToTerraform(struct!.prefix),
     role_arn: cdktn.stringToTerraform(struct!.roleArn),
-    cloudwatch_logging_options: awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
+    cloudwatch_logging_options: tfDeliveryStreamElasticsearchConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationS3ConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ElasticsearchConfigurationS3ConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.ElasticsearchConfigurationS3ConfigurationProperty): any {
+export function tfDeliveryStreamElasticsearchConfigurationS3ConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.ElasticsearchConfigurationS3ConfigurationPropertyOutputReference | TfDeliveryStream.ElasticsearchConfigurationS3ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -997,7 +997,7 @@ export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationS3Conf
       storageClassType: "string",
     },
     cloudwatch_logging_options: {
-      value: awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
+      value: tfDeliveryStreamElasticsearchConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
       isBlock: true,
       type: "list",
       storageClassType: "ElasticsearchConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyList",
@@ -1009,7 +1009,7 @@ export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationS3Conf
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationVpcConfigPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ElasticsearchConfigurationVpcConfigPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.ElasticsearchConfigurationVpcConfigProperty): any {
+export function tfDeliveryStreamElasticsearchConfigurationVpcConfigPropertyToTerraform(struct?: TfDeliveryStream.ElasticsearchConfigurationVpcConfigPropertyOutputReference | TfDeliveryStream.ElasticsearchConfigurationVpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1022,7 +1022,7 @@ export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationVpcCon
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationVpcConfigPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ElasticsearchConfigurationVpcConfigPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.ElasticsearchConfigurationVpcConfigProperty): any {
+export function tfDeliveryStreamElasticsearchConfigurationVpcConfigPropertyToHclTerraform(struct?: TfDeliveryStream.ElasticsearchConfigurationVpcConfigPropertyOutputReference | TfDeliveryStream.ElasticsearchConfigurationVpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1053,7 +1053,7 @@ export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationVpcCon
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ElasticsearchConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.ElasticsearchConfigurationProperty): any {
+export function tfDeliveryStreamElasticsearchConfigurationPropertyToTerraform(struct?: TfDeliveryStream.ElasticsearchConfigurationPropertyOutputReference | TfDeliveryStream.ElasticsearchConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1069,15 +1069,15 @@ export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationProper
     role_arn: cdktn.stringToTerraform(struct!.roleArn),
     s3_backup_mode: cdktn.stringToTerraform(struct!.s3BackupMode),
     type_name: cdktn.stringToTerraform(struct!.typeName),
-    cloudwatch_logging_options: awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
-    processing_configuration: awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationPropertyToTerraform(struct!.processingConfiguration),
-    s3_configuration: awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationS3ConfigurationPropertyToTerraform(struct!.s3Configuration),
-    vpc_config: awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationVpcConfigPropertyToTerraform(struct!.vpcConfig),
+    cloudwatch_logging_options: tfDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
+    processing_configuration: tfDeliveryStreamElasticsearchConfigurationProcessingConfigurationPropertyToTerraform(struct!.processingConfiguration),
+    s3_configuration: tfDeliveryStreamElasticsearchConfigurationS3ConfigurationPropertyToTerraform(struct!.s3Configuration),
+    vpc_config: tfDeliveryStreamElasticsearchConfigurationVpcConfigPropertyToTerraform(struct!.vpcConfig),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ElasticsearchConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.ElasticsearchConfigurationProperty): any {
+export function tfDeliveryStreamElasticsearchConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.ElasticsearchConfigurationPropertyOutputReference | TfDeliveryStream.ElasticsearchConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1144,25 +1144,25 @@ export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationProper
       storageClassType: "string",
     },
     cloudwatch_logging_options: {
-      value: awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
+      value: tfDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
       isBlock: true,
       type: "list",
       storageClassType: "ElasticsearchConfigurationCloudwatchLoggingOptionsPropertyList",
     },
     processing_configuration: {
-      value: awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationPropertyToHclTerraform(struct!.processingConfiguration),
+      value: tfDeliveryStreamElasticsearchConfigurationProcessingConfigurationPropertyToHclTerraform(struct!.processingConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ElasticsearchConfigurationProcessingConfigurationPropertyList",
     },
     s3_configuration: {
-      value: awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationS3ConfigurationPropertyToHclTerraform(struct!.s3Configuration),
+      value: tfDeliveryStreamElasticsearchConfigurationS3ConfigurationPropertyToHclTerraform(struct!.s3Configuration),
       isBlock: true,
       type: "list",
       storageClassType: "ElasticsearchConfigurationS3ConfigurationPropertyList",
     },
     vpc_config: {
-      value: awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationVpcConfigPropertyToHclTerraform(struct!.vpcConfig),
+      value: tfDeliveryStreamElasticsearchConfigurationVpcConfigPropertyToHclTerraform(struct!.vpcConfig),
       isBlock: true,
       type: "list",
       storageClassType: "ElasticsearchConfigurationVpcConfigPropertyList",
@@ -1174,7 +1174,7 @@ export function awsKinesisFirehoseDeliveryStreamElasticsearchConfigurationProper
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ExtendedS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.ExtendedS3ConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: TfDeliveryStream.ExtendedS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.ExtendedS3ConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1187,7 +1187,7 @@ export function awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationCloudwatc
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ExtendedS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.ExtendedS3ConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: TfDeliveryStream.ExtendedS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.ExtendedS3ConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1218,7 +1218,7 @@ export function awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationCloudwatc
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamHiveJsonSerDePropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.HiveJsonSerDePropertyOutputReference | AwsKinesisFirehoseDeliveryStream.HiveJsonSerDeProperty): any {
+export function tfDeliveryStreamHiveJsonSerDePropertyToTerraform(struct?: TfDeliveryStream.HiveJsonSerDePropertyOutputReference | TfDeliveryStream.HiveJsonSerDeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1229,7 +1229,7 @@ export function awsKinesisFirehoseDeliveryStreamHiveJsonSerDePropertyToTerraform
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamHiveJsonSerDePropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.HiveJsonSerDePropertyOutputReference | AwsKinesisFirehoseDeliveryStream.HiveJsonSerDeProperty): any {
+export function tfDeliveryStreamHiveJsonSerDePropertyToHclTerraform(struct?: TfDeliveryStream.HiveJsonSerDePropertyOutputReference | TfDeliveryStream.HiveJsonSerDeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1248,7 +1248,7 @@ export function awsKinesisFirehoseDeliveryStreamHiveJsonSerDePropertyToHclTerraf
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpenXJsonSerDePropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpenXJsonSerDePropertyOutputReference | AwsKinesisFirehoseDeliveryStream.OpenXJsonSerDeProperty): any {
+export function tfDeliveryStreamOpenXJsonSerDePropertyToTerraform(struct?: TfDeliveryStream.OpenXJsonSerDePropertyOutputReference | TfDeliveryStream.OpenXJsonSerDeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1261,7 +1261,7 @@ export function awsKinesisFirehoseDeliveryStreamOpenXJsonSerDePropertyToTerrafor
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpenXJsonSerDePropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpenXJsonSerDePropertyOutputReference | AwsKinesisFirehoseDeliveryStream.OpenXJsonSerDeProperty): any {
+export function tfDeliveryStreamOpenXJsonSerDePropertyToHclTerraform(struct?: TfDeliveryStream.OpenXJsonSerDePropertyOutputReference | TfDeliveryStream.OpenXJsonSerDeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1292,32 +1292,32 @@ export function awsKinesisFirehoseDeliveryStreamOpenXJsonSerDePropertyToHclTerra
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamDeserializerPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.DeserializerPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.DeserializerProperty): any {
+export function tfDeliveryStreamDeserializerPropertyToTerraform(struct?: TfDeliveryStream.DeserializerPropertyOutputReference | TfDeliveryStream.DeserializerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    hive_json_ser_de: awsKinesisFirehoseDeliveryStreamHiveJsonSerDePropertyToTerraform(struct!.hiveJsonSerDe),
-    open_x_json_ser_de: awsKinesisFirehoseDeliveryStreamOpenXJsonSerDePropertyToTerraform(struct!.openXJsonSerDe),
+    hive_json_ser_de: tfDeliveryStreamHiveJsonSerDePropertyToTerraform(struct!.hiveJsonSerDe),
+    open_x_json_ser_de: tfDeliveryStreamOpenXJsonSerDePropertyToTerraform(struct!.openXJsonSerDe),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamDeserializerPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.DeserializerPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.DeserializerProperty): any {
+export function tfDeliveryStreamDeserializerPropertyToHclTerraform(struct?: TfDeliveryStream.DeserializerPropertyOutputReference | TfDeliveryStream.DeserializerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     hive_json_ser_de: {
-      value: awsKinesisFirehoseDeliveryStreamHiveJsonSerDePropertyToHclTerraform(struct!.hiveJsonSerDe),
+      value: tfDeliveryStreamHiveJsonSerDePropertyToHclTerraform(struct!.hiveJsonSerDe),
       isBlock: true,
       type: "list",
       storageClassType: "HiveJsonSerDePropertyList",
     },
     open_x_json_ser_de: {
-      value: awsKinesisFirehoseDeliveryStreamOpenXJsonSerDePropertyToHclTerraform(struct!.openXJsonSerDe),
+      value: tfDeliveryStreamOpenXJsonSerDePropertyToHclTerraform(struct!.openXJsonSerDe),
       isBlock: true,
       type: "list",
       storageClassType: "OpenXJsonSerDePropertyList",
@@ -1329,25 +1329,25 @@ export function awsKinesisFirehoseDeliveryStreamDeserializerPropertyToHclTerrafo
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamInputFormatConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.InputFormatConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.InputFormatConfigurationProperty): any {
+export function tfDeliveryStreamInputFormatConfigurationPropertyToTerraform(struct?: TfDeliveryStream.InputFormatConfigurationPropertyOutputReference | TfDeliveryStream.InputFormatConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    deserializer: awsKinesisFirehoseDeliveryStreamDeserializerPropertyToTerraform(struct!.deserializer),
+    deserializer: tfDeliveryStreamDeserializerPropertyToTerraform(struct!.deserializer),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamInputFormatConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.InputFormatConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.InputFormatConfigurationProperty): any {
+export function tfDeliveryStreamInputFormatConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.InputFormatConfigurationPropertyOutputReference | TfDeliveryStream.InputFormatConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     deserializer: {
-      value: awsKinesisFirehoseDeliveryStreamDeserializerPropertyToHclTerraform(struct!.deserializer),
+      value: tfDeliveryStreamDeserializerPropertyToHclTerraform(struct!.deserializer),
       isBlock: true,
       type: "list",
       storageClassType: "DeserializerPropertyList",
@@ -1359,7 +1359,7 @@ export function awsKinesisFirehoseDeliveryStreamInputFormatConfigurationProperty
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOrcSerDePropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OrcSerDePropertyOutputReference | AwsKinesisFirehoseDeliveryStream.OrcSerDeProperty): any {
+export function tfDeliveryStreamOrcSerDePropertyToTerraform(struct?: TfDeliveryStream.OrcSerDePropertyOutputReference | TfDeliveryStream.OrcSerDeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1379,7 +1379,7 @@ export function awsKinesisFirehoseDeliveryStreamOrcSerDePropertyToTerraform(stru
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOrcSerDePropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OrcSerDePropertyOutputReference | AwsKinesisFirehoseDeliveryStream.OrcSerDeProperty): any {
+export function tfDeliveryStreamOrcSerDePropertyToHclTerraform(struct?: TfDeliveryStream.OrcSerDePropertyOutputReference | TfDeliveryStream.OrcSerDeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1452,7 +1452,7 @@ export function awsKinesisFirehoseDeliveryStreamOrcSerDePropertyToHclTerraform(s
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamParquetSerDePropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ParquetSerDePropertyOutputReference | AwsKinesisFirehoseDeliveryStream.ParquetSerDeProperty): any {
+export function tfDeliveryStreamParquetSerDePropertyToTerraform(struct?: TfDeliveryStream.ParquetSerDePropertyOutputReference | TfDeliveryStream.ParquetSerDeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1468,7 +1468,7 @@ export function awsKinesisFirehoseDeliveryStreamParquetSerDePropertyToTerraform(
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamParquetSerDePropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ParquetSerDePropertyOutputReference | AwsKinesisFirehoseDeliveryStream.ParquetSerDeProperty): any {
+export function tfDeliveryStreamParquetSerDePropertyToHclTerraform(struct?: TfDeliveryStream.ParquetSerDePropertyOutputReference | TfDeliveryStream.ParquetSerDeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1517,32 +1517,32 @@ export function awsKinesisFirehoseDeliveryStreamParquetSerDePropertyToHclTerrafo
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSerializerPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SerializerPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.SerializerProperty): any {
+export function tfDeliveryStreamSerializerPropertyToTerraform(struct?: TfDeliveryStream.SerializerPropertyOutputReference | TfDeliveryStream.SerializerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    orc_ser_de: awsKinesisFirehoseDeliveryStreamOrcSerDePropertyToTerraform(struct!.orcSerDe),
-    parquet_ser_de: awsKinesisFirehoseDeliveryStreamParquetSerDePropertyToTerraform(struct!.parquetSerDe),
+    orc_ser_de: tfDeliveryStreamOrcSerDePropertyToTerraform(struct!.orcSerDe),
+    parquet_ser_de: tfDeliveryStreamParquetSerDePropertyToTerraform(struct!.parquetSerDe),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSerializerPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SerializerPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.SerializerProperty): any {
+export function tfDeliveryStreamSerializerPropertyToHclTerraform(struct?: TfDeliveryStream.SerializerPropertyOutputReference | TfDeliveryStream.SerializerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     orc_ser_de: {
-      value: awsKinesisFirehoseDeliveryStreamOrcSerDePropertyToHclTerraform(struct!.orcSerDe),
+      value: tfDeliveryStreamOrcSerDePropertyToHclTerraform(struct!.orcSerDe),
       isBlock: true,
       type: "list",
       storageClassType: "OrcSerDePropertyList",
     },
     parquet_ser_de: {
-      value: awsKinesisFirehoseDeliveryStreamParquetSerDePropertyToHclTerraform(struct!.parquetSerDe),
+      value: tfDeliveryStreamParquetSerDePropertyToHclTerraform(struct!.parquetSerDe),
       isBlock: true,
       type: "list",
       storageClassType: "ParquetSerDePropertyList",
@@ -1554,25 +1554,25 @@ export function awsKinesisFirehoseDeliveryStreamSerializerPropertyToHclTerraform
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOutputFormatConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OutputFormatConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.OutputFormatConfigurationProperty): any {
+export function tfDeliveryStreamOutputFormatConfigurationPropertyToTerraform(struct?: TfDeliveryStream.OutputFormatConfigurationPropertyOutputReference | TfDeliveryStream.OutputFormatConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    serializer: awsKinesisFirehoseDeliveryStreamSerializerPropertyToTerraform(struct!.serializer),
+    serializer: tfDeliveryStreamSerializerPropertyToTerraform(struct!.serializer),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOutputFormatConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OutputFormatConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.OutputFormatConfigurationProperty): any {
+export function tfDeliveryStreamOutputFormatConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.OutputFormatConfigurationPropertyOutputReference | TfDeliveryStream.OutputFormatConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     serializer: {
-      value: awsKinesisFirehoseDeliveryStreamSerializerPropertyToHclTerraform(struct!.serializer),
+      value: tfDeliveryStreamSerializerPropertyToHclTerraform(struct!.serializer),
       isBlock: true,
       type: "list",
       storageClassType: "SerializerPropertyList",
@@ -1584,7 +1584,7 @@ export function awsKinesisFirehoseDeliveryStreamOutputFormatConfigurationPropert
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSchemaConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SchemaConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.SchemaConfigurationProperty): any {
+export function tfDeliveryStreamSchemaConfigurationPropertyToTerraform(struct?: TfDeliveryStream.SchemaConfigurationPropertyOutputReference | TfDeliveryStream.SchemaConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1600,7 +1600,7 @@ export function awsKinesisFirehoseDeliveryStreamSchemaConfigurationPropertyToTer
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSchemaConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SchemaConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.SchemaConfigurationProperty): any {
+export function tfDeliveryStreamSchemaConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.SchemaConfigurationPropertyOutputReference | TfDeliveryStream.SchemaConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1649,21 +1649,21 @@ export function awsKinesisFirehoseDeliveryStreamSchemaConfigurationPropertyToHcl
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamDataFormatConversionConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.DataFormatConversionConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.DataFormatConversionConfigurationProperty): any {
+export function tfDeliveryStreamDataFormatConversionConfigurationPropertyToTerraform(struct?: TfDeliveryStream.DataFormatConversionConfigurationPropertyOutputReference | TfDeliveryStream.DataFormatConversionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     enabled: cdktn.booleanToTerraform(struct!.enabled),
-    input_format_configuration: awsKinesisFirehoseDeliveryStreamInputFormatConfigurationPropertyToTerraform(struct!.inputFormatConfiguration),
-    output_format_configuration: awsKinesisFirehoseDeliveryStreamOutputFormatConfigurationPropertyToTerraform(struct!.outputFormatConfiguration),
-    schema_configuration: awsKinesisFirehoseDeliveryStreamSchemaConfigurationPropertyToTerraform(struct!.schemaConfiguration),
+    input_format_configuration: tfDeliveryStreamInputFormatConfigurationPropertyToTerraform(struct!.inputFormatConfiguration),
+    output_format_configuration: tfDeliveryStreamOutputFormatConfigurationPropertyToTerraform(struct!.outputFormatConfiguration),
+    schema_configuration: tfDeliveryStreamSchemaConfigurationPropertyToTerraform(struct!.schemaConfiguration),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamDataFormatConversionConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.DataFormatConversionConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.DataFormatConversionConfigurationProperty): any {
+export function tfDeliveryStreamDataFormatConversionConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.DataFormatConversionConfigurationPropertyOutputReference | TfDeliveryStream.DataFormatConversionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1676,19 +1676,19 @@ export function awsKinesisFirehoseDeliveryStreamDataFormatConversionConfiguratio
       storageClassType: "boolean",
     },
     input_format_configuration: {
-      value: awsKinesisFirehoseDeliveryStreamInputFormatConfigurationPropertyToHclTerraform(struct!.inputFormatConfiguration),
+      value: tfDeliveryStreamInputFormatConfigurationPropertyToHclTerraform(struct!.inputFormatConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "InputFormatConfigurationPropertyList",
     },
     output_format_configuration: {
-      value: awsKinesisFirehoseDeliveryStreamOutputFormatConfigurationPropertyToHclTerraform(struct!.outputFormatConfiguration),
+      value: tfDeliveryStreamOutputFormatConfigurationPropertyToHclTerraform(struct!.outputFormatConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "OutputFormatConfigurationPropertyList",
     },
     schema_configuration: {
-      value: awsKinesisFirehoseDeliveryStreamSchemaConfigurationPropertyToHclTerraform(struct!.schemaConfiguration),
+      value: tfDeliveryStreamSchemaConfigurationPropertyToHclTerraform(struct!.schemaConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "SchemaConfigurationPropertyList",
@@ -1700,7 +1700,7 @@ export function awsKinesisFirehoseDeliveryStreamDataFormatConversionConfiguratio
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamDynamicPartitioningConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.DynamicPartitioningConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.DynamicPartitioningConfigurationProperty): any {
+export function tfDeliveryStreamDynamicPartitioningConfigurationPropertyToTerraform(struct?: TfDeliveryStream.DynamicPartitioningConfigurationPropertyOutputReference | TfDeliveryStream.DynamicPartitioningConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1712,7 +1712,7 @@ export function awsKinesisFirehoseDeliveryStreamDynamicPartitioningConfiguration
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamDynamicPartitioningConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.DynamicPartitioningConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.DynamicPartitioningConfigurationProperty): any {
+export function tfDeliveryStreamDynamicPartitioningConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.DynamicPartitioningConfigurationPropertyOutputReference | TfDeliveryStream.DynamicPartitioningConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1737,7 +1737,7 @@ export function awsKinesisFirehoseDeliveryStreamDynamicPartitioningConfiguration
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ExtendedS3ConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform(struct?: TfDeliveryStream.ExtendedS3ConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1749,7 +1749,7 @@ export function awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationProcessin
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ExtendedS3ConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform(struct?: TfDeliveryStream.ExtendedS3ConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1774,19 +1774,19 @@ export function awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationProcessin
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorsPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ExtendedS3ConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorsPropertyToTerraform(struct?: TfDeliveryStream.ExtendedS3ConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     type: cdktn.stringToTerraform(struct!.type),
-    parameters: cdktn.listMapper(awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform, true)(struct!.parameters),
+    parameters: cdktn.listMapper(tfDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform, true)(struct!.parameters),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ExtendedS3ConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform(struct?: TfDeliveryStream.ExtendedS3ConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1799,7 +1799,7 @@ export function awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationProcessin
       storageClassType: "string",
     },
     parameters: {
-      value: cdktn.listMapperHcl(awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform, true)(struct!.parameters),
+      value: cdktn.listMapperHcl(tfDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform, true)(struct!.parameters),
       isBlock: true,
       type: "set",
       storageClassType: "ExtendedS3ConfigurationProcessingConfigurationProcessorsParametersPropertyList",
@@ -1811,19 +1811,19 @@ export function awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationProcessin
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ExtendedS3ConfigurationProcessingConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.ExtendedS3ConfigurationProcessingConfigurationProperty): any {
+export function tfDeliveryStreamExtendedS3ConfigurationProcessingConfigurationPropertyToTerraform(struct?: TfDeliveryStream.ExtendedS3ConfigurationProcessingConfigurationPropertyOutputReference | TfDeliveryStream.ExtendedS3ConfigurationProcessingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     enabled: cdktn.booleanToTerraform(struct!.enabled),
-    processors: cdktn.listMapper(awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorsPropertyToTerraform, true)(struct!.processors),
+    processors: cdktn.listMapper(tfDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorsPropertyToTerraform, true)(struct!.processors),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ExtendedS3ConfigurationProcessingConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.ExtendedS3ConfigurationProcessingConfigurationProperty): any {
+export function tfDeliveryStreamExtendedS3ConfigurationProcessingConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.ExtendedS3ConfigurationProcessingConfigurationPropertyOutputReference | TfDeliveryStream.ExtendedS3ConfigurationProcessingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1836,7 +1836,7 @@ export function awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationProcessin
       storageClassType: "boolean",
     },
     processors: {
-      value: cdktn.listMapperHcl(awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform, true)(struct!.processors),
+      value: cdktn.listMapperHcl(tfDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform, true)(struct!.processors),
       isBlock: true,
       type: "list",
       storageClassType: "ExtendedS3ConfigurationProcessingConfigurationProcessorsPropertyList",
@@ -1848,7 +1848,7 @@ export function awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationProcessin
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.ExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: TfDeliveryStream.ExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.ExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1861,7 +1861,7 @@ export function awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationS3BackupC
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.ExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: TfDeliveryStream.ExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.ExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1892,7 +1892,7 @@ export function awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationS3BackupC
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ExtendedS3ConfigurationS3BackupConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.ExtendedS3ConfigurationS3BackupConfigurationProperty): any {
+export function tfDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationPropertyToTerraform(struct?: TfDeliveryStream.ExtendedS3ConfigurationS3BackupConfigurationPropertyOutputReference | TfDeliveryStream.ExtendedS3ConfigurationS3BackupConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1906,12 +1906,12 @@ export function awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationS3BackupC
     kms_key_arn: cdktn.stringToTerraform(struct!.kmsKeyArn),
     prefix: cdktn.stringToTerraform(struct!.prefix),
     role_arn: cdktn.stringToTerraform(struct!.roleArn),
-    cloudwatch_logging_options: awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
+    cloudwatch_logging_options: tfDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ExtendedS3ConfigurationS3BackupConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.ExtendedS3ConfigurationS3BackupConfigurationProperty): any {
+export function tfDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.ExtendedS3ConfigurationS3BackupConfigurationPropertyOutputReference | TfDeliveryStream.ExtendedS3ConfigurationS3BackupConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1966,7 +1966,7 @@ export function awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationS3BackupC
       storageClassType: "string",
     },
     cloudwatch_logging_options: {
-      value: awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
+      value: tfDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
       isBlock: true,
       type: "list",
       storageClassType: "ExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsPropertyList",
@@ -1978,7 +1978,7 @@ export function awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationS3BackupC
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ExtendedS3ConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.ExtendedS3ConfigurationProperty): any {
+export function tfDeliveryStreamExtendedS3ConfigurationPropertyToTerraform(struct?: TfDeliveryStream.ExtendedS3ConfigurationPropertyOutputReference | TfDeliveryStream.ExtendedS3ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1995,16 +1995,16 @@ export function awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationPropertyT
     prefix: cdktn.stringToTerraform(struct!.prefix),
     role_arn: cdktn.stringToTerraform(struct!.roleArn),
     s3_backup_mode: cdktn.stringToTerraform(struct!.s3BackupMode),
-    cloudwatch_logging_options: awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
-    data_format_conversion_configuration: awsKinesisFirehoseDeliveryStreamDataFormatConversionConfigurationPropertyToTerraform(struct!.dataFormatConversionConfiguration),
-    dynamic_partitioning_configuration: awsKinesisFirehoseDeliveryStreamDynamicPartitioningConfigurationPropertyToTerraform(struct!.dynamicPartitioningConfiguration),
-    processing_configuration: awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationPropertyToTerraform(struct!.processingConfiguration),
-    s3_backup_configuration: awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationPropertyToTerraform(struct!.s3BackupConfiguration),
+    cloudwatch_logging_options: tfDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
+    data_format_conversion_configuration: tfDeliveryStreamDataFormatConversionConfigurationPropertyToTerraform(struct!.dataFormatConversionConfiguration),
+    dynamic_partitioning_configuration: tfDeliveryStreamDynamicPartitioningConfigurationPropertyToTerraform(struct!.dynamicPartitioningConfiguration),
+    processing_configuration: tfDeliveryStreamExtendedS3ConfigurationProcessingConfigurationPropertyToTerraform(struct!.processingConfiguration),
+    s3_backup_configuration: tfDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationPropertyToTerraform(struct!.s3BackupConfiguration),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ExtendedS3ConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.ExtendedS3ConfigurationProperty): any {
+export function tfDeliveryStreamExtendedS3ConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.ExtendedS3ConfigurationPropertyOutputReference | TfDeliveryStream.ExtendedS3ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2077,31 +2077,31 @@ export function awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationPropertyT
       storageClassType: "string",
     },
     cloudwatch_logging_options: {
-      value: awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
+      value: tfDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
       isBlock: true,
       type: "list",
       storageClassType: "ExtendedS3ConfigurationCloudwatchLoggingOptionsPropertyList",
     },
     data_format_conversion_configuration: {
-      value: awsKinesisFirehoseDeliveryStreamDataFormatConversionConfigurationPropertyToHclTerraform(struct!.dataFormatConversionConfiguration),
+      value: tfDeliveryStreamDataFormatConversionConfigurationPropertyToHclTerraform(struct!.dataFormatConversionConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "DataFormatConversionConfigurationPropertyList",
     },
     dynamic_partitioning_configuration: {
-      value: awsKinesisFirehoseDeliveryStreamDynamicPartitioningConfigurationPropertyToHclTerraform(struct!.dynamicPartitioningConfiguration),
+      value: tfDeliveryStreamDynamicPartitioningConfigurationPropertyToHclTerraform(struct!.dynamicPartitioningConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "DynamicPartitioningConfigurationPropertyList",
     },
     processing_configuration: {
-      value: awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationPropertyToHclTerraform(struct!.processingConfiguration),
+      value: tfDeliveryStreamExtendedS3ConfigurationProcessingConfigurationPropertyToHclTerraform(struct!.processingConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ExtendedS3ConfigurationProcessingConfigurationPropertyList",
     },
     s3_backup_configuration: {
-      value: awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationPropertyToHclTerraform(struct!.s3BackupConfiguration),
+      value: tfDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationPropertyToHclTerraform(struct!.s3BackupConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ExtendedS3ConfigurationS3BackupConfigurationPropertyList",
@@ -2113,7 +2113,7 @@ export function awsKinesisFirehoseDeliveryStreamExtendedS3ConfigurationPropertyT
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.HttpEndpointConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.HttpEndpointConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: TfDeliveryStream.HttpEndpointConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.HttpEndpointConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2126,7 +2126,7 @@ export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationCloudwa
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.HttpEndpointConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.HttpEndpointConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: TfDeliveryStream.HttpEndpointConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.HttpEndpointConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2157,7 +2157,7 @@ export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationCloudwa
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.HttpEndpointConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform(struct?: TfDeliveryStream.HttpEndpointConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2169,7 +2169,7 @@ export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationProcess
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.HttpEndpointConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform(struct?: TfDeliveryStream.HttpEndpointConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2194,19 +2194,19 @@ export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationProcess
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorsPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.HttpEndpointConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorsPropertyToTerraform(struct?: TfDeliveryStream.HttpEndpointConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     type: cdktn.stringToTerraform(struct!.type),
-    parameters: cdktn.listMapper(awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform, true)(struct!.parameters),
+    parameters: cdktn.listMapper(tfDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform, true)(struct!.parameters),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.HttpEndpointConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform(struct?: TfDeliveryStream.HttpEndpointConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2219,7 +2219,7 @@ export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationProcess
       storageClassType: "string",
     },
     parameters: {
-      value: cdktn.listMapperHcl(awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform, true)(struct!.parameters),
+      value: cdktn.listMapperHcl(tfDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform, true)(struct!.parameters),
       isBlock: true,
       type: "set",
       storageClassType: "HttpEndpointConfigurationProcessingConfigurationProcessorsParametersPropertyList",
@@ -2231,19 +2231,19 @@ export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationProcess
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.HttpEndpointConfigurationProcessingConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.HttpEndpointConfigurationProcessingConfigurationProperty): any {
+export function tfDeliveryStreamHttpEndpointConfigurationProcessingConfigurationPropertyToTerraform(struct?: TfDeliveryStream.HttpEndpointConfigurationProcessingConfigurationPropertyOutputReference | TfDeliveryStream.HttpEndpointConfigurationProcessingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     enabled: cdktn.booleanToTerraform(struct!.enabled),
-    processors: cdktn.listMapper(awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorsPropertyToTerraform, true)(struct!.processors),
+    processors: cdktn.listMapper(tfDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorsPropertyToTerraform, true)(struct!.processors),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.HttpEndpointConfigurationProcessingConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.HttpEndpointConfigurationProcessingConfigurationProperty): any {
+export function tfDeliveryStreamHttpEndpointConfigurationProcessingConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.HttpEndpointConfigurationProcessingConfigurationPropertyOutputReference | TfDeliveryStream.HttpEndpointConfigurationProcessingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2256,7 +2256,7 @@ export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationProcess
       storageClassType: "boolean",
     },
     processors: {
-      value: cdktn.listMapperHcl(awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform, true)(struct!.processors),
+      value: cdktn.listMapperHcl(tfDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform, true)(struct!.processors),
       isBlock: true,
       type: "list",
       storageClassType: "HttpEndpointConfigurationProcessingConfigurationProcessorsPropertyList",
@@ -2268,7 +2268,7 @@ export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationProcess
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamCommonAttributesPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.CommonAttributesProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamCommonAttributesPropertyToTerraform(struct?: TfDeliveryStream.CommonAttributesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2280,7 +2280,7 @@ export function awsKinesisFirehoseDeliveryStreamCommonAttributesPropertyToTerraf
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamCommonAttributesPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.CommonAttributesProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamCommonAttributesPropertyToHclTerraform(struct?: TfDeliveryStream.CommonAttributesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2305,19 +2305,19 @@ export function awsKinesisFirehoseDeliveryStreamCommonAttributesPropertyToHclTer
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamRequestConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.RequestConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.RequestConfigurationProperty): any {
+export function tfDeliveryStreamRequestConfigurationPropertyToTerraform(struct?: TfDeliveryStream.RequestConfigurationPropertyOutputReference | TfDeliveryStream.RequestConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     content_encoding: cdktn.stringToTerraform(struct!.contentEncoding),
-    common_attributes: cdktn.listMapper(awsKinesisFirehoseDeliveryStreamCommonAttributesPropertyToTerraform, true)(struct!.commonAttributes),
+    common_attributes: cdktn.listMapper(tfDeliveryStreamCommonAttributesPropertyToTerraform, true)(struct!.commonAttributes),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamRequestConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.RequestConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.RequestConfigurationProperty): any {
+export function tfDeliveryStreamRequestConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.RequestConfigurationPropertyOutputReference | TfDeliveryStream.RequestConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2330,7 +2330,7 @@ export function awsKinesisFirehoseDeliveryStreamRequestConfigurationPropertyToHc
       storageClassType: "string",
     },
     common_attributes: {
-      value: cdktn.listMapperHcl(awsKinesisFirehoseDeliveryStreamCommonAttributesPropertyToHclTerraform, true)(struct!.commonAttributes),
+      value: cdktn.listMapperHcl(tfDeliveryStreamCommonAttributesPropertyToHclTerraform, true)(struct!.commonAttributes),
       isBlock: true,
       type: "list",
       storageClassType: "CommonAttributesPropertyList",
@@ -2342,7 +2342,7 @@ export function awsKinesisFirehoseDeliveryStreamRequestConfigurationPropertyToHc
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.HttpEndpointConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.HttpEndpointConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamHttpEndpointConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: TfDeliveryStream.HttpEndpointConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.HttpEndpointConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2355,7 +2355,7 @@ export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationS3Confi
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.HttpEndpointConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.HttpEndpointConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamHttpEndpointConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: TfDeliveryStream.HttpEndpointConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.HttpEndpointConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2386,7 +2386,7 @@ export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationS3Confi
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationS3ConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.HttpEndpointConfigurationS3ConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.HttpEndpointConfigurationS3ConfigurationProperty): any {
+export function tfDeliveryStreamHttpEndpointConfigurationS3ConfigurationPropertyToTerraform(struct?: TfDeliveryStream.HttpEndpointConfigurationS3ConfigurationPropertyOutputReference | TfDeliveryStream.HttpEndpointConfigurationS3ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2400,12 +2400,12 @@ export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationS3Confi
     kms_key_arn: cdktn.stringToTerraform(struct!.kmsKeyArn),
     prefix: cdktn.stringToTerraform(struct!.prefix),
     role_arn: cdktn.stringToTerraform(struct!.roleArn),
-    cloudwatch_logging_options: awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
+    cloudwatch_logging_options: tfDeliveryStreamHttpEndpointConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationS3ConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.HttpEndpointConfigurationS3ConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.HttpEndpointConfigurationS3ConfigurationProperty): any {
+export function tfDeliveryStreamHttpEndpointConfigurationS3ConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.HttpEndpointConfigurationS3ConfigurationPropertyOutputReference | TfDeliveryStream.HttpEndpointConfigurationS3ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2460,7 +2460,7 @@ export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationS3Confi
       storageClassType: "string",
     },
     cloudwatch_logging_options: {
-      value: awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
+      value: tfDeliveryStreamHttpEndpointConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
       isBlock: true,
       type: "list",
       storageClassType: "HttpEndpointConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyList",
@@ -2472,7 +2472,7 @@ export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationS3Confi
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationSecretsManagerConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.HttpEndpointConfigurationSecretsManagerConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.HttpEndpointConfigurationSecretsManagerConfigurationProperty): any {
+export function tfDeliveryStreamHttpEndpointConfigurationSecretsManagerConfigurationPropertyToTerraform(struct?: TfDeliveryStream.HttpEndpointConfigurationSecretsManagerConfigurationPropertyOutputReference | TfDeliveryStream.HttpEndpointConfigurationSecretsManagerConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2485,7 +2485,7 @@ export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationSecrets
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationSecretsManagerConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.HttpEndpointConfigurationSecretsManagerConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.HttpEndpointConfigurationSecretsManagerConfigurationProperty): any {
+export function tfDeliveryStreamHttpEndpointConfigurationSecretsManagerConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.HttpEndpointConfigurationSecretsManagerConfigurationPropertyOutputReference | TfDeliveryStream.HttpEndpointConfigurationSecretsManagerConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2516,7 +2516,7 @@ export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationSecrets
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.HttpEndpointConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.HttpEndpointConfigurationProperty): any {
+export function tfDeliveryStreamHttpEndpointConfigurationPropertyToTerraform(struct?: TfDeliveryStream.HttpEndpointConfigurationPropertyOutputReference | TfDeliveryStream.HttpEndpointConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2530,16 +2530,16 @@ export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationPropert
     role_arn: cdktn.stringToTerraform(struct!.roleArn),
     s3_backup_mode: cdktn.stringToTerraform(struct!.s3BackupMode),
     url: cdktn.stringToTerraform(struct!.url),
-    cloudwatch_logging_options: awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
-    processing_configuration: awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationPropertyToTerraform(struct!.processingConfiguration),
-    request_configuration: awsKinesisFirehoseDeliveryStreamRequestConfigurationPropertyToTerraform(struct!.requestConfiguration),
-    s3_configuration: awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationS3ConfigurationPropertyToTerraform(struct!.s3Configuration),
-    secrets_manager_configuration: awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationSecretsManagerConfigurationPropertyToTerraform(struct!.secretsManagerConfiguration),
+    cloudwatch_logging_options: tfDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
+    processing_configuration: tfDeliveryStreamHttpEndpointConfigurationProcessingConfigurationPropertyToTerraform(struct!.processingConfiguration),
+    request_configuration: tfDeliveryStreamRequestConfigurationPropertyToTerraform(struct!.requestConfiguration),
+    s3_configuration: tfDeliveryStreamHttpEndpointConfigurationS3ConfigurationPropertyToTerraform(struct!.s3Configuration),
+    secrets_manager_configuration: tfDeliveryStreamHttpEndpointConfigurationSecretsManagerConfigurationPropertyToTerraform(struct!.secretsManagerConfiguration),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.HttpEndpointConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.HttpEndpointConfigurationProperty): any {
+export function tfDeliveryStreamHttpEndpointConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.HttpEndpointConfigurationPropertyOutputReference | TfDeliveryStream.HttpEndpointConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2594,31 +2594,31 @@ export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationPropert
       storageClassType: "string",
     },
     cloudwatch_logging_options: {
-      value: awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
+      value: tfDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
       isBlock: true,
       type: "list",
       storageClassType: "HttpEndpointConfigurationCloudwatchLoggingOptionsPropertyList",
     },
     processing_configuration: {
-      value: awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationPropertyToHclTerraform(struct!.processingConfiguration),
+      value: tfDeliveryStreamHttpEndpointConfigurationProcessingConfigurationPropertyToHclTerraform(struct!.processingConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "HttpEndpointConfigurationProcessingConfigurationPropertyList",
     },
     request_configuration: {
-      value: awsKinesisFirehoseDeliveryStreamRequestConfigurationPropertyToHclTerraform(struct!.requestConfiguration),
+      value: tfDeliveryStreamRequestConfigurationPropertyToHclTerraform(struct!.requestConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "RequestConfigurationPropertyList",
     },
     s3_configuration: {
-      value: awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationS3ConfigurationPropertyToHclTerraform(struct!.s3Configuration),
+      value: tfDeliveryStreamHttpEndpointConfigurationS3ConfigurationPropertyToHclTerraform(struct!.s3Configuration),
       isBlock: true,
       type: "list",
       storageClassType: "HttpEndpointConfigurationS3ConfigurationPropertyList",
     },
     secrets_manager_configuration: {
-      value: awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationSecretsManagerConfigurationPropertyToHclTerraform(struct!.secretsManagerConfiguration),
+      value: tfDeliveryStreamHttpEndpointConfigurationSecretsManagerConfigurationPropertyToHclTerraform(struct!.secretsManagerConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "HttpEndpointConfigurationSecretsManagerConfigurationPropertyList",
@@ -2630,7 +2630,7 @@ export function awsKinesisFirehoseDeliveryStreamHttpEndpointConfigurationPropert
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamIcebergConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.IcebergConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.IcebergConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamIcebergConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: TfDeliveryStream.IcebergConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.IcebergConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2643,7 +2643,7 @@ export function awsKinesisFirehoseDeliveryStreamIcebergConfigurationCloudwatchLo
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamIcebergConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.IcebergConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.IcebergConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamIcebergConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: TfDeliveryStream.IcebergConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.IcebergConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2674,7 +2674,7 @@ export function awsKinesisFirehoseDeliveryStreamIcebergConfigurationCloudwatchLo
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamDestinationTableConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.DestinationTableConfigurationProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamDestinationTableConfigurationPropertyToTerraform(struct?: TfDeliveryStream.DestinationTableConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2688,7 +2688,7 @@ export function awsKinesisFirehoseDeliveryStreamDestinationTableConfigurationPro
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamDestinationTableConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.DestinationTableConfigurationProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamDestinationTableConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.DestinationTableConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2725,7 +2725,7 @@ export function awsKinesisFirehoseDeliveryStreamDestinationTableConfigurationPro
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamIcebergConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.IcebergConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamIcebergConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform(struct?: TfDeliveryStream.IcebergConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2737,7 +2737,7 @@ export function awsKinesisFirehoseDeliveryStreamIcebergConfigurationProcessingCo
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamIcebergConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.IcebergConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamIcebergConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform(struct?: TfDeliveryStream.IcebergConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2762,19 +2762,19 @@ export function awsKinesisFirehoseDeliveryStreamIcebergConfigurationProcessingCo
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamIcebergConfigurationProcessingConfigurationProcessorsPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.IcebergConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamIcebergConfigurationProcessingConfigurationProcessorsPropertyToTerraform(struct?: TfDeliveryStream.IcebergConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     type: cdktn.stringToTerraform(struct!.type),
-    parameters: cdktn.listMapper(awsKinesisFirehoseDeliveryStreamIcebergConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform, true)(struct!.parameters),
+    parameters: cdktn.listMapper(tfDeliveryStreamIcebergConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform, true)(struct!.parameters),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamIcebergConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.IcebergConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamIcebergConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform(struct?: TfDeliveryStream.IcebergConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2787,7 +2787,7 @@ export function awsKinesisFirehoseDeliveryStreamIcebergConfigurationProcessingCo
       storageClassType: "string",
     },
     parameters: {
-      value: cdktn.listMapperHcl(awsKinesisFirehoseDeliveryStreamIcebergConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform, true)(struct!.parameters),
+      value: cdktn.listMapperHcl(tfDeliveryStreamIcebergConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform, true)(struct!.parameters),
       isBlock: true,
       type: "set",
       storageClassType: "IcebergConfigurationProcessingConfigurationProcessorsParametersPropertyList",
@@ -2799,19 +2799,19 @@ export function awsKinesisFirehoseDeliveryStreamIcebergConfigurationProcessingCo
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamIcebergConfigurationProcessingConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.IcebergConfigurationProcessingConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.IcebergConfigurationProcessingConfigurationProperty): any {
+export function tfDeliveryStreamIcebergConfigurationProcessingConfigurationPropertyToTerraform(struct?: TfDeliveryStream.IcebergConfigurationProcessingConfigurationPropertyOutputReference | TfDeliveryStream.IcebergConfigurationProcessingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     enabled: cdktn.booleanToTerraform(struct!.enabled),
-    processors: cdktn.listMapper(awsKinesisFirehoseDeliveryStreamIcebergConfigurationProcessingConfigurationProcessorsPropertyToTerraform, true)(struct!.processors),
+    processors: cdktn.listMapper(tfDeliveryStreamIcebergConfigurationProcessingConfigurationProcessorsPropertyToTerraform, true)(struct!.processors),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamIcebergConfigurationProcessingConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.IcebergConfigurationProcessingConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.IcebergConfigurationProcessingConfigurationProperty): any {
+export function tfDeliveryStreamIcebergConfigurationProcessingConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.IcebergConfigurationProcessingConfigurationPropertyOutputReference | TfDeliveryStream.IcebergConfigurationProcessingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2824,7 +2824,7 @@ export function awsKinesisFirehoseDeliveryStreamIcebergConfigurationProcessingCo
       storageClassType: "boolean",
     },
     processors: {
-      value: cdktn.listMapperHcl(awsKinesisFirehoseDeliveryStreamIcebergConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform, true)(struct!.processors),
+      value: cdktn.listMapperHcl(tfDeliveryStreamIcebergConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform, true)(struct!.processors),
       isBlock: true,
       type: "list",
       storageClassType: "IcebergConfigurationProcessingConfigurationProcessorsPropertyList",
@@ -2836,7 +2836,7 @@ export function awsKinesisFirehoseDeliveryStreamIcebergConfigurationProcessingCo
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamIcebergConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.IcebergConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.IcebergConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamIcebergConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: TfDeliveryStream.IcebergConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.IcebergConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2849,7 +2849,7 @@ export function awsKinesisFirehoseDeliveryStreamIcebergConfigurationS3Configurat
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamIcebergConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.IcebergConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.IcebergConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamIcebergConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: TfDeliveryStream.IcebergConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.IcebergConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2880,7 +2880,7 @@ export function awsKinesisFirehoseDeliveryStreamIcebergConfigurationS3Configurat
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamIcebergConfigurationS3ConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.IcebergConfigurationS3ConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.IcebergConfigurationS3ConfigurationProperty): any {
+export function tfDeliveryStreamIcebergConfigurationS3ConfigurationPropertyToTerraform(struct?: TfDeliveryStream.IcebergConfigurationS3ConfigurationPropertyOutputReference | TfDeliveryStream.IcebergConfigurationS3ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2894,12 +2894,12 @@ export function awsKinesisFirehoseDeliveryStreamIcebergConfigurationS3Configurat
     kms_key_arn: cdktn.stringToTerraform(struct!.kmsKeyArn),
     prefix: cdktn.stringToTerraform(struct!.prefix),
     role_arn: cdktn.stringToTerraform(struct!.roleArn),
-    cloudwatch_logging_options: awsKinesisFirehoseDeliveryStreamIcebergConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
+    cloudwatch_logging_options: tfDeliveryStreamIcebergConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamIcebergConfigurationS3ConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.IcebergConfigurationS3ConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.IcebergConfigurationS3ConfigurationProperty): any {
+export function tfDeliveryStreamIcebergConfigurationS3ConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.IcebergConfigurationS3ConfigurationPropertyOutputReference | TfDeliveryStream.IcebergConfigurationS3ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2954,7 +2954,7 @@ export function awsKinesisFirehoseDeliveryStreamIcebergConfigurationS3Configurat
       storageClassType: "string",
     },
     cloudwatch_logging_options: {
-      value: awsKinesisFirehoseDeliveryStreamIcebergConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
+      value: tfDeliveryStreamIcebergConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
       isBlock: true,
       type: "list",
       storageClassType: "IcebergConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyList",
@@ -2966,7 +2966,7 @@ export function awsKinesisFirehoseDeliveryStreamIcebergConfigurationS3Configurat
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamIcebergConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.IcebergConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.IcebergConfigurationProperty): any {
+export function tfDeliveryStreamIcebergConfigurationPropertyToTerraform(struct?: TfDeliveryStream.IcebergConfigurationPropertyOutputReference | TfDeliveryStream.IcebergConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2979,15 +2979,15 @@ export function awsKinesisFirehoseDeliveryStreamIcebergConfigurationPropertyToTe
     retry_duration: cdktn.numberToTerraform(struct!.retryDuration),
     role_arn: cdktn.stringToTerraform(struct!.roleArn),
     s3_backup_mode: cdktn.stringToTerraform(struct!.s3BackupMode),
-    cloudwatch_logging_options: awsKinesisFirehoseDeliveryStreamIcebergConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
-    destination_table_configuration: cdktn.listMapper(awsKinesisFirehoseDeliveryStreamDestinationTableConfigurationPropertyToTerraform, true)(struct!.destinationTableConfiguration),
-    processing_configuration: awsKinesisFirehoseDeliveryStreamIcebergConfigurationProcessingConfigurationPropertyToTerraform(struct!.processingConfiguration),
-    s3_configuration: awsKinesisFirehoseDeliveryStreamIcebergConfigurationS3ConfigurationPropertyToTerraform(struct!.s3Configuration),
+    cloudwatch_logging_options: tfDeliveryStreamIcebergConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
+    destination_table_configuration: cdktn.listMapper(tfDeliveryStreamDestinationTableConfigurationPropertyToTerraform, true)(struct!.destinationTableConfiguration),
+    processing_configuration: tfDeliveryStreamIcebergConfigurationProcessingConfigurationPropertyToTerraform(struct!.processingConfiguration),
+    s3_configuration: tfDeliveryStreamIcebergConfigurationS3ConfigurationPropertyToTerraform(struct!.s3Configuration),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamIcebergConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.IcebergConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.IcebergConfigurationProperty): any {
+export function tfDeliveryStreamIcebergConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.IcebergConfigurationPropertyOutputReference | TfDeliveryStream.IcebergConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3036,25 +3036,25 @@ export function awsKinesisFirehoseDeliveryStreamIcebergConfigurationPropertyToHc
       storageClassType: "string",
     },
     cloudwatch_logging_options: {
-      value: awsKinesisFirehoseDeliveryStreamIcebergConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
+      value: tfDeliveryStreamIcebergConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
       isBlock: true,
       type: "list",
       storageClassType: "IcebergConfigurationCloudwatchLoggingOptionsPropertyList",
     },
     destination_table_configuration: {
-      value: cdktn.listMapperHcl(awsKinesisFirehoseDeliveryStreamDestinationTableConfigurationPropertyToHclTerraform, true)(struct!.destinationTableConfiguration),
+      value: cdktn.listMapperHcl(tfDeliveryStreamDestinationTableConfigurationPropertyToHclTerraform, true)(struct!.destinationTableConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationTableConfigurationPropertyList",
     },
     processing_configuration: {
-      value: awsKinesisFirehoseDeliveryStreamIcebergConfigurationProcessingConfigurationPropertyToHclTerraform(struct!.processingConfiguration),
+      value: tfDeliveryStreamIcebergConfigurationProcessingConfigurationPropertyToHclTerraform(struct!.processingConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "IcebergConfigurationProcessingConfigurationPropertyList",
     },
     s3_configuration: {
-      value: awsKinesisFirehoseDeliveryStreamIcebergConfigurationS3ConfigurationPropertyToHclTerraform(struct!.s3Configuration),
+      value: tfDeliveryStreamIcebergConfigurationS3ConfigurationPropertyToHclTerraform(struct!.s3Configuration),
       isBlock: true,
       type: "list",
       storageClassType: "IcebergConfigurationS3ConfigurationPropertyList",
@@ -3066,7 +3066,7 @@ export function awsKinesisFirehoseDeliveryStreamIcebergConfigurationPropertyToHc
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamKinesisSourceConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.KinesisSourceConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.KinesisSourceConfigurationProperty): any {
+export function tfDeliveryStreamKinesisSourceConfigurationPropertyToTerraform(struct?: TfDeliveryStream.KinesisSourceConfigurationPropertyOutputReference | TfDeliveryStream.KinesisSourceConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3078,7 +3078,7 @@ export function awsKinesisFirehoseDeliveryStreamKinesisSourceConfigurationProper
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamKinesisSourceConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.KinesisSourceConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.KinesisSourceConfigurationProperty): any {
+export function tfDeliveryStreamKinesisSourceConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.KinesisSourceConfigurationPropertyOutputReference | TfDeliveryStream.KinesisSourceConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3103,7 +3103,7 @@ export function awsKinesisFirehoseDeliveryStreamKinesisSourceConfigurationProper
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamAuthenticationConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.AuthenticationConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.AuthenticationConfigurationProperty): any {
+export function tfDeliveryStreamAuthenticationConfigurationPropertyToTerraform(struct?: TfDeliveryStream.AuthenticationConfigurationPropertyOutputReference | TfDeliveryStream.AuthenticationConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3115,7 +3115,7 @@ export function awsKinesisFirehoseDeliveryStreamAuthenticationConfigurationPrope
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamAuthenticationConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.AuthenticationConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.AuthenticationConfigurationProperty): any {
+export function tfDeliveryStreamAuthenticationConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.AuthenticationConfigurationPropertyOutputReference | TfDeliveryStream.AuthenticationConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3140,7 +3140,7 @@ export function awsKinesisFirehoseDeliveryStreamAuthenticationConfigurationPrope
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamMskSourceConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.MskSourceConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.MskSourceConfigurationProperty): any {
+export function tfDeliveryStreamMskSourceConfigurationPropertyToTerraform(struct?: TfDeliveryStream.MskSourceConfigurationPropertyOutputReference | TfDeliveryStream.MskSourceConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3149,12 +3149,12 @@ export function awsKinesisFirehoseDeliveryStreamMskSourceConfigurationPropertyTo
     msk_cluster_arn: cdktn.stringToTerraform(struct!.mskClusterArn),
     read_from_timestamp: cdktn.stringToTerraform(struct!.readFromTimestamp),
     topic_name: cdktn.stringToTerraform(struct!.topicName),
-    authentication_configuration: awsKinesisFirehoseDeliveryStreamAuthenticationConfigurationPropertyToTerraform(struct!.authenticationConfiguration),
+    authentication_configuration: tfDeliveryStreamAuthenticationConfigurationPropertyToTerraform(struct!.authenticationConfiguration),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamMskSourceConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.MskSourceConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.MskSourceConfigurationProperty): any {
+export function tfDeliveryStreamMskSourceConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.MskSourceConfigurationPropertyOutputReference | TfDeliveryStream.MskSourceConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3179,7 +3179,7 @@ export function awsKinesisFirehoseDeliveryStreamMskSourceConfigurationPropertyTo
       storageClassType: "string",
     },
     authentication_configuration: {
-      value: awsKinesisFirehoseDeliveryStreamAuthenticationConfigurationPropertyToHclTerraform(struct!.authenticationConfiguration),
+      value: tfDeliveryStreamAuthenticationConfigurationPropertyToHclTerraform(struct!.authenticationConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "AuthenticationConfigurationPropertyList",
@@ -3191,7 +3191,7 @@ export function awsKinesisFirehoseDeliveryStreamMskSourceConfigurationPropertyTo
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpensearchConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.OpensearchConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamOpensearchConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: TfDeliveryStream.OpensearchConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.OpensearchConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3204,7 +3204,7 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationCloudwatc
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpensearchConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.OpensearchConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamOpensearchConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: TfDeliveryStream.OpensearchConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.OpensearchConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3235,7 +3235,7 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationCloudwatc
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamDocumentIdOptionsPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.DocumentIdOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.DocumentIdOptionsProperty): any {
+export function tfDeliveryStreamDocumentIdOptionsPropertyToTerraform(struct?: TfDeliveryStream.DocumentIdOptionsPropertyOutputReference | TfDeliveryStream.DocumentIdOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3246,7 +3246,7 @@ export function awsKinesisFirehoseDeliveryStreamDocumentIdOptionsPropertyToTerra
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamDocumentIdOptionsPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.DocumentIdOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.DocumentIdOptionsProperty): any {
+export function tfDeliveryStreamDocumentIdOptionsPropertyToHclTerraform(struct?: TfDeliveryStream.DocumentIdOptionsPropertyOutputReference | TfDeliveryStream.DocumentIdOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3265,7 +3265,7 @@ export function awsKinesisFirehoseDeliveryStreamDocumentIdOptionsPropertyToHclTe
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpensearchConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamOpensearchConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform(struct?: TfDeliveryStream.OpensearchConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3277,7 +3277,7 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationProcessin
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpensearchConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamOpensearchConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform(struct?: TfDeliveryStream.OpensearchConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3302,19 +3302,19 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationProcessin
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationProcessingConfigurationProcessorsPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpensearchConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamOpensearchConfigurationProcessingConfigurationProcessorsPropertyToTerraform(struct?: TfDeliveryStream.OpensearchConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     type: cdktn.stringToTerraform(struct!.type),
-    parameters: cdktn.listMapper(awsKinesisFirehoseDeliveryStreamOpensearchConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform, true)(struct!.parameters),
+    parameters: cdktn.listMapper(tfDeliveryStreamOpensearchConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform, true)(struct!.parameters),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpensearchConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamOpensearchConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform(struct?: TfDeliveryStream.OpensearchConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3327,7 +3327,7 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationProcessin
       storageClassType: "string",
     },
     parameters: {
-      value: cdktn.listMapperHcl(awsKinesisFirehoseDeliveryStreamOpensearchConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform, true)(struct!.parameters),
+      value: cdktn.listMapperHcl(tfDeliveryStreamOpensearchConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform, true)(struct!.parameters),
       isBlock: true,
       type: "set",
       storageClassType: "OpensearchConfigurationProcessingConfigurationProcessorsParametersPropertyList",
@@ -3339,19 +3339,19 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationProcessin
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationProcessingConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpensearchConfigurationProcessingConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.OpensearchConfigurationProcessingConfigurationProperty): any {
+export function tfDeliveryStreamOpensearchConfigurationProcessingConfigurationPropertyToTerraform(struct?: TfDeliveryStream.OpensearchConfigurationProcessingConfigurationPropertyOutputReference | TfDeliveryStream.OpensearchConfigurationProcessingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     enabled: cdktn.booleanToTerraform(struct!.enabled),
-    processors: cdktn.listMapper(awsKinesisFirehoseDeliveryStreamOpensearchConfigurationProcessingConfigurationProcessorsPropertyToTerraform, true)(struct!.processors),
+    processors: cdktn.listMapper(tfDeliveryStreamOpensearchConfigurationProcessingConfigurationProcessorsPropertyToTerraform, true)(struct!.processors),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationProcessingConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpensearchConfigurationProcessingConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.OpensearchConfigurationProcessingConfigurationProperty): any {
+export function tfDeliveryStreamOpensearchConfigurationProcessingConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.OpensearchConfigurationProcessingConfigurationPropertyOutputReference | TfDeliveryStream.OpensearchConfigurationProcessingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3364,7 +3364,7 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationProcessin
       storageClassType: "boolean",
     },
     processors: {
-      value: cdktn.listMapperHcl(awsKinesisFirehoseDeliveryStreamOpensearchConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform, true)(struct!.processors),
+      value: cdktn.listMapperHcl(tfDeliveryStreamOpensearchConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform, true)(struct!.processors),
       isBlock: true,
       type: "list",
       storageClassType: "OpensearchConfigurationProcessingConfigurationProcessorsPropertyList",
@@ -3376,7 +3376,7 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationProcessin
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpensearchConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.OpensearchConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamOpensearchConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: TfDeliveryStream.OpensearchConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.OpensearchConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3389,7 +3389,7 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationS3Configu
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpensearchConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.OpensearchConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamOpensearchConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: TfDeliveryStream.OpensearchConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.OpensearchConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3420,7 +3420,7 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationS3Configu
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationS3ConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpensearchConfigurationS3ConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.OpensearchConfigurationS3ConfigurationProperty): any {
+export function tfDeliveryStreamOpensearchConfigurationS3ConfigurationPropertyToTerraform(struct?: TfDeliveryStream.OpensearchConfigurationS3ConfigurationPropertyOutputReference | TfDeliveryStream.OpensearchConfigurationS3ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3434,12 +3434,12 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationS3Configu
     kms_key_arn: cdktn.stringToTerraform(struct!.kmsKeyArn),
     prefix: cdktn.stringToTerraform(struct!.prefix),
     role_arn: cdktn.stringToTerraform(struct!.roleArn),
-    cloudwatch_logging_options: awsKinesisFirehoseDeliveryStreamOpensearchConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
+    cloudwatch_logging_options: tfDeliveryStreamOpensearchConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationS3ConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpensearchConfigurationS3ConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.OpensearchConfigurationS3ConfigurationProperty): any {
+export function tfDeliveryStreamOpensearchConfigurationS3ConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.OpensearchConfigurationS3ConfigurationPropertyOutputReference | TfDeliveryStream.OpensearchConfigurationS3ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3494,7 +3494,7 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationS3Configu
       storageClassType: "string",
     },
     cloudwatch_logging_options: {
-      value: awsKinesisFirehoseDeliveryStreamOpensearchConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
+      value: tfDeliveryStreamOpensearchConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
       isBlock: true,
       type: "list",
       storageClassType: "OpensearchConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyList",
@@ -3506,7 +3506,7 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationS3Configu
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationVpcConfigPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpensearchConfigurationVpcConfigPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.OpensearchConfigurationVpcConfigProperty): any {
+export function tfDeliveryStreamOpensearchConfigurationVpcConfigPropertyToTerraform(struct?: TfDeliveryStream.OpensearchConfigurationVpcConfigPropertyOutputReference | TfDeliveryStream.OpensearchConfigurationVpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3519,7 +3519,7 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationVpcConfig
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationVpcConfigPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpensearchConfigurationVpcConfigPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.OpensearchConfigurationVpcConfigProperty): any {
+export function tfDeliveryStreamOpensearchConfigurationVpcConfigPropertyToHclTerraform(struct?: TfDeliveryStream.OpensearchConfigurationVpcConfigPropertyOutputReference | TfDeliveryStream.OpensearchConfigurationVpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3550,7 +3550,7 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationVpcConfig
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpensearchConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.OpensearchConfigurationProperty): any {
+export function tfDeliveryStreamOpensearchConfigurationPropertyToTerraform(struct?: TfDeliveryStream.OpensearchConfigurationPropertyOutputReference | TfDeliveryStream.OpensearchConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3566,16 +3566,16 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationPropertyT
     role_arn: cdktn.stringToTerraform(struct!.roleArn),
     s3_backup_mode: cdktn.stringToTerraform(struct!.s3BackupMode),
     type_name: cdktn.stringToTerraform(struct!.typeName),
-    cloudwatch_logging_options: awsKinesisFirehoseDeliveryStreamOpensearchConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
-    document_id_options: awsKinesisFirehoseDeliveryStreamDocumentIdOptionsPropertyToTerraform(struct!.documentIdOptions),
-    processing_configuration: awsKinesisFirehoseDeliveryStreamOpensearchConfigurationProcessingConfigurationPropertyToTerraform(struct!.processingConfiguration),
-    s3_configuration: awsKinesisFirehoseDeliveryStreamOpensearchConfigurationS3ConfigurationPropertyToTerraform(struct!.s3Configuration),
-    vpc_config: awsKinesisFirehoseDeliveryStreamOpensearchConfigurationVpcConfigPropertyToTerraform(struct!.vpcConfig),
+    cloudwatch_logging_options: tfDeliveryStreamOpensearchConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
+    document_id_options: tfDeliveryStreamDocumentIdOptionsPropertyToTerraform(struct!.documentIdOptions),
+    processing_configuration: tfDeliveryStreamOpensearchConfigurationProcessingConfigurationPropertyToTerraform(struct!.processingConfiguration),
+    s3_configuration: tfDeliveryStreamOpensearchConfigurationS3ConfigurationPropertyToTerraform(struct!.s3Configuration),
+    vpc_config: tfDeliveryStreamOpensearchConfigurationVpcConfigPropertyToTerraform(struct!.vpcConfig),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpensearchConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.OpensearchConfigurationProperty): any {
+export function tfDeliveryStreamOpensearchConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.OpensearchConfigurationPropertyOutputReference | TfDeliveryStream.OpensearchConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3642,31 +3642,31 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationPropertyT
       storageClassType: "string",
     },
     cloudwatch_logging_options: {
-      value: awsKinesisFirehoseDeliveryStreamOpensearchConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
+      value: tfDeliveryStreamOpensearchConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
       isBlock: true,
       type: "list",
       storageClassType: "OpensearchConfigurationCloudwatchLoggingOptionsPropertyList",
     },
     document_id_options: {
-      value: awsKinesisFirehoseDeliveryStreamDocumentIdOptionsPropertyToHclTerraform(struct!.documentIdOptions),
+      value: tfDeliveryStreamDocumentIdOptionsPropertyToHclTerraform(struct!.documentIdOptions),
       isBlock: true,
       type: "list",
       storageClassType: "DocumentIdOptionsPropertyList",
     },
     processing_configuration: {
-      value: awsKinesisFirehoseDeliveryStreamOpensearchConfigurationProcessingConfigurationPropertyToHclTerraform(struct!.processingConfiguration),
+      value: tfDeliveryStreamOpensearchConfigurationProcessingConfigurationPropertyToHclTerraform(struct!.processingConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "OpensearchConfigurationProcessingConfigurationPropertyList",
     },
     s3_configuration: {
-      value: awsKinesisFirehoseDeliveryStreamOpensearchConfigurationS3ConfigurationPropertyToHclTerraform(struct!.s3Configuration),
+      value: tfDeliveryStreamOpensearchConfigurationS3ConfigurationPropertyToHclTerraform(struct!.s3Configuration),
       isBlock: true,
       type: "list",
       storageClassType: "OpensearchConfigurationS3ConfigurationPropertyList",
     },
     vpc_config: {
-      value: awsKinesisFirehoseDeliveryStreamOpensearchConfigurationVpcConfigPropertyToHclTerraform(struct!.vpcConfig),
+      value: tfDeliveryStreamOpensearchConfigurationVpcConfigPropertyToHclTerraform(struct!.vpcConfig),
       isBlock: true,
       type: "list",
       storageClassType: "OpensearchConfigurationVpcConfigPropertyList",
@@ -3678,7 +3678,7 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchConfigurationPropertyT
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpensearchserverlessConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.OpensearchserverlessConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamOpensearchserverlessConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: TfDeliveryStream.OpensearchserverlessConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.OpensearchserverlessConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3691,7 +3691,7 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfiguratio
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpensearchserverlessConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.OpensearchserverlessConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamOpensearchserverlessConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: TfDeliveryStream.OpensearchserverlessConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.OpensearchserverlessConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3722,7 +3722,7 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfiguratio
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpensearchserverlessConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamOpensearchserverlessConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform(struct?: TfDeliveryStream.OpensearchserverlessConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3734,7 +3734,7 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfiguratio
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpensearchserverlessConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamOpensearchserverlessConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform(struct?: TfDeliveryStream.OpensearchserverlessConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3759,19 +3759,19 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfiguratio
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfigurationProcessingConfigurationProcessorsPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpensearchserverlessConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamOpensearchserverlessConfigurationProcessingConfigurationProcessorsPropertyToTerraform(struct?: TfDeliveryStream.OpensearchserverlessConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     type: cdktn.stringToTerraform(struct!.type),
-    parameters: cdktn.listMapper(awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform, true)(struct!.parameters),
+    parameters: cdktn.listMapper(tfDeliveryStreamOpensearchserverlessConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform, true)(struct!.parameters),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpensearchserverlessConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamOpensearchserverlessConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform(struct?: TfDeliveryStream.OpensearchserverlessConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3784,7 +3784,7 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfiguratio
       storageClassType: "string",
     },
     parameters: {
-      value: cdktn.listMapperHcl(awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform, true)(struct!.parameters),
+      value: cdktn.listMapperHcl(tfDeliveryStreamOpensearchserverlessConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform, true)(struct!.parameters),
       isBlock: true,
       type: "set",
       storageClassType: "OpensearchserverlessConfigurationProcessingConfigurationProcessorsParametersPropertyList",
@@ -3796,19 +3796,19 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfiguratio
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfigurationProcessingConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpensearchserverlessConfigurationProcessingConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.OpensearchserverlessConfigurationProcessingConfigurationProperty): any {
+export function tfDeliveryStreamOpensearchserverlessConfigurationProcessingConfigurationPropertyToTerraform(struct?: TfDeliveryStream.OpensearchserverlessConfigurationProcessingConfigurationPropertyOutputReference | TfDeliveryStream.OpensearchserverlessConfigurationProcessingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     enabled: cdktn.booleanToTerraform(struct!.enabled),
-    processors: cdktn.listMapper(awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfigurationProcessingConfigurationProcessorsPropertyToTerraform, true)(struct!.processors),
+    processors: cdktn.listMapper(tfDeliveryStreamOpensearchserverlessConfigurationProcessingConfigurationProcessorsPropertyToTerraform, true)(struct!.processors),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfigurationProcessingConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpensearchserverlessConfigurationProcessingConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.OpensearchserverlessConfigurationProcessingConfigurationProperty): any {
+export function tfDeliveryStreamOpensearchserverlessConfigurationProcessingConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.OpensearchserverlessConfigurationProcessingConfigurationPropertyOutputReference | TfDeliveryStream.OpensearchserverlessConfigurationProcessingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3821,7 +3821,7 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfiguratio
       storageClassType: "boolean",
     },
     processors: {
-      value: cdktn.listMapperHcl(awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform, true)(struct!.processors),
+      value: cdktn.listMapperHcl(tfDeliveryStreamOpensearchserverlessConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform, true)(struct!.processors),
       isBlock: true,
       type: "list",
       storageClassType: "OpensearchserverlessConfigurationProcessingConfigurationProcessorsPropertyList",
@@ -3833,7 +3833,7 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfiguratio
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpensearchserverlessConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.OpensearchserverlessConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamOpensearchserverlessConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: TfDeliveryStream.OpensearchserverlessConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.OpensearchserverlessConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3846,7 +3846,7 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfiguratio
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpensearchserverlessConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.OpensearchserverlessConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamOpensearchserverlessConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: TfDeliveryStream.OpensearchserverlessConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.OpensearchserverlessConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3877,7 +3877,7 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfiguratio
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfigurationS3ConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpensearchserverlessConfigurationS3ConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.OpensearchserverlessConfigurationS3ConfigurationProperty): any {
+export function tfDeliveryStreamOpensearchserverlessConfigurationS3ConfigurationPropertyToTerraform(struct?: TfDeliveryStream.OpensearchserverlessConfigurationS3ConfigurationPropertyOutputReference | TfDeliveryStream.OpensearchserverlessConfigurationS3ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3891,12 +3891,12 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfiguratio
     kms_key_arn: cdktn.stringToTerraform(struct!.kmsKeyArn),
     prefix: cdktn.stringToTerraform(struct!.prefix),
     role_arn: cdktn.stringToTerraform(struct!.roleArn),
-    cloudwatch_logging_options: awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
+    cloudwatch_logging_options: tfDeliveryStreamOpensearchserverlessConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfigurationS3ConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpensearchserverlessConfigurationS3ConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.OpensearchserverlessConfigurationS3ConfigurationProperty): any {
+export function tfDeliveryStreamOpensearchserverlessConfigurationS3ConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.OpensearchserverlessConfigurationS3ConfigurationPropertyOutputReference | TfDeliveryStream.OpensearchserverlessConfigurationS3ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3951,7 +3951,7 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfiguratio
       storageClassType: "string",
     },
     cloudwatch_logging_options: {
-      value: awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
+      value: tfDeliveryStreamOpensearchserverlessConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
       isBlock: true,
       type: "list",
       storageClassType: "OpensearchserverlessConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyList",
@@ -3963,7 +3963,7 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfiguratio
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfigurationVpcConfigPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpensearchserverlessConfigurationVpcConfigPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.OpensearchserverlessConfigurationVpcConfigProperty): any {
+export function tfDeliveryStreamOpensearchserverlessConfigurationVpcConfigPropertyToTerraform(struct?: TfDeliveryStream.OpensearchserverlessConfigurationVpcConfigPropertyOutputReference | TfDeliveryStream.OpensearchserverlessConfigurationVpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3976,7 +3976,7 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfiguratio
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfigurationVpcConfigPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpensearchserverlessConfigurationVpcConfigPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.OpensearchserverlessConfigurationVpcConfigProperty): any {
+export function tfDeliveryStreamOpensearchserverlessConfigurationVpcConfigPropertyToHclTerraform(struct?: TfDeliveryStream.OpensearchserverlessConfigurationVpcConfigPropertyOutputReference | TfDeliveryStream.OpensearchserverlessConfigurationVpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4007,7 +4007,7 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfiguratio
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpensearchserverlessConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.OpensearchserverlessConfigurationProperty): any {
+export function tfDeliveryStreamOpensearchserverlessConfigurationPropertyToTerraform(struct?: TfDeliveryStream.OpensearchserverlessConfigurationPropertyOutputReference | TfDeliveryStream.OpensearchserverlessConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4020,15 +4020,15 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfiguratio
     retry_duration: cdktn.numberToTerraform(struct!.retryDuration),
     role_arn: cdktn.stringToTerraform(struct!.roleArn),
     s3_backup_mode: cdktn.stringToTerraform(struct!.s3BackupMode),
-    cloudwatch_logging_options: awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
-    processing_configuration: awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfigurationProcessingConfigurationPropertyToTerraform(struct!.processingConfiguration),
-    s3_configuration: awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfigurationS3ConfigurationPropertyToTerraform(struct!.s3Configuration),
-    vpc_config: awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfigurationVpcConfigPropertyToTerraform(struct!.vpcConfig),
+    cloudwatch_logging_options: tfDeliveryStreamOpensearchserverlessConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
+    processing_configuration: tfDeliveryStreamOpensearchserverlessConfigurationProcessingConfigurationPropertyToTerraform(struct!.processingConfiguration),
+    s3_configuration: tfDeliveryStreamOpensearchserverlessConfigurationS3ConfigurationPropertyToTerraform(struct!.s3Configuration),
+    vpc_config: tfDeliveryStreamOpensearchserverlessConfigurationVpcConfigPropertyToTerraform(struct!.vpcConfig),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.OpensearchserverlessConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.OpensearchserverlessConfigurationProperty): any {
+export function tfDeliveryStreamOpensearchserverlessConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.OpensearchserverlessConfigurationPropertyOutputReference | TfDeliveryStream.OpensearchserverlessConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4077,25 +4077,25 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfiguratio
       storageClassType: "string",
     },
     cloudwatch_logging_options: {
-      value: awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
+      value: tfDeliveryStreamOpensearchserverlessConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
       isBlock: true,
       type: "list",
       storageClassType: "OpensearchserverlessConfigurationCloudwatchLoggingOptionsPropertyList",
     },
     processing_configuration: {
-      value: awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfigurationProcessingConfigurationPropertyToHclTerraform(struct!.processingConfiguration),
+      value: tfDeliveryStreamOpensearchserverlessConfigurationProcessingConfigurationPropertyToHclTerraform(struct!.processingConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "OpensearchserverlessConfigurationProcessingConfigurationPropertyList",
     },
     s3_configuration: {
-      value: awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfigurationS3ConfigurationPropertyToHclTerraform(struct!.s3Configuration),
+      value: tfDeliveryStreamOpensearchserverlessConfigurationS3ConfigurationPropertyToHclTerraform(struct!.s3Configuration),
       isBlock: true,
       type: "list",
       storageClassType: "OpensearchserverlessConfigurationS3ConfigurationPropertyList",
     },
     vpc_config: {
-      value: awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfigurationVpcConfigPropertyToHclTerraform(struct!.vpcConfig),
+      value: tfDeliveryStreamOpensearchserverlessConfigurationVpcConfigPropertyToHclTerraform(struct!.vpcConfig),
       isBlock: true,
       type: "list",
       storageClassType: "OpensearchserverlessConfigurationVpcConfigPropertyList",
@@ -4107,7 +4107,7 @@ export function awsKinesisFirehoseDeliveryStreamOpensearchserverlessConfiguratio
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: TfDeliveryStream.RedshiftConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.RedshiftConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4120,7 +4120,7 @@ export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationCloudwatchL
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: TfDeliveryStream.RedshiftConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.RedshiftConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4151,7 +4151,7 @@ export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationCloudwatchL
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform(struct?: TfDeliveryStream.RedshiftConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4163,7 +4163,7 @@ export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationProcessingC
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform(struct?: TfDeliveryStream.RedshiftConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4188,19 +4188,19 @@ export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationProcessingC
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorsPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorsPropertyToTerraform(struct?: TfDeliveryStream.RedshiftConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     type: cdktn.stringToTerraform(struct!.type),
-    parameters: cdktn.listMapper(awsKinesisFirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform, true)(struct!.parameters),
+    parameters: cdktn.listMapper(tfDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform, true)(struct!.parameters),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform(struct?: TfDeliveryStream.RedshiftConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4213,7 +4213,7 @@ export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationProcessingC
       storageClassType: "string",
     },
     parameters: {
-      value: cdktn.listMapperHcl(awsKinesisFirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform, true)(struct!.parameters),
+      value: cdktn.listMapperHcl(tfDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform, true)(struct!.parameters),
       isBlock: true,
       type: "set",
       storageClassType: "RedshiftConfigurationProcessingConfigurationProcessorsParametersPropertyList",
@@ -4225,19 +4225,19 @@ export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationProcessingC
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationProcessingConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationProcessingConfigurationProperty): any {
+export function tfDeliveryStreamRedshiftConfigurationProcessingConfigurationPropertyToTerraform(struct?: TfDeliveryStream.RedshiftConfigurationProcessingConfigurationPropertyOutputReference | TfDeliveryStream.RedshiftConfigurationProcessingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     enabled: cdktn.booleanToTerraform(struct!.enabled),
-    processors: cdktn.listMapper(awsKinesisFirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorsPropertyToTerraform, true)(struct!.processors),
+    processors: cdktn.listMapper(tfDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorsPropertyToTerraform, true)(struct!.processors),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationProcessingConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationProcessingConfigurationProperty): any {
+export function tfDeliveryStreamRedshiftConfigurationProcessingConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.RedshiftConfigurationProcessingConfigurationPropertyOutputReference | TfDeliveryStream.RedshiftConfigurationProcessingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4250,7 +4250,7 @@ export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationProcessingC
       storageClassType: "boolean",
     },
     processors: {
-      value: cdktn.listMapperHcl(awsKinesisFirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform, true)(struct!.processors),
+      value: cdktn.listMapperHcl(tfDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform, true)(struct!.processors),
       isBlock: true,
       type: "list",
       storageClassType: "RedshiftConfigurationProcessingConfigurationProcessorsPropertyList",
@@ -4262,7 +4262,7 @@ export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationProcessingC
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: TfDeliveryStream.RedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.RedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4275,7 +4275,7 @@ export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationS3BackupCon
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: TfDeliveryStream.RedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.RedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4306,7 +4306,7 @@ export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationS3BackupCon
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationS3BackupConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationS3BackupConfigurationProperty): any {
+export function tfDeliveryStreamRedshiftConfigurationS3BackupConfigurationPropertyToTerraform(struct?: TfDeliveryStream.RedshiftConfigurationS3BackupConfigurationPropertyOutputReference | TfDeliveryStream.RedshiftConfigurationS3BackupConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4320,12 +4320,12 @@ export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationS3BackupCon
     kms_key_arn: cdktn.stringToTerraform(struct!.kmsKeyArn),
     prefix: cdktn.stringToTerraform(struct!.prefix),
     role_arn: cdktn.stringToTerraform(struct!.roleArn),
-    cloudwatch_logging_options: awsKinesisFirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
+    cloudwatch_logging_options: tfDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationS3BackupConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationS3BackupConfigurationProperty): any {
+export function tfDeliveryStreamRedshiftConfigurationS3BackupConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.RedshiftConfigurationS3BackupConfigurationPropertyOutputReference | TfDeliveryStream.RedshiftConfigurationS3BackupConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4380,7 +4380,7 @@ export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationS3BackupCon
       storageClassType: "string",
     },
     cloudwatch_logging_options: {
-      value: awsKinesisFirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
+      value: tfDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
       isBlock: true,
       type: "list",
       storageClassType: "RedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsPropertyList",
@@ -4392,7 +4392,7 @@ export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationS3BackupCon
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamRedshiftConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: TfDeliveryStream.RedshiftConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.RedshiftConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4405,7 +4405,7 @@ export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationS3Configura
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamRedshiftConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: TfDeliveryStream.RedshiftConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.RedshiftConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4436,7 +4436,7 @@ export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationS3Configura
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationS3ConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationS3ConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationS3ConfigurationProperty): any {
+export function tfDeliveryStreamRedshiftConfigurationS3ConfigurationPropertyToTerraform(struct?: TfDeliveryStream.RedshiftConfigurationS3ConfigurationPropertyOutputReference | TfDeliveryStream.RedshiftConfigurationS3ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4450,12 +4450,12 @@ export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationS3Configura
     kms_key_arn: cdktn.stringToTerraform(struct!.kmsKeyArn),
     prefix: cdktn.stringToTerraform(struct!.prefix),
     role_arn: cdktn.stringToTerraform(struct!.roleArn),
-    cloudwatch_logging_options: awsKinesisFirehoseDeliveryStreamRedshiftConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
+    cloudwatch_logging_options: tfDeliveryStreamRedshiftConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationS3ConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationS3ConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationS3ConfigurationProperty): any {
+export function tfDeliveryStreamRedshiftConfigurationS3ConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.RedshiftConfigurationS3ConfigurationPropertyOutputReference | TfDeliveryStream.RedshiftConfigurationS3ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4510,7 +4510,7 @@ export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationS3Configura
       storageClassType: "string",
     },
     cloudwatch_logging_options: {
-      value: awsKinesisFirehoseDeliveryStreamRedshiftConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
+      value: tfDeliveryStreamRedshiftConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
       isBlock: true,
       type: "list",
       storageClassType: "RedshiftConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyList",
@@ -4522,7 +4522,7 @@ export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationS3Configura
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationSecretsManagerConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationSecretsManagerConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationSecretsManagerConfigurationProperty): any {
+export function tfDeliveryStreamRedshiftConfigurationSecretsManagerConfigurationPropertyToTerraform(struct?: TfDeliveryStream.RedshiftConfigurationSecretsManagerConfigurationPropertyOutputReference | TfDeliveryStream.RedshiftConfigurationSecretsManagerConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4535,7 +4535,7 @@ export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationSecretsMana
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationSecretsManagerConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationSecretsManagerConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationSecretsManagerConfigurationProperty): any {
+export function tfDeliveryStreamRedshiftConfigurationSecretsManagerConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.RedshiftConfigurationSecretsManagerConfigurationPropertyOutputReference | TfDeliveryStream.RedshiftConfigurationSecretsManagerConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4566,7 +4566,7 @@ export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationSecretsMana
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationProperty): any {
+export function tfDeliveryStreamRedshiftConfigurationPropertyToTerraform(struct?: TfDeliveryStream.RedshiftConfigurationPropertyOutputReference | TfDeliveryStream.RedshiftConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4581,16 +4581,16 @@ export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationPropertyToT
     role_arn: cdktn.stringToTerraform(struct!.roleArn),
     s3_backup_mode: cdktn.stringToTerraform(struct!.s3BackupMode),
     username: cdktn.stringToTerraform(struct!.username),
-    cloudwatch_logging_options: awsKinesisFirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
-    processing_configuration: awsKinesisFirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationPropertyToTerraform(struct!.processingConfiguration),
-    s3_backup_configuration: awsKinesisFirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationPropertyToTerraform(struct!.s3BackupConfiguration),
-    s3_configuration: awsKinesisFirehoseDeliveryStreamRedshiftConfigurationS3ConfigurationPropertyToTerraform(struct!.s3Configuration),
-    secrets_manager_configuration: awsKinesisFirehoseDeliveryStreamRedshiftConfigurationSecretsManagerConfigurationPropertyToTerraform(struct!.secretsManagerConfiguration),
+    cloudwatch_logging_options: tfDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
+    processing_configuration: tfDeliveryStreamRedshiftConfigurationProcessingConfigurationPropertyToTerraform(struct!.processingConfiguration),
+    s3_backup_configuration: tfDeliveryStreamRedshiftConfigurationS3BackupConfigurationPropertyToTerraform(struct!.s3BackupConfiguration),
+    s3_configuration: tfDeliveryStreamRedshiftConfigurationS3ConfigurationPropertyToTerraform(struct!.s3Configuration),
+    secrets_manager_configuration: tfDeliveryStreamRedshiftConfigurationSecretsManagerConfigurationPropertyToTerraform(struct!.secretsManagerConfiguration),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.RedshiftConfigurationProperty): any {
+export function tfDeliveryStreamRedshiftConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.RedshiftConfigurationPropertyOutputReference | TfDeliveryStream.RedshiftConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4651,31 +4651,31 @@ export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationPropertyToH
       storageClassType: "string",
     },
     cloudwatch_logging_options: {
-      value: awsKinesisFirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
+      value: tfDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
       isBlock: true,
       type: "list",
       storageClassType: "RedshiftConfigurationCloudwatchLoggingOptionsPropertyList",
     },
     processing_configuration: {
-      value: awsKinesisFirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationPropertyToHclTerraform(struct!.processingConfiguration),
+      value: tfDeliveryStreamRedshiftConfigurationProcessingConfigurationPropertyToHclTerraform(struct!.processingConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "RedshiftConfigurationProcessingConfigurationPropertyList",
     },
     s3_backup_configuration: {
-      value: awsKinesisFirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationPropertyToHclTerraform(struct!.s3BackupConfiguration),
+      value: tfDeliveryStreamRedshiftConfigurationS3BackupConfigurationPropertyToHclTerraform(struct!.s3BackupConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "RedshiftConfigurationS3BackupConfigurationPropertyList",
     },
     s3_configuration: {
-      value: awsKinesisFirehoseDeliveryStreamRedshiftConfigurationS3ConfigurationPropertyToHclTerraform(struct!.s3Configuration),
+      value: tfDeliveryStreamRedshiftConfigurationS3ConfigurationPropertyToHclTerraform(struct!.s3Configuration),
       isBlock: true,
       type: "list",
       storageClassType: "RedshiftConfigurationS3ConfigurationPropertyList",
     },
     secrets_manager_configuration: {
-      value: awsKinesisFirehoseDeliveryStreamRedshiftConfigurationSecretsManagerConfigurationPropertyToHclTerraform(struct!.secretsManagerConfiguration),
+      value: tfDeliveryStreamRedshiftConfigurationSecretsManagerConfigurationPropertyToHclTerraform(struct!.secretsManagerConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "RedshiftConfigurationSecretsManagerConfigurationPropertyList",
@@ -4687,7 +4687,7 @@ export function awsKinesisFirehoseDeliveryStreamRedshiftConfigurationPropertyToH
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamServerSideEncryptionPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ServerSideEncryptionPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.ServerSideEncryptionProperty): any {
+export function tfDeliveryStreamServerSideEncryptionPropertyToTerraform(struct?: TfDeliveryStream.ServerSideEncryptionPropertyOutputReference | TfDeliveryStream.ServerSideEncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4700,7 +4700,7 @@ export function awsKinesisFirehoseDeliveryStreamServerSideEncryptionPropertyToTe
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamServerSideEncryptionPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.ServerSideEncryptionPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.ServerSideEncryptionProperty): any {
+export function tfDeliveryStreamServerSideEncryptionPropertyToHclTerraform(struct?: TfDeliveryStream.ServerSideEncryptionPropertyOutputReference | TfDeliveryStream.ServerSideEncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4731,7 +4731,7 @@ export function awsKinesisFirehoseDeliveryStreamServerSideEncryptionPropertyToHc
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SnowflakeConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.SnowflakeConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamSnowflakeConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: TfDeliveryStream.SnowflakeConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.SnowflakeConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4744,7 +4744,7 @@ export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationCloudwatch
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SnowflakeConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.SnowflakeConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamSnowflakeConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: TfDeliveryStream.SnowflakeConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.SnowflakeConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4775,7 +4775,7 @@ export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationCloudwatch
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SnowflakeConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamSnowflakeConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform(struct?: TfDeliveryStream.SnowflakeConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4787,7 +4787,7 @@ export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationProcessing
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SnowflakeConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamSnowflakeConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform(struct?: TfDeliveryStream.SnowflakeConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4812,19 +4812,19 @@ export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationProcessing
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationProcessingConfigurationProcessorsPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SnowflakeConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamSnowflakeConfigurationProcessingConfigurationProcessorsPropertyToTerraform(struct?: TfDeliveryStream.SnowflakeConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     type: cdktn.stringToTerraform(struct!.type),
-    parameters: cdktn.listMapper(awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform, true)(struct!.parameters),
+    parameters: cdktn.listMapper(tfDeliveryStreamSnowflakeConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform, true)(struct!.parameters),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SnowflakeConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamSnowflakeConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform(struct?: TfDeliveryStream.SnowflakeConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4837,7 +4837,7 @@ export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationProcessing
       storageClassType: "string",
     },
     parameters: {
-      value: cdktn.listMapperHcl(awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform, true)(struct!.parameters),
+      value: cdktn.listMapperHcl(tfDeliveryStreamSnowflakeConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform, true)(struct!.parameters),
       isBlock: true,
       type: "set",
       storageClassType: "SnowflakeConfigurationProcessingConfigurationProcessorsParametersPropertyList",
@@ -4849,19 +4849,19 @@ export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationProcessing
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationProcessingConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SnowflakeConfigurationProcessingConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.SnowflakeConfigurationProcessingConfigurationProperty): any {
+export function tfDeliveryStreamSnowflakeConfigurationProcessingConfigurationPropertyToTerraform(struct?: TfDeliveryStream.SnowflakeConfigurationProcessingConfigurationPropertyOutputReference | TfDeliveryStream.SnowflakeConfigurationProcessingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     enabled: cdktn.booleanToTerraform(struct!.enabled),
-    processors: cdktn.listMapper(awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationProcessingConfigurationProcessorsPropertyToTerraform, true)(struct!.processors),
+    processors: cdktn.listMapper(tfDeliveryStreamSnowflakeConfigurationProcessingConfigurationProcessorsPropertyToTerraform, true)(struct!.processors),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationProcessingConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SnowflakeConfigurationProcessingConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.SnowflakeConfigurationProcessingConfigurationProperty): any {
+export function tfDeliveryStreamSnowflakeConfigurationProcessingConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.SnowflakeConfigurationProcessingConfigurationPropertyOutputReference | TfDeliveryStream.SnowflakeConfigurationProcessingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4874,7 +4874,7 @@ export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationProcessing
       storageClassType: "boolean",
     },
     processors: {
-      value: cdktn.listMapperHcl(awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform, true)(struct!.processors),
+      value: cdktn.listMapperHcl(tfDeliveryStreamSnowflakeConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform, true)(struct!.processors),
       isBlock: true,
       type: "list",
       storageClassType: "SnowflakeConfigurationProcessingConfigurationProcessorsPropertyList",
@@ -4886,7 +4886,7 @@ export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationProcessing
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SnowflakeConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.SnowflakeConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamSnowflakeConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: TfDeliveryStream.SnowflakeConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.SnowflakeConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4899,7 +4899,7 @@ export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationS3Configur
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SnowflakeConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.SnowflakeConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamSnowflakeConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: TfDeliveryStream.SnowflakeConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.SnowflakeConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4930,7 +4930,7 @@ export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationS3Configur
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationS3ConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SnowflakeConfigurationS3ConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.SnowflakeConfigurationS3ConfigurationProperty): any {
+export function tfDeliveryStreamSnowflakeConfigurationS3ConfigurationPropertyToTerraform(struct?: TfDeliveryStream.SnowflakeConfigurationS3ConfigurationPropertyOutputReference | TfDeliveryStream.SnowflakeConfigurationS3ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4944,12 +4944,12 @@ export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationS3Configur
     kms_key_arn: cdktn.stringToTerraform(struct!.kmsKeyArn),
     prefix: cdktn.stringToTerraform(struct!.prefix),
     role_arn: cdktn.stringToTerraform(struct!.roleArn),
-    cloudwatch_logging_options: awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
+    cloudwatch_logging_options: tfDeliveryStreamSnowflakeConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationS3ConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SnowflakeConfigurationS3ConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.SnowflakeConfigurationS3ConfigurationProperty): any {
+export function tfDeliveryStreamSnowflakeConfigurationS3ConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.SnowflakeConfigurationS3ConfigurationPropertyOutputReference | TfDeliveryStream.SnowflakeConfigurationS3ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5004,7 +5004,7 @@ export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationS3Configur
       storageClassType: "string",
     },
     cloudwatch_logging_options: {
-      value: awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
+      value: tfDeliveryStreamSnowflakeConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
       isBlock: true,
       type: "list",
       storageClassType: "SnowflakeConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyList",
@@ -5016,7 +5016,7 @@ export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationS3Configur
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationSecretsManagerConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SnowflakeConfigurationSecretsManagerConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.SnowflakeConfigurationSecretsManagerConfigurationProperty): any {
+export function tfDeliveryStreamSnowflakeConfigurationSecretsManagerConfigurationPropertyToTerraform(struct?: TfDeliveryStream.SnowflakeConfigurationSecretsManagerConfigurationPropertyOutputReference | TfDeliveryStream.SnowflakeConfigurationSecretsManagerConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5029,7 +5029,7 @@ export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationSecretsMan
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationSecretsManagerConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SnowflakeConfigurationSecretsManagerConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.SnowflakeConfigurationSecretsManagerConfigurationProperty): any {
+export function tfDeliveryStreamSnowflakeConfigurationSecretsManagerConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.SnowflakeConfigurationSecretsManagerConfigurationPropertyOutputReference | TfDeliveryStream.SnowflakeConfigurationSecretsManagerConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5060,7 +5060,7 @@ export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationSecretsMan
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSnowflakeRoleConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SnowflakeRoleConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.SnowflakeRoleConfigurationProperty): any {
+export function tfDeliveryStreamSnowflakeRoleConfigurationPropertyToTerraform(struct?: TfDeliveryStream.SnowflakeRoleConfigurationPropertyOutputReference | TfDeliveryStream.SnowflakeRoleConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5072,7 +5072,7 @@ export function awsKinesisFirehoseDeliveryStreamSnowflakeRoleConfigurationProper
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSnowflakeRoleConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SnowflakeRoleConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.SnowflakeRoleConfigurationProperty): any {
+export function tfDeliveryStreamSnowflakeRoleConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.SnowflakeRoleConfigurationPropertyOutputReference | TfDeliveryStream.SnowflakeRoleConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5097,7 +5097,7 @@ export function awsKinesisFirehoseDeliveryStreamSnowflakeRoleConfigurationProper
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSnowflakeVpcConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SnowflakeVpcConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.SnowflakeVpcConfigurationProperty): any {
+export function tfDeliveryStreamSnowflakeVpcConfigurationPropertyToTerraform(struct?: TfDeliveryStream.SnowflakeVpcConfigurationPropertyOutputReference | TfDeliveryStream.SnowflakeVpcConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5108,7 +5108,7 @@ export function awsKinesisFirehoseDeliveryStreamSnowflakeVpcConfigurationPropert
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSnowflakeVpcConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SnowflakeVpcConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.SnowflakeVpcConfigurationProperty): any {
+export function tfDeliveryStreamSnowflakeVpcConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.SnowflakeVpcConfigurationPropertyOutputReference | TfDeliveryStream.SnowflakeVpcConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5127,7 +5127,7 @@ export function awsKinesisFirehoseDeliveryStreamSnowflakeVpcConfigurationPropert
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SnowflakeConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.SnowflakeConfigurationProperty): any {
+export function tfDeliveryStreamSnowflakeConfigurationPropertyToTerraform(struct?: TfDeliveryStream.SnowflakeConfigurationPropertyOutputReference | TfDeliveryStream.SnowflakeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5148,17 +5148,17 @@ export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationPropertyTo
     schema: cdktn.stringToTerraform(struct!.schema),
     table: cdktn.stringToTerraform(struct!.table),
     user: cdktn.stringToTerraform(struct!.user),
-    cloudwatch_logging_options: awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
-    processing_configuration: awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationProcessingConfigurationPropertyToTerraform(struct!.processingConfiguration),
-    s3_configuration: awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationS3ConfigurationPropertyToTerraform(struct!.s3Configuration),
-    secrets_manager_configuration: awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationSecretsManagerConfigurationPropertyToTerraform(struct!.secretsManagerConfiguration),
-    snowflake_role_configuration: awsKinesisFirehoseDeliveryStreamSnowflakeRoleConfigurationPropertyToTerraform(struct!.snowflakeRoleConfiguration),
-    snowflake_vpc_configuration: awsKinesisFirehoseDeliveryStreamSnowflakeVpcConfigurationPropertyToTerraform(struct!.snowflakeVpcConfiguration),
+    cloudwatch_logging_options: tfDeliveryStreamSnowflakeConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
+    processing_configuration: tfDeliveryStreamSnowflakeConfigurationProcessingConfigurationPropertyToTerraform(struct!.processingConfiguration),
+    s3_configuration: tfDeliveryStreamSnowflakeConfigurationS3ConfigurationPropertyToTerraform(struct!.s3Configuration),
+    secrets_manager_configuration: tfDeliveryStreamSnowflakeConfigurationSecretsManagerConfigurationPropertyToTerraform(struct!.secretsManagerConfiguration),
+    snowflake_role_configuration: tfDeliveryStreamSnowflakeRoleConfigurationPropertyToTerraform(struct!.snowflakeRoleConfiguration),
+    snowflake_vpc_configuration: tfDeliveryStreamSnowflakeVpcConfigurationPropertyToTerraform(struct!.snowflakeVpcConfiguration),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SnowflakeConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.SnowflakeConfigurationProperty): any {
+export function tfDeliveryStreamSnowflakeConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.SnowflakeConfigurationPropertyOutputReference | TfDeliveryStream.SnowflakeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5255,37 +5255,37 @@ export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationPropertyTo
       storageClassType: "string",
     },
     cloudwatch_logging_options: {
-      value: awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
+      value: tfDeliveryStreamSnowflakeConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
       isBlock: true,
       type: "list",
       storageClassType: "SnowflakeConfigurationCloudwatchLoggingOptionsPropertyList",
     },
     processing_configuration: {
-      value: awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationProcessingConfigurationPropertyToHclTerraform(struct!.processingConfiguration),
+      value: tfDeliveryStreamSnowflakeConfigurationProcessingConfigurationPropertyToHclTerraform(struct!.processingConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "SnowflakeConfigurationProcessingConfigurationPropertyList",
     },
     s3_configuration: {
-      value: awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationS3ConfigurationPropertyToHclTerraform(struct!.s3Configuration),
+      value: tfDeliveryStreamSnowflakeConfigurationS3ConfigurationPropertyToHclTerraform(struct!.s3Configuration),
       isBlock: true,
       type: "list",
       storageClassType: "SnowflakeConfigurationS3ConfigurationPropertyList",
     },
     secrets_manager_configuration: {
-      value: awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationSecretsManagerConfigurationPropertyToHclTerraform(struct!.secretsManagerConfiguration),
+      value: tfDeliveryStreamSnowflakeConfigurationSecretsManagerConfigurationPropertyToHclTerraform(struct!.secretsManagerConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "SnowflakeConfigurationSecretsManagerConfigurationPropertyList",
     },
     snowflake_role_configuration: {
-      value: awsKinesisFirehoseDeliveryStreamSnowflakeRoleConfigurationPropertyToHclTerraform(struct!.snowflakeRoleConfiguration),
+      value: tfDeliveryStreamSnowflakeRoleConfigurationPropertyToHclTerraform(struct!.snowflakeRoleConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "SnowflakeRoleConfigurationPropertyList",
     },
     snowflake_vpc_configuration: {
-      value: awsKinesisFirehoseDeliveryStreamSnowflakeVpcConfigurationPropertyToHclTerraform(struct!.snowflakeVpcConfiguration),
+      value: tfDeliveryStreamSnowflakeVpcConfigurationPropertyToHclTerraform(struct!.snowflakeVpcConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "SnowflakeVpcConfigurationPropertyList",
@@ -5297,7 +5297,7 @@ export function awsKinesisFirehoseDeliveryStreamSnowflakeConfigurationPropertyTo
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SplunkConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.SplunkConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: TfDeliveryStream.SplunkConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.SplunkConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5310,7 +5310,7 @@ export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationCloudwatchLog
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SplunkConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.SplunkConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: TfDeliveryStream.SplunkConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.SplunkConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5341,7 +5341,7 @@ export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationCloudwatchLog
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SplunkConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform(struct?: TfDeliveryStream.SplunkConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5353,7 +5353,7 @@ export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationProcessingCon
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SplunkConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform(struct?: TfDeliveryStream.SplunkConfigurationProcessingConfigurationProcessorsParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5378,19 +5378,19 @@ export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationProcessingCon
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorsPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SplunkConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorsPropertyToTerraform(struct?: TfDeliveryStream.SplunkConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     type: cdktn.stringToTerraform(struct!.type),
-    parameters: cdktn.listMapper(awsKinesisFirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform, true)(struct!.parameters),
+    parameters: cdktn.listMapper(tfDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorsParametersPropertyToTerraform, true)(struct!.parameters),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SplunkConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform(struct?: TfDeliveryStream.SplunkConfigurationProcessingConfigurationProcessorsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5403,7 +5403,7 @@ export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationProcessingCon
       storageClassType: "string",
     },
     parameters: {
-      value: cdktn.listMapperHcl(awsKinesisFirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform, true)(struct!.parameters),
+      value: cdktn.listMapperHcl(tfDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorsParametersPropertyToHclTerraform, true)(struct!.parameters),
       isBlock: true,
       type: "set",
       storageClassType: "SplunkConfigurationProcessingConfigurationProcessorsParametersPropertyList",
@@ -5415,19 +5415,19 @@ export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationProcessingCon
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SplunkConfigurationProcessingConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.SplunkConfigurationProcessingConfigurationProperty): any {
+export function tfDeliveryStreamSplunkConfigurationProcessingConfigurationPropertyToTerraform(struct?: TfDeliveryStream.SplunkConfigurationProcessingConfigurationPropertyOutputReference | TfDeliveryStream.SplunkConfigurationProcessingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     enabled: cdktn.booleanToTerraform(struct!.enabled),
-    processors: cdktn.listMapper(awsKinesisFirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorsPropertyToTerraform, true)(struct!.processors),
+    processors: cdktn.listMapper(tfDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorsPropertyToTerraform, true)(struct!.processors),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SplunkConfigurationProcessingConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.SplunkConfigurationProcessingConfigurationProperty): any {
+export function tfDeliveryStreamSplunkConfigurationProcessingConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.SplunkConfigurationProcessingConfigurationPropertyOutputReference | TfDeliveryStream.SplunkConfigurationProcessingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5440,7 +5440,7 @@ export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationProcessingCon
       storageClassType: "boolean",
     },
     processors: {
-      value: cdktn.listMapperHcl(awsKinesisFirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform, true)(struct!.processors),
+      value: cdktn.listMapperHcl(tfDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorsPropertyToHclTerraform, true)(struct!.processors),
       isBlock: true,
       type: "list",
       storageClassType: "SplunkConfigurationProcessingConfigurationProcessorsPropertyList",
@@ -5452,7 +5452,7 @@ export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationProcessingCon
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SplunkConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.SplunkConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamSplunkConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct?: TfDeliveryStream.SplunkConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.SplunkConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5465,7 +5465,7 @@ export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationS3Configurati
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SplunkConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.SplunkConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty): any {
+export function tfDeliveryStreamSplunkConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: TfDeliveryStream.SplunkConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyOutputReference | TfDeliveryStream.SplunkConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5496,7 +5496,7 @@ export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationS3Configurati
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationS3ConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SplunkConfigurationS3ConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.SplunkConfigurationS3ConfigurationProperty): any {
+export function tfDeliveryStreamSplunkConfigurationS3ConfigurationPropertyToTerraform(struct?: TfDeliveryStream.SplunkConfigurationS3ConfigurationPropertyOutputReference | TfDeliveryStream.SplunkConfigurationS3ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5510,12 +5510,12 @@ export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationS3Configurati
     kms_key_arn: cdktn.stringToTerraform(struct!.kmsKeyArn),
     prefix: cdktn.stringToTerraform(struct!.prefix),
     role_arn: cdktn.stringToTerraform(struct!.roleArn),
-    cloudwatch_logging_options: awsKinesisFirehoseDeliveryStreamSplunkConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
+    cloudwatch_logging_options: tfDeliveryStreamSplunkConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationS3ConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SplunkConfigurationS3ConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.SplunkConfigurationS3ConfigurationProperty): any {
+export function tfDeliveryStreamSplunkConfigurationS3ConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.SplunkConfigurationS3ConfigurationPropertyOutputReference | TfDeliveryStream.SplunkConfigurationS3ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5570,7 +5570,7 @@ export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationS3Configurati
       storageClassType: "string",
     },
     cloudwatch_logging_options: {
-      value: awsKinesisFirehoseDeliveryStreamSplunkConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
+      value: tfDeliveryStreamSplunkConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
       isBlock: true,
       type: "list",
       storageClassType: "SplunkConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyList",
@@ -5582,7 +5582,7 @@ export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationS3Configurati
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationSecretsManagerConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SplunkConfigurationSecretsManagerConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.SplunkConfigurationSecretsManagerConfigurationProperty): any {
+export function tfDeliveryStreamSplunkConfigurationSecretsManagerConfigurationPropertyToTerraform(struct?: TfDeliveryStream.SplunkConfigurationSecretsManagerConfigurationPropertyOutputReference | TfDeliveryStream.SplunkConfigurationSecretsManagerConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5595,7 +5595,7 @@ export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationSecretsManage
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationSecretsManagerConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SplunkConfigurationSecretsManagerConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.SplunkConfigurationSecretsManagerConfigurationProperty): any {
+export function tfDeliveryStreamSplunkConfigurationSecretsManagerConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.SplunkConfigurationSecretsManagerConfigurationPropertyOutputReference | TfDeliveryStream.SplunkConfigurationSecretsManagerConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5626,7 +5626,7 @@ export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationSecretsManage
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SplunkConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.SplunkConfigurationProperty): any {
+export function tfDeliveryStreamSplunkConfigurationPropertyToTerraform(struct?: TfDeliveryStream.SplunkConfigurationPropertyOutputReference | TfDeliveryStream.SplunkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5640,15 +5640,15 @@ export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationPropertyToTer
     hec_token: cdktn.stringToTerraform(struct!.hecToken),
     retry_duration: cdktn.numberToTerraform(struct!.retryDuration),
     s3_backup_mode: cdktn.stringToTerraform(struct!.s3BackupMode),
-    cloudwatch_logging_options: awsKinesisFirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
-    processing_configuration: awsKinesisFirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationPropertyToTerraform(struct!.processingConfiguration),
-    s3_configuration: awsKinesisFirehoseDeliveryStreamSplunkConfigurationS3ConfigurationPropertyToTerraform(struct!.s3Configuration),
-    secrets_manager_configuration: awsKinesisFirehoseDeliveryStreamSplunkConfigurationSecretsManagerConfigurationPropertyToTerraform(struct!.secretsManagerConfiguration),
+    cloudwatch_logging_options: tfDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsPropertyToTerraform(struct!.cloudwatchLoggingOptions),
+    processing_configuration: tfDeliveryStreamSplunkConfigurationProcessingConfigurationPropertyToTerraform(struct!.processingConfiguration),
+    s3_configuration: tfDeliveryStreamSplunkConfigurationS3ConfigurationPropertyToTerraform(struct!.s3Configuration),
+    secrets_manager_configuration: tfDeliveryStreamSplunkConfigurationSecretsManagerConfigurationPropertyToTerraform(struct!.secretsManagerConfiguration),
   }
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.SplunkConfigurationPropertyOutputReference | AwsKinesisFirehoseDeliveryStream.SplunkConfigurationProperty): any {
+export function tfDeliveryStreamSplunkConfigurationPropertyToHclTerraform(struct?: TfDeliveryStream.SplunkConfigurationPropertyOutputReference | TfDeliveryStream.SplunkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5703,25 +5703,25 @@ export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationPropertyToHcl
       storageClassType: "string",
     },
     cloudwatch_logging_options: {
-      value: awsKinesisFirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
+      value: tfDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsPropertyToHclTerraform(struct!.cloudwatchLoggingOptions),
       isBlock: true,
       type: "list",
       storageClassType: "SplunkConfigurationCloudwatchLoggingOptionsPropertyList",
     },
     processing_configuration: {
-      value: awsKinesisFirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationPropertyToHclTerraform(struct!.processingConfiguration),
+      value: tfDeliveryStreamSplunkConfigurationProcessingConfigurationPropertyToHclTerraform(struct!.processingConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "SplunkConfigurationProcessingConfigurationPropertyList",
     },
     s3_configuration: {
-      value: awsKinesisFirehoseDeliveryStreamSplunkConfigurationS3ConfigurationPropertyToHclTerraform(struct!.s3Configuration),
+      value: tfDeliveryStreamSplunkConfigurationS3ConfigurationPropertyToHclTerraform(struct!.s3Configuration),
       isBlock: true,
       type: "list",
       storageClassType: "SplunkConfigurationS3ConfigurationPropertyList",
     },
     secrets_manager_configuration: {
-      value: awsKinesisFirehoseDeliveryStreamSplunkConfigurationSecretsManagerConfigurationPropertyToHclTerraform(struct!.secretsManagerConfiguration),
+      value: tfDeliveryStreamSplunkConfigurationSecretsManagerConfigurationPropertyToHclTerraform(struct!.secretsManagerConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "SplunkConfigurationSecretsManagerConfigurationPropertyList",
@@ -5733,7 +5733,7 @@ export function awsKinesisFirehoseDeliveryStreamSplunkConfigurationPropertyToHcl
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamTimeoutsPropertyToTerraform(struct?: AwsKinesisFirehoseDeliveryStream.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamTimeoutsPropertyToTerraform(struct?: TfDeliveryStream.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5746,7 +5746,7 @@ export function awsKinesisFirehoseDeliveryStreamTimeoutsPropertyToTerraform(stru
 }
 
 
-export function awsKinesisFirehoseDeliveryStreamTimeoutsPropertyToHclTerraform(struct?: AwsKinesisFirehoseDeliveryStream.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDeliveryStreamTimeoutsPropertyToHclTerraform(struct?: TfDeliveryStream.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5777,18 +5777,18 @@ export function awsKinesisFirehoseDeliveryStreamTimeoutsPropertyToHclTerraform(s
 }
 
 
-export namespace AwsKinesisFirehoseDeliveryStream {
+export namespace TfDeliveryStream {
 export interface ElasticsearchConfigurationCloudwatchLoggingOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name AwsKinesisFirehoseDeliveryStream#log_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name TfDeliveryStream#log_group_name}
   */
   readonly logGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name AwsKinesisFirehoseDeliveryStream#log_stream_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name TfDeliveryStream#log_stream_name}
   */
   readonly logStreamName?: string;
 }
@@ -5886,11 +5886,11 @@ export class ElasticsearchConfigurationCloudwatchLoggingOptionsPropertyOutputRef
 }
 export interface ElasticsearchConfigurationProcessingConfigurationProcessorsParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_name AwsKinesisFirehoseDeliveryStream#parameter_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_name TfDeliveryStream#parameter_name}
   */
   readonly parameterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_value AwsKinesisFirehoseDeliveryStream#parameter_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_value TfDeliveryStream#parameter_value}
   */
   readonly parameterValue: string;
 }
@@ -5992,13 +5992,13 @@ export class ElasticsearchConfigurationProcessingConfigurationProcessorsParamete
 }
 export interface ElasticsearchConfigurationProcessingConfigurationProcessorsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#type AwsKinesisFirehoseDeliveryStream#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#type TfDeliveryStream#type}
   */
   readonly type: string;
   /**
   * parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameters AwsKinesisFirehoseDeliveryStream#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameters TfDeliveryStream#parameters}
   */
   readonly parameters?: ElasticsearchConfigurationProcessingConfigurationProcessorsParametersProperty[] | cdktn.IResolvable;
 }
@@ -6103,13 +6103,13 @@ export class ElasticsearchConfigurationProcessingConfigurationProcessorsProperty
 }
 export interface ElasticsearchConfigurationProcessingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
   * processors block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processors AwsKinesisFirehoseDeliveryStream#processors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processors TfDeliveryStream#processors}
   */
   readonly processors?: ElasticsearchConfigurationProcessingConfigurationProcessorsProperty[] | cdktn.IResolvable;
 }
@@ -6185,15 +6185,15 @@ export class ElasticsearchConfigurationProcessingConfigurationPropertyOutputRefe
 }
 export interface ElasticsearchConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name AwsKinesisFirehoseDeliveryStream#log_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name TfDeliveryStream#log_group_name}
   */
   readonly logGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name AwsKinesisFirehoseDeliveryStream#log_stream_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name TfDeliveryStream#log_stream_name}
   */
   readonly logStreamName?: string;
 }
@@ -6291,41 +6291,41 @@ export class ElasticsearchConfigurationS3ConfigurationCloudwatchLoggingOptionsPr
 }
 export interface ElasticsearchConfigurationS3ConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#bucket_arn AwsKinesisFirehoseDeliveryStream#bucket_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#bucket_arn TfDeliveryStream#bucket_arn}
   */
   readonly bucketArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval AwsKinesisFirehoseDeliveryStream#buffering_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval TfDeliveryStream#buffering_interval}
   */
   readonly bufferingInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size AwsKinesisFirehoseDeliveryStream#buffering_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size TfDeliveryStream#buffering_size}
   */
   readonly bufferingSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#compression_format AwsKinesisFirehoseDeliveryStream#compression_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#compression_format TfDeliveryStream#compression_format}
   */
   readonly compressionFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#error_output_prefix AwsKinesisFirehoseDeliveryStream#error_output_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#error_output_prefix TfDeliveryStream#error_output_prefix}
   */
   readonly errorOutputPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#kms_key_arn AwsKinesisFirehoseDeliveryStream#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#kms_key_arn TfDeliveryStream#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#prefix AwsKinesisFirehoseDeliveryStream#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#prefix TfDeliveryStream#prefix}
   */
   readonly prefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn AwsKinesisFirehoseDeliveryStream#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn TfDeliveryStream#role_arn}
   */
   readonly roleArn: string;
   /**
   * cloudwatch_logging_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options AwsKinesisFirehoseDeliveryStream#cloudwatch_logging_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options TfDeliveryStream#cloudwatch_logging_options}
   */
   readonly cloudwatchLoggingOptions?: ElasticsearchConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty;
 }
@@ -6549,15 +6549,15 @@ export class ElasticsearchConfigurationS3ConfigurationPropertyOutputReference ex
 }
 export interface ElasticsearchConfigurationVpcConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn AwsKinesisFirehoseDeliveryStream#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn TfDeliveryStream#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#security_group_ids AwsKinesisFirehoseDeliveryStream#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#security_group_ids TfDeliveryStream#security_group_ids}
   */
   readonly securityGroupIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#subnet_ids AwsKinesisFirehoseDeliveryStream#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#subnet_ids TfDeliveryStream#subnet_ids}
   */
   readonly subnetIds: string[];
 }
@@ -6651,67 +6651,67 @@ export class ElasticsearchConfigurationVpcConfigPropertyOutputReference extends 
 }
 export interface ElasticsearchConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval AwsKinesisFirehoseDeliveryStream#buffering_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval TfDeliveryStream#buffering_interval}
   */
   readonly bufferingInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size AwsKinesisFirehoseDeliveryStream#buffering_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size TfDeliveryStream#buffering_size}
   */
   readonly bufferingSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cluster_endpoint AwsKinesisFirehoseDeliveryStream#cluster_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cluster_endpoint TfDeliveryStream#cluster_endpoint}
   */
   readonly clusterEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#domain_arn AwsKinesisFirehoseDeliveryStream#domain_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#domain_arn TfDeliveryStream#domain_arn}
   */
   readonly domainArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#index_name AwsKinesisFirehoseDeliveryStream#index_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#index_name TfDeliveryStream#index_name}
   */
   readonly indexName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#index_rotation_period AwsKinesisFirehoseDeliveryStream#index_rotation_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#index_rotation_period TfDeliveryStream#index_rotation_period}
   */
   readonly indexRotationPeriod?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#retry_duration AwsKinesisFirehoseDeliveryStream#retry_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#retry_duration TfDeliveryStream#retry_duration}
   */
   readonly retryDuration?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn AwsKinesisFirehoseDeliveryStream#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn TfDeliveryStream#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_backup_mode AwsKinesisFirehoseDeliveryStream#s3_backup_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_backup_mode TfDeliveryStream#s3_backup_mode}
   */
   readonly s3BackupMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#type_name AwsKinesisFirehoseDeliveryStream#type_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#type_name TfDeliveryStream#type_name}
   */
   readonly typeName?: string;
   /**
   * cloudwatch_logging_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options AwsKinesisFirehoseDeliveryStream#cloudwatch_logging_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options TfDeliveryStream#cloudwatch_logging_options}
   */
   readonly cloudwatchLoggingOptions?: ElasticsearchConfigurationCloudwatchLoggingOptionsProperty;
   /**
   * processing_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processing_configuration AwsKinesisFirehoseDeliveryStream#processing_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processing_configuration TfDeliveryStream#processing_configuration}
   */
   readonly processingConfiguration?: ElasticsearchConfigurationProcessingConfigurationProperty;
   /**
   * s3_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_configuration AwsKinesisFirehoseDeliveryStream#s3_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_configuration TfDeliveryStream#s3_configuration}
   */
   readonly s3Configuration: ElasticsearchConfigurationS3ConfigurationProperty;
   /**
   * vpc_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#vpc_config AwsKinesisFirehoseDeliveryStream#vpc_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#vpc_config TfDeliveryStream#vpc_config}
   */
   readonly vpcConfig?: ElasticsearchConfigurationVpcConfigProperty;
 }
@@ -7042,15 +7042,15 @@ export class ElasticsearchConfigurationPropertyOutputReference extends cdktn.Com
 }
 export interface ExtendedS3ConfigurationCloudwatchLoggingOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name AwsKinesisFirehoseDeliveryStream#log_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name TfDeliveryStream#log_group_name}
   */
   readonly logGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name AwsKinesisFirehoseDeliveryStream#log_stream_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name TfDeliveryStream#log_stream_name}
   */
   readonly logStreamName?: string;
 }
@@ -7148,7 +7148,7 @@ export class ExtendedS3ConfigurationCloudwatchLoggingOptionsPropertyOutputRefere
 }
 export interface HiveJsonSerDeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#timestamp_formats AwsKinesisFirehoseDeliveryStream#timestamp_formats}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#timestamp_formats TfDeliveryStream#timestamp_formats}
   */
   readonly timestampFormats?: string[];
 }
@@ -7202,15 +7202,15 @@ export class HiveJsonSerDePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface OpenXJsonSerDeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#case_insensitive AwsKinesisFirehoseDeliveryStream#case_insensitive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#case_insensitive TfDeliveryStream#case_insensitive}
   */
   readonly caseInsensitive?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#column_to_json_key_mappings AwsKinesisFirehoseDeliveryStream#column_to_json_key_mappings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#column_to_json_key_mappings TfDeliveryStream#column_to_json_key_mappings}
   */
   readonly columnToJsonKeyMappings?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#convert_dots_in_json_keys_to_underscores AwsKinesisFirehoseDeliveryStream#convert_dots_in_json_keys_to_underscores}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#convert_dots_in_json_keys_to_underscores TfDeliveryStream#convert_dots_in_json_keys_to_underscores}
   */
   readonly convertDotsInJsonKeysToUnderscores?: boolean | cdktn.IResolvable;
 }
@@ -7310,13 +7310,13 @@ export interface DeserializerProperty {
   /**
   * hive_json_ser_de block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#hive_json_ser_de AwsKinesisFirehoseDeliveryStream#hive_json_ser_de}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#hive_json_ser_de TfDeliveryStream#hive_json_ser_de}
   */
   readonly hiveJsonSerDe?: HiveJsonSerDeProperty;
   /**
   * open_x_json_ser_de block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#open_x_json_ser_de AwsKinesisFirehoseDeliveryStream#open_x_json_ser_de}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#open_x_json_ser_de TfDeliveryStream#open_x_json_ser_de}
   */
   readonly openXJsonSerDe?: OpenXJsonSerDeProperty;
 }
@@ -7394,7 +7394,7 @@ export interface InputFormatConfigurationProperty {
   /**
   * deserializer block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#deserializer AwsKinesisFirehoseDeliveryStream#deserializer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#deserializer TfDeliveryStream#deserializer}
   */
   readonly deserializer: DeserializerProperty;
 }
@@ -7445,43 +7445,43 @@ export class InputFormatConfigurationPropertyOutputReference extends cdktn.Compl
 }
 export interface OrcSerDeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#block_size_bytes AwsKinesisFirehoseDeliveryStream#block_size_bytes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#block_size_bytes TfDeliveryStream#block_size_bytes}
   */
   readonly blockSizeBytes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#bloom_filter_columns AwsKinesisFirehoseDeliveryStream#bloom_filter_columns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#bloom_filter_columns TfDeliveryStream#bloom_filter_columns}
   */
   readonly bloomFilterColumns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#bloom_filter_false_positive_probability AwsKinesisFirehoseDeliveryStream#bloom_filter_false_positive_probability}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#bloom_filter_false_positive_probability TfDeliveryStream#bloom_filter_false_positive_probability}
   */
   readonly bloomFilterFalsePositiveProbability?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#compression AwsKinesisFirehoseDeliveryStream#compression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#compression TfDeliveryStream#compression}
   */
   readonly compression?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#dictionary_key_threshold AwsKinesisFirehoseDeliveryStream#dictionary_key_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#dictionary_key_threshold TfDeliveryStream#dictionary_key_threshold}
   */
   readonly dictionaryKeyThreshold?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enable_padding AwsKinesisFirehoseDeliveryStream#enable_padding}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enable_padding TfDeliveryStream#enable_padding}
   */
   readonly enablePadding?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#format_version AwsKinesisFirehoseDeliveryStream#format_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#format_version TfDeliveryStream#format_version}
   */
   readonly formatVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#padding_tolerance AwsKinesisFirehoseDeliveryStream#padding_tolerance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#padding_tolerance TfDeliveryStream#padding_tolerance}
   */
   readonly paddingTolerance?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#row_index_stride AwsKinesisFirehoseDeliveryStream#row_index_stride}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#row_index_stride TfDeliveryStream#row_index_stride}
   */
   readonly rowIndexStride?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#stripe_size_bytes AwsKinesisFirehoseDeliveryStream#stripe_size_bytes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#stripe_size_bytes TfDeliveryStream#stripe_size_bytes}
   */
   readonly stripeSizeBytes?: number;
 }
@@ -7733,27 +7733,27 @@ export class OrcSerDePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ParquetSerDeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#block_size_bytes AwsKinesisFirehoseDeliveryStream#block_size_bytes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#block_size_bytes TfDeliveryStream#block_size_bytes}
   */
   readonly blockSizeBytes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#compression AwsKinesisFirehoseDeliveryStream#compression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#compression TfDeliveryStream#compression}
   */
   readonly compression?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enable_dictionary_compression AwsKinesisFirehoseDeliveryStream#enable_dictionary_compression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enable_dictionary_compression TfDeliveryStream#enable_dictionary_compression}
   */
   readonly enableDictionaryCompression?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#max_padding_bytes AwsKinesisFirehoseDeliveryStream#max_padding_bytes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#max_padding_bytes TfDeliveryStream#max_padding_bytes}
   */
   readonly maxPaddingBytes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#page_size_bytes AwsKinesisFirehoseDeliveryStream#page_size_bytes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#page_size_bytes TfDeliveryStream#page_size_bytes}
   */
   readonly pageSizeBytes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#writer_version AwsKinesisFirehoseDeliveryStream#writer_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#writer_version TfDeliveryStream#writer_version}
   */
   readonly writerVersion?: string;
 }
@@ -7919,13 +7919,13 @@ export interface SerializerProperty {
   /**
   * orc_ser_de block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#orc_ser_de AwsKinesisFirehoseDeliveryStream#orc_ser_de}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#orc_ser_de TfDeliveryStream#orc_ser_de}
   */
   readonly orcSerDe?: OrcSerDeProperty;
   /**
   * parquet_ser_de block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parquet_ser_de AwsKinesisFirehoseDeliveryStream#parquet_ser_de}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parquet_ser_de TfDeliveryStream#parquet_ser_de}
   */
   readonly parquetSerDe?: ParquetSerDeProperty;
 }
@@ -8003,7 +8003,7 @@ export interface OutputFormatConfigurationProperty {
   /**
   * serializer block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#serializer AwsKinesisFirehoseDeliveryStream#serializer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#serializer TfDeliveryStream#serializer}
   */
   readonly serializer: SerializerProperty;
 }
@@ -8054,27 +8054,27 @@ export class OutputFormatConfigurationPropertyOutputReference extends cdktn.Comp
 }
 export interface SchemaConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#catalog_id AwsKinesisFirehoseDeliveryStream#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#catalog_id TfDeliveryStream#catalog_id}
   */
   readonly catalogId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#database_name AwsKinesisFirehoseDeliveryStream#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#database_name TfDeliveryStream#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#region AwsKinesisFirehoseDeliveryStream#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#region TfDeliveryStream#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn AwsKinesisFirehoseDeliveryStream#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn TfDeliveryStream#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#table_name AwsKinesisFirehoseDeliveryStream#table_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#table_name TfDeliveryStream#table_name}
   */
   readonly tableName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#version_id AwsKinesisFirehoseDeliveryStream#version_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#version_id TfDeliveryStream#version_id}
   */
   readonly versionId?: string;
 }
@@ -8229,25 +8229,25 @@ export class SchemaConfigurationPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface DataFormatConversionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
   * input_format_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#input_format_configuration AwsKinesisFirehoseDeliveryStream#input_format_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#input_format_configuration TfDeliveryStream#input_format_configuration}
   */
   readonly inputFormatConfiguration: InputFormatConfigurationProperty;
   /**
   * output_format_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#output_format_configuration AwsKinesisFirehoseDeliveryStream#output_format_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#output_format_configuration TfDeliveryStream#output_format_configuration}
   */
   readonly outputFormatConfiguration: OutputFormatConfigurationProperty;
   /**
   * schema_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#schema_configuration AwsKinesisFirehoseDeliveryStream#schema_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#schema_configuration TfDeliveryStream#schema_configuration}
   */
   readonly schemaConfiguration: SchemaConfigurationProperty;
 }
@@ -8358,11 +8358,11 @@ export class DataFormatConversionConfigurationPropertyOutputReference extends cd
 }
 export interface DynamicPartitioningConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#retry_duration AwsKinesisFirehoseDeliveryStream#retry_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#retry_duration TfDeliveryStream#retry_duration}
   */
   readonly retryDuration?: number;
 }
@@ -8438,11 +8438,11 @@ export class DynamicPartitioningConfigurationPropertyOutputReference extends cdk
 }
 export interface ExtendedS3ConfigurationProcessingConfigurationProcessorsParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_name AwsKinesisFirehoseDeliveryStream#parameter_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_name TfDeliveryStream#parameter_name}
   */
   readonly parameterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_value AwsKinesisFirehoseDeliveryStream#parameter_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_value TfDeliveryStream#parameter_value}
   */
   readonly parameterValue: string;
 }
@@ -8544,13 +8544,13 @@ export class ExtendedS3ConfigurationProcessingConfigurationProcessorsParametersP
 }
 export interface ExtendedS3ConfigurationProcessingConfigurationProcessorsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#type AwsKinesisFirehoseDeliveryStream#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#type TfDeliveryStream#type}
   */
   readonly type: string;
   /**
   * parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameters AwsKinesisFirehoseDeliveryStream#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameters TfDeliveryStream#parameters}
   */
   readonly parameters?: ExtendedS3ConfigurationProcessingConfigurationProcessorsParametersProperty[] | cdktn.IResolvable;
 }
@@ -8655,13 +8655,13 @@ export class ExtendedS3ConfigurationProcessingConfigurationProcessorsPropertyLis
 }
 export interface ExtendedS3ConfigurationProcessingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
   * processors block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processors AwsKinesisFirehoseDeliveryStream#processors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processors TfDeliveryStream#processors}
   */
   readonly processors?: ExtendedS3ConfigurationProcessingConfigurationProcessorsProperty[] | cdktn.IResolvable;
 }
@@ -8737,15 +8737,15 @@ export class ExtendedS3ConfigurationProcessingConfigurationPropertyOutputReferen
 }
 export interface ExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name AwsKinesisFirehoseDeliveryStream#log_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name TfDeliveryStream#log_group_name}
   */
   readonly logGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name AwsKinesisFirehoseDeliveryStream#log_stream_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name TfDeliveryStream#log_stream_name}
   */
   readonly logStreamName?: string;
 }
@@ -8843,41 +8843,41 @@ export class ExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOption
 }
 export interface ExtendedS3ConfigurationS3BackupConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#bucket_arn AwsKinesisFirehoseDeliveryStream#bucket_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#bucket_arn TfDeliveryStream#bucket_arn}
   */
   readonly bucketArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval AwsKinesisFirehoseDeliveryStream#buffering_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval TfDeliveryStream#buffering_interval}
   */
   readonly bufferingInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size AwsKinesisFirehoseDeliveryStream#buffering_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size TfDeliveryStream#buffering_size}
   */
   readonly bufferingSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#compression_format AwsKinesisFirehoseDeliveryStream#compression_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#compression_format TfDeliveryStream#compression_format}
   */
   readonly compressionFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#error_output_prefix AwsKinesisFirehoseDeliveryStream#error_output_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#error_output_prefix TfDeliveryStream#error_output_prefix}
   */
   readonly errorOutputPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#kms_key_arn AwsKinesisFirehoseDeliveryStream#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#kms_key_arn TfDeliveryStream#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#prefix AwsKinesisFirehoseDeliveryStream#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#prefix TfDeliveryStream#prefix}
   */
   readonly prefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn AwsKinesisFirehoseDeliveryStream#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn TfDeliveryStream#role_arn}
   */
   readonly roleArn: string;
   /**
   * cloudwatch_logging_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options AwsKinesisFirehoseDeliveryStream#cloudwatch_logging_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options TfDeliveryStream#cloudwatch_logging_options}
   */
   readonly cloudwatchLoggingOptions?: ExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsProperty;
 }
@@ -9101,77 +9101,77 @@ export class ExtendedS3ConfigurationS3BackupConfigurationPropertyOutputReference
 }
 export interface ExtendedS3ConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#bucket_arn AwsKinesisFirehoseDeliveryStream#bucket_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#bucket_arn TfDeliveryStream#bucket_arn}
   */
   readonly bucketArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval AwsKinesisFirehoseDeliveryStream#buffering_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval TfDeliveryStream#buffering_interval}
   */
   readonly bufferingInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size AwsKinesisFirehoseDeliveryStream#buffering_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size TfDeliveryStream#buffering_size}
   */
   readonly bufferingSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#compression_format AwsKinesisFirehoseDeliveryStream#compression_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#compression_format TfDeliveryStream#compression_format}
   */
   readonly compressionFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#custom_time_zone AwsKinesisFirehoseDeliveryStream#custom_time_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#custom_time_zone TfDeliveryStream#custom_time_zone}
   */
   readonly customTimeZone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#error_output_prefix AwsKinesisFirehoseDeliveryStream#error_output_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#error_output_prefix TfDeliveryStream#error_output_prefix}
   */
   readonly errorOutputPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#file_extension AwsKinesisFirehoseDeliveryStream#file_extension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#file_extension TfDeliveryStream#file_extension}
   */
   readonly fileExtension?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#kms_key_arn AwsKinesisFirehoseDeliveryStream#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#kms_key_arn TfDeliveryStream#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#prefix AwsKinesisFirehoseDeliveryStream#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#prefix TfDeliveryStream#prefix}
   */
   readonly prefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn AwsKinesisFirehoseDeliveryStream#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn TfDeliveryStream#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_backup_mode AwsKinesisFirehoseDeliveryStream#s3_backup_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_backup_mode TfDeliveryStream#s3_backup_mode}
   */
   readonly s3BackupMode?: string;
   /**
   * cloudwatch_logging_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options AwsKinesisFirehoseDeliveryStream#cloudwatch_logging_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options TfDeliveryStream#cloudwatch_logging_options}
   */
   readonly cloudwatchLoggingOptions?: ExtendedS3ConfigurationCloudwatchLoggingOptionsProperty;
   /**
   * data_format_conversion_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#data_format_conversion_configuration AwsKinesisFirehoseDeliveryStream#data_format_conversion_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#data_format_conversion_configuration TfDeliveryStream#data_format_conversion_configuration}
   */
   readonly dataFormatConversionConfiguration?: DataFormatConversionConfigurationProperty;
   /**
   * dynamic_partitioning_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#dynamic_partitioning_configuration AwsKinesisFirehoseDeliveryStream#dynamic_partitioning_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#dynamic_partitioning_configuration TfDeliveryStream#dynamic_partitioning_configuration}
   */
   readonly dynamicPartitioningConfiguration?: DynamicPartitioningConfigurationProperty;
   /**
   * processing_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processing_configuration AwsKinesisFirehoseDeliveryStream#processing_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processing_configuration TfDeliveryStream#processing_configuration}
   */
   readonly processingConfiguration?: ExtendedS3ConfigurationProcessingConfigurationProperty;
   /**
   * s3_backup_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_backup_configuration AwsKinesisFirehoseDeliveryStream#s3_backup_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_backup_configuration TfDeliveryStream#s3_backup_configuration}
   */
   readonly s3BackupConfiguration?: ExtendedS3ConfigurationS3BackupConfigurationProperty;
 }
@@ -9549,15 +9549,15 @@ export class ExtendedS3ConfigurationPropertyOutputReference extends cdktn.Comple
 }
 export interface HttpEndpointConfigurationCloudwatchLoggingOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name AwsKinesisFirehoseDeliveryStream#log_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name TfDeliveryStream#log_group_name}
   */
   readonly logGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name AwsKinesisFirehoseDeliveryStream#log_stream_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name TfDeliveryStream#log_stream_name}
   */
   readonly logStreamName?: string;
 }
@@ -9655,11 +9655,11 @@ export class HttpEndpointConfigurationCloudwatchLoggingOptionsPropertyOutputRefe
 }
 export interface HttpEndpointConfigurationProcessingConfigurationProcessorsParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_name AwsKinesisFirehoseDeliveryStream#parameter_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_name TfDeliveryStream#parameter_name}
   */
   readonly parameterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_value AwsKinesisFirehoseDeliveryStream#parameter_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_value TfDeliveryStream#parameter_value}
   */
   readonly parameterValue: string;
 }
@@ -9761,13 +9761,13 @@ export class HttpEndpointConfigurationProcessingConfigurationProcessorsParameter
 }
 export interface HttpEndpointConfigurationProcessingConfigurationProcessorsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#type AwsKinesisFirehoseDeliveryStream#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#type TfDeliveryStream#type}
   */
   readonly type: string;
   /**
   * parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameters AwsKinesisFirehoseDeliveryStream#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameters TfDeliveryStream#parameters}
   */
   readonly parameters?: HttpEndpointConfigurationProcessingConfigurationProcessorsParametersProperty[] | cdktn.IResolvable;
 }
@@ -9872,13 +9872,13 @@ export class HttpEndpointConfigurationProcessingConfigurationProcessorsPropertyL
 }
 export interface HttpEndpointConfigurationProcessingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
   * processors block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processors AwsKinesisFirehoseDeliveryStream#processors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processors TfDeliveryStream#processors}
   */
   readonly processors?: HttpEndpointConfigurationProcessingConfigurationProcessorsProperty[] | cdktn.IResolvable;
 }
@@ -9954,11 +9954,11 @@ export class HttpEndpointConfigurationProcessingConfigurationPropertyOutputRefer
 }
 export interface CommonAttributesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#name AwsKinesisFirehoseDeliveryStream#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#name TfDeliveryStream#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#value AwsKinesisFirehoseDeliveryStream#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#value TfDeliveryStream#value}
   */
   readonly value: string;
 }
@@ -10060,13 +10060,13 @@ export class CommonAttributesPropertyList extends cdktn.ComplexList {
 }
 export interface RequestConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#content_encoding AwsKinesisFirehoseDeliveryStream#content_encoding}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#content_encoding TfDeliveryStream#content_encoding}
   */
   readonly contentEncoding?: string;
   /**
   * common_attributes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#common_attributes AwsKinesisFirehoseDeliveryStream#common_attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#common_attributes TfDeliveryStream#common_attributes}
   */
   readonly commonAttributes?: CommonAttributesProperty[] | cdktn.IResolvable;
 }
@@ -10142,15 +10142,15 @@ export class RequestConfigurationPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface HttpEndpointConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name AwsKinesisFirehoseDeliveryStream#log_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name TfDeliveryStream#log_group_name}
   */
   readonly logGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name AwsKinesisFirehoseDeliveryStream#log_stream_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name TfDeliveryStream#log_stream_name}
   */
   readonly logStreamName?: string;
 }
@@ -10248,41 +10248,41 @@ export class HttpEndpointConfigurationS3ConfigurationCloudwatchLoggingOptionsPro
 }
 export interface HttpEndpointConfigurationS3ConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#bucket_arn AwsKinesisFirehoseDeliveryStream#bucket_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#bucket_arn TfDeliveryStream#bucket_arn}
   */
   readonly bucketArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval AwsKinesisFirehoseDeliveryStream#buffering_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval TfDeliveryStream#buffering_interval}
   */
   readonly bufferingInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size AwsKinesisFirehoseDeliveryStream#buffering_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size TfDeliveryStream#buffering_size}
   */
   readonly bufferingSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#compression_format AwsKinesisFirehoseDeliveryStream#compression_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#compression_format TfDeliveryStream#compression_format}
   */
   readonly compressionFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#error_output_prefix AwsKinesisFirehoseDeliveryStream#error_output_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#error_output_prefix TfDeliveryStream#error_output_prefix}
   */
   readonly errorOutputPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#kms_key_arn AwsKinesisFirehoseDeliveryStream#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#kms_key_arn TfDeliveryStream#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#prefix AwsKinesisFirehoseDeliveryStream#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#prefix TfDeliveryStream#prefix}
   */
   readonly prefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn AwsKinesisFirehoseDeliveryStream#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn TfDeliveryStream#role_arn}
   */
   readonly roleArn: string;
   /**
   * cloudwatch_logging_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options AwsKinesisFirehoseDeliveryStream#cloudwatch_logging_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options TfDeliveryStream#cloudwatch_logging_options}
   */
   readonly cloudwatchLoggingOptions?: HttpEndpointConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty;
 }
@@ -10506,15 +10506,15 @@ export class HttpEndpointConfigurationS3ConfigurationPropertyOutputReference ext
 }
 export interface HttpEndpointConfigurationSecretsManagerConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn AwsKinesisFirehoseDeliveryStream#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn TfDeliveryStream#role_arn}
   */
   readonly roleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#secret_arn AwsKinesisFirehoseDeliveryStream#secret_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#secret_arn TfDeliveryStream#secret_arn}
   */
   readonly secretArn?: string;
 }
@@ -10612,65 +10612,65 @@ export class HttpEndpointConfigurationSecretsManagerConfigurationPropertyOutputR
 }
 export interface HttpEndpointConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#access_key AwsKinesisFirehoseDeliveryStream#access_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#access_key TfDeliveryStream#access_key}
   */
   readonly accessKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval AwsKinesisFirehoseDeliveryStream#buffering_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval TfDeliveryStream#buffering_interval}
   */
   readonly bufferingInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size AwsKinesisFirehoseDeliveryStream#buffering_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size TfDeliveryStream#buffering_size}
   */
   readonly bufferingSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#name AwsKinesisFirehoseDeliveryStream#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#name TfDeliveryStream#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#retry_duration AwsKinesisFirehoseDeliveryStream#retry_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#retry_duration TfDeliveryStream#retry_duration}
   */
   readonly retryDuration?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn AwsKinesisFirehoseDeliveryStream#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn TfDeliveryStream#role_arn}
   */
   readonly roleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_backup_mode AwsKinesisFirehoseDeliveryStream#s3_backup_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_backup_mode TfDeliveryStream#s3_backup_mode}
   */
   readonly s3BackupMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#url AwsKinesisFirehoseDeliveryStream#url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#url TfDeliveryStream#url}
   */
   readonly url: string;
   /**
   * cloudwatch_logging_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options AwsKinesisFirehoseDeliveryStream#cloudwatch_logging_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options TfDeliveryStream#cloudwatch_logging_options}
   */
   readonly cloudwatchLoggingOptions?: HttpEndpointConfigurationCloudwatchLoggingOptionsProperty;
   /**
   * processing_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processing_configuration AwsKinesisFirehoseDeliveryStream#processing_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processing_configuration TfDeliveryStream#processing_configuration}
   */
   readonly processingConfiguration?: HttpEndpointConfigurationProcessingConfigurationProperty;
   /**
   * request_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#request_configuration AwsKinesisFirehoseDeliveryStream#request_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#request_configuration TfDeliveryStream#request_configuration}
   */
   readonly requestConfiguration?: RequestConfigurationProperty;
   /**
   * s3_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_configuration AwsKinesisFirehoseDeliveryStream#s3_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_configuration TfDeliveryStream#s3_configuration}
   */
   readonly s3Configuration: HttpEndpointConfigurationS3ConfigurationProperty;
   /**
   * secrets_manager_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#secrets_manager_configuration AwsKinesisFirehoseDeliveryStream#secrets_manager_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#secrets_manager_configuration TfDeliveryStream#secrets_manager_configuration}
   */
   readonly secretsManagerConfiguration?: HttpEndpointConfigurationSecretsManagerConfigurationProperty;
 }
@@ -10982,15 +10982,15 @@ export class HttpEndpointConfigurationPropertyOutputReference extends cdktn.Comp
 }
 export interface IcebergConfigurationCloudwatchLoggingOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name AwsKinesisFirehoseDeliveryStream#log_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name TfDeliveryStream#log_group_name}
   */
   readonly logGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name AwsKinesisFirehoseDeliveryStream#log_stream_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name TfDeliveryStream#log_stream_name}
   */
   readonly logStreamName?: string;
 }
@@ -11088,19 +11088,19 @@ export class IcebergConfigurationCloudwatchLoggingOptionsPropertyOutputReference
 }
 export interface DestinationTableConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#database_name AwsKinesisFirehoseDeliveryStream#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#database_name TfDeliveryStream#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_error_output_prefix AwsKinesisFirehoseDeliveryStream#s3_error_output_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_error_output_prefix TfDeliveryStream#s3_error_output_prefix}
   */
   readonly s3ErrorOutputPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#table_name AwsKinesisFirehoseDeliveryStream#table_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#table_name TfDeliveryStream#table_name}
   */
   readonly tableName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#unique_keys AwsKinesisFirehoseDeliveryStream#unique_keys}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#unique_keys TfDeliveryStream#unique_keys}
   */
   readonly uniqueKeys?: string[];
 }
@@ -11246,11 +11246,11 @@ export class DestinationTableConfigurationPropertyList extends cdktn.ComplexList
 }
 export interface IcebergConfigurationProcessingConfigurationProcessorsParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_name AwsKinesisFirehoseDeliveryStream#parameter_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_name TfDeliveryStream#parameter_name}
   */
   readonly parameterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_value AwsKinesisFirehoseDeliveryStream#parameter_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_value TfDeliveryStream#parameter_value}
   */
   readonly parameterValue: string;
 }
@@ -11352,13 +11352,13 @@ export class IcebergConfigurationProcessingConfigurationProcessorsParametersProp
 }
 export interface IcebergConfigurationProcessingConfigurationProcessorsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#type AwsKinesisFirehoseDeliveryStream#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#type TfDeliveryStream#type}
   */
   readonly type: string;
   /**
   * parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameters AwsKinesisFirehoseDeliveryStream#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameters TfDeliveryStream#parameters}
   */
   readonly parameters?: IcebergConfigurationProcessingConfigurationProcessorsParametersProperty[] | cdktn.IResolvable;
 }
@@ -11463,13 +11463,13 @@ export class IcebergConfigurationProcessingConfigurationProcessorsPropertyList e
 }
 export interface IcebergConfigurationProcessingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
   * processors block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processors AwsKinesisFirehoseDeliveryStream#processors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processors TfDeliveryStream#processors}
   */
   readonly processors?: IcebergConfigurationProcessingConfigurationProcessorsProperty[] | cdktn.IResolvable;
 }
@@ -11545,15 +11545,15 @@ export class IcebergConfigurationProcessingConfigurationPropertyOutputReference 
 }
 export interface IcebergConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name AwsKinesisFirehoseDeliveryStream#log_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name TfDeliveryStream#log_group_name}
   */
   readonly logGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name AwsKinesisFirehoseDeliveryStream#log_stream_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name TfDeliveryStream#log_stream_name}
   */
   readonly logStreamName?: string;
 }
@@ -11651,41 +11651,41 @@ export class IcebergConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty
 }
 export interface IcebergConfigurationS3ConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#bucket_arn AwsKinesisFirehoseDeliveryStream#bucket_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#bucket_arn TfDeliveryStream#bucket_arn}
   */
   readonly bucketArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval AwsKinesisFirehoseDeliveryStream#buffering_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval TfDeliveryStream#buffering_interval}
   */
   readonly bufferingInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size AwsKinesisFirehoseDeliveryStream#buffering_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size TfDeliveryStream#buffering_size}
   */
   readonly bufferingSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#compression_format AwsKinesisFirehoseDeliveryStream#compression_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#compression_format TfDeliveryStream#compression_format}
   */
   readonly compressionFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#error_output_prefix AwsKinesisFirehoseDeliveryStream#error_output_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#error_output_prefix TfDeliveryStream#error_output_prefix}
   */
   readonly errorOutputPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#kms_key_arn AwsKinesisFirehoseDeliveryStream#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#kms_key_arn TfDeliveryStream#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#prefix AwsKinesisFirehoseDeliveryStream#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#prefix TfDeliveryStream#prefix}
   */
   readonly prefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn AwsKinesisFirehoseDeliveryStream#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn TfDeliveryStream#role_arn}
   */
   readonly roleArn: string;
   /**
   * cloudwatch_logging_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options AwsKinesisFirehoseDeliveryStream#cloudwatch_logging_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options TfDeliveryStream#cloudwatch_logging_options}
   */
   readonly cloudwatchLoggingOptions?: IcebergConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty;
 }
@@ -11909,55 +11909,55 @@ export class IcebergConfigurationS3ConfigurationPropertyOutputReference extends 
 }
 export interface IcebergConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#append_only AwsKinesisFirehoseDeliveryStream#append_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#append_only TfDeliveryStream#append_only}
   */
   readonly appendOnly?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval AwsKinesisFirehoseDeliveryStream#buffering_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval TfDeliveryStream#buffering_interval}
   */
   readonly bufferingInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size AwsKinesisFirehoseDeliveryStream#buffering_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size TfDeliveryStream#buffering_size}
   */
   readonly bufferingSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#catalog_arn AwsKinesisFirehoseDeliveryStream#catalog_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#catalog_arn TfDeliveryStream#catalog_arn}
   */
   readonly catalogArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#retry_duration AwsKinesisFirehoseDeliveryStream#retry_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#retry_duration TfDeliveryStream#retry_duration}
   */
   readonly retryDuration?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn AwsKinesisFirehoseDeliveryStream#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn TfDeliveryStream#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_backup_mode AwsKinesisFirehoseDeliveryStream#s3_backup_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_backup_mode TfDeliveryStream#s3_backup_mode}
   */
   readonly s3BackupMode?: string;
   /**
   * cloudwatch_logging_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options AwsKinesisFirehoseDeliveryStream#cloudwatch_logging_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options TfDeliveryStream#cloudwatch_logging_options}
   */
   readonly cloudwatchLoggingOptions?: IcebergConfigurationCloudwatchLoggingOptionsProperty;
   /**
   * destination_table_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#destination_table_configuration AwsKinesisFirehoseDeliveryStream#destination_table_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#destination_table_configuration TfDeliveryStream#destination_table_configuration}
   */
   readonly destinationTableConfiguration?: DestinationTableConfigurationProperty[] | cdktn.IResolvable;
   /**
   * processing_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processing_configuration AwsKinesisFirehoseDeliveryStream#processing_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processing_configuration TfDeliveryStream#processing_configuration}
   */
   readonly processingConfiguration?: IcebergConfigurationProcessingConfigurationProperty;
   /**
   * s3_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_configuration AwsKinesisFirehoseDeliveryStream#s3_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_configuration TfDeliveryStream#s3_configuration}
   */
   readonly s3Configuration: IcebergConfigurationS3ConfigurationProperty;
 }
@@ -12222,11 +12222,11 @@ export class IcebergConfigurationPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface KinesisSourceConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#kinesis_stream_arn AwsKinesisFirehoseDeliveryStream#kinesis_stream_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#kinesis_stream_arn TfDeliveryStream#kinesis_stream_arn}
   */
   readonly kinesisStreamArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn AwsKinesisFirehoseDeliveryStream#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn TfDeliveryStream#role_arn}
   */
   readonly roleArn: string;
 }
@@ -12296,11 +12296,11 @@ export class KinesisSourceConfigurationPropertyOutputReference extends cdktn.Com
 }
 export interface AuthenticationConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#connectivity AwsKinesisFirehoseDeliveryStream#connectivity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#connectivity TfDeliveryStream#connectivity}
   */
   readonly connectivity: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn AwsKinesisFirehoseDeliveryStream#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn TfDeliveryStream#role_arn}
   */
   readonly roleArn: string;
 }
@@ -12370,21 +12370,21 @@ export class AuthenticationConfigurationPropertyOutputReference extends cdktn.Co
 }
 export interface MskSourceConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#msk_cluster_arn AwsKinesisFirehoseDeliveryStream#msk_cluster_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#msk_cluster_arn TfDeliveryStream#msk_cluster_arn}
   */
   readonly mskClusterArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#read_from_timestamp AwsKinesisFirehoseDeliveryStream#read_from_timestamp}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#read_from_timestamp TfDeliveryStream#read_from_timestamp}
   */
   readonly readFromTimestamp?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#topic_name AwsKinesisFirehoseDeliveryStream#topic_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#topic_name TfDeliveryStream#topic_name}
   */
   readonly topicName: string;
   /**
   * authentication_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#authentication_configuration AwsKinesisFirehoseDeliveryStream#authentication_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#authentication_configuration TfDeliveryStream#authentication_configuration}
   */
   readonly authenticationConfiguration: AuthenticationConfigurationProperty;
 }
@@ -12495,15 +12495,15 @@ export class MskSourceConfigurationPropertyOutputReference extends cdktn.Complex
 }
 export interface OpensearchConfigurationCloudwatchLoggingOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name AwsKinesisFirehoseDeliveryStream#log_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name TfDeliveryStream#log_group_name}
   */
   readonly logGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name AwsKinesisFirehoseDeliveryStream#log_stream_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name TfDeliveryStream#log_stream_name}
   */
   readonly logStreamName?: string;
 }
@@ -12601,7 +12601,7 @@ export class OpensearchConfigurationCloudwatchLoggingOptionsPropertyOutputRefere
 }
 export interface DocumentIdOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#default_document_id_format AwsKinesisFirehoseDeliveryStream#default_document_id_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#default_document_id_format TfDeliveryStream#default_document_id_format}
   */
   readonly defaultDocumentIdFormat: string;
 }
@@ -12652,11 +12652,11 @@ export class DocumentIdOptionsPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface OpensearchConfigurationProcessingConfigurationProcessorsParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_name AwsKinesisFirehoseDeliveryStream#parameter_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_name TfDeliveryStream#parameter_name}
   */
   readonly parameterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_value AwsKinesisFirehoseDeliveryStream#parameter_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_value TfDeliveryStream#parameter_value}
   */
   readonly parameterValue: string;
 }
@@ -12758,13 +12758,13 @@ export class OpensearchConfigurationProcessingConfigurationProcessorsParametersP
 }
 export interface OpensearchConfigurationProcessingConfigurationProcessorsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#type AwsKinesisFirehoseDeliveryStream#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#type TfDeliveryStream#type}
   */
   readonly type: string;
   /**
   * parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameters AwsKinesisFirehoseDeliveryStream#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameters TfDeliveryStream#parameters}
   */
   readonly parameters?: OpensearchConfigurationProcessingConfigurationProcessorsParametersProperty[] | cdktn.IResolvable;
 }
@@ -12869,13 +12869,13 @@ export class OpensearchConfigurationProcessingConfigurationProcessorsPropertyLis
 }
 export interface OpensearchConfigurationProcessingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
   * processors block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processors AwsKinesisFirehoseDeliveryStream#processors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processors TfDeliveryStream#processors}
   */
   readonly processors?: OpensearchConfigurationProcessingConfigurationProcessorsProperty[] | cdktn.IResolvable;
 }
@@ -12951,15 +12951,15 @@ export class OpensearchConfigurationProcessingConfigurationPropertyOutputReferen
 }
 export interface OpensearchConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name AwsKinesisFirehoseDeliveryStream#log_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name TfDeliveryStream#log_group_name}
   */
   readonly logGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name AwsKinesisFirehoseDeliveryStream#log_stream_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name TfDeliveryStream#log_stream_name}
   */
   readonly logStreamName?: string;
 }
@@ -13057,41 +13057,41 @@ export class OpensearchConfigurationS3ConfigurationCloudwatchLoggingOptionsPrope
 }
 export interface OpensearchConfigurationS3ConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#bucket_arn AwsKinesisFirehoseDeliveryStream#bucket_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#bucket_arn TfDeliveryStream#bucket_arn}
   */
   readonly bucketArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval AwsKinesisFirehoseDeliveryStream#buffering_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval TfDeliveryStream#buffering_interval}
   */
   readonly bufferingInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size AwsKinesisFirehoseDeliveryStream#buffering_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size TfDeliveryStream#buffering_size}
   */
   readonly bufferingSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#compression_format AwsKinesisFirehoseDeliveryStream#compression_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#compression_format TfDeliveryStream#compression_format}
   */
   readonly compressionFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#error_output_prefix AwsKinesisFirehoseDeliveryStream#error_output_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#error_output_prefix TfDeliveryStream#error_output_prefix}
   */
   readonly errorOutputPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#kms_key_arn AwsKinesisFirehoseDeliveryStream#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#kms_key_arn TfDeliveryStream#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#prefix AwsKinesisFirehoseDeliveryStream#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#prefix TfDeliveryStream#prefix}
   */
   readonly prefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn AwsKinesisFirehoseDeliveryStream#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn TfDeliveryStream#role_arn}
   */
   readonly roleArn: string;
   /**
   * cloudwatch_logging_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options AwsKinesisFirehoseDeliveryStream#cloudwatch_logging_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options TfDeliveryStream#cloudwatch_logging_options}
   */
   readonly cloudwatchLoggingOptions?: OpensearchConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty;
 }
@@ -13315,15 +13315,15 @@ export class OpensearchConfigurationS3ConfigurationPropertyOutputReference exten
 }
 export interface OpensearchConfigurationVpcConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn AwsKinesisFirehoseDeliveryStream#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn TfDeliveryStream#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#security_group_ids AwsKinesisFirehoseDeliveryStream#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#security_group_ids TfDeliveryStream#security_group_ids}
   */
   readonly securityGroupIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#subnet_ids AwsKinesisFirehoseDeliveryStream#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#subnet_ids TfDeliveryStream#subnet_ids}
   */
   readonly subnetIds: string[];
 }
@@ -13417,73 +13417,73 @@ export class OpensearchConfigurationVpcConfigPropertyOutputReference extends cdk
 }
 export interface OpensearchConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval AwsKinesisFirehoseDeliveryStream#buffering_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval TfDeliveryStream#buffering_interval}
   */
   readonly bufferingInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size AwsKinesisFirehoseDeliveryStream#buffering_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size TfDeliveryStream#buffering_size}
   */
   readonly bufferingSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cluster_endpoint AwsKinesisFirehoseDeliveryStream#cluster_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cluster_endpoint TfDeliveryStream#cluster_endpoint}
   */
   readonly clusterEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#domain_arn AwsKinesisFirehoseDeliveryStream#domain_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#domain_arn TfDeliveryStream#domain_arn}
   */
   readonly domainArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#index_name AwsKinesisFirehoseDeliveryStream#index_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#index_name TfDeliveryStream#index_name}
   */
   readonly indexName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#index_rotation_period AwsKinesisFirehoseDeliveryStream#index_rotation_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#index_rotation_period TfDeliveryStream#index_rotation_period}
   */
   readonly indexRotationPeriod?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#retry_duration AwsKinesisFirehoseDeliveryStream#retry_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#retry_duration TfDeliveryStream#retry_duration}
   */
   readonly retryDuration?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn AwsKinesisFirehoseDeliveryStream#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn TfDeliveryStream#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_backup_mode AwsKinesisFirehoseDeliveryStream#s3_backup_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_backup_mode TfDeliveryStream#s3_backup_mode}
   */
   readonly s3BackupMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#type_name AwsKinesisFirehoseDeliveryStream#type_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#type_name TfDeliveryStream#type_name}
   */
   readonly typeName?: string;
   /**
   * cloudwatch_logging_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options AwsKinesisFirehoseDeliveryStream#cloudwatch_logging_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options TfDeliveryStream#cloudwatch_logging_options}
   */
   readonly cloudwatchLoggingOptions?: OpensearchConfigurationCloudwatchLoggingOptionsProperty;
   /**
   * document_id_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#document_id_options AwsKinesisFirehoseDeliveryStream#document_id_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#document_id_options TfDeliveryStream#document_id_options}
   */
   readonly documentIdOptions?: DocumentIdOptionsProperty;
   /**
   * processing_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processing_configuration AwsKinesisFirehoseDeliveryStream#processing_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processing_configuration TfDeliveryStream#processing_configuration}
   */
   readonly processingConfiguration?: OpensearchConfigurationProcessingConfigurationProperty;
   /**
   * s3_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_configuration AwsKinesisFirehoseDeliveryStream#s3_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_configuration TfDeliveryStream#s3_configuration}
   */
   readonly s3Configuration: OpensearchConfigurationS3ConfigurationProperty;
   /**
   * vpc_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#vpc_config AwsKinesisFirehoseDeliveryStream#vpc_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#vpc_config TfDeliveryStream#vpc_config}
   */
   readonly vpcConfig?: OpensearchConfigurationVpcConfigProperty;
 }
@@ -13836,15 +13836,15 @@ export class OpensearchConfigurationPropertyOutputReference extends cdktn.Comple
 }
 export interface OpensearchserverlessConfigurationCloudwatchLoggingOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name AwsKinesisFirehoseDeliveryStream#log_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name TfDeliveryStream#log_group_name}
   */
   readonly logGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name AwsKinesisFirehoseDeliveryStream#log_stream_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name TfDeliveryStream#log_stream_name}
   */
   readonly logStreamName?: string;
 }
@@ -13942,11 +13942,11 @@ export class OpensearchserverlessConfigurationCloudwatchLoggingOptionsPropertyOu
 }
 export interface OpensearchserverlessConfigurationProcessingConfigurationProcessorsParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_name AwsKinesisFirehoseDeliveryStream#parameter_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_name TfDeliveryStream#parameter_name}
   */
   readonly parameterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_value AwsKinesisFirehoseDeliveryStream#parameter_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_value TfDeliveryStream#parameter_value}
   */
   readonly parameterValue: string;
 }
@@ -14048,13 +14048,13 @@ export class OpensearchserverlessConfigurationProcessingConfigurationProcessorsP
 }
 export interface OpensearchserverlessConfigurationProcessingConfigurationProcessorsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#type AwsKinesisFirehoseDeliveryStream#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#type TfDeliveryStream#type}
   */
   readonly type: string;
   /**
   * parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameters AwsKinesisFirehoseDeliveryStream#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameters TfDeliveryStream#parameters}
   */
   readonly parameters?: OpensearchserverlessConfigurationProcessingConfigurationProcessorsParametersProperty[] | cdktn.IResolvable;
 }
@@ -14159,13 +14159,13 @@ export class OpensearchserverlessConfigurationProcessingConfigurationProcessorsP
 }
 export interface OpensearchserverlessConfigurationProcessingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
   * processors block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processors AwsKinesisFirehoseDeliveryStream#processors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processors TfDeliveryStream#processors}
   */
   readonly processors?: OpensearchserverlessConfigurationProcessingConfigurationProcessorsProperty[] | cdktn.IResolvable;
 }
@@ -14241,15 +14241,15 @@ export class OpensearchserverlessConfigurationProcessingConfigurationPropertyOut
 }
 export interface OpensearchserverlessConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name AwsKinesisFirehoseDeliveryStream#log_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name TfDeliveryStream#log_group_name}
   */
   readonly logGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name AwsKinesisFirehoseDeliveryStream#log_stream_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name TfDeliveryStream#log_stream_name}
   */
   readonly logStreamName?: string;
 }
@@ -14347,41 +14347,41 @@ export class OpensearchserverlessConfigurationS3ConfigurationCloudwatchLoggingOp
 }
 export interface OpensearchserverlessConfigurationS3ConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#bucket_arn AwsKinesisFirehoseDeliveryStream#bucket_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#bucket_arn TfDeliveryStream#bucket_arn}
   */
   readonly bucketArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval AwsKinesisFirehoseDeliveryStream#buffering_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval TfDeliveryStream#buffering_interval}
   */
   readonly bufferingInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size AwsKinesisFirehoseDeliveryStream#buffering_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size TfDeliveryStream#buffering_size}
   */
   readonly bufferingSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#compression_format AwsKinesisFirehoseDeliveryStream#compression_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#compression_format TfDeliveryStream#compression_format}
   */
   readonly compressionFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#error_output_prefix AwsKinesisFirehoseDeliveryStream#error_output_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#error_output_prefix TfDeliveryStream#error_output_prefix}
   */
   readonly errorOutputPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#kms_key_arn AwsKinesisFirehoseDeliveryStream#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#kms_key_arn TfDeliveryStream#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#prefix AwsKinesisFirehoseDeliveryStream#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#prefix TfDeliveryStream#prefix}
   */
   readonly prefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn AwsKinesisFirehoseDeliveryStream#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn TfDeliveryStream#role_arn}
   */
   readonly roleArn: string;
   /**
   * cloudwatch_logging_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options AwsKinesisFirehoseDeliveryStream#cloudwatch_logging_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options TfDeliveryStream#cloudwatch_logging_options}
   */
   readonly cloudwatchLoggingOptions?: OpensearchserverlessConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty;
 }
@@ -14605,15 +14605,15 @@ export class OpensearchserverlessConfigurationS3ConfigurationPropertyOutputRefer
 }
 export interface OpensearchserverlessConfigurationVpcConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn AwsKinesisFirehoseDeliveryStream#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn TfDeliveryStream#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#security_group_ids AwsKinesisFirehoseDeliveryStream#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#security_group_ids TfDeliveryStream#security_group_ids}
   */
   readonly securityGroupIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#subnet_ids AwsKinesisFirehoseDeliveryStream#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#subnet_ids TfDeliveryStream#subnet_ids}
   */
   readonly subnetIds: string[];
 }
@@ -14707,55 +14707,55 @@ export class OpensearchserverlessConfigurationVpcConfigPropertyOutputReference e
 }
 export interface OpensearchserverlessConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval AwsKinesisFirehoseDeliveryStream#buffering_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval TfDeliveryStream#buffering_interval}
   */
   readonly bufferingInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size AwsKinesisFirehoseDeliveryStream#buffering_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size TfDeliveryStream#buffering_size}
   */
   readonly bufferingSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#collection_endpoint AwsKinesisFirehoseDeliveryStream#collection_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#collection_endpoint TfDeliveryStream#collection_endpoint}
   */
   readonly collectionEndpoint: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#index_name AwsKinesisFirehoseDeliveryStream#index_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#index_name TfDeliveryStream#index_name}
   */
   readonly indexName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#retry_duration AwsKinesisFirehoseDeliveryStream#retry_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#retry_duration TfDeliveryStream#retry_duration}
   */
   readonly retryDuration?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn AwsKinesisFirehoseDeliveryStream#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn TfDeliveryStream#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_backup_mode AwsKinesisFirehoseDeliveryStream#s3_backup_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_backup_mode TfDeliveryStream#s3_backup_mode}
   */
   readonly s3BackupMode?: string;
   /**
   * cloudwatch_logging_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options AwsKinesisFirehoseDeliveryStream#cloudwatch_logging_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options TfDeliveryStream#cloudwatch_logging_options}
   */
   readonly cloudwatchLoggingOptions?: OpensearchserverlessConfigurationCloudwatchLoggingOptionsProperty;
   /**
   * processing_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processing_configuration AwsKinesisFirehoseDeliveryStream#processing_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processing_configuration TfDeliveryStream#processing_configuration}
   */
   readonly processingConfiguration?: OpensearchserverlessConfigurationProcessingConfigurationProperty;
   /**
   * s3_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_configuration AwsKinesisFirehoseDeliveryStream#s3_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_configuration TfDeliveryStream#s3_configuration}
   */
   readonly s3Configuration: OpensearchserverlessConfigurationS3ConfigurationProperty;
   /**
   * vpc_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#vpc_config AwsKinesisFirehoseDeliveryStream#vpc_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#vpc_config TfDeliveryStream#vpc_config}
   */
   readonly vpcConfig?: OpensearchserverlessConfigurationVpcConfigProperty;
 }
@@ -15017,15 +15017,15 @@ export class OpensearchserverlessConfigurationPropertyOutputReference extends cd
 }
 export interface RedshiftConfigurationCloudwatchLoggingOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name AwsKinesisFirehoseDeliveryStream#log_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name TfDeliveryStream#log_group_name}
   */
   readonly logGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name AwsKinesisFirehoseDeliveryStream#log_stream_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name TfDeliveryStream#log_stream_name}
   */
   readonly logStreamName?: string;
 }
@@ -15123,11 +15123,11 @@ export class RedshiftConfigurationCloudwatchLoggingOptionsPropertyOutputReferenc
 }
 export interface RedshiftConfigurationProcessingConfigurationProcessorsParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_name AwsKinesisFirehoseDeliveryStream#parameter_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_name TfDeliveryStream#parameter_name}
   */
   readonly parameterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_value AwsKinesisFirehoseDeliveryStream#parameter_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_value TfDeliveryStream#parameter_value}
   */
   readonly parameterValue: string;
 }
@@ -15229,13 +15229,13 @@ export class RedshiftConfigurationProcessingConfigurationProcessorsParametersPro
 }
 export interface RedshiftConfigurationProcessingConfigurationProcessorsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#type AwsKinesisFirehoseDeliveryStream#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#type TfDeliveryStream#type}
   */
   readonly type: string;
   /**
   * parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameters AwsKinesisFirehoseDeliveryStream#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameters TfDeliveryStream#parameters}
   */
   readonly parameters?: RedshiftConfigurationProcessingConfigurationProcessorsParametersProperty[] | cdktn.IResolvable;
 }
@@ -15340,13 +15340,13 @@ export class RedshiftConfigurationProcessingConfigurationProcessorsPropertyList 
 }
 export interface RedshiftConfigurationProcessingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
   * processors block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processors AwsKinesisFirehoseDeliveryStream#processors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processors TfDeliveryStream#processors}
   */
   readonly processors?: RedshiftConfigurationProcessingConfigurationProcessorsProperty[] | cdktn.IResolvable;
 }
@@ -15422,15 +15422,15 @@ export class RedshiftConfigurationProcessingConfigurationPropertyOutputReference
 }
 export interface RedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name AwsKinesisFirehoseDeliveryStream#log_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name TfDeliveryStream#log_group_name}
   */
   readonly logGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name AwsKinesisFirehoseDeliveryStream#log_stream_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name TfDeliveryStream#log_stream_name}
   */
   readonly logStreamName?: string;
 }
@@ -15528,41 +15528,41 @@ export class RedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsP
 }
 export interface RedshiftConfigurationS3BackupConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#bucket_arn AwsKinesisFirehoseDeliveryStream#bucket_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#bucket_arn TfDeliveryStream#bucket_arn}
   */
   readonly bucketArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval AwsKinesisFirehoseDeliveryStream#buffering_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval TfDeliveryStream#buffering_interval}
   */
   readonly bufferingInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size AwsKinesisFirehoseDeliveryStream#buffering_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size TfDeliveryStream#buffering_size}
   */
   readonly bufferingSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#compression_format AwsKinesisFirehoseDeliveryStream#compression_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#compression_format TfDeliveryStream#compression_format}
   */
   readonly compressionFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#error_output_prefix AwsKinesisFirehoseDeliveryStream#error_output_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#error_output_prefix TfDeliveryStream#error_output_prefix}
   */
   readonly errorOutputPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#kms_key_arn AwsKinesisFirehoseDeliveryStream#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#kms_key_arn TfDeliveryStream#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#prefix AwsKinesisFirehoseDeliveryStream#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#prefix TfDeliveryStream#prefix}
   */
   readonly prefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn AwsKinesisFirehoseDeliveryStream#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn TfDeliveryStream#role_arn}
   */
   readonly roleArn: string;
   /**
   * cloudwatch_logging_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options AwsKinesisFirehoseDeliveryStream#cloudwatch_logging_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options TfDeliveryStream#cloudwatch_logging_options}
   */
   readonly cloudwatchLoggingOptions?: RedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsProperty;
 }
@@ -15786,15 +15786,15 @@ export class RedshiftConfigurationS3BackupConfigurationPropertyOutputReference e
 }
 export interface RedshiftConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name AwsKinesisFirehoseDeliveryStream#log_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name TfDeliveryStream#log_group_name}
   */
   readonly logGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name AwsKinesisFirehoseDeliveryStream#log_stream_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name TfDeliveryStream#log_stream_name}
   */
   readonly logStreamName?: string;
 }
@@ -15892,41 +15892,41 @@ export class RedshiftConfigurationS3ConfigurationCloudwatchLoggingOptionsPropert
 }
 export interface RedshiftConfigurationS3ConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#bucket_arn AwsKinesisFirehoseDeliveryStream#bucket_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#bucket_arn TfDeliveryStream#bucket_arn}
   */
   readonly bucketArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval AwsKinesisFirehoseDeliveryStream#buffering_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval TfDeliveryStream#buffering_interval}
   */
   readonly bufferingInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size AwsKinesisFirehoseDeliveryStream#buffering_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size TfDeliveryStream#buffering_size}
   */
   readonly bufferingSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#compression_format AwsKinesisFirehoseDeliveryStream#compression_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#compression_format TfDeliveryStream#compression_format}
   */
   readonly compressionFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#error_output_prefix AwsKinesisFirehoseDeliveryStream#error_output_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#error_output_prefix TfDeliveryStream#error_output_prefix}
   */
   readonly errorOutputPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#kms_key_arn AwsKinesisFirehoseDeliveryStream#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#kms_key_arn TfDeliveryStream#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#prefix AwsKinesisFirehoseDeliveryStream#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#prefix TfDeliveryStream#prefix}
   */
   readonly prefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn AwsKinesisFirehoseDeliveryStream#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn TfDeliveryStream#role_arn}
   */
   readonly roleArn: string;
   /**
   * cloudwatch_logging_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options AwsKinesisFirehoseDeliveryStream#cloudwatch_logging_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options TfDeliveryStream#cloudwatch_logging_options}
   */
   readonly cloudwatchLoggingOptions?: RedshiftConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty;
 }
@@ -16150,15 +16150,15 @@ export class RedshiftConfigurationS3ConfigurationPropertyOutputReference extends
 }
 export interface RedshiftConfigurationSecretsManagerConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn AwsKinesisFirehoseDeliveryStream#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn TfDeliveryStream#role_arn}
   */
   readonly roleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#secret_arn AwsKinesisFirehoseDeliveryStream#secret_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#secret_arn TfDeliveryStream#secret_arn}
   */
   readonly secretArn?: string;
 }
@@ -16256,69 +16256,69 @@ export class RedshiftConfigurationSecretsManagerConfigurationPropertyOutputRefer
 }
 export interface RedshiftConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cluster_jdbcurl AwsKinesisFirehoseDeliveryStream#cluster_jdbcurl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cluster_jdbcurl TfDeliveryStream#cluster_jdbcurl}
   */
   readonly clusterJdbcurl: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#copy_options AwsKinesisFirehoseDeliveryStream#copy_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#copy_options TfDeliveryStream#copy_options}
   */
   readonly copyOptions?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#data_table_columns AwsKinesisFirehoseDeliveryStream#data_table_columns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#data_table_columns TfDeliveryStream#data_table_columns}
   */
   readonly dataTableColumns?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#data_table_name AwsKinesisFirehoseDeliveryStream#data_table_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#data_table_name TfDeliveryStream#data_table_name}
   */
   readonly dataTableName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#password AwsKinesisFirehoseDeliveryStream#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#password TfDeliveryStream#password}
   */
   readonly password?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#retry_duration AwsKinesisFirehoseDeliveryStream#retry_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#retry_duration TfDeliveryStream#retry_duration}
   */
   readonly retryDuration?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn AwsKinesisFirehoseDeliveryStream#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn TfDeliveryStream#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_backup_mode AwsKinesisFirehoseDeliveryStream#s3_backup_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_backup_mode TfDeliveryStream#s3_backup_mode}
   */
   readonly s3BackupMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#username AwsKinesisFirehoseDeliveryStream#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#username TfDeliveryStream#username}
   */
   readonly username?: string;
   /**
   * cloudwatch_logging_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options AwsKinesisFirehoseDeliveryStream#cloudwatch_logging_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options TfDeliveryStream#cloudwatch_logging_options}
   */
   readonly cloudwatchLoggingOptions?: RedshiftConfigurationCloudwatchLoggingOptionsProperty;
   /**
   * processing_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processing_configuration AwsKinesisFirehoseDeliveryStream#processing_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processing_configuration TfDeliveryStream#processing_configuration}
   */
   readonly processingConfiguration?: RedshiftConfigurationProcessingConfigurationProperty;
   /**
   * s3_backup_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_backup_configuration AwsKinesisFirehoseDeliveryStream#s3_backup_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_backup_configuration TfDeliveryStream#s3_backup_configuration}
   */
   readonly s3BackupConfiguration?: RedshiftConfigurationS3BackupConfigurationProperty;
   /**
   * s3_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_configuration AwsKinesisFirehoseDeliveryStream#s3_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_configuration TfDeliveryStream#s3_configuration}
   */
   readonly s3Configuration: RedshiftConfigurationS3ConfigurationProperty;
   /**
   * secrets_manager_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#secrets_manager_configuration AwsKinesisFirehoseDeliveryStream#secrets_manager_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#secrets_manager_configuration TfDeliveryStream#secrets_manager_configuration}
   */
   readonly secretsManagerConfiguration?: RedshiftConfigurationSecretsManagerConfigurationProperty;
 }
@@ -16646,15 +16646,15 @@ export class RedshiftConfigurationPropertyOutputReference extends cdktn.ComplexO
 }
 export interface ServerSideEncryptionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#key_arn AwsKinesisFirehoseDeliveryStream#key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#key_arn TfDeliveryStream#key_arn}
   */
   readonly keyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#key_type AwsKinesisFirehoseDeliveryStream#key_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#key_type TfDeliveryStream#key_type}
   */
   readonly keyType?: string;
 }
@@ -16752,15 +16752,15 @@ export class ServerSideEncryptionPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface SnowflakeConfigurationCloudwatchLoggingOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name AwsKinesisFirehoseDeliveryStream#log_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name TfDeliveryStream#log_group_name}
   */
   readonly logGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name AwsKinesisFirehoseDeliveryStream#log_stream_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name TfDeliveryStream#log_stream_name}
   */
   readonly logStreamName?: string;
 }
@@ -16858,11 +16858,11 @@ export class SnowflakeConfigurationCloudwatchLoggingOptionsPropertyOutputReferen
 }
 export interface SnowflakeConfigurationProcessingConfigurationProcessorsParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_name AwsKinesisFirehoseDeliveryStream#parameter_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_name TfDeliveryStream#parameter_name}
   */
   readonly parameterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_value AwsKinesisFirehoseDeliveryStream#parameter_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_value TfDeliveryStream#parameter_value}
   */
   readonly parameterValue: string;
 }
@@ -16964,13 +16964,13 @@ export class SnowflakeConfigurationProcessingConfigurationProcessorsParametersPr
 }
 export interface SnowflakeConfigurationProcessingConfigurationProcessorsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#type AwsKinesisFirehoseDeliveryStream#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#type TfDeliveryStream#type}
   */
   readonly type: string;
   /**
   * parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameters AwsKinesisFirehoseDeliveryStream#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameters TfDeliveryStream#parameters}
   */
   readonly parameters?: SnowflakeConfigurationProcessingConfigurationProcessorsParametersProperty[] | cdktn.IResolvable;
 }
@@ -17075,13 +17075,13 @@ export class SnowflakeConfigurationProcessingConfigurationProcessorsPropertyList
 }
 export interface SnowflakeConfigurationProcessingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
   * processors block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processors AwsKinesisFirehoseDeliveryStream#processors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processors TfDeliveryStream#processors}
   */
   readonly processors?: SnowflakeConfigurationProcessingConfigurationProcessorsProperty[] | cdktn.IResolvable;
 }
@@ -17157,15 +17157,15 @@ export class SnowflakeConfigurationProcessingConfigurationPropertyOutputReferenc
 }
 export interface SnowflakeConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name AwsKinesisFirehoseDeliveryStream#log_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name TfDeliveryStream#log_group_name}
   */
   readonly logGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name AwsKinesisFirehoseDeliveryStream#log_stream_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name TfDeliveryStream#log_stream_name}
   */
   readonly logStreamName?: string;
 }
@@ -17263,41 +17263,41 @@ export class SnowflakeConfigurationS3ConfigurationCloudwatchLoggingOptionsProper
 }
 export interface SnowflakeConfigurationS3ConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#bucket_arn AwsKinesisFirehoseDeliveryStream#bucket_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#bucket_arn TfDeliveryStream#bucket_arn}
   */
   readonly bucketArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval AwsKinesisFirehoseDeliveryStream#buffering_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval TfDeliveryStream#buffering_interval}
   */
   readonly bufferingInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size AwsKinesisFirehoseDeliveryStream#buffering_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size TfDeliveryStream#buffering_size}
   */
   readonly bufferingSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#compression_format AwsKinesisFirehoseDeliveryStream#compression_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#compression_format TfDeliveryStream#compression_format}
   */
   readonly compressionFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#error_output_prefix AwsKinesisFirehoseDeliveryStream#error_output_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#error_output_prefix TfDeliveryStream#error_output_prefix}
   */
   readonly errorOutputPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#kms_key_arn AwsKinesisFirehoseDeliveryStream#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#kms_key_arn TfDeliveryStream#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#prefix AwsKinesisFirehoseDeliveryStream#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#prefix TfDeliveryStream#prefix}
   */
   readonly prefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn AwsKinesisFirehoseDeliveryStream#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn TfDeliveryStream#role_arn}
   */
   readonly roleArn: string;
   /**
   * cloudwatch_logging_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options AwsKinesisFirehoseDeliveryStream#cloudwatch_logging_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options TfDeliveryStream#cloudwatch_logging_options}
   */
   readonly cloudwatchLoggingOptions?: SnowflakeConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty;
 }
@@ -17521,15 +17521,15 @@ export class SnowflakeConfigurationS3ConfigurationPropertyOutputReference extend
 }
 export interface SnowflakeConfigurationSecretsManagerConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn AwsKinesisFirehoseDeliveryStream#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn TfDeliveryStream#role_arn}
   */
   readonly roleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#secret_arn AwsKinesisFirehoseDeliveryStream#secret_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#secret_arn TfDeliveryStream#secret_arn}
   */
   readonly secretArn?: string;
 }
@@ -17627,11 +17627,11 @@ export class SnowflakeConfigurationSecretsManagerConfigurationPropertyOutputRefe
 }
 export interface SnowflakeRoleConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#snowflake_role AwsKinesisFirehoseDeliveryStream#snowflake_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#snowflake_role TfDeliveryStream#snowflake_role}
   */
   readonly snowflakeRole?: string;
 }
@@ -17707,7 +17707,7 @@ export class SnowflakeRoleConfigurationPropertyOutputReference extends cdktn.Com
 }
 export interface SnowflakeVpcConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#private_link_vpce_id AwsKinesisFirehoseDeliveryStream#private_link_vpce_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#private_link_vpce_id TfDeliveryStream#private_link_vpce_id}
   */
   readonly privateLinkVpceId: string;
 }
@@ -17758,99 +17758,99 @@ export class SnowflakeVpcConfigurationPropertyOutputReference extends cdktn.Comp
 }
 export interface SnowflakeConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#account_url AwsKinesisFirehoseDeliveryStream#account_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#account_url TfDeliveryStream#account_url}
   */
   readonly accountUrl: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval AwsKinesisFirehoseDeliveryStream#buffering_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval TfDeliveryStream#buffering_interval}
   */
   readonly bufferingInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size AwsKinesisFirehoseDeliveryStream#buffering_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size TfDeliveryStream#buffering_size}
   */
   readonly bufferingSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#content_column_name AwsKinesisFirehoseDeliveryStream#content_column_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#content_column_name TfDeliveryStream#content_column_name}
   */
   readonly contentColumnName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#data_loading_option AwsKinesisFirehoseDeliveryStream#data_loading_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#data_loading_option TfDeliveryStream#data_loading_option}
   */
   readonly dataLoadingOption?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#database AwsKinesisFirehoseDeliveryStream#database}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#database TfDeliveryStream#database}
   */
   readonly database: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#key_passphrase AwsKinesisFirehoseDeliveryStream#key_passphrase}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#key_passphrase TfDeliveryStream#key_passphrase}
   */
   readonly keyPassphrase?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#metadata_column_name AwsKinesisFirehoseDeliveryStream#metadata_column_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#metadata_column_name TfDeliveryStream#metadata_column_name}
   */
   readonly metadataColumnName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#private_key AwsKinesisFirehoseDeliveryStream#private_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#private_key TfDeliveryStream#private_key}
   */
   readonly privateKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#retry_duration AwsKinesisFirehoseDeliveryStream#retry_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#retry_duration TfDeliveryStream#retry_duration}
   */
   readonly retryDuration?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn AwsKinesisFirehoseDeliveryStream#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn TfDeliveryStream#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_backup_mode AwsKinesisFirehoseDeliveryStream#s3_backup_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_backup_mode TfDeliveryStream#s3_backup_mode}
   */
   readonly s3BackupMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#schema AwsKinesisFirehoseDeliveryStream#schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#schema TfDeliveryStream#schema}
   */
   readonly schema: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#table AwsKinesisFirehoseDeliveryStream#table}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#table TfDeliveryStream#table}
   */
   readonly table: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#user AwsKinesisFirehoseDeliveryStream#user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#user TfDeliveryStream#user}
   */
   readonly user?: string;
   /**
   * cloudwatch_logging_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options AwsKinesisFirehoseDeliveryStream#cloudwatch_logging_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options TfDeliveryStream#cloudwatch_logging_options}
   */
   readonly cloudwatchLoggingOptions?: SnowflakeConfigurationCloudwatchLoggingOptionsProperty;
   /**
   * processing_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processing_configuration AwsKinesisFirehoseDeliveryStream#processing_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processing_configuration TfDeliveryStream#processing_configuration}
   */
   readonly processingConfiguration?: SnowflakeConfigurationProcessingConfigurationProperty;
   /**
   * s3_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_configuration AwsKinesisFirehoseDeliveryStream#s3_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_configuration TfDeliveryStream#s3_configuration}
   */
   readonly s3Configuration: SnowflakeConfigurationS3ConfigurationProperty;
   /**
   * secrets_manager_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#secrets_manager_configuration AwsKinesisFirehoseDeliveryStream#secrets_manager_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#secrets_manager_configuration TfDeliveryStream#secrets_manager_configuration}
   */
   readonly secretsManagerConfiguration?: SnowflakeConfigurationSecretsManagerConfigurationProperty;
   /**
   * snowflake_role_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#snowflake_role_configuration AwsKinesisFirehoseDeliveryStream#snowflake_role_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#snowflake_role_configuration TfDeliveryStream#snowflake_role_configuration}
   */
   readonly snowflakeRoleConfiguration?: SnowflakeRoleConfigurationProperty;
   /**
   * snowflake_vpc_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#snowflake_vpc_configuration AwsKinesisFirehoseDeliveryStream#snowflake_vpc_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#snowflake_vpc_configuration TfDeliveryStream#snowflake_vpc_configuration}
   */
   readonly snowflakeVpcConfiguration?: SnowflakeVpcConfigurationProperty;
 }
@@ -18326,15 +18326,15 @@ export class SnowflakeConfigurationPropertyOutputReference extends cdktn.Complex
 }
 export interface SplunkConfigurationCloudwatchLoggingOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name AwsKinesisFirehoseDeliveryStream#log_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name TfDeliveryStream#log_group_name}
   */
   readonly logGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name AwsKinesisFirehoseDeliveryStream#log_stream_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name TfDeliveryStream#log_stream_name}
   */
   readonly logStreamName?: string;
 }
@@ -18432,11 +18432,11 @@ export class SplunkConfigurationCloudwatchLoggingOptionsPropertyOutputReference 
 }
 export interface SplunkConfigurationProcessingConfigurationProcessorsParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_name AwsKinesisFirehoseDeliveryStream#parameter_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_name TfDeliveryStream#parameter_name}
   */
   readonly parameterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_value AwsKinesisFirehoseDeliveryStream#parameter_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameter_value TfDeliveryStream#parameter_value}
   */
   readonly parameterValue: string;
 }
@@ -18538,13 +18538,13 @@ export class SplunkConfigurationProcessingConfigurationProcessorsParametersPrope
 }
 export interface SplunkConfigurationProcessingConfigurationProcessorsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#type AwsKinesisFirehoseDeliveryStream#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#type TfDeliveryStream#type}
   */
   readonly type: string;
   /**
   * parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameters AwsKinesisFirehoseDeliveryStream#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#parameters TfDeliveryStream#parameters}
   */
   readonly parameters?: SplunkConfigurationProcessingConfigurationProcessorsParametersProperty[] | cdktn.IResolvable;
 }
@@ -18649,13 +18649,13 @@ export class SplunkConfigurationProcessingConfigurationProcessorsPropertyList ex
 }
 export interface SplunkConfigurationProcessingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
   * processors block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processors AwsKinesisFirehoseDeliveryStream#processors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processors TfDeliveryStream#processors}
   */
   readonly processors?: SplunkConfigurationProcessingConfigurationProcessorsProperty[] | cdktn.IResolvable;
 }
@@ -18731,15 +18731,15 @@ export class SplunkConfigurationProcessingConfigurationPropertyOutputReference e
 }
 export interface SplunkConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name AwsKinesisFirehoseDeliveryStream#log_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_group_name TfDeliveryStream#log_group_name}
   */
   readonly logGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name AwsKinesisFirehoseDeliveryStream#log_stream_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#log_stream_name TfDeliveryStream#log_stream_name}
   */
   readonly logStreamName?: string;
 }
@@ -18837,41 +18837,41 @@ export class SplunkConfigurationS3ConfigurationCloudwatchLoggingOptionsPropertyO
 }
 export interface SplunkConfigurationS3ConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#bucket_arn AwsKinesisFirehoseDeliveryStream#bucket_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#bucket_arn TfDeliveryStream#bucket_arn}
   */
   readonly bucketArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval AwsKinesisFirehoseDeliveryStream#buffering_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval TfDeliveryStream#buffering_interval}
   */
   readonly bufferingInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size AwsKinesisFirehoseDeliveryStream#buffering_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size TfDeliveryStream#buffering_size}
   */
   readonly bufferingSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#compression_format AwsKinesisFirehoseDeliveryStream#compression_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#compression_format TfDeliveryStream#compression_format}
   */
   readonly compressionFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#error_output_prefix AwsKinesisFirehoseDeliveryStream#error_output_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#error_output_prefix TfDeliveryStream#error_output_prefix}
   */
   readonly errorOutputPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#kms_key_arn AwsKinesisFirehoseDeliveryStream#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#kms_key_arn TfDeliveryStream#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#prefix AwsKinesisFirehoseDeliveryStream#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#prefix TfDeliveryStream#prefix}
   */
   readonly prefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn AwsKinesisFirehoseDeliveryStream#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn TfDeliveryStream#role_arn}
   */
   readonly roleArn: string;
   /**
   * cloudwatch_logging_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options AwsKinesisFirehoseDeliveryStream#cloudwatch_logging_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options TfDeliveryStream#cloudwatch_logging_options}
   */
   readonly cloudwatchLoggingOptions?: SplunkConfigurationS3ConfigurationCloudwatchLoggingOptionsProperty;
 }
@@ -19095,15 +19095,15 @@ export class SplunkConfigurationS3ConfigurationPropertyOutputReference extends c
 }
 export interface SplunkConfigurationSecretsManagerConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled AwsKinesisFirehoseDeliveryStream#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#enabled TfDeliveryStream#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn AwsKinesisFirehoseDeliveryStream#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#role_arn TfDeliveryStream#role_arn}
   */
   readonly roleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#secret_arn AwsKinesisFirehoseDeliveryStream#secret_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#secret_arn TfDeliveryStream#secret_arn}
   */
   readonly secretArn?: string;
 }
@@ -19201,59 +19201,59 @@ export class SplunkConfigurationSecretsManagerConfigurationPropertyOutputReferen
 }
 export interface SplunkConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval AwsKinesisFirehoseDeliveryStream#buffering_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_interval TfDeliveryStream#buffering_interval}
   */
   readonly bufferingInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size AwsKinesisFirehoseDeliveryStream#buffering_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#buffering_size TfDeliveryStream#buffering_size}
   */
   readonly bufferingSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#hec_acknowledgment_timeout AwsKinesisFirehoseDeliveryStream#hec_acknowledgment_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#hec_acknowledgment_timeout TfDeliveryStream#hec_acknowledgment_timeout}
   */
   readonly hecAcknowledgmentTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#hec_endpoint AwsKinesisFirehoseDeliveryStream#hec_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#hec_endpoint TfDeliveryStream#hec_endpoint}
   */
   readonly hecEndpoint: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#hec_endpoint_type AwsKinesisFirehoseDeliveryStream#hec_endpoint_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#hec_endpoint_type TfDeliveryStream#hec_endpoint_type}
   */
   readonly hecEndpointType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#hec_token AwsKinesisFirehoseDeliveryStream#hec_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#hec_token TfDeliveryStream#hec_token}
   */
   readonly hecToken?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#retry_duration AwsKinesisFirehoseDeliveryStream#retry_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#retry_duration TfDeliveryStream#retry_duration}
   */
   readonly retryDuration?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_backup_mode AwsKinesisFirehoseDeliveryStream#s3_backup_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_backup_mode TfDeliveryStream#s3_backup_mode}
   */
   readonly s3BackupMode?: string;
   /**
   * cloudwatch_logging_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options AwsKinesisFirehoseDeliveryStream#cloudwatch_logging_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#cloudwatch_logging_options TfDeliveryStream#cloudwatch_logging_options}
   */
   readonly cloudwatchLoggingOptions?: SplunkConfigurationCloudwatchLoggingOptionsProperty;
   /**
   * processing_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processing_configuration AwsKinesisFirehoseDeliveryStream#processing_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#processing_configuration TfDeliveryStream#processing_configuration}
   */
   readonly processingConfiguration?: SplunkConfigurationProcessingConfigurationProperty;
   /**
   * s3_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_configuration AwsKinesisFirehoseDeliveryStream#s3_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#s3_configuration TfDeliveryStream#s3_configuration}
   */
   readonly s3Configuration: SplunkConfigurationS3ConfigurationProperty;
   /**
   * secrets_manager_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#secrets_manager_configuration AwsKinesisFirehoseDeliveryStream#secrets_manager_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#secrets_manager_configuration TfDeliveryStream#secrets_manager_configuration}
   */
   readonly secretsManagerConfiguration?: SplunkConfigurationSecretsManagerConfigurationProperty;
 }
@@ -19543,15 +19543,15 @@ export class SplunkConfigurationPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#create AwsKinesisFirehoseDeliveryStream#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#create TfDeliveryStream#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#delete AwsKinesisFirehoseDeliveryStream#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#delete TfDeliveryStream#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#update AwsKinesisFirehoseDeliveryStream#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_firehose_delivery_stream#update TfDeliveryStream#update}
   */
   readonly update?: string;
 }

@@ -5,34 +5,34 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSagemakerModelPackageGroupConfig extends cdktn.TerraformMetaArguments {
+export interface TfModelPackageGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_package_group#id AwsSagemakerModelPackageGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_package_group#id TfModelPackageGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_package_group#model_package_group_description AwsSagemakerModelPackageGroup#model_package_group_description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_package_group#model_package_group_description TfModelPackageGroup#model_package_group_description}
   */
   readonly modelPackageGroupDescription?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_package_group#model_package_group_name AwsSagemakerModelPackageGroup#model_package_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_package_group#model_package_group_name TfModelPackageGroup#model_package_group_name}
   */
   readonly modelPackageGroupName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_package_group#region AwsSagemakerModelPackageGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_package_group#region TfModelPackageGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_package_group#tags AwsSagemakerModelPackageGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_package_group#tags TfModelPackageGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_package_group#tags_all AwsSagemakerModelPackageGroup#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_package_group#tags_all TfModelPackageGroup#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -40,7 +40,7 @@ export interface AwsSagemakerModelPackageGroupConfig extends cdktn.TerraformMeta
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_package_group aws_sagemaker_model_package_group}
 */
-export class AwsSagemakerModelPackageGroup extends cdktn.TerraformResource {
+export class TfModelPackageGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class AwsSagemakerModelPackageGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSagemakerModelPackageGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfModelPackageGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSagemakerModelPackageGroup to import
-  * @param importFromId The id of the existing AwsSagemakerModelPackageGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_package_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSagemakerModelPackageGroup to import is found
+  * @param importToId The construct id used in the generated config for the TfModelPackageGroup to import
+  * @param importFromId The id of the existing TfModelPackageGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_package_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfModelPackageGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sagemaker_model_package_group", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class AwsSagemakerModelPackageGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSagemakerModelPackageGroupConfig
+  * @param options TfModelPackageGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSagemakerModelPackageGroupConfig) {
+  public constructor(scope: Construct, id: string, config: TfModelPackageGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sagemaker_model_package_group',
       terraformGeneratorMetadata: {

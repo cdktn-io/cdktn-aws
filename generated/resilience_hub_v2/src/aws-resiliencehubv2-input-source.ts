@@ -5,29 +5,29 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsResiliencehubv2InputSourceConfig extends cdktn.TerraformMetaArguments {
+export interface TfInputSourceConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_input_source#region AwsResiliencehubv2InputSource#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_input_source#region TfInputSource#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_input_source#service_arn AwsResiliencehubv2InputSource#service_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_input_source#service_arn TfInputSource#service_arn}
   */
   readonly serviceArn: string;
   /**
   * resource_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_input_source#resource_configuration AwsResiliencehubv2InputSource#resource_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_input_source#resource_configuration TfInputSource#resource_configuration}
   */
-  readonly resourceConfiguration?: AwsResiliencehubv2InputSource.ResourceConfigurationProperty[] | cdktn.IResolvable;
+  readonly resourceConfiguration?: TfInputSource.ResourceConfigurationProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_input_source aws_resiliencehubv2_input_source}
 */
-export class AwsResiliencehubv2InputSource extends cdktn.TerraformResource {
+export class TfInputSource extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -38,11 +38,11 @@ export class AwsResiliencehubv2InputSource extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsResiliencehubv2InputSource resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfInputSource resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsResiliencehubv2InputSource to import
-  * @param importFromId The id of the existing AwsResiliencehubv2InputSource that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_input_source#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsResiliencehubv2InputSource to import is found
+  * @param importToId The construct id used in the generated config for the TfInputSource to import
+  * @param importFromId The id of the existing TfInputSource that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_input_source#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfInputSource to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_resiliencehubv2_input_source", importId: importFromId, provider });
@@ -57,9 +57,9 @@ export class AwsResiliencehubv2InputSource extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsResiliencehubv2InputSourceConfig
+  * @param options TfInputSourceConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsResiliencehubv2InputSourceConfig) {
+  public constructor(scope: Construct, id: string, config: TfInputSourceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_resiliencehubv2_input_source',
       terraformGeneratorMetadata: {
@@ -119,11 +119,11 @@ export class AwsResiliencehubv2InputSource extends cdktn.TerraformResource {
   }
 
   // resource_configuration - computed: false, optional: true, required: false
-  private _resourceConfiguration = new AwsResiliencehubv2InputSource.ResourceConfigurationPropertyList(this, "resource_configuration", false);
+  private _resourceConfiguration = new TfInputSource.ResourceConfigurationPropertyList(this, "resource_configuration", false);
   public get resourceConfiguration() {
     return this._resourceConfiguration;
   }
-  public putResourceConfiguration(value: AwsResiliencehubv2InputSource.ResourceConfigurationProperty[] | cdktn.IResolvable) {
+  public putResourceConfiguration(value: TfInputSource.ResourceConfigurationProperty[] | cdktn.IResolvable) {
     this._resourceConfiguration.internalValue = value;
   }
   public resetResourceConfiguration() {
@@ -142,7 +142,7 @@ export class AwsResiliencehubv2InputSource extends cdktn.TerraformResource {
     return {
       region: cdktn.stringToTerraform(this._region),
       service_arn: cdktn.stringToTerraform(this._serviceArn),
-      resource_configuration: cdktn.listMapper(awsResiliencehubv2InputSourceResourceConfigurationPropertyToTerraform, true)(this._resourceConfiguration.internalValue),
+      resource_configuration: cdktn.listMapper(tfInputSourceResourceConfigurationPropertyToTerraform, true)(this._resourceConfiguration.internalValue),
     };
   }
 
@@ -161,10 +161,10 @@ export class AwsResiliencehubv2InputSource extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       resource_configuration: {
-        value: cdktn.listMapperHcl(awsResiliencehubv2InputSourceResourceConfigurationPropertyToHclTerraform, true)(this._resourceConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfInputSourceResourceConfigurationPropertyToHclTerraform, true)(this._resourceConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsResiliencehubv2InputSource.ResourceConfigurationPropertyList",
+        storageClassType: "TfInputSource.ResourceConfigurationPropertyList",
       },
     };
 
@@ -173,7 +173,7 @@ export class AwsResiliencehubv2InputSource extends cdktn.TerraformResource {
   }
 }
 
-export function awsResiliencehubv2InputSourceEksPropertyToTerraform(struct?: AwsResiliencehubv2InputSource.EksProperty | cdktn.IResolvable): any {
+export function tfInputSourceEksPropertyToTerraform(struct?: TfInputSource.EksProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -185,7 +185,7 @@ export function awsResiliencehubv2InputSourceEksPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsResiliencehubv2InputSourceEksPropertyToHclTerraform(struct?: AwsResiliencehubv2InputSource.EksProperty | cdktn.IResolvable): any {
+export function tfInputSourceEksPropertyToHclTerraform(struct?: TfInputSource.EksProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -210,7 +210,7 @@ export function awsResiliencehubv2InputSourceEksPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsResiliencehubv2InputSourceResourceTagPropertyToTerraform(struct?: AwsResiliencehubv2InputSource.ResourceTagProperty | cdktn.IResolvable): any {
+export function tfInputSourceResourceTagPropertyToTerraform(struct?: TfInputSource.ResourceTagProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -222,7 +222,7 @@ export function awsResiliencehubv2InputSourceResourceTagPropertyToTerraform(stru
 }
 
 
-export function awsResiliencehubv2InputSourceResourceTagPropertyToHclTerraform(struct?: AwsResiliencehubv2InputSource.ResourceTagProperty | cdktn.IResolvable): any {
+export function tfInputSourceResourceTagPropertyToHclTerraform(struct?: TfInputSource.ResourceTagProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -247,7 +247,7 @@ export function awsResiliencehubv2InputSourceResourceTagPropertyToHclTerraform(s
 }
 
 
-export function awsResiliencehubv2InputSourceResourceConfigurationPropertyToTerraform(struct?: AwsResiliencehubv2InputSource.ResourceConfigurationProperty | cdktn.IResolvable): any {
+export function tfInputSourceResourceConfigurationPropertyToTerraform(struct?: TfInputSource.ResourceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -256,13 +256,13 @@ export function awsResiliencehubv2InputSourceResourceConfigurationPropertyToTerr
     cfn_stack_arn: cdktn.stringToTerraform(struct!.cfnStackArn),
     design_file_s3_url: cdktn.stringToTerraform(struct!.designFileS3Url),
     tf_state_file_url: cdktn.stringToTerraform(struct!.tfStateFileUrl),
-    eks: cdktn.listMapper(awsResiliencehubv2InputSourceEksPropertyToTerraform, true)(struct!.eks),
-    resource_tag: cdktn.listMapper(awsResiliencehubv2InputSourceResourceTagPropertyToTerraform, true)(struct!.resourceTag),
+    eks: cdktn.listMapper(tfInputSourceEksPropertyToTerraform, true)(struct!.eks),
+    resource_tag: cdktn.listMapper(tfInputSourceResourceTagPropertyToTerraform, true)(struct!.resourceTag),
   }
 }
 
 
-export function awsResiliencehubv2InputSourceResourceConfigurationPropertyToHclTerraform(struct?: AwsResiliencehubv2InputSource.ResourceConfigurationProperty | cdktn.IResolvable): any {
+export function tfInputSourceResourceConfigurationPropertyToHclTerraform(struct?: TfInputSource.ResourceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -287,13 +287,13 @@ export function awsResiliencehubv2InputSourceResourceConfigurationPropertyToHclT
       storageClassType: "string",
     },
     eks: {
-      value: cdktn.listMapperHcl(awsResiliencehubv2InputSourceEksPropertyToHclTerraform, true)(struct!.eks),
+      value: cdktn.listMapperHcl(tfInputSourceEksPropertyToHclTerraform, true)(struct!.eks),
       isBlock: true,
       type: "list",
       storageClassType: "EksPropertyList",
     },
     resource_tag: {
-      value: cdktn.listMapperHcl(awsResiliencehubv2InputSourceResourceTagPropertyToHclTerraform, true)(struct!.resourceTag),
+      value: cdktn.listMapperHcl(tfInputSourceResourceTagPropertyToHclTerraform, true)(struct!.resourceTag),
       isBlock: true,
       type: "set",
       storageClassType: "ResourceTagPropertyList",
@@ -305,14 +305,14 @@ export function awsResiliencehubv2InputSourceResourceConfigurationPropertyToHclT
 }
 
 
-export namespace AwsResiliencehubv2InputSource {
+export namespace TfInputSource {
 export interface EksProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_input_source#cluster_arn AwsResiliencehubv2InputSource#cluster_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_input_source#cluster_arn TfInputSource#cluster_arn}
   */
   readonly clusterArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_input_source#namespaces AwsResiliencehubv2InputSource#namespaces}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_input_source#namespaces TfInputSource#namespaces}
   */
   readonly namespaces: string[];
 }
@@ -414,11 +414,11 @@ export class EksPropertyList extends cdktn.ComplexList {
 }
 export interface ResourceTagProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_input_source#key AwsResiliencehubv2InputSource#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_input_source#key TfInputSource#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_input_source#values AwsResiliencehubv2InputSource#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_input_source#values TfInputSource#values}
   */
   readonly values: string[];
 }
@@ -520,27 +520,27 @@ export class ResourceTagPropertyList extends cdktn.ComplexList {
 }
 export interface ResourceConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_input_source#cfn_stack_arn AwsResiliencehubv2InputSource#cfn_stack_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_input_source#cfn_stack_arn TfInputSource#cfn_stack_arn}
   */
   readonly cfnStackArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_input_source#design_file_s3_url AwsResiliencehubv2InputSource#design_file_s3_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_input_source#design_file_s3_url TfInputSource#design_file_s3_url}
   */
   readonly designFileS3Url?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_input_source#tf_state_file_url AwsResiliencehubv2InputSource#tf_state_file_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_input_source#tf_state_file_url TfInputSource#tf_state_file_url}
   */
   readonly tfStateFileUrl?: string;
   /**
   * eks block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_input_source#eks AwsResiliencehubv2InputSource#eks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_input_source#eks TfInputSource#eks}
   */
   readonly eks?: EksProperty[] | cdktn.IResolvable;
   /**
   * resource_tag block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_input_source#resource_tag AwsResiliencehubv2InputSource#resource_tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_input_source#resource_tag TfInputSource#resource_tag}
   */
   readonly resourceTag?: ResourceTagProperty[] | cdktn.IResolvable;
 }

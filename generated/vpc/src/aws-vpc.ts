@@ -5,74 +5,74 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsVpcConfig extends cdktn.TerraformMetaArguments {
+export interface TfVpcConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#assign_generated_ipv6_cidr_block AwsVpc#assign_generated_ipv6_cidr_block}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#assign_generated_ipv6_cidr_block TfVpc#assign_generated_ipv6_cidr_block}
   */
   readonly assignGeneratedIpv6CidrBlock?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#cidr_block AwsVpc#cidr_block}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#cidr_block TfVpc#cidr_block}
   */
   readonly cidrBlock?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#enable_dns_hostnames AwsVpc#enable_dns_hostnames}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#enable_dns_hostnames TfVpc#enable_dns_hostnames}
   */
   readonly enableDnsHostnames?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#enable_dns_support AwsVpc#enable_dns_support}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#enable_dns_support TfVpc#enable_dns_support}
   */
   readonly enableDnsSupport?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#enable_network_address_usage_metrics AwsVpc#enable_network_address_usage_metrics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#enable_network_address_usage_metrics TfVpc#enable_network_address_usage_metrics}
   */
   readonly enableNetworkAddressUsageMetrics?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#id AwsVpc#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#id TfVpc#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#instance_tenancy AwsVpc#instance_tenancy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#instance_tenancy TfVpc#instance_tenancy}
   */
   readonly instanceTenancy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#ipv4_ipam_pool_id AwsVpc#ipv4_ipam_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#ipv4_ipam_pool_id TfVpc#ipv4_ipam_pool_id}
   */
   readonly ipv4IpamPoolId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#ipv4_netmask_length AwsVpc#ipv4_netmask_length}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#ipv4_netmask_length TfVpc#ipv4_netmask_length}
   */
   readonly ipv4NetmaskLength?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#ipv6_cidr_block AwsVpc#ipv6_cidr_block}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#ipv6_cidr_block TfVpc#ipv6_cidr_block}
   */
   readonly ipv6CidrBlock?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#ipv6_cidr_block_network_border_group AwsVpc#ipv6_cidr_block_network_border_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#ipv6_cidr_block_network_border_group TfVpc#ipv6_cidr_block_network_border_group}
   */
   readonly ipv6CidrBlockNetworkBorderGroup?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#ipv6_ipam_pool_id AwsVpc#ipv6_ipam_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#ipv6_ipam_pool_id TfVpc#ipv6_ipam_pool_id}
   */
   readonly ipv6IpamPoolId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#ipv6_netmask_length AwsVpc#ipv6_netmask_length}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#ipv6_netmask_length TfVpc#ipv6_netmask_length}
   */
   readonly ipv6NetmaskLength?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#region AwsVpc#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#region TfVpc#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#tags AwsVpc#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#tags TfVpc#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#tags_all AwsVpc#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#tags_all TfVpc#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -80,7 +80,7 @@ export interface AwsVpcConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc aws_vpc}
 */
-export class AwsVpc extends cdktn.TerraformResource {
+export class TfVpc extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -91,11 +91,11 @@ export class AwsVpc extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsVpc resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfVpc resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsVpc to import
-  * @param importFromId The id of the existing AwsVpc that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsVpc to import is found
+  * @param importToId The construct id used in the generated config for the TfVpc to import
+  * @param importFromId The id of the existing TfVpc that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfVpc to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpc", importId: importFromId, provider });
@@ -110,9 +110,9 @@ export class AwsVpc extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsVpcConfig = {}
+  * @param options TfVpcConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsVpcConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfVpcConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_vpc',
       terraformGeneratorMetadata: {

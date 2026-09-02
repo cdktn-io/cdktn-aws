@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsNetworkmanagerAttachmentAccepterConfig extends cdktn.TerraformMetaArguments {
+export interface TfAttachmentAccepterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_attachment_accepter#attachment_id AwsNetworkmanagerAttachmentAccepter#attachment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_attachment_accepter#attachment_id TfAttachmentAccepter#attachment_id}
   */
   readonly attachmentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_attachment_accepter#attachment_type AwsNetworkmanagerAttachmentAccepter#attachment_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_attachment_accepter#attachment_type TfAttachmentAccepter#attachment_type}
   */
   readonly attachmentType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_attachment_accepter#id AwsNetworkmanagerAttachmentAccepter#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_attachment_accepter#id TfAttachmentAccepter#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,15 +24,15 @@ export interface AwsNetworkmanagerAttachmentAccepterConfig extends cdktn.Terrafo
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_attachment_accepter#timeouts AwsNetworkmanagerAttachmentAccepter#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_attachment_accepter#timeouts TfAttachmentAccepter#timeouts}
   */
-  readonly timeouts?: AwsNetworkmanagerAttachmentAccepter.TimeoutsProperty;
+  readonly timeouts?: TfAttachmentAccepter.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_attachment_accepter aws_networkmanager_attachment_accepter}
 */
-export class AwsNetworkmanagerAttachmentAccepter extends cdktn.TerraformResource {
+export class TfAttachmentAccepter extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class AwsNetworkmanagerAttachmentAccepter extends cdktn.TerraformResource
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsNetworkmanagerAttachmentAccepter resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAttachmentAccepter resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsNetworkmanagerAttachmentAccepter to import
-  * @param importFromId The id of the existing AwsNetworkmanagerAttachmentAccepter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_attachment_accepter#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsNetworkmanagerAttachmentAccepter to import is found
+  * @param importToId The construct id used in the generated config for the TfAttachmentAccepter to import
+  * @param importFromId The id of the existing TfAttachmentAccepter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_attachment_accepter#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAttachmentAccepter to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkmanager_attachment_accepter", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class AwsNetworkmanagerAttachmentAccepter extends cdktn.TerraformResource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsNetworkmanagerAttachmentAccepterConfig
+  * @param options TfAttachmentAccepterConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsNetworkmanagerAttachmentAccepterConfig) {
+  public constructor(scope: Construct, id: string, config: TfAttachmentAccepterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_networkmanager_attachment_accepter',
       terraformGeneratorMetadata: {
@@ -178,11 +178,11 @@ export class AwsNetworkmanagerAttachmentAccepter extends cdktn.TerraformResource
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsNetworkmanagerAttachmentAccepter.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfAttachmentAccepter.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsNetworkmanagerAttachmentAccepter.TimeoutsProperty) {
+  public putTimeouts(value: TfAttachmentAccepter.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -202,7 +202,7 @@ export class AwsNetworkmanagerAttachmentAccepter extends cdktn.TerraformResource
       attachment_id: cdktn.stringToTerraform(this._attachmentId),
       attachment_type: cdktn.stringToTerraform(this._attachmentType),
       id: cdktn.stringToTerraform(this._id),
-      timeouts: awsNetworkmanagerAttachmentAccepterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfAttachmentAccepterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -227,10 +227,10 @@ export class AwsNetworkmanagerAttachmentAccepter extends cdktn.TerraformResource
         storageClassType: "string",
       },
       timeouts: {
-        value: awsNetworkmanagerAttachmentAccepterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfAttachmentAccepterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsNetworkmanagerAttachmentAccepter.TimeoutsProperty",
+        storageClassType: "TfAttachmentAccepter.TimeoutsProperty",
       },
     };
 
@@ -239,7 +239,7 @@ export class AwsNetworkmanagerAttachmentAccepter extends cdktn.TerraformResource
   }
 }
 
-export function awsNetworkmanagerAttachmentAccepterTimeoutsPropertyToTerraform(struct?: AwsNetworkmanagerAttachmentAccepter.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfAttachmentAccepterTimeoutsPropertyToTerraform(struct?: TfAttachmentAccepter.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -250,7 +250,7 @@ export function awsNetworkmanagerAttachmentAccepterTimeoutsPropertyToTerraform(s
 }
 
 
-export function awsNetworkmanagerAttachmentAccepterTimeoutsPropertyToHclTerraform(struct?: AwsNetworkmanagerAttachmentAccepter.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfAttachmentAccepterTimeoutsPropertyToHclTerraform(struct?: TfAttachmentAccepter.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -269,10 +269,10 @@ export function awsNetworkmanagerAttachmentAccepterTimeoutsPropertyToHclTerrafor
 }
 
 
-export namespace AwsNetworkmanagerAttachmentAccepter {
+export namespace TfAttachmentAccepter {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_attachment_accepter#create AwsNetworkmanagerAttachmentAccepter#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_attachment_accepter#create TfAttachmentAccepter#create}
   */
   readonly create?: string;
 }

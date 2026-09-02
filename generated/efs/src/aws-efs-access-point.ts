@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEfsAccessPointConfig extends cdktn.TerraformMetaArguments {
+export interface TfAccessPointConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_access_point#file_system_id AwsEfsAccessPoint#file_system_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_access_point#file_system_id TfAccessPoint#file_system_id}
   */
   readonly fileSystemId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_access_point#id AwsEfsAccessPoint#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_access_point#id TfAccessPoint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,35 +20,35 @@ export interface AwsEfsAccessPointConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_access_point#region AwsEfsAccessPoint#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_access_point#region TfAccessPoint#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_access_point#tags AwsEfsAccessPoint#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_access_point#tags TfAccessPoint#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_access_point#tags_all AwsEfsAccessPoint#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_access_point#tags_all TfAccessPoint#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * posix_user block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_access_point#posix_user AwsEfsAccessPoint#posix_user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_access_point#posix_user TfAccessPoint#posix_user}
   */
-  readonly posixUser?: AwsEfsAccessPoint.PosixUserProperty;
+  readonly posixUser?: TfAccessPoint.PosixUserProperty;
   /**
   * root_directory block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_access_point#root_directory AwsEfsAccessPoint#root_directory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_access_point#root_directory TfAccessPoint#root_directory}
   */
-  readonly rootDirectory?: AwsEfsAccessPoint.RootDirectoryProperty;
+  readonly rootDirectory?: TfAccessPoint.RootDirectoryProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_access_point aws_efs_access_point}
 */
-export class AwsEfsAccessPoint extends cdktn.TerraformResource {
+export class TfAccessPoint extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class AwsEfsAccessPoint extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEfsAccessPoint resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAccessPoint resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEfsAccessPoint to import
-  * @param importFromId The id of the existing AwsEfsAccessPoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_access_point#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEfsAccessPoint to import is found
+  * @param importToId The construct id used in the generated config for the TfAccessPoint to import
+  * @param importFromId The id of the existing TfAccessPoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_access_point#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAccessPoint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_efs_access_point", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class AwsEfsAccessPoint extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEfsAccessPointConfig
+  * @param options TfAccessPointConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEfsAccessPointConfig) {
+  public constructor(scope: Construct, id: string, config: TfAccessPointConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_efs_access_point',
       terraformGeneratorMetadata: {
@@ -202,11 +202,11 @@ export class AwsEfsAccessPoint extends cdktn.TerraformResource {
   }
 
   // posix_user - computed: false, optional: true, required: false
-  private _posixUser = new AwsEfsAccessPoint.PosixUserPropertyOutputReference(this, "posix_user");
+  private _posixUser = new TfAccessPoint.PosixUserPropertyOutputReference(this, "posix_user");
   public get posixUser() {
     return this._posixUser;
   }
-  public putPosixUser(value: AwsEfsAccessPoint.PosixUserProperty) {
+  public putPosixUser(value: TfAccessPoint.PosixUserProperty) {
     this._posixUser.internalValue = value;
   }
   public resetPosixUser() {
@@ -218,11 +218,11 @@ export class AwsEfsAccessPoint extends cdktn.TerraformResource {
   }
 
   // root_directory - computed: false, optional: true, required: false
-  private _rootDirectory = new AwsEfsAccessPoint.RootDirectoryPropertyOutputReference(this, "root_directory");
+  private _rootDirectory = new TfAccessPoint.RootDirectoryPropertyOutputReference(this, "root_directory");
   public get rootDirectory() {
     return this._rootDirectory;
   }
-  public putRootDirectory(value: AwsEfsAccessPoint.RootDirectoryProperty) {
+  public putRootDirectory(value: TfAccessPoint.RootDirectoryProperty) {
     this._rootDirectory.internalValue = value;
   }
   public resetRootDirectory() {
@@ -244,8 +244,8 @@ export class AwsEfsAccessPoint extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      posix_user: awsEfsAccessPointPosixUserPropertyToTerraform(this._posixUser.internalValue),
-      root_directory: awsEfsAccessPointRootDirectoryPropertyToTerraform(this._rootDirectory.internalValue),
+      posix_user: tfAccessPointPosixUserPropertyToTerraform(this._posixUser.internalValue),
+      root_directory: tfAccessPointRootDirectoryPropertyToTerraform(this._rootDirectory.internalValue),
     };
   }
 
@@ -282,16 +282,16 @@ export class AwsEfsAccessPoint extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       posix_user: {
-        value: awsEfsAccessPointPosixUserPropertyToHclTerraform(this._posixUser.internalValue),
+        value: tfAccessPointPosixUserPropertyToHclTerraform(this._posixUser.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEfsAccessPoint.PosixUserPropertyList",
+        storageClassType: "TfAccessPoint.PosixUserPropertyList",
       },
       root_directory: {
-        value: awsEfsAccessPointRootDirectoryPropertyToHclTerraform(this._rootDirectory.internalValue),
+        value: tfAccessPointRootDirectoryPropertyToHclTerraform(this._rootDirectory.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEfsAccessPoint.RootDirectoryPropertyList",
+        storageClassType: "TfAccessPoint.RootDirectoryPropertyList",
       },
     };
 
@@ -300,7 +300,7 @@ export class AwsEfsAccessPoint extends cdktn.TerraformResource {
   }
 }
 
-export function awsEfsAccessPointPosixUserPropertyToTerraform(struct?: AwsEfsAccessPoint.PosixUserPropertyOutputReference | AwsEfsAccessPoint.PosixUserProperty): any {
+export function tfAccessPointPosixUserPropertyToTerraform(struct?: TfAccessPoint.PosixUserPropertyOutputReference | TfAccessPoint.PosixUserProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -313,7 +313,7 @@ export function awsEfsAccessPointPosixUserPropertyToTerraform(struct?: AwsEfsAcc
 }
 
 
-export function awsEfsAccessPointPosixUserPropertyToHclTerraform(struct?: AwsEfsAccessPoint.PosixUserPropertyOutputReference | AwsEfsAccessPoint.PosixUserProperty): any {
+export function tfAccessPointPosixUserPropertyToHclTerraform(struct?: TfAccessPoint.PosixUserPropertyOutputReference | TfAccessPoint.PosixUserProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -344,7 +344,7 @@ export function awsEfsAccessPointPosixUserPropertyToHclTerraform(struct?: AwsEfs
 }
 
 
-export function awsEfsAccessPointCreationInfoPropertyToTerraform(struct?: AwsEfsAccessPoint.CreationInfoPropertyOutputReference | AwsEfsAccessPoint.CreationInfoProperty): any {
+export function tfAccessPointCreationInfoPropertyToTerraform(struct?: TfAccessPoint.CreationInfoPropertyOutputReference | TfAccessPoint.CreationInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -357,7 +357,7 @@ export function awsEfsAccessPointCreationInfoPropertyToTerraform(struct?: AwsEfs
 }
 
 
-export function awsEfsAccessPointCreationInfoPropertyToHclTerraform(struct?: AwsEfsAccessPoint.CreationInfoPropertyOutputReference | AwsEfsAccessPoint.CreationInfoProperty): any {
+export function tfAccessPointCreationInfoPropertyToHclTerraform(struct?: TfAccessPoint.CreationInfoPropertyOutputReference | TfAccessPoint.CreationInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -388,19 +388,19 @@ export function awsEfsAccessPointCreationInfoPropertyToHclTerraform(struct?: Aws
 }
 
 
-export function awsEfsAccessPointRootDirectoryPropertyToTerraform(struct?: AwsEfsAccessPoint.RootDirectoryPropertyOutputReference | AwsEfsAccessPoint.RootDirectoryProperty): any {
+export function tfAccessPointRootDirectoryPropertyToTerraform(struct?: TfAccessPoint.RootDirectoryPropertyOutputReference | TfAccessPoint.RootDirectoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     path: cdktn.stringToTerraform(struct!.path),
-    creation_info: awsEfsAccessPointCreationInfoPropertyToTerraform(struct!.creationInfo),
+    creation_info: tfAccessPointCreationInfoPropertyToTerraform(struct!.creationInfo),
   }
 }
 
 
-export function awsEfsAccessPointRootDirectoryPropertyToHclTerraform(struct?: AwsEfsAccessPoint.RootDirectoryPropertyOutputReference | AwsEfsAccessPoint.RootDirectoryProperty): any {
+export function tfAccessPointRootDirectoryPropertyToHclTerraform(struct?: TfAccessPoint.RootDirectoryPropertyOutputReference | TfAccessPoint.RootDirectoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -413,7 +413,7 @@ export function awsEfsAccessPointRootDirectoryPropertyToHclTerraform(struct?: Aw
       storageClassType: "string",
     },
     creation_info: {
-      value: awsEfsAccessPointCreationInfoPropertyToHclTerraform(struct!.creationInfo),
+      value: tfAccessPointCreationInfoPropertyToHclTerraform(struct!.creationInfo),
       isBlock: true,
       type: "list",
       storageClassType: "CreationInfoPropertyList",
@@ -425,18 +425,18 @@ export function awsEfsAccessPointRootDirectoryPropertyToHclTerraform(struct?: Aw
 }
 
 
-export namespace AwsEfsAccessPoint {
+export namespace TfAccessPoint {
 export interface PosixUserProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_access_point#gid AwsEfsAccessPoint#gid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_access_point#gid TfAccessPoint#gid}
   */
   readonly gid: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_access_point#secondary_gids AwsEfsAccessPoint#secondary_gids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_access_point#secondary_gids TfAccessPoint#secondary_gids}
   */
   readonly secondaryGids?: number[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_access_point#uid AwsEfsAccessPoint#uid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_access_point#uid TfAccessPoint#uid}
   */
   readonly uid: number;
 }
@@ -528,15 +528,15 @@ export class PosixUserPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface CreationInfoProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_access_point#owner_gid AwsEfsAccessPoint#owner_gid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_access_point#owner_gid TfAccessPoint#owner_gid}
   */
   readonly ownerGid: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_access_point#owner_uid AwsEfsAccessPoint#owner_uid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_access_point#owner_uid TfAccessPoint#owner_uid}
   */
   readonly ownerUid: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_access_point#permissions AwsEfsAccessPoint#permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_access_point#permissions TfAccessPoint#permissions}
   */
   readonly permissions: string;
 }
@@ -625,13 +625,13 @@ export class CreationInfoPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RootDirectoryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_access_point#path AwsEfsAccessPoint#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_access_point#path TfAccessPoint#path}
   */
   readonly path?: string;
   /**
   * creation_info block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_access_point#creation_info AwsEfsAccessPoint#creation_info}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_access_point#creation_info TfAccessPoint#creation_info}
   */
   readonly creationInfo?: CreationInfoProperty;
 }

@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsVpclatticeServiceNetworkServiceAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface TfServiceNetworkServiceAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_service_association#id AwsVpclatticeServiceNetworkServiceAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_service_association#id TfServiceNetworkServiceAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,37 +16,37 @@ export interface AwsVpclatticeServiceNetworkServiceAssociationConfig extends cdk
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_service_association#region AwsVpclatticeServiceNetworkServiceAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_service_association#region TfServiceNetworkServiceAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_service_association#service_identifier AwsVpclatticeServiceNetworkServiceAssociation#service_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_service_association#service_identifier TfServiceNetworkServiceAssociation#service_identifier}
   */
   readonly serviceIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_service_association#service_network_identifier AwsVpclatticeServiceNetworkServiceAssociation#service_network_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_service_association#service_network_identifier TfServiceNetworkServiceAssociation#service_network_identifier}
   */
   readonly serviceNetworkIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_service_association#tags AwsVpclatticeServiceNetworkServiceAssociation#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_service_association#tags TfServiceNetworkServiceAssociation#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_service_association#tags_all AwsVpclatticeServiceNetworkServiceAssociation#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_service_association#tags_all TfServiceNetworkServiceAssociation#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_service_association#timeouts AwsVpclatticeServiceNetworkServiceAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_service_association#timeouts TfServiceNetworkServiceAssociation#timeouts}
   */
-  readonly timeouts?: AwsVpclatticeServiceNetworkServiceAssociation.TimeoutsProperty;
+  readonly timeouts?: TfServiceNetworkServiceAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_service_association aws_vpclattice_service_network_service_association}
 */
-export class AwsVpclatticeServiceNetworkServiceAssociation extends cdktn.TerraformResource {
+export class TfServiceNetworkServiceAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class AwsVpclatticeServiceNetworkServiceAssociation extends cdktn.Terrafo
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsVpclatticeServiceNetworkServiceAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfServiceNetworkServiceAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsVpclatticeServiceNetworkServiceAssociation to import
-  * @param importFromId The id of the existing AwsVpclatticeServiceNetworkServiceAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_service_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsVpclatticeServiceNetworkServiceAssociation to import is found
+  * @param importToId The construct id used in the generated config for the TfServiceNetworkServiceAssociation to import
+  * @param importFromId The id of the existing TfServiceNetworkServiceAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_service_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfServiceNetworkServiceAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpclattice_service_network_service_association", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class AwsVpclatticeServiceNetworkServiceAssociation extends cdktn.Terrafo
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsVpclatticeServiceNetworkServiceAssociationConfig
+  * @param options TfServiceNetworkServiceAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsVpclatticeServiceNetworkServiceAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: TfServiceNetworkServiceAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpclattice_service_network_service_association',
       terraformGeneratorMetadata: {
@@ -123,7 +123,7 @@ export class AwsVpclatticeServiceNetworkServiceAssociation extends cdktn.Terrafo
   }
 
   // dns_entry - computed: true, optional: false, required: false
-  private _dnsEntry = new AwsVpclatticeServiceNetworkServiceAssociation.DnsEntryPropertyList(this, "dns_entry", false);
+  private _dnsEntry = new TfServiceNetworkServiceAssociation.DnsEntryPropertyList(this, "dns_entry", false);
   public get dnsEntry() {
     return this._dnsEntry;
   }
@@ -224,11 +224,11 @@ export class AwsVpclatticeServiceNetworkServiceAssociation extends cdktn.Terrafo
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsVpclatticeServiceNetworkServiceAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfServiceNetworkServiceAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsVpclatticeServiceNetworkServiceAssociation.TimeoutsProperty) {
+  public putTimeouts(value: TfServiceNetworkServiceAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -251,7 +251,7 @@ export class AwsVpclatticeServiceNetworkServiceAssociation extends cdktn.Terrafo
       service_network_identifier: cdktn.stringToTerraform(this._serviceNetworkIdentifier),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: awsVpclatticeServiceNetworkServiceAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfServiceNetworkServiceAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -294,10 +294,10 @@ export class AwsVpclatticeServiceNetworkServiceAssociation extends cdktn.Terrafo
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsVpclatticeServiceNetworkServiceAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfServiceNetworkServiceAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsVpclatticeServiceNetworkServiceAssociation.TimeoutsProperty",
+        storageClassType: "TfServiceNetworkServiceAssociation.TimeoutsProperty",
       },
     };
 
@@ -306,7 +306,7 @@ export class AwsVpclatticeServiceNetworkServiceAssociation extends cdktn.Terrafo
   }
 }
 
-export function awsVpclatticeServiceNetworkServiceAssociationDnsEntryPropertyToTerraform(struct?: AwsVpclatticeServiceNetworkServiceAssociation.DnsEntryProperty): any {
+export function tfServiceNetworkServiceAssociationDnsEntryPropertyToTerraform(struct?: TfServiceNetworkServiceAssociation.DnsEntryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -316,7 +316,7 @@ export function awsVpclatticeServiceNetworkServiceAssociationDnsEntryPropertyToT
 }
 
 
-export function awsVpclatticeServiceNetworkServiceAssociationDnsEntryPropertyToHclTerraform(struct?: AwsVpclatticeServiceNetworkServiceAssociation.DnsEntryProperty): any {
+export function tfServiceNetworkServiceAssociationDnsEntryPropertyToHclTerraform(struct?: TfServiceNetworkServiceAssociation.DnsEntryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -327,7 +327,7 @@ export function awsVpclatticeServiceNetworkServiceAssociationDnsEntryPropertyToH
 }
 
 
-export function awsVpclatticeServiceNetworkServiceAssociationTimeoutsPropertyToTerraform(struct?: AwsVpclatticeServiceNetworkServiceAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfServiceNetworkServiceAssociationTimeoutsPropertyToTerraform(struct?: TfServiceNetworkServiceAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -340,7 +340,7 @@ export function awsVpclatticeServiceNetworkServiceAssociationTimeoutsPropertyToT
 }
 
 
-export function awsVpclatticeServiceNetworkServiceAssociationTimeoutsPropertyToHclTerraform(struct?: AwsVpclatticeServiceNetworkServiceAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfServiceNetworkServiceAssociationTimeoutsPropertyToHclTerraform(struct?: TfServiceNetworkServiceAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -371,7 +371,7 @@ export function awsVpclatticeServiceNetworkServiceAssociationTimeoutsPropertyToH
 }
 
 
-export namespace AwsVpclatticeServiceNetworkServiceAssociation {
+export namespace TfServiceNetworkServiceAssociation {
 export interface DnsEntryProperty {
 }
 export class DnsEntryPropertyOutputReference extends cdktn.ComplexObject {
@@ -433,15 +433,15 @@ export class DnsEntryPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_service_association#create AwsVpclatticeServiceNetworkServiceAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_service_association#create TfServiceNetworkServiceAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_service_association#delete AwsVpclatticeServiceNetworkServiceAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_service_association#delete TfServiceNetworkServiceAssociation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_service_association#update AwsVpclatticeServiceNetworkServiceAssociation#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_service_association#update TfServiceNetworkServiceAssociation#update}
   */
   readonly update?: string;
 }

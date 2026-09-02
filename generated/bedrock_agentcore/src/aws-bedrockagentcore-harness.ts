@@ -5,109 +5,109 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsBedrockagentcoreHarnessConfig extends cdktn.TerraformMetaArguments {
+export interface TfHarnessConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#allowed_tools AwsBedrockagentcoreHarness#allowed_tools}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#allowed_tools TfHarness#allowed_tools}
   */
   readonly allowedTools?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#environment_variables AwsBedrockagentcoreHarness#environment_variables}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#environment_variables TfHarness#environment_variables}
   */
   readonly environmentVariables?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#execution_role_arn AwsBedrockagentcoreHarness#execution_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#execution_role_arn TfHarness#execution_role_arn}
   */
   readonly executionRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#harness_name AwsBedrockagentcoreHarness#harness_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#harness_name TfHarness#harness_name}
   */
   readonly harnessName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#max_iterations AwsBedrockagentcoreHarness#max_iterations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#max_iterations TfHarness#max_iterations}
   */
   readonly maxIterations?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#max_tokens AwsBedrockagentcoreHarness#max_tokens}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#max_tokens TfHarness#max_tokens}
   */
   readonly maxTokens?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#region AwsBedrockagentcoreHarness#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#region TfHarness#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#tags AwsBedrockagentcoreHarness#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#tags TfHarness#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#timeout_seconds AwsBedrockagentcoreHarness#timeout_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#timeout_seconds TfHarness#timeout_seconds}
   */
   readonly timeoutSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#truncation AwsBedrockagentcoreHarness#truncation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#truncation TfHarness#truncation}
   */
-  readonly truncation?: AwsBedrockagentcoreHarness.TruncationProperty[] | cdktn.IResolvable;
+  readonly truncation?: TfHarness.TruncationProperty[] | cdktn.IResolvable;
   /**
   * authorizer_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#authorizer_configuration AwsBedrockagentcoreHarness#authorizer_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#authorizer_configuration TfHarness#authorizer_configuration}
   */
-  readonly authorizerConfiguration?: AwsBedrockagentcoreHarness.AuthorizerConfigurationProperty[] | cdktn.IResolvable;
+  readonly authorizerConfiguration?: TfHarness.AuthorizerConfigurationProperty[] | cdktn.IResolvable;
   /**
   * environment block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#environment AwsBedrockagentcoreHarness#environment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#environment TfHarness#environment}
   */
-  readonly environment?: AwsBedrockagentcoreHarness.EnvironmentProperty[] | cdktn.IResolvable;
+  readonly environment?: TfHarness.EnvironmentProperty[] | cdktn.IResolvable;
   /**
   * environment_artifact block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#environment_artifact AwsBedrockagentcoreHarness#environment_artifact}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#environment_artifact TfHarness#environment_artifact}
   */
-  readonly environmentArtifact?: AwsBedrockagentcoreHarness.EnvironmentArtifactProperty[] | cdktn.IResolvable;
+  readonly environmentArtifact?: TfHarness.EnvironmentArtifactProperty[] | cdktn.IResolvable;
   /**
   * memory block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#memory AwsBedrockagentcoreHarness#memory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#memory TfHarness#memory}
   */
-  readonly memory?: AwsBedrockagentcoreHarness.MemoryProperty[] | cdktn.IResolvable;
+  readonly memory?: TfHarness.MemoryProperty[] | cdktn.IResolvable;
   /**
   * model block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#model AwsBedrockagentcoreHarness#model}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#model TfHarness#model}
   */
-  readonly model?: AwsBedrockagentcoreHarness.ModelProperty[] | cdktn.IResolvable;
+  readonly model?: TfHarness.ModelProperty[] | cdktn.IResolvable;
   /**
   * skill block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#skill AwsBedrockagentcoreHarness#skill}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#skill TfHarness#skill}
   */
-  readonly skill?: AwsBedrockagentcoreHarness.SkillProperty[] | cdktn.IResolvable;
+  readonly skill?: TfHarness.SkillProperty[] | cdktn.IResolvable;
   /**
   * system_prompt block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#system_prompt AwsBedrockagentcoreHarness#system_prompt}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#system_prompt TfHarness#system_prompt}
   */
-  readonly systemPrompt?: AwsBedrockagentcoreHarness.SystemPromptProperty[] | cdktn.IResolvable;
+  readonly systemPrompt?: TfHarness.SystemPromptProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#timeouts AwsBedrockagentcoreHarness#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#timeouts TfHarness#timeouts}
   */
-  readonly timeouts?: AwsBedrockagentcoreHarness.TimeoutsProperty;
+  readonly timeouts?: TfHarness.TimeoutsProperty;
   /**
   * tool block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#tool AwsBedrockagentcoreHarness#tool}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#tool TfHarness#tool}
   */
-  readonly tool?: AwsBedrockagentcoreHarness.ToolProperty[] | cdktn.IResolvable;
+  readonly tool?: TfHarness.ToolProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness aws_bedrockagentcore_harness}
 */
-export class AwsBedrockagentcoreHarness extends cdktn.TerraformResource {
+export class TfHarness extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -118,11 +118,11 @@ export class AwsBedrockagentcoreHarness extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsBedrockagentcoreHarness resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfHarness resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsBedrockagentcoreHarness to import
-  * @param importFromId The id of the existing AwsBedrockagentcoreHarness that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsBedrockagentcoreHarness to import is found
+  * @param importToId The construct id used in the generated config for the TfHarness to import
+  * @param importFromId The id of the existing TfHarness that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfHarness to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrockagentcore_harness", importId: importFromId, provider });
@@ -137,9 +137,9 @@ export class AwsBedrockagentcoreHarness extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsBedrockagentcoreHarnessConfig
+  * @param options TfHarnessConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsBedrockagentcoreHarnessConfig) {
+  public constructor(scope: Construct, id: string, config: TfHarnessConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrockagentcore_harness',
       terraformGeneratorMetadata: {
@@ -202,7 +202,7 @@ export class AwsBedrockagentcoreHarness extends cdktn.TerraformResource {
   }
 
   // environment_actual - computed: true, optional: false, required: false
-  private _environmentActual = new AwsBedrockagentcoreHarness.EnvironmentActualPropertyList(this, "environment_actual", false);
+  private _environmentActual = new TfHarness.EnvironmentActualPropertyList(this, "environment_actual", false);
   public get environmentActual() {
     return this._environmentActual;
   }
@@ -287,7 +287,7 @@ export class AwsBedrockagentcoreHarness extends cdktn.TerraformResource {
   }
 
   // memory_actual - computed: true, optional: false, required: false
-  private _memoryActual = new AwsBedrockagentcoreHarness.MemoryActualPropertyList(this, "memory_actual", false);
+  private _memoryActual = new TfHarness.MemoryActualPropertyList(this, "memory_actual", false);
   public get memoryActual() {
     return this._memoryActual;
   }
@@ -347,11 +347,11 @@ export class AwsBedrockagentcoreHarness extends cdktn.TerraformResource {
   }
 
   // truncation - computed: true, optional: true, required: false
-  private _truncation = new AwsBedrockagentcoreHarness.TruncationPropertyList(this, "truncation", false);
+  private _truncation = new TfHarness.TruncationPropertyList(this, "truncation", false);
   public get truncation() {
     return this._truncation;
   }
-  public putTruncation(value: AwsBedrockagentcoreHarness.TruncationProperty[] | cdktn.IResolvable) {
+  public putTruncation(value: TfHarness.TruncationProperty[] | cdktn.IResolvable) {
     this._truncation.internalValue = value;
   }
   public resetTruncation() {
@@ -363,11 +363,11 @@ export class AwsBedrockagentcoreHarness extends cdktn.TerraformResource {
   }
 
   // authorizer_configuration - computed: false, optional: true, required: false
-  private _authorizerConfiguration = new AwsBedrockagentcoreHarness.AuthorizerConfigurationPropertyList(this, "authorizer_configuration", false);
+  private _authorizerConfiguration = new TfHarness.AuthorizerConfigurationPropertyList(this, "authorizer_configuration", false);
   public get authorizerConfiguration() {
     return this._authorizerConfiguration;
   }
-  public putAuthorizerConfiguration(value: AwsBedrockagentcoreHarness.AuthorizerConfigurationProperty[] | cdktn.IResolvable) {
+  public putAuthorizerConfiguration(value: TfHarness.AuthorizerConfigurationProperty[] | cdktn.IResolvable) {
     this._authorizerConfiguration.internalValue = value;
   }
   public resetAuthorizerConfiguration() {
@@ -379,11 +379,11 @@ export class AwsBedrockagentcoreHarness extends cdktn.TerraformResource {
   }
 
   // environment - computed: false, optional: true, required: false
-  private _environment = new AwsBedrockagentcoreHarness.EnvironmentPropertyList(this, "environment", false);
+  private _environment = new TfHarness.EnvironmentPropertyList(this, "environment", false);
   public get environment() {
     return this._environment;
   }
-  public putEnvironment(value: AwsBedrockagentcoreHarness.EnvironmentProperty[] | cdktn.IResolvable) {
+  public putEnvironment(value: TfHarness.EnvironmentProperty[] | cdktn.IResolvable) {
     this._environment.internalValue = value;
   }
   public resetEnvironment() {
@@ -395,11 +395,11 @@ export class AwsBedrockagentcoreHarness extends cdktn.TerraformResource {
   }
 
   // environment_artifact - computed: false, optional: true, required: false
-  private _environmentArtifact = new AwsBedrockagentcoreHarness.EnvironmentArtifactPropertyList(this, "environment_artifact", false);
+  private _environmentArtifact = new TfHarness.EnvironmentArtifactPropertyList(this, "environment_artifact", false);
   public get environmentArtifact() {
     return this._environmentArtifact;
   }
-  public putEnvironmentArtifact(value: AwsBedrockagentcoreHarness.EnvironmentArtifactProperty[] | cdktn.IResolvable) {
+  public putEnvironmentArtifact(value: TfHarness.EnvironmentArtifactProperty[] | cdktn.IResolvable) {
     this._environmentArtifact.internalValue = value;
   }
   public resetEnvironmentArtifact() {
@@ -411,11 +411,11 @@ export class AwsBedrockagentcoreHarness extends cdktn.TerraformResource {
   }
 
   // memory - computed: false, optional: true, required: false
-  private _memory = new AwsBedrockagentcoreHarness.MemoryPropertyList(this, "memory", false);
+  private _memory = new TfHarness.MemoryPropertyList(this, "memory", false);
   public get memory() {
     return this._memory;
   }
-  public putMemory(value: AwsBedrockagentcoreHarness.MemoryProperty[] | cdktn.IResolvable) {
+  public putMemory(value: TfHarness.MemoryProperty[] | cdktn.IResolvable) {
     this._memory.internalValue = value;
   }
   public resetMemory() {
@@ -427,11 +427,11 @@ export class AwsBedrockagentcoreHarness extends cdktn.TerraformResource {
   }
 
   // model - computed: false, optional: true, required: false
-  private _model = new AwsBedrockagentcoreHarness.ModelPropertyList(this, "model", false);
+  private _model = new TfHarness.ModelPropertyList(this, "model", false);
   public get model() {
     return this._model;
   }
-  public putModel(value: AwsBedrockagentcoreHarness.ModelProperty[] | cdktn.IResolvable) {
+  public putModel(value: TfHarness.ModelProperty[] | cdktn.IResolvable) {
     this._model.internalValue = value;
   }
   public resetModel() {
@@ -443,11 +443,11 @@ export class AwsBedrockagentcoreHarness extends cdktn.TerraformResource {
   }
 
   // skill - computed: false, optional: true, required: false
-  private _skill = new AwsBedrockagentcoreHarness.SkillPropertyList(this, "skill", false);
+  private _skill = new TfHarness.SkillPropertyList(this, "skill", false);
   public get skill() {
     return this._skill;
   }
-  public putSkill(value: AwsBedrockagentcoreHarness.SkillProperty[] | cdktn.IResolvable) {
+  public putSkill(value: TfHarness.SkillProperty[] | cdktn.IResolvable) {
     this._skill.internalValue = value;
   }
   public resetSkill() {
@@ -459,11 +459,11 @@ export class AwsBedrockagentcoreHarness extends cdktn.TerraformResource {
   }
 
   // system_prompt - computed: false, optional: true, required: false
-  private _systemPrompt = new AwsBedrockagentcoreHarness.SystemPromptPropertyList(this, "system_prompt", false);
+  private _systemPrompt = new TfHarness.SystemPromptPropertyList(this, "system_prompt", false);
   public get systemPrompt() {
     return this._systemPrompt;
   }
-  public putSystemPrompt(value: AwsBedrockagentcoreHarness.SystemPromptProperty[] | cdktn.IResolvable) {
+  public putSystemPrompt(value: TfHarness.SystemPromptProperty[] | cdktn.IResolvable) {
     this._systemPrompt.internalValue = value;
   }
   public resetSystemPrompt() {
@@ -475,11 +475,11 @@ export class AwsBedrockagentcoreHarness extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsBedrockagentcoreHarness.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfHarness.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsBedrockagentcoreHarness.TimeoutsProperty) {
+  public putTimeouts(value: TfHarness.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -491,11 +491,11 @@ export class AwsBedrockagentcoreHarness extends cdktn.TerraformResource {
   }
 
   // tool - computed: false, optional: true, required: false
-  private _tool = new AwsBedrockagentcoreHarness.ToolPropertyList(this, "tool", false);
+  private _tool = new TfHarness.ToolPropertyList(this, "tool", false);
   public get tool() {
     return this._tool;
   }
-  public putTool(value: AwsBedrockagentcoreHarness.ToolProperty[] | cdktn.IResolvable) {
+  public putTool(value: TfHarness.ToolProperty[] | cdktn.IResolvable) {
     this._tool.internalValue = value;
   }
   public resetTool() {
@@ -521,16 +521,16 @@ export class AwsBedrockagentcoreHarness extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       timeout_seconds: cdktn.numberToTerraform(this._timeoutSeconds),
-      truncation: cdktn.listMapper(awsBedrockagentcoreHarnessTruncationPropertyToTerraform, false)(this._truncation.internalValue),
-      authorizer_configuration: cdktn.listMapper(awsBedrockagentcoreHarnessAuthorizerConfigurationPropertyToTerraform, true)(this._authorizerConfiguration.internalValue),
-      environment: cdktn.listMapper(awsBedrockagentcoreHarnessEnvironmentPropertyToTerraform, true)(this._environment.internalValue),
-      environment_artifact: cdktn.listMapper(awsBedrockagentcoreHarnessEnvironmentArtifactPropertyToTerraform, true)(this._environmentArtifact.internalValue),
-      memory: cdktn.listMapper(awsBedrockagentcoreHarnessMemoryPropertyToTerraform, true)(this._memory.internalValue),
-      model: cdktn.listMapper(awsBedrockagentcoreHarnessModelPropertyToTerraform, true)(this._model.internalValue),
-      skill: cdktn.listMapper(awsBedrockagentcoreHarnessSkillPropertyToTerraform, true)(this._skill.internalValue),
-      system_prompt: cdktn.listMapper(awsBedrockagentcoreHarnessSystemPromptPropertyToTerraform, true)(this._systemPrompt.internalValue),
-      timeouts: awsBedrockagentcoreHarnessTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      tool: cdktn.listMapper(awsBedrockagentcoreHarnessToolPropertyToTerraform, true)(this._tool.internalValue),
+      truncation: cdktn.listMapper(tfHarnessTruncationPropertyToTerraform, false)(this._truncation.internalValue),
+      authorizer_configuration: cdktn.listMapper(tfHarnessAuthorizerConfigurationPropertyToTerraform, true)(this._authorizerConfiguration.internalValue),
+      environment: cdktn.listMapper(tfHarnessEnvironmentPropertyToTerraform, true)(this._environment.internalValue),
+      environment_artifact: cdktn.listMapper(tfHarnessEnvironmentArtifactPropertyToTerraform, true)(this._environmentArtifact.internalValue),
+      memory: cdktn.listMapper(tfHarnessMemoryPropertyToTerraform, true)(this._memory.internalValue),
+      model: cdktn.listMapper(tfHarnessModelPropertyToTerraform, true)(this._model.internalValue),
+      skill: cdktn.listMapper(tfHarnessSkillPropertyToTerraform, true)(this._skill.internalValue),
+      system_prompt: cdktn.listMapper(tfHarnessSystemPromptPropertyToTerraform, true)(this._systemPrompt.internalValue),
+      timeouts: tfHarnessTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      tool: cdktn.listMapper(tfHarnessToolPropertyToTerraform, true)(this._tool.internalValue),
     };
   }
 
@@ -591,64 +591,64 @@ export class AwsBedrockagentcoreHarness extends cdktn.TerraformResource {
         storageClassType: "number",
       },
       truncation: {
-        value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessTruncationPropertyToHclTerraform, false)(this._truncation.internalValue),
+        value: cdktn.listMapperHcl(tfHarnessTruncationPropertyToHclTerraform, false)(this._truncation.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentcoreHarness.TruncationPropertyList",
+        storageClassType: "TfHarness.TruncationPropertyList",
       },
       authorizer_configuration: {
-        value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessAuthorizerConfigurationPropertyToHclTerraform, true)(this._authorizerConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfHarnessAuthorizerConfigurationPropertyToHclTerraform, true)(this._authorizerConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentcoreHarness.AuthorizerConfigurationPropertyList",
+        storageClassType: "TfHarness.AuthorizerConfigurationPropertyList",
       },
       environment: {
-        value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessEnvironmentPropertyToHclTerraform, true)(this._environment.internalValue),
+        value: cdktn.listMapperHcl(tfHarnessEnvironmentPropertyToHclTerraform, true)(this._environment.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentcoreHarness.EnvironmentPropertyList",
+        storageClassType: "TfHarness.EnvironmentPropertyList",
       },
       environment_artifact: {
-        value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessEnvironmentArtifactPropertyToHclTerraform, true)(this._environmentArtifact.internalValue),
+        value: cdktn.listMapperHcl(tfHarnessEnvironmentArtifactPropertyToHclTerraform, true)(this._environmentArtifact.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentcoreHarness.EnvironmentArtifactPropertyList",
+        storageClassType: "TfHarness.EnvironmentArtifactPropertyList",
       },
       memory: {
-        value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessMemoryPropertyToHclTerraform, true)(this._memory.internalValue),
+        value: cdktn.listMapperHcl(tfHarnessMemoryPropertyToHclTerraform, true)(this._memory.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentcoreHarness.MemoryPropertyList",
+        storageClassType: "TfHarness.MemoryPropertyList",
       },
       model: {
-        value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessModelPropertyToHclTerraform, true)(this._model.internalValue),
+        value: cdktn.listMapperHcl(tfHarnessModelPropertyToHclTerraform, true)(this._model.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentcoreHarness.ModelPropertyList",
+        storageClassType: "TfHarness.ModelPropertyList",
       },
       skill: {
-        value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessSkillPropertyToHclTerraform, true)(this._skill.internalValue),
+        value: cdktn.listMapperHcl(tfHarnessSkillPropertyToHclTerraform, true)(this._skill.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentcoreHarness.SkillPropertyList",
+        storageClassType: "TfHarness.SkillPropertyList",
       },
       system_prompt: {
-        value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessSystemPromptPropertyToHclTerraform, true)(this._systemPrompt.internalValue),
+        value: cdktn.listMapperHcl(tfHarnessSystemPromptPropertyToHclTerraform, true)(this._systemPrompt.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentcoreHarness.SystemPromptPropertyList",
+        storageClassType: "TfHarness.SystemPromptPropertyList",
       },
       timeouts: {
-        value: awsBedrockagentcoreHarnessTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfHarnessTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsBedrockagentcoreHarness.TimeoutsProperty",
+        storageClassType: "TfHarness.TimeoutsProperty",
       },
       tool: {
-        value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessToolPropertyToHclTerraform, true)(this._tool.internalValue),
+        value: cdktn.listMapperHcl(tfHarnessToolPropertyToHclTerraform, true)(this._tool.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentcoreHarness.ToolPropertyList",
+        storageClassType: "TfHarness.ToolPropertyList",
       },
     };
 
@@ -657,7 +657,7 @@ export class AwsBedrockagentcoreHarness extends cdktn.TerraformResource {
   }
 }
 
-export function awsBedrockagentcoreHarnessEnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationEfsAccessPointPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationEfsAccessPointProperty): any {
+export function tfHarnessEnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationEfsAccessPointPropertyToTerraform(struct?: TfHarness.EnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationEfsAccessPointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -667,7 +667,7 @@ export function awsBedrockagentcoreHarnessEnvironmentActualAgentcoreRuntimeEnvir
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationEfsAccessPointPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationEfsAccessPointProperty): any {
+export function tfHarnessEnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationEfsAccessPointPropertyToHclTerraform(struct?: TfHarness.EnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationEfsAccessPointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -678,7 +678,7 @@ export function awsBedrockagentcoreHarnessEnvironmentActualAgentcoreRuntimeEnvir
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationS3FilesAccessPointPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationS3FilesAccessPointProperty): any {
+export function tfHarnessEnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationS3FilesAccessPointPropertyToTerraform(struct?: TfHarness.EnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationS3FilesAccessPointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -688,7 +688,7 @@ export function awsBedrockagentcoreHarnessEnvironmentActualAgentcoreRuntimeEnvir
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationS3FilesAccessPointPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationS3FilesAccessPointProperty): any {
+export function tfHarnessEnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationS3FilesAccessPointPropertyToHclTerraform(struct?: TfHarness.EnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationS3FilesAccessPointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -699,7 +699,7 @@ export function awsBedrockagentcoreHarnessEnvironmentActualAgentcoreRuntimeEnvir
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationSessionStoragePropertyToTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationSessionStorageProperty): any {
+export function tfHarnessEnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationSessionStoragePropertyToTerraform(struct?: TfHarness.EnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationSessionStorageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -709,7 +709,7 @@ export function awsBedrockagentcoreHarnessEnvironmentActualAgentcoreRuntimeEnvir
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationSessionStoragePropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationSessionStorageProperty): any {
+export function tfHarnessEnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationSessionStoragePropertyToHclTerraform(struct?: TfHarness.EnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationSessionStorageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -720,7 +720,7 @@ export function awsBedrockagentcoreHarnessEnvironmentActualAgentcoreRuntimeEnvir
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationProperty): any {
+export function tfHarnessEnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationPropertyToTerraform(struct?: TfHarness.EnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -730,7 +730,7 @@ export function awsBedrockagentcoreHarnessEnvironmentActualAgentcoreRuntimeEnvir
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationProperty): any {
+export function tfHarnessEnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationPropertyToHclTerraform(struct?: TfHarness.EnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -741,7 +741,7 @@ export function awsBedrockagentcoreHarnessEnvironmentActualAgentcoreRuntimeEnvir
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentActualAgentcoreRuntimeEnvironmentLifecycleConfigurationPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentActualAgentcoreRuntimeEnvironmentLifecycleConfigurationProperty): any {
+export function tfHarnessEnvironmentActualAgentcoreRuntimeEnvironmentLifecycleConfigurationPropertyToTerraform(struct?: TfHarness.EnvironmentActualAgentcoreRuntimeEnvironmentLifecycleConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -751,7 +751,7 @@ export function awsBedrockagentcoreHarnessEnvironmentActualAgentcoreRuntimeEnvir
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentActualAgentcoreRuntimeEnvironmentLifecycleConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentActualAgentcoreRuntimeEnvironmentLifecycleConfigurationProperty): any {
+export function tfHarnessEnvironmentActualAgentcoreRuntimeEnvironmentLifecycleConfigurationPropertyToHclTerraform(struct?: TfHarness.EnvironmentActualAgentcoreRuntimeEnvironmentLifecycleConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -762,7 +762,7 @@ export function awsBedrockagentcoreHarnessEnvironmentActualAgentcoreRuntimeEnvir
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentActualAgentcoreRuntimeEnvironmentNetworkConfigurationNetworkModeConfigPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentActualAgentcoreRuntimeEnvironmentNetworkConfigurationNetworkModeConfigProperty): any {
+export function tfHarnessEnvironmentActualAgentcoreRuntimeEnvironmentNetworkConfigurationNetworkModeConfigPropertyToTerraform(struct?: TfHarness.EnvironmentActualAgentcoreRuntimeEnvironmentNetworkConfigurationNetworkModeConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -772,7 +772,7 @@ export function awsBedrockagentcoreHarnessEnvironmentActualAgentcoreRuntimeEnvir
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentActualAgentcoreRuntimeEnvironmentNetworkConfigurationNetworkModeConfigPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentActualAgentcoreRuntimeEnvironmentNetworkConfigurationNetworkModeConfigProperty): any {
+export function tfHarnessEnvironmentActualAgentcoreRuntimeEnvironmentNetworkConfigurationNetworkModeConfigPropertyToHclTerraform(struct?: TfHarness.EnvironmentActualAgentcoreRuntimeEnvironmentNetworkConfigurationNetworkModeConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -783,7 +783,7 @@ export function awsBedrockagentcoreHarnessEnvironmentActualAgentcoreRuntimeEnvir
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentActualAgentcoreRuntimeEnvironmentNetworkConfigurationPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentActualAgentcoreRuntimeEnvironmentNetworkConfigurationProperty): any {
+export function tfHarnessEnvironmentActualAgentcoreRuntimeEnvironmentNetworkConfigurationPropertyToTerraform(struct?: TfHarness.EnvironmentActualAgentcoreRuntimeEnvironmentNetworkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -793,7 +793,7 @@ export function awsBedrockagentcoreHarnessEnvironmentActualAgentcoreRuntimeEnvir
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentActualAgentcoreRuntimeEnvironmentNetworkConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentActualAgentcoreRuntimeEnvironmentNetworkConfigurationProperty): any {
+export function tfHarnessEnvironmentActualAgentcoreRuntimeEnvironmentNetworkConfigurationPropertyToHclTerraform(struct?: TfHarness.EnvironmentActualAgentcoreRuntimeEnvironmentNetworkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -804,7 +804,7 @@ export function awsBedrockagentcoreHarnessEnvironmentActualAgentcoreRuntimeEnvir
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentActualAgentcoreRuntimeEnvironmentPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentActualAgentcoreRuntimeEnvironmentProperty): any {
+export function tfHarnessEnvironmentActualAgentcoreRuntimeEnvironmentPropertyToTerraform(struct?: TfHarness.EnvironmentActualAgentcoreRuntimeEnvironmentProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -814,7 +814,7 @@ export function awsBedrockagentcoreHarnessEnvironmentActualAgentcoreRuntimeEnvir
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentActualAgentcoreRuntimeEnvironmentPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentActualAgentcoreRuntimeEnvironmentProperty): any {
+export function tfHarnessEnvironmentActualAgentcoreRuntimeEnvironmentPropertyToHclTerraform(struct?: TfHarness.EnvironmentActualAgentcoreRuntimeEnvironmentProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -825,7 +825,7 @@ export function awsBedrockagentcoreHarnessEnvironmentActualAgentcoreRuntimeEnvir
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentActualPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentActualProperty): any {
+export function tfHarnessEnvironmentActualPropertyToTerraform(struct?: TfHarness.EnvironmentActualProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -835,7 +835,7 @@ export function awsBedrockagentcoreHarnessEnvironmentActualPropertyToTerraform(s
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentActualPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentActualProperty): any {
+export function tfHarnessEnvironmentActualPropertyToHclTerraform(struct?: TfHarness.EnvironmentActualProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -846,7 +846,7 @@ export function awsBedrockagentcoreHarnessEnvironmentActualPropertyToHclTerrafor
 }
 
 
-export function awsBedrockagentcoreHarnessMemoryActualAgentcoreMemoryConfigurationRetrievalConfigPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.MemoryActualAgentcoreMemoryConfigurationRetrievalConfigProperty): any {
+export function tfHarnessMemoryActualAgentcoreMemoryConfigurationRetrievalConfigPropertyToTerraform(struct?: TfHarness.MemoryActualAgentcoreMemoryConfigurationRetrievalConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -856,7 +856,7 @@ export function awsBedrockagentcoreHarnessMemoryActualAgentcoreMemoryConfigurati
 }
 
 
-export function awsBedrockagentcoreHarnessMemoryActualAgentcoreMemoryConfigurationRetrievalConfigPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.MemoryActualAgentcoreMemoryConfigurationRetrievalConfigProperty): any {
+export function tfHarnessMemoryActualAgentcoreMemoryConfigurationRetrievalConfigPropertyToHclTerraform(struct?: TfHarness.MemoryActualAgentcoreMemoryConfigurationRetrievalConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -867,7 +867,7 @@ export function awsBedrockagentcoreHarnessMemoryActualAgentcoreMemoryConfigurati
 }
 
 
-export function awsBedrockagentcoreHarnessMemoryActualAgentcoreMemoryConfigurationPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.MemoryActualAgentcoreMemoryConfigurationProperty): any {
+export function tfHarnessMemoryActualAgentcoreMemoryConfigurationPropertyToTerraform(struct?: TfHarness.MemoryActualAgentcoreMemoryConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -877,7 +877,7 @@ export function awsBedrockagentcoreHarnessMemoryActualAgentcoreMemoryConfigurati
 }
 
 
-export function awsBedrockagentcoreHarnessMemoryActualAgentcoreMemoryConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.MemoryActualAgentcoreMemoryConfigurationProperty): any {
+export function tfHarnessMemoryActualAgentcoreMemoryConfigurationPropertyToHclTerraform(struct?: TfHarness.MemoryActualAgentcoreMemoryConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -888,7 +888,7 @@ export function awsBedrockagentcoreHarnessMemoryActualAgentcoreMemoryConfigurati
 }
 
 
-export function awsBedrockagentcoreHarnessMemoryActualDisabledPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.MemoryActualDisabledProperty): any {
+export function tfHarnessMemoryActualDisabledPropertyToTerraform(struct?: TfHarness.MemoryActualDisabledProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -898,7 +898,7 @@ export function awsBedrockagentcoreHarnessMemoryActualDisabledPropertyToTerrafor
 }
 
 
-export function awsBedrockagentcoreHarnessMemoryActualDisabledPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.MemoryActualDisabledProperty): any {
+export function tfHarnessMemoryActualDisabledPropertyToHclTerraform(struct?: TfHarness.MemoryActualDisabledProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -909,7 +909,7 @@ export function awsBedrockagentcoreHarnessMemoryActualDisabledPropertyToHclTerra
 }
 
 
-export function awsBedrockagentcoreHarnessMemoryActualManagedMemoryConfigurationPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.MemoryActualManagedMemoryConfigurationProperty): any {
+export function tfHarnessMemoryActualManagedMemoryConfigurationPropertyToTerraform(struct?: TfHarness.MemoryActualManagedMemoryConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -919,7 +919,7 @@ export function awsBedrockagentcoreHarnessMemoryActualManagedMemoryConfiguration
 }
 
 
-export function awsBedrockagentcoreHarnessMemoryActualManagedMemoryConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.MemoryActualManagedMemoryConfigurationProperty): any {
+export function tfHarnessMemoryActualManagedMemoryConfigurationPropertyToHclTerraform(struct?: TfHarness.MemoryActualManagedMemoryConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -930,7 +930,7 @@ export function awsBedrockagentcoreHarnessMemoryActualManagedMemoryConfiguration
 }
 
 
-export function awsBedrockagentcoreHarnessMemoryActualPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.MemoryActualProperty): any {
+export function tfHarnessMemoryActualPropertyToTerraform(struct?: TfHarness.MemoryActualProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -940,7 +940,7 @@ export function awsBedrockagentcoreHarnessMemoryActualPropertyToTerraform(struct
 }
 
 
-export function awsBedrockagentcoreHarnessMemoryActualPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.MemoryActualProperty): any {
+export function tfHarnessMemoryActualPropertyToHclTerraform(struct?: TfHarness.MemoryActualProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -951,7 +951,7 @@ export function awsBedrockagentcoreHarnessMemoryActualPropertyToHclTerraform(str
 }
 
 
-export function awsBedrockagentcoreHarnessSlidingWindowPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.SlidingWindowProperty | cdktn.IResolvable): any {
+export function tfHarnessSlidingWindowPropertyToTerraform(struct?: TfHarness.SlidingWindowProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -962,7 +962,7 @@ export function awsBedrockagentcoreHarnessSlidingWindowPropertyToTerraform(struc
 }
 
 
-export function awsBedrockagentcoreHarnessSlidingWindowPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.SlidingWindowProperty | cdktn.IResolvable): any {
+export function tfHarnessSlidingWindowPropertyToHclTerraform(struct?: TfHarness.SlidingWindowProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -981,7 +981,7 @@ export function awsBedrockagentcoreHarnessSlidingWindowPropertyToHclTerraform(st
 }
 
 
-export function awsBedrockagentcoreHarnessSummarizationPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.SummarizationProperty | cdktn.IResolvable): any {
+export function tfHarnessSummarizationPropertyToTerraform(struct?: TfHarness.SummarizationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -994,7 +994,7 @@ export function awsBedrockagentcoreHarnessSummarizationPropertyToTerraform(struc
 }
 
 
-export function awsBedrockagentcoreHarnessSummarizationPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.SummarizationProperty | cdktn.IResolvable): any {
+export function tfHarnessSummarizationPropertyToHclTerraform(struct?: TfHarness.SummarizationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1025,32 +1025,32 @@ export function awsBedrockagentcoreHarnessSummarizationPropertyToHclTerraform(st
 }
 
 
-export function awsBedrockagentcoreHarnessTruncationConfigPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.TruncationConfigProperty | cdktn.IResolvable): any {
+export function tfHarnessTruncationConfigPropertyToTerraform(struct?: TfHarness.TruncationConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    sliding_window: cdktn.listMapper(awsBedrockagentcoreHarnessSlidingWindowPropertyToTerraform, false)(struct!.slidingWindow),
-    summarization: cdktn.listMapper(awsBedrockagentcoreHarnessSummarizationPropertyToTerraform, false)(struct!.summarization),
+    sliding_window: cdktn.listMapper(tfHarnessSlidingWindowPropertyToTerraform, false)(struct!.slidingWindow),
+    summarization: cdktn.listMapper(tfHarnessSummarizationPropertyToTerraform, false)(struct!.summarization),
   }
 }
 
 
-export function awsBedrockagentcoreHarnessTruncationConfigPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.TruncationConfigProperty | cdktn.IResolvable): any {
+export function tfHarnessTruncationConfigPropertyToHclTerraform(struct?: TfHarness.TruncationConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     sliding_window: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessSlidingWindowPropertyToHclTerraform, false)(struct!.slidingWindow),
+      value: cdktn.listMapperHcl(tfHarnessSlidingWindowPropertyToHclTerraform, false)(struct!.slidingWindow),
       isBlock: true,
       type: "list",
       storageClassType: "SlidingWindowPropertyList",
     },
     summarization: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessSummarizationPropertyToHclTerraform, false)(struct!.summarization),
+      value: cdktn.listMapperHcl(tfHarnessSummarizationPropertyToHclTerraform, false)(struct!.summarization),
       isBlock: true,
       type: "list",
       storageClassType: "SummarizationPropertyList",
@@ -1062,26 +1062,26 @@ export function awsBedrockagentcoreHarnessTruncationConfigPropertyToHclTerraform
 }
 
 
-export function awsBedrockagentcoreHarnessTruncationPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.TruncationProperty | cdktn.IResolvable): any {
+export function tfHarnessTruncationPropertyToTerraform(struct?: TfHarness.TruncationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    config: cdktn.listMapper(awsBedrockagentcoreHarnessTruncationConfigPropertyToTerraform, false)(struct!.config),
+    config: cdktn.listMapper(tfHarnessTruncationConfigPropertyToTerraform, false)(struct!.config),
     strategy: cdktn.stringToTerraform(struct!.strategy),
   }
 }
 
 
-export function awsBedrockagentcoreHarnessTruncationPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.TruncationProperty | cdktn.IResolvable): any {
+export function tfHarnessTruncationPropertyToHclTerraform(struct?: TfHarness.TruncationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     config: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessTruncationConfigPropertyToHclTerraform, false)(struct!.config),
+      value: cdktn.listMapperHcl(tfHarnessTruncationConfigPropertyToHclTerraform, false)(struct!.config),
       isBlock: true,
       type: "list",
       storageClassType: "TruncationConfigPropertyList",
@@ -1099,7 +1099,7 @@ export function awsBedrockagentcoreHarnessTruncationPropertyToHclTerraform(struc
 }
 
 
-export function awsBedrockagentcoreHarnessHostingEnvironmentPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.HostingEnvironmentProperty | cdktn.IResolvable): any {
+export function tfHarnessHostingEnvironmentPropertyToTerraform(struct?: TfHarness.HostingEnvironmentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1110,7 +1110,7 @@ export function awsBedrockagentcoreHarnessHostingEnvironmentPropertyToTerraform(
 }
 
 
-export function awsBedrockagentcoreHarnessHostingEnvironmentPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.HostingEnvironmentProperty | cdktn.IResolvable): any {
+export function tfHarnessHostingEnvironmentPropertyToHclTerraform(struct?: TfHarness.HostingEnvironmentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1129,19 +1129,19 @@ export function awsBedrockagentcoreHarnessHostingEnvironmentPropertyToHclTerrafo
 }
 
 
-export function awsBedrockagentcoreHarnessAllowedWorkloadConfigurationPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.AllowedWorkloadConfigurationProperty | cdktn.IResolvable): any {
+export function tfHarnessAllowedWorkloadConfigurationPropertyToTerraform(struct?: TfHarness.AllowedWorkloadConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     workload_identities: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.workloadIdentities),
-    hosting_environment: cdktn.listMapper(awsBedrockagentcoreHarnessHostingEnvironmentPropertyToTerraform, true)(struct!.hostingEnvironment),
+    hosting_environment: cdktn.listMapper(tfHarnessHostingEnvironmentPropertyToTerraform, true)(struct!.hostingEnvironment),
   }
 }
 
 
-export function awsBedrockagentcoreHarnessAllowedWorkloadConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.AllowedWorkloadConfigurationProperty | cdktn.IResolvable): any {
+export function tfHarnessAllowedWorkloadConfigurationPropertyToHclTerraform(struct?: TfHarness.AllowedWorkloadConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1154,7 +1154,7 @@ export function awsBedrockagentcoreHarnessAllowedWorkloadConfigurationPropertyTo
       storageClassType: "stringList",
     },
     hosting_environment: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessHostingEnvironmentPropertyToHclTerraform, true)(struct!.hostingEnvironment),
+      value: cdktn.listMapperHcl(tfHarnessHostingEnvironmentPropertyToHclTerraform, true)(struct!.hostingEnvironment),
       isBlock: true,
       type: "list",
       storageClassType: "HostingEnvironmentPropertyList",
@@ -1166,7 +1166,7 @@ export function awsBedrockagentcoreHarnessAllowedWorkloadConfigurationPropertyTo
 }
 
 
-export function awsBedrockagentcoreHarnessClaimMatchValuePropertyToTerraform(struct?: AwsBedrockagentcoreHarness.ClaimMatchValueProperty | cdktn.IResolvable): any {
+export function tfHarnessClaimMatchValuePropertyToTerraform(struct?: TfHarness.ClaimMatchValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1178,7 +1178,7 @@ export function awsBedrockagentcoreHarnessClaimMatchValuePropertyToTerraform(str
 }
 
 
-export function awsBedrockagentcoreHarnessClaimMatchValuePropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.ClaimMatchValueProperty | cdktn.IResolvable): any {
+export function tfHarnessClaimMatchValuePropertyToHclTerraform(struct?: TfHarness.ClaimMatchValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1203,19 +1203,19 @@ export function awsBedrockagentcoreHarnessClaimMatchValuePropertyToHclTerraform(
 }
 
 
-export function awsBedrockagentcoreHarnessAuthorizingClaimMatchValuePropertyToTerraform(struct?: AwsBedrockagentcoreHarness.AuthorizingClaimMatchValueProperty | cdktn.IResolvable): any {
+export function tfHarnessAuthorizingClaimMatchValuePropertyToTerraform(struct?: TfHarness.AuthorizingClaimMatchValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     claim_match_operator: cdktn.stringToTerraform(struct!.claimMatchOperator),
-    claim_match_value: cdktn.listMapper(awsBedrockagentcoreHarnessClaimMatchValuePropertyToTerraform, true)(struct!.claimMatchValue),
+    claim_match_value: cdktn.listMapper(tfHarnessClaimMatchValuePropertyToTerraform, true)(struct!.claimMatchValue),
   }
 }
 
 
-export function awsBedrockagentcoreHarnessAuthorizingClaimMatchValuePropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.AuthorizingClaimMatchValueProperty | cdktn.IResolvable): any {
+export function tfHarnessAuthorizingClaimMatchValuePropertyToHclTerraform(struct?: TfHarness.AuthorizingClaimMatchValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1228,7 +1228,7 @@ export function awsBedrockagentcoreHarnessAuthorizingClaimMatchValuePropertyToHc
       storageClassType: "string",
     },
     claim_match_value: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessClaimMatchValuePropertyToHclTerraform, true)(struct!.claimMatchValue),
+      value: cdktn.listMapperHcl(tfHarnessClaimMatchValuePropertyToHclTerraform, true)(struct!.claimMatchValue),
       isBlock: true,
       type: "list",
       storageClassType: "ClaimMatchValuePropertyList",
@@ -1240,7 +1240,7 @@ export function awsBedrockagentcoreHarnessAuthorizingClaimMatchValuePropertyToHc
 }
 
 
-export function awsBedrockagentcoreHarnessCustomClaimPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.CustomClaimProperty | cdktn.IResolvable): any {
+export function tfHarnessCustomClaimPropertyToTerraform(struct?: TfHarness.CustomClaimProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1248,12 +1248,12 @@ export function awsBedrockagentcoreHarnessCustomClaimPropertyToTerraform(struct?
   return {
     inbound_token_claim_name: cdktn.stringToTerraform(struct!.inboundTokenClaimName),
     inbound_token_claim_value_type: cdktn.stringToTerraform(struct!.inboundTokenClaimValueType),
-    authorizing_claim_match_value: cdktn.listMapper(awsBedrockagentcoreHarnessAuthorizingClaimMatchValuePropertyToTerraform, true)(struct!.authorizingClaimMatchValue),
+    authorizing_claim_match_value: cdktn.listMapper(tfHarnessAuthorizingClaimMatchValuePropertyToTerraform, true)(struct!.authorizingClaimMatchValue),
   }
 }
 
 
-export function awsBedrockagentcoreHarnessCustomClaimPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.CustomClaimProperty | cdktn.IResolvable): any {
+export function tfHarnessCustomClaimPropertyToHclTerraform(struct?: TfHarness.CustomClaimProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1272,7 +1272,7 @@ export function awsBedrockagentcoreHarnessCustomClaimPropertyToHclTerraform(stru
       storageClassType: "string",
     },
     authorizing_claim_match_value: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessAuthorizingClaimMatchValuePropertyToHclTerraform, true)(struct!.authorizingClaimMatchValue),
+      value: cdktn.listMapperHcl(tfHarnessAuthorizingClaimMatchValuePropertyToHclTerraform, true)(struct!.authorizingClaimMatchValue),
       isBlock: true,
       type: "list",
       storageClassType: "AuthorizingClaimMatchValuePropertyList",
@@ -1284,7 +1284,7 @@ export function awsBedrockagentcoreHarnessCustomClaimPropertyToHclTerraform(stru
 }
 
 
-export function awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourcePropertyToTerraform(struct?: AwsBedrockagentcoreHarness.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourceProperty | cdktn.IResolvable): any {
+export function tfHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourcePropertyToTerraform(struct?: TfHarness.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1300,7 +1300,7 @@ export function awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthor
 }
 
 
-export function awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourcePropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourceProperty | cdktn.IResolvable): any {
+export function tfHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourcePropertyToHclTerraform(struct?: TfHarness.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1349,7 +1349,7 @@ export function awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthor
 }
 
 
-export function awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourcePropertyToTerraform(struct?: AwsBedrockagentcoreHarness.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourceProperty | cdktn.IResolvable): any {
+export function tfHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourcePropertyToTerraform(struct?: TfHarness.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1360,7 +1360,7 @@ export function awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthor
 }
 
 
-export function awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourcePropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourceProperty | cdktn.IResolvable): any {
+export function tfHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourcePropertyToHclTerraform(struct?: TfHarness.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1379,32 +1379,32 @@ export function awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthor
 }
 
 
-export function awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointProperty | cdktn.IResolvable): any {
+export function tfHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointPropertyToTerraform(struct?: TfHarness.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    managed_vpc_resource: cdktn.listMapper(awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourcePropertyToTerraform, true)(struct!.managedVpcResource),
-    self_managed_lattice_resource: cdktn.listMapper(awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourcePropertyToTerraform, true)(struct!.selfManagedLatticeResource),
+    managed_vpc_resource: cdktn.listMapper(tfHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourcePropertyToTerraform, true)(struct!.managedVpcResource),
+    self_managed_lattice_resource: cdktn.listMapper(tfHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourcePropertyToTerraform, true)(struct!.selfManagedLatticeResource),
   }
 }
 
 
-export function awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointProperty | cdktn.IResolvable): any {
+export function tfHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointPropertyToHclTerraform(struct?: TfHarness.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     managed_vpc_resource: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourcePropertyToHclTerraform, true)(struct!.managedVpcResource),
+      value: cdktn.listMapperHcl(tfHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourcePropertyToHclTerraform, true)(struct!.managedVpcResource),
       isBlock: true,
       type: "list",
       storageClassType: "AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourcePropertyList",
     },
     self_managed_lattice_resource: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourcePropertyToHclTerraform, true)(struct!.selfManagedLatticeResource),
+      value: cdktn.listMapperHcl(tfHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourcePropertyToHclTerraform, true)(struct!.selfManagedLatticeResource),
       isBlock: true,
       type: "list",
       storageClassType: "AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourcePropertyList",
@@ -1416,7 +1416,7 @@ export function awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthor
 }
 
 
-export function awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourcePropertyToTerraform(struct?: AwsBedrockagentcoreHarness.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourceProperty | cdktn.IResolvable): any {
+export function tfHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourcePropertyToTerraform(struct?: TfHarness.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1432,7 +1432,7 @@ export function awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthor
 }
 
 
-export function awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourcePropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourceProperty | cdktn.IResolvable): any {
+export function tfHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourcePropertyToHclTerraform(struct?: TfHarness.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1481,7 +1481,7 @@ export function awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthor
 }
 
 
-export function awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourcePropertyToTerraform(struct?: AwsBedrockagentcoreHarness.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourceProperty | cdktn.IResolvable): any {
+export function tfHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourcePropertyToTerraform(struct?: TfHarness.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1492,7 +1492,7 @@ export function awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthor
 }
 
 
-export function awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourcePropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourceProperty | cdktn.IResolvable): any {
+export function tfHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourcePropertyToHclTerraform(struct?: TfHarness.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1511,32 +1511,32 @@ export function awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthor
 }
 
 
-export function awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointProperty | cdktn.IResolvable): any {
+export function tfHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointPropertyToTerraform(struct?: TfHarness.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    managed_vpc_resource: cdktn.listMapper(awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourcePropertyToTerraform, true)(struct!.managedVpcResource),
-    self_managed_lattice_resource: cdktn.listMapper(awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourcePropertyToTerraform, true)(struct!.selfManagedLatticeResource),
+    managed_vpc_resource: cdktn.listMapper(tfHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourcePropertyToTerraform, true)(struct!.managedVpcResource),
+    self_managed_lattice_resource: cdktn.listMapper(tfHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourcePropertyToTerraform, true)(struct!.selfManagedLatticeResource),
   }
 }
 
 
-export function awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointProperty | cdktn.IResolvable): any {
+export function tfHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointPropertyToHclTerraform(struct?: TfHarness.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     managed_vpc_resource: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourcePropertyToHclTerraform, true)(struct!.managedVpcResource),
+      value: cdktn.listMapperHcl(tfHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourcePropertyToHclTerraform, true)(struct!.managedVpcResource),
       isBlock: true,
       type: "list",
       storageClassType: "AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourcePropertyList",
     },
     self_managed_lattice_resource: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourcePropertyToHclTerraform, true)(struct!.selfManagedLatticeResource),
+      value: cdktn.listMapperHcl(tfHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourcePropertyToHclTerraform, true)(struct!.selfManagedLatticeResource),
       isBlock: true,
       type: "list",
       storageClassType: "AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourcePropertyList",
@@ -1548,19 +1548,19 @@ export function awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthor
 }
 
 
-export function awsBedrockagentcoreHarnessPrivateEndpointOverridesPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.PrivateEndpointOverridesProperty | cdktn.IResolvable): any {
+export function tfHarnessPrivateEndpointOverridesPropertyToTerraform(struct?: TfHarness.PrivateEndpointOverridesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     domain: cdktn.stringToTerraform(struct!.domain),
-    private_endpoint: cdktn.listMapper(awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointPropertyToTerraform, true)(struct!.privateEndpoint),
+    private_endpoint: cdktn.listMapper(tfHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointPropertyToTerraform, true)(struct!.privateEndpoint),
   }
 }
 
 
-export function awsBedrockagentcoreHarnessPrivateEndpointOverridesPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.PrivateEndpointOverridesProperty | cdktn.IResolvable): any {
+export function tfHarnessPrivateEndpointOverridesPropertyToHclTerraform(struct?: TfHarness.PrivateEndpointOverridesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1573,7 +1573,7 @@ export function awsBedrockagentcoreHarnessPrivateEndpointOverridesPropertyToHclT
       storageClassType: "string",
     },
     private_endpoint: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointPropertyToHclTerraform, true)(struct!.privateEndpoint),
+      value: cdktn.listMapperHcl(tfHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointPropertyToHclTerraform, true)(struct!.privateEndpoint),
       isBlock: true,
       type: "list",
       storageClassType: "AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointPropertyList",
@@ -1585,7 +1585,7 @@ export function awsBedrockagentcoreHarnessPrivateEndpointOverridesPropertyToHclT
 }
 
 
-export function awsBedrockagentcoreHarnessCustomJwtAuthorizerPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.CustomJwtAuthorizerProperty | cdktn.IResolvable): any {
+export function tfHarnessCustomJwtAuthorizerPropertyToTerraform(struct?: TfHarness.CustomJwtAuthorizerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1595,15 +1595,15 @@ export function awsBedrockagentcoreHarnessCustomJwtAuthorizerPropertyToTerraform
     allowed_clients: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.allowedClients),
     allowed_scopes: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.allowedScopes),
     discovery_url: cdktn.stringToTerraform(struct!.discoveryUrl),
-    allowed_workload_configuration: cdktn.listMapper(awsBedrockagentcoreHarnessAllowedWorkloadConfigurationPropertyToTerraform, true)(struct!.allowedWorkloadConfiguration),
-    custom_claim: cdktn.listMapper(awsBedrockagentcoreHarnessCustomClaimPropertyToTerraform, true)(struct!.customClaim),
-    private_endpoint: cdktn.listMapper(awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointPropertyToTerraform, true)(struct!.privateEndpoint),
-    private_endpoint_overrides: cdktn.listMapper(awsBedrockagentcoreHarnessPrivateEndpointOverridesPropertyToTerraform, true)(struct!.privateEndpointOverrides),
+    allowed_workload_configuration: cdktn.listMapper(tfHarnessAllowedWorkloadConfigurationPropertyToTerraform, true)(struct!.allowedWorkloadConfiguration),
+    custom_claim: cdktn.listMapper(tfHarnessCustomClaimPropertyToTerraform, true)(struct!.customClaim),
+    private_endpoint: cdktn.listMapper(tfHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointPropertyToTerraform, true)(struct!.privateEndpoint),
+    private_endpoint_overrides: cdktn.listMapper(tfHarnessPrivateEndpointOverridesPropertyToTerraform, true)(struct!.privateEndpointOverrides),
   }
 }
 
 
-export function awsBedrockagentcoreHarnessCustomJwtAuthorizerPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.CustomJwtAuthorizerProperty | cdktn.IResolvable): any {
+export function tfHarnessCustomJwtAuthorizerPropertyToHclTerraform(struct?: TfHarness.CustomJwtAuthorizerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1634,25 +1634,25 @@ export function awsBedrockagentcoreHarnessCustomJwtAuthorizerPropertyToHclTerraf
       storageClassType: "string",
     },
     allowed_workload_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessAllowedWorkloadConfigurationPropertyToHclTerraform, true)(struct!.allowedWorkloadConfiguration),
+      value: cdktn.listMapperHcl(tfHarnessAllowedWorkloadConfigurationPropertyToHclTerraform, true)(struct!.allowedWorkloadConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "AllowedWorkloadConfigurationPropertyList",
     },
     custom_claim: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessCustomClaimPropertyToHclTerraform, true)(struct!.customClaim),
+      value: cdktn.listMapperHcl(tfHarnessCustomClaimPropertyToHclTerraform, true)(struct!.customClaim),
       isBlock: true,
       type: "set",
       storageClassType: "CustomClaimPropertyList",
     },
     private_endpoint: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointPropertyToHclTerraform, true)(struct!.privateEndpoint),
+      value: cdktn.listMapperHcl(tfHarnessAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointPropertyToHclTerraform, true)(struct!.privateEndpoint),
       isBlock: true,
       type: "list",
       storageClassType: "AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointPropertyList",
     },
     private_endpoint_overrides: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessPrivateEndpointOverridesPropertyToHclTerraform, true)(struct!.privateEndpointOverrides),
+      value: cdktn.listMapperHcl(tfHarnessPrivateEndpointOverridesPropertyToHclTerraform, true)(struct!.privateEndpointOverrides),
       isBlock: true,
       type: "list",
       storageClassType: "PrivateEndpointOverridesPropertyList",
@@ -1664,25 +1664,25 @@ export function awsBedrockagentcoreHarnessCustomJwtAuthorizerPropertyToHclTerraf
 }
 
 
-export function awsBedrockagentcoreHarnessAuthorizerConfigurationPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.AuthorizerConfigurationProperty | cdktn.IResolvable): any {
+export function tfHarnessAuthorizerConfigurationPropertyToTerraform(struct?: TfHarness.AuthorizerConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_jwt_authorizer: cdktn.listMapper(awsBedrockagentcoreHarnessCustomJwtAuthorizerPropertyToTerraform, true)(struct!.customJwtAuthorizer),
+    custom_jwt_authorizer: cdktn.listMapper(tfHarnessCustomJwtAuthorizerPropertyToTerraform, true)(struct!.customJwtAuthorizer),
   }
 }
 
 
-export function awsBedrockagentcoreHarnessAuthorizerConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.AuthorizerConfigurationProperty | cdktn.IResolvable): any {
+export function tfHarnessAuthorizerConfigurationPropertyToHclTerraform(struct?: TfHarness.AuthorizerConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_jwt_authorizer: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessCustomJwtAuthorizerPropertyToHclTerraform, true)(struct!.customJwtAuthorizer),
+      value: cdktn.listMapperHcl(tfHarnessCustomJwtAuthorizerPropertyToHclTerraform, true)(struct!.customJwtAuthorizer),
       isBlock: true,
       type: "list",
       storageClassType: "CustomJwtAuthorizerPropertyList",
@@ -1694,7 +1694,7 @@ export function awsBedrockagentcoreHarnessAuthorizerConfigurationPropertyToHclTe
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironmentLifecycleConfigurationPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentAgentcoreRuntimeEnvironmentLifecycleConfigurationProperty | cdktn.IResolvable): any {
+export function tfHarnessEnvironmentAgentcoreRuntimeEnvironmentLifecycleConfigurationPropertyToTerraform(struct?: TfHarness.EnvironmentAgentcoreRuntimeEnvironmentLifecycleConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1706,7 +1706,7 @@ export function awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironment
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironmentLifecycleConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentAgentcoreRuntimeEnvironmentLifecycleConfigurationProperty | cdktn.IResolvable): any {
+export function tfHarnessEnvironmentAgentcoreRuntimeEnvironmentLifecycleConfigurationPropertyToHclTerraform(struct?: TfHarness.EnvironmentAgentcoreRuntimeEnvironmentLifecycleConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1731,7 +1731,7 @@ export function awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironment
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationEfsAccessPointPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationEfsAccessPointProperty | cdktn.IResolvable): any {
+export function tfHarnessEnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationEfsAccessPointPropertyToTerraform(struct?: TfHarness.EnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationEfsAccessPointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1743,7 +1743,7 @@ export function awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironment
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationEfsAccessPointPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationEfsAccessPointProperty | cdktn.IResolvable): any {
+export function tfHarnessEnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationEfsAccessPointPropertyToHclTerraform(struct?: TfHarness.EnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationEfsAccessPointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1768,7 +1768,7 @@ export function awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironment
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationS3FilesAccessPointPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationS3FilesAccessPointProperty | cdktn.IResolvable): any {
+export function tfHarnessEnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationS3FilesAccessPointPropertyToTerraform(struct?: TfHarness.EnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationS3FilesAccessPointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1780,7 +1780,7 @@ export function awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironment
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationS3FilesAccessPointPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationS3FilesAccessPointProperty | cdktn.IResolvable): any {
+export function tfHarnessEnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationS3FilesAccessPointPropertyToHclTerraform(struct?: TfHarness.EnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationS3FilesAccessPointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1805,7 +1805,7 @@ export function awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironment
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationSessionStoragePropertyToTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationSessionStorageProperty | cdktn.IResolvable): any {
+export function tfHarnessEnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationSessionStoragePropertyToTerraform(struct?: TfHarness.EnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationSessionStorageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1816,7 +1816,7 @@ export function awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironment
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationSessionStoragePropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationSessionStorageProperty | cdktn.IResolvable): any {
+export function tfHarnessEnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationSessionStoragePropertyToHclTerraform(struct?: TfHarness.EnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationSessionStorageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1835,39 +1835,39 @@ export function awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironment
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationProperty | cdktn.IResolvable): any {
+export function tfHarnessEnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationPropertyToTerraform(struct?: TfHarness.EnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    efs_access_point: cdktn.listMapper(awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationEfsAccessPointPropertyToTerraform, true)(struct!.efsAccessPoint),
-    s3_files_access_point: cdktn.listMapper(awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationS3FilesAccessPointPropertyToTerraform, true)(struct!.s3FilesAccessPoint),
-    session_storage: cdktn.listMapper(awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationSessionStoragePropertyToTerraform, true)(struct!.sessionStorage),
+    efs_access_point: cdktn.listMapper(tfHarnessEnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationEfsAccessPointPropertyToTerraform, true)(struct!.efsAccessPoint),
+    s3_files_access_point: cdktn.listMapper(tfHarnessEnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationS3FilesAccessPointPropertyToTerraform, true)(struct!.s3FilesAccessPoint),
+    session_storage: cdktn.listMapper(tfHarnessEnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationSessionStoragePropertyToTerraform, true)(struct!.sessionStorage),
   }
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationProperty | cdktn.IResolvable): any {
+export function tfHarnessEnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationPropertyToHclTerraform(struct?: TfHarness.EnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     efs_access_point: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationEfsAccessPointPropertyToHclTerraform, true)(struct!.efsAccessPoint),
+      value: cdktn.listMapperHcl(tfHarnessEnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationEfsAccessPointPropertyToHclTerraform, true)(struct!.efsAccessPoint),
       isBlock: true,
       type: "list",
       storageClassType: "EnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationEfsAccessPointPropertyList",
     },
     s3_files_access_point: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationS3FilesAccessPointPropertyToHclTerraform, true)(struct!.s3FilesAccessPoint),
+      value: cdktn.listMapperHcl(tfHarnessEnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationS3FilesAccessPointPropertyToHclTerraform, true)(struct!.s3FilesAccessPoint),
       isBlock: true,
       type: "list",
       storageClassType: "EnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationS3FilesAccessPointPropertyList",
     },
     session_storage: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationSessionStoragePropertyToHclTerraform, true)(struct!.sessionStorage),
+      value: cdktn.listMapperHcl(tfHarnessEnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationSessionStoragePropertyToHclTerraform, true)(struct!.sessionStorage),
       isBlock: true,
       type: "list",
       storageClassType: "EnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationSessionStoragePropertyList",
@@ -1879,7 +1879,7 @@ export function awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironment
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironmentNetworkConfigurationNetworkModeConfigPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentAgentcoreRuntimeEnvironmentNetworkConfigurationNetworkModeConfigProperty | cdktn.IResolvable): any {
+export function tfHarnessEnvironmentAgentcoreRuntimeEnvironmentNetworkConfigurationNetworkModeConfigPropertyToTerraform(struct?: TfHarness.EnvironmentAgentcoreRuntimeEnvironmentNetworkConfigurationNetworkModeConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1891,7 +1891,7 @@ export function awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironment
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironmentNetworkConfigurationNetworkModeConfigPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentAgentcoreRuntimeEnvironmentNetworkConfigurationNetworkModeConfigProperty | cdktn.IResolvable): any {
+export function tfHarnessEnvironmentAgentcoreRuntimeEnvironmentNetworkConfigurationNetworkModeConfigPropertyToHclTerraform(struct?: TfHarness.EnvironmentAgentcoreRuntimeEnvironmentNetworkConfigurationNetworkModeConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1916,19 +1916,19 @@ export function awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironment
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironmentNetworkConfigurationPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentAgentcoreRuntimeEnvironmentNetworkConfigurationProperty | cdktn.IResolvable): any {
+export function tfHarnessEnvironmentAgentcoreRuntimeEnvironmentNetworkConfigurationPropertyToTerraform(struct?: TfHarness.EnvironmentAgentcoreRuntimeEnvironmentNetworkConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     network_mode: cdktn.stringToTerraform(struct!.networkMode),
-    network_mode_config: cdktn.listMapper(awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironmentNetworkConfigurationNetworkModeConfigPropertyToTerraform, true)(struct!.networkModeConfig),
+    network_mode_config: cdktn.listMapper(tfHarnessEnvironmentAgentcoreRuntimeEnvironmentNetworkConfigurationNetworkModeConfigPropertyToTerraform, true)(struct!.networkModeConfig),
   }
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironmentNetworkConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentAgentcoreRuntimeEnvironmentNetworkConfigurationProperty | cdktn.IResolvable): any {
+export function tfHarnessEnvironmentAgentcoreRuntimeEnvironmentNetworkConfigurationPropertyToHclTerraform(struct?: TfHarness.EnvironmentAgentcoreRuntimeEnvironmentNetworkConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1941,7 +1941,7 @@ export function awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironment
       storageClassType: "string",
     },
     network_mode_config: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironmentNetworkConfigurationNetworkModeConfigPropertyToHclTerraform, true)(struct!.networkModeConfig),
+      value: cdktn.listMapperHcl(tfHarnessEnvironmentAgentcoreRuntimeEnvironmentNetworkConfigurationNetworkModeConfigPropertyToHclTerraform, true)(struct!.networkModeConfig),
       isBlock: true,
       type: "list",
       storageClassType: "EnvironmentAgentcoreRuntimeEnvironmentNetworkConfigurationNetworkModeConfigPropertyList",
@@ -1953,39 +1953,39 @@ export function awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironment
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironmentPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentAgentcoreRuntimeEnvironmentProperty | cdktn.IResolvable): any {
+export function tfHarnessEnvironmentAgentcoreRuntimeEnvironmentPropertyToTerraform(struct?: TfHarness.EnvironmentAgentcoreRuntimeEnvironmentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    lifecycle_configuration: cdktn.listMapper(awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironmentLifecycleConfigurationPropertyToTerraform, false)(struct!.lifecycleConfiguration),
-    filesystem_configuration: cdktn.listMapper(awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationPropertyToTerraform, true)(struct!.filesystemConfiguration),
-    network_configuration: cdktn.listMapper(awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironmentNetworkConfigurationPropertyToTerraform, true)(struct!.networkConfiguration),
+    lifecycle_configuration: cdktn.listMapper(tfHarnessEnvironmentAgentcoreRuntimeEnvironmentLifecycleConfigurationPropertyToTerraform, false)(struct!.lifecycleConfiguration),
+    filesystem_configuration: cdktn.listMapper(tfHarnessEnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationPropertyToTerraform, true)(struct!.filesystemConfiguration),
+    network_configuration: cdktn.listMapper(tfHarnessEnvironmentAgentcoreRuntimeEnvironmentNetworkConfigurationPropertyToTerraform, true)(struct!.networkConfiguration),
   }
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironmentPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentAgentcoreRuntimeEnvironmentProperty | cdktn.IResolvable): any {
+export function tfHarnessEnvironmentAgentcoreRuntimeEnvironmentPropertyToHclTerraform(struct?: TfHarness.EnvironmentAgentcoreRuntimeEnvironmentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     lifecycle_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironmentLifecycleConfigurationPropertyToHclTerraform, false)(struct!.lifecycleConfiguration),
+      value: cdktn.listMapperHcl(tfHarnessEnvironmentAgentcoreRuntimeEnvironmentLifecycleConfigurationPropertyToHclTerraform, false)(struct!.lifecycleConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "EnvironmentAgentcoreRuntimeEnvironmentLifecycleConfigurationPropertyList",
     },
     filesystem_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationPropertyToHclTerraform, true)(struct!.filesystemConfiguration),
+      value: cdktn.listMapperHcl(tfHarnessEnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationPropertyToHclTerraform, true)(struct!.filesystemConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "EnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationPropertyList",
     },
     network_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironmentNetworkConfigurationPropertyToHclTerraform, true)(struct!.networkConfiguration),
+      value: cdktn.listMapperHcl(tfHarnessEnvironmentAgentcoreRuntimeEnvironmentNetworkConfigurationPropertyToHclTerraform, true)(struct!.networkConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "EnvironmentAgentcoreRuntimeEnvironmentNetworkConfigurationPropertyList",
@@ -1997,25 +1997,25 @@ export function awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironment
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentProperty | cdktn.IResolvable): any {
+export function tfHarnessEnvironmentPropertyToTerraform(struct?: TfHarness.EnvironmentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    agentcore_runtime_environment: cdktn.listMapper(awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironmentPropertyToTerraform, true)(struct!.agentcoreRuntimeEnvironment),
+    agentcore_runtime_environment: cdktn.listMapper(tfHarnessEnvironmentAgentcoreRuntimeEnvironmentPropertyToTerraform, true)(struct!.agentcoreRuntimeEnvironment),
   }
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentProperty | cdktn.IResolvable): any {
+export function tfHarnessEnvironmentPropertyToHclTerraform(struct?: TfHarness.EnvironmentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     agentcore_runtime_environment: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessEnvironmentAgentcoreRuntimeEnvironmentPropertyToHclTerraform, true)(struct!.agentcoreRuntimeEnvironment),
+      value: cdktn.listMapperHcl(tfHarnessEnvironmentAgentcoreRuntimeEnvironmentPropertyToHclTerraform, true)(struct!.agentcoreRuntimeEnvironment),
       isBlock: true,
       type: "list",
       storageClassType: "EnvironmentAgentcoreRuntimeEnvironmentPropertyList",
@@ -2027,7 +2027,7 @@ export function awsBedrockagentcoreHarnessEnvironmentPropertyToHclTerraform(stru
 }
 
 
-export function awsBedrockagentcoreHarnessContainerConfigurationPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.ContainerConfigurationProperty | cdktn.IResolvable): any {
+export function tfHarnessContainerConfigurationPropertyToTerraform(struct?: TfHarness.ContainerConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2038,7 +2038,7 @@ export function awsBedrockagentcoreHarnessContainerConfigurationPropertyToTerraf
 }
 
 
-export function awsBedrockagentcoreHarnessContainerConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.ContainerConfigurationProperty | cdktn.IResolvable): any {
+export function tfHarnessContainerConfigurationPropertyToHclTerraform(struct?: TfHarness.ContainerConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2057,25 +2057,25 @@ export function awsBedrockagentcoreHarnessContainerConfigurationPropertyToHclTer
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentArtifactPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentArtifactProperty | cdktn.IResolvable): any {
+export function tfHarnessEnvironmentArtifactPropertyToTerraform(struct?: TfHarness.EnvironmentArtifactProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    container_configuration: cdktn.listMapper(awsBedrockagentcoreHarnessContainerConfigurationPropertyToTerraform, true)(struct!.containerConfiguration),
+    container_configuration: cdktn.listMapper(tfHarnessContainerConfigurationPropertyToTerraform, true)(struct!.containerConfiguration),
   }
 }
 
 
-export function awsBedrockagentcoreHarnessEnvironmentArtifactPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.EnvironmentArtifactProperty | cdktn.IResolvable): any {
+export function tfHarnessEnvironmentArtifactPropertyToHclTerraform(struct?: TfHarness.EnvironmentArtifactProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     container_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessContainerConfigurationPropertyToHclTerraform, true)(struct!.containerConfiguration),
+      value: cdktn.listMapperHcl(tfHarnessContainerConfigurationPropertyToHclTerraform, true)(struct!.containerConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ContainerConfigurationPropertyList",
@@ -2087,7 +2087,7 @@ export function awsBedrockagentcoreHarnessEnvironmentArtifactPropertyToHclTerraf
 }
 
 
-export function awsBedrockagentcoreHarnessMemoryAgentcoreMemoryConfigurationRetrievalConfigPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.MemoryAgentcoreMemoryConfigurationRetrievalConfigProperty | cdktn.IResolvable): any {
+export function tfHarnessMemoryAgentcoreMemoryConfigurationRetrievalConfigPropertyToTerraform(struct?: TfHarness.MemoryAgentcoreMemoryConfigurationRetrievalConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2101,7 +2101,7 @@ export function awsBedrockagentcoreHarnessMemoryAgentcoreMemoryConfigurationRetr
 }
 
 
-export function awsBedrockagentcoreHarnessMemoryAgentcoreMemoryConfigurationRetrievalConfigPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.MemoryAgentcoreMemoryConfigurationRetrievalConfigProperty | cdktn.IResolvable): any {
+export function tfHarnessMemoryAgentcoreMemoryConfigurationRetrievalConfigPropertyToHclTerraform(struct?: TfHarness.MemoryAgentcoreMemoryConfigurationRetrievalConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2138,7 +2138,7 @@ export function awsBedrockagentcoreHarnessMemoryAgentcoreMemoryConfigurationRetr
 }
 
 
-export function awsBedrockagentcoreHarnessMemoryAgentcoreMemoryConfigurationPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.MemoryAgentcoreMemoryConfigurationProperty | cdktn.IResolvable): any {
+export function tfHarnessMemoryAgentcoreMemoryConfigurationPropertyToTerraform(struct?: TfHarness.MemoryAgentcoreMemoryConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2147,12 +2147,12 @@ export function awsBedrockagentcoreHarnessMemoryAgentcoreMemoryConfigurationProp
     actor_id: cdktn.stringToTerraform(struct!.actorId),
     arn: cdktn.stringToTerraform(struct!.arn),
     messages_count: cdktn.numberToTerraform(struct!.messagesCount),
-    retrieval_config: cdktn.listMapper(awsBedrockagentcoreHarnessMemoryAgentcoreMemoryConfigurationRetrievalConfigPropertyToTerraform, true)(struct!.retrievalConfig),
+    retrieval_config: cdktn.listMapper(tfHarnessMemoryAgentcoreMemoryConfigurationRetrievalConfigPropertyToTerraform, true)(struct!.retrievalConfig),
   }
 }
 
 
-export function awsBedrockagentcoreHarnessMemoryAgentcoreMemoryConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.MemoryAgentcoreMemoryConfigurationProperty | cdktn.IResolvable): any {
+export function tfHarnessMemoryAgentcoreMemoryConfigurationPropertyToHclTerraform(struct?: TfHarness.MemoryAgentcoreMemoryConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2177,7 +2177,7 @@ export function awsBedrockagentcoreHarnessMemoryAgentcoreMemoryConfigurationProp
       storageClassType: "number",
     },
     retrieval_config: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessMemoryAgentcoreMemoryConfigurationRetrievalConfigPropertyToHclTerraform, true)(struct!.retrievalConfig),
+      value: cdktn.listMapperHcl(tfHarnessMemoryAgentcoreMemoryConfigurationRetrievalConfigPropertyToHclTerraform, true)(struct!.retrievalConfig),
       isBlock: true,
       type: "list",
       storageClassType: "MemoryAgentcoreMemoryConfigurationRetrievalConfigPropertyList",
@@ -2189,7 +2189,7 @@ export function awsBedrockagentcoreHarnessMemoryAgentcoreMemoryConfigurationProp
 }
 
 
-export function awsBedrockagentcoreHarnessMemoryDisabledPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.MemoryDisabledProperty | cdktn.IResolvable): any {
+export function tfHarnessMemoryDisabledPropertyToTerraform(struct?: TfHarness.MemoryDisabledProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2199,7 +2199,7 @@ export function awsBedrockagentcoreHarnessMemoryDisabledPropertyToTerraform(stru
 }
 
 
-export function awsBedrockagentcoreHarnessMemoryDisabledPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.MemoryDisabledProperty | cdktn.IResolvable): any {
+export function tfHarnessMemoryDisabledPropertyToHclTerraform(struct?: TfHarness.MemoryDisabledProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2210,7 +2210,7 @@ export function awsBedrockagentcoreHarnessMemoryDisabledPropertyToHclTerraform(s
 }
 
 
-export function awsBedrockagentcoreHarnessMemoryManagedMemoryConfigurationPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.MemoryManagedMemoryConfigurationProperty | cdktn.IResolvable): any {
+export function tfHarnessMemoryManagedMemoryConfigurationPropertyToTerraform(struct?: TfHarness.MemoryManagedMemoryConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2223,7 +2223,7 @@ export function awsBedrockagentcoreHarnessMemoryManagedMemoryConfigurationProper
 }
 
 
-export function awsBedrockagentcoreHarnessMemoryManagedMemoryConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.MemoryManagedMemoryConfigurationProperty | cdktn.IResolvable): any {
+export function tfHarnessMemoryManagedMemoryConfigurationPropertyToHclTerraform(struct?: TfHarness.MemoryManagedMemoryConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2254,39 +2254,39 @@ export function awsBedrockagentcoreHarnessMemoryManagedMemoryConfigurationProper
 }
 
 
-export function awsBedrockagentcoreHarnessMemoryPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.MemoryProperty | cdktn.IResolvable): any {
+export function tfHarnessMemoryPropertyToTerraform(struct?: TfHarness.MemoryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    agentcore_memory_configuration: cdktn.listMapper(awsBedrockagentcoreHarnessMemoryAgentcoreMemoryConfigurationPropertyToTerraform, true)(struct!.agentcoreMemoryConfiguration),
-    disabled: cdktn.listMapper(awsBedrockagentcoreHarnessMemoryDisabledPropertyToTerraform, true)(struct!.disabled),
-    managed_memory_configuration: cdktn.listMapper(awsBedrockagentcoreHarnessMemoryManagedMemoryConfigurationPropertyToTerraform, true)(struct!.managedMemoryConfiguration),
+    agentcore_memory_configuration: cdktn.listMapper(tfHarnessMemoryAgentcoreMemoryConfigurationPropertyToTerraform, true)(struct!.agentcoreMemoryConfiguration),
+    disabled: cdktn.listMapper(tfHarnessMemoryDisabledPropertyToTerraform, true)(struct!.disabled),
+    managed_memory_configuration: cdktn.listMapper(tfHarnessMemoryManagedMemoryConfigurationPropertyToTerraform, true)(struct!.managedMemoryConfiguration),
   }
 }
 
 
-export function awsBedrockagentcoreHarnessMemoryPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.MemoryProperty | cdktn.IResolvable): any {
+export function tfHarnessMemoryPropertyToHclTerraform(struct?: TfHarness.MemoryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     agentcore_memory_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessMemoryAgentcoreMemoryConfigurationPropertyToHclTerraform, true)(struct!.agentcoreMemoryConfiguration),
+      value: cdktn.listMapperHcl(tfHarnessMemoryAgentcoreMemoryConfigurationPropertyToHclTerraform, true)(struct!.agentcoreMemoryConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "MemoryAgentcoreMemoryConfigurationPropertyList",
     },
     disabled: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessMemoryDisabledPropertyToHclTerraform, true)(struct!.disabled),
+      value: cdktn.listMapperHcl(tfHarnessMemoryDisabledPropertyToHclTerraform, true)(struct!.disabled),
       isBlock: true,
       type: "list",
       storageClassType: "MemoryDisabledPropertyList",
     },
     managed_memory_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessMemoryManagedMemoryConfigurationPropertyToHclTerraform, true)(struct!.managedMemoryConfiguration),
+      value: cdktn.listMapperHcl(tfHarnessMemoryManagedMemoryConfigurationPropertyToHclTerraform, true)(struct!.managedMemoryConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "MemoryManagedMemoryConfigurationPropertyList",
@@ -2298,7 +2298,7 @@ export function awsBedrockagentcoreHarnessMemoryPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsBedrockagentcoreHarnessBedrockModelConfigPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.BedrockModelConfigProperty | cdktn.IResolvable): any {
+export function tfHarnessBedrockModelConfigPropertyToTerraform(struct?: TfHarness.BedrockModelConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2312,7 +2312,7 @@ export function awsBedrockagentcoreHarnessBedrockModelConfigPropertyToTerraform(
 }
 
 
-export function awsBedrockagentcoreHarnessBedrockModelConfigPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.BedrockModelConfigProperty | cdktn.IResolvable): any {
+export function tfHarnessBedrockModelConfigPropertyToHclTerraform(struct?: TfHarness.BedrockModelConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2349,7 +2349,7 @@ export function awsBedrockagentcoreHarnessBedrockModelConfigPropertyToHclTerrafo
 }
 
 
-export function awsBedrockagentcoreHarnessGeminiModelConfigPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.GeminiModelConfigProperty | cdktn.IResolvable): any {
+export function tfHarnessGeminiModelConfigPropertyToTerraform(struct?: TfHarness.GeminiModelConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2365,7 +2365,7 @@ export function awsBedrockagentcoreHarnessGeminiModelConfigPropertyToTerraform(s
 }
 
 
-export function awsBedrockagentcoreHarnessGeminiModelConfigPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.GeminiModelConfigProperty | cdktn.IResolvable): any {
+export function tfHarnessGeminiModelConfigPropertyToHclTerraform(struct?: TfHarness.GeminiModelConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2414,7 +2414,7 @@ export function awsBedrockagentcoreHarnessGeminiModelConfigPropertyToHclTerrafor
 }
 
 
-export function awsBedrockagentcoreHarnessOpenaiModelConfigPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.OpenaiModelConfigProperty | cdktn.IResolvable): any {
+export function tfHarnessOpenaiModelConfigPropertyToTerraform(struct?: TfHarness.OpenaiModelConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2429,7 +2429,7 @@ export function awsBedrockagentcoreHarnessOpenaiModelConfigPropertyToTerraform(s
 }
 
 
-export function awsBedrockagentcoreHarnessOpenaiModelConfigPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.OpenaiModelConfigProperty | cdktn.IResolvable): any {
+export function tfHarnessOpenaiModelConfigPropertyToHclTerraform(struct?: TfHarness.OpenaiModelConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2472,39 +2472,39 @@ export function awsBedrockagentcoreHarnessOpenaiModelConfigPropertyToHclTerrafor
 }
 
 
-export function awsBedrockagentcoreHarnessModelPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.ModelProperty | cdktn.IResolvable): any {
+export function tfHarnessModelPropertyToTerraform(struct?: TfHarness.ModelProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    bedrock_model_config: cdktn.listMapper(awsBedrockagentcoreHarnessBedrockModelConfigPropertyToTerraform, true)(struct!.bedrockModelConfig),
-    gemini_model_config: cdktn.listMapper(awsBedrockagentcoreHarnessGeminiModelConfigPropertyToTerraform, true)(struct!.geminiModelConfig),
-    openai_model_config: cdktn.listMapper(awsBedrockagentcoreHarnessOpenaiModelConfigPropertyToTerraform, true)(struct!.openaiModelConfig),
+    bedrock_model_config: cdktn.listMapper(tfHarnessBedrockModelConfigPropertyToTerraform, true)(struct!.bedrockModelConfig),
+    gemini_model_config: cdktn.listMapper(tfHarnessGeminiModelConfigPropertyToTerraform, true)(struct!.geminiModelConfig),
+    openai_model_config: cdktn.listMapper(tfHarnessOpenaiModelConfigPropertyToTerraform, true)(struct!.openaiModelConfig),
   }
 }
 
 
-export function awsBedrockagentcoreHarnessModelPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.ModelProperty | cdktn.IResolvable): any {
+export function tfHarnessModelPropertyToHclTerraform(struct?: TfHarness.ModelProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     bedrock_model_config: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessBedrockModelConfigPropertyToHclTerraform, true)(struct!.bedrockModelConfig),
+      value: cdktn.listMapperHcl(tfHarnessBedrockModelConfigPropertyToHclTerraform, true)(struct!.bedrockModelConfig),
       isBlock: true,
       type: "list",
       storageClassType: "BedrockModelConfigPropertyList",
     },
     gemini_model_config: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessGeminiModelConfigPropertyToHclTerraform, true)(struct!.geminiModelConfig),
+      value: cdktn.listMapperHcl(tfHarnessGeminiModelConfigPropertyToHclTerraform, true)(struct!.geminiModelConfig),
       isBlock: true,
       type: "list",
       storageClassType: "GeminiModelConfigPropertyList",
     },
     openai_model_config: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessOpenaiModelConfigPropertyToHclTerraform, true)(struct!.openaiModelConfig),
+      value: cdktn.listMapperHcl(tfHarnessOpenaiModelConfigPropertyToHclTerraform, true)(struct!.openaiModelConfig),
       isBlock: true,
       type: "list",
       storageClassType: "OpenaiModelConfigPropertyList",
@@ -2516,7 +2516,7 @@ export function awsBedrockagentcoreHarnessModelPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsBedrockagentcoreHarnessSkillPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.SkillProperty | cdktn.IResolvable): any {
+export function tfHarnessSkillPropertyToTerraform(struct?: TfHarness.SkillProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2527,7 +2527,7 @@ export function awsBedrockagentcoreHarnessSkillPropertyToTerraform(struct?: AwsB
 }
 
 
-export function awsBedrockagentcoreHarnessSkillPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.SkillProperty | cdktn.IResolvable): any {
+export function tfHarnessSkillPropertyToHclTerraform(struct?: TfHarness.SkillProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2546,7 +2546,7 @@ export function awsBedrockagentcoreHarnessSkillPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsBedrockagentcoreHarnessSystemPromptPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.SystemPromptProperty | cdktn.IResolvable): any {
+export function tfHarnessSystemPromptPropertyToTerraform(struct?: TfHarness.SystemPromptProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2557,7 +2557,7 @@ export function awsBedrockagentcoreHarnessSystemPromptPropertyToTerraform(struct
 }
 
 
-export function awsBedrockagentcoreHarnessSystemPromptPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.SystemPromptProperty | cdktn.IResolvable): any {
+export function tfHarnessSystemPromptPropertyToHclTerraform(struct?: TfHarness.SystemPromptProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2576,7 +2576,7 @@ export function awsBedrockagentcoreHarnessSystemPromptPropertyToHclTerraform(str
 }
 
 
-export function awsBedrockagentcoreHarnessTimeoutsPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfHarnessTimeoutsPropertyToTerraform(struct?: TfHarness.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2589,7 +2589,7 @@ export function awsBedrockagentcoreHarnessTimeoutsPropertyToTerraform(struct?: A
 }
 
 
-export function awsBedrockagentcoreHarnessTimeoutsPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfHarnessTimeoutsPropertyToHclTerraform(struct?: TfHarness.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2620,7 +2620,7 @@ export function awsBedrockagentcoreHarnessTimeoutsPropertyToHclTerraform(struct?
 }
 
 
-export function awsBedrockagentcoreHarnessAgentcoreBrowserPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.AgentcoreBrowserProperty | cdktn.IResolvable): any {
+export function tfHarnessAgentcoreBrowserPropertyToTerraform(struct?: TfHarness.AgentcoreBrowserProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2631,7 +2631,7 @@ export function awsBedrockagentcoreHarnessAgentcoreBrowserPropertyToTerraform(st
 }
 
 
-export function awsBedrockagentcoreHarnessAgentcoreBrowserPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.AgentcoreBrowserProperty | cdktn.IResolvable): any {
+export function tfHarnessAgentcoreBrowserPropertyToHclTerraform(struct?: TfHarness.AgentcoreBrowserProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2650,7 +2650,7 @@ export function awsBedrockagentcoreHarnessAgentcoreBrowserPropertyToHclTerraform
 }
 
 
-export function awsBedrockagentcoreHarnessAgentcoreCodeInterpreterPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.AgentcoreCodeInterpreterProperty | cdktn.IResolvable): any {
+export function tfHarnessAgentcoreCodeInterpreterPropertyToTerraform(struct?: TfHarness.AgentcoreCodeInterpreterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2661,7 +2661,7 @@ export function awsBedrockagentcoreHarnessAgentcoreCodeInterpreterPropertyToTerr
 }
 
 
-export function awsBedrockagentcoreHarnessAgentcoreCodeInterpreterPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.AgentcoreCodeInterpreterProperty | cdktn.IResolvable): any {
+export function tfHarnessAgentcoreCodeInterpreterPropertyToHclTerraform(struct?: TfHarness.AgentcoreCodeInterpreterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2680,7 +2680,7 @@ export function awsBedrockagentcoreHarnessAgentcoreCodeInterpreterPropertyToHclT
 }
 
 
-export function awsBedrockagentcoreHarnessOauthPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.OauthProperty | cdktn.IResolvable): any {
+export function tfHarnessOauthPropertyToTerraform(struct?: TfHarness.OauthProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2695,7 +2695,7 @@ export function awsBedrockagentcoreHarnessOauthPropertyToTerraform(struct?: AwsB
 }
 
 
-export function awsBedrockagentcoreHarnessOauthPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.OauthProperty | cdktn.IResolvable): any {
+export function tfHarnessOauthPropertyToHclTerraform(struct?: TfHarness.OauthProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2738,7 +2738,7 @@ export function awsBedrockagentcoreHarnessOauthPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsBedrockagentcoreHarnessOutboundAuthPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.OutboundAuthProperty | cdktn.IResolvable): any {
+export function tfHarnessOutboundAuthPropertyToTerraform(struct?: TfHarness.OutboundAuthProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2746,12 +2746,12 @@ export function awsBedrockagentcoreHarnessOutboundAuthPropertyToTerraform(struct
   return {
     aws_iam: cdktn.booleanToTerraform(struct!.awsIam),
     none: cdktn.booleanToTerraform(struct!.none),
-    oauth: cdktn.listMapper(awsBedrockagentcoreHarnessOauthPropertyToTerraform, true)(struct!.oauth),
+    oauth: cdktn.listMapper(tfHarnessOauthPropertyToTerraform, true)(struct!.oauth),
   }
 }
 
 
-export function awsBedrockagentcoreHarnessOutboundAuthPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.OutboundAuthProperty | cdktn.IResolvable): any {
+export function tfHarnessOutboundAuthPropertyToHclTerraform(struct?: TfHarness.OutboundAuthProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2770,7 +2770,7 @@ export function awsBedrockagentcoreHarnessOutboundAuthPropertyToHclTerraform(str
       storageClassType: "boolean",
     },
     oauth: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessOauthPropertyToHclTerraform, true)(struct!.oauth),
+      value: cdktn.listMapperHcl(tfHarnessOauthPropertyToHclTerraform, true)(struct!.oauth),
       isBlock: true,
       type: "list",
       storageClassType: "OauthPropertyList",
@@ -2782,19 +2782,19 @@ export function awsBedrockagentcoreHarnessOutboundAuthPropertyToHclTerraform(str
 }
 
 
-export function awsBedrockagentcoreHarnessAgentcoreGatewayPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.AgentcoreGatewayProperty | cdktn.IResolvable): any {
+export function tfHarnessAgentcoreGatewayPropertyToTerraform(struct?: TfHarness.AgentcoreGatewayProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     gateway_arn: cdktn.stringToTerraform(struct!.gatewayArn),
-    outbound_auth: cdktn.listMapper(awsBedrockagentcoreHarnessOutboundAuthPropertyToTerraform, true)(struct!.outboundAuth),
+    outbound_auth: cdktn.listMapper(tfHarnessOutboundAuthPropertyToTerraform, true)(struct!.outboundAuth),
   }
 }
 
 
-export function awsBedrockagentcoreHarnessAgentcoreGatewayPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.AgentcoreGatewayProperty | cdktn.IResolvable): any {
+export function tfHarnessAgentcoreGatewayPropertyToHclTerraform(struct?: TfHarness.AgentcoreGatewayProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2807,7 +2807,7 @@ export function awsBedrockagentcoreHarnessAgentcoreGatewayPropertyToHclTerraform
       storageClassType: "string",
     },
     outbound_auth: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessOutboundAuthPropertyToHclTerraform, true)(struct!.outboundAuth),
+      value: cdktn.listMapperHcl(tfHarnessOutboundAuthPropertyToHclTerraform, true)(struct!.outboundAuth),
       isBlock: true,
       type: "list",
       storageClassType: "OutboundAuthPropertyList",
@@ -2819,7 +2819,7 @@ export function awsBedrockagentcoreHarnessAgentcoreGatewayPropertyToHclTerraform
 }
 
 
-export function awsBedrockagentcoreHarnessInlineFunctionPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.InlineFunctionProperty | cdktn.IResolvable): any {
+export function tfHarnessInlineFunctionPropertyToTerraform(struct?: TfHarness.InlineFunctionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2831,7 +2831,7 @@ export function awsBedrockagentcoreHarnessInlineFunctionPropertyToTerraform(stru
 }
 
 
-export function awsBedrockagentcoreHarnessInlineFunctionPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.InlineFunctionProperty | cdktn.IResolvable): any {
+export function tfHarnessInlineFunctionPropertyToHclTerraform(struct?: TfHarness.InlineFunctionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2856,7 +2856,7 @@ export function awsBedrockagentcoreHarnessInlineFunctionPropertyToHclTerraform(s
 }
 
 
-export function awsBedrockagentcoreHarnessRemoteMcpPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.RemoteMcpProperty | cdktn.IResolvable): any {
+export function tfHarnessRemoteMcpPropertyToTerraform(struct?: TfHarness.RemoteMcpProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2868,7 +2868,7 @@ export function awsBedrockagentcoreHarnessRemoteMcpPropertyToTerraform(struct?: 
 }
 
 
-export function awsBedrockagentcoreHarnessRemoteMcpPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.RemoteMcpProperty | cdktn.IResolvable): any {
+export function tfHarnessRemoteMcpPropertyToHclTerraform(struct?: TfHarness.RemoteMcpProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2893,53 +2893,53 @@ export function awsBedrockagentcoreHarnessRemoteMcpPropertyToHclTerraform(struct
 }
 
 
-export function awsBedrockagentcoreHarnessToolConfigPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.ToolConfigProperty | cdktn.IResolvable): any {
+export function tfHarnessToolConfigPropertyToTerraform(struct?: TfHarness.ToolConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    agentcore_browser: cdktn.listMapper(awsBedrockagentcoreHarnessAgentcoreBrowserPropertyToTerraform, true)(struct!.agentcoreBrowser),
-    agentcore_code_interpreter: cdktn.listMapper(awsBedrockagentcoreHarnessAgentcoreCodeInterpreterPropertyToTerraform, true)(struct!.agentcoreCodeInterpreter),
-    agentcore_gateway: cdktn.listMapper(awsBedrockagentcoreHarnessAgentcoreGatewayPropertyToTerraform, true)(struct!.agentcoreGateway),
-    inline_function: cdktn.listMapper(awsBedrockagentcoreHarnessInlineFunctionPropertyToTerraform, true)(struct!.inlineFunction),
-    remote_mcp: cdktn.listMapper(awsBedrockagentcoreHarnessRemoteMcpPropertyToTerraform, true)(struct!.remoteMcp),
+    agentcore_browser: cdktn.listMapper(tfHarnessAgentcoreBrowserPropertyToTerraform, true)(struct!.agentcoreBrowser),
+    agentcore_code_interpreter: cdktn.listMapper(tfHarnessAgentcoreCodeInterpreterPropertyToTerraform, true)(struct!.agentcoreCodeInterpreter),
+    agentcore_gateway: cdktn.listMapper(tfHarnessAgentcoreGatewayPropertyToTerraform, true)(struct!.agentcoreGateway),
+    inline_function: cdktn.listMapper(tfHarnessInlineFunctionPropertyToTerraform, true)(struct!.inlineFunction),
+    remote_mcp: cdktn.listMapper(tfHarnessRemoteMcpPropertyToTerraform, true)(struct!.remoteMcp),
   }
 }
 
 
-export function awsBedrockagentcoreHarnessToolConfigPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.ToolConfigProperty | cdktn.IResolvable): any {
+export function tfHarnessToolConfigPropertyToHclTerraform(struct?: TfHarness.ToolConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     agentcore_browser: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessAgentcoreBrowserPropertyToHclTerraform, true)(struct!.agentcoreBrowser),
+      value: cdktn.listMapperHcl(tfHarnessAgentcoreBrowserPropertyToHclTerraform, true)(struct!.agentcoreBrowser),
       isBlock: true,
       type: "list",
       storageClassType: "AgentcoreBrowserPropertyList",
     },
     agentcore_code_interpreter: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessAgentcoreCodeInterpreterPropertyToHclTerraform, true)(struct!.agentcoreCodeInterpreter),
+      value: cdktn.listMapperHcl(tfHarnessAgentcoreCodeInterpreterPropertyToHclTerraform, true)(struct!.agentcoreCodeInterpreter),
       isBlock: true,
       type: "list",
       storageClassType: "AgentcoreCodeInterpreterPropertyList",
     },
     agentcore_gateway: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessAgentcoreGatewayPropertyToHclTerraform, true)(struct!.agentcoreGateway),
+      value: cdktn.listMapperHcl(tfHarnessAgentcoreGatewayPropertyToHclTerraform, true)(struct!.agentcoreGateway),
       isBlock: true,
       type: "list",
       storageClassType: "AgentcoreGatewayPropertyList",
     },
     inline_function: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessInlineFunctionPropertyToHclTerraform, true)(struct!.inlineFunction),
+      value: cdktn.listMapperHcl(tfHarnessInlineFunctionPropertyToHclTerraform, true)(struct!.inlineFunction),
       isBlock: true,
       type: "list",
       storageClassType: "InlineFunctionPropertyList",
     },
     remote_mcp: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessRemoteMcpPropertyToHclTerraform, true)(struct!.remoteMcp),
+      value: cdktn.listMapperHcl(tfHarnessRemoteMcpPropertyToHclTerraform, true)(struct!.remoteMcp),
       isBlock: true,
       type: "list",
       storageClassType: "RemoteMcpPropertyList",
@@ -2951,7 +2951,7 @@ export function awsBedrockagentcoreHarnessToolConfigPropertyToHclTerraform(struc
 }
 
 
-export function awsBedrockagentcoreHarnessToolPropertyToTerraform(struct?: AwsBedrockagentcoreHarness.ToolProperty | cdktn.IResolvable): any {
+export function tfHarnessToolPropertyToTerraform(struct?: TfHarness.ToolProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2959,12 +2959,12 @@ export function awsBedrockagentcoreHarnessToolPropertyToTerraform(struct?: AwsBe
   return {
     name: cdktn.stringToTerraform(struct!.name),
     type: cdktn.stringToTerraform(struct!.type),
-    config: cdktn.listMapper(awsBedrockagentcoreHarnessToolConfigPropertyToTerraform, true)(struct!.config),
+    config: cdktn.listMapper(tfHarnessToolConfigPropertyToTerraform, true)(struct!.config),
   }
 }
 
 
-export function awsBedrockagentcoreHarnessToolPropertyToHclTerraform(struct?: AwsBedrockagentcoreHarness.ToolProperty | cdktn.IResolvable): any {
+export function tfHarnessToolPropertyToHclTerraform(struct?: TfHarness.ToolProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2983,7 +2983,7 @@ export function awsBedrockagentcoreHarnessToolPropertyToHclTerraform(struct?: Aw
       storageClassType: "string",
     },
     config: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreHarnessToolConfigPropertyToHclTerraform, true)(struct!.config),
+      value: cdktn.listMapperHcl(tfHarnessToolConfigPropertyToHclTerraform, true)(struct!.config),
       isBlock: true,
       type: "list",
       storageClassType: "ToolConfigPropertyList",
@@ -2995,7 +2995,7 @@ export function awsBedrockagentcoreHarnessToolPropertyToHclTerraform(struct?: Aw
 }
 
 
-export namespace AwsBedrockagentcoreHarness {
+export namespace TfHarness {
 export interface EnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationEfsAccessPointProperty {
 }
 export class EnvironmentActualAgentcoreRuntimeEnvironmentFilesystemConfigurationEfsAccessPointPropertyOutputReference extends cdktn.ComplexObject {
@@ -3881,7 +3881,7 @@ export class MemoryActualPropertyList extends cdktn.ComplexList {
 }
 export interface SlidingWindowProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#messages_count AwsBedrockagentcoreHarness#messages_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#messages_count TfHarness#messages_count}
   */
   readonly messagesCount?: number;
 }
@@ -3967,15 +3967,15 @@ export class SlidingWindowPropertyList extends cdktn.ComplexList {
 }
 export interface SummarizationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#preserve_recent_messages AwsBedrockagentcoreHarness#preserve_recent_messages}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#preserve_recent_messages TfHarness#preserve_recent_messages}
   */
   readonly preserveRecentMessages?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#summarization_system_prompt AwsBedrockagentcoreHarness#summarization_system_prompt}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#summarization_system_prompt TfHarness#summarization_system_prompt}
   */
   readonly summarizationSystemPrompt?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#summary_ratio AwsBedrockagentcoreHarness#summary_ratio}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#summary_ratio TfHarness#summary_ratio}
   */
   readonly summaryRatio?: number;
 }
@@ -4105,11 +4105,11 @@ export class SummarizationPropertyList extends cdktn.ComplexList {
 }
 export interface TruncationConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#sliding_window AwsBedrockagentcoreHarness#sliding_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#sliding_window TfHarness#sliding_window}
   */
   readonly slidingWindow?: SlidingWindowProperty[] | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#summarization AwsBedrockagentcoreHarness#summarization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#summarization TfHarness#summarization}
   */
   readonly summarization?: SummarizationProperty[] | cdktn.IResolvable;
 }
@@ -4217,11 +4217,11 @@ export class TruncationConfigPropertyList extends cdktn.ComplexList {
 }
 export interface TruncationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#config AwsBedrockagentcoreHarness#config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#config TfHarness#config}
   */
   readonly config?: TruncationConfigProperty[] | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#strategy AwsBedrockagentcoreHarness#strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#strategy TfHarness#strategy}
   */
   readonly strategy?: string;
 }
@@ -4329,7 +4329,7 @@ export class TruncationPropertyList extends cdktn.ComplexList {
 }
 export interface HostingEnvironmentProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#arn AwsBedrockagentcoreHarness#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#arn TfHarness#arn}
   */
   readonly arn: string;
 }
@@ -4412,13 +4412,13 @@ export class HostingEnvironmentPropertyList extends cdktn.ComplexList {
 }
 export interface AllowedWorkloadConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#workload_identities AwsBedrockagentcoreHarness#workload_identities}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#workload_identities TfHarness#workload_identities}
   */
   readonly workloadIdentities?: string[];
   /**
   * hosting_environment block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#hosting_environment AwsBedrockagentcoreHarness#hosting_environment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#hosting_environment TfHarness#hosting_environment}
   */
   readonly hostingEnvironment?: HostingEnvironmentProperty[] | cdktn.IResolvable;
 }
@@ -4526,11 +4526,11 @@ export class AllowedWorkloadConfigurationPropertyList extends cdktn.ComplexList 
 }
 export interface ClaimMatchValueProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#match_value_string AwsBedrockagentcoreHarness#match_value_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#match_value_string TfHarness#match_value_string}
   */
   readonly matchValueString?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#match_value_string_list AwsBedrockagentcoreHarness#match_value_string_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#match_value_string_list TfHarness#match_value_string_list}
   */
   readonly matchValueStringList?: string[];
 }
@@ -4638,13 +4638,13 @@ export class ClaimMatchValuePropertyList extends cdktn.ComplexList {
 }
 export interface AuthorizingClaimMatchValueProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#claim_match_operator AwsBedrockagentcoreHarness#claim_match_operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#claim_match_operator TfHarness#claim_match_operator}
   */
   readonly claimMatchOperator: string;
   /**
   * claim_match_value block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#claim_match_value AwsBedrockagentcoreHarness#claim_match_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#claim_match_value TfHarness#claim_match_value}
   */
   readonly claimMatchValue?: ClaimMatchValueProperty[] | cdktn.IResolvable;
 }
@@ -4749,17 +4749,17 @@ export class AuthorizingClaimMatchValuePropertyList extends cdktn.ComplexList {
 }
 export interface CustomClaimProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#inbound_token_claim_name AwsBedrockagentcoreHarness#inbound_token_claim_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#inbound_token_claim_name TfHarness#inbound_token_claim_name}
   */
   readonly inboundTokenClaimName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#inbound_token_claim_value_type AwsBedrockagentcoreHarness#inbound_token_claim_value_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#inbound_token_claim_value_type TfHarness#inbound_token_claim_value_type}
   */
   readonly inboundTokenClaimValueType: string;
   /**
   * authorizing_claim_match_value block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#authorizing_claim_match_value AwsBedrockagentcoreHarness#authorizing_claim_match_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#authorizing_claim_match_value TfHarness#authorizing_claim_match_value}
   */
   readonly authorizingClaimMatchValue?: AuthorizingClaimMatchValueProperty[] | cdktn.IResolvable;
 }
@@ -4883,27 +4883,27 @@ export class CustomClaimPropertyList extends cdktn.ComplexList {
 }
 export interface AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#endpoint_ip_address_type AwsBedrockagentcoreHarness#endpoint_ip_address_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#endpoint_ip_address_type TfHarness#endpoint_ip_address_type}
   */
   readonly endpointIpAddressType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#routing_domain AwsBedrockagentcoreHarness#routing_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#routing_domain TfHarness#routing_domain}
   */
   readonly routingDomain?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#security_group_ids AwsBedrockagentcoreHarness#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#security_group_ids TfHarness#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#subnet_ids AwsBedrockagentcoreHarness#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#subnet_ids TfHarness#subnet_ids}
   */
   readonly subnetIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#tags AwsBedrockagentcoreHarness#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#tags TfHarness#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#vpc_identifier AwsBedrockagentcoreHarness#vpc_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#vpc_identifier TfHarness#vpc_identifier}
   */
   readonly vpcIdentifier: string;
 }
@@ -5090,7 +5090,7 @@ export class AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpc
 }
 export interface AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#resource_configuration_identifier AwsBedrockagentcoreHarness#resource_configuration_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#resource_configuration_identifier TfHarness#resource_configuration_identifier}
   */
   readonly resourceConfigurationIdentifier: string;
 }
@@ -5175,13 +5175,13 @@ export interface AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointProper
   /**
   * managed_vpc_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#managed_vpc_resource AwsBedrockagentcoreHarness#managed_vpc_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#managed_vpc_resource TfHarness#managed_vpc_resource}
   */
   readonly managedVpcResource?: AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourceProperty[] | cdktn.IResolvable;
   /**
   * self_managed_lattice_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#self_managed_lattice_resource AwsBedrockagentcoreHarness#self_managed_lattice_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#self_managed_lattice_resource TfHarness#self_managed_lattice_resource}
   */
   readonly selfManagedLatticeResource?: AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourceProperty[] | cdktn.IResolvable;
 }
@@ -5289,27 +5289,27 @@ export class AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointPropertyLi
 }
 export interface AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#endpoint_ip_address_type AwsBedrockagentcoreHarness#endpoint_ip_address_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#endpoint_ip_address_type TfHarness#endpoint_ip_address_type}
   */
   readonly endpointIpAddressType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#routing_domain AwsBedrockagentcoreHarness#routing_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#routing_domain TfHarness#routing_domain}
   */
   readonly routingDomain?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#security_group_ids AwsBedrockagentcoreHarness#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#security_group_ids TfHarness#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#subnet_ids AwsBedrockagentcoreHarness#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#subnet_ids TfHarness#subnet_ids}
   */
   readonly subnetIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#tags AwsBedrockagentcoreHarness#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#tags TfHarness#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#vpc_identifier AwsBedrockagentcoreHarness#vpc_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#vpc_identifier TfHarness#vpc_identifier}
   */
   readonly vpcIdentifier: string;
 }
@@ -5496,7 +5496,7 @@ export class AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesP
 }
 export interface AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#resource_configuration_identifier AwsBedrockagentcoreHarness#resource_configuration_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#resource_configuration_identifier TfHarness#resource_configuration_identifier}
   */
   readonly resourceConfigurationIdentifier: string;
 }
@@ -5581,13 +5581,13 @@ export interface AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverri
   /**
   * managed_vpc_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#managed_vpc_resource AwsBedrockagentcoreHarness#managed_vpc_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#managed_vpc_resource TfHarness#managed_vpc_resource}
   */
   readonly managedVpcResource?: AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourceProperty[] | cdktn.IResolvable;
   /**
   * self_managed_lattice_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#self_managed_lattice_resource AwsBedrockagentcoreHarness#self_managed_lattice_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#self_managed_lattice_resource TfHarness#self_managed_lattice_resource}
   */
   readonly selfManagedLatticeResource?: AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourceProperty[] | cdktn.IResolvable;
 }
@@ -5695,13 +5695,13 @@ export class AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesP
 }
 export interface PrivateEndpointOverridesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#domain AwsBedrockagentcoreHarness#domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#domain TfHarness#domain}
   */
   readonly domain: string;
   /**
   * private_endpoint block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#private_endpoint AwsBedrockagentcoreHarness#private_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#private_endpoint TfHarness#private_endpoint}
   */
   readonly privateEndpoint?: AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointProperty[] | cdktn.IResolvable;
 }
@@ -5806,43 +5806,43 @@ export class PrivateEndpointOverridesPropertyList extends cdktn.ComplexList {
 }
 export interface CustomJwtAuthorizerProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#allowed_audience AwsBedrockagentcoreHarness#allowed_audience}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#allowed_audience TfHarness#allowed_audience}
   */
   readonly allowedAudience?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#allowed_clients AwsBedrockagentcoreHarness#allowed_clients}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#allowed_clients TfHarness#allowed_clients}
   */
   readonly allowedClients?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#allowed_scopes AwsBedrockagentcoreHarness#allowed_scopes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#allowed_scopes TfHarness#allowed_scopes}
   */
   readonly allowedScopes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#discovery_url AwsBedrockagentcoreHarness#discovery_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#discovery_url TfHarness#discovery_url}
   */
   readonly discoveryUrl: string;
   /**
   * allowed_workload_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#allowed_workload_configuration AwsBedrockagentcoreHarness#allowed_workload_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#allowed_workload_configuration TfHarness#allowed_workload_configuration}
   */
   readonly allowedWorkloadConfiguration?: AllowedWorkloadConfigurationProperty[] | cdktn.IResolvable;
   /**
   * custom_claim block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#custom_claim AwsBedrockagentcoreHarness#custom_claim}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#custom_claim TfHarness#custom_claim}
   */
   readonly customClaim?: CustomClaimProperty[] | cdktn.IResolvable;
   /**
   * private_endpoint block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#private_endpoint AwsBedrockagentcoreHarness#private_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#private_endpoint TfHarness#private_endpoint}
   */
   readonly privateEndpoint?: AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointProperty[] | cdktn.IResolvable;
   /**
   * private_endpoint_overrides block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#private_endpoint_overrides AwsBedrockagentcoreHarness#private_endpoint_overrides}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#private_endpoint_overrides TfHarness#private_endpoint_overrides}
   */
   readonly privateEndpointOverrides?: PrivateEndpointOverridesProperty[] | cdktn.IResolvable;
 }
@@ -6081,7 +6081,7 @@ export interface AuthorizerConfigurationProperty {
   /**
   * custom_jwt_authorizer block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#custom_jwt_authorizer AwsBedrockagentcoreHarness#custom_jwt_authorizer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#custom_jwt_authorizer TfHarness#custom_jwt_authorizer}
   */
   readonly customJwtAuthorizer?: CustomJwtAuthorizerProperty[] | cdktn.IResolvable;
 }
@@ -6167,11 +6167,11 @@ export class AuthorizerConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface EnvironmentAgentcoreRuntimeEnvironmentLifecycleConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#idle_runtime_session_timeout AwsBedrockagentcoreHarness#idle_runtime_session_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#idle_runtime_session_timeout TfHarness#idle_runtime_session_timeout}
   */
   readonly idleRuntimeSessionTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#max_lifetime AwsBedrockagentcoreHarness#max_lifetime}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#max_lifetime TfHarness#max_lifetime}
   */
   readonly maxLifetime?: number;
 }
@@ -6279,11 +6279,11 @@ export class EnvironmentAgentcoreRuntimeEnvironmentLifecycleConfigurationPropert
 }
 export interface EnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationEfsAccessPointProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#access_point_arn AwsBedrockagentcoreHarness#access_point_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#access_point_arn TfHarness#access_point_arn}
   */
   readonly accessPointArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#mount_path AwsBedrockagentcoreHarness#mount_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#mount_path TfHarness#mount_path}
   */
   readonly mountPath: string;
 }
@@ -6385,11 +6385,11 @@ export class EnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationEfsAcc
 }
 export interface EnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationS3FilesAccessPointProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#access_point_arn AwsBedrockagentcoreHarness#access_point_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#access_point_arn TfHarness#access_point_arn}
   */
   readonly accessPointArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#mount_path AwsBedrockagentcoreHarness#mount_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#mount_path TfHarness#mount_path}
   */
   readonly mountPath: string;
 }
@@ -6491,7 +6491,7 @@ export class EnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationS3File
 }
 export interface EnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationSessionStorageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#mount_path AwsBedrockagentcoreHarness#mount_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#mount_path TfHarness#mount_path}
   */
   readonly mountPath: string;
 }
@@ -6576,19 +6576,19 @@ export interface EnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationPr
   /**
   * efs_access_point block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#efs_access_point AwsBedrockagentcoreHarness#efs_access_point}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#efs_access_point TfHarness#efs_access_point}
   */
   readonly efsAccessPoint?: EnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationEfsAccessPointProperty[] | cdktn.IResolvable;
   /**
   * s3_files_access_point block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#s3_files_access_point AwsBedrockagentcoreHarness#s3_files_access_point}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#s3_files_access_point TfHarness#s3_files_access_point}
   */
   readonly s3FilesAccessPoint?: EnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationS3FilesAccessPointProperty[] | cdktn.IResolvable;
   /**
   * session_storage block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#session_storage AwsBedrockagentcoreHarness#session_storage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#session_storage TfHarness#session_storage}
   */
   readonly sessionStorage?: EnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationSessionStorageProperty[] | cdktn.IResolvable;
 }
@@ -6718,11 +6718,11 @@ export class EnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationProper
 }
 export interface EnvironmentAgentcoreRuntimeEnvironmentNetworkConfigurationNetworkModeConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#security_groups AwsBedrockagentcoreHarness#security_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#security_groups TfHarness#security_groups}
   */
   readonly securityGroups: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#subnets AwsBedrockagentcoreHarness#subnets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#subnets TfHarness#subnets}
   */
   readonly subnets: string[];
 }
@@ -6829,13 +6829,13 @@ export class EnvironmentAgentcoreRuntimeEnvironmentNetworkConfigurationNetworkMo
 }
 export interface EnvironmentAgentcoreRuntimeEnvironmentNetworkConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#network_mode AwsBedrockagentcoreHarness#network_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#network_mode TfHarness#network_mode}
   */
   readonly networkMode: string;
   /**
   * network_mode_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#network_mode_config AwsBedrockagentcoreHarness#network_mode_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#network_mode_config TfHarness#network_mode_config}
   */
   readonly networkModeConfig?: EnvironmentAgentcoreRuntimeEnvironmentNetworkConfigurationNetworkModeConfigProperty[] | cdktn.IResolvable;
 }
@@ -6940,19 +6940,19 @@ export class EnvironmentAgentcoreRuntimeEnvironmentNetworkConfigurationPropertyL
 }
 export interface EnvironmentAgentcoreRuntimeEnvironmentProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#lifecycle_configuration AwsBedrockagentcoreHarness#lifecycle_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#lifecycle_configuration TfHarness#lifecycle_configuration}
   */
   readonly lifecycleConfiguration?: EnvironmentAgentcoreRuntimeEnvironmentLifecycleConfigurationProperty[] | cdktn.IResolvable;
   /**
   * filesystem_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#filesystem_configuration AwsBedrockagentcoreHarness#filesystem_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#filesystem_configuration TfHarness#filesystem_configuration}
   */
   readonly filesystemConfiguration?: EnvironmentAgentcoreRuntimeEnvironmentFilesystemConfigurationProperty[] | cdktn.IResolvable;
   /**
   * network_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#network_configuration AwsBedrockagentcoreHarness#network_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#network_configuration TfHarness#network_configuration}
   */
   readonly networkConfiguration?: EnvironmentAgentcoreRuntimeEnvironmentNetworkConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -7099,7 +7099,7 @@ export interface EnvironmentProperty {
   /**
   * agentcore_runtime_environment block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#agentcore_runtime_environment AwsBedrockagentcoreHarness#agentcore_runtime_environment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#agentcore_runtime_environment TfHarness#agentcore_runtime_environment}
   */
   readonly agentcoreRuntimeEnvironment?: EnvironmentAgentcoreRuntimeEnvironmentProperty[] | cdktn.IResolvable;
 }
@@ -7185,7 +7185,7 @@ export class EnvironmentPropertyList extends cdktn.ComplexList {
 }
 export interface ContainerConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#container_uri AwsBedrockagentcoreHarness#container_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#container_uri TfHarness#container_uri}
   */
   readonly containerUri: string;
 }
@@ -7270,7 +7270,7 @@ export interface EnvironmentArtifactProperty {
   /**
   * container_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#container_configuration AwsBedrockagentcoreHarness#container_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#container_configuration TfHarness#container_configuration}
   */
   readonly containerConfiguration?: ContainerConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -7356,19 +7356,19 @@ export class EnvironmentArtifactPropertyList extends cdktn.ComplexList {
 }
 export interface MemoryAgentcoreMemoryConfigurationRetrievalConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#map_block_key AwsBedrockagentcoreHarness#map_block_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#map_block_key TfHarness#map_block_key}
   */
   readonly mapBlockKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#relevance_score AwsBedrockagentcoreHarness#relevance_score}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#relevance_score TfHarness#relevance_score}
   */
   readonly relevanceScore?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#strategy_id AwsBedrockagentcoreHarness#strategy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#strategy_id TfHarness#strategy_id}
   */
   readonly strategyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#top_k AwsBedrockagentcoreHarness#top_k}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#top_k TfHarness#top_k}
   */
   readonly topK?: number;
 }
@@ -7517,21 +7517,21 @@ export class MemoryAgentcoreMemoryConfigurationRetrievalConfigPropertyList exten
 }
 export interface MemoryAgentcoreMemoryConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#actor_id AwsBedrockagentcoreHarness#actor_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#actor_id TfHarness#actor_id}
   */
   readonly actorId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#arn AwsBedrockagentcoreHarness#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#arn TfHarness#arn}
   */
   readonly arn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#messages_count AwsBedrockagentcoreHarness#messages_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#messages_count TfHarness#messages_count}
   */
   readonly messagesCount?: number;
   /**
   * retrieval_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#retrieval_config AwsBedrockagentcoreHarness#retrieval_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#retrieval_config TfHarness#retrieval_config}
   */
   readonly retrievalConfig?: MemoryAgentcoreMemoryConfigurationRetrievalConfigProperty[] | cdktn.IResolvable;
 }
@@ -7740,15 +7740,15 @@ export class MemoryDisabledPropertyList extends cdktn.ComplexList {
 }
 export interface MemoryManagedMemoryConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#encryption_key_arn AwsBedrockagentcoreHarness#encryption_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#encryption_key_arn TfHarness#encryption_key_arn}
   */
   readonly encryptionKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#event_expiry_duration AwsBedrockagentcoreHarness#event_expiry_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#event_expiry_duration TfHarness#event_expiry_duration}
   */
   readonly eventExpiryDuration?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#strategies AwsBedrockagentcoreHarness#strategies}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#strategies TfHarness#strategies}
   */
   readonly strategies?: string[];
 }
@@ -7885,19 +7885,19 @@ export interface MemoryProperty {
   /**
   * agentcore_memory_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#agentcore_memory_configuration AwsBedrockagentcoreHarness#agentcore_memory_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#agentcore_memory_configuration TfHarness#agentcore_memory_configuration}
   */
   readonly agentcoreMemoryConfiguration?: MemoryAgentcoreMemoryConfigurationProperty[] | cdktn.IResolvable;
   /**
   * disabled block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#disabled AwsBedrockagentcoreHarness#disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#disabled TfHarness#disabled}
   */
   readonly disabled?: MemoryDisabledProperty[] | cdktn.IResolvable;
   /**
   * managed_memory_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#managed_memory_configuration AwsBedrockagentcoreHarness#managed_memory_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#managed_memory_configuration TfHarness#managed_memory_configuration}
   */
   readonly managedMemoryConfiguration?: MemoryManagedMemoryConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -8027,19 +8027,19 @@ export class MemoryPropertyList extends cdktn.ComplexList {
 }
 export interface BedrockModelConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#max_tokens AwsBedrockagentcoreHarness#max_tokens}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#max_tokens TfHarness#max_tokens}
   */
   readonly maxTokens?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#model_id AwsBedrockagentcoreHarness#model_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#model_id TfHarness#model_id}
   */
   readonly modelId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#temperature AwsBedrockagentcoreHarness#temperature}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#temperature TfHarness#temperature}
   */
   readonly temperature?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#top_p AwsBedrockagentcoreHarness#top_p}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#top_p TfHarness#top_p}
   */
   readonly topP?: number;
 }
@@ -8188,27 +8188,27 @@ export class BedrockModelConfigPropertyList extends cdktn.ComplexList {
 }
 export interface GeminiModelConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#api_key_arn AwsBedrockagentcoreHarness#api_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#api_key_arn TfHarness#api_key_arn}
   */
   readonly apiKeyArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#max_tokens AwsBedrockagentcoreHarness#max_tokens}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#max_tokens TfHarness#max_tokens}
   */
   readonly maxTokens?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#model_id AwsBedrockagentcoreHarness#model_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#model_id TfHarness#model_id}
   */
   readonly modelId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#temperature AwsBedrockagentcoreHarness#temperature}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#temperature TfHarness#temperature}
   */
   readonly temperature?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#top_k AwsBedrockagentcoreHarness#top_k}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#top_k TfHarness#top_k}
   */
   readonly topK?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#top_p AwsBedrockagentcoreHarness#top_p}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#top_p TfHarness#top_p}
   */
   readonly topP?: number;
 }
@@ -8398,23 +8398,23 @@ export class GeminiModelConfigPropertyList extends cdktn.ComplexList {
 }
 export interface OpenaiModelConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#api_key_arn AwsBedrockagentcoreHarness#api_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#api_key_arn TfHarness#api_key_arn}
   */
   readonly apiKeyArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#max_tokens AwsBedrockagentcoreHarness#max_tokens}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#max_tokens TfHarness#max_tokens}
   */
   readonly maxTokens?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#model_id AwsBedrockagentcoreHarness#model_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#model_id TfHarness#model_id}
   */
   readonly modelId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#temperature AwsBedrockagentcoreHarness#temperature}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#temperature TfHarness#temperature}
   */
   readonly temperature?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#top_p AwsBedrockagentcoreHarness#top_p}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#top_p TfHarness#top_p}
   */
   readonly topP?: number;
 }
@@ -8584,19 +8584,19 @@ export interface ModelProperty {
   /**
   * bedrock_model_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#bedrock_model_config AwsBedrockagentcoreHarness#bedrock_model_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#bedrock_model_config TfHarness#bedrock_model_config}
   */
   readonly bedrockModelConfig?: BedrockModelConfigProperty[] | cdktn.IResolvable;
   /**
   * gemini_model_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#gemini_model_config AwsBedrockagentcoreHarness#gemini_model_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#gemini_model_config TfHarness#gemini_model_config}
   */
   readonly geminiModelConfig?: GeminiModelConfigProperty[] | cdktn.IResolvable;
   /**
   * openai_model_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#openai_model_config AwsBedrockagentcoreHarness#openai_model_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#openai_model_config TfHarness#openai_model_config}
   */
   readonly openaiModelConfig?: OpenaiModelConfigProperty[] | cdktn.IResolvable;
 }
@@ -8726,7 +8726,7 @@ export class ModelPropertyList extends cdktn.ComplexList {
 }
 export interface SkillProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#path AwsBedrockagentcoreHarness#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#path TfHarness#path}
   */
   readonly path: string;
 }
@@ -8809,7 +8809,7 @@ export class SkillPropertyList extends cdktn.ComplexList {
 }
 export interface SystemPromptProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#text AwsBedrockagentcoreHarness#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#text TfHarness#text}
   */
   readonly text: string;
 }
@@ -8894,19 +8894,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#create AwsBedrockagentcoreHarness#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#create TfHarness#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#delete AwsBedrockagentcoreHarness#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#delete TfHarness#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#update AwsBedrockagentcoreHarness#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#update TfHarness#update}
   */
   readonly update?: string;
 }
@@ -9014,7 +9014,7 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface AgentcoreBrowserProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#browser_arn AwsBedrockagentcoreHarness#browser_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#browser_arn TfHarness#browser_arn}
   */
   readonly browserArn?: string;
 }
@@ -9100,7 +9100,7 @@ export class AgentcoreBrowserPropertyList extends cdktn.ComplexList {
 }
 export interface AgentcoreCodeInterpreterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#code_interpreter_arn AwsBedrockagentcoreHarness#code_interpreter_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#code_interpreter_arn TfHarness#code_interpreter_arn}
   */
   readonly codeInterpreterArn?: string;
 }
@@ -9186,23 +9186,23 @@ export class AgentcoreCodeInterpreterPropertyList extends cdktn.ComplexList {
 }
 export interface OauthProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#custom_parameters AwsBedrockagentcoreHarness#custom_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#custom_parameters TfHarness#custom_parameters}
   */
   readonly customParameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#default_return_url AwsBedrockagentcoreHarness#default_return_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#default_return_url TfHarness#default_return_url}
   */
   readonly defaultReturnUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#grant_type AwsBedrockagentcoreHarness#grant_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#grant_type TfHarness#grant_type}
   */
   readonly grantType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#provider_arn AwsBedrockagentcoreHarness#provider_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#provider_arn TfHarness#provider_arn}
   */
   readonly providerArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#scopes AwsBedrockagentcoreHarness#scopes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#scopes TfHarness#scopes}
   */
   readonly scopes: string[];
 }
@@ -9370,17 +9370,17 @@ export class OauthPropertyList extends cdktn.ComplexList {
 }
 export interface OutboundAuthProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#aws_iam AwsBedrockagentcoreHarness#aws_iam}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#aws_iam TfHarness#aws_iam}
   */
   readonly awsIam?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#none AwsBedrockagentcoreHarness#none}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#none TfHarness#none}
   */
   readonly none?: boolean | cdktn.IResolvable;
   /**
   * oauth block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#oauth AwsBedrockagentcoreHarness#oauth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#oauth TfHarness#oauth}
   */
   readonly oauth?: OauthProperty[] | cdktn.IResolvable;
 }
@@ -9510,13 +9510,13 @@ export class OutboundAuthPropertyList extends cdktn.ComplexList {
 }
 export interface AgentcoreGatewayProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#gateway_arn AwsBedrockagentcoreHarness#gateway_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#gateway_arn TfHarness#gateway_arn}
   */
   readonly gatewayArn: string;
   /**
   * outbound_auth block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#outbound_auth AwsBedrockagentcoreHarness#outbound_auth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#outbound_auth TfHarness#outbound_auth}
   */
   readonly outboundAuth?: OutboundAuthProperty[] | cdktn.IResolvable;
 }
@@ -9621,11 +9621,11 @@ export class AgentcoreGatewayPropertyList extends cdktn.ComplexList {
 }
 export interface InlineFunctionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#description AwsBedrockagentcoreHarness#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#description TfHarness#description}
   */
   readonly description: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#input_schema AwsBedrockagentcoreHarness#input_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#input_schema TfHarness#input_schema}
   */
   readonly inputSchema: string;
 }
@@ -9727,11 +9727,11 @@ export class InlineFunctionPropertyList extends cdktn.ComplexList {
 }
 export interface RemoteMcpProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#headers AwsBedrockagentcoreHarness#headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#headers TfHarness#headers}
   */
   readonly headers?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#url AwsBedrockagentcoreHarness#url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#url TfHarness#url}
   */
   readonly url: string;
 }
@@ -9838,31 +9838,31 @@ export interface ToolConfigProperty {
   /**
   * agentcore_browser block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#agentcore_browser AwsBedrockagentcoreHarness#agentcore_browser}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#agentcore_browser TfHarness#agentcore_browser}
   */
   readonly agentcoreBrowser?: AgentcoreBrowserProperty[] | cdktn.IResolvable;
   /**
   * agentcore_code_interpreter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#agentcore_code_interpreter AwsBedrockagentcoreHarness#agentcore_code_interpreter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#agentcore_code_interpreter TfHarness#agentcore_code_interpreter}
   */
   readonly agentcoreCodeInterpreter?: AgentcoreCodeInterpreterProperty[] | cdktn.IResolvable;
   /**
   * agentcore_gateway block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#agentcore_gateway AwsBedrockagentcoreHarness#agentcore_gateway}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#agentcore_gateway TfHarness#agentcore_gateway}
   */
   readonly agentcoreGateway?: AgentcoreGatewayProperty[] | cdktn.IResolvable;
   /**
   * inline_function block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#inline_function AwsBedrockagentcoreHarness#inline_function}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#inline_function TfHarness#inline_function}
   */
   readonly inlineFunction?: InlineFunctionProperty[] | cdktn.IResolvable;
   /**
   * remote_mcp block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#remote_mcp AwsBedrockagentcoreHarness#remote_mcp}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#remote_mcp TfHarness#remote_mcp}
   */
   readonly remoteMcp?: RemoteMcpProperty[] | cdktn.IResolvable;
 }
@@ -10036,17 +10036,17 @@ export class ToolConfigPropertyList extends cdktn.ComplexList {
 }
 export interface ToolProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#name AwsBedrockagentcoreHarness#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#name TfHarness#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#type AwsBedrockagentcoreHarness#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#type TfHarness#type}
   */
   readonly type: string;
   /**
   * config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#config AwsBedrockagentcoreHarness#config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_harness#config TfHarness#config}
   */
   readonly config?: ToolConfigProperty[] | cdktn.IResolvable;
 }

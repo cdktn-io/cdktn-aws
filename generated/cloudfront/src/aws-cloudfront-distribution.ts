@@ -5,146 +5,146 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCloudfrontDistributionConfig extends cdktn.TerraformMetaArguments {
+export interface TfDistributionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#aliases AwsCloudfrontDistribution#aliases}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#aliases TfDistribution#aliases}
   */
   readonly aliases?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#anycast_ip_list_id AwsCloudfrontDistribution#anycast_ip_list_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#anycast_ip_list_id TfDistribution#anycast_ip_list_id}
   */
   readonly anycastIpListId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#comment AwsCloudfrontDistribution#comment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#comment TfDistribution#comment}
   */
   readonly comment?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#continuous_deployment_policy_id AwsCloudfrontDistribution#continuous_deployment_policy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#continuous_deployment_policy_id TfDistribution#continuous_deployment_policy_id}
   */
   readonly continuousDeploymentPolicyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#default_root_object AwsCloudfrontDistribution#default_root_object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#default_root_object TfDistribution#default_root_object}
   */
   readonly defaultRootObject?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#enabled AwsCloudfrontDistribution#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#enabled TfDistribution#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#http_version AwsCloudfrontDistribution#http_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#http_version TfDistribution#http_version}
   */
   readonly httpVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#id AwsCloudfrontDistribution#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#id TfDistribution#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#is_ipv6_enabled AwsCloudfrontDistribution#is_ipv6_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#is_ipv6_enabled TfDistribution#is_ipv6_enabled}
   */
   readonly isIpv6Enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#price_class AwsCloudfrontDistribution#price_class}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#price_class TfDistribution#price_class}
   */
   readonly priceClass?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#retain_on_delete AwsCloudfrontDistribution#retain_on_delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#retain_on_delete TfDistribution#retain_on_delete}
   */
   readonly retainOnDelete?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#staging AwsCloudfrontDistribution#staging}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#staging TfDistribution#staging}
   */
   readonly staging?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#tags AwsCloudfrontDistribution#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#tags TfDistribution#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#tags_all AwsCloudfrontDistribution#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#tags_all TfDistribution#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#wait_for_deployment AwsCloudfrontDistribution#wait_for_deployment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#wait_for_deployment TfDistribution#wait_for_deployment}
   */
   readonly waitForDeployment?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#web_acl_id AwsCloudfrontDistribution#web_acl_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#web_acl_id TfDistribution#web_acl_id}
   */
   readonly webAclId?: string;
   /**
   * cache_tag_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#cache_tag_config AwsCloudfrontDistribution#cache_tag_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#cache_tag_config TfDistribution#cache_tag_config}
   */
-  readonly cacheTagConfig?: AwsCloudfrontDistribution.CacheTagConfigProperty;
+  readonly cacheTagConfig?: TfDistribution.CacheTagConfigProperty;
   /**
   * connection_function_association block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#connection_function_association AwsCloudfrontDistribution#connection_function_association}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#connection_function_association TfDistribution#connection_function_association}
   */
-  readonly connectionFunctionAssociation?: AwsCloudfrontDistribution.ConnectionFunctionAssociationProperty;
+  readonly connectionFunctionAssociation?: TfDistribution.ConnectionFunctionAssociationProperty;
   /**
   * custom_error_response block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#custom_error_response AwsCloudfrontDistribution#custom_error_response}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#custom_error_response TfDistribution#custom_error_response}
   */
-  readonly customErrorResponse?: AwsCloudfrontDistribution.CustomErrorResponseProperty[] | cdktn.IResolvable;
+  readonly customErrorResponse?: TfDistribution.CustomErrorResponseProperty[] | cdktn.IResolvable;
   /**
   * default_cache_behavior block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#default_cache_behavior AwsCloudfrontDistribution#default_cache_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#default_cache_behavior TfDistribution#default_cache_behavior}
   */
-  readonly defaultCacheBehavior: AwsCloudfrontDistribution.DefaultCacheBehaviorProperty;
+  readonly defaultCacheBehavior: TfDistribution.DefaultCacheBehaviorProperty;
   /**
   * logging_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#logging_config AwsCloudfrontDistribution#logging_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#logging_config TfDistribution#logging_config}
   */
-  readonly loggingConfig?: AwsCloudfrontDistribution.LoggingConfigProperty;
+  readonly loggingConfig?: TfDistribution.LoggingConfigProperty;
   /**
   * ordered_cache_behavior block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#ordered_cache_behavior AwsCloudfrontDistribution#ordered_cache_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#ordered_cache_behavior TfDistribution#ordered_cache_behavior}
   */
-  readonly orderedCacheBehavior?: AwsCloudfrontDistribution.OrderedCacheBehaviorProperty[] | cdktn.IResolvable;
+  readonly orderedCacheBehavior?: TfDistribution.OrderedCacheBehaviorProperty[] | cdktn.IResolvable;
   /**
   * origin block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin AwsCloudfrontDistribution#origin}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin TfDistribution#origin}
   */
-  readonly origin: AwsCloudfrontDistribution.OriginProperty[] | cdktn.IResolvable;
+  readonly origin: TfDistribution.OriginProperty[] | cdktn.IResolvable;
   /**
   * origin_group block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_group AwsCloudfrontDistribution#origin_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_group TfDistribution#origin_group}
   */
-  readonly originGroup?: AwsCloudfrontDistribution.OriginGroupProperty[] | cdktn.IResolvable;
+  readonly originGroup?: TfDistribution.OriginGroupProperty[] | cdktn.IResolvable;
   /**
   * restrictions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#restrictions AwsCloudfrontDistribution#restrictions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#restrictions TfDistribution#restrictions}
   */
-  readonly restrictions: AwsCloudfrontDistribution.RestrictionsProperty;
+  readonly restrictions: TfDistribution.RestrictionsProperty;
   /**
   * viewer_certificate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#viewer_certificate AwsCloudfrontDistribution#viewer_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#viewer_certificate TfDistribution#viewer_certificate}
   */
-  readonly viewerCertificate: AwsCloudfrontDistribution.ViewerCertificateProperty;
+  readonly viewerCertificate: TfDistribution.ViewerCertificateProperty;
   /**
   * viewer_mtls_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#viewer_mtls_config AwsCloudfrontDistribution#viewer_mtls_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#viewer_mtls_config TfDistribution#viewer_mtls_config}
   */
-  readonly viewerMtlsConfig?: AwsCloudfrontDistribution.ViewerMtlsConfigProperty;
+  readonly viewerMtlsConfig?: TfDistribution.ViewerMtlsConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution aws_cloudfront_distribution}
 */
-export class AwsCloudfrontDistribution extends cdktn.TerraformResource {
+export class TfDistribution extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -155,11 +155,11 @@ export class AwsCloudfrontDistribution extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCloudfrontDistribution resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDistribution resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCloudfrontDistribution to import
-  * @param importFromId The id of the existing AwsCloudfrontDistribution that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCloudfrontDistribution to import is found
+  * @param importToId The construct id used in the generated config for the TfDistribution to import
+  * @param importFromId The id of the existing TfDistribution that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDistribution to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudfront_distribution", importId: importFromId, provider });
@@ -174,9 +174,9 @@ export class AwsCloudfrontDistribution extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCloudfrontDistributionConfig
+  * @param options TfDistributionConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCloudfrontDistributionConfig) {
+  public constructor(scope: Construct, id: string, config: TfDistributionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudfront_distribution',
       terraformGeneratorMetadata: {
@@ -492,13 +492,13 @@ export class AwsCloudfrontDistribution extends cdktn.TerraformResource {
   }
 
   // trusted_key_groups - computed: true, optional: false, required: false
-  private _trustedKeyGroups = new AwsCloudfrontDistribution.TrustedKeyGroupsPropertyList(this, "trusted_key_groups", false);
+  private _trustedKeyGroups = new TfDistribution.TrustedKeyGroupsPropertyList(this, "trusted_key_groups", false);
   public get trustedKeyGroups() {
     return this._trustedKeyGroups;
   }
 
   // trusted_signers - computed: true, optional: false, required: false
-  private _trustedSigners = new AwsCloudfrontDistribution.TrustedSignersPropertyList(this, "trusted_signers", false);
+  private _trustedSigners = new TfDistribution.TrustedSignersPropertyList(this, "trusted_signers", false);
   public get trustedSigners() {
     return this._trustedSigners;
   }
@@ -536,11 +536,11 @@ export class AwsCloudfrontDistribution extends cdktn.TerraformResource {
   }
 
   // cache_tag_config - computed: false, optional: true, required: false
-  private _cacheTagConfig = new AwsCloudfrontDistribution.CacheTagConfigPropertyOutputReference(this, "cache_tag_config");
+  private _cacheTagConfig = new TfDistribution.CacheTagConfigPropertyOutputReference(this, "cache_tag_config");
   public get cacheTagConfig() {
     return this._cacheTagConfig;
   }
-  public putCacheTagConfig(value: AwsCloudfrontDistribution.CacheTagConfigProperty) {
+  public putCacheTagConfig(value: TfDistribution.CacheTagConfigProperty) {
     this._cacheTagConfig.internalValue = value;
   }
   public resetCacheTagConfig() {
@@ -552,11 +552,11 @@ export class AwsCloudfrontDistribution extends cdktn.TerraformResource {
   }
 
   // connection_function_association - computed: false, optional: true, required: false
-  private _connectionFunctionAssociation = new AwsCloudfrontDistribution.ConnectionFunctionAssociationPropertyOutputReference(this, "connection_function_association");
+  private _connectionFunctionAssociation = new TfDistribution.ConnectionFunctionAssociationPropertyOutputReference(this, "connection_function_association");
   public get connectionFunctionAssociation() {
     return this._connectionFunctionAssociation;
   }
-  public putConnectionFunctionAssociation(value: AwsCloudfrontDistribution.ConnectionFunctionAssociationProperty) {
+  public putConnectionFunctionAssociation(value: TfDistribution.ConnectionFunctionAssociationProperty) {
     this._connectionFunctionAssociation.internalValue = value;
   }
   public resetConnectionFunctionAssociation() {
@@ -568,11 +568,11 @@ export class AwsCloudfrontDistribution extends cdktn.TerraformResource {
   }
 
   // custom_error_response - computed: false, optional: true, required: false
-  private _customErrorResponse = new AwsCloudfrontDistribution.CustomErrorResponsePropertyList(this, "custom_error_response", true);
+  private _customErrorResponse = new TfDistribution.CustomErrorResponsePropertyList(this, "custom_error_response", true);
   public get customErrorResponse() {
     return this._customErrorResponse;
   }
-  public putCustomErrorResponse(value: AwsCloudfrontDistribution.CustomErrorResponseProperty[] | cdktn.IResolvable) {
+  public putCustomErrorResponse(value: TfDistribution.CustomErrorResponseProperty[] | cdktn.IResolvable) {
     this._customErrorResponse.internalValue = value;
   }
   public resetCustomErrorResponse() {
@@ -584,11 +584,11 @@ export class AwsCloudfrontDistribution extends cdktn.TerraformResource {
   }
 
   // default_cache_behavior - computed: false, optional: false, required: true
-  private _defaultCacheBehavior = new AwsCloudfrontDistribution.DefaultCacheBehaviorPropertyOutputReference(this, "default_cache_behavior");
+  private _defaultCacheBehavior = new TfDistribution.DefaultCacheBehaviorPropertyOutputReference(this, "default_cache_behavior");
   public get defaultCacheBehavior() {
     return this._defaultCacheBehavior;
   }
-  public putDefaultCacheBehavior(value: AwsCloudfrontDistribution.DefaultCacheBehaviorProperty) {
+  public putDefaultCacheBehavior(value: TfDistribution.DefaultCacheBehaviorProperty) {
     this._defaultCacheBehavior.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -597,11 +597,11 @@ export class AwsCloudfrontDistribution extends cdktn.TerraformResource {
   }
 
   // logging_config - computed: false, optional: true, required: false
-  private _loggingConfig = new AwsCloudfrontDistribution.LoggingConfigPropertyOutputReference(this, "logging_config");
+  private _loggingConfig = new TfDistribution.LoggingConfigPropertyOutputReference(this, "logging_config");
   public get loggingConfig() {
     return this._loggingConfig;
   }
-  public putLoggingConfig(value: AwsCloudfrontDistribution.LoggingConfigProperty) {
+  public putLoggingConfig(value: TfDistribution.LoggingConfigProperty) {
     this._loggingConfig.internalValue = value;
   }
   public resetLoggingConfig() {
@@ -613,11 +613,11 @@ export class AwsCloudfrontDistribution extends cdktn.TerraformResource {
   }
 
   // ordered_cache_behavior - computed: false, optional: true, required: false
-  private _orderedCacheBehavior = new AwsCloudfrontDistribution.OrderedCacheBehaviorPropertyList(this, "ordered_cache_behavior", false);
+  private _orderedCacheBehavior = new TfDistribution.OrderedCacheBehaviorPropertyList(this, "ordered_cache_behavior", false);
   public get orderedCacheBehavior() {
     return this._orderedCacheBehavior;
   }
-  public putOrderedCacheBehavior(value: AwsCloudfrontDistribution.OrderedCacheBehaviorProperty[] | cdktn.IResolvable) {
+  public putOrderedCacheBehavior(value: TfDistribution.OrderedCacheBehaviorProperty[] | cdktn.IResolvable) {
     this._orderedCacheBehavior.internalValue = value;
   }
   public resetOrderedCacheBehavior() {
@@ -629,11 +629,11 @@ export class AwsCloudfrontDistribution extends cdktn.TerraformResource {
   }
 
   // origin - computed: false, optional: false, required: true
-  private _origin = new AwsCloudfrontDistribution.OriginPropertyList(this, "origin", true);
+  private _origin = new TfDistribution.OriginPropertyList(this, "origin", true);
   public get origin() {
     return this._origin;
   }
-  public putOrigin(value: AwsCloudfrontDistribution.OriginProperty[] | cdktn.IResolvable) {
+  public putOrigin(value: TfDistribution.OriginProperty[] | cdktn.IResolvable) {
     this._origin.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -642,11 +642,11 @@ export class AwsCloudfrontDistribution extends cdktn.TerraformResource {
   }
 
   // origin_group - computed: false, optional: true, required: false
-  private _originGroup = new AwsCloudfrontDistribution.OriginGroupPropertyList(this, "origin_group", true);
+  private _originGroup = new TfDistribution.OriginGroupPropertyList(this, "origin_group", true);
   public get originGroup() {
     return this._originGroup;
   }
-  public putOriginGroup(value: AwsCloudfrontDistribution.OriginGroupProperty[] | cdktn.IResolvable) {
+  public putOriginGroup(value: TfDistribution.OriginGroupProperty[] | cdktn.IResolvable) {
     this._originGroup.internalValue = value;
   }
   public resetOriginGroup() {
@@ -658,11 +658,11 @@ export class AwsCloudfrontDistribution extends cdktn.TerraformResource {
   }
 
   // restrictions - computed: false, optional: false, required: true
-  private _restrictions = new AwsCloudfrontDistribution.RestrictionsPropertyOutputReference(this, "restrictions");
+  private _restrictions = new TfDistribution.RestrictionsPropertyOutputReference(this, "restrictions");
   public get restrictions() {
     return this._restrictions;
   }
-  public putRestrictions(value: AwsCloudfrontDistribution.RestrictionsProperty) {
+  public putRestrictions(value: TfDistribution.RestrictionsProperty) {
     this._restrictions.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -671,11 +671,11 @@ export class AwsCloudfrontDistribution extends cdktn.TerraformResource {
   }
 
   // viewer_certificate - computed: false, optional: false, required: true
-  private _viewerCertificate = new AwsCloudfrontDistribution.ViewerCertificatePropertyOutputReference(this, "viewer_certificate");
+  private _viewerCertificate = new TfDistribution.ViewerCertificatePropertyOutputReference(this, "viewer_certificate");
   public get viewerCertificate() {
     return this._viewerCertificate;
   }
-  public putViewerCertificate(value: AwsCloudfrontDistribution.ViewerCertificateProperty) {
+  public putViewerCertificate(value: TfDistribution.ViewerCertificateProperty) {
     this._viewerCertificate.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -684,11 +684,11 @@ export class AwsCloudfrontDistribution extends cdktn.TerraformResource {
   }
 
   // viewer_mtls_config - computed: false, optional: true, required: false
-  private _viewerMtlsConfig = new AwsCloudfrontDistribution.ViewerMtlsConfigPropertyOutputReference(this, "viewer_mtls_config");
+  private _viewerMtlsConfig = new TfDistribution.ViewerMtlsConfigPropertyOutputReference(this, "viewer_mtls_config");
   public get viewerMtlsConfig() {
     return this._viewerMtlsConfig;
   }
-  public putViewerMtlsConfig(value: AwsCloudfrontDistribution.ViewerMtlsConfigProperty) {
+  public putViewerMtlsConfig(value: TfDistribution.ViewerMtlsConfigProperty) {
     this._viewerMtlsConfig.internalValue = value;
   }
   public resetViewerMtlsConfig() {
@@ -721,17 +721,17 @@ export class AwsCloudfrontDistribution extends cdktn.TerraformResource {
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       wait_for_deployment: cdktn.booleanToTerraform(this._waitForDeployment),
       web_acl_id: cdktn.stringToTerraform(this._webAclId),
-      cache_tag_config: awsCloudfrontDistributionCacheTagConfigPropertyToTerraform(this._cacheTagConfig.internalValue),
-      connection_function_association: awsCloudfrontDistributionConnectionFunctionAssociationPropertyToTerraform(this._connectionFunctionAssociation.internalValue),
-      custom_error_response: cdktn.listMapper(awsCloudfrontDistributionCustomErrorResponsePropertyToTerraform, true)(this._customErrorResponse.internalValue),
-      default_cache_behavior: awsCloudfrontDistributionDefaultCacheBehaviorPropertyToTerraform(this._defaultCacheBehavior.internalValue),
-      logging_config: awsCloudfrontDistributionLoggingConfigPropertyToTerraform(this._loggingConfig.internalValue),
-      ordered_cache_behavior: cdktn.listMapper(awsCloudfrontDistributionOrderedCacheBehaviorPropertyToTerraform, true)(this._orderedCacheBehavior.internalValue),
-      origin: cdktn.listMapper(awsCloudfrontDistributionOriginPropertyToTerraform, true)(this._origin.internalValue),
-      origin_group: cdktn.listMapper(awsCloudfrontDistributionOriginGroupPropertyToTerraform, true)(this._originGroup.internalValue),
-      restrictions: awsCloudfrontDistributionRestrictionsPropertyToTerraform(this._restrictions.internalValue),
-      viewer_certificate: awsCloudfrontDistributionViewerCertificatePropertyToTerraform(this._viewerCertificate.internalValue),
-      viewer_mtls_config: awsCloudfrontDistributionViewerMtlsConfigPropertyToTerraform(this._viewerMtlsConfig.internalValue),
+      cache_tag_config: tfDistributionCacheTagConfigPropertyToTerraform(this._cacheTagConfig.internalValue),
+      connection_function_association: tfDistributionConnectionFunctionAssociationPropertyToTerraform(this._connectionFunctionAssociation.internalValue),
+      custom_error_response: cdktn.listMapper(tfDistributionCustomErrorResponsePropertyToTerraform, true)(this._customErrorResponse.internalValue),
+      default_cache_behavior: tfDistributionDefaultCacheBehaviorPropertyToTerraform(this._defaultCacheBehavior.internalValue),
+      logging_config: tfDistributionLoggingConfigPropertyToTerraform(this._loggingConfig.internalValue),
+      ordered_cache_behavior: cdktn.listMapper(tfDistributionOrderedCacheBehaviorPropertyToTerraform, true)(this._orderedCacheBehavior.internalValue),
+      origin: cdktn.listMapper(tfDistributionOriginPropertyToTerraform, true)(this._origin.internalValue),
+      origin_group: cdktn.listMapper(tfDistributionOriginGroupPropertyToTerraform, true)(this._originGroup.internalValue),
+      restrictions: tfDistributionRestrictionsPropertyToTerraform(this._restrictions.internalValue),
+      viewer_certificate: tfDistributionViewerCertificatePropertyToTerraform(this._viewerCertificate.internalValue),
+      viewer_mtls_config: tfDistributionViewerMtlsConfigPropertyToTerraform(this._viewerMtlsConfig.internalValue),
     };
   }
 
@@ -834,70 +834,70 @@ export class AwsCloudfrontDistribution extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       cache_tag_config: {
-        value: awsCloudfrontDistributionCacheTagConfigPropertyToHclTerraform(this._cacheTagConfig.internalValue),
+        value: tfDistributionCacheTagConfigPropertyToHclTerraform(this._cacheTagConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudfrontDistribution.CacheTagConfigPropertyList",
+        storageClassType: "TfDistribution.CacheTagConfigPropertyList",
       },
       connection_function_association: {
-        value: awsCloudfrontDistributionConnectionFunctionAssociationPropertyToHclTerraform(this._connectionFunctionAssociation.internalValue),
+        value: tfDistributionConnectionFunctionAssociationPropertyToHclTerraform(this._connectionFunctionAssociation.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudfrontDistribution.ConnectionFunctionAssociationPropertyList",
+        storageClassType: "TfDistribution.ConnectionFunctionAssociationPropertyList",
       },
       custom_error_response: {
-        value: cdktn.listMapperHcl(awsCloudfrontDistributionCustomErrorResponsePropertyToHclTerraform, true)(this._customErrorResponse.internalValue),
+        value: cdktn.listMapperHcl(tfDistributionCustomErrorResponsePropertyToHclTerraform, true)(this._customErrorResponse.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsCloudfrontDistribution.CustomErrorResponsePropertyList",
+        storageClassType: "TfDistribution.CustomErrorResponsePropertyList",
       },
       default_cache_behavior: {
-        value: awsCloudfrontDistributionDefaultCacheBehaviorPropertyToHclTerraform(this._defaultCacheBehavior.internalValue),
+        value: tfDistributionDefaultCacheBehaviorPropertyToHclTerraform(this._defaultCacheBehavior.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudfrontDistribution.DefaultCacheBehaviorPropertyList",
+        storageClassType: "TfDistribution.DefaultCacheBehaviorPropertyList",
       },
       logging_config: {
-        value: awsCloudfrontDistributionLoggingConfigPropertyToHclTerraform(this._loggingConfig.internalValue),
+        value: tfDistributionLoggingConfigPropertyToHclTerraform(this._loggingConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudfrontDistribution.LoggingConfigPropertyList",
+        storageClassType: "TfDistribution.LoggingConfigPropertyList",
       },
       ordered_cache_behavior: {
-        value: cdktn.listMapperHcl(awsCloudfrontDistributionOrderedCacheBehaviorPropertyToHclTerraform, true)(this._orderedCacheBehavior.internalValue),
+        value: cdktn.listMapperHcl(tfDistributionOrderedCacheBehaviorPropertyToHclTerraform, true)(this._orderedCacheBehavior.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudfrontDistribution.OrderedCacheBehaviorPropertyList",
+        storageClassType: "TfDistribution.OrderedCacheBehaviorPropertyList",
       },
       origin: {
-        value: cdktn.listMapperHcl(awsCloudfrontDistributionOriginPropertyToHclTerraform, true)(this._origin.internalValue),
+        value: cdktn.listMapperHcl(tfDistributionOriginPropertyToHclTerraform, true)(this._origin.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsCloudfrontDistribution.OriginPropertyList",
+        storageClassType: "TfDistribution.OriginPropertyList",
       },
       origin_group: {
-        value: cdktn.listMapperHcl(awsCloudfrontDistributionOriginGroupPropertyToHclTerraform, true)(this._originGroup.internalValue),
+        value: cdktn.listMapperHcl(tfDistributionOriginGroupPropertyToHclTerraform, true)(this._originGroup.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsCloudfrontDistribution.OriginGroupPropertyList",
+        storageClassType: "TfDistribution.OriginGroupPropertyList",
       },
       restrictions: {
-        value: awsCloudfrontDistributionRestrictionsPropertyToHclTerraform(this._restrictions.internalValue),
+        value: tfDistributionRestrictionsPropertyToHclTerraform(this._restrictions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudfrontDistribution.RestrictionsPropertyList",
+        storageClassType: "TfDistribution.RestrictionsPropertyList",
       },
       viewer_certificate: {
-        value: awsCloudfrontDistributionViewerCertificatePropertyToHclTerraform(this._viewerCertificate.internalValue),
+        value: tfDistributionViewerCertificatePropertyToHclTerraform(this._viewerCertificate.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudfrontDistribution.ViewerCertificatePropertyList",
+        storageClassType: "TfDistribution.ViewerCertificatePropertyList",
       },
       viewer_mtls_config: {
-        value: awsCloudfrontDistributionViewerMtlsConfigPropertyToHclTerraform(this._viewerMtlsConfig.internalValue),
+        value: tfDistributionViewerMtlsConfigPropertyToHclTerraform(this._viewerMtlsConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudfrontDistribution.ViewerMtlsConfigPropertyList",
+        storageClassType: "TfDistribution.ViewerMtlsConfigPropertyList",
       },
     };
 
@@ -906,7 +906,7 @@ export class AwsCloudfrontDistribution extends cdktn.TerraformResource {
   }
 }
 
-export function awsCloudfrontDistributionTrustedKeyGroupsItemsPropertyToTerraform(struct?: AwsCloudfrontDistribution.TrustedKeyGroupsItemsProperty): any {
+export function tfDistributionTrustedKeyGroupsItemsPropertyToTerraform(struct?: TfDistribution.TrustedKeyGroupsItemsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -916,7 +916,7 @@ export function awsCloudfrontDistributionTrustedKeyGroupsItemsPropertyToTerrafor
 }
 
 
-export function awsCloudfrontDistributionTrustedKeyGroupsItemsPropertyToHclTerraform(struct?: AwsCloudfrontDistribution.TrustedKeyGroupsItemsProperty): any {
+export function tfDistributionTrustedKeyGroupsItemsPropertyToHclTerraform(struct?: TfDistribution.TrustedKeyGroupsItemsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -927,7 +927,7 @@ export function awsCloudfrontDistributionTrustedKeyGroupsItemsPropertyToHclTerra
 }
 
 
-export function awsCloudfrontDistributionTrustedKeyGroupsPropertyToTerraform(struct?: AwsCloudfrontDistribution.TrustedKeyGroupsProperty): any {
+export function tfDistributionTrustedKeyGroupsPropertyToTerraform(struct?: TfDistribution.TrustedKeyGroupsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -937,7 +937,7 @@ export function awsCloudfrontDistributionTrustedKeyGroupsPropertyToTerraform(str
 }
 
 
-export function awsCloudfrontDistributionTrustedKeyGroupsPropertyToHclTerraform(struct?: AwsCloudfrontDistribution.TrustedKeyGroupsProperty): any {
+export function tfDistributionTrustedKeyGroupsPropertyToHclTerraform(struct?: TfDistribution.TrustedKeyGroupsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -948,7 +948,7 @@ export function awsCloudfrontDistributionTrustedKeyGroupsPropertyToHclTerraform(
 }
 
 
-export function awsCloudfrontDistributionTrustedSignersItemsPropertyToTerraform(struct?: AwsCloudfrontDistribution.TrustedSignersItemsProperty): any {
+export function tfDistributionTrustedSignersItemsPropertyToTerraform(struct?: TfDistribution.TrustedSignersItemsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -958,7 +958,7 @@ export function awsCloudfrontDistributionTrustedSignersItemsPropertyToTerraform(
 }
 
 
-export function awsCloudfrontDistributionTrustedSignersItemsPropertyToHclTerraform(struct?: AwsCloudfrontDistribution.TrustedSignersItemsProperty): any {
+export function tfDistributionTrustedSignersItemsPropertyToHclTerraform(struct?: TfDistribution.TrustedSignersItemsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -969,7 +969,7 @@ export function awsCloudfrontDistributionTrustedSignersItemsPropertyToHclTerrafo
 }
 
 
-export function awsCloudfrontDistributionTrustedSignersPropertyToTerraform(struct?: AwsCloudfrontDistribution.TrustedSignersProperty): any {
+export function tfDistributionTrustedSignersPropertyToTerraform(struct?: TfDistribution.TrustedSignersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -979,7 +979,7 @@ export function awsCloudfrontDistributionTrustedSignersPropertyToTerraform(struc
 }
 
 
-export function awsCloudfrontDistributionTrustedSignersPropertyToHclTerraform(struct?: AwsCloudfrontDistribution.TrustedSignersProperty): any {
+export function tfDistributionTrustedSignersPropertyToHclTerraform(struct?: TfDistribution.TrustedSignersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -990,7 +990,7 @@ export function awsCloudfrontDistributionTrustedSignersPropertyToHclTerraform(st
 }
 
 
-export function awsCloudfrontDistributionCacheTagConfigPropertyToTerraform(struct?: AwsCloudfrontDistribution.CacheTagConfigPropertyOutputReference | AwsCloudfrontDistribution.CacheTagConfigProperty): any {
+export function tfDistributionCacheTagConfigPropertyToTerraform(struct?: TfDistribution.CacheTagConfigPropertyOutputReference | TfDistribution.CacheTagConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1001,7 +1001,7 @@ export function awsCloudfrontDistributionCacheTagConfigPropertyToTerraform(struc
 }
 
 
-export function awsCloudfrontDistributionCacheTagConfigPropertyToHclTerraform(struct?: AwsCloudfrontDistribution.CacheTagConfigPropertyOutputReference | AwsCloudfrontDistribution.CacheTagConfigProperty): any {
+export function tfDistributionCacheTagConfigPropertyToHclTerraform(struct?: TfDistribution.CacheTagConfigPropertyOutputReference | TfDistribution.CacheTagConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1020,7 +1020,7 @@ export function awsCloudfrontDistributionCacheTagConfigPropertyToHclTerraform(st
 }
 
 
-export function awsCloudfrontDistributionConnectionFunctionAssociationPropertyToTerraform(struct?: AwsCloudfrontDistribution.ConnectionFunctionAssociationPropertyOutputReference | AwsCloudfrontDistribution.ConnectionFunctionAssociationProperty): any {
+export function tfDistributionConnectionFunctionAssociationPropertyToTerraform(struct?: TfDistribution.ConnectionFunctionAssociationPropertyOutputReference | TfDistribution.ConnectionFunctionAssociationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1031,7 +1031,7 @@ export function awsCloudfrontDistributionConnectionFunctionAssociationPropertyTo
 }
 
 
-export function awsCloudfrontDistributionConnectionFunctionAssociationPropertyToHclTerraform(struct?: AwsCloudfrontDistribution.ConnectionFunctionAssociationPropertyOutputReference | AwsCloudfrontDistribution.ConnectionFunctionAssociationProperty): any {
+export function tfDistributionConnectionFunctionAssociationPropertyToHclTerraform(struct?: TfDistribution.ConnectionFunctionAssociationPropertyOutputReference | TfDistribution.ConnectionFunctionAssociationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1050,7 +1050,7 @@ export function awsCloudfrontDistributionConnectionFunctionAssociationPropertyTo
 }
 
 
-export function awsCloudfrontDistributionCustomErrorResponsePropertyToTerraform(struct?: AwsCloudfrontDistribution.CustomErrorResponseProperty | cdktn.IResolvable): any {
+export function tfDistributionCustomErrorResponsePropertyToTerraform(struct?: TfDistribution.CustomErrorResponseProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1064,7 +1064,7 @@ export function awsCloudfrontDistributionCustomErrorResponsePropertyToTerraform(
 }
 
 
-export function awsCloudfrontDistributionCustomErrorResponsePropertyToHclTerraform(struct?: AwsCloudfrontDistribution.CustomErrorResponseProperty | cdktn.IResolvable): any {
+export function tfDistributionCustomErrorResponsePropertyToHclTerraform(struct?: TfDistribution.CustomErrorResponseProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1101,7 +1101,7 @@ export function awsCloudfrontDistributionCustomErrorResponsePropertyToHclTerrafo
 }
 
 
-export function awsCloudfrontDistributionDefaultCacheBehaviorForwardedValuesCookiesPropertyToTerraform(struct?: AwsCloudfrontDistribution.DefaultCacheBehaviorForwardedValuesCookiesPropertyOutputReference | AwsCloudfrontDistribution.DefaultCacheBehaviorForwardedValuesCookiesProperty): any {
+export function tfDistributionDefaultCacheBehaviorForwardedValuesCookiesPropertyToTerraform(struct?: TfDistribution.DefaultCacheBehaviorForwardedValuesCookiesPropertyOutputReference | TfDistribution.DefaultCacheBehaviorForwardedValuesCookiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1113,7 +1113,7 @@ export function awsCloudfrontDistributionDefaultCacheBehaviorForwardedValuesCook
 }
 
 
-export function awsCloudfrontDistributionDefaultCacheBehaviorForwardedValuesCookiesPropertyToHclTerraform(struct?: AwsCloudfrontDistribution.DefaultCacheBehaviorForwardedValuesCookiesPropertyOutputReference | AwsCloudfrontDistribution.DefaultCacheBehaviorForwardedValuesCookiesProperty): any {
+export function tfDistributionDefaultCacheBehaviorForwardedValuesCookiesPropertyToHclTerraform(struct?: TfDistribution.DefaultCacheBehaviorForwardedValuesCookiesPropertyOutputReference | TfDistribution.DefaultCacheBehaviorForwardedValuesCookiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1138,7 +1138,7 @@ export function awsCloudfrontDistributionDefaultCacheBehaviorForwardedValuesCook
 }
 
 
-export function awsCloudfrontDistributionDefaultCacheBehaviorForwardedValuesPropertyToTerraform(struct?: AwsCloudfrontDistribution.DefaultCacheBehaviorForwardedValuesPropertyOutputReference | AwsCloudfrontDistribution.DefaultCacheBehaviorForwardedValuesProperty): any {
+export function tfDistributionDefaultCacheBehaviorForwardedValuesPropertyToTerraform(struct?: TfDistribution.DefaultCacheBehaviorForwardedValuesPropertyOutputReference | TfDistribution.DefaultCacheBehaviorForwardedValuesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1147,12 +1147,12 @@ export function awsCloudfrontDistributionDefaultCacheBehaviorForwardedValuesProp
     headers: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.headers),
     query_string: cdktn.booleanToTerraform(struct!.queryString),
     query_string_cache_keys: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.queryStringCacheKeys),
-    cookies: awsCloudfrontDistributionDefaultCacheBehaviorForwardedValuesCookiesPropertyToTerraform(struct!.cookies),
+    cookies: tfDistributionDefaultCacheBehaviorForwardedValuesCookiesPropertyToTerraform(struct!.cookies),
   }
 }
 
 
-export function awsCloudfrontDistributionDefaultCacheBehaviorForwardedValuesPropertyToHclTerraform(struct?: AwsCloudfrontDistribution.DefaultCacheBehaviorForwardedValuesPropertyOutputReference | AwsCloudfrontDistribution.DefaultCacheBehaviorForwardedValuesProperty): any {
+export function tfDistributionDefaultCacheBehaviorForwardedValuesPropertyToHclTerraform(struct?: TfDistribution.DefaultCacheBehaviorForwardedValuesPropertyOutputReference | TfDistribution.DefaultCacheBehaviorForwardedValuesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1177,7 +1177,7 @@ export function awsCloudfrontDistributionDefaultCacheBehaviorForwardedValuesProp
       storageClassType: "stringList",
     },
     cookies: {
-      value: awsCloudfrontDistributionDefaultCacheBehaviorForwardedValuesCookiesPropertyToHclTerraform(struct!.cookies),
+      value: tfDistributionDefaultCacheBehaviorForwardedValuesCookiesPropertyToHclTerraform(struct!.cookies),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultCacheBehaviorForwardedValuesCookiesPropertyList",
@@ -1189,7 +1189,7 @@ export function awsCloudfrontDistributionDefaultCacheBehaviorForwardedValuesProp
 }
 
 
-export function awsCloudfrontDistributionDefaultCacheBehaviorFunctionAssociationPropertyToTerraform(struct?: AwsCloudfrontDistribution.DefaultCacheBehaviorFunctionAssociationProperty | cdktn.IResolvable): any {
+export function tfDistributionDefaultCacheBehaviorFunctionAssociationPropertyToTerraform(struct?: TfDistribution.DefaultCacheBehaviorFunctionAssociationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1201,7 +1201,7 @@ export function awsCloudfrontDistributionDefaultCacheBehaviorFunctionAssociation
 }
 
 
-export function awsCloudfrontDistributionDefaultCacheBehaviorFunctionAssociationPropertyToHclTerraform(struct?: AwsCloudfrontDistribution.DefaultCacheBehaviorFunctionAssociationProperty | cdktn.IResolvable): any {
+export function tfDistributionDefaultCacheBehaviorFunctionAssociationPropertyToHclTerraform(struct?: TfDistribution.DefaultCacheBehaviorFunctionAssociationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1226,7 +1226,7 @@ export function awsCloudfrontDistributionDefaultCacheBehaviorFunctionAssociation
 }
 
 
-export function awsCloudfrontDistributionDefaultCacheBehaviorGrpcConfigPropertyToTerraform(struct?: AwsCloudfrontDistribution.DefaultCacheBehaviorGrpcConfigPropertyOutputReference | AwsCloudfrontDistribution.DefaultCacheBehaviorGrpcConfigProperty): any {
+export function tfDistributionDefaultCacheBehaviorGrpcConfigPropertyToTerraform(struct?: TfDistribution.DefaultCacheBehaviorGrpcConfigPropertyOutputReference | TfDistribution.DefaultCacheBehaviorGrpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1237,7 +1237,7 @@ export function awsCloudfrontDistributionDefaultCacheBehaviorGrpcConfigPropertyT
 }
 
 
-export function awsCloudfrontDistributionDefaultCacheBehaviorGrpcConfigPropertyToHclTerraform(struct?: AwsCloudfrontDistribution.DefaultCacheBehaviorGrpcConfigPropertyOutputReference | AwsCloudfrontDistribution.DefaultCacheBehaviorGrpcConfigProperty): any {
+export function tfDistributionDefaultCacheBehaviorGrpcConfigPropertyToHclTerraform(struct?: TfDistribution.DefaultCacheBehaviorGrpcConfigPropertyOutputReference | TfDistribution.DefaultCacheBehaviorGrpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1256,7 +1256,7 @@ export function awsCloudfrontDistributionDefaultCacheBehaviorGrpcConfigPropertyT
 }
 
 
-export function awsCloudfrontDistributionDefaultCacheBehaviorLambdaFunctionAssociationPropertyToTerraform(struct?: AwsCloudfrontDistribution.DefaultCacheBehaviorLambdaFunctionAssociationProperty | cdktn.IResolvable): any {
+export function tfDistributionDefaultCacheBehaviorLambdaFunctionAssociationPropertyToTerraform(struct?: TfDistribution.DefaultCacheBehaviorLambdaFunctionAssociationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1269,7 +1269,7 @@ export function awsCloudfrontDistributionDefaultCacheBehaviorLambdaFunctionAssoc
 }
 
 
-export function awsCloudfrontDistributionDefaultCacheBehaviorLambdaFunctionAssociationPropertyToHclTerraform(struct?: AwsCloudfrontDistribution.DefaultCacheBehaviorLambdaFunctionAssociationProperty | cdktn.IResolvable): any {
+export function tfDistributionDefaultCacheBehaviorLambdaFunctionAssociationPropertyToHclTerraform(struct?: TfDistribution.DefaultCacheBehaviorLambdaFunctionAssociationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1300,7 +1300,7 @@ export function awsCloudfrontDistributionDefaultCacheBehaviorLambdaFunctionAssoc
 }
 
 
-export function awsCloudfrontDistributionDefaultCacheBehaviorPropertyToTerraform(struct?: AwsCloudfrontDistribution.DefaultCacheBehaviorPropertyOutputReference | AwsCloudfrontDistribution.DefaultCacheBehaviorProperty): any {
+export function tfDistributionDefaultCacheBehaviorPropertyToTerraform(struct?: TfDistribution.DefaultCacheBehaviorPropertyOutputReference | TfDistribution.DefaultCacheBehaviorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1322,15 +1322,15 @@ export function awsCloudfrontDistributionDefaultCacheBehaviorPropertyToTerraform
     trusted_key_groups: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.trustedKeyGroups),
     trusted_signers: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.trustedSigners),
     viewer_protocol_policy: cdktn.stringToTerraform(struct!.viewerProtocolPolicy),
-    forwarded_values: awsCloudfrontDistributionDefaultCacheBehaviorForwardedValuesPropertyToTerraform(struct!.forwardedValues),
-    function_association: cdktn.listMapper(awsCloudfrontDistributionDefaultCacheBehaviorFunctionAssociationPropertyToTerraform, true)(struct!.functionAssociation),
-    grpc_config: awsCloudfrontDistributionDefaultCacheBehaviorGrpcConfigPropertyToTerraform(struct!.grpcConfig),
-    lambda_function_association: cdktn.listMapper(awsCloudfrontDistributionDefaultCacheBehaviorLambdaFunctionAssociationPropertyToTerraform, true)(struct!.lambdaFunctionAssociation),
+    forwarded_values: tfDistributionDefaultCacheBehaviorForwardedValuesPropertyToTerraform(struct!.forwardedValues),
+    function_association: cdktn.listMapper(tfDistributionDefaultCacheBehaviorFunctionAssociationPropertyToTerraform, true)(struct!.functionAssociation),
+    grpc_config: tfDistributionDefaultCacheBehaviorGrpcConfigPropertyToTerraform(struct!.grpcConfig),
+    lambda_function_association: cdktn.listMapper(tfDistributionDefaultCacheBehaviorLambdaFunctionAssociationPropertyToTerraform, true)(struct!.lambdaFunctionAssociation),
   }
 }
 
 
-export function awsCloudfrontDistributionDefaultCacheBehaviorPropertyToHclTerraform(struct?: AwsCloudfrontDistribution.DefaultCacheBehaviorPropertyOutputReference | AwsCloudfrontDistribution.DefaultCacheBehaviorProperty): any {
+export function tfDistributionDefaultCacheBehaviorPropertyToHclTerraform(struct?: TfDistribution.DefaultCacheBehaviorPropertyOutputReference | TfDistribution.DefaultCacheBehaviorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1433,25 +1433,25 @@ export function awsCloudfrontDistributionDefaultCacheBehaviorPropertyToHclTerraf
       storageClassType: "string",
     },
     forwarded_values: {
-      value: awsCloudfrontDistributionDefaultCacheBehaviorForwardedValuesPropertyToHclTerraform(struct!.forwardedValues),
+      value: tfDistributionDefaultCacheBehaviorForwardedValuesPropertyToHclTerraform(struct!.forwardedValues),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultCacheBehaviorForwardedValuesPropertyList",
     },
     function_association: {
-      value: cdktn.listMapperHcl(awsCloudfrontDistributionDefaultCacheBehaviorFunctionAssociationPropertyToHclTerraform, true)(struct!.functionAssociation),
+      value: cdktn.listMapperHcl(tfDistributionDefaultCacheBehaviorFunctionAssociationPropertyToHclTerraform, true)(struct!.functionAssociation),
       isBlock: true,
       type: "set",
       storageClassType: "DefaultCacheBehaviorFunctionAssociationPropertyList",
     },
     grpc_config: {
-      value: awsCloudfrontDistributionDefaultCacheBehaviorGrpcConfigPropertyToHclTerraform(struct!.grpcConfig),
+      value: tfDistributionDefaultCacheBehaviorGrpcConfigPropertyToHclTerraform(struct!.grpcConfig),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultCacheBehaviorGrpcConfigPropertyList",
     },
     lambda_function_association: {
-      value: cdktn.listMapperHcl(awsCloudfrontDistributionDefaultCacheBehaviorLambdaFunctionAssociationPropertyToHclTerraform, true)(struct!.lambdaFunctionAssociation),
+      value: cdktn.listMapperHcl(tfDistributionDefaultCacheBehaviorLambdaFunctionAssociationPropertyToHclTerraform, true)(struct!.lambdaFunctionAssociation),
       isBlock: true,
       type: "set",
       storageClassType: "DefaultCacheBehaviorLambdaFunctionAssociationPropertyList",
@@ -1463,7 +1463,7 @@ export function awsCloudfrontDistributionDefaultCacheBehaviorPropertyToHclTerraf
 }
 
 
-export function awsCloudfrontDistributionLoggingConfigPropertyToTerraform(struct?: AwsCloudfrontDistribution.LoggingConfigPropertyOutputReference | AwsCloudfrontDistribution.LoggingConfigProperty): any {
+export function tfDistributionLoggingConfigPropertyToTerraform(struct?: TfDistribution.LoggingConfigPropertyOutputReference | TfDistribution.LoggingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1476,7 +1476,7 @@ export function awsCloudfrontDistributionLoggingConfigPropertyToTerraform(struct
 }
 
 
-export function awsCloudfrontDistributionLoggingConfigPropertyToHclTerraform(struct?: AwsCloudfrontDistribution.LoggingConfigPropertyOutputReference | AwsCloudfrontDistribution.LoggingConfigProperty): any {
+export function tfDistributionLoggingConfigPropertyToHclTerraform(struct?: TfDistribution.LoggingConfigPropertyOutputReference | TfDistribution.LoggingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1507,7 +1507,7 @@ export function awsCloudfrontDistributionLoggingConfigPropertyToHclTerraform(str
 }
 
 
-export function awsCloudfrontDistributionOrderedCacheBehaviorForwardedValuesCookiesPropertyToTerraform(struct?: AwsCloudfrontDistribution.OrderedCacheBehaviorForwardedValuesCookiesPropertyOutputReference | AwsCloudfrontDistribution.OrderedCacheBehaviorForwardedValuesCookiesProperty): any {
+export function tfDistributionOrderedCacheBehaviorForwardedValuesCookiesPropertyToTerraform(struct?: TfDistribution.OrderedCacheBehaviorForwardedValuesCookiesPropertyOutputReference | TfDistribution.OrderedCacheBehaviorForwardedValuesCookiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1519,7 +1519,7 @@ export function awsCloudfrontDistributionOrderedCacheBehaviorForwardedValuesCook
 }
 
 
-export function awsCloudfrontDistributionOrderedCacheBehaviorForwardedValuesCookiesPropertyToHclTerraform(struct?: AwsCloudfrontDistribution.OrderedCacheBehaviorForwardedValuesCookiesPropertyOutputReference | AwsCloudfrontDistribution.OrderedCacheBehaviorForwardedValuesCookiesProperty): any {
+export function tfDistributionOrderedCacheBehaviorForwardedValuesCookiesPropertyToHclTerraform(struct?: TfDistribution.OrderedCacheBehaviorForwardedValuesCookiesPropertyOutputReference | TfDistribution.OrderedCacheBehaviorForwardedValuesCookiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1544,7 +1544,7 @@ export function awsCloudfrontDistributionOrderedCacheBehaviorForwardedValuesCook
 }
 
 
-export function awsCloudfrontDistributionOrderedCacheBehaviorForwardedValuesPropertyToTerraform(struct?: AwsCloudfrontDistribution.OrderedCacheBehaviorForwardedValuesPropertyOutputReference | AwsCloudfrontDistribution.OrderedCacheBehaviorForwardedValuesProperty): any {
+export function tfDistributionOrderedCacheBehaviorForwardedValuesPropertyToTerraform(struct?: TfDistribution.OrderedCacheBehaviorForwardedValuesPropertyOutputReference | TfDistribution.OrderedCacheBehaviorForwardedValuesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1553,12 +1553,12 @@ export function awsCloudfrontDistributionOrderedCacheBehaviorForwardedValuesProp
     headers: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.headers),
     query_string: cdktn.booleanToTerraform(struct!.queryString),
     query_string_cache_keys: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.queryStringCacheKeys),
-    cookies: awsCloudfrontDistributionOrderedCacheBehaviorForwardedValuesCookiesPropertyToTerraform(struct!.cookies),
+    cookies: tfDistributionOrderedCacheBehaviorForwardedValuesCookiesPropertyToTerraform(struct!.cookies),
   }
 }
 
 
-export function awsCloudfrontDistributionOrderedCacheBehaviorForwardedValuesPropertyToHclTerraform(struct?: AwsCloudfrontDistribution.OrderedCacheBehaviorForwardedValuesPropertyOutputReference | AwsCloudfrontDistribution.OrderedCacheBehaviorForwardedValuesProperty): any {
+export function tfDistributionOrderedCacheBehaviorForwardedValuesPropertyToHclTerraform(struct?: TfDistribution.OrderedCacheBehaviorForwardedValuesPropertyOutputReference | TfDistribution.OrderedCacheBehaviorForwardedValuesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1583,7 +1583,7 @@ export function awsCloudfrontDistributionOrderedCacheBehaviorForwardedValuesProp
       storageClassType: "stringList",
     },
     cookies: {
-      value: awsCloudfrontDistributionOrderedCacheBehaviorForwardedValuesCookiesPropertyToHclTerraform(struct!.cookies),
+      value: tfDistributionOrderedCacheBehaviorForwardedValuesCookiesPropertyToHclTerraform(struct!.cookies),
       isBlock: true,
       type: "list",
       storageClassType: "OrderedCacheBehaviorForwardedValuesCookiesPropertyList",
@@ -1595,7 +1595,7 @@ export function awsCloudfrontDistributionOrderedCacheBehaviorForwardedValuesProp
 }
 
 
-export function awsCloudfrontDistributionOrderedCacheBehaviorFunctionAssociationPropertyToTerraform(struct?: AwsCloudfrontDistribution.OrderedCacheBehaviorFunctionAssociationProperty | cdktn.IResolvable): any {
+export function tfDistributionOrderedCacheBehaviorFunctionAssociationPropertyToTerraform(struct?: TfDistribution.OrderedCacheBehaviorFunctionAssociationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1607,7 +1607,7 @@ export function awsCloudfrontDistributionOrderedCacheBehaviorFunctionAssociation
 }
 
 
-export function awsCloudfrontDistributionOrderedCacheBehaviorFunctionAssociationPropertyToHclTerraform(struct?: AwsCloudfrontDistribution.OrderedCacheBehaviorFunctionAssociationProperty | cdktn.IResolvable): any {
+export function tfDistributionOrderedCacheBehaviorFunctionAssociationPropertyToHclTerraform(struct?: TfDistribution.OrderedCacheBehaviorFunctionAssociationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1632,7 +1632,7 @@ export function awsCloudfrontDistributionOrderedCacheBehaviorFunctionAssociation
 }
 
 
-export function awsCloudfrontDistributionOrderedCacheBehaviorGrpcConfigPropertyToTerraform(struct?: AwsCloudfrontDistribution.OrderedCacheBehaviorGrpcConfigPropertyOutputReference | AwsCloudfrontDistribution.OrderedCacheBehaviorGrpcConfigProperty): any {
+export function tfDistributionOrderedCacheBehaviorGrpcConfigPropertyToTerraform(struct?: TfDistribution.OrderedCacheBehaviorGrpcConfigPropertyOutputReference | TfDistribution.OrderedCacheBehaviorGrpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1643,7 +1643,7 @@ export function awsCloudfrontDistributionOrderedCacheBehaviorGrpcConfigPropertyT
 }
 
 
-export function awsCloudfrontDistributionOrderedCacheBehaviorGrpcConfigPropertyToHclTerraform(struct?: AwsCloudfrontDistribution.OrderedCacheBehaviorGrpcConfigPropertyOutputReference | AwsCloudfrontDistribution.OrderedCacheBehaviorGrpcConfigProperty): any {
+export function tfDistributionOrderedCacheBehaviorGrpcConfigPropertyToHclTerraform(struct?: TfDistribution.OrderedCacheBehaviorGrpcConfigPropertyOutputReference | TfDistribution.OrderedCacheBehaviorGrpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1662,7 +1662,7 @@ export function awsCloudfrontDistributionOrderedCacheBehaviorGrpcConfigPropertyT
 }
 
 
-export function awsCloudfrontDistributionOrderedCacheBehaviorLambdaFunctionAssociationPropertyToTerraform(struct?: AwsCloudfrontDistribution.OrderedCacheBehaviorLambdaFunctionAssociationProperty | cdktn.IResolvable): any {
+export function tfDistributionOrderedCacheBehaviorLambdaFunctionAssociationPropertyToTerraform(struct?: TfDistribution.OrderedCacheBehaviorLambdaFunctionAssociationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1675,7 +1675,7 @@ export function awsCloudfrontDistributionOrderedCacheBehaviorLambdaFunctionAssoc
 }
 
 
-export function awsCloudfrontDistributionOrderedCacheBehaviorLambdaFunctionAssociationPropertyToHclTerraform(struct?: AwsCloudfrontDistribution.OrderedCacheBehaviorLambdaFunctionAssociationProperty | cdktn.IResolvable): any {
+export function tfDistributionOrderedCacheBehaviorLambdaFunctionAssociationPropertyToHclTerraform(struct?: TfDistribution.OrderedCacheBehaviorLambdaFunctionAssociationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1706,7 +1706,7 @@ export function awsCloudfrontDistributionOrderedCacheBehaviorLambdaFunctionAssoc
 }
 
 
-export function awsCloudfrontDistributionOrderedCacheBehaviorPropertyToTerraform(struct?: AwsCloudfrontDistribution.OrderedCacheBehaviorProperty | cdktn.IResolvable): any {
+export function tfDistributionOrderedCacheBehaviorPropertyToTerraform(struct?: TfDistribution.OrderedCacheBehaviorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1729,15 +1729,15 @@ export function awsCloudfrontDistributionOrderedCacheBehaviorPropertyToTerraform
     trusted_key_groups: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.trustedKeyGroups),
     trusted_signers: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.trustedSigners),
     viewer_protocol_policy: cdktn.stringToTerraform(struct!.viewerProtocolPolicy),
-    forwarded_values: awsCloudfrontDistributionOrderedCacheBehaviorForwardedValuesPropertyToTerraform(struct!.forwardedValues),
-    function_association: cdktn.listMapper(awsCloudfrontDistributionOrderedCacheBehaviorFunctionAssociationPropertyToTerraform, true)(struct!.functionAssociation),
-    grpc_config: awsCloudfrontDistributionOrderedCacheBehaviorGrpcConfigPropertyToTerraform(struct!.grpcConfig),
-    lambda_function_association: cdktn.listMapper(awsCloudfrontDistributionOrderedCacheBehaviorLambdaFunctionAssociationPropertyToTerraform, true)(struct!.lambdaFunctionAssociation),
+    forwarded_values: tfDistributionOrderedCacheBehaviorForwardedValuesPropertyToTerraform(struct!.forwardedValues),
+    function_association: cdktn.listMapper(tfDistributionOrderedCacheBehaviorFunctionAssociationPropertyToTerraform, true)(struct!.functionAssociation),
+    grpc_config: tfDistributionOrderedCacheBehaviorGrpcConfigPropertyToTerraform(struct!.grpcConfig),
+    lambda_function_association: cdktn.listMapper(tfDistributionOrderedCacheBehaviorLambdaFunctionAssociationPropertyToTerraform, true)(struct!.lambdaFunctionAssociation),
   }
 }
 
 
-export function awsCloudfrontDistributionOrderedCacheBehaviorPropertyToHclTerraform(struct?: AwsCloudfrontDistribution.OrderedCacheBehaviorProperty | cdktn.IResolvable): any {
+export function tfDistributionOrderedCacheBehaviorPropertyToHclTerraform(struct?: TfDistribution.OrderedCacheBehaviorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1846,25 +1846,25 @@ export function awsCloudfrontDistributionOrderedCacheBehaviorPropertyToHclTerraf
       storageClassType: "string",
     },
     forwarded_values: {
-      value: awsCloudfrontDistributionOrderedCacheBehaviorForwardedValuesPropertyToHclTerraform(struct!.forwardedValues),
+      value: tfDistributionOrderedCacheBehaviorForwardedValuesPropertyToHclTerraform(struct!.forwardedValues),
       isBlock: true,
       type: "list",
       storageClassType: "OrderedCacheBehaviorForwardedValuesPropertyList",
     },
     function_association: {
-      value: cdktn.listMapperHcl(awsCloudfrontDistributionOrderedCacheBehaviorFunctionAssociationPropertyToHclTerraform, true)(struct!.functionAssociation),
+      value: cdktn.listMapperHcl(tfDistributionOrderedCacheBehaviorFunctionAssociationPropertyToHclTerraform, true)(struct!.functionAssociation),
       isBlock: true,
       type: "set",
       storageClassType: "OrderedCacheBehaviorFunctionAssociationPropertyList",
     },
     grpc_config: {
-      value: awsCloudfrontDistributionOrderedCacheBehaviorGrpcConfigPropertyToHclTerraform(struct!.grpcConfig),
+      value: tfDistributionOrderedCacheBehaviorGrpcConfigPropertyToHclTerraform(struct!.grpcConfig),
       isBlock: true,
       type: "list",
       storageClassType: "OrderedCacheBehaviorGrpcConfigPropertyList",
     },
     lambda_function_association: {
-      value: cdktn.listMapperHcl(awsCloudfrontDistributionOrderedCacheBehaviorLambdaFunctionAssociationPropertyToHclTerraform, true)(struct!.lambdaFunctionAssociation),
+      value: cdktn.listMapperHcl(tfDistributionOrderedCacheBehaviorLambdaFunctionAssociationPropertyToHclTerraform, true)(struct!.lambdaFunctionAssociation),
       isBlock: true,
       type: "set",
       storageClassType: "OrderedCacheBehaviorLambdaFunctionAssociationPropertyList",
@@ -1876,7 +1876,7 @@ export function awsCloudfrontDistributionOrderedCacheBehaviorPropertyToHclTerraf
 }
 
 
-export function awsCloudfrontDistributionCustomHeaderPropertyToTerraform(struct?: AwsCloudfrontDistribution.CustomHeaderProperty | cdktn.IResolvable): any {
+export function tfDistributionCustomHeaderPropertyToTerraform(struct?: TfDistribution.CustomHeaderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1888,7 +1888,7 @@ export function awsCloudfrontDistributionCustomHeaderPropertyToTerraform(struct?
 }
 
 
-export function awsCloudfrontDistributionCustomHeaderPropertyToHclTerraform(struct?: AwsCloudfrontDistribution.CustomHeaderProperty | cdktn.IResolvable): any {
+export function tfDistributionCustomHeaderPropertyToHclTerraform(struct?: TfDistribution.CustomHeaderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1913,7 +1913,7 @@ export function awsCloudfrontDistributionCustomHeaderPropertyToHclTerraform(stru
 }
 
 
-export function awsCloudfrontDistributionOriginMtlsConfigPropertyToTerraform(struct?: AwsCloudfrontDistribution.OriginMtlsConfigPropertyOutputReference | AwsCloudfrontDistribution.OriginMtlsConfigProperty): any {
+export function tfDistributionOriginMtlsConfigPropertyToTerraform(struct?: TfDistribution.OriginMtlsConfigPropertyOutputReference | TfDistribution.OriginMtlsConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1924,7 +1924,7 @@ export function awsCloudfrontDistributionOriginMtlsConfigPropertyToTerraform(str
 }
 
 
-export function awsCloudfrontDistributionOriginMtlsConfigPropertyToHclTerraform(struct?: AwsCloudfrontDistribution.OriginMtlsConfigPropertyOutputReference | AwsCloudfrontDistribution.OriginMtlsConfigProperty): any {
+export function tfDistributionOriginMtlsConfigPropertyToHclTerraform(struct?: TfDistribution.OriginMtlsConfigPropertyOutputReference | TfDistribution.OriginMtlsConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1943,7 +1943,7 @@ export function awsCloudfrontDistributionOriginMtlsConfigPropertyToHclTerraform(
 }
 
 
-export function awsCloudfrontDistributionCustomOriginConfigPropertyToTerraform(struct?: AwsCloudfrontDistribution.CustomOriginConfigPropertyOutputReference | AwsCloudfrontDistribution.CustomOriginConfigProperty): any {
+export function tfDistributionCustomOriginConfigPropertyToTerraform(struct?: TfDistribution.CustomOriginConfigPropertyOutputReference | TfDistribution.CustomOriginConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1956,12 +1956,12 @@ export function awsCloudfrontDistributionCustomOriginConfigPropertyToTerraform(s
     origin_protocol_policy: cdktn.stringToTerraform(struct!.originProtocolPolicy),
     origin_read_timeout: cdktn.numberToTerraform(struct!.originReadTimeout),
     origin_ssl_protocols: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.originSslProtocols),
-    origin_mtls_config: awsCloudfrontDistributionOriginMtlsConfigPropertyToTerraform(struct!.originMtlsConfig),
+    origin_mtls_config: tfDistributionOriginMtlsConfigPropertyToTerraform(struct!.originMtlsConfig),
   }
 }
 
 
-export function awsCloudfrontDistributionCustomOriginConfigPropertyToHclTerraform(struct?: AwsCloudfrontDistribution.CustomOriginConfigPropertyOutputReference | AwsCloudfrontDistribution.CustomOriginConfigProperty): any {
+export function tfDistributionCustomOriginConfigPropertyToHclTerraform(struct?: TfDistribution.CustomOriginConfigPropertyOutputReference | TfDistribution.CustomOriginConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2010,7 +2010,7 @@ export function awsCloudfrontDistributionCustomOriginConfigPropertyToHclTerrafor
       storageClassType: "stringList",
     },
     origin_mtls_config: {
-      value: awsCloudfrontDistributionOriginMtlsConfigPropertyToHclTerraform(struct!.originMtlsConfig),
+      value: tfDistributionOriginMtlsConfigPropertyToHclTerraform(struct!.originMtlsConfig),
       isBlock: true,
       type: "list",
       storageClassType: "OriginMtlsConfigPropertyList",
@@ -2022,7 +2022,7 @@ export function awsCloudfrontDistributionCustomOriginConfigPropertyToHclTerrafor
 }
 
 
-export function awsCloudfrontDistributionOriginShieldPropertyToTerraform(struct?: AwsCloudfrontDistribution.OriginShieldPropertyOutputReference | AwsCloudfrontDistribution.OriginShieldProperty): any {
+export function tfDistributionOriginShieldPropertyToTerraform(struct?: TfDistribution.OriginShieldPropertyOutputReference | TfDistribution.OriginShieldProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2034,7 +2034,7 @@ export function awsCloudfrontDistributionOriginShieldPropertyToTerraform(struct?
 }
 
 
-export function awsCloudfrontDistributionOriginShieldPropertyToHclTerraform(struct?: AwsCloudfrontDistribution.OriginShieldPropertyOutputReference | AwsCloudfrontDistribution.OriginShieldProperty): any {
+export function tfDistributionOriginShieldPropertyToHclTerraform(struct?: TfDistribution.OriginShieldPropertyOutputReference | TfDistribution.OriginShieldProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2059,7 +2059,7 @@ export function awsCloudfrontDistributionOriginShieldPropertyToHclTerraform(stru
 }
 
 
-export function awsCloudfrontDistributionS3OriginConfigPropertyToTerraform(struct?: AwsCloudfrontDistribution.S3OriginConfigPropertyOutputReference | AwsCloudfrontDistribution.S3OriginConfigProperty): any {
+export function tfDistributionS3OriginConfigPropertyToTerraform(struct?: TfDistribution.S3OriginConfigPropertyOutputReference | TfDistribution.S3OriginConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2070,7 +2070,7 @@ export function awsCloudfrontDistributionS3OriginConfigPropertyToTerraform(struc
 }
 
 
-export function awsCloudfrontDistributionS3OriginConfigPropertyToHclTerraform(struct?: AwsCloudfrontDistribution.S3OriginConfigPropertyOutputReference | AwsCloudfrontDistribution.S3OriginConfigProperty): any {
+export function tfDistributionS3OriginConfigPropertyToHclTerraform(struct?: TfDistribution.S3OriginConfigPropertyOutputReference | TfDistribution.S3OriginConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2089,7 +2089,7 @@ export function awsCloudfrontDistributionS3OriginConfigPropertyToHclTerraform(st
 }
 
 
-export function awsCloudfrontDistributionVpcOriginConfigPropertyToTerraform(struct?: AwsCloudfrontDistribution.VpcOriginConfigPropertyOutputReference | AwsCloudfrontDistribution.VpcOriginConfigProperty): any {
+export function tfDistributionVpcOriginConfigPropertyToTerraform(struct?: TfDistribution.VpcOriginConfigPropertyOutputReference | TfDistribution.VpcOriginConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2103,7 +2103,7 @@ export function awsCloudfrontDistributionVpcOriginConfigPropertyToTerraform(stru
 }
 
 
-export function awsCloudfrontDistributionVpcOriginConfigPropertyToHclTerraform(struct?: AwsCloudfrontDistribution.VpcOriginConfigPropertyOutputReference | AwsCloudfrontDistribution.VpcOriginConfigProperty): any {
+export function tfDistributionVpcOriginConfigPropertyToHclTerraform(struct?: TfDistribution.VpcOriginConfigPropertyOutputReference | TfDistribution.VpcOriginConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2140,7 +2140,7 @@ export function awsCloudfrontDistributionVpcOriginConfigPropertyToHclTerraform(s
 }
 
 
-export function awsCloudfrontDistributionOriginPropertyToTerraform(struct?: AwsCloudfrontDistribution.OriginProperty | cdktn.IResolvable): any {
+export function tfDistributionOriginPropertyToTerraform(struct?: TfDistribution.OriginProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2153,16 +2153,16 @@ export function awsCloudfrontDistributionOriginPropertyToTerraform(struct?: AwsC
     origin_id: cdktn.stringToTerraform(struct!.originId),
     origin_path: cdktn.stringToTerraform(struct!.originPath),
     response_completion_timeout: cdktn.numberToTerraform(struct!.responseCompletionTimeout),
-    custom_header: cdktn.listMapper(awsCloudfrontDistributionCustomHeaderPropertyToTerraform, true)(struct!.customHeader),
-    custom_origin_config: awsCloudfrontDistributionCustomOriginConfigPropertyToTerraform(struct!.customOriginConfig),
-    origin_shield: awsCloudfrontDistributionOriginShieldPropertyToTerraform(struct!.originShield),
-    s3_origin_config: awsCloudfrontDistributionS3OriginConfigPropertyToTerraform(struct!.s3OriginConfig),
-    vpc_origin_config: awsCloudfrontDistributionVpcOriginConfigPropertyToTerraform(struct!.vpcOriginConfig),
+    custom_header: cdktn.listMapper(tfDistributionCustomHeaderPropertyToTerraform, true)(struct!.customHeader),
+    custom_origin_config: tfDistributionCustomOriginConfigPropertyToTerraform(struct!.customOriginConfig),
+    origin_shield: tfDistributionOriginShieldPropertyToTerraform(struct!.originShield),
+    s3_origin_config: tfDistributionS3OriginConfigPropertyToTerraform(struct!.s3OriginConfig),
+    vpc_origin_config: tfDistributionVpcOriginConfigPropertyToTerraform(struct!.vpcOriginConfig),
   }
 }
 
 
-export function awsCloudfrontDistributionOriginPropertyToHclTerraform(struct?: AwsCloudfrontDistribution.OriginProperty | cdktn.IResolvable): any {
+export function tfDistributionOriginPropertyToHclTerraform(struct?: TfDistribution.OriginProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2211,31 +2211,31 @@ export function awsCloudfrontDistributionOriginPropertyToHclTerraform(struct?: A
       storageClassType: "number",
     },
     custom_header: {
-      value: cdktn.listMapperHcl(awsCloudfrontDistributionCustomHeaderPropertyToHclTerraform, true)(struct!.customHeader),
+      value: cdktn.listMapperHcl(tfDistributionCustomHeaderPropertyToHclTerraform, true)(struct!.customHeader),
       isBlock: true,
       type: "set",
       storageClassType: "CustomHeaderPropertyList",
     },
     custom_origin_config: {
-      value: awsCloudfrontDistributionCustomOriginConfigPropertyToHclTerraform(struct!.customOriginConfig),
+      value: tfDistributionCustomOriginConfigPropertyToHclTerraform(struct!.customOriginConfig),
       isBlock: true,
       type: "list",
       storageClassType: "CustomOriginConfigPropertyList",
     },
     origin_shield: {
-      value: awsCloudfrontDistributionOriginShieldPropertyToHclTerraform(struct!.originShield),
+      value: tfDistributionOriginShieldPropertyToHclTerraform(struct!.originShield),
       isBlock: true,
       type: "list",
       storageClassType: "OriginShieldPropertyList",
     },
     s3_origin_config: {
-      value: awsCloudfrontDistributionS3OriginConfigPropertyToHclTerraform(struct!.s3OriginConfig),
+      value: tfDistributionS3OriginConfigPropertyToHclTerraform(struct!.s3OriginConfig),
       isBlock: true,
       type: "list",
       storageClassType: "S3OriginConfigPropertyList",
     },
     vpc_origin_config: {
-      value: awsCloudfrontDistributionVpcOriginConfigPropertyToHclTerraform(struct!.vpcOriginConfig),
+      value: tfDistributionVpcOriginConfigPropertyToHclTerraform(struct!.vpcOriginConfig),
       isBlock: true,
       type: "list",
       storageClassType: "VpcOriginConfigPropertyList",
@@ -2247,7 +2247,7 @@ export function awsCloudfrontDistributionOriginPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsCloudfrontDistributionFailoverCriteriaPropertyToTerraform(struct?: AwsCloudfrontDistribution.FailoverCriteriaPropertyOutputReference | AwsCloudfrontDistribution.FailoverCriteriaProperty): any {
+export function tfDistributionFailoverCriteriaPropertyToTerraform(struct?: TfDistribution.FailoverCriteriaPropertyOutputReference | TfDistribution.FailoverCriteriaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2258,7 +2258,7 @@ export function awsCloudfrontDistributionFailoverCriteriaPropertyToTerraform(str
 }
 
 
-export function awsCloudfrontDistributionFailoverCriteriaPropertyToHclTerraform(struct?: AwsCloudfrontDistribution.FailoverCriteriaPropertyOutputReference | AwsCloudfrontDistribution.FailoverCriteriaProperty): any {
+export function tfDistributionFailoverCriteriaPropertyToHclTerraform(struct?: TfDistribution.FailoverCriteriaPropertyOutputReference | TfDistribution.FailoverCriteriaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2277,7 +2277,7 @@ export function awsCloudfrontDistributionFailoverCriteriaPropertyToHclTerraform(
 }
 
 
-export function awsCloudfrontDistributionMemberPropertyToTerraform(struct?: AwsCloudfrontDistribution.MemberProperty | cdktn.IResolvable): any {
+export function tfDistributionMemberPropertyToTerraform(struct?: TfDistribution.MemberProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2288,7 +2288,7 @@ export function awsCloudfrontDistributionMemberPropertyToTerraform(struct?: AwsC
 }
 
 
-export function awsCloudfrontDistributionMemberPropertyToHclTerraform(struct?: AwsCloudfrontDistribution.MemberProperty | cdktn.IResolvable): any {
+export function tfDistributionMemberPropertyToHclTerraform(struct?: TfDistribution.MemberProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2307,20 +2307,20 @@ export function awsCloudfrontDistributionMemberPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsCloudfrontDistributionOriginGroupPropertyToTerraform(struct?: AwsCloudfrontDistribution.OriginGroupProperty | cdktn.IResolvable): any {
+export function tfDistributionOriginGroupPropertyToTerraform(struct?: TfDistribution.OriginGroupProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     origin_id: cdktn.stringToTerraform(struct!.originId),
-    failover_criteria: awsCloudfrontDistributionFailoverCriteriaPropertyToTerraform(struct!.failoverCriteria),
-    member: cdktn.listMapper(awsCloudfrontDistributionMemberPropertyToTerraform, true)(struct!.member),
+    failover_criteria: tfDistributionFailoverCriteriaPropertyToTerraform(struct!.failoverCriteria),
+    member: cdktn.listMapper(tfDistributionMemberPropertyToTerraform, true)(struct!.member),
   }
 }
 
 
-export function awsCloudfrontDistributionOriginGroupPropertyToHclTerraform(struct?: AwsCloudfrontDistribution.OriginGroupProperty | cdktn.IResolvable): any {
+export function tfDistributionOriginGroupPropertyToHclTerraform(struct?: TfDistribution.OriginGroupProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2333,13 +2333,13 @@ export function awsCloudfrontDistributionOriginGroupPropertyToHclTerraform(struc
       storageClassType: "string",
     },
     failover_criteria: {
-      value: awsCloudfrontDistributionFailoverCriteriaPropertyToHclTerraform(struct!.failoverCriteria),
+      value: tfDistributionFailoverCriteriaPropertyToHclTerraform(struct!.failoverCriteria),
       isBlock: true,
       type: "list",
       storageClassType: "FailoverCriteriaPropertyList",
     },
     member: {
-      value: cdktn.listMapperHcl(awsCloudfrontDistributionMemberPropertyToHclTerraform, true)(struct!.member),
+      value: cdktn.listMapperHcl(tfDistributionMemberPropertyToHclTerraform, true)(struct!.member),
       isBlock: true,
       type: "list",
       storageClassType: "MemberPropertyList",
@@ -2351,7 +2351,7 @@ export function awsCloudfrontDistributionOriginGroupPropertyToHclTerraform(struc
 }
 
 
-export function awsCloudfrontDistributionGeoRestrictionPropertyToTerraform(struct?: AwsCloudfrontDistribution.GeoRestrictionPropertyOutputReference | AwsCloudfrontDistribution.GeoRestrictionProperty): any {
+export function tfDistributionGeoRestrictionPropertyToTerraform(struct?: TfDistribution.GeoRestrictionPropertyOutputReference | TfDistribution.GeoRestrictionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2363,7 +2363,7 @@ export function awsCloudfrontDistributionGeoRestrictionPropertyToTerraform(struc
 }
 
 
-export function awsCloudfrontDistributionGeoRestrictionPropertyToHclTerraform(struct?: AwsCloudfrontDistribution.GeoRestrictionPropertyOutputReference | AwsCloudfrontDistribution.GeoRestrictionProperty): any {
+export function tfDistributionGeoRestrictionPropertyToHclTerraform(struct?: TfDistribution.GeoRestrictionPropertyOutputReference | TfDistribution.GeoRestrictionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2388,25 +2388,25 @@ export function awsCloudfrontDistributionGeoRestrictionPropertyToHclTerraform(st
 }
 
 
-export function awsCloudfrontDistributionRestrictionsPropertyToTerraform(struct?: AwsCloudfrontDistribution.RestrictionsPropertyOutputReference | AwsCloudfrontDistribution.RestrictionsProperty): any {
+export function tfDistributionRestrictionsPropertyToTerraform(struct?: TfDistribution.RestrictionsPropertyOutputReference | TfDistribution.RestrictionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    geo_restriction: awsCloudfrontDistributionGeoRestrictionPropertyToTerraform(struct!.geoRestriction),
+    geo_restriction: tfDistributionGeoRestrictionPropertyToTerraform(struct!.geoRestriction),
   }
 }
 
 
-export function awsCloudfrontDistributionRestrictionsPropertyToHclTerraform(struct?: AwsCloudfrontDistribution.RestrictionsPropertyOutputReference | AwsCloudfrontDistribution.RestrictionsProperty): any {
+export function tfDistributionRestrictionsPropertyToHclTerraform(struct?: TfDistribution.RestrictionsPropertyOutputReference | TfDistribution.RestrictionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     geo_restriction: {
-      value: awsCloudfrontDistributionGeoRestrictionPropertyToHclTerraform(struct!.geoRestriction),
+      value: tfDistributionGeoRestrictionPropertyToHclTerraform(struct!.geoRestriction),
       isBlock: true,
       type: "list",
       storageClassType: "GeoRestrictionPropertyList",
@@ -2418,7 +2418,7 @@ export function awsCloudfrontDistributionRestrictionsPropertyToHclTerraform(stru
 }
 
 
-export function awsCloudfrontDistributionViewerCertificatePropertyToTerraform(struct?: AwsCloudfrontDistribution.ViewerCertificatePropertyOutputReference | AwsCloudfrontDistribution.ViewerCertificateProperty): any {
+export function tfDistributionViewerCertificatePropertyToTerraform(struct?: TfDistribution.ViewerCertificatePropertyOutputReference | TfDistribution.ViewerCertificateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2433,7 +2433,7 @@ export function awsCloudfrontDistributionViewerCertificatePropertyToTerraform(st
 }
 
 
-export function awsCloudfrontDistributionViewerCertificatePropertyToHclTerraform(struct?: AwsCloudfrontDistribution.ViewerCertificatePropertyOutputReference | AwsCloudfrontDistribution.ViewerCertificateProperty): any {
+export function tfDistributionViewerCertificatePropertyToHclTerraform(struct?: TfDistribution.ViewerCertificatePropertyOutputReference | TfDistribution.ViewerCertificateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2476,7 +2476,7 @@ export function awsCloudfrontDistributionViewerCertificatePropertyToHclTerraform
 }
 
 
-export function awsCloudfrontDistributionTrustStoreConfigPropertyToTerraform(struct?: AwsCloudfrontDistribution.TrustStoreConfigPropertyOutputReference | AwsCloudfrontDistribution.TrustStoreConfigProperty): any {
+export function tfDistributionTrustStoreConfigPropertyToTerraform(struct?: TfDistribution.TrustStoreConfigPropertyOutputReference | TfDistribution.TrustStoreConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2489,7 +2489,7 @@ export function awsCloudfrontDistributionTrustStoreConfigPropertyToTerraform(str
 }
 
 
-export function awsCloudfrontDistributionTrustStoreConfigPropertyToHclTerraform(struct?: AwsCloudfrontDistribution.TrustStoreConfigPropertyOutputReference | AwsCloudfrontDistribution.TrustStoreConfigProperty): any {
+export function tfDistributionTrustStoreConfigPropertyToHclTerraform(struct?: TfDistribution.TrustStoreConfigPropertyOutputReference | TfDistribution.TrustStoreConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2520,19 +2520,19 @@ export function awsCloudfrontDistributionTrustStoreConfigPropertyToHclTerraform(
 }
 
 
-export function awsCloudfrontDistributionViewerMtlsConfigPropertyToTerraform(struct?: AwsCloudfrontDistribution.ViewerMtlsConfigPropertyOutputReference | AwsCloudfrontDistribution.ViewerMtlsConfigProperty): any {
+export function tfDistributionViewerMtlsConfigPropertyToTerraform(struct?: TfDistribution.ViewerMtlsConfigPropertyOutputReference | TfDistribution.ViewerMtlsConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     mode: cdktn.stringToTerraform(struct!.mode),
-    trust_store_config: awsCloudfrontDistributionTrustStoreConfigPropertyToTerraform(struct!.trustStoreConfig),
+    trust_store_config: tfDistributionTrustStoreConfigPropertyToTerraform(struct!.trustStoreConfig),
   }
 }
 
 
-export function awsCloudfrontDistributionViewerMtlsConfigPropertyToHclTerraform(struct?: AwsCloudfrontDistribution.ViewerMtlsConfigPropertyOutputReference | AwsCloudfrontDistribution.ViewerMtlsConfigProperty): any {
+export function tfDistributionViewerMtlsConfigPropertyToHclTerraform(struct?: TfDistribution.ViewerMtlsConfigPropertyOutputReference | TfDistribution.ViewerMtlsConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2545,7 +2545,7 @@ export function awsCloudfrontDistributionViewerMtlsConfigPropertyToHclTerraform(
       storageClassType: "string",
     },
     trust_store_config: {
-      value: awsCloudfrontDistributionTrustStoreConfigPropertyToHclTerraform(struct!.trustStoreConfig),
+      value: tfDistributionTrustStoreConfigPropertyToHclTerraform(struct!.trustStoreConfig),
       isBlock: true,
       type: "list",
       storageClassType: "TrustStoreConfigPropertyList",
@@ -2557,7 +2557,7 @@ export function awsCloudfrontDistributionViewerMtlsConfigPropertyToHclTerraform(
 }
 
 
-export namespace AwsCloudfrontDistribution {
+export namespace TfDistribution {
 export interface TrustedKeyGroupsItemsProperty {
 }
 export class TrustedKeyGroupsItemsPropertyOutputReference extends cdktn.ComplexObject {
@@ -2798,7 +2798,7 @@ export class TrustedSignersPropertyList extends cdktn.ComplexList {
 }
 export interface CacheTagConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#header_name AwsCloudfrontDistribution#header_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#header_name TfDistribution#header_name}
   */
   readonly headerName: string;
 }
@@ -2849,7 +2849,7 @@ export class CacheTagConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ConnectionFunctionAssociationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#id AwsCloudfrontDistribution#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#id TfDistribution#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -2903,19 +2903,19 @@ export class ConnectionFunctionAssociationPropertyOutputReference extends cdktn.
 }
 export interface CustomErrorResponseProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#error_caching_min_ttl AwsCloudfrontDistribution#error_caching_min_ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#error_caching_min_ttl TfDistribution#error_caching_min_ttl}
   */
   readonly errorCachingMinTtl?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#error_code AwsCloudfrontDistribution#error_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#error_code TfDistribution#error_code}
   */
   readonly errorCode: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#response_code AwsCloudfrontDistribution#response_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#response_code TfDistribution#response_code}
   */
   readonly responseCode?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#response_page_path AwsCloudfrontDistribution#response_page_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#response_page_path TfDistribution#response_page_path}
   */
   readonly responsePagePath?: string;
 }
@@ -3064,11 +3064,11 @@ export class CustomErrorResponsePropertyList extends cdktn.ComplexList {
 }
 export interface DefaultCacheBehaviorForwardedValuesCookiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#forward AwsCloudfrontDistribution#forward}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#forward TfDistribution#forward}
   */
   readonly forward: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#whitelisted_names AwsCloudfrontDistribution#whitelisted_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#whitelisted_names TfDistribution#whitelisted_names}
   */
   readonly whitelistedNames?: string[];
 }
@@ -3141,21 +3141,21 @@ export class DefaultCacheBehaviorForwardedValuesCookiesPropertyOutputReference e
 }
 export interface DefaultCacheBehaviorForwardedValuesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#headers AwsCloudfrontDistribution#headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#headers TfDistribution#headers}
   */
   readonly headers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#query_string AwsCloudfrontDistribution#query_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#query_string TfDistribution#query_string}
   */
   readonly queryString: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#query_string_cache_keys AwsCloudfrontDistribution#query_string_cache_keys}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#query_string_cache_keys TfDistribution#query_string_cache_keys}
   */
   readonly queryStringCacheKeys?: string[];
   /**
   * cookies block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#cookies AwsCloudfrontDistribution#cookies}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#cookies TfDistribution#cookies}
   */
   readonly cookies: DefaultCacheBehaviorForwardedValuesCookiesProperty;
 }
@@ -3269,11 +3269,11 @@ export class DefaultCacheBehaviorForwardedValuesPropertyOutputReference extends 
 }
 export interface DefaultCacheBehaviorFunctionAssociationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#event_type AwsCloudfrontDistribution#event_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#event_type TfDistribution#event_type}
   */
   readonly eventType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#function_arn AwsCloudfrontDistribution#function_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#function_arn TfDistribution#function_arn}
   */
   readonly functionArn: string;
 }
@@ -3375,7 +3375,7 @@ export class DefaultCacheBehaviorFunctionAssociationPropertyList extends cdktn.C
 }
 export interface DefaultCacheBehaviorGrpcConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#enabled AwsCloudfrontDistribution#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#enabled TfDistribution#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
 }
@@ -3429,15 +3429,15 @@ export class DefaultCacheBehaviorGrpcConfigPropertyOutputReference extends cdktn
 }
 export interface DefaultCacheBehaviorLambdaFunctionAssociationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#event_type AwsCloudfrontDistribution#event_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#event_type TfDistribution#event_type}
   */
   readonly eventType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#include_body AwsCloudfrontDistribution#include_body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#include_body TfDistribution#include_body}
   */
   readonly includeBody?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#lambda_arn AwsCloudfrontDistribution#lambda_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#lambda_arn TfDistribution#lambda_arn}
   */
   readonly lambdaArn: string;
 }
@@ -3561,91 +3561,91 @@ export class DefaultCacheBehaviorLambdaFunctionAssociationPropertyList extends c
 }
 export interface DefaultCacheBehaviorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#allowed_methods AwsCloudfrontDistribution#allowed_methods}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#allowed_methods TfDistribution#allowed_methods}
   */
   readonly allowedMethods: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#cache_policy_id AwsCloudfrontDistribution#cache_policy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#cache_policy_id TfDistribution#cache_policy_id}
   */
   readonly cachePolicyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#cached_methods AwsCloudfrontDistribution#cached_methods}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#cached_methods TfDistribution#cached_methods}
   */
   readonly cachedMethods: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#compress AwsCloudfrontDistribution#compress}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#compress TfDistribution#compress}
   */
   readonly compress?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#default_ttl AwsCloudfrontDistribution#default_ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#default_ttl TfDistribution#default_ttl}
   */
   readonly defaultTtl?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#field_level_encryption_id AwsCloudfrontDistribution#field_level_encryption_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#field_level_encryption_id TfDistribution#field_level_encryption_id}
   */
   readonly fieldLevelEncryptionId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#max_ttl AwsCloudfrontDistribution#max_ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#max_ttl TfDistribution#max_ttl}
   */
   readonly maxTtl?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#min_ttl AwsCloudfrontDistribution#min_ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#min_ttl TfDistribution#min_ttl}
   */
   readonly minTtl?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_request_policy_id AwsCloudfrontDistribution#origin_request_policy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_request_policy_id TfDistribution#origin_request_policy_id}
   */
   readonly originRequestPolicyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#realtime_log_config_arn AwsCloudfrontDistribution#realtime_log_config_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#realtime_log_config_arn TfDistribution#realtime_log_config_arn}
   */
   readonly realtimeLogConfigArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#response_headers_policy_id AwsCloudfrontDistribution#response_headers_policy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#response_headers_policy_id TfDistribution#response_headers_policy_id}
   */
   readonly responseHeadersPolicyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#smooth_streaming AwsCloudfrontDistribution#smooth_streaming}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#smooth_streaming TfDistribution#smooth_streaming}
   */
   readonly smoothStreaming?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#target_origin_id AwsCloudfrontDistribution#target_origin_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#target_origin_id TfDistribution#target_origin_id}
   */
   readonly targetOriginId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#trusted_key_groups AwsCloudfrontDistribution#trusted_key_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#trusted_key_groups TfDistribution#trusted_key_groups}
   */
   readonly trustedKeyGroups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#trusted_signers AwsCloudfrontDistribution#trusted_signers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#trusted_signers TfDistribution#trusted_signers}
   */
   readonly trustedSigners?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#viewer_protocol_policy AwsCloudfrontDistribution#viewer_protocol_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#viewer_protocol_policy TfDistribution#viewer_protocol_policy}
   */
   readonly viewerProtocolPolicy: string;
   /**
   * forwarded_values block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#forwarded_values AwsCloudfrontDistribution#forwarded_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#forwarded_values TfDistribution#forwarded_values}
   */
   readonly forwardedValues?: DefaultCacheBehaviorForwardedValuesProperty;
   /**
   * function_association block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#function_association AwsCloudfrontDistribution#function_association}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#function_association TfDistribution#function_association}
   */
   readonly functionAssociation?: DefaultCacheBehaviorFunctionAssociationProperty[] | cdktn.IResolvable;
   /**
   * grpc_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#grpc_config AwsCloudfrontDistribution#grpc_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#grpc_config TfDistribution#grpc_config}
   */
   readonly grpcConfig?: DefaultCacheBehaviorGrpcConfigProperty;
   /**
   * lambda_function_association block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#lambda_function_association AwsCloudfrontDistribution#lambda_function_association}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#lambda_function_association TfDistribution#lambda_function_association}
   */
   readonly lambdaFunctionAssociation?: DefaultCacheBehaviorLambdaFunctionAssociationProperty[] | cdktn.IResolvable;
 }
@@ -4105,15 +4105,15 @@ export class DefaultCacheBehaviorPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface LoggingConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#bucket AwsCloudfrontDistribution#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#bucket TfDistribution#bucket}
   */
   readonly bucket?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#include_cookies AwsCloudfrontDistribution#include_cookies}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#include_cookies TfDistribution#include_cookies}
   */
   readonly includeCookies?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#prefix AwsCloudfrontDistribution#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#prefix TfDistribution#prefix}
   */
   readonly prefix?: string;
 }
@@ -4211,11 +4211,11 @@ export class LoggingConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface OrderedCacheBehaviorForwardedValuesCookiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#forward AwsCloudfrontDistribution#forward}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#forward TfDistribution#forward}
   */
   readonly forward: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#whitelisted_names AwsCloudfrontDistribution#whitelisted_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#whitelisted_names TfDistribution#whitelisted_names}
   */
   readonly whitelistedNames?: string[];
 }
@@ -4288,21 +4288,21 @@ export class OrderedCacheBehaviorForwardedValuesCookiesPropertyOutputReference e
 }
 export interface OrderedCacheBehaviorForwardedValuesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#headers AwsCloudfrontDistribution#headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#headers TfDistribution#headers}
   */
   readonly headers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#query_string AwsCloudfrontDistribution#query_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#query_string TfDistribution#query_string}
   */
   readonly queryString: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#query_string_cache_keys AwsCloudfrontDistribution#query_string_cache_keys}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#query_string_cache_keys TfDistribution#query_string_cache_keys}
   */
   readonly queryStringCacheKeys?: string[];
   /**
   * cookies block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#cookies AwsCloudfrontDistribution#cookies}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#cookies TfDistribution#cookies}
   */
   readonly cookies: OrderedCacheBehaviorForwardedValuesCookiesProperty;
 }
@@ -4416,11 +4416,11 @@ export class OrderedCacheBehaviorForwardedValuesPropertyOutputReference extends 
 }
 export interface OrderedCacheBehaviorFunctionAssociationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#event_type AwsCloudfrontDistribution#event_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#event_type TfDistribution#event_type}
   */
   readonly eventType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#function_arn AwsCloudfrontDistribution#function_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#function_arn TfDistribution#function_arn}
   */
   readonly functionArn: string;
 }
@@ -4522,7 +4522,7 @@ export class OrderedCacheBehaviorFunctionAssociationPropertyList extends cdktn.C
 }
 export interface OrderedCacheBehaviorGrpcConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#enabled AwsCloudfrontDistribution#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#enabled TfDistribution#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
 }
@@ -4576,15 +4576,15 @@ export class OrderedCacheBehaviorGrpcConfigPropertyOutputReference extends cdktn
 }
 export interface OrderedCacheBehaviorLambdaFunctionAssociationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#event_type AwsCloudfrontDistribution#event_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#event_type TfDistribution#event_type}
   */
   readonly eventType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#include_body AwsCloudfrontDistribution#include_body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#include_body TfDistribution#include_body}
   */
   readonly includeBody?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#lambda_arn AwsCloudfrontDistribution#lambda_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#lambda_arn TfDistribution#lambda_arn}
   */
   readonly lambdaArn: string;
 }
@@ -4708,95 +4708,95 @@ export class OrderedCacheBehaviorLambdaFunctionAssociationPropertyList extends c
 }
 export interface OrderedCacheBehaviorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#allowed_methods AwsCloudfrontDistribution#allowed_methods}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#allowed_methods TfDistribution#allowed_methods}
   */
   readonly allowedMethods: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#cache_policy_id AwsCloudfrontDistribution#cache_policy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#cache_policy_id TfDistribution#cache_policy_id}
   */
   readonly cachePolicyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#cached_methods AwsCloudfrontDistribution#cached_methods}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#cached_methods TfDistribution#cached_methods}
   */
   readonly cachedMethods: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#compress AwsCloudfrontDistribution#compress}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#compress TfDistribution#compress}
   */
   readonly compress?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#default_ttl AwsCloudfrontDistribution#default_ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#default_ttl TfDistribution#default_ttl}
   */
   readonly defaultTtl?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#field_level_encryption_id AwsCloudfrontDistribution#field_level_encryption_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#field_level_encryption_id TfDistribution#field_level_encryption_id}
   */
   readonly fieldLevelEncryptionId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#max_ttl AwsCloudfrontDistribution#max_ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#max_ttl TfDistribution#max_ttl}
   */
   readonly maxTtl?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#min_ttl AwsCloudfrontDistribution#min_ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#min_ttl TfDistribution#min_ttl}
   */
   readonly minTtl?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_request_policy_id AwsCloudfrontDistribution#origin_request_policy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_request_policy_id TfDistribution#origin_request_policy_id}
   */
   readonly originRequestPolicyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#path_pattern AwsCloudfrontDistribution#path_pattern}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#path_pattern TfDistribution#path_pattern}
   */
   readonly pathPattern: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#realtime_log_config_arn AwsCloudfrontDistribution#realtime_log_config_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#realtime_log_config_arn TfDistribution#realtime_log_config_arn}
   */
   readonly realtimeLogConfigArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#response_headers_policy_id AwsCloudfrontDistribution#response_headers_policy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#response_headers_policy_id TfDistribution#response_headers_policy_id}
   */
   readonly responseHeadersPolicyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#smooth_streaming AwsCloudfrontDistribution#smooth_streaming}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#smooth_streaming TfDistribution#smooth_streaming}
   */
   readonly smoothStreaming?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#target_origin_id AwsCloudfrontDistribution#target_origin_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#target_origin_id TfDistribution#target_origin_id}
   */
   readonly targetOriginId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#trusted_key_groups AwsCloudfrontDistribution#trusted_key_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#trusted_key_groups TfDistribution#trusted_key_groups}
   */
   readonly trustedKeyGroups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#trusted_signers AwsCloudfrontDistribution#trusted_signers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#trusted_signers TfDistribution#trusted_signers}
   */
   readonly trustedSigners?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#viewer_protocol_policy AwsCloudfrontDistribution#viewer_protocol_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#viewer_protocol_policy TfDistribution#viewer_protocol_policy}
   */
   readonly viewerProtocolPolicy: string;
   /**
   * forwarded_values block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#forwarded_values AwsCloudfrontDistribution#forwarded_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#forwarded_values TfDistribution#forwarded_values}
   */
   readonly forwardedValues?: OrderedCacheBehaviorForwardedValuesProperty;
   /**
   * function_association block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#function_association AwsCloudfrontDistribution#function_association}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#function_association TfDistribution#function_association}
   */
   readonly functionAssociation?: OrderedCacheBehaviorFunctionAssociationProperty[] | cdktn.IResolvable;
   /**
   * grpc_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#grpc_config AwsCloudfrontDistribution#grpc_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#grpc_config TfDistribution#grpc_config}
   */
   readonly grpcConfig?: OrderedCacheBehaviorGrpcConfigProperty;
   /**
   * lambda_function_association block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#lambda_function_association AwsCloudfrontDistribution#lambda_function_association}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#lambda_function_association TfDistribution#lambda_function_association}
   */
   readonly lambdaFunctionAssociation?: OrderedCacheBehaviorLambdaFunctionAssociationProperty[] | cdktn.IResolvable;
 }
@@ -5307,11 +5307,11 @@ export class OrderedCacheBehaviorPropertyList extends cdktn.ComplexList {
 }
 export interface CustomHeaderProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#name AwsCloudfrontDistribution#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#name TfDistribution#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#value AwsCloudfrontDistribution#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#value TfDistribution#value}
   */
   readonly value: string;
 }
@@ -5413,7 +5413,7 @@ export class CustomHeaderPropertyList extends cdktn.ComplexList {
 }
 export interface OriginMtlsConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#client_certificate_arn AwsCloudfrontDistribution#client_certificate_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#client_certificate_arn TfDistribution#client_certificate_arn}
   */
   readonly clientCertificateArn: string;
 }
@@ -5464,37 +5464,37 @@ export class OriginMtlsConfigPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface CustomOriginConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#http_port AwsCloudfrontDistribution#http_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#http_port TfDistribution#http_port}
   */
   readonly httpPort: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#https_port AwsCloudfrontDistribution#https_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#https_port TfDistribution#https_port}
   */
   readonly httpsPort: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#ip_address_type AwsCloudfrontDistribution#ip_address_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#ip_address_type TfDistribution#ip_address_type}
   */
   readonly ipAddressType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_keepalive_timeout AwsCloudfrontDistribution#origin_keepalive_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_keepalive_timeout TfDistribution#origin_keepalive_timeout}
   */
   readonly originKeepaliveTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_protocol_policy AwsCloudfrontDistribution#origin_protocol_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_protocol_policy TfDistribution#origin_protocol_policy}
   */
   readonly originProtocolPolicy: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_read_timeout AwsCloudfrontDistribution#origin_read_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_read_timeout TfDistribution#origin_read_timeout}
   */
   readonly originReadTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_ssl_protocols AwsCloudfrontDistribution#origin_ssl_protocols}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_ssl_protocols TfDistribution#origin_ssl_protocols}
   */
   readonly originSslProtocols: string[];
   /**
   * origin_mtls_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_mtls_config AwsCloudfrontDistribution#origin_mtls_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_mtls_config TfDistribution#origin_mtls_config}
   */
   readonly originMtlsConfig?: OriginMtlsConfigProperty;
 }
@@ -5690,11 +5690,11 @@ export class CustomOriginConfigPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface OriginShieldProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#enabled AwsCloudfrontDistribution#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#enabled TfDistribution#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_shield_region AwsCloudfrontDistribution#origin_shield_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_shield_region TfDistribution#origin_shield_region}
   */
   readonly originShieldRegion?: string;
 }
@@ -5767,7 +5767,7 @@ export class OriginShieldPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface S3OriginConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_access_identity AwsCloudfrontDistribution#origin_access_identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_access_identity TfDistribution#origin_access_identity}
   */
   readonly originAccessIdentity: string;
 }
@@ -5818,19 +5818,19 @@ export class S3OriginConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VpcOriginConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_keepalive_timeout AwsCloudfrontDistribution#origin_keepalive_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_keepalive_timeout TfDistribution#origin_keepalive_timeout}
   */
   readonly originKeepaliveTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_read_timeout AwsCloudfrontDistribution#origin_read_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_read_timeout TfDistribution#origin_read_timeout}
   */
   readonly originReadTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#owner_account_id AwsCloudfrontDistribution#owner_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#owner_account_id TfDistribution#owner_account_id}
   */
   readonly ownerAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#vpc_origin_id AwsCloudfrontDistribution#vpc_origin_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#vpc_origin_id TfDistribution#vpc_origin_id}
   */
   readonly vpcOriginId: string;
 }
@@ -5947,61 +5947,61 @@ export class VpcOriginConfigPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface OriginProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#connection_attempts AwsCloudfrontDistribution#connection_attempts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#connection_attempts TfDistribution#connection_attempts}
   */
   readonly connectionAttempts?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#connection_timeout AwsCloudfrontDistribution#connection_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#connection_timeout TfDistribution#connection_timeout}
   */
   readonly connectionTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#domain_name AwsCloudfrontDistribution#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#domain_name TfDistribution#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_access_control_id AwsCloudfrontDistribution#origin_access_control_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_access_control_id TfDistribution#origin_access_control_id}
   */
   readonly originAccessControlId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_id AwsCloudfrontDistribution#origin_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_id TfDistribution#origin_id}
   */
   readonly originId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_path AwsCloudfrontDistribution#origin_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_path TfDistribution#origin_path}
   */
   readonly originPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#response_completion_timeout AwsCloudfrontDistribution#response_completion_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#response_completion_timeout TfDistribution#response_completion_timeout}
   */
   readonly responseCompletionTimeout?: number;
   /**
   * custom_header block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#custom_header AwsCloudfrontDistribution#custom_header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#custom_header TfDistribution#custom_header}
   */
   readonly customHeader?: CustomHeaderProperty[] | cdktn.IResolvable;
   /**
   * custom_origin_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#custom_origin_config AwsCloudfrontDistribution#custom_origin_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#custom_origin_config TfDistribution#custom_origin_config}
   */
   readonly customOriginConfig?: CustomOriginConfigProperty;
   /**
   * origin_shield block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_shield AwsCloudfrontDistribution#origin_shield}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_shield TfDistribution#origin_shield}
   */
   readonly originShield?: OriginShieldProperty;
   /**
   * s3_origin_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#s3_origin_config AwsCloudfrontDistribution#s3_origin_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#s3_origin_config TfDistribution#s3_origin_config}
   */
   readonly s3OriginConfig?: S3OriginConfigProperty;
   /**
   * vpc_origin_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#vpc_origin_config AwsCloudfrontDistribution#vpc_origin_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#vpc_origin_config TfDistribution#vpc_origin_config}
   */
   readonly vpcOriginConfig?: VpcOriginConfigProperty;
 }
@@ -6323,7 +6323,7 @@ export class OriginPropertyList extends cdktn.ComplexList {
 }
 export interface FailoverCriteriaProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#status_codes AwsCloudfrontDistribution#status_codes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#status_codes TfDistribution#status_codes}
   */
   readonly statusCodes: number[];
 }
@@ -6374,7 +6374,7 @@ export class FailoverCriteriaPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface MemberProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_id AwsCloudfrontDistribution#origin_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_id TfDistribution#origin_id}
   */
   readonly originId: string;
 }
@@ -6457,19 +6457,19 @@ export class MemberPropertyList extends cdktn.ComplexList {
 }
 export interface OriginGroupProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_id AwsCloudfrontDistribution#origin_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#origin_id TfDistribution#origin_id}
   */
   readonly originId: string;
   /**
   * failover_criteria block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#failover_criteria AwsCloudfrontDistribution#failover_criteria}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#failover_criteria TfDistribution#failover_criteria}
   */
   readonly failoverCriteria: FailoverCriteriaProperty;
   /**
   * member block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#member AwsCloudfrontDistribution#member}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#member TfDistribution#member}
   */
   readonly member: MemberProperty[] | cdktn.IResolvable;
 }
@@ -6590,11 +6590,11 @@ export class OriginGroupPropertyList extends cdktn.ComplexList {
 }
 export interface GeoRestrictionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#locations AwsCloudfrontDistribution#locations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#locations TfDistribution#locations}
   */
   readonly locations?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#restriction_type AwsCloudfrontDistribution#restriction_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#restriction_type TfDistribution#restriction_type}
   */
   readonly restrictionType: string;
 }
@@ -6669,7 +6669,7 @@ export interface RestrictionsProperty {
   /**
   * geo_restriction block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#geo_restriction AwsCloudfrontDistribution#geo_restriction}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#geo_restriction TfDistribution#geo_restriction}
   */
   readonly geoRestriction: GeoRestrictionProperty;
 }
@@ -6720,23 +6720,23 @@ export class RestrictionsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ViewerCertificateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#acm_certificate_arn AwsCloudfrontDistribution#acm_certificate_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#acm_certificate_arn TfDistribution#acm_certificate_arn}
   */
   readonly acmCertificateArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#cloudfront_default_certificate AwsCloudfrontDistribution#cloudfront_default_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#cloudfront_default_certificate TfDistribution#cloudfront_default_certificate}
   */
   readonly cloudfrontDefaultCertificate?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#iam_certificate_id AwsCloudfrontDistribution#iam_certificate_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#iam_certificate_id TfDistribution#iam_certificate_id}
   */
   readonly iamCertificateId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#minimum_protocol_version AwsCloudfrontDistribution#minimum_protocol_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#minimum_protocol_version TfDistribution#minimum_protocol_version}
   */
   readonly minimumProtocolVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#ssl_support_method AwsCloudfrontDistribution#ssl_support_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#ssl_support_method TfDistribution#ssl_support_method}
   */
   readonly sslSupportMethod?: string;
 }
@@ -6878,15 +6878,15 @@ export class ViewerCertificatePropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface TrustStoreConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#advertise_trust_store_ca_names AwsCloudfrontDistribution#advertise_trust_store_ca_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#advertise_trust_store_ca_names TfDistribution#advertise_trust_store_ca_names}
   */
   readonly advertiseTrustStoreCaNames?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#ignore_certificate_expiry AwsCloudfrontDistribution#ignore_certificate_expiry}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#ignore_certificate_expiry TfDistribution#ignore_certificate_expiry}
   */
   readonly ignoreCertificateExpiry?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#trust_store_id AwsCloudfrontDistribution#trust_store_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#trust_store_id TfDistribution#trust_store_id}
   */
   readonly trustStoreId: string;
 }
@@ -6981,13 +6981,13 @@ export class TrustStoreConfigPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface ViewerMtlsConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#mode AwsCloudfrontDistribution#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#mode TfDistribution#mode}
   */
   readonly mode?: string;
   /**
   * trust_store_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#trust_store_config AwsCloudfrontDistribution#trust_store_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution#trust_store_config TfDistribution#trust_store_config}
   */
   readonly trustStoreConfig?: TrustStoreConfigProperty;
 }

@@ -5,61 +5,61 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsBedrockagentcoreGatewayTargetConfig extends cdktn.TerraformMetaArguments {
+export interface TfGatewayTargetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description AwsBedrockagentcoreGatewayTarget#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description TfGatewayTarget#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#gateway_identifier AwsBedrockagentcoreGatewayTarget#gateway_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#gateway_identifier TfGatewayTarget#gateway_identifier}
   */
   readonly gatewayIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#name AwsBedrockagentcoreGatewayTarget#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#name TfGatewayTarget#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#region AwsBedrockagentcoreGatewayTarget#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#region TfGatewayTarget#region}
   */
   readonly region?: string;
   /**
   * credential_provider_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#credential_provider_configuration AwsBedrockagentcoreGatewayTarget#credential_provider_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#credential_provider_configuration TfGatewayTarget#credential_provider_configuration}
   */
-  readonly credentialProviderConfiguration?: AwsBedrockagentcoreGatewayTarget.CredentialProviderConfigurationProperty[] | cdktn.IResolvable;
+  readonly credentialProviderConfiguration?: TfGatewayTarget.CredentialProviderConfigurationProperty[] | cdktn.IResolvable;
   /**
   * metadata_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#metadata_configuration AwsBedrockagentcoreGatewayTarget#metadata_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#metadata_configuration TfGatewayTarget#metadata_configuration}
   */
-  readonly metadataConfiguration?: AwsBedrockagentcoreGatewayTarget.MetadataConfigurationProperty[] | cdktn.IResolvable;
+  readonly metadataConfiguration?: TfGatewayTarget.MetadataConfigurationProperty[] | cdktn.IResolvable;
   /**
   * private_endpoint block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#private_endpoint AwsBedrockagentcoreGatewayTarget#private_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#private_endpoint TfGatewayTarget#private_endpoint}
   */
-  readonly privateEndpoint?: AwsBedrockagentcoreGatewayTarget.PrivateEndpointProperty[] | cdktn.IResolvable;
+  readonly privateEndpoint?: TfGatewayTarget.PrivateEndpointProperty[] | cdktn.IResolvable;
   /**
   * target_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#target_configuration AwsBedrockagentcoreGatewayTarget#target_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#target_configuration TfGatewayTarget#target_configuration}
   */
-  readonly targetConfiguration?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationProperty[] | cdktn.IResolvable;
+  readonly targetConfiguration?: TfGatewayTarget.TargetConfigurationProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#timeouts AwsBedrockagentcoreGatewayTarget#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#timeouts TfGatewayTarget#timeouts}
   */
-  readonly timeouts?: AwsBedrockagentcoreGatewayTarget.TimeoutsProperty;
+  readonly timeouts?: TfGatewayTarget.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target aws_bedrockagentcore_gateway_target}
 */
-export class AwsBedrockagentcoreGatewayTarget extends cdktn.TerraformResource {
+export class TfGatewayTarget extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -70,11 +70,11 @@ export class AwsBedrockagentcoreGatewayTarget extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsBedrockagentcoreGatewayTarget resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfGatewayTarget resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsBedrockagentcoreGatewayTarget to import
-  * @param importFromId The id of the existing AwsBedrockagentcoreGatewayTarget that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsBedrockagentcoreGatewayTarget to import is found
+  * @param importToId The construct id used in the generated config for the TfGatewayTarget to import
+  * @param importFromId The id of the existing TfGatewayTarget that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfGatewayTarget to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrockagentcore_gateway_target", importId: importFromId, provider });
@@ -89,9 +89,9 @@ export class AwsBedrockagentcoreGatewayTarget extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsBedrockagentcoreGatewayTargetConfig
+  * @param options TfGatewayTargetConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsBedrockagentcoreGatewayTargetConfig) {
+  public constructor(scope: Construct, id: string, config: TfGatewayTargetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrockagentcore_gateway_target',
       terraformGeneratorMetadata: {
@@ -186,11 +186,11 @@ export class AwsBedrockagentcoreGatewayTarget extends cdktn.TerraformResource {
   }
 
   // credential_provider_configuration - computed: false, optional: true, required: false
-  private _credentialProviderConfiguration = new AwsBedrockagentcoreGatewayTarget.CredentialProviderConfigurationPropertyList(this, "credential_provider_configuration", false);
+  private _credentialProviderConfiguration = new TfGatewayTarget.CredentialProviderConfigurationPropertyList(this, "credential_provider_configuration", false);
   public get credentialProviderConfiguration() {
     return this._credentialProviderConfiguration;
   }
-  public putCredentialProviderConfiguration(value: AwsBedrockagentcoreGatewayTarget.CredentialProviderConfigurationProperty[] | cdktn.IResolvable) {
+  public putCredentialProviderConfiguration(value: TfGatewayTarget.CredentialProviderConfigurationProperty[] | cdktn.IResolvable) {
     this._credentialProviderConfiguration.internalValue = value;
   }
   public resetCredentialProviderConfiguration() {
@@ -202,11 +202,11 @@ export class AwsBedrockagentcoreGatewayTarget extends cdktn.TerraformResource {
   }
 
   // metadata_configuration - computed: false, optional: true, required: false
-  private _metadataConfiguration = new AwsBedrockagentcoreGatewayTarget.MetadataConfigurationPropertyList(this, "metadata_configuration", false);
+  private _metadataConfiguration = new TfGatewayTarget.MetadataConfigurationPropertyList(this, "metadata_configuration", false);
   public get metadataConfiguration() {
     return this._metadataConfiguration;
   }
-  public putMetadataConfiguration(value: AwsBedrockagentcoreGatewayTarget.MetadataConfigurationProperty[] | cdktn.IResolvable) {
+  public putMetadataConfiguration(value: TfGatewayTarget.MetadataConfigurationProperty[] | cdktn.IResolvable) {
     this._metadataConfiguration.internalValue = value;
   }
   public resetMetadataConfiguration() {
@@ -218,11 +218,11 @@ export class AwsBedrockagentcoreGatewayTarget extends cdktn.TerraformResource {
   }
 
   // private_endpoint - computed: false, optional: true, required: false
-  private _privateEndpoint = new AwsBedrockagentcoreGatewayTarget.PrivateEndpointPropertyList(this, "private_endpoint", false);
+  private _privateEndpoint = new TfGatewayTarget.PrivateEndpointPropertyList(this, "private_endpoint", false);
   public get privateEndpoint() {
     return this._privateEndpoint;
   }
-  public putPrivateEndpoint(value: AwsBedrockagentcoreGatewayTarget.PrivateEndpointProperty[] | cdktn.IResolvable) {
+  public putPrivateEndpoint(value: TfGatewayTarget.PrivateEndpointProperty[] | cdktn.IResolvable) {
     this._privateEndpoint.internalValue = value;
   }
   public resetPrivateEndpoint() {
@@ -234,11 +234,11 @@ export class AwsBedrockagentcoreGatewayTarget extends cdktn.TerraformResource {
   }
 
   // target_configuration - computed: false, optional: true, required: false
-  private _targetConfiguration = new AwsBedrockagentcoreGatewayTarget.TargetConfigurationPropertyList(this, "target_configuration", false);
+  private _targetConfiguration = new TfGatewayTarget.TargetConfigurationPropertyList(this, "target_configuration", false);
   public get targetConfiguration() {
     return this._targetConfiguration;
   }
-  public putTargetConfiguration(value: AwsBedrockagentcoreGatewayTarget.TargetConfigurationProperty[] | cdktn.IResolvable) {
+  public putTargetConfiguration(value: TfGatewayTarget.TargetConfigurationProperty[] | cdktn.IResolvable) {
     this._targetConfiguration.internalValue = value;
   }
   public resetTargetConfiguration() {
@@ -250,11 +250,11 @@ export class AwsBedrockagentcoreGatewayTarget extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsBedrockagentcoreGatewayTarget.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfGatewayTarget.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsBedrockagentcoreGatewayTarget.TimeoutsProperty) {
+  public putTimeouts(value: TfGatewayTarget.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -275,11 +275,11 @@ export class AwsBedrockagentcoreGatewayTarget extends cdktn.TerraformResource {
       gateway_identifier: cdktn.stringToTerraform(this._gatewayIdentifier),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
-      credential_provider_configuration: cdktn.listMapper(awsBedrockagentcoreGatewayTargetCredentialProviderConfigurationPropertyToTerraform, true)(this._credentialProviderConfiguration.internalValue),
-      metadata_configuration: cdktn.listMapper(awsBedrockagentcoreGatewayTargetMetadataConfigurationPropertyToTerraform, true)(this._metadataConfiguration.internalValue),
-      private_endpoint: cdktn.listMapper(awsBedrockagentcoreGatewayTargetPrivateEndpointPropertyToTerraform, true)(this._privateEndpoint.internalValue),
-      target_configuration: cdktn.listMapper(awsBedrockagentcoreGatewayTargetTargetConfigurationPropertyToTerraform, true)(this._targetConfiguration.internalValue),
-      timeouts: awsBedrockagentcoreGatewayTargetTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      credential_provider_configuration: cdktn.listMapper(tfGatewayTargetCredentialProviderConfigurationPropertyToTerraform, true)(this._credentialProviderConfiguration.internalValue),
+      metadata_configuration: cdktn.listMapper(tfGatewayTargetMetadataConfigurationPropertyToTerraform, true)(this._metadataConfiguration.internalValue),
+      private_endpoint: cdktn.listMapper(tfGatewayTargetPrivateEndpointPropertyToTerraform, true)(this._privateEndpoint.internalValue),
+      target_configuration: cdktn.listMapper(tfGatewayTargetTargetConfigurationPropertyToTerraform, true)(this._targetConfiguration.internalValue),
+      timeouts: tfGatewayTargetTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -310,34 +310,34 @@ export class AwsBedrockagentcoreGatewayTarget extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       credential_provider_configuration: {
-        value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetCredentialProviderConfigurationPropertyToHclTerraform, true)(this._credentialProviderConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfGatewayTargetCredentialProviderConfigurationPropertyToHclTerraform, true)(this._credentialProviderConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentcoreGatewayTarget.CredentialProviderConfigurationPropertyList",
+        storageClassType: "TfGatewayTarget.CredentialProviderConfigurationPropertyList",
       },
       metadata_configuration: {
-        value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetMetadataConfigurationPropertyToHclTerraform, true)(this._metadataConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfGatewayTargetMetadataConfigurationPropertyToHclTerraform, true)(this._metadataConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentcoreGatewayTarget.MetadataConfigurationPropertyList",
+        storageClassType: "TfGatewayTarget.MetadataConfigurationPropertyList",
       },
       private_endpoint: {
-        value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetPrivateEndpointPropertyToHclTerraform, true)(this._privateEndpoint.internalValue),
+        value: cdktn.listMapperHcl(tfGatewayTargetPrivateEndpointPropertyToHclTerraform, true)(this._privateEndpoint.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentcoreGatewayTarget.PrivateEndpointPropertyList",
+        storageClassType: "TfGatewayTarget.PrivateEndpointPropertyList",
       },
       target_configuration: {
-        value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetTargetConfigurationPropertyToHclTerraform, true)(this._targetConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfGatewayTargetTargetConfigurationPropertyToHclTerraform, true)(this._targetConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentcoreGatewayTarget.TargetConfigurationPropertyList",
+        storageClassType: "TfGatewayTarget.TargetConfigurationPropertyList",
       },
       timeouts: {
-        value: awsBedrockagentcoreGatewayTargetTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfGatewayTargetTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsBedrockagentcoreGatewayTarget.TimeoutsProperty",
+        storageClassType: "TfGatewayTarget.TimeoutsProperty",
       },
     };
 
@@ -346,7 +346,7 @@ export class AwsBedrockagentcoreGatewayTarget extends cdktn.TerraformResource {
   }
 }
 
-export function awsBedrockagentcoreGatewayTargetApiKeyPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.ApiKeyProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetApiKeyPropertyToTerraform(struct?: TfGatewayTarget.ApiKeyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -360,7 +360,7 @@ export function awsBedrockagentcoreGatewayTargetApiKeyPropertyToTerraform(struct
 }
 
 
-export function awsBedrockagentcoreGatewayTargetApiKeyPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.ApiKeyProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetApiKeyPropertyToHclTerraform(struct?: TfGatewayTarget.ApiKeyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -397,7 +397,7 @@ export function awsBedrockagentcoreGatewayTargetApiKeyPropertyToHclTerraform(str
 }
 
 
-export function awsBedrockagentcoreGatewayTargetCallerIamCredentialsPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.CallerIamCredentialsProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetCallerIamCredentialsPropertyToTerraform(struct?: TfGatewayTarget.CallerIamCredentialsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -409,7 +409,7 @@ export function awsBedrockagentcoreGatewayTargetCallerIamCredentialsPropertyToTe
 }
 
 
-export function awsBedrockagentcoreGatewayTargetCallerIamCredentialsPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.CallerIamCredentialsProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetCallerIamCredentialsPropertyToHclTerraform(struct?: TfGatewayTarget.CallerIamCredentialsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -434,7 +434,7 @@ export function awsBedrockagentcoreGatewayTargetCallerIamCredentialsPropertyToHc
 }
 
 
-export function awsBedrockagentcoreGatewayTargetGatewayIamRolePropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.GatewayIamRoleProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetGatewayIamRolePropertyToTerraform(struct?: TfGatewayTarget.GatewayIamRoleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -446,7 +446,7 @@ export function awsBedrockagentcoreGatewayTargetGatewayIamRolePropertyToTerrafor
 }
 
 
-export function awsBedrockagentcoreGatewayTargetGatewayIamRolePropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.GatewayIamRoleProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetGatewayIamRolePropertyToHclTerraform(struct?: TfGatewayTarget.GatewayIamRoleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -471,7 +471,7 @@ export function awsBedrockagentcoreGatewayTargetGatewayIamRolePropertyToHclTerra
 }
 
 
-export function awsBedrockagentcoreGatewayTargetJwtPassthroughPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.JwtPassthroughProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetJwtPassthroughPropertyToTerraform(struct?: TfGatewayTarget.JwtPassthroughProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -481,7 +481,7 @@ export function awsBedrockagentcoreGatewayTargetJwtPassthroughPropertyToTerrafor
 }
 
 
-export function awsBedrockagentcoreGatewayTargetJwtPassthroughPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.JwtPassthroughProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetJwtPassthroughPropertyToHclTerraform(struct?: TfGatewayTarget.JwtPassthroughProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -492,7 +492,7 @@ export function awsBedrockagentcoreGatewayTargetJwtPassthroughPropertyToHclTerra
 }
 
 
-export function awsBedrockagentcoreGatewayTargetOauthPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.OauthProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetOauthPropertyToTerraform(struct?: TfGatewayTarget.OauthProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -507,7 +507,7 @@ export function awsBedrockagentcoreGatewayTargetOauthPropertyToTerraform(struct?
 }
 
 
-export function awsBedrockagentcoreGatewayTargetOauthPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.OauthProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetOauthPropertyToHclTerraform(struct?: TfGatewayTarget.OauthProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -550,53 +550,53 @@ export function awsBedrockagentcoreGatewayTargetOauthPropertyToHclTerraform(stru
 }
 
 
-export function awsBedrockagentcoreGatewayTargetCredentialProviderConfigurationPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.CredentialProviderConfigurationProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetCredentialProviderConfigurationPropertyToTerraform(struct?: TfGatewayTarget.CredentialProviderConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    api_key: cdktn.listMapper(awsBedrockagentcoreGatewayTargetApiKeyPropertyToTerraform, true)(struct!.apiKey),
-    caller_iam_credentials: cdktn.listMapper(awsBedrockagentcoreGatewayTargetCallerIamCredentialsPropertyToTerraform, true)(struct!.callerIamCredentials),
-    gateway_iam_role: cdktn.listMapper(awsBedrockagentcoreGatewayTargetGatewayIamRolePropertyToTerraform, true)(struct!.gatewayIamRole),
-    jwt_passthrough: cdktn.listMapper(awsBedrockagentcoreGatewayTargetJwtPassthroughPropertyToTerraform, true)(struct!.jwtPassthrough),
-    oauth: cdktn.listMapper(awsBedrockagentcoreGatewayTargetOauthPropertyToTerraform, true)(struct!.oauth),
+    api_key: cdktn.listMapper(tfGatewayTargetApiKeyPropertyToTerraform, true)(struct!.apiKey),
+    caller_iam_credentials: cdktn.listMapper(tfGatewayTargetCallerIamCredentialsPropertyToTerraform, true)(struct!.callerIamCredentials),
+    gateway_iam_role: cdktn.listMapper(tfGatewayTargetGatewayIamRolePropertyToTerraform, true)(struct!.gatewayIamRole),
+    jwt_passthrough: cdktn.listMapper(tfGatewayTargetJwtPassthroughPropertyToTerraform, true)(struct!.jwtPassthrough),
+    oauth: cdktn.listMapper(tfGatewayTargetOauthPropertyToTerraform, true)(struct!.oauth),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayTargetCredentialProviderConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.CredentialProviderConfigurationProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetCredentialProviderConfigurationPropertyToHclTerraform(struct?: TfGatewayTarget.CredentialProviderConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     api_key: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetApiKeyPropertyToHclTerraform, true)(struct!.apiKey),
+      value: cdktn.listMapperHcl(tfGatewayTargetApiKeyPropertyToHclTerraform, true)(struct!.apiKey),
       isBlock: true,
       type: "list",
       storageClassType: "ApiKeyPropertyList",
     },
     caller_iam_credentials: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetCallerIamCredentialsPropertyToHclTerraform, true)(struct!.callerIamCredentials),
+      value: cdktn.listMapperHcl(tfGatewayTargetCallerIamCredentialsPropertyToHclTerraform, true)(struct!.callerIamCredentials),
       isBlock: true,
       type: "list",
       storageClassType: "CallerIamCredentialsPropertyList",
     },
     gateway_iam_role: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetGatewayIamRolePropertyToHclTerraform, true)(struct!.gatewayIamRole),
+      value: cdktn.listMapperHcl(tfGatewayTargetGatewayIamRolePropertyToHclTerraform, true)(struct!.gatewayIamRole),
       isBlock: true,
       type: "list",
       storageClassType: "GatewayIamRolePropertyList",
     },
     jwt_passthrough: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetJwtPassthroughPropertyToHclTerraform, true)(struct!.jwtPassthrough),
+      value: cdktn.listMapperHcl(tfGatewayTargetJwtPassthroughPropertyToHclTerraform, true)(struct!.jwtPassthrough),
       isBlock: true,
       type: "list",
       storageClassType: "JwtPassthroughPropertyList",
     },
     oauth: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetOauthPropertyToHclTerraform, true)(struct!.oauth),
+      value: cdktn.listMapperHcl(tfGatewayTargetOauthPropertyToHclTerraform, true)(struct!.oauth),
       isBlock: true,
       type: "list",
       storageClassType: "OauthPropertyList",
@@ -608,7 +608,7 @@ export function awsBedrockagentcoreGatewayTargetCredentialProviderConfigurationP
 }
 
 
-export function awsBedrockagentcoreGatewayTargetMetadataConfigurationPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.MetadataConfigurationProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetMetadataConfigurationPropertyToTerraform(struct?: TfGatewayTarget.MetadataConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -621,7 +621,7 @@ export function awsBedrockagentcoreGatewayTargetMetadataConfigurationPropertyToT
 }
 
 
-export function awsBedrockagentcoreGatewayTargetMetadataConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.MetadataConfigurationProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetMetadataConfigurationPropertyToHclTerraform(struct?: TfGatewayTarget.MetadataConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -652,7 +652,7 @@ export function awsBedrockagentcoreGatewayTargetMetadataConfigurationPropertyToH
 }
 
 
-export function awsBedrockagentcoreGatewayTargetManagedVpcResourcePropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.ManagedVpcResourceProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetManagedVpcResourcePropertyToTerraform(struct?: TfGatewayTarget.ManagedVpcResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -668,7 +668,7 @@ export function awsBedrockagentcoreGatewayTargetManagedVpcResourcePropertyToTerr
 }
 
 
-export function awsBedrockagentcoreGatewayTargetManagedVpcResourcePropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.ManagedVpcResourceProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetManagedVpcResourcePropertyToHclTerraform(struct?: TfGatewayTarget.ManagedVpcResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -717,7 +717,7 @@ export function awsBedrockagentcoreGatewayTargetManagedVpcResourcePropertyToHclT
 }
 
 
-export function awsBedrockagentcoreGatewayTargetSelfManagedLatticeResourcePropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.SelfManagedLatticeResourceProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetSelfManagedLatticeResourcePropertyToTerraform(struct?: TfGatewayTarget.SelfManagedLatticeResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -728,7 +728,7 @@ export function awsBedrockagentcoreGatewayTargetSelfManagedLatticeResourceProper
 }
 
 
-export function awsBedrockagentcoreGatewayTargetSelfManagedLatticeResourcePropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.SelfManagedLatticeResourceProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetSelfManagedLatticeResourcePropertyToHclTerraform(struct?: TfGatewayTarget.SelfManagedLatticeResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -747,32 +747,32 @@ export function awsBedrockagentcoreGatewayTargetSelfManagedLatticeResourceProper
 }
 
 
-export function awsBedrockagentcoreGatewayTargetPrivateEndpointPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.PrivateEndpointProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetPrivateEndpointPropertyToTerraform(struct?: TfGatewayTarget.PrivateEndpointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    managed_vpc_resource: cdktn.listMapper(awsBedrockagentcoreGatewayTargetManagedVpcResourcePropertyToTerraform, true)(struct!.managedVpcResource),
-    self_managed_lattice_resource: cdktn.listMapper(awsBedrockagentcoreGatewayTargetSelfManagedLatticeResourcePropertyToTerraform, true)(struct!.selfManagedLatticeResource),
+    managed_vpc_resource: cdktn.listMapper(tfGatewayTargetManagedVpcResourcePropertyToTerraform, true)(struct!.managedVpcResource),
+    self_managed_lattice_resource: cdktn.listMapper(tfGatewayTargetSelfManagedLatticeResourcePropertyToTerraform, true)(struct!.selfManagedLatticeResource),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayTargetPrivateEndpointPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.PrivateEndpointProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetPrivateEndpointPropertyToHclTerraform(struct?: TfGatewayTarget.PrivateEndpointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     managed_vpc_resource: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetManagedVpcResourcePropertyToHclTerraform, true)(struct!.managedVpcResource),
+      value: cdktn.listMapperHcl(tfGatewayTargetManagedVpcResourcePropertyToHclTerraform, true)(struct!.managedVpcResource),
       isBlock: true,
       type: "list",
       storageClassType: "ManagedVpcResourcePropertyList",
     },
     self_managed_lattice_resource: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetSelfManagedLatticeResourcePropertyToHclTerraform, true)(struct!.selfManagedLatticeResource),
+      value: cdktn.listMapperHcl(tfGatewayTargetSelfManagedLatticeResourcePropertyToHclTerraform, true)(struct!.selfManagedLatticeResource),
       isBlock: true,
       type: "list",
       storageClassType: "SelfManagedLatticeResourcePropertyList",
@@ -784,7 +784,7 @@ export function awsBedrockagentcoreGatewayTargetPrivateEndpointPropertyToHclTerr
 }
 
 
-export function awsBedrockagentcoreGatewayTargetAgentcoreRuntimePropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.AgentcoreRuntimeProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetAgentcoreRuntimePropertyToTerraform(struct?: TfGatewayTarget.AgentcoreRuntimeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -796,7 +796,7 @@ export function awsBedrockagentcoreGatewayTargetAgentcoreRuntimePropertyToTerraf
 }
 
 
-export function awsBedrockagentcoreGatewayTargetAgentcoreRuntimePropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.AgentcoreRuntimeProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetAgentcoreRuntimePropertyToHclTerraform(struct?: TfGatewayTarget.AgentcoreRuntimeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -821,25 +821,25 @@ export function awsBedrockagentcoreGatewayTargetAgentcoreRuntimePropertyToHclTer
 }
 
 
-export function awsBedrockagentcoreGatewayTargetHttpPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.HttpProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetHttpPropertyToTerraform(struct?: TfGatewayTarget.HttpProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    agentcore_runtime: cdktn.listMapper(awsBedrockagentcoreGatewayTargetAgentcoreRuntimePropertyToTerraform, true)(struct!.agentcoreRuntime),
+    agentcore_runtime: cdktn.listMapper(tfGatewayTargetAgentcoreRuntimePropertyToTerraform, true)(struct!.agentcoreRuntime),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayTargetHttpPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.HttpProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetHttpPropertyToHclTerraform(struct?: TfGatewayTarget.HttpProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     agentcore_runtime: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetAgentcoreRuntimePropertyToHclTerraform, true)(struct!.agentcoreRuntime),
+      value: cdktn.listMapperHcl(tfGatewayTargetAgentcoreRuntimePropertyToHclTerraform, true)(struct!.agentcoreRuntime),
       isBlock: true,
       type: "list",
       storageClassType: "AgentcoreRuntimePropertyList",
@@ -851,7 +851,7 @@ export function awsBedrockagentcoreGatewayTargetHttpPropertyToHclTerraform(struc
 }
 
 
-export function awsBedrockagentcoreGatewayTargetToolFilterPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.ToolFilterProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetToolFilterPropertyToTerraform(struct?: TfGatewayTarget.ToolFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -863,7 +863,7 @@ export function awsBedrockagentcoreGatewayTargetToolFilterPropertyToTerraform(st
 }
 
 
-export function awsBedrockagentcoreGatewayTargetToolFilterPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.ToolFilterProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetToolFilterPropertyToHclTerraform(struct?: TfGatewayTarget.ToolFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -888,7 +888,7 @@ export function awsBedrockagentcoreGatewayTargetToolFilterPropertyToHclTerraform
 }
 
 
-export function awsBedrockagentcoreGatewayTargetToolOverridePropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.ToolOverrideProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetToolOverridePropertyToTerraform(struct?: TfGatewayTarget.ToolOverrideProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -902,7 +902,7 @@ export function awsBedrockagentcoreGatewayTargetToolOverridePropertyToTerraform(
 }
 
 
-export function awsBedrockagentcoreGatewayTargetToolOverridePropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.ToolOverrideProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetToolOverridePropertyToHclTerraform(struct?: TfGatewayTarget.ToolOverrideProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -939,32 +939,32 @@ export function awsBedrockagentcoreGatewayTargetToolOverridePropertyToHclTerrafo
 }
 
 
-export function awsBedrockagentcoreGatewayTargetApiGatewayToolConfigurationPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.ApiGatewayToolConfigurationProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetApiGatewayToolConfigurationPropertyToTerraform(struct?: TfGatewayTarget.ApiGatewayToolConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    tool_filter: cdktn.listMapper(awsBedrockagentcoreGatewayTargetToolFilterPropertyToTerraform, true)(struct!.toolFilter),
-    tool_override: cdktn.listMapper(awsBedrockagentcoreGatewayTargetToolOverridePropertyToTerraform, true)(struct!.toolOverride),
+    tool_filter: cdktn.listMapper(tfGatewayTargetToolFilterPropertyToTerraform, true)(struct!.toolFilter),
+    tool_override: cdktn.listMapper(tfGatewayTargetToolOverridePropertyToTerraform, true)(struct!.toolOverride),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayTargetApiGatewayToolConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.ApiGatewayToolConfigurationProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetApiGatewayToolConfigurationPropertyToHclTerraform(struct?: TfGatewayTarget.ApiGatewayToolConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     tool_filter: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetToolFilterPropertyToHclTerraform, true)(struct!.toolFilter),
+      value: cdktn.listMapperHcl(tfGatewayTargetToolFilterPropertyToHclTerraform, true)(struct!.toolFilter),
       isBlock: true,
       type: "set",
       storageClassType: "ToolFilterPropertyList",
     },
     tool_override: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetToolOverridePropertyToHclTerraform, true)(struct!.toolOverride),
+      value: cdktn.listMapperHcl(tfGatewayTargetToolOverridePropertyToHclTerraform, true)(struct!.toolOverride),
       isBlock: true,
       type: "set",
       storageClassType: "ToolOverridePropertyList",
@@ -976,7 +976,7 @@ export function awsBedrockagentcoreGatewayTargetApiGatewayToolConfigurationPrope
 }
 
 
-export function awsBedrockagentcoreGatewayTargetApiGatewayPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.ApiGatewayProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetApiGatewayPropertyToTerraform(struct?: TfGatewayTarget.ApiGatewayProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -984,12 +984,12 @@ export function awsBedrockagentcoreGatewayTargetApiGatewayPropertyToTerraform(st
   return {
     rest_api_id: cdktn.stringToTerraform(struct!.restApiId),
     stage: cdktn.stringToTerraform(struct!.stage),
-    api_gateway_tool_configuration: cdktn.listMapper(awsBedrockagentcoreGatewayTargetApiGatewayToolConfigurationPropertyToTerraform, true)(struct!.apiGatewayToolConfiguration),
+    api_gateway_tool_configuration: cdktn.listMapper(tfGatewayTargetApiGatewayToolConfigurationPropertyToTerraform, true)(struct!.apiGatewayToolConfiguration),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayTargetApiGatewayPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.ApiGatewayProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetApiGatewayPropertyToHclTerraform(struct?: TfGatewayTarget.ApiGatewayProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1008,7 +1008,7 @@ export function awsBedrockagentcoreGatewayTargetApiGatewayPropertyToHclTerraform
       storageClassType: "string",
     },
     api_gateway_tool_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetApiGatewayToolConfigurationPropertyToHclTerraform, true)(struct!.apiGatewayToolConfiguration),
+      value: cdktn.listMapperHcl(tfGatewayTargetApiGatewayToolConfigurationPropertyToHclTerraform, true)(struct!.apiGatewayToolConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ApiGatewayToolConfigurationPropertyList",
@@ -1020,7 +1020,7 @@ export function awsBedrockagentcoreGatewayTargetApiGatewayPropertyToHclTerraform
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsItemsPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsItemsProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsItemsPropertyToTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsItemsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1034,7 +1034,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsItemsPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsItemsProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsItemsPropertyToHclTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsItemsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1071,7 +1071,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsPropertyPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsPropertyProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsPropertyPropertyToTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsPropertyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1087,7 +1087,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsPropertyPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsPropertyProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsPropertyPropertyToHclTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsPropertyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1136,7 +1136,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsPropertyToTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1144,13 +1144,13 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
   return {
     description: cdktn.stringToTerraform(struct!.description),
     type: cdktn.stringToTerraform(struct!.type),
-    items: cdktn.listMapper(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsItemsPropertyToTerraform, true)(struct!.items),
-    property: cdktn.listMapper(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsPropertyPropertyToTerraform, true)(struct!.property),
+    items: cdktn.listMapper(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsItemsPropertyToTerraform, true)(struct!.items),
+    property: cdktn.listMapper(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsPropertyPropertyToTerraform, true)(struct!.property),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsPropertyToHclTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1169,13 +1169,13 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
       storageClassType: "string",
     },
     items: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsItemsPropertyToHclTerraform, true)(struct!.items),
+      value: cdktn.listMapperHcl(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsItemsPropertyToHclTerraform, true)(struct!.items),
       isBlock: true,
       type: "list",
       storageClassType: "TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsItemsPropertyList",
     },
     property: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsPropertyPropertyToHclTerraform, true)(struct!.property),
+      value: cdktn.listMapperHcl(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsPropertyPropertyToHclTerraform, true)(struct!.property),
       isBlock: true,
       type: "set",
       storageClassType: "TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsPropertyPropertyList",
@@ -1187,7 +1187,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsItemsPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsItemsProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsItemsPropertyToTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsItemsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1201,7 +1201,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsItemsPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsItemsProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsItemsPropertyToHclTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsItemsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1238,7 +1238,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsPropertyPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsPropertyProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsPropertyPropertyToTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsPropertyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1254,7 +1254,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsPropertyPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsPropertyProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsPropertyPropertyToHclTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsPropertyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1303,7 +1303,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsPropertyToTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1311,13 +1311,13 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
   return {
     description: cdktn.stringToTerraform(struct!.description),
     type: cdktn.stringToTerraform(struct!.type),
-    items: cdktn.listMapper(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsItemsPropertyToTerraform, true)(struct!.items),
-    property: cdktn.listMapper(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsPropertyPropertyToTerraform, true)(struct!.property),
+    items: cdktn.listMapper(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsItemsPropertyToTerraform, true)(struct!.items),
+    property: cdktn.listMapper(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsPropertyPropertyToTerraform, true)(struct!.property),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsPropertyToHclTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1336,13 +1336,13 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
       storageClassType: "string",
     },
     items: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsItemsPropertyToHclTerraform, true)(struct!.items),
+      value: cdktn.listMapperHcl(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsItemsPropertyToHclTerraform, true)(struct!.items),
       isBlock: true,
       type: "list",
       storageClassType: "TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsItemsPropertyList",
     },
     property: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsPropertyPropertyToHclTerraform, true)(struct!.property),
+      value: cdktn.listMapperHcl(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsPropertyPropertyToHclTerraform, true)(struct!.property),
       isBlock: true,
       type: "set",
       storageClassType: "TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsPropertyPropertyList",
@@ -1354,7 +1354,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyPropertyPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyPropertyProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyPropertyPropertyToTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyPropertyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1370,7 +1370,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyPropertyPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyPropertyProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyPropertyPropertyToHclTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyPropertyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1419,7 +1419,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyPropertyToTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1429,13 +1429,13 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
     name: cdktn.stringToTerraform(struct!.name),
     required: cdktn.booleanToTerraform(struct!.required),
     type: cdktn.stringToTerraform(struct!.type),
-    items: cdktn.listMapper(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsPropertyToTerraform, true)(struct!.items),
-    property: cdktn.listMapper(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyPropertyPropertyToTerraform, true)(struct!.property),
+    items: cdktn.listMapper(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsPropertyToTerraform, true)(struct!.items),
+    property: cdktn.listMapper(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyPropertyPropertyToTerraform, true)(struct!.property),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyPropertyToHclTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1466,13 +1466,13 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
       storageClassType: "string",
     },
     items: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsPropertyToHclTerraform, true)(struct!.items),
+      value: cdktn.listMapperHcl(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsPropertyToHclTerraform, true)(struct!.items),
       isBlock: true,
       type: "list",
       storageClassType: "TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsPropertyList",
     },
     property: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyPropertyPropertyToHclTerraform, true)(struct!.property),
+      value: cdktn.listMapperHcl(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyPropertyPropertyToHclTerraform, true)(struct!.property),
       isBlock: true,
       type: "set",
       storageClassType: "TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyPropertyPropertyList",
@@ -1484,7 +1484,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
 }
 
 
-export function awsBedrockagentcoreGatewayTargetInputSchemaPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.InputSchemaProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetInputSchemaPropertyToTerraform(struct?: TfGatewayTarget.InputSchemaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1492,13 +1492,13 @@ export function awsBedrockagentcoreGatewayTargetInputSchemaPropertyToTerraform(s
   return {
     description: cdktn.stringToTerraform(struct!.description),
     type: cdktn.stringToTerraform(struct!.type),
-    items: cdktn.listMapper(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsPropertyToTerraform, true)(struct!.items),
-    property: cdktn.listMapper(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyPropertyToTerraform, true)(struct!.property),
+    items: cdktn.listMapper(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsPropertyToTerraform, true)(struct!.items),
+    property: cdktn.listMapper(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyPropertyToTerraform, true)(struct!.property),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayTargetInputSchemaPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.InputSchemaProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetInputSchemaPropertyToHclTerraform(struct?: TfGatewayTarget.InputSchemaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1517,13 +1517,13 @@ export function awsBedrockagentcoreGatewayTargetInputSchemaPropertyToHclTerrafor
       storageClassType: "string",
     },
     items: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsPropertyToHclTerraform, true)(struct!.items),
+      value: cdktn.listMapperHcl(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsPropertyToHclTerraform, true)(struct!.items),
       isBlock: true,
       type: "list",
       storageClassType: "TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsPropertyList",
     },
     property: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyPropertyToHclTerraform, true)(struct!.property),
+      value: cdktn.listMapperHcl(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyPropertyToHclTerraform, true)(struct!.property),
       isBlock: true,
       type: "set",
       storageClassType: "TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyPropertyList",
@@ -1535,7 +1535,7 @@ export function awsBedrockagentcoreGatewayTargetInputSchemaPropertyToHclTerrafor
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsItemsPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsItemsProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsItemsPropertyToTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsItemsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1549,7 +1549,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsItemsPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsItemsProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsItemsPropertyToHclTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsItemsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1586,7 +1586,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsPropertyPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsPropertyProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsPropertyPropertyToTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsPropertyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1602,7 +1602,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsPropertyPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsPropertyProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsPropertyPropertyToHclTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsPropertyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1651,7 +1651,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsPropertyToTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1659,13 +1659,13 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
   return {
     description: cdktn.stringToTerraform(struct!.description),
     type: cdktn.stringToTerraform(struct!.type),
-    items: cdktn.listMapper(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsItemsPropertyToTerraform, true)(struct!.items),
-    property: cdktn.listMapper(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsPropertyPropertyToTerraform, true)(struct!.property),
+    items: cdktn.listMapper(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsItemsPropertyToTerraform, true)(struct!.items),
+    property: cdktn.listMapper(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsPropertyPropertyToTerraform, true)(struct!.property),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsPropertyToHclTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1684,13 +1684,13 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
       storageClassType: "string",
     },
     items: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsItemsPropertyToHclTerraform, true)(struct!.items),
+      value: cdktn.listMapperHcl(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsItemsPropertyToHclTerraform, true)(struct!.items),
       isBlock: true,
       type: "list",
       storageClassType: "TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsItemsPropertyList",
     },
     property: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsPropertyPropertyToHclTerraform, true)(struct!.property),
+      value: cdktn.listMapperHcl(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsPropertyPropertyToHclTerraform, true)(struct!.property),
       isBlock: true,
       type: "set",
       storageClassType: "TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsPropertyPropertyList",
@@ -1702,7 +1702,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsItemsPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsItemsProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsItemsPropertyToTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsItemsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1716,7 +1716,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsItemsPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsItemsProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsItemsPropertyToHclTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsItemsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1753,7 +1753,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsPropertyPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsPropertyProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsPropertyPropertyToTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsPropertyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1769,7 +1769,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsPropertyPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsPropertyProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsPropertyPropertyToHclTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsPropertyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1818,7 +1818,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsPropertyToTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1826,13 +1826,13 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
   return {
     description: cdktn.stringToTerraform(struct!.description),
     type: cdktn.stringToTerraform(struct!.type),
-    items: cdktn.listMapper(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsItemsPropertyToTerraform, true)(struct!.items),
-    property: cdktn.listMapper(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsPropertyPropertyToTerraform, true)(struct!.property),
+    items: cdktn.listMapper(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsItemsPropertyToTerraform, true)(struct!.items),
+    property: cdktn.listMapper(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsPropertyPropertyToTerraform, true)(struct!.property),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsPropertyToHclTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1851,13 +1851,13 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
       storageClassType: "string",
     },
     items: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsItemsPropertyToHclTerraform, true)(struct!.items),
+      value: cdktn.listMapperHcl(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsItemsPropertyToHclTerraform, true)(struct!.items),
       isBlock: true,
       type: "list",
       storageClassType: "TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsItemsPropertyList",
     },
     property: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsPropertyPropertyToHclTerraform, true)(struct!.property),
+      value: cdktn.listMapperHcl(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsPropertyPropertyToHclTerraform, true)(struct!.property),
       isBlock: true,
       type: "set",
       storageClassType: "TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsPropertyPropertyList",
@@ -1869,7 +1869,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyPropertyPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyPropertyProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyPropertyPropertyToTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyPropertyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1885,7 +1885,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyPropertyPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyPropertyProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyPropertyPropertyToHclTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyPropertyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1934,7 +1934,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyPropertyToTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1944,13 +1944,13 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
     name: cdktn.stringToTerraform(struct!.name),
     required: cdktn.booleanToTerraform(struct!.required),
     type: cdktn.stringToTerraform(struct!.type),
-    items: cdktn.listMapper(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsPropertyToTerraform, true)(struct!.items),
-    property: cdktn.listMapper(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyPropertyPropertyToTerraform, true)(struct!.property),
+    items: cdktn.listMapper(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsPropertyToTerraform, true)(struct!.items),
+    property: cdktn.listMapper(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyPropertyPropertyToTerraform, true)(struct!.property),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyPropertyToHclTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1981,13 +1981,13 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
       storageClassType: "string",
     },
     items: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsPropertyToHclTerraform, true)(struct!.items),
+      value: cdktn.listMapperHcl(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsPropertyToHclTerraform, true)(struct!.items),
       isBlock: true,
       type: "list",
       storageClassType: "TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsPropertyList",
     },
     property: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyPropertyPropertyToHclTerraform, true)(struct!.property),
+      value: cdktn.listMapperHcl(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyPropertyPropertyToHclTerraform, true)(struct!.property),
       isBlock: true,
       type: "set",
       storageClassType: "TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyPropertyPropertyList",
@@ -1999,7 +1999,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
 }
 
 
-export function awsBedrockagentcoreGatewayTargetOutputSchemaPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.OutputSchemaProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetOutputSchemaPropertyToTerraform(struct?: TfGatewayTarget.OutputSchemaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2007,13 +2007,13 @@ export function awsBedrockagentcoreGatewayTargetOutputSchemaPropertyToTerraform(
   return {
     description: cdktn.stringToTerraform(struct!.description),
     type: cdktn.stringToTerraform(struct!.type),
-    items: cdktn.listMapper(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsPropertyToTerraform, true)(struct!.items),
-    property: cdktn.listMapper(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyPropertyToTerraform, true)(struct!.property),
+    items: cdktn.listMapper(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsPropertyToTerraform, true)(struct!.items),
+    property: cdktn.listMapper(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyPropertyToTerraform, true)(struct!.property),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayTargetOutputSchemaPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.OutputSchemaProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetOutputSchemaPropertyToHclTerraform(struct?: TfGatewayTarget.OutputSchemaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2032,13 +2032,13 @@ export function awsBedrockagentcoreGatewayTargetOutputSchemaPropertyToHclTerrafo
       storageClassType: "string",
     },
     items: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsPropertyToHclTerraform, true)(struct!.items),
+      value: cdktn.listMapperHcl(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsPropertyToHclTerraform, true)(struct!.items),
       isBlock: true,
       type: "list",
       storageClassType: "TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsPropertyList",
     },
     property: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyPropertyToHclTerraform, true)(struct!.property),
+      value: cdktn.listMapperHcl(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyPropertyToHclTerraform, true)(struct!.property),
       isBlock: true,
       type: "set",
       storageClassType: "TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyPropertyList",
@@ -2050,7 +2050,7 @@ export function awsBedrockagentcoreGatewayTargetOutputSchemaPropertyToHclTerrafo
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadPropertyToTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2058,13 +2058,13 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
   return {
     description: cdktn.stringToTerraform(struct!.description),
     name: cdktn.stringToTerraform(struct!.name),
-    input_schema: cdktn.listMapper(awsBedrockagentcoreGatewayTargetInputSchemaPropertyToTerraform, true)(struct!.inputSchema),
-    output_schema: cdktn.listMapper(awsBedrockagentcoreGatewayTargetOutputSchemaPropertyToTerraform, true)(struct!.outputSchema),
+    input_schema: cdktn.listMapper(tfGatewayTargetInputSchemaPropertyToTerraform, true)(struct!.inputSchema),
+    output_schema: cdktn.listMapper(tfGatewayTargetOutputSchemaPropertyToTerraform, true)(struct!.outputSchema),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadPropertyToHclTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaInlinePayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2083,13 +2083,13 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
       storageClassType: "string",
     },
     input_schema: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetInputSchemaPropertyToHclTerraform, true)(struct!.inputSchema),
+      value: cdktn.listMapperHcl(tfGatewayTargetInputSchemaPropertyToHclTerraform, true)(struct!.inputSchema),
       isBlock: true,
       type: "list",
       storageClassType: "InputSchemaPropertyList",
     },
     output_schema: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetOutputSchemaPropertyToHclTerraform, true)(struct!.outputSchema),
+      value: cdktn.listMapperHcl(tfGatewayTargetOutputSchemaPropertyToHclTerraform, true)(struct!.outputSchema),
       isBlock: true,
       type: "list",
       storageClassType: "OutputSchemaPropertyList",
@@ -2101,7 +2101,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaS3PropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaS3Property | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaS3PropertyToTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaS3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2113,7 +2113,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaS3PropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpLambdaToolSchemaS3Property | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaS3PropertyToHclTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpLambdaToolSchemaS3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2138,32 +2138,32 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaTool
 }
 
 
-export function awsBedrockagentcoreGatewayTargetToolSchemaPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.ToolSchemaProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetToolSchemaPropertyToTerraform(struct?: TfGatewayTarget.ToolSchemaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    inline_payload: cdktn.listMapper(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadPropertyToTerraform, true)(struct!.inlinePayload),
-    s3: cdktn.listMapper(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaS3PropertyToTerraform, true)(struct!.s3),
+    inline_payload: cdktn.listMapper(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadPropertyToTerraform, true)(struct!.inlinePayload),
+    s3: cdktn.listMapper(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaS3PropertyToTerraform, true)(struct!.s3),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayTargetToolSchemaPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.ToolSchemaProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetToolSchemaPropertyToHclTerraform(struct?: TfGatewayTarget.ToolSchemaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     inline_payload: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadPropertyToHclTerraform, true)(struct!.inlinePayload),
+      value: cdktn.listMapperHcl(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaInlinePayloadPropertyToHclTerraform, true)(struct!.inlinePayload),
       isBlock: true,
       type: "list",
       storageClassType: "TargetConfigurationMcpLambdaToolSchemaInlinePayloadPropertyList",
     },
     s3: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpLambdaToolSchemaS3PropertyToHclTerraform, true)(struct!.s3),
+      value: cdktn.listMapperHcl(tfGatewayTargetTargetConfigurationMcpLambdaToolSchemaS3PropertyToHclTerraform, true)(struct!.s3),
       isBlock: true,
       type: "list",
       storageClassType: "TargetConfigurationMcpLambdaToolSchemaS3PropertyList",
@@ -2175,19 +2175,19 @@ export function awsBedrockagentcoreGatewayTargetToolSchemaPropertyToHclTerraform
 }
 
 
-export function awsBedrockagentcoreGatewayTargetLambdaPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.LambdaProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetLambdaPropertyToTerraform(struct?: TfGatewayTarget.LambdaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     lambda_arn: cdktn.stringToTerraform(struct!.lambdaArn),
-    tool_schema: cdktn.listMapper(awsBedrockagentcoreGatewayTargetToolSchemaPropertyToTerraform, true)(struct!.toolSchema),
+    tool_schema: cdktn.listMapper(tfGatewayTargetToolSchemaPropertyToTerraform, true)(struct!.toolSchema),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayTargetLambdaPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.LambdaProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetLambdaPropertyToHclTerraform(struct?: TfGatewayTarget.LambdaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2200,7 +2200,7 @@ export function awsBedrockagentcoreGatewayTargetLambdaPropertyToHclTerraform(str
       storageClassType: "string",
     },
     tool_schema: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetToolSchemaPropertyToHclTerraform, true)(struct!.toolSchema),
+      value: cdktn.listMapperHcl(tfGatewayTargetToolSchemaPropertyToHclTerraform, true)(struct!.toolSchema),
       isBlock: true,
       type: "list",
       storageClassType: "ToolSchemaPropertyList",
@@ -2212,7 +2212,7 @@ export function awsBedrockagentcoreGatewayTargetLambdaPropertyToHclTerraform(str
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpMcpServerMcpToolSchemaInlinePayloadPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpMcpServerMcpToolSchemaInlinePayloadProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpMcpServerMcpToolSchemaInlinePayloadPropertyToTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpMcpServerMcpToolSchemaInlinePayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2223,7 +2223,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpMcpServerM
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpMcpServerMcpToolSchemaInlinePayloadPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpMcpServerMcpToolSchemaInlinePayloadProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpMcpServerMcpToolSchemaInlinePayloadPropertyToHclTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpMcpServerMcpToolSchemaInlinePayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2242,7 +2242,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpMcpServerM
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpMcpServerMcpToolSchemaS3PropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpMcpServerMcpToolSchemaS3Property | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpMcpServerMcpToolSchemaS3PropertyToTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpMcpServerMcpToolSchemaS3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2254,7 +2254,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpMcpServerM
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpMcpServerMcpToolSchemaS3PropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpMcpServerMcpToolSchemaS3Property | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpMcpServerMcpToolSchemaS3PropertyToHclTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpMcpServerMcpToolSchemaS3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2279,32 +2279,32 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpMcpServerM
 }
 
 
-export function awsBedrockagentcoreGatewayTargetMcpToolSchemaPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.McpToolSchemaProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetMcpToolSchemaPropertyToTerraform(struct?: TfGatewayTarget.McpToolSchemaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    inline_payload: cdktn.listMapper(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpMcpServerMcpToolSchemaInlinePayloadPropertyToTerraform, true)(struct!.inlinePayload),
-    s3: cdktn.listMapper(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpMcpServerMcpToolSchemaS3PropertyToTerraform, true)(struct!.s3),
+    inline_payload: cdktn.listMapper(tfGatewayTargetTargetConfigurationMcpMcpServerMcpToolSchemaInlinePayloadPropertyToTerraform, true)(struct!.inlinePayload),
+    s3: cdktn.listMapper(tfGatewayTargetTargetConfigurationMcpMcpServerMcpToolSchemaS3PropertyToTerraform, true)(struct!.s3),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayTargetMcpToolSchemaPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.McpToolSchemaProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetMcpToolSchemaPropertyToHclTerraform(struct?: TfGatewayTarget.McpToolSchemaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     inline_payload: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpMcpServerMcpToolSchemaInlinePayloadPropertyToHclTerraform, true)(struct!.inlinePayload),
+      value: cdktn.listMapperHcl(tfGatewayTargetTargetConfigurationMcpMcpServerMcpToolSchemaInlinePayloadPropertyToHclTerraform, true)(struct!.inlinePayload),
       isBlock: true,
       type: "list",
       storageClassType: "TargetConfigurationMcpMcpServerMcpToolSchemaInlinePayloadPropertyList",
     },
     s3: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpMcpServerMcpToolSchemaS3PropertyToHclTerraform, true)(struct!.s3),
+      value: cdktn.listMapperHcl(tfGatewayTargetTargetConfigurationMcpMcpServerMcpToolSchemaS3PropertyToHclTerraform, true)(struct!.s3),
       isBlock: true,
       type: "list",
       storageClassType: "TargetConfigurationMcpMcpServerMcpToolSchemaS3PropertyList",
@@ -2316,7 +2316,7 @@ export function awsBedrockagentcoreGatewayTargetMcpToolSchemaPropertyToHclTerraf
 }
 
 
-export function awsBedrockagentcoreGatewayTargetMcpServerPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.McpServerProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetMcpServerPropertyToTerraform(struct?: TfGatewayTarget.McpServerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2325,12 +2325,12 @@ export function awsBedrockagentcoreGatewayTargetMcpServerPropertyToTerraform(str
     endpoint: cdktn.stringToTerraform(struct!.endpoint),
     listing_mode: cdktn.stringToTerraform(struct!.listingMode),
     resource_priority: cdktn.numberToTerraform(struct!.resourcePriority),
-    mcp_tool_schema: cdktn.listMapper(awsBedrockagentcoreGatewayTargetMcpToolSchemaPropertyToTerraform, true)(struct!.mcpToolSchema),
+    mcp_tool_schema: cdktn.listMapper(tfGatewayTargetMcpToolSchemaPropertyToTerraform, true)(struct!.mcpToolSchema),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayTargetMcpServerPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.McpServerProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetMcpServerPropertyToHclTerraform(struct?: TfGatewayTarget.McpServerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2355,7 +2355,7 @@ export function awsBedrockagentcoreGatewayTargetMcpServerPropertyToHclTerraform(
       storageClassType: "number",
     },
     mcp_tool_schema: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetMcpToolSchemaPropertyToHclTerraform, true)(struct!.mcpToolSchema),
+      value: cdktn.listMapperHcl(tfGatewayTargetMcpToolSchemaPropertyToHclTerraform, true)(struct!.mcpToolSchema),
       isBlock: true,
       type: "list",
       storageClassType: "McpToolSchemaPropertyList",
@@ -2367,7 +2367,7 @@ export function awsBedrockagentcoreGatewayTargetMcpServerPropertyToHclTerraform(
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpOpenApiSchemaInlinePayloadPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpOpenApiSchemaInlinePayloadProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpOpenApiSchemaInlinePayloadPropertyToTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpOpenApiSchemaInlinePayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2378,7 +2378,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpOpenApiSch
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpOpenApiSchemaInlinePayloadPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpOpenApiSchemaInlinePayloadProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpOpenApiSchemaInlinePayloadPropertyToHclTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpOpenApiSchemaInlinePayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2397,7 +2397,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpOpenApiSch
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpOpenApiSchemaS3PropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpOpenApiSchemaS3Property | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpOpenApiSchemaS3PropertyToTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpOpenApiSchemaS3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2409,7 +2409,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpOpenApiSch
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpOpenApiSchemaS3PropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpOpenApiSchemaS3Property | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpOpenApiSchemaS3PropertyToHclTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpOpenApiSchemaS3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2434,32 +2434,32 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpOpenApiSch
 }
 
 
-export function awsBedrockagentcoreGatewayTargetOpenApiSchemaPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.OpenApiSchemaProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetOpenApiSchemaPropertyToTerraform(struct?: TfGatewayTarget.OpenApiSchemaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    inline_payload: cdktn.listMapper(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpOpenApiSchemaInlinePayloadPropertyToTerraform, true)(struct!.inlinePayload),
-    s3: cdktn.listMapper(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpOpenApiSchemaS3PropertyToTerraform, true)(struct!.s3),
+    inline_payload: cdktn.listMapper(tfGatewayTargetTargetConfigurationMcpOpenApiSchemaInlinePayloadPropertyToTerraform, true)(struct!.inlinePayload),
+    s3: cdktn.listMapper(tfGatewayTargetTargetConfigurationMcpOpenApiSchemaS3PropertyToTerraform, true)(struct!.s3),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayTargetOpenApiSchemaPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.OpenApiSchemaProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetOpenApiSchemaPropertyToHclTerraform(struct?: TfGatewayTarget.OpenApiSchemaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     inline_payload: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpOpenApiSchemaInlinePayloadPropertyToHclTerraform, true)(struct!.inlinePayload),
+      value: cdktn.listMapperHcl(tfGatewayTargetTargetConfigurationMcpOpenApiSchemaInlinePayloadPropertyToHclTerraform, true)(struct!.inlinePayload),
       isBlock: true,
       type: "list",
       storageClassType: "TargetConfigurationMcpOpenApiSchemaInlinePayloadPropertyList",
     },
     s3: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpOpenApiSchemaS3PropertyToHclTerraform, true)(struct!.s3),
+      value: cdktn.listMapperHcl(tfGatewayTargetTargetConfigurationMcpOpenApiSchemaS3PropertyToHclTerraform, true)(struct!.s3),
       isBlock: true,
       type: "list",
       storageClassType: "TargetConfigurationMcpOpenApiSchemaS3PropertyList",
@@ -2471,7 +2471,7 @@ export function awsBedrockagentcoreGatewayTargetOpenApiSchemaPropertyToHclTerraf
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpSmithyModelInlinePayloadPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpSmithyModelInlinePayloadProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpSmithyModelInlinePayloadPropertyToTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpSmithyModelInlinePayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2482,7 +2482,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpSmithyMode
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpSmithyModelInlinePayloadPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpSmithyModelInlinePayloadProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpSmithyModelInlinePayloadPropertyToHclTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpSmithyModelInlinePayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2501,7 +2501,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpSmithyMode
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpSmithyModelS3PropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpSmithyModelS3Property | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpSmithyModelS3PropertyToTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpSmithyModelS3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2513,7 +2513,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpSmithyMode
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpSmithyModelS3PropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationMcpSmithyModelS3Property | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationMcpSmithyModelS3PropertyToHclTerraform(struct?: TfGatewayTarget.TargetConfigurationMcpSmithyModelS3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2538,32 +2538,32 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationMcpSmithyMode
 }
 
 
-export function awsBedrockagentcoreGatewayTargetSmithyModelPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.SmithyModelProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetSmithyModelPropertyToTerraform(struct?: TfGatewayTarget.SmithyModelProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    inline_payload: cdktn.listMapper(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpSmithyModelInlinePayloadPropertyToTerraform, true)(struct!.inlinePayload),
-    s3: cdktn.listMapper(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpSmithyModelS3PropertyToTerraform, true)(struct!.s3),
+    inline_payload: cdktn.listMapper(tfGatewayTargetTargetConfigurationMcpSmithyModelInlinePayloadPropertyToTerraform, true)(struct!.inlinePayload),
+    s3: cdktn.listMapper(tfGatewayTargetTargetConfigurationMcpSmithyModelS3PropertyToTerraform, true)(struct!.s3),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayTargetSmithyModelPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.SmithyModelProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetSmithyModelPropertyToHclTerraform(struct?: TfGatewayTarget.SmithyModelProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     inline_payload: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpSmithyModelInlinePayloadPropertyToHclTerraform, true)(struct!.inlinePayload),
+      value: cdktn.listMapperHcl(tfGatewayTargetTargetConfigurationMcpSmithyModelInlinePayloadPropertyToHclTerraform, true)(struct!.inlinePayload),
       isBlock: true,
       type: "list",
       storageClassType: "TargetConfigurationMcpSmithyModelInlinePayloadPropertyList",
     },
     s3: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetTargetConfigurationMcpSmithyModelS3PropertyToHclTerraform, true)(struct!.s3),
+      value: cdktn.listMapperHcl(tfGatewayTargetTargetConfigurationMcpSmithyModelS3PropertyToHclTerraform, true)(struct!.s3),
       isBlock: true,
       type: "list",
       storageClassType: "TargetConfigurationMcpSmithyModelS3PropertyList",
@@ -2575,53 +2575,53 @@ export function awsBedrockagentcoreGatewayTargetSmithyModelPropertyToHclTerrafor
 }
 
 
-export function awsBedrockagentcoreGatewayTargetMcpPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.McpProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetMcpPropertyToTerraform(struct?: TfGatewayTarget.McpProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    api_gateway: cdktn.listMapper(awsBedrockagentcoreGatewayTargetApiGatewayPropertyToTerraform, true)(struct!.apiGateway),
-    lambda: cdktn.listMapper(awsBedrockagentcoreGatewayTargetLambdaPropertyToTerraform, true)(struct!.lambda),
-    mcp_server: cdktn.listMapper(awsBedrockagentcoreGatewayTargetMcpServerPropertyToTerraform, true)(struct!.mcpServer),
-    open_api_schema: cdktn.listMapper(awsBedrockagentcoreGatewayTargetOpenApiSchemaPropertyToTerraform, true)(struct!.openApiSchema),
-    smithy_model: cdktn.listMapper(awsBedrockagentcoreGatewayTargetSmithyModelPropertyToTerraform, true)(struct!.smithyModel),
+    api_gateway: cdktn.listMapper(tfGatewayTargetApiGatewayPropertyToTerraform, true)(struct!.apiGateway),
+    lambda: cdktn.listMapper(tfGatewayTargetLambdaPropertyToTerraform, true)(struct!.lambda),
+    mcp_server: cdktn.listMapper(tfGatewayTargetMcpServerPropertyToTerraform, true)(struct!.mcpServer),
+    open_api_schema: cdktn.listMapper(tfGatewayTargetOpenApiSchemaPropertyToTerraform, true)(struct!.openApiSchema),
+    smithy_model: cdktn.listMapper(tfGatewayTargetSmithyModelPropertyToTerraform, true)(struct!.smithyModel),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayTargetMcpPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.McpProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetMcpPropertyToHclTerraform(struct?: TfGatewayTarget.McpProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     api_gateway: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetApiGatewayPropertyToHclTerraform, true)(struct!.apiGateway),
+      value: cdktn.listMapperHcl(tfGatewayTargetApiGatewayPropertyToHclTerraform, true)(struct!.apiGateway),
       isBlock: true,
       type: "list",
       storageClassType: "ApiGatewayPropertyList",
     },
     lambda: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetLambdaPropertyToHclTerraform, true)(struct!.lambda),
+      value: cdktn.listMapperHcl(tfGatewayTargetLambdaPropertyToHclTerraform, true)(struct!.lambda),
       isBlock: true,
       type: "list",
       storageClassType: "LambdaPropertyList",
     },
     mcp_server: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetMcpServerPropertyToHclTerraform, true)(struct!.mcpServer),
+      value: cdktn.listMapperHcl(tfGatewayTargetMcpServerPropertyToHclTerraform, true)(struct!.mcpServer),
       isBlock: true,
       type: "list",
       storageClassType: "McpServerPropertyList",
     },
     open_api_schema: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetOpenApiSchemaPropertyToHclTerraform, true)(struct!.openApiSchema),
+      value: cdktn.listMapperHcl(tfGatewayTargetOpenApiSchemaPropertyToHclTerraform, true)(struct!.openApiSchema),
       isBlock: true,
       type: "list",
       storageClassType: "OpenApiSchemaPropertyList",
     },
     smithy_model: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetSmithyModelPropertyToHclTerraform, true)(struct!.smithyModel),
+      value: cdktn.listMapperHcl(tfGatewayTargetSmithyModelPropertyToHclTerraform, true)(struct!.smithyModel),
       isBlock: true,
       type: "list",
       storageClassType: "SmithyModelPropertyList",
@@ -2633,32 +2633,32 @@ export function awsBedrockagentcoreGatewayTargetMcpPropertyToHclTerraform(struct
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationPropertyToTerraform(struct?: TfGatewayTarget.TargetConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    http: cdktn.listMapper(awsBedrockagentcoreGatewayTargetHttpPropertyToTerraform, true)(struct!.http),
-    mcp: cdktn.listMapper(awsBedrockagentcoreGatewayTargetMcpPropertyToTerraform, true)(struct!.mcp),
+    http: cdktn.listMapper(tfGatewayTargetHttpPropertyToTerraform, true)(struct!.http),
+    mcp: cdktn.listMapper(tfGatewayTargetMcpPropertyToTerraform, true)(struct!.mcp),
   }
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTargetConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TargetConfigurationProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTargetConfigurationPropertyToHclTerraform(struct?: TfGatewayTarget.TargetConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     http: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetHttpPropertyToHclTerraform, true)(struct!.http),
+      value: cdktn.listMapperHcl(tfGatewayTargetHttpPropertyToHclTerraform, true)(struct!.http),
       isBlock: true,
       type: "list",
       storageClassType: "HttpPropertyList",
     },
     mcp: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreGatewayTargetMcpPropertyToHclTerraform, true)(struct!.mcp),
+      value: cdktn.listMapperHcl(tfGatewayTargetMcpPropertyToHclTerraform, true)(struct!.mcp),
       isBlock: true,
       type: "list",
       storageClassType: "McpPropertyList",
@@ -2670,7 +2670,7 @@ export function awsBedrockagentcoreGatewayTargetTargetConfigurationPropertyToHcl
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTimeoutsPropertyToTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTimeoutsPropertyToTerraform(struct?: TfGatewayTarget.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2683,7 +2683,7 @@ export function awsBedrockagentcoreGatewayTargetTimeoutsPropertyToTerraform(stru
 }
 
 
-export function awsBedrockagentcoreGatewayTargetTimeoutsPropertyToHclTerraform(struct?: AwsBedrockagentcoreGatewayTarget.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfGatewayTargetTimeoutsPropertyToHclTerraform(struct?: TfGatewayTarget.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2714,22 +2714,22 @@ export function awsBedrockagentcoreGatewayTargetTimeoutsPropertyToHclTerraform(s
 }
 
 
-export namespace AwsBedrockagentcoreGatewayTarget {
+export namespace TfGatewayTarget {
 export interface ApiKeyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#credential_location AwsBedrockagentcoreGatewayTarget#credential_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#credential_location TfGatewayTarget#credential_location}
   */
   readonly credentialLocation?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#credential_parameter_name AwsBedrockagentcoreGatewayTarget#credential_parameter_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#credential_parameter_name TfGatewayTarget#credential_parameter_name}
   */
   readonly credentialParameterName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#credential_prefix AwsBedrockagentcoreGatewayTarget#credential_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#credential_prefix TfGatewayTarget#credential_prefix}
   */
   readonly credentialPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#provider_arn AwsBedrockagentcoreGatewayTarget#provider_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#provider_arn TfGatewayTarget#provider_arn}
   */
   readonly providerArn: string;
 }
@@ -2878,11 +2878,11 @@ export class ApiKeyPropertyList extends cdktn.ComplexList {
 }
 export interface CallerIamCredentialsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#region AwsBedrockagentcoreGatewayTarget#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#region TfGatewayTarget#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#service AwsBedrockagentcoreGatewayTarget#service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#service TfGatewayTarget#service}
   */
   readonly service: string;
 }
@@ -2989,13 +2989,13 @@ export interface GatewayIamRoleProperty {
   /**
   * AWS Region used for SigV4 signing of upstream requests. Defaults to the gateway's Region when omitted. Only meaningful when `service` is set.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#region AwsBedrockagentcoreGatewayTarget#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#region TfGatewayTarget#region}
   */
   readonly region?: string;
   /**
   * The target AWS service name used for SigV4 signing of upstream requests. Required when calling SigV4-protected endpoints such as another Bedrock AgentCore Runtime (use `bedrock-agentcore`). Omit for non-SigV4 IAM-role-based authentication.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#service AwsBedrockagentcoreGatewayTarget#service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#service TfGatewayTarget#service}
   */
   readonly service?: string;
 }
@@ -3163,27 +3163,27 @@ export class JwtPassthroughPropertyList extends cdktn.ComplexList {
 }
 export interface OauthProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#custom_parameters AwsBedrockagentcoreGatewayTarget#custom_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#custom_parameters TfGatewayTarget#custom_parameters}
   */
   readonly customParameters?: { [key: string]: string };
   /**
   * The URL where the end user's browser is redirected after obtaining the authorization code. Required when grant_type is AUTHORIZATION_CODE.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#default_return_url AwsBedrockagentcoreGatewayTarget#default_return_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#default_return_url TfGatewayTarget#default_return_url}
   */
   readonly defaultReturnUrl?: string;
   /**
   * The OAuth grant type. Valid values are AUTHORIZATION_CODE and CLIENT_CREDENTIALS.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#grant_type AwsBedrockagentcoreGatewayTarget#grant_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#grant_type TfGatewayTarget#grant_type}
   */
   readonly grantType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#provider_arn AwsBedrockagentcoreGatewayTarget#provider_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#provider_arn TfGatewayTarget#provider_arn}
   */
   readonly providerArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#scopes AwsBedrockagentcoreGatewayTarget#scopes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#scopes TfGatewayTarget#scopes}
   */
   readonly scopes: string[];
 }
@@ -3353,31 +3353,31 @@ export interface CredentialProviderConfigurationProperty {
   /**
   * api_key block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#api_key AwsBedrockagentcoreGatewayTarget#api_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#api_key TfGatewayTarget#api_key}
   */
   readonly apiKey?: ApiKeyProperty[] | cdktn.IResolvable;
   /**
   * caller_iam_credentials block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#caller_iam_credentials AwsBedrockagentcoreGatewayTarget#caller_iam_credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#caller_iam_credentials TfGatewayTarget#caller_iam_credentials}
   */
   readonly callerIamCredentials?: CallerIamCredentialsProperty[] | cdktn.IResolvable;
   /**
   * gateway_iam_role block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#gateway_iam_role AwsBedrockagentcoreGatewayTarget#gateway_iam_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#gateway_iam_role TfGatewayTarget#gateway_iam_role}
   */
   readonly gatewayIamRole?: GatewayIamRoleProperty[] | cdktn.IResolvable;
   /**
   * jwt_passthrough block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#jwt_passthrough AwsBedrockagentcoreGatewayTarget#jwt_passthrough}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#jwt_passthrough TfGatewayTarget#jwt_passthrough}
   */
   readonly jwtPassthrough?: JwtPassthroughProperty[] | cdktn.IResolvable;
   /**
   * oauth block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#oauth AwsBedrockagentcoreGatewayTarget#oauth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#oauth TfGatewayTarget#oauth}
   */
   readonly oauth?: OauthProperty[] | cdktn.IResolvable;
 }
@@ -3553,19 +3553,19 @@ export interface MetadataConfigurationProperty {
   /**
   * A list of URL query parameters that are allowed to be propagated from incoming gateway URL to the target.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#allowed_query_parameters AwsBedrockagentcoreGatewayTarget#allowed_query_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#allowed_query_parameters TfGatewayTarget#allowed_query_parameters}
   */
   readonly allowedQueryParameters?: string[];
   /**
   * A list of HTTP headers that are allowed to be propagated from incoming client requests to the target.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#allowed_request_headers AwsBedrockagentcoreGatewayTarget#allowed_request_headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#allowed_request_headers TfGatewayTarget#allowed_request_headers}
   */
   readonly allowedRequestHeaders?: string[];
   /**
   * A list of HTTP headers that are allowed to be propagated from the target response back to the client.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#allowed_response_headers AwsBedrockagentcoreGatewayTarget#allowed_response_headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#allowed_response_headers TfGatewayTarget#allowed_response_headers}
   */
   readonly allowedResponseHeaders?: string[];
 }
@@ -3695,27 +3695,27 @@ export class MetadataConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface ManagedVpcResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#endpoint_ip_address_type AwsBedrockagentcoreGatewayTarget#endpoint_ip_address_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#endpoint_ip_address_type TfGatewayTarget#endpoint_ip_address_type}
   */
   readonly endpointIpAddressType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#routing_domain AwsBedrockagentcoreGatewayTarget#routing_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#routing_domain TfGatewayTarget#routing_domain}
   */
   readonly routingDomain?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#security_group_ids AwsBedrockagentcoreGatewayTarget#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#security_group_ids TfGatewayTarget#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#subnet_ids AwsBedrockagentcoreGatewayTarget#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#subnet_ids TfGatewayTarget#subnet_ids}
   */
   readonly subnetIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#tags AwsBedrockagentcoreGatewayTarget#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#tags TfGatewayTarget#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#vpc_identifier AwsBedrockagentcoreGatewayTarget#vpc_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#vpc_identifier TfGatewayTarget#vpc_identifier}
   */
   readonly vpcIdentifier: string;
 }
@@ -3902,7 +3902,7 @@ export class ManagedVpcResourcePropertyList extends cdktn.ComplexList {
 }
 export interface SelfManagedLatticeResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#resource_configuration_identifier AwsBedrockagentcoreGatewayTarget#resource_configuration_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#resource_configuration_identifier TfGatewayTarget#resource_configuration_identifier}
   */
   readonly resourceConfigurationIdentifier: string;
 }
@@ -3987,13 +3987,13 @@ export interface PrivateEndpointProperty {
   /**
   * managed_vpc_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#managed_vpc_resource AwsBedrockagentcoreGatewayTarget#managed_vpc_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#managed_vpc_resource TfGatewayTarget#managed_vpc_resource}
   */
   readonly managedVpcResource?: ManagedVpcResourceProperty[] | cdktn.IResolvable;
   /**
   * self_managed_lattice_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#self_managed_lattice_resource AwsBedrockagentcoreGatewayTarget#self_managed_lattice_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#self_managed_lattice_resource TfGatewayTarget#self_managed_lattice_resource}
   */
   readonly selfManagedLatticeResource?: SelfManagedLatticeResourceProperty[] | cdktn.IResolvable;
 }
@@ -4101,11 +4101,11 @@ export class PrivateEndpointPropertyList extends cdktn.ComplexList {
 }
 export interface AgentcoreRuntimeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#arn AwsBedrockagentcoreGatewayTarget#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#arn TfGatewayTarget#arn}
   */
   readonly arn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#qualifier AwsBedrockagentcoreGatewayTarget#qualifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#qualifier TfGatewayTarget#qualifier}
   */
   readonly qualifier?: string;
 }
@@ -4212,7 +4212,7 @@ export interface HttpProperty {
   /**
   * agentcore_runtime block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#agentcore_runtime AwsBedrockagentcoreGatewayTarget#agentcore_runtime}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#agentcore_runtime TfGatewayTarget#agentcore_runtime}
   */
   readonly agentcoreRuntime?: AgentcoreRuntimeProperty[] | cdktn.IResolvable;
 }
@@ -4298,11 +4298,11 @@ export class HttpPropertyList extends cdktn.ComplexList {
 }
 export interface ToolFilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#filter_path AwsBedrockagentcoreGatewayTarget#filter_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#filter_path TfGatewayTarget#filter_path}
   */
   readonly filterPath: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#methods AwsBedrockagentcoreGatewayTarget#methods}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#methods TfGatewayTarget#methods}
   */
   readonly methods: string[];
 }
@@ -4404,19 +4404,19 @@ export class ToolFilterPropertyList extends cdktn.ComplexList {
 }
 export interface ToolOverrideProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description AwsBedrockagentcoreGatewayTarget#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description TfGatewayTarget#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#method AwsBedrockagentcoreGatewayTarget#method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#method TfGatewayTarget#method}
   */
   readonly method: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#name AwsBedrockagentcoreGatewayTarget#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#name TfGatewayTarget#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#path AwsBedrockagentcoreGatewayTarget#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#path TfGatewayTarget#path}
   */
   readonly path: string;
 }
@@ -4561,13 +4561,13 @@ export interface ApiGatewayToolConfigurationProperty {
   /**
   * tool_filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#tool_filter AwsBedrockagentcoreGatewayTarget#tool_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#tool_filter TfGatewayTarget#tool_filter}
   */
   readonly toolFilter?: ToolFilterProperty[] | cdktn.IResolvable;
   /**
   * tool_override block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#tool_override AwsBedrockagentcoreGatewayTarget#tool_override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#tool_override TfGatewayTarget#tool_override}
   */
   readonly toolOverride?: ToolOverrideProperty[] | cdktn.IResolvable;
 }
@@ -4675,17 +4675,17 @@ export class ApiGatewayToolConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface ApiGatewayProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#rest_api_id AwsBedrockagentcoreGatewayTarget#rest_api_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#rest_api_id TfGatewayTarget#rest_api_id}
   */
   readonly restApiId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#stage AwsBedrockagentcoreGatewayTarget#stage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#stage TfGatewayTarget#stage}
   */
   readonly stage: string;
   /**
   * api_gateway_tool_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#api_gateway_tool_configuration AwsBedrockagentcoreGatewayTarget#api_gateway_tool_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#api_gateway_tool_configuration TfGatewayTarget#api_gateway_tool_configuration}
   */
   readonly apiGatewayToolConfiguration?: ApiGatewayToolConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -4809,19 +4809,19 @@ export class ApiGatewayPropertyList extends cdktn.ComplexList {
 }
 export interface TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsItemsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description AwsBedrockagentcoreGatewayTarget#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description TfGatewayTarget#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items_json AwsBedrockagentcoreGatewayTarget#items_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items_json TfGatewayTarget#items_json}
   */
   readonly itemsJson?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#properties_json AwsBedrockagentcoreGatewayTarget#properties_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#properties_json TfGatewayTarget#properties_json}
   */
   readonly propertiesJson?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type AwsBedrockagentcoreGatewayTarget#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type TfGatewayTarget#type}
   */
   readonly type: string;
 }
@@ -4970,27 +4970,27 @@ export class TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItems
 }
 export interface TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsPropertyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description AwsBedrockagentcoreGatewayTarget#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description TfGatewayTarget#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items_json AwsBedrockagentcoreGatewayTarget#items_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items_json TfGatewayTarget#items_json}
   */
   readonly itemsJson?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#name AwsBedrockagentcoreGatewayTarget#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#name TfGatewayTarget#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#properties_json AwsBedrockagentcoreGatewayTarget#properties_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#properties_json TfGatewayTarget#properties_json}
   */
   readonly propertiesJson?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#required AwsBedrockagentcoreGatewayTarget#required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#required TfGatewayTarget#required}
   */
   readonly required?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type AwsBedrockagentcoreGatewayTarget#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type TfGatewayTarget#type}
   */
   readonly type: string;
 }
@@ -5180,23 +5180,23 @@ export class TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItems
 }
 export interface TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description AwsBedrockagentcoreGatewayTarget#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description TfGatewayTarget#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type AwsBedrockagentcoreGatewayTarget#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type TfGatewayTarget#type}
   */
   readonly type: string;
   /**
   * items block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items AwsBedrockagentcoreGatewayTarget#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items TfGatewayTarget#items}
   */
   readonly items?: TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsItemsProperty[] | cdktn.IResolvable;
   /**
   * property block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#property AwsBedrockagentcoreGatewayTarget#property}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#property TfGatewayTarget#property}
   */
   readonly property?: TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsPropertyProperty[] | cdktn.IResolvable;
 }
@@ -5345,19 +5345,19 @@ export class TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItems
 }
 export interface TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsItemsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description AwsBedrockagentcoreGatewayTarget#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description TfGatewayTarget#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items_json AwsBedrockagentcoreGatewayTarget#items_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items_json TfGatewayTarget#items_json}
   */
   readonly itemsJson?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#properties_json AwsBedrockagentcoreGatewayTarget#properties_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#properties_json TfGatewayTarget#properties_json}
   */
   readonly propertiesJson?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type AwsBedrockagentcoreGatewayTarget#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type TfGatewayTarget#type}
   */
   readonly type: string;
 }
@@ -5506,27 +5506,27 @@ export class TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPrope
 }
 export interface TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsPropertyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description AwsBedrockagentcoreGatewayTarget#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description TfGatewayTarget#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items_json AwsBedrockagentcoreGatewayTarget#items_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items_json TfGatewayTarget#items_json}
   */
   readonly itemsJson?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#name AwsBedrockagentcoreGatewayTarget#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#name TfGatewayTarget#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#properties_json AwsBedrockagentcoreGatewayTarget#properties_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#properties_json TfGatewayTarget#properties_json}
   */
   readonly propertiesJson?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#required AwsBedrockagentcoreGatewayTarget#required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#required TfGatewayTarget#required}
   */
   readonly required?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type AwsBedrockagentcoreGatewayTarget#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type TfGatewayTarget#type}
   */
   readonly type: string;
 }
@@ -5716,23 +5716,23 @@ export class TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPrope
 }
 export interface TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description AwsBedrockagentcoreGatewayTarget#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description TfGatewayTarget#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type AwsBedrockagentcoreGatewayTarget#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type TfGatewayTarget#type}
   */
   readonly type: string;
   /**
   * items block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items AwsBedrockagentcoreGatewayTarget#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items TfGatewayTarget#items}
   */
   readonly items?: TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsItemsProperty[] | cdktn.IResolvable;
   /**
   * property block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#property AwsBedrockagentcoreGatewayTarget#property}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#property TfGatewayTarget#property}
   */
   readonly property?: TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsPropertyProperty[] | cdktn.IResolvable;
 }
@@ -5881,27 +5881,27 @@ export class TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPrope
 }
 export interface TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyPropertyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description AwsBedrockagentcoreGatewayTarget#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description TfGatewayTarget#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items_json AwsBedrockagentcoreGatewayTarget#items_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items_json TfGatewayTarget#items_json}
   */
   readonly itemsJson?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#name AwsBedrockagentcoreGatewayTarget#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#name TfGatewayTarget#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#properties_json AwsBedrockagentcoreGatewayTarget#properties_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#properties_json TfGatewayTarget#properties_json}
   */
   readonly propertiesJson?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#required AwsBedrockagentcoreGatewayTarget#required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#required TfGatewayTarget#required}
   */
   readonly required?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type AwsBedrockagentcoreGatewayTarget#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type TfGatewayTarget#type}
   */
   readonly type: string;
 }
@@ -6091,31 +6091,31 @@ export class TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPrope
 }
 export interface TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description AwsBedrockagentcoreGatewayTarget#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description TfGatewayTarget#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#name AwsBedrockagentcoreGatewayTarget#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#name TfGatewayTarget#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#required AwsBedrockagentcoreGatewayTarget#required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#required TfGatewayTarget#required}
   */
   readonly required?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type AwsBedrockagentcoreGatewayTarget#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type TfGatewayTarget#type}
   */
   readonly type: string;
   /**
   * items block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items AwsBedrockagentcoreGatewayTarget#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items TfGatewayTarget#items}
   */
   readonly items?: TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyItemsProperty[] | cdktn.IResolvable;
   /**
   * property block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#property AwsBedrockagentcoreGatewayTarget#property}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#property TfGatewayTarget#property}
   */
   readonly property?: TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyPropertyProperty[] | cdktn.IResolvable;
 }
@@ -6305,23 +6305,23 @@ export class TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPrope
 }
 export interface InputSchemaProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description AwsBedrockagentcoreGatewayTarget#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description TfGatewayTarget#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type AwsBedrockagentcoreGatewayTarget#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type TfGatewayTarget#type}
   */
   readonly type: string;
   /**
   * items block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items AwsBedrockagentcoreGatewayTarget#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items TfGatewayTarget#items}
   */
   readonly items?: TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaItemsProperty[] | cdktn.IResolvable;
   /**
   * property block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#property AwsBedrockagentcoreGatewayTarget#property}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#property TfGatewayTarget#property}
   */
   readonly property?: TargetConfigurationMcpLambdaToolSchemaInlinePayloadInputSchemaPropertyProperty[] | cdktn.IResolvable;
 }
@@ -6470,19 +6470,19 @@ export class InputSchemaPropertyList extends cdktn.ComplexList {
 }
 export interface TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsItemsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description AwsBedrockagentcoreGatewayTarget#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description TfGatewayTarget#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items_json AwsBedrockagentcoreGatewayTarget#items_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items_json TfGatewayTarget#items_json}
   */
   readonly itemsJson?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#properties_json AwsBedrockagentcoreGatewayTarget#properties_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#properties_json TfGatewayTarget#properties_json}
   */
   readonly propertiesJson?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type AwsBedrockagentcoreGatewayTarget#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type TfGatewayTarget#type}
   */
   readonly type: string;
 }
@@ -6631,27 +6631,27 @@ export class TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItem
 }
 export interface TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsPropertyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description AwsBedrockagentcoreGatewayTarget#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description TfGatewayTarget#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items_json AwsBedrockagentcoreGatewayTarget#items_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items_json TfGatewayTarget#items_json}
   */
   readonly itemsJson?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#name AwsBedrockagentcoreGatewayTarget#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#name TfGatewayTarget#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#properties_json AwsBedrockagentcoreGatewayTarget#properties_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#properties_json TfGatewayTarget#properties_json}
   */
   readonly propertiesJson?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#required AwsBedrockagentcoreGatewayTarget#required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#required TfGatewayTarget#required}
   */
   readonly required?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type AwsBedrockagentcoreGatewayTarget#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type TfGatewayTarget#type}
   */
   readonly type: string;
 }
@@ -6841,23 +6841,23 @@ export class TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItem
 }
 export interface TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description AwsBedrockagentcoreGatewayTarget#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description TfGatewayTarget#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type AwsBedrockagentcoreGatewayTarget#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type TfGatewayTarget#type}
   */
   readonly type: string;
   /**
   * items block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items AwsBedrockagentcoreGatewayTarget#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items TfGatewayTarget#items}
   */
   readonly items?: TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsItemsProperty[] | cdktn.IResolvable;
   /**
   * property block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#property AwsBedrockagentcoreGatewayTarget#property}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#property TfGatewayTarget#property}
   */
   readonly property?: TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsPropertyProperty[] | cdktn.IResolvable;
 }
@@ -7006,19 +7006,19 @@ export class TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItem
 }
 export interface TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsItemsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description AwsBedrockagentcoreGatewayTarget#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description TfGatewayTarget#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items_json AwsBedrockagentcoreGatewayTarget#items_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items_json TfGatewayTarget#items_json}
   */
   readonly itemsJson?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#properties_json AwsBedrockagentcoreGatewayTarget#properties_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#properties_json TfGatewayTarget#properties_json}
   */
   readonly propertiesJson?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type AwsBedrockagentcoreGatewayTarget#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type TfGatewayTarget#type}
   */
   readonly type: string;
 }
@@ -7167,27 +7167,27 @@ export class TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaProp
 }
 export interface TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsPropertyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description AwsBedrockagentcoreGatewayTarget#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description TfGatewayTarget#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items_json AwsBedrockagentcoreGatewayTarget#items_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items_json TfGatewayTarget#items_json}
   */
   readonly itemsJson?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#name AwsBedrockagentcoreGatewayTarget#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#name TfGatewayTarget#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#properties_json AwsBedrockagentcoreGatewayTarget#properties_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#properties_json TfGatewayTarget#properties_json}
   */
   readonly propertiesJson?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#required AwsBedrockagentcoreGatewayTarget#required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#required TfGatewayTarget#required}
   */
   readonly required?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type AwsBedrockagentcoreGatewayTarget#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type TfGatewayTarget#type}
   */
   readonly type: string;
 }
@@ -7377,23 +7377,23 @@ export class TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaProp
 }
 export interface TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description AwsBedrockagentcoreGatewayTarget#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description TfGatewayTarget#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type AwsBedrockagentcoreGatewayTarget#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type TfGatewayTarget#type}
   */
   readonly type: string;
   /**
   * items block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items AwsBedrockagentcoreGatewayTarget#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items TfGatewayTarget#items}
   */
   readonly items?: TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsItemsProperty[] | cdktn.IResolvable;
   /**
   * property block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#property AwsBedrockagentcoreGatewayTarget#property}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#property TfGatewayTarget#property}
   */
   readonly property?: TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsPropertyProperty[] | cdktn.IResolvable;
 }
@@ -7542,27 +7542,27 @@ export class TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaProp
 }
 export interface TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyPropertyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description AwsBedrockagentcoreGatewayTarget#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description TfGatewayTarget#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items_json AwsBedrockagentcoreGatewayTarget#items_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items_json TfGatewayTarget#items_json}
   */
   readonly itemsJson?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#name AwsBedrockagentcoreGatewayTarget#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#name TfGatewayTarget#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#properties_json AwsBedrockagentcoreGatewayTarget#properties_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#properties_json TfGatewayTarget#properties_json}
   */
   readonly propertiesJson?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#required AwsBedrockagentcoreGatewayTarget#required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#required TfGatewayTarget#required}
   */
   readonly required?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type AwsBedrockagentcoreGatewayTarget#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type TfGatewayTarget#type}
   */
   readonly type: string;
 }
@@ -7752,31 +7752,31 @@ export class TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaProp
 }
 export interface TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description AwsBedrockagentcoreGatewayTarget#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description TfGatewayTarget#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#name AwsBedrockagentcoreGatewayTarget#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#name TfGatewayTarget#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#required AwsBedrockagentcoreGatewayTarget#required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#required TfGatewayTarget#required}
   */
   readonly required?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type AwsBedrockagentcoreGatewayTarget#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type TfGatewayTarget#type}
   */
   readonly type: string;
   /**
   * items block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items AwsBedrockagentcoreGatewayTarget#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items TfGatewayTarget#items}
   */
   readonly items?: TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyItemsProperty[] | cdktn.IResolvable;
   /**
   * property block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#property AwsBedrockagentcoreGatewayTarget#property}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#property TfGatewayTarget#property}
   */
   readonly property?: TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyPropertyProperty[] | cdktn.IResolvable;
 }
@@ -7966,23 +7966,23 @@ export class TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaProp
 }
 export interface OutputSchemaProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description AwsBedrockagentcoreGatewayTarget#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description TfGatewayTarget#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type AwsBedrockagentcoreGatewayTarget#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#type TfGatewayTarget#type}
   */
   readonly type: string;
   /**
   * items block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items AwsBedrockagentcoreGatewayTarget#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#items TfGatewayTarget#items}
   */
   readonly items?: TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaItemsProperty[] | cdktn.IResolvable;
   /**
   * property block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#property AwsBedrockagentcoreGatewayTarget#property}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#property TfGatewayTarget#property}
   */
   readonly property?: TargetConfigurationMcpLambdaToolSchemaInlinePayloadOutputSchemaPropertyProperty[] | cdktn.IResolvable;
 }
@@ -8131,23 +8131,23 @@ export class OutputSchemaPropertyList extends cdktn.ComplexList {
 }
 export interface TargetConfigurationMcpLambdaToolSchemaInlinePayloadProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description AwsBedrockagentcoreGatewayTarget#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#description TfGatewayTarget#description}
   */
   readonly description: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#name AwsBedrockagentcoreGatewayTarget#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#name TfGatewayTarget#name}
   */
   readonly name: string;
   /**
   * input_schema block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#input_schema AwsBedrockagentcoreGatewayTarget#input_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#input_schema TfGatewayTarget#input_schema}
   */
   readonly inputSchema?: InputSchemaProperty[] | cdktn.IResolvable;
   /**
   * output_schema block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#output_schema AwsBedrockagentcoreGatewayTarget#output_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#output_schema TfGatewayTarget#output_schema}
   */
   readonly outputSchema?: OutputSchemaProperty[] | cdktn.IResolvable;
 }
@@ -8293,11 +8293,11 @@ export class TargetConfigurationMcpLambdaToolSchemaInlinePayloadPropertyList ext
 }
 export interface TargetConfigurationMcpLambdaToolSchemaS3Property {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#bucket_owner_account_id AwsBedrockagentcoreGatewayTarget#bucket_owner_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#bucket_owner_account_id TfGatewayTarget#bucket_owner_account_id}
   */
   readonly bucketOwnerAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#uri AwsBedrockagentcoreGatewayTarget#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#uri TfGatewayTarget#uri}
   */
   readonly uri?: string;
 }
@@ -8407,13 +8407,13 @@ export interface ToolSchemaProperty {
   /**
   * inline_payload block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#inline_payload AwsBedrockagentcoreGatewayTarget#inline_payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#inline_payload TfGatewayTarget#inline_payload}
   */
   readonly inlinePayload?: TargetConfigurationMcpLambdaToolSchemaInlinePayloadProperty[] | cdktn.IResolvable;
   /**
   * s3 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#s3 AwsBedrockagentcoreGatewayTarget#s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#s3 TfGatewayTarget#s3}
   */
   readonly s3?: TargetConfigurationMcpLambdaToolSchemaS3Property[] | cdktn.IResolvable;
 }
@@ -8521,13 +8521,13 @@ export class ToolSchemaPropertyList extends cdktn.ComplexList {
 }
 export interface LambdaProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#lambda_arn AwsBedrockagentcoreGatewayTarget#lambda_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#lambda_arn TfGatewayTarget#lambda_arn}
   */
   readonly lambdaArn: string;
   /**
   * tool_schema block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#tool_schema AwsBedrockagentcoreGatewayTarget#tool_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#tool_schema TfGatewayTarget#tool_schema}
   */
   readonly toolSchema?: ToolSchemaProperty[] | cdktn.IResolvable;
 }
@@ -8632,7 +8632,7 @@ export class LambdaPropertyList extends cdktn.ComplexList {
 }
 export interface TargetConfigurationMcpMcpServerMcpToolSchemaInlinePayloadProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#payload AwsBedrockagentcoreGatewayTarget#payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#payload TfGatewayTarget#payload}
   */
   readonly payload: string;
 }
@@ -8715,11 +8715,11 @@ export class TargetConfigurationMcpMcpServerMcpToolSchemaInlinePayloadPropertyLi
 }
 export interface TargetConfigurationMcpMcpServerMcpToolSchemaS3Property {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#bucket_owner_account_id AwsBedrockagentcoreGatewayTarget#bucket_owner_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#bucket_owner_account_id TfGatewayTarget#bucket_owner_account_id}
   */
   readonly bucketOwnerAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#uri AwsBedrockagentcoreGatewayTarget#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#uri TfGatewayTarget#uri}
   */
   readonly uri: string;
 }
@@ -8826,13 +8826,13 @@ export interface McpToolSchemaProperty {
   /**
   * inline_payload block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#inline_payload AwsBedrockagentcoreGatewayTarget#inline_payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#inline_payload TfGatewayTarget#inline_payload}
   */
   readonly inlinePayload?: TargetConfigurationMcpMcpServerMcpToolSchemaInlinePayloadProperty[] | cdktn.IResolvable;
   /**
   * s3 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#s3 AwsBedrockagentcoreGatewayTarget#s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#s3 TfGatewayTarget#s3}
   */
   readonly s3?: TargetConfigurationMcpMcpServerMcpToolSchemaS3Property[] | cdktn.IResolvable;
 }
@@ -8940,21 +8940,21 @@ export class McpToolSchemaPropertyList extends cdktn.ComplexList {
 }
 export interface McpServerProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#endpoint AwsBedrockagentcoreGatewayTarget#endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#endpoint TfGatewayTarget#endpoint}
   */
   readonly endpoint: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#listing_mode AwsBedrockagentcoreGatewayTarget#listing_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#listing_mode TfGatewayTarget#listing_mode}
   */
   readonly listingMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#resource_priority AwsBedrockagentcoreGatewayTarget#resource_priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#resource_priority TfGatewayTarget#resource_priority}
   */
   readonly resourcePriority?: number;
   /**
   * mcp_tool_schema block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#mcp_tool_schema AwsBedrockagentcoreGatewayTarget#mcp_tool_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#mcp_tool_schema TfGatewayTarget#mcp_tool_schema}
   */
   readonly mcpToolSchema?: McpToolSchemaProperty[] | cdktn.IResolvable;
 }
@@ -9103,7 +9103,7 @@ export class McpServerPropertyList extends cdktn.ComplexList {
 }
 export interface TargetConfigurationMcpOpenApiSchemaInlinePayloadProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#payload AwsBedrockagentcoreGatewayTarget#payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#payload TfGatewayTarget#payload}
   */
   readonly payload: string;
 }
@@ -9186,11 +9186,11 @@ export class TargetConfigurationMcpOpenApiSchemaInlinePayloadPropertyList extend
 }
 export interface TargetConfigurationMcpOpenApiSchemaS3Property {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#bucket_owner_account_id AwsBedrockagentcoreGatewayTarget#bucket_owner_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#bucket_owner_account_id TfGatewayTarget#bucket_owner_account_id}
   */
   readonly bucketOwnerAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#uri AwsBedrockagentcoreGatewayTarget#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#uri TfGatewayTarget#uri}
   */
   readonly uri?: string;
 }
@@ -9300,13 +9300,13 @@ export interface OpenApiSchemaProperty {
   /**
   * inline_payload block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#inline_payload AwsBedrockagentcoreGatewayTarget#inline_payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#inline_payload TfGatewayTarget#inline_payload}
   */
   readonly inlinePayload?: TargetConfigurationMcpOpenApiSchemaInlinePayloadProperty[] | cdktn.IResolvable;
   /**
   * s3 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#s3 AwsBedrockagentcoreGatewayTarget#s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#s3 TfGatewayTarget#s3}
   */
   readonly s3?: TargetConfigurationMcpOpenApiSchemaS3Property[] | cdktn.IResolvable;
 }
@@ -9414,7 +9414,7 @@ export class OpenApiSchemaPropertyList extends cdktn.ComplexList {
 }
 export interface TargetConfigurationMcpSmithyModelInlinePayloadProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#payload AwsBedrockagentcoreGatewayTarget#payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#payload TfGatewayTarget#payload}
   */
   readonly payload: string;
 }
@@ -9497,11 +9497,11 @@ export class TargetConfigurationMcpSmithyModelInlinePayloadPropertyList extends 
 }
 export interface TargetConfigurationMcpSmithyModelS3Property {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#bucket_owner_account_id AwsBedrockagentcoreGatewayTarget#bucket_owner_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#bucket_owner_account_id TfGatewayTarget#bucket_owner_account_id}
   */
   readonly bucketOwnerAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#uri AwsBedrockagentcoreGatewayTarget#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#uri TfGatewayTarget#uri}
   */
   readonly uri?: string;
 }
@@ -9611,13 +9611,13 @@ export interface SmithyModelProperty {
   /**
   * inline_payload block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#inline_payload AwsBedrockagentcoreGatewayTarget#inline_payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#inline_payload TfGatewayTarget#inline_payload}
   */
   readonly inlinePayload?: TargetConfigurationMcpSmithyModelInlinePayloadProperty[] | cdktn.IResolvable;
   /**
   * s3 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#s3 AwsBedrockagentcoreGatewayTarget#s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#s3 TfGatewayTarget#s3}
   */
   readonly s3?: TargetConfigurationMcpSmithyModelS3Property[] | cdktn.IResolvable;
 }
@@ -9727,31 +9727,31 @@ export interface McpProperty {
   /**
   * api_gateway block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#api_gateway AwsBedrockagentcoreGatewayTarget#api_gateway}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#api_gateway TfGatewayTarget#api_gateway}
   */
   readonly apiGateway?: ApiGatewayProperty[] | cdktn.IResolvable;
   /**
   * lambda block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#lambda AwsBedrockagentcoreGatewayTarget#lambda}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#lambda TfGatewayTarget#lambda}
   */
   readonly lambda?: LambdaProperty[] | cdktn.IResolvable;
   /**
   * mcp_server block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#mcp_server AwsBedrockagentcoreGatewayTarget#mcp_server}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#mcp_server TfGatewayTarget#mcp_server}
   */
   readonly mcpServer?: McpServerProperty[] | cdktn.IResolvable;
   /**
   * open_api_schema block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#open_api_schema AwsBedrockagentcoreGatewayTarget#open_api_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#open_api_schema TfGatewayTarget#open_api_schema}
   */
   readonly openApiSchema?: OpenApiSchemaProperty[] | cdktn.IResolvable;
   /**
   * smithy_model block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#smithy_model AwsBedrockagentcoreGatewayTarget#smithy_model}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#smithy_model TfGatewayTarget#smithy_model}
   */
   readonly smithyModel?: SmithyModelProperty[] | cdktn.IResolvable;
 }
@@ -9927,13 +9927,13 @@ export interface TargetConfigurationProperty {
   /**
   * http block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#http AwsBedrockagentcoreGatewayTarget#http}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#http TfGatewayTarget#http}
   */
   readonly http?: HttpProperty[] | cdktn.IResolvable;
   /**
   * mcp block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#mcp AwsBedrockagentcoreGatewayTarget#mcp}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#mcp TfGatewayTarget#mcp}
   */
   readonly mcp?: McpProperty[] | cdktn.IResolvable;
 }
@@ -10043,19 +10043,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#create AwsBedrockagentcoreGatewayTarget#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#create TfGatewayTarget#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#delete AwsBedrockagentcoreGatewayTarget#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#delete TfGatewayTarget#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#update AwsBedrockagentcoreGatewayTarget#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_gateway_target#update TfGatewayTarget#update}
   */
   readonly update?: string;
 }

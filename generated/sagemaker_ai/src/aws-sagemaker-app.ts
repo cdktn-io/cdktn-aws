@@ -5,21 +5,21 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSagemakerAppConfig extends cdktn.TerraformMetaArguments {
+export interface TfAppConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app#app_name AwsSagemakerApp#app_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app#app_name TfApp#app_name}
   */
   readonly appName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app#app_type AwsSagemakerApp#app_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app#app_type TfApp#app_type}
   */
   readonly appType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app#domain_id AwsSagemakerApp#domain_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app#domain_id TfApp#domain_id}
   */
   readonly domainId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app#id AwsSagemakerApp#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app#id TfApp#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,37 +28,37 @@ export interface AwsSagemakerAppConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app#region AwsSagemakerApp#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app#region TfApp#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app#space_name AwsSagemakerApp#space_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app#space_name TfApp#space_name}
   */
   readonly spaceName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app#tags AwsSagemakerApp#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app#tags TfApp#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app#tags_all AwsSagemakerApp#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app#tags_all TfApp#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app#user_profile_name AwsSagemakerApp#user_profile_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app#user_profile_name TfApp#user_profile_name}
   */
   readonly userProfileName?: string;
   /**
   * resource_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app#resource_spec AwsSagemakerApp#resource_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app#resource_spec TfApp#resource_spec}
   */
-  readonly resourceSpec?: AwsSagemakerApp.ResourceSpecProperty;
+  readonly resourceSpec?: TfApp.ResourceSpecProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app aws_sagemaker_app}
 */
-export class AwsSagemakerApp extends cdktn.TerraformResource {
+export class TfApp extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -69,11 +69,11 @@ export class AwsSagemakerApp extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSagemakerApp resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfApp resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSagemakerApp to import
-  * @param importFromId The id of the existing AwsSagemakerApp that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSagemakerApp to import is found
+  * @param importToId The construct id used in the generated config for the TfApp to import
+  * @param importFromId The id of the existing TfApp that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfApp to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sagemaker_app", importId: importFromId, provider });
@@ -88,9 +88,9 @@ export class AwsSagemakerApp extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSagemakerAppConfig
+  * @param options TfAppConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSagemakerAppConfig) {
+  public constructor(scope: Construct, id: string, config: TfAppConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sagemaker_app',
       terraformGeneratorMetadata: {
@@ -263,11 +263,11 @@ export class AwsSagemakerApp extends cdktn.TerraformResource {
   }
 
   // resource_spec - computed: false, optional: true, required: false
-  private _resourceSpec = new AwsSagemakerApp.ResourceSpecPropertyOutputReference(this, "resource_spec");
+  private _resourceSpec = new TfApp.ResourceSpecPropertyOutputReference(this, "resource_spec");
   public get resourceSpec() {
     return this._resourceSpec;
   }
-  public putResourceSpec(value: AwsSagemakerApp.ResourceSpecProperty) {
+  public putResourceSpec(value: TfApp.ResourceSpecProperty) {
     this._resourceSpec.internalValue = value;
   }
   public resetResourceSpec() {
@@ -293,7 +293,7 @@ export class AwsSagemakerApp extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       user_profile_name: cdktn.stringToTerraform(this._userProfileName),
-      resource_spec: awsSagemakerAppResourceSpecPropertyToTerraform(this._resourceSpec.internalValue),
+      resource_spec: tfAppResourceSpecPropertyToTerraform(this._resourceSpec.internalValue),
     };
   }
 
@@ -354,10 +354,10 @@ export class AwsSagemakerApp extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       resource_spec: {
-        value: awsSagemakerAppResourceSpecPropertyToHclTerraform(this._resourceSpec.internalValue),
+        value: tfAppResourceSpecPropertyToHclTerraform(this._resourceSpec.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSagemakerApp.ResourceSpecPropertyList",
+        storageClassType: "TfApp.ResourceSpecPropertyList",
       },
     };
 
@@ -366,7 +366,7 @@ export class AwsSagemakerApp extends cdktn.TerraformResource {
   }
 }
 
-export function awsSagemakerAppResourceSpecPropertyToTerraform(struct?: AwsSagemakerApp.ResourceSpecPropertyOutputReference | AwsSagemakerApp.ResourceSpecProperty): any {
+export function tfAppResourceSpecPropertyToTerraform(struct?: TfApp.ResourceSpecPropertyOutputReference | TfApp.ResourceSpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -381,7 +381,7 @@ export function awsSagemakerAppResourceSpecPropertyToTerraform(struct?: AwsSagem
 }
 
 
-export function awsSagemakerAppResourceSpecPropertyToHclTerraform(struct?: AwsSagemakerApp.ResourceSpecPropertyOutputReference | AwsSagemakerApp.ResourceSpecProperty): any {
+export function tfAppResourceSpecPropertyToHclTerraform(struct?: TfApp.ResourceSpecPropertyOutputReference | TfApp.ResourceSpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -424,26 +424,26 @@ export function awsSagemakerAppResourceSpecPropertyToHclTerraform(struct?: AwsSa
 }
 
 
-export namespace AwsSagemakerApp {
+export namespace TfApp {
 export interface ResourceSpecProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app#instance_type AwsSagemakerApp#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app#instance_type TfApp#instance_type}
   */
   readonly instanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app#lifecycle_config_arn AwsSagemakerApp#lifecycle_config_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app#lifecycle_config_arn TfApp#lifecycle_config_arn}
   */
   readonly lifecycleConfigArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app#sagemaker_image_arn AwsSagemakerApp#sagemaker_image_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app#sagemaker_image_arn TfApp#sagemaker_image_arn}
   */
   readonly sagemakerImageArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app#sagemaker_image_version_alias AwsSagemakerApp#sagemaker_image_version_alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app#sagemaker_image_version_alias TfApp#sagemaker_image_version_alias}
   */
   readonly sagemakerImageVersionAlias?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app#sagemaker_image_version_arn AwsSagemakerApp#sagemaker_image_version_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app#sagemaker_image_version_arn TfApp#sagemaker_image_version_arn}
   */
   readonly sagemakerImageVersionArn?: string;
 }

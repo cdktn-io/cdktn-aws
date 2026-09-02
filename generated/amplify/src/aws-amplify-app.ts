@@ -5,126 +5,126 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsAmplifyAppConfig extends cdktn.TerraformMetaArguments {
+export interface TfAppConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#access_token AwsAmplifyApp#access_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#access_token TfApp#access_token}
   */
   readonly accessToken?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#auto_branch_creation_patterns AwsAmplifyApp#auto_branch_creation_patterns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#auto_branch_creation_patterns TfApp#auto_branch_creation_patterns}
   */
   readonly autoBranchCreationPatterns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#basic_auth_credentials AwsAmplifyApp#basic_auth_credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#basic_auth_credentials TfApp#basic_auth_credentials}
   */
   readonly basicAuthCredentials?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#build_spec AwsAmplifyApp#build_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#build_spec TfApp#build_spec}
   */
   readonly buildSpec?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#compute_role_arn AwsAmplifyApp#compute_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#compute_role_arn TfApp#compute_role_arn}
   */
   readonly computeRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#custom_headers AwsAmplifyApp#custom_headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#custom_headers TfApp#custom_headers}
   */
   readonly customHeaders?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#description AwsAmplifyApp#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#description TfApp#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#enable_auto_branch_creation AwsAmplifyApp#enable_auto_branch_creation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#enable_auto_branch_creation TfApp#enable_auto_branch_creation}
   */
   readonly enableAutoBranchCreation?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#enable_basic_auth AwsAmplifyApp#enable_basic_auth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#enable_basic_auth TfApp#enable_basic_auth}
   */
   readonly enableBasicAuth?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#enable_branch_auto_build AwsAmplifyApp#enable_branch_auto_build}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#enable_branch_auto_build TfApp#enable_branch_auto_build}
   */
   readonly enableBranchAutoBuild?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#enable_branch_auto_deletion AwsAmplifyApp#enable_branch_auto_deletion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#enable_branch_auto_deletion TfApp#enable_branch_auto_deletion}
   */
   readonly enableBranchAutoDeletion?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#environment_variables AwsAmplifyApp#environment_variables}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#environment_variables TfApp#environment_variables}
   */
   readonly environmentVariables?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#iam_service_role_arn AwsAmplifyApp#iam_service_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#iam_service_role_arn TfApp#iam_service_role_arn}
   */
   readonly iamServiceRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#id AwsAmplifyApp#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#id TfApp#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#name AwsAmplifyApp#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#name TfApp#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#oauth_token AwsAmplifyApp#oauth_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#oauth_token TfApp#oauth_token}
   */
   readonly oauthToken?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#platform AwsAmplifyApp#platform}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#platform TfApp#platform}
   */
   readonly platform?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#region AwsAmplifyApp#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#region TfApp#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#repository AwsAmplifyApp#repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#repository TfApp#repository}
   */
   readonly repository?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#tags AwsAmplifyApp#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#tags TfApp#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#tags_all AwsAmplifyApp#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#tags_all TfApp#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * auto_branch_creation_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#auto_branch_creation_config AwsAmplifyApp#auto_branch_creation_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#auto_branch_creation_config TfApp#auto_branch_creation_config}
   */
-  readonly autoBranchCreationConfig?: AwsAmplifyApp.AutoBranchCreationConfigProperty;
+  readonly autoBranchCreationConfig?: TfApp.AutoBranchCreationConfigProperty;
   /**
   * cache_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#cache_config AwsAmplifyApp#cache_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#cache_config TfApp#cache_config}
   */
-  readonly cacheConfig?: AwsAmplifyApp.CacheConfigProperty;
+  readonly cacheConfig?: TfApp.CacheConfigProperty;
   /**
   * custom_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#custom_rule AwsAmplifyApp#custom_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#custom_rule TfApp#custom_rule}
   */
-  readonly customRule?: AwsAmplifyApp.CustomRuleProperty[] | cdktn.IResolvable;
+  readonly customRule?: TfApp.CustomRuleProperty[] | cdktn.IResolvable;
   /**
   * job_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#job_config AwsAmplifyApp#job_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#job_config TfApp#job_config}
   */
-  readonly jobConfig?: AwsAmplifyApp.JobConfigProperty;
+  readonly jobConfig?: TfApp.JobConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app aws_amplify_app}
 */
-export class AwsAmplifyApp extends cdktn.TerraformResource {
+export class TfApp extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -135,11 +135,11 @@ export class AwsAmplifyApp extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsAmplifyApp resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfApp resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsAmplifyApp to import
-  * @param importFromId The id of the existing AwsAmplifyApp that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsAmplifyApp to import is found
+  * @param importToId The construct id used in the generated config for the TfApp to import
+  * @param importFromId The id of the existing TfApp that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfApp to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_amplify_app", importId: importFromId, provider });
@@ -154,9 +154,9 @@ export class AwsAmplifyApp extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsAmplifyAppConfig
+  * @param options TfAppConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsAmplifyAppConfig) {
+  public constructor(scope: Construct, id: string, config: TfAppConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_amplify_app',
       terraformGeneratorMetadata: {
@@ -483,7 +483,7 @@ export class AwsAmplifyApp extends cdktn.TerraformResource {
   }
 
   // production_branch - computed: true, optional: false, required: false
-  private _productionBranch = new AwsAmplifyApp.ProductionBranchPropertyList(this, "production_branch", false);
+  private _productionBranch = new TfApp.ProductionBranchPropertyList(this, "production_branch", false);
   public get productionBranch() {
     return this._productionBranch;
   }
@@ -553,11 +553,11 @@ export class AwsAmplifyApp extends cdktn.TerraformResource {
   }
 
   // auto_branch_creation_config - computed: false, optional: true, required: false
-  private _autoBranchCreationConfig = new AwsAmplifyApp.AutoBranchCreationConfigPropertyOutputReference(this, "auto_branch_creation_config");
+  private _autoBranchCreationConfig = new TfApp.AutoBranchCreationConfigPropertyOutputReference(this, "auto_branch_creation_config");
   public get autoBranchCreationConfig() {
     return this._autoBranchCreationConfig;
   }
-  public putAutoBranchCreationConfig(value: AwsAmplifyApp.AutoBranchCreationConfigProperty) {
+  public putAutoBranchCreationConfig(value: TfApp.AutoBranchCreationConfigProperty) {
     this._autoBranchCreationConfig.internalValue = value;
   }
   public resetAutoBranchCreationConfig() {
@@ -569,11 +569,11 @@ export class AwsAmplifyApp extends cdktn.TerraformResource {
   }
 
   // cache_config - computed: false, optional: true, required: false
-  private _cacheConfig = new AwsAmplifyApp.CacheConfigPropertyOutputReference(this, "cache_config");
+  private _cacheConfig = new TfApp.CacheConfigPropertyOutputReference(this, "cache_config");
   public get cacheConfig() {
     return this._cacheConfig;
   }
-  public putCacheConfig(value: AwsAmplifyApp.CacheConfigProperty) {
+  public putCacheConfig(value: TfApp.CacheConfigProperty) {
     this._cacheConfig.internalValue = value;
   }
   public resetCacheConfig() {
@@ -585,11 +585,11 @@ export class AwsAmplifyApp extends cdktn.TerraformResource {
   }
 
   // custom_rule - computed: false, optional: true, required: false
-  private _customRule = new AwsAmplifyApp.CustomRulePropertyList(this, "custom_rule", false);
+  private _customRule = new TfApp.CustomRulePropertyList(this, "custom_rule", false);
   public get customRule() {
     return this._customRule;
   }
-  public putCustomRule(value: AwsAmplifyApp.CustomRuleProperty[] | cdktn.IResolvable) {
+  public putCustomRule(value: TfApp.CustomRuleProperty[] | cdktn.IResolvable) {
     this._customRule.internalValue = value;
   }
   public resetCustomRule() {
@@ -601,11 +601,11 @@ export class AwsAmplifyApp extends cdktn.TerraformResource {
   }
 
   // job_config - computed: false, optional: true, required: false
-  private _jobConfig = new AwsAmplifyApp.JobConfigPropertyOutputReference(this, "job_config");
+  private _jobConfig = new TfApp.JobConfigPropertyOutputReference(this, "job_config");
   public get jobConfig() {
     return this._jobConfig;
   }
-  public putJobConfig(value: AwsAmplifyApp.JobConfigProperty) {
+  public putJobConfig(value: TfApp.JobConfigProperty) {
     this._jobConfig.internalValue = value;
   }
   public resetJobConfig() {
@@ -643,10 +643,10 @@ export class AwsAmplifyApp extends cdktn.TerraformResource {
       repository: cdktn.stringToTerraform(this._repository),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      auto_branch_creation_config: awsAmplifyAppAutoBranchCreationConfigPropertyToTerraform(this._autoBranchCreationConfig.internalValue),
-      cache_config: awsAmplifyAppCacheConfigPropertyToTerraform(this._cacheConfig.internalValue),
-      custom_rule: cdktn.listMapper(awsAmplifyAppCustomRulePropertyToTerraform, true)(this._customRule.internalValue),
-      job_config: awsAmplifyAppJobConfigPropertyToTerraform(this._jobConfig.internalValue),
+      auto_branch_creation_config: tfAppAutoBranchCreationConfigPropertyToTerraform(this._autoBranchCreationConfig.internalValue),
+      cache_config: tfAppCacheConfigPropertyToTerraform(this._cacheConfig.internalValue),
+      custom_rule: cdktn.listMapper(tfAppCustomRulePropertyToTerraform, true)(this._customRule.internalValue),
+      job_config: tfAppJobConfigPropertyToTerraform(this._jobConfig.internalValue),
     };
   }
 
@@ -779,28 +779,28 @@ export class AwsAmplifyApp extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       auto_branch_creation_config: {
-        value: awsAmplifyAppAutoBranchCreationConfigPropertyToHclTerraform(this._autoBranchCreationConfig.internalValue),
+        value: tfAppAutoBranchCreationConfigPropertyToHclTerraform(this._autoBranchCreationConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAmplifyApp.AutoBranchCreationConfigPropertyList",
+        storageClassType: "TfApp.AutoBranchCreationConfigPropertyList",
       },
       cache_config: {
-        value: awsAmplifyAppCacheConfigPropertyToHclTerraform(this._cacheConfig.internalValue),
+        value: tfAppCacheConfigPropertyToHclTerraform(this._cacheConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAmplifyApp.CacheConfigPropertyList",
+        storageClassType: "TfApp.CacheConfigPropertyList",
       },
       custom_rule: {
-        value: cdktn.listMapperHcl(awsAmplifyAppCustomRulePropertyToHclTerraform, true)(this._customRule.internalValue),
+        value: cdktn.listMapperHcl(tfAppCustomRulePropertyToHclTerraform, true)(this._customRule.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAmplifyApp.CustomRulePropertyList",
+        storageClassType: "TfApp.CustomRulePropertyList",
       },
       job_config: {
-        value: awsAmplifyAppJobConfigPropertyToHclTerraform(this._jobConfig.internalValue),
+        value: tfAppJobConfigPropertyToHclTerraform(this._jobConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAmplifyApp.JobConfigPropertyList",
+        storageClassType: "TfApp.JobConfigPropertyList",
       },
     };
 
@@ -809,7 +809,7 @@ export class AwsAmplifyApp extends cdktn.TerraformResource {
   }
 }
 
-export function awsAmplifyAppProductionBranchPropertyToTerraform(struct?: AwsAmplifyApp.ProductionBranchProperty): any {
+export function tfAppProductionBranchPropertyToTerraform(struct?: TfApp.ProductionBranchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -819,7 +819,7 @@ export function awsAmplifyAppProductionBranchPropertyToTerraform(struct?: AwsAmp
 }
 
 
-export function awsAmplifyAppProductionBranchPropertyToHclTerraform(struct?: AwsAmplifyApp.ProductionBranchProperty): any {
+export function tfAppProductionBranchPropertyToHclTerraform(struct?: TfApp.ProductionBranchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -830,7 +830,7 @@ export function awsAmplifyAppProductionBranchPropertyToHclTerraform(struct?: Aws
 }
 
 
-export function awsAmplifyAppAutoBranchCreationConfigPropertyToTerraform(struct?: AwsAmplifyApp.AutoBranchCreationConfigPropertyOutputReference | AwsAmplifyApp.AutoBranchCreationConfigProperty): any {
+export function tfAppAutoBranchCreationConfigPropertyToTerraform(struct?: TfApp.AutoBranchCreationConfigPropertyOutputReference | TfApp.AutoBranchCreationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -850,7 +850,7 @@ export function awsAmplifyAppAutoBranchCreationConfigPropertyToTerraform(struct?
 }
 
 
-export function awsAmplifyAppAutoBranchCreationConfigPropertyToHclTerraform(struct?: AwsAmplifyApp.AutoBranchCreationConfigPropertyOutputReference | AwsAmplifyApp.AutoBranchCreationConfigProperty): any {
+export function tfAppAutoBranchCreationConfigPropertyToHclTerraform(struct?: TfApp.AutoBranchCreationConfigPropertyOutputReference | TfApp.AutoBranchCreationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -923,7 +923,7 @@ export function awsAmplifyAppAutoBranchCreationConfigPropertyToHclTerraform(stru
 }
 
 
-export function awsAmplifyAppCacheConfigPropertyToTerraform(struct?: AwsAmplifyApp.CacheConfigPropertyOutputReference | AwsAmplifyApp.CacheConfigProperty): any {
+export function tfAppCacheConfigPropertyToTerraform(struct?: TfApp.CacheConfigPropertyOutputReference | TfApp.CacheConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -934,7 +934,7 @@ export function awsAmplifyAppCacheConfigPropertyToTerraform(struct?: AwsAmplifyA
 }
 
 
-export function awsAmplifyAppCacheConfigPropertyToHclTerraform(struct?: AwsAmplifyApp.CacheConfigPropertyOutputReference | AwsAmplifyApp.CacheConfigProperty): any {
+export function tfAppCacheConfigPropertyToHclTerraform(struct?: TfApp.CacheConfigPropertyOutputReference | TfApp.CacheConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -953,7 +953,7 @@ export function awsAmplifyAppCacheConfigPropertyToHclTerraform(struct?: AwsAmpli
 }
 
 
-export function awsAmplifyAppCustomRulePropertyToTerraform(struct?: AwsAmplifyApp.CustomRuleProperty | cdktn.IResolvable): any {
+export function tfAppCustomRulePropertyToTerraform(struct?: TfApp.CustomRuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -967,7 +967,7 @@ export function awsAmplifyAppCustomRulePropertyToTerraform(struct?: AwsAmplifyAp
 }
 
 
-export function awsAmplifyAppCustomRulePropertyToHclTerraform(struct?: AwsAmplifyApp.CustomRuleProperty | cdktn.IResolvable): any {
+export function tfAppCustomRulePropertyToHclTerraform(struct?: TfApp.CustomRuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1004,7 +1004,7 @@ export function awsAmplifyAppCustomRulePropertyToHclTerraform(struct?: AwsAmplif
 }
 
 
-export function awsAmplifyAppJobConfigPropertyToTerraform(struct?: AwsAmplifyApp.JobConfigPropertyOutputReference | AwsAmplifyApp.JobConfigProperty): any {
+export function tfAppJobConfigPropertyToTerraform(struct?: TfApp.JobConfigPropertyOutputReference | TfApp.JobConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1015,7 +1015,7 @@ export function awsAmplifyAppJobConfigPropertyToTerraform(struct?: AwsAmplifyApp
 }
 
 
-export function awsAmplifyAppJobConfigPropertyToHclTerraform(struct?: AwsAmplifyApp.JobConfigPropertyOutputReference | AwsAmplifyApp.JobConfigProperty): any {
+export function tfAppJobConfigPropertyToHclTerraform(struct?: TfApp.JobConfigPropertyOutputReference | TfApp.JobConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1034,7 +1034,7 @@ export function awsAmplifyAppJobConfigPropertyToHclTerraform(struct?: AwsAmplify
 }
 
 
-export namespace AwsAmplifyApp {
+export namespace TfApp {
 export interface ProductionBranchProperty {
 }
 export class ProductionBranchPropertyOutputReference extends cdktn.ComplexObject {
@@ -1106,43 +1106,43 @@ export class ProductionBranchPropertyList extends cdktn.ComplexList {
 }
 export interface AutoBranchCreationConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#basic_auth_credentials AwsAmplifyApp#basic_auth_credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#basic_auth_credentials TfApp#basic_auth_credentials}
   */
   readonly basicAuthCredentials?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#build_spec AwsAmplifyApp#build_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#build_spec TfApp#build_spec}
   */
   readonly buildSpec?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#enable_auto_build AwsAmplifyApp#enable_auto_build}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#enable_auto_build TfApp#enable_auto_build}
   */
   readonly enableAutoBuild?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#enable_basic_auth AwsAmplifyApp#enable_basic_auth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#enable_basic_auth TfApp#enable_basic_auth}
   */
   readonly enableBasicAuth?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#enable_performance_mode AwsAmplifyApp#enable_performance_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#enable_performance_mode TfApp#enable_performance_mode}
   */
   readonly enablePerformanceMode?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#enable_pull_request_preview AwsAmplifyApp#enable_pull_request_preview}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#enable_pull_request_preview TfApp#enable_pull_request_preview}
   */
   readonly enablePullRequestPreview?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#environment_variables AwsAmplifyApp#environment_variables}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#environment_variables TfApp#environment_variables}
   */
   readonly environmentVariables?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#framework AwsAmplifyApp#framework}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#framework TfApp#framework}
   */
   readonly framework?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#pull_request_environment_name AwsAmplifyApp#pull_request_environment_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#pull_request_environment_name TfApp#pull_request_environment_name}
   */
   readonly pullRequestEnvironmentName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#stage AwsAmplifyApp#stage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#stage TfApp#stage}
   */
   readonly stage?: string;
 }
@@ -1394,7 +1394,7 @@ export class AutoBranchCreationConfigPropertyOutputReference extends cdktn.Compl
 }
 export interface CacheConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#type AwsAmplifyApp#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#type TfApp#type}
   */
   readonly type: string;
 }
@@ -1445,19 +1445,19 @@ export class CacheConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface CustomRuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#condition AwsAmplifyApp#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#condition TfApp#condition}
   */
   readonly condition?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#source AwsAmplifyApp#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#source TfApp#source}
   */
   readonly source: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#status AwsAmplifyApp#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#status TfApp#status}
   */
   readonly status?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#target AwsAmplifyApp#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#target TfApp#target}
   */
   readonly target: string;
 }
@@ -1603,7 +1603,7 @@ export class CustomRulePropertyList extends cdktn.ComplexList {
 }
 export interface JobConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#build_compute_type AwsAmplifyApp#build_compute_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_app#build_compute_type TfApp#build_compute_type}
   */
   readonly buildComputeType?: string;
 }

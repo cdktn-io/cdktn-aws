@@ -5,11 +5,11 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsEksAccessPoliciesConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataAccessPoliciesConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_access_policies#region DataAwsEksAccessPolicies#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_access_policies#region TfDataAccessPolicies#region}
   */
   readonly region?: string;
 }
@@ -17,7 +17,7 @@ export interface DataAwsEksAccessPoliciesConfig extends cdktn.TerraformMetaArgum
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_access_policies aws_eks_access_policies}
 */
-export class DataAwsEksAccessPolicies extends cdktn.TerraformDataSource {
+export class TfDataAccessPolicies extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -28,11 +28,11 @@ export class DataAwsEksAccessPolicies extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsEksAccessPolicies resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataAccessPolicies resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsEksAccessPolicies to import
-  * @param importFromId The id of the existing DataAwsEksAccessPolicies that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_access_policies#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsEksAccessPolicies to import is found
+  * @param importToId The construct id used in the generated config for the TfDataAccessPolicies to import
+  * @param importFromId The id of the existing TfDataAccessPolicies that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_access_policies#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataAccessPolicies to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_eks_access_policies", importId: importFromId, provider });
@@ -47,9 +47,9 @@ export class DataAwsEksAccessPolicies extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsEksAccessPoliciesConfig = {}
+  * @param options TfDataAccessPoliciesConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsEksAccessPoliciesConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDataAccessPoliciesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_eks_access_policies',
       terraformGeneratorMetadata: {
@@ -73,7 +73,7 @@ export class DataAwsEksAccessPolicies extends cdktn.TerraformDataSource {
   // ==========
 
   // access_policies - computed: true, optional: false, required: false
-  private _accessPolicies = new DataAwsEksAccessPolicies.AccessPoliciesPropertyList(this, "access_policies", false);
+  private _accessPolicies = new TfDataAccessPolicies.AccessPoliciesPropertyList(this, "access_policies", false);
   public get accessPolicies() {
     return this._accessPolicies;
   }
@@ -119,7 +119,7 @@ export class DataAwsEksAccessPolicies extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsEksAccessPoliciesAccessPoliciesPropertyToTerraform(struct?: DataAwsEksAccessPolicies.AccessPoliciesProperty): any {
+export function tfDataAccessPoliciesAccessPoliciesPropertyToTerraform(struct?: TfDataAccessPolicies.AccessPoliciesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -129,7 +129,7 @@ export function dataAwsEksAccessPoliciesAccessPoliciesPropertyToTerraform(struct
 }
 
 
-export function dataAwsEksAccessPoliciesAccessPoliciesPropertyToHclTerraform(struct?: DataAwsEksAccessPolicies.AccessPoliciesProperty): any {
+export function tfDataAccessPoliciesAccessPoliciesPropertyToHclTerraform(struct?: TfDataAccessPolicies.AccessPoliciesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -140,7 +140,7 @@ export function dataAwsEksAccessPoliciesAccessPoliciesPropertyToHclTerraform(str
 }
 
 
-export namespace DataAwsEksAccessPolicies {
+export namespace TfDataAccessPolicies {
 export interface AccessPoliciesProperty {
 }
 export class AccessPoliciesPropertyOutputReference extends cdktn.ComplexObject {

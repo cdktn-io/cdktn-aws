@@ -5,92 +5,92 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDxPrivateVirtualInterfaceConfig extends cdktn.TerraformMetaArguments {
+export interface TfPrivateVirtualInterfaceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#address_family AwsDxPrivateVirtualInterface#address_family}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#address_family TfPrivateVirtualInterface#address_family}
   */
   readonly addressFamily: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#amazon_address AwsDxPrivateVirtualInterface#amazon_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#amazon_address TfPrivateVirtualInterface#amazon_address}
   */
   readonly amazonAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#bgp_asn AwsDxPrivateVirtualInterface#bgp_asn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#bgp_asn TfPrivateVirtualInterface#bgp_asn}
   */
   readonly bgpAsn?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#bgp_asn_long AwsDxPrivateVirtualInterface#bgp_asn_long}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#bgp_asn_long TfPrivateVirtualInterface#bgp_asn_long}
   */
   readonly bgpAsnLong?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#bgp_auth_key AwsDxPrivateVirtualInterface#bgp_auth_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#bgp_auth_key TfPrivateVirtualInterface#bgp_auth_key}
   */
   readonly bgpAuthKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#connection_id AwsDxPrivateVirtualInterface#connection_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#connection_id TfPrivateVirtualInterface#connection_id}
   */
   readonly connectionId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#customer_address AwsDxPrivateVirtualInterface#customer_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#customer_address TfPrivateVirtualInterface#customer_address}
   */
   readonly customerAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#dx_gateway_id AwsDxPrivateVirtualInterface#dx_gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#dx_gateway_id TfPrivateVirtualInterface#dx_gateway_id}
   */
   readonly dxGatewayId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#id AwsDxPrivateVirtualInterface#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#id TfPrivateVirtualInterface#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#mtu AwsDxPrivateVirtualInterface#mtu}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#mtu TfPrivateVirtualInterface#mtu}
   */
   readonly mtu?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#name AwsDxPrivateVirtualInterface#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#name TfPrivateVirtualInterface#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#region AwsDxPrivateVirtualInterface#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#region TfPrivateVirtualInterface#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#sitelink_enabled AwsDxPrivateVirtualInterface#sitelink_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#sitelink_enabled TfPrivateVirtualInterface#sitelink_enabled}
   */
   readonly sitelinkEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#tags AwsDxPrivateVirtualInterface#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#tags TfPrivateVirtualInterface#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#tags_all AwsDxPrivateVirtualInterface#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#tags_all TfPrivateVirtualInterface#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#vlan AwsDxPrivateVirtualInterface#vlan}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#vlan TfPrivateVirtualInterface#vlan}
   */
   readonly vlan: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#vpn_gateway_id AwsDxPrivateVirtualInterface#vpn_gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#vpn_gateway_id TfPrivateVirtualInterface#vpn_gateway_id}
   */
   readonly vpnGatewayId?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#timeouts AwsDxPrivateVirtualInterface#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#timeouts TfPrivateVirtualInterface#timeouts}
   */
-  readonly timeouts?: AwsDxPrivateVirtualInterface.TimeoutsProperty;
+  readonly timeouts?: TfPrivateVirtualInterface.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface aws_dx_private_virtual_interface}
 */
-export class AwsDxPrivateVirtualInterface extends cdktn.TerraformResource {
+export class TfPrivateVirtualInterface extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -101,11 +101,11 @@ export class AwsDxPrivateVirtualInterface extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDxPrivateVirtualInterface resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfPrivateVirtualInterface resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDxPrivateVirtualInterface to import
-  * @param importFromId The id of the existing AwsDxPrivateVirtualInterface that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDxPrivateVirtualInterface to import is found
+  * @param importToId The construct id used in the generated config for the TfPrivateVirtualInterface to import
+  * @param importFromId The id of the existing TfPrivateVirtualInterface that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfPrivateVirtualInterface to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_dx_private_virtual_interface", importId: importFromId, provider });
@@ -120,9 +120,9 @@ export class AwsDxPrivateVirtualInterface extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDxPrivateVirtualInterfaceConfig
+  * @param options TfPrivateVirtualInterfaceConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDxPrivateVirtualInterfaceConfig) {
+  public constructor(scope: Construct, id: string, config: TfPrivateVirtualInterfaceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_dx_private_virtual_interface',
       terraformGeneratorMetadata: {
@@ -443,11 +443,11 @@ export class AwsDxPrivateVirtualInterface extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsDxPrivateVirtualInterface.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfPrivateVirtualInterface.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsDxPrivateVirtualInterface.TimeoutsProperty) {
+  public putTimeouts(value: TfPrivateVirtualInterface.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -481,7 +481,7 @@ export class AwsDxPrivateVirtualInterface extends cdktn.TerraformResource {
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       vlan: cdktn.numberToTerraform(this._vlan),
       vpn_gateway_id: cdktn.stringToTerraform(this._vpnGatewayId),
-      timeouts: awsDxPrivateVirtualInterfaceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfPrivateVirtualInterfaceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -590,10 +590,10 @@ export class AwsDxPrivateVirtualInterface extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsDxPrivateVirtualInterfaceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfPrivateVirtualInterfaceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsDxPrivateVirtualInterface.TimeoutsProperty",
+        storageClassType: "TfPrivateVirtualInterface.TimeoutsProperty",
       },
     };
 
@@ -602,7 +602,7 @@ export class AwsDxPrivateVirtualInterface extends cdktn.TerraformResource {
   }
 }
 
-export function awsDxPrivateVirtualInterfaceTimeoutsPropertyToTerraform(struct?: AwsDxPrivateVirtualInterface.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfPrivateVirtualInterfaceTimeoutsPropertyToTerraform(struct?: TfPrivateVirtualInterface.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -615,7 +615,7 @@ export function awsDxPrivateVirtualInterfaceTimeoutsPropertyToTerraform(struct?:
 }
 
 
-export function awsDxPrivateVirtualInterfaceTimeoutsPropertyToHclTerraform(struct?: AwsDxPrivateVirtualInterface.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfPrivateVirtualInterfaceTimeoutsPropertyToHclTerraform(struct?: TfPrivateVirtualInterface.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -646,18 +646,18 @@ export function awsDxPrivateVirtualInterfaceTimeoutsPropertyToHclTerraform(struc
 }
 
 
-export namespace AwsDxPrivateVirtualInterface {
+export namespace TfPrivateVirtualInterface {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#create AwsDxPrivateVirtualInterface#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#create TfPrivateVirtualInterface#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#delete AwsDxPrivateVirtualInterface#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#delete TfPrivateVirtualInterface#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#update AwsDxPrivateVirtualInterface#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_private_virtual_interface#update TfPrivateVirtualInterface#update}
   */
   readonly update?: string;
 }

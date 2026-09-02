@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsCloudformationTypeConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataTypeConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudformation_type#arn DataAwsCloudformationType#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudformation_type#arn TfDataType#arn}
   */
   readonly arn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudformation_type#id DataAwsCloudformationType#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudformation_type#id TfDataType#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,19 +20,19 @@ export interface DataAwsCloudformationTypeConfig extends cdktn.TerraformMetaArgu
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudformation_type#region DataAwsCloudformationType#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudformation_type#region TfDataType#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudformation_type#type DataAwsCloudformationType#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudformation_type#type TfDataType#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudformation_type#type_name DataAwsCloudformationType#type_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudformation_type#type_name TfDataType#type_name}
   */
   readonly typeName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudformation_type#version_id DataAwsCloudformationType#version_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudformation_type#version_id TfDataType#version_id}
   */
   readonly versionId?: string;
 }
@@ -40,7 +40,7 @@ export interface DataAwsCloudformationTypeConfig extends cdktn.TerraformMetaArgu
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudformation_type aws_cloudformation_type}
 */
-export class DataAwsCloudformationType extends cdktn.TerraformDataSource {
+export class TfDataType extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class DataAwsCloudformationType extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsCloudformationType resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataType resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsCloudformationType to import
-  * @param importFromId The id of the existing DataAwsCloudformationType that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudformation_type#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsCloudformationType to import is found
+  * @param importToId The construct id used in the generated config for the TfDataType to import
+  * @param importFromId The id of the existing TfDataType that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudformation_type#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataType to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudformation_type", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class DataAwsCloudformationType extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsCloudformationTypeConfig = {}
+  * @param options TfDataTypeConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsCloudformationTypeConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDataTypeConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudformation_type',
       terraformGeneratorMetadata: {
@@ -163,7 +163,7 @@ export class DataAwsCloudformationType extends cdktn.TerraformDataSource {
   }
 
   // logging_config - computed: true, optional: false, required: false
-  private _loggingConfig = new DataAwsCloudformationType.LoggingConfigPropertyList(this, "logging_config", false);
+  private _loggingConfig = new TfDataType.LoggingConfigPropertyList(this, "logging_config", false);
   public get loggingConfig() {
     return this._loggingConfig;
   }
@@ -317,7 +317,7 @@ export class DataAwsCloudformationType extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsCloudformationTypeLoggingConfigPropertyToTerraform(struct?: DataAwsCloudformationType.LoggingConfigProperty): any {
+export function tfDataTypeLoggingConfigPropertyToTerraform(struct?: TfDataType.LoggingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -327,7 +327,7 @@ export function dataAwsCloudformationTypeLoggingConfigPropertyToTerraform(struct
 }
 
 
-export function dataAwsCloudformationTypeLoggingConfigPropertyToHclTerraform(struct?: DataAwsCloudformationType.LoggingConfigProperty): any {
+export function tfDataTypeLoggingConfigPropertyToHclTerraform(struct?: TfDataType.LoggingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -338,7 +338,7 @@ export function dataAwsCloudformationTypeLoggingConfigPropertyToHclTerraform(str
 }
 
 
-export namespace DataAwsCloudformationType {
+export namespace TfDataType {
 export interface LoggingConfigProperty {
 }
 export class LoggingConfigPropertyOutputReference extends cdktn.ComplexObject {

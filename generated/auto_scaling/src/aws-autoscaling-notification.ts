@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsAutoscalingNotificationConfig extends cdktn.TerraformMetaArguments {
+export interface TfNotificationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_notification#group_names AwsAutoscalingNotification#group_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_notification#group_names TfNotification#group_names}
   */
   readonly groupNames: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_notification#id AwsAutoscalingNotification#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_notification#id TfNotification#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_notification#notifications AwsAutoscalingNotification#notifications}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_notification#notifications TfNotification#notifications}
   */
   readonly notifications: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_notification#region AwsAutoscalingNotification#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_notification#region TfNotification#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_notification#topic_arn AwsAutoscalingNotification#topic_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_notification#topic_arn TfNotification#topic_arn}
   */
   readonly topicArn: string;
 }
@@ -36,7 +36,7 @@ export interface AwsAutoscalingNotificationConfig extends cdktn.TerraformMetaArg
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_notification aws_autoscaling_notification}
 */
-export class AwsAutoscalingNotification extends cdktn.TerraformResource {
+export class TfNotification extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class AwsAutoscalingNotification extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsAutoscalingNotification resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfNotification resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsAutoscalingNotification to import
-  * @param importFromId The id of the existing AwsAutoscalingNotification that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_notification#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsAutoscalingNotification to import is found
+  * @param importToId The construct id used in the generated config for the TfNotification to import
+  * @param importFromId The id of the existing TfNotification that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_notification#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfNotification to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_autoscaling_notification", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class AwsAutoscalingNotification extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsAutoscalingNotificationConfig
+  * @param options TfNotificationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsAutoscalingNotificationConfig) {
+  public constructor(scope: Construct, id: string, config: TfNotificationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_autoscaling_notification',
       terraformGeneratorMetadata: {

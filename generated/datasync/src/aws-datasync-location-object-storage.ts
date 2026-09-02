@@ -5,21 +5,21 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDatasyncLocationObjectStorageConfig extends cdktn.TerraformMetaArguments {
+export interface TfLocationObjectStorageConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_object_storage#access_key AwsDatasyncLocationObjectStorage#access_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_object_storage#access_key TfLocationObjectStorage#access_key}
   */
   readonly accessKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_object_storage#agent_arns AwsDatasyncLocationObjectStorage#agent_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_object_storage#agent_arns TfLocationObjectStorage#agent_arns}
   */
   readonly agentArns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_object_storage#bucket_name AwsDatasyncLocationObjectStorage#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_object_storage#bucket_name TfLocationObjectStorage#bucket_name}
   */
   readonly bucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_object_storage#id AwsDatasyncLocationObjectStorage#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_object_storage#id TfLocationObjectStorage#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,39 +28,39 @@ export interface AwsDatasyncLocationObjectStorageConfig extends cdktn.TerraformM
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_object_storage#region AwsDatasyncLocationObjectStorage#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_object_storage#region TfLocationObjectStorage#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_object_storage#secret_key AwsDatasyncLocationObjectStorage#secret_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_object_storage#secret_key TfLocationObjectStorage#secret_key}
   */
   readonly secretKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_object_storage#server_certificate AwsDatasyncLocationObjectStorage#server_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_object_storage#server_certificate TfLocationObjectStorage#server_certificate}
   */
   readonly serverCertificate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_object_storage#server_hostname AwsDatasyncLocationObjectStorage#server_hostname}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_object_storage#server_hostname TfLocationObjectStorage#server_hostname}
   */
   readonly serverHostname: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_object_storage#server_port AwsDatasyncLocationObjectStorage#server_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_object_storage#server_port TfLocationObjectStorage#server_port}
   */
   readonly serverPort?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_object_storage#server_protocol AwsDatasyncLocationObjectStorage#server_protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_object_storage#server_protocol TfLocationObjectStorage#server_protocol}
   */
   readonly serverProtocol?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_object_storage#subdirectory AwsDatasyncLocationObjectStorage#subdirectory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_object_storage#subdirectory TfLocationObjectStorage#subdirectory}
   */
   readonly subdirectory?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_object_storage#tags AwsDatasyncLocationObjectStorage#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_object_storage#tags TfLocationObjectStorage#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_object_storage#tags_all AwsDatasyncLocationObjectStorage#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_object_storage#tags_all TfLocationObjectStorage#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -68,7 +68,7 @@ export interface AwsDatasyncLocationObjectStorageConfig extends cdktn.TerraformM
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_object_storage aws_datasync_location_object_storage}
 */
-export class AwsDatasyncLocationObjectStorage extends cdktn.TerraformResource {
+export class TfLocationObjectStorage extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -79,11 +79,11 @@ export class AwsDatasyncLocationObjectStorage extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDatasyncLocationObjectStorage resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfLocationObjectStorage resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDatasyncLocationObjectStorage to import
-  * @param importFromId The id of the existing AwsDatasyncLocationObjectStorage that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_object_storage#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDatasyncLocationObjectStorage to import is found
+  * @param importToId The construct id used in the generated config for the TfLocationObjectStorage to import
+  * @param importFromId The id of the existing TfLocationObjectStorage that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_object_storage#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfLocationObjectStorage to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_datasync_location_object_storage", importId: importFromId, provider });
@@ -98,9 +98,9 @@ export class AwsDatasyncLocationObjectStorage extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDatasyncLocationObjectStorageConfig
+  * @param options TfLocationObjectStorageConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDatasyncLocationObjectStorageConfig) {
+  public constructor(scope: Construct, id: string, config: TfLocationObjectStorageConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_datasync_location_object_storage',
       terraformGeneratorMetadata: {

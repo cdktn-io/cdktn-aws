@@ -5,52 +5,52 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsFinspaceKxUserConfig extends cdktn.TerraformMetaArguments {
+export interface TfKxUserConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_user#environment_id AwsFinspaceKxUser#environment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_user#environment_id TfKxUser#environment_id}
   */
   readonly environmentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_user#iam_role AwsFinspaceKxUser#iam_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_user#iam_role TfKxUser#iam_role}
   */
   readonly iamRole: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_user#id AwsFinspaceKxUser#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_user#id TfKxUser#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_user#name AwsFinspaceKxUser#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_user#name TfKxUser#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_user#region AwsFinspaceKxUser#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_user#region TfKxUser#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_user#tags AwsFinspaceKxUser#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_user#tags TfKxUser#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_user#tags_all AwsFinspaceKxUser#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_user#tags_all TfKxUser#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_user#timeouts AwsFinspaceKxUser#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_user#timeouts TfKxUser#timeouts}
   */
-  readonly timeouts?: AwsFinspaceKxUser.TimeoutsProperty;
+  readonly timeouts?: TfKxUser.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_user aws_finspace_kx_user}
 */
-export class AwsFinspaceKxUser extends cdktn.TerraformResource {
+export class TfKxUser extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class AwsFinspaceKxUser extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsFinspaceKxUser resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfKxUser resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsFinspaceKxUser to import
-  * @param importFromId The id of the existing AwsFinspaceKxUser that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_user#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsFinspaceKxUser to import is found
+  * @param importToId The construct id used in the generated config for the TfKxUser to import
+  * @param importFromId The id of the existing TfKxUser that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_user#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfKxUser to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_finspace_kx_user", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class AwsFinspaceKxUser extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsFinspaceKxUserConfig
+  * @param options TfKxUserConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsFinspaceKxUserConfig) {
+  public constructor(scope: Construct, id: string, config: TfKxUserConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_finspace_kx_user',
       terraformGeneratorMetadata: {
@@ -221,11 +221,11 @@ export class AwsFinspaceKxUser extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsFinspaceKxUser.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfKxUser.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsFinspaceKxUser.TimeoutsProperty) {
+  public putTimeouts(value: TfKxUser.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -249,7 +249,7 @@ export class AwsFinspaceKxUser extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: awsFinspaceKxUserTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfKxUserTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -298,10 +298,10 @@ export class AwsFinspaceKxUser extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsFinspaceKxUserTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfKxUserTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsFinspaceKxUser.TimeoutsProperty",
+        storageClassType: "TfKxUser.TimeoutsProperty",
       },
     };
 
@@ -310,7 +310,7 @@ export class AwsFinspaceKxUser extends cdktn.TerraformResource {
   }
 }
 
-export function awsFinspaceKxUserTimeoutsPropertyToTerraform(struct?: AwsFinspaceKxUser.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfKxUserTimeoutsPropertyToTerraform(struct?: TfKxUser.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -323,7 +323,7 @@ export function awsFinspaceKxUserTimeoutsPropertyToTerraform(struct?: AwsFinspac
 }
 
 
-export function awsFinspaceKxUserTimeoutsPropertyToHclTerraform(struct?: AwsFinspaceKxUser.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfKxUserTimeoutsPropertyToHclTerraform(struct?: TfKxUser.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -354,18 +354,18 @@ export function awsFinspaceKxUserTimeoutsPropertyToHclTerraform(struct?: AwsFins
 }
 
 
-export namespace AwsFinspaceKxUser {
+export namespace TfKxUser {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_user#create AwsFinspaceKxUser#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_user#create TfKxUser#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_user#delete AwsFinspaceKxUser#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_user#delete TfKxUser#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_user#update AwsFinspaceKxUser#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_user#update TfKxUser#update}
   */
   readonly update?: string;
 }

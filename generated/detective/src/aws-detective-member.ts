@@ -5,38 +5,38 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDetectiveMemberConfig extends cdktn.TerraformMetaArguments {
+export interface TfMemberConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/detective_member#account_id AwsDetectiveMember#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/detective_member#account_id TfMember#account_id}
   */
   readonly accountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/detective_member#disable_email_notification AwsDetectiveMember#disable_email_notification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/detective_member#disable_email_notification TfMember#disable_email_notification}
   */
   readonly disableEmailNotification?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/detective_member#email_address AwsDetectiveMember#email_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/detective_member#email_address TfMember#email_address}
   */
   readonly emailAddress: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/detective_member#graph_arn AwsDetectiveMember#graph_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/detective_member#graph_arn TfMember#graph_arn}
   */
   readonly graphArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/detective_member#id AwsDetectiveMember#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/detective_member#id TfMember#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/detective_member#message AwsDetectiveMember#message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/detective_member#message TfMember#message}
   */
   readonly message?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/detective_member#region AwsDetectiveMember#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/detective_member#region TfMember#region}
   */
   readonly region?: string;
 }
@@ -44,7 +44,7 @@ export interface AwsDetectiveMemberConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/detective_member aws_detective_member}
 */
-export class AwsDetectiveMember extends cdktn.TerraformResource {
+export class TfMember extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class AwsDetectiveMember extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDetectiveMember resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfMember resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDetectiveMember to import
-  * @param importFromId The id of the existing AwsDetectiveMember that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/detective_member#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDetectiveMember to import is found
+  * @param importToId The construct id used in the generated config for the TfMember to import
+  * @param importFromId The id of the existing TfMember that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/detective_member#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfMember to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_detective_member", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class AwsDetectiveMember extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDetectiveMemberConfig
+  * @param options TfMemberConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDetectiveMemberConfig) {
+  public constructor(scope: Construct, id: string, config: TfMemberConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_detective_member',
       terraformGeneratorMetadata: {

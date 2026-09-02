@@ -5,37 +5,37 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSecuritylakeCustomLogSourceConfig extends cdktn.TerraformMetaArguments {
+export interface TfCustomLogSourceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_custom_log_source#event_classes AwsSecuritylakeCustomLogSource#event_classes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_custom_log_source#event_classes TfCustomLogSource#event_classes}
   */
   readonly eventClasses?: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_custom_log_source#region AwsSecuritylakeCustomLogSource#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_custom_log_source#region TfCustomLogSource#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_custom_log_source#source_name AwsSecuritylakeCustomLogSource#source_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_custom_log_source#source_name TfCustomLogSource#source_name}
   */
   readonly sourceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_custom_log_source#source_version AwsSecuritylakeCustomLogSource#source_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_custom_log_source#source_version TfCustomLogSource#source_version}
   */
   readonly sourceVersion?: string;
   /**
   * configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_custom_log_source#configuration AwsSecuritylakeCustomLogSource#configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_custom_log_source#configuration TfCustomLogSource#configuration}
   */
-  readonly configuration?: AwsSecuritylakeCustomLogSource.ConfigurationProperty[] | cdktn.IResolvable;
+  readonly configuration?: TfCustomLogSource.ConfigurationProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_custom_log_source aws_securitylake_custom_log_source}
 */
-export class AwsSecuritylakeCustomLogSource extends cdktn.TerraformResource {
+export class TfCustomLogSource extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -46,11 +46,11 @@ export class AwsSecuritylakeCustomLogSource extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSecuritylakeCustomLogSource resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfCustomLogSource resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSecuritylakeCustomLogSource to import
-  * @param importFromId The id of the existing AwsSecuritylakeCustomLogSource that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_custom_log_source#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSecuritylakeCustomLogSource to import is found
+  * @param importToId The construct id used in the generated config for the TfCustomLogSource to import
+  * @param importFromId The id of the existing TfCustomLogSource that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_custom_log_source#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfCustomLogSource to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_securitylake_custom_log_source", importId: importFromId, provider });
@@ -65,9 +65,9 @@ export class AwsSecuritylakeCustomLogSource extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSecuritylakeCustomLogSourceConfig
+  * @param options TfCustomLogSourceConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSecuritylakeCustomLogSourceConfig) {
+  public constructor(scope: Construct, id: string, config: TfCustomLogSourceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_securitylake_custom_log_source',
       terraformGeneratorMetadata: {
@@ -95,7 +95,7 @@ export class AwsSecuritylakeCustomLogSource extends cdktn.TerraformResource {
   // ==========
 
   // attributes - computed: true, optional: false, required: false
-  private _attributes = new AwsSecuritylakeCustomLogSource.AttributesPropertyList(this, "attributes", false);
+  private _attributes = new TfCustomLogSource.AttributesPropertyList(this, "attributes", false);
   public get attributes() {
     return this._attributes;
   }
@@ -122,7 +122,7 @@ export class AwsSecuritylakeCustomLogSource extends cdktn.TerraformResource {
   }
 
   // provider_details - computed: true, optional: false, required: false
-  private _providerDetails = new AwsSecuritylakeCustomLogSource.ProviderDetailsPropertyList(this, "provider_details", false);
+  private _providerDetails = new TfCustomLogSource.ProviderDetailsPropertyList(this, "provider_details", false);
   public get providerDetails() {
     return this._providerDetails;
   }
@@ -173,11 +173,11 @@ export class AwsSecuritylakeCustomLogSource extends cdktn.TerraformResource {
   }
 
   // configuration - computed: false, optional: true, required: false
-  private _configuration = new AwsSecuritylakeCustomLogSource.ConfigurationPropertyList(this, "configuration", false);
+  private _configuration = new TfCustomLogSource.ConfigurationPropertyList(this, "configuration", false);
   public get configuration() {
     return this._configuration;
   }
-  public putConfiguration(value: AwsSecuritylakeCustomLogSource.ConfigurationProperty[] | cdktn.IResolvable) {
+  public putConfiguration(value: TfCustomLogSource.ConfigurationProperty[] | cdktn.IResolvable) {
     this._configuration.internalValue = value;
   }
   public resetConfiguration() {
@@ -198,7 +198,7 @@ export class AwsSecuritylakeCustomLogSource extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       source_name: cdktn.stringToTerraform(this._sourceName),
       source_version: cdktn.stringToTerraform(this._sourceVersion),
-      configuration: cdktn.listMapper(awsSecuritylakeCustomLogSourceConfigurationPropertyToTerraform, true)(this._configuration.internalValue),
+      configuration: cdktn.listMapper(tfCustomLogSourceConfigurationPropertyToTerraform, true)(this._configuration.internalValue),
     };
   }
 
@@ -229,10 +229,10 @@ export class AwsSecuritylakeCustomLogSource extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       configuration: {
-        value: cdktn.listMapperHcl(awsSecuritylakeCustomLogSourceConfigurationPropertyToHclTerraform, true)(this._configuration.internalValue),
+        value: cdktn.listMapperHcl(tfCustomLogSourceConfigurationPropertyToHclTerraform, true)(this._configuration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSecuritylakeCustomLogSource.ConfigurationPropertyList",
+        storageClassType: "TfCustomLogSource.ConfigurationPropertyList",
       },
     };
 
@@ -241,7 +241,7 @@ export class AwsSecuritylakeCustomLogSource extends cdktn.TerraformResource {
   }
 }
 
-export function awsSecuritylakeCustomLogSourceAttributesPropertyToTerraform(struct?: AwsSecuritylakeCustomLogSource.AttributesProperty): any {
+export function tfCustomLogSourceAttributesPropertyToTerraform(struct?: TfCustomLogSource.AttributesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -251,7 +251,7 @@ export function awsSecuritylakeCustomLogSourceAttributesPropertyToTerraform(stru
 }
 
 
-export function awsSecuritylakeCustomLogSourceAttributesPropertyToHclTerraform(struct?: AwsSecuritylakeCustomLogSource.AttributesProperty): any {
+export function tfCustomLogSourceAttributesPropertyToHclTerraform(struct?: TfCustomLogSource.AttributesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -262,7 +262,7 @@ export function awsSecuritylakeCustomLogSourceAttributesPropertyToHclTerraform(s
 }
 
 
-export function awsSecuritylakeCustomLogSourceProviderDetailsPropertyToTerraform(struct?: AwsSecuritylakeCustomLogSource.ProviderDetailsProperty): any {
+export function tfCustomLogSourceProviderDetailsPropertyToTerraform(struct?: TfCustomLogSource.ProviderDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -272,7 +272,7 @@ export function awsSecuritylakeCustomLogSourceProviderDetailsPropertyToTerraform
 }
 
 
-export function awsSecuritylakeCustomLogSourceProviderDetailsPropertyToHclTerraform(struct?: AwsSecuritylakeCustomLogSource.ProviderDetailsProperty): any {
+export function tfCustomLogSourceProviderDetailsPropertyToHclTerraform(struct?: TfCustomLogSource.ProviderDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -283,7 +283,7 @@ export function awsSecuritylakeCustomLogSourceProviderDetailsPropertyToHclTerraf
 }
 
 
-export function awsSecuritylakeCustomLogSourceCrawlerConfigurationPropertyToTerraform(struct?: AwsSecuritylakeCustomLogSource.CrawlerConfigurationProperty | cdktn.IResolvable): any {
+export function tfCustomLogSourceCrawlerConfigurationPropertyToTerraform(struct?: TfCustomLogSource.CrawlerConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -294,7 +294,7 @@ export function awsSecuritylakeCustomLogSourceCrawlerConfigurationPropertyToTerr
 }
 
 
-export function awsSecuritylakeCustomLogSourceCrawlerConfigurationPropertyToHclTerraform(struct?: AwsSecuritylakeCustomLogSource.CrawlerConfigurationProperty | cdktn.IResolvable): any {
+export function tfCustomLogSourceCrawlerConfigurationPropertyToHclTerraform(struct?: TfCustomLogSource.CrawlerConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -313,7 +313,7 @@ export function awsSecuritylakeCustomLogSourceCrawlerConfigurationPropertyToHclT
 }
 
 
-export function awsSecuritylakeCustomLogSourceProviderIdentityPropertyToTerraform(struct?: AwsSecuritylakeCustomLogSource.ProviderIdentityProperty | cdktn.IResolvable): any {
+export function tfCustomLogSourceProviderIdentityPropertyToTerraform(struct?: TfCustomLogSource.ProviderIdentityProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -325,7 +325,7 @@ export function awsSecuritylakeCustomLogSourceProviderIdentityPropertyToTerrafor
 }
 
 
-export function awsSecuritylakeCustomLogSourceProviderIdentityPropertyToHclTerraform(struct?: AwsSecuritylakeCustomLogSource.ProviderIdentityProperty | cdktn.IResolvable): any {
+export function tfCustomLogSourceProviderIdentityPropertyToHclTerraform(struct?: TfCustomLogSource.ProviderIdentityProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -350,32 +350,32 @@ export function awsSecuritylakeCustomLogSourceProviderIdentityPropertyToHclTerra
 }
 
 
-export function awsSecuritylakeCustomLogSourceConfigurationPropertyToTerraform(struct?: AwsSecuritylakeCustomLogSource.ConfigurationProperty | cdktn.IResolvable): any {
+export function tfCustomLogSourceConfigurationPropertyToTerraform(struct?: TfCustomLogSource.ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    crawler_configuration: cdktn.listMapper(awsSecuritylakeCustomLogSourceCrawlerConfigurationPropertyToTerraform, true)(struct!.crawlerConfiguration),
-    provider_identity: cdktn.listMapper(awsSecuritylakeCustomLogSourceProviderIdentityPropertyToTerraform, true)(struct!.providerIdentity),
+    crawler_configuration: cdktn.listMapper(tfCustomLogSourceCrawlerConfigurationPropertyToTerraform, true)(struct!.crawlerConfiguration),
+    provider_identity: cdktn.listMapper(tfCustomLogSourceProviderIdentityPropertyToTerraform, true)(struct!.providerIdentity),
   }
 }
 
 
-export function awsSecuritylakeCustomLogSourceConfigurationPropertyToHclTerraform(struct?: AwsSecuritylakeCustomLogSource.ConfigurationProperty | cdktn.IResolvable): any {
+export function tfCustomLogSourceConfigurationPropertyToHclTerraform(struct?: TfCustomLogSource.ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     crawler_configuration: {
-      value: cdktn.listMapperHcl(awsSecuritylakeCustomLogSourceCrawlerConfigurationPropertyToHclTerraform, true)(struct!.crawlerConfiguration),
+      value: cdktn.listMapperHcl(tfCustomLogSourceCrawlerConfigurationPropertyToHclTerraform, true)(struct!.crawlerConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "CrawlerConfigurationPropertyList",
     },
     provider_identity: {
-      value: cdktn.listMapperHcl(awsSecuritylakeCustomLogSourceProviderIdentityPropertyToHclTerraform, true)(struct!.providerIdentity),
+      value: cdktn.listMapperHcl(tfCustomLogSourceProviderIdentityPropertyToHclTerraform, true)(struct!.providerIdentity),
       isBlock: true,
       type: "list",
       storageClassType: "ProviderIdentityPropertyList",
@@ -387,7 +387,7 @@ export function awsSecuritylakeCustomLogSourceConfigurationPropertyToHclTerrafor
 }
 
 
-export namespace AwsSecuritylakeCustomLogSource {
+export namespace TfCustomLogSource {
 export interface AttributesProperty {
 }
 export class AttributesPropertyOutputReference extends cdktn.ComplexObject {
@@ -513,7 +513,7 @@ export class ProviderDetailsPropertyList extends cdktn.ComplexList {
 }
 export interface CrawlerConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_custom_log_source#role_arn AwsSecuritylakeCustomLogSource#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_custom_log_source#role_arn TfCustomLogSource#role_arn}
   */
   readonly roleArn: string;
 }
@@ -596,11 +596,11 @@ export class CrawlerConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface ProviderIdentityProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_custom_log_source#external_id AwsSecuritylakeCustomLogSource#external_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_custom_log_source#external_id TfCustomLogSource#external_id}
   */
   readonly externalId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_custom_log_source#principal AwsSecuritylakeCustomLogSource#principal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_custom_log_source#principal TfCustomLogSource#principal}
   */
   readonly principal: string;
 }
@@ -704,13 +704,13 @@ export interface ConfigurationProperty {
   /**
   * crawler_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_custom_log_source#crawler_configuration AwsSecuritylakeCustomLogSource#crawler_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_custom_log_source#crawler_configuration TfCustomLogSource#crawler_configuration}
   */
   readonly crawlerConfiguration?: CrawlerConfigurationProperty[] | cdktn.IResolvable;
   /**
   * provider_identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_custom_log_source#provider_identity AwsSecuritylakeCustomLogSource#provider_identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_custom_log_source#provider_identity TfCustomLogSource#provider_identity}
   */
   readonly providerIdentity?: ProviderIdentityProperty[] | cdktn.IResolvable;
 }

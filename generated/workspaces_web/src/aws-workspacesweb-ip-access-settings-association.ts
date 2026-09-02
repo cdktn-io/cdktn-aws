@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsWorkspaceswebIpAccessSettingsAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface TfIpAccessSettingsAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_ip_access_settings_association#ip_access_settings_arn AwsWorkspaceswebIpAccessSettingsAssociation#ip_access_settings_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_ip_access_settings_association#ip_access_settings_arn TfIpAccessSettingsAssociation#ip_access_settings_arn}
   */
   readonly ipAccessSettingsArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_ip_access_settings_association#portal_arn AwsWorkspaceswebIpAccessSettingsAssociation#portal_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_ip_access_settings_association#portal_arn TfIpAccessSettingsAssociation#portal_arn}
   */
   readonly portalArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_ip_access_settings_association#region AwsWorkspaceswebIpAccessSettingsAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_ip_access_settings_association#region TfIpAccessSettingsAssociation#region}
   */
   readonly region?: string;
 }
@@ -25,7 +25,7 @@ export interface AwsWorkspaceswebIpAccessSettingsAssociationConfig extends cdktn
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_ip_access_settings_association aws_workspacesweb_ip_access_settings_association}
 */
-export class AwsWorkspaceswebIpAccessSettingsAssociation extends cdktn.TerraformResource {
+export class TfIpAccessSettingsAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -36,11 +36,11 @@ export class AwsWorkspaceswebIpAccessSettingsAssociation extends cdktn.Terraform
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsWorkspaceswebIpAccessSettingsAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfIpAccessSettingsAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsWorkspaceswebIpAccessSettingsAssociation to import
-  * @param importFromId The id of the existing AwsWorkspaceswebIpAccessSettingsAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_ip_access_settings_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsWorkspaceswebIpAccessSettingsAssociation to import is found
+  * @param importToId The construct id used in the generated config for the TfIpAccessSettingsAssociation to import
+  * @param importFromId The id of the existing TfIpAccessSettingsAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_ip_access_settings_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfIpAccessSettingsAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_workspacesweb_ip_access_settings_association", importId: importFromId, provider });
@@ -55,9 +55,9 @@ export class AwsWorkspaceswebIpAccessSettingsAssociation extends cdktn.Terraform
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsWorkspaceswebIpAccessSettingsAssociationConfig
+  * @param options TfIpAccessSettingsAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsWorkspaceswebIpAccessSettingsAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: TfIpAccessSettingsAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_workspacesweb_ip_access_settings_association',
       terraformGeneratorMetadata: {

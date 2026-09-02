@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsWafv2RegexPatternSetConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataRegexPatternSetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/wafv2_regex_pattern_set#id DataAwsWafv2RegexPatternSet#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/wafv2_regex_pattern_set#id TfDataRegexPatternSet#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/wafv2_regex_pattern_set#name DataAwsWafv2RegexPatternSet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/wafv2_regex_pattern_set#name TfDataRegexPatternSet#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/wafv2_regex_pattern_set#region DataAwsWafv2RegexPatternSet#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/wafv2_regex_pattern_set#region TfDataRegexPatternSet#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/wafv2_regex_pattern_set#scope DataAwsWafv2RegexPatternSet#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/wafv2_regex_pattern_set#scope TfDataRegexPatternSet#scope}
   */
   readonly scope: string;
 }
@@ -32,7 +32,7 @@ export interface DataAwsWafv2RegexPatternSetConfig extends cdktn.TerraformMetaAr
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/wafv2_regex_pattern_set aws_wafv2_regex_pattern_set}
 */
-export class DataAwsWafv2RegexPatternSet extends cdktn.TerraformDataSource {
+export class TfDataRegexPatternSet extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class DataAwsWafv2RegexPatternSet extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsWafv2RegexPatternSet resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataRegexPatternSet resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsWafv2RegexPatternSet to import
-  * @param importFromId The id of the existing DataAwsWafv2RegexPatternSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/wafv2_regex_pattern_set#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsWafv2RegexPatternSet to import is found
+  * @param importToId The construct id used in the generated config for the TfDataRegexPatternSet to import
+  * @param importFromId The id of the existing TfDataRegexPatternSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/wafv2_regex_pattern_set#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataRegexPatternSet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_wafv2_regex_pattern_set", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class DataAwsWafv2RegexPatternSet extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsWafv2RegexPatternSetConfig
+  * @param options TfDataRegexPatternSetConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsWafv2RegexPatternSetConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataRegexPatternSetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_wafv2_regex_pattern_set',
       terraformGeneratorMetadata: {
@@ -146,7 +146,7 @@ export class DataAwsWafv2RegexPatternSet extends cdktn.TerraformDataSource {
   }
 
   // regular_expression - computed: true, optional: false, required: false
-  private _regularExpression = new DataAwsWafv2RegexPatternSet.RegularExpressionPropertyList(this, "regular_expression", true);
+  private _regularExpression = new TfDataRegexPatternSet.RegularExpressionPropertyList(this, "regular_expression", true);
   public get regularExpression() {
     return this._regularExpression;
   }
@@ -210,7 +210,7 @@ export class DataAwsWafv2RegexPatternSet extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsWafv2RegexPatternSetRegularExpressionPropertyToTerraform(struct?: DataAwsWafv2RegexPatternSet.RegularExpressionProperty): any {
+export function tfDataRegexPatternSetRegularExpressionPropertyToTerraform(struct?: TfDataRegexPatternSet.RegularExpressionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -220,7 +220,7 @@ export function dataAwsWafv2RegexPatternSetRegularExpressionPropertyToTerraform(
 }
 
 
-export function dataAwsWafv2RegexPatternSetRegularExpressionPropertyToHclTerraform(struct?: DataAwsWafv2RegexPatternSet.RegularExpressionProperty): any {
+export function tfDataRegexPatternSetRegularExpressionPropertyToHclTerraform(struct?: TfDataRegexPatternSet.RegularExpressionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -231,7 +231,7 @@ export function dataAwsWafv2RegexPatternSetRegularExpressionPropertyToHclTerrafo
 }
 
 
-export namespace DataAwsWafv2RegexPatternSet {
+export namespace TfDataRegexPatternSet {
 export interface RegularExpressionProperty {
 }
 export class RegularExpressionPropertyOutputReference extends cdktn.ComplexObject {

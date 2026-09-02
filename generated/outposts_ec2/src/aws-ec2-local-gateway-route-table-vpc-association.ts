@@ -5,34 +5,34 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEc2LocalGatewayRouteTableVpcAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface TfLocalGatewayRouteTableVpcAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table_vpc_association#id AwsEc2LocalGatewayRouteTableVpcAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table_vpc_association#id TfLocalGatewayRouteTableVpcAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table_vpc_association#local_gateway_route_table_id AwsEc2LocalGatewayRouteTableVpcAssociation#local_gateway_route_table_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table_vpc_association#local_gateway_route_table_id TfLocalGatewayRouteTableVpcAssociation#local_gateway_route_table_id}
   */
   readonly localGatewayRouteTableId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table_vpc_association#region AwsEc2LocalGatewayRouteTableVpcAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table_vpc_association#region TfLocalGatewayRouteTableVpcAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table_vpc_association#tags AwsEc2LocalGatewayRouteTableVpcAssociation#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table_vpc_association#tags TfLocalGatewayRouteTableVpcAssociation#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table_vpc_association#tags_all AwsEc2LocalGatewayRouteTableVpcAssociation#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table_vpc_association#tags_all TfLocalGatewayRouteTableVpcAssociation#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table_vpc_association#vpc_id AwsEc2LocalGatewayRouteTableVpcAssociation#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table_vpc_association#vpc_id TfLocalGatewayRouteTableVpcAssociation#vpc_id}
   */
   readonly vpcId: string;
 }
@@ -40,7 +40,7 @@ export interface AwsEc2LocalGatewayRouteTableVpcAssociationConfig extends cdktn.
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table_vpc_association aws_ec2_local_gateway_route_table_vpc_association}
 */
-export class AwsEc2LocalGatewayRouteTableVpcAssociation extends cdktn.TerraformResource {
+export class TfLocalGatewayRouteTableVpcAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class AwsEc2LocalGatewayRouteTableVpcAssociation extends cdktn.TerraformR
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEc2LocalGatewayRouteTableVpcAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfLocalGatewayRouteTableVpcAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEc2LocalGatewayRouteTableVpcAssociation to import
-  * @param importFromId The id of the existing AwsEc2LocalGatewayRouteTableVpcAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table_vpc_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEc2LocalGatewayRouteTableVpcAssociation to import is found
+  * @param importToId The construct id used in the generated config for the TfLocalGatewayRouteTableVpcAssociation to import
+  * @param importFromId The id of the existing TfLocalGatewayRouteTableVpcAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table_vpc_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfLocalGatewayRouteTableVpcAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_local_gateway_route_table_vpc_association", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class AwsEc2LocalGatewayRouteTableVpcAssociation extends cdktn.TerraformR
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEc2LocalGatewayRouteTableVpcAssociationConfig
+  * @param options TfLocalGatewayRouteTableVpcAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEc2LocalGatewayRouteTableVpcAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: TfLocalGatewayRouteTableVpcAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_local_gateway_route_table_vpc_association',
       terraformGeneratorMetadata: {

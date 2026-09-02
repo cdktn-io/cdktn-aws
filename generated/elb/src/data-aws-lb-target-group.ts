@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsLbTargetGroupConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataTargetGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_target_group#arn DataAwsLbTargetGroup#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_target_group#arn TfDataTargetGroup#arn}
   */
   readonly arn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_target_group#id DataAwsLbTargetGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_target_group#id TfDataTargetGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_target_group#load_balancing_anomaly_mitigation DataAwsLbTargetGroup#load_balancing_anomaly_mitigation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_target_group#load_balancing_anomaly_mitigation TfDataTargetGroup#load_balancing_anomaly_mitigation}
   */
   readonly loadBalancingAnomalyMitigation?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_target_group#name DataAwsLbTargetGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_target_group#name TfDataTargetGroup#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_target_group#region DataAwsLbTargetGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_target_group#region TfDataTargetGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_target_group#tags DataAwsLbTargetGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_target_group#tags TfDataTargetGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_target_group#timeouts DataAwsLbTargetGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_target_group#timeouts TfDataTargetGroup#timeouts}
   */
-  readonly timeouts?: DataAwsLbTargetGroup.TimeoutsProperty;
+  readonly timeouts?: TfDataTargetGroup.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_target_group aws_lb_target_group}
 */
-export class DataAwsLbTargetGroup extends cdktn.TerraformDataSource {
+export class TfDataTargetGroup extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class DataAwsLbTargetGroup extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsLbTargetGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataTargetGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsLbTargetGroup to import
-  * @param importFromId The id of the existing DataAwsLbTargetGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_target_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsLbTargetGroup to import is found
+  * @param importToId The construct id used in the generated config for the TfDataTargetGroup to import
+  * @param importFromId The id of the existing TfDataTargetGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_target_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataTargetGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lb_target_group", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class DataAwsLbTargetGroup extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsLbTargetGroupConfig = {}
+  * @param options TfDataTargetGroupConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsLbTargetGroupConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDataTargetGroupConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_lb_target_group',
       terraformGeneratorMetadata: {
@@ -139,7 +139,7 @@ export class DataAwsLbTargetGroup extends cdktn.TerraformDataSource {
   }
 
   // health_check - computed: true, optional: false, required: false
-  private _healthCheck = new DataAwsLbTargetGroup.HealthCheckPropertyList(this, "health_check", false);
+  private _healthCheck = new TfDataTargetGroup.HealthCheckPropertyList(this, "health_check", false);
   public get healthCheck() {
     return this._healthCheck;
   }
@@ -259,7 +259,7 @@ export class DataAwsLbTargetGroup extends cdktn.TerraformDataSource {
   }
 
   // stickiness - computed: true, optional: false, required: false
-  private _stickiness = new DataAwsLbTargetGroup.StickinessPropertyList(this, "stickiness", false);
+  private _stickiness = new TfDataTargetGroup.StickinessPropertyList(this, "stickiness", false);
   public get stickiness() {
     return this._stickiness;
   }
@@ -296,11 +296,11 @@ export class DataAwsLbTargetGroup extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAwsLbTargetGroup.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfDataTargetGroup.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: DataAwsLbTargetGroup.TimeoutsProperty) {
+  public putTimeouts(value: TfDataTargetGroup.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -323,7 +323,7 @@ export class DataAwsLbTargetGroup extends cdktn.TerraformDataSource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      timeouts: dataAwsLbTargetGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfDataTargetGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -366,10 +366,10 @@ export class DataAwsLbTargetGroup extends cdktn.TerraformDataSource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: dataAwsLbTargetGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfDataTargetGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "DataAwsLbTargetGroup.TimeoutsProperty",
+        storageClassType: "TfDataTargetGroup.TimeoutsProperty",
       },
     };
 
@@ -378,7 +378,7 @@ export class DataAwsLbTargetGroup extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsLbTargetGroupHealthCheckPropertyToTerraform(struct?: DataAwsLbTargetGroup.HealthCheckProperty): any {
+export function tfDataTargetGroupHealthCheckPropertyToTerraform(struct?: TfDataTargetGroup.HealthCheckProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -388,7 +388,7 @@ export function dataAwsLbTargetGroupHealthCheckPropertyToTerraform(struct?: Data
 }
 
 
-export function dataAwsLbTargetGroupHealthCheckPropertyToHclTerraform(struct?: DataAwsLbTargetGroup.HealthCheckProperty): any {
+export function tfDataTargetGroupHealthCheckPropertyToHclTerraform(struct?: TfDataTargetGroup.HealthCheckProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -399,7 +399,7 @@ export function dataAwsLbTargetGroupHealthCheckPropertyToHclTerraform(struct?: D
 }
 
 
-export function dataAwsLbTargetGroupStickinessPropertyToTerraform(struct?: DataAwsLbTargetGroup.StickinessProperty): any {
+export function tfDataTargetGroupStickinessPropertyToTerraform(struct?: TfDataTargetGroup.StickinessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -409,7 +409,7 @@ export function dataAwsLbTargetGroupStickinessPropertyToTerraform(struct?: DataA
 }
 
 
-export function dataAwsLbTargetGroupStickinessPropertyToHclTerraform(struct?: DataAwsLbTargetGroup.StickinessProperty): any {
+export function tfDataTargetGroupStickinessPropertyToHclTerraform(struct?: TfDataTargetGroup.StickinessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -420,7 +420,7 @@ export function dataAwsLbTargetGroupStickinessPropertyToHclTerraform(struct?: Da
 }
 
 
-export function dataAwsLbTargetGroupTimeoutsPropertyToTerraform(struct?: DataAwsLbTargetGroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDataTargetGroupTimeoutsPropertyToTerraform(struct?: TfDataTargetGroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -431,7 +431,7 @@ export function dataAwsLbTargetGroupTimeoutsPropertyToTerraform(struct?: DataAws
 }
 
 
-export function dataAwsLbTargetGroupTimeoutsPropertyToHclTerraform(struct?: DataAwsLbTargetGroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDataTargetGroupTimeoutsPropertyToHclTerraform(struct?: TfDataTargetGroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -450,7 +450,7 @@ export function dataAwsLbTargetGroupTimeoutsPropertyToHclTerraform(struct?: Data
 }
 
 
-export namespace DataAwsLbTargetGroup {
+export namespace TfDataTargetGroup {
 export interface HealthCheckProperty {
 }
 export class HealthCheckPropertyOutputReference extends cdktn.ComplexObject {
@@ -616,7 +616,7 @@ export class StickinessPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_target_group#read DataAwsLbTargetGroup#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_target_group#read TfDataTargetGroup#read}
   */
   readonly read?: string;
 }

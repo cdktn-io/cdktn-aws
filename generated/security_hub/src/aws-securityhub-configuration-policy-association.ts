@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSecurityhubConfigurationPolicyAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface TfConfigurationPolicyAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy_association#id AwsSecurityhubConfigurationPolicyAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy_association#id TfConfigurationPolicyAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,33 +16,33 @@ export interface AwsSecurityhubConfigurationPolicyAssociationConfig extends cdkt
   /**
   * The universally unique identifier (UUID) of the configuration policy, or SELF_MANAGED_SECURITY_HUB for a self-managed configuration.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy_association#policy_id AwsSecurityhubConfigurationPolicyAssociation#policy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy_association#policy_id TfConfigurationPolicyAssociation#policy_id}
   */
   readonly policyId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy_association#region AwsSecurityhubConfigurationPolicyAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy_association#region TfConfigurationPolicyAssociation#region}
   */
   readonly region?: string;
   /**
   * The identifier of the target account, organizational unit, or the root to associate with the specified configuration.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy_association#target_id AwsSecurityhubConfigurationPolicyAssociation#target_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy_association#target_id TfConfigurationPolicyAssociation#target_id}
   */
   readonly targetId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy_association#timeouts AwsSecurityhubConfigurationPolicyAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy_association#timeouts TfConfigurationPolicyAssociation#timeouts}
   */
-  readonly timeouts?: AwsSecurityhubConfigurationPolicyAssociation.TimeoutsProperty;
+  readonly timeouts?: TfConfigurationPolicyAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy_association aws_securityhub_configuration_policy_association}
 */
-export class AwsSecurityhubConfigurationPolicyAssociation extends cdktn.TerraformResource {
+export class TfConfigurationPolicyAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class AwsSecurityhubConfigurationPolicyAssociation extends cdktn.Terrafor
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSecurityhubConfigurationPolicyAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfConfigurationPolicyAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSecurityhubConfigurationPolicyAssociation to import
-  * @param importFromId The id of the existing AwsSecurityhubConfigurationPolicyAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSecurityhubConfigurationPolicyAssociation to import is found
+  * @param importToId The construct id used in the generated config for the TfConfigurationPolicyAssociation to import
+  * @param importFromId The id of the existing TfConfigurationPolicyAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfConfigurationPolicyAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_securityhub_configuration_policy_association", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class AwsSecurityhubConfigurationPolicyAssociation extends cdktn.Terrafor
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSecurityhubConfigurationPolicyAssociationConfig
+  * @param options TfConfigurationPolicyAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSecurityhubConfigurationPolicyAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: TfConfigurationPolicyAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_securityhub_configuration_policy_association',
       terraformGeneratorMetadata: {
@@ -160,11 +160,11 @@ export class AwsSecurityhubConfigurationPolicyAssociation extends cdktn.Terrafor
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsSecurityhubConfigurationPolicyAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfConfigurationPolicyAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsSecurityhubConfigurationPolicyAssociation.TimeoutsProperty) {
+  public putTimeouts(value: TfConfigurationPolicyAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -185,7 +185,7 @@ export class AwsSecurityhubConfigurationPolicyAssociation extends cdktn.Terrafor
       policy_id: cdktn.stringToTerraform(this._policyId),
       region: cdktn.stringToTerraform(this._region),
       target_id: cdktn.stringToTerraform(this._targetId),
-      timeouts: awsSecurityhubConfigurationPolicyAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfConfigurationPolicyAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -216,10 +216,10 @@ export class AwsSecurityhubConfigurationPolicyAssociation extends cdktn.Terrafor
         storageClassType: "string",
       },
       timeouts: {
-        value: awsSecurityhubConfigurationPolicyAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfConfigurationPolicyAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsSecurityhubConfigurationPolicyAssociation.TimeoutsProperty",
+        storageClassType: "TfConfigurationPolicyAssociation.TimeoutsProperty",
       },
     };
 
@@ -228,7 +228,7 @@ export class AwsSecurityhubConfigurationPolicyAssociation extends cdktn.Terrafor
   }
 }
 
-export function awsSecurityhubConfigurationPolicyAssociationTimeoutsPropertyToTerraform(struct?: AwsSecurityhubConfigurationPolicyAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfConfigurationPolicyAssociationTimeoutsPropertyToTerraform(struct?: TfConfigurationPolicyAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -240,7 +240,7 @@ export function awsSecurityhubConfigurationPolicyAssociationTimeoutsPropertyToTe
 }
 
 
-export function awsSecurityhubConfigurationPolicyAssociationTimeoutsPropertyToHclTerraform(struct?: AwsSecurityhubConfigurationPolicyAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfConfigurationPolicyAssociationTimeoutsPropertyToHclTerraform(struct?: TfConfigurationPolicyAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -265,14 +265,14 @@ export function awsSecurityhubConfigurationPolicyAssociationTimeoutsPropertyToHc
 }
 
 
-export namespace AwsSecurityhubConfigurationPolicyAssociation {
+export namespace TfConfigurationPolicyAssociation {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy_association#create AwsSecurityhubConfigurationPolicyAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy_association#create TfConfigurationPolicyAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy_association#update AwsSecurityhubConfigurationPolicyAssociation#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_configuration_policy_association#update TfConfigurationPolicyAssociation#update}
   */
   readonly update?: string;
 }

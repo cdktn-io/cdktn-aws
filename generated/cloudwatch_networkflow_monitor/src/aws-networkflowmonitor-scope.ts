@@ -5,35 +5,35 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsNetworkflowmonitorScopeConfig extends cdktn.TerraformMetaArguments {
+export interface TfScopeConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_scope#region AwsNetworkflowmonitorScope#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_scope#region TfScope#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_scope#tags AwsNetworkflowmonitorScope#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_scope#tags TfScope#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_scope#target AwsNetworkflowmonitorScope#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_scope#target TfScope#target}
   */
-  readonly target?: AwsNetworkflowmonitorScope.TargetProperty[] | cdktn.IResolvable;
+  readonly target?: TfScope.TargetProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_scope#timeouts AwsNetworkflowmonitorScope#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_scope#timeouts TfScope#timeouts}
   */
-  readonly timeouts?: AwsNetworkflowmonitorScope.TimeoutsProperty;
+  readonly timeouts?: TfScope.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_scope aws_networkflowmonitor_scope}
 */
-export class AwsNetworkflowmonitorScope extends cdktn.TerraformResource {
+export class TfScope extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class AwsNetworkflowmonitorScope extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsNetworkflowmonitorScope resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfScope resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsNetworkflowmonitorScope to import
-  * @param importFromId The id of the existing AwsNetworkflowmonitorScope that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_scope#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsNetworkflowmonitorScope to import is found
+  * @param importToId The construct id used in the generated config for the TfScope to import
+  * @param importFromId The id of the existing TfScope that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_scope#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfScope to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkflowmonitor_scope", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class AwsNetworkflowmonitorScope extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsNetworkflowmonitorScopeConfig = {}
+  * @param options TfScopeConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsNetworkflowmonitorScopeConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfScopeConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_networkflowmonitor_scope',
       terraformGeneratorMetadata: {
@@ -140,11 +140,11 @@ export class AwsNetworkflowmonitorScope extends cdktn.TerraformResource {
   }
 
   // target - computed: false, optional: true, required: false
-  private _target = new AwsNetworkflowmonitorScope.TargetPropertyList(this, "target", true);
+  private _target = new TfScope.TargetPropertyList(this, "target", true);
   public get target() {
     return this._target;
   }
-  public putTarget(value: AwsNetworkflowmonitorScope.TargetProperty[] | cdktn.IResolvable) {
+  public putTarget(value: TfScope.TargetProperty[] | cdktn.IResolvable) {
     this._target.internalValue = value;
   }
   public resetTarget() {
@@ -156,11 +156,11 @@ export class AwsNetworkflowmonitorScope extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsNetworkflowmonitorScope.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfScope.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsNetworkflowmonitorScope.TimeoutsProperty) {
+  public putTimeouts(value: TfScope.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -179,8 +179,8 @@ export class AwsNetworkflowmonitorScope extends cdktn.TerraformResource {
     return {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      target: cdktn.listMapper(awsNetworkflowmonitorScopeTargetPropertyToTerraform, true)(this._target.internalValue),
-      timeouts: awsNetworkflowmonitorScopeTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      target: cdktn.listMapper(tfScopeTargetPropertyToTerraform, true)(this._target.internalValue),
+      timeouts: tfScopeTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -199,16 +199,16 @@ export class AwsNetworkflowmonitorScope extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       target: {
-        value: cdktn.listMapperHcl(awsNetworkflowmonitorScopeTargetPropertyToHclTerraform, true)(this._target.internalValue),
+        value: cdktn.listMapperHcl(tfScopeTargetPropertyToHclTerraform, true)(this._target.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsNetworkflowmonitorScope.TargetPropertyList",
+        storageClassType: "TfScope.TargetPropertyList",
       },
       timeouts: {
-        value: awsNetworkflowmonitorScopeTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfScopeTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsNetworkflowmonitorScope.TimeoutsProperty",
+        storageClassType: "TfScope.TimeoutsProperty",
       },
     };
 
@@ -217,7 +217,7 @@ export class AwsNetworkflowmonitorScope extends cdktn.TerraformResource {
   }
 }
 
-export function awsNetworkflowmonitorScopeTargetIdPropertyToTerraform(struct?: AwsNetworkflowmonitorScope.TargetIdProperty | cdktn.IResolvable): any {
+export function tfScopeTargetIdPropertyToTerraform(struct?: TfScope.TargetIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -228,7 +228,7 @@ export function awsNetworkflowmonitorScopeTargetIdPropertyToTerraform(struct?: A
 }
 
 
-export function awsNetworkflowmonitorScopeTargetIdPropertyToHclTerraform(struct?: AwsNetworkflowmonitorScope.TargetIdProperty | cdktn.IResolvable): any {
+export function tfScopeTargetIdPropertyToHclTerraform(struct?: TfScope.TargetIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -247,19 +247,19 @@ export function awsNetworkflowmonitorScopeTargetIdPropertyToHclTerraform(struct?
 }
 
 
-export function awsNetworkflowmonitorScopeTargetIdentifierPropertyToTerraform(struct?: AwsNetworkflowmonitorScope.TargetIdentifierProperty | cdktn.IResolvable): any {
+export function tfScopeTargetIdentifierPropertyToTerraform(struct?: TfScope.TargetIdentifierProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     target_type: cdktn.stringToTerraform(struct!.targetType),
-    target_id: cdktn.listMapper(awsNetworkflowmonitorScopeTargetIdPropertyToTerraform, true)(struct!.targetId),
+    target_id: cdktn.listMapper(tfScopeTargetIdPropertyToTerraform, true)(struct!.targetId),
   }
 }
 
 
-export function awsNetworkflowmonitorScopeTargetIdentifierPropertyToHclTerraform(struct?: AwsNetworkflowmonitorScope.TargetIdentifierProperty | cdktn.IResolvable): any {
+export function tfScopeTargetIdentifierPropertyToHclTerraform(struct?: TfScope.TargetIdentifierProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -272,7 +272,7 @@ export function awsNetworkflowmonitorScopeTargetIdentifierPropertyToHclTerraform
       storageClassType: "string",
     },
     target_id: {
-      value: cdktn.listMapperHcl(awsNetworkflowmonitorScopeTargetIdPropertyToHclTerraform, true)(struct!.targetId),
+      value: cdktn.listMapperHcl(tfScopeTargetIdPropertyToHclTerraform, true)(struct!.targetId),
       isBlock: true,
       type: "list",
       storageClassType: "TargetIdPropertyList",
@@ -284,19 +284,19 @@ export function awsNetworkflowmonitorScopeTargetIdentifierPropertyToHclTerraform
 }
 
 
-export function awsNetworkflowmonitorScopeTargetPropertyToTerraform(struct?: AwsNetworkflowmonitorScope.TargetProperty | cdktn.IResolvable): any {
+export function tfScopeTargetPropertyToTerraform(struct?: TfScope.TargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     region: cdktn.stringToTerraform(struct!.region),
-    target_identifier: cdktn.listMapper(awsNetworkflowmonitorScopeTargetIdentifierPropertyToTerraform, true)(struct!.targetIdentifier),
+    target_identifier: cdktn.listMapper(tfScopeTargetIdentifierPropertyToTerraform, true)(struct!.targetIdentifier),
   }
 }
 
 
-export function awsNetworkflowmonitorScopeTargetPropertyToHclTerraform(struct?: AwsNetworkflowmonitorScope.TargetProperty | cdktn.IResolvable): any {
+export function tfScopeTargetPropertyToHclTerraform(struct?: TfScope.TargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -309,7 +309,7 @@ export function awsNetworkflowmonitorScopeTargetPropertyToHclTerraform(struct?: 
       storageClassType: "string",
     },
     target_identifier: {
-      value: cdktn.listMapperHcl(awsNetworkflowmonitorScopeTargetIdentifierPropertyToHclTerraform, true)(struct!.targetIdentifier),
+      value: cdktn.listMapperHcl(tfScopeTargetIdentifierPropertyToHclTerraform, true)(struct!.targetIdentifier),
       isBlock: true,
       type: "list",
       storageClassType: "TargetIdentifierPropertyList",
@@ -321,7 +321,7 @@ export function awsNetworkflowmonitorScopeTargetPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsNetworkflowmonitorScopeTimeoutsPropertyToTerraform(struct?: AwsNetworkflowmonitorScope.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfScopeTimeoutsPropertyToTerraform(struct?: TfScope.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -334,7 +334,7 @@ export function awsNetworkflowmonitorScopeTimeoutsPropertyToTerraform(struct?: A
 }
 
 
-export function awsNetworkflowmonitorScopeTimeoutsPropertyToHclTerraform(struct?: AwsNetworkflowmonitorScope.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfScopeTimeoutsPropertyToHclTerraform(struct?: TfScope.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -365,10 +365,10 @@ export function awsNetworkflowmonitorScopeTimeoutsPropertyToHclTerraform(struct?
 }
 
 
-export namespace AwsNetworkflowmonitorScope {
+export namespace TfScope {
 export interface TargetIdProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_scope#account_id AwsNetworkflowmonitorScope#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_scope#account_id TfScope#account_id}
   */
   readonly accountId: string;
 }
@@ -451,13 +451,13 @@ export class TargetIdPropertyList extends cdktn.ComplexList {
 }
 export interface TargetIdentifierProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_scope#target_type AwsNetworkflowmonitorScope#target_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_scope#target_type TfScope#target_type}
   */
   readonly targetType: string;
   /**
   * target_id block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_scope#target_id AwsNetworkflowmonitorScope#target_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_scope#target_id TfScope#target_id}
   */
   readonly targetId?: TargetIdProperty[] | cdktn.IResolvable;
 }
@@ -562,13 +562,13 @@ export class TargetIdentifierPropertyList extends cdktn.ComplexList {
 }
 export interface TargetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_scope#region AwsNetworkflowmonitorScope#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_scope#region TfScope#region}
   */
   readonly region: string;
   /**
   * target_identifier block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_scope#target_identifier AwsNetworkflowmonitorScope#target_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_scope#target_identifier TfScope#target_identifier}
   */
   readonly targetIdentifier?: TargetIdentifierProperty[] | cdktn.IResolvable;
 }
@@ -675,19 +675,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_scope#create AwsNetworkflowmonitorScope#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_scope#create TfScope#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_scope#delete AwsNetworkflowmonitorScope#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_scope#delete TfScope#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_scope#update AwsNetworkflowmonitorScope#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_scope#update TfScope#update}
   */
   readonly update?: string;
 }

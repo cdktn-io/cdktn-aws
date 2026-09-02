@@ -5,76 +5,76 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsWafv2RuleGroupConfig extends cdktn.TerraformMetaArguments {
+export interface TfRuleGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#capacity AwsWafv2RuleGroup#capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#capacity TfRuleGroup#capacity}
   */
   readonly capacity: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#description AwsWafv2RuleGroup#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#description TfRuleGroup#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#id AwsWafv2RuleGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#id TfRuleGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#name AwsWafv2RuleGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#name TfRuleGroup#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#name_prefix AwsWafv2RuleGroup#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#name_prefix TfRuleGroup#name_prefix}
   */
   readonly namePrefix?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#region AwsWafv2RuleGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#region TfRuleGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#rules_json AwsWafv2RuleGroup#rules_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#rules_json TfRuleGroup#rules_json}
   */
   readonly rulesJson?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#scope AwsWafv2RuleGroup#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#scope TfRuleGroup#scope}
   */
   readonly scope: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#tags AwsWafv2RuleGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#tags TfRuleGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#tags_all AwsWafv2RuleGroup#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#tags_all TfRuleGroup#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * custom_response_body block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#custom_response_body AwsWafv2RuleGroup#custom_response_body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#custom_response_body TfRuleGroup#custom_response_body}
   */
-  readonly customResponseBody?: AwsWafv2RuleGroup.CustomResponseBodyProperty[] | cdktn.IResolvable;
+  readonly customResponseBody?: TfRuleGroup.CustomResponseBodyProperty[] | cdktn.IResolvable;
   /**
   * rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#rule AwsWafv2RuleGroup#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#rule TfRuleGroup#rule}
   */
-  readonly rule?: AwsWafv2RuleGroup.RuleProperty[] | cdktn.IResolvable;
+  readonly rule?: TfRuleGroup.RuleProperty[] | cdktn.IResolvable;
   /**
   * visibility_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#visibility_config AwsWafv2RuleGroup#visibility_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#visibility_config TfRuleGroup#visibility_config}
   */
-  readonly visibilityConfig: AwsWafv2RuleGroup.VisibilityConfigProperty;
+  readonly visibilityConfig: TfRuleGroup.VisibilityConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group aws_wafv2_rule_group}
 */
-export class AwsWafv2RuleGroup extends cdktn.TerraformResource {
+export class TfRuleGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -85,11 +85,11 @@ export class AwsWafv2RuleGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsWafv2RuleGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfRuleGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsWafv2RuleGroup to import
-  * @param importFromId The id of the existing AwsWafv2RuleGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsWafv2RuleGroup to import is found
+  * @param importToId The construct id used in the generated config for the TfRuleGroup to import
+  * @param importFromId The id of the existing TfRuleGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfRuleGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_wafv2_rule_group", importId: importFromId, provider });
@@ -104,9 +104,9 @@ export class AwsWafv2RuleGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsWafv2RuleGroupConfig
+  * @param options TfRuleGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsWafv2RuleGroupConfig) {
+  public constructor(scope: Construct, id: string, config: TfRuleGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_wafv2_rule_group',
       terraformGeneratorMetadata: {
@@ -306,11 +306,11 @@ export class AwsWafv2RuleGroup extends cdktn.TerraformResource {
   }
 
   // custom_response_body - computed: false, optional: true, required: false
-  private _customResponseBody = new AwsWafv2RuleGroup.CustomResponseBodyPropertyList(this, "custom_response_body", true);
+  private _customResponseBody = new TfRuleGroup.CustomResponseBodyPropertyList(this, "custom_response_body", true);
   public get customResponseBody() {
     return this._customResponseBody;
   }
-  public putCustomResponseBody(value: AwsWafv2RuleGroup.CustomResponseBodyProperty[] | cdktn.IResolvable) {
+  public putCustomResponseBody(value: TfRuleGroup.CustomResponseBodyProperty[] | cdktn.IResolvable) {
     this._customResponseBody.internalValue = value;
   }
   public resetCustomResponseBody() {
@@ -322,11 +322,11 @@ export class AwsWafv2RuleGroup extends cdktn.TerraformResource {
   }
 
   // rule - computed: false, optional: true, required: false
-  private _rule = new AwsWafv2RuleGroup.RulePropertyList(this, "rule", true);
+  private _rule = new TfRuleGroup.RulePropertyList(this, "rule", true);
   public get rule() {
     return this._rule;
   }
-  public putRule(value: AwsWafv2RuleGroup.RuleProperty[] | cdktn.IResolvable) {
+  public putRule(value: TfRuleGroup.RuleProperty[] | cdktn.IResolvable) {
     this._rule.internalValue = value;
   }
   public resetRule() {
@@ -338,11 +338,11 @@ export class AwsWafv2RuleGroup extends cdktn.TerraformResource {
   }
 
   // visibility_config - computed: false, optional: false, required: true
-  private _visibilityConfig = new AwsWafv2RuleGroup.VisibilityConfigPropertyOutputReference(this, "visibility_config");
+  private _visibilityConfig = new TfRuleGroup.VisibilityConfigPropertyOutputReference(this, "visibility_config");
   public get visibilityConfig() {
     return this._visibilityConfig;
   }
-  public putVisibilityConfig(value: AwsWafv2RuleGroup.VisibilityConfigProperty) {
+  public putVisibilityConfig(value: TfRuleGroup.VisibilityConfigProperty) {
     this._visibilityConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -366,9 +366,9 @@ export class AwsWafv2RuleGroup extends cdktn.TerraformResource {
       scope: cdktn.stringToTerraform(this._scope),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      custom_response_body: cdktn.listMapper(awsWafv2RuleGroupCustomResponseBodyPropertyToTerraform, true)(this._customResponseBody.internalValue),
-      rule: cdktn.listMapper(awsWafv2RuleGroupRulePropertyToTerraform, true)(this._rule.internalValue),
-      visibility_config: awsWafv2RuleGroupVisibilityConfigPropertyToTerraform(this._visibilityConfig.internalValue),
+      custom_response_body: cdktn.listMapper(tfRuleGroupCustomResponseBodyPropertyToTerraform, true)(this._customResponseBody.internalValue),
+      rule: cdktn.listMapper(tfRuleGroupRulePropertyToTerraform, true)(this._rule.internalValue),
+      visibility_config: tfRuleGroupVisibilityConfigPropertyToTerraform(this._visibilityConfig.internalValue),
     };
   }
 
@@ -435,22 +435,22 @@ export class AwsWafv2RuleGroup extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       custom_response_body: {
-        value: cdktn.listMapperHcl(awsWafv2RuleGroupCustomResponseBodyPropertyToHclTerraform, true)(this._customResponseBody.internalValue),
+        value: cdktn.listMapperHcl(tfRuleGroupCustomResponseBodyPropertyToHclTerraform, true)(this._customResponseBody.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsWafv2RuleGroup.CustomResponseBodyPropertyList",
+        storageClassType: "TfRuleGroup.CustomResponseBodyPropertyList",
       },
       rule: {
-        value: cdktn.listMapperHcl(awsWafv2RuleGroupRulePropertyToHclTerraform, true)(this._rule.internalValue),
+        value: cdktn.listMapperHcl(tfRuleGroupRulePropertyToHclTerraform, true)(this._rule.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsWafv2RuleGroup.RulePropertyList",
+        storageClassType: "TfRuleGroup.RulePropertyList",
       },
       visibility_config: {
-        value: awsWafv2RuleGroupVisibilityConfigPropertyToHclTerraform(this._visibilityConfig.internalValue),
+        value: tfRuleGroupVisibilityConfigPropertyToHclTerraform(this._visibilityConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsWafv2RuleGroup.VisibilityConfigPropertyList",
+        storageClassType: "TfRuleGroup.VisibilityConfigPropertyList",
       },
     };
 
@@ -459,7 +459,7 @@ export class AwsWafv2RuleGroup extends cdktn.TerraformResource {
   }
 }
 
-export function awsWafv2RuleGroupCustomResponseBodyPropertyToTerraform(struct?: AwsWafv2RuleGroup.CustomResponseBodyProperty | cdktn.IResolvable): any {
+export function tfRuleGroupCustomResponseBodyPropertyToTerraform(struct?: TfRuleGroup.CustomResponseBodyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -472,7 +472,7 @@ export function awsWafv2RuleGroupCustomResponseBodyPropertyToTerraform(struct?: 
 }
 
 
-export function awsWafv2RuleGroupCustomResponseBodyPropertyToHclTerraform(struct?: AwsWafv2RuleGroup.CustomResponseBodyProperty | cdktn.IResolvable): any {
+export function tfRuleGroupCustomResponseBodyPropertyToHclTerraform(struct?: TfRuleGroup.CustomResponseBodyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -503,7 +503,7 @@ export function awsWafv2RuleGroupCustomResponseBodyPropertyToHclTerraform(struct
 }
 
 
-export function awsWafv2RuleGroupRuleActionAllowCustomRequestHandlingInsertHeaderPropertyToTerraform(struct?: AwsWafv2RuleGroup.RuleActionAllowCustomRequestHandlingInsertHeaderProperty | cdktn.IResolvable): any {
+export function tfRuleGroupRuleActionAllowCustomRequestHandlingInsertHeaderPropertyToTerraform(struct?: TfRuleGroup.RuleActionAllowCustomRequestHandlingInsertHeaderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -515,7 +515,7 @@ export function awsWafv2RuleGroupRuleActionAllowCustomRequestHandlingInsertHeade
 }
 
 
-export function awsWafv2RuleGroupRuleActionAllowCustomRequestHandlingInsertHeaderPropertyToHclTerraform(struct?: AwsWafv2RuleGroup.RuleActionAllowCustomRequestHandlingInsertHeaderProperty | cdktn.IResolvable): any {
+export function tfRuleGroupRuleActionAllowCustomRequestHandlingInsertHeaderPropertyToHclTerraform(struct?: TfRuleGroup.RuleActionAllowCustomRequestHandlingInsertHeaderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -540,25 +540,25 @@ export function awsWafv2RuleGroupRuleActionAllowCustomRequestHandlingInsertHeade
 }
 
 
-export function awsWafv2RuleGroupRuleActionAllowCustomRequestHandlingPropertyToTerraform(struct?: AwsWafv2RuleGroup.RuleActionAllowCustomRequestHandlingPropertyOutputReference | AwsWafv2RuleGroup.RuleActionAllowCustomRequestHandlingProperty): any {
+export function tfRuleGroupRuleActionAllowCustomRequestHandlingPropertyToTerraform(struct?: TfRuleGroup.RuleActionAllowCustomRequestHandlingPropertyOutputReference | TfRuleGroup.RuleActionAllowCustomRequestHandlingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    insert_header: cdktn.listMapper(awsWafv2RuleGroupRuleActionAllowCustomRequestHandlingInsertHeaderPropertyToTerraform, true)(struct!.insertHeader),
+    insert_header: cdktn.listMapper(tfRuleGroupRuleActionAllowCustomRequestHandlingInsertHeaderPropertyToTerraform, true)(struct!.insertHeader),
   }
 }
 
 
-export function awsWafv2RuleGroupRuleActionAllowCustomRequestHandlingPropertyToHclTerraform(struct?: AwsWafv2RuleGroup.RuleActionAllowCustomRequestHandlingPropertyOutputReference | AwsWafv2RuleGroup.RuleActionAllowCustomRequestHandlingProperty): any {
+export function tfRuleGroupRuleActionAllowCustomRequestHandlingPropertyToHclTerraform(struct?: TfRuleGroup.RuleActionAllowCustomRequestHandlingPropertyOutputReference | TfRuleGroup.RuleActionAllowCustomRequestHandlingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     insert_header: {
-      value: cdktn.listMapperHcl(awsWafv2RuleGroupRuleActionAllowCustomRequestHandlingInsertHeaderPropertyToHclTerraform, true)(struct!.insertHeader),
+      value: cdktn.listMapperHcl(tfRuleGroupRuleActionAllowCustomRequestHandlingInsertHeaderPropertyToHclTerraform, true)(struct!.insertHeader),
       isBlock: true,
       type: "set",
       storageClassType: "RuleActionAllowCustomRequestHandlingInsertHeaderPropertyList",
@@ -570,25 +570,25 @@ export function awsWafv2RuleGroupRuleActionAllowCustomRequestHandlingPropertyToH
 }
 
 
-export function awsWafv2RuleGroupAllowPropertyToTerraform(struct?: AwsWafv2RuleGroup.AllowPropertyOutputReference | AwsWafv2RuleGroup.AllowProperty): any {
+export function tfRuleGroupAllowPropertyToTerraform(struct?: TfRuleGroup.AllowPropertyOutputReference | TfRuleGroup.AllowProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_request_handling: awsWafv2RuleGroupRuleActionAllowCustomRequestHandlingPropertyToTerraform(struct!.customRequestHandling),
+    custom_request_handling: tfRuleGroupRuleActionAllowCustomRequestHandlingPropertyToTerraform(struct!.customRequestHandling),
   }
 }
 
 
-export function awsWafv2RuleGroupAllowPropertyToHclTerraform(struct?: AwsWafv2RuleGroup.AllowPropertyOutputReference | AwsWafv2RuleGroup.AllowProperty): any {
+export function tfRuleGroupAllowPropertyToHclTerraform(struct?: TfRuleGroup.AllowPropertyOutputReference | TfRuleGroup.AllowProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_request_handling: {
-      value: awsWafv2RuleGroupRuleActionAllowCustomRequestHandlingPropertyToHclTerraform(struct!.customRequestHandling),
+      value: tfRuleGroupRuleActionAllowCustomRequestHandlingPropertyToHclTerraform(struct!.customRequestHandling),
       isBlock: true,
       type: "list",
       storageClassType: "RuleActionAllowCustomRequestHandlingPropertyList",
@@ -600,7 +600,7 @@ export function awsWafv2RuleGroupAllowPropertyToHclTerraform(struct?: AwsWafv2Ru
 }
 
 
-export function awsWafv2RuleGroupResponseHeaderPropertyToTerraform(struct?: AwsWafv2RuleGroup.ResponseHeaderProperty | cdktn.IResolvable): any {
+export function tfRuleGroupResponseHeaderPropertyToTerraform(struct?: TfRuleGroup.ResponseHeaderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -612,7 +612,7 @@ export function awsWafv2RuleGroupResponseHeaderPropertyToTerraform(struct?: AwsW
 }
 
 
-export function awsWafv2RuleGroupResponseHeaderPropertyToHclTerraform(struct?: AwsWafv2RuleGroup.ResponseHeaderProperty | cdktn.IResolvable): any {
+export function tfRuleGroupResponseHeaderPropertyToHclTerraform(struct?: TfRuleGroup.ResponseHeaderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -637,7 +637,7 @@ export function awsWafv2RuleGroupResponseHeaderPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsWafv2RuleGroupCustomResponsePropertyToTerraform(struct?: AwsWafv2RuleGroup.CustomResponsePropertyOutputReference | AwsWafv2RuleGroup.CustomResponseProperty): any {
+export function tfRuleGroupCustomResponsePropertyToTerraform(struct?: TfRuleGroup.CustomResponsePropertyOutputReference | TfRuleGroup.CustomResponseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -645,12 +645,12 @@ export function awsWafv2RuleGroupCustomResponsePropertyToTerraform(struct?: AwsW
   return {
     custom_response_body_key: cdktn.stringToTerraform(struct!.customResponseBodyKey),
     response_code: cdktn.numberToTerraform(struct!.responseCode),
-    response_header: cdktn.listMapper(awsWafv2RuleGroupResponseHeaderPropertyToTerraform, true)(struct!.responseHeader),
+    response_header: cdktn.listMapper(tfRuleGroupResponseHeaderPropertyToTerraform, true)(struct!.responseHeader),
   }
 }
 
 
-export function awsWafv2RuleGroupCustomResponsePropertyToHclTerraform(struct?: AwsWafv2RuleGroup.CustomResponsePropertyOutputReference | AwsWafv2RuleGroup.CustomResponseProperty): any {
+export function tfRuleGroupCustomResponsePropertyToHclTerraform(struct?: TfRuleGroup.CustomResponsePropertyOutputReference | TfRuleGroup.CustomResponseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -669,7 +669,7 @@ export function awsWafv2RuleGroupCustomResponsePropertyToHclTerraform(struct?: A
       storageClassType: "number",
     },
     response_header: {
-      value: cdktn.listMapperHcl(awsWafv2RuleGroupResponseHeaderPropertyToHclTerraform, true)(struct!.responseHeader),
+      value: cdktn.listMapperHcl(tfRuleGroupResponseHeaderPropertyToHclTerraform, true)(struct!.responseHeader),
       isBlock: true,
       type: "set",
       storageClassType: "ResponseHeaderPropertyList",
@@ -681,25 +681,25 @@ export function awsWafv2RuleGroupCustomResponsePropertyToHclTerraform(struct?: A
 }
 
 
-export function awsWafv2RuleGroupBlockPropertyToTerraform(struct?: AwsWafv2RuleGroup.BlockPropertyOutputReference | AwsWafv2RuleGroup.BlockProperty): any {
+export function tfRuleGroupBlockPropertyToTerraform(struct?: TfRuleGroup.BlockPropertyOutputReference | TfRuleGroup.BlockProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_response: awsWafv2RuleGroupCustomResponsePropertyToTerraform(struct!.customResponse),
+    custom_response: tfRuleGroupCustomResponsePropertyToTerraform(struct!.customResponse),
   }
 }
 
 
-export function awsWafv2RuleGroupBlockPropertyToHclTerraform(struct?: AwsWafv2RuleGroup.BlockPropertyOutputReference | AwsWafv2RuleGroup.BlockProperty): any {
+export function tfRuleGroupBlockPropertyToHclTerraform(struct?: TfRuleGroup.BlockPropertyOutputReference | TfRuleGroup.BlockProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_response: {
-      value: awsWafv2RuleGroupCustomResponsePropertyToHclTerraform(struct!.customResponse),
+      value: tfRuleGroupCustomResponsePropertyToHclTerraform(struct!.customResponse),
       isBlock: true,
       type: "list",
       storageClassType: "CustomResponsePropertyList",
@@ -711,7 +711,7 @@ export function awsWafv2RuleGroupBlockPropertyToHclTerraform(struct?: AwsWafv2Ru
 }
 
 
-export function awsWafv2RuleGroupRuleActionCaptchaCustomRequestHandlingInsertHeaderPropertyToTerraform(struct?: AwsWafv2RuleGroup.RuleActionCaptchaCustomRequestHandlingInsertHeaderProperty | cdktn.IResolvable): any {
+export function tfRuleGroupRuleActionCaptchaCustomRequestHandlingInsertHeaderPropertyToTerraform(struct?: TfRuleGroup.RuleActionCaptchaCustomRequestHandlingInsertHeaderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -723,7 +723,7 @@ export function awsWafv2RuleGroupRuleActionCaptchaCustomRequestHandlingInsertHea
 }
 
 
-export function awsWafv2RuleGroupRuleActionCaptchaCustomRequestHandlingInsertHeaderPropertyToHclTerraform(struct?: AwsWafv2RuleGroup.RuleActionCaptchaCustomRequestHandlingInsertHeaderProperty | cdktn.IResolvable): any {
+export function tfRuleGroupRuleActionCaptchaCustomRequestHandlingInsertHeaderPropertyToHclTerraform(struct?: TfRuleGroup.RuleActionCaptchaCustomRequestHandlingInsertHeaderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -748,25 +748,25 @@ export function awsWafv2RuleGroupRuleActionCaptchaCustomRequestHandlingInsertHea
 }
 
 
-export function awsWafv2RuleGroupRuleActionCaptchaCustomRequestHandlingPropertyToTerraform(struct?: AwsWafv2RuleGroup.RuleActionCaptchaCustomRequestHandlingPropertyOutputReference | AwsWafv2RuleGroup.RuleActionCaptchaCustomRequestHandlingProperty): any {
+export function tfRuleGroupRuleActionCaptchaCustomRequestHandlingPropertyToTerraform(struct?: TfRuleGroup.RuleActionCaptchaCustomRequestHandlingPropertyOutputReference | TfRuleGroup.RuleActionCaptchaCustomRequestHandlingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    insert_header: cdktn.listMapper(awsWafv2RuleGroupRuleActionCaptchaCustomRequestHandlingInsertHeaderPropertyToTerraform, true)(struct!.insertHeader),
+    insert_header: cdktn.listMapper(tfRuleGroupRuleActionCaptchaCustomRequestHandlingInsertHeaderPropertyToTerraform, true)(struct!.insertHeader),
   }
 }
 
 
-export function awsWafv2RuleGroupRuleActionCaptchaCustomRequestHandlingPropertyToHclTerraform(struct?: AwsWafv2RuleGroup.RuleActionCaptchaCustomRequestHandlingPropertyOutputReference | AwsWafv2RuleGroup.RuleActionCaptchaCustomRequestHandlingProperty): any {
+export function tfRuleGroupRuleActionCaptchaCustomRequestHandlingPropertyToHclTerraform(struct?: TfRuleGroup.RuleActionCaptchaCustomRequestHandlingPropertyOutputReference | TfRuleGroup.RuleActionCaptchaCustomRequestHandlingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     insert_header: {
-      value: cdktn.listMapperHcl(awsWafv2RuleGroupRuleActionCaptchaCustomRequestHandlingInsertHeaderPropertyToHclTerraform, true)(struct!.insertHeader),
+      value: cdktn.listMapperHcl(tfRuleGroupRuleActionCaptchaCustomRequestHandlingInsertHeaderPropertyToHclTerraform, true)(struct!.insertHeader),
       isBlock: true,
       type: "set",
       storageClassType: "RuleActionCaptchaCustomRequestHandlingInsertHeaderPropertyList",
@@ -778,25 +778,25 @@ export function awsWafv2RuleGroupRuleActionCaptchaCustomRequestHandlingPropertyT
 }
 
 
-export function awsWafv2RuleGroupCaptchaPropertyToTerraform(struct?: AwsWafv2RuleGroup.CaptchaPropertyOutputReference | AwsWafv2RuleGroup.CaptchaProperty): any {
+export function tfRuleGroupCaptchaPropertyToTerraform(struct?: TfRuleGroup.CaptchaPropertyOutputReference | TfRuleGroup.CaptchaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_request_handling: awsWafv2RuleGroupRuleActionCaptchaCustomRequestHandlingPropertyToTerraform(struct!.customRequestHandling),
+    custom_request_handling: tfRuleGroupRuleActionCaptchaCustomRequestHandlingPropertyToTerraform(struct!.customRequestHandling),
   }
 }
 
 
-export function awsWafv2RuleGroupCaptchaPropertyToHclTerraform(struct?: AwsWafv2RuleGroup.CaptchaPropertyOutputReference | AwsWafv2RuleGroup.CaptchaProperty): any {
+export function tfRuleGroupCaptchaPropertyToHclTerraform(struct?: TfRuleGroup.CaptchaPropertyOutputReference | TfRuleGroup.CaptchaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_request_handling: {
-      value: awsWafv2RuleGroupRuleActionCaptchaCustomRequestHandlingPropertyToHclTerraform(struct!.customRequestHandling),
+      value: tfRuleGroupRuleActionCaptchaCustomRequestHandlingPropertyToHclTerraform(struct!.customRequestHandling),
       isBlock: true,
       type: "list",
       storageClassType: "RuleActionCaptchaCustomRequestHandlingPropertyList",
@@ -808,7 +808,7 @@ export function awsWafv2RuleGroupCaptchaPropertyToHclTerraform(struct?: AwsWafv2
 }
 
 
-export function awsWafv2RuleGroupRuleActionChallengeCustomRequestHandlingInsertHeaderPropertyToTerraform(struct?: AwsWafv2RuleGroup.RuleActionChallengeCustomRequestHandlingInsertHeaderProperty | cdktn.IResolvable): any {
+export function tfRuleGroupRuleActionChallengeCustomRequestHandlingInsertHeaderPropertyToTerraform(struct?: TfRuleGroup.RuleActionChallengeCustomRequestHandlingInsertHeaderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -820,7 +820,7 @@ export function awsWafv2RuleGroupRuleActionChallengeCustomRequestHandlingInsertH
 }
 
 
-export function awsWafv2RuleGroupRuleActionChallengeCustomRequestHandlingInsertHeaderPropertyToHclTerraform(struct?: AwsWafv2RuleGroup.RuleActionChallengeCustomRequestHandlingInsertHeaderProperty | cdktn.IResolvable): any {
+export function tfRuleGroupRuleActionChallengeCustomRequestHandlingInsertHeaderPropertyToHclTerraform(struct?: TfRuleGroup.RuleActionChallengeCustomRequestHandlingInsertHeaderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -845,25 +845,25 @@ export function awsWafv2RuleGroupRuleActionChallengeCustomRequestHandlingInsertH
 }
 
 
-export function awsWafv2RuleGroupRuleActionChallengeCustomRequestHandlingPropertyToTerraform(struct?: AwsWafv2RuleGroup.RuleActionChallengeCustomRequestHandlingPropertyOutputReference | AwsWafv2RuleGroup.RuleActionChallengeCustomRequestHandlingProperty): any {
+export function tfRuleGroupRuleActionChallengeCustomRequestHandlingPropertyToTerraform(struct?: TfRuleGroup.RuleActionChallengeCustomRequestHandlingPropertyOutputReference | TfRuleGroup.RuleActionChallengeCustomRequestHandlingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    insert_header: cdktn.listMapper(awsWafv2RuleGroupRuleActionChallengeCustomRequestHandlingInsertHeaderPropertyToTerraform, true)(struct!.insertHeader),
+    insert_header: cdktn.listMapper(tfRuleGroupRuleActionChallengeCustomRequestHandlingInsertHeaderPropertyToTerraform, true)(struct!.insertHeader),
   }
 }
 
 
-export function awsWafv2RuleGroupRuleActionChallengeCustomRequestHandlingPropertyToHclTerraform(struct?: AwsWafv2RuleGroup.RuleActionChallengeCustomRequestHandlingPropertyOutputReference | AwsWafv2RuleGroup.RuleActionChallengeCustomRequestHandlingProperty): any {
+export function tfRuleGroupRuleActionChallengeCustomRequestHandlingPropertyToHclTerraform(struct?: TfRuleGroup.RuleActionChallengeCustomRequestHandlingPropertyOutputReference | TfRuleGroup.RuleActionChallengeCustomRequestHandlingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     insert_header: {
-      value: cdktn.listMapperHcl(awsWafv2RuleGroupRuleActionChallengeCustomRequestHandlingInsertHeaderPropertyToHclTerraform, true)(struct!.insertHeader),
+      value: cdktn.listMapperHcl(tfRuleGroupRuleActionChallengeCustomRequestHandlingInsertHeaderPropertyToHclTerraform, true)(struct!.insertHeader),
       isBlock: true,
       type: "set",
       storageClassType: "RuleActionChallengeCustomRequestHandlingInsertHeaderPropertyList",
@@ -875,25 +875,25 @@ export function awsWafv2RuleGroupRuleActionChallengeCustomRequestHandlingPropert
 }
 
 
-export function awsWafv2RuleGroupChallengePropertyToTerraform(struct?: AwsWafv2RuleGroup.ChallengePropertyOutputReference | AwsWafv2RuleGroup.ChallengeProperty): any {
+export function tfRuleGroupChallengePropertyToTerraform(struct?: TfRuleGroup.ChallengePropertyOutputReference | TfRuleGroup.ChallengeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_request_handling: awsWafv2RuleGroupRuleActionChallengeCustomRequestHandlingPropertyToTerraform(struct!.customRequestHandling),
+    custom_request_handling: tfRuleGroupRuleActionChallengeCustomRequestHandlingPropertyToTerraform(struct!.customRequestHandling),
   }
 }
 
 
-export function awsWafv2RuleGroupChallengePropertyToHclTerraform(struct?: AwsWafv2RuleGroup.ChallengePropertyOutputReference | AwsWafv2RuleGroup.ChallengeProperty): any {
+export function tfRuleGroupChallengePropertyToHclTerraform(struct?: TfRuleGroup.ChallengePropertyOutputReference | TfRuleGroup.ChallengeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_request_handling: {
-      value: awsWafv2RuleGroupRuleActionChallengeCustomRequestHandlingPropertyToHclTerraform(struct!.customRequestHandling),
+      value: tfRuleGroupRuleActionChallengeCustomRequestHandlingPropertyToHclTerraform(struct!.customRequestHandling),
       isBlock: true,
       type: "list",
       storageClassType: "RuleActionChallengeCustomRequestHandlingPropertyList",
@@ -905,7 +905,7 @@ export function awsWafv2RuleGroupChallengePropertyToHclTerraform(struct?: AwsWaf
 }
 
 
-export function awsWafv2RuleGroupRuleActionCountCustomRequestHandlingInsertHeaderPropertyToTerraform(struct?: AwsWafv2RuleGroup.RuleActionCountCustomRequestHandlingInsertHeaderProperty | cdktn.IResolvable): any {
+export function tfRuleGroupRuleActionCountCustomRequestHandlingInsertHeaderPropertyToTerraform(struct?: TfRuleGroup.RuleActionCountCustomRequestHandlingInsertHeaderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -917,7 +917,7 @@ export function awsWafv2RuleGroupRuleActionCountCustomRequestHandlingInsertHeade
 }
 
 
-export function awsWafv2RuleGroupRuleActionCountCustomRequestHandlingInsertHeaderPropertyToHclTerraform(struct?: AwsWafv2RuleGroup.RuleActionCountCustomRequestHandlingInsertHeaderProperty | cdktn.IResolvable): any {
+export function tfRuleGroupRuleActionCountCustomRequestHandlingInsertHeaderPropertyToHclTerraform(struct?: TfRuleGroup.RuleActionCountCustomRequestHandlingInsertHeaderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -942,25 +942,25 @@ export function awsWafv2RuleGroupRuleActionCountCustomRequestHandlingInsertHeade
 }
 
 
-export function awsWafv2RuleGroupRuleActionCountCustomRequestHandlingPropertyToTerraform(struct?: AwsWafv2RuleGroup.RuleActionCountCustomRequestHandlingPropertyOutputReference | AwsWafv2RuleGroup.RuleActionCountCustomRequestHandlingProperty): any {
+export function tfRuleGroupRuleActionCountCustomRequestHandlingPropertyToTerraform(struct?: TfRuleGroup.RuleActionCountCustomRequestHandlingPropertyOutputReference | TfRuleGroup.RuleActionCountCustomRequestHandlingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    insert_header: cdktn.listMapper(awsWafv2RuleGroupRuleActionCountCustomRequestHandlingInsertHeaderPropertyToTerraform, true)(struct!.insertHeader),
+    insert_header: cdktn.listMapper(tfRuleGroupRuleActionCountCustomRequestHandlingInsertHeaderPropertyToTerraform, true)(struct!.insertHeader),
   }
 }
 
 
-export function awsWafv2RuleGroupRuleActionCountCustomRequestHandlingPropertyToHclTerraform(struct?: AwsWafv2RuleGroup.RuleActionCountCustomRequestHandlingPropertyOutputReference | AwsWafv2RuleGroup.RuleActionCountCustomRequestHandlingProperty): any {
+export function tfRuleGroupRuleActionCountCustomRequestHandlingPropertyToHclTerraform(struct?: TfRuleGroup.RuleActionCountCustomRequestHandlingPropertyOutputReference | TfRuleGroup.RuleActionCountCustomRequestHandlingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     insert_header: {
-      value: cdktn.listMapperHcl(awsWafv2RuleGroupRuleActionCountCustomRequestHandlingInsertHeaderPropertyToHclTerraform, true)(struct!.insertHeader),
+      value: cdktn.listMapperHcl(tfRuleGroupRuleActionCountCustomRequestHandlingInsertHeaderPropertyToHclTerraform, true)(struct!.insertHeader),
       isBlock: true,
       type: "set",
       storageClassType: "RuleActionCountCustomRequestHandlingInsertHeaderPropertyList",
@@ -972,25 +972,25 @@ export function awsWafv2RuleGroupRuleActionCountCustomRequestHandlingPropertyToH
 }
 
 
-export function awsWafv2RuleGroupCountPropertyToTerraform(struct?: AwsWafv2RuleGroup.CountPropertyOutputReference | AwsWafv2RuleGroup.CountProperty): any {
+export function tfRuleGroupCountPropertyToTerraform(struct?: TfRuleGroup.CountPropertyOutputReference | TfRuleGroup.CountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_request_handling: awsWafv2RuleGroupRuleActionCountCustomRequestHandlingPropertyToTerraform(struct!.customRequestHandling),
+    custom_request_handling: tfRuleGroupRuleActionCountCustomRequestHandlingPropertyToTerraform(struct!.customRequestHandling),
   }
 }
 
 
-export function awsWafv2RuleGroupCountPropertyToHclTerraform(struct?: AwsWafv2RuleGroup.CountPropertyOutputReference | AwsWafv2RuleGroup.CountProperty): any {
+export function tfRuleGroupCountPropertyToHclTerraform(struct?: TfRuleGroup.CountPropertyOutputReference | TfRuleGroup.CountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_request_handling: {
-      value: awsWafv2RuleGroupRuleActionCountCustomRequestHandlingPropertyToHclTerraform(struct!.customRequestHandling),
+      value: tfRuleGroupRuleActionCountCustomRequestHandlingPropertyToHclTerraform(struct!.customRequestHandling),
       isBlock: true,
       type: "list",
       storageClassType: "RuleActionCountCustomRequestHandlingPropertyList",
@@ -1002,53 +1002,53 @@ export function awsWafv2RuleGroupCountPropertyToHclTerraform(struct?: AwsWafv2Ru
 }
 
 
-export function awsWafv2RuleGroupActionPropertyToTerraform(struct?: AwsWafv2RuleGroup.ActionPropertyOutputReference | AwsWafv2RuleGroup.ActionProperty): any {
+export function tfRuleGroupActionPropertyToTerraform(struct?: TfRuleGroup.ActionPropertyOutputReference | TfRuleGroup.ActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    allow: awsWafv2RuleGroupAllowPropertyToTerraform(struct!.allow),
-    block: awsWafv2RuleGroupBlockPropertyToTerraform(struct!.block),
-    captcha: awsWafv2RuleGroupCaptchaPropertyToTerraform(struct!.captcha),
-    challenge: awsWafv2RuleGroupChallengePropertyToTerraform(struct!.challenge),
-    count: awsWafv2RuleGroupCountPropertyToTerraform(struct!.count),
+    allow: tfRuleGroupAllowPropertyToTerraform(struct!.allow),
+    block: tfRuleGroupBlockPropertyToTerraform(struct!.block),
+    captcha: tfRuleGroupCaptchaPropertyToTerraform(struct!.captcha),
+    challenge: tfRuleGroupChallengePropertyToTerraform(struct!.challenge),
+    count: tfRuleGroupCountPropertyToTerraform(struct!.count),
   }
 }
 
 
-export function awsWafv2RuleGroupActionPropertyToHclTerraform(struct?: AwsWafv2RuleGroup.ActionPropertyOutputReference | AwsWafv2RuleGroup.ActionProperty): any {
+export function tfRuleGroupActionPropertyToHclTerraform(struct?: TfRuleGroup.ActionPropertyOutputReference | TfRuleGroup.ActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     allow: {
-      value: awsWafv2RuleGroupAllowPropertyToHclTerraform(struct!.allow),
+      value: tfRuleGroupAllowPropertyToHclTerraform(struct!.allow),
       isBlock: true,
       type: "list",
       storageClassType: "AllowPropertyList",
     },
     block: {
-      value: awsWafv2RuleGroupBlockPropertyToHclTerraform(struct!.block),
+      value: tfRuleGroupBlockPropertyToHclTerraform(struct!.block),
       isBlock: true,
       type: "list",
       storageClassType: "BlockPropertyList",
     },
     captcha: {
-      value: awsWafv2RuleGroupCaptchaPropertyToHclTerraform(struct!.captcha),
+      value: tfRuleGroupCaptchaPropertyToHclTerraform(struct!.captcha),
       isBlock: true,
       type: "list",
       storageClassType: "CaptchaPropertyList",
     },
     challenge: {
-      value: awsWafv2RuleGroupChallengePropertyToHclTerraform(struct!.challenge),
+      value: tfRuleGroupChallengePropertyToHclTerraform(struct!.challenge),
       isBlock: true,
       type: "list",
       storageClassType: "ChallengePropertyList",
     },
     count: {
-      value: awsWafv2RuleGroupCountPropertyToHclTerraform(struct!.count),
+      value: tfRuleGroupCountPropertyToHclTerraform(struct!.count),
       isBlock: true,
       type: "list",
       storageClassType: "CountPropertyList",
@@ -1060,7 +1060,7 @@ export function awsWafv2RuleGroupActionPropertyToHclTerraform(struct?: AwsWafv2R
 }
 
 
-export function awsWafv2RuleGroupImmunityTimePropertyPropertyToTerraform(struct?: AwsWafv2RuleGroup.ImmunityTimePropertyPropertyOutputReference | AwsWafv2RuleGroup.ImmunityTimePropertyProperty): any {
+export function tfRuleGroupImmunityTimePropertyPropertyToTerraform(struct?: TfRuleGroup.ImmunityTimePropertyPropertyOutputReference | TfRuleGroup.ImmunityTimePropertyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1071,7 +1071,7 @@ export function awsWafv2RuleGroupImmunityTimePropertyPropertyToTerraform(struct?
 }
 
 
-export function awsWafv2RuleGroupImmunityTimePropertyPropertyToHclTerraform(struct?: AwsWafv2RuleGroup.ImmunityTimePropertyPropertyOutputReference | AwsWafv2RuleGroup.ImmunityTimePropertyProperty): any {
+export function tfRuleGroupImmunityTimePropertyPropertyToHclTerraform(struct?: TfRuleGroup.ImmunityTimePropertyPropertyOutputReference | TfRuleGroup.ImmunityTimePropertyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1090,25 +1090,25 @@ export function awsWafv2RuleGroupImmunityTimePropertyPropertyToHclTerraform(stru
 }
 
 
-export function awsWafv2RuleGroupCaptchaConfigPropertyToTerraform(struct?: AwsWafv2RuleGroup.CaptchaConfigPropertyOutputReference | AwsWafv2RuleGroup.CaptchaConfigProperty): any {
+export function tfRuleGroupCaptchaConfigPropertyToTerraform(struct?: TfRuleGroup.CaptchaConfigPropertyOutputReference | TfRuleGroup.CaptchaConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    immunity_time_property: awsWafv2RuleGroupImmunityTimePropertyPropertyToTerraform(struct!.immunityTimeProperty),
+    immunity_time_property: tfRuleGroupImmunityTimePropertyPropertyToTerraform(struct!.immunityTimeProperty),
   }
 }
 
 
-export function awsWafv2RuleGroupCaptchaConfigPropertyToHclTerraform(struct?: AwsWafv2RuleGroup.CaptchaConfigPropertyOutputReference | AwsWafv2RuleGroup.CaptchaConfigProperty): any {
+export function tfRuleGroupCaptchaConfigPropertyToHclTerraform(struct?: TfRuleGroup.CaptchaConfigPropertyOutputReference | TfRuleGroup.CaptchaConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     immunity_time_property: {
-      value: awsWafv2RuleGroupImmunityTimePropertyPropertyToHclTerraform(struct!.immunityTimeProperty),
+      value: tfRuleGroupImmunityTimePropertyPropertyToHclTerraform(struct!.immunityTimeProperty),
       isBlock: true,
       type: "list",
       storageClassType: "ImmunityTimePropertyPropertyList",
@@ -1120,7 +1120,7 @@ export function awsWafv2RuleGroupCaptchaConfigPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsWafv2RuleGroupRuleLabelPropertyToTerraform(struct?: AwsWafv2RuleGroup.RuleLabelProperty | cdktn.IResolvable): any {
+export function tfRuleGroupRuleLabelPropertyToTerraform(struct?: TfRuleGroup.RuleLabelProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1131,7 +1131,7 @@ export function awsWafv2RuleGroupRuleLabelPropertyToTerraform(struct?: AwsWafv2R
 }
 
 
-export function awsWafv2RuleGroupRuleLabelPropertyToHclTerraform(struct?: AwsWafv2RuleGroup.RuleLabelProperty | cdktn.IResolvable): any {
+export function tfRuleGroupRuleLabelPropertyToHclTerraform(struct?: TfRuleGroup.RuleLabelProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1150,7 +1150,7 @@ export function awsWafv2RuleGroupRuleLabelPropertyToHclTerraform(struct?: AwsWaf
 }
 
 
-export function awsWafv2RuleGroupRuleVisibilityConfigPropertyToTerraform(struct?: AwsWafv2RuleGroup.RuleVisibilityConfigPropertyOutputReference | AwsWafv2RuleGroup.RuleVisibilityConfigProperty): any {
+export function tfRuleGroupRuleVisibilityConfigPropertyToTerraform(struct?: TfRuleGroup.RuleVisibilityConfigPropertyOutputReference | TfRuleGroup.RuleVisibilityConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1163,7 +1163,7 @@ export function awsWafv2RuleGroupRuleVisibilityConfigPropertyToTerraform(struct?
 }
 
 
-export function awsWafv2RuleGroupRuleVisibilityConfigPropertyToHclTerraform(struct?: AwsWafv2RuleGroup.RuleVisibilityConfigPropertyOutputReference | AwsWafv2RuleGroup.RuleVisibilityConfigProperty): any {
+export function tfRuleGroupRuleVisibilityConfigPropertyToHclTerraform(struct?: TfRuleGroup.RuleVisibilityConfigPropertyOutputReference | TfRuleGroup.RuleVisibilityConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1194,7 +1194,7 @@ export function awsWafv2RuleGroupRuleVisibilityConfigPropertyToHclTerraform(stru
 }
 
 
-export function awsWafv2RuleGroupRulePropertyToTerraform(struct?: AwsWafv2RuleGroup.RuleProperty | cdktn.IResolvable): any {
+export function tfRuleGroupRulePropertyToTerraform(struct?: TfRuleGroup.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1202,16 +1202,16 @@ export function awsWafv2RuleGroupRulePropertyToTerraform(struct?: AwsWafv2RuleGr
   return {
     name: cdktn.stringToTerraform(struct!.name),
     priority: cdktn.numberToTerraform(struct!.priority),
-    action: awsWafv2RuleGroupActionPropertyToTerraform(struct!.action),
-    captcha_config: awsWafv2RuleGroupCaptchaConfigPropertyToTerraform(struct!.captchaConfig),
-    rule_label: cdktn.listMapper(awsWafv2RuleGroupRuleLabelPropertyToTerraform, true)(struct!.ruleLabel),
+    action: tfRuleGroupActionPropertyToTerraform(struct!.action),
+    captcha_config: tfRuleGroupCaptchaConfigPropertyToTerraform(struct!.captchaConfig),
+    rule_label: cdktn.listMapper(tfRuleGroupRuleLabelPropertyToTerraform, true)(struct!.ruleLabel),
     statement: cdktn.anyToTerraform(struct!.statement),
-    visibility_config: awsWafv2RuleGroupRuleVisibilityConfigPropertyToTerraform(struct!.visibilityConfig),
+    visibility_config: tfRuleGroupRuleVisibilityConfigPropertyToTerraform(struct!.visibilityConfig),
   }
 }
 
 
-export function awsWafv2RuleGroupRulePropertyToHclTerraform(struct?: AwsWafv2RuleGroup.RuleProperty | cdktn.IResolvable): any {
+export function tfRuleGroupRulePropertyToHclTerraform(struct?: TfRuleGroup.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1230,19 +1230,19 @@ export function awsWafv2RuleGroupRulePropertyToHclTerraform(struct?: AwsWafv2Rul
       storageClassType: "number",
     },
     action: {
-      value: awsWafv2RuleGroupActionPropertyToHclTerraform(struct!.action),
+      value: tfRuleGroupActionPropertyToHclTerraform(struct!.action),
       isBlock: true,
       type: "list",
       storageClassType: "ActionPropertyList",
     },
     captcha_config: {
-      value: awsWafv2RuleGroupCaptchaConfigPropertyToHclTerraform(struct!.captchaConfig),
+      value: tfRuleGroupCaptchaConfigPropertyToHclTerraform(struct!.captchaConfig),
       isBlock: true,
       type: "list",
       storageClassType: "CaptchaConfigPropertyList",
     },
     rule_label: {
-      value: cdktn.listMapperHcl(awsWafv2RuleGroupRuleLabelPropertyToHclTerraform, true)(struct!.ruleLabel),
+      value: cdktn.listMapperHcl(tfRuleGroupRuleLabelPropertyToHclTerraform, true)(struct!.ruleLabel),
       isBlock: true,
       type: "set",
       storageClassType: "RuleLabelPropertyList",
@@ -1254,7 +1254,7 @@ export function awsWafv2RuleGroupRulePropertyToHclTerraform(struct?: AwsWafv2Rul
       storageClassType: "any",
     },
     visibility_config: {
-      value: awsWafv2RuleGroupRuleVisibilityConfigPropertyToHclTerraform(struct!.visibilityConfig),
+      value: tfRuleGroupRuleVisibilityConfigPropertyToHclTerraform(struct!.visibilityConfig),
       isBlock: true,
       type: "list",
       storageClassType: "RuleVisibilityConfigPropertyList",
@@ -1266,7 +1266,7 @@ export function awsWafv2RuleGroupRulePropertyToHclTerraform(struct?: AwsWafv2Rul
 }
 
 
-export function awsWafv2RuleGroupVisibilityConfigPropertyToTerraform(struct?: AwsWafv2RuleGroup.VisibilityConfigPropertyOutputReference | AwsWafv2RuleGroup.VisibilityConfigProperty): any {
+export function tfRuleGroupVisibilityConfigPropertyToTerraform(struct?: TfRuleGroup.VisibilityConfigPropertyOutputReference | TfRuleGroup.VisibilityConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1279,7 +1279,7 @@ export function awsWafv2RuleGroupVisibilityConfigPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsWafv2RuleGroupVisibilityConfigPropertyToHclTerraform(struct?: AwsWafv2RuleGroup.VisibilityConfigPropertyOutputReference | AwsWafv2RuleGroup.VisibilityConfigProperty): any {
+export function tfRuleGroupVisibilityConfigPropertyToHclTerraform(struct?: TfRuleGroup.VisibilityConfigPropertyOutputReference | TfRuleGroup.VisibilityConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1310,18 +1310,18 @@ export function awsWafv2RuleGroupVisibilityConfigPropertyToHclTerraform(struct?:
 }
 
 
-export namespace AwsWafv2RuleGroup {
+export namespace TfRuleGroup {
 export interface CustomResponseBodyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#content AwsWafv2RuleGroup#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#content TfRuleGroup#content}
   */
   readonly content: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#content_type AwsWafv2RuleGroup#content_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#content_type TfRuleGroup#content_type}
   */
   readonly contentType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#key AwsWafv2RuleGroup#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#key TfRuleGroup#key}
   */
   readonly key: string;
 }
@@ -1442,11 +1442,11 @@ export class CustomResponseBodyPropertyList extends cdktn.ComplexList {
 }
 export interface RuleActionAllowCustomRequestHandlingInsertHeaderProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#name AwsWafv2RuleGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#name TfRuleGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#value AwsWafv2RuleGroup#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#value TfRuleGroup#value}
   */
   readonly value: string;
 }
@@ -1550,7 +1550,7 @@ export interface RuleActionAllowCustomRequestHandlingProperty {
   /**
   * insert_header block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#insert_header AwsWafv2RuleGroup#insert_header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#insert_header TfRuleGroup#insert_header}
   */
   readonly insertHeader: RuleActionAllowCustomRequestHandlingInsertHeaderProperty[] | cdktn.IResolvable;
 }
@@ -1603,7 +1603,7 @@ export interface AllowProperty {
   /**
   * custom_request_handling block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#custom_request_handling AwsWafv2RuleGroup#custom_request_handling}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#custom_request_handling TfRuleGroup#custom_request_handling}
   */
   readonly customRequestHandling?: RuleActionAllowCustomRequestHandlingProperty;
 }
@@ -1657,11 +1657,11 @@ export class AllowPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ResponseHeaderProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#name AwsWafv2RuleGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#name TfRuleGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#value AwsWafv2RuleGroup#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#value TfRuleGroup#value}
   */
   readonly value: string;
 }
@@ -1763,17 +1763,17 @@ export class ResponseHeaderPropertyList extends cdktn.ComplexList {
 }
 export interface CustomResponseProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#custom_response_body_key AwsWafv2RuleGroup#custom_response_body_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#custom_response_body_key TfRuleGroup#custom_response_body_key}
   */
   readonly customResponseBodyKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#response_code AwsWafv2RuleGroup#response_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#response_code TfRuleGroup#response_code}
   */
   readonly responseCode: number;
   /**
   * response_header block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#response_header AwsWafv2RuleGroup#response_header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#response_header TfRuleGroup#response_header}
   */
   readonly responseHeader?: ResponseHeaderProperty[] | cdktn.IResolvable;
 }
@@ -1870,7 +1870,7 @@ export interface BlockProperty {
   /**
   * custom_response block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#custom_response AwsWafv2RuleGroup#custom_response}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#custom_response TfRuleGroup#custom_response}
   */
   readonly customResponse?: CustomResponseProperty;
 }
@@ -1924,11 +1924,11 @@ export class BlockPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RuleActionCaptchaCustomRequestHandlingInsertHeaderProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#name AwsWafv2RuleGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#name TfRuleGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#value AwsWafv2RuleGroup#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#value TfRuleGroup#value}
   */
   readonly value: string;
 }
@@ -2032,7 +2032,7 @@ export interface RuleActionCaptchaCustomRequestHandlingProperty {
   /**
   * insert_header block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#insert_header AwsWafv2RuleGroup#insert_header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#insert_header TfRuleGroup#insert_header}
   */
   readonly insertHeader: RuleActionCaptchaCustomRequestHandlingInsertHeaderProperty[] | cdktn.IResolvable;
 }
@@ -2085,7 +2085,7 @@ export interface CaptchaProperty {
   /**
   * custom_request_handling block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#custom_request_handling AwsWafv2RuleGroup#custom_request_handling}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#custom_request_handling TfRuleGroup#custom_request_handling}
   */
   readonly customRequestHandling?: RuleActionCaptchaCustomRequestHandlingProperty;
 }
@@ -2139,11 +2139,11 @@ export class CaptchaPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RuleActionChallengeCustomRequestHandlingInsertHeaderProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#name AwsWafv2RuleGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#name TfRuleGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#value AwsWafv2RuleGroup#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#value TfRuleGroup#value}
   */
   readonly value: string;
 }
@@ -2247,7 +2247,7 @@ export interface RuleActionChallengeCustomRequestHandlingProperty {
   /**
   * insert_header block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#insert_header AwsWafv2RuleGroup#insert_header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#insert_header TfRuleGroup#insert_header}
   */
   readonly insertHeader: RuleActionChallengeCustomRequestHandlingInsertHeaderProperty[] | cdktn.IResolvable;
 }
@@ -2300,7 +2300,7 @@ export interface ChallengeProperty {
   /**
   * custom_request_handling block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#custom_request_handling AwsWafv2RuleGroup#custom_request_handling}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#custom_request_handling TfRuleGroup#custom_request_handling}
   */
   readonly customRequestHandling?: RuleActionChallengeCustomRequestHandlingProperty;
 }
@@ -2354,11 +2354,11 @@ export class ChallengePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RuleActionCountCustomRequestHandlingInsertHeaderProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#name AwsWafv2RuleGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#name TfRuleGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#value AwsWafv2RuleGroup#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#value TfRuleGroup#value}
   */
   readonly value: string;
 }
@@ -2462,7 +2462,7 @@ export interface RuleActionCountCustomRequestHandlingProperty {
   /**
   * insert_header block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#insert_header AwsWafv2RuleGroup#insert_header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#insert_header TfRuleGroup#insert_header}
   */
   readonly insertHeader: RuleActionCountCustomRequestHandlingInsertHeaderProperty[] | cdktn.IResolvable;
 }
@@ -2515,7 +2515,7 @@ export interface CountProperty {
   /**
   * custom_request_handling block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#custom_request_handling AwsWafv2RuleGroup#custom_request_handling}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#custom_request_handling TfRuleGroup#custom_request_handling}
   */
   readonly customRequestHandling?: RuleActionCountCustomRequestHandlingProperty;
 }
@@ -2571,31 +2571,31 @@ export interface ActionProperty {
   /**
   * allow block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#allow AwsWafv2RuleGroup#allow}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#allow TfRuleGroup#allow}
   */
   readonly allow?: AllowProperty;
   /**
   * block block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#block AwsWafv2RuleGroup#block}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#block TfRuleGroup#block}
   */
   readonly block?: BlockProperty;
   /**
   * captcha block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#captcha AwsWafv2RuleGroup#captcha}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#captcha TfRuleGroup#captcha}
   */
   readonly captcha?: CaptchaProperty;
   /**
   * challenge block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#challenge AwsWafv2RuleGroup#challenge}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#challenge TfRuleGroup#challenge}
   */
   readonly challenge?: ChallengeProperty;
   /**
   * count block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#count AwsWafv2RuleGroup#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#count TfRuleGroup#count}
   */
   readonly count?: CountProperty;
 }
@@ -2737,7 +2737,7 @@ export class ActionPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ImmunityTimePropertyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#immunity_time AwsWafv2RuleGroup#immunity_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#immunity_time TfRuleGroup#immunity_time}
   */
   readonly immunityTime?: number;
 }
@@ -2793,7 +2793,7 @@ export interface CaptchaConfigProperty {
   /**
   * immunity_time_property block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#immunity_time_property AwsWafv2RuleGroup#immunity_time_property}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#immunity_time_property TfRuleGroup#immunity_time_property}
   */
   readonly immunityTimeProperty?: ImmunityTimePropertyProperty;
 }
@@ -2847,7 +2847,7 @@ export class CaptchaConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RuleLabelProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#name AwsWafv2RuleGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#name TfRuleGroup#name}
   */
   readonly name: string;
 }
@@ -2930,15 +2930,15 @@ export class RuleLabelPropertyList extends cdktn.ComplexList {
 }
 export interface RuleVisibilityConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#cloudwatch_metrics_enabled AwsWafv2RuleGroup#cloudwatch_metrics_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#cloudwatch_metrics_enabled TfRuleGroup#cloudwatch_metrics_enabled}
   */
   readonly cloudwatchMetricsEnabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#metric_name AwsWafv2RuleGroup#metric_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#metric_name TfRuleGroup#metric_name}
   */
   readonly metricName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#sampled_requests_enabled AwsWafv2RuleGroup#sampled_requests_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#sampled_requests_enabled TfRuleGroup#sampled_requests_enabled}
   */
   readonly sampledRequestsEnabled: boolean | cdktn.IResolvable;
 }
@@ -3027,41 +3027,41 @@ export class RuleVisibilityConfigPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface RuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#name AwsWafv2RuleGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#name TfRuleGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#priority AwsWafv2RuleGroup#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#priority TfRuleGroup#priority}
   */
   readonly priority: number;
   /**
   * action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#action AwsWafv2RuleGroup#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#action TfRuleGroup#action}
   */
   readonly action: ActionProperty;
   /**
   * captcha_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#captcha_config AwsWafv2RuleGroup#captcha_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#captcha_config TfRuleGroup#captcha_config}
   */
   readonly captchaConfig?: CaptchaConfigProperty;
   /**
   * rule_label block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#rule_label AwsWafv2RuleGroup#rule_label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#rule_label TfRuleGroup#rule_label}
   */
   readonly ruleLabel?: RuleLabelProperty[] | cdktn.IResolvable;
   /**
   * statement block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#statement AwsWafv2RuleGroup#statement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#statement TfRuleGroup#statement}
   */
   readonly statement?: any;
   /**
   * visibility_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#visibility_config AwsWafv2RuleGroup#visibility_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#visibility_config TfRuleGroup#visibility_config}
   */
   readonly visibilityConfig: RuleVisibilityConfigProperty;
 }
@@ -3267,15 +3267,15 @@ export class RulePropertyList extends cdktn.ComplexList {
 }
 export interface VisibilityConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#cloudwatch_metrics_enabled AwsWafv2RuleGroup#cloudwatch_metrics_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#cloudwatch_metrics_enabled TfRuleGroup#cloudwatch_metrics_enabled}
   */
   readonly cloudwatchMetricsEnabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#metric_name AwsWafv2RuleGroup#metric_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#metric_name TfRuleGroup#metric_name}
   */
   readonly metricName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#sampled_requests_enabled AwsWafv2RuleGroup#sampled_requests_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_rule_group#sampled_requests_enabled TfRuleGroup#sampled_requests_enabled}
   */
   readonly sampledRequestsEnabled: boolean | cdktn.IResolvable;
 }

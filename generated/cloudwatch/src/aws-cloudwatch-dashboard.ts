@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCloudwatchDashboardConfig extends cdktn.TerraformMetaArguments {
+export interface TfDashboardConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_dashboard#dashboard_body AwsCloudwatchDashboard#dashboard_body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_dashboard#dashboard_body TfDashboard#dashboard_body}
   */
   readonly dashboardBody: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_dashboard#dashboard_name AwsCloudwatchDashboard#dashboard_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_dashboard#dashboard_name TfDashboard#dashboard_name}
   */
   readonly dashboardName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_dashboard#id AwsCloudwatchDashboard#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_dashboard#id TfDashboard#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,7 +24,7 @@ export interface AwsCloudwatchDashboardConfig extends cdktn.TerraformMetaArgumen
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_dashboard#region AwsCloudwatchDashboard#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_dashboard#region TfDashboard#region}
   */
   readonly region?: string;
 }
@@ -32,7 +32,7 @@ export interface AwsCloudwatchDashboardConfig extends cdktn.TerraformMetaArgumen
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_dashboard aws_cloudwatch_dashboard}
 */
-export class AwsCloudwatchDashboard extends cdktn.TerraformResource {
+export class TfDashboard extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class AwsCloudwatchDashboard extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCloudwatchDashboard resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDashboard resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCloudwatchDashboard to import
-  * @param importFromId The id of the existing AwsCloudwatchDashboard that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_dashboard#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCloudwatchDashboard to import is found
+  * @param importToId The construct id used in the generated config for the TfDashboard to import
+  * @param importFromId The id of the existing TfDashboard that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_dashboard#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDashboard to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudwatch_dashboard", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class AwsCloudwatchDashboard extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCloudwatchDashboardConfig
+  * @param options TfDashboardConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCloudwatchDashboardConfig) {
+  public constructor(scope: Construct, id: string, config: TfDashboardConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudwatch_dashboard',
       terraformGeneratorMetadata: {

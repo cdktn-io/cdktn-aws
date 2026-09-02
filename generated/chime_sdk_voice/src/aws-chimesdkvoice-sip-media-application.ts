@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsChimesdkvoiceSipMediaApplicationConfig extends cdktn.TerraformMetaArguments {
+export interface TfSipMediaApplicationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_media_application#aws_region AwsChimesdkvoiceSipMediaApplication#aws_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_media_application#aws_region TfSipMediaApplication#aws_region}
   */
   readonly awsRegion: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_media_application#id AwsChimesdkvoiceSipMediaApplication#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_media_application#id TfSipMediaApplication#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_media_application#name AwsChimesdkvoiceSipMediaApplication#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_media_application#name TfSipMediaApplication#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_media_application#region AwsChimesdkvoiceSipMediaApplication#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_media_application#region TfSipMediaApplication#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_media_application#tags AwsChimesdkvoiceSipMediaApplication#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_media_application#tags TfSipMediaApplication#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_media_application#tags_all AwsChimesdkvoiceSipMediaApplication#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_media_application#tags_all TfSipMediaApplication#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * endpoints block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_media_application#endpoints AwsChimesdkvoiceSipMediaApplication#endpoints}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_media_application#endpoints TfSipMediaApplication#endpoints}
   */
-  readonly endpoints: AwsChimesdkvoiceSipMediaApplication.EndpointsProperty;
+  readonly endpoints: TfSipMediaApplication.EndpointsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_media_application aws_chimesdkvoice_sip_media_application}
 */
-export class AwsChimesdkvoiceSipMediaApplication extends cdktn.TerraformResource {
+export class TfSipMediaApplication extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class AwsChimesdkvoiceSipMediaApplication extends cdktn.TerraformResource
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsChimesdkvoiceSipMediaApplication resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfSipMediaApplication resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsChimesdkvoiceSipMediaApplication to import
-  * @param importFromId The id of the existing AwsChimesdkvoiceSipMediaApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_media_application#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsChimesdkvoiceSipMediaApplication to import is found
+  * @param importToId The construct id used in the generated config for the TfSipMediaApplication to import
+  * @param importFromId The id of the existing TfSipMediaApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_media_application#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfSipMediaApplication to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_chimesdkvoice_sip_media_application", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class AwsChimesdkvoiceSipMediaApplication extends cdktn.TerraformResource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsChimesdkvoiceSipMediaApplicationConfig
+  * @param options TfSipMediaApplicationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsChimesdkvoiceSipMediaApplicationConfig) {
+  public constructor(scope: Construct, id: string, config: TfSipMediaApplicationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_chimesdkvoice_sip_media_application',
       terraformGeneratorMetadata: {
@@ -203,11 +203,11 @@ export class AwsChimesdkvoiceSipMediaApplication extends cdktn.TerraformResource
   }
 
   // endpoints - computed: false, optional: false, required: true
-  private _endpoints = new AwsChimesdkvoiceSipMediaApplication.EndpointsPropertyOutputReference(this, "endpoints");
+  private _endpoints = new TfSipMediaApplication.EndpointsPropertyOutputReference(this, "endpoints");
   public get endpoints() {
     return this._endpoints;
   }
-  public putEndpoints(value: AwsChimesdkvoiceSipMediaApplication.EndpointsProperty) {
+  public putEndpoints(value: TfSipMediaApplication.EndpointsProperty) {
     this._endpoints.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -227,7 +227,7 @@ export class AwsChimesdkvoiceSipMediaApplication extends cdktn.TerraformResource
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      endpoints: awsChimesdkvoiceSipMediaApplicationEndpointsPropertyToTerraform(this._endpoints.internalValue),
+      endpoints: tfSipMediaApplicationEndpointsPropertyToTerraform(this._endpoints.internalValue),
     };
   }
 
@@ -270,10 +270,10 @@ export class AwsChimesdkvoiceSipMediaApplication extends cdktn.TerraformResource
         storageClassType: "stringMap",
       },
       endpoints: {
-        value: awsChimesdkvoiceSipMediaApplicationEndpointsPropertyToHclTerraform(this._endpoints.internalValue),
+        value: tfSipMediaApplicationEndpointsPropertyToHclTerraform(this._endpoints.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsChimesdkvoiceSipMediaApplication.EndpointsPropertyList",
+        storageClassType: "TfSipMediaApplication.EndpointsPropertyList",
       },
     };
 
@@ -282,7 +282,7 @@ export class AwsChimesdkvoiceSipMediaApplication extends cdktn.TerraformResource
   }
 }
 
-export function awsChimesdkvoiceSipMediaApplicationEndpointsPropertyToTerraform(struct?: AwsChimesdkvoiceSipMediaApplication.EndpointsPropertyOutputReference | AwsChimesdkvoiceSipMediaApplication.EndpointsProperty): any {
+export function tfSipMediaApplicationEndpointsPropertyToTerraform(struct?: TfSipMediaApplication.EndpointsPropertyOutputReference | TfSipMediaApplication.EndpointsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -293,7 +293,7 @@ export function awsChimesdkvoiceSipMediaApplicationEndpointsPropertyToTerraform(
 }
 
 
-export function awsChimesdkvoiceSipMediaApplicationEndpointsPropertyToHclTerraform(struct?: AwsChimesdkvoiceSipMediaApplication.EndpointsPropertyOutputReference | AwsChimesdkvoiceSipMediaApplication.EndpointsProperty): any {
+export function tfSipMediaApplicationEndpointsPropertyToHclTerraform(struct?: TfSipMediaApplication.EndpointsPropertyOutputReference | TfSipMediaApplication.EndpointsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -312,10 +312,10 @@ export function awsChimesdkvoiceSipMediaApplicationEndpointsPropertyToHclTerrafo
 }
 
 
-export namespace AwsChimesdkvoiceSipMediaApplication {
+export namespace TfSipMediaApplication {
 export interface EndpointsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_media_application#lambda_arn AwsChimesdkvoiceSipMediaApplication#lambda_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_media_application#lambda_arn TfSipMediaApplication#lambda_arn}
   */
   readonly lambdaArn: string;
 }

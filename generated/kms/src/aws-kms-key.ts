@@ -5,88 +5,88 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsKmsKeyConfig extends cdktn.TerraformMetaArguments {
+export interface TfKeyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#bypass_policy_lockout_safety_check AwsKmsKey#bypass_policy_lockout_safety_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#bypass_policy_lockout_safety_check TfKey#bypass_policy_lockout_safety_check}
   */
   readonly bypassPolicyLockoutSafetyCheck?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#custom_key_store_id AwsKmsKey#custom_key_store_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#custom_key_store_id TfKey#custom_key_store_id}
   */
   readonly customKeyStoreId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#customer_master_key_spec AwsKmsKey#customer_master_key_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#customer_master_key_spec TfKey#customer_master_key_spec}
   */
   readonly customerMasterKeySpec?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#deletion_window_in_days AwsKmsKey#deletion_window_in_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#deletion_window_in_days TfKey#deletion_window_in_days}
   */
   readonly deletionWindowInDays?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#description AwsKmsKey#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#description TfKey#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#enable_key_rotation AwsKmsKey#enable_key_rotation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#enable_key_rotation TfKey#enable_key_rotation}
   */
   readonly enableKeyRotation?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#id AwsKmsKey#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#id TfKey#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#is_enabled AwsKmsKey#is_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#is_enabled TfKey#is_enabled}
   */
   readonly isEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#key_usage AwsKmsKey#key_usage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#key_usage TfKey#key_usage}
   */
   readonly keyUsage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#multi_region AwsKmsKey#multi_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#multi_region TfKey#multi_region}
   */
   readonly multiRegion?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#policy AwsKmsKey#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#policy TfKey#policy}
   */
   readonly policy?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#region AwsKmsKey#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#region TfKey#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#rotation_period_in_days AwsKmsKey#rotation_period_in_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#rotation_period_in_days TfKey#rotation_period_in_days}
   */
   readonly rotationPeriodInDays?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#tags AwsKmsKey#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#tags TfKey#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#tags_all AwsKmsKey#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#tags_all TfKey#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#xks_key_id AwsKmsKey#xks_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#xks_key_id TfKey#xks_key_id}
   */
   readonly xksKeyId?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#timeouts AwsKmsKey#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#timeouts TfKey#timeouts}
   */
-  readonly timeouts?: AwsKmsKey.TimeoutsProperty;
+  readonly timeouts?: TfKey.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key aws_kms_key}
 */
-export class AwsKmsKey extends cdktn.TerraformResource {
+export class TfKey extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -97,11 +97,11 @@ export class AwsKmsKey extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsKmsKey resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfKey resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsKmsKey to import
-  * @param importFromId The id of the existing AwsKmsKey that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsKmsKey to import is found
+  * @param importToId The construct id used in the generated config for the TfKey to import
+  * @param importFromId The id of the existing TfKey that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfKey to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_kms_key", importId: importFromId, provider });
@@ -116,9 +116,9 @@ export class AwsKmsKey extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsKmsKeyConfig = {}
+  * @param options TfKeyConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsKmsKeyConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfKeyConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_kms_key',
       terraformGeneratorMetadata: {
@@ -424,11 +424,11 @@ export class AwsKmsKey extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsKmsKey.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfKey.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsKmsKey.TimeoutsProperty) {
+  public putTimeouts(value: TfKey.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -461,7 +461,7 @@ export class AwsKmsKey extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       xks_key_id: cdktn.stringToTerraform(this._xksKeyId),
-      timeouts: awsKmsKeyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfKeyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -564,10 +564,10 @@ export class AwsKmsKey extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsKmsKeyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfKeyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsKmsKey.TimeoutsProperty",
+        storageClassType: "TfKey.TimeoutsProperty",
       },
     };
 
@@ -576,7 +576,7 @@ export class AwsKmsKey extends cdktn.TerraformResource {
   }
 }
 
-export function awsKmsKeyTimeoutsPropertyToTerraform(struct?: AwsKmsKey.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfKeyTimeoutsPropertyToTerraform(struct?: TfKey.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -587,7 +587,7 @@ export function awsKmsKeyTimeoutsPropertyToTerraform(struct?: AwsKmsKey.Timeouts
 }
 
 
-export function awsKmsKeyTimeoutsPropertyToHclTerraform(struct?: AwsKmsKey.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfKeyTimeoutsPropertyToHclTerraform(struct?: TfKey.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -606,10 +606,10 @@ export function awsKmsKeyTimeoutsPropertyToHclTerraform(struct?: AwsKmsKey.Timeo
 }
 
 
-export namespace AwsKmsKey {
+export namespace TfKey {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#create AwsKmsKey#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#create TfKey#create}
   */
   readonly create?: string;
 }

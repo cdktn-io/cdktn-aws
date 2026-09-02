@@ -5,90 +5,90 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSagemakerDomainConfig extends cdktn.TerraformMetaArguments {
+export interface TfDomainConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#app_network_access_type AwsSagemakerDomain#app_network_access_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#app_network_access_type TfDomain#app_network_access_type}
   */
   readonly appNetworkAccessType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#app_security_group_management AwsSagemakerDomain#app_security_group_management}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#app_security_group_management TfDomain#app_security_group_management}
   */
   readonly appSecurityGroupManagement?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#auth_mode AwsSagemakerDomain#auth_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#auth_mode TfDomain#auth_mode}
   */
   readonly authMode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#domain_name AwsSagemakerDomain#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#domain_name TfDomain#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#id AwsSagemakerDomain#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#id TfDomain#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#kms_key_id AwsSagemakerDomain#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#kms_key_id TfDomain#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#region AwsSagemakerDomain#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#region TfDomain#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#subnet_ids AwsSagemakerDomain#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#subnet_ids TfDomain#subnet_ids}
   */
   readonly subnetIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#tag_propagation AwsSagemakerDomain#tag_propagation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#tag_propagation TfDomain#tag_propagation}
   */
   readonly tagPropagation?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#tags AwsSagemakerDomain#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#tags TfDomain#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#tags_all AwsSagemakerDomain#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#tags_all TfDomain#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#vpc_id AwsSagemakerDomain#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#vpc_id TfDomain#vpc_id}
   */
   readonly vpcId: string;
   /**
   * default_space_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_space_settings AwsSagemakerDomain#default_space_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_space_settings TfDomain#default_space_settings}
   */
-  readonly defaultSpaceSettings?: AwsSagemakerDomain.DefaultSpaceSettingsProperty;
+  readonly defaultSpaceSettings?: TfDomain.DefaultSpaceSettingsProperty;
   /**
   * default_user_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_user_settings AwsSagemakerDomain#default_user_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_user_settings TfDomain#default_user_settings}
   */
-  readonly defaultUserSettings: AwsSagemakerDomain.DefaultUserSettingsProperty;
+  readonly defaultUserSettings: TfDomain.DefaultUserSettingsProperty;
   /**
   * domain_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#domain_settings AwsSagemakerDomain#domain_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#domain_settings TfDomain#domain_settings}
   */
-  readonly domainSettings?: AwsSagemakerDomain.DomainSettingsProperty;
+  readonly domainSettings?: TfDomain.DomainSettingsProperty;
   /**
   * retention_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#retention_policy AwsSagemakerDomain#retention_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#retention_policy TfDomain#retention_policy}
   */
-  readonly retentionPolicy?: AwsSagemakerDomain.RetentionPolicyProperty;
+  readonly retentionPolicy?: TfDomain.RetentionPolicyProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain aws_sagemaker_domain}
 */
-export class AwsSagemakerDomain extends cdktn.TerraformResource {
+export class TfDomain extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -99,11 +99,11 @@ export class AwsSagemakerDomain extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSagemakerDomain resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDomain resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSagemakerDomain to import
-  * @param importFromId The id of the existing AwsSagemakerDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSagemakerDomain to import is found
+  * @param importToId The construct id used in the generated config for the TfDomain to import
+  * @param importFromId The id of the existing TfDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDomain to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sagemaker_domain", importId: importFromId, provider });
@@ -118,9 +118,9 @@ export class AwsSagemakerDomain extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSagemakerDomainConfig
+  * @param options TfDomainConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSagemakerDomainConfig) {
+  public constructor(scope: Construct, id: string, config: TfDomainConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sagemaker_domain',
       terraformGeneratorMetadata: {
@@ -369,11 +369,11 @@ export class AwsSagemakerDomain extends cdktn.TerraformResource {
   }
 
   // default_space_settings - computed: false, optional: true, required: false
-  private _defaultSpaceSettings = new AwsSagemakerDomain.DefaultSpaceSettingsPropertyOutputReference(this, "default_space_settings");
+  private _defaultSpaceSettings = new TfDomain.DefaultSpaceSettingsPropertyOutputReference(this, "default_space_settings");
   public get defaultSpaceSettings() {
     return this._defaultSpaceSettings;
   }
-  public putDefaultSpaceSettings(value: AwsSagemakerDomain.DefaultSpaceSettingsProperty) {
+  public putDefaultSpaceSettings(value: TfDomain.DefaultSpaceSettingsProperty) {
     this._defaultSpaceSettings.internalValue = value;
   }
   public resetDefaultSpaceSettings() {
@@ -385,11 +385,11 @@ export class AwsSagemakerDomain extends cdktn.TerraformResource {
   }
 
   // default_user_settings - computed: false, optional: false, required: true
-  private _defaultUserSettings = new AwsSagemakerDomain.DefaultUserSettingsPropertyOutputReference(this, "default_user_settings");
+  private _defaultUserSettings = new TfDomain.DefaultUserSettingsPropertyOutputReference(this, "default_user_settings");
   public get defaultUserSettings() {
     return this._defaultUserSettings;
   }
-  public putDefaultUserSettings(value: AwsSagemakerDomain.DefaultUserSettingsProperty) {
+  public putDefaultUserSettings(value: TfDomain.DefaultUserSettingsProperty) {
     this._defaultUserSettings.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -398,11 +398,11 @@ export class AwsSagemakerDomain extends cdktn.TerraformResource {
   }
 
   // domain_settings - computed: false, optional: true, required: false
-  private _domainSettings = new AwsSagemakerDomain.DomainSettingsPropertyOutputReference(this, "domain_settings");
+  private _domainSettings = new TfDomain.DomainSettingsPropertyOutputReference(this, "domain_settings");
   public get domainSettings() {
     return this._domainSettings;
   }
-  public putDomainSettings(value: AwsSagemakerDomain.DomainSettingsProperty) {
+  public putDomainSettings(value: TfDomain.DomainSettingsProperty) {
     this._domainSettings.internalValue = value;
   }
   public resetDomainSettings() {
@@ -414,11 +414,11 @@ export class AwsSagemakerDomain extends cdktn.TerraformResource {
   }
 
   // retention_policy - computed: false, optional: true, required: false
-  private _retentionPolicy = new AwsSagemakerDomain.RetentionPolicyPropertyOutputReference(this, "retention_policy");
+  private _retentionPolicy = new TfDomain.RetentionPolicyPropertyOutputReference(this, "retention_policy");
   public get retentionPolicy() {
     return this._retentionPolicy;
   }
-  public putRetentionPolicy(value: AwsSagemakerDomain.RetentionPolicyProperty) {
+  public putRetentionPolicy(value: TfDomain.RetentionPolicyProperty) {
     this._retentionPolicy.internalValue = value;
   }
   public resetRetentionPolicy() {
@@ -447,10 +447,10 @@ export class AwsSagemakerDomain extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       vpc_id: cdktn.stringToTerraform(this._vpcId),
-      default_space_settings: awsSagemakerDomainDefaultSpaceSettingsPropertyToTerraform(this._defaultSpaceSettings.internalValue),
-      default_user_settings: awsSagemakerDomainDefaultUserSettingsPropertyToTerraform(this._defaultUserSettings.internalValue),
-      domain_settings: awsSagemakerDomainDomainSettingsPropertyToTerraform(this._domainSettings.internalValue),
-      retention_policy: awsSagemakerDomainRetentionPolicyPropertyToTerraform(this._retentionPolicy.internalValue),
+      default_space_settings: tfDomainDefaultSpaceSettingsPropertyToTerraform(this._defaultSpaceSettings.internalValue),
+      default_user_settings: tfDomainDefaultUserSettingsPropertyToTerraform(this._defaultUserSettings.internalValue),
+      domain_settings: tfDomainDomainSettingsPropertyToTerraform(this._domainSettings.internalValue),
+      retention_policy: tfDomainRetentionPolicyPropertyToTerraform(this._retentionPolicy.internalValue),
     };
   }
 
@@ -529,28 +529,28 @@ export class AwsSagemakerDomain extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       default_space_settings: {
-        value: awsSagemakerDomainDefaultSpaceSettingsPropertyToHclTerraform(this._defaultSpaceSettings.internalValue),
+        value: tfDomainDefaultSpaceSettingsPropertyToHclTerraform(this._defaultSpaceSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSagemakerDomain.DefaultSpaceSettingsPropertyList",
+        storageClassType: "TfDomain.DefaultSpaceSettingsPropertyList",
       },
       default_user_settings: {
-        value: awsSagemakerDomainDefaultUserSettingsPropertyToHclTerraform(this._defaultUserSettings.internalValue),
+        value: tfDomainDefaultUserSettingsPropertyToHclTerraform(this._defaultUserSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSagemakerDomain.DefaultUserSettingsPropertyList",
+        storageClassType: "TfDomain.DefaultUserSettingsPropertyList",
       },
       domain_settings: {
-        value: awsSagemakerDomainDomainSettingsPropertyToHclTerraform(this._domainSettings.internalValue),
+        value: tfDomainDomainSettingsPropertyToHclTerraform(this._domainSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSagemakerDomain.DomainSettingsPropertyList",
+        storageClassType: "TfDomain.DomainSettingsPropertyList",
       },
       retention_policy: {
-        value: awsSagemakerDomainRetentionPolicyPropertyToHclTerraform(this._retentionPolicy.internalValue),
+        value: tfDomainRetentionPolicyPropertyToHclTerraform(this._retentionPolicy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSagemakerDomain.RetentionPolicyPropertyList",
+        storageClassType: "TfDomain.RetentionPolicyPropertyList",
       },
     };
 
@@ -559,7 +559,7 @@ export class AwsSagemakerDomain extends cdktn.TerraformResource {
   }
 }
 
-export function awsSagemakerDomainDefaultSpaceSettingsCustomFileSystemConfigEfsFileSystemConfigPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsCustomFileSystemConfigEfsFileSystemConfigPropertyOutputReference | AwsSagemakerDomain.DefaultSpaceSettingsCustomFileSystemConfigEfsFileSystemConfigProperty): any {
+export function tfDomainDefaultSpaceSettingsCustomFileSystemConfigEfsFileSystemConfigPropertyToTerraform(struct?: TfDomain.DefaultSpaceSettingsCustomFileSystemConfigEfsFileSystemConfigPropertyOutputReference | TfDomain.DefaultSpaceSettingsCustomFileSystemConfigEfsFileSystemConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -571,7 +571,7 @@ export function awsSagemakerDomainDefaultSpaceSettingsCustomFileSystemConfigEfsF
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsCustomFileSystemConfigEfsFileSystemConfigPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsCustomFileSystemConfigEfsFileSystemConfigPropertyOutputReference | AwsSagemakerDomain.DefaultSpaceSettingsCustomFileSystemConfigEfsFileSystemConfigProperty): any {
+export function tfDomainDefaultSpaceSettingsCustomFileSystemConfigEfsFileSystemConfigPropertyToHclTerraform(struct?: TfDomain.DefaultSpaceSettingsCustomFileSystemConfigEfsFileSystemConfigPropertyOutputReference | TfDomain.DefaultSpaceSettingsCustomFileSystemConfigEfsFileSystemConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -596,25 +596,25 @@ export function awsSagemakerDomainDefaultSpaceSettingsCustomFileSystemConfigEfsF
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsCustomFileSystemConfigPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsCustomFileSystemConfigProperty | cdktn.IResolvable): any {
+export function tfDomainDefaultSpaceSettingsCustomFileSystemConfigPropertyToTerraform(struct?: TfDomain.DefaultSpaceSettingsCustomFileSystemConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    efs_file_system_config: awsSagemakerDomainDefaultSpaceSettingsCustomFileSystemConfigEfsFileSystemConfigPropertyToTerraform(struct!.efsFileSystemConfig),
+    efs_file_system_config: tfDomainDefaultSpaceSettingsCustomFileSystemConfigEfsFileSystemConfigPropertyToTerraform(struct!.efsFileSystemConfig),
   }
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsCustomFileSystemConfigPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsCustomFileSystemConfigProperty | cdktn.IResolvable): any {
+export function tfDomainDefaultSpaceSettingsCustomFileSystemConfigPropertyToHclTerraform(struct?: TfDomain.DefaultSpaceSettingsCustomFileSystemConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     efs_file_system_config: {
-      value: awsSagemakerDomainDefaultSpaceSettingsCustomFileSystemConfigEfsFileSystemConfigPropertyToHclTerraform(struct!.efsFileSystemConfig),
+      value: tfDomainDefaultSpaceSettingsCustomFileSystemConfigEfsFileSystemConfigPropertyToHclTerraform(struct!.efsFileSystemConfig),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultSpaceSettingsCustomFileSystemConfigEfsFileSystemConfigPropertyList",
@@ -626,7 +626,7 @@ export function awsSagemakerDomainDefaultSpaceSettingsCustomFileSystemConfigProp
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsCustomPosixUserConfigPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsCustomPosixUserConfigPropertyOutputReference | AwsSagemakerDomain.DefaultSpaceSettingsCustomPosixUserConfigProperty): any {
+export function tfDomainDefaultSpaceSettingsCustomPosixUserConfigPropertyToTerraform(struct?: TfDomain.DefaultSpaceSettingsCustomPosixUserConfigPropertyOutputReference | TfDomain.DefaultSpaceSettingsCustomPosixUserConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -638,7 +638,7 @@ export function awsSagemakerDomainDefaultSpaceSettingsCustomPosixUserConfigPrope
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsCustomPosixUserConfigPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsCustomPosixUserConfigPropertyOutputReference | AwsSagemakerDomain.DefaultSpaceSettingsCustomPosixUserConfigProperty): any {
+export function tfDomainDefaultSpaceSettingsCustomPosixUserConfigPropertyToHclTerraform(struct?: TfDomain.DefaultSpaceSettingsCustomPosixUserConfigPropertyOutputReference | TfDomain.DefaultSpaceSettingsCustomPosixUserConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -663,7 +663,7 @@ export function awsSagemakerDomainDefaultSpaceSettingsCustomPosixUserConfigPrope
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsProperty): any {
+export function tfDomainDefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsPropertyToTerraform(struct?: TfDomain.DefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsPropertyOutputReference | TfDomain.DefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -677,7 +677,7 @@ export function awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsAppLi
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsProperty): any {
+export function tfDomainDefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsPropertyToHclTerraform(struct?: TfDomain.DefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsPropertyOutputReference | TfDomain.DefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -714,25 +714,25 @@ export function awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsAppLi
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementPropertyOutputReference | AwsSagemakerDomain.DefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementProperty): any {
+export function tfDomainDefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementPropertyToTerraform(struct?: TfDomain.DefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementPropertyOutputReference | TfDomain.DefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    idle_settings: awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsPropertyToTerraform(struct!.idleSettings),
+    idle_settings: tfDomainDefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsPropertyToTerraform(struct!.idleSettings),
   }
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementPropertyOutputReference | AwsSagemakerDomain.DefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementProperty): any {
+export function tfDomainDefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementPropertyToHclTerraform(struct?: TfDomain.DefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementPropertyOutputReference | TfDomain.DefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     idle_settings: {
-      value: awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsPropertyToHclTerraform(struct!.idleSettings),
+      value: tfDomainDefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsPropertyToHclTerraform(struct!.idleSettings),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsPropertyList",
@@ -744,7 +744,7 @@ export function awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsAppLi
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsCodeRepositoryPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsJupyterLabAppSettingsCodeRepositoryProperty | cdktn.IResolvable): any {
+export function tfDomainDefaultSpaceSettingsJupyterLabAppSettingsCodeRepositoryPropertyToTerraform(struct?: TfDomain.DefaultSpaceSettingsJupyterLabAppSettingsCodeRepositoryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -755,7 +755,7 @@ export function awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsCodeR
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsCodeRepositoryPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsJupyterLabAppSettingsCodeRepositoryProperty | cdktn.IResolvable): any {
+export function tfDomainDefaultSpaceSettingsJupyterLabAppSettingsCodeRepositoryPropertyToHclTerraform(struct?: TfDomain.DefaultSpaceSettingsJupyterLabAppSettingsCodeRepositoryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -774,7 +774,7 @@ export function awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsCodeR
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsCustomImagePropertyToTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsJupyterLabAppSettingsCustomImageProperty | cdktn.IResolvable): any {
+export function tfDomainDefaultSpaceSettingsJupyterLabAppSettingsCustomImagePropertyToTerraform(struct?: TfDomain.DefaultSpaceSettingsJupyterLabAppSettingsCustomImageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -787,7 +787,7 @@ export function awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsCusto
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsCustomImagePropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsJupyterLabAppSettingsCustomImageProperty | cdktn.IResolvable): any {
+export function tfDomainDefaultSpaceSettingsJupyterLabAppSettingsCustomImagePropertyToHclTerraform(struct?: TfDomain.DefaultSpaceSettingsJupyterLabAppSettingsCustomImageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -818,7 +818,7 @@ export function awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsCusto
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsDefaultResourceSpecPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsJupyterLabAppSettingsDefaultResourceSpecPropertyOutputReference | AwsSagemakerDomain.DefaultSpaceSettingsJupyterLabAppSettingsDefaultResourceSpecProperty): any {
+export function tfDomainDefaultSpaceSettingsJupyterLabAppSettingsDefaultResourceSpecPropertyToTerraform(struct?: TfDomain.DefaultSpaceSettingsJupyterLabAppSettingsDefaultResourceSpecPropertyOutputReference | TfDomain.DefaultSpaceSettingsJupyterLabAppSettingsDefaultResourceSpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -833,7 +833,7 @@ export function awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsDefau
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsJupyterLabAppSettingsDefaultResourceSpecPropertyOutputReference | AwsSagemakerDomain.DefaultSpaceSettingsJupyterLabAppSettingsDefaultResourceSpecProperty): any {
+export function tfDomainDefaultSpaceSettingsJupyterLabAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct?: TfDomain.DefaultSpaceSettingsJupyterLabAppSettingsDefaultResourceSpecPropertyOutputReference | TfDomain.DefaultSpaceSettingsJupyterLabAppSettingsDefaultResourceSpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -876,7 +876,7 @@ export function awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsDefau
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsEmrSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsJupyterLabAppSettingsEmrSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultSpaceSettingsJupyterLabAppSettingsEmrSettingsProperty): any {
+export function tfDomainDefaultSpaceSettingsJupyterLabAppSettingsEmrSettingsPropertyToTerraform(struct?: TfDomain.DefaultSpaceSettingsJupyterLabAppSettingsEmrSettingsPropertyOutputReference | TfDomain.DefaultSpaceSettingsJupyterLabAppSettingsEmrSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -888,7 +888,7 @@ export function awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsEmrSe
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsEmrSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsJupyterLabAppSettingsEmrSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultSpaceSettingsJupyterLabAppSettingsEmrSettingsProperty): any {
+export function tfDomainDefaultSpaceSettingsJupyterLabAppSettingsEmrSettingsPropertyToHclTerraform(struct?: TfDomain.DefaultSpaceSettingsJupyterLabAppSettingsEmrSettingsPropertyOutputReference | TfDomain.DefaultSpaceSettingsJupyterLabAppSettingsEmrSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -913,7 +913,7 @@ export function awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsEmrSe
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsJupyterLabAppSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultSpaceSettingsJupyterLabAppSettingsProperty): any {
+export function tfDomainDefaultSpaceSettingsJupyterLabAppSettingsPropertyToTerraform(struct?: TfDomain.DefaultSpaceSettingsJupyterLabAppSettingsPropertyOutputReference | TfDomain.DefaultSpaceSettingsJupyterLabAppSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -921,16 +921,16 @@ export function awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsPrope
   return {
     built_in_lifecycle_config_arn: cdktn.stringToTerraform(struct!.builtInLifecycleConfigArn),
     lifecycle_config_arns: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.lifecycleConfigArns),
-    app_lifecycle_management: awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementPropertyToTerraform(struct!.appLifecycleManagement),
-    code_repository: cdktn.listMapper(awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsCodeRepositoryPropertyToTerraform, true)(struct!.codeRepository),
-    custom_image: cdktn.listMapper(awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsCustomImagePropertyToTerraform, true)(struct!.customImage),
-    default_resource_spec: awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsDefaultResourceSpecPropertyToTerraform(struct!.defaultResourceSpec),
-    emr_settings: awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsEmrSettingsPropertyToTerraform(struct!.emrSettings),
+    app_lifecycle_management: tfDomainDefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementPropertyToTerraform(struct!.appLifecycleManagement),
+    code_repository: cdktn.listMapper(tfDomainDefaultSpaceSettingsJupyterLabAppSettingsCodeRepositoryPropertyToTerraform, true)(struct!.codeRepository),
+    custom_image: cdktn.listMapper(tfDomainDefaultSpaceSettingsJupyterLabAppSettingsCustomImagePropertyToTerraform, true)(struct!.customImage),
+    default_resource_spec: tfDomainDefaultSpaceSettingsJupyterLabAppSettingsDefaultResourceSpecPropertyToTerraform(struct!.defaultResourceSpec),
+    emr_settings: tfDomainDefaultSpaceSettingsJupyterLabAppSettingsEmrSettingsPropertyToTerraform(struct!.emrSettings),
   }
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsJupyterLabAppSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultSpaceSettingsJupyterLabAppSettingsProperty): any {
+export function tfDomainDefaultSpaceSettingsJupyterLabAppSettingsPropertyToHclTerraform(struct?: TfDomain.DefaultSpaceSettingsJupyterLabAppSettingsPropertyOutputReference | TfDomain.DefaultSpaceSettingsJupyterLabAppSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -949,31 +949,31 @@ export function awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsPrope
       storageClassType: "stringList",
     },
     app_lifecycle_management: {
-      value: awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementPropertyToHclTerraform(struct!.appLifecycleManagement),
+      value: tfDomainDefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementPropertyToHclTerraform(struct!.appLifecycleManagement),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementPropertyList",
     },
     code_repository: {
-      value: cdktn.listMapperHcl(awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsCodeRepositoryPropertyToHclTerraform, true)(struct!.codeRepository),
+      value: cdktn.listMapperHcl(tfDomainDefaultSpaceSettingsJupyterLabAppSettingsCodeRepositoryPropertyToHclTerraform, true)(struct!.codeRepository),
       isBlock: true,
       type: "set",
       storageClassType: "DefaultSpaceSettingsJupyterLabAppSettingsCodeRepositoryPropertyList",
     },
     custom_image: {
-      value: cdktn.listMapperHcl(awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsCustomImagePropertyToHclTerraform, true)(struct!.customImage),
+      value: cdktn.listMapperHcl(tfDomainDefaultSpaceSettingsJupyterLabAppSettingsCustomImagePropertyToHclTerraform, true)(struct!.customImage),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultSpaceSettingsJupyterLabAppSettingsCustomImagePropertyList",
     },
     default_resource_spec: {
-      value: awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct!.defaultResourceSpec),
+      value: tfDomainDefaultSpaceSettingsJupyterLabAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct!.defaultResourceSpec),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultSpaceSettingsJupyterLabAppSettingsDefaultResourceSpecPropertyList",
     },
     emr_settings: {
-      value: awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsEmrSettingsPropertyToHclTerraform(struct!.emrSettings),
+      value: tfDomainDefaultSpaceSettingsJupyterLabAppSettingsEmrSettingsPropertyToHclTerraform(struct!.emrSettings),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultSpaceSettingsJupyterLabAppSettingsEmrSettingsPropertyList",
@@ -985,7 +985,7 @@ export function awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsPrope
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsCodeRepositoryPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsJupyterServerAppSettingsCodeRepositoryProperty | cdktn.IResolvable): any {
+export function tfDomainDefaultSpaceSettingsJupyterServerAppSettingsCodeRepositoryPropertyToTerraform(struct?: TfDomain.DefaultSpaceSettingsJupyterServerAppSettingsCodeRepositoryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -996,7 +996,7 @@ export function awsSagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsCo
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsCodeRepositoryPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsJupyterServerAppSettingsCodeRepositoryProperty | cdktn.IResolvable): any {
+export function tfDomainDefaultSpaceSettingsJupyterServerAppSettingsCodeRepositoryPropertyToHclTerraform(struct?: TfDomain.DefaultSpaceSettingsJupyterServerAppSettingsCodeRepositoryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1015,7 +1015,7 @@ export function awsSagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsCo
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsDefaultResourceSpecPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsJupyterServerAppSettingsDefaultResourceSpecPropertyOutputReference | AwsSagemakerDomain.DefaultSpaceSettingsJupyterServerAppSettingsDefaultResourceSpecProperty): any {
+export function tfDomainDefaultSpaceSettingsJupyterServerAppSettingsDefaultResourceSpecPropertyToTerraform(struct?: TfDomain.DefaultSpaceSettingsJupyterServerAppSettingsDefaultResourceSpecPropertyOutputReference | TfDomain.DefaultSpaceSettingsJupyterServerAppSettingsDefaultResourceSpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1030,7 +1030,7 @@ export function awsSagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsDe
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsJupyterServerAppSettingsDefaultResourceSpecPropertyOutputReference | AwsSagemakerDomain.DefaultSpaceSettingsJupyterServerAppSettingsDefaultResourceSpecProperty): any {
+export function tfDomainDefaultSpaceSettingsJupyterServerAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct?: TfDomain.DefaultSpaceSettingsJupyterServerAppSettingsDefaultResourceSpecPropertyOutputReference | TfDomain.DefaultSpaceSettingsJupyterServerAppSettingsDefaultResourceSpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1073,20 +1073,20 @@ export function awsSagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsDe
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsJupyterServerAppSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultSpaceSettingsJupyterServerAppSettingsProperty): any {
+export function tfDomainDefaultSpaceSettingsJupyterServerAppSettingsPropertyToTerraform(struct?: TfDomain.DefaultSpaceSettingsJupyterServerAppSettingsPropertyOutputReference | TfDomain.DefaultSpaceSettingsJupyterServerAppSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     lifecycle_config_arns: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.lifecycleConfigArns),
-    code_repository: cdktn.listMapper(awsSagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsCodeRepositoryPropertyToTerraform, true)(struct!.codeRepository),
-    default_resource_spec: awsSagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsDefaultResourceSpecPropertyToTerraform(struct!.defaultResourceSpec),
+    code_repository: cdktn.listMapper(tfDomainDefaultSpaceSettingsJupyterServerAppSettingsCodeRepositoryPropertyToTerraform, true)(struct!.codeRepository),
+    default_resource_spec: tfDomainDefaultSpaceSettingsJupyterServerAppSettingsDefaultResourceSpecPropertyToTerraform(struct!.defaultResourceSpec),
   }
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsJupyterServerAppSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultSpaceSettingsJupyterServerAppSettingsProperty): any {
+export function tfDomainDefaultSpaceSettingsJupyterServerAppSettingsPropertyToHclTerraform(struct?: TfDomain.DefaultSpaceSettingsJupyterServerAppSettingsPropertyOutputReference | TfDomain.DefaultSpaceSettingsJupyterServerAppSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1099,13 +1099,13 @@ export function awsSagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsPr
       storageClassType: "stringList",
     },
     code_repository: {
-      value: cdktn.listMapperHcl(awsSagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsCodeRepositoryPropertyToHclTerraform, true)(struct!.codeRepository),
+      value: cdktn.listMapperHcl(tfDomainDefaultSpaceSettingsJupyterServerAppSettingsCodeRepositoryPropertyToHclTerraform, true)(struct!.codeRepository),
       isBlock: true,
       type: "set",
       storageClassType: "DefaultSpaceSettingsJupyterServerAppSettingsCodeRepositoryPropertyList",
     },
     default_resource_spec: {
-      value: awsSagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct!.defaultResourceSpec),
+      value: tfDomainDefaultSpaceSettingsJupyterServerAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct!.defaultResourceSpec),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultSpaceSettingsJupyterServerAppSettingsDefaultResourceSpecPropertyList",
@@ -1117,7 +1117,7 @@ export function awsSagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsPr
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsKernelGatewayAppSettingsCustomImagePropertyToTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsKernelGatewayAppSettingsCustomImageProperty | cdktn.IResolvable): any {
+export function tfDomainDefaultSpaceSettingsKernelGatewayAppSettingsCustomImagePropertyToTerraform(struct?: TfDomain.DefaultSpaceSettingsKernelGatewayAppSettingsCustomImageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1130,7 +1130,7 @@ export function awsSagemakerDomainDefaultSpaceSettingsKernelGatewayAppSettingsCu
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsKernelGatewayAppSettingsCustomImagePropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsKernelGatewayAppSettingsCustomImageProperty | cdktn.IResolvable): any {
+export function tfDomainDefaultSpaceSettingsKernelGatewayAppSettingsCustomImagePropertyToHclTerraform(struct?: TfDomain.DefaultSpaceSettingsKernelGatewayAppSettingsCustomImageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1161,7 +1161,7 @@ export function awsSagemakerDomainDefaultSpaceSettingsKernelGatewayAppSettingsCu
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpecPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpecPropertyOutputReference | AwsSagemakerDomain.DefaultSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpecProperty): any {
+export function tfDomainDefaultSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpecPropertyToTerraform(struct?: TfDomain.DefaultSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpecPropertyOutputReference | TfDomain.DefaultSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1176,7 +1176,7 @@ export function awsSagemakerDomainDefaultSpaceSettingsKernelGatewayAppSettingsDe
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpecPropertyOutputReference | AwsSagemakerDomain.DefaultSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpecProperty): any {
+export function tfDomainDefaultSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct?: TfDomain.DefaultSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpecPropertyOutputReference | TfDomain.DefaultSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1219,20 +1219,20 @@ export function awsSagemakerDomainDefaultSpaceSettingsKernelGatewayAppSettingsDe
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsKernelGatewayAppSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsKernelGatewayAppSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultSpaceSettingsKernelGatewayAppSettingsProperty): any {
+export function tfDomainDefaultSpaceSettingsKernelGatewayAppSettingsPropertyToTerraform(struct?: TfDomain.DefaultSpaceSettingsKernelGatewayAppSettingsPropertyOutputReference | TfDomain.DefaultSpaceSettingsKernelGatewayAppSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     lifecycle_config_arns: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.lifecycleConfigArns),
-    custom_image: cdktn.listMapper(awsSagemakerDomainDefaultSpaceSettingsKernelGatewayAppSettingsCustomImagePropertyToTerraform, true)(struct!.customImage),
-    default_resource_spec: awsSagemakerDomainDefaultSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpecPropertyToTerraform(struct!.defaultResourceSpec),
+    custom_image: cdktn.listMapper(tfDomainDefaultSpaceSettingsKernelGatewayAppSettingsCustomImagePropertyToTerraform, true)(struct!.customImage),
+    default_resource_spec: tfDomainDefaultSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpecPropertyToTerraform(struct!.defaultResourceSpec),
   }
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsKernelGatewayAppSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsKernelGatewayAppSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultSpaceSettingsKernelGatewayAppSettingsProperty): any {
+export function tfDomainDefaultSpaceSettingsKernelGatewayAppSettingsPropertyToHclTerraform(struct?: TfDomain.DefaultSpaceSettingsKernelGatewayAppSettingsPropertyOutputReference | TfDomain.DefaultSpaceSettingsKernelGatewayAppSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1245,13 +1245,13 @@ export function awsSagemakerDomainDefaultSpaceSettingsKernelGatewayAppSettingsPr
       storageClassType: "stringList",
     },
     custom_image: {
-      value: cdktn.listMapperHcl(awsSagemakerDomainDefaultSpaceSettingsKernelGatewayAppSettingsCustomImagePropertyToHclTerraform, true)(struct!.customImage),
+      value: cdktn.listMapperHcl(tfDomainDefaultSpaceSettingsKernelGatewayAppSettingsCustomImagePropertyToHclTerraform, true)(struct!.customImage),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultSpaceSettingsKernelGatewayAppSettingsCustomImagePropertyList",
     },
     default_resource_spec: {
-      value: awsSagemakerDomainDefaultSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct!.defaultResourceSpec),
+      value: tfDomainDefaultSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct!.defaultResourceSpec),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpecPropertyList",
@@ -1263,7 +1263,7 @@ export function awsSagemakerDomainDefaultSpaceSettingsKernelGatewayAppSettingsPr
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsSpaceStorageSettingsDefaultEbsStorageSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsSpaceStorageSettingsDefaultEbsStorageSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultSpaceSettingsSpaceStorageSettingsDefaultEbsStorageSettingsProperty): any {
+export function tfDomainDefaultSpaceSettingsSpaceStorageSettingsDefaultEbsStorageSettingsPropertyToTerraform(struct?: TfDomain.DefaultSpaceSettingsSpaceStorageSettingsDefaultEbsStorageSettingsPropertyOutputReference | TfDomain.DefaultSpaceSettingsSpaceStorageSettingsDefaultEbsStorageSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1275,7 +1275,7 @@ export function awsSagemakerDomainDefaultSpaceSettingsSpaceStorageSettingsDefaul
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsSpaceStorageSettingsDefaultEbsStorageSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsSpaceStorageSettingsDefaultEbsStorageSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultSpaceSettingsSpaceStorageSettingsDefaultEbsStorageSettingsProperty): any {
+export function tfDomainDefaultSpaceSettingsSpaceStorageSettingsDefaultEbsStorageSettingsPropertyToHclTerraform(struct?: TfDomain.DefaultSpaceSettingsSpaceStorageSettingsDefaultEbsStorageSettingsPropertyOutputReference | TfDomain.DefaultSpaceSettingsSpaceStorageSettingsDefaultEbsStorageSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1300,25 +1300,25 @@ export function awsSagemakerDomainDefaultSpaceSettingsSpaceStorageSettingsDefaul
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsSpaceStorageSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsSpaceStorageSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultSpaceSettingsSpaceStorageSettingsProperty): any {
+export function tfDomainDefaultSpaceSettingsSpaceStorageSettingsPropertyToTerraform(struct?: TfDomain.DefaultSpaceSettingsSpaceStorageSettingsPropertyOutputReference | TfDomain.DefaultSpaceSettingsSpaceStorageSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    default_ebs_storage_settings: awsSagemakerDomainDefaultSpaceSettingsSpaceStorageSettingsDefaultEbsStorageSettingsPropertyToTerraform(struct!.defaultEbsStorageSettings),
+    default_ebs_storage_settings: tfDomainDefaultSpaceSettingsSpaceStorageSettingsDefaultEbsStorageSettingsPropertyToTerraform(struct!.defaultEbsStorageSettings),
   }
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsSpaceStorageSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsSpaceStorageSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultSpaceSettingsSpaceStorageSettingsProperty): any {
+export function tfDomainDefaultSpaceSettingsSpaceStorageSettingsPropertyToHclTerraform(struct?: TfDomain.DefaultSpaceSettingsSpaceStorageSettingsPropertyOutputReference | TfDomain.DefaultSpaceSettingsSpaceStorageSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     default_ebs_storage_settings: {
-      value: awsSagemakerDomainDefaultSpaceSettingsSpaceStorageSettingsDefaultEbsStorageSettingsPropertyToHclTerraform(struct!.defaultEbsStorageSettings),
+      value: tfDomainDefaultSpaceSettingsSpaceStorageSettingsDefaultEbsStorageSettingsPropertyToHclTerraform(struct!.defaultEbsStorageSettings),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultSpaceSettingsSpaceStorageSettingsDefaultEbsStorageSettingsPropertyList",
@@ -1330,7 +1330,7 @@ export function awsSagemakerDomainDefaultSpaceSettingsSpaceStorageSettingsProper
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultSpaceSettingsProperty): any {
+export function tfDomainDefaultSpaceSettingsPropertyToTerraform(struct?: TfDomain.DefaultSpaceSettingsPropertyOutputReference | TfDomain.DefaultSpaceSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1338,17 +1338,17 @@ export function awsSagemakerDomainDefaultSpaceSettingsPropertyToTerraform(struct
   return {
     execution_role: cdktn.stringToTerraform(struct!.executionRole),
     security_groups: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.securityGroups),
-    custom_file_system_config: cdktn.listMapper(awsSagemakerDomainDefaultSpaceSettingsCustomFileSystemConfigPropertyToTerraform, true)(struct!.customFileSystemConfig),
-    custom_posix_user_config: awsSagemakerDomainDefaultSpaceSettingsCustomPosixUserConfigPropertyToTerraform(struct!.customPosixUserConfig),
-    jupyter_lab_app_settings: awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsPropertyToTerraform(struct!.jupyterLabAppSettings),
-    jupyter_server_app_settings: awsSagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsPropertyToTerraform(struct!.jupyterServerAppSettings),
-    kernel_gateway_app_settings: awsSagemakerDomainDefaultSpaceSettingsKernelGatewayAppSettingsPropertyToTerraform(struct!.kernelGatewayAppSettings),
-    space_storage_settings: awsSagemakerDomainDefaultSpaceSettingsSpaceStorageSettingsPropertyToTerraform(struct!.spaceStorageSettings),
+    custom_file_system_config: cdktn.listMapper(tfDomainDefaultSpaceSettingsCustomFileSystemConfigPropertyToTerraform, true)(struct!.customFileSystemConfig),
+    custom_posix_user_config: tfDomainDefaultSpaceSettingsCustomPosixUserConfigPropertyToTerraform(struct!.customPosixUserConfig),
+    jupyter_lab_app_settings: tfDomainDefaultSpaceSettingsJupyterLabAppSettingsPropertyToTerraform(struct!.jupyterLabAppSettings),
+    jupyter_server_app_settings: tfDomainDefaultSpaceSettingsJupyterServerAppSettingsPropertyToTerraform(struct!.jupyterServerAppSettings),
+    kernel_gateway_app_settings: tfDomainDefaultSpaceSettingsKernelGatewayAppSettingsPropertyToTerraform(struct!.kernelGatewayAppSettings),
+    space_storage_settings: tfDomainDefaultSpaceSettingsSpaceStorageSettingsPropertyToTerraform(struct!.spaceStorageSettings),
   }
 }
 
 
-export function awsSagemakerDomainDefaultSpaceSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultSpaceSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultSpaceSettingsProperty): any {
+export function tfDomainDefaultSpaceSettingsPropertyToHclTerraform(struct?: TfDomain.DefaultSpaceSettingsPropertyOutputReference | TfDomain.DefaultSpaceSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1367,37 +1367,37 @@ export function awsSagemakerDomainDefaultSpaceSettingsPropertyToHclTerraform(str
       storageClassType: "stringList",
     },
     custom_file_system_config: {
-      value: cdktn.listMapperHcl(awsSagemakerDomainDefaultSpaceSettingsCustomFileSystemConfigPropertyToHclTerraform, true)(struct!.customFileSystemConfig),
+      value: cdktn.listMapperHcl(tfDomainDefaultSpaceSettingsCustomFileSystemConfigPropertyToHclTerraform, true)(struct!.customFileSystemConfig),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultSpaceSettingsCustomFileSystemConfigPropertyList",
     },
     custom_posix_user_config: {
-      value: awsSagemakerDomainDefaultSpaceSettingsCustomPosixUserConfigPropertyToHclTerraform(struct!.customPosixUserConfig),
+      value: tfDomainDefaultSpaceSettingsCustomPosixUserConfigPropertyToHclTerraform(struct!.customPosixUserConfig),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultSpaceSettingsCustomPosixUserConfigPropertyList",
     },
     jupyter_lab_app_settings: {
-      value: awsSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsPropertyToHclTerraform(struct!.jupyterLabAppSettings),
+      value: tfDomainDefaultSpaceSettingsJupyterLabAppSettingsPropertyToHclTerraform(struct!.jupyterLabAppSettings),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultSpaceSettingsJupyterLabAppSettingsPropertyList",
     },
     jupyter_server_app_settings: {
-      value: awsSagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsPropertyToHclTerraform(struct!.jupyterServerAppSettings),
+      value: tfDomainDefaultSpaceSettingsJupyterServerAppSettingsPropertyToHclTerraform(struct!.jupyterServerAppSettings),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultSpaceSettingsJupyterServerAppSettingsPropertyList",
     },
     kernel_gateway_app_settings: {
-      value: awsSagemakerDomainDefaultSpaceSettingsKernelGatewayAppSettingsPropertyToHclTerraform(struct!.kernelGatewayAppSettings),
+      value: tfDomainDefaultSpaceSettingsKernelGatewayAppSettingsPropertyToHclTerraform(struct!.kernelGatewayAppSettings),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultSpaceSettingsKernelGatewayAppSettingsPropertyList",
     },
     space_storage_settings: {
-      value: awsSagemakerDomainDefaultSpaceSettingsSpaceStorageSettingsPropertyToHclTerraform(struct!.spaceStorageSettings),
+      value: tfDomainDefaultSpaceSettingsSpaceStorageSettingsPropertyToHclTerraform(struct!.spaceStorageSettings),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultSpaceSettingsSpaceStorageSettingsPropertyList",
@@ -1409,7 +1409,7 @@ export function awsSagemakerDomainDefaultSpaceSettingsPropertyToHclTerraform(str
 }
 
 
-export function awsSagemakerDomainDirectDeploySettingsPropertyToTerraform(struct?: AwsSagemakerDomain.DirectDeploySettingsPropertyOutputReference | AwsSagemakerDomain.DirectDeploySettingsProperty): any {
+export function tfDomainDirectDeploySettingsPropertyToTerraform(struct?: TfDomain.DirectDeploySettingsPropertyOutputReference | TfDomain.DirectDeploySettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1420,7 +1420,7 @@ export function awsSagemakerDomainDirectDeploySettingsPropertyToTerraform(struct
 }
 
 
-export function awsSagemakerDomainDirectDeploySettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.DirectDeploySettingsPropertyOutputReference | AwsSagemakerDomain.DirectDeploySettingsProperty): any {
+export function tfDomainDirectDeploySettingsPropertyToHclTerraform(struct?: TfDomain.DirectDeploySettingsPropertyOutputReference | TfDomain.DirectDeploySettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1439,7 +1439,7 @@ export function awsSagemakerDomainDirectDeploySettingsPropertyToHclTerraform(str
 }
 
 
-export function awsSagemakerDomainEmrServerlessSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.EmrServerlessSettingsPropertyOutputReference | AwsSagemakerDomain.EmrServerlessSettingsProperty): any {
+export function tfDomainEmrServerlessSettingsPropertyToTerraform(struct?: TfDomain.EmrServerlessSettingsPropertyOutputReference | TfDomain.EmrServerlessSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1451,7 +1451,7 @@ export function awsSagemakerDomainEmrServerlessSettingsPropertyToTerraform(struc
 }
 
 
-export function awsSagemakerDomainEmrServerlessSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.EmrServerlessSettingsPropertyOutputReference | AwsSagemakerDomain.EmrServerlessSettingsProperty): any {
+export function tfDomainEmrServerlessSettingsPropertyToHclTerraform(struct?: TfDomain.EmrServerlessSettingsPropertyOutputReference | TfDomain.EmrServerlessSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1476,7 +1476,7 @@ export function awsSagemakerDomainEmrServerlessSettingsPropertyToHclTerraform(st
 }
 
 
-export function awsSagemakerDomainGenerativeAiSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.GenerativeAiSettingsPropertyOutputReference | AwsSagemakerDomain.GenerativeAiSettingsProperty): any {
+export function tfDomainGenerativeAiSettingsPropertyToTerraform(struct?: TfDomain.GenerativeAiSettingsPropertyOutputReference | TfDomain.GenerativeAiSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1487,7 +1487,7 @@ export function awsSagemakerDomainGenerativeAiSettingsPropertyToTerraform(struct
 }
 
 
-export function awsSagemakerDomainGenerativeAiSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.GenerativeAiSettingsPropertyOutputReference | AwsSagemakerDomain.GenerativeAiSettingsProperty): any {
+export function tfDomainGenerativeAiSettingsPropertyToHclTerraform(struct?: TfDomain.GenerativeAiSettingsPropertyOutputReference | TfDomain.GenerativeAiSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1506,7 +1506,7 @@ export function awsSagemakerDomainGenerativeAiSettingsPropertyToHclTerraform(str
 }
 
 
-export function awsSagemakerDomainIdentityProviderOauthSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.IdentityProviderOauthSettingsProperty | cdktn.IResolvable): any {
+export function tfDomainIdentityProviderOauthSettingsPropertyToTerraform(struct?: TfDomain.IdentityProviderOauthSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1519,7 +1519,7 @@ export function awsSagemakerDomainIdentityProviderOauthSettingsPropertyToTerrafo
 }
 
 
-export function awsSagemakerDomainIdentityProviderOauthSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.IdentityProviderOauthSettingsProperty | cdktn.IResolvable): any {
+export function tfDomainIdentityProviderOauthSettingsPropertyToHclTerraform(struct?: TfDomain.IdentityProviderOauthSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1550,7 +1550,7 @@ export function awsSagemakerDomainIdentityProviderOauthSettingsPropertyToHclTerr
 }
 
 
-export function awsSagemakerDomainKendraSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.KendraSettingsPropertyOutputReference | AwsSagemakerDomain.KendraSettingsProperty): any {
+export function tfDomainKendraSettingsPropertyToTerraform(struct?: TfDomain.KendraSettingsPropertyOutputReference | TfDomain.KendraSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1561,7 +1561,7 @@ export function awsSagemakerDomainKendraSettingsPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsSagemakerDomainKendraSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.KendraSettingsPropertyOutputReference | AwsSagemakerDomain.KendraSettingsProperty): any {
+export function tfDomainKendraSettingsPropertyToHclTerraform(struct?: TfDomain.KendraSettingsPropertyOutputReference | TfDomain.KendraSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1580,7 +1580,7 @@ export function awsSagemakerDomainKendraSettingsPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsSagemakerDomainModelRegisterSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.ModelRegisterSettingsPropertyOutputReference | AwsSagemakerDomain.ModelRegisterSettingsProperty): any {
+export function tfDomainModelRegisterSettingsPropertyToTerraform(struct?: TfDomain.ModelRegisterSettingsPropertyOutputReference | TfDomain.ModelRegisterSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1592,7 +1592,7 @@ export function awsSagemakerDomainModelRegisterSettingsPropertyToTerraform(struc
 }
 
 
-export function awsSagemakerDomainModelRegisterSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.ModelRegisterSettingsPropertyOutputReference | AwsSagemakerDomain.ModelRegisterSettingsProperty): any {
+export function tfDomainModelRegisterSettingsPropertyToHclTerraform(struct?: TfDomain.ModelRegisterSettingsPropertyOutputReference | TfDomain.ModelRegisterSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1617,7 +1617,7 @@ export function awsSagemakerDomainModelRegisterSettingsPropertyToHclTerraform(st
 }
 
 
-export function awsSagemakerDomainTimeSeriesForecastingSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.TimeSeriesForecastingSettingsPropertyOutputReference | AwsSagemakerDomain.TimeSeriesForecastingSettingsProperty): any {
+export function tfDomainTimeSeriesForecastingSettingsPropertyToTerraform(struct?: TfDomain.TimeSeriesForecastingSettingsPropertyOutputReference | TfDomain.TimeSeriesForecastingSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1629,7 +1629,7 @@ export function awsSagemakerDomainTimeSeriesForecastingSettingsPropertyToTerrafo
 }
 
 
-export function awsSagemakerDomainTimeSeriesForecastingSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.TimeSeriesForecastingSettingsPropertyOutputReference | AwsSagemakerDomain.TimeSeriesForecastingSettingsProperty): any {
+export function tfDomainTimeSeriesForecastingSettingsPropertyToHclTerraform(struct?: TfDomain.TimeSeriesForecastingSettingsPropertyOutputReference | TfDomain.TimeSeriesForecastingSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1654,7 +1654,7 @@ export function awsSagemakerDomainTimeSeriesForecastingSettingsPropertyToHclTerr
 }
 
 
-export function awsSagemakerDomainWorkspaceSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.WorkspaceSettingsPropertyOutputReference | AwsSagemakerDomain.WorkspaceSettingsProperty): any {
+export function tfDomainWorkspaceSettingsPropertyToTerraform(struct?: TfDomain.WorkspaceSettingsPropertyOutputReference | TfDomain.WorkspaceSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1666,7 +1666,7 @@ export function awsSagemakerDomainWorkspaceSettingsPropertyToTerraform(struct?: 
 }
 
 
-export function awsSagemakerDomainWorkspaceSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.WorkspaceSettingsPropertyOutputReference | AwsSagemakerDomain.WorkspaceSettingsProperty): any {
+export function tfDomainWorkspaceSettingsPropertyToHclTerraform(struct?: TfDomain.WorkspaceSettingsPropertyOutputReference | TfDomain.WorkspaceSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1691,74 +1691,74 @@ export function awsSagemakerDomainWorkspaceSettingsPropertyToHclTerraform(struct
 }
 
 
-export function awsSagemakerDomainCanvasAppSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.CanvasAppSettingsPropertyOutputReference | AwsSagemakerDomain.CanvasAppSettingsProperty): any {
+export function tfDomainCanvasAppSettingsPropertyToTerraform(struct?: TfDomain.CanvasAppSettingsPropertyOutputReference | TfDomain.CanvasAppSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    direct_deploy_settings: awsSagemakerDomainDirectDeploySettingsPropertyToTerraform(struct!.directDeploySettings),
-    emr_serverless_settings: awsSagemakerDomainEmrServerlessSettingsPropertyToTerraform(struct!.emrServerlessSettings),
-    generative_ai_settings: awsSagemakerDomainGenerativeAiSettingsPropertyToTerraform(struct!.generativeAiSettings),
-    identity_provider_oauth_settings: cdktn.listMapper(awsSagemakerDomainIdentityProviderOauthSettingsPropertyToTerraform, true)(struct!.identityProviderOauthSettings),
-    kendra_settings: awsSagemakerDomainKendraSettingsPropertyToTerraform(struct!.kendraSettings),
-    model_register_settings: awsSagemakerDomainModelRegisterSettingsPropertyToTerraform(struct!.modelRegisterSettings),
-    time_series_forecasting_settings: awsSagemakerDomainTimeSeriesForecastingSettingsPropertyToTerraform(struct!.timeSeriesForecastingSettings),
-    workspace_settings: awsSagemakerDomainWorkspaceSettingsPropertyToTerraform(struct!.workspaceSettings),
+    direct_deploy_settings: tfDomainDirectDeploySettingsPropertyToTerraform(struct!.directDeploySettings),
+    emr_serverless_settings: tfDomainEmrServerlessSettingsPropertyToTerraform(struct!.emrServerlessSettings),
+    generative_ai_settings: tfDomainGenerativeAiSettingsPropertyToTerraform(struct!.generativeAiSettings),
+    identity_provider_oauth_settings: cdktn.listMapper(tfDomainIdentityProviderOauthSettingsPropertyToTerraform, true)(struct!.identityProviderOauthSettings),
+    kendra_settings: tfDomainKendraSettingsPropertyToTerraform(struct!.kendraSettings),
+    model_register_settings: tfDomainModelRegisterSettingsPropertyToTerraform(struct!.modelRegisterSettings),
+    time_series_forecasting_settings: tfDomainTimeSeriesForecastingSettingsPropertyToTerraform(struct!.timeSeriesForecastingSettings),
+    workspace_settings: tfDomainWorkspaceSettingsPropertyToTerraform(struct!.workspaceSettings),
   }
 }
 
 
-export function awsSagemakerDomainCanvasAppSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.CanvasAppSettingsPropertyOutputReference | AwsSagemakerDomain.CanvasAppSettingsProperty): any {
+export function tfDomainCanvasAppSettingsPropertyToHclTerraform(struct?: TfDomain.CanvasAppSettingsPropertyOutputReference | TfDomain.CanvasAppSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     direct_deploy_settings: {
-      value: awsSagemakerDomainDirectDeploySettingsPropertyToHclTerraform(struct!.directDeploySettings),
+      value: tfDomainDirectDeploySettingsPropertyToHclTerraform(struct!.directDeploySettings),
       isBlock: true,
       type: "list",
       storageClassType: "DirectDeploySettingsPropertyList",
     },
     emr_serverless_settings: {
-      value: awsSagemakerDomainEmrServerlessSettingsPropertyToHclTerraform(struct!.emrServerlessSettings),
+      value: tfDomainEmrServerlessSettingsPropertyToHclTerraform(struct!.emrServerlessSettings),
       isBlock: true,
       type: "list",
       storageClassType: "EmrServerlessSettingsPropertyList",
     },
     generative_ai_settings: {
-      value: awsSagemakerDomainGenerativeAiSettingsPropertyToHclTerraform(struct!.generativeAiSettings),
+      value: tfDomainGenerativeAiSettingsPropertyToHclTerraform(struct!.generativeAiSettings),
       isBlock: true,
       type: "list",
       storageClassType: "GenerativeAiSettingsPropertyList",
     },
     identity_provider_oauth_settings: {
-      value: cdktn.listMapperHcl(awsSagemakerDomainIdentityProviderOauthSettingsPropertyToHclTerraform, true)(struct!.identityProviderOauthSettings),
+      value: cdktn.listMapperHcl(tfDomainIdentityProviderOauthSettingsPropertyToHclTerraform, true)(struct!.identityProviderOauthSettings),
       isBlock: true,
       type: "list",
       storageClassType: "IdentityProviderOauthSettingsPropertyList",
     },
     kendra_settings: {
-      value: awsSagemakerDomainKendraSettingsPropertyToHclTerraform(struct!.kendraSettings),
+      value: tfDomainKendraSettingsPropertyToHclTerraform(struct!.kendraSettings),
       isBlock: true,
       type: "list",
       storageClassType: "KendraSettingsPropertyList",
     },
     model_register_settings: {
-      value: awsSagemakerDomainModelRegisterSettingsPropertyToHclTerraform(struct!.modelRegisterSettings),
+      value: tfDomainModelRegisterSettingsPropertyToHclTerraform(struct!.modelRegisterSettings),
       isBlock: true,
       type: "list",
       storageClassType: "ModelRegisterSettingsPropertyList",
     },
     time_series_forecasting_settings: {
-      value: awsSagemakerDomainTimeSeriesForecastingSettingsPropertyToHclTerraform(struct!.timeSeriesForecastingSettings),
+      value: tfDomainTimeSeriesForecastingSettingsPropertyToHclTerraform(struct!.timeSeriesForecastingSettings),
       isBlock: true,
       type: "list",
       storageClassType: "TimeSeriesForecastingSettingsPropertyList",
     },
     workspace_settings: {
-      value: awsSagemakerDomainWorkspaceSettingsPropertyToHclTerraform(struct!.workspaceSettings),
+      value: tfDomainWorkspaceSettingsPropertyToHclTerraform(struct!.workspaceSettings),
       isBlock: true,
       type: "list",
       storageClassType: "WorkspaceSettingsPropertyList",
@@ -1770,7 +1770,7 @@ export function awsSagemakerDomainCanvasAppSettingsPropertyToHclTerraform(struct
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettingsProperty): any {
+export function tfDomainDefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettingsPropertyToTerraform(struct?: TfDomain.DefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettingsPropertyOutputReference | TfDomain.DefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1784,7 +1784,7 @@ export function awsSagemakerDomainDefaultUserSettingsCodeEditorAppSettingsAppLif
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettingsProperty): any {
+export function tfDomainDefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettingsPropertyToHclTerraform(struct?: TfDomain.DefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettingsPropertyOutputReference | TfDomain.DefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1821,25 +1821,25 @@ export function awsSagemakerDomainDefaultUserSettingsCodeEditorAppSettingsAppLif
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementProperty): any {
+export function tfDomainDefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementPropertyToTerraform(struct?: TfDomain.DefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementPropertyOutputReference | TfDomain.DefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    idle_settings: awsSagemakerDomainDefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettingsPropertyToTerraform(struct!.idleSettings),
+    idle_settings: tfDomainDefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettingsPropertyToTerraform(struct!.idleSettings),
   }
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementProperty): any {
+export function tfDomainDefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementPropertyToHclTerraform(struct?: TfDomain.DefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementPropertyOutputReference | TfDomain.DefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     idle_settings: {
-      value: awsSagemakerDomainDefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettingsPropertyToHclTerraform(struct!.idleSettings),
+      value: tfDomainDefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettingsPropertyToHclTerraform(struct!.idleSettings),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettingsPropertyList",
@@ -1851,7 +1851,7 @@ export function awsSagemakerDomainDefaultUserSettingsCodeEditorAppSettingsAppLif
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsCodeEditorAppSettingsCustomImagePropertyToTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsCodeEditorAppSettingsCustomImageProperty | cdktn.IResolvable): any {
+export function tfDomainDefaultUserSettingsCodeEditorAppSettingsCustomImagePropertyToTerraform(struct?: TfDomain.DefaultUserSettingsCodeEditorAppSettingsCustomImageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1864,7 +1864,7 @@ export function awsSagemakerDomainDefaultUserSettingsCodeEditorAppSettingsCustom
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsCodeEditorAppSettingsCustomImagePropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsCodeEditorAppSettingsCustomImageProperty | cdktn.IResolvable): any {
+export function tfDomainDefaultUserSettingsCodeEditorAppSettingsCustomImagePropertyToHclTerraform(struct?: TfDomain.DefaultUserSettingsCodeEditorAppSettingsCustomImageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1895,7 +1895,7 @@ export function awsSagemakerDomainDefaultUserSettingsCodeEditorAppSettingsCustom
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsCodeEditorAppSettingsDefaultResourceSpecPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsCodeEditorAppSettingsDefaultResourceSpecPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsCodeEditorAppSettingsDefaultResourceSpecProperty): any {
+export function tfDomainDefaultUserSettingsCodeEditorAppSettingsDefaultResourceSpecPropertyToTerraform(struct?: TfDomain.DefaultUserSettingsCodeEditorAppSettingsDefaultResourceSpecPropertyOutputReference | TfDomain.DefaultUserSettingsCodeEditorAppSettingsDefaultResourceSpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1910,7 +1910,7 @@ export function awsSagemakerDomainDefaultUserSettingsCodeEditorAppSettingsDefaul
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsCodeEditorAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsCodeEditorAppSettingsDefaultResourceSpecPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsCodeEditorAppSettingsDefaultResourceSpecProperty): any {
+export function tfDomainDefaultUserSettingsCodeEditorAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct?: TfDomain.DefaultUserSettingsCodeEditorAppSettingsDefaultResourceSpecPropertyOutputReference | TfDomain.DefaultUserSettingsCodeEditorAppSettingsDefaultResourceSpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1953,7 +1953,7 @@ export function awsSagemakerDomainDefaultUserSettingsCodeEditorAppSettingsDefaul
 }
 
 
-export function awsSagemakerDomainCodeEditorAppSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.CodeEditorAppSettingsPropertyOutputReference | AwsSagemakerDomain.CodeEditorAppSettingsProperty): any {
+export function tfDomainCodeEditorAppSettingsPropertyToTerraform(struct?: TfDomain.CodeEditorAppSettingsPropertyOutputReference | TfDomain.CodeEditorAppSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1961,14 +1961,14 @@ export function awsSagemakerDomainCodeEditorAppSettingsPropertyToTerraform(struc
   return {
     built_in_lifecycle_config_arn: cdktn.stringToTerraform(struct!.builtInLifecycleConfigArn),
     lifecycle_config_arns: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.lifecycleConfigArns),
-    app_lifecycle_management: awsSagemakerDomainDefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementPropertyToTerraform(struct!.appLifecycleManagement),
-    custom_image: cdktn.listMapper(awsSagemakerDomainDefaultUserSettingsCodeEditorAppSettingsCustomImagePropertyToTerraform, true)(struct!.customImage),
-    default_resource_spec: awsSagemakerDomainDefaultUserSettingsCodeEditorAppSettingsDefaultResourceSpecPropertyToTerraform(struct!.defaultResourceSpec),
+    app_lifecycle_management: tfDomainDefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementPropertyToTerraform(struct!.appLifecycleManagement),
+    custom_image: cdktn.listMapper(tfDomainDefaultUserSettingsCodeEditorAppSettingsCustomImagePropertyToTerraform, true)(struct!.customImage),
+    default_resource_spec: tfDomainDefaultUserSettingsCodeEditorAppSettingsDefaultResourceSpecPropertyToTerraform(struct!.defaultResourceSpec),
   }
 }
 
 
-export function awsSagemakerDomainCodeEditorAppSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.CodeEditorAppSettingsPropertyOutputReference | AwsSagemakerDomain.CodeEditorAppSettingsProperty): any {
+export function tfDomainCodeEditorAppSettingsPropertyToHclTerraform(struct?: TfDomain.CodeEditorAppSettingsPropertyOutputReference | TfDomain.CodeEditorAppSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1987,19 +1987,19 @@ export function awsSagemakerDomainCodeEditorAppSettingsPropertyToHclTerraform(st
       storageClassType: "stringList",
     },
     app_lifecycle_management: {
-      value: awsSagemakerDomainDefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementPropertyToHclTerraform(struct!.appLifecycleManagement),
+      value: tfDomainDefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementPropertyToHclTerraform(struct!.appLifecycleManagement),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementPropertyList",
     },
     custom_image: {
-      value: cdktn.listMapperHcl(awsSagemakerDomainDefaultUserSettingsCodeEditorAppSettingsCustomImagePropertyToHclTerraform, true)(struct!.customImage),
+      value: cdktn.listMapperHcl(tfDomainDefaultUserSettingsCodeEditorAppSettingsCustomImagePropertyToHclTerraform, true)(struct!.customImage),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultUserSettingsCodeEditorAppSettingsCustomImagePropertyList",
     },
     default_resource_spec: {
-      value: awsSagemakerDomainDefaultUserSettingsCodeEditorAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct!.defaultResourceSpec),
+      value: tfDomainDefaultUserSettingsCodeEditorAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct!.defaultResourceSpec),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultUserSettingsCodeEditorAppSettingsDefaultResourceSpecPropertyList",
@@ -2011,7 +2011,7 @@ export function awsSagemakerDomainCodeEditorAppSettingsPropertyToHclTerraform(st
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsCustomFileSystemConfigEfsFileSystemConfigPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsCustomFileSystemConfigEfsFileSystemConfigPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsCustomFileSystemConfigEfsFileSystemConfigProperty): any {
+export function tfDomainDefaultUserSettingsCustomFileSystemConfigEfsFileSystemConfigPropertyToTerraform(struct?: TfDomain.DefaultUserSettingsCustomFileSystemConfigEfsFileSystemConfigPropertyOutputReference | TfDomain.DefaultUserSettingsCustomFileSystemConfigEfsFileSystemConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2023,7 +2023,7 @@ export function awsSagemakerDomainDefaultUserSettingsCustomFileSystemConfigEfsFi
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsCustomFileSystemConfigEfsFileSystemConfigPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsCustomFileSystemConfigEfsFileSystemConfigPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsCustomFileSystemConfigEfsFileSystemConfigProperty): any {
+export function tfDomainDefaultUserSettingsCustomFileSystemConfigEfsFileSystemConfigPropertyToHclTerraform(struct?: TfDomain.DefaultUserSettingsCustomFileSystemConfigEfsFileSystemConfigPropertyOutputReference | TfDomain.DefaultUserSettingsCustomFileSystemConfigEfsFileSystemConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2048,25 +2048,25 @@ export function awsSagemakerDomainDefaultUserSettingsCustomFileSystemConfigEfsFi
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsCustomFileSystemConfigPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsCustomFileSystemConfigProperty | cdktn.IResolvable): any {
+export function tfDomainDefaultUserSettingsCustomFileSystemConfigPropertyToTerraform(struct?: TfDomain.DefaultUserSettingsCustomFileSystemConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    efs_file_system_config: awsSagemakerDomainDefaultUserSettingsCustomFileSystemConfigEfsFileSystemConfigPropertyToTerraform(struct!.efsFileSystemConfig),
+    efs_file_system_config: tfDomainDefaultUserSettingsCustomFileSystemConfigEfsFileSystemConfigPropertyToTerraform(struct!.efsFileSystemConfig),
   }
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsCustomFileSystemConfigPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsCustomFileSystemConfigProperty | cdktn.IResolvable): any {
+export function tfDomainDefaultUserSettingsCustomFileSystemConfigPropertyToHclTerraform(struct?: TfDomain.DefaultUserSettingsCustomFileSystemConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     efs_file_system_config: {
-      value: awsSagemakerDomainDefaultUserSettingsCustomFileSystemConfigEfsFileSystemConfigPropertyToHclTerraform(struct!.efsFileSystemConfig),
+      value: tfDomainDefaultUserSettingsCustomFileSystemConfigEfsFileSystemConfigPropertyToHclTerraform(struct!.efsFileSystemConfig),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultUserSettingsCustomFileSystemConfigEfsFileSystemConfigPropertyList",
@@ -2078,7 +2078,7 @@ export function awsSagemakerDomainDefaultUserSettingsCustomFileSystemConfigPrope
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsCustomPosixUserConfigPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsCustomPosixUserConfigPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsCustomPosixUserConfigProperty): any {
+export function tfDomainDefaultUserSettingsCustomPosixUserConfigPropertyToTerraform(struct?: TfDomain.DefaultUserSettingsCustomPosixUserConfigPropertyOutputReference | TfDomain.DefaultUserSettingsCustomPosixUserConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2090,7 +2090,7 @@ export function awsSagemakerDomainDefaultUserSettingsCustomPosixUserConfigProper
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsCustomPosixUserConfigPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsCustomPosixUserConfigPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsCustomPosixUserConfigProperty): any {
+export function tfDomainDefaultUserSettingsCustomPosixUserConfigPropertyToHclTerraform(struct?: TfDomain.DefaultUserSettingsCustomPosixUserConfigPropertyOutputReference | TfDomain.DefaultUserSettingsCustomPosixUserConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2115,7 +2115,7 @@ export function awsSagemakerDomainDefaultUserSettingsCustomPosixUserConfigProper
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsProperty): any {
+export function tfDomainDefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsPropertyToTerraform(struct?: TfDomain.DefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsPropertyOutputReference | TfDomain.DefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2129,7 +2129,7 @@ export function awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsAppLif
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsProperty): any {
+export function tfDomainDefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsPropertyToHclTerraform(struct?: TfDomain.DefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsPropertyOutputReference | TfDomain.DefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2166,25 +2166,25 @@ export function awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsAppLif
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementProperty): any {
+export function tfDomainDefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementPropertyToTerraform(struct?: TfDomain.DefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementPropertyOutputReference | TfDomain.DefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    idle_settings: awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsPropertyToTerraform(struct!.idleSettings),
+    idle_settings: tfDomainDefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsPropertyToTerraform(struct!.idleSettings),
   }
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementProperty): any {
+export function tfDomainDefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementPropertyToHclTerraform(struct?: TfDomain.DefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementPropertyOutputReference | TfDomain.DefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     idle_settings: {
-      value: awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsPropertyToHclTerraform(struct!.idleSettings),
+      value: tfDomainDefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsPropertyToHclTerraform(struct!.idleSettings),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsPropertyList",
@@ -2196,7 +2196,7 @@ export function awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsAppLif
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsCodeRepositoryPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsJupyterLabAppSettingsCodeRepositoryProperty | cdktn.IResolvable): any {
+export function tfDomainDefaultUserSettingsJupyterLabAppSettingsCodeRepositoryPropertyToTerraform(struct?: TfDomain.DefaultUserSettingsJupyterLabAppSettingsCodeRepositoryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2207,7 +2207,7 @@ export function awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsCodeRe
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsCodeRepositoryPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsJupyterLabAppSettingsCodeRepositoryProperty | cdktn.IResolvable): any {
+export function tfDomainDefaultUserSettingsJupyterLabAppSettingsCodeRepositoryPropertyToHclTerraform(struct?: TfDomain.DefaultUserSettingsJupyterLabAppSettingsCodeRepositoryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2226,7 +2226,7 @@ export function awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsCodeRe
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsCustomImagePropertyToTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsJupyterLabAppSettingsCustomImageProperty | cdktn.IResolvable): any {
+export function tfDomainDefaultUserSettingsJupyterLabAppSettingsCustomImagePropertyToTerraform(struct?: TfDomain.DefaultUserSettingsJupyterLabAppSettingsCustomImageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2239,7 +2239,7 @@ export function awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsCustom
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsCustomImagePropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsJupyterLabAppSettingsCustomImageProperty | cdktn.IResolvable): any {
+export function tfDomainDefaultUserSettingsJupyterLabAppSettingsCustomImagePropertyToHclTerraform(struct?: TfDomain.DefaultUserSettingsJupyterLabAppSettingsCustomImageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2270,7 +2270,7 @@ export function awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsCustom
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsDefaultResourceSpecPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsJupyterLabAppSettingsDefaultResourceSpecPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsJupyterLabAppSettingsDefaultResourceSpecProperty): any {
+export function tfDomainDefaultUserSettingsJupyterLabAppSettingsDefaultResourceSpecPropertyToTerraform(struct?: TfDomain.DefaultUserSettingsJupyterLabAppSettingsDefaultResourceSpecPropertyOutputReference | TfDomain.DefaultUserSettingsJupyterLabAppSettingsDefaultResourceSpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2285,7 +2285,7 @@ export function awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsDefaul
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsJupyterLabAppSettingsDefaultResourceSpecPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsJupyterLabAppSettingsDefaultResourceSpecProperty): any {
+export function tfDomainDefaultUserSettingsJupyterLabAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct?: TfDomain.DefaultUserSettingsJupyterLabAppSettingsDefaultResourceSpecPropertyOutputReference | TfDomain.DefaultUserSettingsJupyterLabAppSettingsDefaultResourceSpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2328,7 +2328,7 @@ export function awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsDefaul
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsEmrSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsJupyterLabAppSettingsEmrSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsJupyterLabAppSettingsEmrSettingsProperty): any {
+export function tfDomainDefaultUserSettingsJupyterLabAppSettingsEmrSettingsPropertyToTerraform(struct?: TfDomain.DefaultUserSettingsJupyterLabAppSettingsEmrSettingsPropertyOutputReference | TfDomain.DefaultUserSettingsJupyterLabAppSettingsEmrSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2340,7 +2340,7 @@ export function awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsEmrSet
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsEmrSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsJupyterLabAppSettingsEmrSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsJupyterLabAppSettingsEmrSettingsProperty): any {
+export function tfDomainDefaultUserSettingsJupyterLabAppSettingsEmrSettingsPropertyToHclTerraform(struct?: TfDomain.DefaultUserSettingsJupyterLabAppSettingsEmrSettingsPropertyOutputReference | TfDomain.DefaultUserSettingsJupyterLabAppSettingsEmrSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2365,7 +2365,7 @@ export function awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsEmrSet
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsJupyterLabAppSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsJupyterLabAppSettingsProperty): any {
+export function tfDomainDefaultUserSettingsJupyterLabAppSettingsPropertyToTerraform(struct?: TfDomain.DefaultUserSettingsJupyterLabAppSettingsPropertyOutputReference | TfDomain.DefaultUserSettingsJupyterLabAppSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2373,16 +2373,16 @@ export function awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsProper
   return {
     built_in_lifecycle_config_arn: cdktn.stringToTerraform(struct!.builtInLifecycleConfigArn),
     lifecycle_config_arns: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.lifecycleConfigArns),
-    app_lifecycle_management: awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementPropertyToTerraform(struct!.appLifecycleManagement),
-    code_repository: cdktn.listMapper(awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsCodeRepositoryPropertyToTerraform, true)(struct!.codeRepository),
-    custom_image: cdktn.listMapper(awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsCustomImagePropertyToTerraform, true)(struct!.customImage),
-    default_resource_spec: awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsDefaultResourceSpecPropertyToTerraform(struct!.defaultResourceSpec),
-    emr_settings: awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsEmrSettingsPropertyToTerraform(struct!.emrSettings),
+    app_lifecycle_management: tfDomainDefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementPropertyToTerraform(struct!.appLifecycleManagement),
+    code_repository: cdktn.listMapper(tfDomainDefaultUserSettingsJupyterLabAppSettingsCodeRepositoryPropertyToTerraform, true)(struct!.codeRepository),
+    custom_image: cdktn.listMapper(tfDomainDefaultUserSettingsJupyterLabAppSettingsCustomImagePropertyToTerraform, true)(struct!.customImage),
+    default_resource_spec: tfDomainDefaultUserSettingsJupyterLabAppSettingsDefaultResourceSpecPropertyToTerraform(struct!.defaultResourceSpec),
+    emr_settings: tfDomainDefaultUserSettingsJupyterLabAppSettingsEmrSettingsPropertyToTerraform(struct!.emrSettings),
   }
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsJupyterLabAppSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsJupyterLabAppSettingsProperty): any {
+export function tfDomainDefaultUserSettingsJupyterLabAppSettingsPropertyToHclTerraform(struct?: TfDomain.DefaultUserSettingsJupyterLabAppSettingsPropertyOutputReference | TfDomain.DefaultUserSettingsJupyterLabAppSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2401,31 +2401,31 @@ export function awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsProper
       storageClassType: "stringList",
     },
     app_lifecycle_management: {
-      value: awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementPropertyToHclTerraform(struct!.appLifecycleManagement),
+      value: tfDomainDefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementPropertyToHclTerraform(struct!.appLifecycleManagement),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementPropertyList",
     },
     code_repository: {
-      value: cdktn.listMapperHcl(awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsCodeRepositoryPropertyToHclTerraform, true)(struct!.codeRepository),
+      value: cdktn.listMapperHcl(tfDomainDefaultUserSettingsJupyterLabAppSettingsCodeRepositoryPropertyToHclTerraform, true)(struct!.codeRepository),
       isBlock: true,
       type: "set",
       storageClassType: "DefaultUserSettingsJupyterLabAppSettingsCodeRepositoryPropertyList",
     },
     custom_image: {
-      value: cdktn.listMapperHcl(awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsCustomImagePropertyToHclTerraform, true)(struct!.customImage),
+      value: cdktn.listMapperHcl(tfDomainDefaultUserSettingsJupyterLabAppSettingsCustomImagePropertyToHclTerraform, true)(struct!.customImage),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultUserSettingsJupyterLabAppSettingsCustomImagePropertyList",
     },
     default_resource_spec: {
-      value: awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct!.defaultResourceSpec),
+      value: tfDomainDefaultUserSettingsJupyterLabAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct!.defaultResourceSpec),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultUserSettingsJupyterLabAppSettingsDefaultResourceSpecPropertyList",
     },
     emr_settings: {
-      value: awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsEmrSettingsPropertyToHclTerraform(struct!.emrSettings),
+      value: tfDomainDefaultUserSettingsJupyterLabAppSettingsEmrSettingsPropertyToHclTerraform(struct!.emrSettings),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultUserSettingsJupyterLabAppSettingsEmrSettingsPropertyList",
@@ -2437,7 +2437,7 @@ export function awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsProper
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsJupyterServerAppSettingsCodeRepositoryPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsJupyterServerAppSettingsCodeRepositoryProperty | cdktn.IResolvable): any {
+export function tfDomainDefaultUserSettingsJupyterServerAppSettingsCodeRepositoryPropertyToTerraform(struct?: TfDomain.DefaultUserSettingsJupyterServerAppSettingsCodeRepositoryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2448,7 +2448,7 @@ export function awsSagemakerDomainDefaultUserSettingsJupyterServerAppSettingsCod
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsJupyterServerAppSettingsCodeRepositoryPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsJupyterServerAppSettingsCodeRepositoryProperty | cdktn.IResolvable): any {
+export function tfDomainDefaultUserSettingsJupyterServerAppSettingsCodeRepositoryPropertyToHclTerraform(struct?: TfDomain.DefaultUserSettingsJupyterServerAppSettingsCodeRepositoryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2467,7 +2467,7 @@ export function awsSagemakerDomainDefaultUserSettingsJupyterServerAppSettingsCod
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecProperty): any {
+export function tfDomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecPropertyToTerraform(struct?: TfDomain.DefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecPropertyOutputReference | TfDomain.DefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2482,7 +2482,7 @@ export function awsSagemakerDomainDefaultUserSettingsJupyterServerAppSettingsDef
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecProperty): any {
+export function tfDomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct?: TfDomain.DefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecPropertyOutputReference | TfDomain.DefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2525,20 +2525,20 @@ export function awsSagemakerDomainDefaultUserSettingsJupyterServerAppSettingsDef
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsJupyterServerAppSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsJupyterServerAppSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsJupyterServerAppSettingsProperty): any {
+export function tfDomainDefaultUserSettingsJupyterServerAppSettingsPropertyToTerraform(struct?: TfDomain.DefaultUserSettingsJupyterServerAppSettingsPropertyOutputReference | TfDomain.DefaultUserSettingsJupyterServerAppSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     lifecycle_config_arns: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.lifecycleConfigArns),
-    code_repository: cdktn.listMapper(awsSagemakerDomainDefaultUserSettingsJupyterServerAppSettingsCodeRepositoryPropertyToTerraform, true)(struct!.codeRepository),
-    default_resource_spec: awsSagemakerDomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecPropertyToTerraform(struct!.defaultResourceSpec),
+    code_repository: cdktn.listMapper(tfDomainDefaultUserSettingsJupyterServerAppSettingsCodeRepositoryPropertyToTerraform, true)(struct!.codeRepository),
+    default_resource_spec: tfDomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecPropertyToTerraform(struct!.defaultResourceSpec),
   }
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsJupyterServerAppSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsJupyterServerAppSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsJupyterServerAppSettingsProperty): any {
+export function tfDomainDefaultUserSettingsJupyterServerAppSettingsPropertyToHclTerraform(struct?: TfDomain.DefaultUserSettingsJupyterServerAppSettingsPropertyOutputReference | TfDomain.DefaultUserSettingsJupyterServerAppSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2551,13 +2551,13 @@ export function awsSagemakerDomainDefaultUserSettingsJupyterServerAppSettingsPro
       storageClassType: "stringList",
     },
     code_repository: {
-      value: cdktn.listMapperHcl(awsSagemakerDomainDefaultUserSettingsJupyterServerAppSettingsCodeRepositoryPropertyToHclTerraform, true)(struct!.codeRepository),
+      value: cdktn.listMapperHcl(tfDomainDefaultUserSettingsJupyterServerAppSettingsCodeRepositoryPropertyToHclTerraform, true)(struct!.codeRepository),
       isBlock: true,
       type: "set",
       storageClassType: "DefaultUserSettingsJupyterServerAppSettingsCodeRepositoryPropertyList",
     },
     default_resource_spec: {
-      value: awsSagemakerDomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct!.defaultResourceSpec),
+      value: tfDomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct!.defaultResourceSpec),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecPropertyList",
@@ -2569,7 +2569,7 @@ export function awsSagemakerDomainDefaultUserSettingsJupyterServerAppSettingsPro
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsCustomImagePropertyToTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsKernelGatewayAppSettingsCustomImageProperty | cdktn.IResolvable): any {
+export function tfDomainDefaultUserSettingsKernelGatewayAppSettingsCustomImagePropertyToTerraform(struct?: TfDomain.DefaultUserSettingsKernelGatewayAppSettingsCustomImageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2582,7 +2582,7 @@ export function awsSagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsCus
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsCustomImagePropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsKernelGatewayAppSettingsCustomImageProperty | cdktn.IResolvable): any {
+export function tfDomainDefaultUserSettingsKernelGatewayAppSettingsCustomImagePropertyToHclTerraform(struct?: TfDomain.DefaultUserSettingsKernelGatewayAppSettingsCustomImageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2613,7 +2613,7 @@ export function awsSagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsCus
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecProperty): any {
+export function tfDomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecPropertyToTerraform(struct?: TfDomain.DefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecPropertyOutputReference | TfDomain.DefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2628,7 +2628,7 @@ export function awsSagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsDef
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecProperty): any {
+export function tfDomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct?: TfDomain.DefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecPropertyOutputReference | TfDomain.DefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2671,20 +2671,20 @@ export function awsSagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsDef
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsKernelGatewayAppSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsKernelGatewayAppSettingsProperty): any {
+export function tfDomainDefaultUserSettingsKernelGatewayAppSettingsPropertyToTerraform(struct?: TfDomain.DefaultUserSettingsKernelGatewayAppSettingsPropertyOutputReference | TfDomain.DefaultUserSettingsKernelGatewayAppSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     lifecycle_config_arns: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.lifecycleConfigArns),
-    custom_image: cdktn.listMapper(awsSagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsCustomImagePropertyToTerraform, true)(struct!.customImage),
-    default_resource_spec: awsSagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecPropertyToTerraform(struct!.defaultResourceSpec),
+    custom_image: cdktn.listMapper(tfDomainDefaultUserSettingsKernelGatewayAppSettingsCustomImagePropertyToTerraform, true)(struct!.customImage),
+    default_resource_spec: tfDomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecPropertyToTerraform(struct!.defaultResourceSpec),
   }
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsKernelGatewayAppSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsKernelGatewayAppSettingsProperty): any {
+export function tfDomainDefaultUserSettingsKernelGatewayAppSettingsPropertyToHclTerraform(struct?: TfDomain.DefaultUserSettingsKernelGatewayAppSettingsPropertyOutputReference | TfDomain.DefaultUserSettingsKernelGatewayAppSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2697,13 +2697,13 @@ export function awsSagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsPro
       storageClassType: "stringList",
     },
     custom_image: {
-      value: cdktn.listMapperHcl(awsSagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsCustomImagePropertyToHclTerraform, true)(struct!.customImage),
+      value: cdktn.listMapperHcl(tfDomainDefaultUserSettingsKernelGatewayAppSettingsCustomImagePropertyToHclTerraform, true)(struct!.customImage),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultUserSettingsKernelGatewayAppSettingsCustomImagePropertyList",
     },
     default_resource_spec: {
-      value: awsSagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct!.defaultResourceSpec),
+      value: tfDomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct!.defaultResourceSpec),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecPropertyList",
@@ -2715,7 +2715,7 @@ export function awsSagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsPro
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsRSessionAppSettingsCustomImagePropertyToTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsRSessionAppSettingsCustomImageProperty | cdktn.IResolvable): any {
+export function tfDomainDefaultUserSettingsRSessionAppSettingsCustomImagePropertyToTerraform(struct?: TfDomain.DefaultUserSettingsRSessionAppSettingsCustomImageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2728,7 +2728,7 @@ export function awsSagemakerDomainDefaultUserSettingsRSessionAppSettingsCustomIm
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsRSessionAppSettingsCustomImagePropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsRSessionAppSettingsCustomImageProperty | cdktn.IResolvable): any {
+export function tfDomainDefaultUserSettingsRSessionAppSettingsCustomImagePropertyToHclTerraform(struct?: TfDomain.DefaultUserSettingsRSessionAppSettingsCustomImageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2759,7 +2759,7 @@ export function awsSagemakerDomainDefaultUserSettingsRSessionAppSettingsCustomIm
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsRSessionAppSettingsDefaultResourceSpecPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsRSessionAppSettingsDefaultResourceSpecPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsRSessionAppSettingsDefaultResourceSpecProperty): any {
+export function tfDomainDefaultUserSettingsRSessionAppSettingsDefaultResourceSpecPropertyToTerraform(struct?: TfDomain.DefaultUserSettingsRSessionAppSettingsDefaultResourceSpecPropertyOutputReference | TfDomain.DefaultUserSettingsRSessionAppSettingsDefaultResourceSpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2774,7 +2774,7 @@ export function awsSagemakerDomainDefaultUserSettingsRSessionAppSettingsDefaultR
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsRSessionAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsRSessionAppSettingsDefaultResourceSpecPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsRSessionAppSettingsDefaultResourceSpecProperty): any {
+export function tfDomainDefaultUserSettingsRSessionAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct?: TfDomain.DefaultUserSettingsRSessionAppSettingsDefaultResourceSpecPropertyOutputReference | TfDomain.DefaultUserSettingsRSessionAppSettingsDefaultResourceSpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2817,32 +2817,32 @@ export function awsSagemakerDomainDefaultUserSettingsRSessionAppSettingsDefaultR
 }
 
 
-export function awsSagemakerDomainRSessionAppSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.RSessionAppSettingsPropertyOutputReference | AwsSagemakerDomain.RSessionAppSettingsProperty): any {
+export function tfDomainRSessionAppSettingsPropertyToTerraform(struct?: TfDomain.RSessionAppSettingsPropertyOutputReference | TfDomain.RSessionAppSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_image: cdktn.listMapper(awsSagemakerDomainDefaultUserSettingsRSessionAppSettingsCustomImagePropertyToTerraform, true)(struct!.customImage),
-    default_resource_spec: awsSagemakerDomainDefaultUserSettingsRSessionAppSettingsDefaultResourceSpecPropertyToTerraform(struct!.defaultResourceSpec),
+    custom_image: cdktn.listMapper(tfDomainDefaultUserSettingsRSessionAppSettingsCustomImagePropertyToTerraform, true)(struct!.customImage),
+    default_resource_spec: tfDomainDefaultUserSettingsRSessionAppSettingsDefaultResourceSpecPropertyToTerraform(struct!.defaultResourceSpec),
   }
 }
 
 
-export function awsSagemakerDomainRSessionAppSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.RSessionAppSettingsPropertyOutputReference | AwsSagemakerDomain.RSessionAppSettingsProperty): any {
+export function tfDomainRSessionAppSettingsPropertyToHclTerraform(struct?: TfDomain.RSessionAppSettingsPropertyOutputReference | TfDomain.RSessionAppSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_image: {
-      value: cdktn.listMapperHcl(awsSagemakerDomainDefaultUserSettingsRSessionAppSettingsCustomImagePropertyToHclTerraform, true)(struct!.customImage),
+      value: cdktn.listMapperHcl(tfDomainDefaultUserSettingsRSessionAppSettingsCustomImagePropertyToHclTerraform, true)(struct!.customImage),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultUserSettingsRSessionAppSettingsCustomImagePropertyList",
     },
     default_resource_spec: {
-      value: awsSagemakerDomainDefaultUserSettingsRSessionAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct!.defaultResourceSpec),
+      value: tfDomainDefaultUserSettingsRSessionAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct!.defaultResourceSpec),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultUserSettingsRSessionAppSettingsDefaultResourceSpecPropertyList",
@@ -2854,7 +2854,7 @@ export function awsSagemakerDomainRSessionAppSettingsPropertyToHclTerraform(stru
 }
 
 
-export function awsSagemakerDomainRStudioServerProAppSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.RStudioServerProAppSettingsPropertyOutputReference | AwsSagemakerDomain.RStudioServerProAppSettingsProperty): any {
+export function tfDomainRStudioServerProAppSettingsPropertyToTerraform(struct?: TfDomain.RStudioServerProAppSettingsPropertyOutputReference | TfDomain.RStudioServerProAppSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2866,7 +2866,7 @@ export function awsSagemakerDomainRStudioServerProAppSettingsPropertyToTerraform
 }
 
 
-export function awsSagemakerDomainRStudioServerProAppSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.RStudioServerProAppSettingsPropertyOutputReference | AwsSagemakerDomain.RStudioServerProAppSettingsProperty): any {
+export function tfDomainRStudioServerProAppSettingsPropertyToHclTerraform(struct?: TfDomain.RStudioServerProAppSettingsPropertyOutputReference | TfDomain.RStudioServerProAppSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2891,7 +2891,7 @@ export function awsSagemakerDomainRStudioServerProAppSettingsPropertyToHclTerraf
 }
 
 
-export function awsSagemakerDomainSharingSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.SharingSettingsPropertyOutputReference | AwsSagemakerDomain.SharingSettingsProperty): any {
+export function tfDomainSharingSettingsPropertyToTerraform(struct?: TfDomain.SharingSettingsPropertyOutputReference | TfDomain.SharingSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2904,7 +2904,7 @@ export function awsSagemakerDomainSharingSettingsPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsSagemakerDomainSharingSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.SharingSettingsPropertyOutputReference | AwsSagemakerDomain.SharingSettingsProperty): any {
+export function tfDomainSharingSettingsPropertyToHclTerraform(struct?: TfDomain.SharingSettingsPropertyOutputReference | TfDomain.SharingSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2935,7 +2935,7 @@ export function awsSagemakerDomainSharingSettingsPropertyToHclTerraform(struct?:
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsSpaceStorageSettingsDefaultEbsStorageSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsSpaceStorageSettingsDefaultEbsStorageSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsSpaceStorageSettingsDefaultEbsStorageSettingsProperty): any {
+export function tfDomainDefaultUserSettingsSpaceStorageSettingsDefaultEbsStorageSettingsPropertyToTerraform(struct?: TfDomain.DefaultUserSettingsSpaceStorageSettingsDefaultEbsStorageSettingsPropertyOutputReference | TfDomain.DefaultUserSettingsSpaceStorageSettingsDefaultEbsStorageSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2947,7 +2947,7 @@ export function awsSagemakerDomainDefaultUserSettingsSpaceStorageSettingsDefault
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsSpaceStorageSettingsDefaultEbsStorageSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsSpaceStorageSettingsDefaultEbsStorageSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsSpaceStorageSettingsDefaultEbsStorageSettingsProperty): any {
+export function tfDomainDefaultUserSettingsSpaceStorageSettingsDefaultEbsStorageSettingsPropertyToHclTerraform(struct?: TfDomain.DefaultUserSettingsSpaceStorageSettingsDefaultEbsStorageSettingsPropertyOutputReference | TfDomain.DefaultUserSettingsSpaceStorageSettingsDefaultEbsStorageSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2972,25 +2972,25 @@ export function awsSagemakerDomainDefaultUserSettingsSpaceStorageSettingsDefault
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsSpaceStorageSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsSpaceStorageSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsSpaceStorageSettingsProperty): any {
+export function tfDomainDefaultUserSettingsSpaceStorageSettingsPropertyToTerraform(struct?: TfDomain.DefaultUserSettingsSpaceStorageSettingsPropertyOutputReference | TfDomain.DefaultUserSettingsSpaceStorageSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    default_ebs_storage_settings: awsSagemakerDomainDefaultUserSettingsSpaceStorageSettingsDefaultEbsStorageSettingsPropertyToTerraform(struct!.defaultEbsStorageSettings),
+    default_ebs_storage_settings: tfDomainDefaultUserSettingsSpaceStorageSettingsDefaultEbsStorageSettingsPropertyToTerraform(struct!.defaultEbsStorageSettings),
   }
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsSpaceStorageSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsSpaceStorageSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsSpaceStorageSettingsProperty): any {
+export function tfDomainDefaultUserSettingsSpaceStorageSettingsPropertyToHclTerraform(struct?: TfDomain.DefaultUserSettingsSpaceStorageSettingsPropertyOutputReference | TfDomain.DefaultUserSettingsSpaceStorageSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     default_ebs_storage_settings: {
-      value: awsSagemakerDomainDefaultUserSettingsSpaceStorageSettingsDefaultEbsStorageSettingsPropertyToHclTerraform(struct!.defaultEbsStorageSettings),
+      value: tfDomainDefaultUserSettingsSpaceStorageSettingsDefaultEbsStorageSettingsPropertyToHclTerraform(struct!.defaultEbsStorageSettings),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultUserSettingsSpaceStorageSettingsDefaultEbsStorageSettingsPropertyList",
@@ -3002,7 +3002,7 @@ export function awsSagemakerDomainDefaultUserSettingsSpaceStorageSettingsPropert
 }
 
 
-export function awsSagemakerDomainStudioWebPortalSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.StudioWebPortalSettingsPropertyOutputReference | AwsSagemakerDomain.StudioWebPortalSettingsProperty): any {
+export function tfDomainStudioWebPortalSettingsPropertyToTerraform(struct?: TfDomain.StudioWebPortalSettingsPropertyOutputReference | TfDomain.StudioWebPortalSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3015,7 +3015,7 @@ export function awsSagemakerDomainStudioWebPortalSettingsPropertyToTerraform(str
 }
 
 
-export function awsSagemakerDomainStudioWebPortalSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.StudioWebPortalSettingsPropertyOutputReference | AwsSagemakerDomain.StudioWebPortalSettingsProperty): any {
+export function tfDomainStudioWebPortalSettingsPropertyToHclTerraform(struct?: TfDomain.StudioWebPortalSettingsPropertyOutputReference | TfDomain.StudioWebPortalSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3046,7 +3046,7 @@ export function awsSagemakerDomainStudioWebPortalSettingsPropertyToHclTerraform(
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecProperty): any {
+export function tfDomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecPropertyToTerraform(struct?: TfDomain.DefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecPropertyOutputReference | TfDomain.DefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3061,7 +3061,7 @@ export function awsSagemakerDomainDefaultUserSettingsTensorBoardAppSettingsDefau
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecProperty): any {
+export function tfDomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct?: TfDomain.DefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecPropertyOutputReference | TfDomain.DefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3104,25 +3104,25 @@ export function awsSagemakerDomainDefaultUserSettingsTensorBoardAppSettingsDefau
 }
 
 
-export function awsSagemakerDomainTensorBoardAppSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.TensorBoardAppSettingsPropertyOutputReference | AwsSagemakerDomain.TensorBoardAppSettingsProperty): any {
+export function tfDomainTensorBoardAppSettingsPropertyToTerraform(struct?: TfDomain.TensorBoardAppSettingsPropertyOutputReference | TfDomain.TensorBoardAppSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    default_resource_spec: awsSagemakerDomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecPropertyToTerraform(struct!.defaultResourceSpec),
+    default_resource_spec: tfDomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecPropertyToTerraform(struct!.defaultResourceSpec),
   }
 }
 
 
-export function awsSagemakerDomainTensorBoardAppSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.TensorBoardAppSettingsPropertyOutputReference | AwsSagemakerDomain.TensorBoardAppSettingsProperty): any {
+export function tfDomainTensorBoardAppSettingsPropertyToHclTerraform(struct?: TfDomain.TensorBoardAppSettingsPropertyOutputReference | TfDomain.TensorBoardAppSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     default_resource_spec: {
-      value: awsSagemakerDomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct!.defaultResourceSpec),
+      value: tfDomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecPropertyToHclTerraform(struct!.defaultResourceSpec),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecPropertyList",
@@ -3134,7 +3134,7 @@ export function awsSagemakerDomainTensorBoardAppSettingsPropertyToHclTerraform(s
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsProperty): any {
+export function tfDomainDefaultUserSettingsPropertyToTerraform(struct?: TfDomain.DefaultUserSettingsPropertyOutputReference | TfDomain.DefaultUserSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3145,24 +3145,24 @@ export function awsSagemakerDomainDefaultUserSettingsPropertyToTerraform(struct?
     execution_role: cdktn.stringToTerraform(struct!.executionRole),
     security_groups: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.securityGroups),
     studio_web_portal: cdktn.stringToTerraform(struct!.studioWebPortal),
-    canvas_app_settings: awsSagemakerDomainCanvasAppSettingsPropertyToTerraform(struct!.canvasAppSettings),
-    code_editor_app_settings: awsSagemakerDomainCodeEditorAppSettingsPropertyToTerraform(struct!.codeEditorAppSettings),
-    custom_file_system_config: cdktn.listMapper(awsSagemakerDomainDefaultUserSettingsCustomFileSystemConfigPropertyToTerraform, true)(struct!.customFileSystemConfig),
-    custom_posix_user_config: awsSagemakerDomainDefaultUserSettingsCustomPosixUserConfigPropertyToTerraform(struct!.customPosixUserConfig),
-    jupyter_lab_app_settings: awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsPropertyToTerraform(struct!.jupyterLabAppSettings),
-    jupyter_server_app_settings: awsSagemakerDomainDefaultUserSettingsJupyterServerAppSettingsPropertyToTerraform(struct!.jupyterServerAppSettings),
-    kernel_gateway_app_settings: awsSagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsPropertyToTerraform(struct!.kernelGatewayAppSettings),
-    r_session_app_settings: awsSagemakerDomainRSessionAppSettingsPropertyToTerraform(struct!.rSessionAppSettings),
-    r_studio_server_pro_app_settings: awsSagemakerDomainRStudioServerProAppSettingsPropertyToTerraform(struct!.rStudioServerProAppSettings),
-    sharing_settings: awsSagemakerDomainSharingSettingsPropertyToTerraform(struct!.sharingSettings),
-    space_storage_settings: awsSagemakerDomainDefaultUserSettingsSpaceStorageSettingsPropertyToTerraform(struct!.spaceStorageSettings),
-    studio_web_portal_settings: awsSagemakerDomainStudioWebPortalSettingsPropertyToTerraform(struct!.studioWebPortalSettings),
-    tensor_board_app_settings: awsSagemakerDomainTensorBoardAppSettingsPropertyToTerraform(struct!.tensorBoardAppSettings),
+    canvas_app_settings: tfDomainCanvasAppSettingsPropertyToTerraform(struct!.canvasAppSettings),
+    code_editor_app_settings: tfDomainCodeEditorAppSettingsPropertyToTerraform(struct!.codeEditorAppSettings),
+    custom_file_system_config: cdktn.listMapper(tfDomainDefaultUserSettingsCustomFileSystemConfigPropertyToTerraform, true)(struct!.customFileSystemConfig),
+    custom_posix_user_config: tfDomainDefaultUserSettingsCustomPosixUserConfigPropertyToTerraform(struct!.customPosixUserConfig),
+    jupyter_lab_app_settings: tfDomainDefaultUserSettingsJupyterLabAppSettingsPropertyToTerraform(struct!.jupyterLabAppSettings),
+    jupyter_server_app_settings: tfDomainDefaultUserSettingsJupyterServerAppSettingsPropertyToTerraform(struct!.jupyterServerAppSettings),
+    kernel_gateway_app_settings: tfDomainDefaultUserSettingsKernelGatewayAppSettingsPropertyToTerraform(struct!.kernelGatewayAppSettings),
+    r_session_app_settings: tfDomainRSessionAppSettingsPropertyToTerraform(struct!.rSessionAppSettings),
+    r_studio_server_pro_app_settings: tfDomainRStudioServerProAppSettingsPropertyToTerraform(struct!.rStudioServerProAppSettings),
+    sharing_settings: tfDomainSharingSettingsPropertyToTerraform(struct!.sharingSettings),
+    space_storage_settings: tfDomainDefaultUserSettingsSpaceStorageSettingsPropertyToTerraform(struct!.spaceStorageSettings),
+    studio_web_portal_settings: tfDomainStudioWebPortalSettingsPropertyToTerraform(struct!.studioWebPortalSettings),
+    tensor_board_app_settings: tfDomainTensorBoardAppSettingsPropertyToTerraform(struct!.tensorBoardAppSettings),
   }
 }
 
 
-export function awsSagemakerDomainDefaultUserSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.DefaultUserSettingsPropertyOutputReference | AwsSagemakerDomain.DefaultUserSettingsProperty): any {
+export function tfDomainDefaultUserSettingsPropertyToHclTerraform(struct?: TfDomain.DefaultUserSettingsPropertyOutputReference | TfDomain.DefaultUserSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3199,79 +3199,79 @@ export function awsSagemakerDomainDefaultUserSettingsPropertyToHclTerraform(stru
       storageClassType: "string",
     },
     canvas_app_settings: {
-      value: awsSagemakerDomainCanvasAppSettingsPropertyToHclTerraform(struct!.canvasAppSettings),
+      value: tfDomainCanvasAppSettingsPropertyToHclTerraform(struct!.canvasAppSettings),
       isBlock: true,
       type: "list",
       storageClassType: "CanvasAppSettingsPropertyList",
     },
     code_editor_app_settings: {
-      value: awsSagemakerDomainCodeEditorAppSettingsPropertyToHclTerraform(struct!.codeEditorAppSettings),
+      value: tfDomainCodeEditorAppSettingsPropertyToHclTerraform(struct!.codeEditorAppSettings),
       isBlock: true,
       type: "list",
       storageClassType: "CodeEditorAppSettingsPropertyList",
     },
     custom_file_system_config: {
-      value: cdktn.listMapperHcl(awsSagemakerDomainDefaultUserSettingsCustomFileSystemConfigPropertyToHclTerraform, true)(struct!.customFileSystemConfig),
+      value: cdktn.listMapperHcl(tfDomainDefaultUserSettingsCustomFileSystemConfigPropertyToHclTerraform, true)(struct!.customFileSystemConfig),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultUserSettingsCustomFileSystemConfigPropertyList",
     },
     custom_posix_user_config: {
-      value: awsSagemakerDomainDefaultUserSettingsCustomPosixUserConfigPropertyToHclTerraform(struct!.customPosixUserConfig),
+      value: tfDomainDefaultUserSettingsCustomPosixUserConfigPropertyToHclTerraform(struct!.customPosixUserConfig),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultUserSettingsCustomPosixUserConfigPropertyList",
     },
     jupyter_lab_app_settings: {
-      value: awsSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsPropertyToHclTerraform(struct!.jupyterLabAppSettings),
+      value: tfDomainDefaultUserSettingsJupyterLabAppSettingsPropertyToHclTerraform(struct!.jupyterLabAppSettings),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultUserSettingsJupyterLabAppSettingsPropertyList",
     },
     jupyter_server_app_settings: {
-      value: awsSagemakerDomainDefaultUserSettingsJupyterServerAppSettingsPropertyToHclTerraform(struct!.jupyterServerAppSettings),
+      value: tfDomainDefaultUserSettingsJupyterServerAppSettingsPropertyToHclTerraform(struct!.jupyterServerAppSettings),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultUserSettingsJupyterServerAppSettingsPropertyList",
     },
     kernel_gateway_app_settings: {
-      value: awsSagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsPropertyToHclTerraform(struct!.kernelGatewayAppSettings),
+      value: tfDomainDefaultUserSettingsKernelGatewayAppSettingsPropertyToHclTerraform(struct!.kernelGatewayAppSettings),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultUserSettingsKernelGatewayAppSettingsPropertyList",
     },
     r_session_app_settings: {
-      value: awsSagemakerDomainRSessionAppSettingsPropertyToHclTerraform(struct!.rSessionAppSettings),
+      value: tfDomainRSessionAppSettingsPropertyToHclTerraform(struct!.rSessionAppSettings),
       isBlock: true,
       type: "list",
       storageClassType: "RSessionAppSettingsPropertyList",
     },
     r_studio_server_pro_app_settings: {
-      value: awsSagemakerDomainRStudioServerProAppSettingsPropertyToHclTerraform(struct!.rStudioServerProAppSettings),
+      value: tfDomainRStudioServerProAppSettingsPropertyToHclTerraform(struct!.rStudioServerProAppSettings),
       isBlock: true,
       type: "list",
       storageClassType: "RStudioServerProAppSettingsPropertyList",
     },
     sharing_settings: {
-      value: awsSagemakerDomainSharingSettingsPropertyToHclTerraform(struct!.sharingSettings),
+      value: tfDomainSharingSettingsPropertyToHclTerraform(struct!.sharingSettings),
       isBlock: true,
       type: "list",
       storageClassType: "SharingSettingsPropertyList",
     },
     space_storage_settings: {
-      value: awsSagemakerDomainDefaultUserSettingsSpaceStorageSettingsPropertyToHclTerraform(struct!.spaceStorageSettings),
+      value: tfDomainDefaultUserSettingsSpaceStorageSettingsPropertyToHclTerraform(struct!.spaceStorageSettings),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultUserSettingsSpaceStorageSettingsPropertyList",
     },
     studio_web_portal_settings: {
-      value: awsSagemakerDomainStudioWebPortalSettingsPropertyToHclTerraform(struct!.studioWebPortalSettings),
+      value: tfDomainStudioWebPortalSettingsPropertyToHclTerraform(struct!.studioWebPortalSettings),
       isBlock: true,
       type: "list",
       storageClassType: "StudioWebPortalSettingsPropertyList",
     },
     tensor_board_app_settings: {
-      value: awsSagemakerDomainTensorBoardAppSettingsPropertyToHclTerraform(struct!.tensorBoardAppSettings),
+      value: tfDomainTensorBoardAppSettingsPropertyToHclTerraform(struct!.tensorBoardAppSettings),
       isBlock: true,
       type: "list",
       storageClassType: "TensorBoardAppSettingsPropertyList",
@@ -3283,7 +3283,7 @@ export function awsSagemakerDomainDefaultUserSettingsPropertyToHclTerraform(stru
 }
 
 
-export function awsSagemakerDomainDockerSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.DockerSettingsPropertyOutputReference | AwsSagemakerDomain.DockerSettingsProperty): any {
+export function tfDomainDockerSettingsPropertyToTerraform(struct?: TfDomain.DockerSettingsPropertyOutputReference | TfDomain.DockerSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3295,7 +3295,7 @@ export function awsSagemakerDomainDockerSettingsPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsSagemakerDomainDockerSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.DockerSettingsPropertyOutputReference | AwsSagemakerDomain.DockerSettingsProperty): any {
+export function tfDomainDockerSettingsPropertyToHclTerraform(struct?: TfDomain.DockerSettingsPropertyOutputReference | TfDomain.DockerSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3320,7 +3320,7 @@ export function awsSagemakerDomainDockerSettingsPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsSagemakerDomainDomainSettingsRStudioServerProDomainSettingsDefaultResourceSpecPropertyToTerraform(struct?: AwsSagemakerDomain.DomainSettingsRStudioServerProDomainSettingsDefaultResourceSpecPropertyOutputReference | AwsSagemakerDomain.DomainSettingsRStudioServerProDomainSettingsDefaultResourceSpecProperty): any {
+export function tfDomainDomainSettingsRStudioServerProDomainSettingsDefaultResourceSpecPropertyToTerraform(struct?: TfDomain.DomainSettingsRStudioServerProDomainSettingsDefaultResourceSpecPropertyOutputReference | TfDomain.DomainSettingsRStudioServerProDomainSettingsDefaultResourceSpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3335,7 +3335,7 @@ export function awsSagemakerDomainDomainSettingsRStudioServerProDomainSettingsDe
 }
 
 
-export function awsSagemakerDomainDomainSettingsRStudioServerProDomainSettingsDefaultResourceSpecPropertyToHclTerraform(struct?: AwsSagemakerDomain.DomainSettingsRStudioServerProDomainSettingsDefaultResourceSpecPropertyOutputReference | AwsSagemakerDomain.DomainSettingsRStudioServerProDomainSettingsDefaultResourceSpecProperty): any {
+export function tfDomainDomainSettingsRStudioServerProDomainSettingsDefaultResourceSpecPropertyToHclTerraform(struct?: TfDomain.DomainSettingsRStudioServerProDomainSettingsDefaultResourceSpecPropertyOutputReference | TfDomain.DomainSettingsRStudioServerProDomainSettingsDefaultResourceSpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3378,7 +3378,7 @@ export function awsSagemakerDomainDomainSettingsRStudioServerProDomainSettingsDe
 }
 
 
-export function awsSagemakerDomainRStudioServerProDomainSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.RStudioServerProDomainSettingsPropertyOutputReference | AwsSagemakerDomain.RStudioServerProDomainSettingsProperty): any {
+export function tfDomainRStudioServerProDomainSettingsPropertyToTerraform(struct?: TfDomain.RStudioServerProDomainSettingsPropertyOutputReference | TfDomain.RStudioServerProDomainSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3387,12 +3387,12 @@ export function awsSagemakerDomainRStudioServerProDomainSettingsPropertyToTerraf
     domain_execution_role_arn: cdktn.stringToTerraform(struct!.domainExecutionRoleArn),
     r_studio_connect_url: cdktn.stringToTerraform(struct!.rStudioConnectUrl),
     r_studio_package_manager_url: cdktn.stringToTerraform(struct!.rStudioPackageManagerUrl),
-    default_resource_spec: awsSagemakerDomainDomainSettingsRStudioServerProDomainSettingsDefaultResourceSpecPropertyToTerraform(struct!.defaultResourceSpec),
+    default_resource_spec: tfDomainDomainSettingsRStudioServerProDomainSettingsDefaultResourceSpecPropertyToTerraform(struct!.defaultResourceSpec),
   }
 }
 
 
-export function awsSagemakerDomainRStudioServerProDomainSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.RStudioServerProDomainSettingsPropertyOutputReference | AwsSagemakerDomain.RStudioServerProDomainSettingsProperty): any {
+export function tfDomainRStudioServerProDomainSettingsPropertyToHclTerraform(struct?: TfDomain.RStudioServerProDomainSettingsPropertyOutputReference | TfDomain.RStudioServerProDomainSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3417,7 +3417,7 @@ export function awsSagemakerDomainRStudioServerProDomainSettingsPropertyToHclTer
       storageClassType: "string",
     },
     default_resource_spec: {
-      value: awsSagemakerDomainDomainSettingsRStudioServerProDomainSettingsDefaultResourceSpecPropertyToHclTerraform(struct!.defaultResourceSpec),
+      value: tfDomainDomainSettingsRStudioServerProDomainSettingsDefaultResourceSpecPropertyToHclTerraform(struct!.defaultResourceSpec),
       isBlock: true,
       type: "list",
       storageClassType: "DomainSettingsRStudioServerProDomainSettingsDefaultResourceSpecPropertyList",
@@ -3429,7 +3429,7 @@ export function awsSagemakerDomainRStudioServerProDomainSettingsPropertyToHclTer
 }
 
 
-export function awsSagemakerDomainTrustedIdentityPropagationSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.TrustedIdentityPropagationSettingsPropertyOutputReference | AwsSagemakerDomain.TrustedIdentityPropagationSettingsProperty): any {
+export function tfDomainTrustedIdentityPropagationSettingsPropertyToTerraform(struct?: TfDomain.TrustedIdentityPropagationSettingsPropertyOutputReference | TfDomain.TrustedIdentityPropagationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3440,7 +3440,7 @@ export function awsSagemakerDomainTrustedIdentityPropagationSettingsPropertyToTe
 }
 
 
-export function awsSagemakerDomainTrustedIdentityPropagationSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.TrustedIdentityPropagationSettingsPropertyOutputReference | AwsSagemakerDomain.TrustedIdentityPropagationSettingsProperty): any {
+export function tfDomainTrustedIdentityPropagationSettingsPropertyToHclTerraform(struct?: TfDomain.TrustedIdentityPropagationSettingsPropertyOutputReference | TfDomain.TrustedIdentityPropagationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3459,7 +3459,7 @@ export function awsSagemakerDomainTrustedIdentityPropagationSettingsPropertyToHc
 }
 
 
-export function awsSagemakerDomainDomainSettingsPropertyToTerraform(struct?: AwsSagemakerDomain.DomainSettingsPropertyOutputReference | AwsSagemakerDomain.DomainSettingsProperty): any {
+export function tfDomainDomainSettingsPropertyToTerraform(struct?: TfDomain.DomainSettingsPropertyOutputReference | TfDomain.DomainSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3467,14 +3467,14 @@ export function awsSagemakerDomainDomainSettingsPropertyToTerraform(struct?: Aws
   return {
     execution_role_identity_config: cdktn.stringToTerraform(struct!.executionRoleIdentityConfig),
     security_group_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.securityGroupIds),
-    docker_settings: awsSagemakerDomainDockerSettingsPropertyToTerraform(struct!.dockerSettings),
-    r_studio_server_pro_domain_settings: awsSagemakerDomainRStudioServerProDomainSettingsPropertyToTerraform(struct!.rStudioServerProDomainSettings),
-    trusted_identity_propagation_settings: awsSagemakerDomainTrustedIdentityPropagationSettingsPropertyToTerraform(struct!.trustedIdentityPropagationSettings),
+    docker_settings: tfDomainDockerSettingsPropertyToTerraform(struct!.dockerSettings),
+    r_studio_server_pro_domain_settings: tfDomainRStudioServerProDomainSettingsPropertyToTerraform(struct!.rStudioServerProDomainSettings),
+    trusted_identity_propagation_settings: tfDomainTrustedIdentityPropagationSettingsPropertyToTerraform(struct!.trustedIdentityPropagationSettings),
   }
 }
 
 
-export function awsSagemakerDomainDomainSettingsPropertyToHclTerraform(struct?: AwsSagemakerDomain.DomainSettingsPropertyOutputReference | AwsSagemakerDomain.DomainSettingsProperty): any {
+export function tfDomainDomainSettingsPropertyToHclTerraform(struct?: TfDomain.DomainSettingsPropertyOutputReference | TfDomain.DomainSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3493,19 +3493,19 @@ export function awsSagemakerDomainDomainSettingsPropertyToHclTerraform(struct?: 
       storageClassType: "stringList",
     },
     docker_settings: {
-      value: awsSagemakerDomainDockerSettingsPropertyToHclTerraform(struct!.dockerSettings),
+      value: tfDomainDockerSettingsPropertyToHclTerraform(struct!.dockerSettings),
       isBlock: true,
       type: "list",
       storageClassType: "DockerSettingsPropertyList",
     },
     r_studio_server_pro_domain_settings: {
-      value: awsSagemakerDomainRStudioServerProDomainSettingsPropertyToHclTerraform(struct!.rStudioServerProDomainSettings),
+      value: tfDomainRStudioServerProDomainSettingsPropertyToHclTerraform(struct!.rStudioServerProDomainSettings),
       isBlock: true,
       type: "list",
       storageClassType: "RStudioServerProDomainSettingsPropertyList",
     },
     trusted_identity_propagation_settings: {
-      value: awsSagemakerDomainTrustedIdentityPropagationSettingsPropertyToHclTerraform(struct!.trustedIdentityPropagationSettings),
+      value: tfDomainTrustedIdentityPropagationSettingsPropertyToHclTerraform(struct!.trustedIdentityPropagationSettings),
       isBlock: true,
       type: "list",
       storageClassType: "TrustedIdentityPropagationSettingsPropertyList",
@@ -3517,7 +3517,7 @@ export function awsSagemakerDomainDomainSettingsPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsSagemakerDomainRetentionPolicyPropertyToTerraform(struct?: AwsSagemakerDomain.RetentionPolicyPropertyOutputReference | AwsSagemakerDomain.RetentionPolicyProperty): any {
+export function tfDomainRetentionPolicyPropertyToTerraform(struct?: TfDomain.RetentionPolicyPropertyOutputReference | TfDomain.RetentionPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3528,7 +3528,7 @@ export function awsSagemakerDomainRetentionPolicyPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsSagemakerDomainRetentionPolicyPropertyToHclTerraform(struct?: AwsSagemakerDomain.RetentionPolicyPropertyOutputReference | AwsSagemakerDomain.RetentionPolicyProperty): any {
+export function tfDomainRetentionPolicyPropertyToHclTerraform(struct?: TfDomain.RetentionPolicyPropertyOutputReference | TfDomain.RetentionPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3547,14 +3547,14 @@ export function awsSagemakerDomainRetentionPolicyPropertyToHclTerraform(struct?:
 }
 
 
-export namespace AwsSagemakerDomain {
+export namespace TfDomain {
 export interface DefaultSpaceSettingsCustomFileSystemConfigEfsFileSystemConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#file_system_id AwsSagemakerDomain#file_system_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#file_system_id TfDomain#file_system_id}
   */
   readonly fileSystemId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#file_system_path AwsSagemakerDomain#file_system_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#file_system_path TfDomain#file_system_path}
   */
   readonly fileSystemPath: string;
 }
@@ -3626,7 +3626,7 @@ export interface DefaultSpaceSettingsCustomFileSystemConfigProperty {
   /**
   * efs_file_system_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#efs_file_system_config AwsSagemakerDomain#efs_file_system_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#efs_file_system_config TfDomain#efs_file_system_config}
   */
   readonly efsFileSystemConfig?: DefaultSpaceSettingsCustomFileSystemConfigEfsFileSystemConfigProperty;
 }
@@ -3712,11 +3712,11 @@ export class DefaultSpaceSettingsCustomFileSystemConfigPropertyList extends cdkt
 }
 export interface DefaultSpaceSettingsCustomPosixUserConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#gid AwsSagemakerDomain#gid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#gid TfDomain#gid}
   */
   readonly gid: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#uid AwsSagemakerDomain#uid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#uid TfDomain#uid}
   */
   readonly uid: number;
 }
@@ -3786,19 +3786,19 @@ export class DefaultSpaceSettingsCustomPosixUserConfigPropertyOutputReference ex
 }
 export interface DefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#idle_timeout_in_minutes AwsSagemakerDomain#idle_timeout_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#idle_timeout_in_minutes TfDomain#idle_timeout_in_minutes}
   */
   readonly idleTimeoutInMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_management AwsSagemakerDomain#lifecycle_management}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_management TfDomain#lifecycle_management}
   */
   readonly lifecycleManagement?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#max_idle_timeout_in_minutes AwsSagemakerDomain#max_idle_timeout_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#max_idle_timeout_in_minutes TfDomain#max_idle_timeout_in_minutes}
   */
   readonly maxIdleTimeoutInMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#min_idle_timeout_in_minutes AwsSagemakerDomain#min_idle_timeout_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#min_idle_timeout_in_minutes TfDomain#min_idle_timeout_in_minutes}
   */
   readonly minIdleTimeoutInMinutes?: number;
 }
@@ -3920,7 +3920,7 @@ export interface DefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagement
   /**
   * idle_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#idle_settings AwsSagemakerDomain#idle_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#idle_settings TfDomain#idle_settings}
   */
   readonly idleSettings?: DefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsProperty;
 }
@@ -3974,7 +3974,7 @@ export class DefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementProp
 }
 export interface DefaultSpaceSettingsJupyterLabAppSettingsCodeRepositoryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#repository_url AwsSagemakerDomain#repository_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#repository_url TfDomain#repository_url}
   */
   readonly repositoryUrl: string;
 }
@@ -4057,15 +4057,15 @@ export class DefaultSpaceSettingsJupyterLabAppSettingsCodeRepositoryPropertyList
 }
 export interface DefaultSpaceSettingsJupyterLabAppSettingsCustomImageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#app_image_config_name AwsSagemakerDomain#app_image_config_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#app_image_config_name TfDomain#app_image_config_name}
   */
   readonly appImageConfigName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#image_name AwsSagemakerDomain#image_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#image_name TfDomain#image_name}
   */
   readonly imageName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#image_version_number AwsSagemakerDomain#image_version_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#image_version_number TfDomain#image_version_number}
   */
   readonly imageVersionNumber?: number;
 }
@@ -4189,23 +4189,23 @@ export class DefaultSpaceSettingsJupyterLabAppSettingsCustomImagePropertyList ex
 }
 export interface DefaultSpaceSettingsJupyterLabAppSettingsDefaultResourceSpecProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#instance_type AwsSagemakerDomain#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#instance_type TfDomain#instance_type}
   */
   readonly instanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arn AwsSagemakerDomain#lifecycle_config_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arn TfDomain#lifecycle_config_arn}
   */
   readonly lifecycleConfigArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_arn AwsSagemakerDomain#sagemaker_image_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_arn TfDomain#sagemaker_image_arn}
   */
   readonly sagemakerImageArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_alias AwsSagemakerDomain#sagemaker_image_version_alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_alias TfDomain#sagemaker_image_version_alias}
   */
   readonly sagemakerImageVersionAlias?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_arn AwsSagemakerDomain#sagemaker_image_version_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_arn TfDomain#sagemaker_image_version_arn}
   */
   readonly sagemakerImageVersionArn?: string;
 }
@@ -4347,11 +4347,11 @@ export class DefaultSpaceSettingsJupyterLabAppSettingsDefaultResourceSpecPropert
 }
 export interface DefaultSpaceSettingsJupyterLabAppSettingsEmrSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#assumable_role_arns AwsSagemakerDomain#assumable_role_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#assumable_role_arns TfDomain#assumable_role_arns}
   */
   readonly assumableRoleArns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#execution_role_arns AwsSagemakerDomain#execution_role_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#execution_role_arns TfDomain#execution_role_arns}
   */
   readonly executionRoleArns?: string[];
 }
@@ -4427,41 +4427,41 @@ export class DefaultSpaceSettingsJupyterLabAppSettingsEmrSettingsPropertyOutputR
 }
 export interface DefaultSpaceSettingsJupyterLabAppSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#built_in_lifecycle_config_arn AwsSagemakerDomain#built_in_lifecycle_config_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#built_in_lifecycle_config_arn TfDomain#built_in_lifecycle_config_arn}
   */
   readonly builtInLifecycleConfigArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arns AwsSagemakerDomain#lifecycle_config_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arns TfDomain#lifecycle_config_arns}
   */
   readonly lifecycleConfigArns?: string[];
   /**
   * app_lifecycle_management block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#app_lifecycle_management AwsSagemakerDomain#app_lifecycle_management}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#app_lifecycle_management TfDomain#app_lifecycle_management}
   */
   readonly appLifecycleManagement?: DefaultSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementProperty;
   /**
   * code_repository block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#code_repository AwsSagemakerDomain#code_repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#code_repository TfDomain#code_repository}
   */
   readonly codeRepository?: DefaultSpaceSettingsJupyterLabAppSettingsCodeRepositoryProperty[] | cdktn.IResolvable;
   /**
   * custom_image block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#custom_image AwsSagemakerDomain#custom_image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#custom_image TfDomain#custom_image}
   */
   readonly customImage?: DefaultSpaceSettingsJupyterLabAppSettingsCustomImageProperty[] | cdktn.IResolvable;
   /**
   * default_resource_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_resource_spec AwsSagemakerDomain#default_resource_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_resource_spec TfDomain#default_resource_spec}
   */
   readonly defaultResourceSpec?: DefaultSpaceSettingsJupyterLabAppSettingsDefaultResourceSpecProperty;
   /**
   * emr_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#emr_settings AwsSagemakerDomain#emr_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#emr_settings TfDomain#emr_settings}
   */
   readonly emrSettings?: DefaultSpaceSettingsJupyterLabAppSettingsEmrSettingsProperty;
 }
@@ -4647,7 +4647,7 @@ export class DefaultSpaceSettingsJupyterLabAppSettingsPropertyOutputReference ex
 }
 export interface DefaultSpaceSettingsJupyterServerAppSettingsCodeRepositoryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#repository_url AwsSagemakerDomain#repository_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#repository_url TfDomain#repository_url}
   */
   readonly repositoryUrl: string;
 }
@@ -4730,23 +4730,23 @@ export class DefaultSpaceSettingsJupyterServerAppSettingsCodeRepositoryPropertyL
 }
 export interface DefaultSpaceSettingsJupyterServerAppSettingsDefaultResourceSpecProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#instance_type AwsSagemakerDomain#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#instance_type TfDomain#instance_type}
   */
   readonly instanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arn AwsSagemakerDomain#lifecycle_config_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arn TfDomain#lifecycle_config_arn}
   */
   readonly lifecycleConfigArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_arn AwsSagemakerDomain#sagemaker_image_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_arn TfDomain#sagemaker_image_arn}
   */
   readonly sagemakerImageArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_alias AwsSagemakerDomain#sagemaker_image_version_alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_alias TfDomain#sagemaker_image_version_alias}
   */
   readonly sagemakerImageVersionAlias?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_arn AwsSagemakerDomain#sagemaker_image_version_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_arn TfDomain#sagemaker_image_version_arn}
   */
   readonly sagemakerImageVersionArn?: string;
 }
@@ -4888,19 +4888,19 @@ export class DefaultSpaceSettingsJupyterServerAppSettingsDefaultResourceSpecProp
 }
 export interface DefaultSpaceSettingsJupyterServerAppSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arns AwsSagemakerDomain#lifecycle_config_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arns TfDomain#lifecycle_config_arns}
   */
   readonly lifecycleConfigArns?: string[];
   /**
   * code_repository block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#code_repository AwsSagemakerDomain#code_repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#code_repository TfDomain#code_repository}
   */
   readonly codeRepository?: DefaultSpaceSettingsJupyterServerAppSettingsCodeRepositoryProperty[] | cdktn.IResolvable;
   /**
   * default_resource_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_resource_spec AwsSagemakerDomain#default_resource_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_resource_spec TfDomain#default_resource_spec}
   */
   readonly defaultResourceSpec?: DefaultSpaceSettingsJupyterServerAppSettingsDefaultResourceSpecProperty;
 }
@@ -4998,15 +4998,15 @@ export class DefaultSpaceSettingsJupyterServerAppSettingsPropertyOutputReference
 }
 export interface DefaultSpaceSettingsKernelGatewayAppSettingsCustomImageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#app_image_config_name AwsSagemakerDomain#app_image_config_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#app_image_config_name TfDomain#app_image_config_name}
   */
   readonly appImageConfigName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#image_name AwsSagemakerDomain#image_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#image_name TfDomain#image_name}
   */
   readonly imageName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#image_version_number AwsSagemakerDomain#image_version_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#image_version_number TfDomain#image_version_number}
   */
   readonly imageVersionNumber?: number;
 }
@@ -5130,23 +5130,23 @@ export class DefaultSpaceSettingsKernelGatewayAppSettingsCustomImagePropertyList
 }
 export interface DefaultSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpecProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#instance_type AwsSagemakerDomain#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#instance_type TfDomain#instance_type}
   */
   readonly instanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arn AwsSagemakerDomain#lifecycle_config_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arn TfDomain#lifecycle_config_arn}
   */
   readonly lifecycleConfigArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_arn AwsSagemakerDomain#sagemaker_image_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_arn TfDomain#sagemaker_image_arn}
   */
   readonly sagemakerImageArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_alias AwsSagemakerDomain#sagemaker_image_version_alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_alias TfDomain#sagemaker_image_version_alias}
   */
   readonly sagemakerImageVersionAlias?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_arn AwsSagemakerDomain#sagemaker_image_version_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_arn TfDomain#sagemaker_image_version_arn}
   */
   readonly sagemakerImageVersionArn?: string;
 }
@@ -5288,19 +5288,19 @@ export class DefaultSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpecProp
 }
 export interface DefaultSpaceSettingsKernelGatewayAppSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arns AwsSagemakerDomain#lifecycle_config_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arns TfDomain#lifecycle_config_arns}
   */
   readonly lifecycleConfigArns?: string[];
   /**
   * custom_image block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#custom_image AwsSagemakerDomain#custom_image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#custom_image TfDomain#custom_image}
   */
   readonly customImage?: DefaultSpaceSettingsKernelGatewayAppSettingsCustomImageProperty[] | cdktn.IResolvable;
   /**
   * default_resource_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_resource_spec AwsSagemakerDomain#default_resource_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_resource_spec TfDomain#default_resource_spec}
   */
   readonly defaultResourceSpec?: DefaultSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpecProperty;
 }
@@ -5398,11 +5398,11 @@ export class DefaultSpaceSettingsKernelGatewayAppSettingsPropertyOutputReference
 }
 export interface DefaultSpaceSettingsSpaceStorageSettingsDefaultEbsStorageSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_ebs_volume_size_in_gb AwsSagemakerDomain#default_ebs_volume_size_in_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_ebs_volume_size_in_gb TfDomain#default_ebs_volume_size_in_gb}
   */
   readonly defaultEbsVolumeSizeInGb: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#maximum_ebs_volume_size_in_gb AwsSagemakerDomain#maximum_ebs_volume_size_in_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#maximum_ebs_volume_size_in_gb TfDomain#maximum_ebs_volume_size_in_gb}
   */
   readonly maximumEbsVolumeSizeInGb: number;
 }
@@ -5474,7 +5474,7 @@ export interface DefaultSpaceSettingsSpaceStorageSettingsProperty {
   /**
   * default_ebs_storage_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_ebs_storage_settings AwsSagemakerDomain#default_ebs_storage_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_ebs_storage_settings TfDomain#default_ebs_storage_settings}
   */
   readonly defaultEbsStorageSettings?: DefaultSpaceSettingsSpaceStorageSettingsDefaultEbsStorageSettingsProperty;
 }
@@ -5528,47 +5528,47 @@ export class DefaultSpaceSettingsSpaceStorageSettingsPropertyOutputReference ext
 }
 export interface DefaultSpaceSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#execution_role AwsSagemakerDomain#execution_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#execution_role TfDomain#execution_role}
   */
   readonly executionRole: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#security_groups AwsSagemakerDomain#security_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#security_groups TfDomain#security_groups}
   */
   readonly securityGroups?: string[];
   /**
   * custom_file_system_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#custom_file_system_config AwsSagemakerDomain#custom_file_system_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#custom_file_system_config TfDomain#custom_file_system_config}
   */
   readonly customFileSystemConfig?: DefaultSpaceSettingsCustomFileSystemConfigProperty[] | cdktn.IResolvable;
   /**
   * custom_posix_user_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#custom_posix_user_config AwsSagemakerDomain#custom_posix_user_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#custom_posix_user_config TfDomain#custom_posix_user_config}
   */
   readonly customPosixUserConfig?: DefaultSpaceSettingsCustomPosixUserConfigProperty;
   /**
   * jupyter_lab_app_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#jupyter_lab_app_settings AwsSagemakerDomain#jupyter_lab_app_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#jupyter_lab_app_settings TfDomain#jupyter_lab_app_settings}
   */
   readonly jupyterLabAppSettings?: DefaultSpaceSettingsJupyterLabAppSettingsProperty;
   /**
   * jupyter_server_app_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#jupyter_server_app_settings AwsSagemakerDomain#jupyter_server_app_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#jupyter_server_app_settings TfDomain#jupyter_server_app_settings}
   */
   readonly jupyterServerAppSettings?: DefaultSpaceSettingsJupyterServerAppSettingsProperty;
   /**
   * kernel_gateway_app_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#kernel_gateway_app_settings AwsSagemakerDomain#kernel_gateway_app_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#kernel_gateway_app_settings TfDomain#kernel_gateway_app_settings}
   */
   readonly kernelGatewayAppSettings?: DefaultSpaceSettingsKernelGatewayAppSettingsProperty;
   /**
   * space_storage_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#space_storage_settings AwsSagemakerDomain#space_storage_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#space_storage_settings TfDomain#space_storage_settings}
   */
   readonly spaceStorageSettings?: DefaultSpaceSettingsSpaceStorageSettingsProperty;
 }
@@ -5773,7 +5773,7 @@ export class DefaultSpaceSettingsPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface DirectDeploySettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#status AwsSagemakerDomain#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#status TfDomain#status}
   */
   readonly status?: string;
 }
@@ -5827,11 +5827,11 @@ export class DirectDeploySettingsPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface EmrServerlessSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#execution_role_arn AwsSagemakerDomain#execution_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#execution_role_arn TfDomain#execution_role_arn}
   */
   readonly executionRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#status AwsSagemakerDomain#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#status TfDomain#status}
   */
   readonly status?: string;
 }
@@ -5907,7 +5907,7 @@ export class EmrServerlessSettingsPropertyOutputReference extends cdktn.ComplexO
 }
 export interface GenerativeAiSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#amazon_bedrock_role_arn AwsSagemakerDomain#amazon_bedrock_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#amazon_bedrock_role_arn TfDomain#amazon_bedrock_role_arn}
   */
   readonly amazonBedrockRoleArn?: string;
 }
@@ -5961,15 +5961,15 @@ export class GenerativeAiSettingsPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface IdentityProviderOauthSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#data_source_name AwsSagemakerDomain#data_source_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#data_source_name TfDomain#data_source_name}
   */
   readonly dataSourceName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#secret_arn AwsSagemakerDomain#secret_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#secret_arn TfDomain#secret_arn}
   */
   readonly secretArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#status AwsSagemakerDomain#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#status TfDomain#status}
   */
   readonly status?: string;
 }
@@ -6096,7 +6096,7 @@ export class IdentityProviderOauthSettingsPropertyList extends cdktn.ComplexList
 }
 export interface KendraSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#status AwsSagemakerDomain#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#status TfDomain#status}
   */
   readonly status?: string;
 }
@@ -6150,11 +6150,11 @@ export class KendraSettingsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ModelRegisterSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#cross_account_model_register_role_arn AwsSagemakerDomain#cross_account_model_register_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#cross_account_model_register_role_arn TfDomain#cross_account_model_register_role_arn}
   */
   readonly crossAccountModelRegisterRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#status AwsSagemakerDomain#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#status TfDomain#status}
   */
   readonly status?: string;
 }
@@ -6230,11 +6230,11 @@ export class ModelRegisterSettingsPropertyOutputReference extends cdktn.ComplexO
 }
 export interface TimeSeriesForecastingSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#amazon_forecast_role_arn AwsSagemakerDomain#amazon_forecast_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#amazon_forecast_role_arn TfDomain#amazon_forecast_role_arn}
   */
   readonly amazonForecastRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#status AwsSagemakerDomain#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#status TfDomain#status}
   */
   readonly status?: string;
 }
@@ -6310,11 +6310,11 @@ export class TimeSeriesForecastingSettingsPropertyOutputReference extends cdktn.
 }
 export interface WorkspaceSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#s3_artifact_path AwsSagemakerDomain#s3_artifact_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#s3_artifact_path TfDomain#s3_artifact_path}
   */
   readonly s3ArtifactPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#s3_kms_key_id AwsSagemakerDomain#s3_kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#s3_kms_key_id TfDomain#s3_kms_key_id}
   */
   readonly s3KmsKeyId?: string;
 }
@@ -6392,49 +6392,49 @@ export interface CanvasAppSettingsProperty {
   /**
   * direct_deploy_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#direct_deploy_settings AwsSagemakerDomain#direct_deploy_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#direct_deploy_settings TfDomain#direct_deploy_settings}
   */
   readonly directDeploySettings?: DirectDeploySettingsProperty;
   /**
   * emr_serverless_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#emr_serverless_settings AwsSagemakerDomain#emr_serverless_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#emr_serverless_settings TfDomain#emr_serverless_settings}
   */
   readonly emrServerlessSettings?: EmrServerlessSettingsProperty;
   /**
   * generative_ai_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#generative_ai_settings AwsSagemakerDomain#generative_ai_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#generative_ai_settings TfDomain#generative_ai_settings}
   */
   readonly generativeAiSettings?: GenerativeAiSettingsProperty;
   /**
   * identity_provider_oauth_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#identity_provider_oauth_settings AwsSagemakerDomain#identity_provider_oauth_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#identity_provider_oauth_settings TfDomain#identity_provider_oauth_settings}
   */
   readonly identityProviderOauthSettings?: IdentityProviderOauthSettingsProperty[] | cdktn.IResolvable;
   /**
   * kendra_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#kendra_settings AwsSagemakerDomain#kendra_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#kendra_settings TfDomain#kendra_settings}
   */
   readonly kendraSettings?: KendraSettingsProperty;
   /**
   * model_register_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#model_register_settings AwsSagemakerDomain#model_register_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#model_register_settings TfDomain#model_register_settings}
   */
   readonly modelRegisterSettings?: ModelRegisterSettingsProperty;
   /**
   * time_series_forecasting_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#time_series_forecasting_settings AwsSagemakerDomain#time_series_forecasting_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#time_series_forecasting_settings TfDomain#time_series_forecasting_settings}
   */
   readonly timeSeriesForecastingSettings?: TimeSeriesForecastingSettingsProperty;
   /**
   * workspace_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#workspace_settings AwsSagemakerDomain#workspace_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#workspace_settings TfDomain#workspace_settings}
   */
   readonly workspaceSettings?: WorkspaceSettingsProperty;
 }
@@ -6642,19 +6642,19 @@ export class CanvasAppSettingsPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface DefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#idle_timeout_in_minutes AwsSagemakerDomain#idle_timeout_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#idle_timeout_in_minutes TfDomain#idle_timeout_in_minutes}
   */
   readonly idleTimeoutInMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_management AwsSagemakerDomain#lifecycle_management}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_management TfDomain#lifecycle_management}
   */
   readonly lifecycleManagement?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#max_idle_timeout_in_minutes AwsSagemakerDomain#max_idle_timeout_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#max_idle_timeout_in_minutes TfDomain#max_idle_timeout_in_minutes}
   */
   readonly maxIdleTimeoutInMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#min_idle_timeout_in_minutes AwsSagemakerDomain#min_idle_timeout_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#min_idle_timeout_in_minutes TfDomain#min_idle_timeout_in_minutes}
   */
   readonly minIdleTimeoutInMinutes?: number;
 }
@@ -6776,7 +6776,7 @@ export interface DefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementP
   /**
   * idle_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#idle_settings AwsSagemakerDomain#idle_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#idle_settings TfDomain#idle_settings}
   */
   readonly idleSettings?: DefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettingsProperty;
 }
@@ -6830,15 +6830,15 @@ export class DefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementPrope
 }
 export interface DefaultUserSettingsCodeEditorAppSettingsCustomImageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#app_image_config_name AwsSagemakerDomain#app_image_config_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#app_image_config_name TfDomain#app_image_config_name}
   */
   readonly appImageConfigName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#image_name AwsSagemakerDomain#image_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#image_name TfDomain#image_name}
   */
   readonly imageName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#image_version_number AwsSagemakerDomain#image_version_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#image_version_number TfDomain#image_version_number}
   */
   readonly imageVersionNumber?: number;
 }
@@ -6962,23 +6962,23 @@ export class DefaultUserSettingsCodeEditorAppSettingsCustomImagePropertyList ext
 }
 export interface DefaultUserSettingsCodeEditorAppSettingsDefaultResourceSpecProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#instance_type AwsSagemakerDomain#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#instance_type TfDomain#instance_type}
   */
   readonly instanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arn AwsSagemakerDomain#lifecycle_config_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arn TfDomain#lifecycle_config_arn}
   */
   readonly lifecycleConfigArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_arn AwsSagemakerDomain#sagemaker_image_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_arn TfDomain#sagemaker_image_arn}
   */
   readonly sagemakerImageArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_alias AwsSagemakerDomain#sagemaker_image_version_alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_alias TfDomain#sagemaker_image_version_alias}
   */
   readonly sagemakerImageVersionAlias?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_arn AwsSagemakerDomain#sagemaker_image_version_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_arn TfDomain#sagemaker_image_version_arn}
   */
   readonly sagemakerImageVersionArn?: string;
 }
@@ -7120,29 +7120,29 @@ export class DefaultUserSettingsCodeEditorAppSettingsDefaultResourceSpecProperty
 }
 export interface CodeEditorAppSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#built_in_lifecycle_config_arn AwsSagemakerDomain#built_in_lifecycle_config_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#built_in_lifecycle_config_arn TfDomain#built_in_lifecycle_config_arn}
   */
   readonly builtInLifecycleConfigArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arns AwsSagemakerDomain#lifecycle_config_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arns TfDomain#lifecycle_config_arns}
   */
   readonly lifecycleConfigArns?: string[];
   /**
   * app_lifecycle_management block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#app_lifecycle_management AwsSagemakerDomain#app_lifecycle_management}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#app_lifecycle_management TfDomain#app_lifecycle_management}
   */
   readonly appLifecycleManagement?: DefaultUserSettingsCodeEditorAppSettingsAppLifecycleManagementProperty;
   /**
   * custom_image block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#custom_image AwsSagemakerDomain#custom_image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#custom_image TfDomain#custom_image}
   */
   readonly customImage?: DefaultUserSettingsCodeEditorAppSettingsCustomImageProperty[] | cdktn.IResolvable;
   /**
   * default_resource_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_resource_spec AwsSagemakerDomain#default_resource_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_resource_spec TfDomain#default_resource_spec}
   */
   readonly defaultResourceSpec?: DefaultUserSettingsCodeEditorAppSettingsDefaultResourceSpecProperty;
 }
@@ -7284,11 +7284,11 @@ export class CodeEditorAppSettingsPropertyOutputReference extends cdktn.ComplexO
 }
 export interface DefaultUserSettingsCustomFileSystemConfigEfsFileSystemConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#file_system_id AwsSagemakerDomain#file_system_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#file_system_id TfDomain#file_system_id}
   */
   readonly fileSystemId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#file_system_path AwsSagemakerDomain#file_system_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#file_system_path TfDomain#file_system_path}
   */
   readonly fileSystemPath: string;
 }
@@ -7360,7 +7360,7 @@ export interface DefaultUserSettingsCustomFileSystemConfigProperty {
   /**
   * efs_file_system_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#efs_file_system_config AwsSagemakerDomain#efs_file_system_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#efs_file_system_config TfDomain#efs_file_system_config}
   */
   readonly efsFileSystemConfig?: DefaultUserSettingsCustomFileSystemConfigEfsFileSystemConfigProperty;
 }
@@ -7446,11 +7446,11 @@ export class DefaultUserSettingsCustomFileSystemConfigPropertyList extends cdktn
 }
 export interface DefaultUserSettingsCustomPosixUserConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#gid AwsSagemakerDomain#gid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#gid TfDomain#gid}
   */
   readonly gid: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#uid AwsSagemakerDomain#uid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#uid TfDomain#uid}
   */
   readonly uid: number;
 }
@@ -7520,19 +7520,19 @@ export class DefaultUserSettingsCustomPosixUserConfigPropertyOutputReference ext
 }
 export interface DefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#idle_timeout_in_minutes AwsSagemakerDomain#idle_timeout_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#idle_timeout_in_minutes TfDomain#idle_timeout_in_minutes}
   */
   readonly idleTimeoutInMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_management AwsSagemakerDomain#lifecycle_management}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_management TfDomain#lifecycle_management}
   */
   readonly lifecycleManagement?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#max_idle_timeout_in_minutes AwsSagemakerDomain#max_idle_timeout_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#max_idle_timeout_in_minutes TfDomain#max_idle_timeout_in_minutes}
   */
   readonly maxIdleTimeoutInMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#min_idle_timeout_in_minutes AwsSagemakerDomain#min_idle_timeout_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#min_idle_timeout_in_minutes TfDomain#min_idle_timeout_in_minutes}
   */
   readonly minIdleTimeoutInMinutes?: number;
 }
@@ -7654,7 +7654,7 @@ export interface DefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementP
   /**
   * idle_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#idle_settings AwsSagemakerDomain#idle_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#idle_settings TfDomain#idle_settings}
   */
   readonly idleSettings?: DefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettingsProperty;
 }
@@ -7708,7 +7708,7 @@ export class DefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementPrope
 }
 export interface DefaultUserSettingsJupyterLabAppSettingsCodeRepositoryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#repository_url AwsSagemakerDomain#repository_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#repository_url TfDomain#repository_url}
   */
   readonly repositoryUrl: string;
 }
@@ -7791,15 +7791,15 @@ export class DefaultUserSettingsJupyterLabAppSettingsCodeRepositoryPropertyList 
 }
 export interface DefaultUserSettingsJupyterLabAppSettingsCustomImageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#app_image_config_name AwsSagemakerDomain#app_image_config_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#app_image_config_name TfDomain#app_image_config_name}
   */
   readonly appImageConfigName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#image_name AwsSagemakerDomain#image_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#image_name TfDomain#image_name}
   */
   readonly imageName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#image_version_number AwsSagemakerDomain#image_version_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#image_version_number TfDomain#image_version_number}
   */
   readonly imageVersionNumber?: number;
 }
@@ -7923,23 +7923,23 @@ export class DefaultUserSettingsJupyterLabAppSettingsCustomImagePropertyList ext
 }
 export interface DefaultUserSettingsJupyterLabAppSettingsDefaultResourceSpecProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#instance_type AwsSagemakerDomain#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#instance_type TfDomain#instance_type}
   */
   readonly instanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arn AwsSagemakerDomain#lifecycle_config_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arn TfDomain#lifecycle_config_arn}
   */
   readonly lifecycleConfigArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_arn AwsSagemakerDomain#sagemaker_image_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_arn TfDomain#sagemaker_image_arn}
   */
   readonly sagemakerImageArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_alias AwsSagemakerDomain#sagemaker_image_version_alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_alias TfDomain#sagemaker_image_version_alias}
   */
   readonly sagemakerImageVersionAlias?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_arn AwsSagemakerDomain#sagemaker_image_version_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_arn TfDomain#sagemaker_image_version_arn}
   */
   readonly sagemakerImageVersionArn?: string;
 }
@@ -8081,11 +8081,11 @@ export class DefaultUserSettingsJupyterLabAppSettingsDefaultResourceSpecProperty
 }
 export interface DefaultUserSettingsJupyterLabAppSettingsEmrSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#assumable_role_arns AwsSagemakerDomain#assumable_role_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#assumable_role_arns TfDomain#assumable_role_arns}
   */
   readonly assumableRoleArns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#execution_role_arns AwsSagemakerDomain#execution_role_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#execution_role_arns TfDomain#execution_role_arns}
   */
   readonly executionRoleArns?: string[];
 }
@@ -8161,41 +8161,41 @@ export class DefaultUserSettingsJupyterLabAppSettingsEmrSettingsPropertyOutputRe
 }
 export interface DefaultUserSettingsJupyterLabAppSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#built_in_lifecycle_config_arn AwsSagemakerDomain#built_in_lifecycle_config_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#built_in_lifecycle_config_arn TfDomain#built_in_lifecycle_config_arn}
   */
   readonly builtInLifecycleConfigArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arns AwsSagemakerDomain#lifecycle_config_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arns TfDomain#lifecycle_config_arns}
   */
   readonly lifecycleConfigArns?: string[];
   /**
   * app_lifecycle_management block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#app_lifecycle_management AwsSagemakerDomain#app_lifecycle_management}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#app_lifecycle_management TfDomain#app_lifecycle_management}
   */
   readonly appLifecycleManagement?: DefaultUserSettingsJupyterLabAppSettingsAppLifecycleManagementProperty;
   /**
   * code_repository block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#code_repository AwsSagemakerDomain#code_repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#code_repository TfDomain#code_repository}
   */
   readonly codeRepository?: DefaultUserSettingsJupyterLabAppSettingsCodeRepositoryProperty[] | cdktn.IResolvable;
   /**
   * custom_image block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#custom_image AwsSagemakerDomain#custom_image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#custom_image TfDomain#custom_image}
   */
   readonly customImage?: DefaultUserSettingsJupyterLabAppSettingsCustomImageProperty[] | cdktn.IResolvable;
   /**
   * default_resource_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_resource_spec AwsSagemakerDomain#default_resource_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_resource_spec TfDomain#default_resource_spec}
   */
   readonly defaultResourceSpec?: DefaultUserSettingsJupyterLabAppSettingsDefaultResourceSpecProperty;
   /**
   * emr_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#emr_settings AwsSagemakerDomain#emr_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#emr_settings TfDomain#emr_settings}
   */
   readonly emrSettings?: DefaultUserSettingsJupyterLabAppSettingsEmrSettingsProperty;
 }
@@ -8381,7 +8381,7 @@ export class DefaultUserSettingsJupyterLabAppSettingsPropertyOutputReference ext
 }
 export interface DefaultUserSettingsJupyterServerAppSettingsCodeRepositoryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#repository_url AwsSagemakerDomain#repository_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#repository_url TfDomain#repository_url}
   */
   readonly repositoryUrl: string;
 }
@@ -8464,23 +8464,23 @@ export class DefaultUserSettingsJupyterServerAppSettingsCodeRepositoryPropertyLi
 }
 export interface DefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#instance_type AwsSagemakerDomain#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#instance_type TfDomain#instance_type}
   */
   readonly instanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arn AwsSagemakerDomain#lifecycle_config_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arn TfDomain#lifecycle_config_arn}
   */
   readonly lifecycleConfigArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_arn AwsSagemakerDomain#sagemaker_image_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_arn TfDomain#sagemaker_image_arn}
   */
   readonly sagemakerImageArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_alias AwsSagemakerDomain#sagemaker_image_version_alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_alias TfDomain#sagemaker_image_version_alias}
   */
   readonly sagemakerImageVersionAlias?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_arn AwsSagemakerDomain#sagemaker_image_version_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_arn TfDomain#sagemaker_image_version_arn}
   */
   readonly sagemakerImageVersionArn?: string;
 }
@@ -8622,19 +8622,19 @@ export class DefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecPrope
 }
 export interface DefaultUserSettingsJupyterServerAppSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arns AwsSagemakerDomain#lifecycle_config_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arns TfDomain#lifecycle_config_arns}
   */
   readonly lifecycleConfigArns?: string[];
   /**
   * code_repository block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#code_repository AwsSagemakerDomain#code_repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#code_repository TfDomain#code_repository}
   */
   readonly codeRepository?: DefaultUserSettingsJupyterServerAppSettingsCodeRepositoryProperty[] | cdktn.IResolvable;
   /**
   * default_resource_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_resource_spec AwsSagemakerDomain#default_resource_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_resource_spec TfDomain#default_resource_spec}
   */
   readonly defaultResourceSpec?: DefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecProperty;
 }
@@ -8732,15 +8732,15 @@ export class DefaultUserSettingsJupyterServerAppSettingsPropertyOutputReference 
 }
 export interface DefaultUserSettingsKernelGatewayAppSettingsCustomImageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#app_image_config_name AwsSagemakerDomain#app_image_config_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#app_image_config_name TfDomain#app_image_config_name}
   */
   readonly appImageConfigName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#image_name AwsSagemakerDomain#image_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#image_name TfDomain#image_name}
   */
   readonly imageName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#image_version_number AwsSagemakerDomain#image_version_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#image_version_number TfDomain#image_version_number}
   */
   readonly imageVersionNumber?: number;
 }
@@ -8864,23 +8864,23 @@ export class DefaultUserSettingsKernelGatewayAppSettingsCustomImagePropertyList 
 }
 export interface DefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#instance_type AwsSagemakerDomain#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#instance_type TfDomain#instance_type}
   */
   readonly instanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arn AwsSagemakerDomain#lifecycle_config_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arn TfDomain#lifecycle_config_arn}
   */
   readonly lifecycleConfigArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_arn AwsSagemakerDomain#sagemaker_image_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_arn TfDomain#sagemaker_image_arn}
   */
   readonly sagemakerImageArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_alias AwsSagemakerDomain#sagemaker_image_version_alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_alias TfDomain#sagemaker_image_version_alias}
   */
   readonly sagemakerImageVersionAlias?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_arn AwsSagemakerDomain#sagemaker_image_version_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_arn TfDomain#sagemaker_image_version_arn}
   */
   readonly sagemakerImageVersionArn?: string;
 }
@@ -9022,19 +9022,19 @@ export class DefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecPrope
 }
 export interface DefaultUserSettingsKernelGatewayAppSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arns AwsSagemakerDomain#lifecycle_config_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arns TfDomain#lifecycle_config_arns}
   */
   readonly lifecycleConfigArns?: string[];
   /**
   * custom_image block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#custom_image AwsSagemakerDomain#custom_image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#custom_image TfDomain#custom_image}
   */
   readonly customImage?: DefaultUserSettingsKernelGatewayAppSettingsCustomImageProperty[] | cdktn.IResolvable;
   /**
   * default_resource_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_resource_spec AwsSagemakerDomain#default_resource_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_resource_spec TfDomain#default_resource_spec}
   */
   readonly defaultResourceSpec?: DefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecProperty;
 }
@@ -9132,15 +9132,15 @@ export class DefaultUserSettingsKernelGatewayAppSettingsPropertyOutputReference 
 }
 export interface DefaultUserSettingsRSessionAppSettingsCustomImageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#app_image_config_name AwsSagemakerDomain#app_image_config_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#app_image_config_name TfDomain#app_image_config_name}
   */
   readonly appImageConfigName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#image_name AwsSagemakerDomain#image_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#image_name TfDomain#image_name}
   */
   readonly imageName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#image_version_number AwsSagemakerDomain#image_version_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#image_version_number TfDomain#image_version_number}
   */
   readonly imageVersionNumber?: number;
 }
@@ -9264,23 +9264,23 @@ export class DefaultUserSettingsRSessionAppSettingsCustomImagePropertyList exten
 }
 export interface DefaultUserSettingsRSessionAppSettingsDefaultResourceSpecProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#instance_type AwsSagemakerDomain#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#instance_type TfDomain#instance_type}
   */
   readonly instanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arn AwsSagemakerDomain#lifecycle_config_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arn TfDomain#lifecycle_config_arn}
   */
   readonly lifecycleConfigArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_arn AwsSagemakerDomain#sagemaker_image_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_arn TfDomain#sagemaker_image_arn}
   */
   readonly sagemakerImageArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_alias AwsSagemakerDomain#sagemaker_image_version_alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_alias TfDomain#sagemaker_image_version_alias}
   */
   readonly sagemakerImageVersionAlias?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_arn AwsSagemakerDomain#sagemaker_image_version_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_arn TfDomain#sagemaker_image_version_arn}
   */
   readonly sagemakerImageVersionArn?: string;
 }
@@ -9424,13 +9424,13 @@ export interface RSessionAppSettingsProperty {
   /**
   * custom_image block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#custom_image AwsSagemakerDomain#custom_image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#custom_image TfDomain#custom_image}
   */
   readonly customImage?: DefaultUserSettingsRSessionAppSettingsCustomImageProperty[] | cdktn.IResolvable;
   /**
   * default_resource_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_resource_spec AwsSagemakerDomain#default_resource_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_resource_spec TfDomain#default_resource_spec}
   */
   readonly defaultResourceSpec?: DefaultUserSettingsRSessionAppSettingsDefaultResourceSpecProperty;
 }
@@ -9506,11 +9506,11 @@ export class RSessionAppSettingsPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface RStudioServerProAppSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#access_status AwsSagemakerDomain#access_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#access_status TfDomain#access_status}
   */
   readonly accessStatus?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#user_group AwsSagemakerDomain#user_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#user_group TfDomain#user_group}
   */
   readonly userGroup?: string;
 }
@@ -9586,15 +9586,15 @@ export class RStudioServerProAppSettingsPropertyOutputReference extends cdktn.Co
 }
 export interface SharingSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#notebook_output_option AwsSagemakerDomain#notebook_output_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#notebook_output_option TfDomain#notebook_output_option}
   */
   readonly notebookOutputOption?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#s3_kms_key_id AwsSagemakerDomain#s3_kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#s3_kms_key_id TfDomain#s3_kms_key_id}
   */
   readonly s3KmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#s3_output_path AwsSagemakerDomain#s3_output_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#s3_output_path TfDomain#s3_output_path}
   */
   readonly s3OutputPath?: string;
 }
@@ -9692,11 +9692,11 @@ export class SharingSettingsPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface DefaultUserSettingsSpaceStorageSettingsDefaultEbsStorageSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_ebs_volume_size_in_gb AwsSagemakerDomain#default_ebs_volume_size_in_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_ebs_volume_size_in_gb TfDomain#default_ebs_volume_size_in_gb}
   */
   readonly defaultEbsVolumeSizeInGb: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#maximum_ebs_volume_size_in_gb AwsSagemakerDomain#maximum_ebs_volume_size_in_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#maximum_ebs_volume_size_in_gb TfDomain#maximum_ebs_volume_size_in_gb}
   */
   readonly maximumEbsVolumeSizeInGb: number;
 }
@@ -9768,7 +9768,7 @@ export interface DefaultUserSettingsSpaceStorageSettingsProperty {
   /**
   * default_ebs_storage_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_ebs_storage_settings AwsSagemakerDomain#default_ebs_storage_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_ebs_storage_settings TfDomain#default_ebs_storage_settings}
   */
   readonly defaultEbsStorageSettings?: DefaultUserSettingsSpaceStorageSettingsDefaultEbsStorageSettingsProperty;
 }
@@ -9822,15 +9822,15 @@ export class DefaultUserSettingsSpaceStorageSettingsPropertyOutputReference exte
 }
 export interface StudioWebPortalSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#hidden_app_types AwsSagemakerDomain#hidden_app_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#hidden_app_types TfDomain#hidden_app_types}
   */
   readonly hiddenAppTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#hidden_instance_types AwsSagemakerDomain#hidden_instance_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#hidden_instance_types TfDomain#hidden_instance_types}
   */
   readonly hiddenInstanceTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#hidden_ml_tools AwsSagemakerDomain#hidden_ml_tools}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#hidden_ml_tools TfDomain#hidden_ml_tools}
   */
   readonly hiddenMlTools?: string[];
 }
@@ -9928,23 +9928,23 @@ export class StudioWebPortalSettingsPropertyOutputReference extends cdktn.Comple
 }
 export interface DefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#instance_type AwsSagemakerDomain#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#instance_type TfDomain#instance_type}
   */
   readonly instanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arn AwsSagemakerDomain#lifecycle_config_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arn TfDomain#lifecycle_config_arn}
   */
   readonly lifecycleConfigArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_arn AwsSagemakerDomain#sagemaker_image_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_arn TfDomain#sagemaker_image_arn}
   */
   readonly sagemakerImageArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_alias AwsSagemakerDomain#sagemaker_image_version_alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_alias TfDomain#sagemaker_image_version_alias}
   */
   readonly sagemakerImageVersionAlias?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_arn AwsSagemakerDomain#sagemaker_image_version_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_arn TfDomain#sagemaker_image_version_arn}
   */
   readonly sagemakerImageVersionArn?: string;
 }
@@ -10088,7 +10088,7 @@ export interface TensorBoardAppSettingsProperty {
   /**
   * default_resource_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_resource_spec AwsSagemakerDomain#default_resource_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_resource_spec TfDomain#default_resource_spec}
   */
   readonly defaultResourceSpec?: DefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecProperty;
 }
@@ -10142,101 +10142,101 @@ export class TensorBoardAppSettingsPropertyOutputReference extends cdktn.Complex
 }
 export interface DefaultUserSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#auto_mount_home_efs AwsSagemakerDomain#auto_mount_home_efs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#auto_mount_home_efs TfDomain#auto_mount_home_efs}
   */
   readonly autoMountHomeEfs?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_landing_uri AwsSagemakerDomain#default_landing_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_landing_uri TfDomain#default_landing_uri}
   */
   readonly defaultLandingUri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#execution_role AwsSagemakerDomain#execution_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#execution_role TfDomain#execution_role}
   */
   readonly executionRole: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#security_groups AwsSagemakerDomain#security_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#security_groups TfDomain#security_groups}
   */
   readonly securityGroups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#studio_web_portal AwsSagemakerDomain#studio_web_portal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#studio_web_portal TfDomain#studio_web_portal}
   */
   readonly studioWebPortal?: string;
   /**
   * canvas_app_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#canvas_app_settings AwsSagemakerDomain#canvas_app_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#canvas_app_settings TfDomain#canvas_app_settings}
   */
   readonly canvasAppSettings?: CanvasAppSettingsProperty;
   /**
   * code_editor_app_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#code_editor_app_settings AwsSagemakerDomain#code_editor_app_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#code_editor_app_settings TfDomain#code_editor_app_settings}
   */
   readonly codeEditorAppSettings?: CodeEditorAppSettingsProperty;
   /**
   * custom_file_system_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#custom_file_system_config AwsSagemakerDomain#custom_file_system_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#custom_file_system_config TfDomain#custom_file_system_config}
   */
   readonly customFileSystemConfig?: DefaultUserSettingsCustomFileSystemConfigProperty[] | cdktn.IResolvable;
   /**
   * custom_posix_user_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#custom_posix_user_config AwsSagemakerDomain#custom_posix_user_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#custom_posix_user_config TfDomain#custom_posix_user_config}
   */
   readonly customPosixUserConfig?: DefaultUserSettingsCustomPosixUserConfigProperty;
   /**
   * jupyter_lab_app_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#jupyter_lab_app_settings AwsSagemakerDomain#jupyter_lab_app_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#jupyter_lab_app_settings TfDomain#jupyter_lab_app_settings}
   */
   readonly jupyterLabAppSettings?: DefaultUserSettingsJupyterLabAppSettingsProperty;
   /**
   * jupyter_server_app_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#jupyter_server_app_settings AwsSagemakerDomain#jupyter_server_app_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#jupyter_server_app_settings TfDomain#jupyter_server_app_settings}
   */
   readonly jupyterServerAppSettings?: DefaultUserSettingsJupyterServerAppSettingsProperty;
   /**
   * kernel_gateway_app_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#kernel_gateway_app_settings AwsSagemakerDomain#kernel_gateway_app_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#kernel_gateway_app_settings TfDomain#kernel_gateway_app_settings}
   */
   readonly kernelGatewayAppSettings?: DefaultUserSettingsKernelGatewayAppSettingsProperty;
   /**
   * r_session_app_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#r_session_app_settings AwsSagemakerDomain#r_session_app_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#r_session_app_settings TfDomain#r_session_app_settings}
   */
   readonly rSessionAppSettings?: RSessionAppSettingsProperty;
   /**
   * r_studio_server_pro_app_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#r_studio_server_pro_app_settings AwsSagemakerDomain#r_studio_server_pro_app_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#r_studio_server_pro_app_settings TfDomain#r_studio_server_pro_app_settings}
   */
   readonly rStudioServerProAppSettings?: RStudioServerProAppSettingsProperty;
   /**
   * sharing_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sharing_settings AwsSagemakerDomain#sharing_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sharing_settings TfDomain#sharing_settings}
   */
   readonly sharingSettings?: SharingSettingsProperty;
   /**
   * space_storage_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#space_storage_settings AwsSagemakerDomain#space_storage_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#space_storage_settings TfDomain#space_storage_settings}
   */
   readonly spaceStorageSettings?: DefaultUserSettingsSpaceStorageSettingsProperty;
   /**
   * studio_web_portal_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#studio_web_portal_settings AwsSagemakerDomain#studio_web_portal_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#studio_web_portal_settings TfDomain#studio_web_portal_settings}
   */
   readonly studioWebPortalSettings?: StudioWebPortalSettingsProperty;
   /**
   * tensor_board_app_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#tensor_board_app_settings AwsSagemakerDomain#tensor_board_app_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#tensor_board_app_settings TfDomain#tensor_board_app_settings}
   */
   readonly tensorBoardAppSettings?: TensorBoardAppSettingsProperty;
 }
@@ -10661,11 +10661,11 @@ export class DefaultUserSettingsPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface DockerSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#enable_docker_access AwsSagemakerDomain#enable_docker_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#enable_docker_access TfDomain#enable_docker_access}
   */
   readonly enableDockerAccess?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#vpc_only_trusted_accounts AwsSagemakerDomain#vpc_only_trusted_accounts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#vpc_only_trusted_accounts TfDomain#vpc_only_trusted_accounts}
   */
   readonly vpcOnlyTrustedAccounts?: string[];
 }
@@ -10741,23 +10741,23 @@ export class DockerSettingsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface DomainSettingsRStudioServerProDomainSettingsDefaultResourceSpecProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#instance_type AwsSagemakerDomain#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#instance_type TfDomain#instance_type}
   */
   readonly instanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arn AwsSagemakerDomain#lifecycle_config_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#lifecycle_config_arn TfDomain#lifecycle_config_arn}
   */
   readonly lifecycleConfigArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_arn AwsSagemakerDomain#sagemaker_image_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_arn TfDomain#sagemaker_image_arn}
   */
   readonly sagemakerImageArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_alias AwsSagemakerDomain#sagemaker_image_version_alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_alias TfDomain#sagemaker_image_version_alias}
   */
   readonly sagemakerImageVersionAlias?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_arn AwsSagemakerDomain#sagemaker_image_version_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#sagemaker_image_version_arn TfDomain#sagemaker_image_version_arn}
   */
   readonly sagemakerImageVersionArn?: string;
 }
@@ -10899,21 +10899,21 @@ export class DomainSettingsRStudioServerProDomainSettingsDefaultResourceSpecProp
 }
 export interface RStudioServerProDomainSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#domain_execution_role_arn AwsSagemakerDomain#domain_execution_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#domain_execution_role_arn TfDomain#domain_execution_role_arn}
   */
   readonly domainExecutionRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#r_studio_connect_url AwsSagemakerDomain#r_studio_connect_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#r_studio_connect_url TfDomain#r_studio_connect_url}
   */
   readonly rStudioConnectUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#r_studio_package_manager_url AwsSagemakerDomain#r_studio_package_manager_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#r_studio_package_manager_url TfDomain#r_studio_package_manager_url}
   */
   readonly rStudioPackageManagerUrl?: string;
   /**
   * default_resource_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_resource_spec AwsSagemakerDomain#default_resource_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#default_resource_spec TfDomain#default_resource_spec}
   */
   readonly defaultResourceSpec?: DomainSettingsRStudioServerProDomainSettingsDefaultResourceSpecProperty;
 }
@@ -11030,7 +11030,7 @@ export class RStudioServerProDomainSettingsPropertyOutputReference extends cdktn
 }
 export interface TrustedIdentityPropagationSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#status AwsSagemakerDomain#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#status TfDomain#status}
   */
   readonly status: string;
 }
@@ -11081,29 +11081,29 @@ export class TrustedIdentityPropagationSettingsPropertyOutputReference extends c
 }
 export interface DomainSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#execution_role_identity_config AwsSagemakerDomain#execution_role_identity_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#execution_role_identity_config TfDomain#execution_role_identity_config}
   */
   readonly executionRoleIdentityConfig?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#security_group_ids AwsSagemakerDomain#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#security_group_ids TfDomain#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
   * docker_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#docker_settings AwsSagemakerDomain#docker_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#docker_settings TfDomain#docker_settings}
   */
   readonly dockerSettings?: DockerSettingsProperty;
   /**
   * r_studio_server_pro_domain_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#r_studio_server_pro_domain_settings AwsSagemakerDomain#r_studio_server_pro_domain_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#r_studio_server_pro_domain_settings TfDomain#r_studio_server_pro_domain_settings}
   */
   readonly rStudioServerProDomainSettings?: RStudioServerProDomainSettingsProperty;
   /**
   * trusted_identity_propagation_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#trusted_identity_propagation_settings AwsSagemakerDomain#trusted_identity_propagation_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#trusted_identity_propagation_settings TfDomain#trusted_identity_propagation_settings}
   */
   readonly trustedIdentityPropagationSettings?: TrustedIdentityPropagationSettingsProperty;
 }
@@ -11245,7 +11245,7 @@ export class DomainSettingsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RetentionPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#home_efs_file_system AwsSagemakerDomain#home_efs_file_system}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_domain#home_efs_file_system TfDomain#home_efs_file_system}
   */
   readonly homeEfsFileSystem?: string;
 }

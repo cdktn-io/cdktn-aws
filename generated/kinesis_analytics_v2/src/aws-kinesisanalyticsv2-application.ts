@@ -5,80 +5,80 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsKinesisanalyticsv2ApplicationConfig extends cdktn.TerraformMetaArguments {
+export interface TfApplicationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#application_mode AwsKinesisanalyticsv2Application#application_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#application_mode TfApplication#application_mode}
   */
   readonly applicationMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#description AwsKinesisanalyticsv2Application#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#description TfApplication#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#force_stop AwsKinesisanalyticsv2Application#force_stop}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#force_stop TfApplication#force_stop}
   */
   readonly forceStop?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#id AwsKinesisanalyticsv2Application#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#id TfApplication#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#name AwsKinesisanalyticsv2Application#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#name TfApplication#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#region AwsKinesisanalyticsv2Application#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#region TfApplication#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#runtime_environment AwsKinesisanalyticsv2Application#runtime_environment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#runtime_environment TfApplication#runtime_environment}
   */
   readonly runtimeEnvironment: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#service_execution_role AwsKinesisanalyticsv2Application#service_execution_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#service_execution_role TfApplication#service_execution_role}
   */
   readonly serviceExecutionRole: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#start_application AwsKinesisanalyticsv2Application#start_application}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#start_application TfApplication#start_application}
   */
   readonly startApplication?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#tags AwsKinesisanalyticsv2Application#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#tags TfApplication#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#tags_all AwsKinesisanalyticsv2Application#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#tags_all TfApplication#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * application_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#application_configuration AwsKinesisanalyticsv2Application#application_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#application_configuration TfApplication#application_configuration}
   */
-  readonly applicationConfiguration?: AwsKinesisanalyticsv2Application.ApplicationConfigurationProperty;
+  readonly applicationConfiguration?: TfApplication.ApplicationConfigurationProperty;
   /**
   * cloudwatch_logging_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#cloudwatch_logging_options AwsKinesisanalyticsv2Application#cloudwatch_logging_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#cloudwatch_logging_options TfApplication#cloudwatch_logging_options}
   */
-  readonly cloudwatchLoggingOptions?: AwsKinesisanalyticsv2Application.CloudwatchLoggingOptionsProperty;
+  readonly cloudwatchLoggingOptions?: TfApplication.CloudwatchLoggingOptionsProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#timeouts AwsKinesisanalyticsv2Application#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#timeouts TfApplication#timeouts}
   */
-  readonly timeouts?: AwsKinesisanalyticsv2Application.TimeoutsProperty;
+  readonly timeouts?: TfApplication.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application aws_kinesisanalyticsv2_application}
 */
-export class AwsKinesisanalyticsv2Application extends cdktn.TerraformResource {
+export class TfApplication extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -89,11 +89,11 @@ export class AwsKinesisanalyticsv2Application extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsKinesisanalyticsv2Application resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfApplication resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsKinesisanalyticsv2Application to import
-  * @param importFromId The id of the existing AwsKinesisanalyticsv2Application that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsKinesisanalyticsv2Application to import is found
+  * @param importToId The construct id used in the generated config for the TfApplication to import
+  * @param importFromId The id of the existing TfApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfApplication to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_kinesisanalyticsv2_application", importId: importFromId, provider });
@@ -108,9 +108,9 @@ export class AwsKinesisanalyticsv2Application extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsKinesisanalyticsv2ApplicationConfig
+  * @param options TfApplicationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsKinesisanalyticsv2ApplicationConfig) {
+  public constructor(scope: Construct, id: string, config: TfApplicationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_kinesisanalyticsv2_application',
       terraformGeneratorMetadata: {
@@ -339,11 +339,11 @@ export class AwsKinesisanalyticsv2Application extends cdktn.TerraformResource {
   }
 
   // application_configuration - computed: false, optional: true, required: false
-  private _applicationConfiguration = new AwsKinesisanalyticsv2Application.ApplicationConfigurationPropertyOutputReference(this, "application_configuration");
+  private _applicationConfiguration = new TfApplication.ApplicationConfigurationPropertyOutputReference(this, "application_configuration");
   public get applicationConfiguration() {
     return this._applicationConfiguration;
   }
-  public putApplicationConfiguration(value: AwsKinesisanalyticsv2Application.ApplicationConfigurationProperty) {
+  public putApplicationConfiguration(value: TfApplication.ApplicationConfigurationProperty) {
     this._applicationConfiguration.internalValue = value;
   }
   public resetApplicationConfiguration() {
@@ -355,11 +355,11 @@ export class AwsKinesisanalyticsv2Application extends cdktn.TerraformResource {
   }
 
   // cloudwatch_logging_options - computed: false, optional: true, required: false
-  private _cloudwatchLoggingOptions = new AwsKinesisanalyticsv2Application.CloudwatchLoggingOptionsPropertyOutputReference(this, "cloudwatch_logging_options");
+  private _cloudwatchLoggingOptions = new TfApplication.CloudwatchLoggingOptionsPropertyOutputReference(this, "cloudwatch_logging_options");
   public get cloudwatchLoggingOptions() {
     return this._cloudwatchLoggingOptions;
   }
-  public putCloudwatchLoggingOptions(value: AwsKinesisanalyticsv2Application.CloudwatchLoggingOptionsProperty) {
+  public putCloudwatchLoggingOptions(value: TfApplication.CloudwatchLoggingOptionsProperty) {
     this._cloudwatchLoggingOptions.internalValue = value;
   }
   public resetCloudwatchLoggingOptions() {
@@ -371,11 +371,11 @@ export class AwsKinesisanalyticsv2Application extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsKinesisanalyticsv2Application.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfApplication.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsKinesisanalyticsv2Application.TimeoutsProperty) {
+  public putTimeouts(value: TfApplication.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -403,9 +403,9 @@ export class AwsKinesisanalyticsv2Application extends cdktn.TerraformResource {
       start_application: cdktn.booleanToTerraform(this._startApplication),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      application_configuration: awsKinesisanalyticsv2ApplicationApplicationConfigurationPropertyToTerraform(this._applicationConfiguration.internalValue),
-      cloudwatch_logging_options: awsKinesisanalyticsv2ApplicationCloudwatchLoggingOptionsPropertyToTerraform(this._cloudwatchLoggingOptions.internalValue),
-      timeouts: awsKinesisanalyticsv2ApplicationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      application_configuration: tfApplicationApplicationConfigurationPropertyToTerraform(this._applicationConfiguration.internalValue),
+      cloudwatch_logging_options: tfApplicationCloudwatchLoggingOptionsPropertyToTerraform(this._cloudwatchLoggingOptions.internalValue),
+      timeouts: tfApplicationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -478,22 +478,22 @@ export class AwsKinesisanalyticsv2Application extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       application_configuration: {
-        value: awsKinesisanalyticsv2ApplicationApplicationConfigurationPropertyToHclTerraform(this._applicationConfiguration.internalValue),
+        value: tfApplicationApplicationConfigurationPropertyToHclTerraform(this._applicationConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsKinesisanalyticsv2Application.ApplicationConfigurationPropertyList",
+        storageClassType: "TfApplication.ApplicationConfigurationPropertyList",
       },
       cloudwatch_logging_options: {
-        value: awsKinesisanalyticsv2ApplicationCloudwatchLoggingOptionsPropertyToHclTerraform(this._cloudwatchLoggingOptions.internalValue),
+        value: tfApplicationCloudwatchLoggingOptionsPropertyToHclTerraform(this._cloudwatchLoggingOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsKinesisanalyticsv2Application.CloudwatchLoggingOptionsPropertyList",
+        storageClassType: "TfApplication.CloudwatchLoggingOptionsPropertyList",
       },
       timeouts: {
-        value: awsKinesisanalyticsv2ApplicationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfApplicationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsKinesisanalyticsv2Application.TimeoutsProperty",
+        storageClassType: "TfApplication.TimeoutsProperty",
       },
     };
 
@@ -502,7 +502,7 @@ export class AwsKinesisanalyticsv2Application extends cdktn.TerraformResource {
   }
 }
 
-export function awsKinesisanalyticsv2ApplicationS3ContentLocationPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.S3ContentLocationPropertyOutputReference | AwsKinesisanalyticsv2Application.S3ContentLocationProperty): any {
+export function tfApplicationS3ContentLocationPropertyToTerraform(struct?: TfApplication.S3ContentLocationPropertyOutputReference | TfApplication.S3ContentLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -515,7 +515,7 @@ export function awsKinesisanalyticsv2ApplicationS3ContentLocationPropertyToTerra
 }
 
 
-export function awsKinesisanalyticsv2ApplicationS3ContentLocationPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.S3ContentLocationPropertyOutputReference | AwsKinesisanalyticsv2Application.S3ContentLocationProperty): any {
+export function tfApplicationS3ContentLocationPropertyToHclTerraform(struct?: TfApplication.S3ContentLocationPropertyOutputReference | TfApplication.S3ContentLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -546,19 +546,19 @@ export function awsKinesisanalyticsv2ApplicationS3ContentLocationPropertyToHclTe
 }
 
 
-export function awsKinesisanalyticsv2ApplicationCodeContentPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.CodeContentPropertyOutputReference | AwsKinesisanalyticsv2Application.CodeContentProperty): any {
+export function tfApplicationCodeContentPropertyToTerraform(struct?: TfApplication.CodeContentPropertyOutputReference | TfApplication.CodeContentProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     text_content: cdktn.stringToTerraform(struct!.textContent),
-    s3_content_location: awsKinesisanalyticsv2ApplicationS3ContentLocationPropertyToTerraform(struct!.s3ContentLocation),
+    s3_content_location: tfApplicationS3ContentLocationPropertyToTerraform(struct!.s3ContentLocation),
   }
 }
 
 
-export function awsKinesisanalyticsv2ApplicationCodeContentPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.CodeContentPropertyOutputReference | AwsKinesisanalyticsv2Application.CodeContentProperty): any {
+export function tfApplicationCodeContentPropertyToHclTerraform(struct?: TfApplication.CodeContentPropertyOutputReference | TfApplication.CodeContentProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -571,7 +571,7 @@ export function awsKinesisanalyticsv2ApplicationCodeContentPropertyToHclTerrafor
       storageClassType: "string",
     },
     s3_content_location: {
-      value: awsKinesisanalyticsv2ApplicationS3ContentLocationPropertyToHclTerraform(struct!.s3ContentLocation),
+      value: tfApplicationS3ContentLocationPropertyToHclTerraform(struct!.s3ContentLocation),
       isBlock: true,
       type: "list",
       storageClassType: "S3ContentLocationPropertyList",
@@ -583,19 +583,19 @@ export function awsKinesisanalyticsv2ApplicationCodeContentPropertyToHclTerrafor
 }
 
 
-export function awsKinesisanalyticsv2ApplicationApplicationCodeConfigurationPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.ApplicationCodeConfigurationPropertyOutputReference | AwsKinesisanalyticsv2Application.ApplicationCodeConfigurationProperty): any {
+export function tfApplicationApplicationCodeConfigurationPropertyToTerraform(struct?: TfApplication.ApplicationCodeConfigurationPropertyOutputReference | TfApplication.ApplicationCodeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     code_content_type: cdktn.stringToTerraform(struct!.codeContentType),
-    code_content: awsKinesisanalyticsv2ApplicationCodeContentPropertyToTerraform(struct!.codeContent),
+    code_content: tfApplicationCodeContentPropertyToTerraform(struct!.codeContent),
   }
 }
 
 
-export function awsKinesisanalyticsv2ApplicationApplicationCodeConfigurationPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.ApplicationCodeConfigurationPropertyOutputReference | AwsKinesisanalyticsv2Application.ApplicationCodeConfigurationProperty): any {
+export function tfApplicationApplicationCodeConfigurationPropertyToHclTerraform(struct?: TfApplication.ApplicationCodeConfigurationPropertyOutputReference | TfApplication.ApplicationCodeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -608,7 +608,7 @@ export function awsKinesisanalyticsv2ApplicationApplicationCodeConfigurationProp
       storageClassType: "string",
     },
     code_content: {
-      value: awsKinesisanalyticsv2ApplicationCodeContentPropertyToHclTerraform(struct!.codeContent),
+      value: tfApplicationCodeContentPropertyToHclTerraform(struct!.codeContent),
       isBlock: true,
       type: "list",
       storageClassType: "CodeContentPropertyList",
@@ -620,7 +620,7 @@ export function awsKinesisanalyticsv2ApplicationApplicationCodeConfigurationProp
 }
 
 
-export function awsKinesisanalyticsv2ApplicationApplicationEncryptionConfigurationPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.ApplicationEncryptionConfigurationPropertyOutputReference | AwsKinesisanalyticsv2Application.ApplicationEncryptionConfigurationProperty): any {
+export function tfApplicationApplicationEncryptionConfigurationPropertyToTerraform(struct?: TfApplication.ApplicationEncryptionConfigurationPropertyOutputReference | TfApplication.ApplicationEncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -632,7 +632,7 @@ export function awsKinesisanalyticsv2ApplicationApplicationEncryptionConfigurati
 }
 
 
-export function awsKinesisanalyticsv2ApplicationApplicationEncryptionConfigurationPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.ApplicationEncryptionConfigurationPropertyOutputReference | AwsKinesisanalyticsv2Application.ApplicationEncryptionConfigurationProperty): any {
+export function tfApplicationApplicationEncryptionConfigurationPropertyToHclTerraform(struct?: TfApplication.ApplicationEncryptionConfigurationPropertyOutputReference | TfApplication.ApplicationEncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -657,7 +657,7 @@ export function awsKinesisanalyticsv2ApplicationApplicationEncryptionConfigurati
 }
 
 
-export function awsKinesisanalyticsv2ApplicationApplicationSnapshotConfigurationPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.ApplicationSnapshotConfigurationPropertyOutputReference | AwsKinesisanalyticsv2Application.ApplicationSnapshotConfigurationProperty): any {
+export function tfApplicationApplicationSnapshotConfigurationPropertyToTerraform(struct?: TfApplication.ApplicationSnapshotConfigurationPropertyOutputReference | TfApplication.ApplicationSnapshotConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -668,7 +668,7 @@ export function awsKinesisanalyticsv2ApplicationApplicationSnapshotConfiguration
 }
 
 
-export function awsKinesisanalyticsv2ApplicationApplicationSnapshotConfigurationPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.ApplicationSnapshotConfigurationPropertyOutputReference | AwsKinesisanalyticsv2Application.ApplicationSnapshotConfigurationProperty): any {
+export function tfApplicationApplicationSnapshotConfigurationPropertyToHclTerraform(struct?: TfApplication.ApplicationSnapshotConfigurationPropertyOutputReference | TfApplication.ApplicationSnapshotConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -687,7 +687,7 @@ export function awsKinesisanalyticsv2ApplicationApplicationSnapshotConfiguration
 }
 
 
-export function awsKinesisanalyticsv2ApplicationPropertyGroupPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.PropertyGroupProperty | cdktn.IResolvable): any {
+export function tfApplicationPropertyGroupPropertyToTerraform(struct?: TfApplication.PropertyGroupProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -699,7 +699,7 @@ export function awsKinesisanalyticsv2ApplicationPropertyGroupPropertyToTerraform
 }
 
 
-export function awsKinesisanalyticsv2ApplicationPropertyGroupPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.PropertyGroupProperty | cdktn.IResolvable): any {
+export function tfApplicationPropertyGroupPropertyToHclTerraform(struct?: TfApplication.PropertyGroupProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -724,25 +724,25 @@ export function awsKinesisanalyticsv2ApplicationPropertyGroupPropertyToHclTerraf
 }
 
 
-export function awsKinesisanalyticsv2ApplicationEnvironmentPropertiesPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.EnvironmentPropertiesPropertyOutputReference | AwsKinesisanalyticsv2Application.EnvironmentPropertiesProperty): any {
+export function tfApplicationEnvironmentPropertiesPropertyToTerraform(struct?: TfApplication.EnvironmentPropertiesPropertyOutputReference | TfApplication.EnvironmentPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    property_group: cdktn.listMapper(awsKinesisanalyticsv2ApplicationPropertyGroupPropertyToTerraform, true)(struct!.propertyGroup),
+    property_group: cdktn.listMapper(tfApplicationPropertyGroupPropertyToTerraform, true)(struct!.propertyGroup),
   }
 }
 
 
-export function awsKinesisanalyticsv2ApplicationEnvironmentPropertiesPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.EnvironmentPropertiesPropertyOutputReference | AwsKinesisanalyticsv2Application.EnvironmentPropertiesProperty): any {
+export function tfApplicationEnvironmentPropertiesPropertyToHclTerraform(struct?: TfApplication.EnvironmentPropertiesPropertyOutputReference | TfApplication.EnvironmentPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     property_group: {
-      value: cdktn.listMapperHcl(awsKinesisanalyticsv2ApplicationPropertyGroupPropertyToHclTerraform, true)(struct!.propertyGroup),
+      value: cdktn.listMapperHcl(tfApplicationPropertyGroupPropertyToHclTerraform, true)(struct!.propertyGroup),
       isBlock: true,
       type: "set",
       storageClassType: "PropertyGroupPropertyList",
@@ -754,7 +754,7 @@ export function awsKinesisanalyticsv2ApplicationEnvironmentPropertiesPropertyToH
 }
 
 
-export function awsKinesisanalyticsv2ApplicationCheckpointConfigurationPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.CheckpointConfigurationPropertyOutputReference | AwsKinesisanalyticsv2Application.CheckpointConfigurationProperty): any {
+export function tfApplicationCheckpointConfigurationPropertyToTerraform(struct?: TfApplication.CheckpointConfigurationPropertyOutputReference | TfApplication.CheckpointConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -768,7 +768,7 @@ export function awsKinesisanalyticsv2ApplicationCheckpointConfigurationPropertyT
 }
 
 
-export function awsKinesisanalyticsv2ApplicationCheckpointConfigurationPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.CheckpointConfigurationPropertyOutputReference | AwsKinesisanalyticsv2Application.CheckpointConfigurationProperty): any {
+export function tfApplicationCheckpointConfigurationPropertyToHclTerraform(struct?: TfApplication.CheckpointConfigurationPropertyOutputReference | TfApplication.CheckpointConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -805,7 +805,7 @@ export function awsKinesisanalyticsv2ApplicationCheckpointConfigurationPropertyT
 }
 
 
-export function awsKinesisanalyticsv2ApplicationMonitoringConfigurationPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.MonitoringConfigurationPropertyOutputReference | AwsKinesisanalyticsv2Application.MonitoringConfigurationProperty): any {
+export function tfApplicationMonitoringConfigurationPropertyToTerraform(struct?: TfApplication.MonitoringConfigurationPropertyOutputReference | TfApplication.MonitoringConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -818,7 +818,7 @@ export function awsKinesisanalyticsv2ApplicationMonitoringConfigurationPropertyT
 }
 
 
-export function awsKinesisanalyticsv2ApplicationMonitoringConfigurationPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.MonitoringConfigurationPropertyOutputReference | AwsKinesisanalyticsv2Application.MonitoringConfigurationProperty): any {
+export function tfApplicationMonitoringConfigurationPropertyToHclTerraform(struct?: TfApplication.MonitoringConfigurationPropertyOutputReference | TfApplication.MonitoringConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -849,7 +849,7 @@ export function awsKinesisanalyticsv2ApplicationMonitoringConfigurationPropertyT
 }
 
 
-export function awsKinesisanalyticsv2ApplicationParallelismConfigurationPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.ParallelismConfigurationPropertyOutputReference | AwsKinesisanalyticsv2Application.ParallelismConfigurationProperty): any {
+export function tfApplicationParallelismConfigurationPropertyToTerraform(struct?: TfApplication.ParallelismConfigurationPropertyOutputReference | TfApplication.ParallelismConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -863,7 +863,7 @@ export function awsKinesisanalyticsv2ApplicationParallelismConfigurationProperty
 }
 
 
-export function awsKinesisanalyticsv2ApplicationParallelismConfigurationPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.ParallelismConfigurationPropertyOutputReference | AwsKinesisanalyticsv2Application.ParallelismConfigurationProperty): any {
+export function tfApplicationParallelismConfigurationPropertyToHclTerraform(struct?: TfApplication.ParallelismConfigurationPropertyOutputReference | TfApplication.ParallelismConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -900,39 +900,39 @@ export function awsKinesisanalyticsv2ApplicationParallelismConfigurationProperty
 }
 
 
-export function awsKinesisanalyticsv2ApplicationFlinkApplicationConfigurationPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.FlinkApplicationConfigurationPropertyOutputReference | AwsKinesisanalyticsv2Application.FlinkApplicationConfigurationProperty): any {
+export function tfApplicationFlinkApplicationConfigurationPropertyToTerraform(struct?: TfApplication.FlinkApplicationConfigurationPropertyOutputReference | TfApplication.FlinkApplicationConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    checkpoint_configuration: awsKinesisanalyticsv2ApplicationCheckpointConfigurationPropertyToTerraform(struct!.checkpointConfiguration),
-    monitoring_configuration: awsKinesisanalyticsv2ApplicationMonitoringConfigurationPropertyToTerraform(struct!.monitoringConfiguration),
-    parallelism_configuration: awsKinesisanalyticsv2ApplicationParallelismConfigurationPropertyToTerraform(struct!.parallelismConfiguration),
+    checkpoint_configuration: tfApplicationCheckpointConfigurationPropertyToTerraform(struct!.checkpointConfiguration),
+    monitoring_configuration: tfApplicationMonitoringConfigurationPropertyToTerraform(struct!.monitoringConfiguration),
+    parallelism_configuration: tfApplicationParallelismConfigurationPropertyToTerraform(struct!.parallelismConfiguration),
   }
 }
 
 
-export function awsKinesisanalyticsv2ApplicationFlinkApplicationConfigurationPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.FlinkApplicationConfigurationPropertyOutputReference | AwsKinesisanalyticsv2Application.FlinkApplicationConfigurationProperty): any {
+export function tfApplicationFlinkApplicationConfigurationPropertyToHclTerraform(struct?: TfApplication.FlinkApplicationConfigurationPropertyOutputReference | TfApplication.FlinkApplicationConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     checkpoint_configuration: {
-      value: awsKinesisanalyticsv2ApplicationCheckpointConfigurationPropertyToHclTerraform(struct!.checkpointConfiguration),
+      value: tfApplicationCheckpointConfigurationPropertyToHclTerraform(struct!.checkpointConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "CheckpointConfigurationPropertyList",
     },
     monitoring_configuration: {
-      value: awsKinesisanalyticsv2ApplicationMonitoringConfigurationPropertyToHclTerraform(struct!.monitoringConfiguration),
+      value: tfApplicationMonitoringConfigurationPropertyToHclTerraform(struct!.monitoringConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "MonitoringConfigurationPropertyList",
     },
     parallelism_configuration: {
-      value: awsKinesisanalyticsv2ApplicationParallelismConfigurationPropertyToHclTerraform(struct!.parallelismConfiguration),
+      value: tfApplicationParallelismConfigurationPropertyToHclTerraform(struct!.parallelismConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ParallelismConfigurationPropertyList",
@@ -944,7 +944,7 @@ export function awsKinesisanalyticsv2ApplicationFlinkApplicationConfigurationPro
 }
 
 
-export function awsKinesisanalyticsv2ApplicationApplicationRestoreConfigurationPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.ApplicationRestoreConfigurationPropertyOutputReference | AwsKinesisanalyticsv2Application.ApplicationRestoreConfigurationProperty): any {
+export function tfApplicationApplicationRestoreConfigurationPropertyToTerraform(struct?: TfApplication.ApplicationRestoreConfigurationPropertyOutputReference | TfApplication.ApplicationRestoreConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -956,7 +956,7 @@ export function awsKinesisanalyticsv2ApplicationApplicationRestoreConfigurationP
 }
 
 
-export function awsKinesisanalyticsv2ApplicationApplicationRestoreConfigurationPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.ApplicationRestoreConfigurationPropertyOutputReference | AwsKinesisanalyticsv2Application.ApplicationRestoreConfigurationProperty): any {
+export function tfApplicationApplicationRestoreConfigurationPropertyToHclTerraform(struct?: TfApplication.ApplicationRestoreConfigurationPropertyOutputReference | TfApplication.ApplicationRestoreConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -981,7 +981,7 @@ export function awsKinesisanalyticsv2ApplicationApplicationRestoreConfigurationP
 }
 
 
-export function awsKinesisanalyticsv2ApplicationFlinkRunConfigurationPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.FlinkRunConfigurationPropertyOutputReference | AwsKinesisanalyticsv2Application.FlinkRunConfigurationProperty): any {
+export function tfApplicationFlinkRunConfigurationPropertyToTerraform(struct?: TfApplication.FlinkRunConfigurationPropertyOutputReference | TfApplication.FlinkRunConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -992,7 +992,7 @@ export function awsKinesisanalyticsv2ApplicationFlinkRunConfigurationPropertyToT
 }
 
 
-export function awsKinesisanalyticsv2ApplicationFlinkRunConfigurationPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.FlinkRunConfigurationPropertyOutputReference | AwsKinesisanalyticsv2Application.FlinkRunConfigurationProperty): any {
+export function tfApplicationFlinkRunConfigurationPropertyToHclTerraform(struct?: TfApplication.FlinkRunConfigurationPropertyOutputReference | TfApplication.FlinkRunConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1011,32 +1011,32 @@ export function awsKinesisanalyticsv2ApplicationFlinkRunConfigurationPropertyToH
 }
 
 
-export function awsKinesisanalyticsv2ApplicationRunConfigurationPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.RunConfigurationPropertyOutputReference | AwsKinesisanalyticsv2Application.RunConfigurationProperty): any {
+export function tfApplicationRunConfigurationPropertyToTerraform(struct?: TfApplication.RunConfigurationPropertyOutputReference | TfApplication.RunConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    application_restore_configuration: awsKinesisanalyticsv2ApplicationApplicationRestoreConfigurationPropertyToTerraform(struct!.applicationRestoreConfiguration),
-    flink_run_configuration: awsKinesisanalyticsv2ApplicationFlinkRunConfigurationPropertyToTerraform(struct!.flinkRunConfiguration),
+    application_restore_configuration: tfApplicationApplicationRestoreConfigurationPropertyToTerraform(struct!.applicationRestoreConfiguration),
+    flink_run_configuration: tfApplicationFlinkRunConfigurationPropertyToTerraform(struct!.flinkRunConfiguration),
   }
 }
 
 
-export function awsKinesisanalyticsv2ApplicationRunConfigurationPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.RunConfigurationPropertyOutputReference | AwsKinesisanalyticsv2Application.RunConfigurationProperty): any {
+export function tfApplicationRunConfigurationPropertyToHclTerraform(struct?: TfApplication.RunConfigurationPropertyOutputReference | TfApplication.RunConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     application_restore_configuration: {
-      value: awsKinesisanalyticsv2ApplicationApplicationRestoreConfigurationPropertyToHclTerraform(struct!.applicationRestoreConfiguration),
+      value: tfApplicationApplicationRestoreConfigurationPropertyToHclTerraform(struct!.applicationRestoreConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ApplicationRestoreConfigurationPropertyList",
     },
     flink_run_configuration: {
-      value: awsKinesisanalyticsv2ApplicationFlinkRunConfigurationPropertyToHclTerraform(struct!.flinkRunConfiguration),
+      value: tfApplicationFlinkRunConfigurationPropertyToHclTerraform(struct!.flinkRunConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "FlinkRunConfigurationPropertyList",
@@ -1048,7 +1048,7 @@ export function awsKinesisanalyticsv2ApplicationRunConfigurationPropertyToHclTer
 }
 
 
-export function awsKinesisanalyticsv2ApplicationInputParallelismPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.InputParallelismPropertyOutputReference | AwsKinesisanalyticsv2Application.InputParallelismProperty): any {
+export function tfApplicationInputParallelismPropertyToTerraform(struct?: TfApplication.InputParallelismPropertyOutputReference | TfApplication.InputParallelismProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1059,7 +1059,7 @@ export function awsKinesisanalyticsv2ApplicationInputParallelismPropertyToTerraf
 }
 
 
-export function awsKinesisanalyticsv2ApplicationInputParallelismPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.InputParallelismPropertyOutputReference | AwsKinesisanalyticsv2Application.InputParallelismProperty): any {
+export function tfApplicationInputParallelismPropertyToHclTerraform(struct?: TfApplication.InputParallelismPropertyOutputReference | TfApplication.InputParallelismProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1078,7 +1078,7 @@ export function awsKinesisanalyticsv2ApplicationInputParallelismPropertyToHclTer
 }
 
 
-export function awsKinesisanalyticsv2ApplicationInputLambdaProcessorPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.InputLambdaProcessorPropertyOutputReference | AwsKinesisanalyticsv2Application.InputLambdaProcessorProperty): any {
+export function tfApplicationInputLambdaProcessorPropertyToTerraform(struct?: TfApplication.InputLambdaProcessorPropertyOutputReference | TfApplication.InputLambdaProcessorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1089,7 +1089,7 @@ export function awsKinesisanalyticsv2ApplicationInputLambdaProcessorPropertyToTe
 }
 
 
-export function awsKinesisanalyticsv2ApplicationInputLambdaProcessorPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.InputLambdaProcessorPropertyOutputReference | AwsKinesisanalyticsv2Application.InputLambdaProcessorProperty): any {
+export function tfApplicationInputLambdaProcessorPropertyToHclTerraform(struct?: TfApplication.InputLambdaProcessorPropertyOutputReference | TfApplication.InputLambdaProcessorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1108,25 +1108,25 @@ export function awsKinesisanalyticsv2ApplicationInputLambdaProcessorPropertyToHc
 }
 
 
-export function awsKinesisanalyticsv2ApplicationInputProcessingConfigurationPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.InputProcessingConfigurationPropertyOutputReference | AwsKinesisanalyticsv2Application.InputProcessingConfigurationProperty): any {
+export function tfApplicationInputProcessingConfigurationPropertyToTerraform(struct?: TfApplication.InputProcessingConfigurationPropertyOutputReference | TfApplication.InputProcessingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    input_lambda_processor: awsKinesisanalyticsv2ApplicationInputLambdaProcessorPropertyToTerraform(struct!.inputLambdaProcessor),
+    input_lambda_processor: tfApplicationInputLambdaProcessorPropertyToTerraform(struct!.inputLambdaProcessor),
   }
 }
 
 
-export function awsKinesisanalyticsv2ApplicationInputProcessingConfigurationPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.InputProcessingConfigurationPropertyOutputReference | AwsKinesisanalyticsv2Application.InputProcessingConfigurationProperty): any {
+export function tfApplicationInputProcessingConfigurationPropertyToHclTerraform(struct?: TfApplication.InputProcessingConfigurationPropertyOutputReference | TfApplication.InputProcessingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     input_lambda_processor: {
-      value: awsKinesisanalyticsv2ApplicationInputLambdaProcessorPropertyToHclTerraform(struct!.inputLambdaProcessor),
+      value: tfApplicationInputLambdaProcessorPropertyToHclTerraform(struct!.inputLambdaProcessor),
       isBlock: true,
       type: "list",
       storageClassType: "InputLambdaProcessorPropertyList",
@@ -1138,7 +1138,7 @@ export function awsKinesisanalyticsv2ApplicationInputProcessingConfigurationProp
 }
 
 
-export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnProperty | cdktn.IResolvable): any {
+export function tfApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnPropertyToTerraform(struct?: TfApplication.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1151,7 +1151,7 @@ export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlAppli
 }
 
 
-export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnProperty | cdktn.IResolvable): any {
+export function tfApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnPropertyToHclTerraform(struct?: TfApplication.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1182,7 +1182,7 @@ export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlAppli
 }
 
 
-export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersPropertyOutputReference | AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersProperty): any {
+export function tfApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersPropertyToTerraform(struct?: TfApplication.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersPropertyOutputReference | TfApplication.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1194,7 +1194,7 @@ export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlAppli
 }
 
 
-export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersPropertyOutputReference | AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersProperty): any {
+export function tfApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersPropertyToHclTerraform(struct?: TfApplication.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersPropertyOutputReference | TfApplication.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1219,7 +1219,7 @@ export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlAppli
 }
 
 
-export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersPropertyOutputReference | AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersProperty): any {
+export function tfApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersPropertyToTerraform(struct?: TfApplication.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersPropertyOutputReference | TfApplication.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1230,7 +1230,7 @@ export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlAppli
 }
 
 
-export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersPropertyOutputReference | AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersProperty): any {
+export function tfApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersPropertyToHclTerraform(struct?: TfApplication.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersPropertyOutputReference | TfApplication.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1249,32 +1249,32 @@ export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlAppli
 }
 
 
-export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersPropertyOutputReference | AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersProperty): any {
+export function tfApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersPropertyToTerraform(struct?: TfApplication.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersPropertyOutputReference | TfApplication.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    csv_mapping_parameters: awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersPropertyToTerraform(struct!.csvMappingParameters),
-    json_mapping_parameters: awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersPropertyToTerraform(struct!.jsonMappingParameters),
+    csv_mapping_parameters: tfApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersPropertyToTerraform(struct!.csvMappingParameters),
+    json_mapping_parameters: tfApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersPropertyToTerraform(struct!.jsonMappingParameters),
   }
 }
 
 
-export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersPropertyOutputReference | AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersProperty): any {
+export function tfApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersPropertyToHclTerraform(struct?: TfApplication.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersPropertyOutputReference | TfApplication.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     csv_mapping_parameters: {
-      value: awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersPropertyToHclTerraform(struct!.csvMappingParameters),
+      value: tfApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersPropertyToHclTerraform(struct!.csvMappingParameters),
       isBlock: true,
       type: "list",
       storageClassType: "ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersPropertyList",
     },
     json_mapping_parameters: {
-      value: awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersPropertyToHclTerraform(struct!.jsonMappingParameters),
+      value: tfApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersPropertyToHclTerraform(struct!.jsonMappingParameters),
       isBlock: true,
       type: "list",
       storageClassType: "ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersPropertyList",
@@ -1286,19 +1286,19 @@ export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlAppli
 }
 
 
-export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatPropertyOutputReference | AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatProperty): any {
+export function tfApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatPropertyToTerraform(struct?: TfApplication.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatPropertyOutputReference | TfApplication.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     record_format_type: cdktn.stringToTerraform(struct!.recordFormatType),
-    mapping_parameters: awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersPropertyToTerraform(struct!.mappingParameters),
+    mapping_parameters: tfApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersPropertyToTerraform(struct!.mappingParameters),
   }
 }
 
 
-export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatPropertyOutputReference | AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatProperty): any {
+export function tfApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatPropertyToHclTerraform(struct?: TfApplication.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatPropertyOutputReference | TfApplication.ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1311,7 +1311,7 @@ export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlAppli
       storageClassType: "string",
     },
     mapping_parameters: {
-      value: awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersPropertyToHclTerraform(struct!.mappingParameters),
+      value: tfApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersPropertyToHclTerraform(struct!.mappingParameters),
       isBlock: true,
       type: "list",
       storageClassType: "ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersPropertyList",
@@ -1323,20 +1323,20 @@ export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlAppli
 }
 
 
-export function awsKinesisanalyticsv2ApplicationInputSchemaPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.InputSchemaPropertyOutputReference | AwsKinesisanalyticsv2Application.InputSchemaProperty): any {
+export function tfApplicationInputSchemaPropertyToTerraform(struct?: TfApplication.InputSchemaPropertyOutputReference | TfApplication.InputSchemaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     record_encoding: cdktn.stringToTerraform(struct!.recordEncoding),
-    record_column: cdktn.listMapper(awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnPropertyToTerraform, true)(struct!.recordColumn),
-    record_format: awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatPropertyToTerraform(struct!.recordFormat),
+    record_column: cdktn.listMapper(tfApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnPropertyToTerraform, true)(struct!.recordColumn),
+    record_format: tfApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatPropertyToTerraform(struct!.recordFormat),
   }
 }
 
 
-export function awsKinesisanalyticsv2ApplicationInputSchemaPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.InputSchemaPropertyOutputReference | AwsKinesisanalyticsv2Application.InputSchemaProperty): any {
+export function tfApplicationInputSchemaPropertyToHclTerraform(struct?: TfApplication.InputSchemaPropertyOutputReference | TfApplication.InputSchemaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1349,13 +1349,13 @@ export function awsKinesisanalyticsv2ApplicationInputSchemaPropertyToHclTerrafor
       storageClassType: "string",
     },
     record_column: {
-      value: cdktn.listMapperHcl(awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnPropertyToHclTerraform, true)(struct!.recordColumn),
+      value: cdktn.listMapperHcl(tfApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnPropertyToHclTerraform, true)(struct!.recordColumn),
       isBlock: true,
       type: "list",
       storageClassType: "ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnPropertyList",
     },
     record_format: {
-      value: awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatPropertyToHclTerraform(struct!.recordFormat),
+      value: tfApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatPropertyToHclTerraform(struct!.recordFormat),
       isBlock: true,
       type: "list",
       storageClassType: "ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatPropertyList",
@@ -1367,7 +1367,7 @@ export function awsKinesisanalyticsv2ApplicationInputSchemaPropertyToHclTerrafor
 }
 
 
-export function awsKinesisanalyticsv2ApplicationInputStartingPositionConfigurationPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.InputStartingPositionConfigurationProperty | cdktn.IResolvable): any {
+export function tfApplicationInputStartingPositionConfigurationPropertyToTerraform(struct?: TfApplication.InputStartingPositionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1378,7 +1378,7 @@ export function awsKinesisanalyticsv2ApplicationInputStartingPositionConfigurati
 }
 
 
-export function awsKinesisanalyticsv2ApplicationInputStartingPositionConfigurationPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.InputStartingPositionConfigurationProperty | cdktn.IResolvable): any {
+export function tfApplicationInputStartingPositionConfigurationPropertyToHclTerraform(struct?: TfApplication.InputStartingPositionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1397,7 +1397,7 @@ export function awsKinesisanalyticsv2ApplicationInputStartingPositionConfigurati
 }
 
 
-export function awsKinesisanalyticsv2ApplicationKinesisFirehoseInputPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.KinesisFirehoseInputPropertyOutputReference | AwsKinesisanalyticsv2Application.KinesisFirehoseInputProperty): any {
+export function tfApplicationKinesisFirehoseInputPropertyToTerraform(struct?: TfApplication.KinesisFirehoseInputPropertyOutputReference | TfApplication.KinesisFirehoseInputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1408,7 +1408,7 @@ export function awsKinesisanalyticsv2ApplicationKinesisFirehoseInputPropertyToTe
 }
 
 
-export function awsKinesisanalyticsv2ApplicationKinesisFirehoseInputPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.KinesisFirehoseInputPropertyOutputReference | AwsKinesisanalyticsv2Application.KinesisFirehoseInputProperty): any {
+export function tfApplicationKinesisFirehoseInputPropertyToHclTerraform(struct?: TfApplication.KinesisFirehoseInputPropertyOutputReference | TfApplication.KinesisFirehoseInputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1427,7 +1427,7 @@ export function awsKinesisanalyticsv2ApplicationKinesisFirehoseInputPropertyToHc
 }
 
 
-export function awsKinesisanalyticsv2ApplicationKinesisStreamsInputPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.KinesisStreamsInputPropertyOutputReference | AwsKinesisanalyticsv2Application.KinesisStreamsInputProperty): any {
+export function tfApplicationKinesisStreamsInputPropertyToTerraform(struct?: TfApplication.KinesisStreamsInputPropertyOutputReference | TfApplication.KinesisStreamsInputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1438,7 +1438,7 @@ export function awsKinesisanalyticsv2ApplicationKinesisStreamsInputPropertyToTer
 }
 
 
-export function awsKinesisanalyticsv2ApplicationKinesisStreamsInputPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.KinesisStreamsInputPropertyOutputReference | AwsKinesisanalyticsv2Application.KinesisStreamsInputProperty): any {
+export function tfApplicationKinesisStreamsInputPropertyToHclTerraform(struct?: TfApplication.KinesisStreamsInputPropertyOutputReference | TfApplication.KinesisStreamsInputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1457,24 +1457,24 @@ export function awsKinesisanalyticsv2ApplicationKinesisStreamsInputPropertyToHcl
 }
 
 
-export function awsKinesisanalyticsv2ApplicationInputPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.InputPropertyOutputReference | AwsKinesisanalyticsv2Application.InputProperty): any {
+export function tfApplicationInputPropertyToTerraform(struct?: TfApplication.InputPropertyOutputReference | TfApplication.InputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     name_prefix: cdktn.stringToTerraform(struct!.namePrefix),
-    input_parallelism: awsKinesisanalyticsv2ApplicationInputParallelismPropertyToTerraform(struct!.inputParallelism),
-    input_processing_configuration: awsKinesisanalyticsv2ApplicationInputProcessingConfigurationPropertyToTerraform(struct!.inputProcessingConfiguration),
-    input_schema: awsKinesisanalyticsv2ApplicationInputSchemaPropertyToTerraform(struct!.inputSchema),
-    input_starting_position_configuration: cdktn.listMapper(awsKinesisanalyticsv2ApplicationInputStartingPositionConfigurationPropertyToTerraform, true)(struct!.inputStartingPositionConfiguration),
-    kinesis_firehose_input: awsKinesisanalyticsv2ApplicationKinesisFirehoseInputPropertyToTerraform(struct!.kinesisFirehoseInput),
-    kinesis_streams_input: awsKinesisanalyticsv2ApplicationKinesisStreamsInputPropertyToTerraform(struct!.kinesisStreamsInput),
+    input_parallelism: tfApplicationInputParallelismPropertyToTerraform(struct!.inputParallelism),
+    input_processing_configuration: tfApplicationInputProcessingConfigurationPropertyToTerraform(struct!.inputProcessingConfiguration),
+    input_schema: tfApplicationInputSchemaPropertyToTerraform(struct!.inputSchema),
+    input_starting_position_configuration: cdktn.listMapper(tfApplicationInputStartingPositionConfigurationPropertyToTerraform, true)(struct!.inputStartingPositionConfiguration),
+    kinesis_firehose_input: tfApplicationKinesisFirehoseInputPropertyToTerraform(struct!.kinesisFirehoseInput),
+    kinesis_streams_input: tfApplicationKinesisStreamsInputPropertyToTerraform(struct!.kinesisStreamsInput),
   }
 }
 
 
-export function awsKinesisanalyticsv2ApplicationInputPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.InputPropertyOutputReference | AwsKinesisanalyticsv2Application.InputProperty): any {
+export function tfApplicationInputPropertyToHclTerraform(struct?: TfApplication.InputPropertyOutputReference | TfApplication.InputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1487,37 +1487,37 @@ export function awsKinesisanalyticsv2ApplicationInputPropertyToHclTerraform(stru
       storageClassType: "string",
     },
     input_parallelism: {
-      value: awsKinesisanalyticsv2ApplicationInputParallelismPropertyToHclTerraform(struct!.inputParallelism),
+      value: tfApplicationInputParallelismPropertyToHclTerraform(struct!.inputParallelism),
       isBlock: true,
       type: "list",
       storageClassType: "InputParallelismPropertyList",
     },
     input_processing_configuration: {
-      value: awsKinesisanalyticsv2ApplicationInputProcessingConfigurationPropertyToHclTerraform(struct!.inputProcessingConfiguration),
+      value: tfApplicationInputProcessingConfigurationPropertyToHclTerraform(struct!.inputProcessingConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "InputProcessingConfigurationPropertyList",
     },
     input_schema: {
-      value: awsKinesisanalyticsv2ApplicationInputSchemaPropertyToHclTerraform(struct!.inputSchema),
+      value: tfApplicationInputSchemaPropertyToHclTerraform(struct!.inputSchema),
       isBlock: true,
       type: "list",
       storageClassType: "InputSchemaPropertyList",
     },
     input_starting_position_configuration: {
-      value: cdktn.listMapperHcl(awsKinesisanalyticsv2ApplicationInputStartingPositionConfigurationPropertyToHclTerraform, true)(struct!.inputStartingPositionConfiguration),
+      value: cdktn.listMapperHcl(tfApplicationInputStartingPositionConfigurationPropertyToHclTerraform, true)(struct!.inputStartingPositionConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "InputStartingPositionConfigurationPropertyList",
     },
     kinesis_firehose_input: {
-      value: awsKinesisanalyticsv2ApplicationKinesisFirehoseInputPropertyToHclTerraform(struct!.kinesisFirehoseInput),
+      value: tfApplicationKinesisFirehoseInputPropertyToHclTerraform(struct!.kinesisFirehoseInput),
       isBlock: true,
       type: "list",
       storageClassType: "KinesisFirehoseInputPropertyList",
     },
     kinesis_streams_input: {
-      value: awsKinesisanalyticsv2ApplicationKinesisStreamsInputPropertyToHclTerraform(struct!.kinesisStreamsInput),
+      value: tfApplicationKinesisStreamsInputPropertyToHclTerraform(struct!.kinesisStreamsInput),
       isBlock: true,
       type: "list",
       storageClassType: "KinesisStreamsInputPropertyList",
@@ -1529,7 +1529,7 @@ export function awsKinesisanalyticsv2ApplicationInputPropertyToHclTerraform(stru
 }
 
 
-export function awsKinesisanalyticsv2ApplicationDestinationSchemaPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.DestinationSchemaPropertyOutputReference | AwsKinesisanalyticsv2Application.DestinationSchemaProperty): any {
+export function tfApplicationDestinationSchemaPropertyToTerraform(struct?: TfApplication.DestinationSchemaPropertyOutputReference | TfApplication.DestinationSchemaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1540,7 +1540,7 @@ export function awsKinesisanalyticsv2ApplicationDestinationSchemaPropertyToTerra
 }
 
 
-export function awsKinesisanalyticsv2ApplicationDestinationSchemaPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.DestinationSchemaPropertyOutputReference | AwsKinesisanalyticsv2Application.DestinationSchemaProperty): any {
+export function tfApplicationDestinationSchemaPropertyToHclTerraform(struct?: TfApplication.DestinationSchemaPropertyOutputReference | TfApplication.DestinationSchemaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1559,7 +1559,7 @@ export function awsKinesisanalyticsv2ApplicationDestinationSchemaPropertyToHclTe
 }
 
 
-export function awsKinesisanalyticsv2ApplicationKinesisFirehoseOutputPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.KinesisFirehoseOutputPropertyOutputReference | AwsKinesisanalyticsv2Application.KinesisFirehoseOutputProperty): any {
+export function tfApplicationKinesisFirehoseOutputPropertyToTerraform(struct?: TfApplication.KinesisFirehoseOutputPropertyOutputReference | TfApplication.KinesisFirehoseOutputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1570,7 +1570,7 @@ export function awsKinesisanalyticsv2ApplicationKinesisFirehoseOutputPropertyToT
 }
 
 
-export function awsKinesisanalyticsv2ApplicationKinesisFirehoseOutputPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.KinesisFirehoseOutputPropertyOutputReference | AwsKinesisanalyticsv2Application.KinesisFirehoseOutputProperty): any {
+export function tfApplicationKinesisFirehoseOutputPropertyToHclTerraform(struct?: TfApplication.KinesisFirehoseOutputPropertyOutputReference | TfApplication.KinesisFirehoseOutputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1589,7 +1589,7 @@ export function awsKinesisanalyticsv2ApplicationKinesisFirehoseOutputPropertyToH
 }
 
 
-export function awsKinesisanalyticsv2ApplicationKinesisStreamsOutputPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.KinesisStreamsOutputPropertyOutputReference | AwsKinesisanalyticsv2Application.KinesisStreamsOutputProperty): any {
+export function tfApplicationKinesisStreamsOutputPropertyToTerraform(struct?: TfApplication.KinesisStreamsOutputPropertyOutputReference | TfApplication.KinesisStreamsOutputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1600,7 +1600,7 @@ export function awsKinesisanalyticsv2ApplicationKinesisStreamsOutputPropertyToTe
 }
 
 
-export function awsKinesisanalyticsv2ApplicationKinesisStreamsOutputPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.KinesisStreamsOutputPropertyOutputReference | AwsKinesisanalyticsv2Application.KinesisStreamsOutputProperty): any {
+export function tfApplicationKinesisStreamsOutputPropertyToHclTerraform(struct?: TfApplication.KinesisStreamsOutputPropertyOutputReference | TfApplication.KinesisStreamsOutputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1619,7 +1619,7 @@ export function awsKinesisanalyticsv2ApplicationKinesisStreamsOutputPropertyToHc
 }
 
 
-export function awsKinesisanalyticsv2ApplicationLambdaOutputPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.LambdaOutputPropertyOutputReference | AwsKinesisanalyticsv2Application.LambdaOutputProperty): any {
+export function tfApplicationLambdaOutputPropertyToTerraform(struct?: TfApplication.LambdaOutputPropertyOutputReference | TfApplication.LambdaOutputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1630,7 +1630,7 @@ export function awsKinesisanalyticsv2ApplicationLambdaOutputPropertyToTerraform(
 }
 
 
-export function awsKinesisanalyticsv2ApplicationLambdaOutputPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.LambdaOutputPropertyOutputReference | AwsKinesisanalyticsv2Application.LambdaOutputProperty): any {
+export function tfApplicationLambdaOutputPropertyToHclTerraform(struct?: TfApplication.LambdaOutputPropertyOutputReference | TfApplication.LambdaOutputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1649,22 +1649,22 @@ export function awsKinesisanalyticsv2ApplicationLambdaOutputPropertyToHclTerrafo
 }
 
 
-export function awsKinesisanalyticsv2ApplicationOutputPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.OutputProperty | cdktn.IResolvable): any {
+export function tfApplicationOutputPropertyToTerraform(struct?: TfApplication.OutputProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     name: cdktn.stringToTerraform(struct!.name),
-    destination_schema: awsKinesisanalyticsv2ApplicationDestinationSchemaPropertyToTerraform(struct!.destinationSchema),
-    kinesis_firehose_output: awsKinesisanalyticsv2ApplicationKinesisFirehoseOutputPropertyToTerraform(struct!.kinesisFirehoseOutput),
-    kinesis_streams_output: awsKinesisanalyticsv2ApplicationKinesisStreamsOutputPropertyToTerraform(struct!.kinesisStreamsOutput),
-    lambda_output: awsKinesisanalyticsv2ApplicationLambdaOutputPropertyToTerraform(struct!.lambdaOutput),
+    destination_schema: tfApplicationDestinationSchemaPropertyToTerraform(struct!.destinationSchema),
+    kinesis_firehose_output: tfApplicationKinesisFirehoseOutputPropertyToTerraform(struct!.kinesisFirehoseOutput),
+    kinesis_streams_output: tfApplicationKinesisStreamsOutputPropertyToTerraform(struct!.kinesisStreamsOutput),
+    lambda_output: tfApplicationLambdaOutputPropertyToTerraform(struct!.lambdaOutput),
   }
 }
 
 
-export function awsKinesisanalyticsv2ApplicationOutputPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.OutputProperty | cdktn.IResolvable): any {
+export function tfApplicationOutputPropertyToHclTerraform(struct?: TfApplication.OutputProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1677,25 +1677,25 @@ export function awsKinesisanalyticsv2ApplicationOutputPropertyToHclTerraform(str
       storageClassType: "string",
     },
     destination_schema: {
-      value: awsKinesisanalyticsv2ApplicationDestinationSchemaPropertyToHclTerraform(struct!.destinationSchema),
+      value: tfApplicationDestinationSchemaPropertyToHclTerraform(struct!.destinationSchema),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationSchemaPropertyList",
     },
     kinesis_firehose_output: {
-      value: awsKinesisanalyticsv2ApplicationKinesisFirehoseOutputPropertyToHclTerraform(struct!.kinesisFirehoseOutput),
+      value: tfApplicationKinesisFirehoseOutputPropertyToHclTerraform(struct!.kinesisFirehoseOutput),
       isBlock: true,
       type: "list",
       storageClassType: "KinesisFirehoseOutputPropertyList",
     },
     kinesis_streams_output: {
-      value: awsKinesisanalyticsv2ApplicationKinesisStreamsOutputPropertyToHclTerraform(struct!.kinesisStreamsOutput),
+      value: tfApplicationKinesisStreamsOutputPropertyToHclTerraform(struct!.kinesisStreamsOutput),
       isBlock: true,
       type: "list",
       storageClassType: "KinesisStreamsOutputPropertyList",
     },
     lambda_output: {
-      value: awsKinesisanalyticsv2ApplicationLambdaOutputPropertyToHclTerraform(struct!.lambdaOutput),
+      value: tfApplicationLambdaOutputPropertyToHclTerraform(struct!.lambdaOutput),
       isBlock: true,
       type: "list",
       storageClassType: "LambdaOutputPropertyList",
@@ -1707,7 +1707,7 @@ export function awsKinesisanalyticsv2ApplicationOutputPropertyToHclTerraform(str
 }
 
 
-export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnProperty | cdktn.IResolvable): any {
+export function tfApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnPropertyToTerraform(struct?: TfApplication.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1720,7 +1720,7 @@ export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlAppli
 }
 
 
-export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnProperty | cdktn.IResolvable): any {
+export function tfApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnPropertyToHclTerraform(struct?: TfApplication.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1751,7 +1751,7 @@ export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlAppli
 }
 
 
-export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersPropertyOutputReference | AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersProperty): any {
+export function tfApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersPropertyToTerraform(struct?: TfApplication.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersPropertyOutputReference | TfApplication.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1763,7 +1763,7 @@ export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlAppli
 }
 
 
-export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersPropertyOutputReference | AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersProperty): any {
+export function tfApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersPropertyToHclTerraform(struct?: TfApplication.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersPropertyOutputReference | TfApplication.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1788,7 +1788,7 @@ export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlAppli
 }
 
 
-export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersPropertyOutputReference | AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersProperty): any {
+export function tfApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersPropertyToTerraform(struct?: TfApplication.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersPropertyOutputReference | TfApplication.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1799,7 +1799,7 @@ export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlAppli
 }
 
 
-export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersPropertyOutputReference | AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersProperty): any {
+export function tfApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersPropertyToHclTerraform(struct?: TfApplication.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersPropertyOutputReference | TfApplication.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1818,32 +1818,32 @@ export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlAppli
 }
 
 
-export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersPropertyOutputReference | AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersProperty): any {
+export function tfApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersPropertyToTerraform(struct?: TfApplication.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersPropertyOutputReference | TfApplication.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    csv_mapping_parameters: awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersPropertyToTerraform(struct!.csvMappingParameters),
-    json_mapping_parameters: awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersPropertyToTerraform(struct!.jsonMappingParameters),
+    csv_mapping_parameters: tfApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersPropertyToTerraform(struct!.csvMappingParameters),
+    json_mapping_parameters: tfApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersPropertyToTerraform(struct!.jsonMappingParameters),
   }
 }
 
 
-export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersPropertyOutputReference | AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersProperty): any {
+export function tfApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersPropertyToHclTerraform(struct?: TfApplication.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersPropertyOutputReference | TfApplication.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     csv_mapping_parameters: {
-      value: awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersPropertyToHclTerraform(struct!.csvMappingParameters),
+      value: tfApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersPropertyToHclTerraform(struct!.csvMappingParameters),
       isBlock: true,
       type: "list",
       storageClassType: "ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersPropertyList",
     },
     json_mapping_parameters: {
-      value: awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersPropertyToHclTerraform(struct!.jsonMappingParameters),
+      value: tfApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersPropertyToHclTerraform(struct!.jsonMappingParameters),
       isBlock: true,
       type: "list",
       storageClassType: "ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersPropertyList",
@@ -1855,19 +1855,19 @@ export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlAppli
 }
 
 
-export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatPropertyOutputReference | AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatProperty): any {
+export function tfApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatPropertyToTerraform(struct?: TfApplication.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatPropertyOutputReference | TfApplication.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     record_format_type: cdktn.stringToTerraform(struct!.recordFormatType),
-    mapping_parameters: awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersPropertyToTerraform(struct!.mappingParameters),
+    mapping_parameters: tfApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersPropertyToTerraform(struct!.mappingParameters),
   }
 }
 
 
-export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatPropertyOutputReference | AwsKinesisanalyticsv2Application.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatProperty): any {
+export function tfApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatPropertyToHclTerraform(struct?: TfApplication.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatPropertyOutputReference | TfApplication.ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1880,7 +1880,7 @@ export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlAppli
       storageClassType: "string",
     },
     mapping_parameters: {
-      value: awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersPropertyToHclTerraform(struct!.mappingParameters),
+      value: tfApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersPropertyToHclTerraform(struct!.mappingParameters),
       isBlock: true,
       type: "list",
       storageClassType: "ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersPropertyList",
@@ -1892,20 +1892,20 @@ export function awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlAppli
 }
 
 
-export function awsKinesisanalyticsv2ApplicationReferenceSchemaPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.ReferenceSchemaPropertyOutputReference | AwsKinesisanalyticsv2Application.ReferenceSchemaProperty): any {
+export function tfApplicationReferenceSchemaPropertyToTerraform(struct?: TfApplication.ReferenceSchemaPropertyOutputReference | TfApplication.ReferenceSchemaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     record_encoding: cdktn.stringToTerraform(struct!.recordEncoding),
-    record_column: cdktn.listMapper(awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnPropertyToTerraform, true)(struct!.recordColumn),
-    record_format: awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatPropertyToTerraform(struct!.recordFormat),
+    record_column: cdktn.listMapper(tfApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnPropertyToTerraform, true)(struct!.recordColumn),
+    record_format: tfApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatPropertyToTerraform(struct!.recordFormat),
   }
 }
 
 
-export function awsKinesisanalyticsv2ApplicationReferenceSchemaPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.ReferenceSchemaPropertyOutputReference | AwsKinesisanalyticsv2Application.ReferenceSchemaProperty): any {
+export function tfApplicationReferenceSchemaPropertyToHclTerraform(struct?: TfApplication.ReferenceSchemaPropertyOutputReference | TfApplication.ReferenceSchemaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1918,13 +1918,13 @@ export function awsKinesisanalyticsv2ApplicationReferenceSchemaPropertyToHclTerr
       storageClassType: "string",
     },
     record_column: {
-      value: cdktn.listMapperHcl(awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnPropertyToHclTerraform, true)(struct!.recordColumn),
+      value: cdktn.listMapperHcl(tfApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnPropertyToHclTerraform, true)(struct!.recordColumn),
       isBlock: true,
       type: "list",
       storageClassType: "ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnPropertyList",
     },
     record_format: {
-      value: awsKinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatPropertyToHclTerraform(struct!.recordFormat),
+      value: tfApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatPropertyToHclTerraform(struct!.recordFormat),
       isBlock: true,
       type: "list",
       storageClassType: "ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatPropertyList",
@@ -1936,7 +1936,7 @@ export function awsKinesisanalyticsv2ApplicationReferenceSchemaPropertyToHclTerr
 }
 
 
-export function awsKinesisanalyticsv2ApplicationS3ReferenceDataSourcePropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.S3ReferenceDataSourcePropertyOutputReference | AwsKinesisanalyticsv2Application.S3ReferenceDataSourceProperty): any {
+export function tfApplicationS3ReferenceDataSourcePropertyToTerraform(struct?: TfApplication.S3ReferenceDataSourcePropertyOutputReference | TfApplication.S3ReferenceDataSourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1948,7 +1948,7 @@ export function awsKinesisanalyticsv2ApplicationS3ReferenceDataSourcePropertyToT
 }
 
 
-export function awsKinesisanalyticsv2ApplicationS3ReferenceDataSourcePropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.S3ReferenceDataSourcePropertyOutputReference | AwsKinesisanalyticsv2Application.S3ReferenceDataSourceProperty): any {
+export function tfApplicationS3ReferenceDataSourcePropertyToHclTerraform(struct?: TfApplication.S3ReferenceDataSourcePropertyOutputReference | TfApplication.S3ReferenceDataSourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1973,20 +1973,20 @@ export function awsKinesisanalyticsv2ApplicationS3ReferenceDataSourcePropertyToH
 }
 
 
-export function awsKinesisanalyticsv2ApplicationReferenceDataSourcePropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.ReferenceDataSourcePropertyOutputReference | AwsKinesisanalyticsv2Application.ReferenceDataSourceProperty): any {
+export function tfApplicationReferenceDataSourcePropertyToTerraform(struct?: TfApplication.ReferenceDataSourcePropertyOutputReference | TfApplication.ReferenceDataSourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     table_name: cdktn.stringToTerraform(struct!.tableName),
-    reference_schema: awsKinesisanalyticsv2ApplicationReferenceSchemaPropertyToTerraform(struct!.referenceSchema),
-    s3_reference_data_source: awsKinesisanalyticsv2ApplicationS3ReferenceDataSourcePropertyToTerraform(struct!.s3ReferenceDataSource),
+    reference_schema: tfApplicationReferenceSchemaPropertyToTerraform(struct!.referenceSchema),
+    s3_reference_data_source: tfApplicationS3ReferenceDataSourcePropertyToTerraform(struct!.s3ReferenceDataSource),
   }
 }
 
 
-export function awsKinesisanalyticsv2ApplicationReferenceDataSourcePropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.ReferenceDataSourcePropertyOutputReference | AwsKinesisanalyticsv2Application.ReferenceDataSourceProperty): any {
+export function tfApplicationReferenceDataSourcePropertyToHclTerraform(struct?: TfApplication.ReferenceDataSourcePropertyOutputReference | TfApplication.ReferenceDataSourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1999,13 +1999,13 @@ export function awsKinesisanalyticsv2ApplicationReferenceDataSourcePropertyToHcl
       storageClassType: "string",
     },
     reference_schema: {
-      value: awsKinesisanalyticsv2ApplicationReferenceSchemaPropertyToHclTerraform(struct!.referenceSchema),
+      value: tfApplicationReferenceSchemaPropertyToHclTerraform(struct!.referenceSchema),
       isBlock: true,
       type: "list",
       storageClassType: "ReferenceSchemaPropertyList",
     },
     s3_reference_data_source: {
-      value: awsKinesisanalyticsv2ApplicationS3ReferenceDataSourcePropertyToHclTerraform(struct!.s3ReferenceDataSource),
+      value: tfApplicationS3ReferenceDataSourcePropertyToHclTerraform(struct!.s3ReferenceDataSource),
       isBlock: true,
       type: "list",
       storageClassType: "S3ReferenceDataSourcePropertyList",
@@ -2017,39 +2017,39 @@ export function awsKinesisanalyticsv2ApplicationReferenceDataSourcePropertyToHcl
 }
 
 
-export function awsKinesisanalyticsv2ApplicationSqlApplicationConfigurationPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.SqlApplicationConfigurationPropertyOutputReference | AwsKinesisanalyticsv2Application.SqlApplicationConfigurationProperty): any {
+export function tfApplicationSqlApplicationConfigurationPropertyToTerraform(struct?: TfApplication.SqlApplicationConfigurationPropertyOutputReference | TfApplication.SqlApplicationConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    input: awsKinesisanalyticsv2ApplicationInputPropertyToTerraform(struct!.input),
-    output: cdktn.listMapper(awsKinesisanalyticsv2ApplicationOutputPropertyToTerraform, true)(struct!.output),
-    reference_data_source: awsKinesisanalyticsv2ApplicationReferenceDataSourcePropertyToTerraform(struct!.referenceDataSource),
+    input: tfApplicationInputPropertyToTerraform(struct!.input),
+    output: cdktn.listMapper(tfApplicationOutputPropertyToTerraform, true)(struct!.output),
+    reference_data_source: tfApplicationReferenceDataSourcePropertyToTerraform(struct!.referenceDataSource),
   }
 }
 
 
-export function awsKinesisanalyticsv2ApplicationSqlApplicationConfigurationPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.SqlApplicationConfigurationPropertyOutputReference | AwsKinesisanalyticsv2Application.SqlApplicationConfigurationProperty): any {
+export function tfApplicationSqlApplicationConfigurationPropertyToHclTerraform(struct?: TfApplication.SqlApplicationConfigurationPropertyOutputReference | TfApplication.SqlApplicationConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     input: {
-      value: awsKinesisanalyticsv2ApplicationInputPropertyToHclTerraform(struct!.input),
+      value: tfApplicationInputPropertyToHclTerraform(struct!.input),
       isBlock: true,
       type: "list",
       storageClassType: "InputPropertyList",
     },
     output: {
-      value: cdktn.listMapperHcl(awsKinesisanalyticsv2ApplicationOutputPropertyToHclTerraform, true)(struct!.output),
+      value: cdktn.listMapperHcl(tfApplicationOutputPropertyToHclTerraform, true)(struct!.output),
       isBlock: true,
       type: "set",
       storageClassType: "OutputPropertyList",
     },
     reference_data_source: {
-      value: awsKinesisanalyticsv2ApplicationReferenceDataSourcePropertyToHclTerraform(struct!.referenceDataSource),
+      value: tfApplicationReferenceDataSourcePropertyToHclTerraform(struct!.referenceDataSource),
       isBlock: true,
       type: "list",
       storageClassType: "ReferenceDataSourcePropertyList",
@@ -2061,7 +2061,7 @@ export function awsKinesisanalyticsv2ApplicationSqlApplicationConfigurationPrope
 }
 
 
-export function awsKinesisanalyticsv2ApplicationVpcConfigurationPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.VpcConfigurationPropertyOutputReference | AwsKinesisanalyticsv2Application.VpcConfigurationProperty): any {
+export function tfApplicationVpcConfigurationPropertyToTerraform(struct?: TfApplication.VpcConfigurationPropertyOutputReference | TfApplication.VpcConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2073,7 +2073,7 @@ export function awsKinesisanalyticsv2ApplicationVpcConfigurationPropertyToTerraf
 }
 
 
-export function awsKinesisanalyticsv2ApplicationVpcConfigurationPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.VpcConfigurationPropertyOutputReference | AwsKinesisanalyticsv2Application.VpcConfigurationProperty): any {
+export function tfApplicationVpcConfigurationPropertyToHclTerraform(struct?: TfApplication.VpcConfigurationPropertyOutputReference | TfApplication.VpcConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2098,74 +2098,74 @@ export function awsKinesisanalyticsv2ApplicationVpcConfigurationPropertyToHclTer
 }
 
 
-export function awsKinesisanalyticsv2ApplicationApplicationConfigurationPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.ApplicationConfigurationPropertyOutputReference | AwsKinesisanalyticsv2Application.ApplicationConfigurationProperty): any {
+export function tfApplicationApplicationConfigurationPropertyToTerraform(struct?: TfApplication.ApplicationConfigurationPropertyOutputReference | TfApplication.ApplicationConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    application_code_configuration: awsKinesisanalyticsv2ApplicationApplicationCodeConfigurationPropertyToTerraform(struct!.applicationCodeConfiguration),
-    application_encryption_configuration: awsKinesisanalyticsv2ApplicationApplicationEncryptionConfigurationPropertyToTerraform(struct!.applicationEncryptionConfiguration),
-    application_snapshot_configuration: awsKinesisanalyticsv2ApplicationApplicationSnapshotConfigurationPropertyToTerraform(struct!.applicationSnapshotConfiguration),
-    environment_properties: awsKinesisanalyticsv2ApplicationEnvironmentPropertiesPropertyToTerraform(struct!.environmentProperties),
-    flink_application_configuration: awsKinesisanalyticsv2ApplicationFlinkApplicationConfigurationPropertyToTerraform(struct!.flinkApplicationConfiguration),
-    run_configuration: awsKinesisanalyticsv2ApplicationRunConfigurationPropertyToTerraform(struct!.runConfiguration),
-    sql_application_configuration: awsKinesisanalyticsv2ApplicationSqlApplicationConfigurationPropertyToTerraform(struct!.sqlApplicationConfiguration),
-    vpc_configuration: awsKinesisanalyticsv2ApplicationVpcConfigurationPropertyToTerraform(struct!.vpcConfiguration),
+    application_code_configuration: tfApplicationApplicationCodeConfigurationPropertyToTerraform(struct!.applicationCodeConfiguration),
+    application_encryption_configuration: tfApplicationApplicationEncryptionConfigurationPropertyToTerraform(struct!.applicationEncryptionConfiguration),
+    application_snapshot_configuration: tfApplicationApplicationSnapshotConfigurationPropertyToTerraform(struct!.applicationSnapshotConfiguration),
+    environment_properties: tfApplicationEnvironmentPropertiesPropertyToTerraform(struct!.environmentProperties),
+    flink_application_configuration: tfApplicationFlinkApplicationConfigurationPropertyToTerraform(struct!.flinkApplicationConfiguration),
+    run_configuration: tfApplicationRunConfigurationPropertyToTerraform(struct!.runConfiguration),
+    sql_application_configuration: tfApplicationSqlApplicationConfigurationPropertyToTerraform(struct!.sqlApplicationConfiguration),
+    vpc_configuration: tfApplicationVpcConfigurationPropertyToTerraform(struct!.vpcConfiguration),
   }
 }
 
 
-export function awsKinesisanalyticsv2ApplicationApplicationConfigurationPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.ApplicationConfigurationPropertyOutputReference | AwsKinesisanalyticsv2Application.ApplicationConfigurationProperty): any {
+export function tfApplicationApplicationConfigurationPropertyToHclTerraform(struct?: TfApplication.ApplicationConfigurationPropertyOutputReference | TfApplication.ApplicationConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     application_code_configuration: {
-      value: awsKinesisanalyticsv2ApplicationApplicationCodeConfigurationPropertyToHclTerraform(struct!.applicationCodeConfiguration),
+      value: tfApplicationApplicationCodeConfigurationPropertyToHclTerraform(struct!.applicationCodeConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ApplicationCodeConfigurationPropertyList",
     },
     application_encryption_configuration: {
-      value: awsKinesisanalyticsv2ApplicationApplicationEncryptionConfigurationPropertyToHclTerraform(struct!.applicationEncryptionConfiguration),
+      value: tfApplicationApplicationEncryptionConfigurationPropertyToHclTerraform(struct!.applicationEncryptionConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ApplicationEncryptionConfigurationPropertyList",
     },
     application_snapshot_configuration: {
-      value: awsKinesisanalyticsv2ApplicationApplicationSnapshotConfigurationPropertyToHclTerraform(struct!.applicationSnapshotConfiguration),
+      value: tfApplicationApplicationSnapshotConfigurationPropertyToHclTerraform(struct!.applicationSnapshotConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ApplicationSnapshotConfigurationPropertyList",
     },
     environment_properties: {
-      value: awsKinesisanalyticsv2ApplicationEnvironmentPropertiesPropertyToHclTerraform(struct!.environmentProperties),
+      value: tfApplicationEnvironmentPropertiesPropertyToHclTerraform(struct!.environmentProperties),
       isBlock: true,
       type: "list",
       storageClassType: "EnvironmentPropertiesPropertyList",
     },
     flink_application_configuration: {
-      value: awsKinesisanalyticsv2ApplicationFlinkApplicationConfigurationPropertyToHclTerraform(struct!.flinkApplicationConfiguration),
+      value: tfApplicationFlinkApplicationConfigurationPropertyToHclTerraform(struct!.flinkApplicationConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "FlinkApplicationConfigurationPropertyList",
     },
     run_configuration: {
-      value: awsKinesisanalyticsv2ApplicationRunConfigurationPropertyToHclTerraform(struct!.runConfiguration),
+      value: tfApplicationRunConfigurationPropertyToHclTerraform(struct!.runConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "RunConfigurationPropertyList",
     },
     sql_application_configuration: {
-      value: awsKinesisanalyticsv2ApplicationSqlApplicationConfigurationPropertyToHclTerraform(struct!.sqlApplicationConfiguration),
+      value: tfApplicationSqlApplicationConfigurationPropertyToHclTerraform(struct!.sqlApplicationConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "SqlApplicationConfigurationPropertyList",
     },
     vpc_configuration: {
-      value: awsKinesisanalyticsv2ApplicationVpcConfigurationPropertyToHclTerraform(struct!.vpcConfiguration),
+      value: tfApplicationVpcConfigurationPropertyToHclTerraform(struct!.vpcConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "VpcConfigurationPropertyList",
@@ -2177,7 +2177,7 @@ export function awsKinesisanalyticsv2ApplicationApplicationConfigurationProperty
 }
 
 
-export function awsKinesisanalyticsv2ApplicationCloudwatchLoggingOptionsPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.CloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisanalyticsv2Application.CloudwatchLoggingOptionsProperty): any {
+export function tfApplicationCloudwatchLoggingOptionsPropertyToTerraform(struct?: TfApplication.CloudwatchLoggingOptionsPropertyOutputReference | TfApplication.CloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2188,7 +2188,7 @@ export function awsKinesisanalyticsv2ApplicationCloudwatchLoggingOptionsProperty
 }
 
 
-export function awsKinesisanalyticsv2ApplicationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.CloudwatchLoggingOptionsPropertyOutputReference | AwsKinesisanalyticsv2Application.CloudwatchLoggingOptionsProperty): any {
+export function tfApplicationCloudwatchLoggingOptionsPropertyToHclTerraform(struct?: TfApplication.CloudwatchLoggingOptionsPropertyOutputReference | TfApplication.CloudwatchLoggingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2207,7 +2207,7 @@ export function awsKinesisanalyticsv2ApplicationCloudwatchLoggingOptionsProperty
 }
 
 
-export function awsKinesisanalyticsv2ApplicationTimeoutsPropertyToTerraform(struct?: AwsKinesisanalyticsv2Application.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfApplicationTimeoutsPropertyToTerraform(struct?: TfApplication.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2220,7 +2220,7 @@ export function awsKinesisanalyticsv2ApplicationTimeoutsPropertyToTerraform(stru
 }
 
 
-export function awsKinesisanalyticsv2ApplicationTimeoutsPropertyToHclTerraform(struct?: AwsKinesisanalyticsv2Application.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfApplicationTimeoutsPropertyToHclTerraform(struct?: TfApplication.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2251,18 +2251,18 @@ export function awsKinesisanalyticsv2ApplicationTimeoutsPropertyToHclTerraform(s
 }
 
 
-export namespace AwsKinesisanalyticsv2Application {
+export namespace TfApplication {
 export interface S3ContentLocationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#bucket_arn AwsKinesisanalyticsv2Application#bucket_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#bucket_arn TfApplication#bucket_arn}
   */
   readonly bucketArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#file_key AwsKinesisanalyticsv2Application#file_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#file_key TfApplication#file_key}
   */
   readonly fileKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#object_version AwsKinesisanalyticsv2Application#object_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#object_version TfApplication#object_version}
   */
   readonly objectVersion?: string;
 }
@@ -2354,13 +2354,13 @@ export class S3ContentLocationPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface CodeContentProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#text_content AwsKinesisanalyticsv2Application#text_content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#text_content TfApplication#text_content}
   */
   readonly textContent?: string;
   /**
   * s3_content_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#s3_content_location AwsKinesisanalyticsv2Application#s3_content_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#s3_content_location TfApplication#s3_content_location}
   */
   readonly s3ContentLocation?: S3ContentLocationProperty;
 }
@@ -2436,13 +2436,13 @@ export class CodeContentPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ApplicationCodeConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#code_content_type AwsKinesisanalyticsv2Application#code_content_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#code_content_type TfApplication#code_content_type}
   */
   readonly codeContentType: string;
   /**
   * code_content block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#code_content AwsKinesisanalyticsv2Application#code_content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#code_content TfApplication#code_content}
   */
   readonly codeContent?: CodeContentProperty;
 }
@@ -2515,11 +2515,11 @@ export class ApplicationCodeConfigurationPropertyOutputReference extends cdktn.C
 }
 export interface ApplicationEncryptionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#key_id AwsKinesisanalyticsv2Application#key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#key_id TfApplication#key_id}
   */
   readonly keyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#key_type AwsKinesisanalyticsv2Application#key_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#key_type TfApplication#key_type}
   */
   readonly keyType: string;
 }
@@ -2592,7 +2592,7 @@ export class ApplicationEncryptionConfigurationPropertyOutputReference extends c
 }
 export interface ApplicationSnapshotConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#snapshots_enabled AwsKinesisanalyticsv2Application#snapshots_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#snapshots_enabled TfApplication#snapshots_enabled}
   */
   readonly snapshotsEnabled: boolean | cdktn.IResolvable;
 }
@@ -2643,11 +2643,11 @@ export class ApplicationSnapshotConfigurationPropertyOutputReference extends cdk
 }
 export interface PropertyGroupProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#property_group_id AwsKinesisanalyticsv2Application#property_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#property_group_id TfApplication#property_group_id}
   */
   readonly propertyGroupId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#property_map AwsKinesisanalyticsv2Application#property_map}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#property_map TfApplication#property_map}
   */
   readonly propertyMap: { [key: string]: string };
 }
@@ -2751,7 +2751,7 @@ export interface EnvironmentPropertiesProperty {
   /**
   * property_group block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#property_group AwsKinesisanalyticsv2Application#property_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#property_group TfApplication#property_group}
   */
   readonly propertyGroup: PropertyGroupProperty[] | cdktn.IResolvable;
 }
@@ -2802,19 +2802,19 @@ export class EnvironmentPropertiesPropertyOutputReference extends cdktn.ComplexO
 }
 export interface CheckpointConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#checkpoint_interval AwsKinesisanalyticsv2Application#checkpoint_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#checkpoint_interval TfApplication#checkpoint_interval}
   */
   readonly checkpointInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#checkpointing_enabled AwsKinesisanalyticsv2Application#checkpointing_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#checkpointing_enabled TfApplication#checkpointing_enabled}
   */
   readonly checkpointingEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#configuration_type AwsKinesisanalyticsv2Application#configuration_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#configuration_type TfApplication#configuration_type}
   */
   readonly configurationType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#min_pause_between_checkpoints AwsKinesisanalyticsv2Application#min_pause_between_checkpoints}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#min_pause_between_checkpoints TfApplication#min_pause_between_checkpoints}
   */
   readonly minPauseBetweenCheckpoints?: number;
 }
@@ -2931,15 +2931,15 @@ export class CheckpointConfigurationPropertyOutputReference extends cdktn.Comple
 }
 export interface MonitoringConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#configuration_type AwsKinesisanalyticsv2Application#configuration_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#configuration_type TfApplication#configuration_type}
   */
   readonly configurationType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#log_level AwsKinesisanalyticsv2Application#log_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#log_level TfApplication#log_level}
   */
   readonly logLevel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#metrics_level AwsKinesisanalyticsv2Application#metrics_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#metrics_level TfApplication#metrics_level}
   */
   readonly metricsLevel?: string;
 }
@@ -3034,19 +3034,19 @@ export class MonitoringConfigurationPropertyOutputReference extends cdktn.Comple
 }
 export interface ParallelismConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#auto_scaling_enabled AwsKinesisanalyticsv2Application#auto_scaling_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#auto_scaling_enabled TfApplication#auto_scaling_enabled}
   */
   readonly autoScalingEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#configuration_type AwsKinesisanalyticsv2Application#configuration_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#configuration_type TfApplication#configuration_type}
   */
   readonly configurationType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#parallelism AwsKinesisanalyticsv2Application#parallelism}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#parallelism TfApplication#parallelism}
   */
   readonly parallelism?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#parallelism_per_kpu AwsKinesisanalyticsv2Application#parallelism_per_kpu}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#parallelism_per_kpu TfApplication#parallelism_per_kpu}
   */
   readonly parallelismPerKpu?: number;
 }
@@ -3165,19 +3165,19 @@ export interface FlinkApplicationConfigurationProperty {
   /**
   * checkpoint_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#checkpoint_configuration AwsKinesisanalyticsv2Application#checkpoint_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#checkpoint_configuration TfApplication#checkpoint_configuration}
   */
   readonly checkpointConfiguration?: CheckpointConfigurationProperty;
   /**
   * monitoring_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#monitoring_configuration AwsKinesisanalyticsv2Application#monitoring_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#monitoring_configuration TfApplication#monitoring_configuration}
   */
   readonly monitoringConfiguration?: MonitoringConfigurationProperty;
   /**
   * parallelism_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#parallelism_configuration AwsKinesisanalyticsv2Application#parallelism_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#parallelism_configuration TfApplication#parallelism_configuration}
   */
   readonly parallelismConfiguration?: ParallelismConfigurationProperty;
 }
@@ -3275,11 +3275,11 @@ export class FlinkApplicationConfigurationPropertyOutputReference extends cdktn.
 }
 export interface ApplicationRestoreConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#application_restore_type AwsKinesisanalyticsv2Application#application_restore_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#application_restore_type TfApplication#application_restore_type}
   */
   readonly applicationRestoreType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#snapshot_name AwsKinesisanalyticsv2Application#snapshot_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#snapshot_name TfApplication#snapshot_name}
   */
   readonly snapshotName?: string;
 }
@@ -3355,7 +3355,7 @@ export class ApplicationRestoreConfigurationPropertyOutputReference extends cdkt
 }
 export interface FlinkRunConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#allow_non_restored_state AwsKinesisanalyticsv2Application#allow_non_restored_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#allow_non_restored_state TfApplication#allow_non_restored_state}
   */
   readonly allowNonRestoredState?: boolean | cdktn.IResolvable;
 }
@@ -3411,13 +3411,13 @@ export interface RunConfigurationProperty {
   /**
   * application_restore_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#application_restore_configuration AwsKinesisanalyticsv2Application#application_restore_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#application_restore_configuration TfApplication#application_restore_configuration}
   */
   readonly applicationRestoreConfiguration?: ApplicationRestoreConfigurationProperty;
   /**
   * flink_run_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#flink_run_configuration AwsKinesisanalyticsv2Application#flink_run_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#flink_run_configuration TfApplication#flink_run_configuration}
   */
   readonly flinkRunConfiguration?: FlinkRunConfigurationProperty;
 }
@@ -3493,7 +3493,7 @@ export class RunConfigurationPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface InputParallelismProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#count AwsKinesisanalyticsv2Application#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#count TfApplication#count}
   */
   readonly count?: number;
 }
@@ -3547,7 +3547,7 @@ export class InputParallelismPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface InputLambdaProcessorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#resource_arn AwsKinesisanalyticsv2Application#resource_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#resource_arn TfApplication#resource_arn}
   */
   readonly resourceArn: string;
 }
@@ -3600,7 +3600,7 @@ export interface InputProcessingConfigurationProperty {
   /**
   * input_lambda_processor block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#input_lambda_processor AwsKinesisanalyticsv2Application#input_lambda_processor}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#input_lambda_processor TfApplication#input_lambda_processor}
   */
   readonly inputLambdaProcessor: InputLambdaProcessorProperty;
 }
@@ -3651,15 +3651,15 @@ export class InputProcessingConfigurationPropertyOutputReference extends cdktn.C
 }
 export interface ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#mapping AwsKinesisanalyticsv2Application#mapping}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#mapping TfApplication#mapping}
   */
   readonly mapping?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#name AwsKinesisanalyticsv2Application#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#name TfApplication#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#sql_type AwsKinesisanalyticsv2Application#sql_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#sql_type TfApplication#sql_type}
   */
   readonly sqlType: string;
 }
@@ -3783,11 +3783,11 @@ export class ApplicationConfigurationSqlApplicationConfigurationInputInputSchema
 }
 export interface ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#record_column_delimiter AwsKinesisanalyticsv2Application#record_column_delimiter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#record_column_delimiter TfApplication#record_column_delimiter}
   */
   readonly recordColumnDelimiter: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#record_row_delimiter AwsKinesisanalyticsv2Application#record_row_delimiter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#record_row_delimiter TfApplication#record_row_delimiter}
   */
   readonly recordRowDelimiter: string;
 }
@@ -3857,7 +3857,7 @@ export class ApplicationConfigurationSqlApplicationConfigurationInputInputSchema
 }
 export interface ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#record_row_path AwsKinesisanalyticsv2Application#record_row_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#record_row_path TfApplication#record_row_path}
   */
   readonly recordRowPath: string;
 }
@@ -3910,13 +3910,13 @@ export interface ApplicationConfigurationSqlApplicationConfigurationInputInputSc
   /**
   * csv_mapping_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#csv_mapping_parameters AwsKinesisanalyticsv2Application#csv_mapping_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#csv_mapping_parameters TfApplication#csv_mapping_parameters}
   */
   readonly csvMappingParameters?: ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersProperty;
   /**
   * json_mapping_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#json_mapping_parameters AwsKinesisanalyticsv2Application#json_mapping_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#json_mapping_parameters TfApplication#json_mapping_parameters}
   */
   readonly jsonMappingParameters?: ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersProperty;
 }
@@ -3992,13 +3992,13 @@ export class ApplicationConfigurationSqlApplicationConfigurationInputInputSchema
 }
 export interface ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#record_format_type AwsKinesisanalyticsv2Application#record_format_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#record_format_type TfApplication#record_format_type}
   */
   readonly recordFormatType: string;
   /**
   * mapping_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#mapping_parameters AwsKinesisanalyticsv2Application#mapping_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#mapping_parameters TfApplication#mapping_parameters}
   */
   readonly mappingParameters: ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersProperty;
 }
@@ -4068,19 +4068,19 @@ export class ApplicationConfigurationSqlApplicationConfigurationInputInputSchema
 }
 export interface InputSchemaProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#record_encoding AwsKinesisanalyticsv2Application#record_encoding}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#record_encoding TfApplication#record_encoding}
   */
   readonly recordEncoding?: string;
   /**
   * record_column block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#record_column AwsKinesisanalyticsv2Application#record_column}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#record_column TfApplication#record_column}
   */
   readonly recordColumn: ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnProperty[] | cdktn.IResolvable;
   /**
   * record_format block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#record_format AwsKinesisanalyticsv2Application#record_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#record_format TfApplication#record_format}
   */
   readonly recordFormat: ApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatProperty;
 }
@@ -4172,7 +4172,7 @@ export class InputSchemaPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface InputStartingPositionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#input_starting_position AwsKinesisanalyticsv2Application#input_starting_position}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#input_starting_position TfApplication#input_starting_position}
   */
   readonly inputStartingPosition?: string;
 }
@@ -4258,7 +4258,7 @@ export class InputStartingPositionConfigurationPropertyList extends cdktn.Comple
 }
 export interface KinesisFirehoseInputProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#resource_arn AwsKinesisanalyticsv2Application#resource_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#resource_arn TfApplication#resource_arn}
   */
   readonly resourceArn: string;
 }
@@ -4309,7 +4309,7 @@ export class KinesisFirehoseInputPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface KinesisStreamsInputProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#resource_arn AwsKinesisanalyticsv2Application#resource_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#resource_arn TfApplication#resource_arn}
   */
   readonly resourceArn: string;
 }
@@ -4360,43 +4360,43 @@ export class KinesisStreamsInputPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface InputProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#name_prefix AwsKinesisanalyticsv2Application#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#name_prefix TfApplication#name_prefix}
   */
   readonly namePrefix: string;
   /**
   * input_parallelism block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#input_parallelism AwsKinesisanalyticsv2Application#input_parallelism}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#input_parallelism TfApplication#input_parallelism}
   */
   readonly inputParallelism?: InputParallelismProperty;
   /**
   * input_processing_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#input_processing_configuration AwsKinesisanalyticsv2Application#input_processing_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#input_processing_configuration TfApplication#input_processing_configuration}
   */
   readonly inputProcessingConfiguration?: InputProcessingConfigurationProperty;
   /**
   * input_schema block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#input_schema AwsKinesisanalyticsv2Application#input_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#input_schema TfApplication#input_schema}
   */
   readonly inputSchema: InputSchemaProperty;
   /**
   * input_starting_position_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#input_starting_position_configuration AwsKinesisanalyticsv2Application#input_starting_position_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#input_starting_position_configuration TfApplication#input_starting_position_configuration}
   */
   readonly inputStartingPositionConfiguration?: InputStartingPositionConfigurationProperty[] | cdktn.IResolvable;
   /**
   * kinesis_firehose_input block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#kinesis_firehose_input AwsKinesisanalyticsv2Application#kinesis_firehose_input}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#kinesis_firehose_input TfApplication#kinesis_firehose_input}
   */
   readonly kinesisFirehoseInput?: KinesisFirehoseInputProperty;
   /**
   * kinesis_streams_input block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#kinesis_streams_input AwsKinesisanalyticsv2Application#kinesis_streams_input}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#kinesis_streams_input TfApplication#kinesis_streams_input}
   */
   readonly kinesisStreamsInput?: KinesisStreamsInputProperty;
 }
@@ -4586,7 +4586,7 @@ export class InputPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface DestinationSchemaProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#record_format_type AwsKinesisanalyticsv2Application#record_format_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#record_format_type TfApplication#record_format_type}
   */
   readonly recordFormatType: string;
 }
@@ -4637,7 +4637,7 @@ export class DestinationSchemaPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface KinesisFirehoseOutputProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#resource_arn AwsKinesisanalyticsv2Application#resource_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#resource_arn TfApplication#resource_arn}
   */
   readonly resourceArn: string;
 }
@@ -4688,7 +4688,7 @@ export class KinesisFirehoseOutputPropertyOutputReference extends cdktn.ComplexO
 }
 export interface KinesisStreamsOutputProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#resource_arn AwsKinesisanalyticsv2Application#resource_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#resource_arn TfApplication#resource_arn}
   */
   readonly resourceArn: string;
 }
@@ -4739,7 +4739,7 @@ export class KinesisStreamsOutputPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface LambdaOutputProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#resource_arn AwsKinesisanalyticsv2Application#resource_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#resource_arn TfApplication#resource_arn}
   */
   readonly resourceArn: string;
 }
@@ -4790,31 +4790,31 @@ export class LambdaOutputPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface OutputProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#name AwsKinesisanalyticsv2Application#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#name TfApplication#name}
   */
   readonly name: string;
   /**
   * destination_schema block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#destination_schema AwsKinesisanalyticsv2Application#destination_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#destination_schema TfApplication#destination_schema}
   */
   readonly destinationSchema: DestinationSchemaProperty;
   /**
   * kinesis_firehose_output block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#kinesis_firehose_output AwsKinesisanalyticsv2Application#kinesis_firehose_output}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#kinesis_firehose_output TfApplication#kinesis_firehose_output}
   */
   readonly kinesisFirehoseOutput?: KinesisFirehoseOutputProperty;
   /**
   * kinesis_streams_output block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#kinesis_streams_output AwsKinesisanalyticsv2Application#kinesis_streams_output}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#kinesis_streams_output TfApplication#kinesis_streams_output}
   */
   readonly kinesisStreamsOutput?: KinesisStreamsOutputProperty;
   /**
   * lambda_output block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#lambda_output AwsKinesisanalyticsv2Application#lambda_output}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#lambda_output TfApplication#lambda_output}
   */
   readonly lambdaOutput?: LambdaOutputProperty;
 }
@@ -4987,15 +4987,15 @@ export class OutputPropertyList extends cdktn.ComplexList {
 }
 export interface ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#mapping AwsKinesisanalyticsv2Application#mapping}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#mapping TfApplication#mapping}
   */
   readonly mapping?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#name AwsKinesisanalyticsv2Application#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#name TfApplication#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#sql_type AwsKinesisanalyticsv2Application#sql_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#sql_type TfApplication#sql_type}
   */
   readonly sqlType: string;
 }
@@ -5119,11 +5119,11 @@ export class ApplicationConfigurationSqlApplicationConfigurationReferenceDataSou
 }
 export interface ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#record_column_delimiter AwsKinesisanalyticsv2Application#record_column_delimiter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#record_column_delimiter TfApplication#record_column_delimiter}
   */
   readonly recordColumnDelimiter: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#record_row_delimiter AwsKinesisanalyticsv2Application#record_row_delimiter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#record_row_delimiter TfApplication#record_row_delimiter}
   */
   readonly recordRowDelimiter: string;
 }
@@ -5193,7 +5193,7 @@ export class ApplicationConfigurationSqlApplicationConfigurationReferenceDataSou
 }
 export interface ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#record_row_path AwsKinesisanalyticsv2Application#record_row_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#record_row_path TfApplication#record_row_path}
   */
   readonly recordRowPath: string;
 }
@@ -5246,13 +5246,13 @@ export interface ApplicationConfigurationSqlApplicationConfigurationReferenceDat
   /**
   * csv_mapping_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#csv_mapping_parameters AwsKinesisanalyticsv2Application#csv_mapping_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#csv_mapping_parameters TfApplication#csv_mapping_parameters}
   */
   readonly csvMappingParameters?: ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersProperty;
   /**
   * json_mapping_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#json_mapping_parameters AwsKinesisanalyticsv2Application#json_mapping_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#json_mapping_parameters TfApplication#json_mapping_parameters}
   */
   readonly jsonMappingParameters?: ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersProperty;
 }
@@ -5328,13 +5328,13 @@ export class ApplicationConfigurationSqlApplicationConfigurationReferenceDataSou
 }
 export interface ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#record_format_type AwsKinesisanalyticsv2Application#record_format_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#record_format_type TfApplication#record_format_type}
   */
   readonly recordFormatType: string;
   /**
   * mapping_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#mapping_parameters AwsKinesisanalyticsv2Application#mapping_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#mapping_parameters TfApplication#mapping_parameters}
   */
   readonly mappingParameters: ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersProperty;
 }
@@ -5404,19 +5404,19 @@ export class ApplicationConfigurationSqlApplicationConfigurationReferenceDataSou
 }
 export interface ReferenceSchemaProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#record_encoding AwsKinesisanalyticsv2Application#record_encoding}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#record_encoding TfApplication#record_encoding}
   */
   readonly recordEncoding?: string;
   /**
   * record_column block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#record_column AwsKinesisanalyticsv2Application#record_column}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#record_column TfApplication#record_column}
   */
   readonly recordColumn: ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnProperty[] | cdktn.IResolvable;
   /**
   * record_format block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#record_format AwsKinesisanalyticsv2Application#record_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#record_format TfApplication#record_format}
   */
   readonly recordFormat: ApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatProperty;
 }
@@ -5508,11 +5508,11 @@ export class ReferenceSchemaPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface S3ReferenceDataSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#bucket_arn AwsKinesisanalyticsv2Application#bucket_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#bucket_arn TfApplication#bucket_arn}
   */
   readonly bucketArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#file_key AwsKinesisanalyticsv2Application#file_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#file_key TfApplication#file_key}
   */
   readonly fileKey: string;
 }
@@ -5582,19 +5582,19 @@ export class S3ReferenceDataSourcePropertyOutputReference extends cdktn.ComplexO
 }
 export interface ReferenceDataSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#table_name AwsKinesisanalyticsv2Application#table_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#table_name TfApplication#table_name}
   */
   readonly tableName: string;
   /**
   * reference_schema block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#reference_schema AwsKinesisanalyticsv2Application#reference_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#reference_schema TfApplication#reference_schema}
   */
   readonly referenceSchema: ReferenceSchemaProperty;
   /**
   * s3_reference_data_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#s3_reference_data_source AwsKinesisanalyticsv2Application#s3_reference_data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#s3_reference_data_source TfApplication#s3_reference_data_source}
   */
   readonly s3ReferenceDataSource: S3ReferenceDataSourceProperty;
 }
@@ -5690,19 +5690,19 @@ export interface SqlApplicationConfigurationProperty {
   /**
   * input block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#input AwsKinesisanalyticsv2Application#input}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#input TfApplication#input}
   */
   readonly input?: InputProperty;
   /**
   * output block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#output AwsKinesisanalyticsv2Application#output}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#output TfApplication#output}
   */
   readonly output?: OutputProperty[] | cdktn.IResolvable;
   /**
   * reference_data_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#reference_data_source AwsKinesisanalyticsv2Application#reference_data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#reference_data_source TfApplication#reference_data_source}
   */
   readonly referenceDataSource?: ReferenceDataSourceProperty;
 }
@@ -5800,11 +5800,11 @@ export class SqlApplicationConfigurationPropertyOutputReference extends cdktn.Co
 }
 export interface VpcConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#security_group_ids AwsKinesisanalyticsv2Application#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#security_group_ids TfApplication#security_group_ids}
   */
   readonly securityGroupIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#subnet_ids AwsKinesisanalyticsv2Application#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#subnet_ids TfApplication#subnet_ids}
   */
   readonly subnetIds: string[];
 }
@@ -5886,49 +5886,49 @@ export interface ApplicationConfigurationProperty {
   /**
   * application_code_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#application_code_configuration AwsKinesisanalyticsv2Application#application_code_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#application_code_configuration TfApplication#application_code_configuration}
   */
   readonly applicationCodeConfiguration: ApplicationCodeConfigurationProperty;
   /**
   * application_encryption_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#application_encryption_configuration AwsKinesisanalyticsv2Application#application_encryption_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#application_encryption_configuration TfApplication#application_encryption_configuration}
   */
   readonly applicationEncryptionConfiguration?: ApplicationEncryptionConfigurationProperty;
   /**
   * application_snapshot_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#application_snapshot_configuration AwsKinesisanalyticsv2Application#application_snapshot_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#application_snapshot_configuration TfApplication#application_snapshot_configuration}
   */
   readonly applicationSnapshotConfiguration?: ApplicationSnapshotConfigurationProperty;
   /**
   * environment_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#environment_properties AwsKinesisanalyticsv2Application#environment_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#environment_properties TfApplication#environment_properties}
   */
   readonly environmentProperties?: EnvironmentPropertiesProperty;
   /**
   * flink_application_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#flink_application_configuration AwsKinesisanalyticsv2Application#flink_application_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#flink_application_configuration TfApplication#flink_application_configuration}
   */
   readonly flinkApplicationConfiguration?: FlinkApplicationConfigurationProperty;
   /**
   * run_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#run_configuration AwsKinesisanalyticsv2Application#run_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#run_configuration TfApplication#run_configuration}
   */
   readonly runConfiguration?: RunConfigurationProperty;
   /**
   * sql_application_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#sql_application_configuration AwsKinesisanalyticsv2Application#sql_application_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#sql_application_configuration TfApplication#sql_application_configuration}
   */
   readonly sqlApplicationConfiguration?: SqlApplicationConfigurationProperty;
   /**
   * vpc_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#vpc_configuration AwsKinesisanalyticsv2Application#vpc_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#vpc_configuration TfApplication#vpc_configuration}
   */
   readonly vpcConfiguration?: VpcConfigurationProperty;
 }
@@ -6133,7 +6133,7 @@ export class ApplicationConfigurationPropertyOutputReference extends cdktn.Compl
 }
 export interface CloudwatchLoggingOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#log_stream_arn AwsKinesisanalyticsv2Application#log_stream_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#log_stream_arn TfApplication#log_stream_arn}
   */
   readonly logStreamArn: string;
 }
@@ -6189,15 +6189,15 @@ export class CloudwatchLoggingOptionsPropertyOutputReference extends cdktn.Compl
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#create AwsKinesisanalyticsv2Application#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#create TfApplication#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#delete AwsKinesisanalyticsv2Application#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#delete TfApplication#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#update AwsKinesisanalyticsv2Application#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesisanalyticsv2_application#update TfApplication#update}
   */
   readonly update?: string;
 }

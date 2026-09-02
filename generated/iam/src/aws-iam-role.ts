@@ -5,70 +5,70 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsIamRoleConfig extends cdktn.TerraformMetaArguments {
+export interface TfRoleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#assume_role_policy AwsIamRole#assume_role_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#assume_role_policy TfRole#assume_role_policy}
   */
   readonly assumeRolePolicy: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#description AwsIamRole#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#description TfRole#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#force_detach_policies AwsIamRole#force_detach_policies}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#force_detach_policies TfRole#force_detach_policies}
   */
   readonly forceDetachPolicies?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#id AwsIamRole#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#id TfRole#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#managed_policy_arns AwsIamRole#managed_policy_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#managed_policy_arns TfRole#managed_policy_arns}
   */
   readonly managedPolicyArns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#max_session_duration AwsIamRole#max_session_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#max_session_duration TfRole#max_session_duration}
   */
   readonly maxSessionDuration?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#name AwsIamRole#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#name TfRole#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#name_prefix AwsIamRole#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#name_prefix TfRole#name_prefix}
   */
   readonly namePrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#path AwsIamRole#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#path TfRole#path}
   */
   readonly path?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#permissions_boundary AwsIamRole#permissions_boundary}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#permissions_boundary TfRole#permissions_boundary}
   */
   readonly permissionsBoundary?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#tags AwsIamRole#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#tags TfRole#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#tags_all AwsIamRole#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#tags_all TfRole#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * inline_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#inline_policy AwsIamRole#inline_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#inline_policy TfRole#inline_policy}
   */
-  readonly inlinePolicy?: AwsIamRole.InlinePolicyProperty[] | cdktn.IResolvable;
+  readonly inlinePolicy?: TfRole.InlinePolicyProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role aws_iam_role}
 */
-export class AwsIamRole extends cdktn.TerraformResource {
+export class TfRole extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -79,11 +79,11 @@ export class AwsIamRole extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsIamRole resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfRole resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsIamRole to import
-  * @param importFromId The id of the existing AwsIamRole that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsIamRole to import is found
+  * @param importToId The construct id used in the generated config for the TfRole to import
+  * @param importFromId The id of the existing TfRole that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfRole to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iam_role", importId: importFromId, provider });
@@ -98,9 +98,9 @@ export class AwsIamRole extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsIamRoleConfig
+  * @param options TfRoleConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsIamRoleConfig) {
+  public constructor(scope: Construct, id: string, config: TfRoleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iam_role',
       terraformGeneratorMetadata: {
@@ -340,11 +340,11 @@ export class AwsIamRole extends cdktn.TerraformResource {
   }
 
   // inline_policy - computed: false, optional: true, required: false
-  private _inlinePolicy = new AwsIamRole.InlinePolicyPropertyList(this, "inline_policy", true);
+  private _inlinePolicy = new TfRole.InlinePolicyPropertyList(this, "inline_policy", true);
   public get inlinePolicy() {
     return this._inlinePolicy;
   }
-  public putInlinePolicy(value: AwsIamRole.InlinePolicyProperty[] | cdktn.IResolvable) {
+  public putInlinePolicy(value: TfRole.InlinePolicyProperty[] | cdktn.IResolvable) {
     this._inlinePolicy.internalValue = value;
   }
   public resetInlinePolicy() {
@@ -373,7 +373,7 @@ export class AwsIamRole extends cdktn.TerraformResource {
       permissions_boundary: cdktn.stringToTerraform(this._permissionsBoundary),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      inline_policy: cdktn.listMapper(awsIamRoleInlinePolicyPropertyToTerraform, true)(this._inlinePolicy.internalValue),
+      inline_policy: cdktn.listMapper(tfRoleInlinePolicyPropertyToTerraform, true)(this._inlinePolicy.internalValue),
     };
   }
 
@@ -452,10 +452,10 @@ export class AwsIamRole extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       inline_policy: {
-        value: cdktn.listMapperHcl(awsIamRoleInlinePolicyPropertyToHclTerraform, true)(this._inlinePolicy.internalValue),
+        value: cdktn.listMapperHcl(tfRoleInlinePolicyPropertyToHclTerraform, true)(this._inlinePolicy.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsIamRole.InlinePolicyPropertyList",
+        storageClassType: "TfRole.InlinePolicyPropertyList",
       },
     };
 
@@ -464,7 +464,7 @@ export class AwsIamRole extends cdktn.TerraformResource {
   }
 }
 
-export function awsIamRoleInlinePolicyPropertyToTerraform(struct?: AwsIamRole.InlinePolicyProperty | cdktn.IResolvable): any {
+export function tfRoleInlinePolicyPropertyToTerraform(struct?: TfRole.InlinePolicyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -476,7 +476,7 @@ export function awsIamRoleInlinePolicyPropertyToTerraform(struct?: AwsIamRole.In
 }
 
 
-export function awsIamRoleInlinePolicyPropertyToHclTerraform(struct?: AwsIamRole.InlinePolicyProperty | cdktn.IResolvable): any {
+export function tfRoleInlinePolicyPropertyToHclTerraform(struct?: TfRole.InlinePolicyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -501,14 +501,14 @@ export function awsIamRoleInlinePolicyPropertyToHclTerraform(struct?: AwsIamRole
 }
 
 
-export namespace AwsIamRole {
+export namespace TfRole {
 export interface InlinePolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#name AwsIamRole#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#name TfRole#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#policy AwsIamRole#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#policy TfRole#policy}
   */
   readonly policy?: string;
 }

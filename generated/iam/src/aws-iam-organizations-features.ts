@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsIamOrganizationsFeaturesConfig extends cdktn.TerraformMetaArguments {
+export interface TfOrganizationsFeaturesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_organizations_features#enabled_features AwsIamOrganizationsFeatures#enabled_features}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_organizations_features#enabled_features TfOrganizationsFeatures#enabled_features}
   */
   readonly enabledFeatures: string[];
 }
@@ -15,7 +15,7 @@ export interface AwsIamOrganizationsFeaturesConfig extends cdktn.TerraformMetaAr
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_organizations_features aws_iam_organizations_features}
 */
-export class AwsIamOrganizationsFeatures extends cdktn.TerraformResource {
+export class TfOrganizationsFeatures extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -26,11 +26,11 @@ export class AwsIamOrganizationsFeatures extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsIamOrganizationsFeatures resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfOrganizationsFeatures resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsIamOrganizationsFeatures to import
-  * @param importFromId The id of the existing AwsIamOrganizationsFeatures that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_organizations_features#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsIamOrganizationsFeatures to import is found
+  * @param importToId The construct id used in the generated config for the TfOrganizationsFeatures to import
+  * @param importFromId The id of the existing TfOrganizationsFeatures that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_organizations_features#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfOrganizationsFeatures to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iam_organizations_features", importId: importFromId, provider });
@@ -45,9 +45,9 @@ export class AwsIamOrganizationsFeatures extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsIamOrganizationsFeaturesConfig
+  * @param options TfOrganizationsFeaturesConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsIamOrganizationsFeaturesConfig) {
+  public constructor(scope: Construct, id: string, config: TfOrganizationsFeaturesConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iam_organizations_features',
       terraformGeneratorMetadata: {

@@ -5,68 +5,68 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsVpclatticeListenerRuleConfig extends cdktn.TerraformMetaArguments {
+export interface TfListenerRuleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#id AwsVpclatticeListenerRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#id TfListenerRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#listener_identifier AwsVpclatticeListenerRule#listener_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#listener_identifier TfListenerRule#listener_identifier}
   */
   readonly listenerIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#name AwsVpclatticeListenerRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#name TfListenerRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#priority AwsVpclatticeListenerRule#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#priority TfListenerRule#priority}
   */
   readonly priority: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#region AwsVpclatticeListenerRule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#region TfListenerRule#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#service_identifier AwsVpclatticeListenerRule#service_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#service_identifier TfListenerRule#service_identifier}
   */
   readonly serviceIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#tags AwsVpclatticeListenerRule#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#tags TfListenerRule#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#tags_all AwsVpclatticeListenerRule#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#tags_all TfListenerRule#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#action AwsVpclatticeListenerRule#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#action TfListenerRule#action}
   */
-  readonly action: AwsVpclatticeListenerRule.ActionProperty;
+  readonly action: TfListenerRule.ActionProperty;
   /**
   * match block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#match AwsVpclatticeListenerRule#match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#match TfListenerRule#match}
   */
-  readonly match: AwsVpclatticeListenerRule.MatchProperty;
+  readonly match: TfListenerRule.MatchProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#timeouts AwsVpclatticeListenerRule#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#timeouts TfListenerRule#timeouts}
   */
-  readonly timeouts?: AwsVpclatticeListenerRule.TimeoutsProperty;
+  readonly timeouts?: TfListenerRule.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule aws_vpclattice_listener_rule}
 */
-export class AwsVpclatticeListenerRule extends cdktn.TerraformResource {
+export class TfListenerRule extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -77,11 +77,11 @@ export class AwsVpclatticeListenerRule extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsVpclatticeListenerRule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfListenerRule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsVpclatticeListenerRule to import
-  * @param importFromId The id of the existing AwsVpclatticeListenerRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsVpclatticeListenerRule to import is found
+  * @param importToId The construct id used in the generated config for the TfListenerRule to import
+  * @param importFromId The id of the existing TfListenerRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfListenerRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpclattice_listener_rule", importId: importFromId, provider });
@@ -96,9 +96,9 @@ export class AwsVpclatticeListenerRule extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsVpclatticeListenerRuleConfig
+  * @param options TfListenerRuleConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsVpclatticeListenerRuleConfig) {
+  public constructor(scope: Construct, id: string, config: TfListenerRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpclattice_listener_rule',
       terraformGeneratorMetadata: {
@@ -258,11 +258,11 @@ export class AwsVpclatticeListenerRule extends cdktn.TerraformResource {
   }
 
   // action - computed: false, optional: false, required: true
-  private _action = new AwsVpclatticeListenerRule.ActionPropertyOutputReference(this, "action");
+  private _action = new TfListenerRule.ActionPropertyOutputReference(this, "action");
   public get action() {
     return this._action;
   }
-  public putAction(value: AwsVpclatticeListenerRule.ActionProperty) {
+  public putAction(value: TfListenerRule.ActionProperty) {
     this._action.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -271,11 +271,11 @@ export class AwsVpclatticeListenerRule extends cdktn.TerraformResource {
   }
 
   // match - computed: false, optional: false, required: true
-  private _match = new AwsVpclatticeListenerRule.MatchPropertyOutputReference(this, "match");
+  private _match = new TfListenerRule.MatchPropertyOutputReference(this, "match");
   public get match() {
     return this._match;
   }
-  public putMatch(value: AwsVpclatticeListenerRule.MatchProperty) {
+  public putMatch(value: TfListenerRule.MatchProperty) {
     this._match.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -284,11 +284,11 @@ export class AwsVpclatticeListenerRule extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsVpclatticeListenerRule.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfListenerRule.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsVpclatticeListenerRule.TimeoutsProperty) {
+  public putTimeouts(value: TfListenerRule.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -313,9 +313,9 @@ export class AwsVpclatticeListenerRule extends cdktn.TerraformResource {
       service_identifier: cdktn.stringToTerraform(this._serviceIdentifier),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      action: awsVpclatticeListenerRuleActionPropertyToTerraform(this._action.internalValue),
-      match: awsVpclatticeListenerRuleMatchPropertyToTerraform(this._match.internalValue),
-      timeouts: awsVpclatticeListenerRuleTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      action: tfListenerRuleActionPropertyToTerraform(this._action.internalValue),
+      match: tfListenerRuleMatchPropertyToTerraform(this._match.internalValue),
+      timeouts: tfListenerRuleTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -370,22 +370,22 @@ export class AwsVpclatticeListenerRule extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       action: {
-        value: awsVpclatticeListenerRuleActionPropertyToHclTerraform(this._action.internalValue),
+        value: tfListenerRuleActionPropertyToHclTerraform(this._action.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsVpclatticeListenerRule.ActionPropertyList",
+        storageClassType: "TfListenerRule.ActionPropertyList",
       },
       match: {
-        value: awsVpclatticeListenerRuleMatchPropertyToHclTerraform(this._match.internalValue),
+        value: tfListenerRuleMatchPropertyToHclTerraform(this._match.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsVpclatticeListenerRule.MatchPropertyList",
+        storageClassType: "TfListenerRule.MatchPropertyList",
       },
       timeouts: {
-        value: awsVpclatticeListenerRuleTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfListenerRuleTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsVpclatticeListenerRule.TimeoutsProperty",
+        storageClassType: "TfListenerRule.TimeoutsProperty",
       },
     };
 
@@ -394,7 +394,7 @@ export class AwsVpclatticeListenerRule extends cdktn.TerraformResource {
   }
 }
 
-export function awsVpclatticeListenerRuleFixedResponsePropertyToTerraform(struct?: AwsVpclatticeListenerRule.FixedResponsePropertyOutputReference | AwsVpclatticeListenerRule.FixedResponseProperty): any {
+export function tfListenerRuleFixedResponsePropertyToTerraform(struct?: TfListenerRule.FixedResponsePropertyOutputReference | TfListenerRule.FixedResponseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -405,7 +405,7 @@ export function awsVpclatticeListenerRuleFixedResponsePropertyToTerraform(struct
 }
 
 
-export function awsVpclatticeListenerRuleFixedResponsePropertyToHclTerraform(struct?: AwsVpclatticeListenerRule.FixedResponsePropertyOutputReference | AwsVpclatticeListenerRule.FixedResponseProperty): any {
+export function tfListenerRuleFixedResponsePropertyToHclTerraform(struct?: TfListenerRule.FixedResponsePropertyOutputReference | TfListenerRule.FixedResponseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -424,7 +424,7 @@ export function awsVpclatticeListenerRuleFixedResponsePropertyToHclTerraform(str
 }
 
 
-export function awsVpclatticeListenerRuleTargetGroupsPropertyToTerraform(struct?: AwsVpclatticeListenerRule.TargetGroupsProperty | cdktn.IResolvable): any {
+export function tfListenerRuleTargetGroupsPropertyToTerraform(struct?: TfListenerRule.TargetGroupsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -436,7 +436,7 @@ export function awsVpclatticeListenerRuleTargetGroupsPropertyToTerraform(struct?
 }
 
 
-export function awsVpclatticeListenerRuleTargetGroupsPropertyToHclTerraform(struct?: AwsVpclatticeListenerRule.TargetGroupsProperty | cdktn.IResolvable): any {
+export function tfListenerRuleTargetGroupsPropertyToHclTerraform(struct?: TfListenerRule.TargetGroupsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -461,25 +461,25 @@ export function awsVpclatticeListenerRuleTargetGroupsPropertyToHclTerraform(stru
 }
 
 
-export function awsVpclatticeListenerRuleForwardPropertyToTerraform(struct?: AwsVpclatticeListenerRule.ForwardPropertyOutputReference | AwsVpclatticeListenerRule.ForwardProperty): any {
+export function tfListenerRuleForwardPropertyToTerraform(struct?: TfListenerRule.ForwardPropertyOutputReference | TfListenerRule.ForwardProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    target_groups: cdktn.listMapper(awsVpclatticeListenerRuleTargetGroupsPropertyToTerraform, true)(struct!.targetGroups),
+    target_groups: cdktn.listMapper(tfListenerRuleTargetGroupsPropertyToTerraform, true)(struct!.targetGroups),
   }
 }
 
 
-export function awsVpclatticeListenerRuleForwardPropertyToHclTerraform(struct?: AwsVpclatticeListenerRule.ForwardPropertyOutputReference | AwsVpclatticeListenerRule.ForwardProperty): any {
+export function tfListenerRuleForwardPropertyToHclTerraform(struct?: TfListenerRule.ForwardPropertyOutputReference | TfListenerRule.ForwardProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     target_groups: {
-      value: cdktn.listMapperHcl(awsVpclatticeListenerRuleTargetGroupsPropertyToHclTerraform, true)(struct!.targetGroups),
+      value: cdktn.listMapperHcl(tfListenerRuleTargetGroupsPropertyToHclTerraform, true)(struct!.targetGroups),
       isBlock: true,
       type: "list",
       storageClassType: "TargetGroupsPropertyList",
@@ -491,32 +491,32 @@ export function awsVpclatticeListenerRuleForwardPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsVpclatticeListenerRuleActionPropertyToTerraform(struct?: AwsVpclatticeListenerRule.ActionPropertyOutputReference | AwsVpclatticeListenerRule.ActionProperty): any {
+export function tfListenerRuleActionPropertyToTerraform(struct?: TfListenerRule.ActionPropertyOutputReference | TfListenerRule.ActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    fixed_response: awsVpclatticeListenerRuleFixedResponsePropertyToTerraform(struct!.fixedResponse),
-    forward: awsVpclatticeListenerRuleForwardPropertyToTerraform(struct!.forward),
+    fixed_response: tfListenerRuleFixedResponsePropertyToTerraform(struct!.fixedResponse),
+    forward: tfListenerRuleForwardPropertyToTerraform(struct!.forward),
   }
 }
 
 
-export function awsVpclatticeListenerRuleActionPropertyToHclTerraform(struct?: AwsVpclatticeListenerRule.ActionPropertyOutputReference | AwsVpclatticeListenerRule.ActionProperty): any {
+export function tfListenerRuleActionPropertyToHclTerraform(struct?: TfListenerRule.ActionPropertyOutputReference | TfListenerRule.ActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     fixed_response: {
-      value: awsVpclatticeListenerRuleFixedResponsePropertyToHclTerraform(struct!.fixedResponse),
+      value: tfListenerRuleFixedResponsePropertyToHclTerraform(struct!.fixedResponse),
       isBlock: true,
       type: "list",
       storageClassType: "FixedResponsePropertyList",
     },
     forward: {
-      value: awsVpclatticeListenerRuleForwardPropertyToHclTerraform(struct!.forward),
+      value: tfListenerRuleForwardPropertyToHclTerraform(struct!.forward),
       isBlock: true,
       type: "list",
       storageClassType: "ForwardPropertyList",
@@ -528,7 +528,7 @@ export function awsVpclatticeListenerRuleActionPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsVpclatticeListenerRuleMatchHttpMatchHeaderMatchesMatchPropertyToTerraform(struct?: AwsVpclatticeListenerRule.MatchHttpMatchHeaderMatchesMatchPropertyOutputReference | AwsVpclatticeListenerRule.MatchHttpMatchHeaderMatchesMatchProperty): any {
+export function tfListenerRuleMatchHttpMatchHeaderMatchesMatchPropertyToTerraform(struct?: TfListenerRule.MatchHttpMatchHeaderMatchesMatchPropertyOutputReference | TfListenerRule.MatchHttpMatchHeaderMatchesMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -541,7 +541,7 @@ export function awsVpclatticeListenerRuleMatchHttpMatchHeaderMatchesMatchPropert
 }
 
 
-export function awsVpclatticeListenerRuleMatchHttpMatchHeaderMatchesMatchPropertyToHclTerraform(struct?: AwsVpclatticeListenerRule.MatchHttpMatchHeaderMatchesMatchPropertyOutputReference | AwsVpclatticeListenerRule.MatchHttpMatchHeaderMatchesMatchProperty): any {
+export function tfListenerRuleMatchHttpMatchHeaderMatchesMatchPropertyToHclTerraform(struct?: TfListenerRule.MatchHttpMatchHeaderMatchesMatchPropertyOutputReference | TfListenerRule.MatchHttpMatchHeaderMatchesMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -572,7 +572,7 @@ export function awsVpclatticeListenerRuleMatchHttpMatchHeaderMatchesMatchPropert
 }
 
 
-export function awsVpclatticeListenerRuleHeaderMatchesPropertyToTerraform(struct?: AwsVpclatticeListenerRule.HeaderMatchesProperty | cdktn.IResolvable): any {
+export function tfListenerRuleHeaderMatchesPropertyToTerraform(struct?: TfListenerRule.HeaderMatchesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -580,12 +580,12 @@ export function awsVpclatticeListenerRuleHeaderMatchesPropertyToTerraform(struct
   return {
     case_sensitive: cdktn.booleanToTerraform(struct!.caseSensitive),
     name: cdktn.stringToTerraform(struct!.name),
-    match: awsVpclatticeListenerRuleMatchHttpMatchHeaderMatchesMatchPropertyToTerraform(struct!.match),
+    match: tfListenerRuleMatchHttpMatchHeaderMatchesMatchPropertyToTerraform(struct!.match),
   }
 }
 
 
-export function awsVpclatticeListenerRuleHeaderMatchesPropertyToHclTerraform(struct?: AwsVpclatticeListenerRule.HeaderMatchesProperty | cdktn.IResolvable): any {
+export function tfListenerRuleHeaderMatchesPropertyToHclTerraform(struct?: TfListenerRule.HeaderMatchesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -604,7 +604,7 @@ export function awsVpclatticeListenerRuleHeaderMatchesPropertyToHclTerraform(str
       storageClassType: "string",
     },
     match: {
-      value: awsVpclatticeListenerRuleMatchHttpMatchHeaderMatchesMatchPropertyToHclTerraform(struct!.match),
+      value: tfListenerRuleMatchHttpMatchHeaderMatchesMatchPropertyToHclTerraform(struct!.match),
       isBlock: true,
       type: "list",
       storageClassType: "MatchHttpMatchHeaderMatchesMatchPropertyList",
@@ -616,7 +616,7 @@ export function awsVpclatticeListenerRuleHeaderMatchesPropertyToHclTerraform(str
 }
 
 
-export function awsVpclatticeListenerRuleMatchHttpMatchPathMatchMatchPropertyToTerraform(struct?: AwsVpclatticeListenerRule.MatchHttpMatchPathMatchMatchPropertyOutputReference | AwsVpclatticeListenerRule.MatchHttpMatchPathMatchMatchProperty): any {
+export function tfListenerRuleMatchHttpMatchPathMatchMatchPropertyToTerraform(struct?: TfListenerRule.MatchHttpMatchPathMatchMatchPropertyOutputReference | TfListenerRule.MatchHttpMatchPathMatchMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -628,7 +628,7 @@ export function awsVpclatticeListenerRuleMatchHttpMatchPathMatchMatchPropertyToT
 }
 
 
-export function awsVpclatticeListenerRuleMatchHttpMatchPathMatchMatchPropertyToHclTerraform(struct?: AwsVpclatticeListenerRule.MatchHttpMatchPathMatchMatchPropertyOutputReference | AwsVpclatticeListenerRule.MatchHttpMatchPathMatchMatchProperty): any {
+export function tfListenerRuleMatchHttpMatchPathMatchMatchPropertyToHclTerraform(struct?: TfListenerRule.MatchHttpMatchPathMatchMatchPropertyOutputReference | TfListenerRule.MatchHttpMatchPathMatchMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -653,19 +653,19 @@ export function awsVpclatticeListenerRuleMatchHttpMatchPathMatchMatchPropertyToH
 }
 
 
-export function awsVpclatticeListenerRulePathMatchPropertyToTerraform(struct?: AwsVpclatticeListenerRule.PathMatchPropertyOutputReference | AwsVpclatticeListenerRule.PathMatchProperty): any {
+export function tfListenerRulePathMatchPropertyToTerraform(struct?: TfListenerRule.PathMatchPropertyOutputReference | TfListenerRule.PathMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     case_sensitive: cdktn.booleanToTerraform(struct!.caseSensitive),
-    match: awsVpclatticeListenerRuleMatchHttpMatchPathMatchMatchPropertyToTerraform(struct!.match),
+    match: tfListenerRuleMatchHttpMatchPathMatchMatchPropertyToTerraform(struct!.match),
   }
 }
 
 
-export function awsVpclatticeListenerRulePathMatchPropertyToHclTerraform(struct?: AwsVpclatticeListenerRule.PathMatchPropertyOutputReference | AwsVpclatticeListenerRule.PathMatchProperty): any {
+export function tfListenerRulePathMatchPropertyToHclTerraform(struct?: TfListenerRule.PathMatchPropertyOutputReference | TfListenerRule.PathMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -678,7 +678,7 @@ export function awsVpclatticeListenerRulePathMatchPropertyToHclTerraform(struct?
       storageClassType: "boolean",
     },
     match: {
-      value: awsVpclatticeListenerRuleMatchHttpMatchPathMatchMatchPropertyToHclTerraform(struct!.match),
+      value: tfListenerRuleMatchHttpMatchPathMatchMatchPropertyToHclTerraform(struct!.match),
       isBlock: true,
       type: "list",
       storageClassType: "MatchHttpMatchPathMatchMatchPropertyList",
@@ -690,20 +690,20 @@ export function awsVpclatticeListenerRulePathMatchPropertyToHclTerraform(struct?
 }
 
 
-export function awsVpclatticeListenerRuleHttpMatchPropertyToTerraform(struct?: AwsVpclatticeListenerRule.HttpMatchPropertyOutputReference | AwsVpclatticeListenerRule.HttpMatchProperty): any {
+export function tfListenerRuleHttpMatchPropertyToTerraform(struct?: TfListenerRule.HttpMatchPropertyOutputReference | TfListenerRule.HttpMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     method: cdktn.stringToTerraform(struct!.method),
-    header_matches: cdktn.listMapper(awsVpclatticeListenerRuleHeaderMatchesPropertyToTerraform, true)(struct!.headerMatches),
-    path_match: awsVpclatticeListenerRulePathMatchPropertyToTerraform(struct!.pathMatch),
+    header_matches: cdktn.listMapper(tfListenerRuleHeaderMatchesPropertyToTerraform, true)(struct!.headerMatches),
+    path_match: tfListenerRulePathMatchPropertyToTerraform(struct!.pathMatch),
   }
 }
 
 
-export function awsVpclatticeListenerRuleHttpMatchPropertyToHclTerraform(struct?: AwsVpclatticeListenerRule.HttpMatchPropertyOutputReference | AwsVpclatticeListenerRule.HttpMatchProperty): any {
+export function tfListenerRuleHttpMatchPropertyToHclTerraform(struct?: TfListenerRule.HttpMatchPropertyOutputReference | TfListenerRule.HttpMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -716,13 +716,13 @@ export function awsVpclatticeListenerRuleHttpMatchPropertyToHclTerraform(struct?
       storageClassType: "string",
     },
     header_matches: {
-      value: cdktn.listMapperHcl(awsVpclatticeListenerRuleHeaderMatchesPropertyToHclTerraform, true)(struct!.headerMatches),
+      value: cdktn.listMapperHcl(tfListenerRuleHeaderMatchesPropertyToHclTerraform, true)(struct!.headerMatches),
       isBlock: true,
       type: "list",
       storageClassType: "HeaderMatchesPropertyList",
     },
     path_match: {
-      value: awsVpclatticeListenerRulePathMatchPropertyToHclTerraform(struct!.pathMatch),
+      value: tfListenerRulePathMatchPropertyToHclTerraform(struct!.pathMatch),
       isBlock: true,
       type: "list",
       storageClassType: "PathMatchPropertyList",
@@ -734,25 +734,25 @@ export function awsVpclatticeListenerRuleHttpMatchPropertyToHclTerraform(struct?
 }
 
 
-export function awsVpclatticeListenerRuleMatchPropertyToTerraform(struct?: AwsVpclatticeListenerRule.MatchPropertyOutputReference | AwsVpclatticeListenerRule.MatchProperty): any {
+export function tfListenerRuleMatchPropertyToTerraform(struct?: TfListenerRule.MatchPropertyOutputReference | TfListenerRule.MatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    http_match: awsVpclatticeListenerRuleHttpMatchPropertyToTerraform(struct!.httpMatch),
+    http_match: tfListenerRuleHttpMatchPropertyToTerraform(struct!.httpMatch),
   }
 }
 
 
-export function awsVpclatticeListenerRuleMatchPropertyToHclTerraform(struct?: AwsVpclatticeListenerRule.MatchPropertyOutputReference | AwsVpclatticeListenerRule.MatchProperty): any {
+export function tfListenerRuleMatchPropertyToHclTerraform(struct?: TfListenerRule.MatchPropertyOutputReference | TfListenerRule.MatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     http_match: {
-      value: awsVpclatticeListenerRuleHttpMatchPropertyToHclTerraform(struct!.httpMatch),
+      value: tfListenerRuleHttpMatchPropertyToHclTerraform(struct!.httpMatch),
       isBlock: true,
       type: "list",
       storageClassType: "HttpMatchPropertyList",
@@ -764,7 +764,7 @@ export function awsVpclatticeListenerRuleMatchPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsVpclatticeListenerRuleTimeoutsPropertyToTerraform(struct?: AwsVpclatticeListenerRule.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfListenerRuleTimeoutsPropertyToTerraform(struct?: TfListenerRule.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -777,7 +777,7 @@ export function awsVpclatticeListenerRuleTimeoutsPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsVpclatticeListenerRuleTimeoutsPropertyToHclTerraform(struct?: AwsVpclatticeListenerRule.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfListenerRuleTimeoutsPropertyToHclTerraform(struct?: TfListenerRule.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -808,10 +808,10 @@ export function awsVpclatticeListenerRuleTimeoutsPropertyToHclTerraform(struct?:
 }
 
 
-export namespace AwsVpclatticeListenerRule {
+export namespace TfListenerRule {
 export interface FixedResponseProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#status_code AwsVpclatticeListenerRule#status_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#status_code TfListenerRule#status_code}
   */
   readonly statusCode: number;
 }
@@ -862,11 +862,11 @@ export class FixedResponsePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TargetGroupsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#target_group_identifier AwsVpclatticeListenerRule#target_group_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#target_group_identifier TfListenerRule#target_group_identifier}
   */
   readonly targetGroupIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#weight AwsVpclatticeListenerRule#weight}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#weight TfListenerRule#weight}
   */
   readonly weight?: number;
 }
@@ -973,7 +973,7 @@ export interface ForwardProperty {
   /**
   * target_groups block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#target_groups AwsVpclatticeListenerRule#target_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#target_groups TfListenerRule#target_groups}
   */
   readonly targetGroups: TargetGroupsProperty[] | cdktn.IResolvable;
 }
@@ -1026,13 +1026,13 @@ export interface ActionProperty {
   /**
   * fixed_response block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#fixed_response AwsVpclatticeListenerRule#fixed_response}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#fixed_response TfListenerRule#fixed_response}
   */
   readonly fixedResponse?: FixedResponseProperty;
   /**
   * forward block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#forward AwsVpclatticeListenerRule#forward}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#forward TfListenerRule#forward}
   */
   readonly forward?: ForwardProperty;
 }
@@ -1108,15 +1108,15 @@ export class ActionPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface MatchHttpMatchHeaderMatchesMatchProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#contains AwsVpclatticeListenerRule#contains}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#contains TfListenerRule#contains}
   */
   readonly contains?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#exact AwsVpclatticeListenerRule#exact}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#exact TfListenerRule#exact}
   */
   readonly exact?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#prefix AwsVpclatticeListenerRule#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#prefix TfListenerRule#prefix}
   */
   readonly prefix?: string;
 }
@@ -1214,17 +1214,17 @@ export class MatchHttpMatchHeaderMatchesMatchPropertyOutputReference extends cdk
 }
 export interface HeaderMatchesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#case_sensitive AwsVpclatticeListenerRule#case_sensitive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#case_sensitive TfListenerRule#case_sensitive}
   */
   readonly caseSensitive?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#name AwsVpclatticeListenerRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#name TfListenerRule#name}
   */
   readonly name: string;
   /**
   * match block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#match AwsVpclatticeListenerRule#match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#match TfListenerRule#match}
   */
   readonly match: MatchHttpMatchHeaderMatchesMatchProperty;
 }
@@ -1348,11 +1348,11 @@ export class HeaderMatchesPropertyList extends cdktn.ComplexList {
 }
 export interface MatchHttpMatchPathMatchMatchProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#exact AwsVpclatticeListenerRule#exact}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#exact TfListenerRule#exact}
   */
   readonly exact?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#prefix AwsVpclatticeListenerRule#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#prefix TfListenerRule#prefix}
   */
   readonly prefix?: string;
 }
@@ -1428,13 +1428,13 @@ export class MatchHttpMatchPathMatchMatchPropertyOutputReference extends cdktn.C
 }
 export interface PathMatchProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#case_sensitive AwsVpclatticeListenerRule#case_sensitive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#case_sensitive TfListenerRule#case_sensitive}
   */
   readonly caseSensitive?: boolean | cdktn.IResolvable;
   /**
   * match block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#match AwsVpclatticeListenerRule#match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#match TfListenerRule#match}
   */
   readonly match: MatchHttpMatchPathMatchMatchProperty;
 }
@@ -1507,19 +1507,19 @@ export class PathMatchPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface HttpMatchProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#method AwsVpclatticeListenerRule#method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#method TfListenerRule#method}
   */
   readonly method?: string;
   /**
   * header_matches block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#header_matches AwsVpclatticeListenerRule#header_matches}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#header_matches TfListenerRule#header_matches}
   */
   readonly headerMatches?: HeaderMatchesProperty[] | cdktn.IResolvable;
   /**
   * path_match block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#path_match AwsVpclatticeListenerRule#path_match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#path_match TfListenerRule#path_match}
   */
   readonly pathMatch?: PathMatchProperty;
 }
@@ -1619,7 +1619,7 @@ export interface MatchProperty {
   /**
   * http_match block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#http_match AwsVpclatticeListenerRule#http_match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#http_match TfListenerRule#http_match}
   */
   readonly httpMatch: HttpMatchProperty;
 }
@@ -1670,15 +1670,15 @@ export class MatchPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#create AwsVpclatticeListenerRule#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#create TfListenerRule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#delete AwsVpclatticeListenerRule#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#delete TfListenerRule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#update AwsVpclatticeListenerRule#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#update TfListenerRule#update}
   */
   readonly update?: string;
 }

@@ -5,32 +5,32 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsConfigAggregateAuthorizationConfig extends cdktn.TerraformMetaArguments {
+export interface TfAggregateAuthorizationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_aggregate_authorization#account_id AwsConfigAggregateAuthorization#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_aggregate_authorization#account_id TfAggregateAuthorization#account_id}
   */
   readonly accountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_aggregate_authorization#authorized_aws_region AwsConfigAggregateAuthorization#authorized_aws_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_aggregate_authorization#authorized_aws_region TfAggregateAuthorization#authorized_aws_region}
   */
   readonly authorizedAwsRegion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_aggregate_authorization#id AwsConfigAggregateAuthorization#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_aggregate_authorization#id TfAggregateAuthorization#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_aggregate_authorization#region AwsConfigAggregateAuthorization#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_aggregate_authorization#region TfAggregateAuthorization#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_aggregate_authorization#tags AwsConfigAggregateAuthorization#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_aggregate_authorization#tags TfAggregateAuthorization#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_aggregate_authorization#tags_all AwsConfigAggregateAuthorization#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_aggregate_authorization#tags_all TfAggregateAuthorization#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -38,7 +38,7 @@ export interface AwsConfigAggregateAuthorizationConfig extends cdktn.TerraformMe
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_aggregate_authorization aws_config_aggregate_authorization}
 */
-export class AwsConfigAggregateAuthorization extends cdktn.TerraformResource {
+export class TfAggregateAuthorization extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class AwsConfigAggregateAuthorization extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsConfigAggregateAuthorization resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAggregateAuthorization resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsConfigAggregateAuthorization to import
-  * @param importFromId The id of the existing AwsConfigAggregateAuthorization that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_aggregate_authorization#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsConfigAggregateAuthorization to import is found
+  * @param importToId The construct id used in the generated config for the TfAggregateAuthorization to import
+  * @param importFromId The id of the existing TfAggregateAuthorization that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_aggregate_authorization#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAggregateAuthorization to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_config_aggregate_authorization", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class AwsConfigAggregateAuthorization extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsConfigAggregateAuthorizationConfig
+  * @param options TfAggregateAuthorizationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsConfigAggregateAuthorizationConfig) {
+  public constructor(scope: Construct, id: string, config: TfAggregateAuthorizationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_config_aggregate_authorization',
       terraformGeneratorMetadata: {

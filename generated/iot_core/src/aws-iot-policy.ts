@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsIotPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface TfPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_policy#id AwsIotPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_policy#id TfPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_policy#name AwsIotPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_policy#name TfPolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_policy#policy AwsIotPolicy#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_policy#policy TfPolicy#policy}
   */
   readonly policy: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_policy#region AwsIotPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_policy#region TfPolicy#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_policy#tags AwsIotPolicy#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_policy#tags TfPolicy#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_policy#tags_all AwsIotPolicy#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_policy#tags_all TfPolicy#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_policy#timeouts AwsIotPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_policy#timeouts TfPolicy#timeouts}
   */
-  readonly timeouts?: AwsIotPolicy.TimeoutsProperty;
+  readonly timeouts?: TfPolicy.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_policy aws_iot_policy}
 */
-export class AwsIotPolicy extends cdktn.TerraformResource {
+export class TfPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class AwsIotPolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsIotPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsIotPolicy to import
-  * @param importFromId The id of the existing AwsIotPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsIotPolicy to import is found
+  * @param importToId The construct id used in the generated config for the TfPolicy to import
+  * @param importFromId The id of the existing TfPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iot_policy", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class AwsIotPolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsIotPolicyConfig
+  * @param options TfPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsIotPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: TfPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iot_policy',
       terraformGeneratorMetadata: {
@@ -208,11 +208,11 @@ export class AwsIotPolicy extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsIotPolicy.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfPolicy.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsIotPolicy.TimeoutsProperty) {
+  public putTimeouts(value: TfPolicy.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -235,7 +235,7 @@ export class AwsIotPolicy extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: awsIotPolicyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfPolicyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -278,10 +278,10 @@ export class AwsIotPolicy extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsIotPolicyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfPolicyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsIotPolicy.TimeoutsProperty",
+        storageClassType: "TfPolicy.TimeoutsProperty",
       },
     };
 
@@ -290,7 +290,7 @@ export class AwsIotPolicy extends cdktn.TerraformResource {
   }
 }
 
-export function awsIotPolicyTimeoutsPropertyToTerraform(struct?: AwsIotPolicy.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfPolicyTimeoutsPropertyToTerraform(struct?: TfPolicy.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -302,7 +302,7 @@ export function awsIotPolicyTimeoutsPropertyToTerraform(struct?: AwsIotPolicy.Ti
 }
 
 
-export function awsIotPolicyTimeoutsPropertyToHclTerraform(struct?: AwsIotPolicy.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfPolicyTimeoutsPropertyToHclTerraform(struct?: TfPolicy.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -327,14 +327,14 @@ export function awsIotPolicyTimeoutsPropertyToHclTerraform(struct?: AwsIotPolicy
 }
 
 
-export namespace AwsIotPolicy {
+export namespace TfPolicy {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_policy#delete AwsIotPolicy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_policy#delete TfPolicy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_policy#update AwsIotPolicy#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_policy#update TfPolicy#update}
   */
   readonly update?: string;
 }

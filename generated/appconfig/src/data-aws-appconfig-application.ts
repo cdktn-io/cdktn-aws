@@ -5,22 +5,22 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsAppconfigApplicationConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataApplicationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appconfig_application#id DataAwsAppconfigApplication#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appconfig_application#id TfDataApplication#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appconfig_application#name DataAwsAppconfigApplication#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appconfig_application#name TfDataApplication#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appconfig_application#region DataAwsAppconfigApplication#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appconfig_application#region TfDataApplication#region}
   */
   readonly region?: string;
 }
@@ -28,7 +28,7 @@ export interface DataAwsAppconfigApplicationConfig extends cdktn.TerraformMetaAr
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appconfig_application aws_appconfig_application}
 */
-export class DataAwsAppconfigApplication extends cdktn.TerraformDataSource {
+export class TfDataApplication extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class DataAwsAppconfigApplication extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsAppconfigApplication resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataApplication resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsAppconfigApplication to import
-  * @param importFromId The id of the existing DataAwsAppconfigApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appconfig_application#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsAppconfigApplication to import is found
+  * @param importToId The construct id used in the generated config for the TfDataApplication to import
+  * @param importFromId The id of the existing TfDataApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appconfig_application#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataApplication to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appconfig_application", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class DataAwsAppconfigApplication extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsAppconfigApplicationConfig = {}
+  * @param options TfDataApplicationConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsAppconfigApplicationConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDataApplicationConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_appconfig_application',
       terraformGeneratorMetadata: {

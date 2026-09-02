@@ -5,114 +5,114 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsQuicksightDataSetConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataSetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#aws_account_id AwsQuicksightDataSet#aws_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#aws_account_id TfDataSet#aws_account_id}
   */
   readonly awsAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#data_set_id AwsQuicksightDataSet#data_set_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#data_set_id TfDataSet#data_set_id}
   */
   readonly dataSetId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#id AwsQuicksightDataSet#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#id TfDataSet#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#import_mode AwsQuicksightDataSet#import_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#import_mode TfDataSet#import_mode}
   */
   readonly importMode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#name AwsQuicksightDataSet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#name TfDataSet#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#region AwsQuicksightDataSet#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#region TfDataSet#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#tags AwsQuicksightDataSet#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#tags TfDataSet#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#tags_all AwsQuicksightDataSet#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#tags_all TfDataSet#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#use_as AwsQuicksightDataSet#use_as}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#use_as TfDataSet#use_as}
   */
   readonly useAs?: string;
   /**
   * column_groups block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#column_groups AwsQuicksightDataSet#column_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#column_groups TfDataSet#column_groups}
   */
-  readonly columnGroups?: AwsQuicksightDataSet.ColumnGroupsProperty[] | cdktn.IResolvable;
+  readonly columnGroups?: TfDataSet.ColumnGroupsProperty[] | cdktn.IResolvable;
   /**
   * column_level_permission_rules block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#column_level_permission_rules AwsQuicksightDataSet#column_level_permission_rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#column_level_permission_rules TfDataSet#column_level_permission_rules}
   */
-  readonly columnLevelPermissionRules?: AwsQuicksightDataSet.ColumnLevelPermissionRulesProperty[] | cdktn.IResolvable;
+  readonly columnLevelPermissionRules?: TfDataSet.ColumnLevelPermissionRulesProperty[] | cdktn.IResolvable;
   /**
   * data_set_usage_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#data_set_usage_configuration AwsQuicksightDataSet#data_set_usage_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#data_set_usage_configuration TfDataSet#data_set_usage_configuration}
   */
-  readonly dataSetUsageConfiguration?: AwsQuicksightDataSet.DataSetUsageConfigurationProperty;
+  readonly dataSetUsageConfiguration?: TfDataSet.DataSetUsageConfigurationProperty;
   /**
   * field_folders block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#field_folders AwsQuicksightDataSet#field_folders}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#field_folders TfDataSet#field_folders}
   */
-  readonly fieldFolders?: AwsQuicksightDataSet.FieldFoldersProperty[] | cdktn.IResolvable;
+  readonly fieldFolders?: TfDataSet.FieldFoldersProperty[] | cdktn.IResolvable;
   /**
   * logical_table_map block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#logical_table_map AwsQuicksightDataSet#logical_table_map}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#logical_table_map TfDataSet#logical_table_map}
   */
-  readonly logicalTableMap?: AwsQuicksightDataSet.LogicalTableMapProperty[] | cdktn.IResolvable;
+  readonly logicalTableMap?: TfDataSet.LogicalTableMapProperty[] | cdktn.IResolvable;
   /**
   * permissions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#permissions AwsQuicksightDataSet#permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#permissions TfDataSet#permissions}
   */
-  readonly permissions?: AwsQuicksightDataSet.PermissionsProperty[] | cdktn.IResolvable;
+  readonly permissions?: TfDataSet.PermissionsProperty[] | cdktn.IResolvable;
   /**
   * physical_table_map block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#physical_table_map AwsQuicksightDataSet#physical_table_map}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#physical_table_map TfDataSet#physical_table_map}
   */
-  readonly physicalTableMap?: AwsQuicksightDataSet.PhysicalTableMapProperty[] | cdktn.IResolvable;
+  readonly physicalTableMap?: TfDataSet.PhysicalTableMapProperty[] | cdktn.IResolvable;
   /**
   * refresh_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#refresh_properties AwsQuicksightDataSet#refresh_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#refresh_properties TfDataSet#refresh_properties}
   */
-  readonly refreshProperties?: AwsQuicksightDataSet.RefreshPropertiesProperty;
+  readonly refreshProperties?: TfDataSet.RefreshPropertiesProperty;
   /**
   * row_level_permission_data_set block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#row_level_permission_data_set AwsQuicksightDataSet#row_level_permission_data_set}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#row_level_permission_data_set TfDataSet#row_level_permission_data_set}
   */
-  readonly rowLevelPermissionDataSet?: AwsQuicksightDataSet.RowLevelPermissionDataSetProperty;
+  readonly rowLevelPermissionDataSet?: TfDataSet.RowLevelPermissionDataSetProperty;
   /**
   * row_level_permission_tag_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#row_level_permission_tag_configuration AwsQuicksightDataSet#row_level_permission_tag_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#row_level_permission_tag_configuration TfDataSet#row_level_permission_tag_configuration}
   */
-  readonly rowLevelPermissionTagConfiguration?: AwsQuicksightDataSet.RowLevelPermissionTagConfigurationProperty;
+  readonly rowLevelPermissionTagConfiguration?: TfDataSet.RowLevelPermissionTagConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set aws_quicksight_data_set}
 */
-export class AwsQuicksightDataSet extends cdktn.TerraformResource {
+export class TfDataSet extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -123,11 +123,11 @@ export class AwsQuicksightDataSet extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsQuicksightDataSet resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataSet resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsQuicksightDataSet to import
-  * @param importFromId The id of the existing AwsQuicksightDataSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsQuicksightDataSet to import is found
+  * @param importToId The construct id used in the generated config for the TfDataSet to import
+  * @param importFromId The id of the existing TfDataSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataSet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_quicksight_data_set", importId: importFromId, provider });
@@ -142,9 +142,9 @@ export class AwsQuicksightDataSet extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsQuicksightDataSetConfig
+  * @param options TfDataSetConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsQuicksightDataSetConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataSetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_quicksight_data_set',
       terraformGeneratorMetadata: {
@@ -262,7 +262,7 @@ export class AwsQuicksightDataSet extends cdktn.TerraformResource {
   }
 
   // output_columns - computed: true, optional: false, required: false
-  private _outputColumns = new AwsQuicksightDataSet.OutputColumnsPropertyList(this, "output_columns", false);
+  private _outputColumns = new TfDataSet.OutputColumnsPropertyList(this, "output_columns", false);
   public get outputColumns() {
     return this._outputColumns;
   }
@@ -332,11 +332,11 @@ export class AwsQuicksightDataSet extends cdktn.TerraformResource {
   }
 
   // column_groups - computed: false, optional: true, required: false
-  private _columnGroups = new AwsQuicksightDataSet.ColumnGroupsPropertyList(this, "column_groups", false);
+  private _columnGroups = new TfDataSet.ColumnGroupsPropertyList(this, "column_groups", false);
   public get columnGroups() {
     return this._columnGroups;
   }
-  public putColumnGroups(value: AwsQuicksightDataSet.ColumnGroupsProperty[] | cdktn.IResolvable) {
+  public putColumnGroups(value: TfDataSet.ColumnGroupsProperty[] | cdktn.IResolvable) {
     this._columnGroups.internalValue = value;
   }
   public resetColumnGroups() {
@@ -348,11 +348,11 @@ export class AwsQuicksightDataSet extends cdktn.TerraformResource {
   }
 
   // column_level_permission_rules - computed: false, optional: true, required: false
-  private _columnLevelPermissionRules = new AwsQuicksightDataSet.ColumnLevelPermissionRulesPropertyList(this, "column_level_permission_rules", false);
+  private _columnLevelPermissionRules = new TfDataSet.ColumnLevelPermissionRulesPropertyList(this, "column_level_permission_rules", false);
   public get columnLevelPermissionRules() {
     return this._columnLevelPermissionRules;
   }
-  public putColumnLevelPermissionRules(value: AwsQuicksightDataSet.ColumnLevelPermissionRulesProperty[] | cdktn.IResolvable) {
+  public putColumnLevelPermissionRules(value: TfDataSet.ColumnLevelPermissionRulesProperty[] | cdktn.IResolvable) {
     this._columnLevelPermissionRules.internalValue = value;
   }
   public resetColumnLevelPermissionRules() {
@@ -364,11 +364,11 @@ export class AwsQuicksightDataSet extends cdktn.TerraformResource {
   }
 
   // data_set_usage_configuration - computed: false, optional: true, required: false
-  private _dataSetUsageConfiguration = new AwsQuicksightDataSet.DataSetUsageConfigurationPropertyOutputReference(this, "data_set_usage_configuration");
+  private _dataSetUsageConfiguration = new TfDataSet.DataSetUsageConfigurationPropertyOutputReference(this, "data_set_usage_configuration");
   public get dataSetUsageConfiguration() {
     return this._dataSetUsageConfiguration;
   }
-  public putDataSetUsageConfiguration(value: AwsQuicksightDataSet.DataSetUsageConfigurationProperty) {
+  public putDataSetUsageConfiguration(value: TfDataSet.DataSetUsageConfigurationProperty) {
     this._dataSetUsageConfiguration.internalValue = value;
   }
   public resetDataSetUsageConfiguration() {
@@ -380,11 +380,11 @@ export class AwsQuicksightDataSet extends cdktn.TerraformResource {
   }
 
   // field_folders - computed: false, optional: true, required: false
-  private _fieldFolders = new AwsQuicksightDataSet.FieldFoldersPropertyList(this, "field_folders", true);
+  private _fieldFolders = new TfDataSet.FieldFoldersPropertyList(this, "field_folders", true);
   public get fieldFolders() {
     return this._fieldFolders;
   }
-  public putFieldFolders(value: AwsQuicksightDataSet.FieldFoldersProperty[] | cdktn.IResolvable) {
+  public putFieldFolders(value: TfDataSet.FieldFoldersProperty[] | cdktn.IResolvable) {
     this._fieldFolders.internalValue = value;
   }
   public resetFieldFolders() {
@@ -396,11 +396,11 @@ export class AwsQuicksightDataSet extends cdktn.TerraformResource {
   }
 
   // logical_table_map - computed: false, optional: true, required: false
-  private _logicalTableMap = new AwsQuicksightDataSet.LogicalTableMapPropertyList(this, "logical_table_map", true);
+  private _logicalTableMap = new TfDataSet.LogicalTableMapPropertyList(this, "logical_table_map", true);
   public get logicalTableMap() {
     return this._logicalTableMap;
   }
-  public putLogicalTableMap(value: AwsQuicksightDataSet.LogicalTableMapProperty[] | cdktn.IResolvable) {
+  public putLogicalTableMap(value: TfDataSet.LogicalTableMapProperty[] | cdktn.IResolvable) {
     this._logicalTableMap.internalValue = value;
   }
   public resetLogicalTableMap() {
@@ -412,11 +412,11 @@ export class AwsQuicksightDataSet extends cdktn.TerraformResource {
   }
 
   // permissions - computed: false, optional: true, required: false
-  private _permissions = new AwsQuicksightDataSet.PermissionsPropertyList(this, "permissions", true);
+  private _permissions = new TfDataSet.PermissionsPropertyList(this, "permissions", true);
   public get permissions() {
     return this._permissions;
   }
-  public putPermissions(value: AwsQuicksightDataSet.PermissionsProperty[] | cdktn.IResolvable) {
+  public putPermissions(value: TfDataSet.PermissionsProperty[] | cdktn.IResolvable) {
     this._permissions.internalValue = value;
   }
   public resetPermissions() {
@@ -428,11 +428,11 @@ export class AwsQuicksightDataSet extends cdktn.TerraformResource {
   }
 
   // physical_table_map - computed: false, optional: true, required: false
-  private _physicalTableMap = new AwsQuicksightDataSet.PhysicalTableMapPropertyList(this, "physical_table_map", true);
+  private _physicalTableMap = new TfDataSet.PhysicalTableMapPropertyList(this, "physical_table_map", true);
   public get physicalTableMap() {
     return this._physicalTableMap;
   }
-  public putPhysicalTableMap(value: AwsQuicksightDataSet.PhysicalTableMapProperty[] | cdktn.IResolvable) {
+  public putPhysicalTableMap(value: TfDataSet.PhysicalTableMapProperty[] | cdktn.IResolvable) {
     this._physicalTableMap.internalValue = value;
   }
   public resetPhysicalTableMap() {
@@ -444,11 +444,11 @@ export class AwsQuicksightDataSet extends cdktn.TerraformResource {
   }
 
   // refresh_properties - computed: false, optional: true, required: false
-  private _refreshProperties = new AwsQuicksightDataSet.RefreshPropertiesPropertyOutputReference(this, "refresh_properties");
+  private _refreshProperties = new TfDataSet.RefreshPropertiesPropertyOutputReference(this, "refresh_properties");
   public get refreshProperties() {
     return this._refreshProperties;
   }
-  public putRefreshProperties(value: AwsQuicksightDataSet.RefreshPropertiesProperty) {
+  public putRefreshProperties(value: TfDataSet.RefreshPropertiesProperty) {
     this._refreshProperties.internalValue = value;
   }
   public resetRefreshProperties() {
@@ -460,11 +460,11 @@ export class AwsQuicksightDataSet extends cdktn.TerraformResource {
   }
 
   // row_level_permission_data_set - computed: false, optional: true, required: false
-  private _rowLevelPermissionDataSet = new AwsQuicksightDataSet.RowLevelPermissionDataSetPropertyOutputReference(this, "row_level_permission_data_set");
+  private _rowLevelPermissionDataSet = new TfDataSet.RowLevelPermissionDataSetPropertyOutputReference(this, "row_level_permission_data_set");
   public get rowLevelPermissionDataSet() {
     return this._rowLevelPermissionDataSet;
   }
-  public putRowLevelPermissionDataSet(value: AwsQuicksightDataSet.RowLevelPermissionDataSetProperty) {
+  public putRowLevelPermissionDataSet(value: TfDataSet.RowLevelPermissionDataSetProperty) {
     this._rowLevelPermissionDataSet.internalValue = value;
   }
   public resetRowLevelPermissionDataSet() {
@@ -476,11 +476,11 @@ export class AwsQuicksightDataSet extends cdktn.TerraformResource {
   }
 
   // row_level_permission_tag_configuration - computed: false, optional: true, required: false
-  private _rowLevelPermissionTagConfiguration = new AwsQuicksightDataSet.RowLevelPermissionTagConfigurationPropertyOutputReference(this, "row_level_permission_tag_configuration");
+  private _rowLevelPermissionTagConfiguration = new TfDataSet.RowLevelPermissionTagConfigurationPropertyOutputReference(this, "row_level_permission_tag_configuration");
   public get rowLevelPermissionTagConfiguration() {
     return this._rowLevelPermissionTagConfiguration;
   }
-  public putRowLevelPermissionTagConfiguration(value: AwsQuicksightDataSet.RowLevelPermissionTagConfigurationProperty) {
+  public putRowLevelPermissionTagConfiguration(value: TfDataSet.RowLevelPermissionTagConfigurationProperty) {
     this._rowLevelPermissionTagConfiguration.internalValue = value;
   }
   public resetRowLevelPermissionTagConfiguration() {
@@ -506,16 +506,16 @@ export class AwsQuicksightDataSet extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       use_as: cdktn.stringToTerraform(this._useAs),
-      column_groups: cdktn.listMapper(awsQuicksightDataSetColumnGroupsPropertyToTerraform, true)(this._columnGroups.internalValue),
-      column_level_permission_rules: cdktn.listMapper(awsQuicksightDataSetColumnLevelPermissionRulesPropertyToTerraform, true)(this._columnLevelPermissionRules.internalValue),
-      data_set_usage_configuration: awsQuicksightDataSetDataSetUsageConfigurationPropertyToTerraform(this._dataSetUsageConfiguration.internalValue),
-      field_folders: cdktn.listMapper(awsQuicksightDataSetFieldFoldersPropertyToTerraform, true)(this._fieldFolders.internalValue),
-      logical_table_map: cdktn.listMapper(awsQuicksightDataSetLogicalTableMapPropertyToTerraform, true)(this._logicalTableMap.internalValue),
-      permissions: cdktn.listMapper(awsQuicksightDataSetPermissionsPropertyToTerraform, true)(this._permissions.internalValue),
-      physical_table_map: cdktn.listMapper(awsQuicksightDataSetPhysicalTableMapPropertyToTerraform, true)(this._physicalTableMap.internalValue),
-      refresh_properties: awsQuicksightDataSetRefreshPropertiesPropertyToTerraform(this._refreshProperties.internalValue),
-      row_level_permission_data_set: awsQuicksightDataSetRowLevelPermissionDataSetPropertyToTerraform(this._rowLevelPermissionDataSet.internalValue),
-      row_level_permission_tag_configuration: awsQuicksightDataSetRowLevelPermissionTagConfigurationPropertyToTerraform(this._rowLevelPermissionTagConfiguration.internalValue),
+      column_groups: cdktn.listMapper(tfDataSetColumnGroupsPropertyToTerraform, true)(this._columnGroups.internalValue),
+      column_level_permission_rules: cdktn.listMapper(tfDataSetColumnLevelPermissionRulesPropertyToTerraform, true)(this._columnLevelPermissionRules.internalValue),
+      data_set_usage_configuration: tfDataSetDataSetUsageConfigurationPropertyToTerraform(this._dataSetUsageConfiguration.internalValue),
+      field_folders: cdktn.listMapper(tfDataSetFieldFoldersPropertyToTerraform, true)(this._fieldFolders.internalValue),
+      logical_table_map: cdktn.listMapper(tfDataSetLogicalTableMapPropertyToTerraform, true)(this._logicalTableMap.internalValue),
+      permissions: cdktn.listMapper(tfDataSetPermissionsPropertyToTerraform, true)(this._permissions.internalValue),
+      physical_table_map: cdktn.listMapper(tfDataSetPhysicalTableMapPropertyToTerraform, true)(this._physicalTableMap.internalValue),
+      refresh_properties: tfDataSetRefreshPropertiesPropertyToTerraform(this._refreshProperties.internalValue),
+      row_level_permission_data_set: tfDataSetRowLevelPermissionDataSetPropertyToTerraform(this._rowLevelPermissionDataSet.internalValue),
+      row_level_permission_tag_configuration: tfDataSetRowLevelPermissionTagConfigurationPropertyToTerraform(this._rowLevelPermissionTagConfiguration.internalValue),
     };
   }
 
@@ -576,64 +576,64 @@ export class AwsQuicksightDataSet extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       column_groups: {
-        value: cdktn.listMapperHcl(awsQuicksightDataSetColumnGroupsPropertyToHclTerraform, true)(this._columnGroups.internalValue),
+        value: cdktn.listMapperHcl(tfDataSetColumnGroupsPropertyToHclTerraform, true)(this._columnGroups.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsQuicksightDataSet.ColumnGroupsPropertyList",
+        storageClassType: "TfDataSet.ColumnGroupsPropertyList",
       },
       column_level_permission_rules: {
-        value: cdktn.listMapperHcl(awsQuicksightDataSetColumnLevelPermissionRulesPropertyToHclTerraform, true)(this._columnLevelPermissionRules.internalValue),
+        value: cdktn.listMapperHcl(tfDataSetColumnLevelPermissionRulesPropertyToHclTerraform, true)(this._columnLevelPermissionRules.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsQuicksightDataSet.ColumnLevelPermissionRulesPropertyList",
+        storageClassType: "TfDataSet.ColumnLevelPermissionRulesPropertyList",
       },
       data_set_usage_configuration: {
-        value: awsQuicksightDataSetDataSetUsageConfigurationPropertyToHclTerraform(this._dataSetUsageConfiguration.internalValue),
+        value: tfDataSetDataSetUsageConfigurationPropertyToHclTerraform(this._dataSetUsageConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsQuicksightDataSet.DataSetUsageConfigurationPropertyList",
+        storageClassType: "TfDataSet.DataSetUsageConfigurationPropertyList",
       },
       field_folders: {
-        value: cdktn.listMapperHcl(awsQuicksightDataSetFieldFoldersPropertyToHclTerraform, true)(this._fieldFolders.internalValue),
+        value: cdktn.listMapperHcl(tfDataSetFieldFoldersPropertyToHclTerraform, true)(this._fieldFolders.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsQuicksightDataSet.FieldFoldersPropertyList",
+        storageClassType: "TfDataSet.FieldFoldersPropertyList",
       },
       logical_table_map: {
-        value: cdktn.listMapperHcl(awsQuicksightDataSetLogicalTableMapPropertyToHclTerraform, true)(this._logicalTableMap.internalValue),
+        value: cdktn.listMapperHcl(tfDataSetLogicalTableMapPropertyToHclTerraform, true)(this._logicalTableMap.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsQuicksightDataSet.LogicalTableMapPropertyList",
+        storageClassType: "TfDataSet.LogicalTableMapPropertyList",
       },
       permissions: {
-        value: cdktn.listMapperHcl(awsQuicksightDataSetPermissionsPropertyToHclTerraform, true)(this._permissions.internalValue),
+        value: cdktn.listMapperHcl(tfDataSetPermissionsPropertyToHclTerraform, true)(this._permissions.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsQuicksightDataSet.PermissionsPropertyList",
+        storageClassType: "TfDataSet.PermissionsPropertyList",
       },
       physical_table_map: {
-        value: cdktn.listMapperHcl(awsQuicksightDataSetPhysicalTableMapPropertyToHclTerraform, true)(this._physicalTableMap.internalValue),
+        value: cdktn.listMapperHcl(tfDataSetPhysicalTableMapPropertyToHclTerraform, true)(this._physicalTableMap.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsQuicksightDataSet.PhysicalTableMapPropertyList",
+        storageClassType: "TfDataSet.PhysicalTableMapPropertyList",
       },
       refresh_properties: {
-        value: awsQuicksightDataSetRefreshPropertiesPropertyToHclTerraform(this._refreshProperties.internalValue),
+        value: tfDataSetRefreshPropertiesPropertyToHclTerraform(this._refreshProperties.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsQuicksightDataSet.RefreshPropertiesPropertyList",
+        storageClassType: "TfDataSet.RefreshPropertiesPropertyList",
       },
       row_level_permission_data_set: {
-        value: awsQuicksightDataSetRowLevelPermissionDataSetPropertyToHclTerraform(this._rowLevelPermissionDataSet.internalValue),
+        value: tfDataSetRowLevelPermissionDataSetPropertyToHclTerraform(this._rowLevelPermissionDataSet.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsQuicksightDataSet.RowLevelPermissionDataSetPropertyList",
+        storageClassType: "TfDataSet.RowLevelPermissionDataSetPropertyList",
       },
       row_level_permission_tag_configuration: {
-        value: awsQuicksightDataSetRowLevelPermissionTagConfigurationPropertyToHclTerraform(this._rowLevelPermissionTagConfiguration.internalValue),
+        value: tfDataSetRowLevelPermissionTagConfigurationPropertyToHclTerraform(this._rowLevelPermissionTagConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsQuicksightDataSet.RowLevelPermissionTagConfigurationPropertyList",
+        storageClassType: "TfDataSet.RowLevelPermissionTagConfigurationPropertyList",
       },
     };
 
@@ -642,7 +642,7 @@ export class AwsQuicksightDataSet extends cdktn.TerraformResource {
   }
 }
 
-export function awsQuicksightDataSetOutputColumnsPropertyToTerraform(struct?: AwsQuicksightDataSet.OutputColumnsProperty): any {
+export function tfDataSetOutputColumnsPropertyToTerraform(struct?: TfDataSet.OutputColumnsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -652,7 +652,7 @@ export function awsQuicksightDataSetOutputColumnsPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsQuicksightDataSetOutputColumnsPropertyToHclTerraform(struct?: AwsQuicksightDataSet.OutputColumnsProperty): any {
+export function tfDataSetOutputColumnsPropertyToHclTerraform(struct?: TfDataSet.OutputColumnsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -663,7 +663,7 @@ export function awsQuicksightDataSetOutputColumnsPropertyToHclTerraform(struct?:
 }
 
 
-export function awsQuicksightDataSetGeoSpatialColumnGroupPropertyToTerraform(struct?: AwsQuicksightDataSet.GeoSpatialColumnGroupPropertyOutputReference | AwsQuicksightDataSet.GeoSpatialColumnGroupProperty): any {
+export function tfDataSetGeoSpatialColumnGroupPropertyToTerraform(struct?: TfDataSet.GeoSpatialColumnGroupPropertyOutputReference | TfDataSet.GeoSpatialColumnGroupProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -676,7 +676,7 @@ export function awsQuicksightDataSetGeoSpatialColumnGroupPropertyToTerraform(str
 }
 
 
-export function awsQuicksightDataSetGeoSpatialColumnGroupPropertyToHclTerraform(struct?: AwsQuicksightDataSet.GeoSpatialColumnGroupPropertyOutputReference | AwsQuicksightDataSet.GeoSpatialColumnGroupProperty): any {
+export function tfDataSetGeoSpatialColumnGroupPropertyToHclTerraform(struct?: TfDataSet.GeoSpatialColumnGroupPropertyOutputReference | TfDataSet.GeoSpatialColumnGroupProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -707,25 +707,25 @@ export function awsQuicksightDataSetGeoSpatialColumnGroupPropertyToHclTerraform(
 }
 
 
-export function awsQuicksightDataSetColumnGroupsPropertyToTerraform(struct?: AwsQuicksightDataSet.ColumnGroupsProperty | cdktn.IResolvable): any {
+export function tfDataSetColumnGroupsPropertyToTerraform(struct?: TfDataSet.ColumnGroupsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    geo_spatial_column_group: awsQuicksightDataSetGeoSpatialColumnGroupPropertyToTerraform(struct!.geoSpatialColumnGroup),
+    geo_spatial_column_group: tfDataSetGeoSpatialColumnGroupPropertyToTerraform(struct!.geoSpatialColumnGroup),
   }
 }
 
 
-export function awsQuicksightDataSetColumnGroupsPropertyToHclTerraform(struct?: AwsQuicksightDataSet.ColumnGroupsProperty | cdktn.IResolvable): any {
+export function tfDataSetColumnGroupsPropertyToHclTerraform(struct?: TfDataSet.ColumnGroupsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     geo_spatial_column_group: {
-      value: awsQuicksightDataSetGeoSpatialColumnGroupPropertyToHclTerraform(struct!.geoSpatialColumnGroup),
+      value: tfDataSetGeoSpatialColumnGroupPropertyToHclTerraform(struct!.geoSpatialColumnGroup),
       isBlock: true,
       type: "list",
       storageClassType: "GeoSpatialColumnGroupPropertyList",
@@ -737,7 +737,7 @@ export function awsQuicksightDataSetColumnGroupsPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsQuicksightDataSetColumnLevelPermissionRulesPropertyToTerraform(struct?: AwsQuicksightDataSet.ColumnLevelPermissionRulesProperty | cdktn.IResolvable): any {
+export function tfDataSetColumnLevelPermissionRulesPropertyToTerraform(struct?: TfDataSet.ColumnLevelPermissionRulesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -749,7 +749,7 @@ export function awsQuicksightDataSetColumnLevelPermissionRulesPropertyToTerrafor
 }
 
 
-export function awsQuicksightDataSetColumnLevelPermissionRulesPropertyToHclTerraform(struct?: AwsQuicksightDataSet.ColumnLevelPermissionRulesProperty | cdktn.IResolvable): any {
+export function tfDataSetColumnLevelPermissionRulesPropertyToHclTerraform(struct?: TfDataSet.ColumnLevelPermissionRulesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -774,7 +774,7 @@ export function awsQuicksightDataSetColumnLevelPermissionRulesPropertyToHclTerra
 }
 
 
-export function awsQuicksightDataSetDataSetUsageConfigurationPropertyToTerraform(struct?: AwsQuicksightDataSet.DataSetUsageConfigurationPropertyOutputReference | AwsQuicksightDataSet.DataSetUsageConfigurationProperty): any {
+export function tfDataSetDataSetUsageConfigurationPropertyToTerraform(struct?: TfDataSet.DataSetUsageConfigurationPropertyOutputReference | TfDataSet.DataSetUsageConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -786,7 +786,7 @@ export function awsQuicksightDataSetDataSetUsageConfigurationPropertyToTerraform
 }
 
 
-export function awsQuicksightDataSetDataSetUsageConfigurationPropertyToHclTerraform(struct?: AwsQuicksightDataSet.DataSetUsageConfigurationPropertyOutputReference | AwsQuicksightDataSet.DataSetUsageConfigurationProperty): any {
+export function tfDataSetDataSetUsageConfigurationPropertyToHclTerraform(struct?: TfDataSet.DataSetUsageConfigurationPropertyOutputReference | TfDataSet.DataSetUsageConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -811,7 +811,7 @@ export function awsQuicksightDataSetDataSetUsageConfigurationPropertyToHclTerraf
 }
 
 
-export function awsQuicksightDataSetFieldFoldersPropertyToTerraform(struct?: AwsQuicksightDataSet.FieldFoldersProperty | cdktn.IResolvable): any {
+export function tfDataSetFieldFoldersPropertyToTerraform(struct?: TfDataSet.FieldFoldersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -824,7 +824,7 @@ export function awsQuicksightDataSetFieldFoldersPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsQuicksightDataSetFieldFoldersPropertyToHclTerraform(struct?: AwsQuicksightDataSet.FieldFoldersProperty | cdktn.IResolvable): any {
+export function tfDataSetFieldFoldersPropertyToHclTerraform(struct?: TfDataSet.FieldFoldersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -855,7 +855,7 @@ export function awsQuicksightDataSetFieldFoldersPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsQuicksightDataSetCastColumnTypeOperationPropertyToTerraform(struct?: AwsQuicksightDataSet.CastColumnTypeOperationPropertyOutputReference | AwsQuicksightDataSet.CastColumnTypeOperationProperty): any {
+export function tfDataSetCastColumnTypeOperationPropertyToTerraform(struct?: TfDataSet.CastColumnTypeOperationPropertyOutputReference | TfDataSet.CastColumnTypeOperationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -868,7 +868,7 @@ export function awsQuicksightDataSetCastColumnTypeOperationPropertyToTerraform(s
 }
 
 
-export function awsQuicksightDataSetCastColumnTypeOperationPropertyToHclTerraform(struct?: AwsQuicksightDataSet.CastColumnTypeOperationPropertyOutputReference | AwsQuicksightDataSet.CastColumnTypeOperationProperty): any {
+export function tfDataSetCastColumnTypeOperationPropertyToHclTerraform(struct?: TfDataSet.CastColumnTypeOperationPropertyOutputReference | TfDataSet.CastColumnTypeOperationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -899,7 +899,7 @@ export function awsQuicksightDataSetCastColumnTypeOperationPropertyToHclTerrafor
 }
 
 
-export function awsQuicksightDataSetLogicalTableMapDataTransformsCreateColumnsOperationColumnsPropertyToTerraform(struct?: AwsQuicksightDataSet.LogicalTableMapDataTransformsCreateColumnsOperationColumnsProperty | cdktn.IResolvable): any {
+export function tfDataSetLogicalTableMapDataTransformsCreateColumnsOperationColumnsPropertyToTerraform(struct?: TfDataSet.LogicalTableMapDataTransformsCreateColumnsOperationColumnsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -912,7 +912,7 @@ export function awsQuicksightDataSetLogicalTableMapDataTransformsCreateColumnsOp
 }
 
 
-export function awsQuicksightDataSetLogicalTableMapDataTransformsCreateColumnsOperationColumnsPropertyToHclTerraform(struct?: AwsQuicksightDataSet.LogicalTableMapDataTransformsCreateColumnsOperationColumnsProperty | cdktn.IResolvable): any {
+export function tfDataSetLogicalTableMapDataTransformsCreateColumnsOperationColumnsPropertyToHclTerraform(struct?: TfDataSet.LogicalTableMapDataTransformsCreateColumnsOperationColumnsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -943,25 +943,25 @@ export function awsQuicksightDataSetLogicalTableMapDataTransformsCreateColumnsOp
 }
 
 
-export function awsQuicksightDataSetCreateColumnsOperationPropertyToTerraform(struct?: AwsQuicksightDataSet.CreateColumnsOperationPropertyOutputReference | AwsQuicksightDataSet.CreateColumnsOperationProperty): any {
+export function tfDataSetCreateColumnsOperationPropertyToTerraform(struct?: TfDataSet.CreateColumnsOperationPropertyOutputReference | TfDataSet.CreateColumnsOperationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    columns: cdktn.listMapper(awsQuicksightDataSetLogicalTableMapDataTransformsCreateColumnsOperationColumnsPropertyToTerraform, true)(struct!.columns),
+    columns: cdktn.listMapper(tfDataSetLogicalTableMapDataTransformsCreateColumnsOperationColumnsPropertyToTerraform, true)(struct!.columns),
   }
 }
 
 
-export function awsQuicksightDataSetCreateColumnsOperationPropertyToHclTerraform(struct?: AwsQuicksightDataSet.CreateColumnsOperationPropertyOutputReference | AwsQuicksightDataSet.CreateColumnsOperationProperty): any {
+export function tfDataSetCreateColumnsOperationPropertyToHclTerraform(struct?: TfDataSet.CreateColumnsOperationPropertyOutputReference | TfDataSet.CreateColumnsOperationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     columns: {
-      value: cdktn.listMapperHcl(awsQuicksightDataSetLogicalTableMapDataTransformsCreateColumnsOperationColumnsPropertyToHclTerraform, true)(struct!.columns),
+      value: cdktn.listMapperHcl(tfDataSetLogicalTableMapDataTransformsCreateColumnsOperationColumnsPropertyToHclTerraform, true)(struct!.columns),
       isBlock: true,
       type: "list",
       storageClassType: "LogicalTableMapDataTransformsCreateColumnsOperationColumnsPropertyList",
@@ -973,7 +973,7 @@ export function awsQuicksightDataSetCreateColumnsOperationPropertyToHclTerraform
 }
 
 
-export function awsQuicksightDataSetFilterOperationPropertyToTerraform(struct?: AwsQuicksightDataSet.FilterOperationPropertyOutputReference | AwsQuicksightDataSet.FilterOperationProperty): any {
+export function tfDataSetFilterOperationPropertyToTerraform(struct?: TfDataSet.FilterOperationPropertyOutputReference | TfDataSet.FilterOperationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -984,7 +984,7 @@ export function awsQuicksightDataSetFilterOperationPropertyToTerraform(struct?: 
 }
 
 
-export function awsQuicksightDataSetFilterOperationPropertyToHclTerraform(struct?: AwsQuicksightDataSet.FilterOperationPropertyOutputReference | AwsQuicksightDataSet.FilterOperationProperty): any {
+export function tfDataSetFilterOperationPropertyToHclTerraform(struct?: TfDataSet.FilterOperationPropertyOutputReference | TfDataSet.FilterOperationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1003,7 +1003,7 @@ export function awsQuicksightDataSetFilterOperationPropertyToHclTerraform(struct
 }
 
 
-export function awsQuicksightDataSetProjectOperationPropertyToTerraform(struct?: AwsQuicksightDataSet.ProjectOperationPropertyOutputReference | AwsQuicksightDataSet.ProjectOperationProperty): any {
+export function tfDataSetProjectOperationPropertyToTerraform(struct?: TfDataSet.ProjectOperationPropertyOutputReference | TfDataSet.ProjectOperationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1014,7 +1014,7 @@ export function awsQuicksightDataSetProjectOperationPropertyToTerraform(struct?:
 }
 
 
-export function awsQuicksightDataSetProjectOperationPropertyToHclTerraform(struct?: AwsQuicksightDataSet.ProjectOperationPropertyOutputReference | AwsQuicksightDataSet.ProjectOperationProperty): any {
+export function tfDataSetProjectOperationPropertyToHclTerraform(struct?: TfDataSet.ProjectOperationPropertyOutputReference | TfDataSet.ProjectOperationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1033,7 +1033,7 @@ export function awsQuicksightDataSetProjectOperationPropertyToHclTerraform(struc
 }
 
 
-export function awsQuicksightDataSetRenameColumnOperationPropertyToTerraform(struct?: AwsQuicksightDataSet.RenameColumnOperationPropertyOutputReference | AwsQuicksightDataSet.RenameColumnOperationProperty): any {
+export function tfDataSetRenameColumnOperationPropertyToTerraform(struct?: TfDataSet.RenameColumnOperationPropertyOutputReference | TfDataSet.RenameColumnOperationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1045,7 +1045,7 @@ export function awsQuicksightDataSetRenameColumnOperationPropertyToTerraform(str
 }
 
 
-export function awsQuicksightDataSetRenameColumnOperationPropertyToHclTerraform(struct?: AwsQuicksightDataSet.RenameColumnOperationPropertyOutputReference | AwsQuicksightDataSet.RenameColumnOperationProperty): any {
+export function tfDataSetRenameColumnOperationPropertyToHclTerraform(struct?: TfDataSet.RenameColumnOperationPropertyOutputReference | TfDataSet.RenameColumnOperationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1070,7 +1070,7 @@ export function awsQuicksightDataSetRenameColumnOperationPropertyToHclTerraform(
 }
 
 
-export function awsQuicksightDataSetColumnDescriptionPropertyToTerraform(struct?: AwsQuicksightDataSet.ColumnDescriptionPropertyOutputReference | AwsQuicksightDataSet.ColumnDescriptionProperty): any {
+export function tfDataSetColumnDescriptionPropertyToTerraform(struct?: TfDataSet.ColumnDescriptionPropertyOutputReference | TfDataSet.ColumnDescriptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1081,7 +1081,7 @@ export function awsQuicksightDataSetColumnDescriptionPropertyToTerraform(struct?
 }
 
 
-export function awsQuicksightDataSetColumnDescriptionPropertyToHclTerraform(struct?: AwsQuicksightDataSet.ColumnDescriptionPropertyOutputReference | AwsQuicksightDataSet.ColumnDescriptionProperty): any {
+export function tfDataSetColumnDescriptionPropertyToHclTerraform(struct?: TfDataSet.ColumnDescriptionPropertyOutputReference | TfDataSet.ColumnDescriptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1100,19 +1100,19 @@ export function awsQuicksightDataSetColumnDescriptionPropertyToHclTerraform(stru
 }
 
 
-export function awsQuicksightDataSetTagsPropertyToTerraform(struct?: AwsQuicksightDataSet.TagsProperty | cdktn.IResolvable): any {
+export function tfDataSetTagsPropertyToTerraform(struct?: TfDataSet.TagsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     column_geographic_role: cdktn.stringToTerraform(struct!.columnGeographicRole),
-    column_description: awsQuicksightDataSetColumnDescriptionPropertyToTerraform(struct!.columnDescription),
+    column_description: tfDataSetColumnDescriptionPropertyToTerraform(struct!.columnDescription),
   }
 }
 
 
-export function awsQuicksightDataSetTagsPropertyToHclTerraform(struct?: AwsQuicksightDataSet.TagsProperty | cdktn.IResolvable): any {
+export function tfDataSetTagsPropertyToHclTerraform(struct?: TfDataSet.TagsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1125,7 +1125,7 @@ export function awsQuicksightDataSetTagsPropertyToHclTerraform(struct?: AwsQuick
       storageClassType: "string",
     },
     column_description: {
-      value: awsQuicksightDataSetColumnDescriptionPropertyToHclTerraform(struct!.columnDescription),
+      value: tfDataSetColumnDescriptionPropertyToHclTerraform(struct!.columnDescription),
       isBlock: true,
       type: "list",
       storageClassType: "ColumnDescriptionPropertyList",
@@ -1137,19 +1137,19 @@ export function awsQuicksightDataSetTagsPropertyToHclTerraform(struct?: AwsQuick
 }
 
 
-export function awsQuicksightDataSetTagColumnOperationPropertyToTerraform(struct?: AwsQuicksightDataSet.TagColumnOperationPropertyOutputReference | AwsQuicksightDataSet.TagColumnOperationProperty): any {
+export function tfDataSetTagColumnOperationPropertyToTerraform(struct?: TfDataSet.TagColumnOperationPropertyOutputReference | TfDataSet.TagColumnOperationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     column_name: cdktn.stringToTerraform(struct!.columnName),
-    tags: cdktn.listMapper(awsQuicksightDataSetTagsPropertyToTerraform, true)(struct!.tags),
+    tags: cdktn.listMapper(tfDataSetTagsPropertyToTerraform, true)(struct!.tags),
   }
 }
 
 
-export function awsQuicksightDataSetTagColumnOperationPropertyToHclTerraform(struct?: AwsQuicksightDataSet.TagColumnOperationPropertyOutputReference | AwsQuicksightDataSet.TagColumnOperationProperty): any {
+export function tfDataSetTagColumnOperationPropertyToHclTerraform(struct?: TfDataSet.TagColumnOperationPropertyOutputReference | TfDataSet.TagColumnOperationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1162,7 +1162,7 @@ export function awsQuicksightDataSetTagColumnOperationPropertyToHclTerraform(str
       storageClassType: "string",
     },
     tags: {
-      value: cdktn.listMapperHcl(awsQuicksightDataSetTagsPropertyToHclTerraform, true)(struct!.tags),
+      value: cdktn.listMapperHcl(tfDataSetTagsPropertyToHclTerraform, true)(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "TagsPropertyList",
@@ -1174,7 +1174,7 @@ export function awsQuicksightDataSetTagColumnOperationPropertyToHclTerraform(str
 }
 
 
-export function awsQuicksightDataSetUntagColumnOperationPropertyToTerraform(struct?: AwsQuicksightDataSet.UntagColumnOperationPropertyOutputReference | AwsQuicksightDataSet.UntagColumnOperationProperty): any {
+export function tfDataSetUntagColumnOperationPropertyToTerraform(struct?: TfDataSet.UntagColumnOperationPropertyOutputReference | TfDataSet.UntagColumnOperationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1186,7 +1186,7 @@ export function awsQuicksightDataSetUntagColumnOperationPropertyToTerraform(stru
 }
 
 
-export function awsQuicksightDataSetUntagColumnOperationPropertyToHclTerraform(struct?: AwsQuicksightDataSet.UntagColumnOperationPropertyOutputReference | AwsQuicksightDataSet.UntagColumnOperationProperty): any {
+export function tfDataSetUntagColumnOperationPropertyToHclTerraform(struct?: TfDataSet.UntagColumnOperationPropertyOutputReference | TfDataSet.UntagColumnOperationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1211,67 +1211,67 @@ export function awsQuicksightDataSetUntagColumnOperationPropertyToHclTerraform(s
 }
 
 
-export function awsQuicksightDataSetDataTransformsPropertyToTerraform(struct?: AwsQuicksightDataSet.DataTransformsProperty | cdktn.IResolvable): any {
+export function tfDataSetDataTransformsPropertyToTerraform(struct?: TfDataSet.DataTransformsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cast_column_type_operation: awsQuicksightDataSetCastColumnTypeOperationPropertyToTerraform(struct!.castColumnTypeOperation),
-    create_columns_operation: awsQuicksightDataSetCreateColumnsOperationPropertyToTerraform(struct!.createColumnsOperation),
-    filter_operation: awsQuicksightDataSetFilterOperationPropertyToTerraform(struct!.filterOperation),
-    project_operation: awsQuicksightDataSetProjectOperationPropertyToTerraform(struct!.projectOperation),
-    rename_column_operation: awsQuicksightDataSetRenameColumnOperationPropertyToTerraform(struct!.renameColumnOperation),
-    tag_column_operation: awsQuicksightDataSetTagColumnOperationPropertyToTerraform(struct!.tagColumnOperation),
-    untag_column_operation: awsQuicksightDataSetUntagColumnOperationPropertyToTerraform(struct!.untagColumnOperation),
+    cast_column_type_operation: tfDataSetCastColumnTypeOperationPropertyToTerraform(struct!.castColumnTypeOperation),
+    create_columns_operation: tfDataSetCreateColumnsOperationPropertyToTerraform(struct!.createColumnsOperation),
+    filter_operation: tfDataSetFilterOperationPropertyToTerraform(struct!.filterOperation),
+    project_operation: tfDataSetProjectOperationPropertyToTerraform(struct!.projectOperation),
+    rename_column_operation: tfDataSetRenameColumnOperationPropertyToTerraform(struct!.renameColumnOperation),
+    tag_column_operation: tfDataSetTagColumnOperationPropertyToTerraform(struct!.tagColumnOperation),
+    untag_column_operation: tfDataSetUntagColumnOperationPropertyToTerraform(struct!.untagColumnOperation),
   }
 }
 
 
-export function awsQuicksightDataSetDataTransformsPropertyToHclTerraform(struct?: AwsQuicksightDataSet.DataTransformsProperty | cdktn.IResolvable): any {
+export function tfDataSetDataTransformsPropertyToHclTerraform(struct?: TfDataSet.DataTransformsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cast_column_type_operation: {
-      value: awsQuicksightDataSetCastColumnTypeOperationPropertyToHclTerraform(struct!.castColumnTypeOperation),
+      value: tfDataSetCastColumnTypeOperationPropertyToHclTerraform(struct!.castColumnTypeOperation),
       isBlock: true,
       type: "list",
       storageClassType: "CastColumnTypeOperationPropertyList",
     },
     create_columns_operation: {
-      value: awsQuicksightDataSetCreateColumnsOperationPropertyToHclTerraform(struct!.createColumnsOperation),
+      value: tfDataSetCreateColumnsOperationPropertyToHclTerraform(struct!.createColumnsOperation),
       isBlock: true,
       type: "list",
       storageClassType: "CreateColumnsOperationPropertyList",
     },
     filter_operation: {
-      value: awsQuicksightDataSetFilterOperationPropertyToHclTerraform(struct!.filterOperation),
+      value: tfDataSetFilterOperationPropertyToHclTerraform(struct!.filterOperation),
       isBlock: true,
       type: "list",
       storageClassType: "FilterOperationPropertyList",
     },
     project_operation: {
-      value: awsQuicksightDataSetProjectOperationPropertyToHclTerraform(struct!.projectOperation),
+      value: tfDataSetProjectOperationPropertyToHclTerraform(struct!.projectOperation),
       isBlock: true,
       type: "list",
       storageClassType: "ProjectOperationPropertyList",
     },
     rename_column_operation: {
-      value: awsQuicksightDataSetRenameColumnOperationPropertyToHclTerraform(struct!.renameColumnOperation),
+      value: tfDataSetRenameColumnOperationPropertyToHclTerraform(struct!.renameColumnOperation),
       isBlock: true,
       type: "list",
       storageClassType: "RenameColumnOperationPropertyList",
     },
     tag_column_operation: {
-      value: awsQuicksightDataSetTagColumnOperationPropertyToHclTerraform(struct!.tagColumnOperation),
+      value: tfDataSetTagColumnOperationPropertyToHclTerraform(struct!.tagColumnOperation),
       isBlock: true,
       type: "list",
       storageClassType: "TagColumnOperationPropertyList",
     },
     untag_column_operation: {
-      value: awsQuicksightDataSetUntagColumnOperationPropertyToHclTerraform(struct!.untagColumnOperation),
+      value: tfDataSetUntagColumnOperationPropertyToHclTerraform(struct!.untagColumnOperation),
       isBlock: true,
       type: "list",
       storageClassType: "UntagColumnOperationPropertyList",
@@ -1283,7 +1283,7 @@ export function awsQuicksightDataSetDataTransformsPropertyToHclTerraform(struct?
 }
 
 
-export function awsQuicksightDataSetLeftJoinKeyPropertiesPropertyToTerraform(struct?: AwsQuicksightDataSet.LeftJoinKeyPropertiesPropertyOutputReference | AwsQuicksightDataSet.LeftJoinKeyPropertiesProperty): any {
+export function tfDataSetLeftJoinKeyPropertiesPropertyToTerraform(struct?: TfDataSet.LeftJoinKeyPropertiesPropertyOutputReference | TfDataSet.LeftJoinKeyPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1294,7 +1294,7 @@ export function awsQuicksightDataSetLeftJoinKeyPropertiesPropertyToTerraform(str
 }
 
 
-export function awsQuicksightDataSetLeftJoinKeyPropertiesPropertyToHclTerraform(struct?: AwsQuicksightDataSet.LeftJoinKeyPropertiesPropertyOutputReference | AwsQuicksightDataSet.LeftJoinKeyPropertiesProperty): any {
+export function tfDataSetLeftJoinKeyPropertiesPropertyToHclTerraform(struct?: TfDataSet.LeftJoinKeyPropertiesPropertyOutputReference | TfDataSet.LeftJoinKeyPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1313,7 +1313,7 @@ export function awsQuicksightDataSetLeftJoinKeyPropertiesPropertyToHclTerraform(
 }
 
 
-export function awsQuicksightDataSetRightJoinKeyPropertiesPropertyToTerraform(struct?: AwsQuicksightDataSet.RightJoinKeyPropertiesPropertyOutputReference | AwsQuicksightDataSet.RightJoinKeyPropertiesProperty): any {
+export function tfDataSetRightJoinKeyPropertiesPropertyToTerraform(struct?: TfDataSet.RightJoinKeyPropertiesPropertyOutputReference | TfDataSet.RightJoinKeyPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1324,7 +1324,7 @@ export function awsQuicksightDataSetRightJoinKeyPropertiesPropertyToTerraform(st
 }
 
 
-export function awsQuicksightDataSetRightJoinKeyPropertiesPropertyToHclTerraform(struct?: AwsQuicksightDataSet.RightJoinKeyPropertiesPropertyOutputReference | AwsQuicksightDataSet.RightJoinKeyPropertiesProperty): any {
+export function tfDataSetRightJoinKeyPropertiesPropertyToHclTerraform(struct?: TfDataSet.RightJoinKeyPropertiesPropertyOutputReference | TfDataSet.RightJoinKeyPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1343,7 +1343,7 @@ export function awsQuicksightDataSetRightJoinKeyPropertiesPropertyToHclTerraform
 }
 
 
-export function awsQuicksightDataSetJoinInstructionPropertyToTerraform(struct?: AwsQuicksightDataSet.JoinInstructionPropertyOutputReference | AwsQuicksightDataSet.JoinInstructionProperty): any {
+export function tfDataSetJoinInstructionPropertyToTerraform(struct?: TfDataSet.JoinInstructionPropertyOutputReference | TfDataSet.JoinInstructionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1353,13 +1353,13 @@ export function awsQuicksightDataSetJoinInstructionPropertyToTerraform(struct?: 
     on_clause: cdktn.stringToTerraform(struct!.onClause),
     right_operand: cdktn.stringToTerraform(struct!.rightOperand),
     type: cdktn.stringToTerraform(struct!.type),
-    left_join_key_properties: awsQuicksightDataSetLeftJoinKeyPropertiesPropertyToTerraform(struct!.leftJoinKeyProperties),
-    right_join_key_properties: awsQuicksightDataSetRightJoinKeyPropertiesPropertyToTerraform(struct!.rightJoinKeyProperties),
+    left_join_key_properties: tfDataSetLeftJoinKeyPropertiesPropertyToTerraform(struct!.leftJoinKeyProperties),
+    right_join_key_properties: tfDataSetRightJoinKeyPropertiesPropertyToTerraform(struct!.rightJoinKeyProperties),
   }
 }
 
 
-export function awsQuicksightDataSetJoinInstructionPropertyToHclTerraform(struct?: AwsQuicksightDataSet.JoinInstructionPropertyOutputReference | AwsQuicksightDataSet.JoinInstructionProperty): any {
+export function tfDataSetJoinInstructionPropertyToHclTerraform(struct?: TfDataSet.JoinInstructionPropertyOutputReference | TfDataSet.JoinInstructionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1390,13 +1390,13 @@ export function awsQuicksightDataSetJoinInstructionPropertyToHclTerraform(struct
       storageClassType: "string",
     },
     left_join_key_properties: {
-      value: awsQuicksightDataSetLeftJoinKeyPropertiesPropertyToHclTerraform(struct!.leftJoinKeyProperties),
+      value: tfDataSetLeftJoinKeyPropertiesPropertyToHclTerraform(struct!.leftJoinKeyProperties),
       isBlock: true,
       type: "list",
       storageClassType: "LeftJoinKeyPropertiesPropertyList",
     },
     right_join_key_properties: {
-      value: awsQuicksightDataSetRightJoinKeyPropertiesPropertyToHclTerraform(struct!.rightJoinKeyProperties),
+      value: tfDataSetRightJoinKeyPropertiesPropertyToHclTerraform(struct!.rightJoinKeyProperties),
       isBlock: true,
       type: "list",
       storageClassType: "RightJoinKeyPropertiesPropertyList",
@@ -1408,7 +1408,7 @@ export function awsQuicksightDataSetJoinInstructionPropertyToHclTerraform(struct
 }
 
 
-export function awsQuicksightDataSetSourcePropertyToTerraform(struct?: AwsQuicksightDataSet.SourcePropertyOutputReference | AwsQuicksightDataSet.SourceProperty): any {
+export function tfDataSetSourcePropertyToTerraform(struct?: TfDataSet.SourcePropertyOutputReference | TfDataSet.SourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1416,12 +1416,12 @@ export function awsQuicksightDataSetSourcePropertyToTerraform(struct?: AwsQuicks
   return {
     data_set_arn: cdktn.stringToTerraform(struct!.dataSetArn),
     physical_table_id: cdktn.stringToTerraform(struct!.physicalTableId),
-    join_instruction: awsQuicksightDataSetJoinInstructionPropertyToTerraform(struct!.joinInstruction),
+    join_instruction: tfDataSetJoinInstructionPropertyToTerraform(struct!.joinInstruction),
   }
 }
 
 
-export function awsQuicksightDataSetSourcePropertyToHclTerraform(struct?: AwsQuicksightDataSet.SourcePropertyOutputReference | AwsQuicksightDataSet.SourceProperty): any {
+export function tfDataSetSourcePropertyToHclTerraform(struct?: TfDataSet.SourcePropertyOutputReference | TfDataSet.SourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1440,7 +1440,7 @@ export function awsQuicksightDataSetSourcePropertyToHclTerraform(struct?: AwsQui
       storageClassType: "string",
     },
     join_instruction: {
-      value: awsQuicksightDataSetJoinInstructionPropertyToHclTerraform(struct!.joinInstruction),
+      value: tfDataSetJoinInstructionPropertyToHclTerraform(struct!.joinInstruction),
       isBlock: true,
       type: "list",
       storageClassType: "JoinInstructionPropertyList",
@@ -1452,7 +1452,7 @@ export function awsQuicksightDataSetSourcePropertyToHclTerraform(struct?: AwsQui
 }
 
 
-export function awsQuicksightDataSetLogicalTableMapPropertyToTerraform(struct?: AwsQuicksightDataSet.LogicalTableMapProperty | cdktn.IResolvable): any {
+export function tfDataSetLogicalTableMapPropertyToTerraform(struct?: TfDataSet.LogicalTableMapProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1460,13 +1460,13 @@ export function awsQuicksightDataSetLogicalTableMapPropertyToTerraform(struct?: 
   return {
     alias: cdktn.stringToTerraform(struct!.alias),
     logical_table_map_id: cdktn.stringToTerraform(struct!.logicalTableMapId),
-    data_transforms: cdktn.listMapper(awsQuicksightDataSetDataTransformsPropertyToTerraform, true)(struct!.dataTransforms),
-    source: awsQuicksightDataSetSourcePropertyToTerraform(struct!.source),
+    data_transforms: cdktn.listMapper(tfDataSetDataTransformsPropertyToTerraform, true)(struct!.dataTransforms),
+    source: tfDataSetSourcePropertyToTerraform(struct!.source),
   }
 }
 
 
-export function awsQuicksightDataSetLogicalTableMapPropertyToHclTerraform(struct?: AwsQuicksightDataSet.LogicalTableMapProperty | cdktn.IResolvable): any {
+export function tfDataSetLogicalTableMapPropertyToHclTerraform(struct?: TfDataSet.LogicalTableMapProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1485,13 +1485,13 @@ export function awsQuicksightDataSetLogicalTableMapPropertyToHclTerraform(struct
       storageClassType: "string",
     },
     data_transforms: {
-      value: cdktn.listMapperHcl(awsQuicksightDataSetDataTransformsPropertyToHclTerraform, true)(struct!.dataTransforms),
+      value: cdktn.listMapperHcl(tfDataSetDataTransformsPropertyToHclTerraform, true)(struct!.dataTransforms),
       isBlock: true,
       type: "list",
       storageClassType: "DataTransformsPropertyList",
     },
     source: {
-      value: awsQuicksightDataSetSourcePropertyToHclTerraform(struct!.source),
+      value: tfDataSetSourcePropertyToHclTerraform(struct!.source),
       isBlock: true,
       type: "list",
       storageClassType: "SourcePropertyList",
@@ -1503,7 +1503,7 @@ export function awsQuicksightDataSetLogicalTableMapPropertyToHclTerraform(struct
 }
 
 
-export function awsQuicksightDataSetPermissionsPropertyToTerraform(struct?: AwsQuicksightDataSet.PermissionsProperty | cdktn.IResolvable): any {
+export function tfDataSetPermissionsPropertyToTerraform(struct?: TfDataSet.PermissionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1515,7 +1515,7 @@ export function awsQuicksightDataSetPermissionsPropertyToTerraform(struct?: AwsQ
 }
 
 
-export function awsQuicksightDataSetPermissionsPropertyToHclTerraform(struct?: AwsQuicksightDataSet.PermissionsProperty | cdktn.IResolvable): any {
+export function tfDataSetPermissionsPropertyToHclTerraform(struct?: TfDataSet.PermissionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1540,7 +1540,7 @@ export function awsQuicksightDataSetPermissionsPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsQuicksightDataSetPhysicalTableMapCustomSqlColumnsPropertyToTerraform(struct?: AwsQuicksightDataSet.PhysicalTableMapCustomSqlColumnsProperty | cdktn.IResolvable): any {
+export function tfDataSetPhysicalTableMapCustomSqlColumnsPropertyToTerraform(struct?: TfDataSet.PhysicalTableMapCustomSqlColumnsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1552,7 +1552,7 @@ export function awsQuicksightDataSetPhysicalTableMapCustomSqlColumnsPropertyToTe
 }
 
 
-export function awsQuicksightDataSetPhysicalTableMapCustomSqlColumnsPropertyToHclTerraform(struct?: AwsQuicksightDataSet.PhysicalTableMapCustomSqlColumnsProperty | cdktn.IResolvable): any {
+export function tfDataSetPhysicalTableMapCustomSqlColumnsPropertyToHclTerraform(struct?: TfDataSet.PhysicalTableMapCustomSqlColumnsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1577,7 +1577,7 @@ export function awsQuicksightDataSetPhysicalTableMapCustomSqlColumnsPropertyToHc
 }
 
 
-export function awsQuicksightDataSetCustomSqlPropertyToTerraform(struct?: AwsQuicksightDataSet.CustomSqlPropertyOutputReference | AwsQuicksightDataSet.CustomSqlProperty): any {
+export function tfDataSetCustomSqlPropertyToTerraform(struct?: TfDataSet.CustomSqlPropertyOutputReference | TfDataSet.CustomSqlProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1586,12 +1586,12 @@ export function awsQuicksightDataSetCustomSqlPropertyToTerraform(struct?: AwsQui
     data_source_arn: cdktn.stringToTerraform(struct!.dataSourceArn),
     name: cdktn.stringToTerraform(struct!.name),
     sql_query: cdktn.stringToTerraform(struct!.sqlQuery),
-    columns: cdktn.listMapper(awsQuicksightDataSetPhysicalTableMapCustomSqlColumnsPropertyToTerraform, true)(struct!.columns),
+    columns: cdktn.listMapper(tfDataSetPhysicalTableMapCustomSqlColumnsPropertyToTerraform, true)(struct!.columns),
   }
 }
 
 
-export function awsQuicksightDataSetCustomSqlPropertyToHclTerraform(struct?: AwsQuicksightDataSet.CustomSqlPropertyOutputReference | AwsQuicksightDataSet.CustomSqlProperty): any {
+export function tfDataSetCustomSqlPropertyToHclTerraform(struct?: TfDataSet.CustomSqlPropertyOutputReference | TfDataSet.CustomSqlProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1616,7 +1616,7 @@ export function awsQuicksightDataSetCustomSqlPropertyToHclTerraform(struct?: Aws
       storageClassType: "string",
     },
     columns: {
-      value: cdktn.listMapperHcl(awsQuicksightDataSetPhysicalTableMapCustomSqlColumnsPropertyToHclTerraform, true)(struct!.columns),
+      value: cdktn.listMapperHcl(tfDataSetPhysicalTableMapCustomSqlColumnsPropertyToHclTerraform, true)(struct!.columns),
       isBlock: true,
       type: "list",
       storageClassType: "PhysicalTableMapCustomSqlColumnsPropertyList",
@@ -1628,7 +1628,7 @@ export function awsQuicksightDataSetCustomSqlPropertyToHclTerraform(struct?: Aws
 }
 
 
-export function awsQuicksightDataSetPhysicalTableMapRelationalTableInputColumnsPropertyToTerraform(struct?: AwsQuicksightDataSet.PhysicalTableMapRelationalTableInputColumnsProperty | cdktn.IResolvable): any {
+export function tfDataSetPhysicalTableMapRelationalTableInputColumnsPropertyToTerraform(struct?: TfDataSet.PhysicalTableMapRelationalTableInputColumnsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1640,7 +1640,7 @@ export function awsQuicksightDataSetPhysicalTableMapRelationalTableInputColumnsP
 }
 
 
-export function awsQuicksightDataSetPhysicalTableMapRelationalTableInputColumnsPropertyToHclTerraform(struct?: AwsQuicksightDataSet.PhysicalTableMapRelationalTableInputColumnsProperty | cdktn.IResolvable): any {
+export function tfDataSetPhysicalTableMapRelationalTableInputColumnsPropertyToHclTerraform(struct?: TfDataSet.PhysicalTableMapRelationalTableInputColumnsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1665,7 +1665,7 @@ export function awsQuicksightDataSetPhysicalTableMapRelationalTableInputColumnsP
 }
 
 
-export function awsQuicksightDataSetRelationalTablePropertyToTerraform(struct?: AwsQuicksightDataSet.RelationalTablePropertyOutputReference | AwsQuicksightDataSet.RelationalTableProperty): any {
+export function tfDataSetRelationalTablePropertyToTerraform(struct?: TfDataSet.RelationalTablePropertyOutputReference | TfDataSet.RelationalTableProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1675,12 +1675,12 @@ export function awsQuicksightDataSetRelationalTablePropertyToTerraform(struct?: 
     data_source_arn: cdktn.stringToTerraform(struct!.dataSourceArn),
     name: cdktn.stringToTerraform(struct!.name),
     schema: cdktn.stringToTerraform(struct!.schema),
-    input_columns: cdktn.listMapper(awsQuicksightDataSetPhysicalTableMapRelationalTableInputColumnsPropertyToTerraform, true)(struct!.inputColumns),
+    input_columns: cdktn.listMapper(tfDataSetPhysicalTableMapRelationalTableInputColumnsPropertyToTerraform, true)(struct!.inputColumns),
   }
 }
 
 
-export function awsQuicksightDataSetRelationalTablePropertyToHclTerraform(struct?: AwsQuicksightDataSet.RelationalTablePropertyOutputReference | AwsQuicksightDataSet.RelationalTableProperty): any {
+export function tfDataSetRelationalTablePropertyToHclTerraform(struct?: TfDataSet.RelationalTablePropertyOutputReference | TfDataSet.RelationalTableProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1711,7 +1711,7 @@ export function awsQuicksightDataSetRelationalTablePropertyToHclTerraform(struct
       storageClassType: "string",
     },
     input_columns: {
-      value: cdktn.listMapperHcl(awsQuicksightDataSetPhysicalTableMapRelationalTableInputColumnsPropertyToHclTerraform, true)(struct!.inputColumns),
+      value: cdktn.listMapperHcl(tfDataSetPhysicalTableMapRelationalTableInputColumnsPropertyToHclTerraform, true)(struct!.inputColumns),
       isBlock: true,
       type: "list",
       storageClassType: "PhysicalTableMapRelationalTableInputColumnsPropertyList",
@@ -1723,7 +1723,7 @@ export function awsQuicksightDataSetRelationalTablePropertyToHclTerraform(struct
 }
 
 
-export function awsQuicksightDataSetPhysicalTableMapS3SourceInputColumnsPropertyToTerraform(struct?: AwsQuicksightDataSet.PhysicalTableMapS3SourceInputColumnsProperty | cdktn.IResolvable): any {
+export function tfDataSetPhysicalTableMapS3SourceInputColumnsPropertyToTerraform(struct?: TfDataSet.PhysicalTableMapS3SourceInputColumnsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1735,7 +1735,7 @@ export function awsQuicksightDataSetPhysicalTableMapS3SourceInputColumnsProperty
 }
 
 
-export function awsQuicksightDataSetPhysicalTableMapS3SourceInputColumnsPropertyToHclTerraform(struct?: AwsQuicksightDataSet.PhysicalTableMapS3SourceInputColumnsProperty | cdktn.IResolvable): any {
+export function tfDataSetPhysicalTableMapS3SourceInputColumnsPropertyToHclTerraform(struct?: TfDataSet.PhysicalTableMapS3SourceInputColumnsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1760,7 +1760,7 @@ export function awsQuicksightDataSetPhysicalTableMapS3SourceInputColumnsProperty
 }
 
 
-export function awsQuicksightDataSetUploadSettingsPropertyToTerraform(struct?: AwsQuicksightDataSet.UploadSettingsPropertyOutputReference | AwsQuicksightDataSet.UploadSettingsProperty): any {
+export function tfDataSetUploadSettingsPropertyToTerraform(struct?: TfDataSet.UploadSettingsPropertyOutputReference | TfDataSet.UploadSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1775,7 +1775,7 @@ export function awsQuicksightDataSetUploadSettingsPropertyToTerraform(struct?: A
 }
 
 
-export function awsQuicksightDataSetUploadSettingsPropertyToHclTerraform(struct?: AwsQuicksightDataSet.UploadSettingsPropertyOutputReference | AwsQuicksightDataSet.UploadSettingsProperty): any {
+export function tfDataSetUploadSettingsPropertyToHclTerraform(struct?: TfDataSet.UploadSettingsPropertyOutputReference | TfDataSet.UploadSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1818,20 +1818,20 @@ export function awsQuicksightDataSetUploadSettingsPropertyToHclTerraform(struct?
 }
 
 
-export function awsQuicksightDataSetS3SourcePropertyToTerraform(struct?: AwsQuicksightDataSet.S3SourcePropertyOutputReference | AwsQuicksightDataSet.S3SourceProperty): any {
+export function tfDataSetS3SourcePropertyToTerraform(struct?: TfDataSet.S3SourcePropertyOutputReference | TfDataSet.S3SourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     data_source_arn: cdktn.stringToTerraform(struct!.dataSourceArn),
-    input_columns: cdktn.listMapper(awsQuicksightDataSetPhysicalTableMapS3SourceInputColumnsPropertyToTerraform, true)(struct!.inputColumns),
-    upload_settings: awsQuicksightDataSetUploadSettingsPropertyToTerraform(struct!.uploadSettings),
+    input_columns: cdktn.listMapper(tfDataSetPhysicalTableMapS3SourceInputColumnsPropertyToTerraform, true)(struct!.inputColumns),
+    upload_settings: tfDataSetUploadSettingsPropertyToTerraform(struct!.uploadSettings),
   }
 }
 
 
-export function awsQuicksightDataSetS3SourcePropertyToHclTerraform(struct?: AwsQuicksightDataSet.S3SourcePropertyOutputReference | AwsQuicksightDataSet.S3SourceProperty): any {
+export function tfDataSetS3SourcePropertyToHclTerraform(struct?: TfDataSet.S3SourcePropertyOutputReference | TfDataSet.S3SourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1844,13 +1844,13 @@ export function awsQuicksightDataSetS3SourcePropertyToHclTerraform(struct?: AwsQ
       storageClassType: "string",
     },
     input_columns: {
-      value: cdktn.listMapperHcl(awsQuicksightDataSetPhysicalTableMapS3SourceInputColumnsPropertyToHclTerraform, true)(struct!.inputColumns),
+      value: cdktn.listMapperHcl(tfDataSetPhysicalTableMapS3SourceInputColumnsPropertyToHclTerraform, true)(struct!.inputColumns),
       isBlock: true,
       type: "list",
       storageClassType: "PhysicalTableMapS3SourceInputColumnsPropertyList",
     },
     upload_settings: {
-      value: awsQuicksightDataSetUploadSettingsPropertyToHclTerraform(struct!.uploadSettings),
+      value: tfDataSetUploadSettingsPropertyToHclTerraform(struct!.uploadSettings),
       isBlock: true,
       type: "list",
       storageClassType: "UploadSettingsPropertyList",
@@ -1862,21 +1862,21 @@ export function awsQuicksightDataSetS3SourcePropertyToHclTerraform(struct?: AwsQ
 }
 
 
-export function awsQuicksightDataSetPhysicalTableMapPropertyToTerraform(struct?: AwsQuicksightDataSet.PhysicalTableMapProperty | cdktn.IResolvable): any {
+export function tfDataSetPhysicalTableMapPropertyToTerraform(struct?: TfDataSet.PhysicalTableMapProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     physical_table_map_id: cdktn.stringToTerraform(struct!.physicalTableMapId),
-    custom_sql: awsQuicksightDataSetCustomSqlPropertyToTerraform(struct!.customSql),
-    relational_table: awsQuicksightDataSetRelationalTablePropertyToTerraform(struct!.relationalTable),
-    s3_source: awsQuicksightDataSetS3SourcePropertyToTerraform(struct!.s3Source),
+    custom_sql: tfDataSetCustomSqlPropertyToTerraform(struct!.customSql),
+    relational_table: tfDataSetRelationalTablePropertyToTerraform(struct!.relationalTable),
+    s3_source: tfDataSetS3SourcePropertyToTerraform(struct!.s3Source),
   }
 }
 
 
-export function awsQuicksightDataSetPhysicalTableMapPropertyToHclTerraform(struct?: AwsQuicksightDataSet.PhysicalTableMapProperty | cdktn.IResolvable): any {
+export function tfDataSetPhysicalTableMapPropertyToHclTerraform(struct?: TfDataSet.PhysicalTableMapProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1889,19 +1889,19 @@ export function awsQuicksightDataSetPhysicalTableMapPropertyToHclTerraform(struc
       storageClassType: "string",
     },
     custom_sql: {
-      value: awsQuicksightDataSetCustomSqlPropertyToHclTerraform(struct!.customSql),
+      value: tfDataSetCustomSqlPropertyToHclTerraform(struct!.customSql),
       isBlock: true,
       type: "list",
       storageClassType: "CustomSqlPropertyList",
     },
     relational_table: {
-      value: awsQuicksightDataSetRelationalTablePropertyToHclTerraform(struct!.relationalTable),
+      value: tfDataSetRelationalTablePropertyToHclTerraform(struct!.relationalTable),
       isBlock: true,
       type: "list",
       storageClassType: "RelationalTablePropertyList",
     },
     s3_source: {
-      value: awsQuicksightDataSetS3SourcePropertyToHclTerraform(struct!.s3Source),
+      value: tfDataSetS3SourcePropertyToHclTerraform(struct!.s3Source),
       isBlock: true,
       type: "list",
       storageClassType: "S3SourcePropertyList",
@@ -1913,7 +1913,7 @@ export function awsQuicksightDataSetPhysicalTableMapPropertyToHclTerraform(struc
 }
 
 
-export function awsQuicksightDataSetLookbackWindowPropertyToTerraform(struct?: AwsQuicksightDataSet.LookbackWindowPropertyOutputReference | AwsQuicksightDataSet.LookbackWindowProperty): any {
+export function tfDataSetLookbackWindowPropertyToTerraform(struct?: TfDataSet.LookbackWindowPropertyOutputReference | TfDataSet.LookbackWindowProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1926,7 +1926,7 @@ export function awsQuicksightDataSetLookbackWindowPropertyToTerraform(struct?: A
 }
 
 
-export function awsQuicksightDataSetLookbackWindowPropertyToHclTerraform(struct?: AwsQuicksightDataSet.LookbackWindowPropertyOutputReference | AwsQuicksightDataSet.LookbackWindowProperty): any {
+export function tfDataSetLookbackWindowPropertyToHclTerraform(struct?: TfDataSet.LookbackWindowPropertyOutputReference | TfDataSet.LookbackWindowProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1957,25 +1957,25 @@ export function awsQuicksightDataSetLookbackWindowPropertyToHclTerraform(struct?
 }
 
 
-export function awsQuicksightDataSetIncrementalRefreshPropertyToTerraform(struct?: AwsQuicksightDataSet.IncrementalRefreshPropertyOutputReference | AwsQuicksightDataSet.IncrementalRefreshProperty): any {
+export function tfDataSetIncrementalRefreshPropertyToTerraform(struct?: TfDataSet.IncrementalRefreshPropertyOutputReference | TfDataSet.IncrementalRefreshProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    lookback_window: awsQuicksightDataSetLookbackWindowPropertyToTerraform(struct!.lookbackWindow),
+    lookback_window: tfDataSetLookbackWindowPropertyToTerraform(struct!.lookbackWindow),
   }
 }
 
 
-export function awsQuicksightDataSetIncrementalRefreshPropertyToHclTerraform(struct?: AwsQuicksightDataSet.IncrementalRefreshPropertyOutputReference | AwsQuicksightDataSet.IncrementalRefreshProperty): any {
+export function tfDataSetIncrementalRefreshPropertyToHclTerraform(struct?: TfDataSet.IncrementalRefreshPropertyOutputReference | TfDataSet.IncrementalRefreshProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     lookback_window: {
-      value: awsQuicksightDataSetLookbackWindowPropertyToHclTerraform(struct!.lookbackWindow),
+      value: tfDataSetLookbackWindowPropertyToHclTerraform(struct!.lookbackWindow),
       isBlock: true,
       type: "list",
       storageClassType: "LookbackWindowPropertyList",
@@ -1987,25 +1987,25 @@ export function awsQuicksightDataSetIncrementalRefreshPropertyToHclTerraform(str
 }
 
 
-export function awsQuicksightDataSetRefreshConfigurationPropertyToTerraform(struct?: AwsQuicksightDataSet.RefreshConfigurationPropertyOutputReference | AwsQuicksightDataSet.RefreshConfigurationProperty): any {
+export function tfDataSetRefreshConfigurationPropertyToTerraform(struct?: TfDataSet.RefreshConfigurationPropertyOutputReference | TfDataSet.RefreshConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    incremental_refresh: awsQuicksightDataSetIncrementalRefreshPropertyToTerraform(struct!.incrementalRefresh),
+    incremental_refresh: tfDataSetIncrementalRefreshPropertyToTerraform(struct!.incrementalRefresh),
   }
 }
 
 
-export function awsQuicksightDataSetRefreshConfigurationPropertyToHclTerraform(struct?: AwsQuicksightDataSet.RefreshConfigurationPropertyOutputReference | AwsQuicksightDataSet.RefreshConfigurationProperty): any {
+export function tfDataSetRefreshConfigurationPropertyToHclTerraform(struct?: TfDataSet.RefreshConfigurationPropertyOutputReference | TfDataSet.RefreshConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     incremental_refresh: {
-      value: awsQuicksightDataSetIncrementalRefreshPropertyToHclTerraform(struct!.incrementalRefresh),
+      value: tfDataSetIncrementalRefreshPropertyToHclTerraform(struct!.incrementalRefresh),
       isBlock: true,
       type: "list",
       storageClassType: "IncrementalRefreshPropertyList",
@@ -2017,25 +2017,25 @@ export function awsQuicksightDataSetRefreshConfigurationPropertyToHclTerraform(s
 }
 
 
-export function awsQuicksightDataSetRefreshPropertiesPropertyToTerraform(struct?: AwsQuicksightDataSet.RefreshPropertiesPropertyOutputReference | AwsQuicksightDataSet.RefreshPropertiesProperty): any {
+export function tfDataSetRefreshPropertiesPropertyToTerraform(struct?: TfDataSet.RefreshPropertiesPropertyOutputReference | TfDataSet.RefreshPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    refresh_configuration: awsQuicksightDataSetRefreshConfigurationPropertyToTerraform(struct!.refreshConfiguration),
+    refresh_configuration: tfDataSetRefreshConfigurationPropertyToTerraform(struct!.refreshConfiguration),
   }
 }
 
 
-export function awsQuicksightDataSetRefreshPropertiesPropertyToHclTerraform(struct?: AwsQuicksightDataSet.RefreshPropertiesPropertyOutputReference | AwsQuicksightDataSet.RefreshPropertiesProperty): any {
+export function tfDataSetRefreshPropertiesPropertyToHclTerraform(struct?: TfDataSet.RefreshPropertiesPropertyOutputReference | TfDataSet.RefreshPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     refresh_configuration: {
-      value: awsQuicksightDataSetRefreshConfigurationPropertyToHclTerraform(struct!.refreshConfiguration),
+      value: tfDataSetRefreshConfigurationPropertyToHclTerraform(struct!.refreshConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "RefreshConfigurationPropertyList",
@@ -2047,7 +2047,7 @@ export function awsQuicksightDataSetRefreshPropertiesPropertyToHclTerraform(stru
 }
 
 
-export function awsQuicksightDataSetRowLevelPermissionDataSetPropertyToTerraform(struct?: AwsQuicksightDataSet.RowLevelPermissionDataSetPropertyOutputReference | AwsQuicksightDataSet.RowLevelPermissionDataSetProperty): any {
+export function tfDataSetRowLevelPermissionDataSetPropertyToTerraform(struct?: TfDataSet.RowLevelPermissionDataSetPropertyOutputReference | TfDataSet.RowLevelPermissionDataSetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2062,7 +2062,7 @@ export function awsQuicksightDataSetRowLevelPermissionDataSetPropertyToTerraform
 }
 
 
-export function awsQuicksightDataSetRowLevelPermissionDataSetPropertyToHclTerraform(struct?: AwsQuicksightDataSet.RowLevelPermissionDataSetPropertyOutputReference | AwsQuicksightDataSet.RowLevelPermissionDataSetProperty): any {
+export function tfDataSetRowLevelPermissionDataSetPropertyToHclTerraform(struct?: TfDataSet.RowLevelPermissionDataSetPropertyOutputReference | TfDataSet.RowLevelPermissionDataSetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2105,7 +2105,7 @@ export function awsQuicksightDataSetRowLevelPermissionDataSetPropertyToHclTerraf
 }
 
 
-export function awsQuicksightDataSetTagRulesPropertyToTerraform(struct?: AwsQuicksightDataSet.TagRulesProperty | cdktn.IResolvable): any {
+export function tfDataSetTagRulesPropertyToTerraform(struct?: TfDataSet.TagRulesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2119,7 +2119,7 @@ export function awsQuicksightDataSetTagRulesPropertyToTerraform(struct?: AwsQuic
 }
 
 
-export function awsQuicksightDataSetTagRulesPropertyToHclTerraform(struct?: AwsQuicksightDataSet.TagRulesProperty | cdktn.IResolvable): any {
+export function tfDataSetTagRulesPropertyToHclTerraform(struct?: TfDataSet.TagRulesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2156,19 +2156,19 @@ export function awsQuicksightDataSetTagRulesPropertyToHclTerraform(struct?: AwsQ
 }
 
 
-export function awsQuicksightDataSetRowLevelPermissionTagConfigurationPropertyToTerraform(struct?: AwsQuicksightDataSet.RowLevelPermissionTagConfigurationPropertyOutputReference | AwsQuicksightDataSet.RowLevelPermissionTagConfigurationProperty): any {
+export function tfDataSetRowLevelPermissionTagConfigurationPropertyToTerraform(struct?: TfDataSet.RowLevelPermissionTagConfigurationPropertyOutputReference | TfDataSet.RowLevelPermissionTagConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     status: cdktn.stringToTerraform(struct!.status),
-    tag_rules: cdktn.listMapper(awsQuicksightDataSetTagRulesPropertyToTerraform, true)(struct!.tagRules),
+    tag_rules: cdktn.listMapper(tfDataSetTagRulesPropertyToTerraform, true)(struct!.tagRules),
   }
 }
 
 
-export function awsQuicksightDataSetRowLevelPermissionTagConfigurationPropertyToHclTerraform(struct?: AwsQuicksightDataSet.RowLevelPermissionTagConfigurationPropertyOutputReference | AwsQuicksightDataSet.RowLevelPermissionTagConfigurationProperty): any {
+export function tfDataSetRowLevelPermissionTagConfigurationPropertyToHclTerraform(struct?: TfDataSet.RowLevelPermissionTagConfigurationPropertyOutputReference | TfDataSet.RowLevelPermissionTagConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2181,7 +2181,7 @@ export function awsQuicksightDataSetRowLevelPermissionTagConfigurationPropertyTo
       storageClassType: "string",
     },
     tag_rules: {
-      value: cdktn.listMapperHcl(awsQuicksightDataSetTagRulesPropertyToHclTerraform, true)(struct!.tagRules),
+      value: cdktn.listMapperHcl(tfDataSetTagRulesPropertyToHclTerraform, true)(struct!.tagRules),
       isBlock: true,
       type: "list",
       storageClassType: "TagRulesPropertyList",
@@ -2193,7 +2193,7 @@ export function awsQuicksightDataSetRowLevelPermissionTagConfigurationPropertyTo
 }
 
 
-export namespace AwsQuicksightDataSet {
+export namespace TfDataSet {
 export interface OutputColumnsProperty {
 }
 export class OutputColumnsPropertyOutputReference extends cdktn.ComplexObject {
@@ -2260,15 +2260,15 @@ export class OutputColumnsPropertyList extends cdktn.ComplexList {
 }
 export interface GeoSpatialColumnGroupProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#columns AwsQuicksightDataSet#columns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#columns TfDataSet#columns}
   */
   readonly columns: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#country_code AwsQuicksightDataSet#country_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#country_code TfDataSet#country_code}
   */
   readonly countryCode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#name AwsQuicksightDataSet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#name TfDataSet#name}
   */
   readonly name: string;
 }
@@ -2359,7 +2359,7 @@ export interface ColumnGroupsProperty {
   /**
   * geo_spatial_column_group block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#geo_spatial_column_group AwsQuicksightDataSet#geo_spatial_column_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#geo_spatial_column_group TfDataSet#geo_spatial_column_group}
   */
   readonly geoSpatialColumnGroup?: GeoSpatialColumnGroupProperty;
 }
@@ -2445,11 +2445,11 @@ export class ColumnGroupsPropertyList extends cdktn.ComplexList {
 }
 export interface ColumnLevelPermissionRulesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#column_names AwsQuicksightDataSet#column_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#column_names TfDataSet#column_names}
   */
   readonly columnNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#principals AwsQuicksightDataSet#principals}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#principals TfDataSet#principals}
   */
   readonly principals?: string[];
 }
@@ -2557,11 +2557,11 @@ export class ColumnLevelPermissionRulesPropertyList extends cdktn.ComplexList {
 }
 export interface DataSetUsageConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#disable_use_as_direct_query_source AwsQuicksightDataSet#disable_use_as_direct_query_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#disable_use_as_direct_query_source TfDataSet#disable_use_as_direct_query_source}
   */
   readonly disableUseAsDirectQuerySource?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#disable_use_as_imported_source AwsQuicksightDataSet#disable_use_as_imported_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#disable_use_as_imported_source TfDataSet#disable_use_as_imported_source}
   */
   readonly disableUseAsImportedSource?: boolean | cdktn.IResolvable;
 }
@@ -2637,15 +2637,15 @@ export class DataSetUsageConfigurationPropertyOutputReference extends cdktn.Comp
 }
 export interface FieldFoldersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#columns AwsQuicksightDataSet#columns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#columns TfDataSet#columns}
   */
   readonly columns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#description AwsQuicksightDataSet#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#description TfDataSet#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#field_folders_id AwsQuicksightDataSet#field_folders_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#field_folders_id TfDataSet#field_folders_id}
   */
   readonly fieldFoldersId: string;
 }
@@ -2772,15 +2772,15 @@ export class FieldFoldersPropertyList extends cdktn.ComplexList {
 }
 export interface CastColumnTypeOperationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#column_name AwsQuicksightDataSet#column_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#column_name TfDataSet#column_name}
   */
   readonly columnName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#format AwsQuicksightDataSet#format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#format TfDataSet#format}
   */
   readonly format?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#new_column_type AwsQuicksightDataSet#new_column_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#new_column_type TfDataSet#new_column_type}
   */
   readonly newColumnType: string;
 }
@@ -2872,15 +2872,15 @@ export class CastColumnTypeOperationPropertyOutputReference extends cdktn.Comple
 }
 export interface LogicalTableMapDataTransformsCreateColumnsOperationColumnsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#column_id AwsQuicksightDataSet#column_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#column_id TfDataSet#column_id}
   */
   readonly columnId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#column_name AwsQuicksightDataSet#column_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#column_name TfDataSet#column_name}
   */
   readonly columnName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#expression AwsQuicksightDataSet#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#expression TfDataSet#expression}
   */
   readonly expression: string;
 }
@@ -3003,7 +3003,7 @@ export interface CreateColumnsOperationProperty {
   /**
   * columns block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#columns AwsQuicksightDataSet#columns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#columns TfDataSet#columns}
   */
   readonly columns: LogicalTableMapDataTransformsCreateColumnsOperationColumnsProperty[] | cdktn.IResolvable;
 }
@@ -3054,7 +3054,7 @@ export class CreateColumnsOperationPropertyOutputReference extends cdktn.Complex
 }
 export interface FilterOperationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#condition_expression AwsQuicksightDataSet#condition_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#condition_expression TfDataSet#condition_expression}
   */
   readonly conditionExpression: string;
 }
@@ -3105,7 +3105,7 @@ export class FilterOperationPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface ProjectOperationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#projected_columns AwsQuicksightDataSet#projected_columns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#projected_columns TfDataSet#projected_columns}
   */
   readonly projectedColumns: string[];
 }
@@ -3156,11 +3156,11 @@ export class ProjectOperationPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface RenameColumnOperationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#column_name AwsQuicksightDataSet#column_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#column_name TfDataSet#column_name}
   */
   readonly columnName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#new_column_name AwsQuicksightDataSet#new_column_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#new_column_name TfDataSet#new_column_name}
   */
   readonly newColumnName: string;
 }
@@ -3230,7 +3230,7 @@ export class RenameColumnOperationPropertyOutputReference extends cdktn.ComplexO
 }
 export interface ColumnDescriptionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#text AwsQuicksightDataSet#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#text TfDataSet#text}
   */
   readonly text?: string;
 }
@@ -3284,13 +3284,13 @@ export class ColumnDescriptionPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface TagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#column_geographic_role AwsQuicksightDataSet#column_geographic_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#column_geographic_role TfDataSet#column_geographic_role}
   */
   readonly columnGeographicRole?: string;
   /**
   * column_description block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#column_description AwsQuicksightDataSet#column_description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#column_description TfDataSet#column_description}
   */
   readonly columnDescription?: ColumnDescriptionProperty;
 }
@@ -3398,13 +3398,13 @@ export class TagsPropertyList extends cdktn.ComplexList {
 }
 export interface TagColumnOperationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#column_name AwsQuicksightDataSet#column_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#column_name TfDataSet#column_name}
   */
   readonly columnName: string;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#tags AwsQuicksightDataSet#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#tags TfDataSet#tags}
   */
   readonly tags: TagsProperty[] | cdktn.IResolvable;
 }
@@ -3474,11 +3474,11 @@ export class TagColumnOperationPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface UntagColumnOperationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#column_name AwsQuicksightDataSet#column_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#column_name TfDataSet#column_name}
   */
   readonly columnName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#tag_names AwsQuicksightDataSet#tag_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#tag_names TfDataSet#tag_names}
   */
   readonly tagNames: string[];
 }
@@ -3550,43 +3550,43 @@ export interface DataTransformsProperty {
   /**
   * cast_column_type_operation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#cast_column_type_operation AwsQuicksightDataSet#cast_column_type_operation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#cast_column_type_operation TfDataSet#cast_column_type_operation}
   */
   readonly castColumnTypeOperation?: CastColumnTypeOperationProperty;
   /**
   * create_columns_operation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#create_columns_operation AwsQuicksightDataSet#create_columns_operation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#create_columns_operation TfDataSet#create_columns_operation}
   */
   readonly createColumnsOperation?: CreateColumnsOperationProperty;
   /**
   * filter_operation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#filter_operation AwsQuicksightDataSet#filter_operation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#filter_operation TfDataSet#filter_operation}
   */
   readonly filterOperation?: FilterOperationProperty;
   /**
   * project_operation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#project_operation AwsQuicksightDataSet#project_operation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#project_operation TfDataSet#project_operation}
   */
   readonly projectOperation?: ProjectOperationProperty;
   /**
   * rename_column_operation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#rename_column_operation AwsQuicksightDataSet#rename_column_operation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#rename_column_operation TfDataSet#rename_column_operation}
   */
   readonly renameColumnOperation?: RenameColumnOperationProperty;
   /**
   * tag_column_operation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#tag_column_operation AwsQuicksightDataSet#tag_column_operation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#tag_column_operation TfDataSet#tag_column_operation}
   */
   readonly tagColumnOperation?: TagColumnOperationProperty;
   /**
   * untag_column_operation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#untag_column_operation AwsQuicksightDataSet#untag_column_operation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#untag_column_operation TfDataSet#untag_column_operation}
   */
   readonly untagColumnOperation?: UntagColumnOperationProperty;
 }
@@ -3804,7 +3804,7 @@ export class DataTransformsPropertyList extends cdktn.ComplexList {
 }
 export interface LeftJoinKeyPropertiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#unique_key AwsQuicksightDataSet#unique_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#unique_key TfDataSet#unique_key}
   */
   readonly uniqueKey?: boolean | cdktn.IResolvable;
 }
@@ -3858,7 +3858,7 @@ export class LeftJoinKeyPropertiesPropertyOutputReference extends cdktn.ComplexO
 }
 export interface RightJoinKeyPropertiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#unique_key AwsQuicksightDataSet#unique_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#unique_key TfDataSet#unique_key}
   */
   readonly uniqueKey?: boolean | cdktn.IResolvable;
 }
@@ -3912,31 +3912,31 @@ export class RightJoinKeyPropertiesPropertyOutputReference extends cdktn.Complex
 }
 export interface JoinInstructionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#left_operand AwsQuicksightDataSet#left_operand}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#left_operand TfDataSet#left_operand}
   */
   readonly leftOperand: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#on_clause AwsQuicksightDataSet#on_clause}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#on_clause TfDataSet#on_clause}
   */
   readonly onClause: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#right_operand AwsQuicksightDataSet#right_operand}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#right_operand TfDataSet#right_operand}
   */
   readonly rightOperand: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#type AwsQuicksightDataSet#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#type TfDataSet#type}
   */
   readonly type: string;
   /**
   * left_join_key_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#left_join_key_properties AwsQuicksightDataSet#left_join_key_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#left_join_key_properties TfDataSet#left_join_key_properties}
   */
   readonly leftJoinKeyProperties?: LeftJoinKeyPropertiesProperty;
   /**
   * right_join_key_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#right_join_key_properties AwsQuicksightDataSet#right_join_key_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#right_join_key_properties TfDataSet#right_join_key_properties}
   */
   readonly rightJoinKeyProperties?: RightJoinKeyPropertiesProperty;
 }
@@ -4088,17 +4088,17 @@ export class JoinInstructionPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface SourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#data_set_arn AwsQuicksightDataSet#data_set_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#data_set_arn TfDataSet#data_set_arn}
   */
   readonly dataSetArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#physical_table_id AwsQuicksightDataSet#physical_table_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#physical_table_id TfDataSet#physical_table_id}
   */
   readonly physicalTableId?: string;
   /**
   * join_instruction block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#join_instruction AwsQuicksightDataSet#join_instruction}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#join_instruction TfDataSet#join_instruction}
   */
   readonly joinInstruction?: JoinInstructionProperty;
 }
@@ -4196,23 +4196,23 @@ export class SourcePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface LogicalTableMapProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#alias AwsQuicksightDataSet#alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#alias TfDataSet#alias}
   */
   readonly alias: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#logical_table_map_id AwsQuicksightDataSet#logical_table_map_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#logical_table_map_id TfDataSet#logical_table_map_id}
   */
   readonly logicalTableMapId: string;
   /**
   * data_transforms block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#data_transforms AwsQuicksightDataSet#data_transforms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#data_transforms TfDataSet#data_transforms}
   */
   readonly dataTransforms?: DataTransformsProperty[] | cdktn.IResolvable;
   /**
   * source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#source AwsQuicksightDataSet#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#source TfDataSet#source}
   */
   readonly source: SourceProperty;
 }
@@ -4355,11 +4355,11 @@ export class LogicalTableMapPropertyList extends cdktn.ComplexList {
 }
 export interface PermissionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#actions AwsQuicksightDataSet#actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#actions TfDataSet#actions}
   */
   readonly actions: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#principal AwsQuicksightDataSet#principal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#principal TfDataSet#principal}
   */
   readonly principal: string;
 }
@@ -4461,11 +4461,11 @@ export class PermissionsPropertyList extends cdktn.ComplexList {
 }
 export interface PhysicalTableMapCustomSqlColumnsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#name AwsQuicksightDataSet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#name TfDataSet#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#type AwsQuicksightDataSet#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#type TfDataSet#type}
   */
   readonly type: string;
 }
@@ -4567,21 +4567,21 @@ export class PhysicalTableMapCustomSqlColumnsPropertyList extends cdktn.ComplexL
 }
 export interface CustomSqlProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#data_source_arn AwsQuicksightDataSet#data_source_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#data_source_arn TfDataSet#data_source_arn}
   */
   readonly dataSourceArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#name AwsQuicksightDataSet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#name TfDataSet#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#sql_query AwsQuicksightDataSet#sql_query}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#sql_query TfDataSet#sql_query}
   */
   readonly sqlQuery: string;
   /**
   * columns block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#columns AwsQuicksightDataSet#columns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#columns TfDataSet#columns}
   */
   readonly columns?: PhysicalTableMapCustomSqlColumnsProperty[] | cdktn.IResolvable;
 }
@@ -4692,11 +4692,11 @@ export class CustomSqlPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface PhysicalTableMapRelationalTableInputColumnsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#name AwsQuicksightDataSet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#name TfDataSet#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#type AwsQuicksightDataSet#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#type TfDataSet#type}
   */
   readonly type: string;
 }
@@ -4798,25 +4798,25 @@ export class PhysicalTableMapRelationalTableInputColumnsPropertyList extends cdk
 }
 export interface RelationalTableProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#catalog AwsQuicksightDataSet#catalog}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#catalog TfDataSet#catalog}
   */
   readonly catalog?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#data_source_arn AwsQuicksightDataSet#data_source_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#data_source_arn TfDataSet#data_source_arn}
   */
   readonly dataSourceArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#name AwsQuicksightDataSet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#name TfDataSet#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#schema AwsQuicksightDataSet#schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#schema TfDataSet#schema}
   */
   readonly schema?: string;
   /**
   * input_columns block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#input_columns AwsQuicksightDataSet#input_columns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#input_columns TfDataSet#input_columns}
   */
   readonly inputColumns: PhysicalTableMapRelationalTableInputColumnsProperty[] | cdktn.IResolvable;
 }
@@ -4949,11 +4949,11 @@ export class RelationalTablePropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface PhysicalTableMapS3SourceInputColumnsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#name AwsQuicksightDataSet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#name TfDataSet#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#type AwsQuicksightDataSet#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#type TfDataSet#type}
   */
   readonly type: string;
 }
@@ -5055,23 +5055,23 @@ export class PhysicalTableMapS3SourceInputColumnsPropertyList extends cdktn.Comp
 }
 export interface UploadSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#contains_header AwsQuicksightDataSet#contains_header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#contains_header TfDataSet#contains_header}
   */
   readonly containsHeader?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#delimiter AwsQuicksightDataSet#delimiter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#delimiter TfDataSet#delimiter}
   */
   readonly delimiter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#format AwsQuicksightDataSet#format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#format TfDataSet#format}
   */
   readonly format?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#start_from_row AwsQuicksightDataSet#start_from_row}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#start_from_row TfDataSet#start_from_row}
   */
   readonly startFromRow?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#text_qualifier AwsQuicksightDataSet#text_qualifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#text_qualifier TfDataSet#text_qualifier}
   */
   readonly textQualifier?: string;
 }
@@ -5213,19 +5213,19 @@ export class UploadSettingsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface S3SourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#data_source_arn AwsQuicksightDataSet#data_source_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#data_source_arn TfDataSet#data_source_arn}
   */
   readonly dataSourceArn: string;
   /**
   * input_columns block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#input_columns AwsQuicksightDataSet#input_columns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#input_columns TfDataSet#input_columns}
   */
   readonly inputColumns: PhysicalTableMapS3SourceInputColumnsProperty[] | cdktn.IResolvable;
   /**
   * upload_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#upload_settings AwsQuicksightDataSet#upload_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#upload_settings TfDataSet#upload_settings}
   */
   readonly uploadSettings: UploadSettingsProperty;
 }
@@ -5314,25 +5314,25 @@ export class S3SourcePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface PhysicalTableMapProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#physical_table_map_id AwsQuicksightDataSet#physical_table_map_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#physical_table_map_id TfDataSet#physical_table_map_id}
   */
   readonly physicalTableMapId: string;
   /**
   * custom_sql block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#custom_sql AwsQuicksightDataSet#custom_sql}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#custom_sql TfDataSet#custom_sql}
   */
   readonly customSql?: CustomSqlProperty;
   /**
   * relational_table block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#relational_table AwsQuicksightDataSet#relational_table}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#relational_table TfDataSet#relational_table}
   */
   readonly relationalTable?: RelationalTableProperty;
   /**
   * s3_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#s3_source AwsQuicksightDataSet#s3_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#s3_source TfDataSet#s3_source}
   */
   readonly s3Source?: S3SourceProperty;
 }
@@ -5481,15 +5481,15 @@ export class PhysicalTableMapPropertyList extends cdktn.ComplexList {
 }
 export interface LookbackWindowProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#column_name AwsQuicksightDataSet#column_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#column_name TfDataSet#column_name}
   */
   readonly columnName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#size AwsQuicksightDataSet#size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#size TfDataSet#size}
   */
   readonly size: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#size_unit AwsQuicksightDataSet#size_unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#size_unit TfDataSet#size_unit}
   */
   readonly sizeUnit: string;
 }
@@ -5580,7 +5580,7 @@ export interface IncrementalRefreshProperty {
   /**
   * lookback_window block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#lookback_window AwsQuicksightDataSet#lookback_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#lookback_window TfDataSet#lookback_window}
   */
   readonly lookbackWindow: LookbackWindowProperty;
 }
@@ -5633,7 +5633,7 @@ export interface RefreshConfigurationProperty {
   /**
   * incremental_refresh block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#incremental_refresh AwsQuicksightDataSet#incremental_refresh}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#incremental_refresh TfDataSet#incremental_refresh}
   */
   readonly incrementalRefresh: IncrementalRefreshProperty;
 }
@@ -5686,7 +5686,7 @@ export interface RefreshPropertiesProperty {
   /**
   * refresh_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#refresh_configuration AwsQuicksightDataSet#refresh_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#refresh_configuration TfDataSet#refresh_configuration}
   */
   readonly refreshConfiguration: RefreshConfigurationProperty;
 }
@@ -5737,23 +5737,23 @@ export class RefreshPropertiesPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface RowLevelPermissionDataSetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#arn AwsQuicksightDataSet#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#arn TfDataSet#arn}
   */
   readonly arn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#format_version AwsQuicksightDataSet#format_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#format_version TfDataSet#format_version}
   */
   readonly formatVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#namespace AwsQuicksightDataSet#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#namespace TfDataSet#namespace}
   */
   readonly namespace?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#permission_policy AwsQuicksightDataSet#permission_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#permission_policy TfDataSet#permission_policy}
   */
   readonly permissionPolicy: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#status AwsQuicksightDataSet#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#status TfDataSet#status}
   */
   readonly status?: string;
 }
@@ -5889,19 +5889,19 @@ export class RowLevelPermissionDataSetPropertyOutputReference extends cdktn.Comp
 }
 export interface TagRulesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#column_name AwsQuicksightDataSet#column_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#column_name TfDataSet#column_name}
   */
   readonly columnName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#match_all_value AwsQuicksightDataSet#match_all_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#match_all_value TfDataSet#match_all_value}
   */
   readonly matchAllValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#tag_key AwsQuicksightDataSet#tag_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#tag_key TfDataSet#tag_key}
   */
   readonly tagKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#tag_multi_value_delimiter AwsQuicksightDataSet#tag_multi_value_delimiter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#tag_multi_value_delimiter TfDataSet#tag_multi_value_delimiter}
   */
   readonly tagMultiValueDelimiter?: string;
 }
@@ -6047,13 +6047,13 @@ export class TagRulesPropertyList extends cdktn.ComplexList {
 }
 export interface RowLevelPermissionTagConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#status AwsQuicksightDataSet#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#status TfDataSet#status}
   */
   readonly status?: string;
   /**
   * tag_rules block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#tag_rules AwsQuicksightDataSet#tag_rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_set#tag_rules TfDataSet#tag_rules}
   */
   readonly tagRules: TagRulesProperty[] | cdktn.IResolvable;
 }

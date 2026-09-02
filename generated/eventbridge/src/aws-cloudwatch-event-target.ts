@@ -5,130 +5,130 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCloudwatchEventTargetConfig extends cdktn.TerraformMetaArguments {
+export interface TfTargetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#arn AwsCloudwatchEventTarget#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#arn TfTarget#arn}
   */
   readonly arn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#event_bus_name AwsCloudwatchEventTarget#event_bus_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#event_bus_name TfTarget#event_bus_name}
   */
   readonly eventBusName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#force_destroy AwsCloudwatchEventTarget#force_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#force_destroy TfTarget#force_destroy}
   */
   readonly forceDestroy?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#id AwsCloudwatchEventTarget#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#id TfTarget#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#input AwsCloudwatchEventTarget#input}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#input TfTarget#input}
   */
   readonly input?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#input_path AwsCloudwatchEventTarget#input_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#input_path TfTarget#input_path}
   */
   readonly inputPath?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#region AwsCloudwatchEventTarget#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#region TfTarget#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#role_arn AwsCloudwatchEventTarget#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#role_arn TfTarget#role_arn}
   */
   readonly roleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#rule AwsCloudwatchEventTarget#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#rule TfTarget#rule}
   */
   readonly rule: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#target_id AwsCloudwatchEventTarget#target_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#target_id TfTarget#target_id}
   */
   readonly targetId?: string;
   /**
   * appsync_target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#appsync_target AwsCloudwatchEventTarget#appsync_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#appsync_target TfTarget#appsync_target}
   */
-  readonly appsyncTarget?: AwsCloudwatchEventTarget.AppsyncTargetProperty;
+  readonly appsyncTarget?: TfTarget.AppsyncTargetProperty;
   /**
   * batch_target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#batch_target AwsCloudwatchEventTarget#batch_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#batch_target TfTarget#batch_target}
   */
-  readonly batchTarget?: AwsCloudwatchEventTarget.BatchTargetProperty;
+  readonly batchTarget?: TfTarget.BatchTargetProperty;
   /**
   * dead_letter_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#dead_letter_config AwsCloudwatchEventTarget#dead_letter_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#dead_letter_config TfTarget#dead_letter_config}
   */
-  readonly deadLetterConfig?: AwsCloudwatchEventTarget.DeadLetterConfigProperty;
+  readonly deadLetterConfig?: TfTarget.DeadLetterConfigProperty;
   /**
   * ecs_target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#ecs_target AwsCloudwatchEventTarget#ecs_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#ecs_target TfTarget#ecs_target}
   */
-  readonly ecsTarget?: AwsCloudwatchEventTarget.EcsTargetProperty;
+  readonly ecsTarget?: TfTarget.EcsTargetProperty;
   /**
   * http_target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#http_target AwsCloudwatchEventTarget#http_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#http_target TfTarget#http_target}
   */
-  readonly httpTarget?: AwsCloudwatchEventTarget.HttpTargetProperty;
+  readonly httpTarget?: TfTarget.HttpTargetProperty;
   /**
   * input_transformer block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#input_transformer AwsCloudwatchEventTarget#input_transformer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#input_transformer TfTarget#input_transformer}
   */
-  readonly inputTransformer?: AwsCloudwatchEventTarget.InputTransformerProperty;
+  readonly inputTransformer?: TfTarget.InputTransformerProperty;
   /**
   * kinesis_target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#kinesis_target AwsCloudwatchEventTarget#kinesis_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#kinesis_target TfTarget#kinesis_target}
   */
-  readonly kinesisTarget?: AwsCloudwatchEventTarget.KinesisTargetProperty;
+  readonly kinesisTarget?: TfTarget.KinesisTargetProperty;
   /**
   * redshift_target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#redshift_target AwsCloudwatchEventTarget#redshift_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#redshift_target TfTarget#redshift_target}
   */
-  readonly redshiftTarget?: AwsCloudwatchEventTarget.RedshiftTargetProperty;
+  readonly redshiftTarget?: TfTarget.RedshiftTargetProperty;
   /**
   * retry_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#retry_policy AwsCloudwatchEventTarget#retry_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#retry_policy TfTarget#retry_policy}
   */
-  readonly retryPolicy?: AwsCloudwatchEventTarget.RetryPolicyProperty;
+  readonly retryPolicy?: TfTarget.RetryPolicyProperty;
   /**
   * run_command_targets block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#run_command_targets AwsCloudwatchEventTarget#run_command_targets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#run_command_targets TfTarget#run_command_targets}
   */
-  readonly runCommandTargets?: AwsCloudwatchEventTarget.RunCommandTargetsProperty[] | cdktn.IResolvable;
+  readonly runCommandTargets?: TfTarget.RunCommandTargetsProperty[] | cdktn.IResolvable;
   /**
   * sagemaker_pipeline_target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#sagemaker_pipeline_target AwsCloudwatchEventTarget#sagemaker_pipeline_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#sagemaker_pipeline_target TfTarget#sagemaker_pipeline_target}
   */
-  readonly sagemakerPipelineTarget?: AwsCloudwatchEventTarget.SagemakerPipelineTargetProperty;
+  readonly sagemakerPipelineTarget?: TfTarget.SagemakerPipelineTargetProperty;
   /**
   * sqs_target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#sqs_target AwsCloudwatchEventTarget#sqs_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#sqs_target TfTarget#sqs_target}
   */
-  readonly sqsTarget?: AwsCloudwatchEventTarget.SqsTargetProperty;
+  readonly sqsTarget?: TfTarget.SqsTargetProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target aws_cloudwatch_event_target}
 */
-export class AwsCloudwatchEventTarget extends cdktn.TerraformResource {
+export class TfTarget extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -139,11 +139,11 @@ export class AwsCloudwatchEventTarget extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCloudwatchEventTarget resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfTarget resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCloudwatchEventTarget to import
-  * @param importFromId The id of the existing AwsCloudwatchEventTarget that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCloudwatchEventTarget to import is found
+  * @param importToId The construct id used in the generated config for the TfTarget to import
+  * @param importFromId The id of the existing TfTarget that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfTarget to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudwatch_event_target", importId: importFromId, provider });
@@ -158,9 +158,9 @@ export class AwsCloudwatchEventTarget extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCloudwatchEventTargetConfig
+  * @param options TfTargetConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCloudwatchEventTargetConfig) {
+  public constructor(scope: Construct, id: string, config: TfTargetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudwatch_event_target',
       terraformGeneratorMetadata: {
@@ -359,11 +359,11 @@ export class AwsCloudwatchEventTarget extends cdktn.TerraformResource {
   }
 
   // appsync_target - computed: false, optional: true, required: false
-  private _appsyncTarget = new AwsCloudwatchEventTarget.AppsyncTargetPropertyOutputReference(this, "appsync_target");
+  private _appsyncTarget = new TfTarget.AppsyncTargetPropertyOutputReference(this, "appsync_target");
   public get appsyncTarget() {
     return this._appsyncTarget;
   }
-  public putAppsyncTarget(value: AwsCloudwatchEventTarget.AppsyncTargetProperty) {
+  public putAppsyncTarget(value: TfTarget.AppsyncTargetProperty) {
     this._appsyncTarget.internalValue = value;
   }
   public resetAppsyncTarget() {
@@ -375,11 +375,11 @@ export class AwsCloudwatchEventTarget extends cdktn.TerraformResource {
   }
 
   // batch_target - computed: false, optional: true, required: false
-  private _batchTarget = new AwsCloudwatchEventTarget.BatchTargetPropertyOutputReference(this, "batch_target");
+  private _batchTarget = new TfTarget.BatchTargetPropertyOutputReference(this, "batch_target");
   public get batchTarget() {
     return this._batchTarget;
   }
-  public putBatchTarget(value: AwsCloudwatchEventTarget.BatchTargetProperty) {
+  public putBatchTarget(value: TfTarget.BatchTargetProperty) {
     this._batchTarget.internalValue = value;
   }
   public resetBatchTarget() {
@@ -391,11 +391,11 @@ export class AwsCloudwatchEventTarget extends cdktn.TerraformResource {
   }
 
   // dead_letter_config - computed: false, optional: true, required: false
-  private _deadLetterConfig = new AwsCloudwatchEventTarget.DeadLetterConfigPropertyOutputReference(this, "dead_letter_config");
+  private _deadLetterConfig = new TfTarget.DeadLetterConfigPropertyOutputReference(this, "dead_letter_config");
   public get deadLetterConfig() {
     return this._deadLetterConfig;
   }
-  public putDeadLetterConfig(value: AwsCloudwatchEventTarget.DeadLetterConfigProperty) {
+  public putDeadLetterConfig(value: TfTarget.DeadLetterConfigProperty) {
     this._deadLetterConfig.internalValue = value;
   }
   public resetDeadLetterConfig() {
@@ -407,11 +407,11 @@ export class AwsCloudwatchEventTarget extends cdktn.TerraformResource {
   }
 
   // ecs_target - computed: false, optional: true, required: false
-  private _ecsTarget = new AwsCloudwatchEventTarget.EcsTargetPropertyOutputReference(this, "ecs_target");
+  private _ecsTarget = new TfTarget.EcsTargetPropertyOutputReference(this, "ecs_target");
   public get ecsTarget() {
     return this._ecsTarget;
   }
-  public putEcsTarget(value: AwsCloudwatchEventTarget.EcsTargetProperty) {
+  public putEcsTarget(value: TfTarget.EcsTargetProperty) {
     this._ecsTarget.internalValue = value;
   }
   public resetEcsTarget() {
@@ -423,11 +423,11 @@ export class AwsCloudwatchEventTarget extends cdktn.TerraformResource {
   }
 
   // http_target - computed: false, optional: true, required: false
-  private _httpTarget = new AwsCloudwatchEventTarget.HttpTargetPropertyOutputReference(this, "http_target");
+  private _httpTarget = new TfTarget.HttpTargetPropertyOutputReference(this, "http_target");
   public get httpTarget() {
     return this._httpTarget;
   }
-  public putHttpTarget(value: AwsCloudwatchEventTarget.HttpTargetProperty) {
+  public putHttpTarget(value: TfTarget.HttpTargetProperty) {
     this._httpTarget.internalValue = value;
   }
   public resetHttpTarget() {
@@ -439,11 +439,11 @@ export class AwsCloudwatchEventTarget extends cdktn.TerraformResource {
   }
 
   // input_transformer - computed: false, optional: true, required: false
-  private _inputTransformer = new AwsCloudwatchEventTarget.InputTransformerPropertyOutputReference(this, "input_transformer");
+  private _inputTransformer = new TfTarget.InputTransformerPropertyOutputReference(this, "input_transformer");
   public get inputTransformer() {
     return this._inputTransformer;
   }
-  public putInputTransformer(value: AwsCloudwatchEventTarget.InputTransformerProperty) {
+  public putInputTransformer(value: TfTarget.InputTransformerProperty) {
     this._inputTransformer.internalValue = value;
   }
   public resetInputTransformer() {
@@ -455,11 +455,11 @@ export class AwsCloudwatchEventTarget extends cdktn.TerraformResource {
   }
 
   // kinesis_target - computed: false, optional: true, required: false
-  private _kinesisTarget = new AwsCloudwatchEventTarget.KinesisTargetPropertyOutputReference(this, "kinesis_target");
+  private _kinesisTarget = new TfTarget.KinesisTargetPropertyOutputReference(this, "kinesis_target");
   public get kinesisTarget() {
     return this._kinesisTarget;
   }
-  public putKinesisTarget(value: AwsCloudwatchEventTarget.KinesisTargetProperty) {
+  public putKinesisTarget(value: TfTarget.KinesisTargetProperty) {
     this._kinesisTarget.internalValue = value;
   }
   public resetKinesisTarget() {
@@ -471,11 +471,11 @@ export class AwsCloudwatchEventTarget extends cdktn.TerraformResource {
   }
 
   // redshift_target - computed: false, optional: true, required: false
-  private _redshiftTarget = new AwsCloudwatchEventTarget.RedshiftTargetPropertyOutputReference(this, "redshift_target");
+  private _redshiftTarget = new TfTarget.RedshiftTargetPropertyOutputReference(this, "redshift_target");
   public get redshiftTarget() {
     return this._redshiftTarget;
   }
-  public putRedshiftTarget(value: AwsCloudwatchEventTarget.RedshiftTargetProperty) {
+  public putRedshiftTarget(value: TfTarget.RedshiftTargetProperty) {
     this._redshiftTarget.internalValue = value;
   }
   public resetRedshiftTarget() {
@@ -487,11 +487,11 @@ export class AwsCloudwatchEventTarget extends cdktn.TerraformResource {
   }
 
   // retry_policy - computed: false, optional: true, required: false
-  private _retryPolicy = new AwsCloudwatchEventTarget.RetryPolicyPropertyOutputReference(this, "retry_policy");
+  private _retryPolicy = new TfTarget.RetryPolicyPropertyOutputReference(this, "retry_policy");
   public get retryPolicy() {
     return this._retryPolicy;
   }
-  public putRetryPolicy(value: AwsCloudwatchEventTarget.RetryPolicyProperty) {
+  public putRetryPolicy(value: TfTarget.RetryPolicyProperty) {
     this._retryPolicy.internalValue = value;
   }
   public resetRetryPolicy() {
@@ -503,11 +503,11 @@ export class AwsCloudwatchEventTarget extends cdktn.TerraformResource {
   }
 
   // run_command_targets - computed: false, optional: true, required: false
-  private _runCommandTargets = new AwsCloudwatchEventTarget.RunCommandTargetsPropertyList(this, "run_command_targets", false);
+  private _runCommandTargets = new TfTarget.RunCommandTargetsPropertyList(this, "run_command_targets", false);
   public get runCommandTargets() {
     return this._runCommandTargets;
   }
-  public putRunCommandTargets(value: AwsCloudwatchEventTarget.RunCommandTargetsProperty[] | cdktn.IResolvable) {
+  public putRunCommandTargets(value: TfTarget.RunCommandTargetsProperty[] | cdktn.IResolvable) {
     this._runCommandTargets.internalValue = value;
   }
   public resetRunCommandTargets() {
@@ -519,11 +519,11 @@ export class AwsCloudwatchEventTarget extends cdktn.TerraformResource {
   }
 
   // sagemaker_pipeline_target - computed: false, optional: true, required: false
-  private _sagemakerPipelineTarget = new AwsCloudwatchEventTarget.SagemakerPipelineTargetPropertyOutputReference(this, "sagemaker_pipeline_target");
+  private _sagemakerPipelineTarget = new TfTarget.SagemakerPipelineTargetPropertyOutputReference(this, "sagemaker_pipeline_target");
   public get sagemakerPipelineTarget() {
     return this._sagemakerPipelineTarget;
   }
-  public putSagemakerPipelineTarget(value: AwsCloudwatchEventTarget.SagemakerPipelineTargetProperty) {
+  public putSagemakerPipelineTarget(value: TfTarget.SagemakerPipelineTargetProperty) {
     this._sagemakerPipelineTarget.internalValue = value;
   }
   public resetSagemakerPipelineTarget() {
@@ -535,11 +535,11 @@ export class AwsCloudwatchEventTarget extends cdktn.TerraformResource {
   }
 
   // sqs_target - computed: false, optional: true, required: false
-  private _sqsTarget = new AwsCloudwatchEventTarget.SqsTargetPropertyOutputReference(this, "sqs_target");
+  private _sqsTarget = new TfTarget.SqsTargetPropertyOutputReference(this, "sqs_target");
   public get sqsTarget() {
     return this._sqsTarget;
   }
-  public putSqsTarget(value: AwsCloudwatchEventTarget.SqsTargetProperty) {
+  public putSqsTarget(value: TfTarget.SqsTargetProperty) {
     this._sqsTarget.internalValue = value;
   }
   public resetSqsTarget() {
@@ -566,18 +566,18 @@ export class AwsCloudwatchEventTarget extends cdktn.TerraformResource {
       role_arn: cdktn.stringToTerraform(this._roleArn),
       rule: cdktn.stringToTerraform(this._rule),
       target_id: cdktn.stringToTerraform(this._targetId),
-      appsync_target: awsCloudwatchEventTargetAppsyncTargetPropertyToTerraform(this._appsyncTarget.internalValue),
-      batch_target: awsCloudwatchEventTargetBatchTargetPropertyToTerraform(this._batchTarget.internalValue),
-      dead_letter_config: awsCloudwatchEventTargetDeadLetterConfigPropertyToTerraform(this._deadLetterConfig.internalValue),
-      ecs_target: awsCloudwatchEventTargetEcsTargetPropertyToTerraform(this._ecsTarget.internalValue),
-      http_target: awsCloudwatchEventTargetHttpTargetPropertyToTerraform(this._httpTarget.internalValue),
-      input_transformer: awsCloudwatchEventTargetInputTransformerPropertyToTerraform(this._inputTransformer.internalValue),
-      kinesis_target: awsCloudwatchEventTargetKinesisTargetPropertyToTerraform(this._kinesisTarget.internalValue),
-      redshift_target: awsCloudwatchEventTargetRedshiftTargetPropertyToTerraform(this._redshiftTarget.internalValue),
-      retry_policy: awsCloudwatchEventTargetRetryPolicyPropertyToTerraform(this._retryPolicy.internalValue),
-      run_command_targets: cdktn.listMapper(awsCloudwatchEventTargetRunCommandTargetsPropertyToTerraform, true)(this._runCommandTargets.internalValue),
-      sagemaker_pipeline_target: awsCloudwatchEventTargetSagemakerPipelineTargetPropertyToTerraform(this._sagemakerPipelineTarget.internalValue),
-      sqs_target: awsCloudwatchEventTargetSqsTargetPropertyToTerraform(this._sqsTarget.internalValue),
+      appsync_target: tfTargetAppsyncTargetPropertyToTerraform(this._appsyncTarget.internalValue),
+      batch_target: tfTargetBatchTargetPropertyToTerraform(this._batchTarget.internalValue),
+      dead_letter_config: tfTargetDeadLetterConfigPropertyToTerraform(this._deadLetterConfig.internalValue),
+      ecs_target: tfTargetEcsTargetPropertyToTerraform(this._ecsTarget.internalValue),
+      http_target: tfTargetHttpTargetPropertyToTerraform(this._httpTarget.internalValue),
+      input_transformer: tfTargetInputTransformerPropertyToTerraform(this._inputTransformer.internalValue),
+      kinesis_target: tfTargetKinesisTargetPropertyToTerraform(this._kinesisTarget.internalValue),
+      redshift_target: tfTargetRedshiftTargetPropertyToTerraform(this._redshiftTarget.internalValue),
+      retry_policy: tfTargetRetryPolicyPropertyToTerraform(this._retryPolicy.internalValue),
+      run_command_targets: cdktn.listMapper(tfTargetRunCommandTargetsPropertyToTerraform, true)(this._runCommandTargets.internalValue),
+      sagemaker_pipeline_target: tfTargetSagemakerPipelineTargetPropertyToTerraform(this._sagemakerPipelineTarget.internalValue),
+      sqs_target: tfTargetSqsTargetPropertyToTerraform(this._sqsTarget.internalValue),
     };
   }
 
@@ -644,76 +644,76 @@ export class AwsCloudwatchEventTarget extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       appsync_target: {
-        value: awsCloudwatchEventTargetAppsyncTargetPropertyToHclTerraform(this._appsyncTarget.internalValue),
+        value: tfTargetAppsyncTargetPropertyToHclTerraform(this._appsyncTarget.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudwatchEventTarget.AppsyncTargetPropertyList",
+        storageClassType: "TfTarget.AppsyncTargetPropertyList",
       },
       batch_target: {
-        value: awsCloudwatchEventTargetBatchTargetPropertyToHclTerraform(this._batchTarget.internalValue),
+        value: tfTargetBatchTargetPropertyToHclTerraform(this._batchTarget.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudwatchEventTarget.BatchTargetPropertyList",
+        storageClassType: "TfTarget.BatchTargetPropertyList",
       },
       dead_letter_config: {
-        value: awsCloudwatchEventTargetDeadLetterConfigPropertyToHclTerraform(this._deadLetterConfig.internalValue),
+        value: tfTargetDeadLetterConfigPropertyToHclTerraform(this._deadLetterConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudwatchEventTarget.DeadLetterConfigPropertyList",
+        storageClassType: "TfTarget.DeadLetterConfigPropertyList",
       },
       ecs_target: {
-        value: awsCloudwatchEventTargetEcsTargetPropertyToHclTerraform(this._ecsTarget.internalValue),
+        value: tfTargetEcsTargetPropertyToHclTerraform(this._ecsTarget.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudwatchEventTarget.EcsTargetPropertyList",
+        storageClassType: "TfTarget.EcsTargetPropertyList",
       },
       http_target: {
-        value: awsCloudwatchEventTargetHttpTargetPropertyToHclTerraform(this._httpTarget.internalValue),
+        value: tfTargetHttpTargetPropertyToHclTerraform(this._httpTarget.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudwatchEventTarget.HttpTargetPropertyList",
+        storageClassType: "TfTarget.HttpTargetPropertyList",
       },
       input_transformer: {
-        value: awsCloudwatchEventTargetInputTransformerPropertyToHclTerraform(this._inputTransformer.internalValue),
+        value: tfTargetInputTransformerPropertyToHclTerraform(this._inputTransformer.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudwatchEventTarget.InputTransformerPropertyList",
+        storageClassType: "TfTarget.InputTransformerPropertyList",
       },
       kinesis_target: {
-        value: awsCloudwatchEventTargetKinesisTargetPropertyToHclTerraform(this._kinesisTarget.internalValue),
+        value: tfTargetKinesisTargetPropertyToHclTerraform(this._kinesisTarget.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudwatchEventTarget.KinesisTargetPropertyList",
+        storageClassType: "TfTarget.KinesisTargetPropertyList",
       },
       redshift_target: {
-        value: awsCloudwatchEventTargetRedshiftTargetPropertyToHclTerraform(this._redshiftTarget.internalValue),
+        value: tfTargetRedshiftTargetPropertyToHclTerraform(this._redshiftTarget.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudwatchEventTarget.RedshiftTargetPropertyList",
+        storageClassType: "TfTarget.RedshiftTargetPropertyList",
       },
       retry_policy: {
-        value: awsCloudwatchEventTargetRetryPolicyPropertyToHclTerraform(this._retryPolicy.internalValue),
+        value: tfTargetRetryPolicyPropertyToHclTerraform(this._retryPolicy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudwatchEventTarget.RetryPolicyPropertyList",
+        storageClassType: "TfTarget.RetryPolicyPropertyList",
       },
       run_command_targets: {
-        value: cdktn.listMapperHcl(awsCloudwatchEventTargetRunCommandTargetsPropertyToHclTerraform, true)(this._runCommandTargets.internalValue),
+        value: cdktn.listMapperHcl(tfTargetRunCommandTargetsPropertyToHclTerraform, true)(this._runCommandTargets.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudwatchEventTarget.RunCommandTargetsPropertyList",
+        storageClassType: "TfTarget.RunCommandTargetsPropertyList",
       },
       sagemaker_pipeline_target: {
-        value: awsCloudwatchEventTargetSagemakerPipelineTargetPropertyToHclTerraform(this._sagemakerPipelineTarget.internalValue),
+        value: tfTargetSagemakerPipelineTargetPropertyToHclTerraform(this._sagemakerPipelineTarget.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudwatchEventTarget.SagemakerPipelineTargetPropertyList",
+        storageClassType: "TfTarget.SagemakerPipelineTargetPropertyList",
       },
       sqs_target: {
-        value: awsCloudwatchEventTargetSqsTargetPropertyToHclTerraform(this._sqsTarget.internalValue),
+        value: tfTargetSqsTargetPropertyToHclTerraform(this._sqsTarget.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudwatchEventTarget.SqsTargetPropertyList",
+        storageClassType: "TfTarget.SqsTargetPropertyList",
       },
     };
 
@@ -722,7 +722,7 @@ export class AwsCloudwatchEventTarget extends cdktn.TerraformResource {
   }
 }
 
-export function awsCloudwatchEventTargetAppsyncTargetPropertyToTerraform(struct?: AwsCloudwatchEventTarget.AppsyncTargetPropertyOutputReference | AwsCloudwatchEventTarget.AppsyncTargetProperty): any {
+export function tfTargetAppsyncTargetPropertyToTerraform(struct?: TfTarget.AppsyncTargetPropertyOutputReference | TfTarget.AppsyncTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -733,7 +733,7 @@ export function awsCloudwatchEventTargetAppsyncTargetPropertyToTerraform(struct?
 }
 
 
-export function awsCloudwatchEventTargetAppsyncTargetPropertyToHclTerraform(struct?: AwsCloudwatchEventTarget.AppsyncTargetPropertyOutputReference | AwsCloudwatchEventTarget.AppsyncTargetProperty): any {
+export function tfTargetAppsyncTargetPropertyToHclTerraform(struct?: TfTarget.AppsyncTargetPropertyOutputReference | TfTarget.AppsyncTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -752,7 +752,7 @@ export function awsCloudwatchEventTargetAppsyncTargetPropertyToHclTerraform(stru
 }
 
 
-export function awsCloudwatchEventTargetBatchTargetPropertyToTerraform(struct?: AwsCloudwatchEventTarget.BatchTargetPropertyOutputReference | AwsCloudwatchEventTarget.BatchTargetProperty): any {
+export function tfTargetBatchTargetPropertyToTerraform(struct?: TfTarget.BatchTargetPropertyOutputReference | TfTarget.BatchTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -766,7 +766,7 @@ export function awsCloudwatchEventTargetBatchTargetPropertyToTerraform(struct?: 
 }
 
 
-export function awsCloudwatchEventTargetBatchTargetPropertyToHclTerraform(struct?: AwsCloudwatchEventTarget.BatchTargetPropertyOutputReference | AwsCloudwatchEventTarget.BatchTargetProperty): any {
+export function tfTargetBatchTargetPropertyToHclTerraform(struct?: TfTarget.BatchTargetPropertyOutputReference | TfTarget.BatchTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -803,7 +803,7 @@ export function awsCloudwatchEventTargetBatchTargetPropertyToHclTerraform(struct
 }
 
 
-export function awsCloudwatchEventTargetDeadLetterConfigPropertyToTerraform(struct?: AwsCloudwatchEventTarget.DeadLetterConfigPropertyOutputReference | AwsCloudwatchEventTarget.DeadLetterConfigProperty): any {
+export function tfTargetDeadLetterConfigPropertyToTerraform(struct?: TfTarget.DeadLetterConfigPropertyOutputReference | TfTarget.DeadLetterConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -814,7 +814,7 @@ export function awsCloudwatchEventTargetDeadLetterConfigPropertyToTerraform(stru
 }
 
 
-export function awsCloudwatchEventTargetDeadLetterConfigPropertyToHclTerraform(struct?: AwsCloudwatchEventTarget.DeadLetterConfigPropertyOutputReference | AwsCloudwatchEventTarget.DeadLetterConfigProperty): any {
+export function tfTargetDeadLetterConfigPropertyToHclTerraform(struct?: TfTarget.DeadLetterConfigPropertyOutputReference | TfTarget.DeadLetterConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -833,7 +833,7 @@ export function awsCloudwatchEventTargetDeadLetterConfigPropertyToHclTerraform(s
 }
 
 
-export function awsCloudwatchEventTargetCapacityProviderStrategyPropertyToTerraform(struct?: AwsCloudwatchEventTarget.CapacityProviderStrategyProperty | cdktn.IResolvable): any {
+export function tfTargetCapacityProviderStrategyPropertyToTerraform(struct?: TfTarget.CapacityProviderStrategyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -846,7 +846,7 @@ export function awsCloudwatchEventTargetCapacityProviderStrategyPropertyToTerraf
 }
 
 
-export function awsCloudwatchEventTargetCapacityProviderStrategyPropertyToHclTerraform(struct?: AwsCloudwatchEventTarget.CapacityProviderStrategyProperty | cdktn.IResolvable): any {
+export function tfTargetCapacityProviderStrategyPropertyToHclTerraform(struct?: TfTarget.CapacityProviderStrategyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -877,7 +877,7 @@ export function awsCloudwatchEventTargetCapacityProviderStrategyPropertyToHclTer
 }
 
 
-export function awsCloudwatchEventTargetNetworkConfigurationPropertyToTerraform(struct?: AwsCloudwatchEventTarget.NetworkConfigurationPropertyOutputReference | AwsCloudwatchEventTarget.NetworkConfigurationProperty): any {
+export function tfTargetNetworkConfigurationPropertyToTerraform(struct?: TfTarget.NetworkConfigurationPropertyOutputReference | TfTarget.NetworkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -890,7 +890,7 @@ export function awsCloudwatchEventTargetNetworkConfigurationPropertyToTerraform(
 }
 
 
-export function awsCloudwatchEventTargetNetworkConfigurationPropertyToHclTerraform(struct?: AwsCloudwatchEventTarget.NetworkConfigurationPropertyOutputReference | AwsCloudwatchEventTarget.NetworkConfigurationProperty): any {
+export function tfTargetNetworkConfigurationPropertyToHclTerraform(struct?: TfTarget.NetworkConfigurationPropertyOutputReference | TfTarget.NetworkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -921,7 +921,7 @@ export function awsCloudwatchEventTargetNetworkConfigurationPropertyToHclTerrafo
 }
 
 
-export function awsCloudwatchEventTargetOrderedPlacementStrategyPropertyToTerraform(struct?: AwsCloudwatchEventTarget.OrderedPlacementStrategyProperty | cdktn.IResolvable): any {
+export function tfTargetOrderedPlacementStrategyPropertyToTerraform(struct?: TfTarget.OrderedPlacementStrategyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -933,7 +933,7 @@ export function awsCloudwatchEventTargetOrderedPlacementStrategyPropertyToTerraf
 }
 
 
-export function awsCloudwatchEventTargetOrderedPlacementStrategyPropertyToHclTerraform(struct?: AwsCloudwatchEventTarget.OrderedPlacementStrategyProperty | cdktn.IResolvable): any {
+export function tfTargetOrderedPlacementStrategyPropertyToHclTerraform(struct?: TfTarget.OrderedPlacementStrategyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -958,7 +958,7 @@ export function awsCloudwatchEventTargetOrderedPlacementStrategyPropertyToHclTer
 }
 
 
-export function awsCloudwatchEventTargetPlacementConstraintPropertyToTerraform(struct?: AwsCloudwatchEventTarget.PlacementConstraintProperty | cdktn.IResolvable): any {
+export function tfTargetPlacementConstraintPropertyToTerraform(struct?: TfTarget.PlacementConstraintProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -970,7 +970,7 @@ export function awsCloudwatchEventTargetPlacementConstraintPropertyToTerraform(s
 }
 
 
-export function awsCloudwatchEventTargetPlacementConstraintPropertyToHclTerraform(struct?: AwsCloudwatchEventTarget.PlacementConstraintProperty | cdktn.IResolvable): any {
+export function tfTargetPlacementConstraintPropertyToHclTerraform(struct?: TfTarget.PlacementConstraintProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -995,7 +995,7 @@ export function awsCloudwatchEventTargetPlacementConstraintPropertyToHclTerrafor
 }
 
 
-export function awsCloudwatchEventTargetEcsTargetPropertyToTerraform(struct?: AwsCloudwatchEventTarget.EcsTargetPropertyOutputReference | AwsCloudwatchEventTarget.EcsTargetProperty): any {
+export function tfTargetEcsTargetPropertyToTerraform(struct?: TfTarget.EcsTargetPropertyOutputReference | TfTarget.EcsTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1010,15 +1010,15 @@ export function awsCloudwatchEventTargetEcsTargetPropertyToTerraform(struct?: Aw
     tags: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.tags),
     task_count: cdktn.numberToTerraform(struct!.taskCount),
     task_definition_arn: cdktn.stringToTerraform(struct!.taskDefinitionArn),
-    capacity_provider_strategy: cdktn.listMapper(awsCloudwatchEventTargetCapacityProviderStrategyPropertyToTerraform, true)(struct!.capacityProviderStrategy),
-    network_configuration: awsCloudwatchEventTargetNetworkConfigurationPropertyToTerraform(struct!.networkConfiguration),
-    ordered_placement_strategy: cdktn.listMapper(awsCloudwatchEventTargetOrderedPlacementStrategyPropertyToTerraform, true)(struct!.orderedPlacementStrategy),
-    placement_constraint: cdktn.listMapper(awsCloudwatchEventTargetPlacementConstraintPropertyToTerraform, true)(struct!.placementConstraint),
+    capacity_provider_strategy: cdktn.listMapper(tfTargetCapacityProviderStrategyPropertyToTerraform, true)(struct!.capacityProviderStrategy),
+    network_configuration: tfTargetNetworkConfigurationPropertyToTerraform(struct!.networkConfiguration),
+    ordered_placement_strategy: cdktn.listMapper(tfTargetOrderedPlacementStrategyPropertyToTerraform, true)(struct!.orderedPlacementStrategy),
+    placement_constraint: cdktn.listMapper(tfTargetPlacementConstraintPropertyToTerraform, true)(struct!.placementConstraint),
   }
 }
 
 
-export function awsCloudwatchEventTargetEcsTargetPropertyToHclTerraform(struct?: AwsCloudwatchEventTarget.EcsTargetPropertyOutputReference | AwsCloudwatchEventTarget.EcsTargetProperty): any {
+export function tfTargetEcsTargetPropertyToHclTerraform(struct?: TfTarget.EcsTargetPropertyOutputReference | TfTarget.EcsTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1079,25 +1079,25 @@ export function awsCloudwatchEventTargetEcsTargetPropertyToHclTerraform(struct?:
       storageClassType: "string",
     },
     capacity_provider_strategy: {
-      value: cdktn.listMapperHcl(awsCloudwatchEventTargetCapacityProviderStrategyPropertyToHclTerraform, true)(struct!.capacityProviderStrategy),
+      value: cdktn.listMapperHcl(tfTargetCapacityProviderStrategyPropertyToHclTerraform, true)(struct!.capacityProviderStrategy),
       isBlock: true,
       type: "set",
       storageClassType: "CapacityProviderStrategyPropertyList",
     },
     network_configuration: {
-      value: awsCloudwatchEventTargetNetworkConfigurationPropertyToHclTerraform(struct!.networkConfiguration),
+      value: tfTargetNetworkConfigurationPropertyToHclTerraform(struct!.networkConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "NetworkConfigurationPropertyList",
     },
     ordered_placement_strategy: {
-      value: cdktn.listMapperHcl(awsCloudwatchEventTargetOrderedPlacementStrategyPropertyToHclTerraform, true)(struct!.orderedPlacementStrategy),
+      value: cdktn.listMapperHcl(tfTargetOrderedPlacementStrategyPropertyToHclTerraform, true)(struct!.orderedPlacementStrategy),
       isBlock: true,
       type: "list",
       storageClassType: "OrderedPlacementStrategyPropertyList",
     },
     placement_constraint: {
-      value: cdktn.listMapperHcl(awsCloudwatchEventTargetPlacementConstraintPropertyToHclTerraform, true)(struct!.placementConstraint),
+      value: cdktn.listMapperHcl(tfTargetPlacementConstraintPropertyToHclTerraform, true)(struct!.placementConstraint),
       isBlock: true,
       type: "set",
       storageClassType: "PlacementConstraintPropertyList",
@@ -1109,7 +1109,7 @@ export function awsCloudwatchEventTargetEcsTargetPropertyToHclTerraform(struct?:
 }
 
 
-export function awsCloudwatchEventTargetHttpTargetPropertyToTerraform(struct?: AwsCloudwatchEventTarget.HttpTargetPropertyOutputReference | AwsCloudwatchEventTarget.HttpTargetProperty): any {
+export function tfTargetHttpTargetPropertyToTerraform(struct?: TfTarget.HttpTargetPropertyOutputReference | TfTarget.HttpTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1122,7 +1122,7 @@ export function awsCloudwatchEventTargetHttpTargetPropertyToTerraform(struct?: A
 }
 
 
-export function awsCloudwatchEventTargetHttpTargetPropertyToHclTerraform(struct?: AwsCloudwatchEventTarget.HttpTargetPropertyOutputReference | AwsCloudwatchEventTarget.HttpTargetProperty): any {
+export function tfTargetHttpTargetPropertyToHclTerraform(struct?: TfTarget.HttpTargetPropertyOutputReference | TfTarget.HttpTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1153,7 +1153,7 @@ export function awsCloudwatchEventTargetHttpTargetPropertyToHclTerraform(struct?
 }
 
 
-export function awsCloudwatchEventTargetInputTransformerPropertyToTerraform(struct?: AwsCloudwatchEventTarget.InputTransformerPropertyOutputReference | AwsCloudwatchEventTarget.InputTransformerProperty): any {
+export function tfTargetInputTransformerPropertyToTerraform(struct?: TfTarget.InputTransformerPropertyOutputReference | TfTarget.InputTransformerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1165,7 +1165,7 @@ export function awsCloudwatchEventTargetInputTransformerPropertyToTerraform(stru
 }
 
 
-export function awsCloudwatchEventTargetInputTransformerPropertyToHclTerraform(struct?: AwsCloudwatchEventTarget.InputTransformerPropertyOutputReference | AwsCloudwatchEventTarget.InputTransformerProperty): any {
+export function tfTargetInputTransformerPropertyToHclTerraform(struct?: TfTarget.InputTransformerPropertyOutputReference | TfTarget.InputTransformerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1190,7 +1190,7 @@ export function awsCloudwatchEventTargetInputTransformerPropertyToHclTerraform(s
 }
 
 
-export function awsCloudwatchEventTargetKinesisTargetPropertyToTerraform(struct?: AwsCloudwatchEventTarget.KinesisTargetPropertyOutputReference | AwsCloudwatchEventTarget.KinesisTargetProperty): any {
+export function tfTargetKinesisTargetPropertyToTerraform(struct?: TfTarget.KinesisTargetPropertyOutputReference | TfTarget.KinesisTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1201,7 +1201,7 @@ export function awsCloudwatchEventTargetKinesisTargetPropertyToTerraform(struct?
 }
 
 
-export function awsCloudwatchEventTargetKinesisTargetPropertyToHclTerraform(struct?: AwsCloudwatchEventTarget.KinesisTargetPropertyOutputReference | AwsCloudwatchEventTarget.KinesisTargetProperty): any {
+export function tfTargetKinesisTargetPropertyToHclTerraform(struct?: TfTarget.KinesisTargetPropertyOutputReference | TfTarget.KinesisTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1220,7 +1220,7 @@ export function awsCloudwatchEventTargetKinesisTargetPropertyToHclTerraform(stru
 }
 
 
-export function awsCloudwatchEventTargetRedshiftTargetPropertyToTerraform(struct?: AwsCloudwatchEventTarget.RedshiftTargetPropertyOutputReference | AwsCloudwatchEventTarget.RedshiftTargetProperty): any {
+export function tfTargetRedshiftTargetPropertyToTerraform(struct?: TfTarget.RedshiftTargetPropertyOutputReference | TfTarget.RedshiftTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1236,7 +1236,7 @@ export function awsCloudwatchEventTargetRedshiftTargetPropertyToTerraform(struct
 }
 
 
-export function awsCloudwatchEventTargetRedshiftTargetPropertyToHclTerraform(struct?: AwsCloudwatchEventTarget.RedshiftTargetPropertyOutputReference | AwsCloudwatchEventTarget.RedshiftTargetProperty): any {
+export function tfTargetRedshiftTargetPropertyToHclTerraform(struct?: TfTarget.RedshiftTargetPropertyOutputReference | TfTarget.RedshiftTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1285,7 +1285,7 @@ export function awsCloudwatchEventTargetRedshiftTargetPropertyToHclTerraform(str
 }
 
 
-export function awsCloudwatchEventTargetRetryPolicyPropertyToTerraform(struct?: AwsCloudwatchEventTarget.RetryPolicyPropertyOutputReference | AwsCloudwatchEventTarget.RetryPolicyProperty): any {
+export function tfTargetRetryPolicyPropertyToTerraform(struct?: TfTarget.RetryPolicyPropertyOutputReference | TfTarget.RetryPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1297,7 +1297,7 @@ export function awsCloudwatchEventTargetRetryPolicyPropertyToTerraform(struct?: 
 }
 
 
-export function awsCloudwatchEventTargetRetryPolicyPropertyToHclTerraform(struct?: AwsCloudwatchEventTarget.RetryPolicyPropertyOutputReference | AwsCloudwatchEventTarget.RetryPolicyProperty): any {
+export function tfTargetRetryPolicyPropertyToHclTerraform(struct?: TfTarget.RetryPolicyPropertyOutputReference | TfTarget.RetryPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1322,7 +1322,7 @@ export function awsCloudwatchEventTargetRetryPolicyPropertyToHclTerraform(struct
 }
 
 
-export function awsCloudwatchEventTargetRunCommandTargetsPropertyToTerraform(struct?: AwsCloudwatchEventTarget.RunCommandTargetsProperty | cdktn.IResolvable): any {
+export function tfTargetRunCommandTargetsPropertyToTerraform(struct?: TfTarget.RunCommandTargetsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1334,7 +1334,7 @@ export function awsCloudwatchEventTargetRunCommandTargetsPropertyToTerraform(str
 }
 
 
-export function awsCloudwatchEventTargetRunCommandTargetsPropertyToHclTerraform(struct?: AwsCloudwatchEventTarget.RunCommandTargetsProperty | cdktn.IResolvable): any {
+export function tfTargetRunCommandTargetsPropertyToHclTerraform(struct?: TfTarget.RunCommandTargetsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1359,7 +1359,7 @@ export function awsCloudwatchEventTargetRunCommandTargetsPropertyToHclTerraform(
 }
 
 
-export function awsCloudwatchEventTargetPipelineParameterListPropertyToTerraform(struct?: AwsCloudwatchEventTarget.PipelineParameterListProperty | cdktn.IResolvable): any {
+export function tfTargetPipelineParameterListPropertyToTerraform(struct?: TfTarget.PipelineParameterListProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1371,7 +1371,7 @@ export function awsCloudwatchEventTargetPipelineParameterListPropertyToTerraform
 }
 
 
-export function awsCloudwatchEventTargetPipelineParameterListPropertyToHclTerraform(struct?: AwsCloudwatchEventTarget.PipelineParameterListProperty | cdktn.IResolvable): any {
+export function tfTargetPipelineParameterListPropertyToHclTerraform(struct?: TfTarget.PipelineParameterListProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1396,25 +1396,25 @@ export function awsCloudwatchEventTargetPipelineParameterListPropertyToHclTerraf
 }
 
 
-export function awsCloudwatchEventTargetSagemakerPipelineTargetPropertyToTerraform(struct?: AwsCloudwatchEventTarget.SagemakerPipelineTargetPropertyOutputReference | AwsCloudwatchEventTarget.SagemakerPipelineTargetProperty): any {
+export function tfTargetSagemakerPipelineTargetPropertyToTerraform(struct?: TfTarget.SagemakerPipelineTargetPropertyOutputReference | TfTarget.SagemakerPipelineTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    pipeline_parameter_list: cdktn.listMapper(awsCloudwatchEventTargetPipelineParameterListPropertyToTerraform, true)(struct!.pipelineParameterList),
+    pipeline_parameter_list: cdktn.listMapper(tfTargetPipelineParameterListPropertyToTerraform, true)(struct!.pipelineParameterList),
   }
 }
 
 
-export function awsCloudwatchEventTargetSagemakerPipelineTargetPropertyToHclTerraform(struct?: AwsCloudwatchEventTarget.SagemakerPipelineTargetPropertyOutputReference | AwsCloudwatchEventTarget.SagemakerPipelineTargetProperty): any {
+export function tfTargetSagemakerPipelineTargetPropertyToHclTerraform(struct?: TfTarget.SagemakerPipelineTargetPropertyOutputReference | TfTarget.SagemakerPipelineTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     pipeline_parameter_list: {
-      value: cdktn.listMapperHcl(awsCloudwatchEventTargetPipelineParameterListPropertyToHclTerraform, true)(struct!.pipelineParameterList),
+      value: cdktn.listMapperHcl(tfTargetPipelineParameterListPropertyToHclTerraform, true)(struct!.pipelineParameterList),
       isBlock: true,
       type: "set",
       storageClassType: "PipelineParameterListPropertyList",
@@ -1426,7 +1426,7 @@ export function awsCloudwatchEventTargetSagemakerPipelineTargetPropertyToHclTerr
 }
 
 
-export function awsCloudwatchEventTargetSqsTargetPropertyToTerraform(struct?: AwsCloudwatchEventTarget.SqsTargetPropertyOutputReference | AwsCloudwatchEventTarget.SqsTargetProperty): any {
+export function tfTargetSqsTargetPropertyToTerraform(struct?: TfTarget.SqsTargetPropertyOutputReference | TfTarget.SqsTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1437,7 +1437,7 @@ export function awsCloudwatchEventTargetSqsTargetPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsCloudwatchEventTargetSqsTargetPropertyToHclTerraform(struct?: AwsCloudwatchEventTarget.SqsTargetPropertyOutputReference | AwsCloudwatchEventTarget.SqsTargetProperty): any {
+export function tfTargetSqsTargetPropertyToHclTerraform(struct?: TfTarget.SqsTargetPropertyOutputReference | TfTarget.SqsTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1456,10 +1456,10 @@ export function awsCloudwatchEventTargetSqsTargetPropertyToHclTerraform(struct?:
 }
 
 
-export namespace AwsCloudwatchEventTarget {
+export namespace TfTarget {
 export interface AppsyncTargetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#graphql_operation AwsCloudwatchEventTarget#graphql_operation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#graphql_operation TfTarget#graphql_operation}
   */
   readonly graphqlOperation?: string;
 }
@@ -1513,19 +1513,19 @@ export class AppsyncTargetPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface BatchTargetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#array_size AwsCloudwatchEventTarget#array_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#array_size TfTarget#array_size}
   */
   readonly arraySize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#job_attempts AwsCloudwatchEventTarget#job_attempts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#job_attempts TfTarget#job_attempts}
   */
   readonly jobAttempts?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#job_definition AwsCloudwatchEventTarget#job_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#job_definition TfTarget#job_definition}
   */
   readonly jobDefinition: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#job_name AwsCloudwatchEventTarget#job_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#job_name TfTarget#job_name}
   */
   readonly jobName: string;
 }
@@ -1639,7 +1639,7 @@ export class BatchTargetPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface DeadLetterConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#arn AwsCloudwatchEventTarget#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#arn TfTarget#arn}
   */
   readonly arn?: string;
 }
@@ -1693,15 +1693,15 @@ export class DeadLetterConfigPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface CapacityProviderStrategyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#base AwsCloudwatchEventTarget#base}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#base TfTarget#base}
   */
   readonly base?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#capacity_provider AwsCloudwatchEventTarget#capacity_provider}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#capacity_provider TfTarget#capacity_provider}
   */
   readonly capacityProvider: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#weight AwsCloudwatchEventTarget#weight}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#weight TfTarget#weight}
   */
   readonly weight?: number;
 }
@@ -1828,15 +1828,15 @@ export class CapacityProviderStrategyPropertyList extends cdktn.ComplexList {
 }
 export interface NetworkConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#assign_public_ip AwsCloudwatchEventTarget#assign_public_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#assign_public_ip TfTarget#assign_public_ip}
   */
   readonly assignPublicIp?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#security_groups AwsCloudwatchEventTarget#security_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#security_groups TfTarget#security_groups}
   */
   readonly securityGroups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#subnets AwsCloudwatchEventTarget#subnets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#subnets TfTarget#subnets}
   */
   readonly subnets: string[];
 }
@@ -1931,11 +1931,11 @@ export class NetworkConfigurationPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface OrderedPlacementStrategyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#field AwsCloudwatchEventTarget#field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#field TfTarget#field}
   */
   readonly field?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#type AwsCloudwatchEventTarget#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#type TfTarget#type}
   */
   readonly type: string;
 }
@@ -2040,11 +2040,11 @@ export class OrderedPlacementStrategyPropertyList extends cdktn.ComplexList {
 }
 export interface PlacementConstraintProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#expression AwsCloudwatchEventTarget#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#expression TfTarget#expression}
   */
   readonly expression?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#type AwsCloudwatchEventTarget#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#type TfTarget#type}
   */
   readonly type: string;
 }
@@ -2149,63 +2149,63 @@ export class PlacementConstraintPropertyList extends cdktn.ComplexList {
 }
 export interface EcsTargetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#enable_ecs_managed_tags AwsCloudwatchEventTarget#enable_ecs_managed_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#enable_ecs_managed_tags TfTarget#enable_ecs_managed_tags}
   */
   readonly enableEcsManagedTags?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#enable_execute_command AwsCloudwatchEventTarget#enable_execute_command}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#enable_execute_command TfTarget#enable_execute_command}
   */
   readonly enableExecuteCommand?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#group AwsCloudwatchEventTarget#group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#group TfTarget#group}
   */
   readonly group?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#launch_type AwsCloudwatchEventTarget#launch_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#launch_type TfTarget#launch_type}
   */
   readonly launchType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#platform_version AwsCloudwatchEventTarget#platform_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#platform_version TfTarget#platform_version}
   */
   readonly platformVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#propagate_tags AwsCloudwatchEventTarget#propagate_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#propagate_tags TfTarget#propagate_tags}
   */
   readonly propagateTags?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#tags AwsCloudwatchEventTarget#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#tags TfTarget#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#task_count AwsCloudwatchEventTarget#task_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#task_count TfTarget#task_count}
   */
   readonly taskCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#task_definition_arn AwsCloudwatchEventTarget#task_definition_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#task_definition_arn TfTarget#task_definition_arn}
   */
   readonly taskDefinitionArn: string;
   /**
   * capacity_provider_strategy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#capacity_provider_strategy AwsCloudwatchEventTarget#capacity_provider_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#capacity_provider_strategy TfTarget#capacity_provider_strategy}
   */
   readonly capacityProviderStrategy?: CapacityProviderStrategyProperty[] | cdktn.IResolvable;
   /**
   * network_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#network_configuration AwsCloudwatchEventTarget#network_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#network_configuration TfTarget#network_configuration}
   */
   readonly networkConfiguration?: NetworkConfigurationProperty;
   /**
   * ordered_placement_strategy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#ordered_placement_strategy AwsCloudwatchEventTarget#ordered_placement_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#ordered_placement_strategy TfTarget#ordered_placement_strategy}
   */
   readonly orderedPlacementStrategy?: OrderedPlacementStrategyProperty[] | cdktn.IResolvable;
   /**
   * placement_constraint block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#placement_constraint AwsCloudwatchEventTarget#placement_constraint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#placement_constraint TfTarget#placement_constraint}
   */
   readonly placementConstraint?: PlacementConstraintProperty[] | cdktn.IResolvable;
 }
@@ -2520,15 +2520,15 @@ export class EcsTargetPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface HttpTargetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#header_parameters AwsCloudwatchEventTarget#header_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#header_parameters TfTarget#header_parameters}
   */
   readonly headerParameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#path_parameter_values AwsCloudwatchEventTarget#path_parameter_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#path_parameter_values TfTarget#path_parameter_values}
   */
   readonly pathParameterValues?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#query_string_parameters AwsCloudwatchEventTarget#query_string_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#query_string_parameters TfTarget#query_string_parameters}
   */
   readonly queryStringParameters?: { [key: string]: string };
 }
@@ -2626,11 +2626,11 @@ export class HttpTargetPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface InputTransformerProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#input_paths AwsCloudwatchEventTarget#input_paths}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#input_paths TfTarget#input_paths}
   */
   readonly inputPaths?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#input_template AwsCloudwatchEventTarget#input_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#input_template TfTarget#input_template}
   */
   readonly inputTemplate: string;
 }
@@ -2703,7 +2703,7 @@ export class InputTransformerPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface KinesisTargetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#partition_key_path AwsCloudwatchEventTarget#partition_key_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#partition_key_path TfTarget#partition_key_path}
   */
   readonly partitionKeyPath?: string;
 }
@@ -2757,27 +2757,27 @@ export class KinesisTargetPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RedshiftTargetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#database AwsCloudwatchEventTarget#database}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#database TfTarget#database}
   */
   readonly database: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#db_user AwsCloudwatchEventTarget#db_user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#db_user TfTarget#db_user}
   */
   readonly dbUser?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#secrets_manager_arn AwsCloudwatchEventTarget#secrets_manager_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#secrets_manager_arn TfTarget#secrets_manager_arn}
   */
   readonly secretsManagerArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#sql AwsCloudwatchEventTarget#sql}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#sql TfTarget#sql}
   */
   readonly sql?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#statement_name AwsCloudwatchEventTarget#statement_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#statement_name TfTarget#statement_name}
   */
   readonly statementName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#with_event AwsCloudwatchEventTarget#with_event}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#with_event TfTarget#with_event}
   */
   readonly withEvent?: boolean | cdktn.IResolvable;
 }
@@ -2938,11 +2938,11 @@ export class RedshiftTargetPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RetryPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#maximum_event_age_in_seconds AwsCloudwatchEventTarget#maximum_event_age_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#maximum_event_age_in_seconds TfTarget#maximum_event_age_in_seconds}
   */
   readonly maximumEventAgeInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#maximum_retry_attempts AwsCloudwatchEventTarget#maximum_retry_attempts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#maximum_retry_attempts TfTarget#maximum_retry_attempts}
   */
   readonly maximumRetryAttempts?: number;
 }
@@ -3018,11 +3018,11 @@ export class RetryPolicyPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RunCommandTargetsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#key AwsCloudwatchEventTarget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#key TfTarget#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#values AwsCloudwatchEventTarget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#values TfTarget#values}
   */
   readonly values: string[];
 }
@@ -3124,11 +3124,11 @@ export class RunCommandTargetsPropertyList extends cdktn.ComplexList {
 }
 export interface PipelineParameterListProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#name AwsCloudwatchEventTarget#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#name TfTarget#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#value AwsCloudwatchEventTarget#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#value TfTarget#value}
   */
   readonly value: string;
 }
@@ -3232,7 +3232,7 @@ export interface SagemakerPipelineTargetProperty {
   /**
   * pipeline_parameter_list block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#pipeline_parameter_list AwsCloudwatchEventTarget#pipeline_parameter_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#pipeline_parameter_list TfTarget#pipeline_parameter_list}
   */
   readonly pipelineParameterList?: PipelineParameterListProperty[] | cdktn.IResolvable;
 }
@@ -3286,7 +3286,7 @@ export class SagemakerPipelineTargetPropertyOutputReference extends cdktn.Comple
 }
 export interface SqsTargetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#message_group_id AwsCloudwatchEventTarget#message_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_target#message_group_id TfTarget#message_group_id}
   */
   readonly messageGroupId?: string;
 }

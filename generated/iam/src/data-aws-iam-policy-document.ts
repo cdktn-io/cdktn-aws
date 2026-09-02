@@ -5,50 +5,50 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsIamPolicyDocumentConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataPolicyDocumentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#id DataAwsIamPolicyDocument#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#id TfDataPolicyDocument#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#override_json DataAwsIamPolicyDocument#override_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#override_json TfDataPolicyDocument#override_json}
   */
   readonly overrideJson?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#override_policy_documents DataAwsIamPolicyDocument#override_policy_documents}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#override_policy_documents TfDataPolicyDocument#override_policy_documents}
   */
   readonly overridePolicyDocuments?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#policy_id DataAwsIamPolicyDocument#policy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#policy_id TfDataPolicyDocument#policy_id}
   */
   readonly policyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#source_json DataAwsIamPolicyDocument#source_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#source_json TfDataPolicyDocument#source_json}
   */
   readonly sourceJson?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#source_policy_documents DataAwsIamPolicyDocument#source_policy_documents}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#source_policy_documents TfDataPolicyDocument#source_policy_documents}
   */
   readonly sourcePolicyDocuments?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#version DataAwsIamPolicyDocument#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#version TfDataPolicyDocument#version}
   */
   readonly version?: string;
   /**
   * statement block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#statement DataAwsIamPolicyDocument#statement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#statement TfDataPolicyDocument#statement}
   */
-  readonly statement?: DataAwsIamPolicyDocument.StatementProperty[] | cdktn.IResolvable;
+  readonly statement?: TfDataPolicyDocument.StatementProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document aws_iam_policy_document}
 */
-export class DataAwsIamPolicyDocument extends cdktn.TerraformDataSource {
+export class TfDataPolicyDocument extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class DataAwsIamPolicyDocument extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsIamPolicyDocument resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataPolicyDocument resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsIamPolicyDocument to import
-  * @param importFromId The id of the existing DataAwsIamPolicyDocument that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsIamPolicyDocument to import is found
+  * @param importToId The construct id used in the generated config for the TfDataPolicyDocument to import
+  * @param importFromId The id of the existing TfDataPolicyDocument that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataPolicyDocument to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iam_policy_document", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class DataAwsIamPolicyDocument extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsIamPolicyDocumentConfig = {}
+  * @param options TfDataPolicyDocumentConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsIamPolicyDocumentConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDataPolicyDocumentConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_iam_policy_document',
       terraformGeneratorMetadata: {
@@ -233,11 +233,11 @@ export class DataAwsIamPolicyDocument extends cdktn.TerraformDataSource {
   }
 
   // statement - computed: false, optional: true, required: false
-  private _statement = new DataAwsIamPolicyDocument.StatementPropertyList(this, "statement", false);
+  private _statement = new TfDataPolicyDocument.StatementPropertyList(this, "statement", false);
   public get statement() {
     return this._statement;
   }
-  public putStatement(value: DataAwsIamPolicyDocument.StatementProperty[] | cdktn.IResolvable) {
+  public putStatement(value: TfDataPolicyDocument.StatementProperty[] | cdktn.IResolvable) {
     this._statement.internalValue = value;
   }
   public resetStatement() {
@@ -261,7 +261,7 @@ export class DataAwsIamPolicyDocument extends cdktn.TerraformDataSource {
       source_json: cdktn.stringToTerraform(this._sourceJson),
       source_policy_documents: cdktn.listMapper(cdktn.stringToTerraform, false)(this._sourcePolicyDocuments),
       version: cdktn.stringToTerraform(this._version),
-      statement: cdktn.listMapper(dataAwsIamPolicyDocumentStatementPropertyToTerraform, true)(this._statement.internalValue),
+      statement: cdktn.listMapper(tfDataPolicyDocumentStatementPropertyToTerraform, true)(this._statement.internalValue),
     };
   }
 
@@ -310,10 +310,10 @@ export class DataAwsIamPolicyDocument extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       statement: {
-        value: cdktn.listMapperHcl(dataAwsIamPolicyDocumentStatementPropertyToHclTerraform, true)(this._statement.internalValue),
+        value: cdktn.listMapperHcl(tfDataPolicyDocumentStatementPropertyToHclTerraform, true)(this._statement.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "DataAwsIamPolicyDocument.StatementPropertyList",
+        storageClassType: "TfDataPolicyDocument.StatementPropertyList",
       },
     };
 
@@ -322,7 +322,7 @@ export class DataAwsIamPolicyDocument extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsIamPolicyDocumentConditionPropertyToTerraform(struct?: DataAwsIamPolicyDocument.ConditionProperty | cdktn.IResolvable): any {
+export function tfDataPolicyDocumentConditionPropertyToTerraform(struct?: TfDataPolicyDocument.ConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -335,7 +335,7 @@ export function dataAwsIamPolicyDocumentConditionPropertyToTerraform(struct?: Da
 }
 
 
-export function dataAwsIamPolicyDocumentConditionPropertyToHclTerraform(struct?: DataAwsIamPolicyDocument.ConditionProperty | cdktn.IResolvable): any {
+export function tfDataPolicyDocumentConditionPropertyToHclTerraform(struct?: TfDataPolicyDocument.ConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -366,7 +366,7 @@ export function dataAwsIamPolicyDocumentConditionPropertyToHclTerraform(struct?:
 }
 
 
-export function dataAwsIamPolicyDocumentNotPrincipalsPropertyToTerraform(struct?: DataAwsIamPolicyDocument.NotPrincipalsProperty | cdktn.IResolvable): any {
+export function tfDataPolicyDocumentNotPrincipalsPropertyToTerraform(struct?: TfDataPolicyDocument.NotPrincipalsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -378,7 +378,7 @@ export function dataAwsIamPolicyDocumentNotPrincipalsPropertyToTerraform(struct?
 }
 
 
-export function dataAwsIamPolicyDocumentNotPrincipalsPropertyToHclTerraform(struct?: DataAwsIamPolicyDocument.NotPrincipalsProperty | cdktn.IResolvable): any {
+export function tfDataPolicyDocumentNotPrincipalsPropertyToHclTerraform(struct?: TfDataPolicyDocument.NotPrincipalsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -403,7 +403,7 @@ export function dataAwsIamPolicyDocumentNotPrincipalsPropertyToHclTerraform(stru
 }
 
 
-export function dataAwsIamPolicyDocumentPrincipalsPropertyToTerraform(struct?: DataAwsIamPolicyDocument.PrincipalsProperty | cdktn.IResolvable): any {
+export function tfDataPolicyDocumentPrincipalsPropertyToTerraform(struct?: TfDataPolicyDocument.PrincipalsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -415,7 +415,7 @@ export function dataAwsIamPolicyDocumentPrincipalsPropertyToTerraform(struct?: D
 }
 
 
-export function dataAwsIamPolicyDocumentPrincipalsPropertyToHclTerraform(struct?: DataAwsIamPolicyDocument.PrincipalsProperty | cdktn.IResolvable): any {
+export function tfDataPolicyDocumentPrincipalsPropertyToHclTerraform(struct?: TfDataPolicyDocument.PrincipalsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -440,7 +440,7 @@ export function dataAwsIamPolicyDocumentPrincipalsPropertyToHclTerraform(struct?
 }
 
 
-export function dataAwsIamPolicyDocumentStatementPropertyToTerraform(struct?: DataAwsIamPolicyDocument.StatementProperty | cdktn.IResolvable): any {
+export function tfDataPolicyDocumentStatementPropertyToTerraform(struct?: TfDataPolicyDocument.StatementProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -452,14 +452,14 @@ export function dataAwsIamPolicyDocumentStatementPropertyToTerraform(struct?: Da
     not_resources: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.notResources),
     resources: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.resources),
     sid: cdktn.stringToTerraform(struct!.sid),
-    condition: cdktn.listMapper(dataAwsIamPolicyDocumentConditionPropertyToTerraform, true)(struct!.condition),
-    not_principals: cdktn.listMapper(dataAwsIamPolicyDocumentNotPrincipalsPropertyToTerraform, true)(struct!.notPrincipals),
-    principals: cdktn.listMapper(dataAwsIamPolicyDocumentPrincipalsPropertyToTerraform, true)(struct!.principals),
+    condition: cdktn.listMapper(tfDataPolicyDocumentConditionPropertyToTerraform, true)(struct!.condition),
+    not_principals: cdktn.listMapper(tfDataPolicyDocumentNotPrincipalsPropertyToTerraform, true)(struct!.notPrincipals),
+    principals: cdktn.listMapper(tfDataPolicyDocumentPrincipalsPropertyToTerraform, true)(struct!.principals),
   }
 }
 
 
-export function dataAwsIamPolicyDocumentStatementPropertyToHclTerraform(struct?: DataAwsIamPolicyDocument.StatementProperty | cdktn.IResolvable): any {
+export function tfDataPolicyDocumentStatementPropertyToHclTerraform(struct?: TfDataPolicyDocument.StatementProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -502,19 +502,19 @@ export function dataAwsIamPolicyDocumentStatementPropertyToHclTerraform(struct?:
       storageClassType: "string",
     },
     condition: {
-      value: cdktn.listMapperHcl(dataAwsIamPolicyDocumentConditionPropertyToHclTerraform, true)(struct!.condition),
+      value: cdktn.listMapperHcl(tfDataPolicyDocumentConditionPropertyToHclTerraform, true)(struct!.condition),
       isBlock: true,
       type: "set",
       storageClassType: "ConditionPropertyList",
     },
     not_principals: {
-      value: cdktn.listMapperHcl(dataAwsIamPolicyDocumentNotPrincipalsPropertyToHclTerraform, true)(struct!.notPrincipals),
+      value: cdktn.listMapperHcl(tfDataPolicyDocumentNotPrincipalsPropertyToHclTerraform, true)(struct!.notPrincipals),
       isBlock: true,
       type: "set",
       storageClassType: "NotPrincipalsPropertyList",
     },
     principals: {
-      value: cdktn.listMapperHcl(dataAwsIamPolicyDocumentPrincipalsPropertyToHclTerraform, true)(struct!.principals),
+      value: cdktn.listMapperHcl(tfDataPolicyDocumentPrincipalsPropertyToHclTerraform, true)(struct!.principals),
       isBlock: true,
       type: "set",
       storageClassType: "PrincipalsPropertyList",
@@ -526,18 +526,18 @@ export function dataAwsIamPolicyDocumentStatementPropertyToHclTerraform(struct?:
 }
 
 
-export namespace DataAwsIamPolicyDocument {
+export namespace TfDataPolicyDocument {
 export interface ConditionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#test DataAwsIamPolicyDocument#test}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#test TfDataPolicyDocument#test}
   */
   readonly test: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#values DataAwsIamPolicyDocument#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#values TfDataPolicyDocument#values}
   */
   readonly values: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#variable DataAwsIamPolicyDocument#variable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#variable TfDataPolicyDocument#variable}
   */
   readonly variable: string;
 }
@@ -658,11 +658,11 @@ export class ConditionPropertyList extends cdktn.ComplexList {
 }
 export interface NotPrincipalsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#identifiers DataAwsIamPolicyDocument#identifiers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#identifiers TfDataPolicyDocument#identifiers}
   */
   readonly identifiers: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#type DataAwsIamPolicyDocument#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#type TfDataPolicyDocument#type}
   */
   readonly type: string;
 }
@@ -764,11 +764,11 @@ export class NotPrincipalsPropertyList extends cdktn.ComplexList {
 }
 export interface PrincipalsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#identifiers DataAwsIamPolicyDocument#identifiers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#identifiers TfDataPolicyDocument#identifiers}
   */
   readonly identifiers: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#type DataAwsIamPolicyDocument#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#type TfDataPolicyDocument#type}
   */
   readonly type: string;
 }
@@ -870,45 +870,45 @@ export class PrincipalsPropertyList extends cdktn.ComplexList {
 }
 export interface StatementProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#actions DataAwsIamPolicyDocument#actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#actions TfDataPolicyDocument#actions}
   */
   readonly actions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#effect DataAwsIamPolicyDocument#effect}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#effect TfDataPolicyDocument#effect}
   */
   readonly effect?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#not_actions DataAwsIamPolicyDocument#not_actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#not_actions TfDataPolicyDocument#not_actions}
   */
   readonly notActions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#not_resources DataAwsIamPolicyDocument#not_resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#not_resources TfDataPolicyDocument#not_resources}
   */
   readonly notResources?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#resources DataAwsIamPolicyDocument#resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#resources TfDataPolicyDocument#resources}
   */
   readonly resources?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#sid DataAwsIamPolicyDocument#sid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#sid TfDataPolicyDocument#sid}
   */
   readonly sid?: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#condition DataAwsIamPolicyDocument#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#condition TfDataPolicyDocument#condition}
   */
   readonly condition?: ConditionProperty[] | cdktn.IResolvable;
   /**
   * not_principals block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#not_principals DataAwsIamPolicyDocument#not_principals}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#not_principals TfDataPolicyDocument#not_principals}
   */
   readonly notPrincipals?: NotPrincipalsProperty[] | cdktn.IResolvable;
   /**
   * principals block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#principals DataAwsIamPolicyDocument#principals}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_policy_document#principals TfDataPolicyDocument#principals}
   */
   readonly principals?: PrincipalsProperty[] | cdktn.IResolvable;
 }

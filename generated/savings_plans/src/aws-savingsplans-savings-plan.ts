@@ -5,47 +5,47 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSavingsplansSavingsPlanConfig extends cdktn.TerraformMetaArguments {
+export interface TfSavingsPlanConfig extends cdktn.TerraformMetaArguments {
   /**
   * The hourly commitment, in USD.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/savingsplans_savings_plan#commitment AwsSavingsplansSavingsPlan#commitment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/savingsplans_savings_plan#commitment TfSavingsPlan#commitment}
   */
   readonly commitment: string;
   /**
   * The time at which to purchase the Savings Plan, in UTC format (YYYY-MM-DDTHH:MM:SSZ).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/savingsplans_savings_plan#purchase_time AwsSavingsplansSavingsPlan#purchase_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/savingsplans_savings_plan#purchase_time TfSavingsPlan#purchase_time}
   */
   readonly purchaseTime?: string;
   /**
   * The unique ID of a Savings Plan offering.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/savingsplans_savings_plan#savings_plan_offering_id AwsSavingsplansSavingsPlan#savings_plan_offering_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/savingsplans_savings_plan#savings_plan_offering_id TfSavingsPlan#savings_plan_offering_id}
   */
   readonly savingsPlanOfferingId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/savingsplans_savings_plan#tags AwsSavingsplansSavingsPlan#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/savingsplans_savings_plan#tags TfSavingsPlan#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * The up-front payment amount.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/savingsplans_savings_plan#upfront_payment_amount AwsSavingsplansSavingsPlan#upfront_payment_amount}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/savingsplans_savings_plan#upfront_payment_amount TfSavingsPlan#upfront_payment_amount}
   */
   readonly upfrontPaymentAmount?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/savingsplans_savings_plan#timeouts AwsSavingsplansSavingsPlan#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/savingsplans_savings_plan#timeouts TfSavingsPlan#timeouts}
   */
-  readonly timeouts?: AwsSavingsplansSavingsPlan.TimeoutsProperty;
+  readonly timeouts?: TfSavingsPlan.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/savingsplans_savings_plan aws_savingsplans_savings_plan}
 */
-export class AwsSavingsplansSavingsPlan extends cdktn.TerraformResource {
+export class TfSavingsPlan extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -56,11 +56,11 @@ export class AwsSavingsplansSavingsPlan extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSavingsplansSavingsPlan resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfSavingsPlan resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSavingsplansSavingsPlan to import
-  * @param importFromId The id of the existing AwsSavingsplansSavingsPlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/savingsplans_savings_plan#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSavingsplansSavingsPlan to import is found
+  * @param importToId The construct id used in the generated config for the TfSavingsPlan to import
+  * @param importFromId The id of the existing TfSavingsPlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/savingsplans_savings_plan#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfSavingsPlan to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_savingsplans_savings_plan", importId: importFromId, provider });
@@ -75,9 +75,9 @@ export class AwsSavingsplansSavingsPlan extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSavingsplansSavingsPlanConfig
+  * @param options TfSavingsPlanConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSavingsplansSavingsPlanConfig) {
+  public constructor(scope: Construct, id: string, config: TfSavingsPlanConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_savingsplans_savings_plan',
       terraformGeneratorMetadata: {
@@ -266,11 +266,11 @@ export class AwsSavingsplansSavingsPlan extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsSavingsplansSavingsPlan.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfSavingsPlan.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsSavingsplansSavingsPlan.TimeoutsProperty) {
+  public putTimeouts(value: TfSavingsPlan.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -292,7 +292,7 @@ export class AwsSavingsplansSavingsPlan extends cdktn.TerraformResource {
       savings_plan_offering_id: cdktn.stringToTerraform(this._savingsPlanOfferingId),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       upfront_payment_amount: cdktn.stringToTerraform(this._upfrontPaymentAmount),
-      timeouts: awsSavingsplansSavingsPlanTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfSavingsPlanTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -329,10 +329,10 @@ export class AwsSavingsplansSavingsPlan extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsSavingsplansSavingsPlanTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfSavingsPlanTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsSavingsplansSavingsPlan.TimeoutsProperty",
+        storageClassType: "TfSavingsPlan.TimeoutsProperty",
       },
     };
 
@@ -341,7 +341,7 @@ export class AwsSavingsplansSavingsPlan extends cdktn.TerraformResource {
   }
 }
 
-export function awsSavingsplansSavingsPlanTimeoutsPropertyToTerraform(struct?: AwsSavingsplansSavingsPlan.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfSavingsPlanTimeoutsPropertyToTerraform(struct?: TfSavingsPlan.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -353,7 +353,7 @@ export function awsSavingsplansSavingsPlanTimeoutsPropertyToTerraform(struct?: A
 }
 
 
-export function awsSavingsplansSavingsPlanTimeoutsPropertyToHclTerraform(struct?: AwsSavingsplansSavingsPlan.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfSavingsPlanTimeoutsPropertyToHclTerraform(struct?: TfSavingsPlan.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -378,18 +378,18 @@ export function awsSavingsplansSavingsPlanTimeoutsPropertyToHclTerraform(struct?
 }
 
 
-export namespace AwsSavingsplansSavingsPlan {
+export namespace TfSavingsPlan {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/savingsplans_savings_plan#create AwsSavingsplansSavingsPlan#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/savingsplans_savings_plan#create TfSavingsPlan#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/savingsplans_savings_plan#delete AwsSavingsplansSavingsPlan#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/savingsplans_savings_plan#delete TfSavingsPlan#delete}
   */
   readonly delete?: string;
 }

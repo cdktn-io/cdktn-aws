@@ -5,23 +5,23 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsDatazoneEnvironmentBlueprintConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataEnvironmentBlueprintConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/datazone_environment_blueprint#domain_id DataAwsDatazoneEnvironmentBlueprint#domain_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/datazone_environment_blueprint#domain_id TfDataEnvironmentBlueprint#domain_id}
   */
   readonly domainId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/datazone_environment_blueprint#managed DataAwsDatazoneEnvironmentBlueprint#managed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/datazone_environment_blueprint#managed TfDataEnvironmentBlueprint#managed}
   */
   readonly managed: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/datazone_environment_blueprint#name DataAwsDatazoneEnvironmentBlueprint#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/datazone_environment_blueprint#name TfDataEnvironmentBlueprint#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/datazone_environment_blueprint#region DataAwsDatazoneEnvironmentBlueprint#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/datazone_environment_blueprint#region TfDataEnvironmentBlueprint#region}
   */
   readonly region?: string;
 }
@@ -29,7 +29,7 @@ export interface DataAwsDatazoneEnvironmentBlueprintConfig extends cdktn.Terrafo
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/datazone_environment_blueprint aws_datazone_environment_blueprint}
 */
-export class DataAwsDatazoneEnvironmentBlueprint extends cdktn.TerraformDataSource {
+export class TfDataEnvironmentBlueprint extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -40,11 +40,11 @@ export class DataAwsDatazoneEnvironmentBlueprint extends cdktn.TerraformDataSour
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsDatazoneEnvironmentBlueprint resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataEnvironmentBlueprint resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsDatazoneEnvironmentBlueprint to import
-  * @param importFromId The id of the existing DataAwsDatazoneEnvironmentBlueprint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/datazone_environment_blueprint#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsDatazoneEnvironmentBlueprint to import is found
+  * @param importToId The construct id used in the generated config for the TfDataEnvironmentBlueprint to import
+  * @param importFromId The id of the existing TfDataEnvironmentBlueprint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/datazone_environment_blueprint#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataEnvironmentBlueprint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_datazone_environment_blueprint", importId: importFromId, provider });
@@ -59,9 +59,9 @@ export class DataAwsDatazoneEnvironmentBlueprint extends cdktn.TerraformDataSour
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsDatazoneEnvironmentBlueprintConfig
+  * @param options TfDataEnvironmentBlueprintConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsDatazoneEnvironmentBlueprintConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataEnvironmentBlueprintConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_datazone_environment_blueprint',
       terraformGeneratorMetadata: {

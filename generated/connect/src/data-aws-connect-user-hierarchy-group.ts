@@ -5,34 +5,34 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsConnectUserHierarchyGroupConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataUserHierarchyGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_user_hierarchy_group#hierarchy_group_id DataAwsConnectUserHierarchyGroup#hierarchy_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_user_hierarchy_group#hierarchy_group_id TfDataUserHierarchyGroup#hierarchy_group_id}
   */
   readonly hierarchyGroupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_user_hierarchy_group#id DataAwsConnectUserHierarchyGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_user_hierarchy_group#id TfDataUserHierarchyGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_user_hierarchy_group#instance_id DataAwsConnectUserHierarchyGroup#instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_user_hierarchy_group#instance_id TfDataUserHierarchyGroup#instance_id}
   */
   readonly instanceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_user_hierarchy_group#name DataAwsConnectUserHierarchyGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_user_hierarchy_group#name TfDataUserHierarchyGroup#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_user_hierarchy_group#region DataAwsConnectUserHierarchyGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_user_hierarchy_group#region TfDataUserHierarchyGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_user_hierarchy_group#tags DataAwsConnectUserHierarchyGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_user_hierarchy_group#tags TfDataUserHierarchyGroup#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -40,7 +40,7 @@ export interface DataAwsConnectUserHierarchyGroupConfig extends cdktn.TerraformM
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_user_hierarchy_group aws_connect_user_hierarchy_group}
 */
-export class DataAwsConnectUserHierarchyGroup extends cdktn.TerraformDataSource {
+export class TfDataUserHierarchyGroup extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class DataAwsConnectUserHierarchyGroup extends cdktn.TerraformDataSource 
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsConnectUserHierarchyGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataUserHierarchyGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsConnectUserHierarchyGroup to import
-  * @param importFromId The id of the existing DataAwsConnectUserHierarchyGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_user_hierarchy_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsConnectUserHierarchyGroup to import is found
+  * @param importToId The construct id used in the generated config for the TfDataUserHierarchyGroup to import
+  * @param importFromId The id of the existing TfDataUserHierarchyGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_user_hierarchy_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataUserHierarchyGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_connect_user_hierarchy_group", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class DataAwsConnectUserHierarchyGroup extends cdktn.TerraformDataSource 
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsConnectUserHierarchyGroupConfig
+  * @param options TfDataUserHierarchyGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsConnectUserHierarchyGroupConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataUserHierarchyGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_connect_user_hierarchy_group',
       terraformGeneratorMetadata: {
@@ -122,7 +122,7 @@ export class DataAwsConnectUserHierarchyGroup extends cdktn.TerraformDataSource 
   }
 
   // hierarchy_path - computed: true, optional: false, required: false
-  private _hierarchyPath = new DataAwsConnectUserHierarchyGroup.HierarchyPathPropertyList(this, "hierarchy_path", false);
+  private _hierarchyPath = new TfDataUserHierarchyGroup.HierarchyPathPropertyList(this, "hierarchy_path", false);
   public get hierarchyPath() {
     return this._hierarchyPath;
   }
@@ -269,7 +269,7 @@ export class DataAwsConnectUserHierarchyGroup extends cdktn.TerraformDataSource 
   }
 }
 
-export function dataAwsConnectUserHierarchyGroupLevelFivePropertyToTerraform(struct?: DataAwsConnectUserHierarchyGroup.LevelFiveProperty): any {
+export function tfDataUserHierarchyGroupLevelFivePropertyToTerraform(struct?: TfDataUserHierarchyGroup.LevelFiveProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -279,7 +279,7 @@ export function dataAwsConnectUserHierarchyGroupLevelFivePropertyToTerraform(str
 }
 
 
-export function dataAwsConnectUserHierarchyGroupLevelFivePropertyToHclTerraform(struct?: DataAwsConnectUserHierarchyGroup.LevelFiveProperty): any {
+export function tfDataUserHierarchyGroupLevelFivePropertyToHclTerraform(struct?: TfDataUserHierarchyGroup.LevelFiveProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -290,7 +290,7 @@ export function dataAwsConnectUserHierarchyGroupLevelFivePropertyToHclTerraform(
 }
 
 
-export function dataAwsConnectUserHierarchyGroupLevelFourPropertyToTerraform(struct?: DataAwsConnectUserHierarchyGroup.LevelFourProperty): any {
+export function tfDataUserHierarchyGroupLevelFourPropertyToTerraform(struct?: TfDataUserHierarchyGroup.LevelFourProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -300,7 +300,7 @@ export function dataAwsConnectUserHierarchyGroupLevelFourPropertyToTerraform(str
 }
 
 
-export function dataAwsConnectUserHierarchyGroupLevelFourPropertyToHclTerraform(struct?: DataAwsConnectUserHierarchyGroup.LevelFourProperty): any {
+export function tfDataUserHierarchyGroupLevelFourPropertyToHclTerraform(struct?: TfDataUserHierarchyGroup.LevelFourProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -311,7 +311,7 @@ export function dataAwsConnectUserHierarchyGroupLevelFourPropertyToHclTerraform(
 }
 
 
-export function dataAwsConnectUserHierarchyGroupLevelOnePropertyToTerraform(struct?: DataAwsConnectUserHierarchyGroup.LevelOneProperty): any {
+export function tfDataUserHierarchyGroupLevelOnePropertyToTerraform(struct?: TfDataUserHierarchyGroup.LevelOneProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -321,7 +321,7 @@ export function dataAwsConnectUserHierarchyGroupLevelOnePropertyToTerraform(stru
 }
 
 
-export function dataAwsConnectUserHierarchyGroupLevelOnePropertyToHclTerraform(struct?: DataAwsConnectUserHierarchyGroup.LevelOneProperty): any {
+export function tfDataUserHierarchyGroupLevelOnePropertyToHclTerraform(struct?: TfDataUserHierarchyGroup.LevelOneProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -332,7 +332,7 @@ export function dataAwsConnectUserHierarchyGroupLevelOnePropertyToHclTerraform(s
 }
 
 
-export function dataAwsConnectUserHierarchyGroupLevelThreePropertyToTerraform(struct?: DataAwsConnectUserHierarchyGroup.LevelThreeProperty): any {
+export function tfDataUserHierarchyGroupLevelThreePropertyToTerraform(struct?: TfDataUserHierarchyGroup.LevelThreeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -342,7 +342,7 @@ export function dataAwsConnectUserHierarchyGroupLevelThreePropertyToTerraform(st
 }
 
 
-export function dataAwsConnectUserHierarchyGroupLevelThreePropertyToHclTerraform(struct?: DataAwsConnectUserHierarchyGroup.LevelThreeProperty): any {
+export function tfDataUserHierarchyGroupLevelThreePropertyToHclTerraform(struct?: TfDataUserHierarchyGroup.LevelThreeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -353,7 +353,7 @@ export function dataAwsConnectUserHierarchyGroupLevelThreePropertyToHclTerraform
 }
 
 
-export function dataAwsConnectUserHierarchyGroupLevelTwoPropertyToTerraform(struct?: DataAwsConnectUserHierarchyGroup.LevelTwoProperty): any {
+export function tfDataUserHierarchyGroupLevelTwoPropertyToTerraform(struct?: TfDataUserHierarchyGroup.LevelTwoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -363,7 +363,7 @@ export function dataAwsConnectUserHierarchyGroupLevelTwoPropertyToTerraform(stru
 }
 
 
-export function dataAwsConnectUserHierarchyGroupLevelTwoPropertyToHclTerraform(struct?: DataAwsConnectUserHierarchyGroup.LevelTwoProperty): any {
+export function tfDataUserHierarchyGroupLevelTwoPropertyToHclTerraform(struct?: TfDataUserHierarchyGroup.LevelTwoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -374,7 +374,7 @@ export function dataAwsConnectUserHierarchyGroupLevelTwoPropertyToHclTerraform(s
 }
 
 
-export function dataAwsConnectUserHierarchyGroupHierarchyPathPropertyToTerraform(struct?: DataAwsConnectUserHierarchyGroup.HierarchyPathProperty): any {
+export function tfDataUserHierarchyGroupHierarchyPathPropertyToTerraform(struct?: TfDataUserHierarchyGroup.HierarchyPathProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -384,7 +384,7 @@ export function dataAwsConnectUserHierarchyGroupHierarchyPathPropertyToTerraform
 }
 
 
-export function dataAwsConnectUserHierarchyGroupHierarchyPathPropertyToHclTerraform(struct?: DataAwsConnectUserHierarchyGroup.HierarchyPathProperty): any {
+export function tfDataUserHierarchyGroupHierarchyPathPropertyToHclTerraform(struct?: TfDataUserHierarchyGroup.HierarchyPathProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -395,7 +395,7 @@ export function dataAwsConnectUserHierarchyGroupHierarchyPathPropertyToHclTerraf
 }
 
 
-export namespace DataAwsConnectUserHierarchyGroup {
+export namespace TfDataUserHierarchyGroup {
 export interface LevelFiveProperty {
 }
 export class LevelFivePropertyOutputReference extends cdktn.ComplexObject {

@@ -5,110 +5,110 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDmsReplicationInstanceConfig extends cdktn.TerraformMetaArguments {
+export interface TfReplicationInstanceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#allocated_storage AwsDmsReplicationInstance#allocated_storage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#allocated_storage TfReplicationInstance#allocated_storage}
   */
   readonly allocatedStorage?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#allow_major_version_upgrade AwsDmsReplicationInstance#allow_major_version_upgrade}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#allow_major_version_upgrade TfReplicationInstance#allow_major_version_upgrade}
   */
   readonly allowMajorVersionUpgrade?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#apply_immediately AwsDmsReplicationInstance#apply_immediately}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#apply_immediately TfReplicationInstance#apply_immediately}
   */
   readonly applyImmediately?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#auto_minor_version_upgrade AwsDmsReplicationInstance#auto_minor_version_upgrade}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#auto_minor_version_upgrade TfReplicationInstance#auto_minor_version_upgrade}
   */
   readonly autoMinorVersionUpgrade?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#availability_zone AwsDmsReplicationInstance#availability_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#availability_zone TfReplicationInstance#availability_zone}
   */
   readonly availabilityZone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#dns_name_servers AwsDmsReplicationInstance#dns_name_servers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#dns_name_servers TfReplicationInstance#dns_name_servers}
   */
   readonly dnsNameServers?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#engine_version AwsDmsReplicationInstance#engine_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#engine_version TfReplicationInstance#engine_version}
   */
   readonly engineVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#id AwsDmsReplicationInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#id TfReplicationInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#kms_key_arn AwsDmsReplicationInstance#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#kms_key_arn TfReplicationInstance#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#multi_az AwsDmsReplicationInstance#multi_az}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#multi_az TfReplicationInstance#multi_az}
   */
   readonly multiAz?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#network_type AwsDmsReplicationInstance#network_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#network_type TfReplicationInstance#network_type}
   */
   readonly networkType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#preferred_maintenance_window AwsDmsReplicationInstance#preferred_maintenance_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#preferred_maintenance_window TfReplicationInstance#preferred_maintenance_window}
   */
   readonly preferredMaintenanceWindow?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#publicly_accessible AwsDmsReplicationInstance#publicly_accessible}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#publicly_accessible TfReplicationInstance#publicly_accessible}
   */
   readonly publiclyAccessible?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#region AwsDmsReplicationInstance#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#region TfReplicationInstance#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#replication_instance_class AwsDmsReplicationInstance#replication_instance_class}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#replication_instance_class TfReplicationInstance#replication_instance_class}
   */
   readonly replicationInstanceClass: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#replication_instance_id AwsDmsReplicationInstance#replication_instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#replication_instance_id TfReplicationInstance#replication_instance_id}
   */
   readonly replicationInstanceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#replication_subnet_group_id AwsDmsReplicationInstance#replication_subnet_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#replication_subnet_group_id TfReplicationInstance#replication_subnet_group_id}
   */
   readonly replicationSubnetGroupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#tags AwsDmsReplicationInstance#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#tags TfReplicationInstance#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#tags_all AwsDmsReplicationInstance#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#tags_all TfReplicationInstance#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#vpc_security_group_ids AwsDmsReplicationInstance#vpc_security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#vpc_security_group_ids TfReplicationInstance#vpc_security_group_ids}
   */
   readonly vpcSecurityGroupIds?: string[];
   /**
   * kerberos_authentication_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#kerberos_authentication_settings AwsDmsReplicationInstance#kerberos_authentication_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#kerberos_authentication_settings TfReplicationInstance#kerberos_authentication_settings}
   */
-  readonly kerberosAuthenticationSettings?: AwsDmsReplicationInstance.KerberosAuthenticationSettingsProperty;
+  readonly kerberosAuthenticationSettings?: TfReplicationInstance.KerberosAuthenticationSettingsProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#timeouts AwsDmsReplicationInstance#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#timeouts TfReplicationInstance#timeouts}
   */
-  readonly timeouts?: AwsDmsReplicationInstance.TimeoutsProperty;
+  readonly timeouts?: TfReplicationInstance.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance aws_dms_replication_instance}
 */
-export class AwsDmsReplicationInstance extends cdktn.TerraformResource {
+export class TfReplicationInstance extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -119,11 +119,11 @@ export class AwsDmsReplicationInstance extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDmsReplicationInstance resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfReplicationInstance resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDmsReplicationInstance to import
-  * @param importFromId The id of the existing AwsDmsReplicationInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDmsReplicationInstance to import is found
+  * @param importToId The construct id used in the generated config for the TfReplicationInstance to import
+  * @param importFromId The id of the existing TfReplicationInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfReplicationInstance to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_dms_replication_instance", importId: importFromId, provider });
@@ -138,9 +138,9 @@ export class AwsDmsReplicationInstance extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDmsReplicationInstanceConfig
+  * @param options TfReplicationInstanceConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDmsReplicationInstanceConfig) {
+  public constructor(scope: Construct, id: string, config: TfReplicationInstanceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_dms_replication_instance',
       terraformGeneratorMetadata: {
@@ -514,11 +514,11 @@ export class AwsDmsReplicationInstance extends cdktn.TerraformResource {
   }
 
   // kerberos_authentication_settings - computed: false, optional: true, required: false
-  private _kerberosAuthenticationSettings = new AwsDmsReplicationInstance.KerberosAuthenticationSettingsPropertyOutputReference(this, "kerberos_authentication_settings");
+  private _kerberosAuthenticationSettings = new TfReplicationInstance.KerberosAuthenticationSettingsPropertyOutputReference(this, "kerberos_authentication_settings");
   public get kerberosAuthenticationSettings() {
     return this._kerberosAuthenticationSettings;
   }
-  public putKerberosAuthenticationSettings(value: AwsDmsReplicationInstance.KerberosAuthenticationSettingsProperty) {
+  public putKerberosAuthenticationSettings(value: TfReplicationInstance.KerberosAuthenticationSettingsProperty) {
     this._kerberosAuthenticationSettings.internalValue = value;
   }
   public resetKerberosAuthenticationSettings() {
@@ -530,11 +530,11 @@ export class AwsDmsReplicationInstance extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsDmsReplicationInstance.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfReplicationInstance.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsDmsReplicationInstance.TimeoutsProperty) {
+  public putTimeouts(value: TfReplicationInstance.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -571,8 +571,8 @@ export class AwsDmsReplicationInstance extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       vpc_security_group_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._vpcSecurityGroupIds),
-      kerberos_authentication_settings: awsDmsReplicationInstanceKerberosAuthenticationSettingsPropertyToTerraform(this._kerberosAuthenticationSettings.internalValue),
-      timeouts: awsDmsReplicationInstanceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      kerberos_authentication_settings: tfReplicationInstanceKerberosAuthenticationSettingsPropertyToTerraform(this._kerberosAuthenticationSettings.internalValue),
+      timeouts: tfReplicationInstanceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -699,16 +699,16 @@ export class AwsDmsReplicationInstance extends cdktn.TerraformResource {
         storageClassType: "stringList",
       },
       kerberos_authentication_settings: {
-        value: awsDmsReplicationInstanceKerberosAuthenticationSettingsPropertyToHclTerraform(this._kerberosAuthenticationSettings.internalValue),
+        value: tfReplicationInstanceKerberosAuthenticationSettingsPropertyToHclTerraform(this._kerberosAuthenticationSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDmsReplicationInstance.KerberosAuthenticationSettingsPropertyList",
+        storageClassType: "TfReplicationInstance.KerberosAuthenticationSettingsPropertyList",
       },
       timeouts: {
-        value: awsDmsReplicationInstanceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfReplicationInstanceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsDmsReplicationInstance.TimeoutsProperty",
+        storageClassType: "TfReplicationInstance.TimeoutsProperty",
       },
     };
 
@@ -717,7 +717,7 @@ export class AwsDmsReplicationInstance extends cdktn.TerraformResource {
   }
 }
 
-export function awsDmsReplicationInstanceKerberosAuthenticationSettingsPropertyToTerraform(struct?: AwsDmsReplicationInstance.KerberosAuthenticationSettingsPropertyOutputReference | AwsDmsReplicationInstance.KerberosAuthenticationSettingsProperty): any {
+export function tfReplicationInstanceKerberosAuthenticationSettingsPropertyToTerraform(struct?: TfReplicationInstance.KerberosAuthenticationSettingsPropertyOutputReference | TfReplicationInstance.KerberosAuthenticationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -730,7 +730,7 @@ export function awsDmsReplicationInstanceKerberosAuthenticationSettingsPropertyT
 }
 
 
-export function awsDmsReplicationInstanceKerberosAuthenticationSettingsPropertyToHclTerraform(struct?: AwsDmsReplicationInstance.KerberosAuthenticationSettingsPropertyOutputReference | AwsDmsReplicationInstance.KerberosAuthenticationSettingsProperty): any {
+export function tfReplicationInstanceKerberosAuthenticationSettingsPropertyToHclTerraform(struct?: TfReplicationInstance.KerberosAuthenticationSettingsPropertyOutputReference | TfReplicationInstance.KerberosAuthenticationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -761,7 +761,7 @@ export function awsDmsReplicationInstanceKerberosAuthenticationSettingsPropertyT
 }
 
 
-export function awsDmsReplicationInstanceTimeoutsPropertyToTerraform(struct?: AwsDmsReplicationInstance.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfReplicationInstanceTimeoutsPropertyToTerraform(struct?: TfReplicationInstance.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -774,7 +774,7 @@ export function awsDmsReplicationInstanceTimeoutsPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsDmsReplicationInstanceTimeoutsPropertyToHclTerraform(struct?: AwsDmsReplicationInstance.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfReplicationInstanceTimeoutsPropertyToHclTerraform(struct?: TfReplicationInstance.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -805,18 +805,18 @@ export function awsDmsReplicationInstanceTimeoutsPropertyToHclTerraform(struct?:
 }
 
 
-export namespace AwsDmsReplicationInstance {
+export namespace TfReplicationInstance {
 export interface KerberosAuthenticationSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#key_cache_secret_iam_arn AwsDmsReplicationInstance#key_cache_secret_iam_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#key_cache_secret_iam_arn TfReplicationInstance#key_cache_secret_iam_arn}
   */
   readonly keyCacheSecretIamArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#key_cache_secret_id AwsDmsReplicationInstance#key_cache_secret_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#key_cache_secret_id TfReplicationInstance#key_cache_secret_id}
   */
   readonly keyCacheSecretId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#krb5_file_contents AwsDmsReplicationInstance#krb5_file_contents}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#krb5_file_contents TfReplicationInstance#krb5_file_contents}
   */
   readonly krb5FileContents: string;
 }
@@ -905,15 +905,15 @@ export class KerberosAuthenticationSettingsPropertyOutputReference extends cdktn
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#create AwsDmsReplicationInstance#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#create TfReplicationInstance#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#delete AwsDmsReplicationInstance#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#delete TfReplicationInstance#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#update AwsDmsReplicationInstance#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#update TfReplicationInstance#update}
   */
   readonly update?: string;
 }

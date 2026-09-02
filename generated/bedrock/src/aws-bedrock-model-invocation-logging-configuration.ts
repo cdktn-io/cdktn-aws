@@ -5,25 +5,25 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsBedrockModelInvocationLoggingConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface TfModelInvocationLoggingConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_model_invocation_logging_configuration#region AwsBedrockModelInvocationLoggingConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_model_invocation_logging_configuration#region TfModelInvocationLoggingConfiguration#region}
   */
   readonly region?: string;
   /**
   * logging_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_model_invocation_logging_configuration#logging_config AwsBedrockModelInvocationLoggingConfiguration#logging_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_model_invocation_logging_configuration#logging_config TfModelInvocationLoggingConfiguration#logging_config}
   */
-  readonly loggingConfig?: AwsBedrockModelInvocationLoggingConfiguration.LoggingConfigProperty[] | cdktn.IResolvable;
+  readonly loggingConfig?: TfModelInvocationLoggingConfiguration.LoggingConfigProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_model_invocation_logging_configuration aws_bedrock_model_invocation_logging_configuration}
 */
-export class AwsBedrockModelInvocationLoggingConfiguration extends cdktn.TerraformResource {
+export class TfModelInvocationLoggingConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -34,11 +34,11 @@ export class AwsBedrockModelInvocationLoggingConfiguration extends cdktn.Terrafo
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsBedrockModelInvocationLoggingConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfModelInvocationLoggingConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsBedrockModelInvocationLoggingConfiguration to import
-  * @param importFromId The id of the existing AwsBedrockModelInvocationLoggingConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_model_invocation_logging_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsBedrockModelInvocationLoggingConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the TfModelInvocationLoggingConfiguration to import
+  * @param importFromId The id of the existing TfModelInvocationLoggingConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_model_invocation_logging_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfModelInvocationLoggingConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrock_model_invocation_logging_configuration", importId: importFromId, provider });
@@ -53,9 +53,9 @@ export class AwsBedrockModelInvocationLoggingConfiguration extends cdktn.Terrafo
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsBedrockModelInvocationLoggingConfigurationConfig = {}
+  * @param options TfModelInvocationLoggingConfigurationConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsBedrockModelInvocationLoggingConfigurationConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfModelInvocationLoggingConfigurationConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrock_model_invocation_logging_configuration',
       terraformGeneratorMetadata: {
@@ -101,11 +101,11 @@ export class AwsBedrockModelInvocationLoggingConfiguration extends cdktn.Terrafo
   }
 
   // logging_config - computed: false, optional: true, required: false
-  private _loggingConfig = new AwsBedrockModelInvocationLoggingConfiguration.LoggingConfigPropertyList(this, "logging_config", false);
+  private _loggingConfig = new TfModelInvocationLoggingConfiguration.LoggingConfigPropertyList(this, "logging_config", false);
   public get loggingConfig() {
     return this._loggingConfig;
   }
-  public putLoggingConfig(value: AwsBedrockModelInvocationLoggingConfiguration.LoggingConfigProperty[] | cdktn.IResolvable) {
+  public putLoggingConfig(value: TfModelInvocationLoggingConfiguration.LoggingConfigProperty[] | cdktn.IResolvable) {
     this._loggingConfig.internalValue = value;
   }
   public resetLoggingConfig() {
@@ -123,7 +123,7 @@ export class AwsBedrockModelInvocationLoggingConfiguration extends cdktn.Terrafo
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       region: cdktn.stringToTerraform(this._region),
-      logging_config: cdktn.listMapper(awsBedrockModelInvocationLoggingConfigurationLoggingConfigPropertyToTerraform, true)(this._loggingConfig.internalValue),
+      logging_config: cdktn.listMapper(tfModelInvocationLoggingConfigurationLoggingConfigPropertyToTerraform, true)(this._loggingConfig.internalValue),
     };
   }
 
@@ -136,10 +136,10 @@ export class AwsBedrockModelInvocationLoggingConfiguration extends cdktn.Terrafo
         storageClassType: "string",
       },
       logging_config: {
-        value: cdktn.listMapperHcl(awsBedrockModelInvocationLoggingConfigurationLoggingConfigPropertyToHclTerraform, true)(this._loggingConfig.internalValue),
+        value: cdktn.listMapperHcl(tfModelInvocationLoggingConfigurationLoggingConfigPropertyToHclTerraform, true)(this._loggingConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockModelInvocationLoggingConfiguration.LoggingConfigPropertyList",
+        storageClassType: "TfModelInvocationLoggingConfiguration.LoggingConfigPropertyList",
       },
     };
 
@@ -148,7 +148,7 @@ export class AwsBedrockModelInvocationLoggingConfiguration extends cdktn.Terrafo
   }
 }
 
-export function awsBedrockModelInvocationLoggingConfigurationLargeDataDeliveryS3ConfigPropertyToTerraform(struct?: AwsBedrockModelInvocationLoggingConfiguration.LargeDataDeliveryS3ConfigProperty | cdktn.IResolvable): any {
+export function tfModelInvocationLoggingConfigurationLargeDataDeliveryS3ConfigPropertyToTerraform(struct?: TfModelInvocationLoggingConfiguration.LargeDataDeliveryS3ConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -160,7 +160,7 @@ export function awsBedrockModelInvocationLoggingConfigurationLargeDataDeliveryS3
 }
 
 
-export function awsBedrockModelInvocationLoggingConfigurationLargeDataDeliveryS3ConfigPropertyToHclTerraform(struct?: AwsBedrockModelInvocationLoggingConfiguration.LargeDataDeliveryS3ConfigProperty | cdktn.IResolvable): any {
+export function tfModelInvocationLoggingConfigurationLargeDataDeliveryS3ConfigPropertyToHclTerraform(struct?: TfModelInvocationLoggingConfiguration.LargeDataDeliveryS3ConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -185,7 +185,7 @@ export function awsBedrockModelInvocationLoggingConfigurationLargeDataDeliveryS3
 }
 
 
-export function awsBedrockModelInvocationLoggingConfigurationCloudwatchConfigPropertyToTerraform(struct?: AwsBedrockModelInvocationLoggingConfiguration.CloudwatchConfigProperty | cdktn.IResolvable): any {
+export function tfModelInvocationLoggingConfigurationCloudwatchConfigPropertyToTerraform(struct?: TfModelInvocationLoggingConfiguration.CloudwatchConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -193,12 +193,12 @@ export function awsBedrockModelInvocationLoggingConfigurationCloudwatchConfigPro
   return {
     log_group_name: cdktn.stringToTerraform(struct!.logGroupName),
     role_arn: cdktn.stringToTerraform(struct!.roleArn),
-    large_data_delivery_s3_config: cdktn.listMapper(awsBedrockModelInvocationLoggingConfigurationLargeDataDeliveryS3ConfigPropertyToTerraform, true)(struct!.largeDataDeliveryS3Config),
+    large_data_delivery_s3_config: cdktn.listMapper(tfModelInvocationLoggingConfigurationLargeDataDeliveryS3ConfigPropertyToTerraform, true)(struct!.largeDataDeliveryS3Config),
   }
 }
 
 
-export function awsBedrockModelInvocationLoggingConfigurationCloudwatchConfigPropertyToHclTerraform(struct?: AwsBedrockModelInvocationLoggingConfiguration.CloudwatchConfigProperty | cdktn.IResolvable): any {
+export function tfModelInvocationLoggingConfigurationCloudwatchConfigPropertyToHclTerraform(struct?: TfModelInvocationLoggingConfiguration.CloudwatchConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -217,7 +217,7 @@ export function awsBedrockModelInvocationLoggingConfigurationCloudwatchConfigPro
       storageClassType: "string",
     },
     large_data_delivery_s3_config: {
-      value: cdktn.listMapperHcl(awsBedrockModelInvocationLoggingConfigurationLargeDataDeliveryS3ConfigPropertyToHclTerraform, true)(struct!.largeDataDeliveryS3Config),
+      value: cdktn.listMapperHcl(tfModelInvocationLoggingConfigurationLargeDataDeliveryS3ConfigPropertyToHclTerraform, true)(struct!.largeDataDeliveryS3Config),
       isBlock: true,
       type: "list",
       storageClassType: "LargeDataDeliveryS3ConfigPropertyList",
@@ -229,7 +229,7 @@ export function awsBedrockModelInvocationLoggingConfigurationCloudwatchConfigPro
 }
 
 
-export function awsBedrockModelInvocationLoggingConfigurationS3ConfigPropertyToTerraform(struct?: AwsBedrockModelInvocationLoggingConfiguration.S3ConfigProperty | cdktn.IResolvable): any {
+export function tfModelInvocationLoggingConfigurationS3ConfigPropertyToTerraform(struct?: TfModelInvocationLoggingConfiguration.S3ConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -241,7 +241,7 @@ export function awsBedrockModelInvocationLoggingConfigurationS3ConfigPropertyToT
 }
 
 
-export function awsBedrockModelInvocationLoggingConfigurationS3ConfigPropertyToHclTerraform(struct?: AwsBedrockModelInvocationLoggingConfiguration.S3ConfigProperty | cdktn.IResolvable): any {
+export function tfModelInvocationLoggingConfigurationS3ConfigPropertyToHclTerraform(struct?: TfModelInvocationLoggingConfiguration.S3ConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -266,7 +266,7 @@ export function awsBedrockModelInvocationLoggingConfigurationS3ConfigPropertyToH
 }
 
 
-export function awsBedrockModelInvocationLoggingConfigurationLoggingConfigPropertyToTerraform(struct?: AwsBedrockModelInvocationLoggingConfiguration.LoggingConfigProperty | cdktn.IResolvable): any {
+export function tfModelInvocationLoggingConfigurationLoggingConfigPropertyToTerraform(struct?: TfModelInvocationLoggingConfiguration.LoggingConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -276,13 +276,13 @@ export function awsBedrockModelInvocationLoggingConfigurationLoggingConfigProper
     image_data_delivery_enabled: cdktn.booleanToTerraform(struct!.imageDataDeliveryEnabled),
     text_data_delivery_enabled: cdktn.booleanToTerraform(struct!.textDataDeliveryEnabled),
     video_data_delivery_enabled: cdktn.booleanToTerraform(struct!.videoDataDeliveryEnabled),
-    cloudwatch_config: cdktn.listMapper(awsBedrockModelInvocationLoggingConfigurationCloudwatchConfigPropertyToTerraform, true)(struct!.cloudwatchConfig),
-    s3_config: cdktn.listMapper(awsBedrockModelInvocationLoggingConfigurationS3ConfigPropertyToTerraform, true)(struct!.s3Config),
+    cloudwatch_config: cdktn.listMapper(tfModelInvocationLoggingConfigurationCloudwatchConfigPropertyToTerraform, true)(struct!.cloudwatchConfig),
+    s3_config: cdktn.listMapper(tfModelInvocationLoggingConfigurationS3ConfigPropertyToTerraform, true)(struct!.s3Config),
   }
 }
 
 
-export function awsBedrockModelInvocationLoggingConfigurationLoggingConfigPropertyToHclTerraform(struct?: AwsBedrockModelInvocationLoggingConfiguration.LoggingConfigProperty | cdktn.IResolvable): any {
+export function tfModelInvocationLoggingConfigurationLoggingConfigPropertyToHclTerraform(struct?: TfModelInvocationLoggingConfiguration.LoggingConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -313,13 +313,13 @@ export function awsBedrockModelInvocationLoggingConfigurationLoggingConfigProper
       storageClassType: "boolean",
     },
     cloudwatch_config: {
-      value: cdktn.listMapperHcl(awsBedrockModelInvocationLoggingConfigurationCloudwatchConfigPropertyToHclTerraform, true)(struct!.cloudwatchConfig),
+      value: cdktn.listMapperHcl(tfModelInvocationLoggingConfigurationCloudwatchConfigPropertyToHclTerraform, true)(struct!.cloudwatchConfig),
       isBlock: true,
       type: "list",
       storageClassType: "CloudwatchConfigPropertyList",
     },
     s3_config: {
-      value: cdktn.listMapperHcl(awsBedrockModelInvocationLoggingConfigurationS3ConfigPropertyToHclTerraform, true)(struct!.s3Config),
+      value: cdktn.listMapperHcl(tfModelInvocationLoggingConfigurationS3ConfigPropertyToHclTerraform, true)(struct!.s3Config),
       isBlock: true,
       type: "list",
       storageClassType: "S3ConfigPropertyList",
@@ -331,14 +331,14 @@ export function awsBedrockModelInvocationLoggingConfigurationLoggingConfigProper
 }
 
 
-export namespace AwsBedrockModelInvocationLoggingConfiguration {
+export namespace TfModelInvocationLoggingConfiguration {
 export interface LargeDataDeliveryS3ConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_model_invocation_logging_configuration#bucket_name AwsBedrockModelInvocationLoggingConfiguration#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_model_invocation_logging_configuration#bucket_name TfModelInvocationLoggingConfiguration#bucket_name}
   */
   readonly bucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_model_invocation_logging_configuration#key_prefix AwsBedrockModelInvocationLoggingConfiguration#key_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_model_invocation_logging_configuration#key_prefix TfModelInvocationLoggingConfiguration#key_prefix}
   */
   readonly keyPrefix?: string;
 }
@@ -443,17 +443,17 @@ export class LargeDataDeliveryS3ConfigPropertyList extends cdktn.ComplexList {
 }
 export interface CloudwatchConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_model_invocation_logging_configuration#log_group_name AwsBedrockModelInvocationLoggingConfiguration#log_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_model_invocation_logging_configuration#log_group_name TfModelInvocationLoggingConfiguration#log_group_name}
   */
   readonly logGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_model_invocation_logging_configuration#role_arn AwsBedrockModelInvocationLoggingConfiguration#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_model_invocation_logging_configuration#role_arn TfModelInvocationLoggingConfiguration#role_arn}
   */
   readonly roleArn: string;
   /**
   * large_data_delivery_s3_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_model_invocation_logging_configuration#large_data_delivery_s3_config AwsBedrockModelInvocationLoggingConfiguration#large_data_delivery_s3_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_model_invocation_logging_configuration#large_data_delivery_s3_config TfModelInvocationLoggingConfiguration#large_data_delivery_s3_config}
   */
   readonly largeDataDeliveryS3Config?: LargeDataDeliveryS3ConfigProperty[] | cdktn.IResolvable;
 }
@@ -577,11 +577,11 @@ export class CloudwatchConfigPropertyList extends cdktn.ComplexList {
 }
 export interface S3ConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_model_invocation_logging_configuration#bucket_name AwsBedrockModelInvocationLoggingConfiguration#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_model_invocation_logging_configuration#bucket_name TfModelInvocationLoggingConfiguration#bucket_name}
   */
   readonly bucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_model_invocation_logging_configuration#key_prefix AwsBedrockModelInvocationLoggingConfiguration#key_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_model_invocation_logging_configuration#key_prefix TfModelInvocationLoggingConfiguration#key_prefix}
   */
   readonly keyPrefix?: string;
 }
@@ -686,31 +686,31 @@ export class S3ConfigPropertyList extends cdktn.ComplexList {
 }
 export interface LoggingConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_model_invocation_logging_configuration#embedding_data_delivery_enabled AwsBedrockModelInvocationLoggingConfiguration#embedding_data_delivery_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_model_invocation_logging_configuration#embedding_data_delivery_enabled TfModelInvocationLoggingConfiguration#embedding_data_delivery_enabled}
   */
   readonly embeddingDataDeliveryEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_model_invocation_logging_configuration#image_data_delivery_enabled AwsBedrockModelInvocationLoggingConfiguration#image_data_delivery_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_model_invocation_logging_configuration#image_data_delivery_enabled TfModelInvocationLoggingConfiguration#image_data_delivery_enabled}
   */
   readonly imageDataDeliveryEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_model_invocation_logging_configuration#text_data_delivery_enabled AwsBedrockModelInvocationLoggingConfiguration#text_data_delivery_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_model_invocation_logging_configuration#text_data_delivery_enabled TfModelInvocationLoggingConfiguration#text_data_delivery_enabled}
   */
   readonly textDataDeliveryEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_model_invocation_logging_configuration#video_data_delivery_enabled AwsBedrockModelInvocationLoggingConfiguration#video_data_delivery_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_model_invocation_logging_configuration#video_data_delivery_enabled TfModelInvocationLoggingConfiguration#video_data_delivery_enabled}
   */
   readonly videoDataDeliveryEnabled?: boolean | cdktn.IResolvable;
   /**
   * cloudwatch_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_model_invocation_logging_configuration#cloudwatch_config AwsBedrockModelInvocationLoggingConfiguration#cloudwatch_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_model_invocation_logging_configuration#cloudwatch_config TfModelInvocationLoggingConfiguration#cloudwatch_config}
   */
   readonly cloudwatchConfig?: CloudwatchConfigProperty[] | cdktn.IResolvable;
   /**
   * s3_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_model_invocation_logging_configuration#s3_config AwsBedrockModelInvocationLoggingConfiguration#s3_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_model_invocation_logging_configuration#s3_config TfModelInvocationLoggingConfiguration#s3_config}
   */
   readonly s3Config?: S3ConfigProperty[] | cdktn.IResolvable;
 }

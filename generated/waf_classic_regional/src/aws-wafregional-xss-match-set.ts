@@ -5,36 +5,36 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsWafregionalXssMatchSetConfig extends cdktn.TerraformMetaArguments {
+export interface TfXssMatchSetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_xss_match_set#id AwsWafregionalXssMatchSet#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_xss_match_set#id TfXssMatchSet#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_xss_match_set#name AwsWafregionalXssMatchSet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_xss_match_set#name TfXssMatchSet#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_xss_match_set#region AwsWafregionalXssMatchSet#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_xss_match_set#region TfXssMatchSet#region}
   */
   readonly region?: string;
   /**
   * xss_match_tuple block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_xss_match_set#xss_match_tuple AwsWafregionalXssMatchSet#xss_match_tuple}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_xss_match_set#xss_match_tuple TfXssMatchSet#xss_match_tuple}
   */
-  readonly xssMatchTuple?: AwsWafregionalXssMatchSet.XssMatchTupleProperty[] | cdktn.IResolvable;
+  readonly xssMatchTuple?: TfXssMatchSet.XssMatchTupleProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_xss_match_set aws_wafregional_xss_match_set}
 */
-export class AwsWafregionalXssMatchSet extends cdktn.TerraformResource {
+export class TfXssMatchSet extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class AwsWafregionalXssMatchSet extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsWafregionalXssMatchSet resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfXssMatchSet resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsWafregionalXssMatchSet to import
-  * @param importFromId The id of the existing AwsWafregionalXssMatchSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_xss_match_set#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsWafregionalXssMatchSet to import is found
+  * @param importToId The construct id used in the generated config for the TfXssMatchSet to import
+  * @param importFromId The id of the existing TfXssMatchSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_xss_match_set#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfXssMatchSet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_wafregional_xss_match_set", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class AwsWafregionalXssMatchSet extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsWafregionalXssMatchSetConfig
+  * @param options TfXssMatchSetConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsWafregionalXssMatchSetConfig) {
+  public constructor(scope: Construct, id: string, config: TfXssMatchSetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_wafregional_xss_match_set',
       terraformGeneratorMetadata: {
@@ -138,11 +138,11 @@ export class AwsWafregionalXssMatchSet extends cdktn.TerraformResource {
   }
 
   // xss_match_tuple - computed: false, optional: true, required: false
-  private _xssMatchTuple = new AwsWafregionalXssMatchSet.XssMatchTuplePropertyList(this, "xss_match_tuple", true);
+  private _xssMatchTuple = new TfXssMatchSet.XssMatchTuplePropertyList(this, "xss_match_tuple", true);
   public get xssMatchTuple() {
     return this._xssMatchTuple;
   }
-  public putXssMatchTuple(value: AwsWafregionalXssMatchSet.XssMatchTupleProperty[] | cdktn.IResolvable) {
+  public putXssMatchTuple(value: TfXssMatchSet.XssMatchTupleProperty[] | cdktn.IResolvable) {
     this._xssMatchTuple.internalValue = value;
   }
   public resetXssMatchTuple() {
@@ -162,7 +162,7 @@ export class AwsWafregionalXssMatchSet extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
-      xss_match_tuple: cdktn.listMapper(awsWafregionalXssMatchSetXssMatchTuplePropertyToTerraform, true)(this._xssMatchTuple.internalValue),
+      xss_match_tuple: cdktn.listMapper(tfXssMatchSetXssMatchTuplePropertyToTerraform, true)(this._xssMatchTuple.internalValue),
     };
   }
 
@@ -187,10 +187,10 @@ export class AwsWafregionalXssMatchSet extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       xss_match_tuple: {
-        value: cdktn.listMapperHcl(awsWafregionalXssMatchSetXssMatchTuplePropertyToHclTerraform, true)(this._xssMatchTuple.internalValue),
+        value: cdktn.listMapperHcl(tfXssMatchSetXssMatchTuplePropertyToHclTerraform, true)(this._xssMatchTuple.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsWafregionalXssMatchSet.XssMatchTuplePropertyList",
+        storageClassType: "TfXssMatchSet.XssMatchTuplePropertyList",
       },
     };
 
@@ -199,7 +199,7 @@ export class AwsWafregionalXssMatchSet extends cdktn.TerraformResource {
   }
 }
 
-export function awsWafregionalXssMatchSetFieldToMatchPropertyToTerraform(struct?: AwsWafregionalXssMatchSet.FieldToMatchPropertyOutputReference | AwsWafregionalXssMatchSet.FieldToMatchProperty): any {
+export function tfXssMatchSetFieldToMatchPropertyToTerraform(struct?: TfXssMatchSet.FieldToMatchPropertyOutputReference | TfXssMatchSet.FieldToMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -211,7 +211,7 @@ export function awsWafregionalXssMatchSetFieldToMatchPropertyToTerraform(struct?
 }
 
 
-export function awsWafregionalXssMatchSetFieldToMatchPropertyToHclTerraform(struct?: AwsWafregionalXssMatchSet.FieldToMatchPropertyOutputReference | AwsWafregionalXssMatchSet.FieldToMatchProperty): any {
+export function tfXssMatchSetFieldToMatchPropertyToHclTerraform(struct?: TfXssMatchSet.FieldToMatchPropertyOutputReference | TfXssMatchSet.FieldToMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -236,19 +236,19 @@ export function awsWafregionalXssMatchSetFieldToMatchPropertyToHclTerraform(stru
 }
 
 
-export function awsWafregionalXssMatchSetXssMatchTuplePropertyToTerraform(struct?: AwsWafregionalXssMatchSet.XssMatchTupleProperty | cdktn.IResolvable): any {
+export function tfXssMatchSetXssMatchTuplePropertyToTerraform(struct?: TfXssMatchSet.XssMatchTupleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     text_transformation: cdktn.stringToTerraform(struct!.textTransformation),
-    field_to_match: awsWafregionalXssMatchSetFieldToMatchPropertyToTerraform(struct!.fieldToMatch),
+    field_to_match: tfXssMatchSetFieldToMatchPropertyToTerraform(struct!.fieldToMatch),
   }
 }
 
 
-export function awsWafregionalXssMatchSetXssMatchTuplePropertyToHclTerraform(struct?: AwsWafregionalXssMatchSet.XssMatchTupleProperty | cdktn.IResolvable): any {
+export function tfXssMatchSetXssMatchTuplePropertyToHclTerraform(struct?: TfXssMatchSet.XssMatchTupleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -261,7 +261,7 @@ export function awsWafregionalXssMatchSetXssMatchTuplePropertyToHclTerraform(str
       storageClassType: "string",
     },
     field_to_match: {
-      value: awsWafregionalXssMatchSetFieldToMatchPropertyToHclTerraform(struct!.fieldToMatch),
+      value: tfXssMatchSetFieldToMatchPropertyToHclTerraform(struct!.fieldToMatch),
       isBlock: true,
       type: "list",
       storageClassType: "FieldToMatchPropertyList",
@@ -273,14 +273,14 @@ export function awsWafregionalXssMatchSetXssMatchTuplePropertyToHclTerraform(str
 }
 
 
-export namespace AwsWafregionalXssMatchSet {
+export namespace TfXssMatchSet {
 export interface FieldToMatchProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_xss_match_set#data AwsWafregionalXssMatchSet#data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_xss_match_set#data TfXssMatchSet#data}
   */
   readonly data?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_xss_match_set#type AwsWafregionalXssMatchSet#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_xss_match_set#type TfXssMatchSet#type}
   */
   readonly type: string;
 }
@@ -353,13 +353,13 @@ export class FieldToMatchPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface XssMatchTupleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_xss_match_set#text_transformation AwsWafregionalXssMatchSet#text_transformation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_xss_match_set#text_transformation TfXssMatchSet#text_transformation}
   */
   readonly textTransformation: string;
   /**
   * field_to_match block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_xss_match_set#field_to_match AwsWafregionalXssMatchSet#field_to_match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_xss_match_set#field_to_match TfXssMatchSet#field_to_match}
   */
   readonly fieldToMatch: FieldToMatchProperty;
 }

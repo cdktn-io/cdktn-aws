@@ -5,58 +5,58 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCloud9EnvironmentEc2Config extends cdktn.TerraformMetaArguments {
+export interface TfEnvironmentEc2Config extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloud9_environment_ec2#automatic_stop_time_minutes AwsCloud9EnvironmentEc2#automatic_stop_time_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloud9_environment_ec2#automatic_stop_time_minutes TfEnvironmentEc2#automatic_stop_time_minutes}
   */
   readonly automaticStopTimeMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloud9_environment_ec2#connection_type AwsCloud9EnvironmentEc2#connection_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloud9_environment_ec2#connection_type TfEnvironmentEc2#connection_type}
   */
   readonly connectionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloud9_environment_ec2#description AwsCloud9EnvironmentEc2#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloud9_environment_ec2#description TfEnvironmentEc2#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloud9_environment_ec2#id AwsCloud9EnvironmentEc2#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloud9_environment_ec2#id TfEnvironmentEc2#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloud9_environment_ec2#image_id AwsCloud9EnvironmentEc2#image_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloud9_environment_ec2#image_id TfEnvironmentEc2#image_id}
   */
   readonly imageId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloud9_environment_ec2#instance_type AwsCloud9EnvironmentEc2#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloud9_environment_ec2#instance_type TfEnvironmentEc2#instance_type}
   */
   readonly instanceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloud9_environment_ec2#name AwsCloud9EnvironmentEc2#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloud9_environment_ec2#name TfEnvironmentEc2#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloud9_environment_ec2#owner_arn AwsCloud9EnvironmentEc2#owner_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloud9_environment_ec2#owner_arn TfEnvironmentEc2#owner_arn}
   */
   readonly ownerArn?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloud9_environment_ec2#region AwsCloud9EnvironmentEc2#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloud9_environment_ec2#region TfEnvironmentEc2#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloud9_environment_ec2#subnet_id AwsCloud9EnvironmentEc2#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloud9_environment_ec2#subnet_id TfEnvironmentEc2#subnet_id}
   */
   readonly subnetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloud9_environment_ec2#tags AwsCloud9EnvironmentEc2#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloud9_environment_ec2#tags TfEnvironmentEc2#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloud9_environment_ec2#tags_all AwsCloud9EnvironmentEc2#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloud9_environment_ec2#tags_all TfEnvironmentEc2#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -64,7 +64,7 @@ export interface AwsCloud9EnvironmentEc2Config extends cdktn.TerraformMetaArgume
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloud9_environment_ec2 aws_cloud9_environment_ec2}
 */
-export class AwsCloud9EnvironmentEc2 extends cdktn.TerraformResource {
+export class TfEnvironmentEc2 extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -75,11 +75,11 @@ export class AwsCloud9EnvironmentEc2 extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCloud9EnvironmentEc2 resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfEnvironmentEc2 resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCloud9EnvironmentEc2 to import
-  * @param importFromId The id of the existing AwsCloud9EnvironmentEc2 that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloud9_environment_ec2#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCloud9EnvironmentEc2 to import is found
+  * @param importToId The construct id used in the generated config for the TfEnvironmentEc2 to import
+  * @param importFromId The id of the existing TfEnvironmentEc2 that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloud9_environment_ec2#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfEnvironmentEc2 to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloud9_environment_ec2", importId: importFromId, provider });
@@ -94,9 +94,9 @@ export class AwsCloud9EnvironmentEc2 extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCloud9EnvironmentEc2Config
+  * @param options TfEnvironmentEc2Config
   */
-  public constructor(scope: Construct, id: string, config: AwsCloud9EnvironmentEc2Config) {
+  public constructor(scope: Construct, id: string, config: TfEnvironmentEc2Config) {
     super(scope, id, {
       terraformResourceType: 'aws_cloud9_environment_ec2',
       terraformGeneratorMetadata: {

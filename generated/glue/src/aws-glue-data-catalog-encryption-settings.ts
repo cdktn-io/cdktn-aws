@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsGlueDataCatalogEncryptionSettingsConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataCatalogEncryptionSettingsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_catalog_encryption_settings#catalog_id AwsGlueDataCatalogEncryptionSettings#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_catalog_encryption_settings#catalog_id TfDataCatalogEncryptionSettings#catalog_id}
   */
   readonly catalogId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_catalog_encryption_settings#id AwsGlueDataCatalogEncryptionSettings#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_catalog_encryption_settings#id TfDataCatalogEncryptionSettings#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,21 +20,21 @@ export interface AwsGlueDataCatalogEncryptionSettingsConfig extends cdktn.Terraf
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_catalog_encryption_settings#region AwsGlueDataCatalogEncryptionSettings#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_catalog_encryption_settings#region TfDataCatalogEncryptionSettings#region}
   */
   readonly region?: string;
   /**
   * data_catalog_encryption_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_catalog_encryption_settings#data_catalog_encryption_settings AwsGlueDataCatalogEncryptionSettings#data_catalog_encryption_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_catalog_encryption_settings#data_catalog_encryption_settings TfDataCatalogEncryptionSettings#data_catalog_encryption_settings}
   */
-  readonly dataCatalogEncryptionSettings: AwsGlueDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsProperty;
+  readonly dataCatalogEncryptionSettings: TfDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_catalog_encryption_settings aws_glue_data_catalog_encryption_settings}
 */
-export class AwsGlueDataCatalogEncryptionSettings extends cdktn.TerraformResource {
+export class TfDataCatalogEncryptionSettings extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class AwsGlueDataCatalogEncryptionSettings extends cdktn.TerraformResourc
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsGlueDataCatalogEncryptionSettings resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataCatalogEncryptionSettings resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsGlueDataCatalogEncryptionSettings to import
-  * @param importFromId The id of the existing AwsGlueDataCatalogEncryptionSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_catalog_encryption_settings#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsGlueDataCatalogEncryptionSettings to import is found
+  * @param importToId The construct id used in the generated config for the TfDataCatalogEncryptionSettings to import
+  * @param importFromId The id of the existing TfDataCatalogEncryptionSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_catalog_encryption_settings#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataCatalogEncryptionSettings to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_glue_data_catalog_encryption_settings", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class AwsGlueDataCatalogEncryptionSettings extends cdktn.TerraformResourc
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsGlueDataCatalogEncryptionSettingsConfig
+  * @param options TfDataCatalogEncryptionSettingsConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsGlueDataCatalogEncryptionSettingsConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataCatalogEncryptionSettingsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_glue_data_catalog_encryption_settings',
       terraformGeneratorMetadata: {
@@ -141,11 +141,11 @@ export class AwsGlueDataCatalogEncryptionSettings extends cdktn.TerraformResourc
   }
 
   // data_catalog_encryption_settings - computed: false, optional: false, required: true
-  private _dataCatalogEncryptionSettings = new AwsGlueDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsPropertyOutputReference(this, "data_catalog_encryption_settings");
+  private _dataCatalogEncryptionSettings = new TfDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsPropertyOutputReference(this, "data_catalog_encryption_settings");
   public get dataCatalogEncryptionSettings() {
     return this._dataCatalogEncryptionSettings;
   }
-  public putDataCatalogEncryptionSettings(value: AwsGlueDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsProperty) {
+  public putDataCatalogEncryptionSettings(value: TfDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsProperty) {
     this._dataCatalogEncryptionSettings.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -162,7 +162,7 @@ export class AwsGlueDataCatalogEncryptionSettings extends cdktn.TerraformResourc
       catalog_id: cdktn.stringToTerraform(this._catalogId),
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      data_catalog_encryption_settings: awsGlueDataCatalogEncryptionSettingsDataCatalogEncryptionSettingsPropertyToTerraform(this._dataCatalogEncryptionSettings.internalValue),
+      data_catalog_encryption_settings: tfDataCatalogEncryptionSettingsDataCatalogEncryptionSettingsPropertyToTerraform(this._dataCatalogEncryptionSettings.internalValue),
     };
   }
 
@@ -187,10 +187,10 @@ export class AwsGlueDataCatalogEncryptionSettings extends cdktn.TerraformResourc
         storageClassType: "string",
       },
       data_catalog_encryption_settings: {
-        value: awsGlueDataCatalogEncryptionSettingsDataCatalogEncryptionSettingsPropertyToHclTerraform(this._dataCatalogEncryptionSettings.internalValue),
+        value: tfDataCatalogEncryptionSettingsDataCatalogEncryptionSettingsPropertyToHclTerraform(this._dataCatalogEncryptionSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGlueDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsPropertyList",
+        storageClassType: "TfDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsPropertyList",
       },
     };
 
@@ -199,7 +199,7 @@ export class AwsGlueDataCatalogEncryptionSettings extends cdktn.TerraformResourc
   }
 }
 
-export function awsGlueDataCatalogEncryptionSettingsConnectionPasswordEncryptionPropertyToTerraform(struct?: AwsGlueDataCatalogEncryptionSettings.ConnectionPasswordEncryptionPropertyOutputReference | AwsGlueDataCatalogEncryptionSettings.ConnectionPasswordEncryptionProperty): any {
+export function tfDataCatalogEncryptionSettingsConnectionPasswordEncryptionPropertyToTerraform(struct?: TfDataCatalogEncryptionSettings.ConnectionPasswordEncryptionPropertyOutputReference | TfDataCatalogEncryptionSettings.ConnectionPasswordEncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -211,7 +211,7 @@ export function awsGlueDataCatalogEncryptionSettingsConnectionPasswordEncryption
 }
 
 
-export function awsGlueDataCatalogEncryptionSettingsConnectionPasswordEncryptionPropertyToHclTerraform(struct?: AwsGlueDataCatalogEncryptionSettings.ConnectionPasswordEncryptionPropertyOutputReference | AwsGlueDataCatalogEncryptionSettings.ConnectionPasswordEncryptionProperty): any {
+export function tfDataCatalogEncryptionSettingsConnectionPasswordEncryptionPropertyToHclTerraform(struct?: TfDataCatalogEncryptionSettings.ConnectionPasswordEncryptionPropertyOutputReference | TfDataCatalogEncryptionSettings.ConnectionPasswordEncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -236,7 +236,7 @@ export function awsGlueDataCatalogEncryptionSettingsConnectionPasswordEncryption
 }
 
 
-export function awsGlueDataCatalogEncryptionSettingsEncryptionAtRestPropertyToTerraform(struct?: AwsGlueDataCatalogEncryptionSettings.EncryptionAtRestPropertyOutputReference | AwsGlueDataCatalogEncryptionSettings.EncryptionAtRestProperty): any {
+export function tfDataCatalogEncryptionSettingsEncryptionAtRestPropertyToTerraform(struct?: TfDataCatalogEncryptionSettings.EncryptionAtRestPropertyOutputReference | TfDataCatalogEncryptionSettings.EncryptionAtRestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -249,7 +249,7 @@ export function awsGlueDataCatalogEncryptionSettingsEncryptionAtRestPropertyToTe
 }
 
 
-export function awsGlueDataCatalogEncryptionSettingsEncryptionAtRestPropertyToHclTerraform(struct?: AwsGlueDataCatalogEncryptionSettings.EncryptionAtRestPropertyOutputReference | AwsGlueDataCatalogEncryptionSettings.EncryptionAtRestProperty): any {
+export function tfDataCatalogEncryptionSettingsEncryptionAtRestPropertyToHclTerraform(struct?: TfDataCatalogEncryptionSettings.EncryptionAtRestPropertyOutputReference | TfDataCatalogEncryptionSettings.EncryptionAtRestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -280,32 +280,32 @@ export function awsGlueDataCatalogEncryptionSettingsEncryptionAtRestPropertyToHc
 }
 
 
-export function awsGlueDataCatalogEncryptionSettingsDataCatalogEncryptionSettingsPropertyToTerraform(struct?: AwsGlueDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsPropertyOutputReference | AwsGlueDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsProperty): any {
+export function tfDataCatalogEncryptionSettingsDataCatalogEncryptionSettingsPropertyToTerraform(struct?: TfDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsPropertyOutputReference | TfDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    connection_password_encryption: awsGlueDataCatalogEncryptionSettingsConnectionPasswordEncryptionPropertyToTerraform(struct!.connectionPasswordEncryption),
-    encryption_at_rest: awsGlueDataCatalogEncryptionSettingsEncryptionAtRestPropertyToTerraform(struct!.encryptionAtRest),
+    connection_password_encryption: tfDataCatalogEncryptionSettingsConnectionPasswordEncryptionPropertyToTerraform(struct!.connectionPasswordEncryption),
+    encryption_at_rest: tfDataCatalogEncryptionSettingsEncryptionAtRestPropertyToTerraform(struct!.encryptionAtRest),
   }
 }
 
 
-export function awsGlueDataCatalogEncryptionSettingsDataCatalogEncryptionSettingsPropertyToHclTerraform(struct?: AwsGlueDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsPropertyOutputReference | AwsGlueDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsProperty): any {
+export function tfDataCatalogEncryptionSettingsDataCatalogEncryptionSettingsPropertyToHclTerraform(struct?: TfDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsPropertyOutputReference | TfDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     connection_password_encryption: {
-      value: awsGlueDataCatalogEncryptionSettingsConnectionPasswordEncryptionPropertyToHclTerraform(struct!.connectionPasswordEncryption),
+      value: tfDataCatalogEncryptionSettingsConnectionPasswordEncryptionPropertyToHclTerraform(struct!.connectionPasswordEncryption),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectionPasswordEncryptionPropertyList",
     },
     encryption_at_rest: {
-      value: awsGlueDataCatalogEncryptionSettingsEncryptionAtRestPropertyToHclTerraform(struct!.encryptionAtRest),
+      value: tfDataCatalogEncryptionSettingsEncryptionAtRestPropertyToHclTerraform(struct!.encryptionAtRest),
       isBlock: true,
       type: "list",
       storageClassType: "EncryptionAtRestPropertyList",
@@ -317,14 +317,14 @@ export function awsGlueDataCatalogEncryptionSettingsDataCatalogEncryptionSetting
 }
 
 
-export namespace AwsGlueDataCatalogEncryptionSettings {
+export namespace TfDataCatalogEncryptionSettings {
 export interface ConnectionPasswordEncryptionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_catalog_encryption_settings#aws_kms_key_id AwsGlueDataCatalogEncryptionSettings#aws_kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_catalog_encryption_settings#aws_kms_key_id TfDataCatalogEncryptionSettings#aws_kms_key_id}
   */
   readonly awsKmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_catalog_encryption_settings#return_connection_password_encrypted AwsGlueDataCatalogEncryptionSettings#return_connection_password_encrypted}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_catalog_encryption_settings#return_connection_password_encrypted TfDataCatalogEncryptionSettings#return_connection_password_encrypted}
   */
   readonly returnConnectionPasswordEncrypted: boolean | cdktn.IResolvable;
 }
@@ -397,15 +397,15 @@ export class ConnectionPasswordEncryptionPropertyOutputReference extends cdktn.C
 }
 export interface EncryptionAtRestProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_catalog_encryption_settings#catalog_encryption_mode AwsGlueDataCatalogEncryptionSettings#catalog_encryption_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_catalog_encryption_settings#catalog_encryption_mode TfDataCatalogEncryptionSettings#catalog_encryption_mode}
   */
   readonly catalogEncryptionMode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_catalog_encryption_settings#catalog_encryption_service_role AwsGlueDataCatalogEncryptionSettings#catalog_encryption_service_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_catalog_encryption_settings#catalog_encryption_service_role TfDataCatalogEncryptionSettings#catalog_encryption_service_role}
   */
   readonly catalogEncryptionServiceRole?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_catalog_encryption_settings#sse_aws_kms_key_id AwsGlueDataCatalogEncryptionSettings#sse_aws_kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_catalog_encryption_settings#sse_aws_kms_key_id TfDataCatalogEncryptionSettings#sse_aws_kms_key_id}
   */
   readonly sseAwsKmsKeyId?: string;
 }
@@ -502,13 +502,13 @@ export interface DataCatalogEncryptionSettingsProperty {
   /**
   * connection_password_encryption block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_catalog_encryption_settings#connection_password_encryption AwsGlueDataCatalogEncryptionSettings#connection_password_encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_catalog_encryption_settings#connection_password_encryption TfDataCatalogEncryptionSettings#connection_password_encryption}
   */
   readonly connectionPasswordEncryption: ConnectionPasswordEncryptionProperty;
   /**
   * encryption_at_rest block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_catalog_encryption_settings#encryption_at_rest AwsGlueDataCatalogEncryptionSettings#encryption_at_rest}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_catalog_encryption_settings#encryption_at_rest TfDataCatalogEncryptionSettings#encryption_at_rest}
   */
   readonly encryptionAtRest: EncryptionAtRestProperty;
 }

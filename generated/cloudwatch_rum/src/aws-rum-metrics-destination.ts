@@ -5,25 +5,25 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsRumMetricsDestinationConfig extends cdktn.TerraformMetaArguments {
+export interface TfMetricsDestinationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_metrics_destination#app_monitor_name AwsRumMetricsDestination#app_monitor_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_metrics_destination#app_monitor_name TfMetricsDestination#app_monitor_name}
   */
   readonly appMonitorName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_metrics_destination#destination AwsRumMetricsDestination#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_metrics_destination#destination TfMetricsDestination#destination}
   */
   readonly destination: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_metrics_destination#destination_arn AwsRumMetricsDestination#destination_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_metrics_destination#destination_arn TfMetricsDestination#destination_arn}
   */
   readonly destinationArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_metrics_destination#iam_role_arn AwsRumMetricsDestination#iam_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_metrics_destination#iam_role_arn TfMetricsDestination#iam_role_arn}
   */
   readonly iamRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_metrics_destination#id AwsRumMetricsDestination#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_metrics_destination#id TfMetricsDestination#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -32,7 +32,7 @@ export interface AwsRumMetricsDestinationConfig extends cdktn.TerraformMetaArgum
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_metrics_destination#region AwsRumMetricsDestination#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_metrics_destination#region TfMetricsDestination#region}
   */
   readonly region?: string;
 }
@@ -40,7 +40,7 @@ export interface AwsRumMetricsDestinationConfig extends cdktn.TerraformMetaArgum
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_metrics_destination aws_rum_metrics_destination}
 */
-export class AwsRumMetricsDestination extends cdktn.TerraformResource {
+export class TfMetricsDestination extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class AwsRumMetricsDestination extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsRumMetricsDestination resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfMetricsDestination resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsRumMetricsDestination to import
-  * @param importFromId The id of the existing AwsRumMetricsDestination that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_metrics_destination#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsRumMetricsDestination to import is found
+  * @param importToId The construct id used in the generated config for the TfMetricsDestination to import
+  * @param importFromId The id of the existing TfMetricsDestination that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rum_metrics_destination#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfMetricsDestination to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_rum_metrics_destination", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class AwsRumMetricsDestination extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsRumMetricsDestinationConfig
+  * @param options TfMetricsDestinationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsRumMetricsDestinationConfig) {
+  public constructor(scope: Construct, id: string, config: TfMetricsDestinationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_rum_metrics_destination',
       terraformGeneratorMetadata: {

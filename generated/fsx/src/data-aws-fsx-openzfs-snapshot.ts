@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsFsxOpenzfsSnapshotConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataOpenzfsSnapshotConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_openzfs_snapshot#id DataAwsFsxOpenzfsSnapshot#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_openzfs_snapshot#id TfDataOpenzfsSnapshot#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_openzfs_snapshot#most_recent DataAwsFsxOpenzfsSnapshot#most_recent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_openzfs_snapshot#most_recent TfDataOpenzfsSnapshot#most_recent}
   */
   readonly mostRecent?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_openzfs_snapshot#name DataAwsFsxOpenzfsSnapshot#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_openzfs_snapshot#name TfDataOpenzfsSnapshot#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_openzfs_snapshot#region DataAwsFsxOpenzfsSnapshot#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_openzfs_snapshot#region TfDataOpenzfsSnapshot#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_openzfs_snapshot#snapshot_ids DataAwsFsxOpenzfsSnapshot#snapshot_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_openzfs_snapshot#snapshot_ids TfDataOpenzfsSnapshot#snapshot_ids}
   */
   readonly snapshotIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_openzfs_snapshot#tags DataAwsFsxOpenzfsSnapshot#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_openzfs_snapshot#tags TfDataOpenzfsSnapshot#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_openzfs_snapshot#filter DataAwsFsxOpenzfsSnapshot#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_openzfs_snapshot#filter TfDataOpenzfsSnapshot#filter}
   */
-  readonly filter?: DataAwsFsxOpenzfsSnapshot.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: TfDataOpenzfsSnapshot.FilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_openzfs_snapshot aws_fsx_openzfs_snapshot}
 */
-export class DataAwsFsxOpenzfsSnapshot extends cdktn.TerraformDataSource {
+export class TfDataOpenzfsSnapshot extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class DataAwsFsxOpenzfsSnapshot extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsFsxOpenzfsSnapshot resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataOpenzfsSnapshot resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsFsxOpenzfsSnapshot to import
-  * @param importFromId The id of the existing DataAwsFsxOpenzfsSnapshot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_openzfs_snapshot#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsFsxOpenzfsSnapshot to import is found
+  * @param importToId The construct id used in the generated config for the TfDataOpenzfsSnapshot to import
+  * @param importFromId The id of the existing TfDataOpenzfsSnapshot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_openzfs_snapshot#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataOpenzfsSnapshot to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_fsx_openzfs_snapshot", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class DataAwsFsxOpenzfsSnapshot extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsFsxOpenzfsSnapshotConfig = {}
+  * @param options TfDataOpenzfsSnapshotConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsFsxOpenzfsSnapshotConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDataOpenzfsSnapshotConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_fsx_openzfs_snapshot',
       terraformGeneratorMetadata: {
@@ -224,11 +224,11 @@ export class DataAwsFsxOpenzfsSnapshot extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataAwsFsxOpenzfsSnapshot.FilterPropertyList(this, "filter", true);
+  private _filter = new TfDataOpenzfsSnapshot.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataAwsFsxOpenzfsSnapshot.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: TfDataOpenzfsSnapshot.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -251,7 +251,7 @@ export class DataAwsFsxOpenzfsSnapshot extends cdktn.TerraformDataSource {
       region: cdktn.stringToTerraform(this._region),
       snapshot_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._snapshotIds),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      filter: cdktn.listMapper(dataAwsFsxOpenzfsSnapshotFilterPropertyToTerraform, true)(this._filter.internalValue),
+      filter: cdktn.listMapper(tfDataOpenzfsSnapshotFilterPropertyToTerraform, true)(this._filter.internalValue),
     };
   }
 
@@ -294,10 +294,10 @@ export class DataAwsFsxOpenzfsSnapshot extends cdktn.TerraformDataSource {
         storageClassType: "stringMap",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataAwsFsxOpenzfsSnapshotFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(tfDataOpenzfsSnapshotFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataAwsFsxOpenzfsSnapshot.FilterPropertyList",
+        storageClassType: "TfDataOpenzfsSnapshot.FilterPropertyList",
       },
     };
 
@@ -306,7 +306,7 @@ export class DataAwsFsxOpenzfsSnapshot extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsFsxOpenzfsSnapshotFilterPropertyToTerraform(struct?: DataAwsFsxOpenzfsSnapshot.FilterProperty | cdktn.IResolvable): any {
+export function tfDataOpenzfsSnapshotFilterPropertyToTerraform(struct?: TfDataOpenzfsSnapshot.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -318,7 +318,7 @@ export function dataAwsFsxOpenzfsSnapshotFilterPropertyToTerraform(struct?: Data
 }
 
 
-export function dataAwsFsxOpenzfsSnapshotFilterPropertyToHclTerraform(struct?: DataAwsFsxOpenzfsSnapshot.FilterProperty | cdktn.IResolvable): any {
+export function tfDataOpenzfsSnapshotFilterPropertyToHclTerraform(struct?: TfDataOpenzfsSnapshot.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -343,14 +343,14 @@ export function dataAwsFsxOpenzfsSnapshotFilterPropertyToHclTerraform(struct?: D
 }
 
 
-export namespace DataAwsFsxOpenzfsSnapshot {
+export namespace TfDataOpenzfsSnapshot {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_openzfs_snapshot#name DataAwsFsxOpenzfsSnapshot#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_openzfs_snapshot#name TfDataOpenzfsSnapshot#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_openzfs_snapshot#values DataAwsFsxOpenzfsSnapshot#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_openzfs_snapshot#values TfDataOpenzfsSnapshot#values}
   */
   readonly values: string[];
 }

@@ -5,45 +5,45 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsRdsSnapshotsConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataSnapshotsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_snapshots#db_instance_identifier DataAwsRdsSnapshots#db_instance_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_snapshots#db_instance_identifier TfDataSnapshots#db_instance_identifier}
   */
   readonly dbInstanceIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_snapshots#db_snapshot_identifier DataAwsRdsSnapshots#db_snapshot_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_snapshots#db_snapshot_identifier TfDataSnapshots#db_snapshot_identifier}
   */
   readonly dbSnapshotIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_snapshots#include_public DataAwsRdsSnapshots#include_public}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_snapshots#include_public TfDataSnapshots#include_public}
   */
   readonly includePublic?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_snapshots#include_shared DataAwsRdsSnapshots#include_shared}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_snapshots#include_shared TfDataSnapshots#include_shared}
   */
   readonly includeShared?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_snapshots#region DataAwsRdsSnapshots#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_snapshots#region TfDataSnapshots#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_snapshots#snapshot_type DataAwsRdsSnapshots#snapshot_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_snapshots#snapshot_type TfDataSnapshots#snapshot_type}
   */
   readonly snapshotType?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_snapshots#filter DataAwsRdsSnapshots#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_snapshots#filter TfDataSnapshots#filter}
   */
-  readonly filter?: DataAwsRdsSnapshots.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: TfDataSnapshots.FilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_snapshots aws_rds_snapshots}
 */
-export class DataAwsRdsSnapshots extends cdktn.TerraformDataSource {
+export class TfDataSnapshots extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -54,11 +54,11 @@ export class DataAwsRdsSnapshots extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsRdsSnapshots resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataSnapshots resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsRdsSnapshots to import
-  * @param importFromId The id of the existing DataAwsRdsSnapshots that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_snapshots#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsRdsSnapshots to import is found
+  * @param importToId The construct id used in the generated config for the TfDataSnapshots to import
+  * @param importFromId The id of the existing TfDataSnapshots that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_snapshots#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataSnapshots to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_rds_snapshots", importId: importFromId, provider });
@@ -73,9 +73,9 @@ export class DataAwsRdsSnapshots extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsRdsSnapshotsConfig = {}
+  * @param options TfDataSnapshotsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsRdsSnapshotsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDataSnapshotsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_rds_snapshots',
       terraformGeneratorMetadata: {
@@ -201,17 +201,17 @@ export class DataAwsRdsSnapshots extends cdktn.TerraformDataSource {
   }
 
   // snapshots - computed: true, optional: false, required: false
-  private _snapshots = new DataAwsRdsSnapshots.SnapshotsPropertyList(this, "snapshots", false);
+  private _snapshots = new TfDataSnapshots.SnapshotsPropertyList(this, "snapshots", false);
   public get snapshots() {
     return this._snapshots;
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataAwsRdsSnapshots.FilterPropertyList(this, "filter", true);
+  private _filter = new TfDataSnapshots.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataAwsRdsSnapshots.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: TfDataSnapshots.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -234,7 +234,7 @@ export class DataAwsRdsSnapshots extends cdktn.TerraformDataSource {
       include_shared: cdktn.booleanToTerraform(this._includeShared),
       region: cdktn.stringToTerraform(this._region),
       snapshot_type: cdktn.stringToTerraform(this._snapshotType),
-      filter: cdktn.listMapper(dataAwsRdsSnapshotsFilterPropertyToTerraform, true)(this._filter.internalValue),
+      filter: cdktn.listMapper(tfDataSnapshotsFilterPropertyToTerraform, true)(this._filter.internalValue),
     };
   }
 
@@ -277,10 +277,10 @@ export class DataAwsRdsSnapshots extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataAwsRdsSnapshotsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(tfDataSnapshotsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataAwsRdsSnapshots.FilterPropertyList",
+        storageClassType: "TfDataSnapshots.FilterPropertyList",
       },
     };
 
@@ -289,7 +289,7 @@ export class DataAwsRdsSnapshots extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsRdsSnapshotsTagListPropertyToTerraform(struct?: DataAwsRdsSnapshots.TagListProperty): any {
+export function tfDataSnapshotsTagListPropertyToTerraform(struct?: TfDataSnapshots.TagListProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -299,7 +299,7 @@ export function dataAwsRdsSnapshotsTagListPropertyToTerraform(struct?: DataAwsRd
 }
 
 
-export function dataAwsRdsSnapshotsTagListPropertyToHclTerraform(struct?: DataAwsRdsSnapshots.TagListProperty): any {
+export function tfDataSnapshotsTagListPropertyToHclTerraform(struct?: TfDataSnapshots.TagListProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -310,7 +310,7 @@ export function dataAwsRdsSnapshotsTagListPropertyToHclTerraform(struct?: DataAw
 }
 
 
-export function dataAwsRdsSnapshotsSnapshotsPropertyToTerraform(struct?: DataAwsRdsSnapshots.SnapshotsProperty): any {
+export function tfDataSnapshotsSnapshotsPropertyToTerraform(struct?: TfDataSnapshots.SnapshotsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -320,7 +320,7 @@ export function dataAwsRdsSnapshotsSnapshotsPropertyToTerraform(struct?: DataAws
 }
 
 
-export function dataAwsRdsSnapshotsSnapshotsPropertyToHclTerraform(struct?: DataAwsRdsSnapshots.SnapshotsProperty): any {
+export function tfDataSnapshotsSnapshotsPropertyToHclTerraform(struct?: TfDataSnapshots.SnapshotsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -331,7 +331,7 @@ export function dataAwsRdsSnapshotsSnapshotsPropertyToHclTerraform(struct?: Data
 }
 
 
-export function dataAwsRdsSnapshotsFilterPropertyToTerraform(struct?: DataAwsRdsSnapshots.FilterProperty | cdktn.IResolvable): any {
+export function tfDataSnapshotsFilterPropertyToTerraform(struct?: TfDataSnapshots.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -343,7 +343,7 @@ export function dataAwsRdsSnapshotsFilterPropertyToTerraform(struct?: DataAwsRds
 }
 
 
-export function dataAwsRdsSnapshotsFilterPropertyToHclTerraform(struct?: DataAwsRdsSnapshots.FilterProperty | cdktn.IResolvable): any {
+export function tfDataSnapshotsFilterPropertyToHclTerraform(struct?: TfDataSnapshots.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -368,7 +368,7 @@ export function dataAwsRdsSnapshotsFilterPropertyToHclTerraform(struct?: DataAws
 }
 
 
-export namespace DataAwsRdsSnapshots {
+export namespace TfDataSnapshots {
 export interface TagListProperty {
 }
 export class TagListPropertyOutputReference extends cdktn.ComplexObject {
@@ -590,11 +590,11 @@ export class SnapshotsPropertyList extends cdktn.ComplexList {
 }
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_snapshots#name DataAwsRdsSnapshots#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_snapshots#name TfDataSnapshots#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_snapshots#values DataAwsRdsSnapshots#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_snapshots#values TfDataSnapshots#values}
   */
   readonly values: string[];
 }

@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsRdsGlobalClusterConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataGlobalClusterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_global_cluster#identifier DataAwsRdsGlobalCluster#identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_global_cluster#identifier TfDataGlobalCluster#identifier}
   */
   readonly identifier: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_global_cluster#region DataAwsRdsGlobalCluster#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_global_cluster#region TfDataGlobalCluster#region}
   */
   readonly region?: string;
 }
@@ -21,7 +21,7 @@ export interface DataAwsRdsGlobalClusterConfig extends cdktn.TerraformMetaArgume
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_global_cluster aws_rds_global_cluster}
 */
-export class DataAwsRdsGlobalCluster extends cdktn.TerraformDataSource {
+export class TfDataGlobalCluster extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class DataAwsRdsGlobalCluster extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsRdsGlobalCluster resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataGlobalCluster resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsRdsGlobalCluster to import
-  * @param importFromId The id of the existing DataAwsRdsGlobalCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_global_cluster#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsRdsGlobalCluster to import is found
+  * @param importToId The construct id used in the generated config for the TfDataGlobalCluster to import
+  * @param importFromId The id of the existing TfDataGlobalCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_global_cluster#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataGlobalCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_rds_global_cluster", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class DataAwsRdsGlobalCluster extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsRdsGlobalClusterConfig
+  * @param options TfDataGlobalClusterConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsRdsGlobalClusterConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataGlobalClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_rds_global_cluster',
       terraformGeneratorMetadata: {
@@ -126,7 +126,7 @@ export class DataAwsRdsGlobalCluster extends cdktn.TerraformDataSource {
   }
 
   // members - computed: true, optional: false, required: false
-  private _members = new DataAwsRdsGlobalCluster.MembersPropertyList(this, "members", false);
+  private _members = new TfDataGlobalCluster.MembersPropertyList(this, "members", false);
   public get members() {
     return this._members;
   }
@@ -195,7 +195,7 @@ export class DataAwsRdsGlobalCluster extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsRdsGlobalClusterMembersPropertyToTerraform(struct?: DataAwsRdsGlobalCluster.MembersProperty): any {
+export function tfDataGlobalClusterMembersPropertyToTerraform(struct?: TfDataGlobalCluster.MembersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -205,7 +205,7 @@ export function dataAwsRdsGlobalClusterMembersPropertyToTerraform(struct?: DataA
 }
 
 
-export function dataAwsRdsGlobalClusterMembersPropertyToHclTerraform(struct?: DataAwsRdsGlobalCluster.MembersProperty): any {
+export function tfDataGlobalClusterMembersPropertyToHclTerraform(struct?: TfDataGlobalCluster.MembersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -216,7 +216,7 @@ export function dataAwsRdsGlobalClusterMembersPropertyToHclTerraform(struct?: Da
 }
 
 
-export namespace DataAwsRdsGlobalCluster {
+export namespace TfDataGlobalCluster {
 export interface MembersProperty {
 }
 export class MembersPropertyOutputReference extends cdktn.ComplexObject {

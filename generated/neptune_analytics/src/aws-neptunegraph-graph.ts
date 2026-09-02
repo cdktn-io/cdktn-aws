@@ -5,11 +5,11 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsNeptunegraphGraphConfig extends cdktn.TerraformMetaArguments {
+export interface TfGraphConfig extends cdktn.TerraformMetaArguments {
   /**
   * A value that indicates whether the graph has deletion protection enabled. The graph can't be deleted when deletion protection is enabled.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptunegraph_graph#deletion_protection AwsNeptunegraphGraph#deletion_protection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptunegraph_graph#deletion_protection TfGraph#deletion_protection}
   */
   readonly deletionProtection?: boolean | cdktn.IResolvable;
   /**
@@ -19,25 +19,25 @@ export interface AwsNeptunegraphGraphConfig extends cdktn.TerraformMetaArguments
   * 								If you don't specify a graph name, a unique graph name is generated for you using the prefix graph-for, 
   * 								followed by a combination of Stack Name and a UUID.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptunegraph_graph#graph_name AwsNeptunegraphGraph#graph_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptunegraph_graph#graph_name TfGraph#graph_name}
   */
   readonly graphName?: string;
   /**
   * Allows user to specify name prefix and have remainder of name automatically generated.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptunegraph_graph#graph_name_prefix AwsNeptunegraphGraph#graph_name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptunegraph_graph#graph_name_prefix TfGraph#graph_name_prefix}
   */
   readonly graphNamePrefix?: string;
   /**
   * Specifies a KMS key to use to encrypt data in the new graph.  Value must be ARN of KMS Key.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptunegraph_graph#kms_key_identifier AwsNeptunegraphGraph#kms_key_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptunegraph_graph#kms_key_identifier TfGraph#kms_key_identifier}
   */
   readonly kmsKeyIdentifier?: string;
   /**
   * The provisioned memory-optimized Neptune Capacity Units (m-NCUs) to use for the graph.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptunegraph_graph#provisioned_memory AwsNeptunegraphGraph#provisioned_memory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptunegraph_graph#provisioned_memory TfGraph#provisioned_memory}
   */
   readonly provisionedMemory: number;
   /**
@@ -48,43 +48,43 @@ export interface AwsNeptunegraphGraphConfig extends cdktn.TerraformMetaArguments
   * 								to create a PrivateGraphEndpoint in a given VPC to ensure the DNS name resolves to a private 
   * 								IP address that is reachable from the VPC.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptunegraph_graph#public_connectivity AwsNeptunegraphGraph#public_connectivity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptunegraph_graph#public_connectivity TfGraph#public_connectivity}
   */
   readonly publicConnectivity?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptunegraph_graph#region AwsNeptunegraphGraph#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptunegraph_graph#region TfGraph#region}
   */
   readonly region?: string;
   /**
   * The number of replicas in other AZs.  Value must be between 0 and 2.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptunegraph_graph#replica_count AwsNeptunegraphGraph#replica_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptunegraph_graph#replica_count TfGraph#replica_count}
   */
   readonly replicaCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptunegraph_graph#tags AwsNeptunegraphGraph#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptunegraph_graph#tags TfGraph#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptunegraph_graph#timeouts AwsNeptunegraphGraph#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptunegraph_graph#timeouts TfGraph#timeouts}
   */
-  readonly timeouts?: AwsNeptunegraphGraph.TimeoutsProperty;
+  readonly timeouts?: TfGraph.TimeoutsProperty;
   /**
   * vector_search_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptunegraph_graph#vector_search_configuration AwsNeptunegraphGraph#vector_search_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptunegraph_graph#vector_search_configuration TfGraph#vector_search_configuration}
   */
-  readonly vectorSearchConfiguration?: AwsNeptunegraphGraph.VectorSearchConfigurationProperty[] | cdktn.IResolvable;
+  readonly vectorSearchConfiguration?: TfGraph.VectorSearchConfigurationProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptunegraph_graph aws_neptunegraph_graph}
 */
-export class AwsNeptunegraphGraph extends cdktn.TerraformResource {
+export class TfGraph extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -95,11 +95,11 @@ export class AwsNeptunegraphGraph extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsNeptunegraphGraph resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfGraph resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsNeptunegraphGraph to import
-  * @param importFromId The id of the existing AwsNeptunegraphGraph that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptunegraph_graph#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsNeptunegraphGraph to import is found
+  * @param importToId The construct id used in the generated config for the TfGraph to import
+  * @param importFromId The id of the existing TfGraph that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptunegraph_graph#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfGraph to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_neptunegraph_graph", importId: importFromId, provider });
@@ -114,9 +114,9 @@ export class AwsNeptunegraphGraph extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsNeptunegraphGraphConfig
+  * @param options TfGraphConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsNeptunegraphGraphConfig) {
+  public constructor(scope: Construct, id: string, config: TfGraphConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_neptunegraph_graph',
       terraformGeneratorMetadata: {
@@ -312,11 +312,11 @@ export class AwsNeptunegraphGraph extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsNeptunegraphGraph.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfGraph.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsNeptunegraphGraph.TimeoutsProperty) {
+  public putTimeouts(value: TfGraph.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -328,11 +328,11 @@ export class AwsNeptunegraphGraph extends cdktn.TerraformResource {
   }
 
   // vector_search_configuration - computed: false, optional: true, required: false
-  private _vectorSearchConfiguration = new AwsNeptunegraphGraph.VectorSearchConfigurationPropertyList(this, "vector_search_configuration", false);
+  private _vectorSearchConfiguration = new TfGraph.VectorSearchConfigurationPropertyList(this, "vector_search_configuration", false);
   public get vectorSearchConfiguration() {
     return this._vectorSearchConfiguration;
   }
-  public putVectorSearchConfiguration(value: AwsNeptunegraphGraph.VectorSearchConfigurationProperty[] | cdktn.IResolvable) {
+  public putVectorSearchConfiguration(value: TfGraph.VectorSearchConfigurationProperty[] | cdktn.IResolvable) {
     this._vectorSearchConfiguration.internalValue = value;
   }
   public resetVectorSearchConfiguration() {
@@ -358,8 +358,8 @@ export class AwsNeptunegraphGraph extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       replica_count: cdktn.numberToTerraform(this._replicaCount),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      timeouts: awsNeptunegraphGraphTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      vector_search_configuration: cdktn.listMapper(awsNeptunegraphGraphVectorSearchConfigurationPropertyToTerraform, true)(this._vectorSearchConfiguration.internalValue),
+      timeouts: tfGraphTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      vector_search_configuration: cdktn.listMapper(tfGraphVectorSearchConfigurationPropertyToTerraform, true)(this._vectorSearchConfiguration.internalValue),
     };
   }
 
@@ -420,16 +420,16 @@ export class AwsNeptunegraphGraph extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsNeptunegraphGraphTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfGraphTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsNeptunegraphGraph.TimeoutsProperty",
+        storageClassType: "TfGraph.TimeoutsProperty",
       },
       vector_search_configuration: {
-        value: cdktn.listMapperHcl(awsNeptunegraphGraphVectorSearchConfigurationPropertyToHclTerraform, true)(this._vectorSearchConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfGraphVectorSearchConfigurationPropertyToHclTerraform, true)(this._vectorSearchConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsNeptunegraphGraph.VectorSearchConfigurationPropertyList",
+        storageClassType: "TfGraph.VectorSearchConfigurationPropertyList",
       },
     };
 
@@ -438,7 +438,7 @@ export class AwsNeptunegraphGraph extends cdktn.TerraformResource {
   }
 }
 
-export function awsNeptunegraphGraphTimeoutsPropertyToTerraform(struct?: AwsNeptunegraphGraph.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfGraphTimeoutsPropertyToTerraform(struct?: TfGraph.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -451,7 +451,7 @@ export function awsNeptunegraphGraphTimeoutsPropertyToTerraform(struct?: AwsNept
 }
 
 
-export function awsNeptunegraphGraphTimeoutsPropertyToHclTerraform(struct?: AwsNeptunegraphGraph.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfGraphTimeoutsPropertyToHclTerraform(struct?: TfGraph.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -482,7 +482,7 @@ export function awsNeptunegraphGraphTimeoutsPropertyToHclTerraform(struct?: AwsN
 }
 
 
-export function awsNeptunegraphGraphVectorSearchConfigurationPropertyToTerraform(struct?: AwsNeptunegraphGraph.VectorSearchConfigurationProperty | cdktn.IResolvable): any {
+export function tfGraphVectorSearchConfigurationPropertyToTerraform(struct?: TfGraph.VectorSearchConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -493,7 +493,7 @@ export function awsNeptunegraphGraphVectorSearchConfigurationPropertyToTerraform
 }
 
 
-export function awsNeptunegraphGraphVectorSearchConfigurationPropertyToHclTerraform(struct?: AwsNeptunegraphGraph.VectorSearchConfigurationProperty | cdktn.IResolvable): any {
+export function tfGraphVectorSearchConfigurationPropertyToHclTerraform(struct?: TfGraph.VectorSearchConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -512,24 +512,24 @@ export function awsNeptunegraphGraphVectorSearchConfigurationPropertyToHclTerraf
 }
 
 
-export namespace AwsNeptunegraphGraph {
+export namespace TfGraph {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptunegraph_graph#create AwsNeptunegraphGraph#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptunegraph_graph#create TfGraph#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptunegraph_graph#delete AwsNeptunegraphGraph#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptunegraph_graph#delete TfGraph#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptunegraph_graph#update AwsNeptunegraphGraph#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptunegraph_graph#update TfGraph#update}
   */
   readonly update?: string;
 }
@@ -639,7 +639,7 @@ export interface VectorSearchConfigurationProperty {
   /**
   * Specifies the number of dimensions for vector embeddings.  Value must be between 1 and 65,535.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptunegraph_graph#vector_search_dimension AwsNeptunegraphGraph#vector_search_dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptunegraph_graph#vector_search_dimension TfGraph#vector_search_dimension}
   */
   readonly vectorSearchDimension?: number;
 }

@@ -5,134 +5,134 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsFinspaceKxClusterConfig extends cdktn.TerraformMetaArguments {
+export interface TfKxClusterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#availability_zone_id AwsFinspaceKxCluster#availability_zone_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#availability_zone_id TfKxCluster#availability_zone_id}
   */
   readonly availabilityZoneId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#az_mode AwsFinspaceKxCluster#az_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#az_mode TfKxCluster#az_mode}
   */
   readonly azMode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#command_line_arguments AwsFinspaceKxCluster#command_line_arguments}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#command_line_arguments TfKxCluster#command_line_arguments}
   */
   readonly commandLineArguments?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#description AwsFinspaceKxCluster#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#description TfKxCluster#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#environment_id AwsFinspaceKxCluster#environment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#environment_id TfKxCluster#environment_id}
   */
   readonly environmentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#execution_role AwsFinspaceKxCluster#execution_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#execution_role TfKxCluster#execution_role}
   */
   readonly executionRole?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#id AwsFinspaceKxCluster#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#id TfKxCluster#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#initialization_script AwsFinspaceKxCluster#initialization_script}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#initialization_script TfKxCluster#initialization_script}
   */
   readonly initializationScript?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#name AwsFinspaceKxCluster#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#name TfKxCluster#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#region AwsFinspaceKxCluster#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#region TfKxCluster#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#release_label AwsFinspaceKxCluster#release_label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#release_label TfKxCluster#release_label}
   */
   readonly releaseLabel: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#tags AwsFinspaceKxCluster#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#tags TfKxCluster#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#tags_all AwsFinspaceKxCluster#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#tags_all TfKxCluster#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#type AwsFinspaceKxCluster#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#type TfKxCluster#type}
   */
   readonly type: string;
   /**
   * auto_scaling_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#auto_scaling_configuration AwsFinspaceKxCluster#auto_scaling_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#auto_scaling_configuration TfKxCluster#auto_scaling_configuration}
   */
-  readonly autoScalingConfiguration?: AwsFinspaceKxCluster.AutoScalingConfigurationProperty;
+  readonly autoScalingConfiguration?: TfKxCluster.AutoScalingConfigurationProperty;
   /**
   * cache_storage_configurations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#cache_storage_configurations AwsFinspaceKxCluster#cache_storage_configurations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#cache_storage_configurations TfKxCluster#cache_storage_configurations}
   */
-  readonly cacheStorageConfigurations?: AwsFinspaceKxCluster.CacheStorageConfigurationsProperty[] | cdktn.IResolvable;
+  readonly cacheStorageConfigurations?: TfKxCluster.CacheStorageConfigurationsProperty[] | cdktn.IResolvable;
   /**
   * capacity_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#capacity_configuration AwsFinspaceKxCluster#capacity_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#capacity_configuration TfKxCluster#capacity_configuration}
   */
-  readonly capacityConfiguration?: AwsFinspaceKxCluster.CapacityConfigurationProperty;
+  readonly capacityConfiguration?: TfKxCluster.CapacityConfigurationProperty;
   /**
   * code block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#code AwsFinspaceKxCluster#code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#code TfKxCluster#code}
   */
-  readonly code?: AwsFinspaceKxCluster.CodeProperty;
+  readonly code?: TfKxCluster.CodeProperty;
   /**
   * database block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#database AwsFinspaceKxCluster#database}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#database TfKxCluster#database}
   */
-  readonly database?: AwsFinspaceKxCluster.DatabaseProperty[] | cdktn.IResolvable;
+  readonly database?: TfKxCluster.DatabaseProperty[] | cdktn.IResolvable;
   /**
   * savedown_storage_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#savedown_storage_configuration AwsFinspaceKxCluster#savedown_storage_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#savedown_storage_configuration TfKxCluster#savedown_storage_configuration}
   */
-  readonly savedownStorageConfiguration?: AwsFinspaceKxCluster.SavedownStorageConfigurationProperty;
+  readonly savedownStorageConfiguration?: TfKxCluster.SavedownStorageConfigurationProperty;
   /**
   * scaling_group_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#scaling_group_configuration AwsFinspaceKxCluster#scaling_group_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#scaling_group_configuration TfKxCluster#scaling_group_configuration}
   */
-  readonly scalingGroupConfiguration?: AwsFinspaceKxCluster.ScalingGroupConfigurationProperty;
+  readonly scalingGroupConfiguration?: TfKxCluster.ScalingGroupConfigurationProperty;
   /**
   * tickerplant_log_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#tickerplant_log_configuration AwsFinspaceKxCluster#tickerplant_log_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#tickerplant_log_configuration TfKxCluster#tickerplant_log_configuration}
   */
-  readonly tickerplantLogConfiguration?: AwsFinspaceKxCluster.TickerplantLogConfigurationProperty[] | cdktn.IResolvable;
+  readonly tickerplantLogConfiguration?: TfKxCluster.TickerplantLogConfigurationProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#timeouts AwsFinspaceKxCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#timeouts TfKxCluster#timeouts}
   */
-  readonly timeouts?: AwsFinspaceKxCluster.TimeoutsProperty;
+  readonly timeouts?: TfKxCluster.TimeoutsProperty;
   /**
   * vpc_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#vpc_configuration AwsFinspaceKxCluster#vpc_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#vpc_configuration TfKxCluster#vpc_configuration}
   */
-  readonly vpcConfiguration: AwsFinspaceKxCluster.VpcConfigurationProperty;
+  readonly vpcConfiguration: TfKxCluster.VpcConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster aws_finspace_kx_cluster}
 */
-export class AwsFinspaceKxCluster extends cdktn.TerraformResource {
+export class TfKxCluster extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -143,11 +143,11 @@ export class AwsFinspaceKxCluster extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsFinspaceKxCluster resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfKxCluster resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsFinspaceKxCluster to import
-  * @param importFromId The id of the existing AwsFinspaceKxCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsFinspaceKxCluster to import is found
+  * @param importToId The construct id used in the generated config for the TfKxCluster to import
+  * @param importFromId The id of the existing TfKxCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfKxCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_finspace_kx_cluster", importId: importFromId, provider });
@@ -162,9 +162,9 @@ export class AwsFinspaceKxCluster extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsFinspaceKxClusterConfig
+  * @param options TfKxClusterConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsFinspaceKxClusterConfig) {
+  public constructor(scope: Construct, id: string, config: TfKxClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_finspace_kx_cluster',
       terraformGeneratorMetadata: {
@@ -445,11 +445,11 @@ export class AwsFinspaceKxCluster extends cdktn.TerraformResource {
   }
 
   // auto_scaling_configuration - computed: false, optional: true, required: false
-  private _autoScalingConfiguration = new AwsFinspaceKxCluster.AutoScalingConfigurationPropertyOutputReference(this, "auto_scaling_configuration");
+  private _autoScalingConfiguration = new TfKxCluster.AutoScalingConfigurationPropertyOutputReference(this, "auto_scaling_configuration");
   public get autoScalingConfiguration() {
     return this._autoScalingConfiguration;
   }
-  public putAutoScalingConfiguration(value: AwsFinspaceKxCluster.AutoScalingConfigurationProperty) {
+  public putAutoScalingConfiguration(value: TfKxCluster.AutoScalingConfigurationProperty) {
     this._autoScalingConfiguration.internalValue = value;
   }
   public resetAutoScalingConfiguration() {
@@ -461,11 +461,11 @@ export class AwsFinspaceKxCluster extends cdktn.TerraformResource {
   }
 
   // cache_storage_configurations - computed: false, optional: true, required: false
-  private _cacheStorageConfigurations = new AwsFinspaceKxCluster.CacheStorageConfigurationsPropertyList(this, "cache_storage_configurations", false);
+  private _cacheStorageConfigurations = new TfKxCluster.CacheStorageConfigurationsPropertyList(this, "cache_storage_configurations", false);
   public get cacheStorageConfigurations() {
     return this._cacheStorageConfigurations;
   }
-  public putCacheStorageConfigurations(value: AwsFinspaceKxCluster.CacheStorageConfigurationsProperty[] | cdktn.IResolvable) {
+  public putCacheStorageConfigurations(value: TfKxCluster.CacheStorageConfigurationsProperty[] | cdktn.IResolvable) {
     this._cacheStorageConfigurations.internalValue = value;
   }
   public resetCacheStorageConfigurations() {
@@ -477,11 +477,11 @@ export class AwsFinspaceKxCluster extends cdktn.TerraformResource {
   }
 
   // capacity_configuration - computed: false, optional: true, required: false
-  private _capacityConfiguration = new AwsFinspaceKxCluster.CapacityConfigurationPropertyOutputReference(this, "capacity_configuration");
+  private _capacityConfiguration = new TfKxCluster.CapacityConfigurationPropertyOutputReference(this, "capacity_configuration");
   public get capacityConfiguration() {
     return this._capacityConfiguration;
   }
-  public putCapacityConfiguration(value: AwsFinspaceKxCluster.CapacityConfigurationProperty) {
+  public putCapacityConfiguration(value: TfKxCluster.CapacityConfigurationProperty) {
     this._capacityConfiguration.internalValue = value;
   }
   public resetCapacityConfiguration() {
@@ -493,11 +493,11 @@ export class AwsFinspaceKxCluster extends cdktn.TerraformResource {
   }
 
   // code - computed: false, optional: true, required: false
-  private _code = new AwsFinspaceKxCluster.CodePropertyOutputReference(this, "code");
+  private _code = new TfKxCluster.CodePropertyOutputReference(this, "code");
   public get code() {
     return this._code;
   }
-  public putCode(value: AwsFinspaceKxCluster.CodeProperty) {
+  public putCode(value: TfKxCluster.CodeProperty) {
     this._code.internalValue = value;
   }
   public resetCode() {
@@ -509,11 +509,11 @@ export class AwsFinspaceKxCluster extends cdktn.TerraformResource {
   }
 
   // database - computed: false, optional: true, required: false
-  private _database = new AwsFinspaceKxCluster.DatabasePropertyList(this, "database", false);
+  private _database = new TfKxCluster.DatabasePropertyList(this, "database", false);
   public get database() {
     return this._database;
   }
-  public putDatabase(value: AwsFinspaceKxCluster.DatabaseProperty[] | cdktn.IResolvable) {
+  public putDatabase(value: TfKxCluster.DatabaseProperty[] | cdktn.IResolvable) {
     this._database.internalValue = value;
   }
   public resetDatabase() {
@@ -525,11 +525,11 @@ export class AwsFinspaceKxCluster extends cdktn.TerraformResource {
   }
 
   // savedown_storage_configuration - computed: false, optional: true, required: false
-  private _savedownStorageConfiguration = new AwsFinspaceKxCluster.SavedownStorageConfigurationPropertyOutputReference(this, "savedown_storage_configuration");
+  private _savedownStorageConfiguration = new TfKxCluster.SavedownStorageConfigurationPropertyOutputReference(this, "savedown_storage_configuration");
   public get savedownStorageConfiguration() {
     return this._savedownStorageConfiguration;
   }
-  public putSavedownStorageConfiguration(value: AwsFinspaceKxCluster.SavedownStorageConfigurationProperty) {
+  public putSavedownStorageConfiguration(value: TfKxCluster.SavedownStorageConfigurationProperty) {
     this._savedownStorageConfiguration.internalValue = value;
   }
   public resetSavedownStorageConfiguration() {
@@ -541,11 +541,11 @@ export class AwsFinspaceKxCluster extends cdktn.TerraformResource {
   }
 
   // scaling_group_configuration - computed: false, optional: true, required: false
-  private _scalingGroupConfiguration = new AwsFinspaceKxCluster.ScalingGroupConfigurationPropertyOutputReference(this, "scaling_group_configuration");
+  private _scalingGroupConfiguration = new TfKxCluster.ScalingGroupConfigurationPropertyOutputReference(this, "scaling_group_configuration");
   public get scalingGroupConfiguration() {
     return this._scalingGroupConfiguration;
   }
-  public putScalingGroupConfiguration(value: AwsFinspaceKxCluster.ScalingGroupConfigurationProperty) {
+  public putScalingGroupConfiguration(value: TfKxCluster.ScalingGroupConfigurationProperty) {
     this._scalingGroupConfiguration.internalValue = value;
   }
   public resetScalingGroupConfiguration() {
@@ -557,11 +557,11 @@ export class AwsFinspaceKxCluster extends cdktn.TerraformResource {
   }
 
   // tickerplant_log_configuration - computed: false, optional: true, required: false
-  private _tickerplantLogConfiguration = new AwsFinspaceKxCluster.TickerplantLogConfigurationPropertyList(this, "tickerplant_log_configuration", false);
+  private _tickerplantLogConfiguration = new TfKxCluster.TickerplantLogConfigurationPropertyList(this, "tickerplant_log_configuration", false);
   public get tickerplantLogConfiguration() {
     return this._tickerplantLogConfiguration;
   }
-  public putTickerplantLogConfiguration(value: AwsFinspaceKxCluster.TickerplantLogConfigurationProperty[] | cdktn.IResolvable) {
+  public putTickerplantLogConfiguration(value: TfKxCluster.TickerplantLogConfigurationProperty[] | cdktn.IResolvable) {
     this._tickerplantLogConfiguration.internalValue = value;
   }
   public resetTickerplantLogConfiguration() {
@@ -573,11 +573,11 @@ export class AwsFinspaceKxCluster extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsFinspaceKxCluster.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfKxCluster.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsFinspaceKxCluster.TimeoutsProperty) {
+  public putTimeouts(value: TfKxCluster.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -589,11 +589,11 @@ export class AwsFinspaceKxCluster extends cdktn.TerraformResource {
   }
 
   // vpc_configuration - computed: false, optional: false, required: true
-  private _vpcConfiguration = new AwsFinspaceKxCluster.VpcConfigurationPropertyOutputReference(this, "vpc_configuration");
+  private _vpcConfiguration = new TfKxCluster.VpcConfigurationPropertyOutputReference(this, "vpc_configuration");
   public get vpcConfiguration() {
     return this._vpcConfiguration;
   }
-  public putVpcConfiguration(value: AwsFinspaceKxCluster.VpcConfigurationProperty) {
+  public putVpcConfiguration(value: TfKxCluster.VpcConfigurationProperty) {
     this._vpcConfiguration.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -621,16 +621,16 @@ export class AwsFinspaceKxCluster extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       type: cdktn.stringToTerraform(this._type),
-      auto_scaling_configuration: awsFinspaceKxClusterAutoScalingConfigurationPropertyToTerraform(this._autoScalingConfiguration.internalValue),
-      cache_storage_configurations: cdktn.listMapper(awsFinspaceKxClusterCacheStorageConfigurationsPropertyToTerraform, true)(this._cacheStorageConfigurations.internalValue),
-      capacity_configuration: awsFinspaceKxClusterCapacityConfigurationPropertyToTerraform(this._capacityConfiguration.internalValue),
-      code: awsFinspaceKxClusterCodePropertyToTerraform(this._code.internalValue),
-      database: cdktn.listMapper(awsFinspaceKxClusterDatabasePropertyToTerraform, true)(this._database.internalValue),
-      savedown_storage_configuration: awsFinspaceKxClusterSavedownStorageConfigurationPropertyToTerraform(this._savedownStorageConfiguration.internalValue),
-      scaling_group_configuration: awsFinspaceKxClusterScalingGroupConfigurationPropertyToTerraform(this._scalingGroupConfiguration.internalValue),
-      tickerplant_log_configuration: cdktn.listMapper(awsFinspaceKxClusterTickerplantLogConfigurationPropertyToTerraform, true)(this._tickerplantLogConfiguration.internalValue),
-      timeouts: awsFinspaceKxClusterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      vpc_configuration: awsFinspaceKxClusterVpcConfigurationPropertyToTerraform(this._vpcConfiguration.internalValue),
+      auto_scaling_configuration: tfKxClusterAutoScalingConfigurationPropertyToTerraform(this._autoScalingConfiguration.internalValue),
+      cache_storage_configurations: cdktn.listMapper(tfKxClusterCacheStorageConfigurationsPropertyToTerraform, true)(this._cacheStorageConfigurations.internalValue),
+      capacity_configuration: tfKxClusterCapacityConfigurationPropertyToTerraform(this._capacityConfiguration.internalValue),
+      code: tfKxClusterCodePropertyToTerraform(this._code.internalValue),
+      database: cdktn.listMapper(tfKxClusterDatabasePropertyToTerraform, true)(this._database.internalValue),
+      savedown_storage_configuration: tfKxClusterSavedownStorageConfigurationPropertyToTerraform(this._savedownStorageConfiguration.internalValue),
+      scaling_group_configuration: tfKxClusterScalingGroupConfigurationPropertyToTerraform(this._scalingGroupConfiguration.internalValue),
+      tickerplant_log_configuration: cdktn.listMapper(tfKxClusterTickerplantLogConfigurationPropertyToTerraform, true)(this._tickerplantLogConfiguration.internalValue),
+      timeouts: tfKxClusterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      vpc_configuration: tfKxClusterVpcConfigurationPropertyToTerraform(this._vpcConfiguration.internalValue),
     };
   }
 
@@ -721,64 +721,64 @@ export class AwsFinspaceKxCluster extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       auto_scaling_configuration: {
-        value: awsFinspaceKxClusterAutoScalingConfigurationPropertyToHclTerraform(this._autoScalingConfiguration.internalValue),
+        value: tfKxClusterAutoScalingConfigurationPropertyToHclTerraform(this._autoScalingConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsFinspaceKxCluster.AutoScalingConfigurationPropertyList",
+        storageClassType: "TfKxCluster.AutoScalingConfigurationPropertyList",
       },
       cache_storage_configurations: {
-        value: cdktn.listMapperHcl(awsFinspaceKxClusterCacheStorageConfigurationsPropertyToHclTerraform, true)(this._cacheStorageConfigurations.internalValue),
+        value: cdktn.listMapperHcl(tfKxClusterCacheStorageConfigurationsPropertyToHclTerraform, true)(this._cacheStorageConfigurations.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsFinspaceKxCluster.CacheStorageConfigurationsPropertyList",
+        storageClassType: "TfKxCluster.CacheStorageConfigurationsPropertyList",
       },
       capacity_configuration: {
-        value: awsFinspaceKxClusterCapacityConfigurationPropertyToHclTerraform(this._capacityConfiguration.internalValue),
+        value: tfKxClusterCapacityConfigurationPropertyToHclTerraform(this._capacityConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsFinspaceKxCluster.CapacityConfigurationPropertyList",
+        storageClassType: "TfKxCluster.CapacityConfigurationPropertyList",
       },
       code: {
-        value: awsFinspaceKxClusterCodePropertyToHclTerraform(this._code.internalValue),
+        value: tfKxClusterCodePropertyToHclTerraform(this._code.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsFinspaceKxCluster.CodePropertyList",
+        storageClassType: "TfKxCluster.CodePropertyList",
       },
       database: {
-        value: cdktn.listMapperHcl(awsFinspaceKxClusterDatabasePropertyToHclTerraform, true)(this._database.internalValue),
+        value: cdktn.listMapperHcl(tfKxClusterDatabasePropertyToHclTerraform, true)(this._database.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsFinspaceKxCluster.DatabasePropertyList",
+        storageClassType: "TfKxCluster.DatabasePropertyList",
       },
       savedown_storage_configuration: {
-        value: awsFinspaceKxClusterSavedownStorageConfigurationPropertyToHclTerraform(this._savedownStorageConfiguration.internalValue),
+        value: tfKxClusterSavedownStorageConfigurationPropertyToHclTerraform(this._savedownStorageConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsFinspaceKxCluster.SavedownStorageConfigurationPropertyList",
+        storageClassType: "TfKxCluster.SavedownStorageConfigurationPropertyList",
       },
       scaling_group_configuration: {
-        value: awsFinspaceKxClusterScalingGroupConfigurationPropertyToHclTerraform(this._scalingGroupConfiguration.internalValue),
+        value: tfKxClusterScalingGroupConfigurationPropertyToHclTerraform(this._scalingGroupConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsFinspaceKxCluster.ScalingGroupConfigurationPropertyList",
+        storageClassType: "TfKxCluster.ScalingGroupConfigurationPropertyList",
       },
       tickerplant_log_configuration: {
-        value: cdktn.listMapperHcl(awsFinspaceKxClusterTickerplantLogConfigurationPropertyToHclTerraform, true)(this._tickerplantLogConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfKxClusterTickerplantLogConfigurationPropertyToHclTerraform, true)(this._tickerplantLogConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsFinspaceKxCluster.TickerplantLogConfigurationPropertyList",
+        storageClassType: "TfKxCluster.TickerplantLogConfigurationPropertyList",
       },
       timeouts: {
-        value: awsFinspaceKxClusterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfKxClusterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsFinspaceKxCluster.TimeoutsProperty",
+        storageClassType: "TfKxCluster.TimeoutsProperty",
       },
       vpc_configuration: {
-        value: awsFinspaceKxClusterVpcConfigurationPropertyToHclTerraform(this._vpcConfiguration.internalValue),
+        value: tfKxClusterVpcConfigurationPropertyToHclTerraform(this._vpcConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsFinspaceKxCluster.VpcConfigurationPropertyList",
+        storageClassType: "TfKxCluster.VpcConfigurationPropertyList",
       },
     };
 
@@ -787,7 +787,7 @@ export class AwsFinspaceKxCluster extends cdktn.TerraformResource {
   }
 }
 
-export function awsFinspaceKxClusterAutoScalingConfigurationPropertyToTerraform(struct?: AwsFinspaceKxCluster.AutoScalingConfigurationPropertyOutputReference | AwsFinspaceKxCluster.AutoScalingConfigurationProperty): any {
+export function tfKxClusterAutoScalingConfigurationPropertyToTerraform(struct?: TfKxCluster.AutoScalingConfigurationPropertyOutputReference | TfKxCluster.AutoScalingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -803,7 +803,7 @@ export function awsFinspaceKxClusterAutoScalingConfigurationPropertyToTerraform(
 }
 
 
-export function awsFinspaceKxClusterAutoScalingConfigurationPropertyToHclTerraform(struct?: AwsFinspaceKxCluster.AutoScalingConfigurationPropertyOutputReference | AwsFinspaceKxCluster.AutoScalingConfigurationProperty): any {
+export function tfKxClusterAutoScalingConfigurationPropertyToHclTerraform(struct?: TfKxCluster.AutoScalingConfigurationPropertyOutputReference | TfKxCluster.AutoScalingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -852,7 +852,7 @@ export function awsFinspaceKxClusterAutoScalingConfigurationPropertyToHclTerrafo
 }
 
 
-export function awsFinspaceKxClusterCacheStorageConfigurationsPropertyToTerraform(struct?: AwsFinspaceKxCluster.CacheStorageConfigurationsProperty | cdktn.IResolvable): any {
+export function tfKxClusterCacheStorageConfigurationsPropertyToTerraform(struct?: TfKxCluster.CacheStorageConfigurationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -864,7 +864,7 @@ export function awsFinspaceKxClusterCacheStorageConfigurationsPropertyToTerrafor
 }
 
 
-export function awsFinspaceKxClusterCacheStorageConfigurationsPropertyToHclTerraform(struct?: AwsFinspaceKxCluster.CacheStorageConfigurationsProperty | cdktn.IResolvable): any {
+export function tfKxClusterCacheStorageConfigurationsPropertyToHclTerraform(struct?: TfKxCluster.CacheStorageConfigurationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -889,7 +889,7 @@ export function awsFinspaceKxClusterCacheStorageConfigurationsPropertyToHclTerra
 }
 
 
-export function awsFinspaceKxClusterCapacityConfigurationPropertyToTerraform(struct?: AwsFinspaceKxCluster.CapacityConfigurationPropertyOutputReference | AwsFinspaceKxCluster.CapacityConfigurationProperty): any {
+export function tfKxClusterCapacityConfigurationPropertyToTerraform(struct?: TfKxCluster.CapacityConfigurationPropertyOutputReference | TfKxCluster.CapacityConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -901,7 +901,7 @@ export function awsFinspaceKxClusterCapacityConfigurationPropertyToTerraform(str
 }
 
 
-export function awsFinspaceKxClusterCapacityConfigurationPropertyToHclTerraform(struct?: AwsFinspaceKxCluster.CapacityConfigurationPropertyOutputReference | AwsFinspaceKxCluster.CapacityConfigurationProperty): any {
+export function tfKxClusterCapacityConfigurationPropertyToHclTerraform(struct?: TfKxCluster.CapacityConfigurationPropertyOutputReference | TfKxCluster.CapacityConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -926,7 +926,7 @@ export function awsFinspaceKxClusterCapacityConfigurationPropertyToHclTerraform(
 }
 
 
-export function awsFinspaceKxClusterCodePropertyToTerraform(struct?: AwsFinspaceKxCluster.CodePropertyOutputReference | AwsFinspaceKxCluster.CodeProperty): any {
+export function tfKxClusterCodePropertyToTerraform(struct?: TfKxCluster.CodePropertyOutputReference | TfKxCluster.CodeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -939,7 +939,7 @@ export function awsFinspaceKxClusterCodePropertyToTerraform(struct?: AwsFinspace
 }
 
 
-export function awsFinspaceKxClusterCodePropertyToHclTerraform(struct?: AwsFinspaceKxCluster.CodePropertyOutputReference | AwsFinspaceKxCluster.CodeProperty): any {
+export function tfKxClusterCodePropertyToHclTerraform(struct?: TfKxCluster.CodePropertyOutputReference | TfKxCluster.CodeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -970,7 +970,7 @@ export function awsFinspaceKxClusterCodePropertyToHclTerraform(struct?: AwsFinsp
 }
 
 
-export function awsFinspaceKxClusterCacheConfigurationsPropertyToTerraform(struct?: AwsFinspaceKxCluster.CacheConfigurationsProperty | cdktn.IResolvable): any {
+export function tfKxClusterCacheConfigurationsPropertyToTerraform(struct?: TfKxCluster.CacheConfigurationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -982,7 +982,7 @@ export function awsFinspaceKxClusterCacheConfigurationsPropertyToTerraform(struc
 }
 
 
-export function awsFinspaceKxClusterCacheConfigurationsPropertyToHclTerraform(struct?: AwsFinspaceKxCluster.CacheConfigurationsProperty | cdktn.IResolvable): any {
+export function tfKxClusterCacheConfigurationsPropertyToHclTerraform(struct?: TfKxCluster.CacheConfigurationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1007,7 +1007,7 @@ export function awsFinspaceKxClusterCacheConfigurationsPropertyToHclTerraform(st
 }
 
 
-export function awsFinspaceKxClusterDatabasePropertyToTerraform(struct?: AwsFinspaceKxCluster.DatabaseProperty | cdktn.IResolvable): any {
+export function tfKxClusterDatabasePropertyToTerraform(struct?: TfKxCluster.DatabaseProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1016,12 +1016,12 @@ export function awsFinspaceKxClusterDatabasePropertyToTerraform(struct?: AwsFins
     changeset_id: cdktn.stringToTerraform(struct!.changesetId),
     database_name: cdktn.stringToTerraform(struct!.databaseName),
     dataview_name: cdktn.stringToTerraform(struct!.dataviewName),
-    cache_configurations: cdktn.listMapper(awsFinspaceKxClusterCacheConfigurationsPropertyToTerraform, true)(struct!.cacheConfigurations),
+    cache_configurations: cdktn.listMapper(tfKxClusterCacheConfigurationsPropertyToTerraform, true)(struct!.cacheConfigurations),
   }
 }
 
 
-export function awsFinspaceKxClusterDatabasePropertyToHclTerraform(struct?: AwsFinspaceKxCluster.DatabaseProperty | cdktn.IResolvable): any {
+export function tfKxClusterDatabasePropertyToHclTerraform(struct?: TfKxCluster.DatabaseProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1046,7 +1046,7 @@ export function awsFinspaceKxClusterDatabasePropertyToHclTerraform(struct?: AwsF
       storageClassType: "string",
     },
     cache_configurations: {
-      value: cdktn.listMapperHcl(awsFinspaceKxClusterCacheConfigurationsPropertyToHclTerraform, true)(struct!.cacheConfigurations),
+      value: cdktn.listMapperHcl(tfKxClusterCacheConfigurationsPropertyToHclTerraform, true)(struct!.cacheConfigurations),
       isBlock: true,
       type: "list",
       storageClassType: "CacheConfigurationsPropertyList",
@@ -1058,7 +1058,7 @@ export function awsFinspaceKxClusterDatabasePropertyToHclTerraform(struct?: AwsF
 }
 
 
-export function awsFinspaceKxClusterSavedownStorageConfigurationPropertyToTerraform(struct?: AwsFinspaceKxCluster.SavedownStorageConfigurationPropertyOutputReference | AwsFinspaceKxCluster.SavedownStorageConfigurationProperty): any {
+export function tfKxClusterSavedownStorageConfigurationPropertyToTerraform(struct?: TfKxCluster.SavedownStorageConfigurationPropertyOutputReference | TfKxCluster.SavedownStorageConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1071,7 +1071,7 @@ export function awsFinspaceKxClusterSavedownStorageConfigurationPropertyToTerraf
 }
 
 
-export function awsFinspaceKxClusterSavedownStorageConfigurationPropertyToHclTerraform(struct?: AwsFinspaceKxCluster.SavedownStorageConfigurationPropertyOutputReference | AwsFinspaceKxCluster.SavedownStorageConfigurationProperty): any {
+export function tfKxClusterSavedownStorageConfigurationPropertyToHclTerraform(struct?: TfKxCluster.SavedownStorageConfigurationPropertyOutputReference | TfKxCluster.SavedownStorageConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1102,7 +1102,7 @@ export function awsFinspaceKxClusterSavedownStorageConfigurationPropertyToHclTer
 }
 
 
-export function awsFinspaceKxClusterScalingGroupConfigurationPropertyToTerraform(struct?: AwsFinspaceKxCluster.ScalingGroupConfigurationPropertyOutputReference | AwsFinspaceKxCluster.ScalingGroupConfigurationProperty): any {
+export function tfKxClusterScalingGroupConfigurationPropertyToTerraform(struct?: TfKxCluster.ScalingGroupConfigurationPropertyOutputReference | TfKxCluster.ScalingGroupConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1117,7 +1117,7 @@ export function awsFinspaceKxClusterScalingGroupConfigurationPropertyToTerraform
 }
 
 
-export function awsFinspaceKxClusterScalingGroupConfigurationPropertyToHclTerraform(struct?: AwsFinspaceKxCluster.ScalingGroupConfigurationPropertyOutputReference | AwsFinspaceKxCluster.ScalingGroupConfigurationProperty): any {
+export function tfKxClusterScalingGroupConfigurationPropertyToHclTerraform(struct?: TfKxCluster.ScalingGroupConfigurationPropertyOutputReference | TfKxCluster.ScalingGroupConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1160,7 +1160,7 @@ export function awsFinspaceKxClusterScalingGroupConfigurationPropertyToHclTerraf
 }
 
 
-export function awsFinspaceKxClusterTickerplantLogConfigurationPropertyToTerraform(struct?: AwsFinspaceKxCluster.TickerplantLogConfigurationProperty | cdktn.IResolvable): any {
+export function tfKxClusterTickerplantLogConfigurationPropertyToTerraform(struct?: TfKxCluster.TickerplantLogConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1171,7 +1171,7 @@ export function awsFinspaceKxClusterTickerplantLogConfigurationPropertyToTerrafo
 }
 
 
-export function awsFinspaceKxClusterTickerplantLogConfigurationPropertyToHclTerraform(struct?: AwsFinspaceKxCluster.TickerplantLogConfigurationProperty | cdktn.IResolvable): any {
+export function tfKxClusterTickerplantLogConfigurationPropertyToHclTerraform(struct?: TfKxCluster.TickerplantLogConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1190,7 +1190,7 @@ export function awsFinspaceKxClusterTickerplantLogConfigurationPropertyToHclTerr
 }
 
 
-export function awsFinspaceKxClusterTimeoutsPropertyToTerraform(struct?: AwsFinspaceKxCluster.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfKxClusterTimeoutsPropertyToTerraform(struct?: TfKxCluster.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1203,7 +1203,7 @@ export function awsFinspaceKxClusterTimeoutsPropertyToTerraform(struct?: AwsFins
 }
 
 
-export function awsFinspaceKxClusterTimeoutsPropertyToHclTerraform(struct?: AwsFinspaceKxCluster.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfKxClusterTimeoutsPropertyToHclTerraform(struct?: TfKxCluster.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1234,7 +1234,7 @@ export function awsFinspaceKxClusterTimeoutsPropertyToHclTerraform(struct?: AwsF
 }
 
 
-export function awsFinspaceKxClusterVpcConfigurationPropertyToTerraform(struct?: AwsFinspaceKxCluster.VpcConfigurationPropertyOutputReference | AwsFinspaceKxCluster.VpcConfigurationProperty): any {
+export function tfKxClusterVpcConfigurationPropertyToTerraform(struct?: TfKxCluster.VpcConfigurationPropertyOutputReference | TfKxCluster.VpcConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1248,7 +1248,7 @@ export function awsFinspaceKxClusterVpcConfigurationPropertyToTerraform(struct?:
 }
 
 
-export function awsFinspaceKxClusterVpcConfigurationPropertyToHclTerraform(struct?: AwsFinspaceKxCluster.VpcConfigurationPropertyOutputReference | AwsFinspaceKxCluster.VpcConfigurationProperty): any {
+export function tfKxClusterVpcConfigurationPropertyToHclTerraform(struct?: TfKxCluster.VpcConfigurationPropertyOutputReference | TfKxCluster.VpcConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1285,30 +1285,30 @@ export function awsFinspaceKxClusterVpcConfigurationPropertyToHclTerraform(struc
 }
 
 
-export namespace AwsFinspaceKxCluster {
+export namespace TfKxCluster {
 export interface AutoScalingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#auto_scaling_metric AwsFinspaceKxCluster#auto_scaling_metric}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#auto_scaling_metric TfKxCluster#auto_scaling_metric}
   */
   readonly autoScalingMetric: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#max_node_count AwsFinspaceKxCluster#max_node_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#max_node_count TfKxCluster#max_node_count}
   */
   readonly maxNodeCount: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#metric_target AwsFinspaceKxCluster#metric_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#metric_target TfKxCluster#metric_target}
   */
   readonly metricTarget: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#min_node_count AwsFinspaceKxCluster#min_node_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#min_node_count TfKxCluster#min_node_count}
   */
   readonly minNodeCount: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#scale_in_cooldown_seconds AwsFinspaceKxCluster#scale_in_cooldown_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#scale_in_cooldown_seconds TfKxCluster#scale_in_cooldown_seconds}
   */
   readonly scaleInCooldownSeconds: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#scale_out_cooldown_seconds AwsFinspaceKxCluster#scale_out_cooldown_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#scale_out_cooldown_seconds TfKxCluster#scale_out_cooldown_seconds}
   */
   readonly scaleOutCooldownSeconds: number;
 }
@@ -1454,11 +1454,11 @@ export class AutoScalingConfigurationPropertyOutputReference extends cdktn.Compl
 }
 export interface CacheStorageConfigurationsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#size AwsFinspaceKxCluster#size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#size TfKxCluster#size}
   */
   readonly size: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#type AwsFinspaceKxCluster#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#type TfKxCluster#type}
   */
   readonly type: string;
 }
@@ -1560,11 +1560,11 @@ export class CacheStorageConfigurationsPropertyList extends cdktn.ComplexList {
 }
 export interface CapacityConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#node_count AwsFinspaceKxCluster#node_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#node_count TfKxCluster#node_count}
   */
   readonly nodeCount: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#node_type AwsFinspaceKxCluster#node_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#node_type TfKxCluster#node_type}
   */
   readonly nodeType: string;
 }
@@ -1634,15 +1634,15 @@ export class CapacityConfigurationPropertyOutputReference extends cdktn.ComplexO
 }
 export interface CodeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#s3_bucket AwsFinspaceKxCluster#s3_bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#s3_bucket TfKxCluster#s3_bucket}
   */
   readonly s3Bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#s3_key AwsFinspaceKxCluster#s3_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#s3_key TfKxCluster#s3_key}
   */
   readonly s3Key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#s3_object_version AwsFinspaceKxCluster#s3_object_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#s3_object_version TfKxCluster#s3_object_version}
   */
   readonly s3ObjectVersion?: string;
 }
@@ -1734,11 +1734,11 @@ export class CodePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface CacheConfigurationsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#cache_type AwsFinspaceKxCluster#cache_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#cache_type TfKxCluster#cache_type}
   */
   readonly cacheType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#db_paths AwsFinspaceKxCluster#db_paths}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#db_paths TfKxCluster#db_paths}
   */
   readonly dbPaths?: string[];
 }
@@ -1843,21 +1843,21 @@ export class CacheConfigurationsPropertyList extends cdktn.ComplexList {
 }
 export interface DatabaseProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#changeset_id AwsFinspaceKxCluster#changeset_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#changeset_id TfKxCluster#changeset_id}
   */
   readonly changesetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#database_name AwsFinspaceKxCluster#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#database_name TfKxCluster#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#dataview_name AwsFinspaceKxCluster#dataview_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#dataview_name TfKxCluster#dataview_name}
   */
   readonly dataviewName?: string;
   /**
   * cache_configurations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#cache_configurations AwsFinspaceKxCluster#cache_configurations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#cache_configurations TfKxCluster#cache_configurations}
   */
   readonly cacheConfigurations?: CacheConfigurationsProperty[] | cdktn.IResolvable;
 }
@@ -2006,15 +2006,15 @@ export class DatabasePropertyList extends cdktn.ComplexList {
 }
 export interface SavedownStorageConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#size AwsFinspaceKxCluster#size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#size TfKxCluster#size}
   */
   readonly size?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#type AwsFinspaceKxCluster#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#type TfKxCluster#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#volume_name AwsFinspaceKxCluster#volume_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#volume_name TfKxCluster#volume_name}
   */
   readonly volumeName?: string;
 }
@@ -2112,23 +2112,23 @@ export class SavedownStorageConfigurationPropertyOutputReference extends cdktn.C
 }
 export interface ScalingGroupConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#cpu AwsFinspaceKxCluster#cpu}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#cpu TfKxCluster#cpu}
   */
   readonly cpu?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#memory_limit AwsFinspaceKxCluster#memory_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#memory_limit TfKxCluster#memory_limit}
   */
   readonly memoryLimit?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#memory_reservation AwsFinspaceKxCluster#memory_reservation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#memory_reservation TfKxCluster#memory_reservation}
   */
   readonly memoryReservation: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#node_count AwsFinspaceKxCluster#node_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#node_count TfKxCluster#node_count}
   */
   readonly nodeCount: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#scaling_group_name AwsFinspaceKxCluster#scaling_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#scaling_group_name TfKxCluster#scaling_group_name}
   */
   readonly scalingGroupName: string;
 }
@@ -2261,7 +2261,7 @@ export class ScalingGroupConfigurationPropertyOutputReference extends cdktn.Comp
 }
 export interface TickerplantLogConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#tickerplant_log_volumes AwsFinspaceKxCluster#tickerplant_log_volumes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#tickerplant_log_volumes TfKxCluster#tickerplant_log_volumes}
   */
   readonly tickerplantLogVolumes: string[];
 }
@@ -2344,15 +2344,15 @@ export class TickerplantLogConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#create AwsFinspaceKxCluster#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#create TfKxCluster#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#delete AwsFinspaceKxCluster#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#delete TfKxCluster#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#update AwsFinspaceKxCluster#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#update TfKxCluster#update}
   */
   readonly update?: string;
 }
@@ -2460,19 +2460,19 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VpcConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#ip_address_type AwsFinspaceKxCluster#ip_address_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#ip_address_type TfKxCluster#ip_address_type}
   */
   readonly ipAddressType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#security_group_ids AwsFinspaceKxCluster#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#security_group_ids TfKxCluster#security_group_ids}
   */
   readonly securityGroupIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#subnet_ids AwsFinspaceKxCluster#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#subnet_ids TfKxCluster#subnet_ids}
   */
   readonly subnetIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#vpc_id AwsFinspaceKxCluster#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_cluster#vpc_id TfKxCluster#vpc_id}
   */
   readonly vpcId: string;
 }

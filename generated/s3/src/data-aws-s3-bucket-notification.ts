@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsS3BucketNotificationConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataBucketNotificationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_bucket_notification#bucket DataAwsS3BucketNotification#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_bucket_notification#bucket TfDataBucketNotification#bucket}
   */
   readonly bucket: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_bucket_notification#region DataAwsS3BucketNotification#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_bucket_notification#region TfDataBucketNotification#region}
   */
   readonly region?: string;
 }
@@ -21,7 +21,7 @@ export interface DataAwsS3BucketNotificationConfig extends cdktn.TerraformMetaAr
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_bucket_notification aws_s3_bucket_notification}
 */
-export class DataAwsS3BucketNotification extends cdktn.TerraformDataSource {
+export class TfDataBucketNotification extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class DataAwsS3BucketNotification extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsS3BucketNotification resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataBucketNotification resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsS3BucketNotification to import
-  * @param importFromId The id of the existing DataAwsS3BucketNotification that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_bucket_notification#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsS3BucketNotification to import is found
+  * @param importToId The construct id used in the generated config for the TfDataBucketNotification to import
+  * @param importFromId The id of the existing TfDataBucketNotification that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3_bucket_notification#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataBucketNotification to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3_bucket_notification", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class DataAwsS3BucketNotification extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsS3BucketNotificationConfig
+  * @param options TfDataBucketNotificationConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsS3BucketNotificationConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataBucketNotificationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3_bucket_notification',
       terraformGeneratorMetadata: {
@@ -96,13 +96,13 @@ export class DataAwsS3BucketNotification extends cdktn.TerraformDataSource {
   }
 
   // lambda_function - computed: true, optional: false, required: false
-  private _lambdaFunction = new DataAwsS3BucketNotification.LambdaFunctionPropertyList(this, "lambda_function", false);
+  private _lambdaFunction = new TfDataBucketNotification.LambdaFunctionPropertyList(this, "lambda_function", false);
   public get lambdaFunction() {
     return this._lambdaFunction;
   }
 
   // queue - computed: true, optional: false, required: false
-  private _queue = new DataAwsS3BucketNotification.QueuePropertyList(this, "queue", false);
+  private _queue = new TfDataBucketNotification.QueuePropertyList(this, "queue", false);
   public get queue() {
     return this._queue;
   }
@@ -124,7 +124,7 @@ export class DataAwsS3BucketNotification extends cdktn.TerraformDataSource {
   }
 
   // topic - computed: true, optional: false, required: false
-  private _topic = new DataAwsS3BucketNotification.TopicPropertyList(this, "topic", false);
+  private _topic = new TfDataBucketNotification.TopicPropertyList(this, "topic", false);
   public get topic() {
     return this._topic;
   }
@@ -161,7 +161,7 @@ export class DataAwsS3BucketNotification extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsS3BucketNotificationLambdaFunctionPropertyToTerraform(struct?: DataAwsS3BucketNotification.LambdaFunctionProperty): any {
+export function tfDataBucketNotificationLambdaFunctionPropertyToTerraform(struct?: TfDataBucketNotification.LambdaFunctionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -171,7 +171,7 @@ export function dataAwsS3BucketNotificationLambdaFunctionPropertyToTerraform(str
 }
 
 
-export function dataAwsS3BucketNotificationLambdaFunctionPropertyToHclTerraform(struct?: DataAwsS3BucketNotification.LambdaFunctionProperty): any {
+export function tfDataBucketNotificationLambdaFunctionPropertyToHclTerraform(struct?: TfDataBucketNotification.LambdaFunctionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -182,7 +182,7 @@ export function dataAwsS3BucketNotificationLambdaFunctionPropertyToHclTerraform(
 }
 
 
-export function dataAwsS3BucketNotificationQueuePropertyToTerraform(struct?: DataAwsS3BucketNotification.QueueProperty): any {
+export function tfDataBucketNotificationQueuePropertyToTerraform(struct?: TfDataBucketNotification.QueueProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -192,7 +192,7 @@ export function dataAwsS3BucketNotificationQueuePropertyToTerraform(struct?: Dat
 }
 
 
-export function dataAwsS3BucketNotificationQueuePropertyToHclTerraform(struct?: DataAwsS3BucketNotification.QueueProperty): any {
+export function tfDataBucketNotificationQueuePropertyToHclTerraform(struct?: TfDataBucketNotification.QueueProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -203,7 +203,7 @@ export function dataAwsS3BucketNotificationQueuePropertyToHclTerraform(struct?: 
 }
 
 
-export function dataAwsS3BucketNotificationTopicPropertyToTerraform(struct?: DataAwsS3BucketNotification.TopicProperty): any {
+export function tfDataBucketNotificationTopicPropertyToTerraform(struct?: TfDataBucketNotification.TopicProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -213,7 +213,7 @@ export function dataAwsS3BucketNotificationTopicPropertyToTerraform(struct?: Dat
 }
 
 
-export function dataAwsS3BucketNotificationTopicPropertyToHclTerraform(struct?: DataAwsS3BucketNotification.TopicProperty): any {
+export function tfDataBucketNotificationTopicPropertyToHclTerraform(struct?: TfDataBucketNotification.TopicProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -224,7 +224,7 @@ export function dataAwsS3BucketNotificationTopicPropertyToHclTerraform(struct?: 
 }
 
 
-export namespace DataAwsS3BucketNotification {
+export namespace TfDataBucketNotification {
 export interface LambdaFunctionProperty {
 }
 export class LambdaFunctionPropertyOutputReference extends cdktn.ComplexObject {

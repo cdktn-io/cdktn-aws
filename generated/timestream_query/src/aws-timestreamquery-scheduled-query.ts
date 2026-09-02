@@ -5,81 +5,81 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsTimestreamqueryScheduledQueryConfig extends cdktn.TerraformMetaArguments {
+export interface TfScheduledQueryConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#execution_role_arn AwsTimestreamqueryScheduledQuery#execution_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#execution_role_arn TfScheduledQuery#execution_role_arn}
   */
   readonly executionRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#kms_key_id AwsTimestreamqueryScheduledQuery#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#kms_key_id TfScheduledQuery#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#name AwsTimestreamqueryScheduledQuery#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#name TfScheduledQuery#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#query_string AwsTimestreamqueryScheduledQuery#query_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#query_string TfScheduledQuery#query_string}
   */
   readonly queryString: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#region AwsTimestreamqueryScheduledQuery#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#region TfScheduledQuery#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#tags AwsTimestreamqueryScheduledQuery#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#tags TfScheduledQuery#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * error_report_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#error_report_configuration AwsTimestreamqueryScheduledQuery#error_report_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#error_report_configuration TfScheduledQuery#error_report_configuration}
   */
-  readonly errorReportConfiguration?: AwsTimestreamqueryScheduledQuery.ErrorReportConfigurationProperty[] | cdktn.IResolvable;
+  readonly errorReportConfiguration?: TfScheduledQuery.ErrorReportConfigurationProperty[] | cdktn.IResolvable;
   /**
   * last_run_summary block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#last_run_summary AwsTimestreamqueryScheduledQuery#last_run_summary}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#last_run_summary TfScheduledQuery#last_run_summary}
   */
-  readonly lastRunSummary?: AwsTimestreamqueryScheduledQuery.LastRunSummaryProperty[] | cdktn.IResolvable;
+  readonly lastRunSummary?: TfScheduledQuery.LastRunSummaryProperty[] | cdktn.IResolvable;
   /**
   * notification_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#notification_configuration AwsTimestreamqueryScheduledQuery#notification_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#notification_configuration TfScheduledQuery#notification_configuration}
   */
-  readonly notificationConfiguration?: AwsTimestreamqueryScheduledQuery.NotificationConfigurationProperty[] | cdktn.IResolvable;
+  readonly notificationConfiguration?: TfScheduledQuery.NotificationConfigurationProperty[] | cdktn.IResolvable;
   /**
   * recently_failed_runs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#recently_failed_runs AwsTimestreamqueryScheduledQuery#recently_failed_runs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#recently_failed_runs TfScheduledQuery#recently_failed_runs}
   */
-  readonly recentlyFailedRuns?: AwsTimestreamqueryScheduledQuery.RecentlyFailedRunsProperty[] | cdktn.IResolvable;
+  readonly recentlyFailedRuns?: TfScheduledQuery.RecentlyFailedRunsProperty[] | cdktn.IResolvable;
   /**
   * schedule_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#schedule_configuration AwsTimestreamqueryScheduledQuery#schedule_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#schedule_configuration TfScheduledQuery#schedule_configuration}
   */
-  readonly scheduleConfiguration?: AwsTimestreamqueryScheduledQuery.ScheduleConfigurationProperty[] | cdktn.IResolvable;
+  readonly scheduleConfiguration?: TfScheduledQuery.ScheduleConfigurationProperty[] | cdktn.IResolvable;
   /**
   * target_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#target_configuration AwsTimestreamqueryScheduledQuery#target_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#target_configuration TfScheduledQuery#target_configuration}
   */
-  readonly targetConfiguration?: AwsTimestreamqueryScheduledQuery.TargetConfigurationProperty[] | cdktn.IResolvable;
+  readonly targetConfiguration?: TfScheduledQuery.TargetConfigurationProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#timeouts AwsTimestreamqueryScheduledQuery#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#timeouts TfScheduledQuery#timeouts}
   */
-  readonly timeouts?: AwsTimestreamqueryScheduledQuery.TimeoutsProperty;
+  readonly timeouts?: TfScheduledQuery.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query aws_timestreamquery_scheduled_query}
 */
-export class AwsTimestreamqueryScheduledQuery extends cdktn.TerraformResource {
+export class TfScheduledQuery extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -90,11 +90,11 @@ export class AwsTimestreamqueryScheduledQuery extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsTimestreamqueryScheduledQuery resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfScheduledQuery resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsTimestreamqueryScheduledQuery to import
-  * @param importFromId The id of the existing AwsTimestreamqueryScheduledQuery that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsTimestreamqueryScheduledQuery to import is found
+  * @param importToId The construct id used in the generated config for the TfScheduledQuery to import
+  * @param importFromId The id of the existing TfScheduledQuery that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfScheduledQuery to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_timestreamquery_scheduled_query", importId: importFromId, provider });
@@ -109,9 +109,9 @@ export class AwsTimestreamqueryScheduledQuery extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsTimestreamqueryScheduledQueryConfig
+  * @param options TfScheduledQueryConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsTimestreamqueryScheduledQueryConfig) {
+  public constructor(scope: Construct, id: string, config: TfScheduledQueryConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_timestreamquery_scheduled_query',
       terraformGeneratorMetadata: {
@@ -265,11 +265,11 @@ export class AwsTimestreamqueryScheduledQuery extends cdktn.TerraformResource {
   }
 
   // error_report_configuration - computed: false, optional: true, required: false
-  private _errorReportConfiguration = new AwsTimestreamqueryScheduledQuery.ErrorReportConfigurationPropertyList(this, "error_report_configuration", false);
+  private _errorReportConfiguration = new TfScheduledQuery.ErrorReportConfigurationPropertyList(this, "error_report_configuration", false);
   public get errorReportConfiguration() {
     return this._errorReportConfiguration;
   }
-  public putErrorReportConfiguration(value: AwsTimestreamqueryScheduledQuery.ErrorReportConfigurationProperty[] | cdktn.IResolvable) {
+  public putErrorReportConfiguration(value: TfScheduledQuery.ErrorReportConfigurationProperty[] | cdktn.IResolvable) {
     this._errorReportConfiguration.internalValue = value;
   }
   public resetErrorReportConfiguration() {
@@ -281,11 +281,11 @@ export class AwsTimestreamqueryScheduledQuery extends cdktn.TerraformResource {
   }
 
   // last_run_summary - computed: false, optional: true, required: false
-  private _lastRunSummary = new AwsTimestreamqueryScheduledQuery.LastRunSummaryPropertyList(this, "last_run_summary", false);
+  private _lastRunSummary = new TfScheduledQuery.LastRunSummaryPropertyList(this, "last_run_summary", false);
   public get lastRunSummary() {
     return this._lastRunSummary;
   }
-  public putLastRunSummary(value: AwsTimestreamqueryScheduledQuery.LastRunSummaryProperty[] | cdktn.IResolvable) {
+  public putLastRunSummary(value: TfScheduledQuery.LastRunSummaryProperty[] | cdktn.IResolvable) {
     this._lastRunSummary.internalValue = value;
   }
   public resetLastRunSummary() {
@@ -297,11 +297,11 @@ export class AwsTimestreamqueryScheduledQuery extends cdktn.TerraformResource {
   }
 
   // notification_configuration - computed: false, optional: true, required: false
-  private _notificationConfiguration = new AwsTimestreamqueryScheduledQuery.NotificationConfigurationPropertyList(this, "notification_configuration", false);
+  private _notificationConfiguration = new TfScheduledQuery.NotificationConfigurationPropertyList(this, "notification_configuration", false);
   public get notificationConfiguration() {
     return this._notificationConfiguration;
   }
-  public putNotificationConfiguration(value: AwsTimestreamqueryScheduledQuery.NotificationConfigurationProperty[] | cdktn.IResolvable) {
+  public putNotificationConfiguration(value: TfScheduledQuery.NotificationConfigurationProperty[] | cdktn.IResolvable) {
     this._notificationConfiguration.internalValue = value;
   }
   public resetNotificationConfiguration() {
@@ -313,11 +313,11 @@ export class AwsTimestreamqueryScheduledQuery extends cdktn.TerraformResource {
   }
 
   // recently_failed_runs - computed: false, optional: true, required: false
-  private _recentlyFailedRuns = new AwsTimestreamqueryScheduledQuery.RecentlyFailedRunsPropertyList(this, "recently_failed_runs", false);
+  private _recentlyFailedRuns = new TfScheduledQuery.RecentlyFailedRunsPropertyList(this, "recently_failed_runs", false);
   public get recentlyFailedRuns() {
     return this._recentlyFailedRuns;
   }
-  public putRecentlyFailedRuns(value: AwsTimestreamqueryScheduledQuery.RecentlyFailedRunsProperty[] | cdktn.IResolvable) {
+  public putRecentlyFailedRuns(value: TfScheduledQuery.RecentlyFailedRunsProperty[] | cdktn.IResolvable) {
     this._recentlyFailedRuns.internalValue = value;
   }
   public resetRecentlyFailedRuns() {
@@ -329,11 +329,11 @@ export class AwsTimestreamqueryScheduledQuery extends cdktn.TerraformResource {
   }
 
   // schedule_configuration - computed: false, optional: true, required: false
-  private _scheduleConfiguration = new AwsTimestreamqueryScheduledQuery.ScheduleConfigurationPropertyList(this, "schedule_configuration", false);
+  private _scheduleConfiguration = new TfScheduledQuery.ScheduleConfigurationPropertyList(this, "schedule_configuration", false);
   public get scheduleConfiguration() {
     return this._scheduleConfiguration;
   }
-  public putScheduleConfiguration(value: AwsTimestreamqueryScheduledQuery.ScheduleConfigurationProperty[] | cdktn.IResolvable) {
+  public putScheduleConfiguration(value: TfScheduledQuery.ScheduleConfigurationProperty[] | cdktn.IResolvable) {
     this._scheduleConfiguration.internalValue = value;
   }
   public resetScheduleConfiguration() {
@@ -345,11 +345,11 @@ export class AwsTimestreamqueryScheduledQuery extends cdktn.TerraformResource {
   }
 
   // target_configuration - computed: false, optional: true, required: false
-  private _targetConfiguration = new AwsTimestreamqueryScheduledQuery.TargetConfigurationPropertyList(this, "target_configuration", false);
+  private _targetConfiguration = new TfScheduledQuery.TargetConfigurationPropertyList(this, "target_configuration", false);
   public get targetConfiguration() {
     return this._targetConfiguration;
   }
-  public putTargetConfiguration(value: AwsTimestreamqueryScheduledQuery.TargetConfigurationProperty[] | cdktn.IResolvable) {
+  public putTargetConfiguration(value: TfScheduledQuery.TargetConfigurationProperty[] | cdktn.IResolvable) {
     this._targetConfiguration.internalValue = value;
   }
   public resetTargetConfiguration() {
@@ -361,11 +361,11 @@ export class AwsTimestreamqueryScheduledQuery extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsTimestreamqueryScheduledQuery.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfScheduledQuery.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsTimestreamqueryScheduledQuery.TimeoutsProperty) {
+  public putTimeouts(value: TfScheduledQuery.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -388,13 +388,13 @@ export class AwsTimestreamqueryScheduledQuery extends cdktn.TerraformResource {
       query_string: cdktn.stringToTerraform(this._queryString),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      error_report_configuration: cdktn.listMapper(awsTimestreamqueryScheduledQueryErrorReportConfigurationPropertyToTerraform, true)(this._errorReportConfiguration.internalValue),
-      last_run_summary: cdktn.listMapper(awsTimestreamqueryScheduledQueryLastRunSummaryPropertyToTerraform, true)(this._lastRunSummary.internalValue),
-      notification_configuration: cdktn.listMapper(awsTimestreamqueryScheduledQueryNotificationConfigurationPropertyToTerraform, true)(this._notificationConfiguration.internalValue),
-      recently_failed_runs: cdktn.listMapper(awsTimestreamqueryScheduledQueryRecentlyFailedRunsPropertyToTerraform, true)(this._recentlyFailedRuns.internalValue),
-      schedule_configuration: cdktn.listMapper(awsTimestreamqueryScheduledQueryScheduleConfigurationPropertyToTerraform, true)(this._scheduleConfiguration.internalValue),
-      target_configuration: cdktn.listMapper(awsTimestreamqueryScheduledQueryTargetConfigurationPropertyToTerraform, true)(this._targetConfiguration.internalValue),
-      timeouts: awsTimestreamqueryScheduledQueryTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      error_report_configuration: cdktn.listMapper(tfScheduledQueryErrorReportConfigurationPropertyToTerraform, true)(this._errorReportConfiguration.internalValue),
+      last_run_summary: cdktn.listMapper(tfScheduledQueryLastRunSummaryPropertyToTerraform, true)(this._lastRunSummary.internalValue),
+      notification_configuration: cdktn.listMapper(tfScheduledQueryNotificationConfigurationPropertyToTerraform, true)(this._notificationConfiguration.internalValue),
+      recently_failed_runs: cdktn.listMapper(tfScheduledQueryRecentlyFailedRunsPropertyToTerraform, true)(this._recentlyFailedRuns.internalValue),
+      schedule_configuration: cdktn.listMapper(tfScheduledQueryScheduleConfigurationPropertyToTerraform, true)(this._scheduleConfiguration.internalValue),
+      target_configuration: cdktn.listMapper(tfScheduledQueryTargetConfigurationPropertyToTerraform, true)(this._targetConfiguration.internalValue),
+      timeouts: tfScheduledQueryTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -437,46 +437,46 @@ export class AwsTimestreamqueryScheduledQuery extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       error_report_configuration: {
-        value: cdktn.listMapperHcl(awsTimestreamqueryScheduledQueryErrorReportConfigurationPropertyToHclTerraform, true)(this._errorReportConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfScheduledQueryErrorReportConfigurationPropertyToHclTerraform, true)(this._errorReportConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsTimestreamqueryScheduledQuery.ErrorReportConfigurationPropertyList",
+        storageClassType: "TfScheduledQuery.ErrorReportConfigurationPropertyList",
       },
       last_run_summary: {
-        value: cdktn.listMapperHcl(awsTimestreamqueryScheduledQueryLastRunSummaryPropertyToHclTerraform, true)(this._lastRunSummary.internalValue),
+        value: cdktn.listMapperHcl(tfScheduledQueryLastRunSummaryPropertyToHclTerraform, true)(this._lastRunSummary.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsTimestreamqueryScheduledQuery.LastRunSummaryPropertyList",
+        storageClassType: "TfScheduledQuery.LastRunSummaryPropertyList",
       },
       notification_configuration: {
-        value: cdktn.listMapperHcl(awsTimestreamqueryScheduledQueryNotificationConfigurationPropertyToHclTerraform, true)(this._notificationConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfScheduledQueryNotificationConfigurationPropertyToHclTerraform, true)(this._notificationConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsTimestreamqueryScheduledQuery.NotificationConfigurationPropertyList",
+        storageClassType: "TfScheduledQuery.NotificationConfigurationPropertyList",
       },
       recently_failed_runs: {
-        value: cdktn.listMapperHcl(awsTimestreamqueryScheduledQueryRecentlyFailedRunsPropertyToHclTerraform, true)(this._recentlyFailedRuns.internalValue),
+        value: cdktn.listMapperHcl(tfScheduledQueryRecentlyFailedRunsPropertyToHclTerraform, true)(this._recentlyFailedRuns.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsTimestreamqueryScheduledQuery.RecentlyFailedRunsPropertyList",
+        storageClassType: "TfScheduledQuery.RecentlyFailedRunsPropertyList",
       },
       schedule_configuration: {
-        value: cdktn.listMapperHcl(awsTimestreamqueryScheduledQueryScheduleConfigurationPropertyToHclTerraform, true)(this._scheduleConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfScheduledQueryScheduleConfigurationPropertyToHclTerraform, true)(this._scheduleConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsTimestreamqueryScheduledQuery.ScheduleConfigurationPropertyList",
+        storageClassType: "TfScheduledQuery.ScheduleConfigurationPropertyList",
       },
       target_configuration: {
-        value: cdktn.listMapperHcl(awsTimestreamqueryScheduledQueryTargetConfigurationPropertyToHclTerraform, true)(this._targetConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfScheduledQueryTargetConfigurationPropertyToHclTerraform, true)(this._targetConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsTimestreamqueryScheduledQuery.TargetConfigurationPropertyList",
+        storageClassType: "TfScheduledQuery.TargetConfigurationPropertyList",
       },
       timeouts: {
-        value: awsTimestreamqueryScheduledQueryTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfScheduledQueryTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsTimestreamqueryScheduledQuery.TimeoutsProperty",
+        storageClassType: "TfScheduledQuery.TimeoutsProperty",
       },
     };
 
@@ -485,7 +485,7 @@ export class AwsTimestreamqueryScheduledQuery extends cdktn.TerraformResource {
   }
 }
 
-export function awsTimestreamqueryScheduledQueryS3ConfigurationPropertyToTerraform(struct?: AwsTimestreamqueryScheduledQuery.S3ConfigurationProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryS3ConfigurationPropertyToTerraform(struct?: TfScheduledQuery.S3ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -498,7 +498,7 @@ export function awsTimestreamqueryScheduledQueryS3ConfigurationPropertyToTerrafo
 }
 
 
-export function awsTimestreamqueryScheduledQueryS3ConfigurationPropertyToHclTerraform(struct?: AwsTimestreamqueryScheduledQuery.S3ConfigurationProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryS3ConfigurationPropertyToHclTerraform(struct?: TfScheduledQuery.S3ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -529,25 +529,25 @@ export function awsTimestreamqueryScheduledQueryS3ConfigurationPropertyToHclTerr
 }
 
 
-export function awsTimestreamqueryScheduledQueryErrorReportConfigurationPropertyToTerraform(struct?: AwsTimestreamqueryScheduledQuery.ErrorReportConfigurationProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryErrorReportConfigurationPropertyToTerraform(struct?: TfScheduledQuery.ErrorReportConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    s3_configuration: cdktn.listMapper(awsTimestreamqueryScheduledQueryS3ConfigurationPropertyToTerraform, true)(struct!.s3Configuration),
+    s3_configuration: cdktn.listMapper(tfScheduledQueryS3ConfigurationPropertyToTerraform, true)(struct!.s3Configuration),
   }
 }
 
 
-export function awsTimestreamqueryScheduledQueryErrorReportConfigurationPropertyToHclTerraform(struct?: AwsTimestreamqueryScheduledQuery.ErrorReportConfigurationProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryErrorReportConfigurationPropertyToHclTerraform(struct?: TfScheduledQuery.ErrorReportConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     s3_configuration: {
-      value: cdktn.listMapperHcl(awsTimestreamqueryScheduledQueryS3ConfigurationPropertyToHclTerraform, true)(struct!.s3Configuration),
+      value: cdktn.listMapperHcl(tfScheduledQueryS3ConfigurationPropertyToHclTerraform, true)(struct!.s3Configuration),
       isBlock: true,
       type: "list",
       storageClassType: "S3ConfigurationPropertyList",
@@ -559,7 +559,7 @@ export function awsTimestreamqueryScheduledQueryErrorReportConfigurationProperty
 }
 
 
-export function awsTimestreamqueryScheduledQueryLastRunSummaryErrorReportLocationS3ReportLocationPropertyToTerraform(struct?: AwsTimestreamqueryScheduledQuery.LastRunSummaryErrorReportLocationS3ReportLocationProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryLastRunSummaryErrorReportLocationS3ReportLocationPropertyToTerraform(struct?: TfScheduledQuery.LastRunSummaryErrorReportLocationS3ReportLocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -569,7 +569,7 @@ export function awsTimestreamqueryScheduledQueryLastRunSummaryErrorReportLocatio
 }
 
 
-export function awsTimestreamqueryScheduledQueryLastRunSummaryErrorReportLocationS3ReportLocationPropertyToHclTerraform(struct?: AwsTimestreamqueryScheduledQuery.LastRunSummaryErrorReportLocationS3ReportLocationProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryLastRunSummaryErrorReportLocationS3ReportLocationPropertyToHclTerraform(struct?: TfScheduledQuery.LastRunSummaryErrorReportLocationS3ReportLocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -580,25 +580,25 @@ export function awsTimestreamqueryScheduledQueryLastRunSummaryErrorReportLocatio
 }
 
 
-export function awsTimestreamqueryScheduledQueryLastRunSummaryErrorReportLocationPropertyToTerraform(struct?: AwsTimestreamqueryScheduledQuery.LastRunSummaryErrorReportLocationProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryLastRunSummaryErrorReportLocationPropertyToTerraform(struct?: TfScheduledQuery.LastRunSummaryErrorReportLocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    s3_report_location: cdktn.listMapper(awsTimestreamqueryScheduledQueryLastRunSummaryErrorReportLocationS3ReportLocationPropertyToTerraform, true)(struct!.s3ReportLocation),
+    s3_report_location: cdktn.listMapper(tfScheduledQueryLastRunSummaryErrorReportLocationS3ReportLocationPropertyToTerraform, true)(struct!.s3ReportLocation),
   }
 }
 
 
-export function awsTimestreamqueryScheduledQueryLastRunSummaryErrorReportLocationPropertyToHclTerraform(struct?: AwsTimestreamqueryScheduledQuery.LastRunSummaryErrorReportLocationProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryLastRunSummaryErrorReportLocationPropertyToHclTerraform(struct?: TfScheduledQuery.LastRunSummaryErrorReportLocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     s3_report_location: {
-      value: cdktn.listMapperHcl(awsTimestreamqueryScheduledQueryLastRunSummaryErrorReportLocationS3ReportLocationPropertyToHclTerraform, true)(struct!.s3ReportLocation),
+      value: cdktn.listMapperHcl(tfScheduledQueryLastRunSummaryErrorReportLocationS3ReportLocationPropertyToHclTerraform, true)(struct!.s3ReportLocation),
       isBlock: true,
       type: "list",
       storageClassType: "LastRunSummaryErrorReportLocationS3ReportLocationPropertyList",
@@ -610,7 +610,7 @@ export function awsTimestreamqueryScheduledQueryLastRunSummaryErrorReportLocatio
 }
 
 
-export function awsTimestreamqueryScheduledQueryLastRunSummaryExecutionStatsPropertyToTerraform(struct?: AwsTimestreamqueryScheduledQuery.LastRunSummaryExecutionStatsProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryLastRunSummaryExecutionStatsPropertyToTerraform(struct?: TfScheduledQuery.LastRunSummaryExecutionStatsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -620,7 +620,7 @@ export function awsTimestreamqueryScheduledQueryLastRunSummaryExecutionStatsProp
 }
 
 
-export function awsTimestreamqueryScheduledQueryLastRunSummaryExecutionStatsPropertyToHclTerraform(struct?: AwsTimestreamqueryScheduledQuery.LastRunSummaryExecutionStatsProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryLastRunSummaryExecutionStatsPropertyToHclTerraform(struct?: TfScheduledQuery.LastRunSummaryExecutionStatsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -631,7 +631,7 @@ export function awsTimestreamqueryScheduledQueryLastRunSummaryExecutionStatsProp
 }
 
 
-export function awsTimestreamqueryScheduledQueryLastRunSummaryQueryInsightsResponseQuerySpatialCoverageMaxPropertyToTerraform(struct?: AwsTimestreamqueryScheduledQuery.LastRunSummaryQueryInsightsResponseQuerySpatialCoverageMaxProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryLastRunSummaryQueryInsightsResponseQuerySpatialCoverageMaxPropertyToTerraform(struct?: TfScheduledQuery.LastRunSummaryQueryInsightsResponseQuerySpatialCoverageMaxProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -641,7 +641,7 @@ export function awsTimestreamqueryScheduledQueryLastRunSummaryQueryInsightsRespo
 }
 
 
-export function awsTimestreamqueryScheduledQueryLastRunSummaryQueryInsightsResponseQuerySpatialCoverageMaxPropertyToHclTerraform(struct?: AwsTimestreamqueryScheduledQuery.LastRunSummaryQueryInsightsResponseQuerySpatialCoverageMaxProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryLastRunSummaryQueryInsightsResponseQuerySpatialCoverageMaxPropertyToHclTerraform(struct?: TfScheduledQuery.LastRunSummaryQueryInsightsResponseQuerySpatialCoverageMaxProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -652,25 +652,25 @@ export function awsTimestreamqueryScheduledQueryLastRunSummaryQueryInsightsRespo
 }
 
 
-export function awsTimestreamqueryScheduledQueryLastRunSummaryQueryInsightsResponseQuerySpatialCoveragePropertyToTerraform(struct?: AwsTimestreamqueryScheduledQuery.LastRunSummaryQueryInsightsResponseQuerySpatialCoverageProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryLastRunSummaryQueryInsightsResponseQuerySpatialCoveragePropertyToTerraform(struct?: TfScheduledQuery.LastRunSummaryQueryInsightsResponseQuerySpatialCoverageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    max: cdktn.listMapper(awsTimestreamqueryScheduledQueryLastRunSummaryQueryInsightsResponseQuerySpatialCoverageMaxPropertyToTerraform, true)(struct!.max),
+    max: cdktn.listMapper(tfScheduledQueryLastRunSummaryQueryInsightsResponseQuerySpatialCoverageMaxPropertyToTerraform, true)(struct!.max),
   }
 }
 
 
-export function awsTimestreamqueryScheduledQueryLastRunSummaryQueryInsightsResponseQuerySpatialCoveragePropertyToHclTerraform(struct?: AwsTimestreamqueryScheduledQuery.LastRunSummaryQueryInsightsResponseQuerySpatialCoverageProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryLastRunSummaryQueryInsightsResponseQuerySpatialCoveragePropertyToHclTerraform(struct?: TfScheduledQuery.LastRunSummaryQueryInsightsResponseQuerySpatialCoverageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     max: {
-      value: cdktn.listMapperHcl(awsTimestreamqueryScheduledQueryLastRunSummaryQueryInsightsResponseQuerySpatialCoverageMaxPropertyToHclTerraform, true)(struct!.max),
+      value: cdktn.listMapperHcl(tfScheduledQueryLastRunSummaryQueryInsightsResponseQuerySpatialCoverageMaxPropertyToHclTerraform, true)(struct!.max),
       isBlock: true,
       type: "list",
       storageClassType: "LastRunSummaryQueryInsightsResponseQuerySpatialCoverageMaxPropertyList",
@@ -682,7 +682,7 @@ export function awsTimestreamqueryScheduledQueryLastRunSummaryQueryInsightsRespo
 }
 
 
-export function awsTimestreamqueryScheduledQueryLastRunSummaryQueryInsightsResponseQueryTemporalRangeMaxPropertyToTerraform(struct?: AwsTimestreamqueryScheduledQuery.LastRunSummaryQueryInsightsResponseQueryTemporalRangeMaxProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryLastRunSummaryQueryInsightsResponseQueryTemporalRangeMaxPropertyToTerraform(struct?: TfScheduledQuery.LastRunSummaryQueryInsightsResponseQueryTemporalRangeMaxProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -692,7 +692,7 @@ export function awsTimestreamqueryScheduledQueryLastRunSummaryQueryInsightsRespo
 }
 
 
-export function awsTimestreamqueryScheduledQueryLastRunSummaryQueryInsightsResponseQueryTemporalRangeMaxPropertyToHclTerraform(struct?: AwsTimestreamqueryScheduledQuery.LastRunSummaryQueryInsightsResponseQueryTemporalRangeMaxProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryLastRunSummaryQueryInsightsResponseQueryTemporalRangeMaxPropertyToHclTerraform(struct?: TfScheduledQuery.LastRunSummaryQueryInsightsResponseQueryTemporalRangeMaxProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -703,25 +703,25 @@ export function awsTimestreamqueryScheduledQueryLastRunSummaryQueryInsightsRespo
 }
 
 
-export function awsTimestreamqueryScheduledQueryLastRunSummaryQueryInsightsResponseQueryTemporalRangePropertyToTerraform(struct?: AwsTimestreamqueryScheduledQuery.LastRunSummaryQueryInsightsResponseQueryTemporalRangeProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryLastRunSummaryQueryInsightsResponseQueryTemporalRangePropertyToTerraform(struct?: TfScheduledQuery.LastRunSummaryQueryInsightsResponseQueryTemporalRangeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    max: cdktn.listMapper(awsTimestreamqueryScheduledQueryLastRunSummaryQueryInsightsResponseQueryTemporalRangeMaxPropertyToTerraform, true)(struct!.max),
+    max: cdktn.listMapper(tfScheduledQueryLastRunSummaryQueryInsightsResponseQueryTemporalRangeMaxPropertyToTerraform, true)(struct!.max),
   }
 }
 
 
-export function awsTimestreamqueryScheduledQueryLastRunSummaryQueryInsightsResponseQueryTemporalRangePropertyToHclTerraform(struct?: AwsTimestreamqueryScheduledQuery.LastRunSummaryQueryInsightsResponseQueryTemporalRangeProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryLastRunSummaryQueryInsightsResponseQueryTemporalRangePropertyToHclTerraform(struct?: TfScheduledQuery.LastRunSummaryQueryInsightsResponseQueryTemporalRangeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     max: {
-      value: cdktn.listMapperHcl(awsTimestreamqueryScheduledQueryLastRunSummaryQueryInsightsResponseQueryTemporalRangeMaxPropertyToHclTerraform, true)(struct!.max),
+      value: cdktn.listMapperHcl(tfScheduledQueryLastRunSummaryQueryInsightsResponseQueryTemporalRangeMaxPropertyToHclTerraform, true)(struct!.max),
       isBlock: true,
       type: "list",
       storageClassType: "LastRunSummaryQueryInsightsResponseQueryTemporalRangeMaxPropertyList",
@@ -733,32 +733,32 @@ export function awsTimestreamqueryScheduledQueryLastRunSummaryQueryInsightsRespo
 }
 
 
-export function awsTimestreamqueryScheduledQueryLastRunSummaryQueryInsightsResponsePropertyToTerraform(struct?: AwsTimestreamqueryScheduledQuery.LastRunSummaryQueryInsightsResponseProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryLastRunSummaryQueryInsightsResponsePropertyToTerraform(struct?: TfScheduledQuery.LastRunSummaryQueryInsightsResponseProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    query_spatial_coverage: cdktn.listMapper(awsTimestreamqueryScheduledQueryLastRunSummaryQueryInsightsResponseQuerySpatialCoveragePropertyToTerraform, true)(struct!.querySpatialCoverage),
-    query_temporal_range: cdktn.listMapper(awsTimestreamqueryScheduledQueryLastRunSummaryQueryInsightsResponseQueryTemporalRangePropertyToTerraform, true)(struct!.queryTemporalRange),
+    query_spatial_coverage: cdktn.listMapper(tfScheduledQueryLastRunSummaryQueryInsightsResponseQuerySpatialCoveragePropertyToTerraform, true)(struct!.querySpatialCoverage),
+    query_temporal_range: cdktn.listMapper(tfScheduledQueryLastRunSummaryQueryInsightsResponseQueryTemporalRangePropertyToTerraform, true)(struct!.queryTemporalRange),
   }
 }
 
 
-export function awsTimestreamqueryScheduledQueryLastRunSummaryQueryInsightsResponsePropertyToHclTerraform(struct?: AwsTimestreamqueryScheduledQuery.LastRunSummaryQueryInsightsResponseProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryLastRunSummaryQueryInsightsResponsePropertyToHclTerraform(struct?: TfScheduledQuery.LastRunSummaryQueryInsightsResponseProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     query_spatial_coverage: {
-      value: cdktn.listMapperHcl(awsTimestreamqueryScheduledQueryLastRunSummaryQueryInsightsResponseQuerySpatialCoveragePropertyToHclTerraform, true)(struct!.querySpatialCoverage),
+      value: cdktn.listMapperHcl(tfScheduledQueryLastRunSummaryQueryInsightsResponseQuerySpatialCoveragePropertyToHclTerraform, true)(struct!.querySpatialCoverage),
       isBlock: true,
       type: "list",
       storageClassType: "LastRunSummaryQueryInsightsResponseQuerySpatialCoveragePropertyList",
     },
     query_temporal_range: {
-      value: cdktn.listMapperHcl(awsTimestreamqueryScheduledQueryLastRunSummaryQueryInsightsResponseQueryTemporalRangePropertyToHclTerraform, true)(struct!.queryTemporalRange),
+      value: cdktn.listMapperHcl(tfScheduledQueryLastRunSummaryQueryInsightsResponseQueryTemporalRangePropertyToHclTerraform, true)(struct!.queryTemporalRange),
       isBlock: true,
       type: "list",
       storageClassType: "LastRunSummaryQueryInsightsResponseQueryTemporalRangePropertyList",
@@ -770,39 +770,39 @@ export function awsTimestreamqueryScheduledQueryLastRunSummaryQueryInsightsRespo
 }
 
 
-export function awsTimestreamqueryScheduledQueryLastRunSummaryPropertyToTerraform(struct?: AwsTimestreamqueryScheduledQuery.LastRunSummaryProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryLastRunSummaryPropertyToTerraform(struct?: TfScheduledQuery.LastRunSummaryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    error_report_location: cdktn.listMapper(awsTimestreamqueryScheduledQueryLastRunSummaryErrorReportLocationPropertyToTerraform, true)(struct!.errorReportLocation),
-    execution_stats: cdktn.listMapper(awsTimestreamqueryScheduledQueryLastRunSummaryExecutionStatsPropertyToTerraform, true)(struct!.executionStats),
-    query_insights_response: cdktn.listMapper(awsTimestreamqueryScheduledQueryLastRunSummaryQueryInsightsResponsePropertyToTerraform, true)(struct!.queryInsightsResponse),
+    error_report_location: cdktn.listMapper(tfScheduledQueryLastRunSummaryErrorReportLocationPropertyToTerraform, true)(struct!.errorReportLocation),
+    execution_stats: cdktn.listMapper(tfScheduledQueryLastRunSummaryExecutionStatsPropertyToTerraform, true)(struct!.executionStats),
+    query_insights_response: cdktn.listMapper(tfScheduledQueryLastRunSummaryQueryInsightsResponsePropertyToTerraform, true)(struct!.queryInsightsResponse),
   }
 }
 
 
-export function awsTimestreamqueryScheduledQueryLastRunSummaryPropertyToHclTerraform(struct?: AwsTimestreamqueryScheduledQuery.LastRunSummaryProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryLastRunSummaryPropertyToHclTerraform(struct?: TfScheduledQuery.LastRunSummaryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     error_report_location: {
-      value: cdktn.listMapperHcl(awsTimestreamqueryScheduledQueryLastRunSummaryErrorReportLocationPropertyToHclTerraform, true)(struct!.errorReportLocation),
+      value: cdktn.listMapperHcl(tfScheduledQueryLastRunSummaryErrorReportLocationPropertyToHclTerraform, true)(struct!.errorReportLocation),
       isBlock: true,
       type: "list",
       storageClassType: "LastRunSummaryErrorReportLocationPropertyList",
     },
     execution_stats: {
-      value: cdktn.listMapperHcl(awsTimestreamqueryScheduledQueryLastRunSummaryExecutionStatsPropertyToHclTerraform, true)(struct!.executionStats),
+      value: cdktn.listMapperHcl(tfScheduledQueryLastRunSummaryExecutionStatsPropertyToHclTerraform, true)(struct!.executionStats),
       isBlock: true,
       type: "list",
       storageClassType: "LastRunSummaryExecutionStatsPropertyList",
     },
     query_insights_response: {
-      value: cdktn.listMapperHcl(awsTimestreamqueryScheduledQueryLastRunSummaryQueryInsightsResponsePropertyToHclTerraform, true)(struct!.queryInsightsResponse),
+      value: cdktn.listMapperHcl(tfScheduledQueryLastRunSummaryQueryInsightsResponsePropertyToHclTerraform, true)(struct!.queryInsightsResponse),
       isBlock: true,
       type: "list",
       storageClassType: "LastRunSummaryQueryInsightsResponsePropertyList",
@@ -814,7 +814,7 @@ export function awsTimestreamqueryScheduledQueryLastRunSummaryPropertyToHclTerra
 }
 
 
-export function awsTimestreamqueryScheduledQuerySnsConfigurationPropertyToTerraform(struct?: AwsTimestreamqueryScheduledQuery.SnsConfigurationProperty | cdktn.IResolvable): any {
+export function tfScheduledQuerySnsConfigurationPropertyToTerraform(struct?: TfScheduledQuery.SnsConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -825,7 +825,7 @@ export function awsTimestreamqueryScheduledQuerySnsConfigurationPropertyToTerraf
 }
 
 
-export function awsTimestreamqueryScheduledQuerySnsConfigurationPropertyToHclTerraform(struct?: AwsTimestreamqueryScheduledQuery.SnsConfigurationProperty | cdktn.IResolvable): any {
+export function tfScheduledQuerySnsConfigurationPropertyToHclTerraform(struct?: TfScheduledQuery.SnsConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -844,25 +844,25 @@ export function awsTimestreamqueryScheduledQuerySnsConfigurationPropertyToHclTer
 }
 
 
-export function awsTimestreamqueryScheduledQueryNotificationConfigurationPropertyToTerraform(struct?: AwsTimestreamqueryScheduledQuery.NotificationConfigurationProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryNotificationConfigurationPropertyToTerraform(struct?: TfScheduledQuery.NotificationConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    sns_configuration: cdktn.listMapper(awsTimestreamqueryScheduledQuerySnsConfigurationPropertyToTerraform, true)(struct!.snsConfiguration),
+    sns_configuration: cdktn.listMapper(tfScheduledQuerySnsConfigurationPropertyToTerraform, true)(struct!.snsConfiguration),
   }
 }
 
 
-export function awsTimestreamqueryScheduledQueryNotificationConfigurationPropertyToHclTerraform(struct?: AwsTimestreamqueryScheduledQuery.NotificationConfigurationProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryNotificationConfigurationPropertyToHclTerraform(struct?: TfScheduledQuery.NotificationConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     sns_configuration: {
-      value: cdktn.listMapperHcl(awsTimestreamqueryScheduledQuerySnsConfigurationPropertyToHclTerraform, true)(struct!.snsConfiguration),
+      value: cdktn.listMapperHcl(tfScheduledQuerySnsConfigurationPropertyToHclTerraform, true)(struct!.snsConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "SnsConfigurationPropertyList",
@@ -874,7 +874,7 @@ export function awsTimestreamqueryScheduledQueryNotificationConfigurationPropert
 }
 
 
-export function awsTimestreamqueryScheduledQueryRecentlyFailedRunsErrorReportLocationS3ReportLocationPropertyToTerraform(struct?: AwsTimestreamqueryScheduledQuery.RecentlyFailedRunsErrorReportLocationS3ReportLocationProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryRecentlyFailedRunsErrorReportLocationS3ReportLocationPropertyToTerraform(struct?: TfScheduledQuery.RecentlyFailedRunsErrorReportLocationS3ReportLocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -884,7 +884,7 @@ export function awsTimestreamqueryScheduledQueryRecentlyFailedRunsErrorReportLoc
 }
 
 
-export function awsTimestreamqueryScheduledQueryRecentlyFailedRunsErrorReportLocationS3ReportLocationPropertyToHclTerraform(struct?: AwsTimestreamqueryScheduledQuery.RecentlyFailedRunsErrorReportLocationS3ReportLocationProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryRecentlyFailedRunsErrorReportLocationS3ReportLocationPropertyToHclTerraform(struct?: TfScheduledQuery.RecentlyFailedRunsErrorReportLocationS3ReportLocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -895,25 +895,25 @@ export function awsTimestreamqueryScheduledQueryRecentlyFailedRunsErrorReportLoc
 }
 
 
-export function awsTimestreamqueryScheduledQueryRecentlyFailedRunsErrorReportLocationPropertyToTerraform(struct?: AwsTimestreamqueryScheduledQuery.RecentlyFailedRunsErrorReportLocationProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryRecentlyFailedRunsErrorReportLocationPropertyToTerraform(struct?: TfScheduledQuery.RecentlyFailedRunsErrorReportLocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    s3_report_location: cdktn.listMapper(awsTimestreamqueryScheduledQueryRecentlyFailedRunsErrorReportLocationS3ReportLocationPropertyToTerraform, true)(struct!.s3ReportLocation),
+    s3_report_location: cdktn.listMapper(tfScheduledQueryRecentlyFailedRunsErrorReportLocationS3ReportLocationPropertyToTerraform, true)(struct!.s3ReportLocation),
   }
 }
 
 
-export function awsTimestreamqueryScheduledQueryRecentlyFailedRunsErrorReportLocationPropertyToHclTerraform(struct?: AwsTimestreamqueryScheduledQuery.RecentlyFailedRunsErrorReportLocationProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryRecentlyFailedRunsErrorReportLocationPropertyToHclTerraform(struct?: TfScheduledQuery.RecentlyFailedRunsErrorReportLocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     s3_report_location: {
-      value: cdktn.listMapperHcl(awsTimestreamqueryScheduledQueryRecentlyFailedRunsErrorReportLocationS3ReportLocationPropertyToHclTerraform, true)(struct!.s3ReportLocation),
+      value: cdktn.listMapperHcl(tfScheduledQueryRecentlyFailedRunsErrorReportLocationS3ReportLocationPropertyToHclTerraform, true)(struct!.s3ReportLocation),
       isBlock: true,
       type: "list",
       storageClassType: "RecentlyFailedRunsErrorReportLocationS3ReportLocationPropertyList",
@@ -925,7 +925,7 @@ export function awsTimestreamqueryScheduledQueryRecentlyFailedRunsErrorReportLoc
 }
 
 
-export function awsTimestreamqueryScheduledQueryRecentlyFailedRunsExecutionStatsPropertyToTerraform(struct?: AwsTimestreamqueryScheduledQuery.RecentlyFailedRunsExecutionStatsProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryRecentlyFailedRunsExecutionStatsPropertyToTerraform(struct?: TfScheduledQuery.RecentlyFailedRunsExecutionStatsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -935,7 +935,7 @@ export function awsTimestreamqueryScheduledQueryRecentlyFailedRunsExecutionStats
 }
 
 
-export function awsTimestreamqueryScheduledQueryRecentlyFailedRunsExecutionStatsPropertyToHclTerraform(struct?: AwsTimestreamqueryScheduledQuery.RecentlyFailedRunsExecutionStatsProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryRecentlyFailedRunsExecutionStatsPropertyToHclTerraform(struct?: TfScheduledQuery.RecentlyFailedRunsExecutionStatsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -946,7 +946,7 @@ export function awsTimestreamqueryScheduledQueryRecentlyFailedRunsExecutionStats
 }
 
 
-export function awsTimestreamqueryScheduledQueryRecentlyFailedRunsQueryInsightsResponseQuerySpatialCoverageMaxPropertyToTerraform(struct?: AwsTimestreamqueryScheduledQuery.RecentlyFailedRunsQueryInsightsResponseQuerySpatialCoverageMaxProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryRecentlyFailedRunsQueryInsightsResponseQuerySpatialCoverageMaxPropertyToTerraform(struct?: TfScheduledQuery.RecentlyFailedRunsQueryInsightsResponseQuerySpatialCoverageMaxProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -956,7 +956,7 @@ export function awsTimestreamqueryScheduledQueryRecentlyFailedRunsQueryInsightsR
 }
 
 
-export function awsTimestreamqueryScheduledQueryRecentlyFailedRunsQueryInsightsResponseQuerySpatialCoverageMaxPropertyToHclTerraform(struct?: AwsTimestreamqueryScheduledQuery.RecentlyFailedRunsQueryInsightsResponseQuerySpatialCoverageMaxProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryRecentlyFailedRunsQueryInsightsResponseQuerySpatialCoverageMaxPropertyToHclTerraform(struct?: TfScheduledQuery.RecentlyFailedRunsQueryInsightsResponseQuerySpatialCoverageMaxProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -967,25 +967,25 @@ export function awsTimestreamqueryScheduledQueryRecentlyFailedRunsQueryInsightsR
 }
 
 
-export function awsTimestreamqueryScheduledQueryRecentlyFailedRunsQueryInsightsResponseQuerySpatialCoveragePropertyToTerraform(struct?: AwsTimestreamqueryScheduledQuery.RecentlyFailedRunsQueryInsightsResponseQuerySpatialCoverageProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryRecentlyFailedRunsQueryInsightsResponseQuerySpatialCoveragePropertyToTerraform(struct?: TfScheduledQuery.RecentlyFailedRunsQueryInsightsResponseQuerySpatialCoverageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    max: cdktn.listMapper(awsTimestreamqueryScheduledQueryRecentlyFailedRunsQueryInsightsResponseQuerySpatialCoverageMaxPropertyToTerraform, true)(struct!.max),
+    max: cdktn.listMapper(tfScheduledQueryRecentlyFailedRunsQueryInsightsResponseQuerySpatialCoverageMaxPropertyToTerraform, true)(struct!.max),
   }
 }
 
 
-export function awsTimestreamqueryScheduledQueryRecentlyFailedRunsQueryInsightsResponseQuerySpatialCoveragePropertyToHclTerraform(struct?: AwsTimestreamqueryScheduledQuery.RecentlyFailedRunsQueryInsightsResponseQuerySpatialCoverageProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryRecentlyFailedRunsQueryInsightsResponseQuerySpatialCoveragePropertyToHclTerraform(struct?: TfScheduledQuery.RecentlyFailedRunsQueryInsightsResponseQuerySpatialCoverageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     max: {
-      value: cdktn.listMapperHcl(awsTimestreamqueryScheduledQueryRecentlyFailedRunsQueryInsightsResponseQuerySpatialCoverageMaxPropertyToHclTerraform, true)(struct!.max),
+      value: cdktn.listMapperHcl(tfScheduledQueryRecentlyFailedRunsQueryInsightsResponseQuerySpatialCoverageMaxPropertyToHclTerraform, true)(struct!.max),
       isBlock: true,
       type: "list",
       storageClassType: "RecentlyFailedRunsQueryInsightsResponseQuerySpatialCoverageMaxPropertyList",
@@ -997,7 +997,7 @@ export function awsTimestreamqueryScheduledQueryRecentlyFailedRunsQueryInsightsR
 }
 
 
-export function awsTimestreamqueryScheduledQueryRecentlyFailedRunsQueryInsightsResponseQueryTemporalRangeMaxPropertyToTerraform(struct?: AwsTimestreamqueryScheduledQuery.RecentlyFailedRunsQueryInsightsResponseQueryTemporalRangeMaxProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryRecentlyFailedRunsQueryInsightsResponseQueryTemporalRangeMaxPropertyToTerraform(struct?: TfScheduledQuery.RecentlyFailedRunsQueryInsightsResponseQueryTemporalRangeMaxProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1007,7 +1007,7 @@ export function awsTimestreamqueryScheduledQueryRecentlyFailedRunsQueryInsightsR
 }
 
 
-export function awsTimestreamqueryScheduledQueryRecentlyFailedRunsQueryInsightsResponseQueryTemporalRangeMaxPropertyToHclTerraform(struct?: AwsTimestreamqueryScheduledQuery.RecentlyFailedRunsQueryInsightsResponseQueryTemporalRangeMaxProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryRecentlyFailedRunsQueryInsightsResponseQueryTemporalRangeMaxPropertyToHclTerraform(struct?: TfScheduledQuery.RecentlyFailedRunsQueryInsightsResponseQueryTemporalRangeMaxProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1018,25 +1018,25 @@ export function awsTimestreamqueryScheduledQueryRecentlyFailedRunsQueryInsightsR
 }
 
 
-export function awsTimestreamqueryScheduledQueryRecentlyFailedRunsQueryInsightsResponseQueryTemporalRangePropertyToTerraform(struct?: AwsTimestreamqueryScheduledQuery.RecentlyFailedRunsQueryInsightsResponseQueryTemporalRangeProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryRecentlyFailedRunsQueryInsightsResponseQueryTemporalRangePropertyToTerraform(struct?: TfScheduledQuery.RecentlyFailedRunsQueryInsightsResponseQueryTemporalRangeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    max: cdktn.listMapper(awsTimestreamqueryScheduledQueryRecentlyFailedRunsQueryInsightsResponseQueryTemporalRangeMaxPropertyToTerraform, true)(struct!.max),
+    max: cdktn.listMapper(tfScheduledQueryRecentlyFailedRunsQueryInsightsResponseQueryTemporalRangeMaxPropertyToTerraform, true)(struct!.max),
   }
 }
 
 
-export function awsTimestreamqueryScheduledQueryRecentlyFailedRunsQueryInsightsResponseQueryTemporalRangePropertyToHclTerraform(struct?: AwsTimestreamqueryScheduledQuery.RecentlyFailedRunsQueryInsightsResponseQueryTemporalRangeProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryRecentlyFailedRunsQueryInsightsResponseQueryTemporalRangePropertyToHclTerraform(struct?: TfScheduledQuery.RecentlyFailedRunsQueryInsightsResponseQueryTemporalRangeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     max: {
-      value: cdktn.listMapperHcl(awsTimestreamqueryScheduledQueryRecentlyFailedRunsQueryInsightsResponseQueryTemporalRangeMaxPropertyToHclTerraform, true)(struct!.max),
+      value: cdktn.listMapperHcl(tfScheduledQueryRecentlyFailedRunsQueryInsightsResponseQueryTemporalRangeMaxPropertyToHclTerraform, true)(struct!.max),
       isBlock: true,
       type: "list",
       storageClassType: "RecentlyFailedRunsQueryInsightsResponseQueryTemporalRangeMaxPropertyList",
@@ -1048,32 +1048,32 @@ export function awsTimestreamqueryScheduledQueryRecentlyFailedRunsQueryInsightsR
 }
 
 
-export function awsTimestreamqueryScheduledQueryRecentlyFailedRunsQueryInsightsResponsePropertyToTerraform(struct?: AwsTimestreamqueryScheduledQuery.RecentlyFailedRunsQueryInsightsResponseProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryRecentlyFailedRunsQueryInsightsResponsePropertyToTerraform(struct?: TfScheduledQuery.RecentlyFailedRunsQueryInsightsResponseProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    query_spatial_coverage: cdktn.listMapper(awsTimestreamqueryScheduledQueryRecentlyFailedRunsQueryInsightsResponseQuerySpatialCoveragePropertyToTerraform, true)(struct!.querySpatialCoverage),
-    query_temporal_range: cdktn.listMapper(awsTimestreamqueryScheduledQueryRecentlyFailedRunsQueryInsightsResponseQueryTemporalRangePropertyToTerraform, true)(struct!.queryTemporalRange),
+    query_spatial_coverage: cdktn.listMapper(tfScheduledQueryRecentlyFailedRunsQueryInsightsResponseQuerySpatialCoveragePropertyToTerraform, true)(struct!.querySpatialCoverage),
+    query_temporal_range: cdktn.listMapper(tfScheduledQueryRecentlyFailedRunsQueryInsightsResponseQueryTemporalRangePropertyToTerraform, true)(struct!.queryTemporalRange),
   }
 }
 
 
-export function awsTimestreamqueryScheduledQueryRecentlyFailedRunsQueryInsightsResponsePropertyToHclTerraform(struct?: AwsTimestreamqueryScheduledQuery.RecentlyFailedRunsQueryInsightsResponseProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryRecentlyFailedRunsQueryInsightsResponsePropertyToHclTerraform(struct?: TfScheduledQuery.RecentlyFailedRunsQueryInsightsResponseProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     query_spatial_coverage: {
-      value: cdktn.listMapperHcl(awsTimestreamqueryScheduledQueryRecentlyFailedRunsQueryInsightsResponseQuerySpatialCoveragePropertyToHclTerraform, true)(struct!.querySpatialCoverage),
+      value: cdktn.listMapperHcl(tfScheduledQueryRecentlyFailedRunsQueryInsightsResponseQuerySpatialCoveragePropertyToHclTerraform, true)(struct!.querySpatialCoverage),
       isBlock: true,
       type: "list",
       storageClassType: "RecentlyFailedRunsQueryInsightsResponseQuerySpatialCoveragePropertyList",
     },
     query_temporal_range: {
-      value: cdktn.listMapperHcl(awsTimestreamqueryScheduledQueryRecentlyFailedRunsQueryInsightsResponseQueryTemporalRangePropertyToHclTerraform, true)(struct!.queryTemporalRange),
+      value: cdktn.listMapperHcl(tfScheduledQueryRecentlyFailedRunsQueryInsightsResponseQueryTemporalRangePropertyToHclTerraform, true)(struct!.queryTemporalRange),
       isBlock: true,
       type: "list",
       storageClassType: "RecentlyFailedRunsQueryInsightsResponseQueryTemporalRangePropertyList",
@@ -1085,39 +1085,39 @@ export function awsTimestreamqueryScheduledQueryRecentlyFailedRunsQueryInsightsR
 }
 
 
-export function awsTimestreamqueryScheduledQueryRecentlyFailedRunsPropertyToTerraform(struct?: AwsTimestreamqueryScheduledQuery.RecentlyFailedRunsProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryRecentlyFailedRunsPropertyToTerraform(struct?: TfScheduledQuery.RecentlyFailedRunsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    error_report_location: cdktn.listMapper(awsTimestreamqueryScheduledQueryRecentlyFailedRunsErrorReportLocationPropertyToTerraform, true)(struct!.errorReportLocation),
-    execution_stats: cdktn.listMapper(awsTimestreamqueryScheduledQueryRecentlyFailedRunsExecutionStatsPropertyToTerraform, true)(struct!.executionStats),
-    query_insights_response: cdktn.listMapper(awsTimestreamqueryScheduledQueryRecentlyFailedRunsQueryInsightsResponsePropertyToTerraform, true)(struct!.queryInsightsResponse),
+    error_report_location: cdktn.listMapper(tfScheduledQueryRecentlyFailedRunsErrorReportLocationPropertyToTerraform, true)(struct!.errorReportLocation),
+    execution_stats: cdktn.listMapper(tfScheduledQueryRecentlyFailedRunsExecutionStatsPropertyToTerraform, true)(struct!.executionStats),
+    query_insights_response: cdktn.listMapper(tfScheduledQueryRecentlyFailedRunsQueryInsightsResponsePropertyToTerraform, true)(struct!.queryInsightsResponse),
   }
 }
 
 
-export function awsTimestreamqueryScheduledQueryRecentlyFailedRunsPropertyToHclTerraform(struct?: AwsTimestreamqueryScheduledQuery.RecentlyFailedRunsProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryRecentlyFailedRunsPropertyToHclTerraform(struct?: TfScheduledQuery.RecentlyFailedRunsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     error_report_location: {
-      value: cdktn.listMapperHcl(awsTimestreamqueryScheduledQueryRecentlyFailedRunsErrorReportLocationPropertyToHclTerraform, true)(struct!.errorReportLocation),
+      value: cdktn.listMapperHcl(tfScheduledQueryRecentlyFailedRunsErrorReportLocationPropertyToHclTerraform, true)(struct!.errorReportLocation),
       isBlock: true,
       type: "list",
       storageClassType: "RecentlyFailedRunsErrorReportLocationPropertyList",
     },
     execution_stats: {
-      value: cdktn.listMapperHcl(awsTimestreamqueryScheduledQueryRecentlyFailedRunsExecutionStatsPropertyToHclTerraform, true)(struct!.executionStats),
+      value: cdktn.listMapperHcl(tfScheduledQueryRecentlyFailedRunsExecutionStatsPropertyToHclTerraform, true)(struct!.executionStats),
       isBlock: true,
       type: "list",
       storageClassType: "RecentlyFailedRunsExecutionStatsPropertyList",
     },
     query_insights_response: {
-      value: cdktn.listMapperHcl(awsTimestreamqueryScheduledQueryRecentlyFailedRunsQueryInsightsResponsePropertyToHclTerraform, true)(struct!.queryInsightsResponse),
+      value: cdktn.listMapperHcl(tfScheduledQueryRecentlyFailedRunsQueryInsightsResponsePropertyToHclTerraform, true)(struct!.queryInsightsResponse),
       isBlock: true,
       type: "list",
       storageClassType: "RecentlyFailedRunsQueryInsightsResponsePropertyList",
@@ -1129,7 +1129,7 @@ export function awsTimestreamqueryScheduledQueryRecentlyFailedRunsPropertyToHclT
 }
 
 
-export function awsTimestreamqueryScheduledQueryScheduleConfigurationPropertyToTerraform(struct?: AwsTimestreamqueryScheduledQuery.ScheduleConfigurationProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryScheduleConfigurationPropertyToTerraform(struct?: TfScheduledQuery.ScheduleConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1140,7 +1140,7 @@ export function awsTimestreamqueryScheduledQueryScheduleConfigurationPropertyToT
 }
 
 
-export function awsTimestreamqueryScheduledQueryScheduleConfigurationPropertyToHclTerraform(struct?: AwsTimestreamqueryScheduledQuery.ScheduleConfigurationProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryScheduleConfigurationPropertyToHclTerraform(struct?: TfScheduledQuery.ScheduleConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1159,7 +1159,7 @@ export function awsTimestreamqueryScheduledQueryScheduleConfigurationPropertyToH
 }
 
 
-export function awsTimestreamqueryScheduledQueryDimensionMappingPropertyToTerraform(struct?: AwsTimestreamqueryScheduledQuery.DimensionMappingProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryDimensionMappingPropertyToTerraform(struct?: TfScheduledQuery.DimensionMappingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1171,7 +1171,7 @@ export function awsTimestreamqueryScheduledQueryDimensionMappingPropertyToTerraf
 }
 
 
-export function awsTimestreamqueryScheduledQueryDimensionMappingPropertyToHclTerraform(struct?: AwsTimestreamqueryScheduledQuery.DimensionMappingProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryDimensionMappingPropertyToHclTerraform(struct?: TfScheduledQuery.DimensionMappingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1196,7 +1196,7 @@ export function awsTimestreamqueryScheduledQueryDimensionMappingPropertyToHclTer
 }
 
 
-export function awsTimestreamqueryScheduledQueryTargetConfigurationTimestreamConfigurationMixedMeasureMappingMultiMeasureAttributeMappingPropertyToTerraform(struct?: AwsTimestreamqueryScheduledQuery.TargetConfigurationTimestreamConfigurationMixedMeasureMappingMultiMeasureAttributeMappingProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryTargetConfigurationTimestreamConfigurationMixedMeasureMappingMultiMeasureAttributeMappingPropertyToTerraform(struct?: TfScheduledQuery.TargetConfigurationTimestreamConfigurationMixedMeasureMappingMultiMeasureAttributeMappingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1209,7 +1209,7 @@ export function awsTimestreamqueryScheduledQueryTargetConfigurationTimestreamCon
 }
 
 
-export function awsTimestreamqueryScheduledQueryTargetConfigurationTimestreamConfigurationMixedMeasureMappingMultiMeasureAttributeMappingPropertyToHclTerraform(struct?: AwsTimestreamqueryScheduledQuery.TargetConfigurationTimestreamConfigurationMixedMeasureMappingMultiMeasureAttributeMappingProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryTargetConfigurationTimestreamConfigurationMixedMeasureMappingMultiMeasureAttributeMappingPropertyToHclTerraform(struct?: TfScheduledQuery.TargetConfigurationTimestreamConfigurationMixedMeasureMappingMultiMeasureAttributeMappingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1240,7 +1240,7 @@ export function awsTimestreamqueryScheduledQueryTargetConfigurationTimestreamCon
 }
 
 
-export function awsTimestreamqueryScheduledQueryMixedMeasureMappingPropertyToTerraform(struct?: AwsTimestreamqueryScheduledQuery.MixedMeasureMappingProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryMixedMeasureMappingPropertyToTerraform(struct?: TfScheduledQuery.MixedMeasureMappingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1250,12 +1250,12 @@ export function awsTimestreamqueryScheduledQueryMixedMeasureMappingPropertyToTer
     measure_value_type: cdktn.stringToTerraform(struct!.measureValueType),
     source_column: cdktn.stringToTerraform(struct!.sourceColumn),
     target_measure_name: cdktn.stringToTerraform(struct!.targetMeasureName),
-    multi_measure_attribute_mapping: cdktn.listMapper(awsTimestreamqueryScheduledQueryTargetConfigurationTimestreamConfigurationMixedMeasureMappingMultiMeasureAttributeMappingPropertyToTerraform, true)(struct!.multiMeasureAttributeMapping),
+    multi_measure_attribute_mapping: cdktn.listMapper(tfScheduledQueryTargetConfigurationTimestreamConfigurationMixedMeasureMappingMultiMeasureAttributeMappingPropertyToTerraform, true)(struct!.multiMeasureAttributeMapping),
   }
 }
 
 
-export function awsTimestreamqueryScheduledQueryMixedMeasureMappingPropertyToHclTerraform(struct?: AwsTimestreamqueryScheduledQuery.MixedMeasureMappingProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryMixedMeasureMappingPropertyToHclTerraform(struct?: TfScheduledQuery.MixedMeasureMappingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1286,7 +1286,7 @@ export function awsTimestreamqueryScheduledQueryMixedMeasureMappingPropertyToHcl
       storageClassType: "string",
     },
     multi_measure_attribute_mapping: {
-      value: cdktn.listMapperHcl(awsTimestreamqueryScheduledQueryTargetConfigurationTimestreamConfigurationMixedMeasureMappingMultiMeasureAttributeMappingPropertyToHclTerraform, true)(struct!.multiMeasureAttributeMapping),
+      value: cdktn.listMapperHcl(tfScheduledQueryTargetConfigurationTimestreamConfigurationMixedMeasureMappingMultiMeasureAttributeMappingPropertyToHclTerraform, true)(struct!.multiMeasureAttributeMapping),
       isBlock: true,
       type: "list",
       storageClassType: "TargetConfigurationTimestreamConfigurationMixedMeasureMappingMultiMeasureAttributeMappingPropertyList",
@@ -1298,7 +1298,7 @@ export function awsTimestreamqueryScheduledQueryMixedMeasureMappingPropertyToHcl
 }
 
 
-export function awsTimestreamqueryScheduledQueryTargetConfigurationTimestreamConfigurationMultiMeasureMappingsMultiMeasureAttributeMappingPropertyToTerraform(struct?: AwsTimestreamqueryScheduledQuery.TargetConfigurationTimestreamConfigurationMultiMeasureMappingsMultiMeasureAttributeMappingProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryTargetConfigurationTimestreamConfigurationMultiMeasureMappingsMultiMeasureAttributeMappingPropertyToTerraform(struct?: TfScheduledQuery.TargetConfigurationTimestreamConfigurationMultiMeasureMappingsMultiMeasureAttributeMappingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1311,7 +1311,7 @@ export function awsTimestreamqueryScheduledQueryTargetConfigurationTimestreamCon
 }
 
 
-export function awsTimestreamqueryScheduledQueryTargetConfigurationTimestreamConfigurationMultiMeasureMappingsMultiMeasureAttributeMappingPropertyToHclTerraform(struct?: AwsTimestreamqueryScheduledQuery.TargetConfigurationTimestreamConfigurationMultiMeasureMappingsMultiMeasureAttributeMappingProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryTargetConfigurationTimestreamConfigurationMultiMeasureMappingsMultiMeasureAttributeMappingPropertyToHclTerraform(struct?: TfScheduledQuery.TargetConfigurationTimestreamConfigurationMultiMeasureMappingsMultiMeasureAttributeMappingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1342,19 +1342,19 @@ export function awsTimestreamqueryScheduledQueryTargetConfigurationTimestreamCon
 }
 
 
-export function awsTimestreamqueryScheduledQueryMultiMeasureMappingsPropertyToTerraform(struct?: AwsTimestreamqueryScheduledQuery.MultiMeasureMappingsProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryMultiMeasureMappingsPropertyToTerraform(struct?: TfScheduledQuery.MultiMeasureMappingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     target_multi_measure_name: cdktn.stringToTerraform(struct!.targetMultiMeasureName),
-    multi_measure_attribute_mapping: cdktn.listMapper(awsTimestreamqueryScheduledQueryTargetConfigurationTimestreamConfigurationMultiMeasureMappingsMultiMeasureAttributeMappingPropertyToTerraform, true)(struct!.multiMeasureAttributeMapping),
+    multi_measure_attribute_mapping: cdktn.listMapper(tfScheduledQueryTargetConfigurationTimestreamConfigurationMultiMeasureMappingsMultiMeasureAttributeMappingPropertyToTerraform, true)(struct!.multiMeasureAttributeMapping),
   }
 }
 
 
-export function awsTimestreamqueryScheduledQueryMultiMeasureMappingsPropertyToHclTerraform(struct?: AwsTimestreamqueryScheduledQuery.MultiMeasureMappingsProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryMultiMeasureMappingsPropertyToHclTerraform(struct?: TfScheduledQuery.MultiMeasureMappingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1367,7 +1367,7 @@ export function awsTimestreamqueryScheduledQueryMultiMeasureMappingsPropertyToHc
       storageClassType: "string",
     },
     multi_measure_attribute_mapping: {
-      value: cdktn.listMapperHcl(awsTimestreamqueryScheduledQueryTargetConfigurationTimestreamConfigurationMultiMeasureMappingsMultiMeasureAttributeMappingPropertyToHclTerraform, true)(struct!.multiMeasureAttributeMapping),
+      value: cdktn.listMapperHcl(tfScheduledQueryTargetConfigurationTimestreamConfigurationMultiMeasureMappingsMultiMeasureAttributeMappingPropertyToHclTerraform, true)(struct!.multiMeasureAttributeMapping),
       isBlock: true,
       type: "list",
       storageClassType: "TargetConfigurationTimestreamConfigurationMultiMeasureMappingsMultiMeasureAttributeMappingPropertyList",
@@ -1379,7 +1379,7 @@ export function awsTimestreamqueryScheduledQueryMultiMeasureMappingsPropertyToHc
 }
 
 
-export function awsTimestreamqueryScheduledQueryTimestreamConfigurationPropertyToTerraform(struct?: AwsTimestreamqueryScheduledQuery.TimestreamConfigurationProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryTimestreamConfigurationPropertyToTerraform(struct?: TfScheduledQuery.TimestreamConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1389,14 +1389,14 @@ export function awsTimestreamqueryScheduledQueryTimestreamConfigurationPropertyT
     measure_name_column: cdktn.stringToTerraform(struct!.measureNameColumn),
     table_name: cdktn.stringToTerraform(struct!.tableName),
     time_column: cdktn.stringToTerraform(struct!.timeColumn),
-    dimension_mapping: cdktn.listMapper(awsTimestreamqueryScheduledQueryDimensionMappingPropertyToTerraform, true)(struct!.dimensionMapping),
-    mixed_measure_mapping: cdktn.listMapper(awsTimestreamqueryScheduledQueryMixedMeasureMappingPropertyToTerraform, true)(struct!.mixedMeasureMapping),
-    multi_measure_mappings: cdktn.listMapper(awsTimestreamqueryScheduledQueryMultiMeasureMappingsPropertyToTerraform, true)(struct!.multiMeasureMappings),
+    dimension_mapping: cdktn.listMapper(tfScheduledQueryDimensionMappingPropertyToTerraform, true)(struct!.dimensionMapping),
+    mixed_measure_mapping: cdktn.listMapper(tfScheduledQueryMixedMeasureMappingPropertyToTerraform, true)(struct!.mixedMeasureMapping),
+    multi_measure_mappings: cdktn.listMapper(tfScheduledQueryMultiMeasureMappingsPropertyToTerraform, true)(struct!.multiMeasureMappings),
   }
 }
 
 
-export function awsTimestreamqueryScheduledQueryTimestreamConfigurationPropertyToHclTerraform(struct?: AwsTimestreamqueryScheduledQuery.TimestreamConfigurationProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryTimestreamConfigurationPropertyToHclTerraform(struct?: TfScheduledQuery.TimestreamConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1427,19 +1427,19 @@ export function awsTimestreamqueryScheduledQueryTimestreamConfigurationPropertyT
       storageClassType: "string",
     },
     dimension_mapping: {
-      value: cdktn.listMapperHcl(awsTimestreamqueryScheduledQueryDimensionMappingPropertyToHclTerraform, true)(struct!.dimensionMapping),
+      value: cdktn.listMapperHcl(tfScheduledQueryDimensionMappingPropertyToHclTerraform, true)(struct!.dimensionMapping),
       isBlock: true,
       type: "list",
       storageClassType: "DimensionMappingPropertyList",
     },
     mixed_measure_mapping: {
-      value: cdktn.listMapperHcl(awsTimestreamqueryScheduledQueryMixedMeasureMappingPropertyToHclTerraform, true)(struct!.mixedMeasureMapping),
+      value: cdktn.listMapperHcl(tfScheduledQueryMixedMeasureMappingPropertyToHclTerraform, true)(struct!.mixedMeasureMapping),
       isBlock: true,
       type: "list",
       storageClassType: "MixedMeasureMappingPropertyList",
     },
     multi_measure_mappings: {
-      value: cdktn.listMapperHcl(awsTimestreamqueryScheduledQueryMultiMeasureMappingsPropertyToHclTerraform, true)(struct!.multiMeasureMappings),
+      value: cdktn.listMapperHcl(tfScheduledQueryMultiMeasureMappingsPropertyToHclTerraform, true)(struct!.multiMeasureMappings),
       isBlock: true,
       type: "list",
       storageClassType: "MultiMeasureMappingsPropertyList",
@@ -1451,25 +1451,25 @@ export function awsTimestreamqueryScheduledQueryTimestreamConfigurationPropertyT
 }
 
 
-export function awsTimestreamqueryScheduledQueryTargetConfigurationPropertyToTerraform(struct?: AwsTimestreamqueryScheduledQuery.TargetConfigurationProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryTargetConfigurationPropertyToTerraform(struct?: TfScheduledQuery.TargetConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    timestream_configuration: cdktn.listMapper(awsTimestreamqueryScheduledQueryTimestreamConfigurationPropertyToTerraform, true)(struct!.timestreamConfiguration),
+    timestream_configuration: cdktn.listMapper(tfScheduledQueryTimestreamConfigurationPropertyToTerraform, true)(struct!.timestreamConfiguration),
   }
 }
 
 
-export function awsTimestreamqueryScheduledQueryTargetConfigurationPropertyToHclTerraform(struct?: AwsTimestreamqueryScheduledQuery.TargetConfigurationProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryTargetConfigurationPropertyToHclTerraform(struct?: TfScheduledQuery.TargetConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     timestream_configuration: {
-      value: cdktn.listMapperHcl(awsTimestreamqueryScheduledQueryTimestreamConfigurationPropertyToHclTerraform, true)(struct!.timestreamConfiguration),
+      value: cdktn.listMapperHcl(tfScheduledQueryTimestreamConfigurationPropertyToHclTerraform, true)(struct!.timestreamConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "TimestreamConfigurationPropertyList",
@@ -1481,7 +1481,7 @@ export function awsTimestreamqueryScheduledQueryTargetConfigurationPropertyToHcl
 }
 
 
-export function awsTimestreamqueryScheduledQueryTimeoutsPropertyToTerraform(struct?: AwsTimestreamqueryScheduledQuery.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryTimeoutsPropertyToTerraform(struct?: TfScheduledQuery.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1494,7 +1494,7 @@ export function awsTimestreamqueryScheduledQueryTimeoutsPropertyToTerraform(stru
 }
 
 
-export function awsTimestreamqueryScheduledQueryTimeoutsPropertyToHclTerraform(struct?: AwsTimestreamqueryScheduledQuery.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfScheduledQueryTimeoutsPropertyToHclTerraform(struct?: TfScheduledQuery.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1525,18 +1525,18 @@ export function awsTimestreamqueryScheduledQueryTimeoutsPropertyToHclTerraform(s
 }
 
 
-export namespace AwsTimestreamqueryScheduledQuery {
+export namespace TfScheduledQuery {
 export interface S3ConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#bucket_name AwsTimestreamqueryScheduledQuery#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#bucket_name TfScheduledQuery#bucket_name}
   */
   readonly bucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#encryption_option AwsTimestreamqueryScheduledQuery#encryption_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#encryption_option TfScheduledQuery#encryption_option}
   */
   readonly encryptionOption?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#object_key_prefix AwsTimestreamqueryScheduledQuery#object_key_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#object_key_prefix TfScheduledQuery#object_key_prefix}
   */
   readonly objectKeyPrefix?: string;
 }
@@ -1665,7 +1665,7 @@ export interface ErrorReportConfigurationProperty {
   /**
   * s3_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#s3_configuration AwsTimestreamqueryScheduledQuery#s3_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#s3_configuration TfScheduledQuery#s3_configuration}
   */
   readonly s3Configuration?: S3ConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -1823,7 +1823,7 @@ export interface LastRunSummaryErrorReportLocationProperty {
   /**
   * s3_report_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#s3_report_location AwsTimestreamqueryScheduledQuery#s3_report_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#s3_report_location TfScheduledQuery#s3_report_location}
   */
   readonly s3ReportLocation?: LastRunSummaryErrorReportLocationS3ReportLocationProperty[] | cdktn.IResolvable;
 }
@@ -2076,7 +2076,7 @@ export interface LastRunSummaryQueryInsightsResponseQuerySpatialCoverageProperty
   /**
   * max block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#max AwsTimestreamqueryScheduledQuery#max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#max TfScheduledQuery#max}
   */
   readonly max?: LastRunSummaryQueryInsightsResponseQuerySpatialCoverageMaxProperty[] | cdktn.IResolvable;
 }
@@ -2234,7 +2234,7 @@ export interface LastRunSummaryQueryInsightsResponseQueryTemporalRangeProperty {
   /**
   * max block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#max AwsTimestreamqueryScheduledQuery#max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#max TfScheduledQuery#max}
   */
   readonly max?: LastRunSummaryQueryInsightsResponseQueryTemporalRangeMaxProperty[] | cdktn.IResolvable;
 }
@@ -2322,13 +2322,13 @@ export interface LastRunSummaryQueryInsightsResponseProperty {
   /**
   * query_spatial_coverage block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#query_spatial_coverage AwsTimestreamqueryScheduledQuery#query_spatial_coverage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#query_spatial_coverage TfScheduledQuery#query_spatial_coverage}
   */
   readonly querySpatialCoverage?: LastRunSummaryQueryInsightsResponseQuerySpatialCoverageProperty[] | cdktn.IResolvable;
   /**
   * query_temporal_range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#query_temporal_range AwsTimestreamqueryScheduledQuery#query_temporal_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#query_temporal_range TfScheduledQuery#query_temporal_range}
   */
   readonly queryTemporalRange?: LastRunSummaryQueryInsightsResponseQueryTemporalRangeProperty[] | cdktn.IResolvable;
 }
@@ -2453,19 +2453,19 @@ export interface LastRunSummaryProperty {
   /**
   * error_report_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#error_report_location AwsTimestreamqueryScheduledQuery#error_report_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#error_report_location TfScheduledQuery#error_report_location}
   */
   readonly errorReportLocation?: LastRunSummaryErrorReportLocationProperty[] | cdktn.IResolvable;
   /**
   * execution_stats block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#execution_stats AwsTimestreamqueryScheduledQuery#execution_stats}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#execution_stats TfScheduledQuery#execution_stats}
   */
   readonly executionStats?: LastRunSummaryExecutionStatsProperty[] | cdktn.IResolvable;
   /**
   * query_insights_response block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#query_insights_response AwsTimestreamqueryScheduledQuery#query_insights_response}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#query_insights_response TfScheduledQuery#query_insights_response}
   */
   readonly queryInsightsResponse?: LastRunSummaryQueryInsightsResponseProperty[] | cdktn.IResolvable;
 }
@@ -2615,7 +2615,7 @@ export class LastRunSummaryPropertyList extends cdktn.ComplexList {
 }
 export interface SnsConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#topic_arn AwsTimestreamqueryScheduledQuery#topic_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#topic_arn TfScheduledQuery#topic_arn}
   */
   readonly topicArn: string;
 }
@@ -2700,7 +2700,7 @@ export interface NotificationConfigurationProperty {
   /**
   * sns_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#sns_configuration AwsTimestreamqueryScheduledQuery#sns_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#sns_configuration TfScheduledQuery#sns_configuration}
   */
   readonly snsConfiguration?: SnsConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -2858,7 +2858,7 @@ export interface RecentlyFailedRunsErrorReportLocationProperty {
   /**
   * s3_report_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#s3_report_location AwsTimestreamqueryScheduledQuery#s3_report_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#s3_report_location TfScheduledQuery#s3_report_location}
   */
   readonly s3ReportLocation?: RecentlyFailedRunsErrorReportLocationS3ReportLocationProperty[] | cdktn.IResolvable;
 }
@@ -3111,7 +3111,7 @@ export interface RecentlyFailedRunsQueryInsightsResponseQuerySpatialCoverageProp
   /**
   * max block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#max AwsTimestreamqueryScheduledQuery#max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#max TfScheduledQuery#max}
   */
   readonly max?: RecentlyFailedRunsQueryInsightsResponseQuerySpatialCoverageMaxProperty[] | cdktn.IResolvable;
 }
@@ -3269,7 +3269,7 @@ export interface RecentlyFailedRunsQueryInsightsResponseQueryTemporalRangeProper
   /**
   * max block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#max AwsTimestreamqueryScheduledQuery#max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#max TfScheduledQuery#max}
   */
   readonly max?: RecentlyFailedRunsQueryInsightsResponseQueryTemporalRangeMaxProperty[] | cdktn.IResolvable;
 }
@@ -3357,13 +3357,13 @@ export interface RecentlyFailedRunsQueryInsightsResponseProperty {
   /**
   * query_spatial_coverage block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#query_spatial_coverage AwsTimestreamqueryScheduledQuery#query_spatial_coverage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#query_spatial_coverage TfScheduledQuery#query_spatial_coverage}
   */
   readonly querySpatialCoverage?: RecentlyFailedRunsQueryInsightsResponseQuerySpatialCoverageProperty[] | cdktn.IResolvable;
   /**
   * query_temporal_range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#query_temporal_range AwsTimestreamqueryScheduledQuery#query_temporal_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#query_temporal_range TfScheduledQuery#query_temporal_range}
   */
   readonly queryTemporalRange?: RecentlyFailedRunsQueryInsightsResponseQueryTemporalRangeProperty[] | cdktn.IResolvable;
 }
@@ -3488,19 +3488,19 @@ export interface RecentlyFailedRunsProperty {
   /**
   * error_report_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#error_report_location AwsTimestreamqueryScheduledQuery#error_report_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#error_report_location TfScheduledQuery#error_report_location}
   */
   readonly errorReportLocation?: RecentlyFailedRunsErrorReportLocationProperty[] | cdktn.IResolvable;
   /**
   * execution_stats block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#execution_stats AwsTimestreamqueryScheduledQuery#execution_stats}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#execution_stats TfScheduledQuery#execution_stats}
   */
   readonly executionStats?: RecentlyFailedRunsExecutionStatsProperty[] | cdktn.IResolvable;
   /**
   * query_insights_response block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#query_insights_response AwsTimestreamqueryScheduledQuery#query_insights_response}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#query_insights_response TfScheduledQuery#query_insights_response}
   */
   readonly queryInsightsResponse?: RecentlyFailedRunsQueryInsightsResponseProperty[] | cdktn.IResolvable;
 }
@@ -3650,7 +3650,7 @@ export class RecentlyFailedRunsPropertyList extends cdktn.ComplexList {
 }
 export interface ScheduleConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#schedule_expression AwsTimestreamqueryScheduledQuery#schedule_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#schedule_expression TfScheduledQuery#schedule_expression}
   */
   readonly scheduleExpression: string;
 }
@@ -3733,11 +3733,11 @@ export class ScheduleConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface DimensionMappingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#dimension_value_type AwsTimestreamqueryScheduledQuery#dimension_value_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#dimension_value_type TfScheduledQuery#dimension_value_type}
   */
   readonly dimensionValueType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#name AwsTimestreamqueryScheduledQuery#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#name TfScheduledQuery#name}
   */
   readonly name: string;
 }
@@ -3839,15 +3839,15 @@ export class DimensionMappingPropertyList extends cdktn.ComplexList {
 }
 export interface TargetConfigurationTimestreamConfigurationMixedMeasureMappingMultiMeasureAttributeMappingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#measure_value_type AwsTimestreamqueryScheduledQuery#measure_value_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#measure_value_type TfScheduledQuery#measure_value_type}
   */
   readonly measureValueType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#source_column AwsTimestreamqueryScheduledQuery#source_column}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#source_column TfScheduledQuery#source_column}
   */
   readonly sourceColumn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#target_multi_measure_attribute_name AwsTimestreamqueryScheduledQuery#target_multi_measure_attribute_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#target_multi_measure_attribute_name TfScheduledQuery#target_multi_measure_attribute_name}
   */
   readonly targetMultiMeasureAttributeName?: string;
 }
@@ -3971,25 +3971,25 @@ export class TargetConfigurationTimestreamConfigurationMixedMeasureMappingMultiM
 }
 export interface MixedMeasureMappingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#measure_name AwsTimestreamqueryScheduledQuery#measure_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#measure_name TfScheduledQuery#measure_name}
   */
   readonly measureName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#measure_value_type AwsTimestreamqueryScheduledQuery#measure_value_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#measure_value_type TfScheduledQuery#measure_value_type}
   */
   readonly measureValueType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#source_column AwsTimestreamqueryScheduledQuery#source_column}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#source_column TfScheduledQuery#source_column}
   */
   readonly sourceColumn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#target_measure_name AwsTimestreamqueryScheduledQuery#target_measure_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#target_measure_name TfScheduledQuery#target_measure_name}
   */
   readonly targetMeasureName?: string;
   /**
   * multi_measure_attribute_mapping block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#multi_measure_attribute_mapping AwsTimestreamqueryScheduledQuery#multi_measure_attribute_mapping}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#multi_measure_attribute_mapping TfScheduledQuery#multi_measure_attribute_mapping}
   */
   readonly multiMeasureAttributeMapping?: TargetConfigurationTimestreamConfigurationMixedMeasureMappingMultiMeasureAttributeMappingProperty[] | cdktn.IResolvable;
 }
@@ -4160,15 +4160,15 @@ export class MixedMeasureMappingPropertyList extends cdktn.ComplexList {
 }
 export interface TargetConfigurationTimestreamConfigurationMultiMeasureMappingsMultiMeasureAttributeMappingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#measure_value_type AwsTimestreamqueryScheduledQuery#measure_value_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#measure_value_type TfScheduledQuery#measure_value_type}
   */
   readonly measureValueType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#source_column AwsTimestreamqueryScheduledQuery#source_column}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#source_column TfScheduledQuery#source_column}
   */
   readonly sourceColumn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#target_multi_measure_attribute_name AwsTimestreamqueryScheduledQuery#target_multi_measure_attribute_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#target_multi_measure_attribute_name TfScheduledQuery#target_multi_measure_attribute_name}
   */
   readonly targetMultiMeasureAttributeName?: string;
 }
@@ -4292,13 +4292,13 @@ export class TargetConfigurationTimestreamConfigurationMultiMeasureMappingsMulti
 }
 export interface MultiMeasureMappingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#target_multi_measure_name AwsTimestreamqueryScheduledQuery#target_multi_measure_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#target_multi_measure_name TfScheduledQuery#target_multi_measure_name}
   */
   readonly targetMultiMeasureName?: string;
   /**
   * multi_measure_attribute_mapping block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#multi_measure_attribute_mapping AwsTimestreamqueryScheduledQuery#multi_measure_attribute_mapping}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#multi_measure_attribute_mapping TfScheduledQuery#multi_measure_attribute_mapping}
   */
   readonly multiMeasureAttributeMapping?: TargetConfigurationTimestreamConfigurationMultiMeasureMappingsMultiMeasureAttributeMappingProperty[] | cdktn.IResolvable;
 }
@@ -4406,37 +4406,37 @@ export class MultiMeasureMappingsPropertyList extends cdktn.ComplexList {
 }
 export interface TimestreamConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#database_name AwsTimestreamqueryScheduledQuery#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#database_name TfScheduledQuery#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#measure_name_column AwsTimestreamqueryScheduledQuery#measure_name_column}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#measure_name_column TfScheduledQuery#measure_name_column}
   */
   readonly measureNameColumn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#table_name AwsTimestreamqueryScheduledQuery#table_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#table_name TfScheduledQuery#table_name}
   */
   readonly tableName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#time_column AwsTimestreamqueryScheduledQuery#time_column}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#time_column TfScheduledQuery#time_column}
   */
   readonly timeColumn: string;
   /**
   * dimension_mapping block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#dimension_mapping AwsTimestreamqueryScheduledQuery#dimension_mapping}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#dimension_mapping TfScheduledQuery#dimension_mapping}
   */
   readonly dimensionMapping?: DimensionMappingProperty[] | cdktn.IResolvable;
   /**
   * mixed_measure_mapping block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#mixed_measure_mapping AwsTimestreamqueryScheduledQuery#mixed_measure_mapping}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#mixed_measure_mapping TfScheduledQuery#mixed_measure_mapping}
   */
   readonly mixedMeasureMapping?: MixedMeasureMappingProperty[] | cdktn.IResolvable;
   /**
   * multi_measure_mappings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#multi_measure_mappings AwsTimestreamqueryScheduledQuery#multi_measure_mappings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#multi_measure_mappings TfScheduledQuery#multi_measure_mappings}
   */
   readonly multiMeasureMappings?: MultiMeasureMappingsProperty[] | cdktn.IResolvable;
 }
@@ -4647,7 +4647,7 @@ export interface TargetConfigurationProperty {
   /**
   * timestream_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#timestream_configuration AwsTimestreamqueryScheduledQuery#timestream_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#timestream_configuration TfScheduledQuery#timestream_configuration}
   */
   readonly timestreamConfiguration?: TimestreamConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -4735,19 +4735,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#create AwsTimestreamqueryScheduledQuery#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#create TfScheduledQuery#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#delete AwsTimestreamqueryScheduledQuery#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#delete TfScheduledQuery#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#update AwsTimestreamqueryScheduledQuery#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamquery_scheduled_query#update TfScheduledQuery#update}
   */
   readonly update?: string;
 }

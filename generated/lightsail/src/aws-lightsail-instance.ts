@@ -5,68 +5,68 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsLightsailInstanceConfig extends cdktn.TerraformMetaArguments {
+export interface TfInstanceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance#availability_zone AwsLightsailInstance#availability_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance#availability_zone TfInstance#availability_zone}
   */
   readonly availabilityZone: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance#blueprint_id AwsLightsailInstance#blueprint_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance#blueprint_id TfInstance#blueprint_id}
   */
   readonly blueprintId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance#bundle_id AwsLightsailInstance#bundle_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance#bundle_id TfInstance#bundle_id}
   */
   readonly bundleId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance#id AwsLightsailInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance#id TfInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance#ip_address_type AwsLightsailInstance#ip_address_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance#ip_address_type TfInstance#ip_address_type}
   */
   readonly ipAddressType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance#key_pair_name AwsLightsailInstance#key_pair_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance#key_pair_name TfInstance#key_pair_name}
   */
   readonly keyPairName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance#name AwsLightsailInstance#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance#name TfInstance#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance#region AwsLightsailInstance#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance#region TfInstance#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance#tags AwsLightsailInstance#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance#tags TfInstance#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance#tags_all AwsLightsailInstance#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance#tags_all TfInstance#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance#user_data AwsLightsailInstance#user_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance#user_data TfInstance#user_data}
   */
   readonly userData?: string;
   /**
   * add_on block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance#add_on AwsLightsailInstance#add_on}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance#add_on TfInstance#add_on}
   */
-  readonly addOn?: AwsLightsailInstance.AddOnProperty;
+  readonly addOn?: TfInstance.AddOnProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance aws_lightsail_instance}
 */
-export class AwsLightsailInstance extends cdktn.TerraformResource {
+export class TfInstance extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -77,11 +77,11 @@ export class AwsLightsailInstance extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsLightsailInstance resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfInstance resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsLightsailInstance to import
-  * @param importFromId The id of the existing AwsLightsailInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsLightsailInstance to import is found
+  * @param importToId The construct id used in the generated config for the TfInstance to import
+  * @param importFromId The id of the existing TfInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfInstance to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lightsail_instance", importId: importFromId, provider });
@@ -96,9 +96,9 @@ export class AwsLightsailInstance extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsLightsailInstanceConfig
+  * @param options TfInstanceConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsLightsailInstanceConfig) {
+  public constructor(scope: Construct, id: string, config: TfInstanceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lightsail_instance',
       terraformGeneratorMetadata: {
@@ -342,11 +342,11 @@ export class AwsLightsailInstance extends cdktn.TerraformResource {
   }
 
   // add_on - computed: false, optional: true, required: false
-  private _addOn = new AwsLightsailInstance.AddOnPropertyOutputReference(this, "add_on");
+  private _addOn = new TfInstance.AddOnPropertyOutputReference(this, "add_on");
   public get addOn() {
     return this._addOn;
   }
-  public putAddOn(value: AwsLightsailInstance.AddOnProperty) {
+  public putAddOn(value: TfInstance.AddOnProperty) {
     this._addOn.internalValue = value;
   }
   public resetAddOn() {
@@ -374,7 +374,7 @@ export class AwsLightsailInstance extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       user_data: cdktn.stringToTerraform(this._userData),
-      add_on: awsLightsailInstanceAddOnPropertyToTerraform(this._addOn.internalValue),
+      add_on: tfInstanceAddOnPropertyToTerraform(this._addOn.internalValue),
     };
   }
 
@@ -447,10 +447,10 @@ export class AwsLightsailInstance extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       add_on: {
-        value: awsLightsailInstanceAddOnPropertyToHclTerraform(this._addOn.internalValue),
+        value: tfInstanceAddOnPropertyToHclTerraform(this._addOn.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLightsailInstance.AddOnPropertyList",
+        storageClassType: "TfInstance.AddOnPropertyList",
       },
     };
 
@@ -459,7 +459,7 @@ export class AwsLightsailInstance extends cdktn.TerraformResource {
   }
 }
 
-export function awsLightsailInstanceAddOnPropertyToTerraform(struct?: AwsLightsailInstance.AddOnPropertyOutputReference | AwsLightsailInstance.AddOnProperty): any {
+export function tfInstanceAddOnPropertyToTerraform(struct?: TfInstance.AddOnPropertyOutputReference | TfInstance.AddOnProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -472,7 +472,7 @@ export function awsLightsailInstanceAddOnPropertyToTerraform(struct?: AwsLightsa
 }
 
 
-export function awsLightsailInstanceAddOnPropertyToHclTerraform(struct?: AwsLightsailInstance.AddOnPropertyOutputReference | AwsLightsailInstance.AddOnProperty): any {
+export function tfInstanceAddOnPropertyToHclTerraform(struct?: TfInstance.AddOnPropertyOutputReference | TfInstance.AddOnProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -503,18 +503,18 @@ export function awsLightsailInstanceAddOnPropertyToHclTerraform(struct?: AwsLigh
 }
 
 
-export namespace AwsLightsailInstance {
+export namespace TfInstance {
 export interface AddOnProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance#snapshot_time AwsLightsailInstance#snapshot_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance#snapshot_time TfInstance#snapshot_time}
   */
   readonly snapshotTime: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance#status AwsLightsailInstance#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance#status TfInstance#status}
   */
   readonly status: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance#type AwsLightsailInstance#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_instance#type TfInstance#type}
   */
   readonly type: string;
 }

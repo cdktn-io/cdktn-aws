@@ -5,31 +5,31 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDevopsguruNotificationChannelConfig extends cdktn.TerraformMetaArguments {
+export interface TfNotificationChannelConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_notification_channel#region AwsDevopsguruNotificationChannel#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_notification_channel#region TfNotificationChannel#region}
   */
   readonly region?: string;
   /**
   * filters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_notification_channel#filters AwsDevopsguruNotificationChannel#filters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_notification_channel#filters TfNotificationChannel#filters}
   */
-  readonly filters?: AwsDevopsguruNotificationChannel.FiltersProperty[] | cdktn.IResolvable;
+  readonly filters?: TfNotificationChannel.FiltersProperty[] | cdktn.IResolvable;
   /**
   * sns block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_notification_channel#sns AwsDevopsguruNotificationChannel#sns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_notification_channel#sns TfNotificationChannel#sns}
   */
-  readonly sns?: AwsDevopsguruNotificationChannel.SnsProperty[] | cdktn.IResolvable;
+  readonly sns?: TfNotificationChannel.SnsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_notification_channel aws_devopsguru_notification_channel}
 */
-export class AwsDevopsguruNotificationChannel extends cdktn.TerraformResource {
+export class TfNotificationChannel extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -40,11 +40,11 @@ export class AwsDevopsguruNotificationChannel extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDevopsguruNotificationChannel resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfNotificationChannel resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDevopsguruNotificationChannel to import
-  * @param importFromId The id of the existing AwsDevopsguruNotificationChannel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_notification_channel#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDevopsguruNotificationChannel to import is found
+  * @param importToId The construct id used in the generated config for the TfNotificationChannel to import
+  * @param importFromId The id of the existing TfNotificationChannel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_notification_channel#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfNotificationChannel to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_devopsguru_notification_channel", importId: importFromId, provider });
@@ -59,9 +59,9 @@ export class AwsDevopsguruNotificationChannel extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDevopsguruNotificationChannelConfig = {}
+  * @param options TfNotificationChannelConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsDevopsguruNotificationChannelConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfNotificationChannelConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_devopsguru_notification_channel',
       terraformGeneratorMetadata: {
@@ -108,11 +108,11 @@ export class AwsDevopsguruNotificationChannel extends cdktn.TerraformResource {
   }
 
   // filters - computed: false, optional: true, required: false
-  private _filters = new AwsDevopsguruNotificationChannel.FiltersPropertyList(this, "filters", false);
+  private _filters = new TfNotificationChannel.FiltersPropertyList(this, "filters", false);
   public get filters() {
     return this._filters;
   }
-  public putFilters(value: AwsDevopsguruNotificationChannel.FiltersProperty[] | cdktn.IResolvable) {
+  public putFilters(value: TfNotificationChannel.FiltersProperty[] | cdktn.IResolvable) {
     this._filters.internalValue = value;
   }
   public resetFilters() {
@@ -124,11 +124,11 @@ export class AwsDevopsguruNotificationChannel extends cdktn.TerraformResource {
   }
 
   // sns - computed: false, optional: true, required: false
-  private _sns = new AwsDevopsguruNotificationChannel.SnsPropertyList(this, "sns", false);
+  private _sns = new TfNotificationChannel.SnsPropertyList(this, "sns", false);
   public get sns() {
     return this._sns;
   }
-  public putSns(value: AwsDevopsguruNotificationChannel.SnsProperty[] | cdktn.IResolvable) {
+  public putSns(value: TfNotificationChannel.SnsProperty[] | cdktn.IResolvable) {
     this._sns.internalValue = value;
   }
   public resetSns() {
@@ -146,8 +146,8 @@ export class AwsDevopsguruNotificationChannel extends cdktn.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       region: cdktn.stringToTerraform(this._region),
-      filters: cdktn.listMapper(awsDevopsguruNotificationChannelFiltersPropertyToTerraform, true)(this._filters.internalValue),
-      sns: cdktn.listMapper(awsDevopsguruNotificationChannelSnsPropertyToTerraform, true)(this._sns.internalValue),
+      filters: cdktn.listMapper(tfNotificationChannelFiltersPropertyToTerraform, true)(this._filters.internalValue),
+      sns: cdktn.listMapper(tfNotificationChannelSnsPropertyToTerraform, true)(this._sns.internalValue),
     };
   }
 
@@ -160,16 +160,16 @@ export class AwsDevopsguruNotificationChannel extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       filters: {
-        value: cdktn.listMapperHcl(awsDevopsguruNotificationChannelFiltersPropertyToHclTerraform, true)(this._filters.internalValue),
+        value: cdktn.listMapperHcl(tfNotificationChannelFiltersPropertyToHclTerraform, true)(this._filters.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDevopsguruNotificationChannel.FiltersPropertyList",
+        storageClassType: "TfNotificationChannel.FiltersPropertyList",
       },
       sns: {
-        value: cdktn.listMapperHcl(awsDevopsguruNotificationChannelSnsPropertyToHclTerraform, true)(this._sns.internalValue),
+        value: cdktn.listMapperHcl(tfNotificationChannelSnsPropertyToHclTerraform, true)(this._sns.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDevopsguruNotificationChannel.SnsPropertyList",
+        storageClassType: "TfNotificationChannel.SnsPropertyList",
       },
     };
 
@@ -178,7 +178,7 @@ export class AwsDevopsguruNotificationChannel extends cdktn.TerraformResource {
   }
 }
 
-export function awsDevopsguruNotificationChannelFiltersPropertyToTerraform(struct?: AwsDevopsguruNotificationChannel.FiltersProperty | cdktn.IResolvable): any {
+export function tfNotificationChannelFiltersPropertyToTerraform(struct?: TfNotificationChannel.FiltersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -190,7 +190,7 @@ export function awsDevopsguruNotificationChannelFiltersPropertyToTerraform(struc
 }
 
 
-export function awsDevopsguruNotificationChannelFiltersPropertyToHclTerraform(struct?: AwsDevopsguruNotificationChannel.FiltersProperty | cdktn.IResolvable): any {
+export function tfNotificationChannelFiltersPropertyToHclTerraform(struct?: TfNotificationChannel.FiltersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -215,7 +215,7 @@ export function awsDevopsguruNotificationChannelFiltersPropertyToHclTerraform(st
 }
 
 
-export function awsDevopsguruNotificationChannelSnsPropertyToTerraform(struct?: AwsDevopsguruNotificationChannel.SnsProperty | cdktn.IResolvable): any {
+export function tfNotificationChannelSnsPropertyToTerraform(struct?: TfNotificationChannel.SnsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -226,7 +226,7 @@ export function awsDevopsguruNotificationChannelSnsPropertyToTerraform(struct?: 
 }
 
 
-export function awsDevopsguruNotificationChannelSnsPropertyToHclTerraform(struct?: AwsDevopsguruNotificationChannel.SnsProperty | cdktn.IResolvable): any {
+export function tfNotificationChannelSnsPropertyToHclTerraform(struct?: TfNotificationChannel.SnsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -245,14 +245,14 @@ export function awsDevopsguruNotificationChannelSnsPropertyToHclTerraform(struct
 }
 
 
-export namespace AwsDevopsguruNotificationChannel {
+export namespace TfNotificationChannel {
 export interface FiltersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_notification_channel#message_types AwsDevopsguruNotificationChannel#message_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_notification_channel#message_types TfNotificationChannel#message_types}
   */
   readonly messageTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_notification_channel#severities AwsDevopsguruNotificationChannel#severities}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_notification_channel#severities TfNotificationChannel#severities}
   */
   readonly severities?: string[];
 }
@@ -360,7 +360,7 @@ export class FiltersPropertyList extends cdktn.ComplexList {
 }
 export interface SnsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_notification_channel#topic_arn AwsDevopsguruNotificationChannel#topic_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_notification_channel#topic_arn TfNotificationChannel#topic_arn}
   */
   readonly topicArn: string;
 }

@@ -5,56 +5,56 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsConnectVocabularyConfig extends cdktn.TerraformMetaArguments {
+export interface TfVocabularyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_vocabulary#content AwsConnectVocabulary#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_vocabulary#content TfVocabulary#content}
   */
   readonly content: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_vocabulary#id AwsConnectVocabulary#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_vocabulary#id TfVocabulary#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_vocabulary#instance_id AwsConnectVocabulary#instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_vocabulary#instance_id TfVocabulary#instance_id}
   */
   readonly instanceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_vocabulary#language_code AwsConnectVocabulary#language_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_vocabulary#language_code TfVocabulary#language_code}
   */
   readonly languageCode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_vocabulary#name AwsConnectVocabulary#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_vocabulary#name TfVocabulary#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_vocabulary#region AwsConnectVocabulary#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_vocabulary#region TfVocabulary#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_vocabulary#tags AwsConnectVocabulary#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_vocabulary#tags TfVocabulary#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_vocabulary#tags_all AwsConnectVocabulary#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_vocabulary#tags_all TfVocabulary#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_vocabulary#timeouts AwsConnectVocabulary#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_vocabulary#timeouts TfVocabulary#timeouts}
   */
-  readonly timeouts?: AwsConnectVocabulary.TimeoutsProperty;
+  readonly timeouts?: TfVocabulary.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_vocabulary aws_connect_vocabulary}
 */
-export class AwsConnectVocabulary extends cdktn.TerraformResource {
+export class TfVocabulary extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class AwsConnectVocabulary extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsConnectVocabulary resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfVocabulary resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsConnectVocabulary to import
-  * @param importFromId The id of the existing AwsConnectVocabulary that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_vocabulary#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsConnectVocabulary to import is found
+  * @param importToId The construct id used in the generated config for the TfVocabulary to import
+  * @param importFromId The id of the existing TfVocabulary that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_vocabulary#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfVocabulary to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_connect_vocabulary", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class AwsConnectVocabulary extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsConnectVocabularyConfig
+  * @param options TfVocabularyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsConnectVocabularyConfig) {
+  public constructor(scope: Construct, id: string, config: TfVocabularyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_connect_vocabulary',
       terraformGeneratorMetadata: {
@@ -259,11 +259,11 @@ export class AwsConnectVocabulary extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsConnectVocabulary.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfVocabulary.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsConnectVocabulary.TimeoutsProperty) {
+  public putTimeouts(value: TfVocabulary.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -288,7 +288,7 @@ export class AwsConnectVocabulary extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: awsConnectVocabularyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfVocabularyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -343,10 +343,10 @@ export class AwsConnectVocabulary extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsConnectVocabularyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfVocabularyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsConnectVocabulary.TimeoutsProperty",
+        storageClassType: "TfVocabulary.TimeoutsProperty",
       },
     };
 
@@ -355,7 +355,7 @@ export class AwsConnectVocabulary extends cdktn.TerraformResource {
   }
 }
 
-export function awsConnectVocabularyTimeoutsPropertyToTerraform(struct?: AwsConnectVocabulary.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfVocabularyTimeoutsPropertyToTerraform(struct?: TfVocabulary.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -367,7 +367,7 @@ export function awsConnectVocabularyTimeoutsPropertyToTerraform(struct?: AwsConn
 }
 
 
-export function awsConnectVocabularyTimeoutsPropertyToHclTerraform(struct?: AwsConnectVocabulary.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfVocabularyTimeoutsPropertyToHclTerraform(struct?: TfVocabulary.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -392,14 +392,14 @@ export function awsConnectVocabularyTimeoutsPropertyToHclTerraform(struct?: AwsC
 }
 
 
-export namespace AwsConnectVocabulary {
+export namespace TfVocabulary {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_vocabulary#create AwsConnectVocabulary#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_vocabulary#create TfVocabulary#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_vocabulary#delete AwsConnectVocabulary#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_vocabulary#delete TfVocabulary#delete}
   */
   readonly delete?: string;
 }

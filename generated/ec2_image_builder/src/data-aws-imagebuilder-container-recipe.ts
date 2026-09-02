@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsImagebuilderContainerRecipeConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataContainerRecipeConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_container_recipe#arn DataAwsImagebuilderContainerRecipe#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_container_recipe#arn TfDataContainerRecipe#arn}
   */
   readonly arn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_container_recipe#id DataAwsImagebuilderContainerRecipe#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_container_recipe#id TfDataContainerRecipe#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,11 +20,11 @@ export interface DataAwsImagebuilderContainerRecipeConfig extends cdktn.Terrafor
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_container_recipe#region DataAwsImagebuilderContainerRecipe#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_container_recipe#region TfDataContainerRecipe#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_container_recipe#tags DataAwsImagebuilderContainerRecipe#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_container_recipe#tags TfDataContainerRecipe#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -32,7 +32,7 @@ export interface DataAwsImagebuilderContainerRecipeConfig extends cdktn.Terrafor
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_container_recipe aws_imagebuilder_container_recipe}
 */
-export class DataAwsImagebuilderContainerRecipe extends cdktn.TerraformDataSource {
+export class TfDataContainerRecipe extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class DataAwsImagebuilderContainerRecipe extends cdktn.TerraformDataSourc
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsImagebuilderContainerRecipe resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataContainerRecipe resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsImagebuilderContainerRecipe to import
-  * @param importFromId The id of the existing DataAwsImagebuilderContainerRecipe that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_container_recipe#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsImagebuilderContainerRecipe to import is found
+  * @param importToId The construct id used in the generated config for the TfDataContainerRecipe to import
+  * @param importFromId The id of the existing TfDataContainerRecipe that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_container_recipe#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataContainerRecipe to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_imagebuilder_container_recipe", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class DataAwsImagebuilderContainerRecipe extends cdktn.TerraformDataSourc
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsImagebuilderContainerRecipeConfig
+  * @param options TfDataContainerRecipeConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsImagebuilderContainerRecipeConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataContainerRecipeConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_imagebuilder_container_recipe',
       terraformGeneratorMetadata: {
@@ -104,7 +104,7 @@ export class DataAwsImagebuilderContainerRecipe extends cdktn.TerraformDataSourc
   }
 
   // component - computed: true, optional: false, required: false
-  private _component = new DataAwsImagebuilderContainerRecipe.ComponentPropertyList(this, "component", false);
+  private _component = new TfDataContainerRecipe.ComponentPropertyList(this, "component", false);
   public get component() {
     return this._component;
   }
@@ -151,7 +151,7 @@ export class DataAwsImagebuilderContainerRecipe extends cdktn.TerraformDataSourc
   }
 
   // instance_configuration - computed: true, optional: false, required: false
-  private _instanceConfiguration = new DataAwsImagebuilderContainerRecipe.InstanceConfigurationPropertyList(this, "instance_configuration", false);
+  private _instanceConfiguration = new TfDataContainerRecipe.InstanceConfigurationPropertyList(this, "instance_configuration", false);
   public get instanceConfiguration() {
     return this._instanceConfiguration;
   }
@@ -214,7 +214,7 @@ export class DataAwsImagebuilderContainerRecipe extends cdktn.TerraformDataSourc
   }
 
   // target_repository - computed: true, optional: false, required: false
-  private _targetRepository = new DataAwsImagebuilderContainerRecipe.TargetRepositoryPropertyList(this, "target_repository", false);
+  private _targetRepository = new TfDataContainerRecipe.TargetRepositoryPropertyList(this, "target_repository", false);
   public get targetRepository() {
     return this._targetRepository;
   }
@@ -275,7 +275,7 @@ export class DataAwsImagebuilderContainerRecipe extends cdktn.TerraformDataSourc
   }
 }
 
-export function dataAwsImagebuilderContainerRecipeParameterPropertyToTerraform(struct?: DataAwsImagebuilderContainerRecipe.ParameterProperty): any {
+export function tfDataContainerRecipeParameterPropertyToTerraform(struct?: TfDataContainerRecipe.ParameterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -285,7 +285,7 @@ export function dataAwsImagebuilderContainerRecipeParameterPropertyToTerraform(s
 }
 
 
-export function dataAwsImagebuilderContainerRecipeParameterPropertyToHclTerraform(struct?: DataAwsImagebuilderContainerRecipe.ParameterProperty): any {
+export function tfDataContainerRecipeParameterPropertyToHclTerraform(struct?: TfDataContainerRecipe.ParameterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -296,7 +296,7 @@ export function dataAwsImagebuilderContainerRecipeParameterPropertyToHclTerrafor
 }
 
 
-export function dataAwsImagebuilderContainerRecipeComponentPropertyToTerraform(struct?: DataAwsImagebuilderContainerRecipe.ComponentProperty): any {
+export function tfDataContainerRecipeComponentPropertyToTerraform(struct?: TfDataContainerRecipe.ComponentProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -306,7 +306,7 @@ export function dataAwsImagebuilderContainerRecipeComponentPropertyToTerraform(s
 }
 
 
-export function dataAwsImagebuilderContainerRecipeComponentPropertyToHclTerraform(struct?: DataAwsImagebuilderContainerRecipe.ComponentProperty): any {
+export function tfDataContainerRecipeComponentPropertyToHclTerraform(struct?: TfDataContainerRecipe.ComponentProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -317,7 +317,7 @@ export function dataAwsImagebuilderContainerRecipeComponentPropertyToHclTerrafor
 }
 
 
-export function dataAwsImagebuilderContainerRecipeEbsPropertyToTerraform(struct?: DataAwsImagebuilderContainerRecipe.EbsProperty): any {
+export function tfDataContainerRecipeEbsPropertyToTerraform(struct?: TfDataContainerRecipe.EbsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -327,7 +327,7 @@ export function dataAwsImagebuilderContainerRecipeEbsPropertyToTerraform(struct?
 }
 
 
-export function dataAwsImagebuilderContainerRecipeEbsPropertyToHclTerraform(struct?: DataAwsImagebuilderContainerRecipe.EbsProperty): any {
+export function tfDataContainerRecipeEbsPropertyToHclTerraform(struct?: TfDataContainerRecipe.EbsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -338,7 +338,7 @@ export function dataAwsImagebuilderContainerRecipeEbsPropertyToHclTerraform(stru
 }
 
 
-export function dataAwsImagebuilderContainerRecipeBlockDeviceMappingPropertyToTerraform(struct?: DataAwsImagebuilderContainerRecipe.BlockDeviceMappingProperty): any {
+export function tfDataContainerRecipeBlockDeviceMappingPropertyToTerraform(struct?: TfDataContainerRecipe.BlockDeviceMappingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -348,7 +348,7 @@ export function dataAwsImagebuilderContainerRecipeBlockDeviceMappingPropertyToTe
 }
 
 
-export function dataAwsImagebuilderContainerRecipeBlockDeviceMappingPropertyToHclTerraform(struct?: DataAwsImagebuilderContainerRecipe.BlockDeviceMappingProperty): any {
+export function tfDataContainerRecipeBlockDeviceMappingPropertyToHclTerraform(struct?: TfDataContainerRecipe.BlockDeviceMappingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -359,7 +359,7 @@ export function dataAwsImagebuilderContainerRecipeBlockDeviceMappingPropertyToHc
 }
 
 
-export function dataAwsImagebuilderContainerRecipeInstanceConfigurationPropertyToTerraform(struct?: DataAwsImagebuilderContainerRecipe.InstanceConfigurationProperty): any {
+export function tfDataContainerRecipeInstanceConfigurationPropertyToTerraform(struct?: TfDataContainerRecipe.InstanceConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -369,7 +369,7 @@ export function dataAwsImagebuilderContainerRecipeInstanceConfigurationPropertyT
 }
 
 
-export function dataAwsImagebuilderContainerRecipeInstanceConfigurationPropertyToHclTerraform(struct?: DataAwsImagebuilderContainerRecipe.InstanceConfigurationProperty): any {
+export function tfDataContainerRecipeInstanceConfigurationPropertyToHclTerraform(struct?: TfDataContainerRecipe.InstanceConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -380,7 +380,7 @@ export function dataAwsImagebuilderContainerRecipeInstanceConfigurationPropertyT
 }
 
 
-export function dataAwsImagebuilderContainerRecipeTargetRepositoryPropertyToTerraform(struct?: DataAwsImagebuilderContainerRecipe.TargetRepositoryProperty): any {
+export function tfDataContainerRecipeTargetRepositoryPropertyToTerraform(struct?: TfDataContainerRecipe.TargetRepositoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -390,7 +390,7 @@ export function dataAwsImagebuilderContainerRecipeTargetRepositoryPropertyToTerr
 }
 
 
-export function dataAwsImagebuilderContainerRecipeTargetRepositoryPropertyToHclTerraform(struct?: DataAwsImagebuilderContainerRecipe.TargetRepositoryProperty): any {
+export function tfDataContainerRecipeTargetRepositoryPropertyToHclTerraform(struct?: TfDataContainerRecipe.TargetRepositoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -401,7 +401,7 @@ export function dataAwsImagebuilderContainerRecipeTargetRepositoryPropertyToHclT
 }
 
 
-export namespace DataAwsImagebuilderContainerRecipe {
+export namespace TfDataContainerRecipe {
 export interface ParameterProperty {
 }
 export class ParameterPropertyOutputReference extends cdktn.ComplexObject {

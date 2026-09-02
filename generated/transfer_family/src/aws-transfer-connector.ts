@@ -5,74 +5,74 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsTransferConnectorConfig extends cdktn.TerraformMetaArguments {
+export interface TfConnectorConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#access_role AwsTransferConnector#access_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#access_role TfConnector#access_role}
   */
   readonly accessRole: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#id AwsTransferConnector#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#id TfConnector#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#logging_role AwsTransferConnector#logging_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#logging_role TfConnector#logging_role}
   */
   readonly loggingRole?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#region AwsTransferConnector#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#region TfConnector#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#security_policy_name AwsTransferConnector#security_policy_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#security_policy_name TfConnector#security_policy_name}
   */
   readonly securityPolicyName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#tags AwsTransferConnector#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#tags TfConnector#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#tags_all AwsTransferConnector#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#tags_all TfConnector#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#url AwsTransferConnector#url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#url TfConnector#url}
   */
   readonly url?: string;
   /**
   * as2_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#as2_config AwsTransferConnector#as2_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#as2_config TfConnector#as2_config}
   */
-  readonly as2Config?: AwsTransferConnector.As2ConfigProperty;
+  readonly as2Config?: TfConnector.As2ConfigProperty;
   /**
   * egress_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#egress_config AwsTransferConnector#egress_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#egress_config TfConnector#egress_config}
   */
-  readonly egressConfig?: AwsTransferConnector.EgressConfigProperty;
+  readonly egressConfig?: TfConnector.EgressConfigProperty;
   /**
   * sftp_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#sftp_config AwsTransferConnector#sftp_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#sftp_config TfConnector#sftp_config}
   */
-  readonly sftpConfig?: AwsTransferConnector.SftpConfigProperty;
+  readonly sftpConfig?: TfConnector.SftpConfigProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#timeouts AwsTransferConnector#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#timeouts TfConnector#timeouts}
   */
-  readonly timeouts?: AwsTransferConnector.TimeoutsProperty;
+  readonly timeouts?: TfConnector.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector aws_transfer_connector}
 */
-export class AwsTransferConnector extends cdktn.TerraformResource {
+export class TfConnector extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -83,11 +83,11 @@ export class AwsTransferConnector extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsTransferConnector resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfConnector resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsTransferConnector to import
-  * @param importFromId The id of the existing AwsTransferConnector that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsTransferConnector to import is found
+  * @param importToId The construct id used in the generated config for the TfConnector to import
+  * @param importFromId The id of the existing TfConnector that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfConnector to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_transfer_connector", importId: importFromId, provider });
@@ -102,9 +102,9 @@ export class AwsTransferConnector extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsTransferConnectorConfig
+  * @param options TfConnectorConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsTransferConnectorConfig) {
+  public constructor(scope: Construct, id: string, config: TfConnectorConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_transfer_connector',
       terraformGeneratorMetadata: {
@@ -274,11 +274,11 @@ export class AwsTransferConnector extends cdktn.TerraformResource {
   }
 
   // as2_config - computed: false, optional: true, required: false
-  private _as2Config = new AwsTransferConnector.As2ConfigPropertyOutputReference(this, "as2_config");
+  private _as2Config = new TfConnector.As2ConfigPropertyOutputReference(this, "as2_config");
   public get as2Config() {
     return this._as2Config;
   }
-  public putAs2Config(value: AwsTransferConnector.As2ConfigProperty) {
+  public putAs2Config(value: TfConnector.As2ConfigProperty) {
     this._as2Config.internalValue = value;
   }
   public resetAs2Config() {
@@ -290,11 +290,11 @@ export class AwsTransferConnector extends cdktn.TerraformResource {
   }
 
   // egress_config - computed: false, optional: true, required: false
-  private _egressConfig = new AwsTransferConnector.EgressConfigPropertyOutputReference(this, "egress_config");
+  private _egressConfig = new TfConnector.EgressConfigPropertyOutputReference(this, "egress_config");
   public get egressConfig() {
     return this._egressConfig;
   }
-  public putEgressConfig(value: AwsTransferConnector.EgressConfigProperty) {
+  public putEgressConfig(value: TfConnector.EgressConfigProperty) {
     this._egressConfig.internalValue = value;
   }
   public resetEgressConfig() {
@@ -306,11 +306,11 @@ export class AwsTransferConnector extends cdktn.TerraformResource {
   }
 
   // sftp_config - computed: false, optional: true, required: false
-  private _sftpConfig = new AwsTransferConnector.SftpConfigPropertyOutputReference(this, "sftp_config");
+  private _sftpConfig = new TfConnector.SftpConfigPropertyOutputReference(this, "sftp_config");
   public get sftpConfig() {
     return this._sftpConfig;
   }
-  public putSftpConfig(value: AwsTransferConnector.SftpConfigProperty) {
+  public putSftpConfig(value: TfConnector.SftpConfigProperty) {
     this._sftpConfig.internalValue = value;
   }
   public resetSftpConfig() {
@@ -322,11 +322,11 @@ export class AwsTransferConnector extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsTransferConnector.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfConnector.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsTransferConnector.TimeoutsProperty) {
+  public putTimeouts(value: TfConnector.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -351,10 +351,10 @@ export class AwsTransferConnector extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       url: cdktn.stringToTerraform(this._url),
-      as2_config: awsTransferConnectorAs2ConfigPropertyToTerraform(this._as2Config.internalValue),
-      egress_config: awsTransferConnectorEgressConfigPropertyToTerraform(this._egressConfig.internalValue),
-      sftp_config: awsTransferConnectorSftpConfigPropertyToTerraform(this._sftpConfig.internalValue),
-      timeouts: awsTransferConnectorTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      as2_config: tfConnectorAs2ConfigPropertyToTerraform(this._as2Config.internalValue),
+      egress_config: tfConnectorEgressConfigPropertyToTerraform(this._egressConfig.internalValue),
+      sftp_config: tfConnectorSftpConfigPropertyToTerraform(this._sftpConfig.internalValue),
+      timeouts: tfConnectorTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -409,28 +409,28 @@ export class AwsTransferConnector extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       as2_config: {
-        value: awsTransferConnectorAs2ConfigPropertyToHclTerraform(this._as2Config.internalValue),
+        value: tfConnectorAs2ConfigPropertyToHclTerraform(this._as2Config.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsTransferConnector.As2ConfigPropertyList",
+        storageClassType: "TfConnector.As2ConfigPropertyList",
       },
       egress_config: {
-        value: awsTransferConnectorEgressConfigPropertyToHclTerraform(this._egressConfig.internalValue),
+        value: tfConnectorEgressConfigPropertyToHclTerraform(this._egressConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsTransferConnector.EgressConfigPropertyList",
+        storageClassType: "TfConnector.EgressConfigPropertyList",
       },
       sftp_config: {
-        value: awsTransferConnectorSftpConfigPropertyToHclTerraform(this._sftpConfig.internalValue),
+        value: tfConnectorSftpConfigPropertyToHclTerraform(this._sftpConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsTransferConnector.SftpConfigPropertyList",
+        storageClassType: "TfConnector.SftpConfigPropertyList",
       },
       timeouts: {
-        value: awsTransferConnectorTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfConnectorTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsTransferConnector.TimeoutsProperty",
+        storageClassType: "TfConnector.TimeoutsProperty",
       },
     };
 
@@ -439,7 +439,7 @@ export class AwsTransferConnector extends cdktn.TerraformResource {
   }
 }
 
-export function awsTransferConnectorAs2ConfigPropertyToTerraform(struct?: AwsTransferConnector.As2ConfigPropertyOutputReference | AwsTransferConnector.As2ConfigProperty): any {
+export function tfConnectorAs2ConfigPropertyToTerraform(struct?: TfConnector.As2ConfigPropertyOutputReference | TfConnector.As2ConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -457,7 +457,7 @@ export function awsTransferConnectorAs2ConfigPropertyToTerraform(struct?: AwsTra
 }
 
 
-export function awsTransferConnectorAs2ConfigPropertyToHclTerraform(struct?: AwsTransferConnector.As2ConfigPropertyOutputReference | AwsTransferConnector.As2ConfigProperty): any {
+export function tfConnectorAs2ConfigPropertyToHclTerraform(struct?: TfConnector.As2ConfigPropertyOutputReference | TfConnector.As2ConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -518,7 +518,7 @@ export function awsTransferConnectorAs2ConfigPropertyToHclTerraform(struct?: Aws
 }
 
 
-export function awsTransferConnectorVpcLatticePropertyToTerraform(struct?: AwsTransferConnector.VpcLatticePropertyOutputReference | AwsTransferConnector.VpcLatticeProperty): any {
+export function tfConnectorVpcLatticePropertyToTerraform(struct?: TfConnector.VpcLatticePropertyOutputReference | TfConnector.VpcLatticeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -530,7 +530,7 @@ export function awsTransferConnectorVpcLatticePropertyToTerraform(struct?: AwsTr
 }
 
 
-export function awsTransferConnectorVpcLatticePropertyToHclTerraform(struct?: AwsTransferConnector.VpcLatticePropertyOutputReference | AwsTransferConnector.VpcLatticeProperty): any {
+export function tfConnectorVpcLatticePropertyToHclTerraform(struct?: TfConnector.VpcLatticePropertyOutputReference | TfConnector.VpcLatticeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -555,25 +555,25 @@ export function awsTransferConnectorVpcLatticePropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsTransferConnectorEgressConfigPropertyToTerraform(struct?: AwsTransferConnector.EgressConfigPropertyOutputReference | AwsTransferConnector.EgressConfigProperty): any {
+export function tfConnectorEgressConfigPropertyToTerraform(struct?: TfConnector.EgressConfigPropertyOutputReference | TfConnector.EgressConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    vpc_lattice: awsTransferConnectorVpcLatticePropertyToTerraform(struct!.vpcLattice),
+    vpc_lattice: tfConnectorVpcLatticePropertyToTerraform(struct!.vpcLattice),
   }
 }
 
 
-export function awsTransferConnectorEgressConfigPropertyToHclTerraform(struct?: AwsTransferConnector.EgressConfigPropertyOutputReference | AwsTransferConnector.EgressConfigProperty): any {
+export function tfConnectorEgressConfigPropertyToHclTerraform(struct?: TfConnector.EgressConfigPropertyOutputReference | TfConnector.EgressConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     vpc_lattice: {
-      value: awsTransferConnectorVpcLatticePropertyToHclTerraform(struct!.vpcLattice),
+      value: tfConnectorVpcLatticePropertyToHclTerraform(struct!.vpcLattice),
       isBlock: true,
       type: "list",
       storageClassType: "VpcLatticePropertyList",
@@ -585,7 +585,7 @@ export function awsTransferConnectorEgressConfigPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsTransferConnectorSftpConfigPropertyToTerraform(struct?: AwsTransferConnector.SftpConfigPropertyOutputReference | AwsTransferConnector.SftpConfigProperty): any {
+export function tfConnectorSftpConfigPropertyToTerraform(struct?: TfConnector.SftpConfigPropertyOutputReference | TfConnector.SftpConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -597,7 +597,7 @@ export function awsTransferConnectorSftpConfigPropertyToTerraform(struct?: AwsTr
 }
 
 
-export function awsTransferConnectorSftpConfigPropertyToHclTerraform(struct?: AwsTransferConnector.SftpConfigPropertyOutputReference | AwsTransferConnector.SftpConfigProperty): any {
+export function tfConnectorSftpConfigPropertyToHclTerraform(struct?: TfConnector.SftpConfigPropertyOutputReference | TfConnector.SftpConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -622,7 +622,7 @@ export function awsTransferConnectorSftpConfigPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsTransferConnectorTimeoutsPropertyToTerraform(struct?: AwsTransferConnector.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfConnectorTimeoutsPropertyToTerraform(struct?: TfConnector.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -635,7 +635,7 @@ export function awsTransferConnectorTimeoutsPropertyToTerraform(struct?: AwsTran
 }
 
 
-export function awsTransferConnectorTimeoutsPropertyToHclTerraform(struct?: AwsTransferConnector.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfConnectorTimeoutsPropertyToHclTerraform(struct?: TfConnector.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -666,38 +666,38 @@ export function awsTransferConnectorTimeoutsPropertyToHclTerraform(struct?: AwsT
 }
 
 
-export namespace AwsTransferConnector {
+export namespace TfConnector {
 export interface As2ConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#compression AwsTransferConnector#compression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#compression TfConnector#compression}
   */
   readonly compression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#encryption_algorithm AwsTransferConnector#encryption_algorithm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#encryption_algorithm TfConnector#encryption_algorithm}
   */
   readonly encryptionAlgorithm: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#local_profile_id AwsTransferConnector#local_profile_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#local_profile_id TfConnector#local_profile_id}
   */
   readonly localProfileId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#mdn_response AwsTransferConnector#mdn_response}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#mdn_response TfConnector#mdn_response}
   */
   readonly mdnResponse: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#mdn_signing_algorithm AwsTransferConnector#mdn_signing_algorithm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#mdn_signing_algorithm TfConnector#mdn_signing_algorithm}
   */
   readonly mdnSigningAlgorithm?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#message_subject AwsTransferConnector#message_subject}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#message_subject TfConnector#message_subject}
   */
   readonly messageSubject?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#partner_profile_id AwsTransferConnector#partner_profile_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#partner_profile_id TfConnector#partner_profile_id}
   */
   readonly partnerProfileId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#signing_algorithm AwsTransferConnector#signing_algorithm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#signing_algorithm TfConnector#signing_algorithm}
   */
   readonly signingAlgorithm: string;
 }
@@ -887,11 +887,11 @@ export class As2ConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VpcLatticeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#port_number AwsTransferConnector#port_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#port_number TfConnector#port_number}
   */
   readonly portNumber?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#resource_configuration_arn AwsTransferConnector#resource_configuration_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#resource_configuration_arn TfConnector#resource_configuration_arn}
   */
   readonly resourceConfigurationArn: string;
 }
@@ -966,7 +966,7 @@ export interface EgressConfigProperty {
   /**
   * vpc_lattice block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#vpc_lattice AwsTransferConnector#vpc_lattice}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#vpc_lattice TfConnector#vpc_lattice}
   */
   readonly vpcLattice?: VpcLatticeProperty;
 }
@@ -1020,11 +1020,11 @@ export class EgressConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SftpConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#trusted_host_keys AwsTransferConnector#trusted_host_keys}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#trusted_host_keys TfConnector#trusted_host_keys}
   */
   readonly trustedHostKeys?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#user_secret_id AwsTransferConnector#user_secret_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#user_secret_id TfConnector#user_secret_id}
   */
   readonly userSecretId?: string;
 }
@@ -1100,15 +1100,15 @@ export class SftpConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#create AwsTransferConnector#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#create TfConnector#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#delete AwsTransferConnector#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#delete TfConnector#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#update AwsTransferConnector#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#update TfConnector#update}
   */
   readonly update?: string;
 }

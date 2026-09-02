@@ -5,45 +5,45 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsFsxS3AccessPointAttachmentConfig extends cdktn.TerraformMetaArguments {
+export interface TfS3AccessPointAttachmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#name AwsFsxS3AccessPointAttachment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#name TfS3AccessPointAttachment#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#region AwsFsxS3AccessPointAttachment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#region TfS3AccessPointAttachment#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#type AwsFsxS3AccessPointAttachment#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#type TfS3AccessPointAttachment#type}
   */
   readonly type: string;
   /**
   * openzfs_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#openzfs_configuration AwsFsxS3AccessPointAttachment#openzfs_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#openzfs_configuration TfS3AccessPointAttachment#openzfs_configuration}
   */
-  readonly openzfsConfiguration?: AwsFsxS3AccessPointAttachment.OpenzfsConfigurationProperty[] | cdktn.IResolvable;
+  readonly openzfsConfiguration?: TfS3AccessPointAttachment.OpenzfsConfigurationProperty[] | cdktn.IResolvable;
   /**
   * s3_access_point block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#s3_access_point AwsFsxS3AccessPointAttachment#s3_access_point}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#s3_access_point TfS3AccessPointAttachment#s3_access_point}
   */
-  readonly s3AccessPoint?: AwsFsxS3AccessPointAttachment.S3AccessPointProperty[] | cdktn.IResolvable;
+  readonly s3AccessPoint?: TfS3AccessPointAttachment.S3AccessPointProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#timeouts AwsFsxS3AccessPointAttachment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#timeouts TfS3AccessPointAttachment#timeouts}
   */
-  readonly timeouts?: AwsFsxS3AccessPointAttachment.TimeoutsProperty;
+  readonly timeouts?: TfS3AccessPointAttachment.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment aws_fsx_s3_access_point_attachment}
 */
-export class AwsFsxS3AccessPointAttachment extends cdktn.TerraformResource {
+export class TfS3AccessPointAttachment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -54,11 +54,11 @@ export class AwsFsxS3AccessPointAttachment extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsFsxS3AccessPointAttachment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfS3AccessPointAttachment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsFsxS3AccessPointAttachment to import
-  * @param importFromId The id of the existing AwsFsxS3AccessPointAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsFsxS3AccessPointAttachment to import is found
+  * @param importToId The construct id used in the generated config for the TfS3AccessPointAttachment to import
+  * @param importFromId The id of the existing TfS3AccessPointAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfS3AccessPointAttachment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_fsx_s3_access_point_attachment", importId: importFromId, provider });
@@ -73,9 +73,9 @@ export class AwsFsxS3AccessPointAttachment extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsFsxS3AccessPointAttachmentConfig
+  * @param options TfS3AccessPointAttachmentConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsFsxS3AccessPointAttachmentConfig) {
+  public constructor(scope: Construct, id: string, config: TfS3AccessPointAttachmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_fsx_s3_access_point_attachment',
       terraformGeneratorMetadata: {
@@ -156,11 +156,11 @@ export class AwsFsxS3AccessPointAttachment extends cdktn.TerraformResource {
   }
 
   // openzfs_configuration - computed: false, optional: true, required: false
-  private _openzfsConfiguration = new AwsFsxS3AccessPointAttachment.OpenzfsConfigurationPropertyList(this, "openzfs_configuration", false);
+  private _openzfsConfiguration = new TfS3AccessPointAttachment.OpenzfsConfigurationPropertyList(this, "openzfs_configuration", false);
   public get openzfsConfiguration() {
     return this._openzfsConfiguration;
   }
-  public putOpenzfsConfiguration(value: AwsFsxS3AccessPointAttachment.OpenzfsConfigurationProperty[] | cdktn.IResolvable) {
+  public putOpenzfsConfiguration(value: TfS3AccessPointAttachment.OpenzfsConfigurationProperty[] | cdktn.IResolvable) {
     this._openzfsConfiguration.internalValue = value;
   }
   public resetOpenzfsConfiguration() {
@@ -172,11 +172,11 @@ export class AwsFsxS3AccessPointAttachment extends cdktn.TerraformResource {
   }
 
   // s3_access_point - computed: false, optional: true, required: false
-  private _s3AccessPoint = new AwsFsxS3AccessPointAttachment.S3AccessPointPropertyList(this, "s3_access_point", false);
+  private _s3AccessPoint = new TfS3AccessPointAttachment.S3AccessPointPropertyList(this, "s3_access_point", false);
   public get s3AccessPoint() {
     return this._s3AccessPoint;
   }
-  public putS3AccessPoint(value: AwsFsxS3AccessPointAttachment.S3AccessPointProperty[] | cdktn.IResolvable) {
+  public putS3AccessPoint(value: TfS3AccessPointAttachment.S3AccessPointProperty[] | cdktn.IResolvable) {
     this._s3AccessPoint.internalValue = value;
   }
   public resetS3AccessPoint() {
@@ -188,11 +188,11 @@ export class AwsFsxS3AccessPointAttachment extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsFsxS3AccessPointAttachment.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfS3AccessPointAttachment.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsFsxS3AccessPointAttachment.TimeoutsProperty) {
+  public putTimeouts(value: TfS3AccessPointAttachment.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -212,9 +212,9 @@ export class AwsFsxS3AccessPointAttachment extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       type: cdktn.stringToTerraform(this._type),
-      openzfs_configuration: cdktn.listMapper(awsFsxS3AccessPointAttachmentOpenzfsConfigurationPropertyToTerraform, true)(this._openzfsConfiguration.internalValue),
-      s3_access_point: cdktn.listMapper(awsFsxS3AccessPointAttachmentS3AccessPointPropertyToTerraform, true)(this._s3AccessPoint.internalValue),
-      timeouts: awsFsxS3AccessPointAttachmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      openzfs_configuration: cdktn.listMapper(tfS3AccessPointAttachmentOpenzfsConfigurationPropertyToTerraform, true)(this._openzfsConfiguration.internalValue),
+      s3_access_point: cdktn.listMapper(tfS3AccessPointAttachmentS3AccessPointPropertyToTerraform, true)(this._s3AccessPoint.internalValue),
+      timeouts: tfS3AccessPointAttachmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -239,22 +239,22 @@ export class AwsFsxS3AccessPointAttachment extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       openzfs_configuration: {
-        value: cdktn.listMapperHcl(awsFsxS3AccessPointAttachmentOpenzfsConfigurationPropertyToHclTerraform, true)(this._openzfsConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfS3AccessPointAttachmentOpenzfsConfigurationPropertyToHclTerraform, true)(this._openzfsConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsFsxS3AccessPointAttachment.OpenzfsConfigurationPropertyList",
+        storageClassType: "TfS3AccessPointAttachment.OpenzfsConfigurationPropertyList",
       },
       s3_access_point: {
-        value: cdktn.listMapperHcl(awsFsxS3AccessPointAttachmentS3AccessPointPropertyToHclTerraform, true)(this._s3AccessPoint.internalValue),
+        value: cdktn.listMapperHcl(tfS3AccessPointAttachmentS3AccessPointPropertyToHclTerraform, true)(this._s3AccessPoint.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsFsxS3AccessPointAttachment.S3AccessPointPropertyList",
+        storageClassType: "TfS3AccessPointAttachment.S3AccessPointPropertyList",
       },
       timeouts: {
-        value: awsFsxS3AccessPointAttachmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfS3AccessPointAttachmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsFsxS3AccessPointAttachment.TimeoutsProperty",
+        storageClassType: "TfS3AccessPointAttachment.TimeoutsProperty",
       },
     };
 
@@ -263,7 +263,7 @@ export class AwsFsxS3AccessPointAttachment extends cdktn.TerraformResource {
   }
 }
 
-export function awsFsxS3AccessPointAttachmentPosixUserPropertyToTerraform(struct?: AwsFsxS3AccessPointAttachment.PosixUserProperty | cdktn.IResolvable): any {
+export function tfS3AccessPointAttachmentPosixUserPropertyToTerraform(struct?: TfS3AccessPointAttachment.PosixUserProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -276,7 +276,7 @@ export function awsFsxS3AccessPointAttachmentPosixUserPropertyToTerraform(struct
 }
 
 
-export function awsFsxS3AccessPointAttachmentPosixUserPropertyToHclTerraform(struct?: AwsFsxS3AccessPointAttachment.PosixUserProperty | cdktn.IResolvable): any {
+export function tfS3AccessPointAttachmentPosixUserPropertyToHclTerraform(struct?: TfS3AccessPointAttachment.PosixUserProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -307,19 +307,19 @@ export function awsFsxS3AccessPointAttachmentPosixUserPropertyToHclTerraform(str
 }
 
 
-export function awsFsxS3AccessPointAttachmentFileSystemIdentityPropertyToTerraform(struct?: AwsFsxS3AccessPointAttachment.FileSystemIdentityProperty | cdktn.IResolvable): any {
+export function tfS3AccessPointAttachmentFileSystemIdentityPropertyToTerraform(struct?: TfS3AccessPointAttachment.FileSystemIdentityProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     type: cdktn.stringToTerraform(struct!.type),
-    posix_user: cdktn.listMapper(awsFsxS3AccessPointAttachmentPosixUserPropertyToTerraform, true)(struct!.posixUser),
+    posix_user: cdktn.listMapper(tfS3AccessPointAttachmentPosixUserPropertyToTerraform, true)(struct!.posixUser),
   }
 }
 
 
-export function awsFsxS3AccessPointAttachmentFileSystemIdentityPropertyToHclTerraform(struct?: AwsFsxS3AccessPointAttachment.FileSystemIdentityProperty | cdktn.IResolvable): any {
+export function tfS3AccessPointAttachmentFileSystemIdentityPropertyToHclTerraform(struct?: TfS3AccessPointAttachment.FileSystemIdentityProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -332,7 +332,7 @@ export function awsFsxS3AccessPointAttachmentFileSystemIdentityPropertyToHclTerr
       storageClassType: "string",
     },
     posix_user: {
-      value: cdktn.listMapperHcl(awsFsxS3AccessPointAttachmentPosixUserPropertyToHclTerraform, true)(struct!.posixUser),
+      value: cdktn.listMapperHcl(tfS3AccessPointAttachmentPosixUserPropertyToHclTerraform, true)(struct!.posixUser),
       isBlock: true,
       type: "list",
       storageClassType: "PosixUserPropertyList",
@@ -344,19 +344,19 @@ export function awsFsxS3AccessPointAttachmentFileSystemIdentityPropertyToHclTerr
 }
 
 
-export function awsFsxS3AccessPointAttachmentOpenzfsConfigurationPropertyToTerraform(struct?: AwsFsxS3AccessPointAttachment.OpenzfsConfigurationProperty | cdktn.IResolvable): any {
+export function tfS3AccessPointAttachmentOpenzfsConfigurationPropertyToTerraform(struct?: TfS3AccessPointAttachment.OpenzfsConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     volume_id: cdktn.stringToTerraform(struct!.volumeId),
-    file_system_identity: cdktn.listMapper(awsFsxS3AccessPointAttachmentFileSystemIdentityPropertyToTerraform, true)(struct!.fileSystemIdentity),
+    file_system_identity: cdktn.listMapper(tfS3AccessPointAttachmentFileSystemIdentityPropertyToTerraform, true)(struct!.fileSystemIdentity),
   }
 }
 
 
-export function awsFsxS3AccessPointAttachmentOpenzfsConfigurationPropertyToHclTerraform(struct?: AwsFsxS3AccessPointAttachment.OpenzfsConfigurationProperty | cdktn.IResolvable): any {
+export function tfS3AccessPointAttachmentOpenzfsConfigurationPropertyToHclTerraform(struct?: TfS3AccessPointAttachment.OpenzfsConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -369,7 +369,7 @@ export function awsFsxS3AccessPointAttachmentOpenzfsConfigurationPropertyToHclTe
       storageClassType: "string",
     },
     file_system_identity: {
-      value: cdktn.listMapperHcl(awsFsxS3AccessPointAttachmentFileSystemIdentityPropertyToHclTerraform, true)(struct!.fileSystemIdentity),
+      value: cdktn.listMapperHcl(tfS3AccessPointAttachmentFileSystemIdentityPropertyToHclTerraform, true)(struct!.fileSystemIdentity),
       isBlock: true,
       type: "list",
       storageClassType: "FileSystemIdentityPropertyList",
@@ -381,7 +381,7 @@ export function awsFsxS3AccessPointAttachmentOpenzfsConfigurationPropertyToHclTe
 }
 
 
-export function awsFsxS3AccessPointAttachmentVpcConfigurationPropertyToTerraform(struct?: AwsFsxS3AccessPointAttachment.VpcConfigurationProperty | cdktn.IResolvable): any {
+export function tfS3AccessPointAttachmentVpcConfigurationPropertyToTerraform(struct?: TfS3AccessPointAttachment.VpcConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -392,7 +392,7 @@ export function awsFsxS3AccessPointAttachmentVpcConfigurationPropertyToTerraform
 }
 
 
-export function awsFsxS3AccessPointAttachmentVpcConfigurationPropertyToHclTerraform(struct?: AwsFsxS3AccessPointAttachment.VpcConfigurationProperty | cdktn.IResolvable): any {
+export function tfS3AccessPointAttachmentVpcConfigurationPropertyToHclTerraform(struct?: TfS3AccessPointAttachment.VpcConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -411,19 +411,19 @@ export function awsFsxS3AccessPointAttachmentVpcConfigurationPropertyToHclTerraf
 }
 
 
-export function awsFsxS3AccessPointAttachmentS3AccessPointPropertyToTerraform(struct?: AwsFsxS3AccessPointAttachment.S3AccessPointProperty | cdktn.IResolvable): any {
+export function tfS3AccessPointAttachmentS3AccessPointPropertyToTerraform(struct?: TfS3AccessPointAttachment.S3AccessPointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     policy: cdktn.stringToTerraform(struct!.policy),
-    vpc_configuration: cdktn.listMapper(awsFsxS3AccessPointAttachmentVpcConfigurationPropertyToTerraform, true)(struct!.vpcConfiguration),
+    vpc_configuration: cdktn.listMapper(tfS3AccessPointAttachmentVpcConfigurationPropertyToTerraform, true)(struct!.vpcConfiguration),
   }
 }
 
 
-export function awsFsxS3AccessPointAttachmentS3AccessPointPropertyToHclTerraform(struct?: AwsFsxS3AccessPointAttachment.S3AccessPointProperty | cdktn.IResolvable): any {
+export function tfS3AccessPointAttachmentS3AccessPointPropertyToHclTerraform(struct?: TfS3AccessPointAttachment.S3AccessPointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -436,7 +436,7 @@ export function awsFsxS3AccessPointAttachmentS3AccessPointPropertyToHclTerraform
       storageClassType: "string",
     },
     vpc_configuration: {
-      value: cdktn.listMapperHcl(awsFsxS3AccessPointAttachmentVpcConfigurationPropertyToHclTerraform, true)(struct!.vpcConfiguration),
+      value: cdktn.listMapperHcl(tfS3AccessPointAttachmentVpcConfigurationPropertyToHclTerraform, true)(struct!.vpcConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "VpcConfigurationPropertyList",
@@ -448,7 +448,7 @@ export function awsFsxS3AccessPointAttachmentS3AccessPointPropertyToHclTerraform
 }
 
 
-export function awsFsxS3AccessPointAttachmentTimeoutsPropertyToTerraform(struct?: AwsFsxS3AccessPointAttachment.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfS3AccessPointAttachmentTimeoutsPropertyToTerraform(struct?: TfS3AccessPointAttachment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -460,7 +460,7 @@ export function awsFsxS3AccessPointAttachmentTimeoutsPropertyToTerraform(struct?
 }
 
 
-export function awsFsxS3AccessPointAttachmentTimeoutsPropertyToHclTerraform(struct?: AwsFsxS3AccessPointAttachment.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfS3AccessPointAttachmentTimeoutsPropertyToHclTerraform(struct?: TfS3AccessPointAttachment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -485,18 +485,18 @@ export function awsFsxS3AccessPointAttachmentTimeoutsPropertyToHclTerraform(stru
 }
 
 
-export namespace AwsFsxS3AccessPointAttachment {
+export namespace TfS3AccessPointAttachment {
 export interface PosixUserProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#gid AwsFsxS3AccessPointAttachment#gid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#gid TfS3AccessPointAttachment#gid}
   */
   readonly gid: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#secondary_gids AwsFsxS3AccessPointAttachment#secondary_gids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#secondary_gids TfS3AccessPointAttachment#secondary_gids}
   */
   readonly secondaryGids?: number[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#uid AwsFsxS3AccessPointAttachment#uid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#uid TfS3AccessPointAttachment#uid}
   */
   readonly uid: number;
 }
@@ -620,13 +620,13 @@ export class PosixUserPropertyList extends cdktn.ComplexList {
 }
 export interface FileSystemIdentityProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#type AwsFsxS3AccessPointAttachment#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#type TfS3AccessPointAttachment#type}
   */
   readonly type: string;
   /**
   * posix_user block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#posix_user AwsFsxS3AccessPointAttachment#posix_user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#posix_user TfS3AccessPointAttachment#posix_user}
   */
   readonly posixUser?: PosixUserProperty[] | cdktn.IResolvable;
 }
@@ -731,13 +731,13 @@ export class FileSystemIdentityPropertyList extends cdktn.ComplexList {
 }
 export interface OpenzfsConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#volume_id AwsFsxS3AccessPointAttachment#volume_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#volume_id TfS3AccessPointAttachment#volume_id}
   */
   readonly volumeId: string;
   /**
   * file_system_identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#file_system_identity AwsFsxS3AccessPointAttachment#file_system_identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#file_system_identity TfS3AccessPointAttachment#file_system_identity}
   */
   readonly fileSystemIdentity?: FileSystemIdentityProperty[] | cdktn.IResolvable;
 }
@@ -842,7 +842,7 @@ export class OpenzfsConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface VpcConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#vpc_id AwsFsxS3AccessPointAttachment#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#vpc_id TfS3AccessPointAttachment#vpc_id}
   */
   readonly vpcId?: string;
 }
@@ -928,13 +928,13 @@ export class VpcConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface S3AccessPointProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#policy AwsFsxS3AccessPointAttachment#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#policy TfS3AccessPointAttachment#policy}
   */
   readonly policy?: string;
   /**
   * vpc_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#vpc_configuration AwsFsxS3AccessPointAttachment#vpc_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#vpc_configuration TfS3AccessPointAttachment#vpc_configuration}
   */
   readonly vpcConfiguration?: VpcConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -1044,13 +1044,13 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#create AwsFsxS3AccessPointAttachment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#create TfS3AccessPointAttachment#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#delete AwsFsxS3AccessPointAttachment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_s3_access_point_attachment#delete TfS3AccessPointAttachment#delete}
   */
   readonly delete?: string;
 }

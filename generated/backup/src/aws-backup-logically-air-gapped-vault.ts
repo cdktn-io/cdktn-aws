@@ -5,45 +5,45 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsBackupLogicallyAirGappedVaultConfig extends cdktn.TerraformMetaArguments {
+export interface TfLogicallyAirGappedVaultConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_logically_air_gapped_vault#encryption_key_arn AwsBackupLogicallyAirGappedVault#encryption_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_logically_air_gapped_vault#encryption_key_arn TfLogicallyAirGappedVault#encryption_key_arn}
   */
   readonly encryptionKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_logically_air_gapped_vault#max_retention_days AwsBackupLogicallyAirGappedVault#max_retention_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_logically_air_gapped_vault#max_retention_days TfLogicallyAirGappedVault#max_retention_days}
   */
   readonly maxRetentionDays: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_logically_air_gapped_vault#min_retention_days AwsBackupLogicallyAirGappedVault#min_retention_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_logically_air_gapped_vault#min_retention_days TfLogicallyAirGappedVault#min_retention_days}
   */
   readonly minRetentionDays: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_logically_air_gapped_vault#name AwsBackupLogicallyAirGappedVault#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_logically_air_gapped_vault#name TfLogicallyAirGappedVault#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_logically_air_gapped_vault#region AwsBackupLogicallyAirGappedVault#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_logically_air_gapped_vault#region TfLogicallyAirGappedVault#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_logically_air_gapped_vault#tags AwsBackupLogicallyAirGappedVault#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_logically_air_gapped_vault#tags TfLogicallyAirGappedVault#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_logically_air_gapped_vault#timeouts AwsBackupLogicallyAirGappedVault#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_logically_air_gapped_vault#timeouts TfLogicallyAirGappedVault#timeouts}
   */
-  readonly timeouts?: AwsBackupLogicallyAirGappedVault.TimeoutsProperty;
+  readonly timeouts?: TfLogicallyAirGappedVault.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_logically_air_gapped_vault aws_backup_logically_air_gapped_vault}
 */
-export class AwsBackupLogicallyAirGappedVault extends cdktn.TerraformResource {
+export class TfLogicallyAirGappedVault extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -54,11 +54,11 @@ export class AwsBackupLogicallyAirGappedVault extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsBackupLogicallyAirGappedVault resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfLogicallyAirGappedVault resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsBackupLogicallyAirGappedVault to import
-  * @param importFromId The id of the existing AwsBackupLogicallyAirGappedVault that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_logically_air_gapped_vault#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsBackupLogicallyAirGappedVault to import is found
+  * @param importToId The construct id used in the generated config for the TfLogicallyAirGappedVault to import
+  * @param importFromId The id of the existing TfLogicallyAirGappedVault that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_logically_air_gapped_vault#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfLogicallyAirGappedVault to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_backup_logically_air_gapped_vault", importId: importFromId, provider });
@@ -73,9 +73,9 @@ export class AwsBackupLogicallyAirGappedVault extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsBackupLogicallyAirGappedVaultConfig
+  * @param options TfLogicallyAirGappedVaultConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsBackupLogicallyAirGappedVaultConfig) {
+  public constructor(scope: Construct, id: string, config: TfLogicallyAirGappedVaultConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_backup_logically_air_gapped_vault',
       terraformGeneratorMetadata: {
@@ -208,11 +208,11 @@ export class AwsBackupLogicallyAirGappedVault extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsBackupLogicallyAirGappedVault.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfLogicallyAirGappedVault.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsBackupLogicallyAirGappedVault.TimeoutsProperty) {
+  public putTimeouts(value: TfLogicallyAirGappedVault.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -235,7 +235,7 @@ export class AwsBackupLogicallyAirGappedVault extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      timeouts: awsBackupLogicallyAirGappedVaultTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfLogicallyAirGappedVaultTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -278,10 +278,10 @@ export class AwsBackupLogicallyAirGappedVault extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsBackupLogicallyAirGappedVaultTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfLogicallyAirGappedVaultTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsBackupLogicallyAirGappedVault.TimeoutsProperty",
+        storageClassType: "TfLogicallyAirGappedVault.TimeoutsProperty",
       },
     };
 
@@ -290,7 +290,7 @@ export class AwsBackupLogicallyAirGappedVault extends cdktn.TerraformResource {
   }
 }
 
-export function awsBackupLogicallyAirGappedVaultTimeoutsPropertyToTerraform(struct?: AwsBackupLogicallyAirGappedVault.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfLogicallyAirGappedVaultTimeoutsPropertyToTerraform(struct?: TfLogicallyAirGappedVault.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -301,7 +301,7 @@ export function awsBackupLogicallyAirGappedVaultTimeoutsPropertyToTerraform(stru
 }
 
 
-export function awsBackupLogicallyAirGappedVaultTimeoutsPropertyToHclTerraform(struct?: AwsBackupLogicallyAirGappedVault.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfLogicallyAirGappedVaultTimeoutsPropertyToHclTerraform(struct?: TfLogicallyAirGappedVault.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -320,12 +320,12 @@ export function awsBackupLogicallyAirGappedVaultTimeoutsPropertyToHclTerraform(s
 }
 
 
-export namespace AwsBackupLogicallyAirGappedVault {
+export namespace TfLogicallyAirGappedVault {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_logically_air_gapped_vault#create AwsBackupLogicallyAirGappedVault#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_logically_air_gapped_vault#create TfLogicallyAirGappedVault#create}
   */
   readonly create?: string;
 }

@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsElasticacheReservedCacheNodeConfig extends cdktn.TerraformMetaArguments {
+export interface TfReservedCacheNodeConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_reserved_cache_node#cache_node_count AwsElasticacheReservedCacheNode#cache_node_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_reserved_cache_node#cache_node_count TfReservedCacheNode#cache_node_count}
   */
   readonly cacheNodeCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_reserved_cache_node#id AwsElasticacheReservedCacheNode#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_reserved_cache_node#id TfReservedCacheNode#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,29 +20,29 @@ export interface AwsElasticacheReservedCacheNodeConfig extends cdktn.TerraformMe
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_reserved_cache_node#region AwsElasticacheReservedCacheNode#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_reserved_cache_node#region TfReservedCacheNode#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_reserved_cache_node#reserved_cache_nodes_offering_id AwsElasticacheReservedCacheNode#reserved_cache_nodes_offering_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_reserved_cache_node#reserved_cache_nodes_offering_id TfReservedCacheNode#reserved_cache_nodes_offering_id}
   */
   readonly reservedCacheNodesOfferingId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_reserved_cache_node#tags AwsElasticacheReservedCacheNode#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_reserved_cache_node#tags TfReservedCacheNode#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_reserved_cache_node#timeouts AwsElasticacheReservedCacheNode#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_reserved_cache_node#timeouts TfReservedCacheNode#timeouts}
   */
-  readonly timeouts?: AwsElasticacheReservedCacheNode.TimeoutsProperty;
+  readonly timeouts?: TfReservedCacheNode.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_reserved_cache_node aws_elasticache_reserved_cache_node}
 */
-export class AwsElasticacheReservedCacheNode extends cdktn.TerraformResource {
+export class TfReservedCacheNode extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class AwsElasticacheReservedCacheNode extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsElasticacheReservedCacheNode resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfReservedCacheNode resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsElasticacheReservedCacheNode to import
-  * @param importFromId The id of the existing AwsElasticacheReservedCacheNode that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_reserved_cache_node#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsElasticacheReservedCacheNode to import is found
+  * @param importToId The construct id used in the generated config for the TfReservedCacheNode to import
+  * @param importFromId The id of the existing TfReservedCacheNode that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_reserved_cache_node#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfReservedCacheNode to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_elasticache_reserved_cache_node", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class AwsElasticacheReservedCacheNode extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsElasticacheReservedCacheNodeConfig
+  * @param options TfReservedCacheNodeConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsElasticacheReservedCacheNodeConfig) {
+  public constructor(scope: Construct, id: string, config: TfReservedCacheNodeConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_elasticache_reserved_cache_node',
       terraformGeneratorMetadata: {
@@ -165,7 +165,7 @@ export class AwsElasticacheReservedCacheNode extends cdktn.TerraformResource {
   }
 
   // recurring_charges - computed: true, optional: false, required: false
-  private _recurringCharges = new AwsElasticacheReservedCacheNode.RecurringChargesPropertyList(this, "recurring_charges", false);
+  private _recurringCharges = new TfReservedCacheNode.RecurringChargesPropertyList(this, "recurring_charges", false);
   public get recurringCharges() {
     return this._recurringCharges;
   }
@@ -237,11 +237,11 @@ export class AwsElasticacheReservedCacheNode extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsElasticacheReservedCacheNode.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfReservedCacheNode.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsElasticacheReservedCacheNode.TimeoutsProperty) {
+  public putTimeouts(value: TfReservedCacheNode.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -263,7 +263,7 @@ export class AwsElasticacheReservedCacheNode extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       reserved_cache_nodes_offering_id: cdktn.stringToTerraform(this._reservedCacheNodesOfferingId),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      timeouts: awsElasticacheReservedCacheNodeTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfReservedCacheNodeTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -300,10 +300,10 @@ export class AwsElasticacheReservedCacheNode extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsElasticacheReservedCacheNodeTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfReservedCacheNodeTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsElasticacheReservedCacheNode.TimeoutsProperty",
+        storageClassType: "TfReservedCacheNode.TimeoutsProperty",
       },
     };
 
@@ -312,7 +312,7 @@ export class AwsElasticacheReservedCacheNode extends cdktn.TerraformResource {
   }
 }
 
-export function awsElasticacheReservedCacheNodeRecurringChargesPropertyToTerraform(struct?: AwsElasticacheReservedCacheNode.RecurringChargesProperty): any {
+export function tfReservedCacheNodeRecurringChargesPropertyToTerraform(struct?: TfReservedCacheNode.RecurringChargesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -322,7 +322,7 @@ export function awsElasticacheReservedCacheNodeRecurringChargesPropertyToTerrafo
 }
 
 
-export function awsElasticacheReservedCacheNodeRecurringChargesPropertyToHclTerraform(struct?: AwsElasticacheReservedCacheNode.RecurringChargesProperty): any {
+export function tfReservedCacheNodeRecurringChargesPropertyToHclTerraform(struct?: TfReservedCacheNode.RecurringChargesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -333,7 +333,7 @@ export function awsElasticacheReservedCacheNodeRecurringChargesPropertyToHclTerr
 }
 
 
-export function awsElasticacheReservedCacheNodeTimeoutsPropertyToTerraform(struct?: AwsElasticacheReservedCacheNode.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfReservedCacheNodeTimeoutsPropertyToTerraform(struct?: TfReservedCacheNode.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -346,7 +346,7 @@ export function awsElasticacheReservedCacheNodeTimeoutsPropertyToTerraform(struc
 }
 
 
-export function awsElasticacheReservedCacheNodeTimeoutsPropertyToHclTerraform(struct?: AwsElasticacheReservedCacheNode.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfReservedCacheNodeTimeoutsPropertyToHclTerraform(struct?: TfReservedCacheNode.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -377,7 +377,7 @@ export function awsElasticacheReservedCacheNodeTimeoutsPropertyToHclTerraform(st
 }
 
 
-export namespace AwsElasticacheReservedCacheNode {
+export namespace TfReservedCacheNode {
 export interface RecurringChargesProperty {
 }
 export class RecurringChargesPropertyOutputReference extends cdktn.ComplexObject {
@@ -441,19 +441,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_reserved_cache_node#create AwsElasticacheReservedCacheNode#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_reserved_cache_node#create TfReservedCacheNode#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_reserved_cache_node#delete AwsElasticacheReservedCacheNode#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_reserved_cache_node#delete TfReservedCacheNode#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_reserved_cache_node#update AwsElasticacheReservedCacheNode#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_reserved_cache_node#update TfReservedCacheNode#update}
   */
   readonly update?: string;
 }

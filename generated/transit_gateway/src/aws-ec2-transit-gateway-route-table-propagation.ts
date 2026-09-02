@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEc2TransitGatewayRouteTablePropagationConfig extends cdktn.TerraformMetaArguments {
+export interface TfTransitGatewayRouteTablePropagationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route_table_propagation#id AwsEc2TransitGatewayRouteTablePropagation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route_table_propagation#id TfTransitGatewayRouteTablePropagation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,15 +16,15 @@ export interface AwsEc2TransitGatewayRouteTablePropagationConfig extends cdktn.T
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route_table_propagation#region AwsEc2TransitGatewayRouteTablePropagation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route_table_propagation#region TfTransitGatewayRouteTablePropagation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route_table_propagation#transit_gateway_attachment_id AwsEc2TransitGatewayRouteTablePropagation#transit_gateway_attachment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route_table_propagation#transit_gateway_attachment_id TfTransitGatewayRouteTablePropagation#transit_gateway_attachment_id}
   */
   readonly transitGatewayAttachmentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route_table_propagation#transit_gateway_route_table_id AwsEc2TransitGatewayRouteTablePropagation#transit_gateway_route_table_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route_table_propagation#transit_gateway_route_table_id TfTransitGatewayRouteTablePropagation#transit_gateway_route_table_id}
   */
   readonly transitGatewayRouteTableId: string;
 }
@@ -32,7 +32,7 @@ export interface AwsEc2TransitGatewayRouteTablePropagationConfig extends cdktn.T
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route_table_propagation aws_ec2_transit_gateway_route_table_propagation}
 */
-export class AwsEc2TransitGatewayRouteTablePropagation extends cdktn.TerraformResource {
+export class TfTransitGatewayRouteTablePropagation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class AwsEc2TransitGatewayRouteTablePropagation extends cdktn.TerraformRe
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEc2TransitGatewayRouteTablePropagation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfTransitGatewayRouteTablePropagation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEc2TransitGatewayRouteTablePropagation to import
-  * @param importFromId The id of the existing AwsEc2TransitGatewayRouteTablePropagation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route_table_propagation#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEc2TransitGatewayRouteTablePropagation to import is found
+  * @param importToId The construct id used in the generated config for the TfTransitGatewayRouteTablePropagation to import
+  * @param importFromId The id of the existing TfTransitGatewayRouteTablePropagation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route_table_propagation#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfTransitGatewayRouteTablePropagation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_transit_gateway_route_table_propagation", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class AwsEc2TransitGatewayRouteTablePropagation extends cdktn.TerraformRe
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEc2TransitGatewayRouteTablePropagationConfig
+  * @param options TfTransitGatewayRouteTablePropagationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEc2TransitGatewayRouteTablePropagationConfig) {
+  public constructor(scope: Construct, id: string, config: TfTransitGatewayRouteTablePropagationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_transit_gateway_route_table_propagation',
       terraformGeneratorMetadata: {

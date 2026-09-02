@@ -5,56 +5,56 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsGuarddutyMemberConfig extends cdktn.TerraformMetaArguments {
+export interface TfMemberConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_member#account_id AwsGuarddutyMember#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_member#account_id TfMember#account_id}
   */
   readonly accountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_member#detector_id AwsGuarddutyMember#detector_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_member#detector_id TfMember#detector_id}
   */
   readonly detectorId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_member#disable_email_notification AwsGuarddutyMember#disable_email_notification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_member#disable_email_notification TfMember#disable_email_notification}
   */
   readonly disableEmailNotification?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_member#email AwsGuarddutyMember#email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_member#email TfMember#email}
   */
   readonly email: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_member#id AwsGuarddutyMember#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_member#id TfMember#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_member#invitation_message AwsGuarddutyMember#invitation_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_member#invitation_message TfMember#invitation_message}
   */
   readonly invitationMessage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_member#invite AwsGuarddutyMember#invite}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_member#invite TfMember#invite}
   */
   readonly invite?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_member#region AwsGuarddutyMember#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_member#region TfMember#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_member#timeouts AwsGuarddutyMember#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_member#timeouts TfMember#timeouts}
   */
-  readonly timeouts?: AwsGuarddutyMember.TimeoutsProperty;
+  readonly timeouts?: TfMember.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_member aws_guardduty_member}
 */
-export class AwsGuarddutyMember extends cdktn.TerraformResource {
+export class TfMember extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class AwsGuarddutyMember extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsGuarddutyMember resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfMember resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsGuarddutyMember to import
-  * @param importFromId The id of the existing AwsGuarddutyMember that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_member#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsGuarddutyMember to import is found
+  * @param importToId The construct id used in the generated config for the TfMember to import
+  * @param importFromId The id of the existing TfMember that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_member#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfMember to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_guardduty_member", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class AwsGuarddutyMember extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsGuarddutyMemberConfig
+  * @param options TfMemberConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsGuarddutyMemberConfig) {
+  public constructor(scope: Construct, id: string, config: TfMemberConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_guardduty_member',
       terraformGeneratorMetadata: {
@@ -242,11 +242,11 @@ export class AwsGuarddutyMember extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsGuarddutyMember.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfMember.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsGuarddutyMember.TimeoutsProperty) {
+  public putTimeouts(value: TfMember.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -271,7 +271,7 @@ export class AwsGuarddutyMember extends cdktn.TerraformResource {
       invitation_message: cdktn.stringToTerraform(this._invitationMessage),
       invite: cdktn.booleanToTerraform(this._invite),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: awsGuarddutyMemberTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfMemberTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -326,10 +326,10 @@ export class AwsGuarddutyMember extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsGuarddutyMemberTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfMemberTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsGuarddutyMember.TimeoutsProperty",
+        storageClassType: "TfMember.TimeoutsProperty",
       },
     };
 
@@ -338,7 +338,7 @@ export class AwsGuarddutyMember extends cdktn.TerraformResource {
   }
 }
 
-export function awsGuarddutyMemberTimeoutsPropertyToTerraform(struct?: AwsGuarddutyMember.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfMemberTimeoutsPropertyToTerraform(struct?: TfMember.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -350,7 +350,7 @@ export function awsGuarddutyMemberTimeoutsPropertyToTerraform(struct?: AwsGuardd
 }
 
 
-export function awsGuarddutyMemberTimeoutsPropertyToHclTerraform(struct?: AwsGuarddutyMember.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfMemberTimeoutsPropertyToHclTerraform(struct?: TfMember.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -375,14 +375,14 @@ export function awsGuarddutyMemberTimeoutsPropertyToHclTerraform(struct?: AwsGua
 }
 
 
-export namespace AwsGuarddutyMember {
+export namespace TfMember {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_member#create AwsGuarddutyMember#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_member#create TfMember#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_member#update AwsGuarddutyMember#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_member#update TfMember#update}
   */
   readonly update?: string;
 }

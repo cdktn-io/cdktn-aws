@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsVpclatticeAccessLogSubscriptionConfig extends cdktn.TerraformMetaArguments {
+export interface TfAccessLogSubscriptionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_access_log_subscription#destination_arn AwsVpclatticeAccessLogSubscription#destination_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_access_log_subscription#destination_arn TfAccessLogSubscription#destination_arn}
   */
   readonly destinationArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_access_log_subscription#id AwsVpclatticeAccessLogSubscription#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_access_log_subscription#id TfAccessLogSubscription#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,23 +20,23 @@ export interface AwsVpclatticeAccessLogSubscriptionConfig extends cdktn.Terrafor
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_access_log_subscription#region AwsVpclatticeAccessLogSubscription#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_access_log_subscription#region TfAccessLogSubscription#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_access_log_subscription#resource_identifier AwsVpclatticeAccessLogSubscription#resource_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_access_log_subscription#resource_identifier TfAccessLogSubscription#resource_identifier}
   */
   readonly resourceIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_access_log_subscription#service_network_log_type AwsVpclatticeAccessLogSubscription#service_network_log_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_access_log_subscription#service_network_log_type TfAccessLogSubscription#service_network_log_type}
   */
   readonly serviceNetworkLogType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_access_log_subscription#tags AwsVpclatticeAccessLogSubscription#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_access_log_subscription#tags TfAccessLogSubscription#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_access_log_subscription#tags_all AwsVpclatticeAccessLogSubscription#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_access_log_subscription#tags_all TfAccessLogSubscription#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -44,7 +44,7 @@ export interface AwsVpclatticeAccessLogSubscriptionConfig extends cdktn.Terrafor
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_access_log_subscription aws_vpclattice_access_log_subscription}
 */
-export class AwsVpclatticeAccessLogSubscription extends cdktn.TerraformResource {
+export class TfAccessLogSubscription extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class AwsVpclatticeAccessLogSubscription extends cdktn.TerraformResource 
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsVpclatticeAccessLogSubscription resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAccessLogSubscription resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsVpclatticeAccessLogSubscription to import
-  * @param importFromId The id of the existing AwsVpclatticeAccessLogSubscription that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_access_log_subscription#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsVpclatticeAccessLogSubscription to import is found
+  * @param importToId The construct id used in the generated config for the TfAccessLogSubscription to import
+  * @param importFromId The id of the existing TfAccessLogSubscription that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_access_log_subscription#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAccessLogSubscription to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpclattice_access_log_subscription", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class AwsVpclatticeAccessLogSubscription extends cdktn.TerraformResource 
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsVpclatticeAccessLogSubscriptionConfig
+  * @param options TfAccessLogSubscriptionConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsVpclatticeAccessLogSubscriptionConfig) {
+  public constructor(scope: Construct, id: string, config: TfAccessLogSubscriptionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpclattice_access_log_subscription',
       terraformGeneratorMetadata: {

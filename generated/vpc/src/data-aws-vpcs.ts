@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsVpcsConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataVpcsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpcs#id DataAwsVpcs#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpcs#id TfDataVpcs#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,31 +16,31 @@ export interface DataAwsVpcsConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpcs#region DataAwsVpcs#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpcs#region TfDataVpcs#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpcs#tags DataAwsVpcs#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpcs#tags TfDataVpcs#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpcs#filter DataAwsVpcs#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpcs#filter TfDataVpcs#filter}
   */
-  readonly filter?: DataAwsVpcs.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: TfDataVpcs.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpcs#timeouts DataAwsVpcs#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpcs#timeouts TfDataVpcs#timeouts}
   */
-  readonly timeouts?: DataAwsVpcs.TimeoutsProperty;
+  readonly timeouts?: TfDataVpcs.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpcs aws_vpcs}
 */
-export class DataAwsVpcs extends cdktn.TerraformDataSource {
+export class TfDataVpcs extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class DataAwsVpcs extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsVpcs resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataVpcs resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsVpcs to import
-  * @param importFromId The id of the existing DataAwsVpcs that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpcs#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsVpcs to import is found
+  * @param importToId The construct id used in the generated config for the TfDataVpcs to import
+  * @param importFromId The id of the existing TfDataVpcs that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpcs#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataVpcs to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpcs", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class DataAwsVpcs extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsVpcsConfig = {}
+  * @param options TfDataVpcsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsVpcsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDataVpcsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_vpcs',
       terraformGeneratorMetadata: {
@@ -153,11 +153,11 @@ export class DataAwsVpcs extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataAwsVpcs.FilterPropertyList(this, "filter", true);
+  private _filter = new TfDataVpcs.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataAwsVpcs.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: TfDataVpcs.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -169,11 +169,11 @@ export class DataAwsVpcs extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAwsVpcs.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfDataVpcs.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: DataAwsVpcs.TimeoutsProperty) {
+  public putTimeouts(value: TfDataVpcs.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -193,8 +193,8 @@ export class DataAwsVpcs extends cdktn.TerraformDataSource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      filter: cdktn.listMapper(dataAwsVpcsFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: dataAwsVpcsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(tfDataVpcsFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: tfDataVpcsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -219,16 +219,16 @@ export class DataAwsVpcs extends cdktn.TerraformDataSource {
         storageClassType: "stringMap",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataAwsVpcsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(tfDataVpcsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataAwsVpcs.FilterPropertyList",
+        storageClassType: "TfDataVpcs.FilterPropertyList",
       },
       timeouts: {
-        value: dataAwsVpcsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfDataVpcsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "DataAwsVpcs.TimeoutsProperty",
+        storageClassType: "TfDataVpcs.TimeoutsProperty",
       },
     };
 
@@ -237,7 +237,7 @@ export class DataAwsVpcs extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsVpcsFilterPropertyToTerraform(struct?: DataAwsVpcs.FilterProperty | cdktn.IResolvable): any {
+export function tfDataVpcsFilterPropertyToTerraform(struct?: TfDataVpcs.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -249,7 +249,7 @@ export function dataAwsVpcsFilterPropertyToTerraform(struct?: DataAwsVpcs.Filter
 }
 
 
-export function dataAwsVpcsFilterPropertyToHclTerraform(struct?: DataAwsVpcs.FilterProperty | cdktn.IResolvable): any {
+export function tfDataVpcsFilterPropertyToHclTerraform(struct?: TfDataVpcs.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -274,7 +274,7 @@ export function dataAwsVpcsFilterPropertyToHclTerraform(struct?: DataAwsVpcs.Fil
 }
 
 
-export function dataAwsVpcsTimeoutsPropertyToTerraform(struct?: DataAwsVpcs.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDataVpcsTimeoutsPropertyToTerraform(struct?: TfDataVpcs.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -285,7 +285,7 @@ export function dataAwsVpcsTimeoutsPropertyToTerraform(struct?: DataAwsVpcs.Time
 }
 
 
-export function dataAwsVpcsTimeoutsPropertyToHclTerraform(struct?: DataAwsVpcs.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDataVpcsTimeoutsPropertyToHclTerraform(struct?: TfDataVpcs.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -304,14 +304,14 @@ export function dataAwsVpcsTimeoutsPropertyToHclTerraform(struct?: DataAwsVpcs.T
 }
 
 
-export namespace DataAwsVpcs {
+export namespace TfDataVpcs {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpcs#name DataAwsVpcs#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpcs#name TfDataVpcs#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpcs#values DataAwsVpcs#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpcs#values TfDataVpcs#values}
   */
   readonly values: string[];
 }
@@ -413,7 +413,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpcs#read DataAwsVpcs#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpcs#read TfDataVpcs#read}
   */
   readonly read?: string;
 }

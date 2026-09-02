@@ -5,84 +5,84 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsVerifiedaccessTrustProviderConfig extends cdktn.TerraformMetaArguments {
+export interface TfTrustProviderConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#description AwsVerifiedaccessTrustProvider#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#description TfTrustProvider#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#device_trust_provider_type AwsVerifiedaccessTrustProvider#device_trust_provider_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#device_trust_provider_type TfTrustProvider#device_trust_provider_type}
   */
   readonly deviceTrustProviderType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#id AwsVerifiedaccessTrustProvider#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#id TfTrustProvider#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#policy_reference_name AwsVerifiedaccessTrustProvider#policy_reference_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#policy_reference_name TfTrustProvider#policy_reference_name}
   */
   readonly policyReferenceName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#region AwsVerifiedaccessTrustProvider#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#region TfTrustProvider#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#tags AwsVerifiedaccessTrustProvider#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#tags TfTrustProvider#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#tags_all AwsVerifiedaccessTrustProvider#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#tags_all TfTrustProvider#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#trust_provider_type AwsVerifiedaccessTrustProvider#trust_provider_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#trust_provider_type TfTrustProvider#trust_provider_type}
   */
   readonly trustProviderType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#user_trust_provider_type AwsVerifiedaccessTrustProvider#user_trust_provider_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#user_trust_provider_type TfTrustProvider#user_trust_provider_type}
   */
   readonly userTrustProviderType?: string;
   /**
   * device_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#device_options AwsVerifiedaccessTrustProvider#device_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#device_options TfTrustProvider#device_options}
   */
-  readonly deviceOptions?: AwsVerifiedaccessTrustProvider.DeviceOptionsProperty;
+  readonly deviceOptions?: TfTrustProvider.DeviceOptionsProperty;
   /**
   * native_application_oidc_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#native_application_oidc_options AwsVerifiedaccessTrustProvider#native_application_oidc_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#native_application_oidc_options TfTrustProvider#native_application_oidc_options}
   */
-  readonly nativeApplicationOidcOptions?: AwsVerifiedaccessTrustProvider.NativeApplicationOidcOptionsProperty;
+  readonly nativeApplicationOidcOptions?: TfTrustProvider.NativeApplicationOidcOptionsProperty;
   /**
   * oidc_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#oidc_options AwsVerifiedaccessTrustProvider#oidc_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#oidc_options TfTrustProvider#oidc_options}
   */
-  readonly oidcOptions?: AwsVerifiedaccessTrustProvider.OidcOptionsProperty;
+  readonly oidcOptions?: TfTrustProvider.OidcOptionsProperty;
   /**
   * sse_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#sse_specification AwsVerifiedaccessTrustProvider#sse_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#sse_specification TfTrustProvider#sse_specification}
   */
-  readonly sseSpecification?: AwsVerifiedaccessTrustProvider.SseSpecificationProperty;
+  readonly sseSpecification?: TfTrustProvider.SseSpecificationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#timeouts AwsVerifiedaccessTrustProvider#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#timeouts TfTrustProvider#timeouts}
   */
-  readonly timeouts?: AwsVerifiedaccessTrustProvider.TimeoutsProperty;
+  readonly timeouts?: TfTrustProvider.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider aws_verifiedaccess_trust_provider}
 */
-export class AwsVerifiedaccessTrustProvider extends cdktn.TerraformResource {
+export class TfTrustProvider extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -93,11 +93,11 @@ export class AwsVerifiedaccessTrustProvider extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsVerifiedaccessTrustProvider resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfTrustProvider resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsVerifiedaccessTrustProvider to import
-  * @param importFromId The id of the existing AwsVerifiedaccessTrustProvider that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsVerifiedaccessTrustProvider to import is found
+  * @param importToId The construct id used in the generated config for the TfTrustProvider to import
+  * @param importFromId The id of the existing TfTrustProvider that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfTrustProvider to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_verifiedaccess_trust_provider", importId: importFromId, provider });
@@ -112,9 +112,9 @@ export class AwsVerifiedaccessTrustProvider extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsVerifiedaccessTrustProviderConfig
+  * @param options TfTrustProviderConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsVerifiedaccessTrustProviderConfig) {
+  public constructor(scope: Construct, id: string, config: TfTrustProviderConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_verifiedaccess_trust_provider',
       terraformGeneratorMetadata: {
@@ -289,11 +289,11 @@ export class AwsVerifiedaccessTrustProvider extends cdktn.TerraformResource {
   }
 
   // device_options - computed: false, optional: true, required: false
-  private _deviceOptions = new AwsVerifiedaccessTrustProvider.DeviceOptionsPropertyOutputReference(this, "device_options");
+  private _deviceOptions = new TfTrustProvider.DeviceOptionsPropertyOutputReference(this, "device_options");
   public get deviceOptions() {
     return this._deviceOptions;
   }
-  public putDeviceOptions(value: AwsVerifiedaccessTrustProvider.DeviceOptionsProperty) {
+  public putDeviceOptions(value: TfTrustProvider.DeviceOptionsProperty) {
     this._deviceOptions.internalValue = value;
   }
   public resetDeviceOptions() {
@@ -305,11 +305,11 @@ export class AwsVerifiedaccessTrustProvider extends cdktn.TerraformResource {
   }
 
   // native_application_oidc_options - computed: false, optional: true, required: false
-  private _nativeApplicationOidcOptions = new AwsVerifiedaccessTrustProvider.NativeApplicationOidcOptionsPropertyOutputReference(this, "native_application_oidc_options");
+  private _nativeApplicationOidcOptions = new TfTrustProvider.NativeApplicationOidcOptionsPropertyOutputReference(this, "native_application_oidc_options");
   public get nativeApplicationOidcOptions() {
     return this._nativeApplicationOidcOptions;
   }
-  public putNativeApplicationOidcOptions(value: AwsVerifiedaccessTrustProvider.NativeApplicationOidcOptionsProperty) {
+  public putNativeApplicationOidcOptions(value: TfTrustProvider.NativeApplicationOidcOptionsProperty) {
     this._nativeApplicationOidcOptions.internalValue = value;
   }
   public resetNativeApplicationOidcOptions() {
@@ -321,11 +321,11 @@ export class AwsVerifiedaccessTrustProvider extends cdktn.TerraformResource {
   }
 
   // oidc_options - computed: false, optional: true, required: false
-  private _oidcOptions = new AwsVerifiedaccessTrustProvider.OidcOptionsPropertyOutputReference(this, "oidc_options");
+  private _oidcOptions = new TfTrustProvider.OidcOptionsPropertyOutputReference(this, "oidc_options");
   public get oidcOptions() {
     return this._oidcOptions;
   }
-  public putOidcOptions(value: AwsVerifiedaccessTrustProvider.OidcOptionsProperty) {
+  public putOidcOptions(value: TfTrustProvider.OidcOptionsProperty) {
     this._oidcOptions.internalValue = value;
   }
   public resetOidcOptions() {
@@ -337,11 +337,11 @@ export class AwsVerifiedaccessTrustProvider extends cdktn.TerraformResource {
   }
 
   // sse_specification - computed: false, optional: true, required: false
-  private _sseSpecification = new AwsVerifiedaccessTrustProvider.SseSpecificationPropertyOutputReference(this, "sse_specification");
+  private _sseSpecification = new TfTrustProvider.SseSpecificationPropertyOutputReference(this, "sse_specification");
   public get sseSpecification() {
     return this._sseSpecification;
   }
-  public putSseSpecification(value: AwsVerifiedaccessTrustProvider.SseSpecificationProperty) {
+  public putSseSpecification(value: TfTrustProvider.SseSpecificationProperty) {
     this._sseSpecification.internalValue = value;
   }
   public resetSseSpecification() {
@@ -353,11 +353,11 @@ export class AwsVerifiedaccessTrustProvider extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsVerifiedaccessTrustProvider.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfTrustProvider.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsVerifiedaccessTrustProvider.TimeoutsProperty) {
+  public putTimeouts(value: TfTrustProvider.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -383,11 +383,11 @@ export class AwsVerifiedaccessTrustProvider extends cdktn.TerraformResource {
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       trust_provider_type: cdktn.stringToTerraform(this._trustProviderType),
       user_trust_provider_type: cdktn.stringToTerraform(this._userTrustProviderType),
-      device_options: awsVerifiedaccessTrustProviderDeviceOptionsPropertyToTerraform(this._deviceOptions.internalValue),
-      native_application_oidc_options: awsVerifiedaccessTrustProviderNativeApplicationOidcOptionsPropertyToTerraform(this._nativeApplicationOidcOptions.internalValue),
-      oidc_options: awsVerifiedaccessTrustProviderOidcOptionsPropertyToTerraform(this._oidcOptions.internalValue),
-      sse_specification: awsVerifiedaccessTrustProviderSseSpecificationPropertyToTerraform(this._sseSpecification.internalValue),
-      timeouts: awsVerifiedaccessTrustProviderTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      device_options: tfTrustProviderDeviceOptionsPropertyToTerraform(this._deviceOptions.internalValue),
+      native_application_oidc_options: tfTrustProviderNativeApplicationOidcOptionsPropertyToTerraform(this._nativeApplicationOidcOptions.internalValue),
+      oidc_options: tfTrustProviderOidcOptionsPropertyToTerraform(this._oidcOptions.internalValue),
+      sse_specification: tfTrustProviderSseSpecificationPropertyToTerraform(this._sseSpecification.internalValue),
+      timeouts: tfTrustProviderTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -448,34 +448,34 @@ export class AwsVerifiedaccessTrustProvider extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       device_options: {
-        value: awsVerifiedaccessTrustProviderDeviceOptionsPropertyToHclTerraform(this._deviceOptions.internalValue),
+        value: tfTrustProviderDeviceOptionsPropertyToHclTerraform(this._deviceOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsVerifiedaccessTrustProvider.DeviceOptionsPropertyList",
+        storageClassType: "TfTrustProvider.DeviceOptionsPropertyList",
       },
       native_application_oidc_options: {
-        value: awsVerifiedaccessTrustProviderNativeApplicationOidcOptionsPropertyToHclTerraform(this._nativeApplicationOidcOptions.internalValue),
+        value: tfTrustProviderNativeApplicationOidcOptionsPropertyToHclTerraform(this._nativeApplicationOidcOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsVerifiedaccessTrustProvider.NativeApplicationOidcOptionsPropertyList",
+        storageClassType: "TfTrustProvider.NativeApplicationOidcOptionsPropertyList",
       },
       oidc_options: {
-        value: awsVerifiedaccessTrustProviderOidcOptionsPropertyToHclTerraform(this._oidcOptions.internalValue),
+        value: tfTrustProviderOidcOptionsPropertyToHclTerraform(this._oidcOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsVerifiedaccessTrustProvider.OidcOptionsPropertyList",
+        storageClassType: "TfTrustProvider.OidcOptionsPropertyList",
       },
       sse_specification: {
-        value: awsVerifiedaccessTrustProviderSseSpecificationPropertyToHclTerraform(this._sseSpecification.internalValue),
+        value: tfTrustProviderSseSpecificationPropertyToHclTerraform(this._sseSpecification.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsVerifiedaccessTrustProvider.SseSpecificationPropertyList",
+        storageClassType: "TfTrustProvider.SseSpecificationPropertyList",
       },
       timeouts: {
-        value: awsVerifiedaccessTrustProviderTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfTrustProviderTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsVerifiedaccessTrustProvider.TimeoutsProperty",
+        storageClassType: "TfTrustProvider.TimeoutsProperty",
       },
     };
 
@@ -484,7 +484,7 @@ export class AwsVerifiedaccessTrustProvider extends cdktn.TerraformResource {
   }
 }
 
-export function awsVerifiedaccessTrustProviderDeviceOptionsPropertyToTerraform(struct?: AwsVerifiedaccessTrustProvider.DeviceOptionsPropertyOutputReference | AwsVerifiedaccessTrustProvider.DeviceOptionsProperty): any {
+export function tfTrustProviderDeviceOptionsPropertyToTerraform(struct?: TfTrustProvider.DeviceOptionsPropertyOutputReference | TfTrustProvider.DeviceOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -495,7 +495,7 @@ export function awsVerifiedaccessTrustProviderDeviceOptionsPropertyToTerraform(s
 }
 
 
-export function awsVerifiedaccessTrustProviderDeviceOptionsPropertyToHclTerraform(struct?: AwsVerifiedaccessTrustProvider.DeviceOptionsPropertyOutputReference | AwsVerifiedaccessTrustProvider.DeviceOptionsProperty): any {
+export function tfTrustProviderDeviceOptionsPropertyToHclTerraform(struct?: TfTrustProvider.DeviceOptionsPropertyOutputReference | TfTrustProvider.DeviceOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -514,7 +514,7 @@ export function awsVerifiedaccessTrustProviderDeviceOptionsPropertyToHclTerrafor
 }
 
 
-export function awsVerifiedaccessTrustProviderNativeApplicationOidcOptionsPropertyToTerraform(struct?: AwsVerifiedaccessTrustProvider.NativeApplicationOidcOptionsPropertyOutputReference | AwsVerifiedaccessTrustProvider.NativeApplicationOidcOptionsProperty): any {
+export function tfTrustProviderNativeApplicationOidcOptionsPropertyToTerraform(struct?: TfTrustProvider.NativeApplicationOidcOptionsPropertyOutputReference | TfTrustProvider.NativeApplicationOidcOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -532,7 +532,7 @@ export function awsVerifiedaccessTrustProviderNativeApplicationOidcOptionsProper
 }
 
 
-export function awsVerifiedaccessTrustProviderNativeApplicationOidcOptionsPropertyToHclTerraform(struct?: AwsVerifiedaccessTrustProvider.NativeApplicationOidcOptionsPropertyOutputReference | AwsVerifiedaccessTrustProvider.NativeApplicationOidcOptionsProperty): any {
+export function tfTrustProviderNativeApplicationOidcOptionsPropertyToHclTerraform(struct?: TfTrustProvider.NativeApplicationOidcOptionsPropertyOutputReference | TfTrustProvider.NativeApplicationOidcOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -593,7 +593,7 @@ export function awsVerifiedaccessTrustProviderNativeApplicationOidcOptionsProper
 }
 
 
-export function awsVerifiedaccessTrustProviderOidcOptionsPropertyToTerraform(struct?: AwsVerifiedaccessTrustProvider.OidcOptionsPropertyOutputReference | AwsVerifiedaccessTrustProvider.OidcOptionsProperty): any {
+export function tfTrustProviderOidcOptionsPropertyToTerraform(struct?: TfTrustProvider.OidcOptionsPropertyOutputReference | TfTrustProvider.OidcOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -610,7 +610,7 @@ export function awsVerifiedaccessTrustProviderOidcOptionsPropertyToTerraform(str
 }
 
 
-export function awsVerifiedaccessTrustProviderOidcOptionsPropertyToHclTerraform(struct?: AwsVerifiedaccessTrustProvider.OidcOptionsPropertyOutputReference | AwsVerifiedaccessTrustProvider.OidcOptionsProperty): any {
+export function tfTrustProviderOidcOptionsPropertyToHclTerraform(struct?: TfTrustProvider.OidcOptionsPropertyOutputReference | TfTrustProvider.OidcOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -665,7 +665,7 @@ export function awsVerifiedaccessTrustProviderOidcOptionsPropertyToHclTerraform(
 }
 
 
-export function awsVerifiedaccessTrustProviderSseSpecificationPropertyToTerraform(struct?: AwsVerifiedaccessTrustProvider.SseSpecificationPropertyOutputReference | AwsVerifiedaccessTrustProvider.SseSpecificationProperty): any {
+export function tfTrustProviderSseSpecificationPropertyToTerraform(struct?: TfTrustProvider.SseSpecificationPropertyOutputReference | TfTrustProvider.SseSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -677,7 +677,7 @@ export function awsVerifiedaccessTrustProviderSseSpecificationPropertyToTerrafor
 }
 
 
-export function awsVerifiedaccessTrustProviderSseSpecificationPropertyToHclTerraform(struct?: AwsVerifiedaccessTrustProvider.SseSpecificationPropertyOutputReference | AwsVerifiedaccessTrustProvider.SseSpecificationProperty): any {
+export function tfTrustProviderSseSpecificationPropertyToHclTerraform(struct?: TfTrustProvider.SseSpecificationPropertyOutputReference | TfTrustProvider.SseSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -702,7 +702,7 @@ export function awsVerifiedaccessTrustProviderSseSpecificationPropertyToHclTerra
 }
 
 
-export function awsVerifiedaccessTrustProviderTimeoutsPropertyToTerraform(struct?: AwsVerifiedaccessTrustProvider.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfTrustProviderTimeoutsPropertyToTerraform(struct?: TfTrustProvider.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -715,7 +715,7 @@ export function awsVerifiedaccessTrustProviderTimeoutsPropertyToTerraform(struct
 }
 
 
-export function awsVerifiedaccessTrustProviderTimeoutsPropertyToHclTerraform(struct?: AwsVerifiedaccessTrustProvider.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfTrustProviderTimeoutsPropertyToHclTerraform(struct?: TfTrustProvider.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -746,10 +746,10 @@ export function awsVerifiedaccessTrustProviderTimeoutsPropertyToHclTerraform(str
 }
 
 
-export namespace AwsVerifiedaccessTrustProvider {
+export namespace TfTrustProvider {
 export interface DeviceOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#tenant_id AwsVerifiedaccessTrustProvider#tenant_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#tenant_id TfTrustProvider#tenant_id}
   */
   readonly tenantId?: string;
 }
@@ -803,35 +803,35 @@ export class DeviceOptionsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface NativeApplicationOidcOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#authorization_endpoint AwsVerifiedaccessTrustProvider#authorization_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#authorization_endpoint TfTrustProvider#authorization_endpoint}
   */
   readonly authorizationEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#client_id AwsVerifiedaccessTrustProvider#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#client_id TfTrustProvider#client_id}
   */
   readonly clientId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#client_secret AwsVerifiedaccessTrustProvider#client_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#client_secret TfTrustProvider#client_secret}
   */
   readonly clientSecret: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#issuer AwsVerifiedaccessTrustProvider#issuer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#issuer TfTrustProvider#issuer}
   */
   readonly issuer?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#public_signing_key_endpoint AwsVerifiedaccessTrustProvider#public_signing_key_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#public_signing_key_endpoint TfTrustProvider#public_signing_key_endpoint}
   */
   readonly publicSigningKeyEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#scope AwsVerifiedaccessTrustProvider#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#scope TfTrustProvider#scope}
   */
   readonly scope?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#token_endpoint AwsVerifiedaccessTrustProvider#token_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#token_endpoint TfTrustProvider#token_endpoint}
   */
   readonly tokenEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#user_info_endpoint AwsVerifiedaccessTrustProvider#user_info_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#user_info_endpoint TfTrustProvider#user_info_endpoint}
   */
   readonly userInfoEndpoint?: string;
 }
@@ -1036,31 +1036,31 @@ export class NativeApplicationOidcOptionsPropertyOutputReference extends cdktn.C
 }
 export interface OidcOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#authorization_endpoint AwsVerifiedaccessTrustProvider#authorization_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#authorization_endpoint TfTrustProvider#authorization_endpoint}
   */
   readonly authorizationEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#client_id AwsVerifiedaccessTrustProvider#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#client_id TfTrustProvider#client_id}
   */
   readonly clientId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#client_secret AwsVerifiedaccessTrustProvider#client_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#client_secret TfTrustProvider#client_secret}
   */
   readonly clientSecret: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#issuer AwsVerifiedaccessTrustProvider#issuer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#issuer TfTrustProvider#issuer}
   */
   readonly issuer?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#scope AwsVerifiedaccessTrustProvider#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#scope TfTrustProvider#scope}
   */
   readonly scope?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#token_endpoint AwsVerifiedaccessTrustProvider#token_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#token_endpoint TfTrustProvider#token_endpoint}
   */
   readonly tokenEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#user_info_endpoint AwsVerifiedaccessTrustProvider#user_info_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#user_info_endpoint TfTrustProvider#user_info_endpoint}
   */
   readonly userInfoEndpoint?: string;
 }
@@ -1243,11 +1243,11 @@ export class OidcOptionsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SseSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#customer_managed_key_enabled AwsVerifiedaccessTrustProvider#customer_managed_key_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#customer_managed_key_enabled TfTrustProvider#customer_managed_key_enabled}
   */
   readonly customerManagedKeyEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#kms_key_arn AwsVerifiedaccessTrustProvider#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#kms_key_arn TfTrustProvider#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
 }
@@ -1323,15 +1323,15 @@ export class SseSpecificationPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#create AwsVerifiedaccessTrustProvider#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#create TfTrustProvider#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#delete AwsVerifiedaccessTrustProvider#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#delete TfTrustProvider#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#update AwsVerifiedaccessTrustProvider#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_trust_provider#update TfTrustProvider#update}
   */
   readonly update?: string;
 }

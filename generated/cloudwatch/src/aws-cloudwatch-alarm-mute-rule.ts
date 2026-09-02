@@ -5,51 +5,51 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCloudwatchAlarmMuteRuleConfig extends cdktn.TerraformMetaArguments {
+export interface TfAlarmMuteRuleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_alarm_mute_rule#description AwsCloudwatchAlarmMuteRule#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_alarm_mute_rule#description TfAlarmMuteRule#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_alarm_mute_rule#expire_date AwsCloudwatchAlarmMuteRule#expire_date}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_alarm_mute_rule#expire_date TfAlarmMuteRule#expire_date}
   */
   readonly expireDate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_alarm_mute_rule#name AwsCloudwatchAlarmMuteRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_alarm_mute_rule#name TfAlarmMuteRule#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_alarm_mute_rule#region AwsCloudwatchAlarmMuteRule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_alarm_mute_rule#region TfAlarmMuteRule#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_alarm_mute_rule#start_date AwsCloudwatchAlarmMuteRule#start_date}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_alarm_mute_rule#start_date TfAlarmMuteRule#start_date}
   */
   readonly startDate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_alarm_mute_rule#tags AwsCloudwatchAlarmMuteRule#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_alarm_mute_rule#tags TfAlarmMuteRule#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * mute_targets block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_alarm_mute_rule#mute_targets AwsCloudwatchAlarmMuteRule#mute_targets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_alarm_mute_rule#mute_targets TfAlarmMuteRule#mute_targets}
   */
-  readonly muteTargets?: AwsCloudwatchAlarmMuteRule.MuteTargetsProperty[] | cdktn.IResolvable;
+  readonly muteTargets?: TfAlarmMuteRule.MuteTargetsProperty[] | cdktn.IResolvable;
   /**
   * rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_alarm_mute_rule#rule AwsCloudwatchAlarmMuteRule#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_alarm_mute_rule#rule TfAlarmMuteRule#rule}
   */
-  readonly rule?: AwsCloudwatchAlarmMuteRule.RuleProperty[] | cdktn.IResolvable;
+  readonly rule?: TfAlarmMuteRule.RuleProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_alarm_mute_rule aws_cloudwatch_alarm_mute_rule}
 */
-export class AwsCloudwatchAlarmMuteRule extends cdktn.TerraformResource {
+export class TfAlarmMuteRule extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -60,11 +60,11 @@ export class AwsCloudwatchAlarmMuteRule extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCloudwatchAlarmMuteRule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAlarmMuteRule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCloudwatchAlarmMuteRule to import
-  * @param importFromId The id of the existing AwsCloudwatchAlarmMuteRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_alarm_mute_rule#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCloudwatchAlarmMuteRule to import is found
+  * @param importToId The construct id used in the generated config for the TfAlarmMuteRule to import
+  * @param importFromId The id of the existing TfAlarmMuteRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_alarm_mute_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAlarmMuteRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudwatch_alarm_mute_rule", importId: importFromId, provider });
@@ -79,9 +79,9 @@ export class AwsCloudwatchAlarmMuteRule extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCloudwatchAlarmMuteRuleConfig
+  * @param options TfAlarmMuteRuleConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCloudwatchAlarmMuteRuleConfig) {
+  public constructor(scope: Construct, id: string, config: TfAlarmMuteRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudwatch_alarm_mute_rule',
       terraformGeneratorMetadata: {
@@ -231,11 +231,11 @@ export class AwsCloudwatchAlarmMuteRule extends cdktn.TerraformResource {
   }
 
   // mute_targets - computed: false, optional: true, required: false
-  private _muteTargets = new AwsCloudwatchAlarmMuteRule.MuteTargetsPropertyList(this, "mute_targets", false);
+  private _muteTargets = new TfAlarmMuteRule.MuteTargetsPropertyList(this, "mute_targets", false);
   public get muteTargets() {
     return this._muteTargets;
   }
-  public putMuteTargets(value: AwsCloudwatchAlarmMuteRule.MuteTargetsProperty[] | cdktn.IResolvable) {
+  public putMuteTargets(value: TfAlarmMuteRule.MuteTargetsProperty[] | cdktn.IResolvable) {
     this._muteTargets.internalValue = value;
   }
   public resetMuteTargets() {
@@ -247,11 +247,11 @@ export class AwsCloudwatchAlarmMuteRule extends cdktn.TerraformResource {
   }
 
   // rule - computed: false, optional: true, required: false
-  private _rule = new AwsCloudwatchAlarmMuteRule.RulePropertyList(this, "rule", false);
+  private _rule = new TfAlarmMuteRule.RulePropertyList(this, "rule", false);
   public get rule() {
     return this._rule;
   }
-  public putRule(value: AwsCloudwatchAlarmMuteRule.RuleProperty[] | cdktn.IResolvable) {
+  public putRule(value: TfAlarmMuteRule.RuleProperty[] | cdktn.IResolvable) {
     this._rule.internalValue = value;
   }
   public resetRule() {
@@ -274,8 +274,8 @@ export class AwsCloudwatchAlarmMuteRule extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       start_date: cdktn.stringToTerraform(this._startDate),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      mute_targets: cdktn.listMapper(awsCloudwatchAlarmMuteRuleMuteTargetsPropertyToTerraform, true)(this._muteTargets.internalValue),
-      rule: cdktn.listMapper(awsCloudwatchAlarmMuteRuleRulePropertyToTerraform, true)(this._rule.internalValue),
+      mute_targets: cdktn.listMapper(tfAlarmMuteRuleMuteTargetsPropertyToTerraform, true)(this._muteTargets.internalValue),
+      rule: cdktn.listMapper(tfAlarmMuteRuleRulePropertyToTerraform, true)(this._rule.internalValue),
     };
   }
 
@@ -318,16 +318,16 @@ export class AwsCloudwatchAlarmMuteRule extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       mute_targets: {
-        value: cdktn.listMapperHcl(awsCloudwatchAlarmMuteRuleMuteTargetsPropertyToHclTerraform, true)(this._muteTargets.internalValue),
+        value: cdktn.listMapperHcl(tfAlarmMuteRuleMuteTargetsPropertyToHclTerraform, true)(this._muteTargets.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudwatchAlarmMuteRule.MuteTargetsPropertyList",
+        storageClassType: "TfAlarmMuteRule.MuteTargetsPropertyList",
       },
       rule: {
-        value: cdktn.listMapperHcl(awsCloudwatchAlarmMuteRuleRulePropertyToHclTerraform, true)(this._rule.internalValue),
+        value: cdktn.listMapperHcl(tfAlarmMuteRuleRulePropertyToHclTerraform, true)(this._rule.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudwatchAlarmMuteRule.RulePropertyList",
+        storageClassType: "TfAlarmMuteRule.RulePropertyList",
       },
     };
 
@@ -336,7 +336,7 @@ export class AwsCloudwatchAlarmMuteRule extends cdktn.TerraformResource {
   }
 }
 
-export function awsCloudwatchAlarmMuteRuleMuteTargetsPropertyToTerraform(struct?: AwsCloudwatchAlarmMuteRule.MuteTargetsProperty | cdktn.IResolvable): any {
+export function tfAlarmMuteRuleMuteTargetsPropertyToTerraform(struct?: TfAlarmMuteRule.MuteTargetsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -347,7 +347,7 @@ export function awsCloudwatchAlarmMuteRuleMuteTargetsPropertyToTerraform(struct?
 }
 
 
-export function awsCloudwatchAlarmMuteRuleMuteTargetsPropertyToHclTerraform(struct?: AwsCloudwatchAlarmMuteRule.MuteTargetsProperty | cdktn.IResolvable): any {
+export function tfAlarmMuteRuleMuteTargetsPropertyToHclTerraform(struct?: TfAlarmMuteRule.MuteTargetsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -366,7 +366,7 @@ export function awsCloudwatchAlarmMuteRuleMuteTargetsPropertyToHclTerraform(stru
 }
 
 
-export function awsCloudwatchAlarmMuteRuleSchedulePropertyToTerraform(struct?: AwsCloudwatchAlarmMuteRule.ScheduleProperty | cdktn.IResolvable): any {
+export function tfAlarmMuteRuleSchedulePropertyToTerraform(struct?: TfAlarmMuteRule.ScheduleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -379,7 +379,7 @@ export function awsCloudwatchAlarmMuteRuleSchedulePropertyToTerraform(struct?: A
 }
 
 
-export function awsCloudwatchAlarmMuteRuleSchedulePropertyToHclTerraform(struct?: AwsCloudwatchAlarmMuteRule.ScheduleProperty | cdktn.IResolvable): any {
+export function tfAlarmMuteRuleSchedulePropertyToHclTerraform(struct?: TfAlarmMuteRule.ScheduleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -410,25 +410,25 @@ export function awsCloudwatchAlarmMuteRuleSchedulePropertyToHclTerraform(struct?
 }
 
 
-export function awsCloudwatchAlarmMuteRuleRulePropertyToTerraform(struct?: AwsCloudwatchAlarmMuteRule.RuleProperty | cdktn.IResolvable): any {
+export function tfAlarmMuteRuleRulePropertyToTerraform(struct?: TfAlarmMuteRule.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    schedule: cdktn.listMapper(awsCloudwatchAlarmMuteRuleSchedulePropertyToTerraform, true)(struct!.schedule),
+    schedule: cdktn.listMapper(tfAlarmMuteRuleSchedulePropertyToTerraform, true)(struct!.schedule),
   }
 }
 
 
-export function awsCloudwatchAlarmMuteRuleRulePropertyToHclTerraform(struct?: AwsCloudwatchAlarmMuteRule.RuleProperty | cdktn.IResolvable): any {
+export function tfAlarmMuteRuleRulePropertyToHclTerraform(struct?: TfAlarmMuteRule.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     schedule: {
-      value: cdktn.listMapperHcl(awsCloudwatchAlarmMuteRuleSchedulePropertyToHclTerraform, true)(struct!.schedule),
+      value: cdktn.listMapperHcl(tfAlarmMuteRuleSchedulePropertyToHclTerraform, true)(struct!.schedule),
       isBlock: true,
       type: "list",
       storageClassType: "SchedulePropertyList",
@@ -440,10 +440,10 @@ export function awsCloudwatchAlarmMuteRuleRulePropertyToHclTerraform(struct?: Aw
 }
 
 
-export namespace AwsCloudwatchAlarmMuteRule {
+export namespace TfAlarmMuteRule {
 export interface MuteTargetsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_alarm_mute_rule#alarm_names AwsCloudwatchAlarmMuteRule#alarm_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_alarm_mute_rule#alarm_names TfAlarmMuteRule#alarm_names}
   */
   readonly alarmNames: string[];
 }
@@ -526,15 +526,15 @@ export class MuteTargetsPropertyList extends cdktn.ComplexList {
 }
 export interface ScheduleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_alarm_mute_rule#duration AwsCloudwatchAlarmMuteRule#duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_alarm_mute_rule#duration TfAlarmMuteRule#duration}
   */
   readonly duration: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_alarm_mute_rule#expression AwsCloudwatchAlarmMuteRule#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_alarm_mute_rule#expression TfAlarmMuteRule#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_alarm_mute_rule#timezone AwsCloudwatchAlarmMuteRule#timezone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_alarm_mute_rule#timezone TfAlarmMuteRule#timezone}
   */
   readonly timezone?: string;
 }
@@ -660,7 +660,7 @@ export interface RuleProperty {
   /**
   * schedule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_alarm_mute_rule#schedule AwsCloudwatchAlarmMuteRule#schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_alarm_mute_rule#schedule TfAlarmMuteRule#schedule}
   */
   readonly schedule?: ScheduleProperty[] | cdktn.IResolvable;
 }

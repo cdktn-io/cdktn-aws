@@ -5,39 +5,39 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsNetworkmanagerDxGatewayAttachmentConfig extends cdktn.TerraformMetaArguments {
+export interface TfDxGatewayAttachmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment#core_network_id AwsNetworkmanagerDxGatewayAttachment#core_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment#core_network_id TfDxGatewayAttachment#core_network_id}
   */
   readonly coreNetworkId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment#direct_connect_gateway_arn AwsNetworkmanagerDxGatewayAttachment#direct_connect_gateway_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment#direct_connect_gateway_arn TfDxGatewayAttachment#direct_connect_gateway_arn}
   */
   readonly directConnectGatewayArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment#edge_locations AwsNetworkmanagerDxGatewayAttachment#edge_locations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment#edge_locations TfDxGatewayAttachment#edge_locations}
   */
   readonly edgeLocations: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment#routing_policy_label AwsNetworkmanagerDxGatewayAttachment#routing_policy_label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment#routing_policy_label TfDxGatewayAttachment#routing_policy_label}
   */
   readonly routingPolicyLabel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment#tags AwsNetworkmanagerDxGatewayAttachment#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment#tags TfDxGatewayAttachment#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment#timeouts AwsNetworkmanagerDxGatewayAttachment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment#timeouts TfDxGatewayAttachment#timeouts}
   */
-  readonly timeouts?: AwsNetworkmanagerDxGatewayAttachment.TimeoutsProperty;
+  readonly timeouts?: TfDxGatewayAttachment.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment aws_networkmanager_dx_gateway_attachment}
 */
-export class AwsNetworkmanagerDxGatewayAttachment extends cdktn.TerraformResource {
+export class TfDxGatewayAttachment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -48,11 +48,11 @@ export class AwsNetworkmanagerDxGatewayAttachment extends cdktn.TerraformResourc
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsNetworkmanagerDxGatewayAttachment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDxGatewayAttachment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsNetworkmanagerDxGatewayAttachment to import
-  * @param importFromId The id of the existing AwsNetworkmanagerDxGatewayAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsNetworkmanagerDxGatewayAttachment to import is found
+  * @param importToId The construct id used in the generated config for the TfDxGatewayAttachment to import
+  * @param importFromId The id of the existing TfDxGatewayAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDxGatewayAttachment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkmanager_dx_gateway_attachment", importId: importFromId, provider });
@@ -67,9 +67,9 @@ export class AwsNetworkmanagerDxGatewayAttachment extends cdktn.TerraformResourc
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsNetworkmanagerDxGatewayAttachmentConfig
+  * @param options TfDxGatewayAttachmentConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsNetworkmanagerDxGatewayAttachmentConfig) {
+  public constructor(scope: Construct, id: string, config: TfDxGatewayAttachmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_networkmanager_dx_gateway_attachment',
       terraformGeneratorMetadata: {
@@ -215,11 +215,11 @@ export class AwsNetworkmanagerDxGatewayAttachment extends cdktn.TerraformResourc
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsNetworkmanagerDxGatewayAttachment.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfDxGatewayAttachment.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsNetworkmanagerDxGatewayAttachment.TimeoutsProperty) {
+  public putTimeouts(value: TfDxGatewayAttachment.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -241,7 +241,7 @@ export class AwsNetworkmanagerDxGatewayAttachment extends cdktn.TerraformResourc
       edge_locations: cdktn.listMapper(cdktn.stringToTerraform, false)(this._edgeLocations),
       routing_policy_label: cdktn.stringToTerraform(this._routingPolicyLabel),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      timeouts: awsNetworkmanagerDxGatewayAttachmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfDxGatewayAttachmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -278,10 +278,10 @@ export class AwsNetworkmanagerDxGatewayAttachment extends cdktn.TerraformResourc
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsNetworkmanagerDxGatewayAttachmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfDxGatewayAttachmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsNetworkmanagerDxGatewayAttachment.TimeoutsProperty",
+        storageClassType: "TfDxGatewayAttachment.TimeoutsProperty",
       },
     };
 
@@ -290,7 +290,7 @@ export class AwsNetworkmanagerDxGatewayAttachment extends cdktn.TerraformResourc
   }
 }
 
-export function awsNetworkmanagerDxGatewayAttachmentTimeoutsPropertyToTerraform(struct?: AwsNetworkmanagerDxGatewayAttachment.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDxGatewayAttachmentTimeoutsPropertyToTerraform(struct?: TfDxGatewayAttachment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -303,7 +303,7 @@ export function awsNetworkmanagerDxGatewayAttachmentTimeoutsPropertyToTerraform(
 }
 
 
-export function awsNetworkmanagerDxGatewayAttachmentTimeoutsPropertyToHclTerraform(struct?: AwsNetworkmanagerDxGatewayAttachment.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDxGatewayAttachmentTimeoutsPropertyToHclTerraform(struct?: TfDxGatewayAttachment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -334,24 +334,24 @@ export function awsNetworkmanagerDxGatewayAttachmentTimeoutsPropertyToHclTerrafo
 }
 
 
-export namespace AwsNetworkmanagerDxGatewayAttachment {
+export namespace TfDxGatewayAttachment {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment#create AwsNetworkmanagerDxGatewayAttachment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment#create TfDxGatewayAttachment#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment#delete AwsNetworkmanagerDxGatewayAttachment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment#delete TfDxGatewayAttachment#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment#update AwsNetworkmanagerDxGatewayAttachment#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment#update TfDxGatewayAttachment#update}
   */
   readonly update?: string;
 }

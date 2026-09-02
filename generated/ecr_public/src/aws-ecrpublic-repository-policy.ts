@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEcrpublicRepositoryPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface TfRepositoryPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository_policy#id AwsEcrpublicRepositoryPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository_policy#id TfRepositoryPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository_policy#policy AwsEcrpublicRepositoryPolicy#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository_policy#policy TfRepositoryPolicy#policy}
   */
   readonly policy: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository_policy#region AwsEcrpublicRepositoryPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository_policy#region TfRepositoryPolicy#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository_policy#repository_name AwsEcrpublicRepositoryPolicy#repository_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository_policy#repository_name TfRepositoryPolicy#repository_name}
   */
   readonly repositoryName: string;
 }
@@ -32,7 +32,7 @@ export interface AwsEcrpublicRepositoryPolicyConfig extends cdktn.TerraformMetaA
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository_policy aws_ecrpublic_repository_policy}
 */
-export class AwsEcrpublicRepositoryPolicy extends cdktn.TerraformResource {
+export class TfRepositoryPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class AwsEcrpublicRepositoryPolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEcrpublicRepositoryPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfRepositoryPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEcrpublicRepositoryPolicy to import
-  * @param importFromId The id of the existing AwsEcrpublicRepositoryPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEcrpublicRepositoryPolicy to import is found
+  * @param importToId The construct id used in the generated config for the TfRepositoryPolicy to import
+  * @param importFromId The id of the existing TfRepositoryPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecrpublic_repository_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfRepositoryPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ecrpublic_repository_policy", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class AwsEcrpublicRepositoryPolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEcrpublicRepositoryPolicyConfig
+  * @param options TfRepositoryPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEcrpublicRepositoryPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: TfRepositoryPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ecrpublic_repository_policy',
       terraformGeneratorMetadata: {

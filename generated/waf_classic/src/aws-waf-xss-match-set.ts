@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsWafXssMatchSetConfig extends cdktn.TerraformMetaArguments {
+export interface TfXssMatchSetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_xss_match_set#id AwsWafXssMatchSet#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_xss_match_set#id TfXssMatchSet#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_xss_match_set#name AwsWafXssMatchSet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_xss_match_set#name TfXssMatchSet#name}
   */
   readonly name: string;
   /**
   * xss_match_tuples block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_xss_match_set#xss_match_tuples AwsWafXssMatchSet#xss_match_tuples}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_xss_match_set#xss_match_tuples TfXssMatchSet#xss_match_tuples}
   */
-  readonly xssMatchTuples?: AwsWafXssMatchSet.XssMatchTuplesProperty[] | cdktn.IResolvable;
+  readonly xssMatchTuples?: TfXssMatchSet.XssMatchTuplesProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_xss_match_set aws_waf_xss_match_set}
 */
-export class AwsWafXssMatchSet extends cdktn.TerraformResource {
+export class TfXssMatchSet extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class AwsWafXssMatchSet extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsWafXssMatchSet resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfXssMatchSet resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsWafXssMatchSet to import
-  * @param importFromId The id of the existing AwsWafXssMatchSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_xss_match_set#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsWafXssMatchSet to import is found
+  * @param importToId The construct id used in the generated config for the TfXssMatchSet to import
+  * @param importFromId The id of the existing TfXssMatchSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_xss_match_set#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfXssMatchSet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_waf_xss_match_set", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class AwsWafXssMatchSet extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsWafXssMatchSetConfig
+  * @param options TfXssMatchSetConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsWafXssMatchSetConfig) {
+  public constructor(scope: Construct, id: string, config: TfXssMatchSetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_waf_xss_match_set',
       terraformGeneratorMetadata: {
@@ -120,11 +120,11 @@ export class AwsWafXssMatchSet extends cdktn.TerraformResource {
   }
 
   // xss_match_tuples - computed: false, optional: true, required: false
-  private _xssMatchTuples = new AwsWafXssMatchSet.XssMatchTuplesPropertyList(this, "xss_match_tuples", true);
+  private _xssMatchTuples = new TfXssMatchSet.XssMatchTuplesPropertyList(this, "xss_match_tuples", true);
   public get xssMatchTuples() {
     return this._xssMatchTuples;
   }
-  public putXssMatchTuples(value: AwsWafXssMatchSet.XssMatchTuplesProperty[] | cdktn.IResolvable) {
+  public putXssMatchTuples(value: TfXssMatchSet.XssMatchTuplesProperty[] | cdktn.IResolvable) {
     this._xssMatchTuples.internalValue = value;
   }
   public resetXssMatchTuples() {
@@ -143,7 +143,7 @@ export class AwsWafXssMatchSet extends cdktn.TerraformResource {
     return {
       id: cdktn.stringToTerraform(this._id),
       name: cdktn.stringToTerraform(this._name),
-      xss_match_tuples: cdktn.listMapper(awsWafXssMatchSetXssMatchTuplesPropertyToTerraform, true)(this._xssMatchTuples.internalValue),
+      xss_match_tuples: cdktn.listMapper(tfXssMatchSetXssMatchTuplesPropertyToTerraform, true)(this._xssMatchTuples.internalValue),
     };
   }
 
@@ -162,10 +162,10 @@ export class AwsWafXssMatchSet extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       xss_match_tuples: {
-        value: cdktn.listMapperHcl(awsWafXssMatchSetXssMatchTuplesPropertyToHclTerraform, true)(this._xssMatchTuples.internalValue),
+        value: cdktn.listMapperHcl(tfXssMatchSetXssMatchTuplesPropertyToHclTerraform, true)(this._xssMatchTuples.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsWafXssMatchSet.XssMatchTuplesPropertyList",
+        storageClassType: "TfXssMatchSet.XssMatchTuplesPropertyList",
       },
     };
 
@@ -174,7 +174,7 @@ export class AwsWafXssMatchSet extends cdktn.TerraformResource {
   }
 }
 
-export function awsWafXssMatchSetFieldToMatchPropertyToTerraform(struct?: AwsWafXssMatchSet.FieldToMatchPropertyOutputReference | AwsWafXssMatchSet.FieldToMatchProperty): any {
+export function tfXssMatchSetFieldToMatchPropertyToTerraform(struct?: TfXssMatchSet.FieldToMatchPropertyOutputReference | TfXssMatchSet.FieldToMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -186,7 +186,7 @@ export function awsWafXssMatchSetFieldToMatchPropertyToTerraform(struct?: AwsWaf
 }
 
 
-export function awsWafXssMatchSetFieldToMatchPropertyToHclTerraform(struct?: AwsWafXssMatchSet.FieldToMatchPropertyOutputReference | AwsWafXssMatchSet.FieldToMatchProperty): any {
+export function tfXssMatchSetFieldToMatchPropertyToHclTerraform(struct?: TfXssMatchSet.FieldToMatchPropertyOutputReference | TfXssMatchSet.FieldToMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -211,19 +211,19 @@ export function awsWafXssMatchSetFieldToMatchPropertyToHclTerraform(struct?: Aws
 }
 
 
-export function awsWafXssMatchSetXssMatchTuplesPropertyToTerraform(struct?: AwsWafXssMatchSet.XssMatchTuplesProperty | cdktn.IResolvable): any {
+export function tfXssMatchSetXssMatchTuplesPropertyToTerraform(struct?: TfXssMatchSet.XssMatchTuplesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     text_transformation: cdktn.stringToTerraform(struct!.textTransformation),
-    field_to_match: awsWafXssMatchSetFieldToMatchPropertyToTerraform(struct!.fieldToMatch),
+    field_to_match: tfXssMatchSetFieldToMatchPropertyToTerraform(struct!.fieldToMatch),
   }
 }
 
 
-export function awsWafXssMatchSetXssMatchTuplesPropertyToHclTerraform(struct?: AwsWafXssMatchSet.XssMatchTuplesProperty | cdktn.IResolvable): any {
+export function tfXssMatchSetXssMatchTuplesPropertyToHclTerraform(struct?: TfXssMatchSet.XssMatchTuplesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -236,7 +236,7 @@ export function awsWafXssMatchSetXssMatchTuplesPropertyToHclTerraform(struct?: A
       storageClassType: "string",
     },
     field_to_match: {
-      value: awsWafXssMatchSetFieldToMatchPropertyToHclTerraform(struct!.fieldToMatch),
+      value: tfXssMatchSetFieldToMatchPropertyToHclTerraform(struct!.fieldToMatch),
       isBlock: true,
       type: "list",
       storageClassType: "FieldToMatchPropertyList",
@@ -248,14 +248,14 @@ export function awsWafXssMatchSetXssMatchTuplesPropertyToHclTerraform(struct?: A
 }
 
 
-export namespace AwsWafXssMatchSet {
+export namespace TfXssMatchSet {
 export interface FieldToMatchProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_xss_match_set#data AwsWafXssMatchSet#data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_xss_match_set#data TfXssMatchSet#data}
   */
   readonly data?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_xss_match_set#type AwsWafXssMatchSet#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_xss_match_set#type TfXssMatchSet#type}
   */
   readonly type: string;
 }
@@ -328,13 +328,13 @@ export class FieldToMatchPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface XssMatchTuplesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_xss_match_set#text_transformation AwsWafXssMatchSet#text_transformation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_xss_match_set#text_transformation TfXssMatchSet#text_transformation}
   */
   readonly textTransformation: string;
   /**
   * field_to_match block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_xss_match_set#field_to_match AwsWafXssMatchSet#field_to_match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_xss_match_set#field_to_match TfXssMatchSet#field_to_match}
   */
   readonly fieldToMatch: FieldToMatchProperty;
 }

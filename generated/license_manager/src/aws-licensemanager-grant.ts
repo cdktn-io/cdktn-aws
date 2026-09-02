@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsLicensemanagerGrantConfig extends cdktn.TerraformMetaArguments {
+export interface TfGrantConfig extends cdktn.TerraformMetaArguments {
   /**
   * Allowed operations for the grant. This is a subset of the allowed operations on the license.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_grant#allowed_operations AwsLicensemanagerGrant#allowed_operations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_grant#allowed_operations TfGrant#allowed_operations}
   */
   readonly allowedOperations: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_grant#id AwsLicensemanagerGrant#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_grant#id TfGrant#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,25 +22,25 @@ export interface AwsLicensemanagerGrantConfig extends cdktn.TerraformMetaArgumen
   /**
   * License ARN.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_grant#license_arn AwsLicensemanagerGrant#license_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_grant#license_arn TfGrant#license_arn}
   */
   readonly licenseArn: string;
   /**
   * Name of the grant.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_grant#name AwsLicensemanagerGrant#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_grant#name TfGrant#name}
   */
   readonly name: string;
   /**
   * The grantee principal ARN. The target account for the grant in the form of the ARN for an account principal of the root user.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_grant#principal AwsLicensemanagerGrant#principal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_grant#principal TfGrant#principal}
   */
   readonly principal: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_grant#region AwsLicensemanagerGrant#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_grant#region TfGrant#region}
   */
   readonly region?: string;
 }
@@ -48,7 +48,7 @@ export interface AwsLicensemanagerGrantConfig extends cdktn.TerraformMetaArgumen
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_grant aws_licensemanager_grant}
 */
-export class AwsLicensemanagerGrant extends cdktn.TerraformResource {
+export class TfGrant extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class AwsLicensemanagerGrant extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsLicensemanagerGrant resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfGrant resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsLicensemanagerGrant to import
-  * @param importFromId The id of the existing AwsLicensemanagerGrant that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_grant#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsLicensemanagerGrant to import is found
+  * @param importToId The construct id used in the generated config for the TfGrant to import
+  * @param importFromId The id of the existing TfGrant that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_grant#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfGrant to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_licensemanager_grant", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class AwsLicensemanagerGrant extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsLicensemanagerGrantConfig
+  * @param options TfGrantConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsLicensemanagerGrantConfig) {
+  public constructor(scope: Construct, id: string, config: TfGrantConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_licensemanager_grant',
       terraformGeneratorMetadata: {

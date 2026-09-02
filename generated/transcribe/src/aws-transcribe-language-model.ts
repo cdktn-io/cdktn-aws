@@ -5,58 +5,58 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsTranscribeLanguageModelConfig extends cdktn.TerraformMetaArguments {
+export interface TfLanguageModelConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_language_model#base_model_name AwsTranscribeLanguageModel#base_model_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_language_model#base_model_name TfLanguageModel#base_model_name}
   */
   readonly baseModelName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_language_model#id AwsTranscribeLanguageModel#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_language_model#id TfLanguageModel#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_language_model#language_code AwsTranscribeLanguageModel#language_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_language_model#language_code TfLanguageModel#language_code}
   */
   readonly languageCode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_language_model#model_name AwsTranscribeLanguageModel#model_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_language_model#model_name TfLanguageModel#model_name}
   */
   readonly modelName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_language_model#region AwsTranscribeLanguageModel#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_language_model#region TfLanguageModel#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_language_model#tags AwsTranscribeLanguageModel#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_language_model#tags TfLanguageModel#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_language_model#tags_all AwsTranscribeLanguageModel#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_language_model#tags_all TfLanguageModel#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * input_data_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_language_model#input_data_config AwsTranscribeLanguageModel#input_data_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_language_model#input_data_config TfLanguageModel#input_data_config}
   */
-  readonly inputDataConfig: AwsTranscribeLanguageModel.InputDataConfigProperty;
+  readonly inputDataConfig: TfLanguageModel.InputDataConfigProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_language_model#timeouts AwsTranscribeLanguageModel#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_language_model#timeouts TfLanguageModel#timeouts}
   */
-  readonly timeouts?: AwsTranscribeLanguageModel.TimeoutsProperty;
+  readonly timeouts?: TfLanguageModel.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_language_model aws_transcribe_language_model}
 */
-export class AwsTranscribeLanguageModel extends cdktn.TerraformResource {
+export class TfLanguageModel extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -67,11 +67,11 @@ export class AwsTranscribeLanguageModel extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsTranscribeLanguageModel resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfLanguageModel resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsTranscribeLanguageModel to import
-  * @param importFromId The id of the existing AwsTranscribeLanguageModel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_language_model#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsTranscribeLanguageModel to import is found
+  * @param importToId The construct id used in the generated config for the TfLanguageModel to import
+  * @param importFromId The id of the existing TfLanguageModel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_language_model#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfLanguageModel to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_transcribe_language_model", importId: importFromId, provider });
@@ -86,9 +86,9 @@ export class AwsTranscribeLanguageModel extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsTranscribeLanguageModelConfig
+  * @param options TfLanguageModelConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsTranscribeLanguageModelConfig) {
+  public constructor(scope: Construct, id: string, config: TfLanguageModelConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_transcribe_language_model',
       terraformGeneratorMetadata: {
@@ -228,11 +228,11 @@ export class AwsTranscribeLanguageModel extends cdktn.TerraformResource {
   }
 
   // input_data_config - computed: false, optional: false, required: true
-  private _inputDataConfig = new AwsTranscribeLanguageModel.InputDataConfigPropertyOutputReference(this, "input_data_config");
+  private _inputDataConfig = new TfLanguageModel.InputDataConfigPropertyOutputReference(this, "input_data_config");
   public get inputDataConfig() {
     return this._inputDataConfig;
   }
-  public putInputDataConfig(value: AwsTranscribeLanguageModel.InputDataConfigProperty) {
+  public putInputDataConfig(value: TfLanguageModel.InputDataConfigProperty) {
     this._inputDataConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -241,11 +241,11 @@ export class AwsTranscribeLanguageModel extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsTranscribeLanguageModel.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfLanguageModel.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsTranscribeLanguageModel.TimeoutsProperty) {
+  public putTimeouts(value: TfLanguageModel.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -269,8 +269,8 @@ export class AwsTranscribeLanguageModel extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      input_data_config: awsTranscribeLanguageModelInputDataConfigPropertyToTerraform(this._inputDataConfig.internalValue),
-      timeouts: awsTranscribeLanguageModelTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      input_data_config: tfLanguageModelInputDataConfigPropertyToTerraform(this._inputDataConfig.internalValue),
+      timeouts: tfLanguageModelTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -319,16 +319,16 @@ export class AwsTranscribeLanguageModel extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       input_data_config: {
-        value: awsTranscribeLanguageModelInputDataConfigPropertyToHclTerraform(this._inputDataConfig.internalValue),
+        value: tfLanguageModelInputDataConfigPropertyToHclTerraform(this._inputDataConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsTranscribeLanguageModel.InputDataConfigPropertyList",
+        storageClassType: "TfLanguageModel.InputDataConfigPropertyList",
       },
       timeouts: {
-        value: awsTranscribeLanguageModelTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfLanguageModelTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsTranscribeLanguageModel.TimeoutsProperty",
+        storageClassType: "TfLanguageModel.TimeoutsProperty",
       },
     };
 
@@ -337,7 +337,7 @@ export class AwsTranscribeLanguageModel extends cdktn.TerraformResource {
   }
 }
 
-export function awsTranscribeLanguageModelInputDataConfigPropertyToTerraform(struct?: AwsTranscribeLanguageModel.InputDataConfigPropertyOutputReference | AwsTranscribeLanguageModel.InputDataConfigProperty): any {
+export function tfLanguageModelInputDataConfigPropertyToTerraform(struct?: TfLanguageModel.InputDataConfigPropertyOutputReference | TfLanguageModel.InputDataConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -350,7 +350,7 @@ export function awsTranscribeLanguageModelInputDataConfigPropertyToTerraform(str
 }
 
 
-export function awsTranscribeLanguageModelInputDataConfigPropertyToHclTerraform(struct?: AwsTranscribeLanguageModel.InputDataConfigPropertyOutputReference | AwsTranscribeLanguageModel.InputDataConfigProperty): any {
+export function tfLanguageModelInputDataConfigPropertyToHclTerraform(struct?: TfLanguageModel.InputDataConfigPropertyOutputReference | TfLanguageModel.InputDataConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -381,7 +381,7 @@ export function awsTranscribeLanguageModelInputDataConfigPropertyToHclTerraform(
 }
 
 
-export function awsTranscribeLanguageModelTimeoutsPropertyToTerraform(struct?: AwsTranscribeLanguageModel.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfLanguageModelTimeoutsPropertyToTerraform(struct?: TfLanguageModel.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -392,7 +392,7 @@ export function awsTranscribeLanguageModelTimeoutsPropertyToTerraform(struct?: A
 }
 
 
-export function awsTranscribeLanguageModelTimeoutsPropertyToHclTerraform(struct?: AwsTranscribeLanguageModel.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfLanguageModelTimeoutsPropertyToHclTerraform(struct?: TfLanguageModel.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -411,18 +411,18 @@ export function awsTranscribeLanguageModelTimeoutsPropertyToHclTerraform(struct?
 }
 
 
-export namespace AwsTranscribeLanguageModel {
+export namespace TfLanguageModel {
 export interface InputDataConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_language_model#data_access_role_arn AwsTranscribeLanguageModel#data_access_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_language_model#data_access_role_arn TfLanguageModel#data_access_role_arn}
   */
   readonly dataAccessRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_language_model#s3_uri AwsTranscribeLanguageModel#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_language_model#s3_uri TfLanguageModel#s3_uri}
   */
   readonly s3Uri: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_language_model#tuning_data_s3_uri AwsTranscribeLanguageModel#tuning_data_s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_language_model#tuning_data_s3_uri TfLanguageModel#tuning_data_s3_uri}
   */
   readonly tuningDataS3Uri?: string;
 }
@@ -514,7 +514,7 @@ export class InputDataConfigPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_language_model#create AwsTranscribeLanguageModel#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_language_model#create TfLanguageModel#create}
   */
   readonly create?: string;
 }

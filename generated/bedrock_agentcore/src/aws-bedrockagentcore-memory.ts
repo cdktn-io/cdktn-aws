@@ -5,61 +5,61 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsBedrockagentcoreMemoryConfig extends cdktn.TerraformMetaArguments {
+export interface TfMemoryConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#description AwsBedrockagentcoreMemory#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#description TfMemory#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#encryption_key_arn AwsBedrockagentcoreMemory#encryption_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#encryption_key_arn TfMemory#encryption_key_arn}
   */
   readonly encryptionKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#event_expiry_duration AwsBedrockagentcoreMemory#event_expiry_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#event_expiry_duration TfMemory#event_expiry_duration}
   */
   readonly eventExpiryDuration: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#memory_execution_role_arn AwsBedrockagentcoreMemory#memory_execution_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#memory_execution_role_arn TfMemory#memory_execution_role_arn}
   */
   readonly memoryExecutionRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#name AwsBedrockagentcoreMemory#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#name TfMemory#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#region AwsBedrockagentcoreMemory#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#region TfMemory#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#tags AwsBedrockagentcoreMemory#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#tags TfMemory#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * indexed_key block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#indexed_key AwsBedrockagentcoreMemory#indexed_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#indexed_key TfMemory#indexed_key}
   */
-  readonly indexedKey?: AwsBedrockagentcoreMemory.IndexedKeyProperty[] | cdktn.IResolvable;
+  readonly indexedKey?: TfMemory.IndexedKeyProperty[] | cdktn.IResolvable;
   /**
   * stream_delivery_resources block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#stream_delivery_resources AwsBedrockagentcoreMemory#stream_delivery_resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#stream_delivery_resources TfMemory#stream_delivery_resources}
   */
-  readonly streamDeliveryResources?: AwsBedrockagentcoreMemory.StreamDeliveryResourcesProperty[] | cdktn.IResolvable;
+  readonly streamDeliveryResources?: TfMemory.StreamDeliveryResourcesProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#timeouts AwsBedrockagentcoreMemory#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#timeouts TfMemory#timeouts}
   */
-  readonly timeouts?: AwsBedrockagentcoreMemory.TimeoutsProperty;
+  readonly timeouts?: TfMemory.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory aws_bedrockagentcore_memory}
 */
-export class AwsBedrockagentcoreMemory extends cdktn.TerraformResource {
+export class TfMemory extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -70,11 +70,11 @@ export class AwsBedrockagentcoreMemory extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsBedrockagentcoreMemory resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfMemory resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsBedrockagentcoreMemory to import
-  * @param importFromId The id of the existing AwsBedrockagentcoreMemory that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsBedrockagentcoreMemory to import is found
+  * @param importToId The construct id used in the generated config for the TfMemory to import
+  * @param importFromId The id of the existing TfMemory that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfMemory to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrockagentcore_memory", importId: importFromId, provider });
@@ -89,9 +89,9 @@ export class AwsBedrockagentcoreMemory extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsBedrockagentcoreMemoryConfig
+  * @param options TfMemoryConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsBedrockagentcoreMemoryConfig) {
+  public constructor(scope: Construct, id: string, config: TfMemoryConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrockagentcore_memory',
       terraformGeneratorMetadata: {
@@ -246,11 +246,11 @@ export class AwsBedrockagentcoreMemory extends cdktn.TerraformResource {
   }
 
   // indexed_key - computed: false, optional: true, required: false
-  private _indexedKey = new AwsBedrockagentcoreMemory.IndexedKeyPropertyList(this, "indexed_key", true);
+  private _indexedKey = new TfMemory.IndexedKeyPropertyList(this, "indexed_key", true);
   public get indexedKey() {
     return this._indexedKey;
   }
-  public putIndexedKey(value: AwsBedrockagentcoreMemory.IndexedKeyProperty[] | cdktn.IResolvable) {
+  public putIndexedKey(value: TfMemory.IndexedKeyProperty[] | cdktn.IResolvable) {
     this._indexedKey.internalValue = value;
   }
   public resetIndexedKey() {
@@ -262,11 +262,11 @@ export class AwsBedrockagentcoreMemory extends cdktn.TerraformResource {
   }
 
   // stream_delivery_resources - computed: false, optional: true, required: false
-  private _streamDeliveryResources = new AwsBedrockagentcoreMemory.StreamDeliveryResourcesPropertyList(this, "stream_delivery_resources", false);
+  private _streamDeliveryResources = new TfMemory.StreamDeliveryResourcesPropertyList(this, "stream_delivery_resources", false);
   public get streamDeliveryResources() {
     return this._streamDeliveryResources;
   }
-  public putStreamDeliveryResources(value: AwsBedrockagentcoreMemory.StreamDeliveryResourcesProperty[] | cdktn.IResolvable) {
+  public putStreamDeliveryResources(value: TfMemory.StreamDeliveryResourcesProperty[] | cdktn.IResolvable) {
     this._streamDeliveryResources.internalValue = value;
   }
   public resetStreamDeliveryResources() {
@@ -278,11 +278,11 @@ export class AwsBedrockagentcoreMemory extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsBedrockagentcoreMemory.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfMemory.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsBedrockagentcoreMemory.TimeoutsProperty) {
+  public putTimeouts(value: TfMemory.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -306,9 +306,9 @@ export class AwsBedrockagentcoreMemory extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      indexed_key: cdktn.listMapper(awsBedrockagentcoreMemoryIndexedKeyPropertyToTerraform, true)(this._indexedKey.internalValue),
-      stream_delivery_resources: cdktn.listMapper(awsBedrockagentcoreMemoryStreamDeliveryResourcesPropertyToTerraform, true)(this._streamDeliveryResources.internalValue),
-      timeouts: awsBedrockagentcoreMemoryTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      indexed_key: cdktn.listMapper(tfMemoryIndexedKeyPropertyToTerraform, true)(this._indexedKey.internalValue),
+      stream_delivery_resources: cdktn.listMapper(tfMemoryStreamDeliveryResourcesPropertyToTerraform, true)(this._streamDeliveryResources.internalValue),
+      timeouts: tfMemoryTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -357,22 +357,22 @@ export class AwsBedrockagentcoreMemory extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       indexed_key: {
-        value: cdktn.listMapperHcl(awsBedrockagentcoreMemoryIndexedKeyPropertyToHclTerraform, true)(this._indexedKey.internalValue),
+        value: cdktn.listMapperHcl(tfMemoryIndexedKeyPropertyToHclTerraform, true)(this._indexedKey.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsBedrockagentcoreMemory.IndexedKeyPropertyList",
+        storageClassType: "TfMemory.IndexedKeyPropertyList",
       },
       stream_delivery_resources: {
-        value: cdktn.listMapperHcl(awsBedrockagentcoreMemoryStreamDeliveryResourcesPropertyToHclTerraform, true)(this._streamDeliveryResources.internalValue),
+        value: cdktn.listMapperHcl(tfMemoryStreamDeliveryResourcesPropertyToHclTerraform, true)(this._streamDeliveryResources.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentcoreMemory.StreamDeliveryResourcesPropertyList",
+        storageClassType: "TfMemory.StreamDeliveryResourcesPropertyList",
       },
       timeouts: {
-        value: awsBedrockagentcoreMemoryTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfMemoryTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsBedrockagentcoreMemory.TimeoutsProperty",
+        storageClassType: "TfMemory.TimeoutsProperty",
       },
     };
 
@@ -381,7 +381,7 @@ export class AwsBedrockagentcoreMemory extends cdktn.TerraformResource {
   }
 }
 
-export function awsBedrockagentcoreMemoryIndexedKeyPropertyToTerraform(struct?: AwsBedrockagentcoreMemory.IndexedKeyProperty | cdktn.IResolvable): any {
+export function tfMemoryIndexedKeyPropertyToTerraform(struct?: TfMemory.IndexedKeyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -393,7 +393,7 @@ export function awsBedrockagentcoreMemoryIndexedKeyPropertyToTerraform(struct?: 
 }
 
 
-export function awsBedrockagentcoreMemoryIndexedKeyPropertyToHclTerraform(struct?: AwsBedrockagentcoreMemory.IndexedKeyProperty | cdktn.IResolvable): any {
+export function tfMemoryIndexedKeyPropertyToHclTerraform(struct?: TfMemory.IndexedKeyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -418,7 +418,7 @@ export function awsBedrockagentcoreMemoryIndexedKeyPropertyToHclTerraform(struct
 }
 
 
-export function awsBedrockagentcoreMemoryContentConfigurationPropertyToTerraform(struct?: AwsBedrockagentcoreMemory.ContentConfigurationProperty | cdktn.IResolvable): any {
+export function tfMemoryContentConfigurationPropertyToTerraform(struct?: TfMemory.ContentConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -430,7 +430,7 @@ export function awsBedrockagentcoreMemoryContentConfigurationPropertyToTerraform
 }
 
 
-export function awsBedrockagentcoreMemoryContentConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentcoreMemory.ContentConfigurationProperty | cdktn.IResolvable): any {
+export function tfMemoryContentConfigurationPropertyToHclTerraform(struct?: TfMemory.ContentConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -455,19 +455,19 @@ export function awsBedrockagentcoreMemoryContentConfigurationPropertyToHclTerraf
 }
 
 
-export function awsBedrockagentcoreMemoryKinesisPropertyToTerraform(struct?: AwsBedrockagentcoreMemory.KinesisProperty | cdktn.IResolvable): any {
+export function tfMemoryKinesisPropertyToTerraform(struct?: TfMemory.KinesisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     data_stream_arn: cdktn.stringToTerraform(struct!.dataStreamArn),
-    content_configuration: cdktn.listMapper(awsBedrockagentcoreMemoryContentConfigurationPropertyToTerraform, true)(struct!.contentConfiguration),
+    content_configuration: cdktn.listMapper(tfMemoryContentConfigurationPropertyToTerraform, true)(struct!.contentConfiguration),
   }
 }
 
 
-export function awsBedrockagentcoreMemoryKinesisPropertyToHclTerraform(struct?: AwsBedrockagentcoreMemory.KinesisProperty | cdktn.IResolvable): any {
+export function tfMemoryKinesisPropertyToHclTerraform(struct?: TfMemory.KinesisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -480,7 +480,7 @@ export function awsBedrockagentcoreMemoryKinesisPropertyToHclTerraform(struct?: 
       storageClassType: "string",
     },
     content_configuration: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreMemoryContentConfigurationPropertyToHclTerraform, true)(struct!.contentConfiguration),
+      value: cdktn.listMapperHcl(tfMemoryContentConfigurationPropertyToHclTerraform, true)(struct!.contentConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ContentConfigurationPropertyList",
@@ -492,25 +492,25 @@ export function awsBedrockagentcoreMemoryKinesisPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsBedrockagentcoreMemoryResourcePropertyToTerraform(struct?: AwsBedrockagentcoreMemory.ResourceProperty | cdktn.IResolvable): any {
+export function tfMemoryResourcePropertyToTerraform(struct?: TfMemory.ResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    kinesis: cdktn.listMapper(awsBedrockagentcoreMemoryKinesisPropertyToTerraform, true)(struct!.kinesis),
+    kinesis: cdktn.listMapper(tfMemoryKinesisPropertyToTerraform, true)(struct!.kinesis),
   }
 }
 
 
-export function awsBedrockagentcoreMemoryResourcePropertyToHclTerraform(struct?: AwsBedrockagentcoreMemory.ResourceProperty | cdktn.IResolvable): any {
+export function tfMemoryResourcePropertyToHclTerraform(struct?: TfMemory.ResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     kinesis: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreMemoryKinesisPropertyToHclTerraform, true)(struct!.kinesis),
+      value: cdktn.listMapperHcl(tfMemoryKinesisPropertyToHclTerraform, true)(struct!.kinesis),
       isBlock: true,
       type: "list",
       storageClassType: "KinesisPropertyList",
@@ -522,25 +522,25 @@ export function awsBedrockagentcoreMemoryResourcePropertyToHclTerraform(struct?:
 }
 
 
-export function awsBedrockagentcoreMemoryStreamDeliveryResourcesPropertyToTerraform(struct?: AwsBedrockagentcoreMemory.StreamDeliveryResourcesProperty | cdktn.IResolvable): any {
+export function tfMemoryStreamDeliveryResourcesPropertyToTerraform(struct?: TfMemory.StreamDeliveryResourcesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    resource: cdktn.listMapper(awsBedrockagentcoreMemoryResourcePropertyToTerraform, true)(struct!.resource),
+    resource: cdktn.listMapper(tfMemoryResourcePropertyToTerraform, true)(struct!.resource),
   }
 }
 
 
-export function awsBedrockagentcoreMemoryStreamDeliveryResourcesPropertyToHclTerraform(struct?: AwsBedrockagentcoreMemory.StreamDeliveryResourcesProperty | cdktn.IResolvable): any {
+export function tfMemoryStreamDeliveryResourcesPropertyToHclTerraform(struct?: TfMemory.StreamDeliveryResourcesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     resource: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreMemoryResourcePropertyToHclTerraform, true)(struct!.resource),
+      value: cdktn.listMapperHcl(tfMemoryResourcePropertyToHclTerraform, true)(struct!.resource),
       isBlock: true,
       type: "list",
       storageClassType: "ResourcePropertyList",
@@ -552,7 +552,7 @@ export function awsBedrockagentcoreMemoryStreamDeliveryResourcesPropertyToHclTer
 }
 
 
-export function awsBedrockagentcoreMemoryTimeoutsPropertyToTerraform(struct?: AwsBedrockagentcoreMemory.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfMemoryTimeoutsPropertyToTerraform(struct?: TfMemory.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -565,7 +565,7 @@ export function awsBedrockagentcoreMemoryTimeoutsPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsBedrockagentcoreMemoryTimeoutsPropertyToHclTerraform(struct?: AwsBedrockagentcoreMemory.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfMemoryTimeoutsPropertyToHclTerraform(struct?: TfMemory.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -596,14 +596,14 @@ export function awsBedrockagentcoreMemoryTimeoutsPropertyToHclTerraform(struct?:
 }
 
 
-export namespace AwsBedrockagentcoreMemory {
+export namespace TfMemory {
 export interface IndexedKeyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#key AwsBedrockagentcoreMemory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#key TfMemory#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#type AwsBedrockagentcoreMemory#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#type TfMemory#type}
   */
   readonly type: string;
 }
@@ -705,11 +705,11 @@ export class IndexedKeyPropertyList extends cdktn.ComplexList {
 }
 export interface ContentConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#level AwsBedrockagentcoreMemory#level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#level TfMemory#level}
   */
   readonly level?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#type AwsBedrockagentcoreMemory#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#type TfMemory#type}
   */
   readonly type: string;
 }
@@ -814,13 +814,13 @@ export class ContentConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface KinesisProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#data_stream_arn AwsBedrockagentcoreMemory#data_stream_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#data_stream_arn TfMemory#data_stream_arn}
   */
   readonly dataStreamArn: string;
   /**
   * content_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#content_configuration AwsBedrockagentcoreMemory#content_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#content_configuration TfMemory#content_configuration}
   */
   readonly contentConfiguration?: ContentConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -927,7 +927,7 @@ export interface ResourceProperty {
   /**
   * kinesis block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#kinesis AwsBedrockagentcoreMemory#kinesis}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#kinesis TfMemory#kinesis}
   */
   readonly kinesis?: KinesisProperty[] | cdktn.IResolvable;
 }
@@ -1015,7 +1015,7 @@ export interface StreamDeliveryResourcesProperty {
   /**
   * resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#resource AwsBedrockagentcoreMemory#resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#resource TfMemory#resource}
   */
   readonly resource?: ResourceProperty[] | cdktn.IResolvable;
 }
@@ -1103,19 +1103,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#create AwsBedrockagentcoreMemory#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#create TfMemory#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#delete AwsBedrockagentcoreMemory#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#delete TfMemory#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#update AwsBedrockagentcoreMemory#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory#update TfMemory#update}
   */
   readonly update?: string;
 }

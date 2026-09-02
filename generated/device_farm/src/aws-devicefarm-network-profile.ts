@@ -5,74 +5,74 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDevicefarmNetworkProfileConfig extends cdktn.TerraformMetaArguments {
+export interface TfNetworkProfileConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#description AwsDevicefarmNetworkProfile#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#description TfNetworkProfile#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#downlink_bandwidth_bits AwsDevicefarmNetworkProfile#downlink_bandwidth_bits}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#downlink_bandwidth_bits TfNetworkProfile#downlink_bandwidth_bits}
   */
   readonly downlinkBandwidthBits?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#downlink_delay_ms AwsDevicefarmNetworkProfile#downlink_delay_ms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#downlink_delay_ms TfNetworkProfile#downlink_delay_ms}
   */
   readonly downlinkDelayMs?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#downlink_jitter_ms AwsDevicefarmNetworkProfile#downlink_jitter_ms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#downlink_jitter_ms TfNetworkProfile#downlink_jitter_ms}
   */
   readonly downlinkJitterMs?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#downlink_loss_percent AwsDevicefarmNetworkProfile#downlink_loss_percent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#downlink_loss_percent TfNetworkProfile#downlink_loss_percent}
   */
   readonly downlinkLossPercent?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#id AwsDevicefarmNetworkProfile#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#id TfNetworkProfile#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#name AwsDevicefarmNetworkProfile#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#name TfNetworkProfile#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#project_arn AwsDevicefarmNetworkProfile#project_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#project_arn TfNetworkProfile#project_arn}
   */
   readonly projectArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#region AwsDevicefarmNetworkProfile#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#region TfNetworkProfile#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#tags AwsDevicefarmNetworkProfile#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#tags TfNetworkProfile#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#tags_all AwsDevicefarmNetworkProfile#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#tags_all TfNetworkProfile#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#type AwsDevicefarmNetworkProfile#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#type TfNetworkProfile#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#uplink_bandwidth_bits AwsDevicefarmNetworkProfile#uplink_bandwidth_bits}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#uplink_bandwidth_bits TfNetworkProfile#uplink_bandwidth_bits}
   */
   readonly uplinkBandwidthBits?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#uplink_delay_ms AwsDevicefarmNetworkProfile#uplink_delay_ms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#uplink_delay_ms TfNetworkProfile#uplink_delay_ms}
   */
   readonly uplinkDelayMs?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#uplink_jitter_ms AwsDevicefarmNetworkProfile#uplink_jitter_ms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#uplink_jitter_ms TfNetworkProfile#uplink_jitter_ms}
   */
   readonly uplinkJitterMs?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#uplink_loss_percent AwsDevicefarmNetworkProfile#uplink_loss_percent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#uplink_loss_percent TfNetworkProfile#uplink_loss_percent}
   */
   readonly uplinkLossPercent?: number;
 }
@@ -80,7 +80,7 @@ export interface AwsDevicefarmNetworkProfileConfig extends cdktn.TerraformMetaAr
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile aws_devicefarm_network_profile}
 */
-export class AwsDevicefarmNetworkProfile extends cdktn.TerraformResource {
+export class TfNetworkProfile extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -91,11 +91,11 @@ export class AwsDevicefarmNetworkProfile extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDevicefarmNetworkProfile resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfNetworkProfile resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDevicefarmNetworkProfile to import
-  * @param importFromId The id of the existing AwsDevicefarmNetworkProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDevicefarmNetworkProfile to import is found
+  * @param importToId The construct id used in the generated config for the TfNetworkProfile to import
+  * @param importFromId The id of the existing TfNetworkProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_network_profile#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfNetworkProfile to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_devicefarm_network_profile", importId: importFromId, provider });
@@ -110,9 +110,9 @@ export class AwsDevicefarmNetworkProfile extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDevicefarmNetworkProfileConfig
+  * @param options TfNetworkProfileConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDevicefarmNetworkProfileConfig) {
+  public constructor(scope: Construct, id: string, config: TfNetworkProfileConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_devicefarm_network_profile',
       terraformGeneratorMetadata: {

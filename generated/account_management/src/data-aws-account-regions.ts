@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsAccountRegionsConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataRegionsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/account_regions#account_id DataAwsAccountRegions#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/account_regions#account_id TfDataRegions#account_id}
   */
   readonly accountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/account_regions#region_opt_status_contains DataAwsAccountRegions#region_opt_status_contains}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/account_regions#region_opt_status_contains TfDataRegions#region_opt_status_contains}
   */
   readonly regionOptStatusContains?: string[];
 }
@@ -19,7 +19,7 @@ export interface DataAwsAccountRegionsConfig extends cdktn.TerraformMetaArgument
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/account_regions aws_account_regions}
 */
-export class DataAwsAccountRegions extends cdktn.TerraformDataSource {
+export class TfDataRegions extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -30,11 +30,11 @@ export class DataAwsAccountRegions extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsAccountRegions resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataRegions resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsAccountRegions to import
-  * @param importFromId The id of the existing DataAwsAccountRegions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/account_regions#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsAccountRegions to import is found
+  * @param importToId The construct id used in the generated config for the TfDataRegions to import
+  * @param importFromId The id of the existing TfDataRegions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/account_regions#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataRegions to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_account_regions", importId: importFromId, provider });
@@ -49,9 +49,9 @@ export class DataAwsAccountRegions extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsAccountRegionsConfig = {}
+  * @param options TfDataRegionsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsAccountRegionsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDataRegionsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_account_regions',
       terraformGeneratorMetadata: {
@@ -108,7 +108,7 @@ export class DataAwsAccountRegions extends cdktn.TerraformDataSource {
   }
 
   // regions - computed: true, optional: false, required: false
-  private _regions = new DataAwsAccountRegions.RegionsPropertyList(this, "regions", false);
+  private _regions = new TfDataRegions.RegionsPropertyList(this, "regions", false);
   public get regions() {
     return this._regions;
   }
@@ -145,7 +145,7 @@ export class DataAwsAccountRegions extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsAccountRegionsRegionsPropertyToTerraform(struct?: DataAwsAccountRegions.RegionsProperty): any {
+export function tfDataRegionsRegionsPropertyToTerraform(struct?: TfDataRegions.RegionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -155,7 +155,7 @@ export function dataAwsAccountRegionsRegionsPropertyToTerraform(struct?: DataAws
 }
 
 
-export function dataAwsAccountRegionsRegionsPropertyToHclTerraform(struct?: DataAwsAccountRegions.RegionsProperty): any {
+export function tfDataRegionsRegionsPropertyToHclTerraform(struct?: TfDataRegions.RegionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -166,7 +166,7 @@ export function dataAwsAccountRegionsRegionsPropertyToHclTerraform(struct?: Data
 }
 
 
-export namespace DataAwsAccountRegions {
+export namespace TfDataRegions {
 export interface RegionsProperty {
 }
 export class RegionsPropertyOutputReference extends cdktn.ComplexObject {

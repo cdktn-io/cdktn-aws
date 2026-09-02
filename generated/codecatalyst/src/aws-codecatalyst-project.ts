@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCodecatalystProjectConfig extends cdktn.TerraformMetaArguments {
+export interface TfProjectConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_project#description AwsCodecatalystProject#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_project#description TfProject#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_project#display_name AwsCodecatalystProject#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_project#display_name TfProject#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_project#id AwsCodecatalystProject#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_project#id TfProject#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,25 +24,25 @@ export interface AwsCodecatalystProjectConfig extends cdktn.TerraformMetaArgumen
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_project#region AwsCodecatalystProject#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_project#region TfProject#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_project#space_name AwsCodecatalystProject#space_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_project#space_name TfProject#space_name}
   */
   readonly spaceName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_project#timeouts AwsCodecatalystProject#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_project#timeouts TfProject#timeouts}
   */
-  readonly timeouts?: AwsCodecatalystProject.TimeoutsProperty;
+  readonly timeouts?: TfProject.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_project aws_codecatalyst_project}
 */
-export class AwsCodecatalystProject extends cdktn.TerraformResource {
+export class TfProject extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class AwsCodecatalystProject extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCodecatalystProject resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfProject resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCodecatalystProject to import
-  * @param importFromId The id of the existing AwsCodecatalystProject that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_project#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCodecatalystProject to import is found
+  * @param importToId The construct id used in the generated config for the TfProject to import
+  * @param importFromId The id of the existing TfProject that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_project#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfProject to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_codecatalyst_project", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class AwsCodecatalystProject extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCodecatalystProjectConfig
+  * @param options TfProjectConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCodecatalystProjectConfig) {
+  public constructor(scope: Construct, id: string, config: TfProjectConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_codecatalyst_project',
       terraformGeneratorMetadata: {
@@ -182,11 +182,11 @@ export class AwsCodecatalystProject extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsCodecatalystProject.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfProject.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsCodecatalystProject.TimeoutsProperty) {
+  public putTimeouts(value: TfProject.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -208,7 +208,7 @@ export class AwsCodecatalystProject extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       space_name: cdktn.stringToTerraform(this._spaceName),
-      timeouts: awsCodecatalystProjectTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfProjectTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -245,10 +245,10 @@ export class AwsCodecatalystProject extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsCodecatalystProjectTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfProjectTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsCodecatalystProject.TimeoutsProperty",
+        storageClassType: "TfProject.TimeoutsProperty",
       },
     };
 
@@ -257,7 +257,7 @@ export class AwsCodecatalystProject extends cdktn.TerraformResource {
   }
 }
 
-export function awsCodecatalystProjectTimeoutsPropertyToTerraform(struct?: AwsCodecatalystProject.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfProjectTimeoutsPropertyToTerraform(struct?: TfProject.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -270,7 +270,7 @@ export function awsCodecatalystProjectTimeoutsPropertyToTerraform(struct?: AwsCo
 }
 
 
-export function awsCodecatalystProjectTimeoutsPropertyToHclTerraform(struct?: AwsCodecatalystProject.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfProjectTimeoutsPropertyToHclTerraform(struct?: TfProject.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -301,18 +301,18 @@ export function awsCodecatalystProjectTimeoutsPropertyToHclTerraform(struct?: Aw
 }
 
 
-export namespace AwsCodecatalystProject {
+export namespace TfProject {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_project#create AwsCodecatalystProject#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_project#create TfProject#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_project#delete AwsCodecatalystProject#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_project#delete TfProject#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_project#update AwsCodecatalystProject#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_project#update TfProject#update}
   */
   readonly update?: string;
 }

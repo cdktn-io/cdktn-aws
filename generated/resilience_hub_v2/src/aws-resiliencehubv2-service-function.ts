@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsResiliencehubv2ServiceFunctionConfig extends cdktn.TerraformMetaArguments {
+export interface TfServiceFunctionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service_function#criticality AwsResiliencehubv2ServiceFunction#criticality}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service_function#criticality TfServiceFunction#criticality}
   */
   readonly criticality: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service_function#description AwsResiliencehubv2ServiceFunction#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service_function#description TfServiceFunction#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service_function#name AwsResiliencehubv2ServiceFunction#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service_function#name TfServiceFunction#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service_function#region AwsResiliencehubv2ServiceFunction#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service_function#region TfServiceFunction#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service_function#service_arn AwsResiliencehubv2ServiceFunction#service_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service_function#service_arn TfServiceFunction#service_arn}
   */
   readonly serviceArn: string;
 }
@@ -33,7 +33,7 @@ export interface AwsResiliencehubv2ServiceFunctionConfig extends cdktn.Terraform
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service_function aws_resiliencehubv2_service_function}
 */
-export class AwsResiliencehubv2ServiceFunction extends cdktn.TerraformResource {
+export class TfServiceFunction extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class AwsResiliencehubv2ServiceFunction extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsResiliencehubv2ServiceFunction resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfServiceFunction resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsResiliencehubv2ServiceFunction to import
-  * @param importFromId The id of the existing AwsResiliencehubv2ServiceFunction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service_function#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsResiliencehubv2ServiceFunction to import is found
+  * @param importToId The construct id used in the generated config for the TfServiceFunction to import
+  * @param importFromId The id of the existing TfServiceFunction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehubv2_service_function#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfServiceFunction to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_resiliencehubv2_service_function", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class AwsResiliencehubv2ServiceFunction extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsResiliencehubv2ServiceFunctionConfig
+  * @param options TfServiceFunctionConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsResiliencehubv2ServiceFunctionConfig) {
+  public constructor(scope: Construct, id: string, config: TfServiceFunctionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_resiliencehubv2_service_function',
       terraformGeneratorMetadata: {

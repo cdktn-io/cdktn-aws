@@ -5,22 +5,22 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsCodecommitApprovalRuleTemplateConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataApprovalRuleTemplateConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecommit_approval_rule_template#id DataAwsCodecommitApprovalRuleTemplate#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecommit_approval_rule_template#id TfDataApprovalRuleTemplate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecommit_approval_rule_template#name DataAwsCodecommitApprovalRuleTemplate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecommit_approval_rule_template#name TfDataApprovalRuleTemplate#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecommit_approval_rule_template#region DataAwsCodecommitApprovalRuleTemplate#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecommit_approval_rule_template#region TfDataApprovalRuleTemplate#region}
   */
   readonly region?: string;
 }
@@ -28,7 +28,7 @@ export interface DataAwsCodecommitApprovalRuleTemplateConfig extends cdktn.Terra
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecommit_approval_rule_template aws_codecommit_approval_rule_template}
 */
-export class DataAwsCodecommitApprovalRuleTemplate extends cdktn.TerraformDataSource {
+export class TfDataApprovalRuleTemplate extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class DataAwsCodecommitApprovalRuleTemplate extends cdktn.TerraformDataSo
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsCodecommitApprovalRuleTemplate resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataApprovalRuleTemplate resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsCodecommitApprovalRuleTemplate to import
-  * @param importFromId The id of the existing DataAwsCodecommitApprovalRuleTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecommit_approval_rule_template#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsCodecommitApprovalRuleTemplate to import is found
+  * @param importToId The construct id used in the generated config for the TfDataApprovalRuleTemplate to import
+  * @param importFromId The id of the existing TfDataApprovalRuleTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecommit_approval_rule_template#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataApprovalRuleTemplate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_codecommit_approval_rule_template", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class DataAwsCodecommitApprovalRuleTemplate extends cdktn.TerraformDataSo
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsCodecommitApprovalRuleTemplateConfig
+  * @param options TfDataApprovalRuleTemplateConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsCodecommitApprovalRuleTemplateConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataApprovalRuleTemplateConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_codecommit_approval_rule_template',
       terraformGeneratorMetadata: {

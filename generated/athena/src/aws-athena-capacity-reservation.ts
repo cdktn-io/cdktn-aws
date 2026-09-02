@@ -5,37 +5,37 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsAthenaCapacityReservationConfig extends cdktn.TerraformMetaArguments {
+export interface TfCapacityReservationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_capacity_reservation#name AwsAthenaCapacityReservation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_capacity_reservation#name TfCapacityReservation#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_capacity_reservation#region AwsAthenaCapacityReservation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_capacity_reservation#region TfCapacityReservation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_capacity_reservation#tags AwsAthenaCapacityReservation#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_capacity_reservation#tags TfCapacityReservation#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_capacity_reservation#target_dpus AwsAthenaCapacityReservation#target_dpus}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_capacity_reservation#target_dpus TfCapacityReservation#target_dpus}
   */
   readonly targetDpus: number;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_capacity_reservation#timeouts AwsAthenaCapacityReservation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_capacity_reservation#timeouts TfCapacityReservation#timeouts}
   */
-  readonly timeouts?: AwsAthenaCapacityReservation.TimeoutsProperty;
+  readonly timeouts?: TfCapacityReservation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_capacity_reservation aws_athena_capacity_reservation}
 */
-export class AwsAthenaCapacityReservation extends cdktn.TerraformResource {
+export class TfCapacityReservation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -46,11 +46,11 @@ export class AwsAthenaCapacityReservation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsAthenaCapacityReservation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfCapacityReservation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsAthenaCapacityReservation to import
-  * @param importFromId The id of the existing AwsAthenaCapacityReservation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_capacity_reservation#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsAthenaCapacityReservation to import is found
+  * @param importToId The construct id used in the generated config for the TfCapacityReservation to import
+  * @param importFromId The id of the existing TfCapacityReservation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_capacity_reservation#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfCapacityReservation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_athena_capacity_reservation", importId: importFromId, provider });
@@ -65,9 +65,9 @@ export class AwsAthenaCapacityReservation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsAthenaCapacityReservationConfig
+  * @param options TfCapacityReservationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsAthenaCapacityReservationConfig) {
+  public constructor(scope: Construct, id: string, config: TfCapacityReservationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_athena_capacity_reservation',
       terraformGeneratorMetadata: {
@@ -174,11 +174,11 @@ export class AwsAthenaCapacityReservation extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsAthenaCapacityReservation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfCapacityReservation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsAthenaCapacityReservation.TimeoutsProperty) {
+  public putTimeouts(value: TfCapacityReservation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -199,7 +199,7 @@ export class AwsAthenaCapacityReservation extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       target_dpus: cdktn.numberToTerraform(this._targetDpus),
-      timeouts: awsAthenaCapacityReservationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfCapacityReservationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -230,10 +230,10 @@ export class AwsAthenaCapacityReservation extends cdktn.TerraformResource {
         storageClassType: "number",
       },
       timeouts: {
-        value: awsAthenaCapacityReservationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfCapacityReservationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsAthenaCapacityReservation.TimeoutsProperty",
+        storageClassType: "TfCapacityReservation.TimeoutsProperty",
       },
     };
 
@@ -242,7 +242,7 @@ export class AwsAthenaCapacityReservation extends cdktn.TerraformResource {
   }
 }
 
-export function awsAthenaCapacityReservationTimeoutsPropertyToTerraform(struct?: AwsAthenaCapacityReservation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfCapacityReservationTimeoutsPropertyToTerraform(struct?: TfCapacityReservation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -255,7 +255,7 @@ export function awsAthenaCapacityReservationTimeoutsPropertyToTerraform(struct?:
 }
 
 
-export function awsAthenaCapacityReservationTimeoutsPropertyToHclTerraform(struct?: AwsAthenaCapacityReservation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfCapacityReservationTimeoutsPropertyToHclTerraform(struct?: TfCapacityReservation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -286,24 +286,24 @@ export function awsAthenaCapacityReservationTimeoutsPropertyToHclTerraform(struc
 }
 
 
-export namespace AwsAthenaCapacityReservation {
+export namespace TfCapacityReservation {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_capacity_reservation#create AwsAthenaCapacityReservation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_capacity_reservation#create TfCapacityReservation#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_capacity_reservation#delete AwsAthenaCapacityReservation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_capacity_reservation#delete TfCapacityReservation#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_capacity_reservation#update AwsAthenaCapacityReservation#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_capacity_reservation#update TfCapacityReservation#update}
   */
   readonly update?: string;
 }

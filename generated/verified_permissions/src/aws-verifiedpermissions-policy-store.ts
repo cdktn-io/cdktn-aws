@@ -5,37 +5,37 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsVerifiedpermissionsPolicyStoreConfig extends cdktn.TerraformMetaArguments {
+export interface TfPolicyStoreConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_policy_store#deletion_protection AwsVerifiedpermissionsPolicyStore#deletion_protection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_policy_store#deletion_protection TfPolicyStore#deletion_protection}
   */
   readonly deletionProtection?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_policy_store#description AwsVerifiedpermissionsPolicyStore#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_policy_store#description TfPolicyStore#description}
   */
   readonly description?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_policy_store#region AwsVerifiedpermissionsPolicyStore#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_policy_store#region TfPolicyStore#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_policy_store#tags AwsVerifiedpermissionsPolicyStore#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_policy_store#tags TfPolicyStore#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * validation_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_policy_store#validation_settings AwsVerifiedpermissionsPolicyStore#validation_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_policy_store#validation_settings TfPolicyStore#validation_settings}
   */
-  readonly validationSettings?: AwsVerifiedpermissionsPolicyStore.ValidationSettingsProperty[] | cdktn.IResolvable;
+  readonly validationSettings?: TfPolicyStore.ValidationSettingsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_policy_store aws_verifiedpermissions_policy_store}
 */
-export class AwsVerifiedpermissionsPolicyStore extends cdktn.TerraformResource {
+export class TfPolicyStore extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -46,11 +46,11 @@ export class AwsVerifiedpermissionsPolicyStore extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsVerifiedpermissionsPolicyStore resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfPolicyStore resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsVerifiedpermissionsPolicyStore to import
-  * @param importFromId The id of the existing AwsVerifiedpermissionsPolicyStore that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_policy_store#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsVerifiedpermissionsPolicyStore to import is found
+  * @param importToId The construct id used in the generated config for the TfPolicyStore to import
+  * @param importFromId The id of the existing TfPolicyStore that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_policy_store#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfPolicyStore to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_verifiedpermissions_policy_store", importId: importFromId, provider });
@@ -65,9 +65,9 @@ export class AwsVerifiedpermissionsPolicyStore extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsVerifiedpermissionsPolicyStoreConfig = {}
+  * @param options TfPolicyStoreConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsVerifiedpermissionsPolicyStoreConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfPolicyStoreConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_verifiedpermissions_policy_store',
       terraformGeneratorMetadata: {
@@ -180,11 +180,11 @@ export class AwsVerifiedpermissionsPolicyStore extends cdktn.TerraformResource {
   }
 
   // validation_settings - computed: false, optional: true, required: false
-  private _validationSettings = new AwsVerifiedpermissionsPolicyStore.ValidationSettingsPropertyList(this, "validation_settings", false);
+  private _validationSettings = new TfPolicyStore.ValidationSettingsPropertyList(this, "validation_settings", false);
   public get validationSettings() {
     return this._validationSettings;
   }
-  public putValidationSettings(value: AwsVerifiedpermissionsPolicyStore.ValidationSettingsProperty[] | cdktn.IResolvable) {
+  public putValidationSettings(value: TfPolicyStore.ValidationSettingsProperty[] | cdktn.IResolvable) {
     this._validationSettings.internalValue = value;
   }
   public resetValidationSettings() {
@@ -205,7 +205,7 @@ export class AwsVerifiedpermissionsPolicyStore extends cdktn.TerraformResource {
       description: cdktn.stringToTerraform(this._description),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      validation_settings: cdktn.listMapper(awsVerifiedpermissionsPolicyStoreValidationSettingsPropertyToTerraform, true)(this._validationSettings.internalValue),
+      validation_settings: cdktn.listMapper(tfPolicyStoreValidationSettingsPropertyToTerraform, true)(this._validationSettings.internalValue),
     };
   }
 
@@ -236,10 +236,10 @@ export class AwsVerifiedpermissionsPolicyStore extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       validation_settings: {
-        value: cdktn.listMapperHcl(awsVerifiedpermissionsPolicyStoreValidationSettingsPropertyToHclTerraform, true)(this._validationSettings.internalValue),
+        value: cdktn.listMapperHcl(tfPolicyStoreValidationSettingsPropertyToHclTerraform, true)(this._validationSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsVerifiedpermissionsPolicyStore.ValidationSettingsPropertyList",
+        storageClassType: "TfPolicyStore.ValidationSettingsPropertyList",
       },
     };
 
@@ -248,7 +248,7 @@ export class AwsVerifiedpermissionsPolicyStore extends cdktn.TerraformResource {
   }
 }
 
-export function awsVerifiedpermissionsPolicyStoreValidationSettingsPropertyToTerraform(struct?: AwsVerifiedpermissionsPolicyStore.ValidationSettingsProperty | cdktn.IResolvable): any {
+export function tfPolicyStoreValidationSettingsPropertyToTerraform(struct?: TfPolicyStore.ValidationSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -259,7 +259,7 @@ export function awsVerifiedpermissionsPolicyStoreValidationSettingsPropertyToTer
 }
 
 
-export function awsVerifiedpermissionsPolicyStoreValidationSettingsPropertyToHclTerraform(struct?: AwsVerifiedpermissionsPolicyStore.ValidationSettingsProperty | cdktn.IResolvable): any {
+export function tfPolicyStoreValidationSettingsPropertyToHclTerraform(struct?: TfPolicyStore.ValidationSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -278,10 +278,10 @@ export function awsVerifiedpermissionsPolicyStoreValidationSettingsPropertyToHcl
 }
 
 
-export namespace AwsVerifiedpermissionsPolicyStore {
+export namespace TfPolicyStore {
 export interface ValidationSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_policy_store#mode AwsVerifiedpermissionsPolicyStore#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_policy_store#mode TfPolicyStore#mode}
   */
   readonly mode: string;
 }

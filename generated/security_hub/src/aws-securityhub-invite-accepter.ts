@@ -5,22 +5,22 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSecurityhubInviteAccepterConfig extends cdktn.TerraformMetaArguments {
+export interface TfInviteAccepterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_invite_accepter#id AwsSecurityhubInviteAccepter#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_invite_accepter#id TfInviteAccepter#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_invite_accepter#master_id AwsSecurityhubInviteAccepter#master_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_invite_accepter#master_id TfInviteAccepter#master_id}
   */
   readonly masterId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_invite_accepter#region AwsSecurityhubInviteAccepter#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_invite_accepter#region TfInviteAccepter#region}
   */
   readonly region?: string;
 }
@@ -28,7 +28,7 @@ export interface AwsSecurityhubInviteAccepterConfig extends cdktn.TerraformMetaA
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_invite_accepter aws_securityhub_invite_accepter}
 */
-export class AwsSecurityhubInviteAccepter extends cdktn.TerraformResource {
+export class TfInviteAccepter extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class AwsSecurityhubInviteAccepter extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSecurityhubInviteAccepter resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfInviteAccepter resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSecurityhubInviteAccepter to import
-  * @param importFromId The id of the existing AwsSecurityhubInviteAccepter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_invite_accepter#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSecurityhubInviteAccepter to import is found
+  * @param importToId The construct id used in the generated config for the TfInviteAccepter to import
+  * @param importFromId The id of the existing TfInviteAccepter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_invite_accepter#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfInviteAccepter to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_securityhub_invite_accepter", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class AwsSecurityhubInviteAccepter extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSecurityhubInviteAccepterConfig
+  * @param options TfInviteAccepterConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSecurityhubInviteAccepterConfig) {
+  public constructor(scope: Construct, id: string, config: TfInviteAccepterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_securityhub_invite_accepter',
       terraformGeneratorMetadata: {

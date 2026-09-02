@@ -5,41 +5,41 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSecurityhubConnectorV2Config extends cdktn.TerraformMetaArguments {
+export interface TfConnectorV2Config extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_connector_v2#description AwsSecurityhubConnectorV2#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_connector_v2#description TfConnectorV2#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_connector_v2#kms_key_arn AwsSecurityhubConnectorV2#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_connector_v2#kms_key_arn TfConnectorV2#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_connector_v2#name AwsSecurityhubConnectorV2#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_connector_v2#name TfConnectorV2#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_connector_v2#region AwsSecurityhubConnectorV2#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_connector_v2#region TfConnectorV2#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_connector_v2#tags AwsSecurityhubConnectorV2#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_connector_v2#tags TfConnectorV2#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * connector_provider block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_connector_v2#connector_provider AwsSecurityhubConnectorV2#connector_provider}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_connector_v2#connector_provider TfConnectorV2#connector_provider}
   */
-  readonly connectorProvider?: AwsSecurityhubConnectorV2.ConnectorProviderProperty[] | cdktn.IResolvable;
+  readonly connectorProvider?: TfConnectorV2.ConnectorProviderProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_connector_v2 aws_securityhub_connector_v2}
 */
-export class AwsSecurityhubConnectorV2 extends cdktn.TerraformResource {
+export class TfConnectorV2 extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -50,11 +50,11 @@ export class AwsSecurityhubConnectorV2 extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSecurityhubConnectorV2 resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfConnectorV2 resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSecurityhubConnectorV2 to import
-  * @param importFromId The id of the existing AwsSecurityhubConnectorV2 that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_connector_v2#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSecurityhubConnectorV2 to import is found
+  * @param importToId The construct id used in the generated config for the TfConnectorV2 to import
+  * @param importFromId The id of the existing TfConnectorV2 that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_connector_v2#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfConnectorV2 to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_securityhub_connector_v2", importId: importFromId, provider });
@@ -69,9 +69,9 @@ export class AwsSecurityhubConnectorV2 extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSecurityhubConnectorV2Config
+  * @param options TfConnectorV2Config
   */
-  public constructor(scope: Construct, id: string, config: AwsSecurityhubConnectorV2Config) {
+  public constructor(scope: Construct, id: string, config: TfConnectorV2Config) {
     super(scope, id, {
       terraformResourceType: 'aws_securityhub_connector_v2',
       terraformGeneratorMetadata: {
@@ -126,7 +126,7 @@ export class AwsSecurityhubConnectorV2 extends cdktn.TerraformResource {
   }
 
   // health - computed: true, optional: false, required: false
-  private _health = new AwsSecurityhubConnectorV2.HealthPropertyList(this, "health", false);
+  private _health = new TfConnectorV2.HealthPropertyList(this, "health", false);
   public get health() {
     return this._health;
   }
@@ -199,11 +199,11 @@ export class AwsSecurityhubConnectorV2 extends cdktn.TerraformResource {
   }
 
   // connector_provider - computed: false, optional: true, required: false
-  private _connectorProvider = new AwsSecurityhubConnectorV2.ConnectorProviderPropertyList(this, "connector_provider", false);
+  private _connectorProvider = new TfConnectorV2.ConnectorProviderPropertyList(this, "connector_provider", false);
   public get connectorProvider() {
     return this._connectorProvider;
   }
-  public putConnectorProvider(value: AwsSecurityhubConnectorV2.ConnectorProviderProperty[] | cdktn.IResolvable) {
+  public putConnectorProvider(value: TfConnectorV2.ConnectorProviderProperty[] | cdktn.IResolvable) {
     this._connectorProvider.internalValue = value;
   }
   public resetConnectorProvider() {
@@ -225,7 +225,7 @@ export class AwsSecurityhubConnectorV2 extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      connector_provider: cdktn.listMapper(awsSecurityhubConnectorV2ConnectorProviderPropertyToTerraform, true)(this._connectorProvider.internalValue),
+      connector_provider: cdktn.listMapper(tfConnectorV2ConnectorProviderPropertyToTerraform, true)(this._connectorProvider.internalValue),
     };
   }
 
@@ -262,10 +262,10 @@ export class AwsSecurityhubConnectorV2 extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       connector_provider: {
-        value: cdktn.listMapperHcl(awsSecurityhubConnectorV2ConnectorProviderPropertyToHclTerraform, true)(this._connectorProvider.internalValue),
+        value: cdktn.listMapperHcl(tfConnectorV2ConnectorProviderPropertyToHclTerraform, true)(this._connectorProvider.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSecurityhubConnectorV2.ConnectorProviderPropertyList",
+        storageClassType: "TfConnectorV2.ConnectorProviderPropertyList",
       },
     };
 
@@ -274,7 +274,7 @@ export class AwsSecurityhubConnectorV2 extends cdktn.TerraformResource {
   }
 }
 
-export function awsSecurityhubConnectorV2HealthPropertyToTerraform(struct?: AwsSecurityhubConnectorV2.HealthProperty): any {
+export function tfConnectorV2HealthPropertyToTerraform(struct?: TfConnectorV2.HealthProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -284,7 +284,7 @@ export function awsSecurityhubConnectorV2HealthPropertyToTerraform(struct?: AwsS
 }
 
 
-export function awsSecurityhubConnectorV2HealthPropertyToHclTerraform(struct?: AwsSecurityhubConnectorV2.HealthProperty): any {
+export function tfConnectorV2HealthPropertyToHclTerraform(struct?: TfConnectorV2.HealthProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -295,7 +295,7 @@ export function awsSecurityhubConnectorV2HealthPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsSecurityhubConnectorV2JiraCloudPropertyToTerraform(struct?: AwsSecurityhubConnectorV2.JiraCloudProperty | cdktn.IResolvable): any {
+export function tfConnectorV2JiraCloudPropertyToTerraform(struct?: TfConnectorV2.JiraCloudProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -306,7 +306,7 @@ export function awsSecurityhubConnectorV2JiraCloudPropertyToTerraform(struct?: A
 }
 
 
-export function awsSecurityhubConnectorV2JiraCloudPropertyToHclTerraform(struct?: AwsSecurityhubConnectorV2.JiraCloudProperty | cdktn.IResolvable): any {
+export function tfConnectorV2JiraCloudPropertyToHclTerraform(struct?: TfConnectorV2.JiraCloudProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -325,7 +325,7 @@ export function awsSecurityhubConnectorV2JiraCloudPropertyToHclTerraform(struct?
 }
 
 
-export function awsSecurityhubConnectorV2ServiceNowPropertyToTerraform(struct?: AwsSecurityhubConnectorV2.ServiceNowProperty | cdktn.IResolvable): any {
+export function tfConnectorV2ServiceNowPropertyToTerraform(struct?: TfConnectorV2.ServiceNowProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -337,7 +337,7 @@ export function awsSecurityhubConnectorV2ServiceNowPropertyToTerraform(struct?: 
 }
 
 
-export function awsSecurityhubConnectorV2ServiceNowPropertyToHclTerraform(struct?: AwsSecurityhubConnectorV2.ServiceNowProperty | cdktn.IResolvable): any {
+export function tfConnectorV2ServiceNowPropertyToHclTerraform(struct?: TfConnectorV2.ServiceNowProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -362,32 +362,32 @@ export function awsSecurityhubConnectorV2ServiceNowPropertyToHclTerraform(struct
 }
 
 
-export function awsSecurityhubConnectorV2ConnectorProviderPropertyToTerraform(struct?: AwsSecurityhubConnectorV2.ConnectorProviderProperty | cdktn.IResolvable): any {
+export function tfConnectorV2ConnectorProviderPropertyToTerraform(struct?: TfConnectorV2.ConnectorProviderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    jira_cloud: cdktn.listMapper(awsSecurityhubConnectorV2JiraCloudPropertyToTerraform, true)(struct!.jiraCloud),
-    service_now: cdktn.listMapper(awsSecurityhubConnectorV2ServiceNowPropertyToTerraform, true)(struct!.serviceNow),
+    jira_cloud: cdktn.listMapper(tfConnectorV2JiraCloudPropertyToTerraform, true)(struct!.jiraCloud),
+    service_now: cdktn.listMapper(tfConnectorV2ServiceNowPropertyToTerraform, true)(struct!.serviceNow),
   }
 }
 
 
-export function awsSecurityhubConnectorV2ConnectorProviderPropertyToHclTerraform(struct?: AwsSecurityhubConnectorV2.ConnectorProviderProperty | cdktn.IResolvable): any {
+export function tfConnectorV2ConnectorProviderPropertyToHclTerraform(struct?: TfConnectorV2.ConnectorProviderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     jira_cloud: {
-      value: cdktn.listMapperHcl(awsSecurityhubConnectorV2JiraCloudPropertyToHclTerraform, true)(struct!.jiraCloud),
+      value: cdktn.listMapperHcl(tfConnectorV2JiraCloudPropertyToHclTerraform, true)(struct!.jiraCloud),
       isBlock: true,
       type: "list",
       storageClassType: "JiraCloudPropertyList",
     },
     service_now: {
-      value: cdktn.listMapperHcl(awsSecurityhubConnectorV2ServiceNowPropertyToHclTerraform, true)(struct!.serviceNow),
+      value: cdktn.listMapperHcl(tfConnectorV2ServiceNowPropertyToHclTerraform, true)(struct!.serviceNow),
       isBlock: true,
       type: "list",
       storageClassType: "ServiceNowPropertyList",
@@ -399,7 +399,7 @@ export function awsSecurityhubConnectorV2ConnectorProviderPropertyToHclTerraform
 }
 
 
-export namespace AwsSecurityhubConnectorV2 {
+export namespace TfConnectorV2 {
 export interface HealthProperty {
 }
 export class HealthPropertyOutputReference extends cdktn.ComplexObject {
@@ -466,7 +466,7 @@ export class HealthPropertyList extends cdktn.ComplexList {
 }
 export interface JiraCloudProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_connector_v2#project_key AwsSecurityhubConnectorV2#project_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_connector_v2#project_key TfConnectorV2#project_key}
   */
   readonly projectKey: string;
 }
@@ -569,11 +569,11 @@ export class JiraCloudPropertyList extends cdktn.ComplexList {
 }
 export interface ServiceNowProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_connector_v2#instance_name AwsSecurityhubConnectorV2#instance_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_connector_v2#instance_name TfConnectorV2#instance_name}
   */
   readonly instanceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_connector_v2#secret_arn AwsSecurityhubConnectorV2#secret_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_connector_v2#secret_arn TfConnectorV2#secret_arn}
   */
   readonly secretArn: string;
 }
@@ -682,13 +682,13 @@ export interface ConnectorProviderProperty {
   /**
   * jira_cloud block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_connector_v2#jira_cloud AwsSecurityhubConnectorV2#jira_cloud}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_connector_v2#jira_cloud TfConnectorV2#jira_cloud}
   */
   readonly jiraCloud?: JiraCloudProperty[] | cdktn.IResolvable;
   /**
   * service_now block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_connector_v2#service_now AwsSecurityhubConnectorV2#service_now}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_connector_v2#service_now TfConnectorV2#service_now}
   */
   readonly serviceNow?: ServiceNowProperty[] | cdktn.IResolvable;
 }

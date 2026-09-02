@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsVpcIpamPoolsConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataPoolsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipam_pools#id DataAwsVpcIpamPools#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipam_pools#id TfDataPools#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,21 +16,21 @@ export interface DataAwsVpcIpamPoolsConfig extends cdktn.TerraformMetaArguments 
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipam_pools#region DataAwsVpcIpamPools#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipam_pools#region TfDataPools#region}
   */
   readonly region?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipam_pools#filter DataAwsVpcIpamPools#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipam_pools#filter TfDataPools#filter}
   */
-  readonly filter?: DataAwsVpcIpamPools.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: TfDataPools.FilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipam_pools aws_vpc_ipam_pools}
 */
-export class DataAwsVpcIpamPools extends cdktn.TerraformDataSource {
+export class TfDataPools extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -41,11 +41,11 @@ export class DataAwsVpcIpamPools extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsVpcIpamPools resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataPools resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsVpcIpamPools to import
-  * @param importFromId The id of the existing DataAwsVpcIpamPools that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipam_pools#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsVpcIpamPools to import is found
+  * @param importToId The construct id used in the generated config for the TfDataPools to import
+  * @param importFromId The id of the existing TfDataPools that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipam_pools#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataPools to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpc_ipam_pools", importId: importFromId, provider });
@@ -60,9 +60,9 @@ export class DataAwsVpcIpamPools extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsVpcIpamPoolsConfig = {}
+  * @param options TfDataPoolsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsVpcIpamPoolsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDataPoolsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_vpc_ipam_pools',
       terraformGeneratorMetadata: {
@@ -104,7 +104,7 @@ export class DataAwsVpcIpamPools extends cdktn.TerraformDataSource {
   }
 
   // ipam_pools - computed: true, optional: false, required: false
-  private _ipamPools = new DataAwsVpcIpamPools.IpamPoolsPropertyList(this, "ipam_pools", true);
+  private _ipamPools = new TfDataPools.IpamPoolsPropertyList(this, "ipam_pools", true);
   public get ipamPools() {
     return this._ipamPools;
   }
@@ -126,11 +126,11 @@ export class DataAwsVpcIpamPools extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataAwsVpcIpamPools.FilterPropertyList(this, "filter", true);
+  private _filter = new TfDataPools.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataAwsVpcIpamPools.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: TfDataPools.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -149,7 +149,7 @@ export class DataAwsVpcIpamPools extends cdktn.TerraformDataSource {
     return {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      filter: cdktn.listMapper(dataAwsVpcIpamPoolsFilterPropertyToTerraform, true)(this._filter.internalValue),
+      filter: cdktn.listMapper(tfDataPoolsFilterPropertyToTerraform, true)(this._filter.internalValue),
     };
   }
 
@@ -168,10 +168,10 @@ export class DataAwsVpcIpamPools extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataAwsVpcIpamPoolsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(tfDataPoolsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataAwsVpcIpamPools.FilterPropertyList",
+        storageClassType: "TfDataPools.FilterPropertyList",
       },
     };
 
@@ -180,7 +180,7 @@ export class DataAwsVpcIpamPools extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsVpcIpamPoolsIpamPoolsPropertyToTerraform(struct?: DataAwsVpcIpamPools.IpamPoolsProperty): any {
+export function tfDataPoolsIpamPoolsPropertyToTerraform(struct?: TfDataPools.IpamPoolsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -190,7 +190,7 @@ export function dataAwsVpcIpamPoolsIpamPoolsPropertyToTerraform(struct?: DataAws
 }
 
 
-export function dataAwsVpcIpamPoolsIpamPoolsPropertyToHclTerraform(struct?: DataAwsVpcIpamPools.IpamPoolsProperty): any {
+export function tfDataPoolsIpamPoolsPropertyToHclTerraform(struct?: TfDataPools.IpamPoolsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -201,7 +201,7 @@ export function dataAwsVpcIpamPoolsIpamPoolsPropertyToHclTerraform(struct?: Data
 }
 
 
-export function dataAwsVpcIpamPoolsFilterPropertyToTerraform(struct?: DataAwsVpcIpamPools.FilterProperty | cdktn.IResolvable): any {
+export function tfDataPoolsFilterPropertyToTerraform(struct?: TfDataPools.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -213,7 +213,7 @@ export function dataAwsVpcIpamPoolsFilterPropertyToTerraform(struct?: DataAwsVpc
 }
 
 
-export function dataAwsVpcIpamPoolsFilterPropertyToHclTerraform(struct?: DataAwsVpcIpamPools.FilterProperty | cdktn.IResolvable): any {
+export function tfDataPoolsFilterPropertyToHclTerraform(struct?: TfDataPools.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -238,7 +238,7 @@ export function dataAwsVpcIpamPoolsFilterPropertyToHclTerraform(struct?: DataAws
 }
 
 
-export namespace DataAwsVpcIpamPools {
+export namespace TfDataPools {
 export interface IpamPoolsProperty {
 }
 export class IpamPoolsPropertyOutputReference extends cdktn.ComplexObject {
@@ -382,11 +382,11 @@ export class IpamPoolsPropertyList extends cdktn.ComplexList {
 }
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipam_pools#name DataAwsVpcIpamPools#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipam_pools#name TfDataPools#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipam_pools#values DataAwsVpcIpamPools#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_ipam_pools#values TfDataPools#values}
   */
   readonly values: string[];
 }

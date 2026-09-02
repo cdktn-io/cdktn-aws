@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsRdsClustersConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataClustersConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_clusters#id DataAwsRdsClusters#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_clusters#id TfDataClusters#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,21 +16,21 @@ export interface DataAwsRdsClustersConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_clusters#region DataAwsRdsClusters#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_clusters#region TfDataClusters#region}
   */
   readonly region?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_clusters#filter DataAwsRdsClusters#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_clusters#filter TfDataClusters#filter}
   */
-  readonly filter?: DataAwsRdsClusters.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: TfDataClusters.FilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_clusters aws_rds_clusters}
 */
-export class DataAwsRdsClusters extends cdktn.TerraformDataSource {
+export class TfDataClusters extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -41,11 +41,11 @@ export class DataAwsRdsClusters extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsRdsClusters resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataClusters resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsRdsClusters to import
-  * @param importFromId The id of the existing DataAwsRdsClusters that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_clusters#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsRdsClusters to import is found
+  * @param importToId The construct id used in the generated config for the TfDataClusters to import
+  * @param importFromId The id of the existing TfDataClusters that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_clusters#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataClusters to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_rds_clusters", importId: importFromId, provider });
@@ -60,9 +60,9 @@ export class DataAwsRdsClusters extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsRdsClustersConfig = {}
+  * @param options TfDataClustersConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsRdsClustersConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDataClustersConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_rds_clusters',
       terraformGeneratorMetadata: {
@@ -130,11 +130,11 @@ export class DataAwsRdsClusters extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataAwsRdsClusters.FilterPropertyList(this, "filter", true);
+  private _filter = new TfDataClusters.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataAwsRdsClusters.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: TfDataClusters.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -153,7 +153,7 @@ export class DataAwsRdsClusters extends cdktn.TerraformDataSource {
     return {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      filter: cdktn.listMapper(dataAwsRdsClustersFilterPropertyToTerraform, true)(this._filter.internalValue),
+      filter: cdktn.listMapper(tfDataClustersFilterPropertyToTerraform, true)(this._filter.internalValue),
     };
   }
 
@@ -172,10 +172,10 @@ export class DataAwsRdsClusters extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataAwsRdsClustersFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(tfDataClustersFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataAwsRdsClusters.FilterPropertyList",
+        storageClassType: "TfDataClusters.FilterPropertyList",
       },
     };
 
@@ -184,7 +184,7 @@ export class DataAwsRdsClusters extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsRdsClustersFilterPropertyToTerraform(struct?: DataAwsRdsClusters.FilterProperty | cdktn.IResolvable): any {
+export function tfDataClustersFilterPropertyToTerraform(struct?: TfDataClusters.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -196,7 +196,7 @@ export function dataAwsRdsClustersFilterPropertyToTerraform(struct?: DataAwsRdsC
 }
 
 
-export function dataAwsRdsClustersFilterPropertyToHclTerraform(struct?: DataAwsRdsClusters.FilterProperty | cdktn.IResolvable): any {
+export function tfDataClustersFilterPropertyToHclTerraform(struct?: TfDataClusters.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -221,14 +221,14 @@ export function dataAwsRdsClustersFilterPropertyToHclTerraform(struct?: DataAwsR
 }
 
 
-export namespace DataAwsRdsClusters {
+export namespace TfDataClusters {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_clusters#name DataAwsRdsClusters#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_clusters#name TfDataClusters#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_clusters#values DataAwsRdsClusters#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/rds_clusters#values TfDataClusters#values}
   */
   readonly values: string[];
 }

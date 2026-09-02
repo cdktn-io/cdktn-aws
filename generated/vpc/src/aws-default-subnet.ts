@@ -5,88 +5,88 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDefaultSubnetConfig extends cdktn.TerraformMetaArguments {
+export interface TfDefaultSubnetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#assign_ipv6_address_on_creation AwsDefaultSubnet#assign_ipv6_address_on_creation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#assign_ipv6_address_on_creation TfDefaultSubnet#assign_ipv6_address_on_creation}
   */
   readonly assignIpv6AddressOnCreation?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#availability_zone AwsDefaultSubnet#availability_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#availability_zone TfDefaultSubnet#availability_zone}
   */
   readonly availabilityZone: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#customer_owned_ipv4_pool AwsDefaultSubnet#customer_owned_ipv4_pool}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#customer_owned_ipv4_pool TfDefaultSubnet#customer_owned_ipv4_pool}
   */
   readonly customerOwnedIpv4Pool?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#enable_dns64 AwsDefaultSubnet#enable_dns64}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#enable_dns64 TfDefaultSubnet#enable_dns64}
   */
   readonly enableDns64?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#enable_resource_name_dns_a_record_on_launch AwsDefaultSubnet#enable_resource_name_dns_a_record_on_launch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#enable_resource_name_dns_a_record_on_launch TfDefaultSubnet#enable_resource_name_dns_a_record_on_launch}
   */
   readonly enableResourceNameDnsARecordOnLaunch?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#enable_resource_name_dns_aaaa_record_on_launch AwsDefaultSubnet#enable_resource_name_dns_aaaa_record_on_launch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#enable_resource_name_dns_aaaa_record_on_launch TfDefaultSubnet#enable_resource_name_dns_aaaa_record_on_launch}
   */
   readonly enableResourceNameDnsAaaaRecordOnLaunch?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#force_destroy AwsDefaultSubnet#force_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#force_destroy TfDefaultSubnet#force_destroy}
   */
   readonly forceDestroy?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#id AwsDefaultSubnet#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#id TfDefaultSubnet#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#ipv6_cidr_block AwsDefaultSubnet#ipv6_cidr_block}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#ipv6_cidr_block TfDefaultSubnet#ipv6_cidr_block}
   */
   readonly ipv6CidrBlock?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#ipv6_native AwsDefaultSubnet#ipv6_native}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#ipv6_native TfDefaultSubnet#ipv6_native}
   */
   readonly ipv6Native?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#map_customer_owned_ip_on_launch AwsDefaultSubnet#map_customer_owned_ip_on_launch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#map_customer_owned_ip_on_launch TfDefaultSubnet#map_customer_owned_ip_on_launch}
   */
   readonly mapCustomerOwnedIpOnLaunch?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#map_public_ip_on_launch AwsDefaultSubnet#map_public_ip_on_launch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#map_public_ip_on_launch TfDefaultSubnet#map_public_ip_on_launch}
   */
   readonly mapPublicIpOnLaunch?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#private_dns_hostname_type_on_launch AwsDefaultSubnet#private_dns_hostname_type_on_launch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#private_dns_hostname_type_on_launch TfDefaultSubnet#private_dns_hostname_type_on_launch}
   */
   readonly privateDnsHostnameTypeOnLaunch?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#region AwsDefaultSubnet#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#region TfDefaultSubnet#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#tags AwsDefaultSubnet#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#tags TfDefaultSubnet#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#tags_all AwsDefaultSubnet#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#tags_all TfDefaultSubnet#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#timeouts AwsDefaultSubnet#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#timeouts TfDefaultSubnet#timeouts}
   */
-  readonly timeouts?: AwsDefaultSubnet.TimeoutsProperty;
+  readonly timeouts?: TfDefaultSubnet.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet aws_default_subnet}
 */
-export class AwsDefaultSubnet extends cdktn.TerraformResource {
+export class TfDefaultSubnet extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -97,11 +97,11 @@ export class AwsDefaultSubnet extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDefaultSubnet resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDefaultSubnet resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDefaultSubnet to import
-  * @param importFromId The id of the existing AwsDefaultSubnet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDefaultSubnet to import is found
+  * @param importToId The construct id used in the generated config for the TfDefaultSubnet to import
+  * @param importFromId The id of the existing TfDefaultSubnet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDefaultSubnet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_default_subnet", importId: importFromId, provider });
@@ -116,9 +116,9 @@ export class AwsDefaultSubnet extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDefaultSubnetConfig
+  * @param options TfDefaultSubnetConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDefaultSubnetConfig) {
+  public constructor(scope: Construct, id: string, config: TfDefaultSubnetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_default_subnet',
       terraformGeneratorMetadata: {
@@ -456,11 +456,11 @@ export class AwsDefaultSubnet extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsDefaultSubnet.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfDefaultSubnet.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsDefaultSubnet.TimeoutsProperty) {
+  public putTimeouts(value: TfDefaultSubnet.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -493,7 +493,7 @@ export class AwsDefaultSubnet extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: awsDefaultSubnetTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfDefaultSubnetTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -596,10 +596,10 @@ export class AwsDefaultSubnet extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsDefaultSubnetTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfDefaultSubnetTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsDefaultSubnet.TimeoutsProperty",
+        storageClassType: "TfDefaultSubnet.TimeoutsProperty",
       },
     };
 
@@ -608,7 +608,7 @@ export class AwsDefaultSubnet extends cdktn.TerraformResource {
   }
 }
 
-export function awsDefaultSubnetTimeoutsPropertyToTerraform(struct?: AwsDefaultSubnet.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDefaultSubnetTimeoutsPropertyToTerraform(struct?: TfDefaultSubnet.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -620,7 +620,7 @@ export function awsDefaultSubnetTimeoutsPropertyToTerraform(struct?: AwsDefaultS
 }
 
 
-export function awsDefaultSubnetTimeoutsPropertyToHclTerraform(struct?: AwsDefaultSubnet.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDefaultSubnetTimeoutsPropertyToHclTerraform(struct?: TfDefaultSubnet.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -645,14 +645,14 @@ export function awsDefaultSubnetTimeoutsPropertyToHclTerraform(struct?: AwsDefau
 }
 
 
-export namespace AwsDefaultSubnet {
+export namespace TfDefaultSubnet {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#create AwsDefaultSubnet#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#create TfDefaultSubnet#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#delete AwsDefaultSubnet#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#delete TfDefaultSubnet#delete}
   */
   readonly delete?: string;
 }

@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsCognitoUserPoolConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataUserPoolConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_pool#region DataAwsCognitoUserPool#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_pool#region TfDataUserPool#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_pool#user_pool_id DataAwsCognitoUserPool#user_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_pool#user_pool_id TfDataUserPool#user_pool_id}
   */
   readonly userPoolId: string;
 }
@@ -21,7 +21,7 @@ export interface DataAwsCognitoUserPoolConfig extends cdktn.TerraformMetaArgumen
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_pool aws_cognito_user_pool}
 */
-export class DataAwsCognitoUserPool extends cdktn.TerraformDataSource {
+export class TfDataUserPool extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class DataAwsCognitoUserPool extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsCognitoUserPool resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataUserPool resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsCognitoUserPool to import
-  * @param importFromId The id of the existing DataAwsCognitoUserPool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_pool#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsCognitoUserPool to import is found
+  * @param importToId The construct id used in the generated config for the TfDataUserPool to import
+  * @param importFromId The id of the existing TfDataUserPool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_pool#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataUserPool to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cognito_user_pool", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class DataAwsCognitoUserPool extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsCognitoUserPoolConfig
+  * @param options TfDataUserPoolConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsCognitoUserPoolConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataUserPoolConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cognito_user_pool',
       terraformGeneratorMetadata: {
@@ -78,13 +78,13 @@ export class DataAwsCognitoUserPool extends cdktn.TerraformDataSource {
   // ==========
 
   // account_recovery_setting - computed: true, optional: false, required: false
-  private _accountRecoverySetting = new DataAwsCognitoUserPool.AccountRecoverySettingPropertyList(this, "account_recovery_setting", false);
+  private _accountRecoverySetting = new TfDataUserPool.AccountRecoverySettingPropertyList(this, "account_recovery_setting", false);
   public get accountRecoverySetting() {
     return this._accountRecoverySetting;
   }
 
   // admin_create_user_config - computed: true, optional: false, required: false
-  private _adminCreateUserConfig = new DataAwsCognitoUserPool.AdminCreateUserConfigPropertyList(this, "admin_create_user_config", false);
+  private _adminCreateUserConfig = new TfDataUserPool.AdminCreateUserConfigPropertyList(this, "admin_create_user_config", false);
   public get adminCreateUserConfig() {
     return this._adminCreateUserConfig;
   }
@@ -115,7 +115,7 @@ export class DataAwsCognitoUserPool extends cdktn.TerraformDataSource {
   }
 
   // device_configuration - computed: true, optional: false, required: false
-  private _deviceConfiguration = new DataAwsCognitoUserPool.DeviceConfigurationPropertyList(this, "device_configuration", false);
+  private _deviceConfiguration = new TfDataUserPool.DeviceConfigurationPropertyList(this, "device_configuration", false);
   public get deviceConfiguration() {
     return this._deviceConfiguration;
   }
@@ -126,7 +126,7 @@ export class DataAwsCognitoUserPool extends cdktn.TerraformDataSource {
   }
 
   // email_configuration - computed: true, optional: false, required: false
-  private _emailConfiguration = new DataAwsCognitoUserPool.EmailConfigurationPropertyList(this, "email_configuration", false);
+  private _emailConfiguration = new TfDataUserPool.EmailConfigurationPropertyList(this, "email_configuration", false);
   public get emailConfiguration() {
     return this._emailConfiguration;
   }
@@ -142,7 +142,7 @@ export class DataAwsCognitoUserPool extends cdktn.TerraformDataSource {
   }
 
   // lambda_config - computed: true, optional: false, required: false
-  private _lambdaConfig = new DataAwsCognitoUserPool.LambdaConfigPropertyList(this, "lambda_config", false);
+  private _lambdaConfig = new TfDataUserPool.LambdaConfigPropertyList(this, "lambda_config", false);
   public get lambdaConfig() {
     return this._lambdaConfig;
   }
@@ -179,7 +179,7 @@ export class DataAwsCognitoUserPool extends cdktn.TerraformDataSource {
   }
 
   // schema_attributes - computed: true, optional: false, required: false
-  private _schemaAttributes = new DataAwsCognitoUserPool.SchemaAttributesPropertyList(this, "schema_attributes", false);
+  private _schemaAttributes = new TfDataUserPool.SchemaAttributesPropertyList(this, "schema_attributes", false);
   public get schemaAttributes() {
     return this._schemaAttributes;
   }
@@ -206,7 +206,7 @@ export class DataAwsCognitoUserPool extends cdktn.TerraformDataSource {
   }
 
   // user_pool_add_ons - computed: true, optional: false, required: false
-  private _userPoolAddOns = new DataAwsCognitoUserPool.UserPoolAddOnsPropertyList(this, "user_pool_add_ons", false);
+  private _userPoolAddOns = new TfDataUserPool.UserPoolAddOnsPropertyList(this, "user_pool_add_ons", false);
   public get userPoolAddOns() {
     return this._userPoolAddOns;
   }
@@ -267,7 +267,7 @@ export class DataAwsCognitoUserPool extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsCognitoUserPoolRecoveryMechanismPropertyToTerraform(struct?: DataAwsCognitoUserPool.RecoveryMechanismProperty): any {
+export function tfDataUserPoolRecoveryMechanismPropertyToTerraform(struct?: TfDataUserPool.RecoveryMechanismProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -277,7 +277,7 @@ export function dataAwsCognitoUserPoolRecoveryMechanismPropertyToTerraform(struc
 }
 
 
-export function dataAwsCognitoUserPoolRecoveryMechanismPropertyToHclTerraform(struct?: DataAwsCognitoUserPool.RecoveryMechanismProperty): any {
+export function tfDataUserPoolRecoveryMechanismPropertyToHclTerraform(struct?: TfDataUserPool.RecoveryMechanismProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -288,7 +288,7 @@ export function dataAwsCognitoUserPoolRecoveryMechanismPropertyToHclTerraform(st
 }
 
 
-export function dataAwsCognitoUserPoolAccountRecoverySettingPropertyToTerraform(struct?: DataAwsCognitoUserPool.AccountRecoverySettingProperty): any {
+export function tfDataUserPoolAccountRecoverySettingPropertyToTerraform(struct?: TfDataUserPool.AccountRecoverySettingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -298,7 +298,7 @@ export function dataAwsCognitoUserPoolAccountRecoverySettingPropertyToTerraform(
 }
 
 
-export function dataAwsCognitoUserPoolAccountRecoverySettingPropertyToHclTerraform(struct?: DataAwsCognitoUserPool.AccountRecoverySettingProperty): any {
+export function tfDataUserPoolAccountRecoverySettingPropertyToHclTerraform(struct?: TfDataUserPool.AccountRecoverySettingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -309,7 +309,7 @@ export function dataAwsCognitoUserPoolAccountRecoverySettingPropertyToHclTerrafo
 }
 
 
-export function dataAwsCognitoUserPoolInviteMessageTemplatePropertyToTerraform(struct?: DataAwsCognitoUserPool.InviteMessageTemplateProperty): any {
+export function tfDataUserPoolInviteMessageTemplatePropertyToTerraform(struct?: TfDataUserPool.InviteMessageTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -319,7 +319,7 @@ export function dataAwsCognitoUserPoolInviteMessageTemplatePropertyToTerraform(s
 }
 
 
-export function dataAwsCognitoUserPoolInviteMessageTemplatePropertyToHclTerraform(struct?: DataAwsCognitoUserPool.InviteMessageTemplateProperty): any {
+export function tfDataUserPoolInviteMessageTemplatePropertyToHclTerraform(struct?: TfDataUserPool.InviteMessageTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -330,7 +330,7 @@ export function dataAwsCognitoUserPoolInviteMessageTemplatePropertyToHclTerrafor
 }
 
 
-export function dataAwsCognitoUserPoolAdminCreateUserConfigPropertyToTerraform(struct?: DataAwsCognitoUserPool.AdminCreateUserConfigProperty): any {
+export function tfDataUserPoolAdminCreateUserConfigPropertyToTerraform(struct?: TfDataUserPool.AdminCreateUserConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -340,7 +340,7 @@ export function dataAwsCognitoUserPoolAdminCreateUserConfigPropertyToTerraform(s
 }
 
 
-export function dataAwsCognitoUserPoolAdminCreateUserConfigPropertyToHclTerraform(struct?: DataAwsCognitoUserPool.AdminCreateUserConfigProperty): any {
+export function tfDataUserPoolAdminCreateUserConfigPropertyToHclTerraform(struct?: TfDataUserPool.AdminCreateUserConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -351,7 +351,7 @@ export function dataAwsCognitoUserPoolAdminCreateUserConfigPropertyToHclTerrafor
 }
 
 
-export function dataAwsCognitoUserPoolDeviceConfigurationPropertyToTerraform(struct?: DataAwsCognitoUserPool.DeviceConfigurationProperty): any {
+export function tfDataUserPoolDeviceConfigurationPropertyToTerraform(struct?: TfDataUserPool.DeviceConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -361,7 +361,7 @@ export function dataAwsCognitoUserPoolDeviceConfigurationPropertyToTerraform(str
 }
 
 
-export function dataAwsCognitoUserPoolDeviceConfigurationPropertyToHclTerraform(struct?: DataAwsCognitoUserPool.DeviceConfigurationProperty): any {
+export function tfDataUserPoolDeviceConfigurationPropertyToHclTerraform(struct?: TfDataUserPool.DeviceConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -372,7 +372,7 @@ export function dataAwsCognitoUserPoolDeviceConfigurationPropertyToHclTerraform(
 }
 
 
-export function dataAwsCognitoUserPoolEmailConfigurationPropertyToTerraform(struct?: DataAwsCognitoUserPool.EmailConfigurationProperty): any {
+export function tfDataUserPoolEmailConfigurationPropertyToTerraform(struct?: TfDataUserPool.EmailConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -382,7 +382,7 @@ export function dataAwsCognitoUserPoolEmailConfigurationPropertyToTerraform(stru
 }
 
 
-export function dataAwsCognitoUserPoolEmailConfigurationPropertyToHclTerraform(struct?: DataAwsCognitoUserPool.EmailConfigurationProperty): any {
+export function tfDataUserPoolEmailConfigurationPropertyToHclTerraform(struct?: TfDataUserPool.EmailConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -393,7 +393,7 @@ export function dataAwsCognitoUserPoolEmailConfigurationPropertyToHclTerraform(s
 }
 
 
-export function dataAwsCognitoUserPoolCustomEmailSenderPropertyToTerraform(struct?: DataAwsCognitoUserPool.CustomEmailSenderProperty): any {
+export function tfDataUserPoolCustomEmailSenderPropertyToTerraform(struct?: TfDataUserPool.CustomEmailSenderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -403,7 +403,7 @@ export function dataAwsCognitoUserPoolCustomEmailSenderPropertyToTerraform(struc
 }
 
 
-export function dataAwsCognitoUserPoolCustomEmailSenderPropertyToHclTerraform(struct?: DataAwsCognitoUserPool.CustomEmailSenderProperty): any {
+export function tfDataUserPoolCustomEmailSenderPropertyToHclTerraform(struct?: TfDataUserPool.CustomEmailSenderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -414,7 +414,7 @@ export function dataAwsCognitoUserPoolCustomEmailSenderPropertyToHclTerraform(st
 }
 
 
-export function dataAwsCognitoUserPoolCustomSmsSenderPropertyToTerraform(struct?: DataAwsCognitoUserPool.CustomSmsSenderProperty): any {
+export function tfDataUserPoolCustomSmsSenderPropertyToTerraform(struct?: TfDataUserPool.CustomSmsSenderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -424,7 +424,7 @@ export function dataAwsCognitoUserPoolCustomSmsSenderPropertyToTerraform(struct?
 }
 
 
-export function dataAwsCognitoUserPoolCustomSmsSenderPropertyToHclTerraform(struct?: DataAwsCognitoUserPool.CustomSmsSenderProperty): any {
+export function tfDataUserPoolCustomSmsSenderPropertyToHclTerraform(struct?: TfDataUserPool.CustomSmsSenderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -435,7 +435,7 @@ export function dataAwsCognitoUserPoolCustomSmsSenderPropertyToHclTerraform(stru
 }
 
 
-export function dataAwsCognitoUserPoolPreTokenGenerationConfigPropertyToTerraform(struct?: DataAwsCognitoUserPool.PreTokenGenerationConfigProperty): any {
+export function tfDataUserPoolPreTokenGenerationConfigPropertyToTerraform(struct?: TfDataUserPool.PreTokenGenerationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -445,7 +445,7 @@ export function dataAwsCognitoUserPoolPreTokenGenerationConfigPropertyToTerrafor
 }
 
 
-export function dataAwsCognitoUserPoolPreTokenGenerationConfigPropertyToHclTerraform(struct?: DataAwsCognitoUserPool.PreTokenGenerationConfigProperty): any {
+export function tfDataUserPoolPreTokenGenerationConfigPropertyToHclTerraform(struct?: TfDataUserPool.PreTokenGenerationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -456,7 +456,7 @@ export function dataAwsCognitoUserPoolPreTokenGenerationConfigPropertyToHclTerra
 }
 
 
-export function dataAwsCognitoUserPoolLambdaConfigPropertyToTerraform(struct?: DataAwsCognitoUserPool.LambdaConfigProperty): any {
+export function tfDataUserPoolLambdaConfigPropertyToTerraform(struct?: TfDataUserPool.LambdaConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -466,7 +466,7 @@ export function dataAwsCognitoUserPoolLambdaConfigPropertyToTerraform(struct?: D
 }
 
 
-export function dataAwsCognitoUserPoolLambdaConfigPropertyToHclTerraform(struct?: DataAwsCognitoUserPool.LambdaConfigProperty): any {
+export function tfDataUserPoolLambdaConfigPropertyToHclTerraform(struct?: TfDataUserPool.LambdaConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -477,7 +477,7 @@ export function dataAwsCognitoUserPoolLambdaConfigPropertyToHclTerraform(struct?
 }
 
 
-export function dataAwsCognitoUserPoolNumberAttributeConstraintsPropertyToTerraform(struct?: DataAwsCognitoUserPool.NumberAttributeConstraintsProperty): any {
+export function tfDataUserPoolNumberAttributeConstraintsPropertyToTerraform(struct?: TfDataUserPool.NumberAttributeConstraintsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -487,7 +487,7 @@ export function dataAwsCognitoUserPoolNumberAttributeConstraintsPropertyToTerraf
 }
 
 
-export function dataAwsCognitoUserPoolNumberAttributeConstraintsPropertyToHclTerraform(struct?: DataAwsCognitoUserPool.NumberAttributeConstraintsProperty): any {
+export function tfDataUserPoolNumberAttributeConstraintsPropertyToHclTerraform(struct?: TfDataUserPool.NumberAttributeConstraintsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -498,7 +498,7 @@ export function dataAwsCognitoUserPoolNumberAttributeConstraintsPropertyToHclTer
 }
 
 
-export function dataAwsCognitoUserPoolStringAttributeConstraintsPropertyToTerraform(struct?: DataAwsCognitoUserPool.StringAttributeConstraintsProperty): any {
+export function tfDataUserPoolStringAttributeConstraintsPropertyToTerraform(struct?: TfDataUserPool.StringAttributeConstraintsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -508,7 +508,7 @@ export function dataAwsCognitoUserPoolStringAttributeConstraintsPropertyToTerraf
 }
 
 
-export function dataAwsCognitoUserPoolStringAttributeConstraintsPropertyToHclTerraform(struct?: DataAwsCognitoUserPool.StringAttributeConstraintsProperty): any {
+export function tfDataUserPoolStringAttributeConstraintsPropertyToHclTerraform(struct?: TfDataUserPool.StringAttributeConstraintsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -519,7 +519,7 @@ export function dataAwsCognitoUserPoolStringAttributeConstraintsPropertyToHclTer
 }
 
 
-export function dataAwsCognitoUserPoolSchemaAttributesPropertyToTerraform(struct?: DataAwsCognitoUserPool.SchemaAttributesProperty): any {
+export function tfDataUserPoolSchemaAttributesPropertyToTerraform(struct?: TfDataUserPool.SchemaAttributesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -529,7 +529,7 @@ export function dataAwsCognitoUserPoolSchemaAttributesPropertyToTerraform(struct
 }
 
 
-export function dataAwsCognitoUserPoolSchemaAttributesPropertyToHclTerraform(struct?: DataAwsCognitoUserPool.SchemaAttributesProperty): any {
+export function tfDataUserPoolSchemaAttributesPropertyToHclTerraform(struct?: TfDataUserPool.SchemaAttributesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -540,7 +540,7 @@ export function dataAwsCognitoUserPoolSchemaAttributesPropertyToHclTerraform(str
 }
 
 
-export function dataAwsCognitoUserPoolAdvancedSecurityAdditionalFlowsPropertyToTerraform(struct?: DataAwsCognitoUserPool.AdvancedSecurityAdditionalFlowsProperty): any {
+export function tfDataUserPoolAdvancedSecurityAdditionalFlowsPropertyToTerraform(struct?: TfDataUserPool.AdvancedSecurityAdditionalFlowsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -550,7 +550,7 @@ export function dataAwsCognitoUserPoolAdvancedSecurityAdditionalFlowsPropertyToT
 }
 
 
-export function dataAwsCognitoUserPoolAdvancedSecurityAdditionalFlowsPropertyToHclTerraform(struct?: DataAwsCognitoUserPool.AdvancedSecurityAdditionalFlowsProperty): any {
+export function tfDataUserPoolAdvancedSecurityAdditionalFlowsPropertyToHclTerraform(struct?: TfDataUserPool.AdvancedSecurityAdditionalFlowsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -561,7 +561,7 @@ export function dataAwsCognitoUserPoolAdvancedSecurityAdditionalFlowsPropertyToH
 }
 
 
-export function dataAwsCognitoUserPoolUserPoolAddOnsPropertyToTerraform(struct?: DataAwsCognitoUserPool.UserPoolAddOnsProperty): any {
+export function tfDataUserPoolUserPoolAddOnsPropertyToTerraform(struct?: TfDataUserPool.UserPoolAddOnsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -571,7 +571,7 @@ export function dataAwsCognitoUserPoolUserPoolAddOnsPropertyToTerraform(struct?:
 }
 
 
-export function dataAwsCognitoUserPoolUserPoolAddOnsPropertyToHclTerraform(struct?: DataAwsCognitoUserPool.UserPoolAddOnsProperty): any {
+export function tfDataUserPoolUserPoolAddOnsPropertyToHclTerraform(struct?: TfDataUserPool.UserPoolAddOnsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -582,7 +582,7 @@ export function dataAwsCognitoUserPoolUserPoolAddOnsPropertyToHclTerraform(struc
 }
 
 
-export namespace DataAwsCognitoUserPool {
+export namespace TfDataUserPool {
 export interface RecoveryMechanismProperty {
 }
 export class RecoveryMechanismPropertyOutputReference extends cdktn.ComplexObject {

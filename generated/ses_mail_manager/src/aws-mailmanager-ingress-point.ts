@@ -5,61 +5,61 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsMailmanagerIngressPointConfig extends cdktn.TerraformMetaArguments {
+export interface TfIngressPointConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#name AwsMailmanagerIngressPoint#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#name TfIngressPoint#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#region AwsMailmanagerIngressPoint#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#region TfIngressPoint#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#rule_set_id AwsMailmanagerIngressPoint#rule_set_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#rule_set_id TfIngressPoint#rule_set_id}
   */
   readonly ruleSetId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#tags AwsMailmanagerIngressPoint#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#tags TfIngressPoint#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#tls_policy AwsMailmanagerIngressPoint#tls_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#tls_policy TfIngressPoint#tls_policy}
   */
   readonly tlsPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#traffic_policy_id AwsMailmanagerIngressPoint#traffic_policy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#traffic_policy_id TfIngressPoint#traffic_policy_id}
   */
   readonly trafficPolicyId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#type AwsMailmanagerIngressPoint#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#type TfIngressPoint#type}
   */
   readonly type: string;
   /**
   * ingress_point_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#ingress_point_configuration AwsMailmanagerIngressPoint#ingress_point_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#ingress_point_configuration TfIngressPoint#ingress_point_configuration}
   */
-  readonly ingressPointConfiguration?: AwsMailmanagerIngressPoint.IngressPointConfigurationProperty[] | cdktn.IResolvable;
+  readonly ingressPointConfiguration?: TfIngressPoint.IngressPointConfigurationProperty[] | cdktn.IResolvable;
   /**
   * network_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#network_configuration AwsMailmanagerIngressPoint#network_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#network_configuration TfIngressPoint#network_configuration}
   */
-  readonly networkConfiguration?: AwsMailmanagerIngressPoint.NetworkConfigurationProperty[] | cdktn.IResolvable;
+  readonly networkConfiguration?: TfIngressPoint.NetworkConfigurationProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#timeouts AwsMailmanagerIngressPoint#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#timeouts TfIngressPoint#timeouts}
   */
-  readonly timeouts?: AwsMailmanagerIngressPoint.TimeoutsProperty;
+  readonly timeouts?: TfIngressPoint.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point aws_mailmanager_ingress_point}
 */
-export class AwsMailmanagerIngressPoint extends cdktn.TerraformResource {
+export class TfIngressPoint extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -70,11 +70,11 @@ export class AwsMailmanagerIngressPoint extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsMailmanagerIngressPoint resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfIngressPoint resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsMailmanagerIngressPoint to import
-  * @param importFromId The id of the existing AwsMailmanagerIngressPoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsMailmanagerIngressPoint to import is found
+  * @param importToId The construct id used in the generated config for the TfIngressPoint to import
+  * @param importFromId The id of the existing TfIngressPoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfIngressPoint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_mailmanager_ingress_point", importId: importFromId, provider });
@@ -89,9 +89,9 @@ export class AwsMailmanagerIngressPoint extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsMailmanagerIngressPointConfig
+  * @param options TfIngressPointConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsMailmanagerIngressPointConfig) {
+  public constructor(scope: Construct, id: string, config: TfIngressPointConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_mailmanager_ingress_point',
       terraformGeneratorMetadata: {
@@ -260,11 +260,11 @@ export class AwsMailmanagerIngressPoint extends cdktn.TerraformResource {
   }
 
   // ingress_point_configuration - computed: false, optional: true, required: false
-  private _ingressPointConfiguration = new AwsMailmanagerIngressPoint.IngressPointConfigurationPropertyList(this, "ingress_point_configuration", false);
+  private _ingressPointConfiguration = new TfIngressPoint.IngressPointConfigurationPropertyList(this, "ingress_point_configuration", false);
   public get ingressPointConfiguration() {
     return this._ingressPointConfiguration;
   }
-  public putIngressPointConfiguration(value: AwsMailmanagerIngressPoint.IngressPointConfigurationProperty[] | cdktn.IResolvable) {
+  public putIngressPointConfiguration(value: TfIngressPoint.IngressPointConfigurationProperty[] | cdktn.IResolvable) {
     this._ingressPointConfiguration.internalValue = value;
   }
   public resetIngressPointConfiguration() {
@@ -276,11 +276,11 @@ export class AwsMailmanagerIngressPoint extends cdktn.TerraformResource {
   }
 
   // network_configuration - computed: false, optional: true, required: false
-  private _networkConfiguration = new AwsMailmanagerIngressPoint.NetworkConfigurationPropertyList(this, "network_configuration", false);
+  private _networkConfiguration = new TfIngressPoint.NetworkConfigurationPropertyList(this, "network_configuration", false);
   public get networkConfiguration() {
     return this._networkConfiguration;
   }
-  public putNetworkConfiguration(value: AwsMailmanagerIngressPoint.NetworkConfigurationProperty[] | cdktn.IResolvable) {
+  public putNetworkConfiguration(value: TfIngressPoint.NetworkConfigurationProperty[] | cdktn.IResolvable) {
     this._networkConfiguration.internalValue = value;
   }
   public resetNetworkConfiguration() {
@@ -292,11 +292,11 @@ export class AwsMailmanagerIngressPoint extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsMailmanagerIngressPoint.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfIngressPoint.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsMailmanagerIngressPoint.TimeoutsProperty) {
+  public putTimeouts(value: TfIngressPoint.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -320,9 +320,9 @@ export class AwsMailmanagerIngressPoint extends cdktn.TerraformResource {
       tls_policy: cdktn.stringToTerraform(this._tlsPolicy),
       traffic_policy_id: cdktn.stringToTerraform(this._trafficPolicyId),
       type: cdktn.stringToTerraform(this._type),
-      ingress_point_configuration: cdktn.listMapper(awsMailmanagerIngressPointIngressPointConfigurationPropertyToTerraform, true)(this._ingressPointConfiguration.internalValue),
-      network_configuration: cdktn.listMapper(awsMailmanagerIngressPointNetworkConfigurationPropertyToTerraform, true)(this._networkConfiguration.internalValue),
-      timeouts: awsMailmanagerIngressPointTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      ingress_point_configuration: cdktn.listMapper(tfIngressPointIngressPointConfigurationPropertyToTerraform, true)(this._ingressPointConfiguration.internalValue),
+      network_configuration: cdktn.listMapper(tfIngressPointNetworkConfigurationPropertyToTerraform, true)(this._networkConfiguration.internalValue),
+      timeouts: tfIngressPointTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -371,22 +371,22 @@ export class AwsMailmanagerIngressPoint extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       ingress_point_configuration: {
-        value: cdktn.listMapperHcl(awsMailmanagerIngressPointIngressPointConfigurationPropertyToHclTerraform, true)(this._ingressPointConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfIngressPointIngressPointConfigurationPropertyToHclTerraform, true)(this._ingressPointConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsMailmanagerIngressPoint.IngressPointConfigurationPropertyList",
+        storageClassType: "TfIngressPoint.IngressPointConfigurationPropertyList",
       },
       network_configuration: {
-        value: cdktn.listMapperHcl(awsMailmanagerIngressPointNetworkConfigurationPropertyToHclTerraform, true)(this._networkConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfIngressPointNetworkConfigurationPropertyToHclTerraform, true)(this._networkConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsMailmanagerIngressPoint.NetworkConfigurationPropertyList",
+        storageClassType: "TfIngressPoint.NetworkConfigurationPropertyList",
       },
       timeouts: {
-        value: awsMailmanagerIngressPointTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfIngressPointTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsMailmanagerIngressPoint.TimeoutsProperty",
+        storageClassType: "TfIngressPoint.TimeoutsProperty",
       },
     };
 
@@ -395,7 +395,7 @@ export class AwsMailmanagerIngressPoint extends cdktn.TerraformResource {
   }
 }
 
-export function awsMailmanagerIngressPointTrustStorePropertyToTerraform(struct?: AwsMailmanagerIngressPoint.TrustStoreProperty | cdktn.IResolvable): any {
+export function tfIngressPointTrustStorePropertyToTerraform(struct?: TfIngressPoint.TrustStoreProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -408,7 +408,7 @@ export function awsMailmanagerIngressPointTrustStorePropertyToTerraform(struct?:
 }
 
 
-export function awsMailmanagerIngressPointTrustStorePropertyToHclTerraform(struct?: AwsMailmanagerIngressPoint.TrustStoreProperty | cdktn.IResolvable): any {
+export function tfIngressPointTrustStorePropertyToHclTerraform(struct?: TfIngressPoint.TrustStoreProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -439,25 +439,25 @@ export function awsMailmanagerIngressPointTrustStorePropertyToHclTerraform(struc
 }
 
 
-export function awsMailmanagerIngressPointTlsAuthConfigurationPropertyToTerraform(struct?: AwsMailmanagerIngressPoint.TlsAuthConfigurationProperty | cdktn.IResolvable): any {
+export function tfIngressPointTlsAuthConfigurationPropertyToTerraform(struct?: TfIngressPoint.TlsAuthConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    trust_store: cdktn.listMapper(awsMailmanagerIngressPointTrustStorePropertyToTerraform, true)(struct!.trustStore),
+    trust_store: cdktn.listMapper(tfIngressPointTrustStorePropertyToTerraform, true)(struct!.trustStore),
   }
 }
 
 
-export function awsMailmanagerIngressPointTlsAuthConfigurationPropertyToHclTerraform(struct?: AwsMailmanagerIngressPoint.TlsAuthConfigurationProperty | cdktn.IResolvable): any {
+export function tfIngressPointTlsAuthConfigurationPropertyToHclTerraform(struct?: TfIngressPoint.TlsAuthConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     trust_store: {
-      value: cdktn.listMapperHcl(awsMailmanagerIngressPointTrustStorePropertyToHclTerraform, true)(struct!.trustStore),
+      value: cdktn.listMapperHcl(tfIngressPointTrustStorePropertyToHclTerraform, true)(struct!.trustStore),
       isBlock: true,
       type: "list",
       storageClassType: "TrustStorePropertyList",
@@ -469,7 +469,7 @@ export function awsMailmanagerIngressPointTlsAuthConfigurationPropertyToHclTerra
 }
 
 
-export function awsMailmanagerIngressPointIngressPointConfigurationPropertyToTerraform(struct?: AwsMailmanagerIngressPoint.IngressPointConfigurationProperty | cdktn.IResolvable): any {
+export function tfIngressPointIngressPointConfigurationPropertyToTerraform(struct?: TfIngressPoint.IngressPointConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -478,12 +478,12 @@ export function awsMailmanagerIngressPointIngressPointConfigurationPropertyToTer
     secret_arn: cdktn.stringToTerraform(struct!.secretArn),
     smtp_password_wo: cdktn.stringToTerraform(struct!.smtpPasswordWo),
     smtp_password_wo_version: cdktn.numberToTerraform(struct!.smtpPasswordWoVersion),
-    tls_auth_configuration: cdktn.listMapper(awsMailmanagerIngressPointTlsAuthConfigurationPropertyToTerraform, true)(struct!.tlsAuthConfiguration),
+    tls_auth_configuration: cdktn.listMapper(tfIngressPointTlsAuthConfigurationPropertyToTerraform, true)(struct!.tlsAuthConfiguration),
   }
 }
 
 
-export function awsMailmanagerIngressPointIngressPointConfigurationPropertyToHclTerraform(struct?: AwsMailmanagerIngressPoint.IngressPointConfigurationProperty | cdktn.IResolvable): any {
+export function tfIngressPointIngressPointConfigurationPropertyToHclTerraform(struct?: TfIngressPoint.IngressPointConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -508,7 +508,7 @@ export function awsMailmanagerIngressPointIngressPointConfigurationPropertyToHcl
       storageClassType: "number",
     },
     tls_auth_configuration: {
-      value: cdktn.listMapperHcl(awsMailmanagerIngressPointTlsAuthConfigurationPropertyToHclTerraform, true)(struct!.tlsAuthConfiguration),
+      value: cdktn.listMapperHcl(tfIngressPointTlsAuthConfigurationPropertyToHclTerraform, true)(struct!.tlsAuthConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "TlsAuthConfigurationPropertyList",
@@ -520,7 +520,7 @@ export function awsMailmanagerIngressPointIngressPointConfigurationPropertyToHcl
 }
 
 
-export function awsMailmanagerIngressPointPrivateNetworkConfigurationPropertyToTerraform(struct?: AwsMailmanagerIngressPoint.PrivateNetworkConfigurationProperty | cdktn.IResolvable): any {
+export function tfIngressPointPrivateNetworkConfigurationPropertyToTerraform(struct?: TfIngressPoint.PrivateNetworkConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -531,7 +531,7 @@ export function awsMailmanagerIngressPointPrivateNetworkConfigurationPropertyToT
 }
 
 
-export function awsMailmanagerIngressPointPrivateNetworkConfigurationPropertyToHclTerraform(struct?: AwsMailmanagerIngressPoint.PrivateNetworkConfigurationProperty | cdktn.IResolvable): any {
+export function tfIngressPointPrivateNetworkConfigurationPropertyToHclTerraform(struct?: TfIngressPoint.PrivateNetworkConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -550,7 +550,7 @@ export function awsMailmanagerIngressPointPrivateNetworkConfigurationPropertyToH
 }
 
 
-export function awsMailmanagerIngressPointPublicNetworkConfigurationPropertyToTerraform(struct?: AwsMailmanagerIngressPoint.PublicNetworkConfigurationProperty | cdktn.IResolvable): any {
+export function tfIngressPointPublicNetworkConfigurationPropertyToTerraform(struct?: TfIngressPoint.PublicNetworkConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -561,7 +561,7 @@ export function awsMailmanagerIngressPointPublicNetworkConfigurationPropertyToTe
 }
 
 
-export function awsMailmanagerIngressPointPublicNetworkConfigurationPropertyToHclTerraform(struct?: AwsMailmanagerIngressPoint.PublicNetworkConfigurationProperty | cdktn.IResolvable): any {
+export function tfIngressPointPublicNetworkConfigurationPropertyToHclTerraform(struct?: TfIngressPoint.PublicNetworkConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -580,32 +580,32 @@ export function awsMailmanagerIngressPointPublicNetworkConfigurationPropertyToHc
 }
 
 
-export function awsMailmanagerIngressPointNetworkConfigurationPropertyToTerraform(struct?: AwsMailmanagerIngressPoint.NetworkConfigurationProperty | cdktn.IResolvable): any {
+export function tfIngressPointNetworkConfigurationPropertyToTerraform(struct?: TfIngressPoint.NetworkConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    private_network_configuration: cdktn.listMapper(awsMailmanagerIngressPointPrivateNetworkConfigurationPropertyToTerraform, true)(struct!.privateNetworkConfiguration),
-    public_network_configuration: cdktn.listMapper(awsMailmanagerIngressPointPublicNetworkConfigurationPropertyToTerraform, true)(struct!.publicNetworkConfiguration),
+    private_network_configuration: cdktn.listMapper(tfIngressPointPrivateNetworkConfigurationPropertyToTerraform, true)(struct!.privateNetworkConfiguration),
+    public_network_configuration: cdktn.listMapper(tfIngressPointPublicNetworkConfigurationPropertyToTerraform, true)(struct!.publicNetworkConfiguration),
   }
 }
 
 
-export function awsMailmanagerIngressPointNetworkConfigurationPropertyToHclTerraform(struct?: AwsMailmanagerIngressPoint.NetworkConfigurationProperty | cdktn.IResolvable): any {
+export function tfIngressPointNetworkConfigurationPropertyToHclTerraform(struct?: TfIngressPoint.NetworkConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     private_network_configuration: {
-      value: cdktn.listMapperHcl(awsMailmanagerIngressPointPrivateNetworkConfigurationPropertyToHclTerraform, true)(struct!.privateNetworkConfiguration),
+      value: cdktn.listMapperHcl(tfIngressPointPrivateNetworkConfigurationPropertyToHclTerraform, true)(struct!.privateNetworkConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "PrivateNetworkConfigurationPropertyList",
     },
     public_network_configuration: {
-      value: cdktn.listMapperHcl(awsMailmanagerIngressPointPublicNetworkConfigurationPropertyToHclTerraform, true)(struct!.publicNetworkConfiguration),
+      value: cdktn.listMapperHcl(tfIngressPointPublicNetworkConfigurationPropertyToHclTerraform, true)(struct!.publicNetworkConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "PublicNetworkConfigurationPropertyList",
@@ -617,7 +617,7 @@ export function awsMailmanagerIngressPointNetworkConfigurationPropertyToHclTerra
 }
 
 
-export function awsMailmanagerIngressPointTimeoutsPropertyToTerraform(struct?: AwsMailmanagerIngressPoint.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfIngressPointTimeoutsPropertyToTerraform(struct?: TfIngressPoint.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -630,7 +630,7 @@ export function awsMailmanagerIngressPointTimeoutsPropertyToTerraform(struct?: A
 }
 
 
-export function awsMailmanagerIngressPointTimeoutsPropertyToHclTerraform(struct?: AwsMailmanagerIngressPoint.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfIngressPointTimeoutsPropertyToHclTerraform(struct?: TfIngressPoint.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -661,18 +661,18 @@ export function awsMailmanagerIngressPointTimeoutsPropertyToHclTerraform(struct?
 }
 
 
-export namespace AwsMailmanagerIngressPoint {
+export namespace TfIngressPoint {
 export interface TrustStoreProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#ca_content AwsMailmanagerIngressPoint#ca_content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#ca_content TfIngressPoint#ca_content}
   */
   readonly caContent: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#crl_content AwsMailmanagerIngressPoint#crl_content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#crl_content TfIngressPoint#crl_content}
   */
   readonly crlContent?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#kms_key_arn AwsMailmanagerIngressPoint#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#kms_key_arn TfIngressPoint#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
 }
@@ -801,7 +801,7 @@ export interface TlsAuthConfigurationProperty {
   /**
   * trust_store block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#trust_store AwsMailmanagerIngressPoint#trust_store}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#trust_store TfIngressPoint#trust_store}
   */
   readonly trustStore?: TrustStoreProperty[] | cdktn.IResolvable;
 }
@@ -887,21 +887,21 @@ export class TlsAuthConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface IngressPointConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#secret_arn AwsMailmanagerIngressPoint#secret_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#secret_arn TfIngressPoint#secret_arn}
   */
   readonly secretArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#smtp_password_wo AwsMailmanagerIngressPoint#smtp_password_wo}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#smtp_password_wo TfIngressPoint#smtp_password_wo}
   */
   readonly smtpPasswordWo?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#smtp_password_wo_version AwsMailmanagerIngressPoint#smtp_password_wo_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#smtp_password_wo_version TfIngressPoint#smtp_password_wo_version}
   */
   readonly smtpPasswordWoVersion?: number;
   /**
   * tls_auth_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#tls_auth_configuration AwsMailmanagerIngressPoint#tls_auth_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#tls_auth_configuration TfIngressPoint#tls_auth_configuration}
   */
   readonly tlsAuthConfiguration?: TlsAuthConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -1056,7 +1056,7 @@ export class IngressPointConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface PrivateNetworkConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#vpc_endpoint_id AwsMailmanagerIngressPoint#vpc_endpoint_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#vpc_endpoint_id TfIngressPoint#vpc_endpoint_id}
   */
   readonly vpcEndpointId: string;
 }
@@ -1139,7 +1139,7 @@ export class PrivateNetworkConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface PublicNetworkConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#ip_type AwsMailmanagerIngressPoint#ip_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#ip_type TfIngressPoint#ip_type}
   */
   readonly ipType: string;
 }
@@ -1224,13 +1224,13 @@ export interface NetworkConfigurationProperty {
   /**
   * private_network_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#private_network_configuration AwsMailmanagerIngressPoint#private_network_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#private_network_configuration TfIngressPoint#private_network_configuration}
   */
   readonly privateNetworkConfiguration?: PrivateNetworkConfigurationProperty[] | cdktn.IResolvable;
   /**
   * public_network_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#public_network_configuration AwsMailmanagerIngressPoint#public_network_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#public_network_configuration TfIngressPoint#public_network_configuration}
   */
   readonly publicNetworkConfiguration?: PublicNetworkConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -1340,19 +1340,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#create AwsMailmanagerIngressPoint#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#create TfIngressPoint#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#delete AwsMailmanagerIngressPoint#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#delete TfIngressPoint#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#update AwsMailmanagerIngressPoint#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_ingress_point#update TfIngressPoint#update}
   */
   readonly update?: string;
 }

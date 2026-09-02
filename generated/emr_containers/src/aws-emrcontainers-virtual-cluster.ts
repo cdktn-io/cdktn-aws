@@ -5,50 +5,50 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEmrcontainersVirtualClusterConfig extends cdktn.TerraformMetaArguments {
+export interface TfVirtualClusterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_virtual_cluster#id AwsEmrcontainersVirtualCluster#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_virtual_cluster#id TfVirtualCluster#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_virtual_cluster#name AwsEmrcontainersVirtualCluster#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_virtual_cluster#name TfVirtualCluster#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_virtual_cluster#region AwsEmrcontainersVirtualCluster#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_virtual_cluster#region TfVirtualCluster#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_virtual_cluster#tags AwsEmrcontainersVirtualCluster#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_virtual_cluster#tags TfVirtualCluster#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_virtual_cluster#tags_all AwsEmrcontainersVirtualCluster#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_virtual_cluster#tags_all TfVirtualCluster#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * container_provider block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_virtual_cluster#container_provider AwsEmrcontainersVirtualCluster#container_provider}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_virtual_cluster#container_provider TfVirtualCluster#container_provider}
   */
-  readonly containerProvider: AwsEmrcontainersVirtualCluster.ContainerProviderProperty;
+  readonly containerProvider: TfVirtualCluster.ContainerProviderProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_virtual_cluster#timeouts AwsEmrcontainersVirtualCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_virtual_cluster#timeouts TfVirtualCluster#timeouts}
   */
-  readonly timeouts?: AwsEmrcontainersVirtualCluster.TimeoutsProperty;
+  readonly timeouts?: TfVirtualCluster.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_virtual_cluster aws_emrcontainers_virtual_cluster}
 */
-export class AwsEmrcontainersVirtualCluster extends cdktn.TerraformResource {
+export class TfVirtualCluster extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class AwsEmrcontainersVirtualCluster extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEmrcontainersVirtualCluster resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfVirtualCluster resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEmrcontainersVirtualCluster to import
-  * @param importFromId The id of the existing AwsEmrcontainersVirtualCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_virtual_cluster#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEmrcontainersVirtualCluster to import is found
+  * @param importToId The construct id used in the generated config for the TfVirtualCluster to import
+  * @param importFromId The id of the existing TfVirtualCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_virtual_cluster#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfVirtualCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_emrcontainers_virtual_cluster", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class AwsEmrcontainersVirtualCluster extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEmrcontainersVirtualClusterConfig
+  * @param options TfVirtualClusterConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEmrcontainersVirtualClusterConfig) {
+  public constructor(scope: Construct, id: string, config: TfVirtualClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_emrcontainers_virtual_cluster',
       terraformGeneratorMetadata: {
@@ -192,11 +192,11 @@ export class AwsEmrcontainersVirtualCluster extends cdktn.TerraformResource {
   }
 
   // container_provider - computed: false, optional: false, required: true
-  private _containerProvider = new AwsEmrcontainersVirtualCluster.ContainerProviderPropertyOutputReference(this, "container_provider");
+  private _containerProvider = new TfVirtualCluster.ContainerProviderPropertyOutputReference(this, "container_provider");
   public get containerProvider() {
     return this._containerProvider;
   }
-  public putContainerProvider(value: AwsEmrcontainersVirtualCluster.ContainerProviderProperty) {
+  public putContainerProvider(value: TfVirtualCluster.ContainerProviderProperty) {
     this._containerProvider.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -205,11 +205,11 @@ export class AwsEmrcontainersVirtualCluster extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsEmrcontainersVirtualCluster.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfVirtualCluster.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsEmrcontainersVirtualCluster.TimeoutsProperty) {
+  public putTimeouts(value: TfVirtualCluster.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -231,8 +231,8 @@ export class AwsEmrcontainersVirtualCluster extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      container_provider: awsEmrcontainersVirtualClusterContainerProviderPropertyToTerraform(this._containerProvider.internalValue),
-      timeouts: awsEmrcontainersVirtualClusterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      container_provider: tfVirtualClusterContainerProviderPropertyToTerraform(this._containerProvider.internalValue),
+      timeouts: tfVirtualClusterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -269,16 +269,16 @@ export class AwsEmrcontainersVirtualCluster extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       container_provider: {
-        value: awsEmrcontainersVirtualClusterContainerProviderPropertyToHclTerraform(this._containerProvider.internalValue),
+        value: tfVirtualClusterContainerProviderPropertyToHclTerraform(this._containerProvider.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEmrcontainersVirtualCluster.ContainerProviderPropertyList",
+        storageClassType: "TfVirtualCluster.ContainerProviderPropertyList",
       },
       timeouts: {
-        value: awsEmrcontainersVirtualClusterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfVirtualClusterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsEmrcontainersVirtualCluster.TimeoutsProperty",
+        storageClassType: "TfVirtualCluster.TimeoutsProperty",
       },
     };
 
@@ -287,7 +287,7 @@ export class AwsEmrcontainersVirtualCluster extends cdktn.TerraformResource {
   }
 }
 
-export function awsEmrcontainersVirtualClusterEksInfoPropertyToTerraform(struct?: AwsEmrcontainersVirtualCluster.EksInfoPropertyOutputReference | AwsEmrcontainersVirtualCluster.EksInfoProperty): any {
+export function tfVirtualClusterEksInfoPropertyToTerraform(struct?: TfVirtualCluster.EksInfoPropertyOutputReference | TfVirtualCluster.EksInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -298,7 +298,7 @@ export function awsEmrcontainersVirtualClusterEksInfoPropertyToTerraform(struct?
 }
 
 
-export function awsEmrcontainersVirtualClusterEksInfoPropertyToHclTerraform(struct?: AwsEmrcontainersVirtualCluster.EksInfoPropertyOutputReference | AwsEmrcontainersVirtualCluster.EksInfoProperty): any {
+export function tfVirtualClusterEksInfoPropertyToHclTerraform(struct?: TfVirtualCluster.EksInfoPropertyOutputReference | TfVirtualCluster.EksInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -317,25 +317,25 @@ export function awsEmrcontainersVirtualClusterEksInfoPropertyToHclTerraform(stru
 }
 
 
-export function awsEmrcontainersVirtualClusterInfoPropertyToTerraform(struct?: AwsEmrcontainersVirtualCluster.InfoPropertyOutputReference | AwsEmrcontainersVirtualCluster.InfoProperty): any {
+export function tfVirtualClusterInfoPropertyToTerraform(struct?: TfVirtualCluster.InfoPropertyOutputReference | TfVirtualCluster.InfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    eks_info: awsEmrcontainersVirtualClusterEksInfoPropertyToTerraform(struct!.eksInfo),
+    eks_info: tfVirtualClusterEksInfoPropertyToTerraform(struct!.eksInfo),
   }
 }
 
 
-export function awsEmrcontainersVirtualClusterInfoPropertyToHclTerraform(struct?: AwsEmrcontainersVirtualCluster.InfoPropertyOutputReference | AwsEmrcontainersVirtualCluster.InfoProperty): any {
+export function tfVirtualClusterInfoPropertyToHclTerraform(struct?: TfVirtualCluster.InfoPropertyOutputReference | TfVirtualCluster.InfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     eks_info: {
-      value: awsEmrcontainersVirtualClusterEksInfoPropertyToHclTerraform(struct!.eksInfo),
+      value: tfVirtualClusterEksInfoPropertyToHclTerraform(struct!.eksInfo),
       isBlock: true,
       type: "list",
       storageClassType: "EksInfoPropertyList",
@@ -347,7 +347,7 @@ export function awsEmrcontainersVirtualClusterInfoPropertyToHclTerraform(struct?
 }
 
 
-export function awsEmrcontainersVirtualClusterContainerProviderPropertyToTerraform(struct?: AwsEmrcontainersVirtualCluster.ContainerProviderPropertyOutputReference | AwsEmrcontainersVirtualCluster.ContainerProviderProperty): any {
+export function tfVirtualClusterContainerProviderPropertyToTerraform(struct?: TfVirtualCluster.ContainerProviderPropertyOutputReference | TfVirtualCluster.ContainerProviderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -355,12 +355,12 @@ export function awsEmrcontainersVirtualClusterContainerProviderPropertyToTerrafo
   return {
     id: cdktn.stringToTerraform(struct!.id),
     type: cdktn.stringToTerraform(struct!.type),
-    info: awsEmrcontainersVirtualClusterInfoPropertyToTerraform(struct!.info),
+    info: tfVirtualClusterInfoPropertyToTerraform(struct!.info),
   }
 }
 
 
-export function awsEmrcontainersVirtualClusterContainerProviderPropertyToHclTerraform(struct?: AwsEmrcontainersVirtualCluster.ContainerProviderPropertyOutputReference | AwsEmrcontainersVirtualCluster.ContainerProviderProperty): any {
+export function tfVirtualClusterContainerProviderPropertyToHclTerraform(struct?: TfVirtualCluster.ContainerProviderPropertyOutputReference | TfVirtualCluster.ContainerProviderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -379,7 +379,7 @@ export function awsEmrcontainersVirtualClusterContainerProviderPropertyToHclTerr
       storageClassType: "string",
     },
     info: {
-      value: awsEmrcontainersVirtualClusterInfoPropertyToHclTerraform(struct!.info),
+      value: tfVirtualClusterInfoPropertyToHclTerraform(struct!.info),
       isBlock: true,
       type: "list",
       storageClassType: "InfoPropertyList",
@@ -391,7 +391,7 @@ export function awsEmrcontainersVirtualClusterContainerProviderPropertyToHclTerr
 }
 
 
-export function awsEmrcontainersVirtualClusterTimeoutsPropertyToTerraform(struct?: AwsEmrcontainersVirtualCluster.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfVirtualClusterTimeoutsPropertyToTerraform(struct?: TfVirtualCluster.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -402,7 +402,7 @@ export function awsEmrcontainersVirtualClusterTimeoutsPropertyToTerraform(struct
 }
 
 
-export function awsEmrcontainersVirtualClusterTimeoutsPropertyToHclTerraform(struct?: AwsEmrcontainersVirtualCluster.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfVirtualClusterTimeoutsPropertyToHclTerraform(struct?: TfVirtualCluster.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -421,10 +421,10 @@ export function awsEmrcontainersVirtualClusterTimeoutsPropertyToHclTerraform(str
 }
 
 
-export namespace AwsEmrcontainersVirtualCluster {
+export namespace TfVirtualCluster {
 export interface EksInfoProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_virtual_cluster#namespace AwsEmrcontainersVirtualCluster#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_virtual_cluster#namespace TfVirtualCluster#namespace}
   */
   readonly namespace?: string;
 }
@@ -480,7 +480,7 @@ export interface InfoProperty {
   /**
   * eks_info block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_virtual_cluster#eks_info AwsEmrcontainersVirtualCluster#eks_info}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_virtual_cluster#eks_info TfVirtualCluster#eks_info}
   */
   readonly eksInfo: EksInfoProperty;
 }
@@ -531,20 +531,20 @@ export class InfoPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ContainerProviderProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_virtual_cluster#id AwsEmrcontainersVirtualCluster#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_virtual_cluster#id TfVirtualCluster#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_virtual_cluster#type AwsEmrcontainersVirtualCluster#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_virtual_cluster#type TfVirtualCluster#type}
   */
   readonly type: string;
   /**
   * info block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_virtual_cluster#info AwsEmrcontainersVirtualCluster#info}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_virtual_cluster#info TfVirtualCluster#info}
   */
   readonly info: InfoProperty;
 }
@@ -633,7 +633,7 @@ export class ContainerProviderPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_virtual_cluster#delete AwsEmrcontainersVirtualCluster#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emrcontainers_virtual_cluster#delete TfVirtualCluster#delete}
   */
   readonly delete?: string;
 }

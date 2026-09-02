@@ -5,34 +5,34 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsOutpostsOutpostConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataOutpostConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/outposts_outpost#arn DataAwsOutpostsOutpost#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/outposts_outpost#arn TfDataOutpost#arn}
   */
   readonly arn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/outposts_outpost#id DataAwsOutpostsOutpost#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/outposts_outpost#id TfDataOutpost#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/outposts_outpost#name DataAwsOutpostsOutpost#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/outposts_outpost#name TfDataOutpost#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/outposts_outpost#owner_id DataAwsOutpostsOutpost#owner_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/outposts_outpost#owner_id TfDataOutpost#owner_id}
   */
   readonly ownerId?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/outposts_outpost#region DataAwsOutpostsOutpost#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/outposts_outpost#region TfDataOutpost#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/outposts_outpost#tags DataAwsOutpostsOutpost#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/outposts_outpost#tags TfDataOutpost#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -40,7 +40,7 @@ export interface DataAwsOutpostsOutpostConfig extends cdktn.TerraformMetaArgumen
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/outposts_outpost aws_outposts_outpost}
 */
-export class DataAwsOutpostsOutpost extends cdktn.TerraformDataSource {
+export class TfDataOutpost extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class DataAwsOutpostsOutpost extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsOutpostsOutpost resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataOutpost resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsOutpostsOutpost to import
-  * @param importFromId The id of the existing DataAwsOutpostsOutpost that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/outposts_outpost#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsOutpostsOutpost to import is found
+  * @param importToId The construct id used in the generated config for the TfDataOutpost to import
+  * @param importFromId The id of the existing TfDataOutpost that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/outposts_outpost#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataOutpost to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_outposts_outpost", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class DataAwsOutpostsOutpost extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsOutpostsOutpostConfig = {}
+  * @param options TfDataOutpostConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsOutpostsOutpostConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDataOutpostConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_outposts_outpost',
       terraformGeneratorMetadata: {

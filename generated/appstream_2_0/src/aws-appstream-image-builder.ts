@@ -5,88 +5,88 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsAppstreamImageBuilderConfig extends cdktn.TerraformMetaArguments {
+export interface TfImageBuilderConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#appstream_agent_version AwsAppstreamImageBuilder#appstream_agent_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#appstream_agent_version TfImageBuilder#appstream_agent_version}
   */
   readonly appstreamAgentVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#description AwsAppstreamImageBuilder#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#description TfImageBuilder#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#display_name AwsAppstreamImageBuilder#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#display_name TfImageBuilder#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#enable_default_internet_access AwsAppstreamImageBuilder#enable_default_internet_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#enable_default_internet_access TfImageBuilder#enable_default_internet_access}
   */
   readonly enableDefaultInternetAccess?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#iam_role_arn AwsAppstreamImageBuilder#iam_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#iam_role_arn TfImageBuilder#iam_role_arn}
   */
   readonly iamRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#id AwsAppstreamImageBuilder#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#id TfImageBuilder#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#image_arn AwsAppstreamImageBuilder#image_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#image_arn TfImageBuilder#image_arn}
   */
   readonly imageArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#image_name AwsAppstreamImageBuilder#image_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#image_name TfImageBuilder#image_name}
   */
   readonly imageName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#instance_type AwsAppstreamImageBuilder#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#instance_type TfImageBuilder#instance_type}
   */
   readonly instanceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#name AwsAppstreamImageBuilder#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#name TfImageBuilder#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#region AwsAppstreamImageBuilder#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#region TfImageBuilder#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#tags AwsAppstreamImageBuilder#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#tags TfImageBuilder#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#tags_all AwsAppstreamImageBuilder#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#tags_all TfImageBuilder#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * access_endpoint block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#access_endpoint AwsAppstreamImageBuilder#access_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#access_endpoint TfImageBuilder#access_endpoint}
   */
-  readonly accessEndpoint?: AwsAppstreamImageBuilder.AccessEndpointProperty[] | cdktn.IResolvable;
+  readonly accessEndpoint?: TfImageBuilder.AccessEndpointProperty[] | cdktn.IResolvable;
   /**
   * domain_join_info block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#domain_join_info AwsAppstreamImageBuilder#domain_join_info}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#domain_join_info TfImageBuilder#domain_join_info}
   */
-  readonly domainJoinInfo?: AwsAppstreamImageBuilder.DomainJoinInfoProperty;
+  readonly domainJoinInfo?: TfImageBuilder.DomainJoinInfoProperty;
   /**
   * vpc_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#vpc_config AwsAppstreamImageBuilder#vpc_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#vpc_config TfImageBuilder#vpc_config}
   */
-  readonly vpcConfig?: AwsAppstreamImageBuilder.VpcConfigProperty;
+  readonly vpcConfig?: TfImageBuilder.VpcConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder aws_appstream_image_builder}
 */
-export class AwsAppstreamImageBuilder extends cdktn.TerraformResource {
+export class TfImageBuilder extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -97,11 +97,11 @@ export class AwsAppstreamImageBuilder extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsAppstreamImageBuilder resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfImageBuilder resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsAppstreamImageBuilder to import
-  * @param importFromId The id of the existing AwsAppstreamImageBuilder that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsAppstreamImageBuilder to import is found
+  * @param importToId The construct id used in the generated config for the TfImageBuilder to import
+  * @param importFromId The id of the existing TfImageBuilder that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfImageBuilder to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appstream_image_builder", importId: importFromId, provider });
@@ -116,9 +116,9 @@ export class AwsAppstreamImageBuilder extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsAppstreamImageBuilderConfig
+  * @param options TfImageBuilderConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsAppstreamImageBuilderConfig) {
+  public constructor(scope: Construct, id: string, config: TfImageBuilderConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appstream_image_builder',
       terraformGeneratorMetadata: {
@@ -374,11 +374,11 @@ export class AwsAppstreamImageBuilder extends cdktn.TerraformResource {
   }
 
   // access_endpoint - computed: false, optional: true, required: false
-  private _accessEndpoint = new AwsAppstreamImageBuilder.AccessEndpointPropertyList(this, "access_endpoint", true);
+  private _accessEndpoint = new TfImageBuilder.AccessEndpointPropertyList(this, "access_endpoint", true);
   public get accessEndpoint() {
     return this._accessEndpoint;
   }
-  public putAccessEndpoint(value: AwsAppstreamImageBuilder.AccessEndpointProperty[] | cdktn.IResolvable) {
+  public putAccessEndpoint(value: TfImageBuilder.AccessEndpointProperty[] | cdktn.IResolvable) {
     this._accessEndpoint.internalValue = value;
   }
   public resetAccessEndpoint() {
@@ -390,11 +390,11 @@ export class AwsAppstreamImageBuilder extends cdktn.TerraformResource {
   }
 
   // domain_join_info - computed: false, optional: true, required: false
-  private _domainJoinInfo = new AwsAppstreamImageBuilder.DomainJoinInfoPropertyOutputReference(this, "domain_join_info");
+  private _domainJoinInfo = new TfImageBuilder.DomainJoinInfoPropertyOutputReference(this, "domain_join_info");
   public get domainJoinInfo() {
     return this._domainJoinInfo;
   }
-  public putDomainJoinInfo(value: AwsAppstreamImageBuilder.DomainJoinInfoProperty) {
+  public putDomainJoinInfo(value: TfImageBuilder.DomainJoinInfoProperty) {
     this._domainJoinInfo.internalValue = value;
   }
   public resetDomainJoinInfo() {
@@ -406,11 +406,11 @@ export class AwsAppstreamImageBuilder extends cdktn.TerraformResource {
   }
 
   // vpc_config - computed: false, optional: true, required: false
-  private _vpcConfig = new AwsAppstreamImageBuilder.VpcConfigPropertyOutputReference(this, "vpc_config");
+  private _vpcConfig = new TfImageBuilder.VpcConfigPropertyOutputReference(this, "vpc_config");
   public get vpcConfig() {
     return this._vpcConfig;
   }
-  public putVpcConfig(value: AwsAppstreamImageBuilder.VpcConfigProperty) {
+  public putVpcConfig(value: TfImageBuilder.VpcConfigProperty) {
     this._vpcConfig.internalValue = value;
   }
   public resetVpcConfig() {
@@ -440,9 +440,9 @@ export class AwsAppstreamImageBuilder extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      access_endpoint: cdktn.listMapper(awsAppstreamImageBuilderAccessEndpointPropertyToTerraform, true)(this._accessEndpoint.internalValue),
-      domain_join_info: awsAppstreamImageBuilderDomainJoinInfoPropertyToTerraform(this._domainJoinInfo.internalValue),
-      vpc_config: awsAppstreamImageBuilderVpcConfigPropertyToTerraform(this._vpcConfig.internalValue),
+      access_endpoint: cdktn.listMapper(tfImageBuilderAccessEndpointPropertyToTerraform, true)(this._accessEndpoint.internalValue),
+      domain_join_info: tfImageBuilderDomainJoinInfoPropertyToTerraform(this._domainJoinInfo.internalValue),
+      vpc_config: tfImageBuilderVpcConfigPropertyToTerraform(this._vpcConfig.internalValue),
     };
   }
 
@@ -527,22 +527,22 @@ export class AwsAppstreamImageBuilder extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       access_endpoint: {
-        value: cdktn.listMapperHcl(awsAppstreamImageBuilderAccessEndpointPropertyToHclTerraform, true)(this._accessEndpoint.internalValue),
+        value: cdktn.listMapperHcl(tfImageBuilderAccessEndpointPropertyToHclTerraform, true)(this._accessEndpoint.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsAppstreamImageBuilder.AccessEndpointPropertyList",
+        storageClassType: "TfImageBuilder.AccessEndpointPropertyList",
       },
       domain_join_info: {
-        value: awsAppstreamImageBuilderDomainJoinInfoPropertyToHclTerraform(this._domainJoinInfo.internalValue),
+        value: tfImageBuilderDomainJoinInfoPropertyToHclTerraform(this._domainJoinInfo.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAppstreamImageBuilder.DomainJoinInfoPropertyList",
+        storageClassType: "TfImageBuilder.DomainJoinInfoPropertyList",
       },
       vpc_config: {
-        value: awsAppstreamImageBuilderVpcConfigPropertyToHclTerraform(this._vpcConfig.internalValue),
+        value: tfImageBuilderVpcConfigPropertyToHclTerraform(this._vpcConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAppstreamImageBuilder.VpcConfigPropertyList",
+        storageClassType: "TfImageBuilder.VpcConfigPropertyList",
       },
     };
 
@@ -551,7 +551,7 @@ export class AwsAppstreamImageBuilder extends cdktn.TerraformResource {
   }
 }
 
-export function awsAppstreamImageBuilderAccessEndpointPropertyToTerraform(struct?: AwsAppstreamImageBuilder.AccessEndpointProperty | cdktn.IResolvable): any {
+export function tfImageBuilderAccessEndpointPropertyToTerraform(struct?: TfImageBuilder.AccessEndpointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -563,7 +563,7 @@ export function awsAppstreamImageBuilderAccessEndpointPropertyToTerraform(struct
 }
 
 
-export function awsAppstreamImageBuilderAccessEndpointPropertyToHclTerraform(struct?: AwsAppstreamImageBuilder.AccessEndpointProperty | cdktn.IResolvable): any {
+export function tfImageBuilderAccessEndpointPropertyToHclTerraform(struct?: TfImageBuilder.AccessEndpointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -588,7 +588,7 @@ export function awsAppstreamImageBuilderAccessEndpointPropertyToHclTerraform(str
 }
 
 
-export function awsAppstreamImageBuilderDomainJoinInfoPropertyToTerraform(struct?: AwsAppstreamImageBuilder.DomainJoinInfoPropertyOutputReference | AwsAppstreamImageBuilder.DomainJoinInfoProperty): any {
+export function tfImageBuilderDomainJoinInfoPropertyToTerraform(struct?: TfImageBuilder.DomainJoinInfoPropertyOutputReference | TfImageBuilder.DomainJoinInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -600,7 +600,7 @@ export function awsAppstreamImageBuilderDomainJoinInfoPropertyToTerraform(struct
 }
 
 
-export function awsAppstreamImageBuilderDomainJoinInfoPropertyToHclTerraform(struct?: AwsAppstreamImageBuilder.DomainJoinInfoPropertyOutputReference | AwsAppstreamImageBuilder.DomainJoinInfoProperty): any {
+export function tfImageBuilderDomainJoinInfoPropertyToHclTerraform(struct?: TfImageBuilder.DomainJoinInfoPropertyOutputReference | TfImageBuilder.DomainJoinInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -625,7 +625,7 @@ export function awsAppstreamImageBuilderDomainJoinInfoPropertyToHclTerraform(str
 }
 
 
-export function awsAppstreamImageBuilderVpcConfigPropertyToTerraform(struct?: AwsAppstreamImageBuilder.VpcConfigPropertyOutputReference | AwsAppstreamImageBuilder.VpcConfigProperty): any {
+export function tfImageBuilderVpcConfigPropertyToTerraform(struct?: TfImageBuilder.VpcConfigPropertyOutputReference | TfImageBuilder.VpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -637,7 +637,7 @@ export function awsAppstreamImageBuilderVpcConfigPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsAppstreamImageBuilderVpcConfigPropertyToHclTerraform(struct?: AwsAppstreamImageBuilder.VpcConfigPropertyOutputReference | AwsAppstreamImageBuilder.VpcConfigProperty): any {
+export function tfImageBuilderVpcConfigPropertyToHclTerraform(struct?: TfImageBuilder.VpcConfigPropertyOutputReference | TfImageBuilder.VpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -662,14 +662,14 @@ export function awsAppstreamImageBuilderVpcConfigPropertyToHclTerraform(struct?:
 }
 
 
-export namespace AwsAppstreamImageBuilder {
+export namespace TfImageBuilder {
 export interface AccessEndpointProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#endpoint_type AwsAppstreamImageBuilder#endpoint_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#endpoint_type TfImageBuilder#endpoint_type}
   */
   readonly endpointType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#vpce_id AwsAppstreamImageBuilder#vpce_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#vpce_id TfImageBuilder#vpce_id}
   */
   readonly vpceId?: string;
 }
@@ -774,11 +774,11 @@ export class AccessEndpointPropertyList extends cdktn.ComplexList {
 }
 export interface DomainJoinInfoProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#directory_name AwsAppstreamImageBuilder#directory_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#directory_name TfImageBuilder#directory_name}
   */
   readonly directoryName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#organizational_unit_distinguished_name AwsAppstreamImageBuilder#organizational_unit_distinguished_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#organizational_unit_distinguished_name TfImageBuilder#organizational_unit_distinguished_name}
   */
   readonly organizationalUnitDistinguishedName?: string;
 }
@@ -854,11 +854,11 @@ export class DomainJoinInfoPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VpcConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#security_group_ids AwsAppstreamImageBuilder#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#security_group_ids TfImageBuilder#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#subnet_ids AwsAppstreamImageBuilder#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_image_builder#subnet_ids TfImageBuilder#subnet_ids}
   */
   readonly subnetIds?: string[];
 }

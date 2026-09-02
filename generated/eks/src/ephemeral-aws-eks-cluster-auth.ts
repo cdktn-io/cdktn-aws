@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface EphemeralAwsEksClusterAuthConfig extends cdktn.TerraformEphemeralMetaArguments {
+export interface TfEphemeralClusterAuthConfig extends cdktn.TerraformEphemeralMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/eks_cluster_auth#name EphemeralAwsEksClusterAuth#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/eks_cluster_auth#name TfEphemeralClusterAuth#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/eks_cluster_auth#region EphemeralAwsEksClusterAuth#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/eks_cluster_auth#region TfEphemeralClusterAuth#region}
   */
   readonly region?: string;
 }
@@ -21,7 +21,7 @@ export interface EphemeralAwsEksClusterAuthConfig extends cdktn.TerraformEphemer
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/eks_cluster_auth aws_eks_cluster_auth}
 */
-export class EphemeralAwsEksClusterAuth extends cdktn.TerraformEphemeralResource {
+export class TfEphemeralClusterAuth extends cdktn.TerraformEphemeralResource {
 
   // =================
   // STATIC PROPERTIES
@@ -37,9 +37,9 @@ export class EphemeralAwsEksClusterAuth extends cdktn.TerraformEphemeralResource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options EphemeralAwsEksClusterAuthConfig
+  * @param options TfEphemeralClusterAuthConfig
   */
-  public constructor(scope: Construct, id: string, config: EphemeralAwsEksClusterAuthConfig) {
+  public constructor(scope: Construct, id: string, config: TfEphemeralClusterAuthConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_eks_cluster_auth',
       terraformGeneratorMetadata: {

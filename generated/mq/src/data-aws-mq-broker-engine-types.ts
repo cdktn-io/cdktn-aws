@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsMqBrokerEngineTypesConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataBrokerEngineTypesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker_engine_types#engine_type DataAwsMqBrokerEngineTypes#engine_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker_engine_types#engine_type TfDataBrokerEngineTypes#engine_type}
   */
   readonly engineType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker_engine_types#id DataAwsMqBrokerEngineTypes#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker_engine_types#id TfDataBrokerEngineTypes#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,7 +20,7 @@ export interface DataAwsMqBrokerEngineTypesConfig extends cdktn.TerraformMetaArg
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker_engine_types#region DataAwsMqBrokerEngineTypes#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker_engine_types#region TfDataBrokerEngineTypes#region}
   */
   readonly region?: string;
 }
@@ -28,7 +28,7 @@ export interface DataAwsMqBrokerEngineTypesConfig extends cdktn.TerraformMetaArg
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker_engine_types aws_mq_broker_engine_types}
 */
-export class DataAwsMqBrokerEngineTypes extends cdktn.TerraformDataSource {
+export class TfDataBrokerEngineTypes extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class DataAwsMqBrokerEngineTypes extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsMqBrokerEngineTypes resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataBrokerEngineTypes resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsMqBrokerEngineTypes to import
-  * @param importFromId The id of the existing DataAwsMqBrokerEngineTypes that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker_engine_types#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsMqBrokerEngineTypes to import is found
+  * @param importToId The construct id used in the generated config for the TfDataBrokerEngineTypes to import
+  * @param importFromId The id of the existing TfDataBrokerEngineTypes that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker_engine_types#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataBrokerEngineTypes to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_mq_broker_engine_types", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class DataAwsMqBrokerEngineTypes extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsMqBrokerEngineTypesConfig = {}
+  * @param options TfDataBrokerEngineTypesConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsMqBrokerEngineTypesConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDataBrokerEngineTypesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_mq_broker_engine_types',
       terraformGeneratorMetadata: {
@@ -86,7 +86,7 @@ export class DataAwsMqBrokerEngineTypes extends cdktn.TerraformDataSource {
   // ==========
 
   // broker_engine_types - computed: true, optional: false, required: false
-  private _brokerEngineTypes = new DataAwsMqBrokerEngineTypes.BrokerEngineTypesPropertyList(this, "broker_engine_types", false);
+  private _brokerEngineTypes = new TfDataBrokerEngineTypes.BrokerEngineTypesPropertyList(this, "broker_engine_types", false);
   public get brokerEngineTypes() {
     return this._brokerEngineTypes;
   }
@@ -178,7 +178,7 @@ export class DataAwsMqBrokerEngineTypes extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsMqBrokerEngineTypesEngineVersionsPropertyToTerraform(struct?: DataAwsMqBrokerEngineTypes.EngineVersionsProperty): any {
+export function tfDataBrokerEngineTypesEngineVersionsPropertyToTerraform(struct?: TfDataBrokerEngineTypes.EngineVersionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -188,7 +188,7 @@ export function dataAwsMqBrokerEngineTypesEngineVersionsPropertyToTerraform(stru
 }
 
 
-export function dataAwsMqBrokerEngineTypesEngineVersionsPropertyToHclTerraform(struct?: DataAwsMqBrokerEngineTypes.EngineVersionsProperty): any {
+export function tfDataBrokerEngineTypesEngineVersionsPropertyToHclTerraform(struct?: TfDataBrokerEngineTypes.EngineVersionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -199,7 +199,7 @@ export function dataAwsMqBrokerEngineTypesEngineVersionsPropertyToHclTerraform(s
 }
 
 
-export function dataAwsMqBrokerEngineTypesBrokerEngineTypesPropertyToTerraform(struct?: DataAwsMqBrokerEngineTypes.BrokerEngineTypesProperty): any {
+export function tfDataBrokerEngineTypesBrokerEngineTypesPropertyToTerraform(struct?: TfDataBrokerEngineTypes.BrokerEngineTypesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -209,7 +209,7 @@ export function dataAwsMqBrokerEngineTypesBrokerEngineTypesPropertyToTerraform(s
 }
 
 
-export function dataAwsMqBrokerEngineTypesBrokerEngineTypesPropertyToHclTerraform(struct?: DataAwsMqBrokerEngineTypes.BrokerEngineTypesProperty): any {
+export function tfDataBrokerEngineTypesBrokerEngineTypesPropertyToHclTerraform(struct?: TfDataBrokerEngineTypes.BrokerEngineTypesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -220,7 +220,7 @@ export function dataAwsMqBrokerEngineTypesBrokerEngineTypesPropertyToHclTerrafor
 }
 
 
-export namespace DataAwsMqBrokerEngineTypes {
+export namespace TfDataBrokerEngineTypes {
 export interface EngineVersionsProperty {
 }
 export class EngineVersionsPropertyOutputReference extends cdktn.ComplexObject {

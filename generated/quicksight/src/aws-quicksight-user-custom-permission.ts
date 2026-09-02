@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsQuicksightUserCustomPermissionConfig extends cdktn.TerraformMetaArguments {
+export interface TfUserCustomPermissionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_user_custom_permission#aws_account_id AwsQuicksightUserCustomPermission#aws_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_user_custom_permission#aws_account_id TfUserCustomPermission#aws_account_id}
   */
   readonly awsAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_user_custom_permission#custom_permissions_name AwsQuicksightUserCustomPermission#custom_permissions_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_user_custom_permission#custom_permissions_name TfUserCustomPermission#custom_permissions_name}
   */
   readonly customPermissionsName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_user_custom_permission#namespace AwsQuicksightUserCustomPermission#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_user_custom_permission#namespace TfUserCustomPermission#namespace}
   */
   readonly namespace?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_user_custom_permission#region AwsQuicksightUserCustomPermission#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_user_custom_permission#region TfUserCustomPermission#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_user_custom_permission#user_name AwsQuicksightUserCustomPermission#user_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_user_custom_permission#user_name TfUserCustomPermission#user_name}
   */
   readonly userName: string;
 }
@@ -33,7 +33,7 @@ export interface AwsQuicksightUserCustomPermissionConfig extends cdktn.Terraform
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_user_custom_permission aws_quicksight_user_custom_permission}
 */
-export class AwsQuicksightUserCustomPermission extends cdktn.TerraformResource {
+export class TfUserCustomPermission extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class AwsQuicksightUserCustomPermission extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsQuicksightUserCustomPermission resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfUserCustomPermission resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsQuicksightUserCustomPermission to import
-  * @param importFromId The id of the existing AwsQuicksightUserCustomPermission that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_user_custom_permission#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsQuicksightUserCustomPermission to import is found
+  * @param importToId The construct id used in the generated config for the TfUserCustomPermission to import
+  * @param importFromId The id of the existing TfUserCustomPermission that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_user_custom_permission#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfUserCustomPermission to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_quicksight_user_custom_permission", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class AwsQuicksightUserCustomPermission extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsQuicksightUserCustomPermissionConfig
+  * @param options TfUserCustomPermissionConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsQuicksightUserCustomPermissionConfig) {
+  public constructor(scope: Construct, id: string, config: TfUserCustomPermissionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_quicksight_user_custom_permission',
       terraformGeneratorMetadata: {

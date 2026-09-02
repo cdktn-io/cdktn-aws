@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEcrRegistryScanningConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface TfRegistryScanningConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_registry_scanning_configuration#id AwsEcrRegistryScanningConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_registry_scanning_configuration#id TfRegistryScanningConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,25 +16,25 @@ export interface AwsEcrRegistryScanningConfigurationConfig extends cdktn.Terrafo
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_registry_scanning_configuration#region AwsEcrRegistryScanningConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_registry_scanning_configuration#region TfRegistryScanningConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_registry_scanning_configuration#scan_type AwsEcrRegistryScanningConfiguration#scan_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_registry_scanning_configuration#scan_type TfRegistryScanningConfiguration#scan_type}
   */
   readonly scanType: string;
   /**
   * rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_registry_scanning_configuration#rule AwsEcrRegistryScanningConfiguration#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_registry_scanning_configuration#rule TfRegistryScanningConfiguration#rule}
   */
-  readonly rule?: AwsEcrRegistryScanningConfiguration.RuleProperty[] | cdktn.IResolvable;
+  readonly rule?: TfRegistryScanningConfiguration.RuleProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_registry_scanning_configuration aws_ecr_registry_scanning_configuration}
 */
-export class AwsEcrRegistryScanningConfiguration extends cdktn.TerraformResource {
+export class TfRegistryScanningConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class AwsEcrRegistryScanningConfiguration extends cdktn.TerraformResource
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEcrRegistryScanningConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfRegistryScanningConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEcrRegistryScanningConfiguration to import
-  * @param importFromId The id of the existing AwsEcrRegistryScanningConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_registry_scanning_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEcrRegistryScanningConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the TfRegistryScanningConfiguration to import
+  * @param importFromId The id of the existing TfRegistryScanningConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_registry_scanning_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfRegistryScanningConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ecr_registry_scanning_configuration", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class AwsEcrRegistryScanningConfiguration extends cdktn.TerraformResource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEcrRegistryScanningConfigurationConfig
+  * @param options TfRegistryScanningConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEcrRegistryScanningConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: TfRegistryScanningConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ecr_registry_scanning_configuration',
       terraformGeneratorMetadata: {
@@ -143,11 +143,11 @@ export class AwsEcrRegistryScanningConfiguration extends cdktn.TerraformResource
   }
 
   // rule - computed: false, optional: true, required: false
-  private _rule = new AwsEcrRegistryScanningConfiguration.RulePropertyList(this, "rule", true);
+  private _rule = new TfRegistryScanningConfiguration.RulePropertyList(this, "rule", true);
   public get rule() {
     return this._rule;
   }
-  public putRule(value: AwsEcrRegistryScanningConfiguration.RuleProperty[] | cdktn.IResolvable) {
+  public putRule(value: TfRegistryScanningConfiguration.RuleProperty[] | cdktn.IResolvable) {
     this._rule.internalValue = value;
   }
   public resetRule() {
@@ -167,7 +167,7 @@ export class AwsEcrRegistryScanningConfiguration extends cdktn.TerraformResource
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       scan_type: cdktn.stringToTerraform(this._scanType),
-      rule: cdktn.listMapper(awsEcrRegistryScanningConfigurationRulePropertyToTerraform, true)(this._rule.internalValue),
+      rule: cdktn.listMapper(tfRegistryScanningConfigurationRulePropertyToTerraform, true)(this._rule.internalValue),
     };
   }
 
@@ -192,10 +192,10 @@ export class AwsEcrRegistryScanningConfiguration extends cdktn.TerraformResource
         storageClassType: "string",
       },
       rule: {
-        value: cdktn.listMapperHcl(awsEcrRegistryScanningConfigurationRulePropertyToHclTerraform, true)(this._rule.internalValue),
+        value: cdktn.listMapperHcl(tfRegistryScanningConfigurationRulePropertyToHclTerraform, true)(this._rule.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsEcrRegistryScanningConfiguration.RulePropertyList",
+        storageClassType: "TfRegistryScanningConfiguration.RulePropertyList",
       },
     };
 
@@ -204,7 +204,7 @@ export class AwsEcrRegistryScanningConfiguration extends cdktn.TerraformResource
   }
 }
 
-export function awsEcrRegistryScanningConfigurationRepositoryFilterPropertyToTerraform(struct?: AwsEcrRegistryScanningConfiguration.RepositoryFilterProperty | cdktn.IResolvable): any {
+export function tfRegistryScanningConfigurationRepositoryFilterPropertyToTerraform(struct?: TfRegistryScanningConfiguration.RepositoryFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -216,7 +216,7 @@ export function awsEcrRegistryScanningConfigurationRepositoryFilterPropertyToTer
 }
 
 
-export function awsEcrRegistryScanningConfigurationRepositoryFilterPropertyToHclTerraform(struct?: AwsEcrRegistryScanningConfiguration.RepositoryFilterProperty | cdktn.IResolvable): any {
+export function tfRegistryScanningConfigurationRepositoryFilterPropertyToHclTerraform(struct?: TfRegistryScanningConfiguration.RepositoryFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -241,19 +241,19 @@ export function awsEcrRegistryScanningConfigurationRepositoryFilterPropertyToHcl
 }
 
 
-export function awsEcrRegistryScanningConfigurationRulePropertyToTerraform(struct?: AwsEcrRegistryScanningConfiguration.RuleProperty | cdktn.IResolvable): any {
+export function tfRegistryScanningConfigurationRulePropertyToTerraform(struct?: TfRegistryScanningConfiguration.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     scan_frequency: cdktn.stringToTerraform(struct!.scanFrequency),
-    repository_filter: cdktn.listMapper(awsEcrRegistryScanningConfigurationRepositoryFilterPropertyToTerraform, true)(struct!.repositoryFilter),
+    repository_filter: cdktn.listMapper(tfRegistryScanningConfigurationRepositoryFilterPropertyToTerraform, true)(struct!.repositoryFilter),
   }
 }
 
 
-export function awsEcrRegistryScanningConfigurationRulePropertyToHclTerraform(struct?: AwsEcrRegistryScanningConfiguration.RuleProperty | cdktn.IResolvable): any {
+export function tfRegistryScanningConfigurationRulePropertyToHclTerraform(struct?: TfRegistryScanningConfiguration.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -266,7 +266,7 @@ export function awsEcrRegistryScanningConfigurationRulePropertyToHclTerraform(st
       storageClassType: "string",
     },
     repository_filter: {
-      value: cdktn.listMapperHcl(awsEcrRegistryScanningConfigurationRepositoryFilterPropertyToHclTerraform, true)(struct!.repositoryFilter),
+      value: cdktn.listMapperHcl(tfRegistryScanningConfigurationRepositoryFilterPropertyToHclTerraform, true)(struct!.repositoryFilter),
       isBlock: true,
       type: "set",
       storageClassType: "RepositoryFilterPropertyList",
@@ -278,14 +278,14 @@ export function awsEcrRegistryScanningConfigurationRulePropertyToHclTerraform(st
 }
 
 
-export namespace AwsEcrRegistryScanningConfiguration {
+export namespace TfRegistryScanningConfiguration {
 export interface RepositoryFilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_registry_scanning_configuration#filter AwsEcrRegistryScanningConfiguration#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_registry_scanning_configuration#filter TfRegistryScanningConfiguration#filter}
   */
   readonly filter: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_registry_scanning_configuration#filter_type AwsEcrRegistryScanningConfiguration#filter_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_registry_scanning_configuration#filter_type TfRegistryScanningConfiguration#filter_type}
   */
   readonly filterType: string;
 }
@@ -387,13 +387,13 @@ export class RepositoryFilterPropertyList extends cdktn.ComplexList {
 }
 export interface RuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_registry_scanning_configuration#scan_frequency AwsEcrRegistryScanningConfiguration#scan_frequency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_registry_scanning_configuration#scan_frequency TfRegistryScanningConfiguration#scan_frequency}
   */
   readonly scanFrequency: string;
   /**
   * repository_filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_registry_scanning_configuration#repository_filter AwsEcrRegistryScanningConfiguration#repository_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_registry_scanning_configuration#repository_filter TfRegistryScanningConfiguration#repository_filter}
   */
   readonly repositoryFilter: RepositoryFilterProperty[] | cdktn.IResolvable;
 }

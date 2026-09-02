@@ -5,55 +5,55 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsLexv2ModelsBotLocaleConfig extends cdktn.TerraformMetaArguments {
+export interface TfBotLocaleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_locale#bot_id AwsLexv2ModelsBotLocale#bot_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_locale#bot_id TfBotLocale#bot_id}
   */
   readonly botId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_locale#bot_version AwsLexv2ModelsBotLocale#bot_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_locale#bot_version TfBotLocale#bot_version}
   */
   readonly botVersion: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_locale#description AwsLexv2ModelsBotLocale#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_locale#description TfBotLocale#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_locale#locale_id AwsLexv2ModelsBotLocale#locale_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_locale#locale_id TfBotLocale#locale_id}
   */
   readonly localeId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_locale#n_lu_intent_confidence_threshold AwsLexv2ModelsBotLocale#n_lu_intent_confidence_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_locale#n_lu_intent_confidence_threshold TfBotLocale#n_lu_intent_confidence_threshold}
   */
   readonly nLuIntentConfidenceThreshold: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_locale#name AwsLexv2ModelsBotLocale#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_locale#name TfBotLocale#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_locale#region AwsLexv2ModelsBotLocale#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_locale#region TfBotLocale#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_locale#timeouts AwsLexv2ModelsBotLocale#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_locale#timeouts TfBotLocale#timeouts}
   */
-  readonly timeouts?: AwsLexv2ModelsBotLocale.TimeoutsProperty;
+  readonly timeouts?: TfBotLocale.TimeoutsProperty;
   /**
   * voice_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_locale#voice_settings AwsLexv2ModelsBotLocale#voice_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_locale#voice_settings TfBotLocale#voice_settings}
   */
-  readonly voiceSettings?: AwsLexv2ModelsBotLocale.VoiceSettingsProperty[] | cdktn.IResolvable;
+  readonly voiceSettings?: TfBotLocale.VoiceSettingsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_locale aws_lexv2models_bot_locale}
 */
-export class AwsLexv2ModelsBotLocale extends cdktn.TerraformResource {
+export class TfBotLocale extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -64,11 +64,11 @@ export class AwsLexv2ModelsBotLocale extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsLexv2ModelsBotLocale resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfBotLocale resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsLexv2ModelsBotLocale to import
-  * @param importFromId The id of the existing AwsLexv2ModelsBotLocale that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_locale#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsLexv2ModelsBotLocale to import is found
+  * @param importToId The construct id used in the generated config for the TfBotLocale to import
+  * @param importFromId The id of the existing TfBotLocale that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_locale#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfBotLocale to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lexv2models_bot_locale", importId: importFromId, provider });
@@ -83,9 +83,9 @@ export class AwsLexv2ModelsBotLocale extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsLexv2ModelsBotLocaleConfig
+  * @param options TfBotLocaleConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsLexv2ModelsBotLocaleConfig) {
+  public constructor(scope: Construct, id: string, config: TfBotLocaleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lexv2models_bot_locale',
       terraformGeneratorMetadata: {
@@ -222,11 +222,11 @@ export class AwsLexv2ModelsBotLocale extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsLexv2ModelsBotLocale.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfBotLocale.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsLexv2ModelsBotLocale.TimeoutsProperty) {
+  public putTimeouts(value: TfBotLocale.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -238,11 +238,11 @@ export class AwsLexv2ModelsBotLocale extends cdktn.TerraformResource {
   }
 
   // voice_settings - computed: false, optional: true, required: false
-  private _voiceSettings = new AwsLexv2ModelsBotLocale.VoiceSettingsPropertyList(this, "voice_settings", false);
+  private _voiceSettings = new TfBotLocale.VoiceSettingsPropertyList(this, "voice_settings", false);
   public get voiceSettings() {
     return this._voiceSettings;
   }
-  public putVoiceSettings(value: AwsLexv2ModelsBotLocale.VoiceSettingsProperty[] | cdktn.IResolvable) {
+  public putVoiceSettings(value: TfBotLocale.VoiceSettingsProperty[] | cdktn.IResolvable) {
     this._voiceSettings.internalValue = value;
   }
   public resetVoiceSettings() {
@@ -266,8 +266,8 @@ export class AwsLexv2ModelsBotLocale extends cdktn.TerraformResource {
       n_lu_intent_confidence_threshold: cdktn.numberToTerraform(this._nLuIntentConfidenceThreshold),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: awsLexv2ModelsBotLocaleTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      voice_settings: cdktn.listMapper(awsLexv2ModelsBotLocaleVoiceSettingsPropertyToTerraform, true)(this._voiceSettings.internalValue),
+      timeouts: tfBotLocaleTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      voice_settings: cdktn.listMapper(tfBotLocaleVoiceSettingsPropertyToTerraform, true)(this._voiceSettings.internalValue),
     };
   }
 
@@ -316,16 +316,16 @@ export class AwsLexv2ModelsBotLocale extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsLexv2ModelsBotLocaleTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfBotLocaleTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsLexv2ModelsBotLocale.TimeoutsProperty",
+        storageClassType: "TfBotLocale.TimeoutsProperty",
       },
       voice_settings: {
-        value: cdktn.listMapperHcl(awsLexv2ModelsBotLocaleVoiceSettingsPropertyToHclTerraform, true)(this._voiceSettings.internalValue),
+        value: cdktn.listMapperHcl(tfBotLocaleVoiceSettingsPropertyToHclTerraform, true)(this._voiceSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLexv2ModelsBotLocale.VoiceSettingsPropertyList",
+        storageClassType: "TfBotLocale.VoiceSettingsPropertyList",
       },
     };
 
@@ -334,7 +334,7 @@ export class AwsLexv2ModelsBotLocale extends cdktn.TerraformResource {
   }
 }
 
-export function awsLexv2ModelsBotLocaleTimeoutsPropertyToTerraform(struct?: AwsLexv2ModelsBotLocale.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfBotLocaleTimeoutsPropertyToTerraform(struct?: TfBotLocale.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -347,7 +347,7 @@ export function awsLexv2ModelsBotLocaleTimeoutsPropertyToTerraform(struct?: AwsL
 }
 
 
-export function awsLexv2ModelsBotLocaleTimeoutsPropertyToHclTerraform(struct?: AwsLexv2ModelsBotLocale.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfBotLocaleTimeoutsPropertyToHclTerraform(struct?: TfBotLocale.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -378,7 +378,7 @@ export function awsLexv2ModelsBotLocaleTimeoutsPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsLexv2ModelsBotLocaleVoiceSettingsPropertyToTerraform(struct?: AwsLexv2ModelsBotLocale.VoiceSettingsProperty | cdktn.IResolvable): any {
+export function tfBotLocaleVoiceSettingsPropertyToTerraform(struct?: TfBotLocale.VoiceSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -390,7 +390,7 @@ export function awsLexv2ModelsBotLocaleVoiceSettingsPropertyToTerraform(struct?:
 }
 
 
-export function awsLexv2ModelsBotLocaleVoiceSettingsPropertyToHclTerraform(struct?: AwsLexv2ModelsBotLocale.VoiceSettingsProperty | cdktn.IResolvable): any {
+export function tfBotLocaleVoiceSettingsPropertyToHclTerraform(struct?: TfBotLocale.VoiceSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -415,24 +415,24 @@ export function awsLexv2ModelsBotLocaleVoiceSettingsPropertyToHclTerraform(struc
 }
 
 
-export namespace AwsLexv2ModelsBotLocale {
+export namespace TfBotLocale {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_locale#create AwsLexv2ModelsBotLocale#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_locale#create TfBotLocale#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_locale#delete AwsLexv2ModelsBotLocale#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_locale#delete TfBotLocale#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_locale#update AwsLexv2ModelsBotLocale#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_locale#update TfBotLocale#update}
   */
   readonly update?: string;
 }
@@ -540,11 +540,11 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VoiceSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_locale#engine AwsLexv2ModelsBotLocale#engine}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_locale#engine TfBotLocale#engine}
   */
   readonly engine?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_locale#voice_id AwsLexv2ModelsBotLocale#voice_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_locale#voice_id TfBotLocale#voice_id}
   */
   readonly voiceId: string;
 }

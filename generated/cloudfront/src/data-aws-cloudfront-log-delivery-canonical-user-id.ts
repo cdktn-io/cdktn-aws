@@ -5,16 +5,16 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsCloudfrontLogDeliveryCanonicalUserIdConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataLogDeliveryCanonicalUserIdConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_log_delivery_canonical_user_id#id DataAwsCloudfrontLogDeliveryCanonicalUserId#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_log_delivery_canonical_user_id#id TfDataLogDeliveryCanonicalUserId#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_log_delivery_canonical_user_id#region DataAwsCloudfrontLogDeliveryCanonicalUserId#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_log_delivery_canonical_user_id#region TfDataLogDeliveryCanonicalUserId#region}
   */
   readonly region?: string;
 }
@@ -22,7 +22,7 @@ export interface DataAwsCloudfrontLogDeliveryCanonicalUserIdConfig extends cdktn
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_log_delivery_canonical_user_id aws_cloudfront_log_delivery_canonical_user_id}
 */
-export class DataAwsCloudfrontLogDeliveryCanonicalUserId extends cdktn.TerraformDataSource {
+export class TfDataLogDeliveryCanonicalUserId extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -33,11 +33,11 @@ export class DataAwsCloudfrontLogDeliveryCanonicalUserId extends cdktn.Terraform
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsCloudfrontLogDeliveryCanonicalUserId resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataLogDeliveryCanonicalUserId resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsCloudfrontLogDeliveryCanonicalUserId to import
-  * @param importFromId The id of the existing DataAwsCloudfrontLogDeliveryCanonicalUserId that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_log_delivery_canonical_user_id#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsCloudfrontLogDeliveryCanonicalUserId to import is found
+  * @param importToId The construct id used in the generated config for the TfDataLogDeliveryCanonicalUserId to import
+  * @param importFromId The id of the existing TfDataLogDeliveryCanonicalUserId that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_log_delivery_canonical_user_id#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataLogDeliveryCanonicalUserId to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudfront_log_delivery_canonical_user_id", importId: importFromId, provider });
@@ -52,9 +52,9 @@ export class DataAwsCloudfrontLogDeliveryCanonicalUserId extends cdktn.Terraform
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsCloudfrontLogDeliveryCanonicalUserIdConfig = {}
+  * @param options TfDataLogDeliveryCanonicalUserIdConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsCloudfrontLogDeliveryCanonicalUserIdConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDataLogDeliveryCanonicalUserIdConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudfront_log_delivery_canonical_user_id',
       terraformGeneratorMetadata: {

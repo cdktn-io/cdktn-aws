@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsIotThingPrincipalAttachmentConfig extends cdktn.TerraformMetaArguments {
+export interface TfThingPrincipalAttachmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_principal_attachment#id AwsIotThingPrincipalAttachment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_principal_attachment#id TfThingPrincipalAttachment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_principal_attachment#principal AwsIotThingPrincipalAttachment#principal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_principal_attachment#principal TfThingPrincipalAttachment#principal}
   */
   readonly principal: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_principal_attachment#region AwsIotThingPrincipalAttachment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_principal_attachment#region TfThingPrincipalAttachment#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_principal_attachment#thing AwsIotThingPrincipalAttachment#thing}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_principal_attachment#thing TfThingPrincipalAttachment#thing}
   */
   readonly thing: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_principal_attachment#thing_principal_type AwsIotThingPrincipalAttachment#thing_principal_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_principal_attachment#thing_principal_type TfThingPrincipalAttachment#thing_principal_type}
   */
   readonly thingPrincipalType?: string;
 }
@@ -36,7 +36,7 @@ export interface AwsIotThingPrincipalAttachmentConfig extends cdktn.TerraformMet
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_principal_attachment aws_iot_thing_principal_attachment}
 */
-export class AwsIotThingPrincipalAttachment extends cdktn.TerraformResource {
+export class TfThingPrincipalAttachment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class AwsIotThingPrincipalAttachment extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsIotThingPrincipalAttachment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfThingPrincipalAttachment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsIotThingPrincipalAttachment to import
-  * @param importFromId The id of the existing AwsIotThingPrincipalAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_principal_attachment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsIotThingPrincipalAttachment to import is found
+  * @param importToId The construct id used in the generated config for the TfThingPrincipalAttachment to import
+  * @param importFromId The id of the existing TfThingPrincipalAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_principal_attachment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfThingPrincipalAttachment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iot_thing_principal_attachment", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class AwsIotThingPrincipalAttachment extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsIotThingPrincipalAttachmentConfig
+  * @param options TfThingPrincipalAttachmentConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsIotThingPrincipalAttachmentConfig) {
+  public constructor(scope: Construct, id: string, config: TfThingPrincipalAttachmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iot_thing_principal_attachment',
       terraformGeneratorMetadata: {

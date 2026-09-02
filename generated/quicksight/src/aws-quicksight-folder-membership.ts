@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsQuicksightFolderMembershipConfig extends cdktn.TerraformMetaArguments {
+export interface TfFolderMembershipConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder_membership#aws_account_id AwsQuicksightFolderMembership#aws_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder_membership#aws_account_id TfFolderMembership#aws_account_id}
   */
   readonly awsAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder_membership#folder_id AwsQuicksightFolderMembership#folder_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder_membership#folder_id TfFolderMembership#folder_id}
   */
   readonly folderId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder_membership#member_id AwsQuicksightFolderMembership#member_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder_membership#member_id TfFolderMembership#member_id}
   */
   readonly memberId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder_membership#member_type AwsQuicksightFolderMembership#member_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder_membership#member_type TfFolderMembership#member_type}
   */
   readonly memberType: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder_membership#region AwsQuicksightFolderMembership#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder_membership#region TfFolderMembership#region}
   */
   readonly region?: string;
 }
@@ -33,7 +33,7 @@ export interface AwsQuicksightFolderMembershipConfig extends cdktn.TerraformMeta
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder_membership aws_quicksight_folder_membership}
 */
-export class AwsQuicksightFolderMembership extends cdktn.TerraformResource {
+export class TfFolderMembership extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class AwsQuicksightFolderMembership extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsQuicksightFolderMembership resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfFolderMembership resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsQuicksightFolderMembership to import
-  * @param importFromId The id of the existing AwsQuicksightFolderMembership that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder_membership#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsQuicksightFolderMembership to import is found
+  * @param importToId The construct id used in the generated config for the TfFolderMembership to import
+  * @param importFromId The id of the existing TfFolderMembership that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_folder_membership#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfFolderMembership to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_quicksight_folder_membership", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class AwsQuicksightFolderMembership extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsQuicksightFolderMembershipConfig
+  * @param options TfFolderMembershipConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsQuicksightFolderMembershipConfig) {
+  public constructor(scope: Construct, id: string, config: TfFolderMembershipConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_quicksight_folder_membership',
       terraformGeneratorMetadata: {

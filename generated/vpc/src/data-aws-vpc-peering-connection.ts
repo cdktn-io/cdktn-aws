@@ -5,64 +5,64 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsVpcPeeringConnectionConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataPeeringConnectionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_peering_connection#cidr_block DataAwsVpcPeeringConnection#cidr_block}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_peering_connection#cidr_block TfDataPeeringConnection#cidr_block}
   */
   readonly cidrBlock?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_peering_connection#id DataAwsVpcPeeringConnection#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_peering_connection#id TfDataPeeringConnection#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_peering_connection#owner_id DataAwsVpcPeeringConnection#owner_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_peering_connection#owner_id TfDataPeeringConnection#owner_id}
   */
   readonly ownerId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_peering_connection#peer_cidr_block DataAwsVpcPeeringConnection#peer_cidr_block}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_peering_connection#peer_cidr_block TfDataPeeringConnection#peer_cidr_block}
   */
   readonly peerCidrBlock?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_peering_connection#peer_owner_id DataAwsVpcPeeringConnection#peer_owner_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_peering_connection#peer_owner_id TfDataPeeringConnection#peer_owner_id}
   */
   readonly peerOwnerId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_peering_connection#peer_vpc_id DataAwsVpcPeeringConnection#peer_vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_peering_connection#peer_vpc_id TfDataPeeringConnection#peer_vpc_id}
   */
   readonly peerVpcId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_peering_connection#status DataAwsVpcPeeringConnection#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_peering_connection#status TfDataPeeringConnection#status}
   */
   readonly status?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_peering_connection#tags DataAwsVpcPeeringConnection#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_peering_connection#tags TfDataPeeringConnection#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_peering_connection#vpc_id DataAwsVpcPeeringConnection#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_peering_connection#vpc_id TfDataPeeringConnection#vpc_id}
   */
   readonly vpcId?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_peering_connection#filter DataAwsVpcPeeringConnection#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_peering_connection#filter TfDataPeeringConnection#filter}
   */
-  readonly filter?: DataAwsVpcPeeringConnection.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: TfDataPeeringConnection.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_peering_connection#timeouts DataAwsVpcPeeringConnection#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_peering_connection#timeouts TfDataPeeringConnection#timeouts}
   */
-  readonly timeouts?: DataAwsVpcPeeringConnection.TimeoutsProperty;
+  readonly timeouts?: TfDataPeeringConnection.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_peering_connection aws_vpc_peering_connection}
 */
-export class DataAwsVpcPeeringConnection extends cdktn.TerraformDataSource {
+export class TfDataPeeringConnection extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -73,11 +73,11 @@ export class DataAwsVpcPeeringConnection extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsVpcPeeringConnection resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataPeeringConnection resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsVpcPeeringConnection to import
-  * @param importFromId The id of the existing DataAwsVpcPeeringConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_peering_connection#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsVpcPeeringConnection to import is found
+  * @param importToId The construct id used in the generated config for the TfDataPeeringConnection to import
+  * @param importFromId The id of the existing TfDataPeeringConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_peering_connection#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataPeeringConnection to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpc_peering_connection", importId: importFromId, provider });
@@ -92,9 +92,9 @@ export class DataAwsVpcPeeringConnection extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsVpcPeeringConnectionConfig = {}
+  * @param options TfDataPeeringConnectionConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsVpcPeeringConnectionConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDataPeeringConnectionConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_vpc_peering_connection',
       terraformGeneratorMetadata: {
@@ -150,7 +150,7 @@ export class DataAwsVpcPeeringConnection extends cdktn.TerraformDataSource {
   }
 
   // cidr_block_set - computed: true, optional: false, required: false
-  private _cidrBlockSet = new DataAwsVpcPeeringConnection.CidrBlockSetPropertyList(this, "cidr_block_set", false);
+  private _cidrBlockSet = new TfDataPeeringConnection.CidrBlockSetPropertyList(this, "cidr_block_set", false);
   public get cidrBlockSet() {
     return this._cidrBlockSet;
   }
@@ -172,7 +172,7 @@ export class DataAwsVpcPeeringConnection extends cdktn.TerraformDataSource {
   }
 
   // ipv6_cidr_block_set - computed: true, optional: false, required: false
-  private _ipv6CidrBlockSet = new DataAwsVpcPeeringConnection.Ipv6CidrBlockSetPropertyList(this, "ipv6_cidr_block_set", false);
+  private _ipv6CidrBlockSet = new TfDataPeeringConnection.Ipv6CidrBlockSetPropertyList(this, "ipv6_cidr_block_set", false);
   public get ipv6CidrBlockSet() {
     return this._ipv6CidrBlockSet;
   }
@@ -210,13 +210,13 @@ export class DataAwsVpcPeeringConnection extends cdktn.TerraformDataSource {
   }
 
   // peer_cidr_block_set - computed: true, optional: false, required: false
-  private _peerCidrBlockSet = new DataAwsVpcPeeringConnection.PeerCidrBlockSetPropertyList(this, "peer_cidr_block_set", false);
+  private _peerCidrBlockSet = new TfDataPeeringConnection.PeerCidrBlockSetPropertyList(this, "peer_cidr_block_set", false);
   public get peerCidrBlockSet() {
     return this._peerCidrBlockSet;
   }
 
   // peer_ipv6_cidr_block_set - computed: true, optional: false, required: false
-  private _peerIpv6CidrBlockSet = new DataAwsVpcPeeringConnection.PeerIpv6CidrBlockSetPropertyList(this, "peer_ipv6_cidr_block_set", false);
+  private _peerIpv6CidrBlockSet = new TfDataPeeringConnection.PeerIpv6CidrBlockSetPropertyList(this, "peer_ipv6_cidr_block_set", false);
   public get peerIpv6CidrBlockSet() {
     return this._peerIpv6CidrBlockSet;
   }
@@ -323,11 +323,11 @@ export class DataAwsVpcPeeringConnection extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataAwsVpcPeeringConnection.FilterPropertyList(this, "filter", true);
+  private _filter = new TfDataPeeringConnection.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataAwsVpcPeeringConnection.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: TfDataPeeringConnection.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -339,11 +339,11 @@ export class DataAwsVpcPeeringConnection extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAwsVpcPeeringConnection.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfDataPeeringConnection.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: DataAwsVpcPeeringConnection.TimeoutsProperty) {
+  public putTimeouts(value: TfDataPeeringConnection.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -369,8 +369,8 @@ export class DataAwsVpcPeeringConnection extends cdktn.TerraformDataSource {
       status: cdktn.stringToTerraform(this._status),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       vpc_id: cdktn.stringToTerraform(this._vpcId),
-      filter: cdktn.listMapper(dataAwsVpcPeeringConnectionFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: dataAwsVpcPeeringConnectionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(tfDataPeeringConnectionFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: tfDataPeeringConnectionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -431,16 +431,16 @@ export class DataAwsVpcPeeringConnection extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataAwsVpcPeeringConnectionFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(tfDataPeeringConnectionFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataAwsVpcPeeringConnection.FilterPropertyList",
+        storageClassType: "TfDataPeeringConnection.FilterPropertyList",
       },
       timeouts: {
-        value: dataAwsVpcPeeringConnectionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfDataPeeringConnectionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "DataAwsVpcPeeringConnection.TimeoutsProperty",
+        storageClassType: "TfDataPeeringConnection.TimeoutsProperty",
       },
     };
 
@@ -449,7 +449,7 @@ export class DataAwsVpcPeeringConnection extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsVpcPeeringConnectionCidrBlockSetPropertyToTerraform(struct?: DataAwsVpcPeeringConnection.CidrBlockSetProperty): any {
+export function tfDataPeeringConnectionCidrBlockSetPropertyToTerraform(struct?: TfDataPeeringConnection.CidrBlockSetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -459,7 +459,7 @@ export function dataAwsVpcPeeringConnectionCidrBlockSetPropertyToTerraform(struc
 }
 
 
-export function dataAwsVpcPeeringConnectionCidrBlockSetPropertyToHclTerraform(struct?: DataAwsVpcPeeringConnection.CidrBlockSetProperty): any {
+export function tfDataPeeringConnectionCidrBlockSetPropertyToHclTerraform(struct?: TfDataPeeringConnection.CidrBlockSetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -470,7 +470,7 @@ export function dataAwsVpcPeeringConnectionCidrBlockSetPropertyToHclTerraform(st
 }
 
 
-export function dataAwsVpcPeeringConnectionIpv6CidrBlockSetPropertyToTerraform(struct?: DataAwsVpcPeeringConnection.Ipv6CidrBlockSetProperty): any {
+export function tfDataPeeringConnectionIpv6CidrBlockSetPropertyToTerraform(struct?: TfDataPeeringConnection.Ipv6CidrBlockSetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -480,7 +480,7 @@ export function dataAwsVpcPeeringConnectionIpv6CidrBlockSetPropertyToTerraform(s
 }
 
 
-export function dataAwsVpcPeeringConnectionIpv6CidrBlockSetPropertyToHclTerraform(struct?: DataAwsVpcPeeringConnection.Ipv6CidrBlockSetProperty): any {
+export function tfDataPeeringConnectionIpv6CidrBlockSetPropertyToHclTerraform(struct?: TfDataPeeringConnection.Ipv6CidrBlockSetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -491,7 +491,7 @@ export function dataAwsVpcPeeringConnectionIpv6CidrBlockSetPropertyToHclTerrafor
 }
 
 
-export function dataAwsVpcPeeringConnectionPeerCidrBlockSetPropertyToTerraform(struct?: DataAwsVpcPeeringConnection.PeerCidrBlockSetProperty): any {
+export function tfDataPeeringConnectionPeerCidrBlockSetPropertyToTerraform(struct?: TfDataPeeringConnection.PeerCidrBlockSetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -501,7 +501,7 @@ export function dataAwsVpcPeeringConnectionPeerCidrBlockSetPropertyToTerraform(s
 }
 
 
-export function dataAwsVpcPeeringConnectionPeerCidrBlockSetPropertyToHclTerraform(struct?: DataAwsVpcPeeringConnection.PeerCidrBlockSetProperty): any {
+export function tfDataPeeringConnectionPeerCidrBlockSetPropertyToHclTerraform(struct?: TfDataPeeringConnection.PeerCidrBlockSetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -512,7 +512,7 @@ export function dataAwsVpcPeeringConnectionPeerCidrBlockSetPropertyToHclTerrafor
 }
 
 
-export function dataAwsVpcPeeringConnectionPeerIpv6CidrBlockSetPropertyToTerraform(struct?: DataAwsVpcPeeringConnection.PeerIpv6CidrBlockSetProperty): any {
+export function tfDataPeeringConnectionPeerIpv6CidrBlockSetPropertyToTerraform(struct?: TfDataPeeringConnection.PeerIpv6CidrBlockSetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -522,7 +522,7 @@ export function dataAwsVpcPeeringConnectionPeerIpv6CidrBlockSetPropertyToTerrafo
 }
 
 
-export function dataAwsVpcPeeringConnectionPeerIpv6CidrBlockSetPropertyToHclTerraform(struct?: DataAwsVpcPeeringConnection.PeerIpv6CidrBlockSetProperty): any {
+export function tfDataPeeringConnectionPeerIpv6CidrBlockSetPropertyToHclTerraform(struct?: TfDataPeeringConnection.PeerIpv6CidrBlockSetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -533,7 +533,7 @@ export function dataAwsVpcPeeringConnectionPeerIpv6CidrBlockSetPropertyToHclTerr
 }
 
 
-export function dataAwsVpcPeeringConnectionFilterPropertyToTerraform(struct?: DataAwsVpcPeeringConnection.FilterProperty | cdktn.IResolvable): any {
+export function tfDataPeeringConnectionFilterPropertyToTerraform(struct?: TfDataPeeringConnection.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -545,7 +545,7 @@ export function dataAwsVpcPeeringConnectionFilterPropertyToTerraform(struct?: Da
 }
 
 
-export function dataAwsVpcPeeringConnectionFilterPropertyToHclTerraform(struct?: DataAwsVpcPeeringConnection.FilterProperty | cdktn.IResolvable): any {
+export function tfDataPeeringConnectionFilterPropertyToHclTerraform(struct?: TfDataPeeringConnection.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -570,7 +570,7 @@ export function dataAwsVpcPeeringConnectionFilterPropertyToHclTerraform(struct?:
 }
 
 
-export function dataAwsVpcPeeringConnectionTimeoutsPropertyToTerraform(struct?: DataAwsVpcPeeringConnection.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDataPeeringConnectionTimeoutsPropertyToTerraform(struct?: TfDataPeeringConnection.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -581,7 +581,7 @@ export function dataAwsVpcPeeringConnectionTimeoutsPropertyToTerraform(struct?: 
 }
 
 
-export function dataAwsVpcPeeringConnectionTimeoutsPropertyToHclTerraform(struct?: DataAwsVpcPeeringConnection.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDataPeeringConnectionTimeoutsPropertyToHclTerraform(struct?: TfDataPeeringConnection.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -600,7 +600,7 @@ export function dataAwsVpcPeeringConnectionTimeoutsPropertyToHclTerraform(struct
 }
 
 
-export namespace DataAwsVpcPeeringConnection {
+export namespace TfDataPeeringConnection {
 export interface CidrBlockSetProperty {
 }
 export class CidrBlockSetPropertyOutputReference extends cdktn.ComplexObject {
@@ -819,11 +819,11 @@ export class PeerIpv6CidrBlockSetPropertyList extends cdktn.ComplexList {
 }
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_peering_connection#name DataAwsVpcPeeringConnection#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_peering_connection#name TfDataPeeringConnection#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_peering_connection#values DataAwsVpcPeeringConnection#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_peering_connection#values TfDataPeeringConnection#values}
   */
   readonly values: string[];
 }
@@ -925,7 +925,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_peering_connection#read DataAwsVpcPeeringConnection#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_peering_connection#read TfDataPeeringConnection#read}
   */
   readonly read?: string;
 }

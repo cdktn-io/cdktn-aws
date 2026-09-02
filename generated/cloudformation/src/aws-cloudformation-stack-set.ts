@@ -5,98 +5,98 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCloudformationStackSetConfig extends cdktn.TerraformMetaArguments {
+export interface TfStackSetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#administration_role_arn AwsCloudformationStackSet#administration_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#administration_role_arn TfStackSet#administration_role_arn}
   */
   readonly administrationRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#call_as AwsCloudformationStackSet#call_as}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#call_as TfStackSet#call_as}
   */
   readonly callAs?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#capabilities AwsCloudformationStackSet#capabilities}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#capabilities TfStackSet#capabilities}
   */
   readonly capabilities?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#description AwsCloudformationStackSet#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#description TfStackSet#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#execution_role_name AwsCloudformationStackSet#execution_role_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#execution_role_name TfStackSet#execution_role_name}
   */
   readonly executionRoleName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#id AwsCloudformationStackSet#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#id TfStackSet#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#name AwsCloudformationStackSet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#name TfStackSet#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#parameters AwsCloudformationStackSet#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#parameters TfStackSet#parameters}
   */
   readonly parameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#permission_model AwsCloudformationStackSet#permission_model}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#permission_model TfStackSet#permission_model}
   */
   readonly permissionModel?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#region AwsCloudformationStackSet#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#region TfStackSet#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#tags AwsCloudformationStackSet#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#tags TfStackSet#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#tags_all AwsCloudformationStackSet#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#tags_all TfStackSet#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#template_body AwsCloudformationStackSet#template_body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#template_body TfStackSet#template_body}
   */
   readonly templateBody?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#template_url AwsCloudformationStackSet#template_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#template_url TfStackSet#template_url}
   */
   readonly templateUrl?: string;
   /**
   * auto_deployment block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#auto_deployment AwsCloudformationStackSet#auto_deployment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#auto_deployment TfStackSet#auto_deployment}
   */
-  readonly autoDeployment?: AwsCloudformationStackSet.AutoDeploymentProperty;
+  readonly autoDeployment?: TfStackSet.AutoDeploymentProperty;
   /**
   * managed_execution block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#managed_execution AwsCloudformationStackSet#managed_execution}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#managed_execution TfStackSet#managed_execution}
   */
-  readonly managedExecution?: AwsCloudformationStackSet.ManagedExecutionProperty;
+  readonly managedExecution?: TfStackSet.ManagedExecutionProperty;
   /**
   * operation_preferences block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#operation_preferences AwsCloudformationStackSet#operation_preferences}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#operation_preferences TfStackSet#operation_preferences}
   */
-  readonly operationPreferences?: AwsCloudformationStackSet.OperationPreferencesProperty;
+  readonly operationPreferences?: TfStackSet.OperationPreferencesProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#timeouts AwsCloudformationStackSet#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#timeouts TfStackSet#timeouts}
   */
-  readonly timeouts?: AwsCloudformationStackSet.TimeoutsProperty;
+  readonly timeouts?: TfStackSet.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set aws_cloudformation_stack_set}
 */
-export class AwsCloudformationStackSet extends cdktn.TerraformResource {
+export class TfStackSet extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -107,11 +107,11 @@ export class AwsCloudformationStackSet extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCloudformationStackSet resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfStackSet resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCloudformationStackSet to import
-  * @param importFromId The id of the existing AwsCloudformationStackSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCloudformationStackSet to import is found
+  * @param importToId The construct id used in the generated config for the TfStackSet to import
+  * @param importFromId The id of the existing TfStackSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfStackSet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudformation_stack_set", importId: importFromId, provider });
@@ -126,9 +126,9 @@ export class AwsCloudformationStackSet extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCloudformationStackSetConfig
+  * @param options TfStackSetConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCloudformationStackSetConfig) {
+  public constructor(scope: Construct, id: string, config: TfStackSetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudformation_stack_set',
       terraformGeneratorMetadata: {
@@ -400,11 +400,11 @@ export class AwsCloudformationStackSet extends cdktn.TerraformResource {
   }
 
   // auto_deployment - computed: false, optional: true, required: false
-  private _autoDeployment = new AwsCloudformationStackSet.AutoDeploymentPropertyOutputReference(this, "auto_deployment");
+  private _autoDeployment = new TfStackSet.AutoDeploymentPropertyOutputReference(this, "auto_deployment");
   public get autoDeployment() {
     return this._autoDeployment;
   }
-  public putAutoDeployment(value: AwsCloudformationStackSet.AutoDeploymentProperty) {
+  public putAutoDeployment(value: TfStackSet.AutoDeploymentProperty) {
     this._autoDeployment.internalValue = value;
   }
   public resetAutoDeployment() {
@@ -416,11 +416,11 @@ export class AwsCloudformationStackSet extends cdktn.TerraformResource {
   }
 
   // managed_execution - computed: false, optional: true, required: false
-  private _managedExecution = new AwsCloudformationStackSet.ManagedExecutionPropertyOutputReference(this, "managed_execution");
+  private _managedExecution = new TfStackSet.ManagedExecutionPropertyOutputReference(this, "managed_execution");
   public get managedExecution() {
     return this._managedExecution;
   }
-  public putManagedExecution(value: AwsCloudformationStackSet.ManagedExecutionProperty) {
+  public putManagedExecution(value: TfStackSet.ManagedExecutionProperty) {
     this._managedExecution.internalValue = value;
   }
   public resetManagedExecution() {
@@ -432,11 +432,11 @@ export class AwsCloudformationStackSet extends cdktn.TerraformResource {
   }
 
   // operation_preferences - computed: false, optional: true, required: false
-  private _operationPreferences = new AwsCloudformationStackSet.OperationPreferencesPropertyOutputReference(this, "operation_preferences");
+  private _operationPreferences = new TfStackSet.OperationPreferencesPropertyOutputReference(this, "operation_preferences");
   public get operationPreferences() {
     return this._operationPreferences;
   }
-  public putOperationPreferences(value: AwsCloudformationStackSet.OperationPreferencesProperty) {
+  public putOperationPreferences(value: TfStackSet.OperationPreferencesProperty) {
     this._operationPreferences.internalValue = value;
   }
   public resetOperationPreferences() {
@@ -448,11 +448,11 @@ export class AwsCloudformationStackSet extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsCloudformationStackSet.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfStackSet.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsCloudformationStackSet.TimeoutsProperty) {
+  public putTimeouts(value: TfStackSet.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -483,10 +483,10 @@ export class AwsCloudformationStackSet extends cdktn.TerraformResource {
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       template_body: cdktn.stringToTerraform(this._templateBody),
       template_url: cdktn.stringToTerraform(this._templateUrl),
-      auto_deployment: awsCloudformationStackSetAutoDeploymentPropertyToTerraform(this._autoDeployment.internalValue),
-      managed_execution: awsCloudformationStackSetManagedExecutionPropertyToTerraform(this._managedExecution.internalValue),
-      operation_preferences: awsCloudformationStackSetOperationPreferencesPropertyToTerraform(this._operationPreferences.internalValue),
-      timeouts: awsCloudformationStackSetTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      auto_deployment: tfStackSetAutoDeploymentPropertyToTerraform(this._autoDeployment.internalValue),
+      managed_execution: tfStackSetManagedExecutionPropertyToTerraform(this._managedExecution.internalValue),
+      operation_preferences: tfStackSetOperationPreferencesPropertyToTerraform(this._operationPreferences.internalValue),
+      timeouts: tfStackSetTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -577,28 +577,28 @@ export class AwsCloudformationStackSet extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       auto_deployment: {
-        value: awsCloudformationStackSetAutoDeploymentPropertyToHclTerraform(this._autoDeployment.internalValue),
+        value: tfStackSetAutoDeploymentPropertyToHclTerraform(this._autoDeployment.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudformationStackSet.AutoDeploymentPropertyList",
+        storageClassType: "TfStackSet.AutoDeploymentPropertyList",
       },
       managed_execution: {
-        value: awsCloudformationStackSetManagedExecutionPropertyToHclTerraform(this._managedExecution.internalValue),
+        value: tfStackSetManagedExecutionPropertyToHclTerraform(this._managedExecution.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudformationStackSet.ManagedExecutionPropertyList",
+        storageClassType: "TfStackSet.ManagedExecutionPropertyList",
       },
       operation_preferences: {
-        value: awsCloudformationStackSetOperationPreferencesPropertyToHclTerraform(this._operationPreferences.internalValue),
+        value: tfStackSetOperationPreferencesPropertyToHclTerraform(this._operationPreferences.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudformationStackSet.OperationPreferencesPropertyList",
+        storageClassType: "TfStackSet.OperationPreferencesPropertyList",
       },
       timeouts: {
-        value: awsCloudformationStackSetTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfStackSetTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsCloudformationStackSet.TimeoutsProperty",
+        storageClassType: "TfStackSet.TimeoutsProperty",
       },
     };
 
@@ -607,7 +607,7 @@ export class AwsCloudformationStackSet extends cdktn.TerraformResource {
   }
 }
 
-export function awsCloudformationStackSetAutoDeploymentPropertyToTerraform(struct?: AwsCloudformationStackSet.AutoDeploymentPropertyOutputReference | AwsCloudformationStackSet.AutoDeploymentProperty): any {
+export function tfStackSetAutoDeploymentPropertyToTerraform(struct?: TfStackSet.AutoDeploymentPropertyOutputReference | TfStackSet.AutoDeploymentProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -620,7 +620,7 @@ export function awsCloudformationStackSetAutoDeploymentPropertyToTerraform(struc
 }
 
 
-export function awsCloudformationStackSetAutoDeploymentPropertyToHclTerraform(struct?: AwsCloudformationStackSet.AutoDeploymentPropertyOutputReference | AwsCloudformationStackSet.AutoDeploymentProperty): any {
+export function tfStackSetAutoDeploymentPropertyToHclTerraform(struct?: TfStackSet.AutoDeploymentPropertyOutputReference | TfStackSet.AutoDeploymentProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -651,7 +651,7 @@ export function awsCloudformationStackSetAutoDeploymentPropertyToHclTerraform(st
 }
 
 
-export function awsCloudformationStackSetManagedExecutionPropertyToTerraform(struct?: AwsCloudformationStackSet.ManagedExecutionPropertyOutputReference | AwsCloudformationStackSet.ManagedExecutionProperty): any {
+export function tfStackSetManagedExecutionPropertyToTerraform(struct?: TfStackSet.ManagedExecutionPropertyOutputReference | TfStackSet.ManagedExecutionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -662,7 +662,7 @@ export function awsCloudformationStackSetManagedExecutionPropertyToTerraform(str
 }
 
 
-export function awsCloudformationStackSetManagedExecutionPropertyToHclTerraform(struct?: AwsCloudformationStackSet.ManagedExecutionPropertyOutputReference | AwsCloudformationStackSet.ManagedExecutionProperty): any {
+export function tfStackSetManagedExecutionPropertyToHclTerraform(struct?: TfStackSet.ManagedExecutionPropertyOutputReference | TfStackSet.ManagedExecutionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -681,7 +681,7 @@ export function awsCloudformationStackSetManagedExecutionPropertyToHclTerraform(
 }
 
 
-export function awsCloudformationStackSetOperationPreferencesPropertyToTerraform(struct?: AwsCloudformationStackSet.OperationPreferencesPropertyOutputReference | AwsCloudformationStackSet.OperationPreferencesProperty): any {
+export function tfStackSetOperationPreferencesPropertyToTerraform(struct?: TfStackSet.OperationPreferencesPropertyOutputReference | TfStackSet.OperationPreferencesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -697,7 +697,7 @@ export function awsCloudformationStackSetOperationPreferencesPropertyToTerraform
 }
 
 
-export function awsCloudformationStackSetOperationPreferencesPropertyToHclTerraform(struct?: AwsCloudformationStackSet.OperationPreferencesPropertyOutputReference | AwsCloudformationStackSet.OperationPreferencesProperty): any {
+export function tfStackSetOperationPreferencesPropertyToHclTerraform(struct?: TfStackSet.OperationPreferencesPropertyOutputReference | TfStackSet.OperationPreferencesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -746,7 +746,7 @@ export function awsCloudformationStackSetOperationPreferencesPropertyToHclTerraf
 }
 
 
-export function awsCloudformationStackSetTimeoutsPropertyToTerraform(struct?: AwsCloudformationStackSet.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfStackSetTimeoutsPropertyToTerraform(struct?: TfStackSet.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -757,7 +757,7 @@ export function awsCloudformationStackSetTimeoutsPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsCloudformationStackSetTimeoutsPropertyToHclTerraform(struct?: AwsCloudformationStackSet.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfStackSetTimeoutsPropertyToHclTerraform(struct?: TfStackSet.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -776,18 +776,18 @@ export function awsCloudformationStackSetTimeoutsPropertyToHclTerraform(struct?:
 }
 
 
-export namespace AwsCloudformationStackSet {
+export namespace TfStackSet {
 export interface AutoDeploymentProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#depends_on_stack_sets AwsCloudformationStackSet#depends_on_stack_sets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#depends_on_stack_sets TfStackSet#depends_on_stack_sets}
   */
   readonly dependsOnStackSets?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#enabled AwsCloudformationStackSet#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#enabled TfStackSet#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#retain_stacks_on_account_removal AwsCloudformationStackSet#retain_stacks_on_account_removal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#retain_stacks_on_account_removal TfStackSet#retain_stacks_on_account_removal}
   */
   readonly retainStacksOnAccountRemoval?: boolean | cdktn.IResolvable;
 }
@@ -885,7 +885,7 @@ export class AutoDeploymentPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ManagedExecutionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#active AwsCloudformationStackSet#active}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#active TfStackSet#active}
   */
   readonly active?: boolean | cdktn.IResolvable;
 }
@@ -939,27 +939,27 @@ export class ManagedExecutionPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface OperationPreferencesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#failure_tolerance_count AwsCloudformationStackSet#failure_tolerance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#failure_tolerance_count TfStackSet#failure_tolerance_count}
   */
   readonly failureToleranceCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#failure_tolerance_percentage AwsCloudformationStackSet#failure_tolerance_percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#failure_tolerance_percentage TfStackSet#failure_tolerance_percentage}
   */
   readonly failureTolerancePercentage?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#max_concurrent_count AwsCloudformationStackSet#max_concurrent_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#max_concurrent_count TfStackSet#max_concurrent_count}
   */
   readonly maxConcurrentCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#max_concurrent_percentage AwsCloudformationStackSet#max_concurrent_percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#max_concurrent_percentage TfStackSet#max_concurrent_percentage}
   */
   readonly maxConcurrentPercentage?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#region_concurrency_type AwsCloudformationStackSet#region_concurrency_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#region_concurrency_type TfStackSet#region_concurrency_type}
   */
   readonly regionConcurrencyType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#region_order AwsCloudformationStackSet#region_order}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#region_order TfStackSet#region_order}
   */
   readonly regionOrder?: string[];
 }
@@ -1123,7 +1123,7 @@ export class OperationPreferencesPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#update AwsCloudformationStackSet#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_set#update TfStackSet#update}
   */
   readonly update?: string;
 }

@@ -5,38 +5,38 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsRedshiftserverlessUsageLimitConfig extends cdktn.TerraformMetaArguments {
+export interface TfUsageLimitConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_usage_limit#amount AwsRedshiftserverlessUsageLimit#amount}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_usage_limit#amount TfUsageLimit#amount}
   */
   readonly amount: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_usage_limit#breach_action AwsRedshiftserverlessUsageLimit#breach_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_usage_limit#breach_action TfUsageLimit#breach_action}
   */
   readonly breachAction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_usage_limit#id AwsRedshiftserverlessUsageLimit#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_usage_limit#id TfUsageLimit#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_usage_limit#period AwsRedshiftserverlessUsageLimit#period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_usage_limit#period TfUsageLimit#period}
   */
   readonly period?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_usage_limit#region AwsRedshiftserverlessUsageLimit#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_usage_limit#region TfUsageLimit#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_usage_limit#resource_arn AwsRedshiftserverlessUsageLimit#resource_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_usage_limit#resource_arn TfUsageLimit#resource_arn}
   */
   readonly resourceArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_usage_limit#usage_type AwsRedshiftserverlessUsageLimit#usage_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_usage_limit#usage_type TfUsageLimit#usage_type}
   */
   readonly usageType: string;
 }
@@ -44,7 +44,7 @@ export interface AwsRedshiftserverlessUsageLimitConfig extends cdktn.TerraformMe
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_usage_limit aws_redshiftserverless_usage_limit}
 */
-export class AwsRedshiftserverlessUsageLimit extends cdktn.TerraformResource {
+export class TfUsageLimit extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class AwsRedshiftserverlessUsageLimit extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsRedshiftserverlessUsageLimit resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfUsageLimit resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsRedshiftserverlessUsageLimit to import
-  * @param importFromId The id of the existing AwsRedshiftserverlessUsageLimit that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_usage_limit#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsRedshiftserverlessUsageLimit to import is found
+  * @param importToId The construct id used in the generated config for the TfUsageLimit to import
+  * @param importFromId The id of the existing TfUsageLimit that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_usage_limit#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfUsageLimit to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_redshiftserverless_usage_limit", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class AwsRedshiftserverlessUsageLimit extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsRedshiftserverlessUsageLimitConfig
+  * @param options TfUsageLimitConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsRedshiftserverlessUsageLimitConfig) {
+  public constructor(scope: Construct, id: string, config: TfUsageLimitConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_redshiftserverless_usage_limit',
       terraformGeneratorMetadata: {

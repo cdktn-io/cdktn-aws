@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsResourcegroupstaggingapiResourcesConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataResourcesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourcegroupstaggingapi_resources#exclude_compliant_resources DataAwsResourcegroupstaggingapiResources#exclude_compliant_resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourcegroupstaggingapi_resources#exclude_compliant_resources TfDataResources#exclude_compliant_resources}
   */
   readonly excludeCompliantResources?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourcegroupstaggingapi_resources#id DataAwsResourcegroupstaggingapiResources#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourcegroupstaggingapi_resources#id TfDataResources#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourcegroupstaggingapi_resources#include_compliance_details DataAwsResourcegroupstaggingapiResources#include_compliance_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourcegroupstaggingapi_resources#include_compliance_details TfDataResources#include_compliance_details}
   */
   readonly includeComplianceDetails?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourcegroupstaggingapi_resources#region DataAwsResourcegroupstaggingapiResources#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourcegroupstaggingapi_resources#region TfDataResources#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourcegroupstaggingapi_resources#resource_arn_list DataAwsResourcegroupstaggingapiResources#resource_arn_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourcegroupstaggingapi_resources#resource_arn_list TfDataResources#resource_arn_list}
   */
   readonly resourceArnList?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourcegroupstaggingapi_resources#resource_type_filters DataAwsResourcegroupstaggingapiResources#resource_type_filters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourcegroupstaggingapi_resources#resource_type_filters TfDataResources#resource_type_filters}
   */
   readonly resourceTypeFilters?: string[];
   /**
   * tag_filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourcegroupstaggingapi_resources#tag_filter DataAwsResourcegroupstaggingapiResources#tag_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourcegroupstaggingapi_resources#tag_filter TfDataResources#tag_filter}
   */
-  readonly tagFilter?: DataAwsResourcegroupstaggingapiResources.TagFilterProperty[] | cdktn.IResolvable;
+  readonly tagFilter?: TfDataResources.TagFilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourcegroupstaggingapi_resources aws_resourcegroupstaggingapi_resources}
 */
-export class DataAwsResourcegroupstaggingapiResources extends cdktn.TerraformDataSource {
+export class TfDataResources extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class DataAwsResourcegroupstaggingapiResources extends cdktn.TerraformDat
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsResourcegroupstaggingapiResources resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataResources resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsResourcegroupstaggingapiResources to import
-  * @param importFromId The id of the existing DataAwsResourcegroupstaggingapiResources that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourcegroupstaggingapi_resources#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsResourcegroupstaggingapiResources to import is found
+  * @param importToId The construct id used in the generated config for the TfDataResources to import
+  * @param importFromId The id of the existing TfDataResources that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourcegroupstaggingapi_resources#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataResources to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_resourcegroupstaggingapi_resources", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class DataAwsResourcegroupstaggingapiResources extends cdktn.TerraformDat
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsResourcegroupstaggingapiResourcesConfig = {}
+  * @param options TfDataResourcesConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsResourcegroupstaggingapiResourcesConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDataResourcesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_resourcegroupstaggingapi_resources',
       terraformGeneratorMetadata: {
@@ -188,7 +188,7 @@ export class DataAwsResourcegroupstaggingapiResources extends cdktn.TerraformDat
   }
 
   // resource_tag_mapping_list - computed: true, optional: false, required: false
-  private _resourceTagMappingList = new DataAwsResourcegroupstaggingapiResources.ResourceTagMappingListPropertyList(this, "resource_tag_mapping_list", false);
+  private _resourceTagMappingList = new TfDataResources.ResourceTagMappingListPropertyList(this, "resource_tag_mapping_list", false);
   public get resourceTagMappingList() {
     return this._resourceTagMappingList;
   }
@@ -210,11 +210,11 @@ export class DataAwsResourcegroupstaggingapiResources extends cdktn.TerraformDat
   }
 
   // tag_filter - computed: false, optional: true, required: false
-  private _tagFilter = new DataAwsResourcegroupstaggingapiResources.TagFilterPropertyList(this, "tag_filter", false);
+  private _tagFilter = new TfDataResources.TagFilterPropertyList(this, "tag_filter", false);
   public get tagFilter() {
     return this._tagFilter;
   }
-  public putTagFilter(value: DataAwsResourcegroupstaggingapiResources.TagFilterProperty[] | cdktn.IResolvable) {
+  public putTagFilter(value: TfDataResources.TagFilterProperty[] | cdktn.IResolvable) {
     this._tagFilter.internalValue = value;
   }
   public resetTagFilter() {
@@ -237,7 +237,7 @@ export class DataAwsResourcegroupstaggingapiResources extends cdktn.TerraformDat
       region: cdktn.stringToTerraform(this._region),
       resource_arn_list: cdktn.listMapper(cdktn.stringToTerraform, false)(this._resourceArnList),
       resource_type_filters: cdktn.listMapper(cdktn.stringToTerraform, false)(this._resourceTypeFilters),
-      tag_filter: cdktn.listMapper(dataAwsResourcegroupstaggingapiResourcesTagFilterPropertyToTerraform, true)(this._tagFilter.internalValue),
+      tag_filter: cdktn.listMapper(tfDataResourcesTagFilterPropertyToTerraform, true)(this._tagFilter.internalValue),
     };
   }
 
@@ -280,10 +280,10 @@ export class DataAwsResourcegroupstaggingapiResources extends cdktn.TerraformDat
         storageClassType: "stringList",
       },
       tag_filter: {
-        value: cdktn.listMapperHcl(dataAwsResourcegroupstaggingapiResourcesTagFilterPropertyToHclTerraform, true)(this._tagFilter.internalValue),
+        value: cdktn.listMapperHcl(tfDataResourcesTagFilterPropertyToHclTerraform, true)(this._tagFilter.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "DataAwsResourcegroupstaggingapiResources.TagFilterPropertyList",
+        storageClassType: "TfDataResources.TagFilterPropertyList",
       },
     };
 
@@ -292,7 +292,7 @@ export class DataAwsResourcegroupstaggingapiResources extends cdktn.TerraformDat
   }
 }
 
-export function dataAwsResourcegroupstaggingapiResourcesComplianceDetailsPropertyToTerraform(struct?: DataAwsResourcegroupstaggingapiResources.ComplianceDetailsProperty): any {
+export function tfDataResourcesComplianceDetailsPropertyToTerraform(struct?: TfDataResources.ComplianceDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -302,7 +302,7 @@ export function dataAwsResourcegroupstaggingapiResourcesComplianceDetailsPropert
 }
 
 
-export function dataAwsResourcegroupstaggingapiResourcesComplianceDetailsPropertyToHclTerraform(struct?: DataAwsResourcegroupstaggingapiResources.ComplianceDetailsProperty): any {
+export function tfDataResourcesComplianceDetailsPropertyToHclTerraform(struct?: TfDataResources.ComplianceDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -313,7 +313,7 @@ export function dataAwsResourcegroupstaggingapiResourcesComplianceDetailsPropert
 }
 
 
-export function dataAwsResourcegroupstaggingapiResourcesResourceTagMappingListPropertyToTerraform(struct?: DataAwsResourcegroupstaggingapiResources.ResourceTagMappingListProperty): any {
+export function tfDataResourcesResourceTagMappingListPropertyToTerraform(struct?: TfDataResources.ResourceTagMappingListProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -323,7 +323,7 @@ export function dataAwsResourcegroupstaggingapiResourcesResourceTagMappingListPr
 }
 
 
-export function dataAwsResourcegroupstaggingapiResourcesResourceTagMappingListPropertyToHclTerraform(struct?: DataAwsResourcegroupstaggingapiResources.ResourceTagMappingListProperty): any {
+export function tfDataResourcesResourceTagMappingListPropertyToHclTerraform(struct?: TfDataResources.ResourceTagMappingListProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -334,7 +334,7 @@ export function dataAwsResourcegroupstaggingapiResourcesResourceTagMappingListPr
 }
 
 
-export function dataAwsResourcegroupstaggingapiResourcesTagFilterPropertyToTerraform(struct?: DataAwsResourcegroupstaggingapiResources.TagFilterProperty | cdktn.IResolvable): any {
+export function tfDataResourcesTagFilterPropertyToTerraform(struct?: TfDataResources.TagFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -346,7 +346,7 @@ export function dataAwsResourcegroupstaggingapiResourcesTagFilterPropertyToTerra
 }
 
 
-export function dataAwsResourcegroupstaggingapiResourcesTagFilterPropertyToHclTerraform(struct?: DataAwsResourcegroupstaggingapiResources.TagFilterProperty | cdktn.IResolvable): any {
+export function tfDataResourcesTagFilterPropertyToHclTerraform(struct?: TfDataResources.TagFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -371,7 +371,7 @@ export function dataAwsResourcegroupstaggingapiResourcesTagFilterPropertyToHclTe
 }
 
 
-export namespace DataAwsResourcegroupstaggingapiResources {
+export namespace TfDataResources {
 export interface ComplianceDetailsProperty {
 }
 export class ComplianceDetailsPropertyOutputReference extends cdktn.ComplexObject {
@@ -504,11 +504,11 @@ export class ResourceTagMappingListPropertyList extends cdktn.ComplexList {
 }
 export interface TagFilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourcegroupstaggingapi_resources#key DataAwsResourcegroupstaggingapiResources#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourcegroupstaggingapi_resources#key TfDataResources#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourcegroupstaggingapi_resources#values DataAwsResourcegroupstaggingapiResources#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourcegroupstaggingapi_resources#values TfDataResources#values}
   */
   readonly values?: string[];
 }

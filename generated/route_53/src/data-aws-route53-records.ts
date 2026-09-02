@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsRoute53RecordsConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataRecordsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_records#name_regex DataAwsRoute53Records#name_regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_records#name_regex TfDataRecords#name_regex}
   */
   readonly nameRegex?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_records#zone_id DataAwsRoute53Records#zone_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_records#zone_id TfDataRecords#zone_id}
   */
   readonly zoneId: string;
 }
@@ -19,7 +19,7 @@ export interface DataAwsRoute53RecordsConfig extends cdktn.TerraformMetaArgument
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_records aws_route53_records}
 */
-export class DataAwsRoute53Records extends cdktn.TerraformDataSource {
+export class TfDataRecords extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -30,11 +30,11 @@ export class DataAwsRoute53Records extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsRoute53Records resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataRecords resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsRoute53Records to import
-  * @param importFromId The id of the existing DataAwsRoute53Records that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_records#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsRoute53Records to import is found
+  * @param importToId The construct id used in the generated config for the TfDataRecords to import
+  * @param importFromId The id of the existing TfDataRecords that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_records#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataRecords to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route53_records", importId: importFromId, provider });
@@ -49,9 +49,9 @@ export class DataAwsRoute53Records extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsRoute53RecordsConfig
+  * @param options TfDataRecordsConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsRoute53RecordsConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataRecordsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_route53_records',
       terraformGeneratorMetadata: {
@@ -92,7 +92,7 @@ export class DataAwsRoute53Records extends cdktn.TerraformDataSource {
   }
 
   // resource_record_sets - computed: true, optional: false, required: false
-  private _resourceRecordSets = new DataAwsRoute53Records.ResourceRecordSetsPropertyList(this, "resource_record_sets", false);
+  private _resourceRecordSets = new TfDataRecords.ResourceRecordSetsPropertyList(this, "resource_record_sets", false);
   public get resourceRecordSets() {
     return this._resourceRecordSets;
   }
@@ -142,7 +142,7 @@ export class DataAwsRoute53Records extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsRoute53RecordsAliasTargetPropertyToTerraform(struct?: DataAwsRoute53Records.AliasTargetProperty): any {
+export function tfDataRecordsAliasTargetPropertyToTerraform(struct?: TfDataRecords.AliasTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -152,7 +152,7 @@ export function dataAwsRoute53RecordsAliasTargetPropertyToTerraform(struct?: Dat
 }
 
 
-export function dataAwsRoute53RecordsAliasTargetPropertyToHclTerraform(struct?: DataAwsRoute53Records.AliasTargetProperty): any {
+export function tfDataRecordsAliasTargetPropertyToHclTerraform(struct?: TfDataRecords.AliasTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -163,7 +163,7 @@ export function dataAwsRoute53RecordsAliasTargetPropertyToHclTerraform(struct?: 
 }
 
 
-export function dataAwsRoute53RecordsCidrRoutingConfigPropertyToTerraform(struct?: DataAwsRoute53Records.CidrRoutingConfigProperty): any {
+export function tfDataRecordsCidrRoutingConfigPropertyToTerraform(struct?: TfDataRecords.CidrRoutingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -173,7 +173,7 @@ export function dataAwsRoute53RecordsCidrRoutingConfigPropertyToTerraform(struct
 }
 
 
-export function dataAwsRoute53RecordsCidrRoutingConfigPropertyToHclTerraform(struct?: DataAwsRoute53Records.CidrRoutingConfigProperty): any {
+export function tfDataRecordsCidrRoutingConfigPropertyToHclTerraform(struct?: TfDataRecords.CidrRoutingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -184,7 +184,7 @@ export function dataAwsRoute53RecordsCidrRoutingConfigPropertyToHclTerraform(str
 }
 
 
-export function dataAwsRoute53RecordsGeolocationPropertyToTerraform(struct?: DataAwsRoute53Records.GeolocationProperty): any {
+export function tfDataRecordsGeolocationPropertyToTerraform(struct?: TfDataRecords.GeolocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -194,7 +194,7 @@ export function dataAwsRoute53RecordsGeolocationPropertyToTerraform(struct?: Dat
 }
 
 
-export function dataAwsRoute53RecordsGeolocationPropertyToHclTerraform(struct?: DataAwsRoute53Records.GeolocationProperty): any {
+export function tfDataRecordsGeolocationPropertyToHclTerraform(struct?: TfDataRecords.GeolocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -205,7 +205,7 @@ export function dataAwsRoute53RecordsGeolocationPropertyToHclTerraform(struct?: 
 }
 
 
-export function dataAwsRoute53RecordsCoordinatesPropertyToTerraform(struct?: DataAwsRoute53Records.CoordinatesProperty): any {
+export function tfDataRecordsCoordinatesPropertyToTerraform(struct?: TfDataRecords.CoordinatesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -215,7 +215,7 @@ export function dataAwsRoute53RecordsCoordinatesPropertyToTerraform(struct?: Dat
 }
 
 
-export function dataAwsRoute53RecordsCoordinatesPropertyToHclTerraform(struct?: DataAwsRoute53Records.CoordinatesProperty): any {
+export function tfDataRecordsCoordinatesPropertyToHclTerraform(struct?: TfDataRecords.CoordinatesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -226,7 +226,7 @@ export function dataAwsRoute53RecordsCoordinatesPropertyToHclTerraform(struct?: 
 }
 
 
-export function dataAwsRoute53RecordsGeoproximityLocationPropertyToTerraform(struct?: DataAwsRoute53Records.GeoproximityLocationProperty): any {
+export function tfDataRecordsGeoproximityLocationPropertyToTerraform(struct?: TfDataRecords.GeoproximityLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -236,7 +236,7 @@ export function dataAwsRoute53RecordsGeoproximityLocationPropertyToTerraform(str
 }
 
 
-export function dataAwsRoute53RecordsGeoproximityLocationPropertyToHclTerraform(struct?: DataAwsRoute53Records.GeoproximityLocationProperty): any {
+export function tfDataRecordsGeoproximityLocationPropertyToHclTerraform(struct?: TfDataRecords.GeoproximityLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -247,7 +247,7 @@ export function dataAwsRoute53RecordsGeoproximityLocationPropertyToHclTerraform(
 }
 
 
-export function dataAwsRoute53RecordsResourceRecordsPropertyToTerraform(struct?: DataAwsRoute53Records.ResourceRecordsProperty): any {
+export function tfDataRecordsResourceRecordsPropertyToTerraform(struct?: TfDataRecords.ResourceRecordsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -257,7 +257,7 @@ export function dataAwsRoute53RecordsResourceRecordsPropertyToTerraform(struct?:
 }
 
 
-export function dataAwsRoute53RecordsResourceRecordsPropertyToHclTerraform(struct?: DataAwsRoute53Records.ResourceRecordsProperty): any {
+export function tfDataRecordsResourceRecordsPropertyToHclTerraform(struct?: TfDataRecords.ResourceRecordsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -268,7 +268,7 @@ export function dataAwsRoute53RecordsResourceRecordsPropertyToHclTerraform(struc
 }
 
 
-export function dataAwsRoute53RecordsResourceRecordSetsPropertyToTerraform(struct?: DataAwsRoute53Records.ResourceRecordSetsProperty): any {
+export function tfDataRecordsResourceRecordSetsPropertyToTerraform(struct?: TfDataRecords.ResourceRecordSetsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -278,7 +278,7 @@ export function dataAwsRoute53RecordsResourceRecordSetsPropertyToTerraform(struc
 }
 
 
-export function dataAwsRoute53RecordsResourceRecordSetsPropertyToHclTerraform(struct?: DataAwsRoute53Records.ResourceRecordSetsProperty): any {
+export function tfDataRecordsResourceRecordSetsPropertyToHclTerraform(struct?: TfDataRecords.ResourceRecordSetsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -289,7 +289,7 @@ export function dataAwsRoute53RecordsResourceRecordSetsPropertyToHclTerraform(st
 }
 
 
-export namespace DataAwsRoute53Records {
+export namespace TfDataRecords {
 export interface AliasTargetProperty {
 }
 export class AliasTargetPropertyOutputReference extends cdktn.ComplexObject {

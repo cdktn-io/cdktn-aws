@@ -5,38 +5,38 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsNetworkmanagerLinkAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface TfLinkAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link_association#device_id AwsNetworkmanagerLinkAssociation#device_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link_association#device_id TfLinkAssociation#device_id}
   */
   readonly deviceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link_association#global_network_id AwsNetworkmanagerLinkAssociation#global_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link_association#global_network_id TfLinkAssociation#global_network_id}
   */
   readonly globalNetworkId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link_association#id AwsNetworkmanagerLinkAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link_association#id TfLinkAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link_association#link_id AwsNetworkmanagerLinkAssociation#link_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link_association#link_id TfLinkAssociation#link_id}
   */
   readonly linkId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link_association#timeouts AwsNetworkmanagerLinkAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link_association#timeouts TfLinkAssociation#timeouts}
   */
-  readonly timeouts?: AwsNetworkmanagerLinkAssociation.TimeoutsProperty;
+  readonly timeouts?: TfLinkAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link_association aws_networkmanager_link_association}
 */
-export class AwsNetworkmanagerLinkAssociation extends cdktn.TerraformResource {
+export class TfLinkAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class AwsNetworkmanagerLinkAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsNetworkmanagerLinkAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfLinkAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsNetworkmanagerLinkAssociation to import
-  * @param importFromId The id of the existing AwsNetworkmanagerLinkAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsNetworkmanagerLinkAssociation to import is found
+  * @param importToId The construct id used in the generated config for the TfLinkAssociation to import
+  * @param importFromId The id of the existing TfLinkAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfLinkAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkmanager_link_association", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class AwsNetworkmanagerLinkAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsNetworkmanagerLinkAssociationConfig
+  * @param options TfLinkAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsNetworkmanagerLinkAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: TfLinkAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_networkmanager_link_association',
       terraformGeneratorMetadata: {
@@ -151,11 +151,11 @@ export class AwsNetworkmanagerLinkAssociation extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsNetworkmanagerLinkAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfLinkAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsNetworkmanagerLinkAssociation.TimeoutsProperty) {
+  public putTimeouts(value: TfLinkAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -176,7 +176,7 @@ export class AwsNetworkmanagerLinkAssociation extends cdktn.TerraformResource {
       global_network_id: cdktn.stringToTerraform(this._globalNetworkId),
       id: cdktn.stringToTerraform(this._id),
       link_id: cdktn.stringToTerraform(this._linkId),
-      timeouts: awsNetworkmanagerLinkAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfLinkAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -207,10 +207,10 @@ export class AwsNetworkmanagerLinkAssociation extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsNetworkmanagerLinkAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfLinkAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsNetworkmanagerLinkAssociation.TimeoutsProperty",
+        storageClassType: "TfLinkAssociation.TimeoutsProperty",
       },
     };
 
@@ -219,7 +219,7 @@ export class AwsNetworkmanagerLinkAssociation extends cdktn.TerraformResource {
   }
 }
 
-export function awsNetworkmanagerLinkAssociationTimeoutsPropertyToTerraform(struct?: AwsNetworkmanagerLinkAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfLinkAssociationTimeoutsPropertyToTerraform(struct?: TfLinkAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -231,7 +231,7 @@ export function awsNetworkmanagerLinkAssociationTimeoutsPropertyToTerraform(stru
 }
 
 
-export function awsNetworkmanagerLinkAssociationTimeoutsPropertyToHclTerraform(struct?: AwsNetworkmanagerLinkAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfLinkAssociationTimeoutsPropertyToHclTerraform(struct?: TfLinkAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -256,14 +256,14 @@ export function awsNetworkmanagerLinkAssociationTimeoutsPropertyToHclTerraform(s
 }
 
 
-export namespace AwsNetworkmanagerLinkAssociation {
+export namespace TfLinkAssociation {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link_association#create AwsNetworkmanagerLinkAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link_association#create TfLinkAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link_association#delete AwsNetworkmanagerLinkAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_link_association#delete TfLinkAssociation#delete}
   */
   readonly delete?: string;
 }

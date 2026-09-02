@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEmrBlockPublicAccessConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface TfBlockPublicAccessConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_block_public_access_configuration#block_public_security_group_rules AwsEmrBlockPublicAccessConfiguration#block_public_security_group_rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_block_public_access_configuration#block_public_security_group_rules TfBlockPublicAccessConfiguration#block_public_security_group_rules}
   */
   readonly blockPublicSecurityGroupRules: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_block_public_access_configuration#id AwsEmrBlockPublicAccessConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_block_public_access_configuration#id TfBlockPublicAccessConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,21 +20,21 @@ export interface AwsEmrBlockPublicAccessConfigurationConfig extends cdktn.Terraf
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_block_public_access_configuration#region AwsEmrBlockPublicAccessConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_block_public_access_configuration#region TfBlockPublicAccessConfiguration#region}
   */
   readonly region?: string;
   /**
   * permitted_public_security_group_rule_range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_block_public_access_configuration#permitted_public_security_group_rule_range AwsEmrBlockPublicAccessConfiguration#permitted_public_security_group_rule_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_block_public_access_configuration#permitted_public_security_group_rule_range TfBlockPublicAccessConfiguration#permitted_public_security_group_rule_range}
   */
-  readonly permittedPublicSecurityGroupRuleRange?: AwsEmrBlockPublicAccessConfiguration.PermittedPublicSecurityGroupRuleRangeProperty[] | cdktn.IResolvable;
+  readonly permittedPublicSecurityGroupRuleRange?: TfBlockPublicAccessConfiguration.PermittedPublicSecurityGroupRuleRangeProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_block_public_access_configuration aws_emr_block_public_access_configuration}
 */
-export class AwsEmrBlockPublicAccessConfiguration extends cdktn.TerraformResource {
+export class TfBlockPublicAccessConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class AwsEmrBlockPublicAccessConfiguration extends cdktn.TerraformResourc
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEmrBlockPublicAccessConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfBlockPublicAccessConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEmrBlockPublicAccessConfiguration to import
-  * @param importFromId The id of the existing AwsEmrBlockPublicAccessConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_block_public_access_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEmrBlockPublicAccessConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the TfBlockPublicAccessConfiguration to import
+  * @param importFromId The id of the existing TfBlockPublicAccessConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_block_public_access_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfBlockPublicAccessConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_emr_block_public_access_configuration", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class AwsEmrBlockPublicAccessConfiguration extends cdktn.TerraformResourc
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEmrBlockPublicAccessConfigurationConfig
+  * @param options TfBlockPublicAccessConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEmrBlockPublicAccessConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: TfBlockPublicAccessConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_emr_block_public_access_configuration',
       terraformGeneratorMetadata: {
@@ -138,11 +138,11 @@ export class AwsEmrBlockPublicAccessConfiguration extends cdktn.TerraformResourc
   }
 
   // permitted_public_security_group_rule_range - computed: false, optional: true, required: false
-  private _permittedPublicSecurityGroupRuleRange = new AwsEmrBlockPublicAccessConfiguration.PermittedPublicSecurityGroupRuleRangePropertyList(this, "permitted_public_security_group_rule_range", false);
+  private _permittedPublicSecurityGroupRuleRange = new TfBlockPublicAccessConfiguration.PermittedPublicSecurityGroupRuleRangePropertyList(this, "permitted_public_security_group_rule_range", false);
   public get permittedPublicSecurityGroupRuleRange() {
     return this._permittedPublicSecurityGroupRuleRange;
   }
-  public putPermittedPublicSecurityGroupRuleRange(value: AwsEmrBlockPublicAccessConfiguration.PermittedPublicSecurityGroupRuleRangeProperty[] | cdktn.IResolvable) {
+  public putPermittedPublicSecurityGroupRuleRange(value: TfBlockPublicAccessConfiguration.PermittedPublicSecurityGroupRuleRangeProperty[] | cdktn.IResolvable) {
     this._permittedPublicSecurityGroupRuleRange.internalValue = value;
   }
   public resetPermittedPublicSecurityGroupRuleRange() {
@@ -162,7 +162,7 @@ export class AwsEmrBlockPublicAccessConfiguration extends cdktn.TerraformResourc
       block_public_security_group_rules: cdktn.booleanToTerraform(this._blockPublicSecurityGroupRules),
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      permitted_public_security_group_rule_range: cdktn.listMapper(awsEmrBlockPublicAccessConfigurationPermittedPublicSecurityGroupRuleRangePropertyToTerraform, true)(this._permittedPublicSecurityGroupRuleRange.internalValue),
+      permitted_public_security_group_rule_range: cdktn.listMapper(tfBlockPublicAccessConfigurationPermittedPublicSecurityGroupRuleRangePropertyToTerraform, true)(this._permittedPublicSecurityGroupRuleRange.internalValue),
     };
   }
 
@@ -187,10 +187,10 @@ export class AwsEmrBlockPublicAccessConfiguration extends cdktn.TerraformResourc
         storageClassType: "string",
       },
       permitted_public_security_group_rule_range: {
-        value: cdktn.listMapperHcl(awsEmrBlockPublicAccessConfigurationPermittedPublicSecurityGroupRuleRangePropertyToHclTerraform, true)(this._permittedPublicSecurityGroupRuleRange.internalValue),
+        value: cdktn.listMapperHcl(tfBlockPublicAccessConfigurationPermittedPublicSecurityGroupRuleRangePropertyToHclTerraform, true)(this._permittedPublicSecurityGroupRuleRange.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEmrBlockPublicAccessConfiguration.PermittedPublicSecurityGroupRuleRangePropertyList",
+        storageClassType: "TfBlockPublicAccessConfiguration.PermittedPublicSecurityGroupRuleRangePropertyList",
       },
     };
 
@@ -199,7 +199,7 @@ export class AwsEmrBlockPublicAccessConfiguration extends cdktn.TerraformResourc
   }
 }
 
-export function awsEmrBlockPublicAccessConfigurationPermittedPublicSecurityGroupRuleRangePropertyToTerraform(struct?: AwsEmrBlockPublicAccessConfiguration.PermittedPublicSecurityGroupRuleRangeProperty | cdktn.IResolvable): any {
+export function tfBlockPublicAccessConfigurationPermittedPublicSecurityGroupRuleRangePropertyToTerraform(struct?: TfBlockPublicAccessConfiguration.PermittedPublicSecurityGroupRuleRangeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -211,7 +211,7 @@ export function awsEmrBlockPublicAccessConfigurationPermittedPublicSecurityGroup
 }
 
 
-export function awsEmrBlockPublicAccessConfigurationPermittedPublicSecurityGroupRuleRangePropertyToHclTerraform(struct?: AwsEmrBlockPublicAccessConfiguration.PermittedPublicSecurityGroupRuleRangeProperty | cdktn.IResolvable): any {
+export function tfBlockPublicAccessConfigurationPermittedPublicSecurityGroupRuleRangePropertyToHclTerraform(struct?: TfBlockPublicAccessConfiguration.PermittedPublicSecurityGroupRuleRangeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -236,14 +236,14 @@ export function awsEmrBlockPublicAccessConfigurationPermittedPublicSecurityGroup
 }
 
 
-export namespace AwsEmrBlockPublicAccessConfiguration {
+export namespace TfBlockPublicAccessConfiguration {
 export interface PermittedPublicSecurityGroupRuleRangeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_block_public_access_configuration#max_range AwsEmrBlockPublicAccessConfiguration#max_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_block_public_access_configuration#max_range TfBlockPublicAccessConfiguration#max_range}
   */
   readonly maxRange: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_block_public_access_configuration#min_range AwsEmrBlockPublicAccessConfiguration#min_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_block_public_access_configuration#min_range TfBlockPublicAccessConfiguration#min_range}
   */
   readonly minRange: number;
 }

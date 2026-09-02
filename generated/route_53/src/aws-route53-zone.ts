@@ -5,60 +5,60 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsRoute53ZoneConfig extends cdktn.TerraformMetaArguments {
+export interface TfZoneConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_zone#comment AwsRoute53Zone#comment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_zone#comment TfZone#comment}
   */
   readonly comment?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_zone#delegation_set_id AwsRoute53Zone#delegation_set_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_zone#delegation_set_id TfZone#delegation_set_id}
   */
   readonly delegationSetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_zone#enable_accelerated_recovery AwsRoute53Zone#enable_accelerated_recovery}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_zone#enable_accelerated_recovery TfZone#enable_accelerated_recovery}
   */
   readonly enableAcceleratedRecovery?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_zone#force_destroy AwsRoute53Zone#force_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_zone#force_destroy TfZone#force_destroy}
   */
   readonly forceDestroy?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_zone#id AwsRoute53Zone#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_zone#id TfZone#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_zone#name AwsRoute53Zone#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_zone#name TfZone#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_zone#tags AwsRoute53Zone#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_zone#tags TfZone#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_zone#tags_all AwsRoute53Zone#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_zone#tags_all TfZone#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_zone#timeouts AwsRoute53Zone#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_zone#timeouts TfZone#timeouts}
   */
-  readonly timeouts?: AwsRoute53Zone.TimeoutsProperty;
+  readonly timeouts?: TfZone.TimeoutsProperty;
   /**
   * vpc block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_zone#vpc AwsRoute53Zone#vpc}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_zone#vpc TfZone#vpc}
   */
-  readonly vpc?: AwsRoute53Zone.VpcProperty[] | cdktn.IResolvable;
+  readonly vpc?: TfZone.VpcProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_zone aws_route53_zone}
 */
-export class AwsRoute53Zone extends cdktn.TerraformResource {
+export class TfZone extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -69,11 +69,11 @@ export class AwsRoute53Zone extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsRoute53Zone resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfZone resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsRoute53Zone to import
-  * @param importFromId The id of the existing AwsRoute53Zone that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_zone#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsRoute53Zone to import is found
+  * @param importToId The construct id used in the generated config for the TfZone to import
+  * @param importFromId The id of the existing TfZone that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_zone#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfZone to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route53_zone", importId: importFromId, provider });
@@ -88,9 +88,9 @@ export class AwsRoute53Zone extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsRoute53ZoneConfig
+  * @param options TfZoneConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsRoute53ZoneConfig) {
+  public constructor(scope: Construct, id: string, config: TfZoneConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_route53_zone',
       terraformGeneratorMetadata: {
@@ -268,11 +268,11 @@ export class AwsRoute53Zone extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsRoute53Zone.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfZone.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsRoute53Zone.TimeoutsProperty) {
+  public putTimeouts(value: TfZone.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -284,11 +284,11 @@ export class AwsRoute53Zone extends cdktn.TerraformResource {
   }
 
   // vpc - computed: false, optional: true, required: false
-  private _vpc = new AwsRoute53Zone.VpcPropertyList(this, "vpc", true);
+  private _vpc = new TfZone.VpcPropertyList(this, "vpc", true);
   public get vpc() {
     return this._vpc;
   }
-  public putVpc(value: AwsRoute53Zone.VpcProperty[] | cdktn.IResolvable) {
+  public putVpc(value: TfZone.VpcProperty[] | cdktn.IResolvable) {
     this._vpc.internalValue = value;
   }
   public resetVpc() {
@@ -313,8 +313,8 @@ export class AwsRoute53Zone extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: awsRoute53ZoneTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      vpc: cdktn.listMapper(awsRoute53ZoneVpcPropertyToTerraform, true)(this._vpc.internalValue),
+      timeouts: tfZoneTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      vpc: cdktn.listMapper(tfZoneVpcPropertyToTerraform, true)(this._vpc.internalValue),
     };
   }
 
@@ -369,16 +369,16 @@ export class AwsRoute53Zone extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsRoute53ZoneTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfZoneTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsRoute53Zone.TimeoutsProperty",
+        storageClassType: "TfZone.TimeoutsProperty",
       },
       vpc: {
-        value: cdktn.listMapperHcl(awsRoute53ZoneVpcPropertyToHclTerraform, true)(this._vpc.internalValue),
+        value: cdktn.listMapperHcl(tfZoneVpcPropertyToHclTerraform, true)(this._vpc.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsRoute53Zone.VpcPropertyList",
+        storageClassType: "TfZone.VpcPropertyList",
       },
     };
 
@@ -387,7 +387,7 @@ export class AwsRoute53Zone extends cdktn.TerraformResource {
   }
 }
 
-export function awsRoute53ZoneTimeoutsPropertyToTerraform(struct?: AwsRoute53Zone.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfZoneTimeoutsPropertyToTerraform(struct?: TfZone.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -400,7 +400,7 @@ export function awsRoute53ZoneTimeoutsPropertyToTerraform(struct?: AwsRoute53Zon
 }
 
 
-export function awsRoute53ZoneTimeoutsPropertyToHclTerraform(struct?: AwsRoute53Zone.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfZoneTimeoutsPropertyToHclTerraform(struct?: TfZone.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -431,7 +431,7 @@ export function awsRoute53ZoneTimeoutsPropertyToHclTerraform(struct?: AwsRoute53
 }
 
 
-export function awsRoute53ZoneVpcPropertyToTerraform(struct?: AwsRoute53Zone.VpcProperty | cdktn.IResolvable): any {
+export function tfZoneVpcPropertyToTerraform(struct?: TfZone.VpcProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -443,7 +443,7 @@ export function awsRoute53ZoneVpcPropertyToTerraform(struct?: AwsRoute53Zone.Vpc
 }
 
 
-export function awsRoute53ZoneVpcPropertyToHclTerraform(struct?: AwsRoute53Zone.VpcProperty | cdktn.IResolvable): any {
+export function tfZoneVpcPropertyToHclTerraform(struct?: TfZone.VpcProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -468,18 +468,18 @@ export function awsRoute53ZoneVpcPropertyToHclTerraform(struct?: AwsRoute53Zone.
 }
 
 
-export namespace AwsRoute53Zone {
+export namespace TfZone {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_zone#create AwsRoute53Zone#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_zone#create TfZone#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_zone#delete AwsRoute53Zone#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_zone#delete TfZone#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_zone#update AwsRoute53Zone#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_zone#update TfZone#update}
   */
   readonly update?: string;
 }
@@ -587,11 +587,11 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VpcProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_zone#vpc_id AwsRoute53Zone#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_zone#vpc_id TfZone#vpc_id}
   */
   readonly vpcId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_zone#vpc_region AwsRoute53Zone#vpc_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_zone#vpc_region TfZone#vpc_region}
   */
   readonly vpcRegion?: string;
 }

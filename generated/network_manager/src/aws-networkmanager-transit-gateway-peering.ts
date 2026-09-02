@@ -5,42 +5,42 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsNetworkmanagerTransitGatewayPeeringConfig extends cdktn.TerraformMetaArguments {
+export interface TfTransitGatewayPeeringConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_peering#core_network_id AwsNetworkmanagerTransitGatewayPeering#core_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_peering#core_network_id TfTransitGatewayPeering#core_network_id}
   */
   readonly coreNetworkId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_peering#id AwsNetworkmanagerTransitGatewayPeering#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_peering#id TfTransitGatewayPeering#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_peering#tags AwsNetworkmanagerTransitGatewayPeering#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_peering#tags TfTransitGatewayPeering#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_peering#tags_all AwsNetworkmanagerTransitGatewayPeering#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_peering#tags_all TfTransitGatewayPeering#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_peering#transit_gateway_arn AwsNetworkmanagerTransitGatewayPeering#transit_gateway_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_peering#transit_gateway_arn TfTransitGatewayPeering#transit_gateway_arn}
   */
   readonly transitGatewayArn: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_peering#timeouts AwsNetworkmanagerTransitGatewayPeering#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_peering#timeouts TfTransitGatewayPeering#timeouts}
   */
-  readonly timeouts?: AwsNetworkmanagerTransitGatewayPeering.TimeoutsProperty;
+  readonly timeouts?: TfTransitGatewayPeering.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_peering aws_networkmanager_transit_gateway_peering}
 */
-export class AwsNetworkmanagerTransitGatewayPeering extends cdktn.TerraformResource {
+export class TfTransitGatewayPeering extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class AwsNetworkmanagerTransitGatewayPeering extends cdktn.TerraformResou
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsNetworkmanagerTransitGatewayPeering resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfTransitGatewayPeering resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsNetworkmanagerTransitGatewayPeering to import
-  * @param importFromId The id of the existing AwsNetworkmanagerTransitGatewayPeering that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_peering#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsNetworkmanagerTransitGatewayPeering to import is found
+  * @param importToId The construct id used in the generated config for the TfTransitGatewayPeering to import
+  * @param importFromId The id of the existing TfTransitGatewayPeering that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_peering#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfTransitGatewayPeering to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkmanager_transit_gateway_peering", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class AwsNetworkmanagerTransitGatewayPeering extends cdktn.TerraformResou
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsNetworkmanagerTransitGatewayPeeringConfig
+  * @param options TfTransitGatewayPeeringConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsNetworkmanagerTransitGatewayPeeringConfig) {
+  public constructor(scope: Construct, id: string, config: TfTransitGatewayPeeringConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_networkmanager_transit_gateway_peering',
       terraformGeneratorMetadata: {
@@ -210,11 +210,11 @@ export class AwsNetworkmanagerTransitGatewayPeering extends cdktn.TerraformResou
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsNetworkmanagerTransitGatewayPeering.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfTransitGatewayPeering.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsNetworkmanagerTransitGatewayPeering.TimeoutsProperty) {
+  public putTimeouts(value: TfTransitGatewayPeering.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -236,7 +236,7 @@ export class AwsNetworkmanagerTransitGatewayPeering extends cdktn.TerraformResou
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       transit_gateway_arn: cdktn.stringToTerraform(this._transitGatewayArn),
-      timeouts: awsNetworkmanagerTransitGatewayPeeringTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfTransitGatewayPeeringTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -273,10 +273,10 @@ export class AwsNetworkmanagerTransitGatewayPeering extends cdktn.TerraformResou
         storageClassType: "string",
       },
       timeouts: {
-        value: awsNetworkmanagerTransitGatewayPeeringTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfTransitGatewayPeeringTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsNetworkmanagerTransitGatewayPeering.TimeoutsProperty",
+        storageClassType: "TfTransitGatewayPeering.TimeoutsProperty",
       },
     };
 
@@ -285,7 +285,7 @@ export class AwsNetworkmanagerTransitGatewayPeering extends cdktn.TerraformResou
   }
 }
 
-export function awsNetworkmanagerTransitGatewayPeeringTimeoutsPropertyToTerraform(struct?: AwsNetworkmanagerTransitGatewayPeering.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfTransitGatewayPeeringTimeoutsPropertyToTerraform(struct?: TfTransitGatewayPeering.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -297,7 +297,7 @@ export function awsNetworkmanagerTransitGatewayPeeringTimeoutsPropertyToTerrafor
 }
 
 
-export function awsNetworkmanagerTransitGatewayPeeringTimeoutsPropertyToHclTerraform(struct?: AwsNetworkmanagerTransitGatewayPeering.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfTransitGatewayPeeringTimeoutsPropertyToHclTerraform(struct?: TfTransitGatewayPeering.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -322,14 +322,14 @@ export function awsNetworkmanagerTransitGatewayPeeringTimeoutsPropertyToHclTerra
 }
 
 
-export namespace AwsNetworkmanagerTransitGatewayPeering {
+export namespace TfTransitGatewayPeering {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_peering#create AwsNetworkmanagerTransitGatewayPeering#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_peering#create TfTransitGatewayPeering#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_peering#delete AwsNetworkmanagerTransitGatewayPeering#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_peering#delete TfTransitGatewayPeering#delete}
   */
   readonly delete?: string;
 }

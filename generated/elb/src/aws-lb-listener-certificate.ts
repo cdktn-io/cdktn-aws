@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsLbListenerCertificateConfig extends cdktn.TerraformMetaArguments {
+export interface TfListenerCertificateConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener_certificate#certificate_arn AwsLbListenerCertificate#certificate_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener_certificate#certificate_arn TfListenerCertificate#certificate_arn}
   */
   readonly certificateArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener_certificate#id AwsLbListenerCertificate#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener_certificate#id TfListenerCertificate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener_certificate#listener_arn AwsLbListenerCertificate#listener_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener_certificate#listener_arn TfListenerCertificate#listener_arn}
   */
   readonly listenerArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener_certificate#region AwsLbListenerCertificate#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener_certificate#region TfListenerCertificate#region}
   */
   readonly region?: string;
 }
@@ -32,7 +32,7 @@ export interface AwsLbListenerCertificateConfig extends cdktn.TerraformMetaArgum
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener_certificate aws_lb_listener_certificate}
 */
-export class AwsLbListenerCertificate extends cdktn.TerraformResource {
+export class TfListenerCertificate extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class AwsLbListenerCertificate extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsLbListenerCertificate resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfListenerCertificate resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsLbListenerCertificate to import
-  * @param importFromId The id of the existing AwsLbListenerCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener_certificate#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsLbListenerCertificate to import is found
+  * @param importToId The construct id used in the generated config for the TfListenerCertificate to import
+  * @param importFromId The id of the existing TfListenerCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_listener_certificate#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfListenerCertificate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lb_listener_certificate", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class AwsLbListenerCertificate extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsLbListenerCertificateConfig
+  * @param options TfListenerCertificateConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsLbListenerCertificateConfig) {
+  public constructor(scope: Construct, id: string, config: TfListenerCertificateConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lb_listener_certificate',
       terraformGeneratorMetadata: {

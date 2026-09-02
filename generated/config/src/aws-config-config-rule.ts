@@ -5,68 +5,68 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsConfigConfigRuleConfig extends cdktn.TerraformMetaArguments {
+export interface TfConfigRuleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#description AwsConfigConfigRule#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#description TfConfigRule#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#id AwsConfigConfigRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#id TfConfigRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#input_parameters AwsConfigConfigRule#input_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#input_parameters TfConfigRule#input_parameters}
   */
   readonly inputParameters?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#maximum_execution_frequency AwsConfigConfigRule#maximum_execution_frequency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#maximum_execution_frequency TfConfigRule#maximum_execution_frequency}
   */
   readonly maximumExecutionFrequency?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#name AwsConfigConfigRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#name TfConfigRule#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#region AwsConfigConfigRule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#region TfConfigRule#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#tags AwsConfigConfigRule#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#tags TfConfigRule#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#tags_all AwsConfigConfigRule#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#tags_all TfConfigRule#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * evaluation_mode block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#evaluation_mode AwsConfigConfigRule#evaluation_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#evaluation_mode TfConfigRule#evaluation_mode}
   */
-  readonly evaluationMode?: AwsConfigConfigRule.EvaluationModeProperty[] | cdktn.IResolvable;
+  readonly evaluationMode?: TfConfigRule.EvaluationModeProperty[] | cdktn.IResolvable;
   /**
   * scope block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#scope AwsConfigConfigRule#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#scope TfConfigRule#scope}
   */
-  readonly scope?: AwsConfigConfigRule.ScopeProperty;
+  readonly scope?: TfConfigRule.ScopeProperty;
   /**
   * source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#source AwsConfigConfigRule#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#source TfConfigRule#source}
   */
-  readonly source: AwsConfigConfigRule.SourceProperty;
+  readonly source: TfConfigRule.SourceProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule aws_config_config_rule}
 */
-export class AwsConfigConfigRule extends cdktn.TerraformResource {
+export class TfConfigRule extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -77,11 +77,11 @@ export class AwsConfigConfigRule extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsConfigConfigRule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfConfigRule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsConfigConfigRule to import
-  * @param importFromId The id of the existing AwsConfigConfigRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsConfigConfigRule to import is found
+  * @param importToId The construct id used in the generated config for the TfConfigRule to import
+  * @param importFromId The id of the existing TfConfigRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfConfigRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_config_config_rule", importId: importFromId, provider });
@@ -96,9 +96,9 @@ export class AwsConfigConfigRule extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsConfigConfigRuleConfig
+  * @param options TfConfigRuleConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsConfigConfigRuleConfig) {
+  public constructor(scope: Construct, id: string, config: TfConfigRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_config_config_rule',
       terraformGeneratorMetadata: {
@@ -267,11 +267,11 @@ export class AwsConfigConfigRule extends cdktn.TerraformResource {
   }
 
   // evaluation_mode - computed: false, optional: true, required: false
-  private _evaluationMode = new AwsConfigConfigRule.EvaluationModePropertyList(this, "evaluation_mode", true);
+  private _evaluationMode = new TfConfigRule.EvaluationModePropertyList(this, "evaluation_mode", true);
   public get evaluationMode() {
     return this._evaluationMode;
   }
-  public putEvaluationMode(value: AwsConfigConfigRule.EvaluationModeProperty[] | cdktn.IResolvable) {
+  public putEvaluationMode(value: TfConfigRule.EvaluationModeProperty[] | cdktn.IResolvable) {
     this._evaluationMode.internalValue = value;
   }
   public resetEvaluationMode() {
@@ -283,11 +283,11 @@ export class AwsConfigConfigRule extends cdktn.TerraformResource {
   }
 
   // scope - computed: false, optional: true, required: false
-  private _scope = new AwsConfigConfigRule.ScopePropertyOutputReference(this, "scope");
+  private _scope = new TfConfigRule.ScopePropertyOutputReference(this, "scope");
   public get scope() {
     return this._scope;
   }
-  public putScope(value: AwsConfigConfigRule.ScopeProperty) {
+  public putScope(value: TfConfigRule.ScopeProperty) {
     this._scope.internalValue = value;
   }
   public resetScope() {
@@ -299,11 +299,11 @@ export class AwsConfigConfigRule extends cdktn.TerraformResource {
   }
 
   // source - computed: false, optional: false, required: true
-  private _source = new AwsConfigConfigRule.SourcePropertyOutputReference(this, "source");
+  private _source = new TfConfigRule.SourcePropertyOutputReference(this, "source");
   public get source() {
     return this._source;
   }
-  public putSource(value: AwsConfigConfigRule.SourceProperty) {
+  public putSource(value: TfConfigRule.SourceProperty) {
     this._source.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -325,9 +325,9 @@ export class AwsConfigConfigRule extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      evaluation_mode: cdktn.listMapper(awsConfigConfigRuleEvaluationModePropertyToTerraform, true)(this._evaluationMode.internalValue),
-      scope: awsConfigConfigRuleScopePropertyToTerraform(this._scope.internalValue),
-      source: awsConfigConfigRuleSourcePropertyToTerraform(this._source.internalValue),
+      evaluation_mode: cdktn.listMapper(tfConfigRuleEvaluationModePropertyToTerraform, true)(this._evaluationMode.internalValue),
+      scope: tfConfigRuleScopePropertyToTerraform(this._scope.internalValue),
+      source: tfConfigRuleSourcePropertyToTerraform(this._source.internalValue),
     };
   }
 
@@ -382,22 +382,22 @@ export class AwsConfigConfigRule extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       evaluation_mode: {
-        value: cdktn.listMapperHcl(awsConfigConfigRuleEvaluationModePropertyToHclTerraform, true)(this._evaluationMode.internalValue),
+        value: cdktn.listMapperHcl(tfConfigRuleEvaluationModePropertyToHclTerraform, true)(this._evaluationMode.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsConfigConfigRule.EvaluationModePropertyList",
+        storageClassType: "TfConfigRule.EvaluationModePropertyList",
       },
       scope: {
-        value: awsConfigConfigRuleScopePropertyToHclTerraform(this._scope.internalValue),
+        value: tfConfigRuleScopePropertyToHclTerraform(this._scope.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsConfigConfigRule.ScopePropertyList",
+        storageClassType: "TfConfigRule.ScopePropertyList",
       },
       source: {
-        value: awsConfigConfigRuleSourcePropertyToHclTerraform(this._source.internalValue),
+        value: tfConfigRuleSourcePropertyToHclTerraform(this._source.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsConfigConfigRule.SourcePropertyList",
+        storageClassType: "TfConfigRule.SourcePropertyList",
       },
     };
 
@@ -406,7 +406,7 @@ export class AwsConfigConfigRule extends cdktn.TerraformResource {
   }
 }
 
-export function awsConfigConfigRuleEvaluationModePropertyToTerraform(struct?: AwsConfigConfigRule.EvaluationModeProperty | cdktn.IResolvable): any {
+export function tfConfigRuleEvaluationModePropertyToTerraform(struct?: TfConfigRule.EvaluationModeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -417,7 +417,7 @@ export function awsConfigConfigRuleEvaluationModePropertyToTerraform(struct?: Aw
 }
 
 
-export function awsConfigConfigRuleEvaluationModePropertyToHclTerraform(struct?: AwsConfigConfigRule.EvaluationModeProperty | cdktn.IResolvable): any {
+export function tfConfigRuleEvaluationModePropertyToHclTerraform(struct?: TfConfigRule.EvaluationModeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -436,7 +436,7 @@ export function awsConfigConfigRuleEvaluationModePropertyToHclTerraform(struct?:
 }
 
 
-export function awsConfigConfigRuleScopePropertyToTerraform(struct?: AwsConfigConfigRule.ScopePropertyOutputReference | AwsConfigConfigRule.ScopeProperty): any {
+export function tfConfigRuleScopePropertyToTerraform(struct?: TfConfigRule.ScopePropertyOutputReference | TfConfigRule.ScopeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -450,7 +450,7 @@ export function awsConfigConfigRuleScopePropertyToTerraform(struct?: AwsConfigCo
 }
 
 
-export function awsConfigConfigRuleScopePropertyToHclTerraform(struct?: AwsConfigConfigRule.ScopePropertyOutputReference | AwsConfigConfigRule.ScopeProperty): any {
+export function tfConfigRuleScopePropertyToHclTerraform(struct?: TfConfigRule.ScopePropertyOutputReference | TfConfigRule.ScopeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -487,7 +487,7 @@ export function awsConfigConfigRuleScopePropertyToHclTerraform(struct?: AwsConfi
 }
 
 
-export function awsConfigConfigRuleCustomPolicyDetailsPropertyToTerraform(struct?: AwsConfigConfigRule.CustomPolicyDetailsPropertyOutputReference | AwsConfigConfigRule.CustomPolicyDetailsProperty): any {
+export function tfConfigRuleCustomPolicyDetailsPropertyToTerraform(struct?: TfConfigRule.CustomPolicyDetailsPropertyOutputReference | TfConfigRule.CustomPolicyDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -500,7 +500,7 @@ export function awsConfigConfigRuleCustomPolicyDetailsPropertyToTerraform(struct
 }
 
 
-export function awsConfigConfigRuleCustomPolicyDetailsPropertyToHclTerraform(struct?: AwsConfigConfigRule.CustomPolicyDetailsPropertyOutputReference | AwsConfigConfigRule.CustomPolicyDetailsProperty): any {
+export function tfConfigRuleCustomPolicyDetailsPropertyToHclTerraform(struct?: TfConfigRule.CustomPolicyDetailsPropertyOutputReference | TfConfigRule.CustomPolicyDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -531,7 +531,7 @@ export function awsConfigConfigRuleCustomPolicyDetailsPropertyToHclTerraform(str
 }
 
 
-export function awsConfigConfigRuleSourceDetailPropertyToTerraform(struct?: AwsConfigConfigRule.SourceDetailProperty | cdktn.IResolvable): any {
+export function tfConfigRuleSourceDetailPropertyToTerraform(struct?: TfConfigRule.SourceDetailProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -544,7 +544,7 @@ export function awsConfigConfigRuleSourceDetailPropertyToTerraform(struct?: AwsC
 }
 
 
-export function awsConfigConfigRuleSourceDetailPropertyToHclTerraform(struct?: AwsConfigConfigRule.SourceDetailProperty | cdktn.IResolvable): any {
+export function tfConfigRuleSourceDetailPropertyToHclTerraform(struct?: TfConfigRule.SourceDetailProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -575,7 +575,7 @@ export function awsConfigConfigRuleSourceDetailPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsConfigConfigRuleSourcePropertyToTerraform(struct?: AwsConfigConfigRule.SourcePropertyOutputReference | AwsConfigConfigRule.SourceProperty): any {
+export function tfConfigRuleSourcePropertyToTerraform(struct?: TfConfigRule.SourcePropertyOutputReference | TfConfigRule.SourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -583,13 +583,13 @@ export function awsConfigConfigRuleSourcePropertyToTerraform(struct?: AwsConfigC
   return {
     owner: cdktn.stringToTerraform(struct!.owner),
     source_identifier: cdktn.stringToTerraform(struct!.sourceIdentifier),
-    custom_policy_details: awsConfigConfigRuleCustomPolicyDetailsPropertyToTerraform(struct!.customPolicyDetails),
-    source_detail: cdktn.listMapper(awsConfigConfigRuleSourceDetailPropertyToTerraform, true)(struct!.sourceDetail),
+    custom_policy_details: tfConfigRuleCustomPolicyDetailsPropertyToTerraform(struct!.customPolicyDetails),
+    source_detail: cdktn.listMapper(tfConfigRuleSourceDetailPropertyToTerraform, true)(struct!.sourceDetail),
   }
 }
 
 
-export function awsConfigConfigRuleSourcePropertyToHclTerraform(struct?: AwsConfigConfigRule.SourcePropertyOutputReference | AwsConfigConfigRule.SourceProperty): any {
+export function tfConfigRuleSourcePropertyToHclTerraform(struct?: TfConfigRule.SourcePropertyOutputReference | TfConfigRule.SourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -608,13 +608,13 @@ export function awsConfigConfigRuleSourcePropertyToHclTerraform(struct?: AwsConf
       storageClassType: "string",
     },
     custom_policy_details: {
-      value: awsConfigConfigRuleCustomPolicyDetailsPropertyToHclTerraform(struct!.customPolicyDetails),
+      value: tfConfigRuleCustomPolicyDetailsPropertyToHclTerraform(struct!.customPolicyDetails),
       isBlock: true,
       type: "list",
       storageClassType: "CustomPolicyDetailsPropertyList",
     },
     source_detail: {
-      value: cdktn.listMapperHcl(awsConfigConfigRuleSourceDetailPropertyToHclTerraform, true)(struct!.sourceDetail),
+      value: cdktn.listMapperHcl(tfConfigRuleSourceDetailPropertyToHclTerraform, true)(struct!.sourceDetail),
       isBlock: true,
       type: "set",
       storageClassType: "SourceDetailPropertyList",
@@ -626,10 +626,10 @@ export function awsConfigConfigRuleSourcePropertyToHclTerraform(struct?: AwsConf
 }
 
 
-export namespace AwsConfigConfigRule {
+export namespace TfConfigRule {
 export interface EvaluationModeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#mode AwsConfigConfigRule#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#mode TfConfigRule#mode}
   */
   readonly mode?: string;
 }
@@ -715,19 +715,19 @@ export class EvaluationModePropertyList extends cdktn.ComplexList {
 }
 export interface ScopeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#compliance_resource_id AwsConfigConfigRule#compliance_resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#compliance_resource_id TfConfigRule#compliance_resource_id}
   */
   readonly complianceResourceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#compliance_resource_types AwsConfigConfigRule#compliance_resource_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#compliance_resource_types TfConfigRule#compliance_resource_types}
   */
   readonly complianceResourceTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#tag_key AwsConfigConfigRule#tag_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#tag_key TfConfigRule#tag_key}
   */
   readonly tagKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#tag_value AwsConfigConfigRule#tag_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#tag_value TfConfigRule#tag_value}
   */
   readonly tagValue?: string;
 }
@@ -847,15 +847,15 @@ export class ScopePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface CustomPolicyDetailsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#enable_debug_log_delivery AwsConfigConfigRule#enable_debug_log_delivery}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#enable_debug_log_delivery TfConfigRule#enable_debug_log_delivery}
   */
   readonly enableDebugLogDelivery?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#policy_runtime AwsConfigConfigRule#policy_runtime}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#policy_runtime TfConfigRule#policy_runtime}
   */
   readonly policyRuntime: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#policy_text AwsConfigConfigRule#policy_text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#policy_text TfConfigRule#policy_text}
   */
   readonly policyText: string;
 }
@@ -947,15 +947,15 @@ export class CustomPolicyDetailsPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface SourceDetailProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#event_source AwsConfigConfigRule#event_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#event_source TfConfigRule#event_source}
   */
   readonly eventSource?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#maximum_execution_frequency AwsConfigConfigRule#maximum_execution_frequency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#maximum_execution_frequency TfConfigRule#maximum_execution_frequency}
   */
   readonly maximumExecutionFrequency?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#message_type AwsConfigConfigRule#message_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#message_type TfConfigRule#message_type}
   */
   readonly messageType?: string;
 }
@@ -1085,23 +1085,23 @@ export class SourceDetailPropertyList extends cdktn.ComplexList {
 }
 export interface SourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#owner AwsConfigConfigRule#owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#owner TfConfigRule#owner}
   */
   readonly owner: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#source_identifier AwsConfigConfigRule#source_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#source_identifier TfConfigRule#source_identifier}
   */
   readonly sourceIdentifier?: string;
   /**
   * custom_policy_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#custom_policy_details AwsConfigConfigRule#custom_policy_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#custom_policy_details TfConfigRule#custom_policy_details}
   */
   readonly customPolicyDetails?: CustomPolicyDetailsProperty;
   /**
   * source_detail block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#source_detail AwsConfigConfigRule#source_detail}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_config_rule#source_detail TfConfigRule#source_detail}
   */
   readonly sourceDetail?: SourceDetailProperty[] | cdktn.IResolvable;
 }

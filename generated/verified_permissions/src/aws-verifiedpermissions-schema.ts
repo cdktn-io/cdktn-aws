@@ -5,29 +5,29 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsVerifiedpermissionsSchemaConfig extends cdktn.TerraformMetaArguments {
+export interface TfSchemaConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_schema#policy_store_id AwsVerifiedpermissionsSchema#policy_store_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_schema#policy_store_id TfSchema#policy_store_id}
   */
   readonly policyStoreId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_schema#region AwsVerifiedpermissionsSchema#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_schema#region TfSchema#region}
   */
   readonly region?: string;
   /**
   * definition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_schema#definition AwsVerifiedpermissionsSchema#definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_schema#definition TfSchema#definition}
   */
-  readonly definition?: AwsVerifiedpermissionsSchema.DefinitionProperty[] | cdktn.IResolvable;
+  readonly definition?: TfSchema.DefinitionProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_schema aws_verifiedpermissions_schema}
 */
-export class AwsVerifiedpermissionsSchema extends cdktn.TerraformResource {
+export class TfSchema extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -38,11 +38,11 @@ export class AwsVerifiedpermissionsSchema extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsVerifiedpermissionsSchema resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfSchema resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsVerifiedpermissionsSchema to import
-  * @param importFromId The id of the existing AwsVerifiedpermissionsSchema that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_schema#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsVerifiedpermissionsSchema to import is found
+  * @param importToId The construct id used in the generated config for the TfSchema to import
+  * @param importFromId The id of the existing TfSchema that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_schema#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfSchema to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_verifiedpermissions_schema", importId: importFromId, provider });
@@ -57,9 +57,9 @@ export class AwsVerifiedpermissionsSchema extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsVerifiedpermissionsSchemaConfig
+  * @param options TfSchemaConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsVerifiedpermissionsSchemaConfig) {
+  public constructor(scope: Construct, id: string, config: TfSchemaConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_verifiedpermissions_schema',
       terraformGeneratorMetadata: {
@@ -124,11 +124,11 @@ export class AwsVerifiedpermissionsSchema extends cdktn.TerraformResource {
   }
 
   // definition - computed: false, optional: true, required: false
-  private _definition = new AwsVerifiedpermissionsSchema.DefinitionPropertyList(this, "definition", false);
+  private _definition = new TfSchema.DefinitionPropertyList(this, "definition", false);
   public get definition() {
     return this._definition;
   }
-  public putDefinition(value: AwsVerifiedpermissionsSchema.DefinitionProperty[] | cdktn.IResolvable) {
+  public putDefinition(value: TfSchema.DefinitionProperty[] | cdktn.IResolvable) {
     this._definition.internalValue = value;
   }
   public resetDefinition() {
@@ -147,7 +147,7 @@ export class AwsVerifiedpermissionsSchema extends cdktn.TerraformResource {
     return {
       policy_store_id: cdktn.stringToTerraform(this._policyStoreId),
       region: cdktn.stringToTerraform(this._region),
-      definition: cdktn.listMapper(awsVerifiedpermissionsSchemaDefinitionPropertyToTerraform, true)(this._definition.internalValue),
+      definition: cdktn.listMapper(tfSchemaDefinitionPropertyToTerraform, true)(this._definition.internalValue),
     };
   }
 
@@ -166,10 +166,10 @@ export class AwsVerifiedpermissionsSchema extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       definition: {
-        value: cdktn.listMapperHcl(awsVerifiedpermissionsSchemaDefinitionPropertyToHclTerraform, true)(this._definition.internalValue),
+        value: cdktn.listMapperHcl(tfSchemaDefinitionPropertyToHclTerraform, true)(this._definition.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsVerifiedpermissionsSchema.DefinitionPropertyList",
+        storageClassType: "TfSchema.DefinitionPropertyList",
       },
     };
 
@@ -178,7 +178,7 @@ export class AwsVerifiedpermissionsSchema extends cdktn.TerraformResource {
   }
 }
 
-export function awsVerifiedpermissionsSchemaDefinitionPropertyToTerraform(struct?: AwsVerifiedpermissionsSchema.DefinitionProperty | cdktn.IResolvable): any {
+export function tfSchemaDefinitionPropertyToTerraform(struct?: TfSchema.DefinitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -189,7 +189,7 @@ export function awsVerifiedpermissionsSchemaDefinitionPropertyToTerraform(struct
 }
 
 
-export function awsVerifiedpermissionsSchemaDefinitionPropertyToHclTerraform(struct?: AwsVerifiedpermissionsSchema.DefinitionProperty | cdktn.IResolvable): any {
+export function tfSchemaDefinitionPropertyToHclTerraform(struct?: TfSchema.DefinitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -208,10 +208,10 @@ export function awsVerifiedpermissionsSchemaDefinitionPropertyToHclTerraform(str
 }
 
 
-export namespace AwsVerifiedpermissionsSchema {
+export namespace TfSchema {
 export interface DefinitionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_schema#value AwsVerifiedpermissionsSchema#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_schema#value TfSchema#value}
   */
   readonly value: string;
 }

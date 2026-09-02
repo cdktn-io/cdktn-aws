@@ -5,22 +5,22 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsSqsQueuesConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataQueuesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sqs_queues#id DataAwsSqsQueues#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sqs_queues#id TfDataQueues#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sqs_queues#queue_name_prefix DataAwsSqsQueues#queue_name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sqs_queues#queue_name_prefix TfDataQueues#queue_name_prefix}
   */
   readonly queueNamePrefix?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sqs_queues#region DataAwsSqsQueues#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sqs_queues#region TfDataQueues#region}
   */
   readonly region?: string;
 }
@@ -28,7 +28,7 @@ export interface DataAwsSqsQueuesConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sqs_queues aws_sqs_queues}
 */
-export class DataAwsSqsQueues extends cdktn.TerraformDataSource {
+export class TfDataQueues extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class DataAwsSqsQueues extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsSqsQueues resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataQueues resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsSqsQueues to import
-  * @param importFromId The id of the existing DataAwsSqsQueues that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sqs_queues#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsSqsQueues to import is found
+  * @param importToId The construct id used in the generated config for the TfDataQueues to import
+  * @param importFromId The id of the existing TfDataQueues that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/sqs_queues#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataQueues to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sqs_queues", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class DataAwsSqsQueues extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsSqsQueuesConfig = {}
+  * @param options TfDataQueuesConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsSqsQueuesConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDataQueuesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_sqs_queues',
       terraformGeneratorMetadata: {

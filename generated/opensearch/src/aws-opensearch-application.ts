@@ -5,55 +5,55 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsOpensearchApplicationConfig extends cdktn.TerraformMetaArguments {
+export interface TfApplicationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#kms_key_arn AwsOpensearchApplication#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#kms_key_arn TfApplication#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#name AwsOpensearchApplication#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#name TfApplication#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#region AwsOpensearchApplication#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#region TfApplication#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#tags AwsOpensearchApplication#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#tags TfApplication#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * app_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#app_config AwsOpensearchApplication#app_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#app_config TfApplication#app_config}
   */
-  readonly appConfig?: AwsOpensearchApplication.AppConfigProperty[] | cdktn.IResolvable;
+  readonly appConfig?: TfApplication.AppConfigProperty[] | cdktn.IResolvable;
   /**
   * data_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#data_source AwsOpensearchApplication#data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#data_source TfApplication#data_source}
   */
-  readonly dataSource?: AwsOpensearchApplication.DataSourceProperty[] | cdktn.IResolvable;
+  readonly dataSource?: TfApplication.DataSourceProperty[] | cdktn.IResolvable;
   /**
   * iam_identity_center_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#iam_identity_center_options AwsOpensearchApplication#iam_identity_center_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#iam_identity_center_options TfApplication#iam_identity_center_options}
   */
-  readonly iamIdentityCenterOptions?: AwsOpensearchApplication.IamIdentityCenterOptionsProperty[] | cdktn.IResolvable;
+  readonly iamIdentityCenterOptions?: TfApplication.IamIdentityCenterOptionsProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#timeouts AwsOpensearchApplication#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#timeouts TfApplication#timeouts}
   */
-  readonly timeouts?: AwsOpensearchApplication.TimeoutsProperty;
+  readonly timeouts?: TfApplication.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application aws_opensearch_application}
 */
-export class AwsOpensearchApplication extends cdktn.TerraformResource {
+export class TfApplication extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -64,11 +64,11 @@ export class AwsOpensearchApplication extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsOpensearchApplication resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfApplication resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsOpensearchApplication to import
-  * @param importFromId The id of the existing AwsOpensearchApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsOpensearchApplication to import is found
+  * @param importToId The construct id used in the generated config for the TfApplication to import
+  * @param importFromId The id of the existing TfApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfApplication to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_opensearch_application", importId: importFromId, provider });
@@ -83,9 +83,9 @@ export class AwsOpensearchApplication extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsOpensearchApplicationConfig
+  * @param options TfApplicationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsOpensearchApplicationConfig) {
+  public constructor(scope: Construct, id: string, config: TfApplicationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_opensearch_application',
       terraformGeneratorMetadata: {
@@ -198,11 +198,11 @@ export class AwsOpensearchApplication extends cdktn.TerraformResource {
   }
 
   // app_config - computed: false, optional: true, required: false
-  private _appConfig = new AwsOpensearchApplication.AppConfigPropertyList(this, "app_config", true);
+  private _appConfig = new TfApplication.AppConfigPropertyList(this, "app_config", true);
   public get appConfig() {
     return this._appConfig;
   }
-  public putAppConfig(value: AwsOpensearchApplication.AppConfigProperty[] | cdktn.IResolvable) {
+  public putAppConfig(value: TfApplication.AppConfigProperty[] | cdktn.IResolvable) {
     this._appConfig.internalValue = value;
   }
   public resetAppConfig() {
@@ -214,11 +214,11 @@ export class AwsOpensearchApplication extends cdktn.TerraformResource {
   }
 
   // data_source - computed: false, optional: true, required: false
-  private _dataSource = new AwsOpensearchApplication.DataSourcePropertyList(this, "data_source", true);
+  private _dataSource = new TfApplication.DataSourcePropertyList(this, "data_source", true);
   public get dataSource() {
     return this._dataSource;
   }
-  public putDataSource(value: AwsOpensearchApplication.DataSourceProperty[] | cdktn.IResolvable) {
+  public putDataSource(value: TfApplication.DataSourceProperty[] | cdktn.IResolvable) {
     this._dataSource.internalValue = value;
   }
   public resetDataSource() {
@@ -230,11 +230,11 @@ export class AwsOpensearchApplication extends cdktn.TerraformResource {
   }
 
   // iam_identity_center_options - computed: false, optional: true, required: false
-  private _iamIdentityCenterOptions = new AwsOpensearchApplication.IamIdentityCenterOptionsPropertyList(this, "iam_identity_center_options", false);
+  private _iamIdentityCenterOptions = new TfApplication.IamIdentityCenterOptionsPropertyList(this, "iam_identity_center_options", false);
   public get iamIdentityCenterOptions() {
     return this._iamIdentityCenterOptions;
   }
-  public putIamIdentityCenterOptions(value: AwsOpensearchApplication.IamIdentityCenterOptionsProperty[] | cdktn.IResolvable) {
+  public putIamIdentityCenterOptions(value: TfApplication.IamIdentityCenterOptionsProperty[] | cdktn.IResolvable) {
     this._iamIdentityCenterOptions.internalValue = value;
   }
   public resetIamIdentityCenterOptions() {
@@ -246,11 +246,11 @@ export class AwsOpensearchApplication extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsOpensearchApplication.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfApplication.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsOpensearchApplication.TimeoutsProperty) {
+  public putTimeouts(value: TfApplication.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -271,10 +271,10 @@ export class AwsOpensearchApplication extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      app_config: cdktn.listMapper(awsOpensearchApplicationAppConfigPropertyToTerraform, true)(this._appConfig.internalValue),
-      data_source: cdktn.listMapper(awsOpensearchApplicationDataSourcePropertyToTerraform, true)(this._dataSource.internalValue),
-      iam_identity_center_options: cdktn.listMapper(awsOpensearchApplicationIamIdentityCenterOptionsPropertyToTerraform, true)(this._iamIdentityCenterOptions.internalValue),
-      timeouts: awsOpensearchApplicationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      app_config: cdktn.listMapper(tfApplicationAppConfigPropertyToTerraform, true)(this._appConfig.internalValue),
+      data_source: cdktn.listMapper(tfApplicationDataSourcePropertyToTerraform, true)(this._dataSource.internalValue),
+      iam_identity_center_options: cdktn.listMapper(tfApplicationIamIdentityCenterOptionsPropertyToTerraform, true)(this._iamIdentityCenterOptions.internalValue),
+      timeouts: tfApplicationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -305,28 +305,28 @@ export class AwsOpensearchApplication extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       app_config: {
-        value: cdktn.listMapperHcl(awsOpensearchApplicationAppConfigPropertyToHclTerraform, true)(this._appConfig.internalValue),
+        value: cdktn.listMapperHcl(tfApplicationAppConfigPropertyToHclTerraform, true)(this._appConfig.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsOpensearchApplication.AppConfigPropertyList",
+        storageClassType: "TfApplication.AppConfigPropertyList",
       },
       data_source: {
-        value: cdktn.listMapperHcl(awsOpensearchApplicationDataSourcePropertyToHclTerraform, true)(this._dataSource.internalValue),
+        value: cdktn.listMapperHcl(tfApplicationDataSourcePropertyToHclTerraform, true)(this._dataSource.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsOpensearchApplication.DataSourcePropertyList",
+        storageClassType: "TfApplication.DataSourcePropertyList",
       },
       iam_identity_center_options: {
-        value: cdktn.listMapperHcl(awsOpensearchApplicationIamIdentityCenterOptionsPropertyToHclTerraform, true)(this._iamIdentityCenterOptions.internalValue),
+        value: cdktn.listMapperHcl(tfApplicationIamIdentityCenterOptionsPropertyToHclTerraform, true)(this._iamIdentityCenterOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsOpensearchApplication.IamIdentityCenterOptionsPropertyList",
+        storageClassType: "TfApplication.IamIdentityCenterOptionsPropertyList",
       },
       timeouts: {
-        value: awsOpensearchApplicationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfApplicationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsOpensearchApplication.TimeoutsProperty",
+        storageClassType: "TfApplication.TimeoutsProperty",
       },
     };
 
@@ -335,7 +335,7 @@ export class AwsOpensearchApplication extends cdktn.TerraformResource {
   }
 }
 
-export function awsOpensearchApplicationAppConfigPropertyToTerraform(struct?: AwsOpensearchApplication.AppConfigProperty | cdktn.IResolvable): any {
+export function tfApplicationAppConfigPropertyToTerraform(struct?: TfApplication.AppConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -347,7 +347,7 @@ export function awsOpensearchApplicationAppConfigPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsOpensearchApplicationAppConfigPropertyToHclTerraform(struct?: AwsOpensearchApplication.AppConfigProperty | cdktn.IResolvable): any {
+export function tfApplicationAppConfigPropertyToHclTerraform(struct?: TfApplication.AppConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -372,7 +372,7 @@ export function awsOpensearchApplicationAppConfigPropertyToHclTerraform(struct?:
 }
 
 
-export function awsOpensearchApplicationDataSourcePropertyToTerraform(struct?: AwsOpensearchApplication.DataSourceProperty | cdktn.IResolvable): any {
+export function tfApplicationDataSourcePropertyToTerraform(struct?: TfApplication.DataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -384,7 +384,7 @@ export function awsOpensearchApplicationDataSourcePropertyToTerraform(struct?: A
 }
 
 
-export function awsOpensearchApplicationDataSourcePropertyToHclTerraform(struct?: AwsOpensearchApplication.DataSourceProperty | cdktn.IResolvable): any {
+export function tfApplicationDataSourcePropertyToHclTerraform(struct?: TfApplication.DataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -409,7 +409,7 @@ export function awsOpensearchApplicationDataSourcePropertyToHclTerraform(struct?
 }
 
 
-export function awsOpensearchApplicationIamIdentityCenterOptionsPropertyToTerraform(struct?: AwsOpensearchApplication.IamIdentityCenterOptionsProperty | cdktn.IResolvable): any {
+export function tfApplicationIamIdentityCenterOptionsPropertyToTerraform(struct?: TfApplication.IamIdentityCenterOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -422,7 +422,7 @@ export function awsOpensearchApplicationIamIdentityCenterOptionsPropertyToTerraf
 }
 
 
-export function awsOpensearchApplicationIamIdentityCenterOptionsPropertyToHclTerraform(struct?: AwsOpensearchApplication.IamIdentityCenterOptionsProperty | cdktn.IResolvable): any {
+export function tfApplicationIamIdentityCenterOptionsPropertyToHclTerraform(struct?: TfApplication.IamIdentityCenterOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -453,7 +453,7 @@ export function awsOpensearchApplicationIamIdentityCenterOptionsPropertyToHclTer
 }
 
 
-export function awsOpensearchApplicationTimeoutsPropertyToTerraform(struct?: AwsOpensearchApplication.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfApplicationTimeoutsPropertyToTerraform(struct?: TfApplication.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -466,7 +466,7 @@ export function awsOpensearchApplicationTimeoutsPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsOpensearchApplicationTimeoutsPropertyToHclTerraform(struct?: AwsOpensearchApplication.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfApplicationTimeoutsPropertyToHclTerraform(struct?: TfApplication.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -497,14 +497,14 @@ export function awsOpensearchApplicationTimeoutsPropertyToHclTerraform(struct?: 
 }
 
 
-export namespace AwsOpensearchApplication {
+export namespace TfApplication {
 export interface AppConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#key AwsOpensearchApplication#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#key TfApplication#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#value AwsOpensearchApplication#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#value TfApplication#value}
   */
   readonly value?: string;
 }
@@ -612,11 +612,11 @@ export class AppConfigPropertyList extends cdktn.ComplexList {
 }
 export interface DataSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#data_source_arn AwsOpensearchApplication#data_source_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#data_source_arn TfApplication#data_source_arn}
   */
   readonly dataSourceArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#data_source_description AwsOpensearchApplication#data_source_description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#data_source_description TfApplication#data_source_description}
   */
   readonly dataSourceDescription?: string;
 }
@@ -724,15 +724,15 @@ export class DataSourcePropertyList extends cdktn.ComplexList {
 }
 export interface IamIdentityCenterOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#enabled AwsOpensearchApplication#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#enabled TfApplication#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#iam_identity_center_instance_arn AwsOpensearchApplication#iam_identity_center_instance_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#iam_identity_center_instance_arn TfApplication#iam_identity_center_instance_arn}
   */
   readonly iamIdentityCenterInstanceArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#iam_role_for_identity_center_application_arn AwsOpensearchApplication#iam_role_for_identity_center_application_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#iam_role_for_identity_center_application_arn TfApplication#iam_role_for_identity_center_application_arn}
   */
   readonly iamRoleForIdentityCenterApplicationArn?: string;
 }
@@ -869,19 +869,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#create AwsOpensearchApplication#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#create TfApplication#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#delete AwsOpensearchApplication#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#delete TfApplication#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#update AwsOpensearchApplication#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_application#update TfApplication#update}
   */
   readonly update?: string;
 }

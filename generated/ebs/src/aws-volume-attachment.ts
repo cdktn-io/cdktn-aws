@@ -5,56 +5,56 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsVolumeAttachmentConfig extends cdktn.TerraformMetaArguments {
+export interface TfVolumeAttachmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/volume_attachment#device_name AwsVolumeAttachment#device_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/volume_attachment#device_name TfVolumeAttachment#device_name}
   */
   readonly deviceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/volume_attachment#force_detach AwsVolumeAttachment#force_detach}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/volume_attachment#force_detach TfVolumeAttachment#force_detach}
   */
   readonly forceDetach?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/volume_attachment#id AwsVolumeAttachment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/volume_attachment#id TfVolumeAttachment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/volume_attachment#instance_id AwsVolumeAttachment#instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/volume_attachment#instance_id TfVolumeAttachment#instance_id}
   */
   readonly instanceId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/volume_attachment#region AwsVolumeAttachment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/volume_attachment#region TfVolumeAttachment#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/volume_attachment#skip_destroy AwsVolumeAttachment#skip_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/volume_attachment#skip_destroy TfVolumeAttachment#skip_destroy}
   */
   readonly skipDestroy?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/volume_attachment#stop_instance_before_detaching AwsVolumeAttachment#stop_instance_before_detaching}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/volume_attachment#stop_instance_before_detaching TfVolumeAttachment#stop_instance_before_detaching}
   */
   readonly stopInstanceBeforeDetaching?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/volume_attachment#volume_id AwsVolumeAttachment#volume_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/volume_attachment#volume_id TfVolumeAttachment#volume_id}
   */
   readonly volumeId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/volume_attachment#timeouts AwsVolumeAttachment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/volume_attachment#timeouts TfVolumeAttachment#timeouts}
   */
-  readonly timeouts?: AwsVolumeAttachment.TimeoutsProperty;
+  readonly timeouts?: TfVolumeAttachment.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/volume_attachment aws_volume_attachment}
 */
-export class AwsVolumeAttachment extends cdktn.TerraformResource {
+export class TfVolumeAttachment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class AwsVolumeAttachment extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsVolumeAttachment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfVolumeAttachment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsVolumeAttachment to import
-  * @param importFromId The id of the existing AwsVolumeAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/volume_attachment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsVolumeAttachment to import is found
+  * @param importToId The construct id used in the generated config for the TfVolumeAttachment to import
+  * @param importFromId The id of the existing TfVolumeAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/volume_attachment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfVolumeAttachment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_volume_attachment", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class AwsVolumeAttachment extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsVolumeAttachmentConfig
+  * @param options TfVolumeAttachmentConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsVolumeAttachmentConfig) {
+  public constructor(scope: Construct, id: string, config: TfVolumeAttachmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_volume_attachment',
       terraformGeneratorMetadata: {
@@ -237,11 +237,11 @@ export class AwsVolumeAttachment extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsVolumeAttachment.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfVolumeAttachment.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsVolumeAttachment.TimeoutsProperty) {
+  public putTimeouts(value: TfVolumeAttachment.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -266,7 +266,7 @@ export class AwsVolumeAttachment extends cdktn.TerraformResource {
       skip_destroy: cdktn.booleanToTerraform(this._skipDestroy),
       stop_instance_before_detaching: cdktn.booleanToTerraform(this._stopInstanceBeforeDetaching),
       volume_id: cdktn.stringToTerraform(this._volumeId),
-      timeouts: awsVolumeAttachmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfVolumeAttachmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -321,10 +321,10 @@ export class AwsVolumeAttachment extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsVolumeAttachmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfVolumeAttachmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsVolumeAttachment.TimeoutsProperty",
+        storageClassType: "TfVolumeAttachment.TimeoutsProperty",
       },
     };
 
@@ -333,7 +333,7 @@ export class AwsVolumeAttachment extends cdktn.TerraformResource {
   }
 }
 
-export function awsVolumeAttachmentTimeoutsPropertyToTerraform(struct?: AwsVolumeAttachment.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfVolumeAttachmentTimeoutsPropertyToTerraform(struct?: TfVolumeAttachment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -345,7 +345,7 @@ export function awsVolumeAttachmentTimeoutsPropertyToTerraform(struct?: AwsVolum
 }
 
 
-export function awsVolumeAttachmentTimeoutsPropertyToHclTerraform(struct?: AwsVolumeAttachment.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfVolumeAttachmentTimeoutsPropertyToHclTerraform(struct?: TfVolumeAttachment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -370,14 +370,14 @@ export function awsVolumeAttachmentTimeoutsPropertyToHclTerraform(struct?: AwsVo
 }
 
 
-export namespace AwsVolumeAttachment {
+export namespace TfVolumeAttachment {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/volume_attachment#create AwsVolumeAttachment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/volume_attachment#create TfVolumeAttachment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/volume_attachment#delete AwsVolumeAttachment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/volume_attachment#delete TfVolumeAttachment#delete}
   */
   readonly delete?: string;
 }

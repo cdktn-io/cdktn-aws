@@ -5,82 +5,82 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsServicecatalogProductConfig extends cdktn.TerraformMetaArguments {
+export interface TfProductConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#accept_language AwsServicecatalogProduct#accept_language}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#accept_language TfProduct#accept_language}
   */
   readonly acceptLanguage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#description AwsServicecatalogProduct#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#description TfProduct#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#distributor AwsServicecatalogProduct#distributor}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#distributor TfProduct#distributor}
   */
   readonly distributor?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#id AwsServicecatalogProduct#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#id TfProduct#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#name AwsServicecatalogProduct#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#name TfProduct#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#owner AwsServicecatalogProduct#owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#owner TfProduct#owner}
   */
   readonly owner: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#region AwsServicecatalogProduct#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#region TfProduct#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#support_description AwsServicecatalogProduct#support_description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#support_description TfProduct#support_description}
   */
   readonly supportDescription?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#support_email AwsServicecatalogProduct#support_email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#support_email TfProduct#support_email}
   */
   readonly supportEmail?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#support_url AwsServicecatalogProduct#support_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#support_url TfProduct#support_url}
   */
   readonly supportUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#tags AwsServicecatalogProduct#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#tags TfProduct#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#tags_all AwsServicecatalogProduct#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#tags_all TfProduct#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#type AwsServicecatalogProduct#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#type TfProduct#type}
   */
   readonly type: string;
   /**
   * provisioning_artifact_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#provisioning_artifact_parameters AwsServicecatalogProduct#provisioning_artifact_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#provisioning_artifact_parameters TfProduct#provisioning_artifact_parameters}
   */
-  readonly provisioningArtifactParameters: AwsServicecatalogProduct.ProvisioningArtifactParametersProperty;
+  readonly provisioningArtifactParameters: TfProduct.ProvisioningArtifactParametersProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#timeouts AwsServicecatalogProduct#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#timeouts TfProduct#timeouts}
   */
-  readonly timeouts?: AwsServicecatalogProduct.TimeoutsProperty;
+  readonly timeouts?: TfProduct.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product aws_servicecatalog_product}
 */
-export class AwsServicecatalogProduct extends cdktn.TerraformResource {
+export class TfProduct extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -91,11 +91,11 @@ export class AwsServicecatalogProduct extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsServicecatalogProduct resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfProduct resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsServicecatalogProduct to import
-  * @param importFromId The id of the existing AwsServicecatalogProduct that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsServicecatalogProduct to import is found
+  * @param importToId The construct id used in the generated config for the TfProduct to import
+  * @param importFromId The id of the existing TfProduct that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfProduct to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_servicecatalog_product", importId: importFromId, provider });
@@ -110,9 +110,9 @@ export class AwsServicecatalogProduct extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsServicecatalogProductConfig
+  * @param options TfProductConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsServicecatalogProductConfig) {
+  public constructor(scope: Construct, id: string, config: TfProductConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_servicecatalog_product',
       terraformGeneratorMetadata: {
@@ -369,11 +369,11 @@ export class AwsServicecatalogProduct extends cdktn.TerraformResource {
   }
 
   // provisioning_artifact_parameters - computed: false, optional: false, required: true
-  private _provisioningArtifactParameters = new AwsServicecatalogProduct.ProvisioningArtifactParametersPropertyOutputReference(this, "provisioning_artifact_parameters");
+  private _provisioningArtifactParameters = new TfProduct.ProvisioningArtifactParametersPropertyOutputReference(this, "provisioning_artifact_parameters");
   public get provisioningArtifactParameters() {
     return this._provisioningArtifactParameters;
   }
-  public putProvisioningArtifactParameters(value: AwsServicecatalogProduct.ProvisioningArtifactParametersProperty) {
+  public putProvisioningArtifactParameters(value: TfProduct.ProvisioningArtifactParametersProperty) {
     this._provisioningArtifactParameters.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -382,11 +382,11 @@ export class AwsServicecatalogProduct extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsServicecatalogProduct.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfProduct.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsServicecatalogProduct.TimeoutsProperty) {
+  public putTimeouts(value: TfProduct.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -416,8 +416,8 @@ export class AwsServicecatalogProduct extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       type: cdktn.stringToTerraform(this._type),
-      provisioning_artifact_parameters: awsServicecatalogProductProvisioningArtifactParametersPropertyToTerraform(this._provisioningArtifactParameters.internalValue),
-      timeouts: awsServicecatalogProductTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      provisioning_artifact_parameters: tfProductProvisioningArtifactParametersPropertyToTerraform(this._provisioningArtifactParameters.internalValue),
+      timeouts: tfProductTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -502,16 +502,16 @@ export class AwsServicecatalogProduct extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       provisioning_artifact_parameters: {
-        value: awsServicecatalogProductProvisioningArtifactParametersPropertyToHclTerraform(this._provisioningArtifactParameters.internalValue),
+        value: tfProductProvisioningArtifactParametersPropertyToHclTerraform(this._provisioningArtifactParameters.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsServicecatalogProduct.ProvisioningArtifactParametersPropertyList",
+        storageClassType: "TfProduct.ProvisioningArtifactParametersPropertyList",
       },
       timeouts: {
-        value: awsServicecatalogProductTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfProductTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsServicecatalogProduct.TimeoutsProperty",
+        storageClassType: "TfProduct.TimeoutsProperty",
       },
     };
 
@@ -520,7 +520,7 @@ export class AwsServicecatalogProduct extends cdktn.TerraformResource {
   }
 }
 
-export function awsServicecatalogProductProvisioningArtifactParametersPropertyToTerraform(struct?: AwsServicecatalogProduct.ProvisioningArtifactParametersPropertyOutputReference | AwsServicecatalogProduct.ProvisioningArtifactParametersProperty): any {
+export function tfProductProvisioningArtifactParametersPropertyToTerraform(struct?: TfProduct.ProvisioningArtifactParametersPropertyOutputReference | TfProduct.ProvisioningArtifactParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -536,7 +536,7 @@ export function awsServicecatalogProductProvisioningArtifactParametersPropertyTo
 }
 
 
-export function awsServicecatalogProductProvisioningArtifactParametersPropertyToHclTerraform(struct?: AwsServicecatalogProduct.ProvisioningArtifactParametersPropertyOutputReference | AwsServicecatalogProduct.ProvisioningArtifactParametersProperty): any {
+export function tfProductProvisioningArtifactParametersPropertyToHclTerraform(struct?: TfProduct.ProvisioningArtifactParametersPropertyOutputReference | TfProduct.ProvisioningArtifactParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -585,7 +585,7 @@ export function awsServicecatalogProductProvisioningArtifactParametersPropertyTo
 }
 
 
-export function awsServicecatalogProductTimeoutsPropertyToTerraform(struct?: AwsServicecatalogProduct.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfProductTimeoutsPropertyToTerraform(struct?: TfProduct.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -599,7 +599,7 @@ export function awsServicecatalogProductTimeoutsPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsServicecatalogProductTimeoutsPropertyToHclTerraform(struct?: AwsServicecatalogProduct.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfProductTimeoutsPropertyToHclTerraform(struct?: TfProduct.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -636,30 +636,30 @@ export function awsServicecatalogProductTimeoutsPropertyToHclTerraform(struct?: 
 }
 
 
-export namespace AwsServicecatalogProduct {
+export namespace TfProduct {
 export interface ProvisioningArtifactParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#description AwsServicecatalogProduct#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#description TfProduct#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#disable_template_validation AwsServicecatalogProduct#disable_template_validation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#disable_template_validation TfProduct#disable_template_validation}
   */
   readonly disableTemplateValidation?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#name AwsServicecatalogProduct#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#name TfProduct#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#template_physical_id AwsServicecatalogProduct#template_physical_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#template_physical_id TfProduct#template_physical_id}
   */
   readonly templatePhysicalId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#template_url AwsServicecatalogProduct#template_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#template_url TfProduct#template_url}
   */
   readonly templateUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#type AwsServicecatalogProduct#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#type TfProduct#type}
   */
   readonly type?: string;
 }
@@ -823,19 +823,19 @@ export class ProvisioningArtifactParametersPropertyOutputReference extends cdktn
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#create AwsServicecatalogProduct#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#create TfProduct#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#delete AwsServicecatalogProduct#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#delete TfProduct#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#read AwsServicecatalogProduct#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#read TfProduct#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#update AwsServicecatalogProduct#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product#update TfProduct#update}
   */
   readonly update?: string;
 }

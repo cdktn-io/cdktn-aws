@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsSsmInstancesConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataInstancesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_instances#id DataAwsSsmInstances#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_instances#id TfDataInstances#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,21 +16,21 @@ export interface DataAwsSsmInstancesConfig extends cdktn.TerraformMetaArguments 
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_instances#region DataAwsSsmInstances#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_instances#region TfDataInstances#region}
   */
   readonly region?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_instances#filter DataAwsSsmInstances#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_instances#filter TfDataInstances#filter}
   */
-  readonly filter?: DataAwsSsmInstances.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: TfDataInstances.FilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_instances aws_ssm_instances}
 */
-export class DataAwsSsmInstances extends cdktn.TerraformDataSource {
+export class TfDataInstances extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -41,11 +41,11 @@ export class DataAwsSsmInstances extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsSsmInstances resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataInstances resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsSsmInstances to import
-  * @param importFromId The id of the existing DataAwsSsmInstances that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_instances#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsSsmInstances to import is found
+  * @param importToId The construct id used in the generated config for the TfDataInstances to import
+  * @param importFromId The id of the existing TfDataInstances that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_instances#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataInstances to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssm_instances", importId: importFromId, provider });
@@ -60,9 +60,9 @@ export class DataAwsSsmInstances extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsSsmInstancesConfig = {}
+  * @param options TfDataInstancesConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsSsmInstancesConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDataInstancesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ssm_instances',
       terraformGeneratorMetadata: {
@@ -125,11 +125,11 @@ export class DataAwsSsmInstances extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataAwsSsmInstances.FilterPropertyList(this, "filter", true);
+  private _filter = new TfDataInstances.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataAwsSsmInstances.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: TfDataInstances.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -148,7 +148,7 @@ export class DataAwsSsmInstances extends cdktn.TerraformDataSource {
     return {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      filter: cdktn.listMapper(dataAwsSsmInstancesFilterPropertyToTerraform, true)(this._filter.internalValue),
+      filter: cdktn.listMapper(tfDataInstancesFilterPropertyToTerraform, true)(this._filter.internalValue),
     };
   }
 
@@ -167,10 +167,10 @@ export class DataAwsSsmInstances extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataAwsSsmInstancesFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(tfDataInstancesFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataAwsSsmInstances.FilterPropertyList",
+        storageClassType: "TfDataInstances.FilterPropertyList",
       },
     };
 
@@ -179,7 +179,7 @@ export class DataAwsSsmInstances extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsSsmInstancesFilterPropertyToTerraform(struct?: DataAwsSsmInstances.FilterProperty | cdktn.IResolvable): any {
+export function tfDataInstancesFilterPropertyToTerraform(struct?: TfDataInstances.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -191,7 +191,7 @@ export function dataAwsSsmInstancesFilterPropertyToTerraform(struct?: DataAwsSsm
 }
 
 
-export function dataAwsSsmInstancesFilterPropertyToHclTerraform(struct?: DataAwsSsmInstances.FilterProperty | cdktn.IResolvable): any {
+export function tfDataInstancesFilterPropertyToHclTerraform(struct?: TfDataInstances.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -216,14 +216,14 @@ export function dataAwsSsmInstancesFilterPropertyToHclTerraform(struct?: DataAws
 }
 
 
-export namespace DataAwsSsmInstances {
+export namespace TfDataInstances {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_instances#name DataAwsSsmInstances#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_instances#name TfDataInstances#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_instances#values DataAwsSsmInstances#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_instances#values TfDataInstances#values}
   */
   readonly values: string[];
 }

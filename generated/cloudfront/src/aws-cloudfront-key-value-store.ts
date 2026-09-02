@@ -5,31 +5,31 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCloudfrontKeyValueStoreConfig extends cdktn.TerraformMetaArguments {
+export interface TfKeyValueStoreConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_key_value_store#comment AwsCloudfrontKeyValueStore#comment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_key_value_store#comment TfKeyValueStore#comment}
   */
   readonly comment?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_key_value_store#name AwsCloudfrontKeyValueStore#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_key_value_store#name TfKeyValueStore#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_key_value_store#tags AwsCloudfrontKeyValueStore#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_key_value_store#tags TfKeyValueStore#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_key_value_store#timeouts AwsCloudfrontKeyValueStore#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_key_value_store#timeouts TfKeyValueStore#timeouts}
   */
-  readonly timeouts?: AwsCloudfrontKeyValueStore.TimeoutsProperty;
+  readonly timeouts?: TfKeyValueStore.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_key_value_store aws_cloudfront_key_value_store}
 */
-export class AwsCloudfrontKeyValueStore extends cdktn.TerraformResource {
+export class TfKeyValueStore extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -40,11 +40,11 @@ export class AwsCloudfrontKeyValueStore extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCloudfrontKeyValueStore resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfKeyValueStore resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCloudfrontKeyValueStore to import
-  * @param importFromId The id of the existing AwsCloudfrontKeyValueStore that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_key_value_store#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCloudfrontKeyValueStore to import is found
+  * @param importToId The construct id used in the generated config for the TfKeyValueStore to import
+  * @param importFromId The id of the existing TfKeyValueStore that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_key_value_store#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfKeyValueStore to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudfront_key_value_store", importId: importFromId, provider });
@@ -59,9 +59,9 @@ export class AwsCloudfrontKeyValueStore extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCloudfrontKeyValueStoreConfig
+  * @param options TfKeyValueStoreConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCloudfrontKeyValueStoreConfig) {
+  public constructor(scope: Construct, id: string, config: TfKeyValueStoreConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudfront_key_value_store',
       terraformGeneratorMetadata: {
@@ -159,11 +159,11 @@ export class AwsCloudfrontKeyValueStore extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsCloudfrontKeyValueStore.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfKeyValueStore.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsCloudfrontKeyValueStore.TimeoutsProperty) {
+  public putTimeouts(value: TfKeyValueStore.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -183,7 +183,7 @@ export class AwsCloudfrontKeyValueStore extends cdktn.TerraformResource {
       comment: cdktn.stringToTerraform(this._comment),
       name: cdktn.stringToTerraform(this._name),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      timeouts: awsCloudfrontKeyValueStoreTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfKeyValueStoreTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -208,10 +208,10 @@ export class AwsCloudfrontKeyValueStore extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsCloudfrontKeyValueStoreTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfKeyValueStoreTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsCloudfrontKeyValueStore.TimeoutsProperty",
+        storageClassType: "TfKeyValueStore.TimeoutsProperty",
       },
     };
 
@@ -220,7 +220,7 @@ export class AwsCloudfrontKeyValueStore extends cdktn.TerraformResource {
   }
 }
 
-export function awsCloudfrontKeyValueStoreTimeoutsPropertyToTerraform(struct?: AwsCloudfrontKeyValueStore.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfKeyValueStoreTimeoutsPropertyToTerraform(struct?: TfKeyValueStore.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -231,7 +231,7 @@ export function awsCloudfrontKeyValueStoreTimeoutsPropertyToTerraform(struct?: A
 }
 
 
-export function awsCloudfrontKeyValueStoreTimeoutsPropertyToHclTerraform(struct?: AwsCloudfrontKeyValueStore.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfKeyValueStoreTimeoutsPropertyToHclTerraform(struct?: TfKeyValueStore.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -250,12 +250,12 @@ export function awsCloudfrontKeyValueStoreTimeoutsPropertyToHclTerraform(struct?
 }
 
 
-export namespace AwsCloudfrontKeyValueStore {
+export namespace TfKeyValueStore {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_key_value_store#create AwsCloudfrontKeyValueStore#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_key_value_store#create TfKeyValueStore#create}
   */
   readonly create?: string;
 }

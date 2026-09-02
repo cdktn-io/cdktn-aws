@@ -5,29 +5,29 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCloudwatchLogTransformerConfig extends cdktn.TerraformMetaArguments {
+export interface TfTransformerConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#log_group_arn AwsCloudwatchLogTransformer#log_group_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#log_group_arn TfTransformer#log_group_arn}
   */
   readonly logGroupArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#region AwsCloudwatchLogTransformer#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#region TfTransformer#region}
   */
   readonly region?: string;
   /**
   * transformer_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#transformer_config AwsCloudwatchLogTransformer#transformer_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#transformer_config TfTransformer#transformer_config}
   */
-  readonly transformerConfig?: AwsCloudwatchLogTransformer.TransformerConfigProperty[] | cdktn.IResolvable;
+  readonly transformerConfig?: TfTransformer.TransformerConfigProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer aws_cloudwatch_log_transformer}
 */
-export class AwsCloudwatchLogTransformer extends cdktn.TerraformResource {
+export class TfTransformer extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -38,11 +38,11 @@ export class AwsCloudwatchLogTransformer extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCloudwatchLogTransformer resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfTransformer resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCloudwatchLogTransformer to import
-  * @param importFromId The id of the existing AwsCloudwatchLogTransformer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCloudwatchLogTransformer to import is found
+  * @param importToId The construct id used in the generated config for the TfTransformer to import
+  * @param importFromId The id of the existing TfTransformer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfTransformer to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudwatch_log_transformer", importId: importFromId, provider });
@@ -57,9 +57,9 @@ export class AwsCloudwatchLogTransformer extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCloudwatchLogTransformerConfig
+  * @param options TfTransformerConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCloudwatchLogTransformerConfig) {
+  public constructor(scope: Construct, id: string, config: TfTransformerConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudwatch_log_transformer',
       terraformGeneratorMetadata: {
@@ -114,11 +114,11 @@ export class AwsCloudwatchLogTransformer extends cdktn.TerraformResource {
   }
 
   // transformer_config - computed: false, optional: true, required: false
-  private _transformerConfig = new AwsCloudwatchLogTransformer.TransformerConfigPropertyList(this, "transformer_config", false);
+  private _transformerConfig = new TfTransformer.TransformerConfigPropertyList(this, "transformer_config", false);
   public get transformerConfig() {
     return this._transformerConfig;
   }
-  public putTransformerConfig(value: AwsCloudwatchLogTransformer.TransformerConfigProperty[] | cdktn.IResolvable) {
+  public putTransformerConfig(value: TfTransformer.TransformerConfigProperty[] | cdktn.IResolvable) {
     this._transformerConfig.internalValue = value;
   }
   public resetTransformerConfig() {
@@ -137,7 +137,7 @@ export class AwsCloudwatchLogTransformer extends cdktn.TerraformResource {
     return {
       log_group_arn: cdktn.stringToTerraform(this._logGroupArn),
       region: cdktn.stringToTerraform(this._region),
-      transformer_config: cdktn.listMapper(awsCloudwatchLogTransformerTransformerConfigPropertyToTerraform, true)(this._transformerConfig.internalValue),
+      transformer_config: cdktn.listMapper(tfTransformerTransformerConfigPropertyToTerraform, true)(this._transformerConfig.internalValue),
     };
   }
 
@@ -156,10 +156,10 @@ export class AwsCloudwatchLogTransformer extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       transformer_config: {
-        value: cdktn.listMapperHcl(awsCloudwatchLogTransformerTransformerConfigPropertyToHclTerraform, true)(this._transformerConfig.internalValue),
+        value: cdktn.listMapperHcl(tfTransformerTransformerConfigPropertyToHclTerraform, true)(this._transformerConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudwatchLogTransformer.TransformerConfigPropertyList",
+        storageClassType: "TfTransformer.TransformerConfigPropertyList",
       },
     };
 
@@ -168,7 +168,7 @@ export class AwsCloudwatchLogTransformer extends cdktn.TerraformResource {
   }
 }
 
-export function awsCloudwatchLogTransformerTransformerConfigAddKeysEntryPropertyToTerraform(struct?: AwsCloudwatchLogTransformer.TransformerConfigAddKeysEntryProperty | cdktn.IResolvable): any {
+export function tfTransformerTransformerConfigAddKeysEntryPropertyToTerraform(struct?: TfTransformer.TransformerConfigAddKeysEntryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -181,7 +181,7 @@ export function awsCloudwatchLogTransformerTransformerConfigAddKeysEntryProperty
 }
 
 
-export function awsCloudwatchLogTransformerTransformerConfigAddKeysEntryPropertyToHclTerraform(struct?: AwsCloudwatchLogTransformer.TransformerConfigAddKeysEntryProperty | cdktn.IResolvable): any {
+export function tfTransformerTransformerConfigAddKeysEntryPropertyToHclTerraform(struct?: TfTransformer.TransformerConfigAddKeysEntryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -212,25 +212,25 @@ export function awsCloudwatchLogTransformerTransformerConfigAddKeysEntryProperty
 }
 
 
-export function awsCloudwatchLogTransformerAddKeysPropertyToTerraform(struct?: AwsCloudwatchLogTransformer.AddKeysProperty | cdktn.IResolvable): any {
+export function tfTransformerAddKeysPropertyToTerraform(struct?: TfTransformer.AddKeysProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    entry: cdktn.listMapper(awsCloudwatchLogTransformerTransformerConfigAddKeysEntryPropertyToTerraform, true)(struct!.entry),
+    entry: cdktn.listMapper(tfTransformerTransformerConfigAddKeysEntryPropertyToTerraform, true)(struct!.entry),
   }
 }
 
 
-export function awsCloudwatchLogTransformerAddKeysPropertyToHclTerraform(struct?: AwsCloudwatchLogTransformer.AddKeysProperty | cdktn.IResolvable): any {
+export function tfTransformerAddKeysPropertyToHclTerraform(struct?: TfTransformer.AddKeysProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     entry: {
-      value: cdktn.listMapperHcl(awsCloudwatchLogTransformerTransformerConfigAddKeysEntryPropertyToHclTerraform, true)(struct!.entry),
+      value: cdktn.listMapperHcl(tfTransformerTransformerConfigAddKeysEntryPropertyToHclTerraform, true)(struct!.entry),
       isBlock: true,
       type: "list",
       storageClassType: "TransformerConfigAddKeysEntryPropertyList",
@@ -242,7 +242,7 @@ export function awsCloudwatchLogTransformerAddKeysPropertyToHclTerraform(struct?
 }
 
 
-export function awsCloudwatchLogTransformerTransformerConfigCopyValueEntryPropertyToTerraform(struct?: AwsCloudwatchLogTransformer.TransformerConfigCopyValueEntryProperty | cdktn.IResolvable): any {
+export function tfTransformerTransformerConfigCopyValueEntryPropertyToTerraform(struct?: TfTransformer.TransformerConfigCopyValueEntryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -255,7 +255,7 @@ export function awsCloudwatchLogTransformerTransformerConfigCopyValueEntryProper
 }
 
 
-export function awsCloudwatchLogTransformerTransformerConfigCopyValueEntryPropertyToHclTerraform(struct?: AwsCloudwatchLogTransformer.TransformerConfigCopyValueEntryProperty | cdktn.IResolvable): any {
+export function tfTransformerTransformerConfigCopyValueEntryPropertyToHclTerraform(struct?: TfTransformer.TransformerConfigCopyValueEntryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -286,25 +286,25 @@ export function awsCloudwatchLogTransformerTransformerConfigCopyValueEntryProper
 }
 
 
-export function awsCloudwatchLogTransformerCopyValuePropertyToTerraform(struct?: AwsCloudwatchLogTransformer.CopyValueProperty | cdktn.IResolvable): any {
+export function tfTransformerCopyValuePropertyToTerraform(struct?: TfTransformer.CopyValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    entry: cdktn.listMapper(awsCloudwatchLogTransformerTransformerConfigCopyValueEntryPropertyToTerraform, true)(struct!.entry),
+    entry: cdktn.listMapper(tfTransformerTransformerConfigCopyValueEntryPropertyToTerraform, true)(struct!.entry),
   }
 }
 
 
-export function awsCloudwatchLogTransformerCopyValuePropertyToHclTerraform(struct?: AwsCloudwatchLogTransformer.CopyValueProperty | cdktn.IResolvable): any {
+export function tfTransformerCopyValuePropertyToHclTerraform(struct?: TfTransformer.CopyValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     entry: {
-      value: cdktn.listMapperHcl(awsCloudwatchLogTransformerTransformerConfigCopyValueEntryPropertyToHclTerraform, true)(struct!.entry),
+      value: cdktn.listMapperHcl(tfTransformerTransformerConfigCopyValueEntryPropertyToHclTerraform, true)(struct!.entry),
       isBlock: true,
       type: "list",
       storageClassType: "TransformerConfigCopyValueEntryPropertyList",
@@ -316,7 +316,7 @@ export function awsCloudwatchLogTransformerCopyValuePropertyToHclTerraform(struc
 }
 
 
-export function awsCloudwatchLogTransformerCsvPropertyToTerraform(struct?: AwsCloudwatchLogTransformer.CsvProperty | cdktn.IResolvable): any {
+export function tfTransformerCsvPropertyToTerraform(struct?: TfTransformer.CsvProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -330,7 +330,7 @@ export function awsCloudwatchLogTransformerCsvPropertyToTerraform(struct?: AwsCl
 }
 
 
-export function awsCloudwatchLogTransformerCsvPropertyToHclTerraform(struct?: AwsCloudwatchLogTransformer.CsvProperty | cdktn.IResolvable): any {
+export function tfTransformerCsvPropertyToHclTerraform(struct?: TfTransformer.CsvProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -367,7 +367,7 @@ export function awsCloudwatchLogTransformerCsvPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsCloudwatchLogTransformerDateTimeConverterPropertyToTerraform(struct?: AwsCloudwatchLogTransformer.DateTimeConverterProperty | cdktn.IResolvable): any {
+export function tfTransformerDateTimeConverterPropertyToTerraform(struct?: TfTransformer.DateTimeConverterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -384,7 +384,7 @@ export function awsCloudwatchLogTransformerDateTimeConverterPropertyToTerraform(
 }
 
 
-export function awsCloudwatchLogTransformerDateTimeConverterPropertyToHclTerraform(struct?: AwsCloudwatchLogTransformer.DateTimeConverterProperty | cdktn.IResolvable): any {
+export function tfTransformerDateTimeConverterPropertyToHclTerraform(struct?: TfTransformer.DateTimeConverterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -439,7 +439,7 @@ export function awsCloudwatchLogTransformerDateTimeConverterPropertyToHclTerrafo
 }
 
 
-export function awsCloudwatchLogTransformerDeleteKeysPropertyToTerraform(struct?: AwsCloudwatchLogTransformer.DeleteKeysProperty | cdktn.IResolvable): any {
+export function tfTransformerDeleteKeysPropertyToTerraform(struct?: TfTransformer.DeleteKeysProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -450,7 +450,7 @@ export function awsCloudwatchLogTransformerDeleteKeysPropertyToTerraform(struct?
 }
 
 
-export function awsCloudwatchLogTransformerDeleteKeysPropertyToHclTerraform(struct?: AwsCloudwatchLogTransformer.DeleteKeysProperty | cdktn.IResolvable): any {
+export function tfTransformerDeleteKeysPropertyToHclTerraform(struct?: TfTransformer.DeleteKeysProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -469,7 +469,7 @@ export function awsCloudwatchLogTransformerDeleteKeysPropertyToHclTerraform(stru
 }
 
 
-export function awsCloudwatchLogTransformerGrokPropertyToTerraform(struct?: AwsCloudwatchLogTransformer.GrokProperty | cdktn.IResolvable): any {
+export function tfTransformerGrokPropertyToTerraform(struct?: TfTransformer.GrokProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -481,7 +481,7 @@ export function awsCloudwatchLogTransformerGrokPropertyToTerraform(struct?: AwsC
 }
 
 
-export function awsCloudwatchLogTransformerGrokPropertyToHclTerraform(struct?: AwsCloudwatchLogTransformer.GrokProperty | cdktn.IResolvable): any {
+export function tfTransformerGrokPropertyToHclTerraform(struct?: TfTransformer.GrokProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -506,7 +506,7 @@ export function awsCloudwatchLogTransformerGrokPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsCloudwatchLogTransformerListToMapPropertyToTerraform(struct?: AwsCloudwatchLogTransformer.ListToMapProperty | cdktn.IResolvable): any {
+export function tfTransformerListToMapPropertyToTerraform(struct?: TfTransformer.ListToMapProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -522,7 +522,7 @@ export function awsCloudwatchLogTransformerListToMapPropertyToTerraform(struct?:
 }
 
 
-export function awsCloudwatchLogTransformerListToMapPropertyToHclTerraform(struct?: AwsCloudwatchLogTransformer.ListToMapProperty | cdktn.IResolvable): any {
+export function tfTransformerListToMapPropertyToHclTerraform(struct?: TfTransformer.ListToMapProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -571,7 +571,7 @@ export function awsCloudwatchLogTransformerListToMapPropertyToHclTerraform(struc
 }
 
 
-export function awsCloudwatchLogTransformerLowerCaseStringPropertyToTerraform(struct?: AwsCloudwatchLogTransformer.LowerCaseStringProperty | cdktn.IResolvable): any {
+export function tfTransformerLowerCaseStringPropertyToTerraform(struct?: TfTransformer.LowerCaseStringProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -582,7 +582,7 @@ export function awsCloudwatchLogTransformerLowerCaseStringPropertyToTerraform(st
 }
 
 
-export function awsCloudwatchLogTransformerLowerCaseStringPropertyToHclTerraform(struct?: AwsCloudwatchLogTransformer.LowerCaseStringProperty | cdktn.IResolvable): any {
+export function tfTransformerLowerCaseStringPropertyToHclTerraform(struct?: TfTransformer.LowerCaseStringProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -601,7 +601,7 @@ export function awsCloudwatchLogTransformerLowerCaseStringPropertyToHclTerraform
 }
 
 
-export function awsCloudwatchLogTransformerTransformerConfigMoveKeysEntryPropertyToTerraform(struct?: AwsCloudwatchLogTransformer.TransformerConfigMoveKeysEntryProperty | cdktn.IResolvable): any {
+export function tfTransformerTransformerConfigMoveKeysEntryPropertyToTerraform(struct?: TfTransformer.TransformerConfigMoveKeysEntryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -614,7 +614,7 @@ export function awsCloudwatchLogTransformerTransformerConfigMoveKeysEntryPropert
 }
 
 
-export function awsCloudwatchLogTransformerTransformerConfigMoveKeysEntryPropertyToHclTerraform(struct?: AwsCloudwatchLogTransformer.TransformerConfigMoveKeysEntryProperty | cdktn.IResolvable): any {
+export function tfTransformerTransformerConfigMoveKeysEntryPropertyToHclTerraform(struct?: TfTransformer.TransformerConfigMoveKeysEntryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -645,25 +645,25 @@ export function awsCloudwatchLogTransformerTransformerConfigMoveKeysEntryPropert
 }
 
 
-export function awsCloudwatchLogTransformerMoveKeysPropertyToTerraform(struct?: AwsCloudwatchLogTransformer.MoveKeysProperty | cdktn.IResolvable): any {
+export function tfTransformerMoveKeysPropertyToTerraform(struct?: TfTransformer.MoveKeysProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    entry: cdktn.listMapper(awsCloudwatchLogTransformerTransformerConfigMoveKeysEntryPropertyToTerraform, true)(struct!.entry),
+    entry: cdktn.listMapper(tfTransformerTransformerConfigMoveKeysEntryPropertyToTerraform, true)(struct!.entry),
   }
 }
 
 
-export function awsCloudwatchLogTransformerMoveKeysPropertyToHclTerraform(struct?: AwsCloudwatchLogTransformer.MoveKeysProperty | cdktn.IResolvable): any {
+export function tfTransformerMoveKeysPropertyToHclTerraform(struct?: TfTransformer.MoveKeysProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     entry: {
-      value: cdktn.listMapperHcl(awsCloudwatchLogTransformerTransformerConfigMoveKeysEntryPropertyToHclTerraform, true)(struct!.entry),
+      value: cdktn.listMapperHcl(tfTransformerTransformerConfigMoveKeysEntryPropertyToHclTerraform, true)(struct!.entry),
       isBlock: true,
       type: "list",
       storageClassType: "TransformerConfigMoveKeysEntryPropertyList",
@@ -675,7 +675,7 @@ export function awsCloudwatchLogTransformerMoveKeysPropertyToHclTerraform(struct
 }
 
 
-export function awsCloudwatchLogTransformerParseCloudfrontPropertyToTerraform(struct?: AwsCloudwatchLogTransformer.ParseCloudfrontProperty | cdktn.IResolvable): any {
+export function tfTransformerParseCloudfrontPropertyToTerraform(struct?: TfTransformer.ParseCloudfrontProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -686,7 +686,7 @@ export function awsCloudwatchLogTransformerParseCloudfrontPropertyToTerraform(st
 }
 
 
-export function awsCloudwatchLogTransformerParseCloudfrontPropertyToHclTerraform(struct?: AwsCloudwatchLogTransformer.ParseCloudfrontProperty | cdktn.IResolvable): any {
+export function tfTransformerParseCloudfrontPropertyToHclTerraform(struct?: TfTransformer.ParseCloudfrontProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -705,7 +705,7 @@ export function awsCloudwatchLogTransformerParseCloudfrontPropertyToHclTerraform
 }
 
 
-export function awsCloudwatchLogTransformerParseJsonPropertyToTerraform(struct?: AwsCloudwatchLogTransformer.ParseJsonProperty | cdktn.IResolvable): any {
+export function tfTransformerParseJsonPropertyToTerraform(struct?: TfTransformer.ParseJsonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -717,7 +717,7 @@ export function awsCloudwatchLogTransformerParseJsonPropertyToTerraform(struct?:
 }
 
 
-export function awsCloudwatchLogTransformerParseJsonPropertyToHclTerraform(struct?: AwsCloudwatchLogTransformer.ParseJsonProperty | cdktn.IResolvable): any {
+export function tfTransformerParseJsonPropertyToHclTerraform(struct?: TfTransformer.ParseJsonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -742,7 +742,7 @@ export function awsCloudwatchLogTransformerParseJsonPropertyToHclTerraform(struc
 }
 
 
-export function awsCloudwatchLogTransformerParseKeyValuePropertyToTerraform(struct?: AwsCloudwatchLogTransformer.ParseKeyValueProperty | cdktn.IResolvable): any {
+export function tfTransformerParseKeyValuePropertyToTerraform(struct?: TfTransformer.ParseKeyValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -759,7 +759,7 @@ export function awsCloudwatchLogTransformerParseKeyValuePropertyToTerraform(stru
 }
 
 
-export function awsCloudwatchLogTransformerParseKeyValuePropertyToHclTerraform(struct?: AwsCloudwatchLogTransformer.ParseKeyValueProperty | cdktn.IResolvable): any {
+export function tfTransformerParseKeyValuePropertyToHclTerraform(struct?: TfTransformer.ParseKeyValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -814,7 +814,7 @@ export function awsCloudwatchLogTransformerParseKeyValuePropertyToHclTerraform(s
 }
 
 
-export function awsCloudwatchLogTransformerParsePostgresPropertyToTerraform(struct?: AwsCloudwatchLogTransformer.ParsePostgresProperty | cdktn.IResolvable): any {
+export function tfTransformerParsePostgresPropertyToTerraform(struct?: TfTransformer.ParsePostgresProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -825,7 +825,7 @@ export function awsCloudwatchLogTransformerParsePostgresPropertyToTerraform(stru
 }
 
 
-export function awsCloudwatchLogTransformerParsePostgresPropertyToHclTerraform(struct?: AwsCloudwatchLogTransformer.ParsePostgresProperty | cdktn.IResolvable): any {
+export function tfTransformerParsePostgresPropertyToHclTerraform(struct?: TfTransformer.ParsePostgresProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -844,7 +844,7 @@ export function awsCloudwatchLogTransformerParsePostgresPropertyToHclTerraform(s
 }
 
 
-export function awsCloudwatchLogTransformerParseRoute53PropertyToTerraform(struct?: AwsCloudwatchLogTransformer.ParseRoute53Property | cdktn.IResolvable): any {
+export function tfTransformerParseRoute53PropertyToTerraform(struct?: TfTransformer.ParseRoute53Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -855,7 +855,7 @@ export function awsCloudwatchLogTransformerParseRoute53PropertyToTerraform(struc
 }
 
 
-export function awsCloudwatchLogTransformerParseRoute53PropertyToHclTerraform(struct?: AwsCloudwatchLogTransformer.ParseRoute53Property | cdktn.IResolvable): any {
+export function tfTransformerParseRoute53PropertyToHclTerraform(struct?: TfTransformer.ParseRoute53Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -874,7 +874,7 @@ export function awsCloudwatchLogTransformerParseRoute53PropertyToHclTerraform(st
 }
 
 
-export function awsCloudwatchLogTransformerParseToOcsfPropertyToTerraform(struct?: AwsCloudwatchLogTransformer.ParseToOcsfProperty | cdktn.IResolvable): any {
+export function tfTransformerParseToOcsfPropertyToTerraform(struct?: TfTransformer.ParseToOcsfProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -887,7 +887,7 @@ export function awsCloudwatchLogTransformerParseToOcsfPropertyToTerraform(struct
 }
 
 
-export function awsCloudwatchLogTransformerParseToOcsfPropertyToHclTerraform(struct?: AwsCloudwatchLogTransformer.ParseToOcsfProperty | cdktn.IResolvable): any {
+export function tfTransformerParseToOcsfPropertyToHclTerraform(struct?: TfTransformer.ParseToOcsfProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -918,7 +918,7 @@ export function awsCloudwatchLogTransformerParseToOcsfPropertyToHclTerraform(str
 }
 
 
-export function awsCloudwatchLogTransformerParseVpcPropertyToTerraform(struct?: AwsCloudwatchLogTransformer.ParseVpcProperty | cdktn.IResolvable): any {
+export function tfTransformerParseVpcPropertyToTerraform(struct?: TfTransformer.ParseVpcProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -929,7 +929,7 @@ export function awsCloudwatchLogTransformerParseVpcPropertyToTerraform(struct?: 
 }
 
 
-export function awsCloudwatchLogTransformerParseVpcPropertyToHclTerraform(struct?: AwsCloudwatchLogTransformer.ParseVpcProperty | cdktn.IResolvable): any {
+export function tfTransformerParseVpcPropertyToHclTerraform(struct?: TfTransformer.ParseVpcProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -948,7 +948,7 @@ export function awsCloudwatchLogTransformerParseVpcPropertyToHclTerraform(struct
 }
 
 
-export function awsCloudwatchLogTransformerParseWafPropertyToTerraform(struct?: AwsCloudwatchLogTransformer.ParseWafProperty | cdktn.IResolvable): any {
+export function tfTransformerParseWafPropertyToTerraform(struct?: TfTransformer.ParseWafProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -959,7 +959,7 @@ export function awsCloudwatchLogTransformerParseWafPropertyToTerraform(struct?: 
 }
 
 
-export function awsCloudwatchLogTransformerParseWafPropertyToHclTerraform(struct?: AwsCloudwatchLogTransformer.ParseWafProperty | cdktn.IResolvable): any {
+export function tfTransformerParseWafPropertyToHclTerraform(struct?: TfTransformer.ParseWafProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -978,7 +978,7 @@ export function awsCloudwatchLogTransformerParseWafPropertyToHclTerraform(struct
 }
 
 
-export function awsCloudwatchLogTransformerTransformerConfigRenameKeysEntryPropertyToTerraform(struct?: AwsCloudwatchLogTransformer.TransformerConfigRenameKeysEntryProperty | cdktn.IResolvable): any {
+export function tfTransformerTransformerConfigRenameKeysEntryPropertyToTerraform(struct?: TfTransformer.TransformerConfigRenameKeysEntryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -991,7 +991,7 @@ export function awsCloudwatchLogTransformerTransformerConfigRenameKeysEntryPrope
 }
 
 
-export function awsCloudwatchLogTransformerTransformerConfigRenameKeysEntryPropertyToHclTerraform(struct?: AwsCloudwatchLogTransformer.TransformerConfigRenameKeysEntryProperty | cdktn.IResolvable): any {
+export function tfTransformerTransformerConfigRenameKeysEntryPropertyToHclTerraform(struct?: TfTransformer.TransformerConfigRenameKeysEntryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1022,25 +1022,25 @@ export function awsCloudwatchLogTransformerTransformerConfigRenameKeysEntryPrope
 }
 
 
-export function awsCloudwatchLogTransformerRenameKeysPropertyToTerraform(struct?: AwsCloudwatchLogTransformer.RenameKeysProperty | cdktn.IResolvable): any {
+export function tfTransformerRenameKeysPropertyToTerraform(struct?: TfTransformer.RenameKeysProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    entry: cdktn.listMapper(awsCloudwatchLogTransformerTransformerConfigRenameKeysEntryPropertyToTerraform, true)(struct!.entry),
+    entry: cdktn.listMapper(tfTransformerTransformerConfigRenameKeysEntryPropertyToTerraform, true)(struct!.entry),
   }
 }
 
 
-export function awsCloudwatchLogTransformerRenameKeysPropertyToHclTerraform(struct?: AwsCloudwatchLogTransformer.RenameKeysProperty | cdktn.IResolvable): any {
+export function tfTransformerRenameKeysPropertyToHclTerraform(struct?: TfTransformer.RenameKeysProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     entry: {
-      value: cdktn.listMapperHcl(awsCloudwatchLogTransformerTransformerConfigRenameKeysEntryPropertyToHclTerraform, true)(struct!.entry),
+      value: cdktn.listMapperHcl(tfTransformerTransformerConfigRenameKeysEntryPropertyToHclTerraform, true)(struct!.entry),
       isBlock: true,
       type: "list",
       storageClassType: "TransformerConfigRenameKeysEntryPropertyList",
@@ -1052,7 +1052,7 @@ export function awsCloudwatchLogTransformerRenameKeysPropertyToHclTerraform(stru
 }
 
 
-export function awsCloudwatchLogTransformerTransformerConfigSplitStringEntryPropertyToTerraform(struct?: AwsCloudwatchLogTransformer.TransformerConfigSplitStringEntryProperty | cdktn.IResolvable): any {
+export function tfTransformerTransformerConfigSplitStringEntryPropertyToTerraform(struct?: TfTransformer.TransformerConfigSplitStringEntryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1064,7 +1064,7 @@ export function awsCloudwatchLogTransformerTransformerConfigSplitStringEntryProp
 }
 
 
-export function awsCloudwatchLogTransformerTransformerConfigSplitStringEntryPropertyToHclTerraform(struct?: AwsCloudwatchLogTransformer.TransformerConfigSplitStringEntryProperty | cdktn.IResolvable): any {
+export function tfTransformerTransformerConfigSplitStringEntryPropertyToHclTerraform(struct?: TfTransformer.TransformerConfigSplitStringEntryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1089,25 +1089,25 @@ export function awsCloudwatchLogTransformerTransformerConfigSplitStringEntryProp
 }
 
 
-export function awsCloudwatchLogTransformerSplitStringPropertyToTerraform(struct?: AwsCloudwatchLogTransformer.SplitStringProperty | cdktn.IResolvable): any {
+export function tfTransformerSplitStringPropertyToTerraform(struct?: TfTransformer.SplitStringProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    entry: cdktn.listMapper(awsCloudwatchLogTransformerTransformerConfigSplitStringEntryPropertyToTerraform, true)(struct!.entry),
+    entry: cdktn.listMapper(tfTransformerTransformerConfigSplitStringEntryPropertyToTerraform, true)(struct!.entry),
   }
 }
 
 
-export function awsCloudwatchLogTransformerSplitStringPropertyToHclTerraform(struct?: AwsCloudwatchLogTransformer.SplitStringProperty | cdktn.IResolvable): any {
+export function tfTransformerSplitStringPropertyToHclTerraform(struct?: TfTransformer.SplitStringProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     entry: {
-      value: cdktn.listMapperHcl(awsCloudwatchLogTransformerTransformerConfigSplitStringEntryPropertyToHclTerraform, true)(struct!.entry),
+      value: cdktn.listMapperHcl(tfTransformerTransformerConfigSplitStringEntryPropertyToHclTerraform, true)(struct!.entry),
       isBlock: true,
       type: "list",
       storageClassType: "TransformerConfigSplitStringEntryPropertyList",
@@ -1119,7 +1119,7 @@ export function awsCloudwatchLogTransformerSplitStringPropertyToHclTerraform(str
 }
 
 
-export function awsCloudwatchLogTransformerTransformerConfigSubstituteStringEntryPropertyToTerraform(struct?: AwsCloudwatchLogTransformer.TransformerConfigSubstituteStringEntryProperty | cdktn.IResolvable): any {
+export function tfTransformerTransformerConfigSubstituteStringEntryPropertyToTerraform(struct?: TfTransformer.TransformerConfigSubstituteStringEntryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1132,7 +1132,7 @@ export function awsCloudwatchLogTransformerTransformerConfigSubstituteStringEntr
 }
 
 
-export function awsCloudwatchLogTransformerTransformerConfigSubstituteStringEntryPropertyToHclTerraform(struct?: AwsCloudwatchLogTransformer.TransformerConfigSubstituteStringEntryProperty | cdktn.IResolvable): any {
+export function tfTransformerTransformerConfigSubstituteStringEntryPropertyToHclTerraform(struct?: TfTransformer.TransformerConfigSubstituteStringEntryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1163,25 +1163,25 @@ export function awsCloudwatchLogTransformerTransformerConfigSubstituteStringEntr
 }
 
 
-export function awsCloudwatchLogTransformerSubstituteStringPropertyToTerraform(struct?: AwsCloudwatchLogTransformer.SubstituteStringProperty | cdktn.IResolvable): any {
+export function tfTransformerSubstituteStringPropertyToTerraform(struct?: TfTransformer.SubstituteStringProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    entry: cdktn.listMapper(awsCloudwatchLogTransformerTransformerConfigSubstituteStringEntryPropertyToTerraform, true)(struct!.entry),
+    entry: cdktn.listMapper(tfTransformerTransformerConfigSubstituteStringEntryPropertyToTerraform, true)(struct!.entry),
   }
 }
 
 
-export function awsCloudwatchLogTransformerSubstituteStringPropertyToHclTerraform(struct?: AwsCloudwatchLogTransformer.SubstituteStringProperty | cdktn.IResolvable): any {
+export function tfTransformerSubstituteStringPropertyToHclTerraform(struct?: TfTransformer.SubstituteStringProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     entry: {
-      value: cdktn.listMapperHcl(awsCloudwatchLogTransformerTransformerConfigSubstituteStringEntryPropertyToHclTerraform, true)(struct!.entry),
+      value: cdktn.listMapperHcl(tfTransformerTransformerConfigSubstituteStringEntryPropertyToHclTerraform, true)(struct!.entry),
       isBlock: true,
       type: "list",
       storageClassType: "TransformerConfigSubstituteStringEntryPropertyList",
@@ -1193,7 +1193,7 @@ export function awsCloudwatchLogTransformerSubstituteStringPropertyToHclTerrafor
 }
 
 
-export function awsCloudwatchLogTransformerTrimStringPropertyToTerraform(struct?: AwsCloudwatchLogTransformer.TrimStringProperty | cdktn.IResolvable): any {
+export function tfTransformerTrimStringPropertyToTerraform(struct?: TfTransformer.TrimStringProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1204,7 +1204,7 @@ export function awsCloudwatchLogTransformerTrimStringPropertyToTerraform(struct?
 }
 
 
-export function awsCloudwatchLogTransformerTrimStringPropertyToHclTerraform(struct?: AwsCloudwatchLogTransformer.TrimStringProperty | cdktn.IResolvable): any {
+export function tfTransformerTrimStringPropertyToHclTerraform(struct?: TfTransformer.TrimStringProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1223,7 +1223,7 @@ export function awsCloudwatchLogTransformerTrimStringPropertyToHclTerraform(stru
 }
 
 
-export function awsCloudwatchLogTransformerTransformerConfigTypeConverterEntryPropertyToTerraform(struct?: AwsCloudwatchLogTransformer.TransformerConfigTypeConverterEntryProperty | cdktn.IResolvable): any {
+export function tfTransformerTransformerConfigTypeConverterEntryPropertyToTerraform(struct?: TfTransformer.TransformerConfigTypeConverterEntryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1235,7 +1235,7 @@ export function awsCloudwatchLogTransformerTransformerConfigTypeConverterEntryPr
 }
 
 
-export function awsCloudwatchLogTransformerTransformerConfigTypeConverterEntryPropertyToHclTerraform(struct?: AwsCloudwatchLogTransformer.TransformerConfigTypeConverterEntryProperty | cdktn.IResolvable): any {
+export function tfTransformerTransformerConfigTypeConverterEntryPropertyToHclTerraform(struct?: TfTransformer.TransformerConfigTypeConverterEntryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1260,25 +1260,25 @@ export function awsCloudwatchLogTransformerTransformerConfigTypeConverterEntryPr
 }
 
 
-export function awsCloudwatchLogTransformerTypeConverterPropertyToTerraform(struct?: AwsCloudwatchLogTransformer.TypeConverterProperty | cdktn.IResolvable): any {
+export function tfTransformerTypeConverterPropertyToTerraform(struct?: TfTransformer.TypeConverterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    entry: cdktn.listMapper(awsCloudwatchLogTransformerTransformerConfigTypeConverterEntryPropertyToTerraform, true)(struct!.entry),
+    entry: cdktn.listMapper(tfTransformerTransformerConfigTypeConverterEntryPropertyToTerraform, true)(struct!.entry),
   }
 }
 
 
-export function awsCloudwatchLogTransformerTypeConverterPropertyToHclTerraform(struct?: AwsCloudwatchLogTransformer.TypeConverterProperty | cdktn.IResolvable): any {
+export function tfTransformerTypeConverterPropertyToHclTerraform(struct?: TfTransformer.TypeConverterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     entry: {
-      value: cdktn.listMapperHcl(awsCloudwatchLogTransformerTransformerConfigTypeConverterEntryPropertyToHclTerraform, true)(struct!.entry),
+      value: cdktn.listMapperHcl(tfTransformerTransformerConfigTypeConverterEntryPropertyToHclTerraform, true)(struct!.entry),
       isBlock: true,
       type: "list",
       storageClassType: "TransformerConfigTypeConverterEntryPropertyList",
@@ -1290,7 +1290,7 @@ export function awsCloudwatchLogTransformerTypeConverterPropertyToHclTerraform(s
 }
 
 
-export function awsCloudwatchLogTransformerUpperCaseStringPropertyToTerraform(struct?: AwsCloudwatchLogTransformer.UpperCaseStringProperty | cdktn.IResolvable): any {
+export function tfTransformerUpperCaseStringPropertyToTerraform(struct?: TfTransformer.UpperCaseStringProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1301,7 +1301,7 @@ export function awsCloudwatchLogTransformerUpperCaseStringPropertyToTerraform(st
 }
 
 
-export function awsCloudwatchLogTransformerUpperCaseStringPropertyToHclTerraform(struct?: AwsCloudwatchLogTransformer.UpperCaseStringProperty | cdktn.IResolvable): any {
+export function tfTransformerUpperCaseStringPropertyToHclTerraform(struct?: TfTransformer.UpperCaseStringProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1320,179 +1320,179 @@ export function awsCloudwatchLogTransformerUpperCaseStringPropertyToHclTerraform
 }
 
 
-export function awsCloudwatchLogTransformerTransformerConfigPropertyToTerraform(struct?: AwsCloudwatchLogTransformer.TransformerConfigProperty | cdktn.IResolvable): any {
+export function tfTransformerTransformerConfigPropertyToTerraform(struct?: TfTransformer.TransformerConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    add_keys: cdktn.listMapper(awsCloudwatchLogTransformerAddKeysPropertyToTerraform, true)(struct!.addKeys),
-    copy_value: cdktn.listMapper(awsCloudwatchLogTransformerCopyValuePropertyToTerraform, true)(struct!.copyValue),
-    csv: cdktn.listMapper(awsCloudwatchLogTransformerCsvPropertyToTerraform, true)(struct!.csv),
-    date_time_converter: cdktn.listMapper(awsCloudwatchLogTransformerDateTimeConverterPropertyToTerraform, true)(struct!.dateTimeConverter),
-    delete_keys: cdktn.listMapper(awsCloudwatchLogTransformerDeleteKeysPropertyToTerraform, true)(struct!.deleteKeys),
-    grok: cdktn.listMapper(awsCloudwatchLogTransformerGrokPropertyToTerraform, true)(struct!.grok),
-    list_to_map: cdktn.listMapper(awsCloudwatchLogTransformerListToMapPropertyToTerraform, true)(struct!.listToMap),
-    lower_case_string: cdktn.listMapper(awsCloudwatchLogTransformerLowerCaseStringPropertyToTerraform, true)(struct!.lowerCaseString),
-    move_keys: cdktn.listMapper(awsCloudwatchLogTransformerMoveKeysPropertyToTerraform, true)(struct!.moveKeys),
-    parse_cloudfront: cdktn.listMapper(awsCloudwatchLogTransformerParseCloudfrontPropertyToTerraform, true)(struct!.parseCloudfront),
-    parse_json: cdktn.listMapper(awsCloudwatchLogTransformerParseJsonPropertyToTerraform, true)(struct!.parseJson),
-    parse_key_value: cdktn.listMapper(awsCloudwatchLogTransformerParseKeyValuePropertyToTerraform, true)(struct!.parseKeyValue),
-    parse_postgres: cdktn.listMapper(awsCloudwatchLogTransformerParsePostgresPropertyToTerraform, true)(struct!.parsePostgres),
-    parse_route53: cdktn.listMapper(awsCloudwatchLogTransformerParseRoute53PropertyToTerraform, true)(struct!.parseRoute53),
-    parse_to_ocsf: cdktn.listMapper(awsCloudwatchLogTransformerParseToOcsfPropertyToTerraform, true)(struct!.parseToOcsf),
-    parse_vpc: cdktn.listMapper(awsCloudwatchLogTransformerParseVpcPropertyToTerraform, true)(struct!.parseVpc),
-    parse_waf: cdktn.listMapper(awsCloudwatchLogTransformerParseWafPropertyToTerraform, true)(struct!.parseWaf),
-    rename_keys: cdktn.listMapper(awsCloudwatchLogTransformerRenameKeysPropertyToTerraform, true)(struct!.renameKeys),
-    split_string: cdktn.listMapper(awsCloudwatchLogTransformerSplitStringPropertyToTerraform, true)(struct!.splitString),
-    substitute_string: cdktn.listMapper(awsCloudwatchLogTransformerSubstituteStringPropertyToTerraform, true)(struct!.substituteString),
-    trim_string: cdktn.listMapper(awsCloudwatchLogTransformerTrimStringPropertyToTerraform, true)(struct!.trimString),
-    type_converter: cdktn.listMapper(awsCloudwatchLogTransformerTypeConverterPropertyToTerraform, true)(struct!.typeConverter),
-    upper_case_string: cdktn.listMapper(awsCloudwatchLogTransformerUpperCaseStringPropertyToTerraform, true)(struct!.upperCaseString),
+    add_keys: cdktn.listMapper(tfTransformerAddKeysPropertyToTerraform, true)(struct!.addKeys),
+    copy_value: cdktn.listMapper(tfTransformerCopyValuePropertyToTerraform, true)(struct!.copyValue),
+    csv: cdktn.listMapper(tfTransformerCsvPropertyToTerraform, true)(struct!.csv),
+    date_time_converter: cdktn.listMapper(tfTransformerDateTimeConverterPropertyToTerraform, true)(struct!.dateTimeConverter),
+    delete_keys: cdktn.listMapper(tfTransformerDeleteKeysPropertyToTerraform, true)(struct!.deleteKeys),
+    grok: cdktn.listMapper(tfTransformerGrokPropertyToTerraform, true)(struct!.grok),
+    list_to_map: cdktn.listMapper(tfTransformerListToMapPropertyToTerraform, true)(struct!.listToMap),
+    lower_case_string: cdktn.listMapper(tfTransformerLowerCaseStringPropertyToTerraform, true)(struct!.lowerCaseString),
+    move_keys: cdktn.listMapper(tfTransformerMoveKeysPropertyToTerraform, true)(struct!.moveKeys),
+    parse_cloudfront: cdktn.listMapper(tfTransformerParseCloudfrontPropertyToTerraform, true)(struct!.parseCloudfront),
+    parse_json: cdktn.listMapper(tfTransformerParseJsonPropertyToTerraform, true)(struct!.parseJson),
+    parse_key_value: cdktn.listMapper(tfTransformerParseKeyValuePropertyToTerraform, true)(struct!.parseKeyValue),
+    parse_postgres: cdktn.listMapper(tfTransformerParsePostgresPropertyToTerraform, true)(struct!.parsePostgres),
+    parse_route53: cdktn.listMapper(tfTransformerParseRoute53PropertyToTerraform, true)(struct!.parseRoute53),
+    parse_to_ocsf: cdktn.listMapper(tfTransformerParseToOcsfPropertyToTerraform, true)(struct!.parseToOcsf),
+    parse_vpc: cdktn.listMapper(tfTransformerParseVpcPropertyToTerraform, true)(struct!.parseVpc),
+    parse_waf: cdktn.listMapper(tfTransformerParseWafPropertyToTerraform, true)(struct!.parseWaf),
+    rename_keys: cdktn.listMapper(tfTransformerRenameKeysPropertyToTerraform, true)(struct!.renameKeys),
+    split_string: cdktn.listMapper(tfTransformerSplitStringPropertyToTerraform, true)(struct!.splitString),
+    substitute_string: cdktn.listMapper(tfTransformerSubstituteStringPropertyToTerraform, true)(struct!.substituteString),
+    trim_string: cdktn.listMapper(tfTransformerTrimStringPropertyToTerraform, true)(struct!.trimString),
+    type_converter: cdktn.listMapper(tfTransformerTypeConverterPropertyToTerraform, true)(struct!.typeConverter),
+    upper_case_string: cdktn.listMapper(tfTransformerUpperCaseStringPropertyToTerraform, true)(struct!.upperCaseString),
   }
 }
 
 
-export function awsCloudwatchLogTransformerTransformerConfigPropertyToHclTerraform(struct?: AwsCloudwatchLogTransformer.TransformerConfigProperty | cdktn.IResolvable): any {
+export function tfTransformerTransformerConfigPropertyToHclTerraform(struct?: TfTransformer.TransformerConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     add_keys: {
-      value: cdktn.listMapperHcl(awsCloudwatchLogTransformerAddKeysPropertyToHclTerraform, true)(struct!.addKeys),
+      value: cdktn.listMapperHcl(tfTransformerAddKeysPropertyToHclTerraform, true)(struct!.addKeys),
       isBlock: true,
       type: "list",
       storageClassType: "AddKeysPropertyList",
     },
     copy_value: {
-      value: cdktn.listMapperHcl(awsCloudwatchLogTransformerCopyValuePropertyToHclTerraform, true)(struct!.copyValue),
+      value: cdktn.listMapperHcl(tfTransformerCopyValuePropertyToHclTerraform, true)(struct!.copyValue),
       isBlock: true,
       type: "list",
       storageClassType: "CopyValuePropertyList",
     },
     csv: {
-      value: cdktn.listMapperHcl(awsCloudwatchLogTransformerCsvPropertyToHclTerraform, true)(struct!.csv),
+      value: cdktn.listMapperHcl(tfTransformerCsvPropertyToHclTerraform, true)(struct!.csv),
       isBlock: true,
       type: "list",
       storageClassType: "CsvPropertyList",
     },
     date_time_converter: {
-      value: cdktn.listMapperHcl(awsCloudwatchLogTransformerDateTimeConverterPropertyToHclTerraform, true)(struct!.dateTimeConverter),
+      value: cdktn.listMapperHcl(tfTransformerDateTimeConverterPropertyToHclTerraform, true)(struct!.dateTimeConverter),
       isBlock: true,
       type: "list",
       storageClassType: "DateTimeConverterPropertyList",
     },
     delete_keys: {
-      value: cdktn.listMapperHcl(awsCloudwatchLogTransformerDeleteKeysPropertyToHclTerraform, true)(struct!.deleteKeys),
+      value: cdktn.listMapperHcl(tfTransformerDeleteKeysPropertyToHclTerraform, true)(struct!.deleteKeys),
       isBlock: true,
       type: "list",
       storageClassType: "DeleteKeysPropertyList",
     },
     grok: {
-      value: cdktn.listMapperHcl(awsCloudwatchLogTransformerGrokPropertyToHclTerraform, true)(struct!.grok),
+      value: cdktn.listMapperHcl(tfTransformerGrokPropertyToHclTerraform, true)(struct!.grok),
       isBlock: true,
       type: "list",
       storageClassType: "GrokPropertyList",
     },
     list_to_map: {
-      value: cdktn.listMapperHcl(awsCloudwatchLogTransformerListToMapPropertyToHclTerraform, true)(struct!.listToMap),
+      value: cdktn.listMapperHcl(tfTransformerListToMapPropertyToHclTerraform, true)(struct!.listToMap),
       isBlock: true,
       type: "list",
       storageClassType: "ListToMapPropertyList",
     },
     lower_case_string: {
-      value: cdktn.listMapperHcl(awsCloudwatchLogTransformerLowerCaseStringPropertyToHclTerraform, true)(struct!.lowerCaseString),
+      value: cdktn.listMapperHcl(tfTransformerLowerCaseStringPropertyToHclTerraform, true)(struct!.lowerCaseString),
       isBlock: true,
       type: "list",
       storageClassType: "LowerCaseStringPropertyList",
     },
     move_keys: {
-      value: cdktn.listMapperHcl(awsCloudwatchLogTransformerMoveKeysPropertyToHclTerraform, true)(struct!.moveKeys),
+      value: cdktn.listMapperHcl(tfTransformerMoveKeysPropertyToHclTerraform, true)(struct!.moveKeys),
       isBlock: true,
       type: "list",
       storageClassType: "MoveKeysPropertyList",
     },
     parse_cloudfront: {
-      value: cdktn.listMapperHcl(awsCloudwatchLogTransformerParseCloudfrontPropertyToHclTerraform, true)(struct!.parseCloudfront),
+      value: cdktn.listMapperHcl(tfTransformerParseCloudfrontPropertyToHclTerraform, true)(struct!.parseCloudfront),
       isBlock: true,
       type: "list",
       storageClassType: "ParseCloudfrontPropertyList",
     },
     parse_json: {
-      value: cdktn.listMapperHcl(awsCloudwatchLogTransformerParseJsonPropertyToHclTerraform, true)(struct!.parseJson),
+      value: cdktn.listMapperHcl(tfTransformerParseJsonPropertyToHclTerraform, true)(struct!.parseJson),
       isBlock: true,
       type: "list",
       storageClassType: "ParseJsonPropertyList",
     },
     parse_key_value: {
-      value: cdktn.listMapperHcl(awsCloudwatchLogTransformerParseKeyValuePropertyToHclTerraform, true)(struct!.parseKeyValue),
+      value: cdktn.listMapperHcl(tfTransformerParseKeyValuePropertyToHclTerraform, true)(struct!.parseKeyValue),
       isBlock: true,
       type: "list",
       storageClassType: "ParseKeyValuePropertyList",
     },
     parse_postgres: {
-      value: cdktn.listMapperHcl(awsCloudwatchLogTransformerParsePostgresPropertyToHclTerraform, true)(struct!.parsePostgres),
+      value: cdktn.listMapperHcl(tfTransformerParsePostgresPropertyToHclTerraform, true)(struct!.parsePostgres),
       isBlock: true,
       type: "list",
       storageClassType: "ParsePostgresPropertyList",
     },
     parse_route53: {
-      value: cdktn.listMapperHcl(awsCloudwatchLogTransformerParseRoute53PropertyToHclTerraform, true)(struct!.parseRoute53),
+      value: cdktn.listMapperHcl(tfTransformerParseRoute53PropertyToHclTerraform, true)(struct!.parseRoute53),
       isBlock: true,
       type: "list",
       storageClassType: "ParseRoute53PropertyList",
     },
     parse_to_ocsf: {
-      value: cdktn.listMapperHcl(awsCloudwatchLogTransformerParseToOcsfPropertyToHclTerraform, true)(struct!.parseToOcsf),
+      value: cdktn.listMapperHcl(tfTransformerParseToOcsfPropertyToHclTerraform, true)(struct!.parseToOcsf),
       isBlock: true,
       type: "list",
       storageClassType: "ParseToOcsfPropertyList",
     },
     parse_vpc: {
-      value: cdktn.listMapperHcl(awsCloudwatchLogTransformerParseVpcPropertyToHclTerraform, true)(struct!.parseVpc),
+      value: cdktn.listMapperHcl(tfTransformerParseVpcPropertyToHclTerraform, true)(struct!.parseVpc),
       isBlock: true,
       type: "list",
       storageClassType: "ParseVpcPropertyList",
     },
     parse_waf: {
-      value: cdktn.listMapperHcl(awsCloudwatchLogTransformerParseWafPropertyToHclTerraform, true)(struct!.parseWaf),
+      value: cdktn.listMapperHcl(tfTransformerParseWafPropertyToHclTerraform, true)(struct!.parseWaf),
       isBlock: true,
       type: "list",
       storageClassType: "ParseWafPropertyList",
     },
     rename_keys: {
-      value: cdktn.listMapperHcl(awsCloudwatchLogTransformerRenameKeysPropertyToHclTerraform, true)(struct!.renameKeys),
+      value: cdktn.listMapperHcl(tfTransformerRenameKeysPropertyToHclTerraform, true)(struct!.renameKeys),
       isBlock: true,
       type: "list",
       storageClassType: "RenameKeysPropertyList",
     },
     split_string: {
-      value: cdktn.listMapperHcl(awsCloudwatchLogTransformerSplitStringPropertyToHclTerraform, true)(struct!.splitString),
+      value: cdktn.listMapperHcl(tfTransformerSplitStringPropertyToHclTerraform, true)(struct!.splitString),
       isBlock: true,
       type: "list",
       storageClassType: "SplitStringPropertyList",
     },
     substitute_string: {
-      value: cdktn.listMapperHcl(awsCloudwatchLogTransformerSubstituteStringPropertyToHclTerraform, true)(struct!.substituteString),
+      value: cdktn.listMapperHcl(tfTransformerSubstituteStringPropertyToHclTerraform, true)(struct!.substituteString),
       isBlock: true,
       type: "list",
       storageClassType: "SubstituteStringPropertyList",
     },
     trim_string: {
-      value: cdktn.listMapperHcl(awsCloudwatchLogTransformerTrimStringPropertyToHclTerraform, true)(struct!.trimString),
+      value: cdktn.listMapperHcl(tfTransformerTrimStringPropertyToHclTerraform, true)(struct!.trimString),
       isBlock: true,
       type: "list",
       storageClassType: "TrimStringPropertyList",
     },
     type_converter: {
-      value: cdktn.listMapperHcl(awsCloudwatchLogTransformerTypeConverterPropertyToHclTerraform, true)(struct!.typeConverter),
+      value: cdktn.listMapperHcl(tfTransformerTypeConverterPropertyToHclTerraform, true)(struct!.typeConverter),
       isBlock: true,
       type: "list",
       storageClassType: "TypeConverterPropertyList",
     },
     upper_case_string: {
-      value: cdktn.listMapperHcl(awsCloudwatchLogTransformerUpperCaseStringPropertyToHclTerraform, true)(struct!.upperCaseString),
+      value: cdktn.listMapperHcl(tfTransformerUpperCaseStringPropertyToHclTerraform, true)(struct!.upperCaseString),
       isBlock: true,
       type: "list",
       storageClassType: "UpperCaseStringPropertyList",
@@ -1504,18 +1504,18 @@ export function awsCloudwatchLogTransformerTransformerConfigPropertyToHclTerrafo
 }
 
 
-export namespace AwsCloudwatchLogTransformer {
+export namespace TfTransformer {
 export interface TransformerConfigAddKeysEntryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#key AwsCloudwatchLogTransformer#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#key TfTransformer#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#overwrite_if_exists AwsCloudwatchLogTransformer#overwrite_if_exists}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#overwrite_if_exists TfTransformer#overwrite_if_exists}
   */
   readonly overwriteIfExists?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#value AwsCloudwatchLogTransformer#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#value TfTransformer#value}
   */
   readonly value: string;
 }
@@ -1641,7 +1641,7 @@ export interface AddKeysProperty {
   /**
   * entry block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#entry AwsCloudwatchLogTransformer#entry}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#entry TfTransformer#entry}
   */
   readonly entry?: TransformerConfigAddKeysEntryProperty[] | cdktn.IResolvable;
 }
@@ -1727,15 +1727,15 @@ export class AddKeysPropertyList extends cdktn.ComplexList {
 }
 export interface TransformerConfigCopyValueEntryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#overwrite_if_exists AwsCloudwatchLogTransformer#overwrite_if_exists}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#overwrite_if_exists TfTransformer#overwrite_if_exists}
   */
   readonly overwriteIfExists?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source AwsCloudwatchLogTransformer#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source TfTransformer#source}
   */
   readonly source: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#target AwsCloudwatchLogTransformer#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#target TfTransformer#target}
   */
   readonly target: string;
 }
@@ -1861,7 +1861,7 @@ export interface CopyValueProperty {
   /**
   * entry block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#entry AwsCloudwatchLogTransformer#entry}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#entry TfTransformer#entry}
   */
   readonly entry?: TransformerConfigCopyValueEntryProperty[] | cdktn.IResolvable;
 }
@@ -1947,19 +1947,19 @@ export class CopyValuePropertyList extends cdktn.ComplexList {
 }
 export interface CsvProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#columns AwsCloudwatchLogTransformer#columns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#columns TfTransformer#columns}
   */
   readonly columns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#delimiter AwsCloudwatchLogTransformer#delimiter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#delimiter TfTransformer#delimiter}
   */
   readonly delimiter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#quote_character AwsCloudwatchLogTransformer#quote_character}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#quote_character TfTransformer#quote_character}
   */
   readonly quoteCharacter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source AwsCloudwatchLogTransformer#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source TfTransformer#source}
   */
   readonly source?: string;
 }
@@ -2111,31 +2111,31 @@ export class CsvPropertyList extends cdktn.ComplexList {
 }
 export interface DateTimeConverterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#locale AwsCloudwatchLogTransformer#locale}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#locale TfTransformer#locale}
   */
   readonly locale?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#match_patterns AwsCloudwatchLogTransformer#match_patterns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#match_patterns TfTransformer#match_patterns}
   */
   readonly matchPatterns: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source AwsCloudwatchLogTransformer#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source TfTransformer#source}
   */
   readonly source: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source_timezone AwsCloudwatchLogTransformer#source_timezone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source_timezone TfTransformer#source_timezone}
   */
   readonly sourceTimezone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#target AwsCloudwatchLogTransformer#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#target TfTransformer#target}
   */
   readonly target: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#target_format AwsCloudwatchLogTransformer#target_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#target_format TfTransformer#target_format}
   */
   readonly targetFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#target_timezone AwsCloudwatchLogTransformer#target_timezone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#target_timezone TfTransformer#target_timezone}
   */
   readonly targetTimezone?: string;
 }
@@ -2344,7 +2344,7 @@ export class DateTimeConverterPropertyList extends cdktn.ComplexList {
 }
 export interface DeleteKeysProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#with_keys AwsCloudwatchLogTransformer#with_keys}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#with_keys TfTransformer#with_keys}
   */
   readonly withKeys: string[];
 }
@@ -2427,11 +2427,11 @@ export class DeleteKeysPropertyList extends cdktn.ComplexList {
 }
 export interface GrokProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#match AwsCloudwatchLogTransformer#match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#match TfTransformer#match}
   */
   readonly match: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source AwsCloudwatchLogTransformer#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source TfTransformer#source}
   */
   readonly source?: string;
 }
@@ -2536,27 +2536,27 @@ export class GrokPropertyList extends cdktn.ComplexList {
 }
 export interface ListToMapProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#flatten AwsCloudwatchLogTransformer#flatten}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#flatten TfTransformer#flatten}
   */
   readonly flatten?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#flattened_element AwsCloudwatchLogTransformer#flattened_element}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#flattened_element TfTransformer#flattened_element}
   */
   readonly flattenedElement?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#key AwsCloudwatchLogTransformer#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#key TfTransformer#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source AwsCloudwatchLogTransformer#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source TfTransformer#source}
   */
   readonly source: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#target AwsCloudwatchLogTransformer#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#target TfTransformer#target}
   */
   readonly target?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#value_key AwsCloudwatchLogTransformer#value_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#value_key TfTransformer#value_key}
   */
   readonly valueKey?: string;
 }
@@ -2746,7 +2746,7 @@ export class ListToMapPropertyList extends cdktn.ComplexList {
 }
 export interface LowerCaseStringProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#with_keys AwsCloudwatchLogTransformer#with_keys}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#with_keys TfTransformer#with_keys}
   */
   readonly withKeys: string[];
 }
@@ -2829,15 +2829,15 @@ export class LowerCaseStringPropertyList extends cdktn.ComplexList {
 }
 export interface TransformerConfigMoveKeysEntryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#overwrite_if_exists AwsCloudwatchLogTransformer#overwrite_if_exists}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#overwrite_if_exists TfTransformer#overwrite_if_exists}
   */
   readonly overwriteIfExists?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source AwsCloudwatchLogTransformer#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source TfTransformer#source}
   */
   readonly source: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#target AwsCloudwatchLogTransformer#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#target TfTransformer#target}
   */
   readonly target: string;
 }
@@ -2963,7 +2963,7 @@ export interface MoveKeysProperty {
   /**
   * entry block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#entry AwsCloudwatchLogTransformer#entry}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#entry TfTransformer#entry}
   */
   readonly entry?: TransformerConfigMoveKeysEntryProperty[] | cdktn.IResolvable;
 }
@@ -3049,7 +3049,7 @@ export class MoveKeysPropertyList extends cdktn.ComplexList {
 }
 export interface ParseCloudfrontProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source AwsCloudwatchLogTransformer#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source TfTransformer#source}
   */
   readonly source?: string;
 }
@@ -3135,11 +3135,11 @@ export class ParseCloudfrontPropertyList extends cdktn.ComplexList {
 }
 export interface ParseJsonProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#destination AwsCloudwatchLogTransformer#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#destination TfTransformer#destination}
   */
   readonly destination?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source AwsCloudwatchLogTransformer#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source TfTransformer#source}
   */
   readonly source?: string;
 }
@@ -3247,31 +3247,31 @@ export class ParseJsonPropertyList extends cdktn.ComplexList {
 }
 export interface ParseKeyValueProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#destination AwsCloudwatchLogTransformer#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#destination TfTransformer#destination}
   */
   readonly destination?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#field_delimiter AwsCloudwatchLogTransformer#field_delimiter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#field_delimiter TfTransformer#field_delimiter}
   */
   readonly fieldDelimiter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#key_prefix AwsCloudwatchLogTransformer#key_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#key_prefix TfTransformer#key_prefix}
   */
   readonly keyPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#key_value_delimiter AwsCloudwatchLogTransformer#key_value_delimiter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#key_value_delimiter TfTransformer#key_value_delimiter}
   */
   readonly keyValueDelimiter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#non_match_value AwsCloudwatchLogTransformer#non_match_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#non_match_value TfTransformer#non_match_value}
   */
   readonly nonMatchValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#overwrite_if_exists AwsCloudwatchLogTransformer#overwrite_if_exists}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#overwrite_if_exists TfTransformer#overwrite_if_exists}
   */
   readonly overwriteIfExists?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source AwsCloudwatchLogTransformer#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source TfTransformer#source}
   */
   readonly source?: string;
 }
@@ -3489,7 +3489,7 @@ export class ParseKeyValuePropertyList extends cdktn.ComplexList {
 }
 export interface ParsePostgresProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source AwsCloudwatchLogTransformer#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source TfTransformer#source}
   */
   readonly source?: string;
 }
@@ -3575,7 +3575,7 @@ export class ParsePostgresPropertyList extends cdktn.ComplexList {
 }
 export interface ParseRoute53Property {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source AwsCloudwatchLogTransformer#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source TfTransformer#source}
   */
   readonly source?: string;
 }
@@ -3661,15 +3661,15 @@ export class ParseRoute53PropertyList extends cdktn.ComplexList {
 }
 export interface ParseToOcsfProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#event_source AwsCloudwatchLogTransformer#event_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#event_source TfTransformer#event_source}
   */
   readonly eventSource: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#ocsf_version AwsCloudwatchLogTransformer#ocsf_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#ocsf_version TfTransformer#ocsf_version}
   */
   readonly ocsfVersion: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source AwsCloudwatchLogTransformer#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source TfTransformer#source}
   */
   readonly source?: string;
 }
@@ -3793,7 +3793,7 @@ export class ParseToOcsfPropertyList extends cdktn.ComplexList {
 }
 export interface ParseVpcProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source AwsCloudwatchLogTransformer#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source TfTransformer#source}
   */
   readonly source?: string;
 }
@@ -3879,7 +3879,7 @@ export class ParseVpcPropertyList extends cdktn.ComplexList {
 }
 export interface ParseWafProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source AwsCloudwatchLogTransformer#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source TfTransformer#source}
   */
   readonly source?: string;
 }
@@ -3965,15 +3965,15 @@ export class ParseWafPropertyList extends cdktn.ComplexList {
 }
 export interface TransformerConfigRenameKeysEntryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#key AwsCloudwatchLogTransformer#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#key TfTransformer#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#overwrite_if_exists AwsCloudwatchLogTransformer#overwrite_if_exists}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#overwrite_if_exists TfTransformer#overwrite_if_exists}
   */
   readonly overwriteIfExists?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#rename_to AwsCloudwatchLogTransformer#rename_to}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#rename_to TfTransformer#rename_to}
   */
   readonly renameTo: string;
 }
@@ -4099,7 +4099,7 @@ export interface RenameKeysProperty {
   /**
   * entry block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#entry AwsCloudwatchLogTransformer#entry}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#entry TfTransformer#entry}
   */
   readonly entry?: TransformerConfigRenameKeysEntryProperty[] | cdktn.IResolvable;
 }
@@ -4185,11 +4185,11 @@ export class RenameKeysPropertyList extends cdktn.ComplexList {
 }
 export interface TransformerConfigSplitStringEntryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#delimiter AwsCloudwatchLogTransformer#delimiter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#delimiter TfTransformer#delimiter}
   */
   readonly delimiter: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source AwsCloudwatchLogTransformer#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source TfTransformer#source}
   */
   readonly source: string;
 }
@@ -4293,7 +4293,7 @@ export interface SplitStringProperty {
   /**
   * entry block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#entry AwsCloudwatchLogTransformer#entry}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#entry TfTransformer#entry}
   */
   readonly entry?: TransformerConfigSplitStringEntryProperty[] | cdktn.IResolvable;
 }
@@ -4379,15 +4379,15 @@ export class SplitStringPropertyList extends cdktn.ComplexList {
 }
 export interface TransformerConfigSubstituteStringEntryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#from AwsCloudwatchLogTransformer#from}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#from TfTransformer#from}
   */
   readonly from: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source AwsCloudwatchLogTransformer#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#source TfTransformer#source}
   */
   readonly source: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#to AwsCloudwatchLogTransformer#to}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#to TfTransformer#to}
   */
   readonly to: string;
 }
@@ -4510,7 +4510,7 @@ export interface SubstituteStringProperty {
   /**
   * entry block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#entry AwsCloudwatchLogTransformer#entry}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#entry TfTransformer#entry}
   */
   readonly entry?: TransformerConfigSubstituteStringEntryProperty[] | cdktn.IResolvable;
 }
@@ -4596,7 +4596,7 @@ export class SubstituteStringPropertyList extends cdktn.ComplexList {
 }
 export interface TrimStringProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#with_keys AwsCloudwatchLogTransformer#with_keys}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#with_keys TfTransformer#with_keys}
   */
   readonly withKeys: string[];
 }
@@ -4679,11 +4679,11 @@ export class TrimStringPropertyList extends cdktn.ComplexList {
 }
 export interface TransformerConfigTypeConverterEntryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#key AwsCloudwatchLogTransformer#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#key TfTransformer#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#type AwsCloudwatchLogTransformer#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#type TfTransformer#type}
   */
   readonly type: string;
 }
@@ -4787,7 +4787,7 @@ export interface TypeConverterProperty {
   /**
   * entry block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#entry AwsCloudwatchLogTransformer#entry}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#entry TfTransformer#entry}
   */
   readonly entry?: TransformerConfigTypeConverterEntryProperty[] | cdktn.IResolvable;
 }
@@ -4873,7 +4873,7 @@ export class TypeConverterPropertyList extends cdktn.ComplexList {
 }
 export interface UpperCaseStringProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#with_keys AwsCloudwatchLogTransformer#with_keys}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#with_keys TfTransformer#with_keys}
   */
   readonly withKeys: string[];
 }
@@ -4958,139 +4958,139 @@ export interface TransformerConfigProperty {
   /**
   * add_keys block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#add_keys AwsCloudwatchLogTransformer#add_keys}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#add_keys TfTransformer#add_keys}
   */
   readonly addKeys?: AddKeysProperty[] | cdktn.IResolvable;
   /**
   * copy_value block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#copy_value AwsCloudwatchLogTransformer#copy_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#copy_value TfTransformer#copy_value}
   */
   readonly copyValue?: CopyValueProperty[] | cdktn.IResolvable;
   /**
   * csv block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#csv AwsCloudwatchLogTransformer#csv}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#csv TfTransformer#csv}
   */
   readonly csv?: CsvProperty[] | cdktn.IResolvable;
   /**
   * date_time_converter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#date_time_converter AwsCloudwatchLogTransformer#date_time_converter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#date_time_converter TfTransformer#date_time_converter}
   */
   readonly dateTimeConverter?: DateTimeConverterProperty[] | cdktn.IResolvable;
   /**
   * delete_keys block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#delete_keys AwsCloudwatchLogTransformer#delete_keys}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#delete_keys TfTransformer#delete_keys}
   */
   readonly deleteKeys?: DeleteKeysProperty[] | cdktn.IResolvable;
   /**
   * grok block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#grok AwsCloudwatchLogTransformer#grok}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#grok TfTransformer#grok}
   */
   readonly grok?: GrokProperty[] | cdktn.IResolvable;
   /**
   * list_to_map block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#list_to_map AwsCloudwatchLogTransformer#list_to_map}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#list_to_map TfTransformer#list_to_map}
   */
   readonly listToMap?: ListToMapProperty[] | cdktn.IResolvable;
   /**
   * lower_case_string block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#lower_case_string AwsCloudwatchLogTransformer#lower_case_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#lower_case_string TfTransformer#lower_case_string}
   */
   readonly lowerCaseString?: LowerCaseStringProperty[] | cdktn.IResolvable;
   /**
   * move_keys block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#move_keys AwsCloudwatchLogTransformer#move_keys}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#move_keys TfTransformer#move_keys}
   */
   readonly moveKeys?: MoveKeysProperty[] | cdktn.IResolvable;
   /**
   * parse_cloudfront block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#parse_cloudfront AwsCloudwatchLogTransformer#parse_cloudfront}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#parse_cloudfront TfTransformer#parse_cloudfront}
   */
   readonly parseCloudfront?: ParseCloudfrontProperty[] | cdktn.IResolvable;
   /**
   * parse_json block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#parse_json AwsCloudwatchLogTransformer#parse_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#parse_json TfTransformer#parse_json}
   */
   readonly parseJson?: ParseJsonProperty[] | cdktn.IResolvable;
   /**
   * parse_key_value block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#parse_key_value AwsCloudwatchLogTransformer#parse_key_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#parse_key_value TfTransformer#parse_key_value}
   */
   readonly parseKeyValue?: ParseKeyValueProperty[] | cdktn.IResolvable;
   /**
   * parse_postgres block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#parse_postgres AwsCloudwatchLogTransformer#parse_postgres}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#parse_postgres TfTransformer#parse_postgres}
   */
   readonly parsePostgres?: ParsePostgresProperty[] | cdktn.IResolvable;
   /**
   * parse_route53 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#parse_route53 AwsCloudwatchLogTransformer#parse_route53}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#parse_route53 TfTransformer#parse_route53}
   */
   readonly parseRoute53?: ParseRoute53Property[] | cdktn.IResolvable;
   /**
   * parse_to_ocsf block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#parse_to_ocsf AwsCloudwatchLogTransformer#parse_to_ocsf}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#parse_to_ocsf TfTransformer#parse_to_ocsf}
   */
   readonly parseToOcsf?: ParseToOcsfProperty[] | cdktn.IResolvable;
   /**
   * parse_vpc block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#parse_vpc AwsCloudwatchLogTransformer#parse_vpc}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#parse_vpc TfTransformer#parse_vpc}
   */
   readonly parseVpc?: ParseVpcProperty[] | cdktn.IResolvable;
   /**
   * parse_waf block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#parse_waf AwsCloudwatchLogTransformer#parse_waf}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#parse_waf TfTransformer#parse_waf}
   */
   readonly parseWaf?: ParseWafProperty[] | cdktn.IResolvable;
   /**
   * rename_keys block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#rename_keys AwsCloudwatchLogTransformer#rename_keys}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#rename_keys TfTransformer#rename_keys}
   */
   readonly renameKeys?: RenameKeysProperty[] | cdktn.IResolvable;
   /**
   * split_string block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#split_string AwsCloudwatchLogTransformer#split_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#split_string TfTransformer#split_string}
   */
   readonly splitString?: SplitStringProperty[] | cdktn.IResolvable;
   /**
   * substitute_string block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#substitute_string AwsCloudwatchLogTransformer#substitute_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#substitute_string TfTransformer#substitute_string}
   */
   readonly substituteString?: SubstituteStringProperty[] | cdktn.IResolvable;
   /**
   * trim_string block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#trim_string AwsCloudwatchLogTransformer#trim_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#trim_string TfTransformer#trim_string}
   */
   readonly trimString?: TrimStringProperty[] | cdktn.IResolvable;
   /**
   * type_converter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#type_converter AwsCloudwatchLogTransformer#type_converter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#type_converter TfTransformer#type_converter}
   */
   readonly typeConverter?: TypeConverterProperty[] | cdktn.IResolvable;
   /**
   * upper_case_string block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#upper_case_string AwsCloudwatchLogTransformer#upper_case_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_log_transformer#upper_case_string TfTransformer#upper_case_string}
   */
   readonly upperCaseString?: UpperCaseStringProperty[] | cdktn.IResolvable;
 }

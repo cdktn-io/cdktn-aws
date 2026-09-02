@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsAcmpcaCertificateAuthorityConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataCertificateAuthorityConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acmpca_certificate_authority#arn DataAwsAcmpcaCertificateAuthority#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acmpca_certificate_authority#arn TfDataCertificateAuthority#arn}
   */
   readonly arn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acmpca_certificate_authority#id DataAwsAcmpcaCertificateAuthority#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acmpca_certificate_authority#id TfDataCertificateAuthority#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,11 +20,11 @@ export interface DataAwsAcmpcaCertificateAuthorityConfig extends cdktn.Terraform
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acmpca_certificate_authority#region DataAwsAcmpcaCertificateAuthority#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acmpca_certificate_authority#region TfDataCertificateAuthority#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acmpca_certificate_authority#tags DataAwsAcmpcaCertificateAuthority#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acmpca_certificate_authority#tags TfDataCertificateAuthority#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -32,7 +32,7 @@ export interface DataAwsAcmpcaCertificateAuthorityConfig extends cdktn.Terraform
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acmpca_certificate_authority aws_acmpca_certificate_authority}
 */
-export class DataAwsAcmpcaCertificateAuthority extends cdktn.TerraformDataSource {
+export class TfDataCertificateAuthority extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class DataAwsAcmpcaCertificateAuthority extends cdktn.TerraformDataSource
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsAcmpcaCertificateAuthority resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataCertificateAuthority resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsAcmpcaCertificateAuthority to import
-  * @param importFromId The id of the existing DataAwsAcmpcaCertificateAuthority that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acmpca_certificate_authority#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsAcmpcaCertificateAuthority to import is found
+  * @param importToId The construct id used in the generated config for the TfDataCertificateAuthority to import
+  * @param importFromId The id of the existing TfDataCertificateAuthority that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acmpca_certificate_authority#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataCertificateAuthority to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_acmpca_certificate_authority", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class DataAwsAcmpcaCertificateAuthority extends cdktn.TerraformDataSource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsAcmpcaCertificateAuthorityConfig
+  * @param options TfDataCertificateAuthorityConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsAcmpcaCertificateAuthorityConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataCertificateAuthorityConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_acmpca_certificate_authority',
       terraformGeneratorMetadata: {
@@ -166,7 +166,7 @@ export class DataAwsAcmpcaCertificateAuthority extends cdktn.TerraformDataSource
   }
 
   // revocation_configuration - computed: true, optional: false, required: false
-  private _revocationConfiguration = new DataAwsAcmpcaCertificateAuthority.RevocationConfigurationPropertyList(this, "revocation_configuration", false);
+  private _revocationConfiguration = new TfDataCertificateAuthority.RevocationConfigurationPropertyList(this, "revocation_configuration", false);
   public get revocationConfiguration() {
     return this._revocationConfiguration;
   }
@@ -253,7 +253,7 @@ export class DataAwsAcmpcaCertificateAuthority extends cdktn.TerraformDataSource
   }
 }
 
-export function dataAwsAcmpcaCertificateAuthorityCrlConfigurationPropertyToTerraform(struct?: DataAwsAcmpcaCertificateAuthority.CrlConfigurationProperty): any {
+export function tfDataCertificateAuthorityCrlConfigurationPropertyToTerraform(struct?: TfDataCertificateAuthority.CrlConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -263,7 +263,7 @@ export function dataAwsAcmpcaCertificateAuthorityCrlConfigurationPropertyToTerra
 }
 
 
-export function dataAwsAcmpcaCertificateAuthorityCrlConfigurationPropertyToHclTerraform(struct?: DataAwsAcmpcaCertificateAuthority.CrlConfigurationProperty): any {
+export function tfDataCertificateAuthorityCrlConfigurationPropertyToHclTerraform(struct?: TfDataCertificateAuthority.CrlConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -274,7 +274,7 @@ export function dataAwsAcmpcaCertificateAuthorityCrlConfigurationPropertyToHclTe
 }
 
 
-export function dataAwsAcmpcaCertificateAuthorityOcspConfigurationPropertyToTerraform(struct?: DataAwsAcmpcaCertificateAuthority.OcspConfigurationProperty): any {
+export function tfDataCertificateAuthorityOcspConfigurationPropertyToTerraform(struct?: TfDataCertificateAuthority.OcspConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -284,7 +284,7 @@ export function dataAwsAcmpcaCertificateAuthorityOcspConfigurationPropertyToTerr
 }
 
 
-export function dataAwsAcmpcaCertificateAuthorityOcspConfigurationPropertyToHclTerraform(struct?: DataAwsAcmpcaCertificateAuthority.OcspConfigurationProperty): any {
+export function tfDataCertificateAuthorityOcspConfigurationPropertyToHclTerraform(struct?: TfDataCertificateAuthority.OcspConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -295,7 +295,7 @@ export function dataAwsAcmpcaCertificateAuthorityOcspConfigurationPropertyToHclT
 }
 
 
-export function dataAwsAcmpcaCertificateAuthorityRevocationConfigurationPropertyToTerraform(struct?: DataAwsAcmpcaCertificateAuthority.RevocationConfigurationProperty): any {
+export function tfDataCertificateAuthorityRevocationConfigurationPropertyToTerraform(struct?: TfDataCertificateAuthority.RevocationConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -305,7 +305,7 @@ export function dataAwsAcmpcaCertificateAuthorityRevocationConfigurationProperty
 }
 
 
-export function dataAwsAcmpcaCertificateAuthorityRevocationConfigurationPropertyToHclTerraform(struct?: DataAwsAcmpcaCertificateAuthority.RevocationConfigurationProperty): any {
+export function tfDataCertificateAuthorityRevocationConfigurationPropertyToHclTerraform(struct?: TfDataCertificateAuthority.RevocationConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -316,7 +316,7 @@ export function dataAwsAcmpcaCertificateAuthorityRevocationConfigurationProperty
 }
 
 
-export namespace DataAwsAcmpcaCertificateAuthority {
+export namespace TfDataCertificateAuthority {
 export interface CrlConfigurationProperty {
 }
 export class CrlConfigurationPropertyOutputReference extends cdktn.ComplexObject {

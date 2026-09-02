@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDirectoryServiceLogSubscriptionConfig extends cdktn.TerraformMetaArguments {
+export interface TfLogSubscriptionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_log_subscription#directory_id AwsDirectoryServiceLogSubscription#directory_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_log_subscription#directory_id TfLogSubscription#directory_id}
   */
   readonly directoryId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_log_subscription#id AwsDirectoryServiceLogSubscription#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_log_subscription#id TfLogSubscription#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_log_subscription#log_group_name AwsDirectoryServiceLogSubscription#log_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_log_subscription#log_group_name TfLogSubscription#log_group_name}
   */
   readonly logGroupName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_log_subscription#region AwsDirectoryServiceLogSubscription#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_log_subscription#region TfLogSubscription#region}
   */
   readonly region?: string;
 }
@@ -32,7 +32,7 @@ export interface AwsDirectoryServiceLogSubscriptionConfig extends cdktn.Terrafor
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_log_subscription aws_directory_service_log_subscription}
 */
-export class AwsDirectoryServiceLogSubscription extends cdktn.TerraformResource {
+export class TfLogSubscription extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class AwsDirectoryServiceLogSubscription extends cdktn.TerraformResource 
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDirectoryServiceLogSubscription resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfLogSubscription resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDirectoryServiceLogSubscription to import
-  * @param importFromId The id of the existing AwsDirectoryServiceLogSubscription that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_log_subscription#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDirectoryServiceLogSubscription to import is found
+  * @param importToId The construct id used in the generated config for the TfLogSubscription to import
+  * @param importFromId The id of the existing TfLogSubscription that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_log_subscription#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfLogSubscription to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_directory_service_log_subscription", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class AwsDirectoryServiceLogSubscription extends cdktn.TerraformResource 
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDirectoryServiceLogSubscriptionConfig
+  * @param options TfLogSubscriptionConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDirectoryServiceLogSubscriptionConfig) {
+  public constructor(scope: Construct, id: string, config: TfLogSubscriptionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_directory_service_log_subscription',
       terraformGeneratorMetadata: {

@@ -5,47 +5,47 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCodeconnectionsHostConfig extends cdktn.TerraformMetaArguments {
+export interface TfHostConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeconnections_host#name AwsCodeconnectionsHost#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeconnections_host#name TfHost#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeconnections_host#provider_endpoint AwsCodeconnectionsHost#provider_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeconnections_host#provider_endpoint TfHost#provider_endpoint}
   */
   readonly providerEndpoint: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeconnections_host#provider_type AwsCodeconnectionsHost#provider_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeconnections_host#provider_type TfHost#provider_type}
   */
   readonly providerType: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeconnections_host#region AwsCodeconnectionsHost#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeconnections_host#region TfHost#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeconnections_host#tags AwsCodeconnectionsHost#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeconnections_host#tags TfHost#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeconnections_host#timeouts AwsCodeconnectionsHost#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeconnections_host#timeouts TfHost#timeouts}
   */
-  readonly timeouts?: AwsCodeconnectionsHost.TimeoutsProperty;
+  readonly timeouts?: TfHost.TimeoutsProperty;
   /**
   * vpc_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeconnections_host#vpc_configuration AwsCodeconnectionsHost#vpc_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeconnections_host#vpc_configuration TfHost#vpc_configuration}
   */
-  readonly vpcConfiguration?: AwsCodeconnectionsHost.VpcConfigurationProperty[] | cdktn.IResolvable;
+  readonly vpcConfiguration?: TfHost.VpcConfigurationProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeconnections_host aws_codeconnections_host}
 */
-export class AwsCodeconnectionsHost extends cdktn.TerraformResource {
+export class TfHost extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -56,11 +56,11 @@ export class AwsCodeconnectionsHost extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCodeconnectionsHost resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfHost resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCodeconnectionsHost to import
-  * @param importFromId The id of the existing AwsCodeconnectionsHost that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeconnections_host#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCodeconnectionsHost to import is found
+  * @param importToId The construct id used in the generated config for the TfHost to import
+  * @param importFromId The id of the existing TfHost that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeconnections_host#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfHost to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_codeconnections_host", importId: importFromId, provider });
@@ -75,9 +75,9 @@ export class AwsCodeconnectionsHost extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCodeconnectionsHostConfig
+  * @param options TfHostConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCodeconnectionsHostConfig) {
+  public constructor(scope: Construct, id: string, config: TfHostConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_codeconnections_host',
       terraformGeneratorMetadata: {
@@ -194,11 +194,11 @@ export class AwsCodeconnectionsHost extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsCodeconnectionsHost.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfHost.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsCodeconnectionsHost.TimeoutsProperty) {
+  public putTimeouts(value: TfHost.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -210,11 +210,11 @@ export class AwsCodeconnectionsHost extends cdktn.TerraformResource {
   }
 
   // vpc_configuration - computed: false, optional: true, required: false
-  private _vpcConfiguration = new AwsCodeconnectionsHost.VpcConfigurationPropertyList(this, "vpc_configuration", false);
+  private _vpcConfiguration = new TfHost.VpcConfigurationPropertyList(this, "vpc_configuration", false);
   public get vpcConfiguration() {
     return this._vpcConfiguration;
   }
-  public putVpcConfiguration(value: AwsCodeconnectionsHost.VpcConfigurationProperty[] | cdktn.IResolvable) {
+  public putVpcConfiguration(value: TfHost.VpcConfigurationProperty[] | cdktn.IResolvable) {
     this._vpcConfiguration.internalValue = value;
   }
   public resetVpcConfiguration() {
@@ -236,8 +236,8 @@ export class AwsCodeconnectionsHost extends cdktn.TerraformResource {
       provider_type: cdktn.stringToTerraform(this._providerType),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      timeouts: awsCodeconnectionsHostTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      vpc_configuration: cdktn.listMapper(awsCodeconnectionsHostVpcConfigurationPropertyToTerraform, true)(this._vpcConfiguration.internalValue),
+      timeouts: tfHostTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      vpc_configuration: cdktn.listMapper(tfHostVpcConfigurationPropertyToTerraform, true)(this._vpcConfiguration.internalValue),
     };
   }
 
@@ -274,16 +274,16 @@ export class AwsCodeconnectionsHost extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsCodeconnectionsHostTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfHostTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsCodeconnectionsHost.TimeoutsProperty",
+        storageClassType: "TfHost.TimeoutsProperty",
       },
       vpc_configuration: {
-        value: cdktn.listMapperHcl(awsCodeconnectionsHostVpcConfigurationPropertyToHclTerraform, true)(this._vpcConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfHostVpcConfigurationPropertyToHclTerraform, true)(this._vpcConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCodeconnectionsHost.VpcConfigurationPropertyList",
+        storageClassType: "TfHost.VpcConfigurationPropertyList",
       },
     };
 
@@ -292,7 +292,7 @@ export class AwsCodeconnectionsHost extends cdktn.TerraformResource {
   }
 }
 
-export function awsCodeconnectionsHostTimeoutsPropertyToTerraform(struct?: AwsCodeconnectionsHost.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfHostTimeoutsPropertyToTerraform(struct?: TfHost.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -305,7 +305,7 @@ export function awsCodeconnectionsHostTimeoutsPropertyToTerraform(struct?: AwsCo
 }
 
 
-export function awsCodeconnectionsHostTimeoutsPropertyToHclTerraform(struct?: AwsCodeconnectionsHost.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfHostTimeoutsPropertyToHclTerraform(struct?: TfHost.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -336,7 +336,7 @@ export function awsCodeconnectionsHostTimeoutsPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsCodeconnectionsHostVpcConfigurationPropertyToTerraform(struct?: AwsCodeconnectionsHost.VpcConfigurationProperty | cdktn.IResolvable): any {
+export function tfHostVpcConfigurationPropertyToTerraform(struct?: TfHost.VpcConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -350,7 +350,7 @@ export function awsCodeconnectionsHostVpcConfigurationPropertyToTerraform(struct
 }
 
 
-export function awsCodeconnectionsHostVpcConfigurationPropertyToHclTerraform(struct?: AwsCodeconnectionsHost.VpcConfigurationProperty | cdktn.IResolvable): any {
+export function tfHostVpcConfigurationPropertyToHclTerraform(struct?: TfHost.VpcConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -387,24 +387,24 @@ export function awsCodeconnectionsHostVpcConfigurationPropertyToHclTerraform(str
 }
 
 
-export namespace AwsCodeconnectionsHost {
+export namespace TfHost {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeconnections_host#create AwsCodeconnectionsHost#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeconnections_host#create TfHost#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeconnections_host#delete AwsCodeconnectionsHost#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeconnections_host#delete TfHost#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeconnections_host#update AwsCodeconnectionsHost#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeconnections_host#update TfHost#update}
   */
   readonly update?: string;
 }
@@ -512,19 +512,19 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VpcConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeconnections_host#security_group_ids AwsCodeconnectionsHost#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeconnections_host#security_group_ids TfHost#security_group_ids}
   */
   readonly securityGroupIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeconnections_host#subnet_ids AwsCodeconnectionsHost#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeconnections_host#subnet_ids TfHost#subnet_ids}
   */
   readonly subnetIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeconnections_host#tls_certificate AwsCodeconnectionsHost#tls_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeconnections_host#tls_certificate TfHost#tls_certificate}
   */
   readonly tlsCertificate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeconnections_host#vpc_id AwsCodeconnectionsHost#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeconnections_host#vpc_id TfHost#vpc_id}
   */
   readonly vpcId: string;
 }

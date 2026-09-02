@@ -5,44 +5,44 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsApprunnerObservabilityConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface TfObservabilityConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_observability_configuration#id AwsApprunnerObservabilityConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_observability_configuration#id TfObservabilityConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_observability_configuration#observability_configuration_name AwsApprunnerObservabilityConfiguration#observability_configuration_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_observability_configuration#observability_configuration_name TfObservabilityConfiguration#observability_configuration_name}
   */
   readonly observabilityConfigurationName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_observability_configuration#region AwsApprunnerObservabilityConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_observability_configuration#region TfObservabilityConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_observability_configuration#tags AwsApprunnerObservabilityConfiguration#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_observability_configuration#tags TfObservabilityConfiguration#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_observability_configuration#tags_all AwsApprunnerObservabilityConfiguration#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_observability_configuration#tags_all TfObservabilityConfiguration#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * trace_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_observability_configuration#trace_configuration AwsApprunnerObservabilityConfiguration#trace_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_observability_configuration#trace_configuration TfObservabilityConfiguration#trace_configuration}
   */
-  readonly traceConfiguration?: AwsApprunnerObservabilityConfiguration.TraceConfigurationProperty;
+  readonly traceConfiguration?: TfObservabilityConfiguration.TraceConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_observability_configuration aws_apprunner_observability_configuration}
 */
-export class AwsApprunnerObservabilityConfiguration extends cdktn.TerraformResource {
+export class TfObservabilityConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class AwsApprunnerObservabilityConfiguration extends cdktn.TerraformResou
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsApprunnerObservabilityConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfObservabilityConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsApprunnerObservabilityConfiguration to import
-  * @param importFromId The id of the existing AwsApprunnerObservabilityConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_observability_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsApprunnerObservabilityConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the TfObservabilityConfiguration to import
+  * @param importFromId The id of the existing TfObservabilityConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_observability_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfObservabilityConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_apprunner_observability_configuration", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class AwsApprunnerObservabilityConfiguration extends cdktn.TerraformResou
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsApprunnerObservabilityConfigurationConfig
+  * @param options TfObservabilityConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsApprunnerObservabilityConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: TfObservabilityConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_apprunner_observability_configuration',
       terraformGeneratorMetadata: {
@@ -200,11 +200,11 @@ export class AwsApprunnerObservabilityConfiguration extends cdktn.TerraformResou
   }
 
   // trace_configuration - computed: false, optional: true, required: false
-  private _traceConfiguration = new AwsApprunnerObservabilityConfiguration.TraceConfigurationPropertyOutputReference(this, "trace_configuration");
+  private _traceConfiguration = new TfObservabilityConfiguration.TraceConfigurationPropertyOutputReference(this, "trace_configuration");
   public get traceConfiguration() {
     return this._traceConfiguration;
   }
-  public putTraceConfiguration(value: AwsApprunnerObservabilityConfiguration.TraceConfigurationProperty) {
+  public putTraceConfiguration(value: TfObservabilityConfiguration.TraceConfigurationProperty) {
     this._traceConfiguration.internalValue = value;
   }
   public resetTraceConfiguration() {
@@ -226,7 +226,7 @@ export class AwsApprunnerObservabilityConfiguration extends cdktn.TerraformResou
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      trace_configuration: awsApprunnerObservabilityConfigurationTraceConfigurationPropertyToTerraform(this._traceConfiguration.internalValue),
+      trace_configuration: tfObservabilityConfigurationTraceConfigurationPropertyToTerraform(this._traceConfiguration.internalValue),
     };
   }
 
@@ -263,10 +263,10 @@ export class AwsApprunnerObservabilityConfiguration extends cdktn.TerraformResou
         storageClassType: "stringMap",
       },
       trace_configuration: {
-        value: awsApprunnerObservabilityConfigurationTraceConfigurationPropertyToHclTerraform(this._traceConfiguration.internalValue),
+        value: tfObservabilityConfigurationTraceConfigurationPropertyToHclTerraform(this._traceConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsApprunnerObservabilityConfiguration.TraceConfigurationPropertyList",
+        storageClassType: "TfObservabilityConfiguration.TraceConfigurationPropertyList",
       },
     };
 
@@ -275,7 +275,7 @@ export class AwsApprunnerObservabilityConfiguration extends cdktn.TerraformResou
   }
 }
 
-export function awsApprunnerObservabilityConfigurationTraceConfigurationPropertyToTerraform(struct?: AwsApprunnerObservabilityConfiguration.TraceConfigurationPropertyOutputReference | AwsApprunnerObservabilityConfiguration.TraceConfigurationProperty): any {
+export function tfObservabilityConfigurationTraceConfigurationPropertyToTerraform(struct?: TfObservabilityConfiguration.TraceConfigurationPropertyOutputReference | TfObservabilityConfiguration.TraceConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -286,7 +286,7 @@ export function awsApprunnerObservabilityConfigurationTraceConfigurationProperty
 }
 
 
-export function awsApprunnerObservabilityConfigurationTraceConfigurationPropertyToHclTerraform(struct?: AwsApprunnerObservabilityConfiguration.TraceConfigurationPropertyOutputReference | AwsApprunnerObservabilityConfiguration.TraceConfigurationProperty): any {
+export function tfObservabilityConfigurationTraceConfigurationPropertyToHclTerraform(struct?: TfObservabilityConfiguration.TraceConfigurationPropertyOutputReference | TfObservabilityConfiguration.TraceConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -305,10 +305,10 @@ export function awsApprunnerObservabilityConfigurationTraceConfigurationProperty
 }
 
 
-export namespace AwsApprunnerObservabilityConfiguration {
+export namespace TfObservabilityConfiguration {
 export interface TraceConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_observability_configuration#vendor AwsApprunnerObservabilityConfiguration#vendor}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_observability_configuration#vendor TfObservabilityConfiguration#vendor}
   */
   readonly vendor?: string;
 }

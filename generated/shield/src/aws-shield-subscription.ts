@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsShieldSubscriptionConfig extends cdktn.TerraformMetaArguments {
+export interface TfSubscriptionConfig extends cdktn.TerraformMetaArguments {
   /**
   * Whether to automatically renew the subscription when it expires.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_subscription#auto_renew AwsShieldSubscription#auto_renew}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_subscription#auto_renew TfSubscription#auto_renew}
   */
   readonly autoRenew?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_subscription#skip_destroy AwsShieldSubscription#skip_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_subscription#skip_destroy TfSubscription#skip_destroy}
   */
   readonly skipDestroy?: boolean | cdktn.IResolvable;
 }
@@ -21,7 +21,7 @@ export interface AwsShieldSubscriptionConfig extends cdktn.TerraformMetaArgument
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_subscription aws_shield_subscription}
 */
-export class AwsShieldSubscription extends cdktn.TerraformResource {
+export class TfSubscription extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class AwsShieldSubscription extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsShieldSubscription resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfSubscription resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsShieldSubscription to import
-  * @param importFromId The id of the existing AwsShieldSubscription that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_subscription#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsShieldSubscription to import is found
+  * @param importToId The construct id used in the generated config for the TfSubscription to import
+  * @param importFromId The id of the existing TfSubscription that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_subscription#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfSubscription to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_shield_subscription", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class AwsShieldSubscription extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsShieldSubscriptionConfig = {}
+  * @param options TfSubscriptionConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsShieldSubscriptionConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfSubscriptionConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_shield_subscription',
       terraformGeneratorMetadata: {

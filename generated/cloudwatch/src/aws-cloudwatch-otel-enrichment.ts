@@ -5,25 +5,25 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCloudwatchOtelEnrichmentConfig extends cdktn.TerraformMetaArguments {
+export interface TfOtelEnrichmentConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_otel_enrichment#region AwsCloudwatchOtelEnrichment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_otel_enrichment#region TfOtelEnrichment#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_otel_enrichment#timeouts AwsCloudwatchOtelEnrichment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_otel_enrichment#timeouts TfOtelEnrichment#timeouts}
   */
-  readonly timeouts?: AwsCloudwatchOtelEnrichment.TimeoutsProperty;
+  readonly timeouts?: TfOtelEnrichment.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_otel_enrichment aws_cloudwatch_otel_enrichment}
 */
-export class AwsCloudwatchOtelEnrichment extends cdktn.TerraformResource {
+export class TfOtelEnrichment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -34,11 +34,11 @@ export class AwsCloudwatchOtelEnrichment extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCloudwatchOtelEnrichment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfOtelEnrichment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCloudwatchOtelEnrichment to import
-  * @param importFromId The id of the existing AwsCloudwatchOtelEnrichment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_otel_enrichment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCloudwatchOtelEnrichment to import is found
+  * @param importToId The construct id used in the generated config for the TfOtelEnrichment to import
+  * @param importFromId The id of the existing TfOtelEnrichment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_otel_enrichment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfOtelEnrichment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudwatch_otel_enrichment", importId: importFromId, provider });
@@ -53,9 +53,9 @@ export class AwsCloudwatchOtelEnrichment extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCloudwatchOtelEnrichmentConfig = {}
+  * @param options TfOtelEnrichmentConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsCloudwatchOtelEnrichmentConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfOtelEnrichmentConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudwatch_otel_enrichment',
       terraformGeneratorMetadata: {
@@ -101,11 +101,11 @@ export class AwsCloudwatchOtelEnrichment extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsCloudwatchOtelEnrichment.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfOtelEnrichment.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsCloudwatchOtelEnrichment.TimeoutsProperty) {
+  public putTimeouts(value: TfOtelEnrichment.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -123,7 +123,7 @@ export class AwsCloudwatchOtelEnrichment extends cdktn.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       region: cdktn.stringToTerraform(this._region),
-      timeouts: awsCloudwatchOtelEnrichmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfOtelEnrichmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -136,10 +136,10 @@ export class AwsCloudwatchOtelEnrichment extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsCloudwatchOtelEnrichmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfOtelEnrichmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsCloudwatchOtelEnrichment.TimeoutsProperty",
+        storageClassType: "TfOtelEnrichment.TimeoutsProperty",
       },
     };
 
@@ -148,7 +148,7 @@ export class AwsCloudwatchOtelEnrichment extends cdktn.TerraformResource {
   }
 }
 
-export function awsCloudwatchOtelEnrichmentTimeoutsPropertyToTerraform(struct?: AwsCloudwatchOtelEnrichment.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfOtelEnrichmentTimeoutsPropertyToTerraform(struct?: TfOtelEnrichment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -160,7 +160,7 @@ export function awsCloudwatchOtelEnrichmentTimeoutsPropertyToTerraform(struct?: 
 }
 
 
-export function awsCloudwatchOtelEnrichmentTimeoutsPropertyToHclTerraform(struct?: AwsCloudwatchOtelEnrichment.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfOtelEnrichmentTimeoutsPropertyToHclTerraform(struct?: TfOtelEnrichment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -185,18 +185,18 @@ export function awsCloudwatchOtelEnrichmentTimeoutsPropertyToHclTerraform(struct
 }
 
 
-export namespace AwsCloudwatchOtelEnrichment {
+export namespace TfOtelEnrichment {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_otel_enrichment#create AwsCloudwatchOtelEnrichment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_otel_enrichment#create TfOtelEnrichment#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_otel_enrichment#delete AwsCloudwatchOtelEnrichment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_otel_enrichment#delete TfOtelEnrichment#delete}
   */
   readonly delete?: string;
 }

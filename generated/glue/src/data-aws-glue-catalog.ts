@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsGlueCatalogConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataCatalogConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog#name DataAwsGlueCatalog#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog#name TfDataCatalog#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog#region DataAwsGlueCatalog#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog#region TfDataCatalog#region}
   */
   readonly region?: string;
 }
@@ -21,7 +21,7 @@ export interface DataAwsGlueCatalogConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog aws_glue_catalog}
 */
-export class DataAwsGlueCatalog extends cdktn.TerraformDataSource {
+export class TfDataCatalog extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class DataAwsGlueCatalog extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsGlueCatalog resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataCatalog resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsGlueCatalog to import
-  * @param importFromId The id of the existing DataAwsGlueCatalog that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsGlueCatalog to import is found
+  * @param importToId The construct id used in the generated config for the TfDataCatalog to import
+  * @param importFromId The id of the existing TfDataCatalog that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataCatalog to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_glue_catalog", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class DataAwsGlueCatalog extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsGlueCatalogConfig
+  * @param options TfDataCatalogConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsGlueCatalogConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataCatalogConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_glue_catalog',
       terraformGeneratorMetadata: {
@@ -93,19 +93,19 @@ export class DataAwsGlueCatalog extends cdktn.TerraformDataSource {
   }
 
   // catalog_properties - computed: true, optional: false, required: false
-  private _catalogProperties = new DataAwsGlueCatalog.CatalogPropertiesPropertyList(this, "catalog_properties", false);
+  private _catalogProperties = new TfDataCatalog.CatalogPropertiesPropertyList(this, "catalog_properties", false);
   public get catalogProperties() {
     return this._catalogProperties;
   }
 
   // create_database_default_permissions - computed: true, optional: false, required: false
-  private _createDatabaseDefaultPermissions = new DataAwsGlueCatalog.CreateDatabaseDefaultPermissionsPropertyList(this, "create_database_default_permissions", false);
+  private _createDatabaseDefaultPermissions = new TfDataCatalog.CreateDatabaseDefaultPermissionsPropertyList(this, "create_database_default_permissions", false);
   public get createDatabaseDefaultPermissions() {
     return this._createDatabaseDefaultPermissions;
   }
 
   // create_table_default_permissions - computed: true, optional: false, required: false
-  private _createTableDefaultPermissions = new DataAwsGlueCatalog.CreateTableDefaultPermissionsPropertyList(this, "create_table_default_permissions", false);
+  private _createTableDefaultPermissions = new TfDataCatalog.CreateTableDefaultPermissionsPropertyList(this, "create_table_default_permissions", false);
   public get createTableDefaultPermissions() {
     return this._createTableDefaultPermissions;
   }
@@ -121,7 +121,7 @@ export class DataAwsGlueCatalog extends cdktn.TerraformDataSource {
   }
 
   // federated_catalog - computed: true, optional: false, required: false
-  private _federatedCatalog = new DataAwsGlueCatalog.FederatedCatalogPropertyList(this, "federated_catalog", false);
+  private _federatedCatalog = new TfDataCatalog.FederatedCatalogPropertyList(this, "federated_catalog", false);
   public get federatedCatalog() {
     return this._federatedCatalog;
   }
@@ -168,7 +168,7 @@ export class DataAwsGlueCatalog extends cdktn.TerraformDataSource {
   }
 
   // target_redshift_catalog - computed: true, optional: false, required: false
-  private _targetRedshiftCatalog = new DataAwsGlueCatalog.TargetRedshiftCatalogPropertyList(this, "target_redshift_catalog", false);
+  private _targetRedshiftCatalog = new TfDataCatalog.TargetRedshiftCatalogPropertyList(this, "target_redshift_catalog", false);
   public get targetRedshiftCatalog() {
     return this._targetRedshiftCatalog;
   }
@@ -210,7 +210,7 @@ export class DataAwsGlueCatalog extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsGlueCatalogDataLakeAccessPropertiesPropertyToTerraform(struct?: DataAwsGlueCatalog.DataLakeAccessPropertiesProperty): any {
+export function tfDataCatalogDataLakeAccessPropertiesPropertyToTerraform(struct?: TfDataCatalog.DataLakeAccessPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -220,7 +220,7 @@ export function dataAwsGlueCatalogDataLakeAccessPropertiesPropertyToTerraform(st
 }
 
 
-export function dataAwsGlueCatalogDataLakeAccessPropertiesPropertyToHclTerraform(struct?: DataAwsGlueCatalog.DataLakeAccessPropertiesProperty): any {
+export function tfDataCatalogDataLakeAccessPropertiesPropertyToHclTerraform(struct?: TfDataCatalog.DataLakeAccessPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -231,7 +231,7 @@ export function dataAwsGlueCatalogDataLakeAccessPropertiesPropertyToHclTerraform
 }
 
 
-export function dataAwsGlueCatalogIcebergOptimizationPropertiesPropertyToTerraform(struct?: DataAwsGlueCatalog.IcebergOptimizationPropertiesProperty): any {
+export function tfDataCatalogIcebergOptimizationPropertiesPropertyToTerraform(struct?: TfDataCatalog.IcebergOptimizationPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -241,7 +241,7 @@ export function dataAwsGlueCatalogIcebergOptimizationPropertiesPropertyToTerrafo
 }
 
 
-export function dataAwsGlueCatalogIcebergOptimizationPropertiesPropertyToHclTerraform(struct?: DataAwsGlueCatalog.IcebergOptimizationPropertiesProperty): any {
+export function tfDataCatalogIcebergOptimizationPropertiesPropertyToHclTerraform(struct?: TfDataCatalog.IcebergOptimizationPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -252,7 +252,7 @@ export function dataAwsGlueCatalogIcebergOptimizationPropertiesPropertyToHclTerr
 }
 
 
-export function dataAwsGlueCatalogCatalogPropertiesPropertyToTerraform(struct?: DataAwsGlueCatalog.CatalogPropertiesProperty): any {
+export function tfDataCatalogCatalogPropertiesPropertyToTerraform(struct?: TfDataCatalog.CatalogPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -262,7 +262,7 @@ export function dataAwsGlueCatalogCatalogPropertiesPropertyToTerraform(struct?: 
 }
 
 
-export function dataAwsGlueCatalogCatalogPropertiesPropertyToHclTerraform(struct?: DataAwsGlueCatalog.CatalogPropertiesProperty): any {
+export function tfDataCatalogCatalogPropertiesPropertyToHclTerraform(struct?: TfDataCatalog.CatalogPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -273,7 +273,7 @@ export function dataAwsGlueCatalogCatalogPropertiesPropertyToHclTerraform(struct
 }
 
 
-export function dataAwsGlueCatalogCreateDatabaseDefaultPermissionsPrincipalPropertyToTerraform(struct?: DataAwsGlueCatalog.CreateDatabaseDefaultPermissionsPrincipalProperty): any {
+export function tfDataCatalogCreateDatabaseDefaultPermissionsPrincipalPropertyToTerraform(struct?: TfDataCatalog.CreateDatabaseDefaultPermissionsPrincipalProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -283,7 +283,7 @@ export function dataAwsGlueCatalogCreateDatabaseDefaultPermissionsPrincipalPrope
 }
 
 
-export function dataAwsGlueCatalogCreateDatabaseDefaultPermissionsPrincipalPropertyToHclTerraform(struct?: DataAwsGlueCatalog.CreateDatabaseDefaultPermissionsPrincipalProperty): any {
+export function tfDataCatalogCreateDatabaseDefaultPermissionsPrincipalPropertyToHclTerraform(struct?: TfDataCatalog.CreateDatabaseDefaultPermissionsPrincipalProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -294,7 +294,7 @@ export function dataAwsGlueCatalogCreateDatabaseDefaultPermissionsPrincipalPrope
 }
 
 
-export function dataAwsGlueCatalogCreateDatabaseDefaultPermissionsPropertyToTerraform(struct?: DataAwsGlueCatalog.CreateDatabaseDefaultPermissionsProperty): any {
+export function tfDataCatalogCreateDatabaseDefaultPermissionsPropertyToTerraform(struct?: TfDataCatalog.CreateDatabaseDefaultPermissionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -304,7 +304,7 @@ export function dataAwsGlueCatalogCreateDatabaseDefaultPermissionsPropertyToTerr
 }
 
 
-export function dataAwsGlueCatalogCreateDatabaseDefaultPermissionsPropertyToHclTerraform(struct?: DataAwsGlueCatalog.CreateDatabaseDefaultPermissionsProperty): any {
+export function tfDataCatalogCreateDatabaseDefaultPermissionsPropertyToHclTerraform(struct?: TfDataCatalog.CreateDatabaseDefaultPermissionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -315,7 +315,7 @@ export function dataAwsGlueCatalogCreateDatabaseDefaultPermissionsPropertyToHclT
 }
 
 
-export function dataAwsGlueCatalogCreateTableDefaultPermissionsPrincipalPropertyToTerraform(struct?: DataAwsGlueCatalog.CreateTableDefaultPermissionsPrincipalProperty): any {
+export function tfDataCatalogCreateTableDefaultPermissionsPrincipalPropertyToTerraform(struct?: TfDataCatalog.CreateTableDefaultPermissionsPrincipalProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -325,7 +325,7 @@ export function dataAwsGlueCatalogCreateTableDefaultPermissionsPrincipalProperty
 }
 
 
-export function dataAwsGlueCatalogCreateTableDefaultPermissionsPrincipalPropertyToHclTerraform(struct?: DataAwsGlueCatalog.CreateTableDefaultPermissionsPrincipalProperty): any {
+export function tfDataCatalogCreateTableDefaultPermissionsPrincipalPropertyToHclTerraform(struct?: TfDataCatalog.CreateTableDefaultPermissionsPrincipalProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -336,7 +336,7 @@ export function dataAwsGlueCatalogCreateTableDefaultPermissionsPrincipalProperty
 }
 
 
-export function dataAwsGlueCatalogCreateTableDefaultPermissionsPropertyToTerraform(struct?: DataAwsGlueCatalog.CreateTableDefaultPermissionsProperty): any {
+export function tfDataCatalogCreateTableDefaultPermissionsPropertyToTerraform(struct?: TfDataCatalog.CreateTableDefaultPermissionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -346,7 +346,7 @@ export function dataAwsGlueCatalogCreateTableDefaultPermissionsPropertyToTerrafo
 }
 
 
-export function dataAwsGlueCatalogCreateTableDefaultPermissionsPropertyToHclTerraform(struct?: DataAwsGlueCatalog.CreateTableDefaultPermissionsProperty): any {
+export function tfDataCatalogCreateTableDefaultPermissionsPropertyToHclTerraform(struct?: TfDataCatalog.CreateTableDefaultPermissionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -357,7 +357,7 @@ export function dataAwsGlueCatalogCreateTableDefaultPermissionsPropertyToHclTerr
 }
 
 
-export function dataAwsGlueCatalogFederatedCatalogPropertyToTerraform(struct?: DataAwsGlueCatalog.FederatedCatalogProperty): any {
+export function tfDataCatalogFederatedCatalogPropertyToTerraform(struct?: TfDataCatalog.FederatedCatalogProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -367,7 +367,7 @@ export function dataAwsGlueCatalogFederatedCatalogPropertyToTerraform(struct?: D
 }
 
 
-export function dataAwsGlueCatalogFederatedCatalogPropertyToHclTerraform(struct?: DataAwsGlueCatalog.FederatedCatalogProperty): any {
+export function tfDataCatalogFederatedCatalogPropertyToHclTerraform(struct?: TfDataCatalog.FederatedCatalogProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -378,7 +378,7 @@ export function dataAwsGlueCatalogFederatedCatalogPropertyToHclTerraform(struct?
 }
 
 
-export function dataAwsGlueCatalogTargetRedshiftCatalogPropertyToTerraform(struct?: DataAwsGlueCatalog.TargetRedshiftCatalogProperty): any {
+export function tfDataCatalogTargetRedshiftCatalogPropertyToTerraform(struct?: TfDataCatalog.TargetRedshiftCatalogProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -388,7 +388,7 @@ export function dataAwsGlueCatalogTargetRedshiftCatalogPropertyToTerraform(struc
 }
 
 
-export function dataAwsGlueCatalogTargetRedshiftCatalogPropertyToHclTerraform(struct?: DataAwsGlueCatalog.TargetRedshiftCatalogProperty): any {
+export function tfDataCatalogTargetRedshiftCatalogPropertyToHclTerraform(struct?: TfDataCatalog.TargetRedshiftCatalogProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -399,7 +399,7 @@ export function dataAwsGlueCatalogTargetRedshiftCatalogPropertyToHclTerraform(st
 }
 
 
-export namespace DataAwsGlueCatalog {
+export namespace TfDataCatalog {
 export interface DataLakeAccessPropertiesProperty {
 }
 export class DataLakeAccessPropertiesPropertyOutputReference extends cdktn.ComplexObject {

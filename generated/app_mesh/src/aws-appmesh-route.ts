@@ -5,56 +5,56 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsAppmeshRouteConfig extends cdktn.TerraformMetaArguments {
+export interface TfRouteConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#id AwsAppmeshRoute#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#id TfRoute#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#mesh_name AwsAppmeshRoute#mesh_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#mesh_name TfRoute#mesh_name}
   */
   readonly meshName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#mesh_owner AwsAppmeshRoute#mesh_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#mesh_owner TfRoute#mesh_owner}
   */
   readonly meshOwner?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#name AwsAppmeshRoute#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#name TfRoute#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#region AwsAppmeshRoute#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#region TfRoute#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#tags AwsAppmeshRoute#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#tags TfRoute#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#tags_all AwsAppmeshRoute#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#tags_all TfRoute#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#virtual_router_name AwsAppmeshRoute#virtual_router_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#virtual_router_name TfRoute#virtual_router_name}
   */
   readonly virtualRouterName: string;
   /**
   * spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#spec AwsAppmeshRoute#spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#spec TfRoute#spec}
   */
-  readonly spec: AwsAppmeshRoute.SpecProperty;
+  readonly spec: TfRoute.SpecProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route aws_appmesh_route}
 */
-export class AwsAppmeshRoute extends cdktn.TerraformResource {
+export class TfRoute extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class AwsAppmeshRoute extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsAppmeshRoute resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfRoute resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsAppmeshRoute to import
-  * @param importFromId The id of the existing AwsAppmeshRoute that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsAppmeshRoute to import is found
+  * @param importToId The construct id used in the generated config for the TfRoute to import
+  * @param importFromId The id of the existing TfRoute that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfRoute to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appmesh_route", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class AwsAppmeshRoute extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsAppmeshRouteConfig
+  * @param options TfRouteConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsAppmeshRouteConfig) {
+  public constructor(scope: Construct, id: string, config: TfRouteConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appmesh_route',
       terraformGeneratorMetadata: {
@@ -257,11 +257,11 @@ export class AwsAppmeshRoute extends cdktn.TerraformResource {
   }
 
   // spec - computed: false, optional: false, required: true
-  private _spec = new AwsAppmeshRoute.SpecPropertyOutputReference(this, "spec");
+  private _spec = new TfRoute.SpecPropertyOutputReference(this, "spec");
   public get spec() {
     return this._spec;
   }
-  public putSpec(value: AwsAppmeshRoute.SpecProperty) {
+  public putSpec(value: TfRoute.SpecProperty) {
     this._spec.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -283,7 +283,7 @@ export class AwsAppmeshRoute extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       virtual_router_name: cdktn.stringToTerraform(this._virtualRouterName),
-      spec: awsAppmeshRouteSpecPropertyToTerraform(this._spec.internalValue),
+      spec: tfRouteSpecPropertyToTerraform(this._spec.internalValue),
     };
   }
 
@@ -338,10 +338,10 @@ export class AwsAppmeshRoute extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       spec: {
-        value: awsAppmeshRouteSpecPropertyToHclTerraform(this._spec.internalValue),
+        value: tfRouteSpecPropertyToHclTerraform(this._spec.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAppmeshRoute.SpecPropertyList",
+        storageClassType: "TfRoute.SpecPropertyList",
       },
     };
 
@@ -350,7 +350,7 @@ export class AwsAppmeshRoute extends cdktn.TerraformResource {
   }
 }
 
-export function awsAppmeshRouteSpecGrpcRouteActionWeightedTargetPropertyToTerraform(struct?: AwsAppmeshRoute.SpecGrpcRouteActionWeightedTargetProperty | cdktn.IResolvable): any {
+export function tfRouteSpecGrpcRouteActionWeightedTargetPropertyToTerraform(struct?: TfRoute.SpecGrpcRouteActionWeightedTargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -363,7 +363,7 @@ export function awsAppmeshRouteSpecGrpcRouteActionWeightedTargetPropertyToTerraf
 }
 
 
-export function awsAppmeshRouteSpecGrpcRouteActionWeightedTargetPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecGrpcRouteActionWeightedTargetProperty | cdktn.IResolvable): any {
+export function tfRouteSpecGrpcRouteActionWeightedTargetPropertyToHclTerraform(struct?: TfRoute.SpecGrpcRouteActionWeightedTargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -394,25 +394,25 @@ export function awsAppmeshRouteSpecGrpcRouteActionWeightedTargetPropertyToHclTer
 }
 
 
-export function awsAppmeshRouteSpecGrpcRouteActionPropertyToTerraform(struct?: AwsAppmeshRoute.SpecGrpcRouteActionPropertyOutputReference | AwsAppmeshRoute.SpecGrpcRouteActionProperty): any {
+export function tfRouteSpecGrpcRouteActionPropertyToTerraform(struct?: TfRoute.SpecGrpcRouteActionPropertyOutputReference | TfRoute.SpecGrpcRouteActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    weighted_target: cdktn.listMapper(awsAppmeshRouteSpecGrpcRouteActionWeightedTargetPropertyToTerraform, true)(struct!.weightedTarget),
+    weighted_target: cdktn.listMapper(tfRouteSpecGrpcRouteActionWeightedTargetPropertyToTerraform, true)(struct!.weightedTarget),
   }
 }
 
 
-export function awsAppmeshRouteSpecGrpcRouteActionPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecGrpcRouteActionPropertyOutputReference | AwsAppmeshRoute.SpecGrpcRouteActionProperty): any {
+export function tfRouteSpecGrpcRouteActionPropertyToHclTerraform(struct?: TfRoute.SpecGrpcRouteActionPropertyOutputReference | TfRoute.SpecGrpcRouteActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     weighted_target: {
-      value: cdktn.listMapperHcl(awsAppmeshRouteSpecGrpcRouteActionWeightedTargetPropertyToHclTerraform, true)(struct!.weightedTarget),
+      value: cdktn.listMapperHcl(tfRouteSpecGrpcRouteActionWeightedTargetPropertyToHclTerraform, true)(struct!.weightedTarget),
       isBlock: true,
       type: "set",
       storageClassType: "SpecGrpcRouteActionWeightedTargetPropertyList",
@@ -424,7 +424,7 @@ export function awsAppmeshRouteSpecGrpcRouteActionPropertyToHclTerraform(struct?
 }
 
 
-export function awsAppmeshRouteSpecGrpcRouteMatchMetadataMatchRangePropertyToTerraform(struct?: AwsAppmeshRoute.SpecGrpcRouteMatchMetadataMatchRangePropertyOutputReference | AwsAppmeshRoute.SpecGrpcRouteMatchMetadataMatchRangeProperty): any {
+export function tfRouteSpecGrpcRouteMatchMetadataMatchRangePropertyToTerraform(struct?: TfRoute.SpecGrpcRouteMatchMetadataMatchRangePropertyOutputReference | TfRoute.SpecGrpcRouteMatchMetadataMatchRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -436,7 +436,7 @@ export function awsAppmeshRouteSpecGrpcRouteMatchMetadataMatchRangePropertyToTer
 }
 
 
-export function awsAppmeshRouteSpecGrpcRouteMatchMetadataMatchRangePropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecGrpcRouteMatchMetadataMatchRangePropertyOutputReference | AwsAppmeshRoute.SpecGrpcRouteMatchMetadataMatchRangeProperty): any {
+export function tfRouteSpecGrpcRouteMatchMetadataMatchRangePropertyToHclTerraform(struct?: TfRoute.SpecGrpcRouteMatchMetadataMatchRangePropertyOutputReference | TfRoute.SpecGrpcRouteMatchMetadataMatchRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -461,7 +461,7 @@ export function awsAppmeshRouteSpecGrpcRouteMatchMetadataMatchRangePropertyToHcl
 }
 
 
-export function awsAppmeshRouteSpecGrpcRouteMatchMetadataMatchPropertyToTerraform(struct?: AwsAppmeshRoute.SpecGrpcRouteMatchMetadataMatchPropertyOutputReference | AwsAppmeshRoute.SpecGrpcRouteMatchMetadataMatchProperty): any {
+export function tfRouteSpecGrpcRouteMatchMetadataMatchPropertyToTerraform(struct?: TfRoute.SpecGrpcRouteMatchMetadataMatchPropertyOutputReference | TfRoute.SpecGrpcRouteMatchMetadataMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -471,12 +471,12 @@ export function awsAppmeshRouteSpecGrpcRouteMatchMetadataMatchPropertyToTerrafor
     prefix: cdktn.stringToTerraform(struct!.prefix),
     regex: cdktn.stringToTerraform(struct!.regex),
     suffix: cdktn.stringToTerraform(struct!.suffix),
-    range: awsAppmeshRouteSpecGrpcRouteMatchMetadataMatchRangePropertyToTerraform(struct!.range),
+    range: tfRouteSpecGrpcRouteMatchMetadataMatchRangePropertyToTerraform(struct!.range),
   }
 }
 
 
-export function awsAppmeshRouteSpecGrpcRouteMatchMetadataMatchPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecGrpcRouteMatchMetadataMatchPropertyOutputReference | AwsAppmeshRoute.SpecGrpcRouteMatchMetadataMatchProperty): any {
+export function tfRouteSpecGrpcRouteMatchMetadataMatchPropertyToHclTerraform(struct?: TfRoute.SpecGrpcRouteMatchMetadataMatchPropertyOutputReference | TfRoute.SpecGrpcRouteMatchMetadataMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -507,7 +507,7 @@ export function awsAppmeshRouteSpecGrpcRouteMatchMetadataMatchPropertyToHclTerra
       storageClassType: "string",
     },
     range: {
-      value: awsAppmeshRouteSpecGrpcRouteMatchMetadataMatchRangePropertyToHclTerraform(struct!.range),
+      value: tfRouteSpecGrpcRouteMatchMetadataMatchRangePropertyToHclTerraform(struct!.range),
       isBlock: true,
       type: "list",
       storageClassType: "SpecGrpcRouteMatchMetadataMatchRangePropertyList",
@@ -519,7 +519,7 @@ export function awsAppmeshRouteSpecGrpcRouteMatchMetadataMatchPropertyToHclTerra
 }
 
 
-export function awsAppmeshRouteMetadataPropertyToTerraform(struct?: AwsAppmeshRoute.MetadataProperty | cdktn.IResolvable): any {
+export function tfRouteMetadataPropertyToTerraform(struct?: TfRoute.MetadataProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -527,12 +527,12 @@ export function awsAppmeshRouteMetadataPropertyToTerraform(struct?: AwsAppmeshRo
   return {
     invert: cdktn.booleanToTerraform(struct!.invert),
     name: cdktn.stringToTerraform(struct!.name),
-    match: awsAppmeshRouteSpecGrpcRouteMatchMetadataMatchPropertyToTerraform(struct!.match),
+    match: tfRouteSpecGrpcRouteMatchMetadataMatchPropertyToTerraform(struct!.match),
   }
 }
 
 
-export function awsAppmeshRouteMetadataPropertyToHclTerraform(struct?: AwsAppmeshRoute.MetadataProperty | cdktn.IResolvable): any {
+export function tfRouteMetadataPropertyToHclTerraform(struct?: TfRoute.MetadataProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -551,7 +551,7 @@ export function awsAppmeshRouteMetadataPropertyToHclTerraform(struct?: AwsAppmes
       storageClassType: "string",
     },
     match: {
-      value: awsAppmeshRouteSpecGrpcRouteMatchMetadataMatchPropertyToHclTerraform(struct!.match),
+      value: tfRouteSpecGrpcRouteMatchMetadataMatchPropertyToHclTerraform(struct!.match),
       isBlock: true,
       type: "list",
       storageClassType: "SpecGrpcRouteMatchMetadataMatchPropertyList",
@@ -563,7 +563,7 @@ export function awsAppmeshRouteMetadataPropertyToHclTerraform(struct?: AwsAppmes
 }
 
 
-export function awsAppmeshRouteSpecGrpcRouteMatchPropertyToTerraform(struct?: AwsAppmeshRoute.SpecGrpcRouteMatchPropertyOutputReference | AwsAppmeshRoute.SpecGrpcRouteMatchProperty): any {
+export function tfRouteSpecGrpcRouteMatchPropertyToTerraform(struct?: TfRoute.SpecGrpcRouteMatchPropertyOutputReference | TfRoute.SpecGrpcRouteMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -573,12 +573,12 @@ export function awsAppmeshRouteSpecGrpcRouteMatchPropertyToTerraform(struct?: Aw
     port: cdktn.numberToTerraform(struct!.port),
     prefix: cdktn.stringToTerraform(struct!.prefix),
     service_name: cdktn.stringToTerraform(struct!.serviceName),
-    metadata: cdktn.listMapper(awsAppmeshRouteMetadataPropertyToTerraform, true)(struct!.metadata),
+    metadata: cdktn.listMapper(tfRouteMetadataPropertyToTerraform, true)(struct!.metadata),
   }
 }
 
 
-export function awsAppmeshRouteSpecGrpcRouteMatchPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecGrpcRouteMatchPropertyOutputReference | AwsAppmeshRoute.SpecGrpcRouteMatchProperty): any {
+export function tfRouteSpecGrpcRouteMatchPropertyToHclTerraform(struct?: TfRoute.SpecGrpcRouteMatchPropertyOutputReference | TfRoute.SpecGrpcRouteMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -609,7 +609,7 @@ export function awsAppmeshRouteSpecGrpcRouteMatchPropertyToHclTerraform(struct?:
       storageClassType: "string",
     },
     metadata: {
-      value: cdktn.listMapperHcl(awsAppmeshRouteMetadataPropertyToHclTerraform, true)(struct!.metadata),
+      value: cdktn.listMapperHcl(tfRouteMetadataPropertyToHclTerraform, true)(struct!.metadata),
       isBlock: true,
       type: "set",
       storageClassType: "MetadataPropertyList",
@@ -621,7 +621,7 @@ export function awsAppmeshRouteSpecGrpcRouteMatchPropertyToHclTerraform(struct?:
 }
 
 
-export function awsAppmeshRouteSpecGrpcRouteRetryPolicyPerRetryTimeoutPropertyToTerraform(struct?: AwsAppmeshRoute.SpecGrpcRouteRetryPolicyPerRetryTimeoutPropertyOutputReference | AwsAppmeshRoute.SpecGrpcRouteRetryPolicyPerRetryTimeoutProperty): any {
+export function tfRouteSpecGrpcRouteRetryPolicyPerRetryTimeoutPropertyToTerraform(struct?: TfRoute.SpecGrpcRouteRetryPolicyPerRetryTimeoutPropertyOutputReference | TfRoute.SpecGrpcRouteRetryPolicyPerRetryTimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -633,7 +633,7 @@ export function awsAppmeshRouteSpecGrpcRouteRetryPolicyPerRetryTimeoutPropertyTo
 }
 
 
-export function awsAppmeshRouteSpecGrpcRouteRetryPolicyPerRetryTimeoutPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecGrpcRouteRetryPolicyPerRetryTimeoutPropertyOutputReference | AwsAppmeshRoute.SpecGrpcRouteRetryPolicyPerRetryTimeoutProperty): any {
+export function tfRouteSpecGrpcRouteRetryPolicyPerRetryTimeoutPropertyToHclTerraform(struct?: TfRoute.SpecGrpcRouteRetryPolicyPerRetryTimeoutPropertyOutputReference | TfRoute.SpecGrpcRouteRetryPolicyPerRetryTimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -658,7 +658,7 @@ export function awsAppmeshRouteSpecGrpcRouteRetryPolicyPerRetryTimeoutPropertyTo
 }
 
 
-export function awsAppmeshRouteSpecGrpcRouteRetryPolicyPropertyToTerraform(struct?: AwsAppmeshRoute.SpecGrpcRouteRetryPolicyPropertyOutputReference | AwsAppmeshRoute.SpecGrpcRouteRetryPolicyProperty): any {
+export function tfRouteSpecGrpcRouteRetryPolicyPropertyToTerraform(struct?: TfRoute.SpecGrpcRouteRetryPolicyPropertyOutputReference | TfRoute.SpecGrpcRouteRetryPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -668,12 +668,12 @@ export function awsAppmeshRouteSpecGrpcRouteRetryPolicyPropertyToTerraform(struc
     http_retry_events: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.httpRetryEvents),
     max_retries: cdktn.numberToTerraform(struct!.maxRetries),
     tcp_retry_events: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.tcpRetryEvents),
-    per_retry_timeout: awsAppmeshRouteSpecGrpcRouteRetryPolicyPerRetryTimeoutPropertyToTerraform(struct!.perRetryTimeout),
+    per_retry_timeout: tfRouteSpecGrpcRouteRetryPolicyPerRetryTimeoutPropertyToTerraform(struct!.perRetryTimeout),
   }
 }
 
 
-export function awsAppmeshRouteSpecGrpcRouteRetryPolicyPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecGrpcRouteRetryPolicyPropertyOutputReference | AwsAppmeshRoute.SpecGrpcRouteRetryPolicyProperty): any {
+export function tfRouteSpecGrpcRouteRetryPolicyPropertyToHclTerraform(struct?: TfRoute.SpecGrpcRouteRetryPolicyPropertyOutputReference | TfRoute.SpecGrpcRouteRetryPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -704,7 +704,7 @@ export function awsAppmeshRouteSpecGrpcRouteRetryPolicyPropertyToHclTerraform(st
       storageClassType: "stringList",
     },
     per_retry_timeout: {
-      value: awsAppmeshRouteSpecGrpcRouteRetryPolicyPerRetryTimeoutPropertyToHclTerraform(struct!.perRetryTimeout),
+      value: tfRouteSpecGrpcRouteRetryPolicyPerRetryTimeoutPropertyToHclTerraform(struct!.perRetryTimeout),
       isBlock: true,
       type: "list",
       storageClassType: "SpecGrpcRouteRetryPolicyPerRetryTimeoutPropertyList",
@@ -716,7 +716,7 @@ export function awsAppmeshRouteSpecGrpcRouteRetryPolicyPropertyToHclTerraform(st
 }
 
 
-export function awsAppmeshRouteSpecGrpcRouteTimeoutIdlePropertyToTerraform(struct?: AwsAppmeshRoute.SpecGrpcRouteTimeoutIdlePropertyOutputReference | AwsAppmeshRoute.SpecGrpcRouteTimeoutIdleProperty): any {
+export function tfRouteSpecGrpcRouteTimeoutIdlePropertyToTerraform(struct?: TfRoute.SpecGrpcRouteTimeoutIdlePropertyOutputReference | TfRoute.SpecGrpcRouteTimeoutIdleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -728,7 +728,7 @@ export function awsAppmeshRouteSpecGrpcRouteTimeoutIdlePropertyToTerraform(struc
 }
 
 
-export function awsAppmeshRouteSpecGrpcRouteTimeoutIdlePropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecGrpcRouteTimeoutIdlePropertyOutputReference | AwsAppmeshRoute.SpecGrpcRouteTimeoutIdleProperty): any {
+export function tfRouteSpecGrpcRouteTimeoutIdlePropertyToHclTerraform(struct?: TfRoute.SpecGrpcRouteTimeoutIdlePropertyOutputReference | TfRoute.SpecGrpcRouteTimeoutIdleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -753,7 +753,7 @@ export function awsAppmeshRouteSpecGrpcRouteTimeoutIdlePropertyToHclTerraform(st
 }
 
 
-export function awsAppmeshRouteSpecGrpcRouteTimeoutPerRequestPropertyToTerraform(struct?: AwsAppmeshRoute.SpecGrpcRouteTimeoutPerRequestPropertyOutputReference | AwsAppmeshRoute.SpecGrpcRouteTimeoutPerRequestProperty): any {
+export function tfRouteSpecGrpcRouteTimeoutPerRequestPropertyToTerraform(struct?: TfRoute.SpecGrpcRouteTimeoutPerRequestPropertyOutputReference | TfRoute.SpecGrpcRouteTimeoutPerRequestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -765,7 +765,7 @@ export function awsAppmeshRouteSpecGrpcRouteTimeoutPerRequestPropertyToTerraform
 }
 
 
-export function awsAppmeshRouteSpecGrpcRouteTimeoutPerRequestPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecGrpcRouteTimeoutPerRequestPropertyOutputReference | AwsAppmeshRoute.SpecGrpcRouteTimeoutPerRequestProperty): any {
+export function tfRouteSpecGrpcRouteTimeoutPerRequestPropertyToHclTerraform(struct?: TfRoute.SpecGrpcRouteTimeoutPerRequestPropertyOutputReference | TfRoute.SpecGrpcRouteTimeoutPerRequestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -790,32 +790,32 @@ export function awsAppmeshRouteSpecGrpcRouteTimeoutPerRequestPropertyToHclTerraf
 }
 
 
-export function awsAppmeshRouteSpecGrpcRouteTimeoutPropertyToTerraform(struct?: AwsAppmeshRoute.SpecGrpcRouteTimeoutPropertyOutputReference | AwsAppmeshRoute.SpecGrpcRouteTimeoutProperty): any {
+export function tfRouteSpecGrpcRouteTimeoutPropertyToTerraform(struct?: TfRoute.SpecGrpcRouteTimeoutPropertyOutputReference | TfRoute.SpecGrpcRouteTimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    idle: awsAppmeshRouteSpecGrpcRouteTimeoutIdlePropertyToTerraform(struct!.idle),
-    per_request: awsAppmeshRouteSpecGrpcRouteTimeoutPerRequestPropertyToTerraform(struct!.perRequest),
+    idle: tfRouteSpecGrpcRouteTimeoutIdlePropertyToTerraform(struct!.idle),
+    per_request: tfRouteSpecGrpcRouteTimeoutPerRequestPropertyToTerraform(struct!.perRequest),
   }
 }
 
 
-export function awsAppmeshRouteSpecGrpcRouteTimeoutPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecGrpcRouteTimeoutPropertyOutputReference | AwsAppmeshRoute.SpecGrpcRouteTimeoutProperty): any {
+export function tfRouteSpecGrpcRouteTimeoutPropertyToHclTerraform(struct?: TfRoute.SpecGrpcRouteTimeoutPropertyOutputReference | TfRoute.SpecGrpcRouteTimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     idle: {
-      value: awsAppmeshRouteSpecGrpcRouteTimeoutIdlePropertyToHclTerraform(struct!.idle),
+      value: tfRouteSpecGrpcRouteTimeoutIdlePropertyToHclTerraform(struct!.idle),
       isBlock: true,
       type: "list",
       storageClassType: "SpecGrpcRouteTimeoutIdlePropertyList",
     },
     per_request: {
-      value: awsAppmeshRouteSpecGrpcRouteTimeoutPerRequestPropertyToHclTerraform(struct!.perRequest),
+      value: tfRouteSpecGrpcRouteTimeoutPerRequestPropertyToHclTerraform(struct!.perRequest),
       isBlock: true,
       type: "list",
       storageClassType: "SpecGrpcRouteTimeoutPerRequestPropertyList",
@@ -827,46 +827,46 @@ export function awsAppmeshRouteSpecGrpcRouteTimeoutPropertyToHclTerraform(struct
 }
 
 
-export function awsAppmeshRouteGrpcRoutePropertyToTerraform(struct?: AwsAppmeshRoute.GrpcRoutePropertyOutputReference | AwsAppmeshRoute.GrpcRouteProperty): any {
+export function tfRouteGrpcRoutePropertyToTerraform(struct?: TfRoute.GrpcRoutePropertyOutputReference | TfRoute.GrpcRouteProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    action: awsAppmeshRouteSpecGrpcRouteActionPropertyToTerraform(struct!.action),
-    match: awsAppmeshRouteSpecGrpcRouteMatchPropertyToTerraform(struct!.match),
-    retry_policy: awsAppmeshRouteSpecGrpcRouteRetryPolicyPropertyToTerraform(struct!.retryPolicy),
-    timeout: awsAppmeshRouteSpecGrpcRouteTimeoutPropertyToTerraform(struct!.timeout),
+    action: tfRouteSpecGrpcRouteActionPropertyToTerraform(struct!.action),
+    match: tfRouteSpecGrpcRouteMatchPropertyToTerraform(struct!.match),
+    retry_policy: tfRouteSpecGrpcRouteRetryPolicyPropertyToTerraform(struct!.retryPolicy),
+    timeout: tfRouteSpecGrpcRouteTimeoutPropertyToTerraform(struct!.timeout),
   }
 }
 
 
-export function awsAppmeshRouteGrpcRoutePropertyToHclTerraform(struct?: AwsAppmeshRoute.GrpcRoutePropertyOutputReference | AwsAppmeshRoute.GrpcRouteProperty): any {
+export function tfRouteGrpcRoutePropertyToHclTerraform(struct?: TfRoute.GrpcRoutePropertyOutputReference | TfRoute.GrpcRouteProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     action: {
-      value: awsAppmeshRouteSpecGrpcRouteActionPropertyToHclTerraform(struct!.action),
+      value: tfRouteSpecGrpcRouteActionPropertyToHclTerraform(struct!.action),
       isBlock: true,
       type: "list",
       storageClassType: "SpecGrpcRouteActionPropertyList",
     },
     match: {
-      value: awsAppmeshRouteSpecGrpcRouteMatchPropertyToHclTerraform(struct!.match),
+      value: tfRouteSpecGrpcRouteMatchPropertyToHclTerraform(struct!.match),
       isBlock: true,
       type: "list",
       storageClassType: "SpecGrpcRouteMatchPropertyList",
     },
     retry_policy: {
-      value: awsAppmeshRouteSpecGrpcRouteRetryPolicyPropertyToHclTerraform(struct!.retryPolicy),
+      value: tfRouteSpecGrpcRouteRetryPolicyPropertyToHclTerraform(struct!.retryPolicy),
       isBlock: true,
       type: "list",
       storageClassType: "SpecGrpcRouteRetryPolicyPropertyList",
     },
     timeout: {
-      value: awsAppmeshRouteSpecGrpcRouteTimeoutPropertyToHclTerraform(struct!.timeout),
+      value: tfRouteSpecGrpcRouteTimeoutPropertyToHclTerraform(struct!.timeout),
       isBlock: true,
       type: "list",
       storageClassType: "SpecGrpcRouteTimeoutPropertyList",
@@ -878,7 +878,7 @@ export function awsAppmeshRouteGrpcRoutePropertyToHclTerraform(struct?: AwsAppme
 }
 
 
-export function awsAppmeshRouteSpecHttp2RouteActionWeightedTargetPropertyToTerraform(struct?: AwsAppmeshRoute.SpecHttp2RouteActionWeightedTargetProperty | cdktn.IResolvable): any {
+export function tfRouteSpecHttp2RouteActionWeightedTargetPropertyToTerraform(struct?: TfRoute.SpecHttp2RouteActionWeightedTargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -891,7 +891,7 @@ export function awsAppmeshRouteSpecHttp2RouteActionWeightedTargetPropertyToTerra
 }
 
 
-export function awsAppmeshRouteSpecHttp2RouteActionWeightedTargetPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecHttp2RouteActionWeightedTargetProperty | cdktn.IResolvable): any {
+export function tfRouteSpecHttp2RouteActionWeightedTargetPropertyToHclTerraform(struct?: TfRoute.SpecHttp2RouteActionWeightedTargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -922,25 +922,25 @@ export function awsAppmeshRouteSpecHttp2RouteActionWeightedTargetPropertyToHclTe
 }
 
 
-export function awsAppmeshRouteSpecHttp2RouteActionPropertyToTerraform(struct?: AwsAppmeshRoute.SpecHttp2RouteActionPropertyOutputReference | AwsAppmeshRoute.SpecHttp2RouteActionProperty): any {
+export function tfRouteSpecHttp2RouteActionPropertyToTerraform(struct?: TfRoute.SpecHttp2RouteActionPropertyOutputReference | TfRoute.SpecHttp2RouteActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    weighted_target: cdktn.listMapper(awsAppmeshRouteSpecHttp2RouteActionWeightedTargetPropertyToTerraform, true)(struct!.weightedTarget),
+    weighted_target: cdktn.listMapper(tfRouteSpecHttp2RouteActionWeightedTargetPropertyToTerraform, true)(struct!.weightedTarget),
   }
 }
 
 
-export function awsAppmeshRouteSpecHttp2RouteActionPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecHttp2RouteActionPropertyOutputReference | AwsAppmeshRoute.SpecHttp2RouteActionProperty): any {
+export function tfRouteSpecHttp2RouteActionPropertyToHclTerraform(struct?: TfRoute.SpecHttp2RouteActionPropertyOutputReference | TfRoute.SpecHttp2RouteActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     weighted_target: {
-      value: cdktn.listMapperHcl(awsAppmeshRouteSpecHttp2RouteActionWeightedTargetPropertyToHclTerraform, true)(struct!.weightedTarget),
+      value: cdktn.listMapperHcl(tfRouteSpecHttp2RouteActionWeightedTargetPropertyToHclTerraform, true)(struct!.weightedTarget),
       isBlock: true,
       type: "set",
       storageClassType: "SpecHttp2RouteActionWeightedTargetPropertyList",
@@ -952,7 +952,7 @@ export function awsAppmeshRouteSpecHttp2RouteActionPropertyToHclTerraform(struct
 }
 
 
-export function awsAppmeshRouteSpecHttp2RouteMatchHeaderMatchRangePropertyToTerraform(struct?: AwsAppmeshRoute.SpecHttp2RouteMatchHeaderMatchRangePropertyOutputReference | AwsAppmeshRoute.SpecHttp2RouteMatchHeaderMatchRangeProperty): any {
+export function tfRouteSpecHttp2RouteMatchHeaderMatchRangePropertyToTerraform(struct?: TfRoute.SpecHttp2RouteMatchHeaderMatchRangePropertyOutputReference | TfRoute.SpecHttp2RouteMatchHeaderMatchRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -964,7 +964,7 @@ export function awsAppmeshRouteSpecHttp2RouteMatchHeaderMatchRangePropertyToTerr
 }
 
 
-export function awsAppmeshRouteSpecHttp2RouteMatchHeaderMatchRangePropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecHttp2RouteMatchHeaderMatchRangePropertyOutputReference | AwsAppmeshRoute.SpecHttp2RouteMatchHeaderMatchRangeProperty): any {
+export function tfRouteSpecHttp2RouteMatchHeaderMatchRangePropertyToHclTerraform(struct?: TfRoute.SpecHttp2RouteMatchHeaderMatchRangePropertyOutputReference | TfRoute.SpecHttp2RouteMatchHeaderMatchRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -989,7 +989,7 @@ export function awsAppmeshRouteSpecHttp2RouteMatchHeaderMatchRangePropertyToHclT
 }
 
 
-export function awsAppmeshRouteSpecHttp2RouteMatchHeaderMatchPropertyToTerraform(struct?: AwsAppmeshRoute.SpecHttp2RouteMatchHeaderMatchPropertyOutputReference | AwsAppmeshRoute.SpecHttp2RouteMatchHeaderMatchProperty): any {
+export function tfRouteSpecHttp2RouteMatchHeaderMatchPropertyToTerraform(struct?: TfRoute.SpecHttp2RouteMatchHeaderMatchPropertyOutputReference | TfRoute.SpecHttp2RouteMatchHeaderMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -999,12 +999,12 @@ export function awsAppmeshRouteSpecHttp2RouteMatchHeaderMatchPropertyToTerraform
     prefix: cdktn.stringToTerraform(struct!.prefix),
     regex: cdktn.stringToTerraform(struct!.regex),
     suffix: cdktn.stringToTerraform(struct!.suffix),
-    range: awsAppmeshRouteSpecHttp2RouteMatchHeaderMatchRangePropertyToTerraform(struct!.range),
+    range: tfRouteSpecHttp2RouteMatchHeaderMatchRangePropertyToTerraform(struct!.range),
   }
 }
 
 
-export function awsAppmeshRouteSpecHttp2RouteMatchHeaderMatchPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecHttp2RouteMatchHeaderMatchPropertyOutputReference | AwsAppmeshRoute.SpecHttp2RouteMatchHeaderMatchProperty): any {
+export function tfRouteSpecHttp2RouteMatchHeaderMatchPropertyToHclTerraform(struct?: TfRoute.SpecHttp2RouteMatchHeaderMatchPropertyOutputReference | TfRoute.SpecHttp2RouteMatchHeaderMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1035,7 +1035,7 @@ export function awsAppmeshRouteSpecHttp2RouteMatchHeaderMatchPropertyToHclTerraf
       storageClassType: "string",
     },
     range: {
-      value: awsAppmeshRouteSpecHttp2RouteMatchHeaderMatchRangePropertyToHclTerraform(struct!.range),
+      value: tfRouteSpecHttp2RouteMatchHeaderMatchRangePropertyToHclTerraform(struct!.range),
       isBlock: true,
       type: "list",
       storageClassType: "SpecHttp2RouteMatchHeaderMatchRangePropertyList",
@@ -1047,7 +1047,7 @@ export function awsAppmeshRouteSpecHttp2RouteMatchHeaderMatchPropertyToHclTerraf
 }
 
 
-export function awsAppmeshRouteSpecHttp2RouteMatchHeaderPropertyToTerraform(struct?: AwsAppmeshRoute.SpecHttp2RouteMatchHeaderProperty | cdktn.IResolvable): any {
+export function tfRouteSpecHttp2RouteMatchHeaderPropertyToTerraform(struct?: TfRoute.SpecHttp2RouteMatchHeaderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1055,12 +1055,12 @@ export function awsAppmeshRouteSpecHttp2RouteMatchHeaderPropertyToTerraform(stru
   return {
     invert: cdktn.booleanToTerraform(struct!.invert),
     name: cdktn.stringToTerraform(struct!.name),
-    match: awsAppmeshRouteSpecHttp2RouteMatchHeaderMatchPropertyToTerraform(struct!.match),
+    match: tfRouteSpecHttp2RouteMatchHeaderMatchPropertyToTerraform(struct!.match),
   }
 }
 
 
-export function awsAppmeshRouteSpecHttp2RouteMatchHeaderPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecHttp2RouteMatchHeaderProperty | cdktn.IResolvable): any {
+export function tfRouteSpecHttp2RouteMatchHeaderPropertyToHclTerraform(struct?: TfRoute.SpecHttp2RouteMatchHeaderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1079,7 +1079,7 @@ export function awsAppmeshRouteSpecHttp2RouteMatchHeaderPropertyToHclTerraform(s
       storageClassType: "string",
     },
     match: {
-      value: awsAppmeshRouteSpecHttp2RouteMatchHeaderMatchPropertyToHclTerraform(struct!.match),
+      value: tfRouteSpecHttp2RouteMatchHeaderMatchPropertyToHclTerraform(struct!.match),
       isBlock: true,
       type: "list",
       storageClassType: "SpecHttp2RouteMatchHeaderMatchPropertyList",
@@ -1091,7 +1091,7 @@ export function awsAppmeshRouteSpecHttp2RouteMatchHeaderPropertyToHclTerraform(s
 }
 
 
-export function awsAppmeshRouteSpecHttp2RouteMatchPathPropertyToTerraform(struct?: AwsAppmeshRoute.SpecHttp2RouteMatchPathPropertyOutputReference | AwsAppmeshRoute.SpecHttp2RouteMatchPathProperty): any {
+export function tfRouteSpecHttp2RouteMatchPathPropertyToTerraform(struct?: TfRoute.SpecHttp2RouteMatchPathPropertyOutputReference | TfRoute.SpecHttp2RouteMatchPathProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1103,7 +1103,7 @@ export function awsAppmeshRouteSpecHttp2RouteMatchPathPropertyToTerraform(struct
 }
 
 
-export function awsAppmeshRouteSpecHttp2RouteMatchPathPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecHttp2RouteMatchPathPropertyOutputReference | AwsAppmeshRoute.SpecHttp2RouteMatchPathProperty): any {
+export function tfRouteSpecHttp2RouteMatchPathPropertyToHclTerraform(struct?: TfRoute.SpecHttp2RouteMatchPathPropertyOutputReference | TfRoute.SpecHttp2RouteMatchPathProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1128,7 +1128,7 @@ export function awsAppmeshRouteSpecHttp2RouteMatchPathPropertyToHclTerraform(str
 }
 
 
-export function awsAppmeshRouteSpecHttp2RouteMatchQueryParameterMatchPropertyToTerraform(struct?: AwsAppmeshRoute.SpecHttp2RouteMatchQueryParameterMatchPropertyOutputReference | AwsAppmeshRoute.SpecHttp2RouteMatchQueryParameterMatchProperty): any {
+export function tfRouteSpecHttp2RouteMatchQueryParameterMatchPropertyToTerraform(struct?: TfRoute.SpecHttp2RouteMatchQueryParameterMatchPropertyOutputReference | TfRoute.SpecHttp2RouteMatchQueryParameterMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1139,7 +1139,7 @@ export function awsAppmeshRouteSpecHttp2RouteMatchQueryParameterMatchPropertyToT
 }
 
 
-export function awsAppmeshRouteSpecHttp2RouteMatchQueryParameterMatchPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecHttp2RouteMatchQueryParameterMatchPropertyOutputReference | AwsAppmeshRoute.SpecHttp2RouteMatchQueryParameterMatchProperty): any {
+export function tfRouteSpecHttp2RouteMatchQueryParameterMatchPropertyToHclTerraform(struct?: TfRoute.SpecHttp2RouteMatchQueryParameterMatchPropertyOutputReference | TfRoute.SpecHttp2RouteMatchQueryParameterMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1158,19 +1158,19 @@ export function awsAppmeshRouteSpecHttp2RouteMatchQueryParameterMatchPropertyToH
 }
 
 
-export function awsAppmeshRouteSpecHttp2RouteMatchQueryParameterPropertyToTerraform(struct?: AwsAppmeshRoute.SpecHttp2RouteMatchQueryParameterProperty | cdktn.IResolvable): any {
+export function tfRouteSpecHttp2RouteMatchQueryParameterPropertyToTerraform(struct?: TfRoute.SpecHttp2RouteMatchQueryParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     name: cdktn.stringToTerraform(struct!.name),
-    match: awsAppmeshRouteSpecHttp2RouteMatchQueryParameterMatchPropertyToTerraform(struct!.match),
+    match: tfRouteSpecHttp2RouteMatchQueryParameterMatchPropertyToTerraform(struct!.match),
   }
 }
 
 
-export function awsAppmeshRouteSpecHttp2RouteMatchQueryParameterPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecHttp2RouteMatchQueryParameterProperty | cdktn.IResolvable): any {
+export function tfRouteSpecHttp2RouteMatchQueryParameterPropertyToHclTerraform(struct?: TfRoute.SpecHttp2RouteMatchQueryParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1183,7 +1183,7 @@ export function awsAppmeshRouteSpecHttp2RouteMatchQueryParameterPropertyToHclTer
       storageClassType: "string",
     },
     match: {
-      value: awsAppmeshRouteSpecHttp2RouteMatchQueryParameterMatchPropertyToHclTerraform(struct!.match),
+      value: tfRouteSpecHttp2RouteMatchQueryParameterMatchPropertyToHclTerraform(struct!.match),
       isBlock: true,
       type: "list",
       storageClassType: "SpecHttp2RouteMatchQueryParameterMatchPropertyList",
@@ -1195,7 +1195,7 @@ export function awsAppmeshRouteSpecHttp2RouteMatchQueryParameterPropertyToHclTer
 }
 
 
-export function awsAppmeshRouteSpecHttp2RouteMatchPropertyToTerraform(struct?: AwsAppmeshRoute.SpecHttp2RouteMatchPropertyOutputReference | AwsAppmeshRoute.SpecHttp2RouteMatchProperty): any {
+export function tfRouteSpecHttp2RouteMatchPropertyToTerraform(struct?: TfRoute.SpecHttp2RouteMatchPropertyOutputReference | TfRoute.SpecHttp2RouteMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1205,14 +1205,14 @@ export function awsAppmeshRouteSpecHttp2RouteMatchPropertyToTerraform(struct?: A
     port: cdktn.numberToTerraform(struct!.port),
     prefix: cdktn.stringToTerraform(struct!.prefix),
     scheme: cdktn.stringToTerraform(struct!.scheme),
-    header: cdktn.listMapper(awsAppmeshRouteSpecHttp2RouteMatchHeaderPropertyToTerraform, true)(struct!.header),
-    path: awsAppmeshRouteSpecHttp2RouteMatchPathPropertyToTerraform(struct!.path),
-    query_parameter: cdktn.listMapper(awsAppmeshRouteSpecHttp2RouteMatchQueryParameterPropertyToTerraform, true)(struct!.queryParameter),
+    header: cdktn.listMapper(tfRouteSpecHttp2RouteMatchHeaderPropertyToTerraform, true)(struct!.header),
+    path: tfRouteSpecHttp2RouteMatchPathPropertyToTerraform(struct!.path),
+    query_parameter: cdktn.listMapper(tfRouteSpecHttp2RouteMatchQueryParameterPropertyToTerraform, true)(struct!.queryParameter),
   }
 }
 
 
-export function awsAppmeshRouteSpecHttp2RouteMatchPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecHttp2RouteMatchPropertyOutputReference | AwsAppmeshRoute.SpecHttp2RouteMatchProperty): any {
+export function tfRouteSpecHttp2RouteMatchPropertyToHclTerraform(struct?: TfRoute.SpecHttp2RouteMatchPropertyOutputReference | TfRoute.SpecHttp2RouteMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1243,19 +1243,19 @@ export function awsAppmeshRouteSpecHttp2RouteMatchPropertyToHclTerraform(struct?
       storageClassType: "string",
     },
     header: {
-      value: cdktn.listMapperHcl(awsAppmeshRouteSpecHttp2RouteMatchHeaderPropertyToHclTerraform, true)(struct!.header),
+      value: cdktn.listMapperHcl(tfRouteSpecHttp2RouteMatchHeaderPropertyToHclTerraform, true)(struct!.header),
       isBlock: true,
       type: "set",
       storageClassType: "SpecHttp2RouteMatchHeaderPropertyList",
     },
     path: {
-      value: awsAppmeshRouteSpecHttp2RouteMatchPathPropertyToHclTerraform(struct!.path),
+      value: tfRouteSpecHttp2RouteMatchPathPropertyToHclTerraform(struct!.path),
       isBlock: true,
       type: "list",
       storageClassType: "SpecHttp2RouteMatchPathPropertyList",
     },
     query_parameter: {
-      value: cdktn.listMapperHcl(awsAppmeshRouteSpecHttp2RouteMatchQueryParameterPropertyToHclTerraform, true)(struct!.queryParameter),
+      value: cdktn.listMapperHcl(tfRouteSpecHttp2RouteMatchQueryParameterPropertyToHclTerraform, true)(struct!.queryParameter),
       isBlock: true,
       type: "set",
       storageClassType: "SpecHttp2RouteMatchQueryParameterPropertyList",
@@ -1267,7 +1267,7 @@ export function awsAppmeshRouteSpecHttp2RouteMatchPropertyToHclTerraform(struct?
 }
 
 
-export function awsAppmeshRouteSpecHttp2RouteRetryPolicyPerRetryTimeoutPropertyToTerraform(struct?: AwsAppmeshRoute.SpecHttp2RouteRetryPolicyPerRetryTimeoutPropertyOutputReference | AwsAppmeshRoute.SpecHttp2RouteRetryPolicyPerRetryTimeoutProperty): any {
+export function tfRouteSpecHttp2RouteRetryPolicyPerRetryTimeoutPropertyToTerraform(struct?: TfRoute.SpecHttp2RouteRetryPolicyPerRetryTimeoutPropertyOutputReference | TfRoute.SpecHttp2RouteRetryPolicyPerRetryTimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1279,7 +1279,7 @@ export function awsAppmeshRouteSpecHttp2RouteRetryPolicyPerRetryTimeoutPropertyT
 }
 
 
-export function awsAppmeshRouteSpecHttp2RouteRetryPolicyPerRetryTimeoutPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecHttp2RouteRetryPolicyPerRetryTimeoutPropertyOutputReference | AwsAppmeshRoute.SpecHttp2RouteRetryPolicyPerRetryTimeoutProperty): any {
+export function tfRouteSpecHttp2RouteRetryPolicyPerRetryTimeoutPropertyToHclTerraform(struct?: TfRoute.SpecHttp2RouteRetryPolicyPerRetryTimeoutPropertyOutputReference | TfRoute.SpecHttp2RouteRetryPolicyPerRetryTimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1304,7 +1304,7 @@ export function awsAppmeshRouteSpecHttp2RouteRetryPolicyPerRetryTimeoutPropertyT
 }
 
 
-export function awsAppmeshRouteSpecHttp2RouteRetryPolicyPropertyToTerraform(struct?: AwsAppmeshRoute.SpecHttp2RouteRetryPolicyPropertyOutputReference | AwsAppmeshRoute.SpecHttp2RouteRetryPolicyProperty): any {
+export function tfRouteSpecHttp2RouteRetryPolicyPropertyToTerraform(struct?: TfRoute.SpecHttp2RouteRetryPolicyPropertyOutputReference | TfRoute.SpecHttp2RouteRetryPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1313,12 +1313,12 @@ export function awsAppmeshRouteSpecHttp2RouteRetryPolicyPropertyToTerraform(stru
     http_retry_events: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.httpRetryEvents),
     max_retries: cdktn.numberToTerraform(struct!.maxRetries),
     tcp_retry_events: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.tcpRetryEvents),
-    per_retry_timeout: awsAppmeshRouteSpecHttp2RouteRetryPolicyPerRetryTimeoutPropertyToTerraform(struct!.perRetryTimeout),
+    per_retry_timeout: tfRouteSpecHttp2RouteRetryPolicyPerRetryTimeoutPropertyToTerraform(struct!.perRetryTimeout),
   }
 }
 
 
-export function awsAppmeshRouteSpecHttp2RouteRetryPolicyPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecHttp2RouteRetryPolicyPropertyOutputReference | AwsAppmeshRoute.SpecHttp2RouteRetryPolicyProperty): any {
+export function tfRouteSpecHttp2RouteRetryPolicyPropertyToHclTerraform(struct?: TfRoute.SpecHttp2RouteRetryPolicyPropertyOutputReference | TfRoute.SpecHttp2RouteRetryPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1343,7 +1343,7 @@ export function awsAppmeshRouteSpecHttp2RouteRetryPolicyPropertyToHclTerraform(s
       storageClassType: "stringList",
     },
     per_retry_timeout: {
-      value: awsAppmeshRouteSpecHttp2RouteRetryPolicyPerRetryTimeoutPropertyToHclTerraform(struct!.perRetryTimeout),
+      value: tfRouteSpecHttp2RouteRetryPolicyPerRetryTimeoutPropertyToHclTerraform(struct!.perRetryTimeout),
       isBlock: true,
       type: "list",
       storageClassType: "SpecHttp2RouteRetryPolicyPerRetryTimeoutPropertyList",
@@ -1355,7 +1355,7 @@ export function awsAppmeshRouteSpecHttp2RouteRetryPolicyPropertyToHclTerraform(s
 }
 
 
-export function awsAppmeshRouteSpecHttp2RouteTimeoutIdlePropertyToTerraform(struct?: AwsAppmeshRoute.SpecHttp2RouteTimeoutIdlePropertyOutputReference | AwsAppmeshRoute.SpecHttp2RouteTimeoutIdleProperty): any {
+export function tfRouteSpecHttp2RouteTimeoutIdlePropertyToTerraform(struct?: TfRoute.SpecHttp2RouteTimeoutIdlePropertyOutputReference | TfRoute.SpecHttp2RouteTimeoutIdleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1367,7 +1367,7 @@ export function awsAppmeshRouteSpecHttp2RouteTimeoutIdlePropertyToTerraform(stru
 }
 
 
-export function awsAppmeshRouteSpecHttp2RouteTimeoutIdlePropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecHttp2RouteTimeoutIdlePropertyOutputReference | AwsAppmeshRoute.SpecHttp2RouteTimeoutIdleProperty): any {
+export function tfRouteSpecHttp2RouteTimeoutIdlePropertyToHclTerraform(struct?: TfRoute.SpecHttp2RouteTimeoutIdlePropertyOutputReference | TfRoute.SpecHttp2RouteTimeoutIdleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1392,7 +1392,7 @@ export function awsAppmeshRouteSpecHttp2RouteTimeoutIdlePropertyToHclTerraform(s
 }
 
 
-export function awsAppmeshRouteSpecHttp2RouteTimeoutPerRequestPropertyToTerraform(struct?: AwsAppmeshRoute.SpecHttp2RouteTimeoutPerRequestPropertyOutputReference | AwsAppmeshRoute.SpecHttp2RouteTimeoutPerRequestProperty): any {
+export function tfRouteSpecHttp2RouteTimeoutPerRequestPropertyToTerraform(struct?: TfRoute.SpecHttp2RouteTimeoutPerRequestPropertyOutputReference | TfRoute.SpecHttp2RouteTimeoutPerRequestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1404,7 +1404,7 @@ export function awsAppmeshRouteSpecHttp2RouteTimeoutPerRequestPropertyToTerrafor
 }
 
 
-export function awsAppmeshRouteSpecHttp2RouteTimeoutPerRequestPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecHttp2RouteTimeoutPerRequestPropertyOutputReference | AwsAppmeshRoute.SpecHttp2RouteTimeoutPerRequestProperty): any {
+export function tfRouteSpecHttp2RouteTimeoutPerRequestPropertyToHclTerraform(struct?: TfRoute.SpecHttp2RouteTimeoutPerRequestPropertyOutputReference | TfRoute.SpecHttp2RouteTimeoutPerRequestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1429,32 +1429,32 @@ export function awsAppmeshRouteSpecHttp2RouteTimeoutPerRequestPropertyToHclTerra
 }
 
 
-export function awsAppmeshRouteSpecHttp2RouteTimeoutPropertyToTerraform(struct?: AwsAppmeshRoute.SpecHttp2RouteTimeoutPropertyOutputReference | AwsAppmeshRoute.SpecHttp2RouteTimeoutProperty): any {
+export function tfRouteSpecHttp2RouteTimeoutPropertyToTerraform(struct?: TfRoute.SpecHttp2RouteTimeoutPropertyOutputReference | TfRoute.SpecHttp2RouteTimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    idle: awsAppmeshRouteSpecHttp2RouteTimeoutIdlePropertyToTerraform(struct!.idle),
-    per_request: awsAppmeshRouteSpecHttp2RouteTimeoutPerRequestPropertyToTerraform(struct!.perRequest),
+    idle: tfRouteSpecHttp2RouteTimeoutIdlePropertyToTerraform(struct!.idle),
+    per_request: tfRouteSpecHttp2RouteTimeoutPerRequestPropertyToTerraform(struct!.perRequest),
   }
 }
 
 
-export function awsAppmeshRouteSpecHttp2RouteTimeoutPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecHttp2RouteTimeoutPropertyOutputReference | AwsAppmeshRoute.SpecHttp2RouteTimeoutProperty): any {
+export function tfRouteSpecHttp2RouteTimeoutPropertyToHclTerraform(struct?: TfRoute.SpecHttp2RouteTimeoutPropertyOutputReference | TfRoute.SpecHttp2RouteTimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     idle: {
-      value: awsAppmeshRouteSpecHttp2RouteTimeoutIdlePropertyToHclTerraform(struct!.idle),
+      value: tfRouteSpecHttp2RouteTimeoutIdlePropertyToHclTerraform(struct!.idle),
       isBlock: true,
       type: "list",
       storageClassType: "SpecHttp2RouteTimeoutIdlePropertyList",
     },
     per_request: {
-      value: awsAppmeshRouteSpecHttp2RouteTimeoutPerRequestPropertyToHclTerraform(struct!.perRequest),
+      value: tfRouteSpecHttp2RouteTimeoutPerRequestPropertyToHclTerraform(struct!.perRequest),
       isBlock: true,
       type: "list",
       storageClassType: "SpecHttp2RouteTimeoutPerRequestPropertyList",
@@ -1466,46 +1466,46 @@ export function awsAppmeshRouteSpecHttp2RouteTimeoutPropertyToHclTerraform(struc
 }
 
 
-export function awsAppmeshRouteHttp2RoutePropertyToTerraform(struct?: AwsAppmeshRoute.Http2RoutePropertyOutputReference | AwsAppmeshRoute.Http2RouteProperty): any {
+export function tfRouteHttp2RoutePropertyToTerraform(struct?: TfRoute.Http2RoutePropertyOutputReference | TfRoute.Http2RouteProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    action: awsAppmeshRouteSpecHttp2RouteActionPropertyToTerraform(struct!.action),
-    match: awsAppmeshRouteSpecHttp2RouteMatchPropertyToTerraform(struct!.match),
-    retry_policy: awsAppmeshRouteSpecHttp2RouteRetryPolicyPropertyToTerraform(struct!.retryPolicy),
-    timeout: awsAppmeshRouteSpecHttp2RouteTimeoutPropertyToTerraform(struct!.timeout),
+    action: tfRouteSpecHttp2RouteActionPropertyToTerraform(struct!.action),
+    match: tfRouteSpecHttp2RouteMatchPropertyToTerraform(struct!.match),
+    retry_policy: tfRouteSpecHttp2RouteRetryPolicyPropertyToTerraform(struct!.retryPolicy),
+    timeout: tfRouteSpecHttp2RouteTimeoutPropertyToTerraform(struct!.timeout),
   }
 }
 
 
-export function awsAppmeshRouteHttp2RoutePropertyToHclTerraform(struct?: AwsAppmeshRoute.Http2RoutePropertyOutputReference | AwsAppmeshRoute.Http2RouteProperty): any {
+export function tfRouteHttp2RoutePropertyToHclTerraform(struct?: TfRoute.Http2RoutePropertyOutputReference | TfRoute.Http2RouteProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     action: {
-      value: awsAppmeshRouteSpecHttp2RouteActionPropertyToHclTerraform(struct!.action),
+      value: tfRouteSpecHttp2RouteActionPropertyToHclTerraform(struct!.action),
       isBlock: true,
       type: "list",
       storageClassType: "SpecHttp2RouteActionPropertyList",
     },
     match: {
-      value: awsAppmeshRouteSpecHttp2RouteMatchPropertyToHclTerraform(struct!.match),
+      value: tfRouteSpecHttp2RouteMatchPropertyToHclTerraform(struct!.match),
       isBlock: true,
       type: "list",
       storageClassType: "SpecHttp2RouteMatchPropertyList",
     },
     retry_policy: {
-      value: awsAppmeshRouteSpecHttp2RouteRetryPolicyPropertyToHclTerraform(struct!.retryPolicy),
+      value: tfRouteSpecHttp2RouteRetryPolicyPropertyToHclTerraform(struct!.retryPolicy),
       isBlock: true,
       type: "list",
       storageClassType: "SpecHttp2RouteRetryPolicyPropertyList",
     },
     timeout: {
-      value: awsAppmeshRouteSpecHttp2RouteTimeoutPropertyToHclTerraform(struct!.timeout),
+      value: tfRouteSpecHttp2RouteTimeoutPropertyToHclTerraform(struct!.timeout),
       isBlock: true,
       type: "list",
       storageClassType: "SpecHttp2RouteTimeoutPropertyList",
@@ -1517,7 +1517,7 @@ export function awsAppmeshRouteHttp2RoutePropertyToHclTerraform(struct?: AwsAppm
 }
 
 
-export function awsAppmeshRouteSpecHttpRouteActionWeightedTargetPropertyToTerraform(struct?: AwsAppmeshRoute.SpecHttpRouteActionWeightedTargetProperty | cdktn.IResolvable): any {
+export function tfRouteSpecHttpRouteActionWeightedTargetPropertyToTerraform(struct?: TfRoute.SpecHttpRouteActionWeightedTargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1530,7 +1530,7 @@ export function awsAppmeshRouteSpecHttpRouteActionWeightedTargetPropertyToTerraf
 }
 
 
-export function awsAppmeshRouteSpecHttpRouteActionWeightedTargetPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecHttpRouteActionWeightedTargetProperty | cdktn.IResolvable): any {
+export function tfRouteSpecHttpRouteActionWeightedTargetPropertyToHclTerraform(struct?: TfRoute.SpecHttpRouteActionWeightedTargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1561,25 +1561,25 @@ export function awsAppmeshRouteSpecHttpRouteActionWeightedTargetPropertyToHclTer
 }
 
 
-export function awsAppmeshRouteSpecHttpRouteActionPropertyToTerraform(struct?: AwsAppmeshRoute.SpecHttpRouteActionPropertyOutputReference | AwsAppmeshRoute.SpecHttpRouteActionProperty): any {
+export function tfRouteSpecHttpRouteActionPropertyToTerraform(struct?: TfRoute.SpecHttpRouteActionPropertyOutputReference | TfRoute.SpecHttpRouteActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    weighted_target: cdktn.listMapper(awsAppmeshRouteSpecHttpRouteActionWeightedTargetPropertyToTerraform, true)(struct!.weightedTarget),
+    weighted_target: cdktn.listMapper(tfRouteSpecHttpRouteActionWeightedTargetPropertyToTerraform, true)(struct!.weightedTarget),
   }
 }
 
 
-export function awsAppmeshRouteSpecHttpRouteActionPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecHttpRouteActionPropertyOutputReference | AwsAppmeshRoute.SpecHttpRouteActionProperty): any {
+export function tfRouteSpecHttpRouteActionPropertyToHclTerraform(struct?: TfRoute.SpecHttpRouteActionPropertyOutputReference | TfRoute.SpecHttpRouteActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     weighted_target: {
-      value: cdktn.listMapperHcl(awsAppmeshRouteSpecHttpRouteActionWeightedTargetPropertyToHclTerraform, true)(struct!.weightedTarget),
+      value: cdktn.listMapperHcl(tfRouteSpecHttpRouteActionWeightedTargetPropertyToHclTerraform, true)(struct!.weightedTarget),
       isBlock: true,
       type: "set",
       storageClassType: "SpecHttpRouteActionWeightedTargetPropertyList",
@@ -1591,7 +1591,7 @@ export function awsAppmeshRouteSpecHttpRouteActionPropertyToHclTerraform(struct?
 }
 
 
-export function awsAppmeshRouteSpecHttpRouteMatchHeaderMatchRangePropertyToTerraform(struct?: AwsAppmeshRoute.SpecHttpRouteMatchHeaderMatchRangePropertyOutputReference | AwsAppmeshRoute.SpecHttpRouteMatchHeaderMatchRangeProperty): any {
+export function tfRouteSpecHttpRouteMatchHeaderMatchRangePropertyToTerraform(struct?: TfRoute.SpecHttpRouteMatchHeaderMatchRangePropertyOutputReference | TfRoute.SpecHttpRouteMatchHeaderMatchRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1603,7 +1603,7 @@ export function awsAppmeshRouteSpecHttpRouteMatchHeaderMatchRangePropertyToTerra
 }
 
 
-export function awsAppmeshRouteSpecHttpRouteMatchHeaderMatchRangePropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecHttpRouteMatchHeaderMatchRangePropertyOutputReference | AwsAppmeshRoute.SpecHttpRouteMatchHeaderMatchRangeProperty): any {
+export function tfRouteSpecHttpRouteMatchHeaderMatchRangePropertyToHclTerraform(struct?: TfRoute.SpecHttpRouteMatchHeaderMatchRangePropertyOutputReference | TfRoute.SpecHttpRouteMatchHeaderMatchRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1628,7 +1628,7 @@ export function awsAppmeshRouteSpecHttpRouteMatchHeaderMatchRangePropertyToHclTe
 }
 
 
-export function awsAppmeshRouteSpecHttpRouteMatchHeaderMatchPropertyToTerraform(struct?: AwsAppmeshRoute.SpecHttpRouteMatchHeaderMatchPropertyOutputReference | AwsAppmeshRoute.SpecHttpRouteMatchHeaderMatchProperty): any {
+export function tfRouteSpecHttpRouteMatchHeaderMatchPropertyToTerraform(struct?: TfRoute.SpecHttpRouteMatchHeaderMatchPropertyOutputReference | TfRoute.SpecHttpRouteMatchHeaderMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1638,12 +1638,12 @@ export function awsAppmeshRouteSpecHttpRouteMatchHeaderMatchPropertyToTerraform(
     prefix: cdktn.stringToTerraform(struct!.prefix),
     regex: cdktn.stringToTerraform(struct!.regex),
     suffix: cdktn.stringToTerraform(struct!.suffix),
-    range: awsAppmeshRouteSpecHttpRouteMatchHeaderMatchRangePropertyToTerraform(struct!.range),
+    range: tfRouteSpecHttpRouteMatchHeaderMatchRangePropertyToTerraform(struct!.range),
   }
 }
 
 
-export function awsAppmeshRouteSpecHttpRouteMatchHeaderMatchPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecHttpRouteMatchHeaderMatchPropertyOutputReference | AwsAppmeshRoute.SpecHttpRouteMatchHeaderMatchProperty): any {
+export function tfRouteSpecHttpRouteMatchHeaderMatchPropertyToHclTerraform(struct?: TfRoute.SpecHttpRouteMatchHeaderMatchPropertyOutputReference | TfRoute.SpecHttpRouteMatchHeaderMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1674,7 +1674,7 @@ export function awsAppmeshRouteSpecHttpRouteMatchHeaderMatchPropertyToHclTerrafo
       storageClassType: "string",
     },
     range: {
-      value: awsAppmeshRouteSpecHttpRouteMatchHeaderMatchRangePropertyToHclTerraform(struct!.range),
+      value: tfRouteSpecHttpRouteMatchHeaderMatchRangePropertyToHclTerraform(struct!.range),
       isBlock: true,
       type: "list",
       storageClassType: "SpecHttpRouteMatchHeaderMatchRangePropertyList",
@@ -1686,7 +1686,7 @@ export function awsAppmeshRouteSpecHttpRouteMatchHeaderMatchPropertyToHclTerrafo
 }
 
 
-export function awsAppmeshRouteSpecHttpRouteMatchHeaderPropertyToTerraform(struct?: AwsAppmeshRoute.SpecHttpRouteMatchHeaderProperty | cdktn.IResolvable): any {
+export function tfRouteSpecHttpRouteMatchHeaderPropertyToTerraform(struct?: TfRoute.SpecHttpRouteMatchHeaderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1694,12 +1694,12 @@ export function awsAppmeshRouteSpecHttpRouteMatchHeaderPropertyToTerraform(struc
   return {
     invert: cdktn.booleanToTerraform(struct!.invert),
     name: cdktn.stringToTerraform(struct!.name),
-    match: awsAppmeshRouteSpecHttpRouteMatchHeaderMatchPropertyToTerraform(struct!.match),
+    match: tfRouteSpecHttpRouteMatchHeaderMatchPropertyToTerraform(struct!.match),
   }
 }
 
 
-export function awsAppmeshRouteSpecHttpRouteMatchHeaderPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecHttpRouteMatchHeaderProperty | cdktn.IResolvable): any {
+export function tfRouteSpecHttpRouteMatchHeaderPropertyToHclTerraform(struct?: TfRoute.SpecHttpRouteMatchHeaderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1718,7 +1718,7 @@ export function awsAppmeshRouteSpecHttpRouteMatchHeaderPropertyToHclTerraform(st
       storageClassType: "string",
     },
     match: {
-      value: awsAppmeshRouteSpecHttpRouteMatchHeaderMatchPropertyToHclTerraform(struct!.match),
+      value: tfRouteSpecHttpRouteMatchHeaderMatchPropertyToHclTerraform(struct!.match),
       isBlock: true,
       type: "list",
       storageClassType: "SpecHttpRouteMatchHeaderMatchPropertyList",
@@ -1730,7 +1730,7 @@ export function awsAppmeshRouteSpecHttpRouteMatchHeaderPropertyToHclTerraform(st
 }
 
 
-export function awsAppmeshRouteSpecHttpRouteMatchPathPropertyToTerraform(struct?: AwsAppmeshRoute.SpecHttpRouteMatchPathPropertyOutputReference | AwsAppmeshRoute.SpecHttpRouteMatchPathProperty): any {
+export function tfRouteSpecHttpRouteMatchPathPropertyToTerraform(struct?: TfRoute.SpecHttpRouteMatchPathPropertyOutputReference | TfRoute.SpecHttpRouteMatchPathProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1742,7 +1742,7 @@ export function awsAppmeshRouteSpecHttpRouteMatchPathPropertyToTerraform(struct?
 }
 
 
-export function awsAppmeshRouteSpecHttpRouteMatchPathPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecHttpRouteMatchPathPropertyOutputReference | AwsAppmeshRoute.SpecHttpRouteMatchPathProperty): any {
+export function tfRouteSpecHttpRouteMatchPathPropertyToHclTerraform(struct?: TfRoute.SpecHttpRouteMatchPathPropertyOutputReference | TfRoute.SpecHttpRouteMatchPathProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1767,7 +1767,7 @@ export function awsAppmeshRouteSpecHttpRouteMatchPathPropertyToHclTerraform(stru
 }
 
 
-export function awsAppmeshRouteSpecHttpRouteMatchQueryParameterMatchPropertyToTerraform(struct?: AwsAppmeshRoute.SpecHttpRouteMatchQueryParameterMatchPropertyOutputReference | AwsAppmeshRoute.SpecHttpRouteMatchQueryParameterMatchProperty): any {
+export function tfRouteSpecHttpRouteMatchQueryParameterMatchPropertyToTerraform(struct?: TfRoute.SpecHttpRouteMatchQueryParameterMatchPropertyOutputReference | TfRoute.SpecHttpRouteMatchQueryParameterMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1778,7 +1778,7 @@ export function awsAppmeshRouteSpecHttpRouteMatchQueryParameterMatchPropertyToTe
 }
 
 
-export function awsAppmeshRouteSpecHttpRouteMatchQueryParameterMatchPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecHttpRouteMatchQueryParameterMatchPropertyOutputReference | AwsAppmeshRoute.SpecHttpRouteMatchQueryParameterMatchProperty): any {
+export function tfRouteSpecHttpRouteMatchQueryParameterMatchPropertyToHclTerraform(struct?: TfRoute.SpecHttpRouteMatchQueryParameterMatchPropertyOutputReference | TfRoute.SpecHttpRouteMatchQueryParameterMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1797,19 +1797,19 @@ export function awsAppmeshRouteSpecHttpRouteMatchQueryParameterMatchPropertyToHc
 }
 
 
-export function awsAppmeshRouteSpecHttpRouteMatchQueryParameterPropertyToTerraform(struct?: AwsAppmeshRoute.SpecHttpRouteMatchQueryParameterProperty | cdktn.IResolvable): any {
+export function tfRouteSpecHttpRouteMatchQueryParameterPropertyToTerraform(struct?: TfRoute.SpecHttpRouteMatchQueryParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     name: cdktn.stringToTerraform(struct!.name),
-    match: awsAppmeshRouteSpecHttpRouteMatchQueryParameterMatchPropertyToTerraform(struct!.match),
+    match: tfRouteSpecHttpRouteMatchQueryParameterMatchPropertyToTerraform(struct!.match),
   }
 }
 
 
-export function awsAppmeshRouteSpecHttpRouteMatchQueryParameterPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecHttpRouteMatchQueryParameterProperty | cdktn.IResolvable): any {
+export function tfRouteSpecHttpRouteMatchQueryParameterPropertyToHclTerraform(struct?: TfRoute.SpecHttpRouteMatchQueryParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1822,7 +1822,7 @@ export function awsAppmeshRouteSpecHttpRouteMatchQueryParameterPropertyToHclTerr
       storageClassType: "string",
     },
     match: {
-      value: awsAppmeshRouteSpecHttpRouteMatchQueryParameterMatchPropertyToHclTerraform(struct!.match),
+      value: tfRouteSpecHttpRouteMatchQueryParameterMatchPropertyToHclTerraform(struct!.match),
       isBlock: true,
       type: "list",
       storageClassType: "SpecHttpRouteMatchQueryParameterMatchPropertyList",
@@ -1834,7 +1834,7 @@ export function awsAppmeshRouteSpecHttpRouteMatchQueryParameterPropertyToHclTerr
 }
 
 
-export function awsAppmeshRouteSpecHttpRouteMatchPropertyToTerraform(struct?: AwsAppmeshRoute.SpecHttpRouteMatchPropertyOutputReference | AwsAppmeshRoute.SpecHttpRouteMatchProperty): any {
+export function tfRouteSpecHttpRouteMatchPropertyToTerraform(struct?: TfRoute.SpecHttpRouteMatchPropertyOutputReference | TfRoute.SpecHttpRouteMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1844,14 +1844,14 @@ export function awsAppmeshRouteSpecHttpRouteMatchPropertyToTerraform(struct?: Aw
     port: cdktn.numberToTerraform(struct!.port),
     prefix: cdktn.stringToTerraform(struct!.prefix),
     scheme: cdktn.stringToTerraform(struct!.scheme),
-    header: cdktn.listMapper(awsAppmeshRouteSpecHttpRouteMatchHeaderPropertyToTerraform, true)(struct!.header),
-    path: awsAppmeshRouteSpecHttpRouteMatchPathPropertyToTerraform(struct!.path),
-    query_parameter: cdktn.listMapper(awsAppmeshRouteSpecHttpRouteMatchQueryParameterPropertyToTerraform, true)(struct!.queryParameter),
+    header: cdktn.listMapper(tfRouteSpecHttpRouteMatchHeaderPropertyToTerraform, true)(struct!.header),
+    path: tfRouteSpecHttpRouteMatchPathPropertyToTerraform(struct!.path),
+    query_parameter: cdktn.listMapper(tfRouteSpecHttpRouteMatchQueryParameterPropertyToTerraform, true)(struct!.queryParameter),
   }
 }
 
 
-export function awsAppmeshRouteSpecHttpRouteMatchPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecHttpRouteMatchPropertyOutputReference | AwsAppmeshRoute.SpecHttpRouteMatchProperty): any {
+export function tfRouteSpecHttpRouteMatchPropertyToHclTerraform(struct?: TfRoute.SpecHttpRouteMatchPropertyOutputReference | TfRoute.SpecHttpRouteMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1882,19 +1882,19 @@ export function awsAppmeshRouteSpecHttpRouteMatchPropertyToHclTerraform(struct?:
       storageClassType: "string",
     },
     header: {
-      value: cdktn.listMapperHcl(awsAppmeshRouteSpecHttpRouteMatchHeaderPropertyToHclTerraform, true)(struct!.header),
+      value: cdktn.listMapperHcl(tfRouteSpecHttpRouteMatchHeaderPropertyToHclTerraform, true)(struct!.header),
       isBlock: true,
       type: "set",
       storageClassType: "SpecHttpRouteMatchHeaderPropertyList",
     },
     path: {
-      value: awsAppmeshRouteSpecHttpRouteMatchPathPropertyToHclTerraform(struct!.path),
+      value: tfRouteSpecHttpRouteMatchPathPropertyToHclTerraform(struct!.path),
       isBlock: true,
       type: "list",
       storageClassType: "SpecHttpRouteMatchPathPropertyList",
     },
     query_parameter: {
-      value: cdktn.listMapperHcl(awsAppmeshRouteSpecHttpRouteMatchQueryParameterPropertyToHclTerraform, true)(struct!.queryParameter),
+      value: cdktn.listMapperHcl(tfRouteSpecHttpRouteMatchQueryParameterPropertyToHclTerraform, true)(struct!.queryParameter),
       isBlock: true,
       type: "set",
       storageClassType: "SpecHttpRouteMatchQueryParameterPropertyList",
@@ -1906,7 +1906,7 @@ export function awsAppmeshRouteSpecHttpRouteMatchPropertyToHclTerraform(struct?:
 }
 
 
-export function awsAppmeshRouteSpecHttpRouteRetryPolicyPerRetryTimeoutPropertyToTerraform(struct?: AwsAppmeshRoute.SpecHttpRouteRetryPolicyPerRetryTimeoutPropertyOutputReference | AwsAppmeshRoute.SpecHttpRouteRetryPolicyPerRetryTimeoutProperty): any {
+export function tfRouteSpecHttpRouteRetryPolicyPerRetryTimeoutPropertyToTerraform(struct?: TfRoute.SpecHttpRouteRetryPolicyPerRetryTimeoutPropertyOutputReference | TfRoute.SpecHttpRouteRetryPolicyPerRetryTimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1918,7 +1918,7 @@ export function awsAppmeshRouteSpecHttpRouteRetryPolicyPerRetryTimeoutPropertyTo
 }
 
 
-export function awsAppmeshRouteSpecHttpRouteRetryPolicyPerRetryTimeoutPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecHttpRouteRetryPolicyPerRetryTimeoutPropertyOutputReference | AwsAppmeshRoute.SpecHttpRouteRetryPolicyPerRetryTimeoutProperty): any {
+export function tfRouteSpecHttpRouteRetryPolicyPerRetryTimeoutPropertyToHclTerraform(struct?: TfRoute.SpecHttpRouteRetryPolicyPerRetryTimeoutPropertyOutputReference | TfRoute.SpecHttpRouteRetryPolicyPerRetryTimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1943,7 +1943,7 @@ export function awsAppmeshRouteSpecHttpRouteRetryPolicyPerRetryTimeoutPropertyTo
 }
 
 
-export function awsAppmeshRouteSpecHttpRouteRetryPolicyPropertyToTerraform(struct?: AwsAppmeshRoute.SpecHttpRouteRetryPolicyPropertyOutputReference | AwsAppmeshRoute.SpecHttpRouteRetryPolicyProperty): any {
+export function tfRouteSpecHttpRouteRetryPolicyPropertyToTerraform(struct?: TfRoute.SpecHttpRouteRetryPolicyPropertyOutputReference | TfRoute.SpecHttpRouteRetryPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1952,12 +1952,12 @@ export function awsAppmeshRouteSpecHttpRouteRetryPolicyPropertyToTerraform(struc
     http_retry_events: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.httpRetryEvents),
     max_retries: cdktn.numberToTerraform(struct!.maxRetries),
     tcp_retry_events: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.tcpRetryEvents),
-    per_retry_timeout: awsAppmeshRouteSpecHttpRouteRetryPolicyPerRetryTimeoutPropertyToTerraform(struct!.perRetryTimeout),
+    per_retry_timeout: tfRouteSpecHttpRouteRetryPolicyPerRetryTimeoutPropertyToTerraform(struct!.perRetryTimeout),
   }
 }
 
 
-export function awsAppmeshRouteSpecHttpRouteRetryPolicyPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecHttpRouteRetryPolicyPropertyOutputReference | AwsAppmeshRoute.SpecHttpRouteRetryPolicyProperty): any {
+export function tfRouteSpecHttpRouteRetryPolicyPropertyToHclTerraform(struct?: TfRoute.SpecHttpRouteRetryPolicyPropertyOutputReference | TfRoute.SpecHttpRouteRetryPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1982,7 +1982,7 @@ export function awsAppmeshRouteSpecHttpRouteRetryPolicyPropertyToHclTerraform(st
       storageClassType: "stringList",
     },
     per_retry_timeout: {
-      value: awsAppmeshRouteSpecHttpRouteRetryPolicyPerRetryTimeoutPropertyToHclTerraform(struct!.perRetryTimeout),
+      value: tfRouteSpecHttpRouteRetryPolicyPerRetryTimeoutPropertyToHclTerraform(struct!.perRetryTimeout),
       isBlock: true,
       type: "list",
       storageClassType: "SpecHttpRouteRetryPolicyPerRetryTimeoutPropertyList",
@@ -1994,7 +1994,7 @@ export function awsAppmeshRouteSpecHttpRouteRetryPolicyPropertyToHclTerraform(st
 }
 
 
-export function awsAppmeshRouteSpecHttpRouteTimeoutIdlePropertyToTerraform(struct?: AwsAppmeshRoute.SpecHttpRouteTimeoutIdlePropertyOutputReference | AwsAppmeshRoute.SpecHttpRouteTimeoutIdleProperty): any {
+export function tfRouteSpecHttpRouteTimeoutIdlePropertyToTerraform(struct?: TfRoute.SpecHttpRouteTimeoutIdlePropertyOutputReference | TfRoute.SpecHttpRouteTimeoutIdleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2006,7 +2006,7 @@ export function awsAppmeshRouteSpecHttpRouteTimeoutIdlePropertyToTerraform(struc
 }
 
 
-export function awsAppmeshRouteSpecHttpRouteTimeoutIdlePropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecHttpRouteTimeoutIdlePropertyOutputReference | AwsAppmeshRoute.SpecHttpRouteTimeoutIdleProperty): any {
+export function tfRouteSpecHttpRouteTimeoutIdlePropertyToHclTerraform(struct?: TfRoute.SpecHttpRouteTimeoutIdlePropertyOutputReference | TfRoute.SpecHttpRouteTimeoutIdleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2031,7 +2031,7 @@ export function awsAppmeshRouteSpecHttpRouteTimeoutIdlePropertyToHclTerraform(st
 }
 
 
-export function awsAppmeshRouteSpecHttpRouteTimeoutPerRequestPropertyToTerraform(struct?: AwsAppmeshRoute.SpecHttpRouteTimeoutPerRequestPropertyOutputReference | AwsAppmeshRoute.SpecHttpRouteTimeoutPerRequestProperty): any {
+export function tfRouteSpecHttpRouteTimeoutPerRequestPropertyToTerraform(struct?: TfRoute.SpecHttpRouteTimeoutPerRequestPropertyOutputReference | TfRoute.SpecHttpRouteTimeoutPerRequestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2043,7 +2043,7 @@ export function awsAppmeshRouteSpecHttpRouteTimeoutPerRequestPropertyToTerraform
 }
 
 
-export function awsAppmeshRouteSpecHttpRouteTimeoutPerRequestPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecHttpRouteTimeoutPerRequestPropertyOutputReference | AwsAppmeshRoute.SpecHttpRouteTimeoutPerRequestProperty): any {
+export function tfRouteSpecHttpRouteTimeoutPerRequestPropertyToHclTerraform(struct?: TfRoute.SpecHttpRouteTimeoutPerRequestPropertyOutputReference | TfRoute.SpecHttpRouteTimeoutPerRequestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2068,32 +2068,32 @@ export function awsAppmeshRouteSpecHttpRouteTimeoutPerRequestPropertyToHclTerraf
 }
 
 
-export function awsAppmeshRouteSpecHttpRouteTimeoutPropertyToTerraform(struct?: AwsAppmeshRoute.SpecHttpRouteTimeoutPropertyOutputReference | AwsAppmeshRoute.SpecHttpRouteTimeoutProperty): any {
+export function tfRouteSpecHttpRouteTimeoutPropertyToTerraform(struct?: TfRoute.SpecHttpRouteTimeoutPropertyOutputReference | TfRoute.SpecHttpRouteTimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    idle: awsAppmeshRouteSpecHttpRouteTimeoutIdlePropertyToTerraform(struct!.idle),
-    per_request: awsAppmeshRouteSpecHttpRouteTimeoutPerRequestPropertyToTerraform(struct!.perRequest),
+    idle: tfRouteSpecHttpRouteTimeoutIdlePropertyToTerraform(struct!.idle),
+    per_request: tfRouteSpecHttpRouteTimeoutPerRequestPropertyToTerraform(struct!.perRequest),
   }
 }
 
 
-export function awsAppmeshRouteSpecHttpRouteTimeoutPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecHttpRouteTimeoutPropertyOutputReference | AwsAppmeshRoute.SpecHttpRouteTimeoutProperty): any {
+export function tfRouteSpecHttpRouteTimeoutPropertyToHclTerraform(struct?: TfRoute.SpecHttpRouteTimeoutPropertyOutputReference | TfRoute.SpecHttpRouteTimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     idle: {
-      value: awsAppmeshRouteSpecHttpRouteTimeoutIdlePropertyToHclTerraform(struct!.idle),
+      value: tfRouteSpecHttpRouteTimeoutIdlePropertyToHclTerraform(struct!.idle),
       isBlock: true,
       type: "list",
       storageClassType: "SpecHttpRouteTimeoutIdlePropertyList",
     },
     per_request: {
-      value: awsAppmeshRouteSpecHttpRouteTimeoutPerRequestPropertyToHclTerraform(struct!.perRequest),
+      value: tfRouteSpecHttpRouteTimeoutPerRequestPropertyToHclTerraform(struct!.perRequest),
       isBlock: true,
       type: "list",
       storageClassType: "SpecHttpRouteTimeoutPerRequestPropertyList",
@@ -2105,46 +2105,46 @@ export function awsAppmeshRouteSpecHttpRouteTimeoutPropertyToHclTerraform(struct
 }
 
 
-export function awsAppmeshRouteHttpRoutePropertyToTerraform(struct?: AwsAppmeshRoute.HttpRoutePropertyOutputReference | AwsAppmeshRoute.HttpRouteProperty): any {
+export function tfRouteHttpRoutePropertyToTerraform(struct?: TfRoute.HttpRoutePropertyOutputReference | TfRoute.HttpRouteProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    action: awsAppmeshRouteSpecHttpRouteActionPropertyToTerraform(struct!.action),
-    match: awsAppmeshRouteSpecHttpRouteMatchPropertyToTerraform(struct!.match),
-    retry_policy: awsAppmeshRouteSpecHttpRouteRetryPolicyPropertyToTerraform(struct!.retryPolicy),
-    timeout: awsAppmeshRouteSpecHttpRouteTimeoutPropertyToTerraform(struct!.timeout),
+    action: tfRouteSpecHttpRouteActionPropertyToTerraform(struct!.action),
+    match: tfRouteSpecHttpRouteMatchPropertyToTerraform(struct!.match),
+    retry_policy: tfRouteSpecHttpRouteRetryPolicyPropertyToTerraform(struct!.retryPolicy),
+    timeout: tfRouteSpecHttpRouteTimeoutPropertyToTerraform(struct!.timeout),
   }
 }
 
 
-export function awsAppmeshRouteHttpRoutePropertyToHclTerraform(struct?: AwsAppmeshRoute.HttpRoutePropertyOutputReference | AwsAppmeshRoute.HttpRouteProperty): any {
+export function tfRouteHttpRoutePropertyToHclTerraform(struct?: TfRoute.HttpRoutePropertyOutputReference | TfRoute.HttpRouteProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     action: {
-      value: awsAppmeshRouteSpecHttpRouteActionPropertyToHclTerraform(struct!.action),
+      value: tfRouteSpecHttpRouteActionPropertyToHclTerraform(struct!.action),
       isBlock: true,
       type: "list",
       storageClassType: "SpecHttpRouteActionPropertyList",
     },
     match: {
-      value: awsAppmeshRouteSpecHttpRouteMatchPropertyToHclTerraform(struct!.match),
+      value: tfRouteSpecHttpRouteMatchPropertyToHclTerraform(struct!.match),
       isBlock: true,
       type: "list",
       storageClassType: "SpecHttpRouteMatchPropertyList",
     },
     retry_policy: {
-      value: awsAppmeshRouteSpecHttpRouteRetryPolicyPropertyToHclTerraform(struct!.retryPolicy),
+      value: tfRouteSpecHttpRouteRetryPolicyPropertyToHclTerraform(struct!.retryPolicy),
       isBlock: true,
       type: "list",
       storageClassType: "SpecHttpRouteRetryPolicyPropertyList",
     },
     timeout: {
-      value: awsAppmeshRouteSpecHttpRouteTimeoutPropertyToHclTerraform(struct!.timeout),
+      value: tfRouteSpecHttpRouteTimeoutPropertyToHclTerraform(struct!.timeout),
       isBlock: true,
       type: "list",
       storageClassType: "SpecHttpRouteTimeoutPropertyList",
@@ -2156,7 +2156,7 @@ export function awsAppmeshRouteHttpRoutePropertyToHclTerraform(struct?: AwsAppme
 }
 
 
-export function awsAppmeshRouteSpecTcpRouteActionWeightedTargetPropertyToTerraform(struct?: AwsAppmeshRoute.SpecTcpRouteActionWeightedTargetProperty | cdktn.IResolvable): any {
+export function tfRouteSpecTcpRouteActionWeightedTargetPropertyToTerraform(struct?: TfRoute.SpecTcpRouteActionWeightedTargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2169,7 +2169,7 @@ export function awsAppmeshRouteSpecTcpRouteActionWeightedTargetPropertyToTerrafo
 }
 
 
-export function awsAppmeshRouteSpecTcpRouteActionWeightedTargetPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecTcpRouteActionWeightedTargetProperty | cdktn.IResolvable): any {
+export function tfRouteSpecTcpRouteActionWeightedTargetPropertyToHclTerraform(struct?: TfRoute.SpecTcpRouteActionWeightedTargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2200,25 +2200,25 @@ export function awsAppmeshRouteSpecTcpRouteActionWeightedTargetPropertyToHclTerr
 }
 
 
-export function awsAppmeshRouteSpecTcpRouteActionPropertyToTerraform(struct?: AwsAppmeshRoute.SpecTcpRouteActionPropertyOutputReference | AwsAppmeshRoute.SpecTcpRouteActionProperty): any {
+export function tfRouteSpecTcpRouteActionPropertyToTerraform(struct?: TfRoute.SpecTcpRouteActionPropertyOutputReference | TfRoute.SpecTcpRouteActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    weighted_target: cdktn.listMapper(awsAppmeshRouteSpecTcpRouteActionWeightedTargetPropertyToTerraform, true)(struct!.weightedTarget),
+    weighted_target: cdktn.listMapper(tfRouteSpecTcpRouteActionWeightedTargetPropertyToTerraform, true)(struct!.weightedTarget),
   }
 }
 
 
-export function awsAppmeshRouteSpecTcpRouteActionPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecTcpRouteActionPropertyOutputReference | AwsAppmeshRoute.SpecTcpRouteActionProperty): any {
+export function tfRouteSpecTcpRouteActionPropertyToHclTerraform(struct?: TfRoute.SpecTcpRouteActionPropertyOutputReference | TfRoute.SpecTcpRouteActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     weighted_target: {
-      value: cdktn.listMapperHcl(awsAppmeshRouteSpecTcpRouteActionWeightedTargetPropertyToHclTerraform, true)(struct!.weightedTarget),
+      value: cdktn.listMapperHcl(tfRouteSpecTcpRouteActionWeightedTargetPropertyToHclTerraform, true)(struct!.weightedTarget),
       isBlock: true,
       type: "set",
       storageClassType: "SpecTcpRouteActionWeightedTargetPropertyList",
@@ -2230,7 +2230,7 @@ export function awsAppmeshRouteSpecTcpRouteActionPropertyToHclTerraform(struct?:
 }
 
 
-export function awsAppmeshRouteSpecTcpRouteMatchPropertyToTerraform(struct?: AwsAppmeshRoute.SpecTcpRouteMatchPropertyOutputReference | AwsAppmeshRoute.SpecTcpRouteMatchProperty): any {
+export function tfRouteSpecTcpRouteMatchPropertyToTerraform(struct?: TfRoute.SpecTcpRouteMatchPropertyOutputReference | TfRoute.SpecTcpRouteMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2241,7 +2241,7 @@ export function awsAppmeshRouteSpecTcpRouteMatchPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsAppmeshRouteSpecTcpRouteMatchPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecTcpRouteMatchPropertyOutputReference | AwsAppmeshRoute.SpecTcpRouteMatchProperty): any {
+export function tfRouteSpecTcpRouteMatchPropertyToHclTerraform(struct?: TfRoute.SpecTcpRouteMatchPropertyOutputReference | TfRoute.SpecTcpRouteMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2260,7 +2260,7 @@ export function awsAppmeshRouteSpecTcpRouteMatchPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsAppmeshRouteSpecTcpRouteTimeoutIdlePropertyToTerraform(struct?: AwsAppmeshRoute.SpecTcpRouteTimeoutIdlePropertyOutputReference | AwsAppmeshRoute.SpecTcpRouteTimeoutIdleProperty): any {
+export function tfRouteSpecTcpRouteTimeoutIdlePropertyToTerraform(struct?: TfRoute.SpecTcpRouteTimeoutIdlePropertyOutputReference | TfRoute.SpecTcpRouteTimeoutIdleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2272,7 +2272,7 @@ export function awsAppmeshRouteSpecTcpRouteTimeoutIdlePropertyToTerraform(struct
 }
 
 
-export function awsAppmeshRouteSpecTcpRouteTimeoutIdlePropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecTcpRouteTimeoutIdlePropertyOutputReference | AwsAppmeshRoute.SpecTcpRouteTimeoutIdleProperty): any {
+export function tfRouteSpecTcpRouteTimeoutIdlePropertyToHclTerraform(struct?: TfRoute.SpecTcpRouteTimeoutIdlePropertyOutputReference | TfRoute.SpecTcpRouteTimeoutIdleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2297,25 +2297,25 @@ export function awsAppmeshRouteSpecTcpRouteTimeoutIdlePropertyToHclTerraform(str
 }
 
 
-export function awsAppmeshRouteSpecTcpRouteTimeoutPropertyToTerraform(struct?: AwsAppmeshRoute.SpecTcpRouteTimeoutPropertyOutputReference | AwsAppmeshRoute.SpecTcpRouteTimeoutProperty): any {
+export function tfRouteSpecTcpRouteTimeoutPropertyToTerraform(struct?: TfRoute.SpecTcpRouteTimeoutPropertyOutputReference | TfRoute.SpecTcpRouteTimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    idle: awsAppmeshRouteSpecTcpRouteTimeoutIdlePropertyToTerraform(struct!.idle),
+    idle: tfRouteSpecTcpRouteTimeoutIdlePropertyToTerraform(struct!.idle),
   }
 }
 
 
-export function awsAppmeshRouteSpecTcpRouteTimeoutPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecTcpRouteTimeoutPropertyOutputReference | AwsAppmeshRoute.SpecTcpRouteTimeoutProperty): any {
+export function tfRouteSpecTcpRouteTimeoutPropertyToHclTerraform(struct?: TfRoute.SpecTcpRouteTimeoutPropertyOutputReference | TfRoute.SpecTcpRouteTimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     idle: {
-      value: awsAppmeshRouteSpecTcpRouteTimeoutIdlePropertyToHclTerraform(struct!.idle),
+      value: tfRouteSpecTcpRouteTimeoutIdlePropertyToHclTerraform(struct!.idle),
       isBlock: true,
       type: "list",
       storageClassType: "SpecTcpRouteTimeoutIdlePropertyList",
@@ -2327,39 +2327,39 @@ export function awsAppmeshRouteSpecTcpRouteTimeoutPropertyToHclTerraform(struct?
 }
 
 
-export function awsAppmeshRouteTcpRoutePropertyToTerraform(struct?: AwsAppmeshRoute.TcpRoutePropertyOutputReference | AwsAppmeshRoute.TcpRouteProperty): any {
+export function tfRouteTcpRoutePropertyToTerraform(struct?: TfRoute.TcpRoutePropertyOutputReference | TfRoute.TcpRouteProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    action: awsAppmeshRouteSpecTcpRouteActionPropertyToTerraform(struct!.action),
-    match: awsAppmeshRouteSpecTcpRouteMatchPropertyToTerraform(struct!.match),
-    timeout: awsAppmeshRouteSpecTcpRouteTimeoutPropertyToTerraform(struct!.timeout),
+    action: tfRouteSpecTcpRouteActionPropertyToTerraform(struct!.action),
+    match: tfRouteSpecTcpRouteMatchPropertyToTerraform(struct!.match),
+    timeout: tfRouteSpecTcpRouteTimeoutPropertyToTerraform(struct!.timeout),
   }
 }
 
 
-export function awsAppmeshRouteTcpRoutePropertyToHclTerraform(struct?: AwsAppmeshRoute.TcpRoutePropertyOutputReference | AwsAppmeshRoute.TcpRouteProperty): any {
+export function tfRouteTcpRoutePropertyToHclTerraform(struct?: TfRoute.TcpRoutePropertyOutputReference | TfRoute.TcpRouteProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     action: {
-      value: awsAppmeshRouteSpecTcpRouteActionPropertyToHclTerraform(struct!.action),
+      value: tfRouteSpecTcpRouteActionPropertyToHclTerraform(struct!.action),
       isBlock: true,
       type: "list",
       storageClassType: "SpecTcpRouteActionPropertyList",
     },
     match: {
-      value: awsAppmeshRouteSpecTcpRouteMatchPropertyToHclTerraform(struct!.match),
+      value: tfRouteSpecTcpRouteMatchPropertyToHclTerraform(struct!.match),
       isBlock: true,
       type: "list",
       storageClassType: "SpecTcpRouteMatchPropertyList",
     },
     timeout: {
-      value: awsAppmeshRouteSpecTcpRouteTimeoutPropertyToHclTerraform(struct!.timeout),
+      value: tfRouteSpecTcpRouteTimeoutPropertyToHclTerraform(struct!.timeout),
       isBlock: true,
       type: "list",
       storageClassType: "SpecTcpRouteTimeoutPropertyList",
@@ -2371,22 +2371,22 @@ export function awsAppmeshRouteTcpRoutePropertyToHclTerraform(struct?: AwsAppmes
 }
 
 
-export function awsAppmeshRouteSpecPropertyToTerraform(struct?: AwsAppmeshRoute.SpecPropertyOutputReference | AwsAppmeshRoute.SpecProperty): any {
+export function tfRouteSpecPropertyToTerraform(struct?: TfRoute.SpecPropertyOutputReference | TfRoute.SpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     priority: cdktn.numberToTerraform(struct!.priority),
-    grpc_route: awsAppmeshRouteGrpcRoutePropertyToTerraform(struct!.grpcRoute),
-    http2_route: awsAppmeshRouteHttp2RoutePropertyToTerraform(struct!.http2Route),
-    http_route: awsAppmeshRouteHttpRoutePropertyToTerraform(struct!.httpRoute),
-    tcp_route: awsAppmeshRouteTcpRoutePropertyToTerraform(struct!.tcpRoute),
+    grpc_route: tfRouteGrpcRoutePropertyToTerraform(struct!.grpcRoute),
+    http2_route: tfRouteHttp2RoutePropertyToTerraform(struct!.http2Route),
+    http_route: tfRouteHttpRoutePropertyToTerraform(struct!.httpRoute),
+    tcp_route: tfRouteTcpRoutePropertyToTerraform(struct!.tcpRoute),
   }
 }
 
 
-export function awsAppmeshRouteSpecPropertyToHclTerraform(struct?: AwsAppmeshRoute.SpecPropertyOutputReference | AwsAppmeshRoute.SpecProperty): any {
+export function tfRouteSpecPropertyToHclTerraform(struct?: TfRoute.SpecPropertyOutputReference | TfRoute.SpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2399,25 +2399,25 @@ export function awsAppmeshRouteSpecPropertyToHclTerraform(struct?: AwsAppmeshRou
       storageClassType: "number",
     },
     grpc_route: {
-      value: awsAppmeshRouteGrpcRoutePropertyToHclTerraform(struct!.grpcRoute),
+      value: tfRouteGrpcRoutePropertyToHclTerraform(struct!.grpcRoute),
       isBlock: true,
       type: "list",
       storageClassType: "GrpcRoutePropertyList",
     },
     http2_route: {
-      value: awsAppmeshRouteHttp2RoutePropertyToHclTerraform(struct!.http2Route),
+      value: tfRouteHttp2RoutePropertyToHclTerraform(struct!.http2Route),
       isBlock: true,
       type: "list",
       storageClassType: "Http2RoutePropertyList",
     },
     http_route: {
-      value: awsAppmeshRouteHttpRoutePropertyToHclTerraform(struct!.httpRoute),
+      value: tfRouteHttpRoutePropertyToHclTerraform(struct!.httpRoute),
       isBlock: true,
       type: "list",
       storageClassType: "HttpRoutePropertyList",
     },
     tcp_route: {
-      value: awsAppmeshRouteTcpRoutePropertyToHclTerraform(struct!.tcpRoute),
+      value: tfRouteTcpRoutePropertyToHclTerraform(struct!.tcpRoute),
       isBlock: true,
       type: "list",
       storageClassType: "TcpRoutePropertyList",
@@ -2429,18 +2429,18 @@ export function awsAppmeshRouteSpecPropertyToHclTerraform(struct?: AwsAppmeshRou
 }
 
 
-export namespace AwsAppmeshRoute {
+export namespace TfRoute {
 export interface SpecGrpcRouteActionWeightedTargetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#port AwsAppmeshRoute#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#port TfRoute#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#virtual_node AwsAppmeshRoute#virtual_node}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#virtual_node TfRoute#virtual_node}
   */
   readonly virtualNode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#weight AwsAppmeshRoute#weight}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#weight TfRoute#weight}
   */
   readonly weight: number;
 }
@@ -2566,7 +2566,7 @@ export interface SpecGrpcRouteActionProperty {
   /**
   * weighted_target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#weighted_target AwsAppmeshRoute#weighted_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#weighted_target TfRoute#weighted_target}
   */
   readonly weightedTarget: SpecGrpcRouteActionWeightedTargetProperty[] | cdktn.IResolvable;
 }
@@ -2617,11 +2617,11 @@ export class SpecGrpcRouteActionPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface SpecGrpcRouteMatchMetadataMatchRangeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#end AwsAppmeshRoute#end}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#end TfRoute#end}
   */
   readonly end: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#start AwsAppmeshRoute#start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#start TfRoute#start}
   */
   readonly start: number;
 }
@@ -2691,25 +2691,25 @@ export class SpecGrpcRouteMatchMetadataMatchRangePropertyOutputReference extends
 }
 export interface SpecGrpcRouteMatchMetadataMatchProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#exact AwsAppmeshRoute#exact}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#exact TfRoute#exact}
   */
   readonly exact?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#prefix AwsAppmeshRoute#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#prefix TfRoute#prefix}
   */
   readonly prefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#regex AwsAppmeshRoute#regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#regex TfRoute#regex}
   */
   readonly regex?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#suffix AwsAppmeshRoute#suffix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#suffix TfRoute#suffix}
   */
   readonly suffix?: string;
   /**
   * range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#range AwsAppmeshRoute#range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#range TfRoute#range}
   */
   readonly range?: SpecGrpcRouteMatchMetadataMatchRangeProperty;
 }
@@ -2851,17 +2851,17 @@ export class SpecGrpcRouteMatchMetadataMatchPropertyOutputReference extends cdkt
 }
 export interface MetadataProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#invert AwsAppmeshRoute#invert}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#invert TfRoute#invert}
   */
   readonly invert?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#name AwsAppmeshRoute#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#name TfRoute#name}
   */
   readonly name: string;
   /**
   * match block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#match AwsAppmeshRoute#match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#match TfRoute#match}
   */
   readonly match?: SpecGrpcRouteMatchMetadataMatchProperty;
 }
@@ -2988,25 +2988,25 @@ export class MetadataPropertyList extends cdktn.ComplexList {
 }
 export interface SpecGrpcRouteMatchProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#method_name AwsAppmeshRoute#method_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#method_name TfRoute#method_name}
   */
   readonly methodName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#port AwsAppmeshRoute#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#port TfRoute#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#prefix AwsAppmeshRoute#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#prefix TfRoute#prefix}
   */
   readonly prefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#service_name AwsAppmeshRoute#service_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#service_name TfRoute#service_name}
   */
   readonly serviceName?: string;
   /**
   * metadata block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#metadata AwsAppmeshRoute#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#metadata TfRoute#metadata}
   */
   readonly metadata?: MetadataProperty[] | cdktn.IResolvable;
 }
@@ -3148,11 +3148,11 @@ export class SpecGrpcRouteMatchPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface SpecGrpcRouteRetryPolicyPerRetryTimeoutProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#unit AwsAppmeshRoute#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#unit TfRoute#unit}
   */
   readonly unit: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#value AwsAppmeshRoute#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#value TfRoute#value}
   */
   readonly value: number;
 }
@@ -3222,25 +3222,25 @@ export class SpecGrpcRouteRetryPolicyPerRetryTimeoutPropertyOutputReference exte
 }
 export interface SpecGrpcRouteRetryPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#grpc_retry_events AwsAppmeshRoute#grpc_retry_events}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#grpc_retry_events TfRoute#grpc_retry_events}
   */
   readonly grpcRetryEvents?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#http_retry_events AwsAppmeshRoute#http_retry_events}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#http_retry_events TfRoute#http_retry_events}
   */
   readonly httpRetryEvents?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#max_retries AwsAppmeshRoute#max_retries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#max_retries TfRoute#max_retries}
   */
   readonly maxRetries: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#tcp_retry_events AwsAppmeshRoute#tcp_retry_events}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#tcp_retry_events TfRoute#tcp_retry_events}
   */
   readonly tcpRetryEvents?: string[];
   /**
   * per_retry_timeout block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#per_retry_timeout AwsAppmeshRoute#per_retry_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#per_retry_timeout TfRoute#per_retry_timeout}
   */
   readonly perRetryTimeout: SpecGrpcRouteRetryPolicyPerRetryTimeoutProperty;
 }
@@ -3376,11 +3376,11 @@ export class SpecGrpcRouteRetryPolicyPropertyOutputReference extends cdktn.Compl
 }
 export interface SpecGrpcRouteTimeoutIdleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#unit AwsAppmeshRoute#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#unit TfRoute#unit}
   */
   readonly unit: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#value AwsAppmeshRoute#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#value TfRoute#value}
   */
   readonly value: number;
 }
@@ -3450,11 +3450,11 @@ export class SpecGrpcRouteTimeoutIdlePropertyOutputReference extends cdktn.Compl
 }
 export interface SpecGrpcRouteTimeoutPerRequestProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#unit AwsAppmeshRoute#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#unit TfRoute#unit}
   */
   readonly unit: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#value AwsAppmeshRoute#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#value TfRoute#value}
   */
   readonly value: number;
 }
@@ -3526,13 +3526,13 @@ export interface SpecGrpcRouteTimeoutProperty {
   /**
   * idle block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#idle AwsAppmeshRoute#idle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#idle TfRoute#idle}
   */
   readonly idle?: SpecGrpcRouteTimeoutIdleProperty;
   /**
   * per_request block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#per_request AwsAppmeshRoute#per_request}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#per_request TfRoute#per_request}
   */
   readonly perRequest?: SpecGrpcRouteTimeoutPerRequestProperty;
 }
@@ -3610,25 +3610,25 @@ export interface GrpcRouteProperty {
   /**
   * action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#action AwsAppmeshRoute#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#action TfRoute#action}
   */
   readonly action: SpecGrpcRouteActionProperty;
   /**
   * match block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#match AwsAppmeshRoute#match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#match TfRoute#match}
   */
   readonly match?: SpecGrpcRouteMatchProperty;
   /**
   * retry_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#retry_policy AwsAppmeshRoute#retry_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#retry_policy TfRoute#retry_policy}
   */
   readonly retryPolicy?: SpecGrpcRouteRetryPolicyProperty;
   /**
   * timeout block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#timeout AwsAppmeshRoute#timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#timeout TfRoute#timeout}
   */
   readonly timeout?: SpecGrpcRouteTimeoutProperty;
 }
@@ -3745,15 +3745,15 @@ export class GrpcRoutePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SpecHttp2RouteActionWeightedTargetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#port AwsAppmeshRoute#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#port TfRoute#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#virtual_node AwsAppmeshRoute#virtual_node}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#virtual_node TfRoute#virtual_node}
   */
   readonly virtualNode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#weight AwsAppmeshRoute#weight}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#weight TfRoute#weight}
   */
   readonly weight: number;
 }
@@ -3879,7 +3879,7 @@ export interface SpecHttp2RouteActionProperty {
   /**
   * weighted_target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#weighted_target AwsAppmeshRoute#weighted_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#weighted_target TfRoute#weighted_target}
   */
   readonly weightedTarget: SpecHttp2RouteActionWeightedTargetProperty[] | cdktn.IResolvable;
 }
@@ -3930,11 +3930,11 @@ export class SpecHttp2RouteActionPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface SpecHttp2RouteMatchHeaderMatchRangeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#end AwsAppmeshRoute#end}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#end TfRoute#end}
   */
   readonly end: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#start AwsAppmeshRoute#start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#start TfRoute#start}
   */
   readonly start: number;
 }
@@ -4004,25 +4004,25 @@ export class SpecHttp2RouteMatchHeaderMatchRangePropertyOutputReference extends 
 }
 export interface SpecHttp2RouteMatchHeaderMatchProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#exact AwsAppmeshRoute#exact}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#exact TfRoute#exact}
   */
   readonly exact?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#prefix AwsAppmeshRoute#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#prefix TfRoute#prefix}
   */
   readonly prefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#regex AwsAppmeshRoute#regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#regex TfRoute#regex}
   */
   readonly regex?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#suffix AwsAppmeshRoute#suffix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#suffix TfRoute#suffix}
   */
   readonly suffix?: string;
   /**
   * range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#range AwsAppmeshRoute#range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#range TfRoute#range}
   */
   readonly range?: SpecHttp2RouteMatchHeaderMatchRangeProperty;
 }
@@ -4164,17 +4164,17 @@ export class SpecHttp2RouteMatchHeaderMatchPropertyOutputReference extends cdktn
 }
 export interface SpecHttp2RouteMatchHeaderProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#invert AwsAppmeshRoute#invert}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#invert TfRoute#invert}
   */
   readonly invert?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#name AwsAppmeshRoute#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#name TfRoute#name}
   */
   readonly name: string;
   /**
   * match block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#match AwsAppmeshRoute#match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#match TfRoute#match}
   */
   readonly match?: SpecHttp2RouteMatchHeaderMatchProperty;
 }
@@ -4301,11 +4301,11 @@ export class SpecHttp2RouteMatchHeaderPropertyList extends cdktn.ComplexList {
 }
 export interface SpecHttp2RouteMatchPathProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#exact AwsAppmeshRoute#exact}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#exact TfRoute#exact}
   */
   readonly exact?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#regex AwsAppmeshRoute#regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#regex TfRoute#regex}
   */
   readonly regex?: string;
 }
@@ -4381,7 +4381,7 @@ export class SpecHttp2RouteMatchPathPropertyOutputReference extends cdktn.Comple
 }
 export interface SpecHttp2RouteMatchQueryParameterMatchProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#exact AwsAppmeshRoute#exact}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#exact TfRoute#exact}
   */
   readonly exact?: string;
 }
@@ -4435,13 +4435,13 @@ export class SpecHttp2RouteMatchQueryParameterMatchPropertyOutputReference exten
 }
 export interface SpecHttp2RouteMatchQueryParameterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#name AwsAppmeshRoute#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#name TfRoute#name}
   */
   readonly name: string;
   /**
   * match block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#match AwsAppmeshRoute#match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#match TfRoute#match}
   */
   readonly match?: SpecHttp2RouteMatchQueryParameterMatchProperty;
 }
@@ -4546,37 +4546,37 @@ export class SpecHttp2RouteMatchQueryParameterPropertyList extends cdktn.Complex
 }
 export interface SpecHttp2RouteMatchProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#method AwsAppmeshRoute#method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#method TfRoute#method}
   */
   readonly method?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#port AwsAppmeshRoute#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#port TfRoute#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#prefix AwsAppmeshRoute#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#prefix TfRoute#prefix}
   */
   readonly prefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#scheme AwsAppmeshRoute#scheme}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#scheme TfRoute#scheme}
   */
   readonly scheme?: string;
   /**
   * header block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#header AwsAppmeshRoute#header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#header TfRoute#header}
   */
   readonly header?: SpecHttp2RouteMatchHeaderProperty[] | cdktn.IResolvable;
   /**
   * path block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#path AwsAppmeshRoute#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#path TfRoute#path}
   */
   readonly path?: SpecHttp2RouteMatchPathProperty;
   /**
   * query_parameter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#query_parameter AwsAppmeshRoute#query_parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#query_parameter TfRoute#query_parameter}
   */
   readonly queryParameter?: SpecHttp2RouteMatchQueryParameterProperty[] | cdktn.IResolvable;
 }
@@ -4762,11 +4762,11 @@ export class SpecHttp2RouteMatchPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface SpecHttp2RouteRetryPolicyPerRetryTimeoutProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#unit AwsAppmeshRoute#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#unit TfRoute#unit}
   */
   readonly unit: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#value AwsAppmeshRoute#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#value TfRoute#value}
   */
   readonly value: number;
 }
@@ -4836,21 +4836,21 @@ export class SpecHttp2RouteRetryPolicyPerRetryTimeoutPropertyOutputReference ext
 }
 export interface SpecHttp2RouteRetryPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#http_retry_events AwsAppmeshRoute#http_retry_events}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#http_retry_events TfRoute#http_retry_events}
   */
   readonly httpRetryEvents?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#max_retries AwsAppmeshRoute#max_retries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#max_retries TfRoute#max_retries}
   */
   readonly maxRetries: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#tcp_retry_events AwsAppmeshRoute#tcp_retry_events}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#tcp_retry_events TfRoute#tcp_retry_events}
   */
   readonly tcpRetryEvents?: string[];
   /**
   * per_retry_timeout block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#per_retry_timeout AwsAppmeshRoute#per_retry_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#per_retry_timeout TfRoute#per_retry_timeout}
   */
   readonly perRetryTimeout: SpecHttp2RouteRetryPolicyPerRetryTimeoutProperty;
 }
@@ -4964,11 +4964,11 @@ export class SpecHttp2RouteRetryPolicyPropertyOutputReference extends cdktn.Comp
 }
 export interface SpecHttp2RouteTimeoutIdleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#unit AwsAppmeshRoute#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#unit TfRoute#unit}
   */
   readonly unit: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#value AwsAppmeshRoute#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#value TfRoute#value}
   */
   readonly value: number;
 }
@@ -5038,11 +5038,11 @@ export class SpecHttp2RouteTimeoutIdlePropertyOutputReference extends cdktn.Comp
 }
 export interface SpecHttp2RouteTimeoutPerRequestProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#unit AwsAppmeshRoute#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#unit TfRoute#unit}
   */
   readonly unit: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#value AwsAppmeshRoute#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#value TfRoute#value}
   */
   readonly value: number;
 }
@@ -5114,13 +5114,13 @@ export interface SpecHttp2RouteTimeoutProperty {
   /**
   * idle block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#idle AwsAppmeshRoute#idle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#idle TfRoute#idle}
   */
   readonly idle?: SpecHttp2RouteTimeoutIdleProperty;
   /**
   * per_request block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#per_request AwsAppmeshRoute#per_request}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#per_request TfRoute#per_request}
   */
   readonly perRequest?: SpecHttp2RouteTimeoutPerRequestProperty;
 }
@@ -5198,25 +5198,25 @@ export interface Http2RouteProperty {
   /**
   * action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#action AwsAppmeshRoute#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#action TfRoute#action}
   */
   readonly action: SpecHttp2RouteActionProperty;
   /**
   * match block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#match AwsAppmeshRoute#match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#match TfRoute#match}
   */
   readonly match: SpecHttp2RouteMatchProperty;
   /**
   * retry_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#retry_policy AwsAppmeshRoute#retry_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#retry_policy TfRoute#retry_policy}
   */
   readonly retryPolicy?: SpecHttp2RouteRetryPolicyProperty;
   /**
   * timeout block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#timeout AwsAppmeshRoute#timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#timeout TfRoute#timeout}
   */
   readonly timeout?: SpecHttp2RouteTimeoutProperty;
 }
@@ -5330,15 +5330,15 @@ export class Http2RoutePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SpecHttpRouteActionWeightedTargetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#port AwsAppmeshRoute#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#port TfRoute#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#virtual_node AwsAppmeshRoute#virtual_node}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#virtual_node TfRoute#virtual_node}
   */
   readonly virtualNode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#weight AwsAppmeshRoute#weight}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#weight TfRoute#weight}
   */
   readonly weight: number;
 }
@@ -5464,7 +5464,7 @@ export interface SpecHttpRouteActionProperty {
   /**
   * weighted_target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#weighted_target AwsAppmeshRoute#weighted_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#weighted_target TfRoute#weighted_target}
   */
   readonly weightedTarget: SpecHttpRouteActionWeightedTargetProperty[] | cdktn.IResolvable;
 }
@@ -5515,11 +5515,11 @@ export class SpecHttpRouteActionPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface SpecHttpRouteMatchHeaderMatchRangeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#end AwsAppmeshRoute#end}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#end TfRoute#end}
   */
   readonly end: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#start AwsAppmeshRoute#start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#start TfRoute#start}
   */
   readonly start: number;
 }
@@ -5589,25 +5589,25 @@ export class SpecHttpRouteMatchHeaderMatchRangePropertyOutputReference extends c
 }
 export interface SpecHttpRouteMatchHeaderMatchProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#exact AwsAppmeshRoute#exact}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#exact TfRoute#exact}
   */
   readonly exact?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#prefix AwsAppmeshRoute#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#prefix TfRoute#prefix}
   */
   readonly prefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#regex AwsAppmeshRoute#regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#regex TfRoute#regex}
   */
   readonly regex?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#suffix AwsAppmeshRoute#suffix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#suffix TfRoute#suffix}
   */
   readonly suffix?: string;
   /**
   * range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#range AwsAppmeshRoute#range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#range TfRoute#range}
   */
   readonly range?: SpecHttpRouteMatchHeaderMatchRangeProperty;
 }
@@ -5749,17 +5749,17 @@ export class SpecHttpRouteMatchHeaderMatchPropertyOutputReference extends cdktn.
 }
 export interface SpecHttpRouteMatchHeaderProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#invert AwsAppmeshRoute#invert}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#invert TfRoute#invert}
   */
   readonly invert?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#name AwsAppmeshRoute#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#name TfRoute#name}
   */
   readonly name: string;
   /**
   * match block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#match AwsAppmeshRoute#match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#match TfRoute#match}
   */
   readonly match?: SpecHttpRouteMatchHeaderMatchProperty;
 }
@@ -5886,11 +5886,11 @@ export class SpecHttpRouteMatchHeaderPropertyList extends cdktn.ComplexList {
 }
 export interface SpecHttpRouteMatchPathProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#exact AwsAppmeshRoute#exact}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#exact TfRoute#exact}
   */
   readonly exact?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#regex AwsAppmeshRoute#regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#regex TfRoute#regex}
   */
   readonly regex?: string;
 }
@@ -5966,7 +5966,7 @@ export class SpecHttpRouteMatchPathPropertyOutputReference extends cdktn.Complex
 }
 export interface SpecHttpRouteMatchQueryParameterMatchProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#exact AwsAppmeshRoute#exact}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#exact TfRoute#exact}
   */
   readonly exact?: string;
 }
@@ -6020,13 +6020,13 @@ export class SpecHttpRouteMatchQueryParameterMatchPropertyOutputReference extend
 }
 export interface SpecHttpRouteMatchQueryParameterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#name AwsAppmeshRoute#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#name TfRoute#name}
   */
   readonly name: string;
   /**
   * match block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#match AwsAppmeshRoute#match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#match TfRoute#match}
   */
   readonly match?: SpecHttpRouteMatchQueryParameterMatchProperty;
 }
@@ -6131,37 +6131,37 @@ export class SpecHttpRouteMatchQueryParameterPropertyList extends cdktn.ComplexL
 }
 export interface SpecHttpRouteMatchProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#method AwsAppmeshRoute#method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#method TfRoute#method}
   */
   readonly method?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#port AwsAppmeshRoute#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#port TfRoute#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#prefix AwsAppmeshRoute#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#prefix TfRoute#prefix}
   */
   readonly prefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#scheme AwsAppmeshRoute#scheme}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#scheme TfRoute#scheme}
   */
   readonly scheme?: string;
   /**
   * header block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#header AwsAppmeshRoute#header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#header TfRoute#header}
   */
   readonly header?: SpecHttpRouteMatchHeaderProperty[] | cdktn.IResolvable;
   /**
   * path block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#path AwsAppmeshRoute#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#path TfRoute#path}
   */
   readonly path?: SpecHttpRouteMatchPathProperty;
   /**
   * query_parameter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#query_parameter AwsAppmeshRoute#query_parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#query_parameter TfRoute#query_parameter}
   */
   readonly queryParameter?: SpecHttpRouteMatchQueryParameterProperty[] | cdktn.IResolvable;
 }
@@ -6347,11 +6347,11 @@ export class SpecHttpRouteMatchPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface SpecHttpRouteRetryPolicyPerRetryTimeoutProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#unit AwsAppmeshRoute#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#unit TfRoute#unit}
   */
   readonly unit: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#value AwsAppmeshRoute#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#value TfRoute#value}
   */
   readonly value: number;
 }
@@ -6421,21 +6421,21 @@ export class SpecHttpRouteRetryPolicyPerRetryTimeoutPropertyOutputReference exte
 }
 export interface SpecHttpRouteRetryPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#http_retry_events AwsAppmeshRoute#http_retry_events}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#http_retry_events TfRoute#http_retry_events}
   */
   readonly httpRetryEvents?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#max_retries AwsAppmeshRoute#max_retries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#max_retries TfRoute#max_retries}
   */
   readonly maxRetries: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#tcp_retry_events AwsAppmeshRoute#tcp_retry_events}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#tcp_retry_events TfRoute#tcp_retry_events}
   */
   readonly tcpRetryEvents?: string[];
   /**
   * per_retry_timeout block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#per_retry_timeout AwsAppmeshRoute#per_retry_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#per_retry_timeout TfRoute#per_retry_timeout}
   */
   readonly perRetryTimeout: SpecHttpRouteRetryPolicyPerRetryTimeoutProperty;
 }
@@ -6549,11 +6549,11 @@ export class SpecHttpRouteRetryPolicyPropertyOutputReference extends cdktn.Compl
 }
 export interface SpecHttpRouteTimeoutIdleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#unit AwsAppmeshRoute#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#unit TfRoute#unit}
   */
   readonly unit: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#value AwsAppmeshRoute#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#value TfRoute#value}
   */
   readonly value: number;
 }
@@ -6623,11 +6623,11 @@ export class SpecHttpRouteTimeoutIdlePropertyOutputReference extends cdktn.Compl
 }
 export interface SpecHttpRouteTimeoutPerRequestProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#unit AwsAppmeshRoute#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#unit TfRoute#unit}
   */
   readonly unit: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#value AwsAppmeshRoute#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#value TfRoute#value}
   */
   readonly value: number;
 }
@@ -6699,13 +6699,13 @@ export interface SpecHttpRouteTimeoutProperty {
   /**
   * idle block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#idle AwsAppmeshRoute#idle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#idle TfRoute#idle}
   */
   readonly idle?: SpecHttpRouteTimeoutIdleProperty;
   /**
   * per_request block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#per_request AwsAppmeshRoute#per_request}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#per_request TfRoute#per_request}
   */
   readonly perRequest?: SpecHttpRouteTimeoutPerRequestProperty;
 }
@@ -6783,25 +6783,25 @@ export interface HttpRouteProperty {
   /**
   * action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#action AwsAppmeshRoute#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#action TfRoute#action}
   */
   readonly action: SpecHttpRouteActionProperty;
   /**
   * match block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#match AwsAppmeshRoute#match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#match TfRoute#match}
   */
   readonly match: SpecHttpRouteMatchProperty;
   /**
   * retry_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#retry_policy AwsAppmeshRoute#retry_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#retry_policy TfRoute#retry_policy}
   */
   readonly retryPolicy?: SpecHttpRouteRetryPolicyProperty;
   /**
   * timeout block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#timeout AwsAppmeshRoute#timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#timeout TfRoute#timeout}
   */
   readonly timeout?: SpecHttpRouteTimeoutProperty;
 }
@@ -6915,15 +6915,15 @@ export class HttpRoutePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SpecTcpRouteActionWeightedTargetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#port AwsAppmeshRoute#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#port TfRoute#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#virtual_node AwsAppmeshRoute#virtual_node}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#virtual_node TfRoute#virtual_node}
   */
   readonly virtualNode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#weight AwsAppmeshRoute#weight}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#weight TfRoute#weight}
   */
   readonly weight: number;
 }
@@ -7049,7 +7049,7 @@ export interface SpecTcpRouteActionProperty {
   /**
   * weighted_target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#weighted_target AwsAppmeshRoute#weighted_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#weighted_target TfRoute#weighted_target}
   */
   readonly weightedTarget: SpecTcpRouteActionWeightedTargetProperty[] | cdktn.IResolvable;
 }
@@ -7100,7 +7100,7 @@ export class SpecTcpRouteActionPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface SpecTcpRouteMatchProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#port AwsAppmeshRoute#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#port TfRoute#port}
   */
   readonly port?: number;
 }
@@ -7154,11 +7154,11 @@ export class SpecTcpRouteMatchPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface SpecTcpRouteTimeoutIdleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#unit AwsAppmeshRoute#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#unit TfRoute#unit}
   */
   readonly unit: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#value AwsAppmeshRoute#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#value TfRoute#value}
   */
   readonly value: number;
 }
@@ -7230,7 +7230,7 @@ export interface SpecTcpRouteTimeoutProperty {
   /**
   * idle block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#idle AwsAppmeshRoute#idle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#idle TfRoute#idle}
   */
   readonly idle?: SpecTcpRouteTimeoutIdleProperty;
 }
@@ -7286,19 +7286,19 @@ export interface TcpRouteProperty {
   /**
   * action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#action AwsAppmeshRoute#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#action TfRoute#action}
   */
   readonly action: SpecTcpRouteActionProperty;
   /**
   * match block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#match AwsAppmeshRoute#match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#match TfRoute#match}
   */
   readonly match?: SpecTcpRouteMatchProperty;
   /**
   * timeout block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#timeout AwsAppmeshRoute#timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#timeout TfRoute#timeout}
   */
   readonly timeout?: SpecTcpRouteTimeoutProperty;
 }
@@ -7393,31 +7393,31 @@ export class TcpRoutePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SpecProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#priority AwsAppmeshRoute#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#priority TfRoute#priority}
   */
   readonly priority?: number;
   /**
   * grpc_route block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#grpc_route AwsAppmeshRoute#grpc_route}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#grpc_route TfRoute#grpc_route}
   */
   readonly grpcRoute?: GrpcRouteProperty;
   /**
   * http2_route block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#http2_route AwsAppmeshRoute#http2_route}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#http2_route TfRoute#http2_route}
   */
   readonly http2Route?: Http2RouteProperty;
   /**
   * http_route block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#http_route AwsAppmeshRoute#http_route}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#http_route TfRoute#http_route}
   */
   readonly httpRoute?: HttpRouteProperty;
   /**
   * tcp_route block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#tcp_route AwsAppmeshRoute#tcp_route}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_route#tcp_route TfRoute#tcp_route}
   */
   readonly tcpRoute?: TcpRouteProperty;
 }

@@ -5,142 +5,142 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsGlueCrawlerConfig extends cdktn.TerraformMetaArguments {
+export interface TfCrawlerConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#classifiers AwsGlueCrawler#classifiers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#classifiers TfCrawler#classifiers}
   */
   readonly classifiers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#configuration AwsGlueCrawler#configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#configuration TfCrawler#configuration}
   */
   readonly configuration?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#database_name AwsGlueCrawler#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#database_name TfCrawler#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#description AwsGlueCrawler#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#description TfCrawler#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#id AwsGlueCrawler#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#id TfCrawler#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#name AwsGlueCrawler#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#name TfCrawler#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#region AwsGlueCrawler#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#region TfCrawler#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#role AwsGlueCrawler#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#role TfCrawler#role}
   */
   readonly role: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#schedule AwsGlueCrawler#schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#schedule TfCrawler#schedule}
   */
   readonly schedule?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#security_configuration AwsGlueCrawler#security_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#security_configuration TfCrawler#security_configuration}
   */
   readonly securityConfiguration?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#table_prefix AwsGlueCrawler#table_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#table_prefix TfCrawler#table_prefix}
   */
   readonly tablePrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#tags AwsGlueCrawler#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#tags TfCrawler#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#tags_all AwsGlueCrawler#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#tags_all TfCrawler#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * catalog_target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#catalog_target AwsGlueCrawler#catalog_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#catalog_target TfCrawler#catalog_target}
   */
-  readonly catalogTarget?: AwsGlueCrawler.CatalogTargetProperty[] | cdktn.IResolvable;
+  readonly catalogTarget?: TfCrawler.CatalogTargetProperty[] | cdktn.IResolvable;
   /**
   * delta_target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#delta_target AwsGlueCrawler#delta_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#delta_target TfCrawler#delta_target}
   */
-  readonly deltaTarget?: AwsGlueCrawler.DeltaTargetProperty[] | cdktn.IResolvable;
+  readonly deltaTarget?: TfCrawler.DeltaTargetProperty[] | cdktn.IResolvable;
   /**
   * dynamodb_target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#dynamodb_target AwsGlueCrawler#dynamodb_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#dynamodb_target TfCrawler#dynamodb_target}
   */
-  readonly dynamodbTarget?: AwsGlueCrawler.DynamodbTargetProperty[] | cdktn.IResolvable;
+  readonly dynamodbTarget?: TfCrawler.DynamodbTargetProperty[] | cdktn.IResolvable;
   /**
   * hudi_target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#hudi_target AwsGlueCrawler#hudi_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#hudi_target TfCrawler#hudi_target}
   */
-  readonly hudiTarget?: AwsGlueCrawler.HudiTargetProperty[] | cdktn.IResolvable;
+  readonly hudiTarget?: TfCrawler.HudiTargetProperty[] | cdktn.IResolvable;
   /**
   * iceberg_target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#iceberg_target AwsGlueCrawler#iceberg_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#iceberg_target TfCrawler#iceberg_target}
   */
-  readonly icebergTarget?: AwsGlueCrawler.IcebergTargetProperty[] | cdktn.IResolvable;
+  readonly icebergTarget?: TfCrawler.IcebergTargetProperty[] | cdktn.IResolvable;
   /**
   * jdbc_target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#jdbc_target AwsGlueCrawler#jdbc_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#jdbc_target TfCrawler#jdbc_target}
   */
-  readonly jdbcTarget?: AwsGlueCrawler.JdbcTargetProperty[] | cdktn.IResolvable;
+  readonly jdbcTarget?: TfCrawler.JdbcTargetProperty[] | cdktn.IResolvable;
   /**
   * lake_formation_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#lake_formation_configuration AwsGlueCrawler#lake_formation_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#lake_formation_configuration TfCrawler#lake_formation_configuration}
   */
-  readonly lakeFormationConfiguration?: AwsGlueCrawler.LakeFormationConfigurationProperty;
+  readonly lakeFormationConfiguration?: TfCrawler.LakeFormationConfigurationProperty;
   /**
   * lineage_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#lineage_configuration AwsGlueCrawler#lineage_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#lineage_configuration TfCrawler#lineage_configuration}
   */
-  readonly lineageConfiguration?: AwsGlueCrawler.LineageConfigurationProperty;
+  readonly lineageConfiguration?: TfCrawler.LineageConfigurationProperty;
   /**
   * mongodb_target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#mongodb_target AwsGlueCrawler#mongodb_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#mongodb_target TfCrawler#mongodb_target}
   */
-  readonly mongodbTarget?: AwsGlueCrawler.MongodbTargetProperty[] | cdktn.IResolvable;
+  readonly mongodbTarget?: TfCrawler.MongodbTargetProperty[] | cdktn.IResolvable;
   /**
   * recrawl_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#recrawl_policy AwsGlueCrawler#recrawl_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#recrawl_policy TfCrawler#recrawl_policy}
   */
-  readonly recrawlPolicy?: AwsGlueCrawler.RecrawlPolicyProperty;
+  readonly recrawlPolicy?: TfCrawler.RecrawlPolicyProperty;
   /**
   * s3_target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#s3_target AwsGlueCrawler#s3_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#s3_target TfCrawler#s3_target}
   */
-  readonly s3Target?: AwsGlueCrawler.S3TargetProperty[] | cdktn.IResolvable;
+  readonly s3Target?: TfCrawler.S3TargetProperty[] | cdktn.IResolvable;
   /**
   * schema_change_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#schema_change_policy AwsGlueCrawler#schema_change_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#schema_change_policy TfCrawler#schema_change_policy}
   */
-  readonly schemaChangePolicy?: AwsGlueCrawler.SchemaChangePolicyProperty;
+  readonly schemaChangePolicy?: TfCrawler.SchemaChangePolicyProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler aws_glue_crawler}
 */
-export class AwsGlueCrawler extends cdktn.TerraformResource {
+export class TfCrawler extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -151,11 +151,11 @@ export class AwsGlueCrawler extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsGlueCrawler resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfCrawler resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsGlueCrawler to import
-  * @param importFromId The id of the existing AwsGlueCrawler that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsGlueCrawler to import is found
+  * @param importToId The construct id used in the generated config for the TfCrawler to import
+  * @param importFromId The id of the existing TfCrawler that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfCrawler to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_glue_crawler", importId: importFromId, provider });
@@ -170,9 +170,9 @@ export class AwsGlueCrawler extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsGlueCrawlerConfig
+  * @param options TfCrawlerConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsGlueCrawlerConfig) {
+  public constructor(scope: Construct, id: string, config: TfCrawlerConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_glue_crawler',
       terraformGeneratorMetadata: {
@@ -424,11 +424,11 @@ export class AwsGlueCrawler extends cdktn.TerraformResource {
   }
 
   // catalog_target - computed: false, optional: true, required: false
-  private _catalogTarget = new AwsGlueCrawler.CatalogTargetPropertyList(this, "catalog_target", false);
+  private _catalogTarget = new TfCrawler.CatalogTargetPropertyList(this, "catalog_target", false);
   public get catalogTarget() {
     return this._catalogTarget;
   }
-  public putCatalogTarget(value: AwsGlueCrawler.CatalogTargetProperty[] | cdktn.IResolvable) {
+  public putCatalogTarget(value: TfCrawler.CatalogTargetProperty[] | cdktn.IResolvable) {
     this._catalogTarget.internalValue = value;
   }
   public resetCatalogTarget() {
@@ -440,11 +440,11 @@ export class AwsGlueCrawler extends cdktn.TerraformResource {
   }
 
   // delta_target - computed: false, optional: true, required: false
-  private _deltaTarget = new AwsGlueCrawler.DeltaTargetPropertyList(this, "delta_target", false);
+  private _deltaTarget = new TfCrawler.DeltaTargetPropertyList(this, "delta_target", false);
   public get deltaTarget() {
     return this._deltaTarget;
   }
-  public putDeltaTarget(value: AwsGlueCrawler.DeltaTargetProperty[] | cdktn.IResolvable) {
+  public putDeltaTarget(value: TfCrawler.DeltaTargetProperty[] | cdktn.IResolvable) {
     this._deltaTarget.internalValue = value;
   }
   public resetDeltaTarget() {
@@ -456,11 +456,11 @@ export class AwsGlueCrawler extends cdktn.TerraformResource {
   }
 
   // dynamodb_target - computed: false, optional: true, required: false
-  private _dynamodbTarget = new AwsGlueCrawler.DynamodbTargetPropertyList(this, "dynamodb_target", false);
+  private _dynamodbTarget = new TfCrawler.DynamodbTargetPropertyList(this, "dynamodb_target", false);
   public get dynamodbTarget() {
     return this._dynamodbTarget;
   }
-  public putDynamodbTarget(value: AwsGlueCrawler.DynamodbTargetProperty[] | cdktn.IResolvable) {
+  public putDynamodbTarget(value: TfCrawler.DynamodbTargetProperty[] | cdktn.IResolvable) {
     this._dynamodbTarget.internalValue = value;
   }
   public resetDynamodbTarget() {
@@ -472,11 +472,11 @@ export class AwsGlueCrawler extends cdktn.TerraformResource {
   }
 
   // hudi_target - computed: false, optional: true, required: false
-  private _hudiTarget = new AwsGlueCrawler.HudiTargetPropertyList(this, "hudi_target", false);
+  private _hudiTarget = new TfCrawler.HudiTargetPropertyList(this, "hudi_target", false);
   public get hudiTarget() {
     return this._hudiTarget;
   }
-  public putHudiTarget(value: AwsGlueCrawler.HudiTargetProperty[] | cdktn.IResolvable) {
+  public putHudiTarget(value: TfCrawler.HudiTargetProperty[] | cdktn.IResolvable) {
     this._hudiTarget.internalValue = value;
   }
   public resetHudiTarget() {
@@ -488,11 +488,11 @@ export class AwsGlueCrawler extends cdktn.TerraformResource {
   }
 
   // iceberg_target - computed: false, optional: true, required: false
-  private _icebergTarget = new AwsGlueCrawler.IcebergTargetPropertyList(this, "iceberg_target", false);
+  private _icebergTarget = new TfCrawler.IcebergTargetPropertyList(this, "iceberg_target", false);
   public get icebergTarget() {
     return this._icebergTarget;
   }
-  public putIcebergTarget(value: AwsGlueCrawler.IcebergTargetProperty[] | cdktn.IResolvable) {
+  public putIcebergTarget(value: TfCrawler.IcebergTargetProperty[] | cdktn.IResolvable) {
     this._icebergTarget.internalValue = value;
   }
   public resetIcebergTarget() {
@@ -504,11 +504,11 @@ export class AwsGlueCrawler extends cdktn.TerraformResource {
   }
 
   // jdbc_target - computed: false, optional: true, required: false
-  private _jdbcTarget = new AwsGlueCrawler.JdbcTargetPropertyList(this, "jdbc_target", false);
+  private _jdbcTarget = new TfCrawler.JdbcTargetPropertyList(this, "jdbc_target", false);
   public get jdbcTarget() {
     return this._jdbcTarget;
   }
-  public putJdbcTarget(value: AwsGlueCrawler.JdbcTargetProperty[] | cdktn.IResolvable) {
+  public putJdbcTarget(value: TfCrawler.JdbcTargetProperty[] | cdktn.IResolvable) {
     this._jdbcTarget.internalValue = value;
   }
   public resetJdbcTarget() {
@@ -520,11 +520,11 @@ export class AwsGlueCrawler extends cdktn.TerraformResource {
   }
 
   // lake_formation_configuration - computed: false, optional: true, required: false
-  private _lakeFormationConfiguration = new AwsGlueCrawler.LakeFormationConfigurationPropertyOutputReference(this, "lake_formation_configuration");
+  private _lakeFormationConfiguration = new TfCrawler.LakeFormationConfigurationPropertyOutputReference(this, "lake_formation_configuration");
   public get lakeFormationConfiguration() {
     return this._lakeFormationConfiguration;
   }
-  public putLakeFormationConfiguration(value: AwsGlueCrawler.LakeFormationConfigurationProperty) {
+  public putLakeFormationConfiguration(value: TfCrawler.LakeFormationConfigurationProperty) {
     this._lakeFormationConfiguration.internalValue = value;
   }
   public resetLakeFormationConfiguration() {
@@ -536,11 +536,11 @@ export class AwsGlueCrawler extends cdktn.TerraformResource {
   }
 
   // lineage_configuration - computed: false, optional: true, required: false
-  private _lineageConfiguration = new AwsGlueCrawler.LineageConfigurationPropertyOutputReference(this, "lineage_configuration");
+  private _lineageConfiguration = new TfCrawler.LineageConfigurationPropertyOutputReference(this, "lineage_configuration");
   public get lineageConfiguration() {
     return this._lineageConfiguration;
   }
-  public putLineageConfiguration(value: AwsGlueCrawler.LineageConfigurationProperty) {
+  public putLineageConfiguration(value: TfCrawler.LineageConfigurationProperty) {
     this._lineageConfiguration.internalValue = value;
   }
   public resetLineageConfiguration() {
@@ -552,11 +552,11 @@ export class AwsGlueCrawler extends cdktn.TerraformResource {
   }
 
   // mongodb_target - computed: false, optional: true, required: false
-  private _mongodbTarget = new AwsGlueCrawler.MongodbTargetPropertyList(this, "mongodb_target", false);
+  private _mongodbTarget = new TfCrawler.MongodbTargetPropertyList(this, "mongodb_target", false);
   public get mongodbTarget() {
     return this._mongodbTarget;
   }
-  public putMongodbTarget(value: AwsGlueCrawler.MongodbTargetProperty[] | cdktn.IResolvable) {
+  public putMongodbTarget(value: TfCrawler.MongodbTargetProperty[] | cdktn.IResolvable) {
     this._mongodbTarget.internalValue = value;
   }
   public resetMongodbTarget() {
@@ -568,11 +568,11 @@ export class AwsGlueCrawler extends cdktn.TerraformResource {
   }
 
   // recrawl_policy - computed: false, optional: true, required: false
-  private _recrawlPolicy = new AwsGlueCrawler.RecrawlPolicyPropertyOutputReference(this, "recrawl_policy");
+  private _recrawlPolicy = new TfCrawler.RecrawlPolicyPropertyOutputReference(this, "recrawl_policy");
   public get recrawlPolicy() {
     return this._recrawlPolicy;
   }
-  public putRecrawlPolicy(value: AwsGlueCrawler.RecrawlPolicyProperty) {
+  public putRecrawlPolicy(value: TfCrawler.RecrawlPolicyProperty) {
     this._recrawlPolicy.internalValue = value;
   }
   public resetRecrawlPolicy() {
@@ -584,11 +584,11 @@ export class AwsGlueCrawler extends cdktn.TerraformResource {
   }
 
   // s3_target - computed: false, optional: true, required: false
-  private _s3Target = new AwsGlueCrawler.S3TargetPropertyList(this, "s3_target", false);
+  private _s3Target = new TfCrawler.S3TargetPropertyList(this, "s3_target", false);
   public get s3Target() {
     return this._s3Target;
   }
-  public putS3Target(value: AwsGlueCrawler.S3TargetProperty[] | cdktn.IResolvable) {
+  public putS3Target(value: TfCrawler.S3TargetProperty[] | cdktn.IResolvable) {
     this._s3Target.internalValue = value;
   }
   public resetS3Target() {
@@ -600,11 +600,11 @@ export class AwsGlueCrawler extends cdktn.TerraformResource {
   }
 
   // schema_change_policy - computed: false, optional: true, required: false
-  private _schemaChangePolicy = new AwsGlueCrawler.SchemaChangePolicyPropertyOutputReference(this, "schema_change_policy");
+  private _schemaChangePolicy = new TfCrawler.SchemaChangePolicyPropertyOutputReference(this, "schema_change_policy");
   public get schemaChangePolicy() {
     return this._schemaChangePolicy;
   }
-  public putSchemaChangePolicy(value: AwsGlueCrawler.SchemaChangePolicyProperty) {
+  public putSchemaChangePolicy(value: TfCrawler.SchemaChangePolicyProperty) {
     this._schemaChangePolicy.internalValue = value;
   }
   public resetSchemaChangePolicy() {
@@ -634,18 +634,18 @@ export class AwsGlueCrawler extends cdktn.TerraformResource {
       table_prefix: cdktn.stringToTerraform(this._tablePrefix),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      catalog_target: cdktn.listMapper(awsGlueCrawlerCatalogTargetPropertyToTerraform, true)(this._catalogTarget.internalValue),
-      delta_target: cdktn.listMapper(awsGlueCrawlerDeltaTargetPropertyToTerraform, true)(this._deltaTarget.internalValue),
-      dynamodb_target: cdktn.listMapper(awsGlueCrawlerDynamodbTargetPropertyToTerraform, true)(this._dynamodbTarget.internalValue),
-      hudi_target: cdktn.listMapper(awsGlueCrawlerHudiTargetPropertyToTerraform, true)(this._hudiTarget.internalValue),
-      iceberg_target: cdktn.listMapper(awsGlueCrawlerIcebergTargetPropertyToTerraform, true)(this._icebergTarget.internalValue),
-      jdbc_target: cdktn.listMapper(awsGlueCrawlerJdbcTargetPropertyToTerraform, true)(this._jdbcTarget.internalValue),
-      lake_formation_configuration: awsGlueCrawlerLakeFormationConfigurationPropertyToTerraform(this._lakeFormationConfiguration.internalValue),
-      lineage_configuration: awsGlueCrawlerLineageConfigurationPropertyToTerraform(this._lineageConfiguration.internalValue),
-      mongodb_target: cdktn.listMapper(awsGlueCrawlerMongodbTargetPropertyToTerraform, true)(this._mongodbTarget.internalValue),
-      recrawl_policy: awsGlueCrawlerRecrawlPolicyPropertyToTerraform(this._recrawlPolicy.internalValue),
-      s3_target: cdktn.listMapper(awsGlueCrawlerS3TargetPropertyToTerraform, true)(this._s3Target.internalValue),
-      schema_change_policy: awsGlueCrawlerSchemaChangePolicyPropertyToTerraform(this._schemaChangePolicy.internalValue),
+      catalog_target: cdktn.listMapper(tfCrawlerCatalogTargetPropertyToTerraform, true)(this._catalogTarget.internalValue),
+      delta_target: cdktn.listMapper(tfCrawlerDeltaTargetPropertyToTerraform, true)(this._deltaTarget.internalValue),
+      dynamodb_target: cdktn.listMapper(tfCrawlerDynamodbTargetPropertyToTerraform, true)(this._dynamodbTarget.internalValue),
+      hudi_target: cdktn.listMapper(tfCrawlerHudiTargetPropertyToTerraform, true)(this._hudiTarget.internalValue),
+      iceberg_target: cdktn.listMapper(tfCrawlerIcebergTargetPropertyToTerraform, true)(this._icebergTarget.internalValue),
+      jdbc_target: cdktn.listMapper(tfCrawlerJdbcTargetPropertyToTerraform, true)(this._jdbcTarget.internalValue),
+      lake_formation_configuration: tfCrawlerLakeFormationConfigurationPropertyToTerraform(this._lakeFormationConfiguration.internalValue),
+      lineage_configuration: tfCrawlerLineageConfigurationPropertyToTerraform(this._lineageConfiguration.internalValue),
+      mongodb_target: cdktn.listMapper(tfCrawlerMongodbTargetPropertyToTerraform, true)(this._mongodbTarget.internalValue),
+      recrawl_policy: tfCrawlerRecrawlPolicyPropertyToTerraform(this._recrawlPolicy.internalValue),
+      s3_target: cdktn.listMapper(tfCrawlerS3TargetPropertyToTerraform, true)(this._s3Target.internalValue),
+      schema_change_policy: tfCrawlerSchemaChangePolicyPropertyToTerraform(this._schemaChangePolicy.internalValue),
     };
   }
 
@@ -730,76 +730,76 @@ export class AwsGlueCrawler extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       catalog_target: {
-        value: cdktn.listMapperHcl(awsGlueCrawlerCatalogTargetPropertyToHclTerraform, true)(this._catalogTarget.internalValue),
+        value: cdktn.listMapperHcl(tfCrawlerCatalogTargetPropertyToHclTerraform, true)(this._catalogTarget.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGlueCrawler.CatalogTargetPropertyList",
+        storageClassType: "TfCrawler.CatalogTargetPropertyList",
       },
       delta_target: {
-        value: cdktn.listMapperHcl(awsGlueCrawlerDeltaTargetPropertyToHclTerraform, true)(this._deltaTarget.internalValue),
+        value: cdktn.listMapperHcl(tfCrawlerDeltaTargetPropertyToHclTerraform, true)(this._deltaTarget.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGlueCrawler.DeltaTargetPropertyList",
+        storageClassType: "TfCrawler.DeltaTargetPropertyList",
       },
       dynamodb_target: {
-        value: cdktn.listMapperHcl(awsGlueCrawlerDynamodbTargetPropertyToHclTerraform, true)(this._dynamodbTarget.internalValue),
+        value: cdktn.listMapperHcl(tfCrawlerDynamodbTargetPropertyToHclTerraform, true)(this._dynamodbTarget.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGlueCrawler.DynamodbTargetPropertyList",
+        storageClassType: "TfCrawler.DynamodbTargetPropertyList",
       },
       hudi_target: {
-        value: cdktn.listMapperHcl(awsGlueCrawlerHudiTargetPropertyToHclTerraform, true)(this._hudiTarget.internalValue),
+        value: cdktn.listMapperHcl(tfCrawlerHudiTargetPropertyToHclTerraform, true)(this._hudiTarget.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGlueCrawler.HudiTargetPropertyList",
+        storageClassType: "TfCrawler.HudiTargetPropertyList",
       },
       iceberg_target: {
-        value: cdktn.listMapperHcl(awsGlueCrawlerIcebergTargetPropertyToHclTerraform, true)(this._icebergTarget.internalValue),
+        value: cdktn.listMapperHcl(tfCrawlerIcebergTargetPropertyToHclTerraform, true)(this._icebergTarget.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGlueCrawler.IcebergTargetPropertyList",
+        storageClassType: "TfCrawler.IcebergTargetPropertyList",
       },
       jdbc_target: {
-        value: cdktn.listMapperHcl(awsGlueCrawlerJdbcTargetPropertyToHclTerraform, true)(this._jdbcTarget.internalValue),
+        value: cdktn.listMapperHcl(tfCrawlerJdbcTargetPropertyToHclTerraform, true)(this._jdbcTarget.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGlueCrawler.JdbcTargetPropertyList",
+        storageClassType: "TfCrawler.JdbcTargetPropertyList",
       },
       lake_formation_configuration: {
-        value: awsGlueCrawlerLakeFormationConfigurationPropertyToHclTerraform(this._lakeFormationConfiguration.internalValue),
+        value: tfCrawlerLakeFormationConfigurationPropertyToHclTerraform(this._lakeFormationConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGlueCrawler.LakeFormationConfigurationPropertyList",
+        storageClassType: "TfCrawler.LakeFormationConfigurationPropertyList",
       },
       lineage_configuration: {
-        value: awsGlueCrawlerLineageConfigurationPropertyToHclTerraform(this._lineageConfiguration.internalValue),
+        value: tfCrawlerLineageConfigurationPropertyToHclTerraform(this._lineageConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGlueCrawler.LineageConfigurationPropertyList",
+        storageClassType: "TfCrawler.LineageConfigurationPropertyList",
       },
       mongodb_target: {
-        value: cdktn.listMapperHcl(awsGlueCrawlerMongodbTargetPropertyToHclTerraform, true)(this._mongodbTarget.internalValue),
+        value: cdktn.listMapperHcl(tfCrawlerMongodbTargetPropertyToHclTerraform, true)(this._mongodbTarget.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGlueCrawler.MongodbTargetPropertyList",
+        storageClassType: "TfCrawler.MongodbTargetPropertyList",
       },
       recrawl_policy: {
-        value: awsGlueCrawlerRecrawlPolicyPropertyToHclTerraform(this._recrawlPolicy.internalValue),
+        value: tfCrawlerRecrawlPolicyPropertyToHclTerraform(this._recrawlPolicy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGlueCrawler.RecrawlPolicyPropertyList",
+        storageClassType: "TfCrawler.RecrawlPolicyPropertyList",
       },
       s3_target: {
-        value: cdktn.listMapperHcl(awsGlueCrawlerS3TargetPropertyToHclTerraform, true)(this._s3Target.internalValue),
+        value: cdktn.listMapperHcl(tfCrawlerS3TargetPropertyToHclTerraform, true)(this._s3Target.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGlueCrawler.S3TargetPropertyList",
+        storageClassType: "TfCrawler.S3TargetPropertyList",
       },
       schema_change_policy: {
-        value: awsGlueCrawlerSchemaChangePolicyPropertyToHclTerraform(this._schemaChangePolicy.internalValue),
+        value: tfCrawlerSchemaChangePolicyPropertyToHclTerraform(this._schemaChangePolicy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGlueCrawler.SchemaChangePolicyPropertyList",
+        storageClassType: "TfCrawler.SchemaChangePolicyPropertyList",
       },
     };
 
@@ -808,7 +808,7 @@ export class AwsGlueCrawler extends cdktn.TerraformResource {
   }
 }
 
-export function awsGlueCrawlerCatalogTargetPropertyToTerraform(struct?: AwsGlueCrawler.CatalogTargetProperty | cdktn.IResolvable): any {
+export function tfCrawlerCatalogTargetPropertyToTerraform(struct?: TfCrawler.CatalogTargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -823,7 +823,7 @@ export function awsGlueCrawlerCatalogTargetPropertyToTerraform(struct?: AwsGlueC
 }
 
 
-export function awsGlueCrawlerCatalogTargetPropertyToHclTerraform(struct?: AwsGlueCrawler.CatalogTargetProperty | cdktn.IResolvable): any {
+export function tfCrawlerCatalogTargetPropertyToHclTerraform(struct?: TfCrawler.CatalogTargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -866,7 +866,7 @@ export function awsGlueCrawlerCatalogTargetPropertyToHclTerraform(struct?: AwsGl
 }
 
 
-export function awsGlueCrawlerDeltaTargetPropertyToTerraform(struct?: AwsGlueCrawler.DeltaTargetProperty | cdktn.IResolvable): any {
+export function tfCrawlerDeltaTargetPropertyToTerraform(struct?: TfCrawler.DeltaTargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -880,7 +880,7 @@ export function awsGlueCrawlerDeltaTargetPropertyToTerraform(struct?: AwsGlueCra
 }
 
 
-export function awsGlueCrawlerDeltaTargetPropertyToHclTerraform(struct?: AwsGlueCrawler.DeltaTargetProperty | cdktn.IResolvable): any {
+export function tfCrawlerDeltaTargetPropertyToHclTerraform(struct?: TfCrawler.DeltaTargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -917,7 +917,7 @@ export function awsGlueCrawlerDeltaTargetPropertyToHclTerraform(struct?: AwsGlue
 }
 
 
-export function awsGlueCrawlerDynamodbTargetPropertyToTerraform(struct?: AwsGlueCrawler.DynamodbTargetProperty | cdktn.IResolvable): any {
+export function tfCrawlerDynamodbTargetPropertyToTerraform(struct?: TfCrawler.DynamodbTargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -930,7 +930,7 @@ export function awsGlueCrawlerDynamodbTargetPropertyToTerraform(struct?: AwsGlue
 }
 
 
-export function awsGlueCrawlerDynamodbTargetPropertyToHclTerraform(struct?: AwsGlueCrawler.DynamodbTargetProperty | cdktn.IResolvable): any {
+export function tfCrawlerDynamodbTargetPropertyToHclTerraform(struct?: TfCrawler.DynamodbTargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -961,7 +961,7 @@ export function awsGlueCrawlerDynamodbTargetPropertyToHclTerraform(struct?: AwsG
 }
 
 
-export function awsGlueCrawlerHudiTargetPropertyToTerraform(struct?: AwsGlueCrawler.HudiTargetProperty | cdktn.IResolvable): any {
+export function tfCrawlerHudiTargetPropertyToTerraform(struct?: TfCrawler.HudiTargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -975,7 +975,7 @@ export function awsGlueCrawlerHudiTargetPropertyToTerraform(struct?: AwsGlueCraw
 }
 
 
-export function awsGlueCrawlerHudiTargetPropertyToHclTerraform(struct?: AwsGlueCrawler.HudiTargetProperty | cdktn.IResolvable): any {
+export function tfCrawlerHudiTargetPropertyToHclTerraform(struct?: TfCrawler.HudiTargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1012,7 +1012,7 @@ export function awsGlueCrawlerHudiTargetPropertyToHclTerraform(struct?: AwsGlueC
 }
 
 
-export function awsGlueCrawlerIcebergTargetPropertyToTerraform(struct?: AwsGlueCrawler.IcebergTargetProperty | cdktn.IResolvable): any {
+export function tfCrawlerIcebergTargetPropertyToTerraform(struct?: TfCrawler.IcebergTargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1026,7 +1026,7 @@ export function awsGlueCrawlerIcebergTargetPropertyToTerraform(struct?: AwsGlueC
 }
 
 
-export function awsGlueCrawlerIcebergTargetPropertyToHclTerraform(struct?: AwsGlueCrawler.IcebergTargetProperty | cdktn.IResolvable): any {
+export function tfCrawlerIcebergTargetPropertyToHclTerraform(struct?: TfCrawler.IcebergTargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1063,7 +1063,7 @@ export function awsGlueCrawlerIcebergTargetPropertyToHclTerraform(struct?: AwsGl
 }
 
 
-export function awsGlueCrawlerJdbcTargetPropertyToTerraform(struct?: AwsGlueCrawler.JdbcTargetProperty | cdktn.IResolvable): any {
+export function tfCrawlerJdbcTargetPropertyToTerraform(struct?: TfCrawler.JdbcTargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1077,7 +1077,7 @@ export function awsGlueCrawlerJdbcTargetPropertyToTerraform(struct?: AwsGlueCraw
 }
 
 
-export function awsGlueCrawlerJdbcTargetPropertyToHclTerraform(struct?: AwsGlueCrawler.JdbcTargetProperty | cdktn.IResolvable): any {
+export function tfCrawlerJdbcTargetPropertyToHclTerraform(struct?: TfCrawler.JdbcTargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1114,7 +1114,7 @@ export function awsGlueCrawlerJdbcTargetPropertyToHclTerraform(struct?: AwsGlueC
 }
 
 
-export function awsGlueCrawlerLakeFormationConfigurationPropertyToTerraform(struct?: AwsGlueCrawler.LakeFormationConfigurationPropertyOutputReference | AwsGlueCrawler.LakeFormationConfigurationProperty): any {
+export function tfCrawlerLakeFormationConfigurationPropertyToTerraform(struct?: TfCrawler.LakeFormationConfigurationPropertyOutputReference | TfCrawler.LakeFormationConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1126,7 +1126,7 @@ export function awsGlueCrawlerLakeFormationConfigurationPropertyToTerraform(stru
 }
 
 
-export function awsGlueCrawlerLakeFormationConfigurationPropertyToHclTerraform(struct?: AwsGlueCrawler.LakeFormationConfigurationPropertyOutputReference | AwsGlueCrawler.LakeFormationConfigurationProperty): any {
+export function tfCrawlerLakeFormationConfigurationPropertyToHclTerraform(struct?: TfCrawler.LakeFormationConfigurationPropertyOutputReference | TfCrawler.LakeFormationConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1151,7 +1151,7 @@ export function awsGlueCrawlerLakeFormationConfigurationPropertyToHclTerraform(s
 }
 
 
-export function awsGlueCrawlerLineageConfigurationPropertyToTerraform(struct?: AwsGlueCrawler.LineageConfigurationPropertyOutputReference | AwsGlueCrawler.LineageConfigurationProperty): any {
+export function tfCrawlerLineageConfigurationPropertyToTerraform(struct?: TfCrawler.LineageConfigurationPropertyOutputReference | TfCrawler.LineageConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1162,7 +1162,7 @@ export function awsGlueCrawlerLineageConfigurationPropertyToTerraform(struct?: A
 }
 
 
-export function awsGlueCrawlerLineageConfigurationPropertyToHclTerraform(struct?: AwsGlueCrawler.LineageConfigurationPropertyOutputReference | AwsGlueCrawler.LineageConfigurationProperty): any {
+export function tfCrawlerLineageConfigurationPropertyToHclTerraform(struct?: TfCrawler.LineageConfigurationPropertyOutputReference | TfCrawler.LineageConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1181,7 +1181,7 @@ export function awsGlueCrawlerLineageConfigurationPropertyToHclTerraform(struct?
 }
 
 
-export function awsGlueCrawlerMongodbTargetPropertyToTerraform(struct?: AwsGlueCrawler.MongodbTargetProperty | cdktn.IResolvable): any {
+export function tfCrawlerMongodbTargetPropertyToTerraform(struct?: TfCrawler.MongodbTargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1194,7 +1194,7 @@ export function awsGlueCrawlerMongodbTargetPropertyToTerraform(struct?: AwsGlueC
 }
 
 
-export function awsGlueCrawlerMongodbTargetPropertyToHclTerraform(struct?: AwsGlueCrawler.MongodbTargetProperty | cdktn.IResolvable): any {
+export function tfCrawlerMongodbTargetPropertyToHclTerraform(struct?: TfCrawler.MongodbTargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1225,7 +1225,7 @@ export function awsGlueCrawlerMongodbTargetPropertyToHclTerraform(struct?: AwsGl
 }
 
 
-export function awsGlueCrawlerRecrawlPolicyPropertyToTerraform(struct?: AwsGlueCrawler.RecrawlPolicyPropertyOutputReference | AwsGlueCrawler.RecrawlPolicyProperty): any {
+export function tfCrawlerRecrawlPolicyPropertyToTerraform(struct?: TfCrawler.RecrawlPolicyPropertyOutputReference | TfCrawler.RecrawlPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1236,7 +1236,7 @@ export function awsGlueCrawlerRecrawlPolicyPropertyToTerraform(struct?: AwsGlueC
 }
 
 
-export function awsGlueCrawlerRecrawlPolicyPropertyToHclTerraform(struct?: AwsGlueCrawler.RecrawlPolicyPropertyOutputReference | AwsGlueCrawler.RecrawlPolicyProperty): any {
+export function tfCrawlerRecrawlPolicyPropertyToHclTerraform(struct?: TfCrawler.RecrawlPolicyPropertyOutputReference | TfCrawler.RecrawlPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1255,7 +1255,7 @@ export function awsGlueCrawlerRecrawlPolicyPropertyToHclTerraform(struct?: AwsGl
 }
 
 
-export function awsGlueCrawlerS3TargetPropertyToTerraform(struct?: AwsGlueCrawler.S3TargetProperty | cdktn.IResolvable): any {
+export function tfCrawlerS3TargetPropertyToTerraform(struct?: TfCrawler.S3TargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1271,7 +1271,7 @@ export function awsGlueCrawlerS3TargetPropertyToTerraform(struct?: AwsGlueCrawle
 }
 
 
-export function awsGlueCrawlerS3TargetPropertyToHclTerraform(struct?: AwsGlueCrawler.S3TargetProperty | cdktn.IResolvable): any {
+export function tfCrawlerS3TargetPropertyToHclTerraform(struct?: TfCrawler.S3TargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1320,7 +1320,7 @@ export function awsGlueCrawlerS3TargetPropertyToHclTerraform(struct?: AwsGlueCra
 }
 
 
-export function awsGlueCrawlerSchemaChangePolicyPropertyToTerraform(struct?: AwsGlueCrawler.SchemaChangePolicyPropertyOutputReference | AwsGlueCrawler.SchemaChangePolicyProperty): any {
+export function tfCrawlerSchemaChangePolicyPropertyToTerraform(struct?: TfCrawler.SchemaChangePolicyPropertyOutputReference | TfCrawler.SchemaChangePolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1332,7 +1332,7 @@ export function awsGlueCrawlerSchemaChangePolicyPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsGlueCrawlerSchemaChangePolicyPropertyToHclTerraform(struct?: AwsGlueCrawler.SchemaChangePolicyPropertyOutputReference | AwsGlueCrawler.SchemaChangePolicyProperty): any {
+export function tfCrawlerSchemaChangePolicyPropertyToHclTerraform(struct?: TfCrawler.SchemaChangePolicyPropertyOutputReference | TfCrawler.SchemaChangePolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1357,26 +1357,26 @@ export function awsGlueCrawlerSchemaChangePolicyPropertyToHclTerraform(struct?: 
 }
 
 
-export namespace AwsGlueCrawler {
+export namespace TfCrawler {
 export interface CatalogTargetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#connection_name AwsGlueCrawler#connection_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#connection_name TfCrawler#connection_name}
   */
   readonly connectionName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#database_name AwsGlueCrawler#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#database_name TfCrawler#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#dlq_event_queue_arn AwsGlueCrawler#dlq_event_queue_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#dlq_event_queue_arn TfCrawler#dlq_event_queue_arn}
   */
   readonly dlqEventQueueArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#event_queue_arn AwsGlueCrawler#event_queue_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#event_queue_arn TfCrawler#event_queue_arn}
   */
   readonly eventQueueArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#tables AwsGlueCrawler#tables}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#tables TfCrawler#tables}
   */
   readonly tables: string[];
 }
@@ -1544,19 +1544,19 @@ export class CatalogTargetPropertyList extends cdktn.ComplexList {
 }
 export interface DeltaTargetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#connection_name AwsGlueCrawler#connection_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#connection_name TfCrawler#connection_name}
   */
   readonly connectionName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#create_native_delta_table AwsGlueCrawler#create_native_delta_table}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#create_native_delta_table TfCrawler#create_native_delta_table}
   */
   readonly createNativeDeltaTable?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#delta_tables AwsGlueCrawler#delta_tables}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#delta_tables TfCrawler#delta_tables}
   */
   readonly deltaTables: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#write_manifest AwsGlueCrawler#write_manifest}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#write_manifest TfCrawler#write_manifest}
   */
   readonly writeManifest: boolean | cdktn.IResolvable;
 }
@@ -1702,15 +1702,15 @@ export class DeltaTargetPropertyList extends cdktn.ComplexList {
 }
 export interface DynamodbTargetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#path AwsGlueCrawler#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#path TfCrawler#path}
   */
   readonly path: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#scan_all AwsGlueCrawler#scan_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#scan_all TfCrawler#scan_all}
   */
   readonly scanAll?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#scan_rate AwsGlueCrawler#scan_rate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#scan_rate TfCrawler#scan_rate}
   */
   readonly scanRate?: number;
 }
@@ -1837,19 +1837,19 @@ export class DynamodbTargetPropertyList extends cdktn.ComplexList {
 }
 export interface HudiTargetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#connection_name AwsGlueCrawler#connection_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#connection_name TfCrawler#connection_name}
   */
   readonly connectionName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#exclusions AwsGlueCrawler#exclusions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#exclusions TfCrawler#exclusions}
   */
   readonly exclusions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#maximum_traversal_depth AwsGlueCrawler#maximum_traversal_depth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#maximum_traversal_depth TfCrawler#maximum_traversal_depth}
   */
   readonly maximumTraversalDepth: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#paths AwsGlueCrawler#paths}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#paths TfCrawler#paths}
   */
   readonly paths: string[];
 }
@@ -1995,19 +1995,19 @@ export class HudiTargetPropertyList extends cdktn.ComplexList {
 }
 export interface IcebergTargetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#connection_name AwsGlueCrawler#connection_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#connection_name TfCrawler#connection_name}
   */
   readonly connectionName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#exclusions AwsGlueCrawler#exclusions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#exclusions TfCrawler#exclusions}
   */
   readonly exclusions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#maximum_traversal_depth AwsGlueCrawler#maximum_traversal_depth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#maximum_traversal_depth TfCrawler#maximum_traversal_depth}
   */
   readonly maximumTraversalDepth: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#paths AwsGlueCrawler#paths}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#paths TfCrawler#paths}
   */
   readonly paths: string[];
 }
@@ -2153,19 +2153,19 @@ export class IcebergTargetPropertyList extends cdktn.ComplexList {
 }
 export interface JdbcTargetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#connection_name AwsGlueCrawler#connection_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#connection_name TfCrawler#connection_name}
   */
   readonly connectionName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#enable_additional_metadata AwsGlueCrawler#enable_additional_metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#enable_additional_metadata TfCrawler#enable_additional_metadata}
   */
   readonly enableAdditionalMetadata?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#exclusions AwsGlueCrawler#exclusions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#exclusions TfCrawler#exclusions}
   */
   readonly exclusions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#path AwsGlueCrawler#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#path TfCrawler#path}
   */
   readonly path: string;
 }
@@ -2311,11 +2311,11 @@ export class JdbcTargetPropertyList extends cdktn.ComplexList {
 }
 export interface LakeFormationConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#account_id AwsGlueCrawler#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#account_id TfCrawler#account_id}
   */
   readonly accountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#use_lake_formation_credentials AwsGlueCrawler#use_lake_formation_credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#use_lake_formation_credentials TfCrawler#use_lake_formation_credentials}
   */
   readonly useLakeFormationCredentials?: boolean | cdktn.IResolvable;
 }
@@ -2391,7 +2391,7 @@ export class LakeFormationConfigurationPropertyOutputReference extends cdktn.Com
 }
 export interface LineageConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#crawler_lineage_settings AwsGlueCrawler#crawler_lineage_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#crawler_lineage_settings TfCrawler#crawler_lineage_settings}
   */
   readonly crawlerLineageSettings?: string;
 }
@@ -2445,15 +2445,15 @@ export class LineageConfigurationPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface MongodbTargetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#connection_name AwsGlueCrawler#connection_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#connection_name TfCrawler#connection_name}
   */
   readonly connectionName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#path AwsGlueCrawler#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#path TfCrawler#path}
   */
   readonly path: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#scan_all AwsGlueCrawler#scan_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#scan_all TfCrawler#scan_all}
   */
   readonly scanAll?: boolean | cdktn.IResolvable;
 }
@@ -2577,7 +2577,7 @@ export class MongodbTargetPropertyList extends cdktn.ComplexList {
 }
 export interface RecrawlPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#recrawl_behavior AwsGlueCrawler#recrawl_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#recrawl_behavior TfCrawler#recrawl_behavior}
   */
   readonly recrawlBehavior?: string;
 }
@@ -2631,27 +2631,27 @@ export class RecrawlPolicyPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface S3TargetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#connection_name AwsGlueCrawler#connection_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#connection_name TfCrawler#connection_name}
   */
   readonly connectionName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#dlq_event_queue_arn AwsGlueCrawler#dlq_event_queue_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#dlq_event_queue_arn TfCrawler#dlq_event_queue_arn}
   */
   readonly dlqEventQueueArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#event_queue_arn AwsGlueCrawler#event_queue_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#event_queue_arn TfCrawler#event_queue_arn}
   */
   readonly eventQueueArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#exclusions AwsGlueCrawler#exclusions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#exclusions TfCrawler#exclusions}
   */
   readonly exclusions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#path AwsGlueCrawler#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#path TfCrawler#path}
   */
   readonly path: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#sample_size AwsGlueCrawler#sample_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#sample_size TfCrawler#sample_size}
   */
   readonly sampleSize?: number;
 }
@@ -2844,11 +2844,11 @@ export class S3TargetPropertyList extends cdktn.ComplexList {
 }
 export interface SchemaChangePolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#delete_behavior AwsGlueCrawler#delete_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#delete_behavior TfCrawler#delete_behavior}
   */
   readonly deleteBehavior?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#update_behavior AwsGlueCrawler#update_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_crawler#update_behavior TfCrawler#update_behavior}
   */
   readonly updateBehavior?: string;
 }

@@ -5,35 +5,35 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsOpensearchserverlessAccessPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface TfAccessPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
   * Description of the policy. Typically used to store information about the permissions defined in the policy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_access_policy#description AwsOpensearchserverlessAccessPolicy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_access_policy#description TfAccessPolicy#description}
   */
   readonly description?: string;
   /**
   * Name of the policy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_access_policy#name AwsOpensearchserverlessAccessPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_access_policy#name TfAccessPolicy#name}
   */
   readonly name: string;
   /**
   * JSON policy document to use as the content for the new policy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_access_policy#policy AwsOpensearchserverlessAccessPolicy#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_access_policy#policy TfAccessPolicy#policy}
   */
   readonly policy: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_access_policy#region AwsOpensearchserverlessAccessPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_access_policy#region TfAccessPolicy#region}
   */
   readonly region?: string;
   /**
   * Type of access policy. Must be `data`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_access_policy#type AwsOpensearchserverlessAccessPolicy#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_access_policy#type TfAccessPolicy#type}
   */
   readonly type: string;
 }
@@ -41,7 +41,7 @@ export interface AwsOpensearchserverlessAccessPolicyConfig extends cdktn.Terrafo
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_access_policy aws_opensearchserverless_access_policy}
 */
-export class AwsOpensearchserverlessAccessPolicy extends cdktn.TerraformResource {
+export class TfAccessPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -52,11 +52,11 @@ export class AwsOpensearchserverlessAccessPolicy extends cdktn.TerraformResource
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsOpensearchserverlessAccessPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAccessPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsOpensearchserverlessAccessPolicy to import
-  * @param importFromId The id of the existing AwsOpensearchserverlessAccessPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_access_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsOpensearchserverlessAccessPolicy to import is found
+  * @param importToId The construct id used in the generated config for the TfAccessPolicy to import
+  * @param importFromId The id of the existing TfAccessPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_access_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAccessPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_opensearchserverless_access_policy", importId: importFromId, provider });
@@ -71,9 +71,9 @@ export class AwsOpensearchserverlessAccessPolicy extends cdktn.TerraformResource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsOpensearchserverlessAccessPolicyConfig
+  * @param options TfAccessPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsOpensearchserverlessAccessPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: TfAccessPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_opensearchserverless_access_policy',
       terraformGeneratorMetadata: {

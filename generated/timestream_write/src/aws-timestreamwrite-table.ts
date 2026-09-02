@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsTimestreamwriteTableConfig extends cdktn.TerraformMetaArguments {
+export interface TfTableConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#database_name AwsTimestreamwriteTable#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#database_name TfTable#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#id AwsTimestreamwriteTable#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#id TfTable#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,45 +20,45 @@ export interface AwsTimestreamwriteTableConfig extends cdktn.TerraformMetaArgume
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#region AwsTimestreamwriteTable#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#region TfTable#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#table_name AwsTimestreamwriteTable#table_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#table_name TfTable#table_name}
   */
   readonly tableName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#tags AwsTimestreamwriteTable#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#tags TfTable#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#tags_all AwsTimestreamwriteTable#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#tags_all TfTable#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * magnetic_store_write_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#magnetic_store_write_properties AwsTimestreamwriteTable#magnetic_store_write_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#magnetic_store_write_properties TfTable#magnetic_store_write_properties}
   */
-  readonly magneticStoreWriteProperties?: AwsTimestreamwriteTable.MagneticStoreWritePropertiesProperty;
+  readonly magneticStoreWriteProperties?: TfTable.MagneticStoreWritePropertiesProperty;
   /**
   * retention_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#retention_properties AwsTimestreamwriteTable#retention_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#retention_properties TfTable#retention_properties}
   */
-  readonly retentionProperties?: AwsTimestreamwriteTable.RetentionPropertiesProperty;
+  readonly retentionProperties?: TfTable.RetentionPropertiesProperty;
   /**
   * schema block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#schema AwsTimestreamwriteTable#schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#schema TfTable#schema}
   */
-  readonly schema?: AwsTimestreamwriteTable.SchemaProperty;
+  readonly schema?: TfTable.SchemaProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table aws_timestreamwrite_table}
 */
-export class AwsTimestreamwriteTable extends cdktn.TerraformResource {
+export class TfTable extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -69,11 +69,11 @@ export class AwsTimestreamwriteTable extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsTimestreamwriteTable resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfTable resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsTimestreamwriteTable to import
-  * @param importFromId The id of the existing AwsTimestreamwriteTable that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsTimestreamwriteTable to import is found
+  * @param importToId The construct id used in the generated config for the TfTable to import
+  * @param importFromId The id of the existing TfTable that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfTable to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_timestreamwrite_table", importId: importFromId, provider });
@@ -88,9 +88,9 @@ export class AwsTimestreamwriteTable extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsTimestreamwriteTableConfig
+  * @param options TfTableConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsTimestreamwriteTableConfig) {
+  public constructor(scope: Construct, id: string, config: TfTableConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_timestreamwrite_table',
       terraformGeneratorMetadata: {
@@ -217,11 +217,11 @@ export class AwsTimestreamwriteTable extends cdktn.TerraformResource {
   }
 
   // magnetic_store_write_properties - computed: false, optional: true, required: false
-  private _magneticStoreWriteProperties = new AwsTimestreamwriteTable.MagneticStoreWritePropertiesPropertyOutputReference(this, "magnetic_store_write_properties");
+  private _magneticStoreWriteProperties = new TfTable.MagneticStoreWritePropertiesPropertyOutputReference(this, "magnetic_store_write_properties");
   public get magneticStoreWriteProperties() {
     return this._magneticStoreWriteProperties;
   }
-  public putMagneticStoreWriteProperties(value: AwsTimestreamwriteTable.MagneticStoreWritePropertiesProperty) {
+  public putMagneticStoreWriteProperties(value: TfTable.MagneticStoreWritePropertiesProperty) {
     this._magneticStoreWriteProperties.internalValue = value;
   }
   public resetMagneticStoreWriteProperties() {
@@ -233,11 +233,11 @@ export class AwsTimestreamwriteTable extends cdktn.TerraformResource {
   }
 
   // retention_properties - computed: false, optional: true, required: false
-  private _retentionProperties = new AwsTimestreamwriteTable.RetentionPropertiesPropertyOutputReference(this, "retention_properties");
+  private _retentionProperties = new TfTable.RetentionPropertiesPropertyOutputReference(this, "retention_properties");
   public get retentionProperties() {
     return this._retentionProperties;
   }
-  public putRetentionProperties(value: AwsTimestreamwriteTable.RetentionPropertiesProperty) {
+  public putRetentionProperties(value: TfTable.RetentionPropertiesProperty) {
     this._retentionProperties.internalValue = value;
   }
   public resetRetentionProperties() {
@@ -249,11 +249,11 @@ export class AwsTimestreamwriteTable extends cdktn.TerraformResource {
   }
 
   // schema - computed: false, optional: true, required: false
-  private _schema = new AwsTimestreamwriteTable.SchemaPropertyOutputReference(this, "schema");
+  private _schema = new TfTable.SchemaPropertyOutputReference(this, "schema");
   public get schema() {
     return this._schema;
   }
-  public putSchema(value: AwsTimestreamwriteTable.SchemaProperty) {
+  public putSchema(value: TfTable.SchemaProperty) {
     this._schema.internalValue = value;
   }
   public resetSchema() {
@@ -276,9 +276,9 @@ export class AwsTimestreamwriteTable extends cdktn.TerraformResource {
       table_name: cdktn.stringToTerraform(this._tableName),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      magnetic_store_write_properties: awsTimestreamwriteTableMagneticStoreWritePropertiesPropertyToTerraform(this._magneticStoreWriteProperties.internalValue),
-      retention_properties: awsTimestreamwriteTableRetentionPropertiesPropertyToTerraform(this._retentionProperties.internalValue),
-      schema: awsTimestreamwriteTableSchemaPropertyToTerraform(this._schema.internalValue),
+      magnetic_store_write_properties: tfTableMagneticStoreWritePropertiesPropertyToTerraform(this._magneticStoreWriteProperties.internalValue),
+      retention_properties: tfTableRetentionPropertiesPropertyToTerraform(this._retentionProperties.internalValue),
+      schema: tfTableSchemaPropertyToTerraform(this._schema.internalValue),
     };
   }
 
@@ -321,22 +321,22 @@ export class AwsTimestreamwriteTable extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       magnetic_store_write_properties: {
-        value: awsTimestreamwriteTableMagneticStoreWritePropertiesPropertyToHclTerraform(this._magneticStoreWriteProperties.internalValue),
+        value: tfTableMagneticStoreWritePropertiesPropertyToHclTerraform(this._magneticStoreWriteProperties.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsTimestreamwriteTable.MagneticStoreWritePropertiesPropertyList",
+        storageClassType: "TfTable.MagneticStoreWritePropertiesPropertyList",
       },
       retention_properties: {
-        value: awsTimestreamwriteTableRetentionPropertiesPropertyToHclTerraform(this._retentionProperties.internalValue),
+        value: tfTableRetentionPropertiesPropertyToHclTerraform(this._retentionProperties.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsTimestreamwriteTable.RetentionPropertiesPropertyList",
+        storageClassType: "TfTable.RetentionPropertiesPropertyList",
       },
       schema: {
-        value: awsTimestreamwriteTableSchemaPropertyToHclTerraform(this._schema.internalValue),
+        value: tfTableSchemaPropertyToHclTerraform(this._schema.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsTimestreamwriteTable.SchemaPropertyList",
+        storageClassType: "TfTable.SchemaPropertyList",
       },
     };
 
@@ -345,7 +345,7 @@ export class AwsTimestreamwriteTable extends cdktn.TerraformResource {
   }
 }
 
-export function awsTimestreamwriteTableS3ConfigurationPropertyToTerraform(struct?: AwsTimestreamwriteTable.S3ConfigurationPropertyOutputReference | AwsTimestreamwriteTable.S3ConfigurationProperty): any {
+export function tfTableS3ConfigurationPropertyToTerraform(struct?: TfTable.S3ConfigurationPropertyOutputReference | TfTable.S3ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -359,7 +359,7 @@ export function awsTimestreamwriteTableS3ConfigurationPropertyToTerraform(struct
 }
 
 
-export function awsTimestreamwriteTableS3ConfigurationPropertyToHclTerraform(struct?: AwsTimestreamwriteTable.S3ConfigurationPropertyOutputReference | AwsTimestreamwriteTable.S3ConfigurationProperty): any {
+export function tfTableS3ConfigurationPropertyToHclTerraform(struct?: TfTable.S3ConfigurationPropertyOutputReference | TfTable.S3ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -396,25 +396,25 @@ export function awsTimestreamwriteTableS3ConfigurationPropertyToHclTerraform(str
 }
 
 
-export function awsTimestreamwriteTableMagneticStoreRejectedDataLocationPropertyToTerraform(struct?: AwsTimestreamwriteTable.MagneticStoreRejectedDataLocationPropertyOutputReference | AwsTimestreamwriteTable.MagneticStoreRejectedDataLocationProperty): any {
+export function tfTableMagneticStoreRejectedDataLocationPropertyToTerraform(struct?: TfTable.MagneticStoreRejectedDataLocationPropertyOutputReference | TfTable.MagneticStoreRejectedDataLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    s3_configuration: awsTimestreamwriteTableS3ConfigurationPropertyToTerraform(struct!.s3Configuration),
+    s3_configuration: tfTableS3ConfigurationPropertyToTerraform(struct!.s3Configuration),
   }
 }
 
 
-export function awsTimestreamwriteTableMagneticStoreRejectedDataLocationPropertyToHclTerraform(struct?: AwsTimestreamwriteTable.MagneticStoreRejectedDataLocationPropertyOutputReference | AwsTimestreamwriteTable.MagneticStoreRejectedDataLocationProperty): any {
+export function tfTableMagneticStoreRejectedDataLocationPropertyToHclTerraform(struct?: TfTable.MagneticStoreRejectedDataLocationPropertyOutputReference | TfTable.MagneticStoreRejectedDataLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     s3_configuration: {
-      value: awsTimestreamwriteTableS3ConfigurationPropertyToHclTerraform(struct!.s3Configuration),
+      value: tfTableS3ConfigurationPropertyToHclTerraform(struct!.s3Configuration),
       isBlock: true,
       type: "list",
       storageClassType: "S3ConfigurationPropertyList",
@@ -426,19 +426,19 @@ export function awsTimestreamwriteTableMagneticStoreRejectedDataLocationProperty
 }
 
 
-export function awsTimestreamwriteTableMagneticStoreWritePropertiesPropertyToTerraform(struct?: AwsTimestreamwriteTable.MagneticStoreWritePropertiesPropertyOutputReference | AwsTimestreamwriteTable.MagneticStoreWritePropertiesProperty): any {
+export function tfTableMagneticStoreWritePropertiesPropertyToTerraform(struct?: TfTable.MagneticStoreWritePropertiesPropertyOutputReference | TfTable.MagneticStoreWritePropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     enable_magnetic_store_writes: cdktn.booleanToTerraform(struct!.enableMagneticStoreWrites),
-    magnetic_store_rejected_data_location: awsTimestreamwriteTableMagneticStoreRejectedDataLocationPropertyToTerraform(struct!.magneticStoreRejectedDataLocation),
+    magnetic_store_rejected_data_location: tfTableMagneticStoreRejectedDataLocationPropertyToTerraform(struct!.magneticStoreRejectedDataLocation),
   }
 }
 
 
-export function awsTimestreamwriteTableMagneticStoreWritePropertiesPropertyToHclTerraform(struct?: AwsTimestreamwriteTable.MagneticStoreWritePropertiesPropertyOutputReference | AwsTimestreamwriteTable.MagneticStoreWritePropertiesProperty): any {
+export function tfTableMagneticStoreWritePropertiesPropertyToHclTerraform(struct?: TfTable.MagneticStoreWritePropertiesPropertyOutputReference | TfTable.MagneticStoreWritePropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -451,7 +451,7 @@ export function awsTimestreamwriteTableMagneticStoreWritePropertiesPropertyToHcl
       storageClassType: "boolean",
     },
     magnetic_store_rejected_data_location: {
-      value: awsTimestreamwriteTableMagneticStoreRejectedDataLocationPropertyToHclTerraform(struct!.magneticStoreRejectedDataLocation),
+      value: tfTableMagneticStoreRejectedDataLocationPropertyToHclTerraform(struct!.magneticStoreRejectedDataLocation),
       isBlock: true,
       type: "list",
       storageClassType: "MagneticStoreRejectedDataLocationPropertyList",
@@ -463,7 +463,7 @@ export function awsTimestreamwriteTableMagneticStoreWritePropertiesPropertyToHcl
 }
 
 
-export function awsTimestreamwriteTableRetentionPropertiesPropertyToTerraform(struct?: AwsTimestreamwriteTable.RetentionPropertiesPropertyOutputReference | AwsTimestreamwriteTable.RetentionPropertiesProperty): any {
+export function tfTableRetentionPropertiesPropertyToTerraform(struct?: TfTable.RetentionPropertiesPropertyOutputReference | TfTable.RetentionPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -475,7 +475,7 @@ export function awsTimestreamwriteTableRetentionPropertiesPropertyToTerraform(st
 }
 
 
-export function awsTimestreamwriteTableRetentionPropertiesPropertyToHclTerraform(struct?: AwsTimestreamwriteTable.RetentionPropertiesPropertyOutputReference | AwsTimestreamwriteTable.RetentionPropertiesProperty): any {
+export function tfTableRetentionPropertiesPropertyToHclTerraform(struct?: TfTable.RetentionPropertiesPropertyOutputReference | TfTable.RetentionPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -500,7 +500,7 @@ export function awsTimestreamwriteTableRetentionPropertiesPropertyToHclTerraform
 }
 
 
-export function awsTimestreamwriteTableCompositePartitionKeyPropertyToTerraform(struct?: AwsTimestreamwriteTable.CompositePartitionKeyPropertyOutputReference | AwsTimestreamwriteTable.CompositePartitionKeyProperty): any {
+export function tfTableCompositePartitionKeyPropertyToTerraform(struct?: TfTable.CompositePartitionKeyPropertyOutputReference | TfTable.CompositePartitionKeyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -513,7 +513,7 @@ export function awsTimestreamwriteTableCompositePartitionKeyPropertyToTerraform(
 }
 
 
-export function awsTimestreamwriteTableCompositePartitionKeyPropertyToHclTerraform(struct?: AwsTimestreamwriteTable.CompositePartitionKeyPropertyOutputReference | AwsTimestreamwriteTable.CompositePartitionKeyProperty): any {
+export function tfTableCompositePartitionKeyPropertyToHclTerraform(struct?: TfTable.CompositePartitionKeyPropertyOutputReference | TfTable.CompositePartitionKeyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -544,25 +544,25 @@ export function awsTimestreamwriteTableCompositePartitionKeyPropertyToHclTerrafo
 }
 
 
-export function awsTimestreamwriteTableSchemaPropertyToTerraform(struct?: AwsTimestreamwriteTable.SchemaPropertyOutputReference | AwsTimestreamwriteTable.SchemaProperty): any {
+export function tfTableSchemaPropertyToTerraform(struct?: TfTable.SchemaPropertyOutputReference | TfTable.SchemaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    composite_partition_key: awsTimestreamwriteTableCompositePartitionKeyPropertyToTerraform(struct!.compositePartitionKey),
+    composite_partition_key: tfTableCompositePartitionKeyPropertyToTerraform(struct!.compositePartitionKey),
   }
 }
 
 
-export function awsTimestreamwriteTableSchemaPropertyToHclTerraform(struct?: AwsTimestreamwriteTable.SchemaPropertyOutputReference | AwsTimestreamwriteTable.SchemaProperty): any {
+export function tfTableSchemaPropertyToHclTerraform(struct?: TfTable.SchemaPropertyOutputReference | TfTable.SchemaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     composite_partition_key: {
-      value: awsTimestreamwriteTableCompositePartitionKeyPropertyToHclTerraform(struct!.compositePartitionKey),
+      value: tfTableCompositePartitionKeyPropertyToHclTerraform(struct!.compositePartitionKey),
       isBlock: true,
       type: "list",
       storageClassType: "CompositePartitionKeyPropertyList",
@@ -574,22 +574,22 @@ export function awsTimestreamwriteTableSchemaPropertyToHclTerraform(struct?: Aws
 }
 
 
-export namespace AwsTimestreamwriteTable {
+export namespace TfTable {
 export interface S3ConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#bucket_name AwsTimestreamwriteTable#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#bucket_name TfTable#bucket_name}
   */
   readonly bucketName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#encryption_option AwsTimestreamwriteTable#encryption_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#encryption_option TfTable#encryption_option}
   */
   readonly encryptionOption?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#kms_key_id AwsTimestreamwriteTable#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#kms_key_id TfTable#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#object_key_prefix AwsTimestreamwriteTable#object_key_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#object_key_prefix TfTable#object_key_prefix}
   */
   readonly objectKeyPrefix?: string;
 }
@@ -711,7 +711,7 @@ export interface MagneticStoreRejectedDataLocationProperty {
   /**
   * s3_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#s3_configuration AwsTimestreamwriteTable#s3_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#s3_configuration TfTable#s3_configuration}
   */
   readonly s3Configuration?: S3ConfigurationProperty;
 }
@@ -765,13 +765,13 @@ export class MagneticStoreRejectedDataLocationPropertyOutputReference extends cd
 }
 export interface MagneticStoreWritePropertiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#enable_magnetic_store_writes AwsTimestreamwriteTable#enable_magnetic_store_writes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#enable_magnetic_store_writes TfTable#enable_magnetic_store_writes}
   */
   readonly enableMagneticStoreWrites?: boolean | cdktn.IResolvable;
   /**
   * magnetic_store_rejected_data_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#magnetic_store_rejected_data_location AwsTimestreamwriteTable#magnetic_store_rejected_data_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#magnetic_store_rejected_data_location TfTable#magnetic_store_rejected_data_location}
   */
   readonly magneticStoreRejectedDataLocation?: MagneticStoreRejectedDataLocationProperty;
 }
@@ -847,11 +847,11 @@ export class MagneticStoreWritePropertiesPropertyOutputReference extends cdktn.C
 }
 export interface RetentionPropertiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#magnetic_store_retention_period_in_days AwsTimestreamwriteTable#magnetic_store_retention_period_in_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#magnetic_store_retention_period_in_days TfTable#magnetic_store_retention_period_in_days}
   */
   readonly magneticStoreRetentionPeriodInDays: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#memory_store_retention_period_in_hours AwsTimestreamwriteTable#memory_store_retention_period_in_hours}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#memory_store_retention_period_in_hours TfTable#memory_store_retention_period_in_hours}
   */
   readonly memoryStoreRetentionPeriodInHours: number;
 }
@@ -921,15 +921,15 @@ export class RetentionPropertiesPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface CompositePartitionKeyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#enforcement_in_record AwsTimestreamwriteTable#enforcement_in_record}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#enforcement_in_record TfTable#enforcement_in_record}
   */
   readonly enforcementInRecord?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#name AwsTimestreamwriteTable#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#name TfTable#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#type AwsTimestreamwriteTable#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#type TfTable#type}
   */
   readonly type: string;
 }
@@ -1026,7 +1026,7 @@ export interface SchemaProperty {
   /**
   * composite_partition_key block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#composite_partition_key AwsTimestreamwriteTable#composite_partition_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreamwrite_table#composite_partition_key TfTable#composite_partition_key}
   */
   readonly compositePartitionKey?: CompositePartitionKeyProperty;
 }

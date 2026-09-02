@@ -5,39 +5,39 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsObservabilityadminS3TableIntegrationConfig extends cdktn.TerraformMetaArguments {
+export interface TfS3TableIntegrationConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_s3_table_integration#region AwsObservabilityadminS3TableIntegration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_s3_table_integration#region TfS3TableIntegration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_s3_table_integration#role_arn AwsObservabilityadminS3TableIntegration#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_s3_table_integration#role_arn TfS3TableIntegration#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_s3_table_integration#tags AwsObservabilityadminS3TableIntegration#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_s3_table_integration#tags TfS3TableIntegration#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * encryption block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_s3_table_integration#encryption AwsObservabilityadminS3TableIntegration#encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_s3_table_integration#encryption TfS3TableIntegration#encryption}
   */
-  readonly encryption?: AwsObservabilityadminS3TableIntegration.EncryptionProperty[] | cdktn.IResolvable;
+  readonly encryption?: TfS3TableIntegration.EncryptionProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_s3_table_integration#timeouts AwsObservabilityadminS3TableIntegration#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_s3_table_integration#timeouts TfS3TableIntegration#timeouts}
   */
-  readonly timeouts?: AwsObservabilityadminS3TableIntegration.TimeoutsProperty;
+  readonly timeouts?: TfS3TableIntegration.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_s3_table_integration aws_observabilityadmin_s3_table_integration}
 */
-export class AwsObservabilityadminS3TableIntegration extends cdktn.TerraformResource {
+export class TfS3TableIntegration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -48,11 +48,11 @@ export class AwsObservabilityadminS3TableIntegration extends cdktn.TerraformReso
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsObservabilityadminS3TableIntegration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfS3TableIntegration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsObservabilityadminS3TableIntegration to import
-  * @param importFromId The id of the existing AwsObservabilityadminS3TableIntegration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_s3_table_integration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsObservabilityadminS3TableIntegration to import is found
+  * @param importToId The construct id used in the generated config for the TfS3TableIntegration to import
+  * @param importFromId The id of the existing TfS3TableIntegration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_s3_table_integration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfS3TableIntegration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_observabilityadmin_s3_table_integration", importId: importFromId, provider });
@@ -67,9 +67,9 @@ export class AwsObservabilityadminS3TableIntegration extends cdktn.TerraformReso
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsObservabilityadminS3TableIntegrationConfig
+  * @param options TfS3TableIntegrationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsObservabilityadminS3TableIntegrationConfig) {
+  public constructor(scope: Construct, id: string, config: TfS3TableIntegrationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_observabilityadmin_s3_table_integration',
       terraformGeneratorMetadata: {
@@ -158,11 +158,11 @@ export class AwsObservabilityadminS3TableIntegration extends cdktn.TerraformReso
   }
 
   // encryption - computed: false, optional: true, required: false
-  private _encryption = new AwsObservabilityadminS3TableIntegration.EncryptionPropertyList(this, "encryption", false);
+  private _encryption = new TfS3TableIntegration.EncryptionPropertyList(this, "encryption", false);
   public get encryption() {
     return this._encryption;
   }
-  public putEncryption(value: AwsObservabilityadminS3TableIntegration.EncryptionProperty[] | cdktn.IResolvable) {
+  public putEncryption(value: TfS3TableIntegration.EncryptionProperty[] | cdktn.IResolvable) {
     this._encryption.internalValue = value;
   }
   public resetEncryption() {
@@ -174,11 +174,11 @@ export class AwsObservabilityadminS3TableIntegration extends cdktn.TerraformReso
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsObservabilityadminS3TableIntegration.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfS3TableIntegration.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsObservabilityadminS3TableIntegration.TimeoutsProperty) {
+  public putTimeouts(value: TfS3TableIntegration.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -198,8 +198,8 @@ export class AwsObservabilityadminS3TableIntegration extends cdktn.TerraformReso
       region: cdktn.stringToTerraform(this._region),
       role_arn: cdktn.stringToTerraform(this._roleArn),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      encryption: cdktn.listMapper(awsObservabilityadminS3TableIntegrationEncryptionPropertyToTerraform, true)(this._encryption.internalValue),
-      timeouts: awsObservabilityadminS3TableIntegrationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      encryption: cdktn.listMapper(tfS3TableIntegrationEncryptionPropertyToTerraform, true)(this._encryption.internalValue),
+      timeouts: tfS3TableIntegrationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -224,16 +224,16 @@ export class AwsObservabilityadminS3TableIntegration extends cdktn.TerraformReso
         storageClassType: "stringMap",
       },
       encryption: {
-        value: cdktn.listMapperHcl(awsObservabilityadminS3TableIntegrationEncryptionPropertyToHclTerraform, true)(this._encryption.internalValue),
+        value: cdktn.listMapperHcl(tfS3TableIntegrationEncryptionPropertyToHclTerraform, true)(this._encryption.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsObservabilityadminS3TableIntegration.EncryptionPropertyList",
+        storageClassType: "TfS3TableIntegration.EncryptionPropertyList",
       },
       timeouts: {
-        value: awsObservabilityadminS3TableIntegrationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfS3TableIntegrationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsObservabilityadminS3TableIntegration.TimeoutsProperty",
+        storageClassType: "TfS3TableIntegration.TimeoutsProperty",
       },
     };
 
@@ -242,7 +242,7 @@ export class AwsObservabilityadminS3TableIntegration extends cdktn.TerraformReso
   }
 }
 
-export function awsObservabilityadminS3TableIntegrationEncryptionPropertyToTerraform(struct?: AwsObservabilityadminS3TableIntegration.EncryptionProperty | cdktn.IResolvable): any {
+export function tfS3TableIntegrationEncryptionPropertyToTerraform(struct?: TfS3TableIntegration.EncryptionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -254,7 +254,7 @@ export function awsObservabilityadminS3TableIntegrationEncryptionPropertyToTerra
 }
 
 
-export function awsObservabilityadminS3TableIntegrationEncryptionPropertyToHclTerraform(struct?: AwsObservabilityadminS3TableIntegration.EncryptionProperty | cdktn.IResolvable): any {
+export function tfS3TableIntegrationEncryptionPropertyToHclTerraform(struct?: TfS3TableIntegration.EncryptionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -279,7 +279,7 @@ export function awsObservabilityadminS3TableIntegrationEncryptionPropertyToHclTe
 }
 
 
-export function awsObservabilityadminS3TableIntegrationTimeoutsPropertyToTerraform(struct?: AwsObservabilityadminS3TableIntegration.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfS3TableIntegrationTimeoutsPropertyToTerraform(struct?: TfS3TableIntegration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -291,7 +291,7 @@ export function awsObservabilityadminS3TableIntegrationTimeoutsPropertyToTerrafo
 }
 
 
-export function awsObservabilityadminS3TableIntegrationTimeoutsPropertyToHclTerraform(struct?: AwsObservabilityadminS3TableIntegration.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfS3TableIntegrationTimeoutsPropertyToHclTerraform(struct?: TfS3TableIntegration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -316,14 +316,14 @@ export function awsObservabilityadminS3TableIntegrationTimeoutsPropertyToHclTerr
 }
 
 
-export namespace AwsObservabilityadminS3TableIntegration {
+export namespace TfS3TableIntegration {
 export interface EncryptionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_s3_table_integration#kms_key_arn AwsObservabilityadminS3TableIntegration#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_s3_table_integration#kms_key_arn TfS3TableIntegration#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_s3_table_integration#sse_algorithm AwsObservabilityadminS3TableIntegration#sse_algorithm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_s3_table_integration#sse_algorithm TfS3TableIntegration#sse_algorithm}
   */
   readonly sseAlgorithm: string;
 }
@@ -430,13 +430,13 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_s3_table_integration#create AwsObservabilityadminS3TableIntegration#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_s3_table_integration#create TfS3TableIntegration#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_s3_table_integration#delete AwsObservabilityadminS3TableIntegration#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_s3_table_integration#delete TfS3TableIntegration#delete}
   */
   readonly delete?: string;
 }

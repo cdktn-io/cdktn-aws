@@ -5,194 +5,194 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsS3ObjectCopyConfig extends cdktn.TerraformMetaArguments {
+export interface TfObjectCopyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#acl AwsS3ObjectCopy#acl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#acl TfObjectCopy#acl}
   */
   readonly acl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#bucket AwsS3ObjectCopy#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#bucket TfObjectCopy#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#bucket_key_enabled AwsS3ObjectCopy#bucket_key_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#bucket_key_enabled TfObjectCopy#bucket_key_enabled}
   */
   readonly bucketKeyEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#cache_control AwsS3ObjectCopy#cache_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#cache_control TfObjectCopy#cache_control}
   */
   readonly cacheControl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#checksum_algorithm AwsS3ObjectCopy#checksum_algorithm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#checksum_algorithm TfObjectCopy#checksum_algorithm}
   */
   readonly checksumAlgorithm?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#content_disposition AwsS3ObjectCopy#content_disposition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#content_disposition TfObjectCopy#content_disposition}
   */
   readonly contentDisposition?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#content_encoding AwsS3ObjectCopy#content_encoding}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#content_encoding TfObjectCopy#content_encoding}
   */
   readonly contentEncoding?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#content_language AwsS3ObjectCopy#content_language}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#content_language TfObjectCopy#content_language}
   */
   readonly contentLanguage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#content_type AwsS3ObjectCopy#content_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#content_type TfObjectCopy#content_type}
   */
   readonly contentType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#copy_if_match AwsS3ObjectCopy#copy_if_match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#copy_if_match TfObjectCopy#copy_if_match}
   */
   readonly copyIfMatch?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#copy_if_modified_since AwsS3ObjectCopy#copy_if_modified_since}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#copy_if_modified_since TfObjectCopy#copy_if_modified_since}
   */
   readonly copyIfModifiedSince?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#copy_if_none_match AwsS3ObjectCopy#copy_if_none_match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#copy_if_none_match TfObjectCopy#copy_if_none_match}
   */
   readonly copyIfNoneMatch?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#copy_if_unmodified_since AwsS3ObjectCopy#copy_if_unmodified_since}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#copy_if_unmodified_since TfObjectCopy#copy_if_unmodified_since}
   */
   readonly copyIfUnmodifiedSince?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#customer_algorithm AwsS3ObjectCopy#customer_algorithm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#customer_algorithm TfObjectCopy#customer_algorithm}
   */
   readonly customerAlgorithm?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#customer_key AwsS3ObjectCopy#customer_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#customer_key TfObjectCopy#customer_key}
   */
   readonly customerKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#customer_key_md5 AwsS3ObjectCopy#customer_key_md5}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#customer_key_md5 TfObjectCopy#customer_key_md5}
   */
   readonly customerKeyMd5?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#expected_bucket_owner AwsS3ObjectCopy#expected_bucket_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#expected_bucket_owner TfObjectCopy#expected_bucket_owner}
   */
   readonly expectedBucketOwner?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#expected_source_bucket_owner AwsS3ObjectCopy#expected_source_bucket_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#expected_source_bucket_owner TfObjectCopy#expected_source_bucket_owner}
   */
   readonly expectedSourceBucketOwner?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#expires AwsS3ObjectCopy#expires}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#expires TfObjectCopy#expires}
   */
   readonly expires?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#force_destroy AwsS3ObjectCopy#force_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#force_destroy TfObjectCopy#force_destroy}
   */
   readonly forceDestroy?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#id AwsS3ObjectCopy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#id TfObjectCopy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#key AwsS3ObjectCopy#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#key TfObjectCopy#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#kms_encryption_context AwsS3ObjectCopy#kms_encryption_context}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#kms_encryption_context TfObjectCopy#kms_encryption_context}
   */
   readonly kmsEncryptionContext?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#kms_key_id AwsS3ObjectCopy#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#kms_key_id TfObjectCopy#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#metadata AwsS3ObjectCopy#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#metadata TfObjectCopy#metadata}
   */
   readonly metadata?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#metadata_directive AwsS3ObjectCopy#metadata_directive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#metadata_directive TfObjectCopy#metadata_directive}
   */
   readonly metadataDirective?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#object_lock_legal_hold_status AwsS3ObjectCopy#object_lock_legal_hold_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#object_lock_legal_hold_status TfObjectCopy#object_lock_legal_hold_status}
   */
   readonly objectLockLegalHoldStatus?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#object_lock_mode AwsS3ObjectCopy#object_lock_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#object_lock_mode TfObjectCopy#object_lock_mode}
   */
   readonly objectLockMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#object_lock_retain_until_date AwsS3ObjectCopy#object_lock_retain_until_date}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#object_lock_retain_until_date TfObjectCopy#object_lock_retain_until_date}
   */
   readonly objectLockRetainUntilDate?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#region AwsS3ObjectCopy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#region TfObjectCopy#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#request_payer AwsS3ObjectCopy#request_payer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#request_payer TfObjectCopy#request_payer}
   */
   readonly requestPayer?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#server_side_encryption AwsS3ObjectCopy#server_side_encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#server_side_encryption TfObjectCopy#server_side_encryption}
   */
   readonly serverSideEncryption?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#source AwsS3ObjectCopy#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#source TfObjectCopy#source}
   */
   readonly source: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#source_customer_algorithm AwsS3ObjectCopy#source_customer_algorithm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#source_customer_algorithm TfObjectCopy#source_customer_algorithm}
   */
   readonly sourceCustomerAlgorithm?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#source_customer_key AwsS3ObjectCopy#source_customer_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#source_customer_key TfObjectCopy#source_customer_key}
   */
   readonly sourceCustomerKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#source_customer_key_md5 AwsS3ObjectCopy#source_customer_key_md5}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#source_customer_key_md5 TfObjectCopy#source_customer_key_md5}
   */
   readonly sourceCustomerKeyMd5?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#storage_class AwsS3ObjectCopy#storage_class}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#storage_class TfObjectCopy#storage_class}
   */
   readonly storageClass?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#tagging_directive AwsS3ObjectCopy#tagging_directive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#tagging_directive TfObjectCopy#tagging_directive}
   */
   readonly taggingDirective?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#tags AwsS3ObjectCopy#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#tags TfObjectCopy#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#tags_all AwsS3ObjectCopy#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#tags_all TfObjectCopy#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#website_redirect AwsS3ObjectCopy#website_redirect}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#website_redirect TfObjectCopy#website_redirect}
   */
   readonly websiteRedirect?: string;
   /**
   * grant block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#grant AwsS3ObjectCopy#grant}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#grant TfObjectCopy#grant}
   */
-  readonly grant?: AwsS3ObjectCopy.GrantProperty[] | cdktn.IResolvable;
+  readonly grant?: TfObjectCopy.GrantProperty[] | cdktn.IResolvable;
   /**
   * override_provider block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#override_provider AwsS3ObjectCopy#override_provider}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#override_provider TfObjectCopy#override_provider}
   */
-  readonly overrideProvider?: AwsS3ObjectCopy.OverrideProviderProperty;
+  readonly overrideProvider?: TfObjectCopy.OverrideProviderProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy aws_s3_object_copy}
 */
-export class AwsS3ObjectCopy extends cdktn.TerraformResource {
+export class TfObjectCopy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -203,11 +203,11 @@ export class AwsS3ObjectCopy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsS3ObjectCopy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfObjectCopy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsS3ObjectCopy to import
-  * @param importFromId The id of the existing AwsS3ObjectCopy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsS3ObjectCopy to import is found
+  * @param importToId The construct id used in the generated config for the TfObjectCopy to import
+  * @param importFromId The id of the existing TfObjectCopy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfObjectCopy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3_object_copy", importId: importFromId, provider });
@@ -222,9 +222,9 @@ export class AwsS3ObjectCopy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsS3ObjectCopyConfig
+  * @param options TfObjectCopyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsS3ObjectCopyConfig) {
+  public constructor(scope: Construct, id: string, config: TfObjectCopyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3_object_copy',
       terraformGeneratorMetadata: {
@@ -997,11 +997,11 @@ export class AwsS3ObjectCopy extends cdktn.TerraformResource {
   }
 
   // grant - computed: false, optional: true, required: false
-  private _grant = new AwsS3ObjectCopy.GrantPropertyList(this, "grant", true);
+  private _grant = new TfObjectCopy.GrantPropertyList(this, "grant", true);
   public get grant() {
     return this._grant;
   }
-  public putGrant(value: AwsS3ObjectCopy.GrantProperty[] | cdktn.IResolvable) {
+  public putGrant(value: TfObjectCopy.GrantProperty[] | cdktn.IResolvable) {
     this._grant.internalValue = value;
   }
   public resetGrant() {
@@ -1013,11 +1013,11 @@ export class AwsS3ObjectCopy extends cdktn.TerraformResource {
   }
 
   // override_provider - computed: false, optional: true, required: false
-  private _overrideProvider = new AwsS3ObjectCopy.OverrideProviderPropertyOutputReference(this, "override_provider");
+  private _overrideProvider = new TfObjectCopy.OverrideProviderPropertyOutputReference(this, "override_provider");
   public get overrideProvider() {
     return this._overrideProvider;
   }
-  public putOverrideProvider(value: AwsS3ObjectCopy.OverrideProviderProperty) {
+  public putOverrideProvider(value: TfObjectCopy.OverrideProviderProperty) {
     this._overrideProvider.internalValue = value;
   }
   public resetOverrideProvider() {
@@ -1075,8 +1075,8 @@ export class AwsS3ObjectCopy extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       website_redirect: cdktn.stringToTerraform(this._websiteRedirect),
-      grant: cdktn.listMapper(awsS3ObjectCopyGrantPropertyToTerraform, true)(this._grant.internalValue),
-      override_provider: awsS3ObjectCopyOverrideProviderPropertyToTerraform(this._overrideProvider.internalValue),
+      grant: cdktn.listMapper(tfObjectCopyGrantPropertyToTerraform, true)(this._grant.internalValue),
+      override_provider: tfObjectCopyOverrideProviderPropertyToTerraform(this._overrideProvider.internalValue),
     };
   }
 
@@ -1329,16 +1329,16 @@ export class AwsS3ObjectCopy extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       grant: {
-        value: cdktn.listMapperHcl(awsS3ObjectCopyGrantPropertyToHclTerraform, true)(this._grant.internalValue),
+        value: cdktn.listMapperHcl(tfObjectCopyGrantPropertyToHclTerraform, true)(this._grant.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsS3ObjectCopy.GrantPropertyList",
+        storageClassType: "TfObjectCopy.GrantPropertyList",
       },
       override_provider: {
-        value: awsS3ObjectCopyOverrideProviderPropertyToHclTerraform(this._overrideProvider.internalValue),
+        value: tfObjectCopyOverrideProviderPropertyToHclTerraform(this._overrideProvider.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsS3ObjectCopy.OverrideProviderPropertyList",
+        storageClassType: "TfObjectCopy.OverrideProviderPropertyList",
       },
     };
 
@@ -1347,7 +1347,7 @@ export class AwsS3ObjectCopy extends cdktn.TerraformResource {
   }
 }
 
-export function awsS3ObjectCopyGrantPropertyToTerraform(struct?: AwsS3ObjectCopy.GrantProperty | cdktn.IResolvable): any {
+export function tfObjectCopyGrantPropertyToTerraform(struct?: TfObjectCopy.GrantProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1362,7 +1362,7 @@ export function awsS3ObjectCopyGrantPropertyToTerraform(struct?: AwsS3ObjectCopy
 }
 
 
-export function awsS3ObjectCopyGrantPropertyToHclTerraform(struct?: AwsS3ObjectCopy.GrantProperty | cdktn.IResolvable): any {
+export function tfObjectCopyGrantPropertyToHclTerraform(struct?: TfObjectCopy.GrantProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1405,7 +1405,7 @@ export function awsS3ObjectCopyGrantPropertyToHclTerraform(struct?: AwsS3ObjectC
 }
 
 
-export function awsS3ObjectCopyDefaultTagsPropertyToTerraform(struct?: AwsS3ObjectCopy.DefaultTagsPropertyOutputReference | AwsS3ObjectCopy.DefaultTagsProperty): any {
+export function tfObjectCopyDefaultTagsPropertyToTerraform(struct?: TfObjectCopy.DefaultTagsPropertyOutputReference | TfObjectCopy.DefaultTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1416,7 +1416,7 @@ export function awsS3ObjectCopyDefaultTagsPropertyToTerraform(struct?: AwsS3Obje
 }
 
 
-export function awsS3ObjectCopyDefaultTagsPropertyToHclTerraform(struct?: AwsS3ObjectCopy.DefaultTagsPropertyOutputReference | AwsS3ObjectCopy.DefaultTagsProperty): any {
+export function tfObjectCopyDefaultTagsPropertyToHclTerraform(struct?: TfObjectCopy.DefaultTagsPropertyOutputReference | TfObjectCopy.DefaultTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1435,25 +1435,25 @@ export function awsS3ObjectCopyDefaultTagsPropertyToHclTerraform(struct?: AwsS3O
 }
 
 
-export function awsS3ObjectCopyOverrideProviderPropertyToTerraform(struct?: AwsS3ObjectCopy.OverrideProviderPropertyOutputReference | AwsS3ObjectCopy.OverrideProviderProperty): any {
+export function tfObjectCopyOverrideProviderPropertyToTerraform(struct?: TfObjectCopy.OverrideProviderPropertyOutputReference | TfObjectCopy.OverrideProviderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    default_tags: awsS3ObjectCopyDefaultTagsPropertyToTerraform(struct!.defaultTags),
+    default_tags: tfObjectCopyDefaultTagsPropertyToTerraform(struct!.defaultTags),
   }
 }
 
 
-export function awsS3ObjectCopyOverrideProviderPropertyToHclTerraform(struct?: AwsS3ObjectCopy.OverrideProviderPropertyOutputReference | AwsS3ObjectCopy.OverrideProviderProperty): any {
+export function tfObjectCopyOverrideProviderPropertyToHclTerraform(struct?: TfObjectCopy.OverrideProviderPropertyOutputReference | TfObjectCopy.OverrideProviderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     default_tags: {
-      value: awsS3ObjectCopyDefaultTagsPropertyToHclTerraform(struct!.defaultTags),
+      value: tfObjectCopyDefaultTagsPropertyToHclTerraform(struct!.defaultTags),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultTagsPropertyList",
@@ -1465,29 +1465,29 @@ export function awsS3ObjectCopyOverrideProviderPropertyToHclTerraform(struct?: A
 }
 
 
-export namespace AwsS3ObjectCopy {
+export namespace TfObjectCopy {
 export interface GrantProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#email AwsS3ObjectCopy#email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#email TfObjectCopy#email}
   */
   readonly email?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#id AwsS3ObjectCopy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#id TfObjectCopy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#permissions AwsS3ObjectCopy#permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#permissions TfObjectCopy#permissions}
   */
   readonly permissions: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#type AwsS3ObjectCopy#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#type TfObjectCopy#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#uri AwsS3ObjectCopy#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#uri TfObjectCopy#uri}
   */
   readonly uri?: string;
 }
@@ -1655,7 +1655,7 @@ export class GrantPropertyList extends cdktn.ComplexList {
 }
 export interface DefaultTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#tags AwsS3ObjectCopy#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#tags TfObjectCopy#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -1711,7 +1711,7 @@ export interface OverrideProviderProperty {
   /**
   * default_tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#default_tags AwsS3ObjectCopy#default_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object_copy#default_tags TfObjectCopy#default_tags}
   */
   readonly defaultTags?: DefaultTagsProperty;
 }

@@ -5,58 +5,58 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsStoragegatewayStoredIscsiVolumeConfig extends cdktn.TerraformMetaArguments {
+export interface TfStoredIscsiVolumeConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#disk_id AwsStoragegatewayStoredIscsiVolume#disk_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#disk_id TfStoredIscsiVolume#disk_id}
   */
   readonly diskId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#gateway_arn AwsStoragegatewayStoredIscsiVolume#gateway_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#gateway_arn TfStoredIscsiVolume#gateway_arn}
   */
   readonly gatewayArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#id AwsStoragegatewayStoredIscsiVolume#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#id TfStoredIscsiVolume#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#kms_encrypted AwsStoragegatewayStoredIscsiVolume#kms_encrypted}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#kms_encrypted TfStoredIscsiVolume#kms_encrypted}
   */
   readonly kmsEncrypted?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#kms_key AwsStoragegatewayStoredIscsiVolume#kms_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#kms_key TfStoredIscsiVolume#kms_key}
   */
   readonly kmsKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#network_interface_id AwsStoragegatewayStoredIscsiVolume#network_interface_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#network_interface_id TfStoredIscsiVolume#network_interface_id}
   */
   readonly networkInterfaceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#preserve_existing_data AwsStoragegatewayStoredIscsiVolume#preserve_existing_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#preserve_existing_data TfStoredIscsiVolume#preserve_existing_data}
   */
   readonly preserveExistingData: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#region AwsStoragegatewayStoredIscsiVolume#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#region TfStoredIscsiVolume#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#snapshot_id AwsStoragegatewayStoredIscsiVolume#snapshot_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#snapshot_id TfStoredIscsiVolume#snapshot_id}
   */
   readonly snapshotId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#tags AwsStoragegatewayStoredIscsiVolume#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#tags TfStoredIscsiVolume#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#tags_all AwsStoragegatewayStoredIscsiVolume#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#tags_all TfStoredIscsiVolume#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#target_name AwsStoragegatewayStoredIscsiVolume#target_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#target_name TfStoredIscsiVolume#target_name}
   */
   readonly targetName: string;
 }
@@ -64,7 +64,7 @@ export interface AwsStoragegatewayStoredIscsiVolumeConfig extends cdktn.Terrafor
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume aws_storagegateway_stored_iscsi_volume}
 */
-export class AwsStoragegatewayStoredIscsiVolume extends cdktn.TerraformResource {
+export class TfStoredIscsiVolume extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -75,11 +75,11 @@ export class AwsStoragegatewayStoredIscsiVolume extends cdktn.TerraformResource 
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsStoragegatewayStoredIscsiVolume resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfStoredIscsiVolume resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsStoragegatewayStoredIscsiVolume to import
-  * @param importFromId The id of the existing AwsStoragegatewayStoredIscsiVolume that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsStoragegatewayStoredIscsiVolume to import is found
+  * @param importToId The construct id used in the generated config for the TfStoredIscsiVolume to import
+  * @param importFromId The id of the existing TfStoredIscsiVolume that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfStoredIscsiVolume to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_storagegateway_stored_iscsi_volume", importId: importFromId, provider });
@@ -94,9 +94,9 @@ export class AwsStoragegatewayStoredIscsiVolume extends cdktn.TerraformResource 
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsStoragegatewayStoredIscsiVolumeConfig
+  * @param options TfStoredIscsiVolumeConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsStoragegatewayStoredIscsiVolumeConfig) {
+  public constructor(scope: Construct, id: string, config: TfStoredIscsiVolumeConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_storagegateway_stored_iscsi_volume',
       terraformGeneratorMetadata: {

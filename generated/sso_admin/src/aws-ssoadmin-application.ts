@@ -5,53 +5,53 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSsoadminApplicationConfig extends cdktn.TerraformMetaArguments {
+export interface TfApplicationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application#application_provider_arn AwsSsoadminApplication#application_provider_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application#application_provider_arn TfApplication#application_provider_arn}
   */
   readonly applicationProviderArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application#client_token AwsSsoadminApplication#client_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application#client_token TfApplication#client_token}
   */
   readonly clientToken?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application#description AwsSsoadminApplication#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application#description TfApplication#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application#instance_arn AwsSsoadminApplication#instance_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application#instance_arn TfApplication#instance_arn}
   */
   readonly instanceArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application#name AwsSsoadminApplication#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application#name TfApplication#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application#region AwsSsoadminApplication#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application#region TfApplication#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application#status AwsSsoadminApplication#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application#status TfApplication#status}
   */
   readonly status?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application#tags AwsSsoadminApplication#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application#tags TfApplication#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * portal_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application#portal_options AwsSsoadminApplication#portal_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application#portal_options TfApplication#portal_options}
   */
-  readonly portalOptions?: AwsSsoadminApplication.PortalOptionsProperty[] | cdktn.IResolvable;
+  readonly portalOptions?: TfApplication.PortalOptionsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application aws_ssoadmin_application}
 */
-export class AwsSsoadminApplication extends cdktn.TerraformResource {
+export class TfApplication extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -62,11 +62,11 @@ export class AwsSsoadminApplication extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSsoadminApplication resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfApplication resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSsoadminApplication to import
-  * @param importFromId The id of the existing AwsSsoadminApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSsoadminApplication to import is found
+  * @param importToId The construct id used in the generated config for the TfApplication to import
+  * @param importFromId The id of the existing TfApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfApplication to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssoadmin_application", importId: importFromId, provider });
@@ -81,9 +81,9 @@ export class AwsSsoadminApplication extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSsoadminApplicationConfig
+  * @param options TfApplicationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSsoadminApplicationConfig) {
+  public constructor(scope: Construct, id: string, config: TfApplicationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ssoadmin_application',
       terraformGeneratorMetadata: {
@@ -260,11 +260,11 @@ export class AwsSsoadminApplication extends cdktn.TerraformResource {
   }
 
   // portal_options - computed: false, optional: true, required: false
-  private _portalOptions = new AwsSsoadminApplication.PortalOptionsPropertyList(this, "portal_options", false);
+  private _portalOptions = new TfApplication.PortalOptionsPropertyList(this, "portal_options", false);
   public get portalOptions() {
     return this._portalOptions;
   }
-  public putPortalOptions(value: AwsSsoadminApplication.PortalOptionsProperty[] | cdktn.IResolvable) {
+  public putPortalOptions(value: TfApplication.PortalOptionsProperty[] | cdktn.IResolvable) {
     this._portalOptions.internalValue = value;
   }
   public resetPortalOptions() {
@@ -289,7 +289,7 @@ export class AwsSsoadminApplication extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       status: cdktn.stringToTerraform(this._status),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      portal_options: cdktn.listMapper(awsSsoadminApplicationPortalOptionsPropertyToTerraform, true)(this._portalOptions.internalValue),
+      portal_options: cdktn.listMapper(tfApplicationPortalOptionsPropertyToTerraform, true)(this._portalOptions.internalValue),
     };
   }
 
@@ -344,10 +344,10 @@ export class AwsSsoadminApplication extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       portal_options: {
-        value: cdktn.listMapperHcl(awsSsoadminApplicationPortalOptionsPropertyToHclTerraform, true)(this._portalOptions.internalValue),
+        value: cdktn.listMapperHcl(tfApplicationPortalOptionsPropertyToHclTerraform, true)(this._portalOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSsoadminApplication.PortalOptionsPropertyList",
+        storageClassType: "TfApplication.PortalOptionsPropertyList",
       },
     };
 
@@ -356,7 +356,7 @@ export class AwsSsoadminApplication extends cdktn.TerraformResource {
   }
 }
 
-export function awsSsoadminApplicationSignInOptionsPropertyToTerraform(struct?: AwsSsoadminApplication.SignInOptionsProperty | cdktn.IResolvable): any {
+export function tfApplicationSignInOptionsPropertyToTerraform(struct?: TfApplication.SignInOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -368,7 +368,7 @@ export function awsSsoadminApplicationSignInOptionsPropertyToTerraform(struct?: 
 }
 
 
-export function awsSsoadminApplicationSignInOptionsPropertyToHclTerraform(struct?: AwsSsoadminApplication.SignInOptionsProperty | cdktn.IResolvable): any {
+export function tfApplicationSignInOptionsPropertyToHclTerraform(struct?: TfApplication.SignInOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -393,19 +393,19 @@ export function awsSsoadminApplicationSignInOptionsPropertyToHclTerraform(struct
 }
 
 
-export function awsSsoadminApplicationPortalOptionsPropertyToTerraform(struct?: AwsSsoadminApplication.PortalOptionsProperty | cdktn.IResolvable): any {
+export function tfApplicationPortalOptionsPropertyToTerraform(struct?: TfApplication.PortalOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     visibility: cdktn.stringToTerraform(struct!.visibility),
-    sign_in_options: cdktn.listMapper(awsSsoadminApplicationSignInOptionsPropertyToTerraform, true)(struct!.signInOptions),
+    sign_in_options: cdktn.listMapper(tfApplicationSignInOptionsPropertyToTerraform, true)(struct!.signInOptions),
   }
 }
 
 
-export function awsSsoadminApplicationPortalOptionsPropertyToHclTerraform(struct?: AwsSsoadminApplication.PortalOptionsProperty | cdktn.IResolvable): any {
+export function tfApplicationPortalOptionsPropertyToHclTerraform(struct?: TfApplication.PortalOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -418,7 +418,7 @@ export function awsSsoadminApplicationPortalOptionsPropertyToHclTerraform(struct
       storageClassType: "string",
     },
     sign_in_options: {
-      value: cdktn.listMapperHcl(awsSsoadminApplicationSignInOptionsPropertyToHclTerraform, true)(struct!.signInOptions),
+      value: cdktn.listMapperHcl(tfApplicationSignInOptionsPropertyToHclTerraform, true)(struct!.signInOptions),
       isBlock: true,
       type: "list",
       storageClassType: "SignInOptionsPropertyList",
@@ -430,14 +430,14 @@ export function awsSsoadminApplicationPortalOptionsPropertyToHclTerraform(struct
 }
 
 
-export namespace AwsSsoadminApplication {
+export namespace TfApplication {
 export interface SignInOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application#application_url AwsSsoadminApplication#application_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application#application_url TfApplication#application_url}
   */
   readonly applicationUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application#origin AwsSsoadminApplication#origin}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application#origin TfApplication#origin}
   */
   readonly origin: string;
 }
@@ -542,13 +542,13 @@ export class SignInOptionsPropertyList extends cdktn.ComplexList {
 }
 export interface PortalOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application#visibility AwsSsoadminApplication#visibility}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application#visibility TfApplication#visibility}
   */
   readonly visibility?: string;
   /**
   * sign_in_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application#sign_in_options AwsSsoadminApplication#sign_in_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application#sign_in_options TfApplication#sign_in_options}
   */
   readonly signInOptions?: SignInOptionsProperty[] | cdktn.IResolvable;
 }

@@ -5,68 +5,68 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSsmincidentsResponsePlanConfig extends cdktn.TerraformMetaArguments {
+export interface TfResponsePlanConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#chat_channel AwsSsmincidentsResponsePlan#chat_channel}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#chat_channel TfResponsePlan#chat_channel}
   */
   readonly chatChannel?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#display_name AwsSsmincidentsResponsePlan#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#display_name TfResponsePlan#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#engagements AwsSsmincidentsResponsePlan#engagements}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#engagements TfResponsePlan#engagements}
   */
   readonly engagements?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#id AwsSsmincidentsResponsePlan#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#id TfResponsePlan#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#name AwsSsmincidentsResponsePlan#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#name TfResponsePlan#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#region AwsSsmincidentsResponsePlan#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#region TfResponsePlan#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#tags AwsSsmincidentsResponsePlan#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#tags TfResponsePlan#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#tags_all AwsSsmincidentsResponsePlan#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#tags_all TfResponsePlan#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#action AwsSsmincidentsResponsePlan#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#action TfResponsePlan#action}
   */
-  readonly action?: AwsSsmincidentsResponsePlan.ActionProperty;
+  readonly action?: TfResponsePlan.ActionProperty;
   /**
   * incident_template block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#incident_template AwsSsmincidentsResponsePlan#incident_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#incident_template TfResponsePlan#incident_template}
   */
-  readonly incidentTemplate: AwsSsmincidentsResponsePlan.IncidentTemplateProperty;
+  readonly incidentTemplate: TfResponsePlan.IncidentTemplateProperty;
   /**
   * integration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#integration AwsSsmincidentsResponsePlan#integration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#integration TfResponsePlan#integration}
   */
-  readonly integration?: AwsSsmincidentsResponsePlan.IntegrationProperty;
+  readonly integration?: TfResponsePlan.IntegrationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan aws_ssmincidents_response_plan}
 */
-export class AwsSsmincidentsResponsePlan extends cdktn.TerraformResource {
+export class TfResponsePlan extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -77,11 +77,11 @@ export class AwsSsmincidentsResponsePlan extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSsmincidentsResponsePlan resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfResponsePlan resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSsmincidentsResponsePlan to import
-  * @param importFromId The id of the existing AwsSsmincidentsResponsePlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSsmincidentsResponsePlan to import is found
+  * @param importToId The construct id used in the generated config for the TfResponsePlan to import
+  * @param importFromId The id of the existing TfResponsePlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfResponsePlan to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssmincidents_response_plan", importId: importFromId, provider });
@@ -96,9 +96,9 @@ export class AwsSsmincidentsResponsePlan extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSsmincidentsResponsePlanConfig
+  * @param options TfResponsePlanConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSsmincidentsResponsePlanConfig) {
+  public constructor(scope: Construct, id: string, config: TfResponsePlanConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ssmincidents_response_plan',
       terraformGeneratorMetadata: {
@@ -262,11 +262,11 @@ export class AwsSsmincidentsResponsePlan extends cdktn.TerraformResource {
   }
 
   // action - computed: false, optional: true, required: false
-  private _action = new AwsSsmincidentsResponsePlan.ActionPropertyOutputReference(this, "action");
+  private _action = new TfResponsePlan.ActionPropertyOutputReference(this, "action");
   public get action() {
     return this._action;
   }
-  public putAction(value: AwsSsmincidentsResponsePlan.ActionProperty) {
+  public putAction(value: TfResponsePlan.ActionProperty) {
     this._action.internalValue = value;
   }
   public resetAction() {
@@ -278,11 +278,11 @@ export class AwsSsmincidentsResponsePlan extends cdktn.TerraformResource {
   }
 
   // incident_template - computed: false, optional: false, required: true
-  private _incidentTemplate = new AwsSsmincidentsResponsePlan.IncidentTemplatePropertyOutputReference(this, "incident_template");
+  private _incidentTemplate = new TfResponsePlan.IncidentTemplatePropertyOutputReference(this, "incident_template");
   public get incidentTemplate() {
     return this._incidentTemplate;
   }
-  public putIncidentTemplate(value: AwsSsmincidentsResponsePlan.IncidentTemplateProperty) {
+  public putIncidentTemplate(value: TfResponsePlan.IncidentTemplateProperty) {
     this._incidentTemplate.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -291,11 +291,11 @@ export class AwsSsmincidentsResponsePlan extends cdktn.TerraformResource {
   }
 
   // integration - computed: false, optional: true, required: false
-  private _integration = new AwsSsmincidentsResponsePlan.IntegrationPropertyOutputReference(this, "integration");
+  private _integration = new TfResponsePlan.IntegrationPropertyOutputReference(this, "integration");
   public get integration() {
     return this._integration;
   }
-  public putIntegration(value: AwsSsmincidentsResponsePlan.IntegrationProperty) {
+  public putIntegration(value: TfResponsePlan.IntegrationProperty) {
     this._integration.internalValue = value;
   }
   public resetIntegration() {
@@ -320,9 +320,9 @@ export class AwsSsmincidentsResponsePlan extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      action: awsSsmincidentsResponsePlanActionPropertyToTerraform(this._action.internalValue),
-      incident_template: awsSsmincidentsResponsePlanIncidentTemplatePropertyToTerraform(this._incidentTemplate.internalValue),
-      integration: awsSsmincidentsResponsePlanIntegrationPropertyToTerraform(this._integration.internalValue),
+      action: tfResponsePlanActionPropertyToTerraform(this._action.internalValue),
+      incident_template: tfResponsePlanIncidentTemplatePropertyToTerraform(this._incidentTemplate.internalValue),
+      integration: tfResponsePlanIntegrationPropertyToTerraform(this._integration.internalValue),
     };
   }
 
@@ -377,22 +377,22 @@ export class AwsSsmincidentsResponsePlan extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       action: {
-        value: awsSsmincidentsResponsePlanActionPropertyToHclTerraform(this._action.internalValue),
+        value: tfResponsePlanActionPropertyToHclTerraform(this._action.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSsmincidentsResponsePlan.ActionPropertyList",
+        storageClassType: "TfResponsePlan.ActionPropertyList",
       },
       incident_template: {
-        value: awsSsmincidentsResponsePlanIncidentTemplatePropertyToHclTerraform(this._incidentTemplate.internalValue),
+        value: tfResponsePlanIncidentTemplatePropertyToHclTerraform(this._incidentTemplate.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSsmincidentsResponsePlan.IncidentTemplatePropertyList",
+        storageClassType: "TfResponsePlan.IncidentTemplatePropertyList",
       },
       integration: {
-        value: awsSsmincidentsResponsePlanIntegrationPropertyToHclTerraform(this._integration.internalValue),
+        value: tfResponsePlanIntegrationPropertyToHclTerraform(this._integration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsSsmincidentsResponsePlan.IntegrationPropertyList",
+        storageClassType: "TfResponsePlan.IntegrationPropertyList",
       },
     };
 
@@ -401,7 +401,7 @@ export class AwsSsmincidentsResponsePlan extends cdktn.TerraformResource {
   }
 }
 
-export function awsSsmincidentsResponsePlanParameterPropertyToTerraform(struct?: AwsSsmincidentsResponsePlan.ParameterProperty | cdktn.IResolvable): any {
+export function tfResponsePlanParameterPropertyToTerraform(struct?: TfResponsePlan.ParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -413,7 +413,7 @@ export function awsSsmincidentsResponsePlanParameterPropertyToTerraform(struct?:
 }
 
 
-export function awsSsmincidentsResponsePlanParameterPropertyToHclTerraform(struct?: AwsSsmincidentsResponsePlan.ParameterProperty | cdktn.IResolvable): any {
+export function tfResponsePlanParameterPropertyToHclTerraform(struct?: TfResponsePlan.ParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -438,7 +438,7 @@ export function awsSsmincidentsResponsePlanParameterPropertyToHclTerraform(struc
 }
 
 
-export function awsSsmincidentsResponsePlanSsmAutomationPropertyToTerraform(struct?: AwsSsmincidentsResponsePlan.SsmAutomationProperty | cdktn.IResolvable): any {
+export function tfResponsePlanSsmAutomationPropertyToTerraform(struct?: TfResponsePlan.SsmAutomationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -449,12 +449,12 @@ export function awsSsmincidentsResponsePlanSsmAutomationPropertyToTerraform(stru
     dynamic_parameters: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.dynamicParameters),
     role_arn: cdktn.stringToTerraform(struct!.roleArn),
     target_account: cdktn.stringToTerraform(struct!.targetAccount),
-    parameter: cdktn.listMapper(awsSsmincidentsResponsePlanParameterPropertyToTerraform, true)(struct!.parameter),
+    parameter: cdktn.listMapper(tfResponsePlanParameterPropertyToTerraform, true)(struct!.parameter),
   }
 }
 
 
-export function awsSsmincidentsResponsePlanSsmAutomationPropertyToHclTerraform(struct?: AwsSsmincidentsResponsePlan.SsmAutomationProperty | cdktn.IResolvable): any {
+export function tfResponsePlanSsmAutomationPropertyToHclTerraform(struct?: TfResponsePlan.SsmAutomationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -491,7 +491,7 @@ export function awsSsmincidentsResponsePlanSsmAutomationPropertyToHclTerraform(s
       storageClassType: "string",
     },
     parameter: {
-      value: cdktn.listMapperHcl(awsSsmincidentsResponsePlanParameterPropertyToHclTerraform, true)(struct!.parameter),
+      value: cdktn.listMapperHcl(tfResponsePlanParameterPropertyToHclTerraform, true)(struct!.parameter),
       isBlock: true,
       type: "set",
       storageClassType: "ParameterPropertyList",
@@ -503,25 +503,25 @@ export function awsSsmincidentsResponsePlanSsmAutomationPropertyToHclTerraform(s
 }
 
 
-export function awsSsmincidentsResponsePlanActionPropertyToTerraform(struct?: AwsSsmincidentsResponsePlan.ActionPropertyOutputReference | AwsSsmincidentsResponsePlan.ActionProperty): any {
+export function tfResponsePlanActionPropertyToTerraform(struct?: TfResponsePlan.ActionPropertyOutputReference | TfResponsePlan.ActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    ssm_automation: cdktn.listMapper(awsSsmincidentsResponsePlanSsmAutomationPropertyToTerraform, true)(struct!.ssmAutomation),
+    ssm_automation: cdktn.listMapper(tfResponsePlanSsmAutomationPropertyToTerraform, true)(struct!.ssmAutomation),
   }
 }
 
 
-export function awsSsmincidentsResponsePlanActionPropertyToHclTerraform(struct?: AwsSsmincidentsResponsePlan.ActionPropertyOutputReference | AwsSsmincidentsResponsePlan.ActionProperty): any {
+export function tfResponsePlanActionPropertyToHclTerraform(struct?: TfResponsePlan.ActionPropertyOutputReference | TfResponsePlan.ActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     ssm_automation: {
-      value: cdktn.listMapperHcl(awsSsmincidentsResponsePlanSsmAutomationPropertyToHclTerraform, true)(struct!.ssmAutomation),
+      value: cdktn.listMapperHcl(tfResponsePlanSsmAutomationPropertyToHclTerraform, true)(struct!.ssmAutomation),
       isBlock: true,
       type: "list",
       storageClassType: "SsmAutomationPropertyList",
@@ -533,7 +533,7 @@ export function awsSsmincidentsResponsePlanActionPropertyToHclTerraform(struct?:
 }
 
 
-export function awsSsmincidentsResponsePlanNotificationTargetPropertyToTerraform(struct?: AwsSsmincidentsResponsePlan.NotificationTargetProperty | cdktn.IResolvable): any {
+export function tfResponsePlanNotificationTargetPropertyToTerraform(struct?: TfResponsePlan.NotificationTargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -544,7 +544,7 @@ export function awsSsmincidentsResponsePlanNotificationTargetPropertyToTerraform
 }
 
 
-export function awsSsmincidentsResponsePlanNotificationTargetPropertyToHclTerraform(struct?: AwsSsmincidentsResponsePlan.NotificationTargetProperty | cdktn.IResolvable): any {
+export function tfResponsePlanNotificationTargetPropertyToHclTerraform(struct?: TfResponsePlan.NotificationTargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -563,7 +563,7 @@ export function awsSsmincidentsResponsePlanNotificationTargetPropertyToHclTerraf
 }
 
 
-export function awsSsmincidentsResponsePlanIncidentTemplatePropertyToTerraform(struct?: AwsSsmincidentsResponsePlan.IncidentTemplatePropertyOutputReference | AwsSsmincidentsResponsePlan.IncidentTemplateProperty): any {
+export function tfResponsePlanIncidentTemplatePropertyToTerraform(struct?: TfResponsePlan.IncidentTemplatePropertyOutputReference | TfResponsePlan.IncidentTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -574,12 +574,12 @@ export function awsSsmincidentsResponsePlanIncidentTemplatePropertyToTerraform(s
     incident_tags: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.incidentTags),
     summary: cdktn.stringToTerraform(struct!.summary),
     title: cdktn.stringToTerraform(struct!.title),
-    notification_target: cdktn.listMapper(awsSsmincidentsResponsePlanNotificationTargetPropertyToTerraform, true)(struct!.notificationTarget),
+    notification_target: cdktn.listMapper(tfResponsePlanNotificationTargetPropertyToTerraform, true)(struct!.notificationTarget),
   }
 }
 
 
-export function awsSsmincidentsResponsePlanIncidentTemplatePropertyToHclTerraform(struct?: AwsSsmincidentsResponsePlan.IncidentTemplatePropertyOutputReference | AwsSsmincidentsResponsePlan.IncidentTemplateProperty): any {
+export function tfResponsePlanIncidentTemplatePropertyToHclTerraform(struct?: TfResponsePlan.IncidentTemplatePropertyOutputReference | TfResponsePlan.IncidentTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -616,7 +616,7 @@ export function awsSsmincidentsResponsePlanIncidentTemplatePropertyToHclTerrafor
       storageClassType: "string",
     },
     notification_target: {
-      value: cdktn.listMapperHcl(awsSsmincidentsResponsePlanNotificationTargetPropertyToHclTerraform, true)(struct!.notificationTarget),
+      value: cdktn.listMapperHcl(tfResponsePlanNotificationTargetPropertyToHclTerraform, true)(struct!.notificationTarget),
       isBlock: true,
       type: "set",
       storageClassType: "NotificationTargetPropertyList",
@@ -628,7 +628,7 @@ export function awsSsmincidentsResponsePlanIncidentTemplatePropertyToHclTerrafor
 }
 
 
-export function awsSsmincidentsResponsePlanPagerdutyPropertyToTerraform(struct?: AwsSsmincidentsResponsePlan.PagerdutyProperty | cdktn.IResolvable): any {
+export function tfResponsePlanPagerdutyPropertyToTerraform(struct?: TfResponsePlan.PagerdutyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -641,7 +641,7 @@ export function awsSsmincidentsResponsePlanPagerdutyPropertyToTerraform(struct?:
 }
 
 
-export function awsSsmincidentsResponsePlanPagerdutyPropertyToHclTerraform(struct?: AwsSsmincidentsResponsePlan.PagerdutyProperty | cdktn.IResolvable): any {
+export function tfResponsePlanPagerdutyPropertyToHclTerraform(struct?: TfResponsePlan.PagerdutyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -672,25 +672,25 @@ export function awsSsmincidentsResponsePlanPagerdutyPropertyToHclTerraform(struc
 }
 
 
-export function awsSsmincidentsResponsePlanIntegrationPropertyToTerraform(struct?: AwsSsmincidentsResponsePlan.IntegrationPropertyOutputReference | AwsSsmincidentsResponsePlan.IntegrationProperty): any {
+export function tfResponsePlanIntegrationPropertyToTerraform(struct?: TfResponsePlan.IntegrationPropertyOutputReference | TfResponsePlan.IntegrationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    pagerduty: cdktn.listMapper(awsSsmincidentsResponsePlanPagerdutyPropertyToTerraform, true)(struct!.pagerduty),
+    pagerduty: cdktn.listMapper(tfResponsePlanPagerdutyPropertyToTerraform, true)(struct!.pagerduty),
   }
 }
 
 
-export function awsSsmincidentsResponsePlanIntegrationPropertyToHclTerraform(struct?: AwsSsmincidentsResponsePlan.IntegrationPropertyOutputReference | AwsSsmincidentsResponsePlan.IntegrationProperty): any {
+export function tfResponsePlanIntegrationPropertyToHclTerraform(struct?: TfResponsePlan.IntegrationPropertyOutputReference | TfResponsePlan.IntegrationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     pagerduty: {
-      value: cdktn.listMapperHcl(awsSsmincidentsResponsePlanPagerdutyPropertyToHclTerraform, true)(struct!.pagerduty),
+      value: cdktn.listMapperHcl(tfResponsePlanPagerdutyPropertyToHclTerraform, true)(struct!.pagerduty),
       isBlock: true,
       type: "list",
       storageClassType: "PagerdutyPropertyList",
@@ -702,14 +702,14 @@ export function awsSsmincidentsResponsePlanIntegrationPropertyToHclTerraform(str
 }
 
 
-export namespace AwsSsmincidentsResponsePlan {
+export namespace TfResponsePlan {
 export interface ParameterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#name AwsSsmincidentsResponsePlan#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#name TfResponsePlan#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#values AwsSsmincidentsResponsePlan#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#values TfResponsePlan#values}
   */
   readonly values: string[];
 }
@@ -811,29 +811,29 @@ export class ParameterPropertyList extends cdktn.ComplexList {
 }
 export interface SsmAutomationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#document_name AwsSsmincidentsResponsePlan#document_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#document_name TfResponsePlan#document_name}
   */
   readonly documentName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#document_version AwsSsmincidentsResponsePlan#document_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#document_version TfResponsePlan#document_version}
   */
   readonly documentVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#dynamic_parameters AwsSsmincidentsResponsePlan#dynamic_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#dynamic_parameters TfResponsePlan#dynamic_parameters}
   */
   readonly dynamicParameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#role_arn AwsSsmincidentsResponsePlan#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#role_arn TfResponsePlan#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#target_account AwsSsmincidentsResponsePlan#target_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#target_account TfResponsePlan#target_account}
   */
   readonly targetAccount?: string;
   /**
   * parameter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#parameter AwsSsmincidentsResponsePlan#parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#parameter TfResponsePlan#parameter}
   */
   readonly parameter?: ParameterProperty[] | cdktn.IResolvable;
 }
@@ -1025,7 +1025,7 @@ export interface ActionProperty {
   /**
   * ssm_automation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#ssm_automation AwsSsmincidentsResponsePlan#ssm_automation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#ssm_automation TfResponsePlan#ssm_automation}
   */
   readonly ssmAutomation?: SsmAutomationProperty[] | cdktn.IResolvable;
 }
@@ -1079,7 +1079,7 @@ export class ActionPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface NotificationTargetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#sns_topic_arn AwsSsmincidentsResponsePlan#sns_topic_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#sns_topic_arn TfResponsePlan#sns_topic_arn}
   */
   readonly snsTopicArn: string;
 }
@@ -1162,29 +1162,29 @@ export class NotificationTargetPropertyList extends cdktn.ComplexList {
 }
 export interface IncidentTemplateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#dedupe_string AwsSsmincidentsResponsePlan#dedupe_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#dedupe_string TfResponsePlan#dedupe_string}
   */
   readonly dedupeString?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#impact AwsSsmincidentsResponsePlan#impact}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#impact TfResponsePlan#impact}
   */
   readonly impact: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#incident_tags AwsSsmincidentsResponsePlan#incident_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#incident_tags TfResponsePlan#incident_tags}
   */
   readonly incidentTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#summary AwsSsmincidentsResponsePlan#summary}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#summary TfResponsePlan#summary}
   */
   readonly summary?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#title AwsSsmincidentsResponsePlan#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#title TfResponsePlan#title}
   */
   readonly title: string;
   /**
   * notification_target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#notification_target AwsSsmincidentsResponsePlan#notification_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#notification_target TfResponsePlan#notification_target}
   */
   readonly notificationTarget?: NotificationTargetProperty[] | cdktn.IResolvable;
 }
@@ -1342,15 +1342,15 @@ export class IncidentTemplatePropertyOutputReference extends cdktn.ComplexObject
 }
 export interface PagerdutyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#name AwsSsmincidentsResponsePlan#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#name TfResponsePlan#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#secret_id AwsSsmincidentsResponsePlan#secret_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#secret_id TfResponsePlan#secret_id}
   */
   readonly secretId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#service_id AwsSsmincidentsResponsePlan#service_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#service_id TfResponsePlan#service_id}
   */
   readonly serviceId: string;
 }
@@ -1473,7 +1473,7 @@ export interface IntegrationProperty {
   /**
   * pagerduty block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#pagerduty AwsSsmincidentsResponsePlan#pagerduty}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmincidents_response_plan#pagerduty TfResponsePlan#pagerduty}
   */
   readonly pagerduty?: PagerdutyProperty[] | cdktn.IResolvable;
 }

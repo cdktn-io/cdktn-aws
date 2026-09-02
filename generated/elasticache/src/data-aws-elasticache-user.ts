@@ -5,56 +5,56 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsElasticacheUserConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataUserConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_user#access_string DataAwsElasticacheUser#access_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_user#access_string TfDataUser#access_string}
   */
   readonly accessString?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_user#engine DataAwsElasticacheUser#engine}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_user#engine TfDataUser#engine}
   */
   readonly engine?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_user#id DataAwsElasticacheUser#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_user#id TfDataUser#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_user#no_password_required DataAwsElasticacheUser#no_password_required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_user#no_password_required TfDataUser#no_password_required}
   */
   readonly noPasswordRequired?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_user#passwords DataAwsElasticacheUser#passwords}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_user#passwords TfDataUser#passwords}
   */
   readonly passwords?: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_user#region DataAwsElasticacheUser#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_user#region TfDataUser#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_user#user_id DataAwsElasticacheUser#user_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_user#user_id TfDataUser#user_id}
   */
   readonly userId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_user#user_name DataAwsElasticacheUser#user_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_user#user_name TfDataUser#user_name}
   */
   readonly userName?: string;
   /**
   * authentication_mode block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_user#authentication_mode DataAwsElasticacheUser#authentication_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_user#authentication_mode TfDataUser#authentication_mode}
   */
-  readonly authenticationMode?: DataAwsElasticacheUser.AuthenticationModeProperty[] | cdktn.IResolvable;
+  readonly authenticationMode?: TfDataUser.AuthenticationModeProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_user aws_elasticache_user}
 */
-export class DataAwsElasticacheUser extends cdktn.TerraformDataSource {
+export class TfDataUser extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class DataAwsElasticacheUser extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsElasticacheUser resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataUser resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsElasticacheUser to import
-  * @param importFromId The id of the existing DataAwsElasticacheUser that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_user#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsElasticacheUser to import is found
+  * @param importToId The construct id used in the generated config for the TfDataUser to import
+  * @param importFromId The id of the existing TfDataUser that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_user#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataUser to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_elasticache_user", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class DataAwsElasticacheUser extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsElasticacheUserConfig
+  * @param options TfDataUserConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsElasticacheUserConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataUserConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_elasticache_user',
       terraformGeneratorMetadata: {
@@ -243,11 +243,11 @@ export class DataAwsElasticacheUser extends cdktn.TerraformDataSource {
   }
 
   // authentication_mode - computed: false, optional: true, required: false
-  private _authenticationMode = new DataAwsElasticacheUser.AuthenticationModePropertyList(this, "authentication_mode", false);
+  private _authenticationMode = new TfDataUser.AuthenticationModePropertyList(this, "authentication_mode", false);
   public get authenticationMode() {
     return this._authenticationMode;
   }
-  public putAuthenticationMode(value: DataAwsElasticacheUser.AuthenticationModeProperty[] | cdktn.IResolvable) {
+  public putAuthenticationMode(value: TfDataUser.AuthenticationModeProperty[] | cdktn.IResolvable) {
     this._authenticationMode.internalValue = value;
   }
   public resetAuthenticationMode() {
@@ -272,7 +272,7 @@ export class DataAwsElasticacheUser extends cdktn.TerraformDataSource {
       region: cdktn.stringToTerraform(this._region),
       user_id: cdktn.stringToTerraform(this._userId),
       user_name: cdktn.stringToTerraform(this._userName),
-      authentication_mode: cdktn.listMapper(dataAwsElasticacheUserAuthenticationModePropertyToTerraform, true)(this._authenticationMode.internalValue),
+      authentication_mode: cdktn.listMapper(tfDataUserAuthenticationModePropertyToTerraform, true)(this._authenticationMode.internalValue),
     };
   }
 
@@ -327,10 +327,10 @@ export class DataAwsElasticacheUser extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       authentication_mode: {
-        value: cdktn.listMapperHcl(dataAwsElasticacheUserAuthenticationModePropertyToHclTerraform, true)(this._authenticationMode.internalValue),
+        value: cdktn.listMapperHcl(tfDataUserAuthenticationModePropertyToHclTerraform, true)(this._authenticationMode.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "DataAwsElasticacheUser.AuthenticationModePropertyList",
+        storageClassType: "TfDataUser.AuthenticationModePropertyList",
       },
     };
 
@@ -339,7 +339,7 @@ export class DataAwsElasticacheUser extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsElasticacheUserAuthenticationModePropertyToTerraform(struct?: DataAwsElasticacheUser.AuthenticationModeProperty | cdktn.IResolvable): any {
+export function tfDataUserAuthenticationModePropertyToTerraform(struct?: TfDataUser.AuthenticationModeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -351,7 +351,7 @@ export function dataAwsElasticacheUserAuthenticationModePropertyToTerraform(stru
 }
 
 
-export function dataAwsElasticacheUserAuthenticationModePropertyToHclTerraform(struct?: DataAwsElasticacheUser.AuthenticationModeProperty | cdktn.IResolvable): any {
+export function tfDataUserAuthenticationModePropertyToHclTerraform(struct?: TfDataUser.AuthenticationModeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -376,14 +376,14 @@ export function dataAwsElasticacheUserAuthenticationModePropertyToHclTerraform(s
 }
 
 
-export namespace DataAwsElasticacheUser {
+export namespace TfDataUser {
 export interface AuthenticationModeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_user#password_count DataAwsElasticacheUser#password_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_user#password_count TfDataUser#password_count}
   */
   readonly passwordCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_user#type DataAwsElasticacheUser#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_user#type TfDataUser#type}
   */
   readonly type?: string;
 }

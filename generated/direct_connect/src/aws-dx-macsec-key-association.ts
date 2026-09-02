@@ -5,21 +5,21 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDxMacsecKeyAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface TfMacsecKeyAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_macsec_key_association#cak AwsDxMacsecKeyAssociation#cak}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_macsec_key_association#cak TfMacsecKeyAssociation#cak}
   */
   readonly cak?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_macsec_key_association#ckn AwsDxMacsecKeyAssociation#ckn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_macsec_key_association#ckn TfMacsecKeyAssociation#ckn}
   */
   readonly ckn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_macsec_key_association#connection_id AwsDxMacsecKeyAssociation#connection_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_macsec_key_association#connection_id TfMacsecKeyAssociation#connection_id}
   */
   readonly connectionId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_macsec_key_association#id AwsDxMacsecKeyAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_macsec_key_association#id TfMacsecKeyAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,11 +28,11 @@ export interface AwsDxMacsecKeyAssociationConfig extends cdktn.TerraformMetaArgu
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_macsec_key_association#region AwsDxMacsecKeyAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_macsec_key_association#region TfMacsecKeyAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_macsec_key_association#secret_arn AwsDxMacsecKeyAssociation#secret_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_macsec_key_association#secret_arn TfMacsecKeyAssociation#secret_arn}
   */
   readonly secretArn?: string;
 }
@@ -40,7 +40,7 @@ export interface AwsDxMacsecKeyAssociationConfig extends cdktn.TerraformMetaArgu
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_macsec_key_association aws_dx_macsec_key_association}
 */
-export class AwsDxMacsecKeyAssociation extends cdktn.TerraformResource {
+export class TfMacsecKeyAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class AwsDxMacsecKeyAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDxMacsecKeyAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfMacsecKeyAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDxMacsecKeyAssociation to import
-  * @param importFromId The id of the existing AwsDxMacsecKeyAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_macsec_key_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDxMacsecKeyAssociation to import is found
+  * @param importToId The construct id used in the generated config for the TfMacsecKeyAssociation to import
+  * @param importFromId The id of the existing TfMacsecKeyAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_macsec_key_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfMacsecKeyAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_dx_macsec_key_association", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class AwsDxMacsecKeyAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDxMacsecKeyAssociationConfig
+  * @param options TfMacsecKeyAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDxMacsecKeyAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: TfMacsecKeyAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_dx_macsec_key_association',
       terraformGeneratorMetadata: {

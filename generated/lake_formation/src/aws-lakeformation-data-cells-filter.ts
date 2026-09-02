@@ -5,31 +5,31 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsLakeformationDataCellsFilterConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataCellsFilterConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_cells_filter#region AwsLakeformationDataCellsFilter#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_cells_filter#region TfDataCellsFilter#region}
   */
   readonly region?: string;
   /**
   * table_data block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_cells_filter#table_data AwsLakeformationDataCellsFilter#table_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_cells_filter#table_data TfDataCellsFilter#table_data}
   */
-  readonly tableData?: AwsLakeformationDataCellsFilter.TableDataProperty[] | cdktn.IResolvable;
+  readonly tableData?: TfDataCellsFilter.TableDataProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_cells_filter#timeouts AwsLakeformationDataCellsFilter#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_cells_filter#timeouts TfDataCellsFilter#timeouts}
   */
-  readonly timeouts?: AwsLakeformationDataCellsFilter.TimeoutsProperty;
+  readonly timeouts?: TfDataCellsFilter.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_cells_filter aws_lakeformation_data_cells_filter}
 */
-export class AwsLakeformationDataCellsFilter extends cdktn.TerraformResource {
+export class TfDataCellsFilter extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -40,11 +40,11 @@ export class AwsLakeformationDataCellsFilter extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsLakeformationDataCellsFilter resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataCellsFilter resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsLakeformationDataCellsFilter to import
-  * @param importFromId The id of the existing AwsLakeformationDataCellsFilter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_cells_filter#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsLakeformationDataCellsFilter to import is found
+  * @param importToId The construct id used in the generated config for the TfDataCellsFilter to import
+  * @param importFromId The id of the existing TfDataCellsFilter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_cells_filter#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataCellsFilter to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lakeformation_data_cells_filter", importId: importFromId, provider });
@@ -59,9 +59,9 @@ export class AwsLakeformationDataCellsFilter extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsLakeformationDataCellsFilterConfig = {}
+  * @param options TfDataCellsFilterConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsLakeformationDataCellsFilterConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDataCellsFilterConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_lakeformation_data_cells_filter',
       terraformGeneratorMetadata: {
@@ -108,11 +108,11 @@ export class AwsLakeformationDataCellsFilter extends cdktn.TerraformResource {
   }
 
   // table_data - computed: false, optional: true, required: false
-  private _tableData = new AwsLakeformationDataCellsFilter.TableDataPropertyList(this, "table_data", false);
+  private _tableData = new TfDataCellsFilter.TableDataPropertyList(this, "table_data", false);
   public get tableData() {
     return this._tableData;
   }
-  public putTableData(value: AwsLakeformationDataCellsFilter.TableDataProperty[] | cdktn.IResolvable) {
+  public putTableData(value: TfDataCellsFilter.TableDataProperty[] | cdktn.IResolvable) {
     this._tableData.internalValue = value;
   }
   public resetTableData() {
@@ -124,11 +124,11 @@ export class AwsLakeformationDataCellsFilter extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsLakeformationDataCellsFilter.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfDataCellsFilter.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsLakeformationDataCellsFilter.TimeoutsProperty) {
+  public putTimeouts(value: TfDataCellsFilter.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -146,8 +146,8 @@ export class AwsLakeformationDataCellsFilter extends cdktn.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       region: cdktn.stringToTerraform(this._region),
-      table_data: cdktn.listMapper(awsLakeformationDataCellsFilterTableDataPropertyToTerraform, true)(this._tableData.internalValue),
-      timeouts: awsLakeformationDataCellsFilterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      table_data: cdktn.listMapper(tfDataCellsFilterTableDataPropertyToTerraform, true)(this._tableData.internalValue),
+      timeouts: tfDataCellsFilterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -160,16 +160,16 @@ export class AwsLakeformationDataCellsFilter extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       table_data: {
-        value: cdktn.listMapperHcl(awsLakeformationDataCellsFilterTableDataPropertyToHclTerraform, true)(this._tableData.internalValue),
+        value: cdktn.listMapperHcl(tfDataCellsFilterTableDataPropertyToHclTerraform, true)(this._tableData.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsLakeformationDataCellsFilter.TableDataPropertyList",
+        storageClassType: "TfDataCellsFilter.TableDataPropertyList",
       },
       timeouts: {
-        value: awsLakeformationDataCellsFilterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfDataCellsFilterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsLakeformationDataCellsFilter.TimeoutsProperty",
+        storageClassType: "TfDataCellsFilter.TimeoutsProperty",
       },
     };
 
@@ -178,7 +178,7 @@ export class AwsLakeformationDataCellsFilter extends cdktn.TerraformResource {
   }
 }
 
-export function awsLakeformationDataCellsFilterColumnWildcardPropertyToTerraform(struct?: AwsLakeformationDataCellsFilter.ColumnWildcardProperty | cdktn.IResolvable): any {
+export function tfDataCellsFilterColumnWildcardPropertyToTerraform(struct?: TfDataCellsFilter.ColumnWildcardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -189,7 +189,7 @@ export function awsLakeformationDataCellsFilterColumnWildcardPropertyToTerraform
 }
 
 
-export function awsLakeformationDataCellsFilterColumnWildcardPropertyToHclTerraform(struct?: AwsLakeformationDataCellsFilter.ColumnWildcardProperty | cdktn.IResolvable): any {
+export function tfDataCellsFilterColumnWildcardPropertyToHclTerraform(struct?: TfDataCellsFilter.ColumnWildcardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -208,7 +208,7 @@ export function awsLakeformationDataCellsFilterColumnWildcardPropertyToHclTerraf
 }
 
 
-export function awsLakeformationDataCellsFilterAllRowsWildcardPropertyToTerraform(struct?: AwsLakeformationDataCellsFilter.AllRowsWildcardProperty | cdktn.IResolvable): any {
+export function tfDataCellsFilterAllRowsWildcardPropertyToTerraform(struct?: TfDataCellsFilter.AllRowsWildcardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -218,7 +218,7 @@ export function awsLakeformationDataCellsFilterAllRowsWildcardPropertyToTerrafor
 }
 
 
-export function awsLakeformationDataCellsFilterAllRowsWildcardPropertyToHclTerraform(struct?: AwsLakeformationDataCellsFilter.AllRowsWildcardProperty | cdktn.IResolvable): any {
+export function tfDataCellsFilterAllRowsWildcardPropertyToHclTerraform(struct?: TfDataCellsFilter.AllRowsWildcardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -229,19 +229,19 @@ export function awsLakeformationDataCellsFilterAllRowsWildcardPropertyToHclTerra
 }
 
 
-export function awsLakeformationDataCellsFilterRowFilterPropertyToTerraform(struct?: AwsLakeformationDataCellsFilter.RowFilterProperty | cdktn.IResolvable): any {
+export function tfDataCellsFilterRowFilterPropertyToTerraform(struct?: TfDataCellsFilter.RowFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     filter_expression: cdktn.stringToTerraform(struct!.filterExpression),
-    all_rows_wildcard: cdktn.listMapper(awsLakeformationDataCellsFilterAllRowsWildcardPropertyToTerraform, true)(struct!.allRowsWildcard),
+    all_rows_wildcard: cdktn.listMapper(tfDataCellsFilterAllRowsWildcardPropertyToTerraform, true)(struct!.allRowsWildcard),
   }
 }
 
 
-export function awsLakeformationDataCellsFilterRowFilterPropertyToHclTerraform(struct?: AwsLakeformationDataCellsFilter.RowFilterProperty | cdktn.IResolvable): any {
+export function tfDataCellsFilterRowFilterPropertyToHclTerraform(struct?: TfDataCellsFilter.RowFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -254,7 +254,7 @@ export function awsLakeformationDataCellsFilterRowFilterPropertyToHclTerraform(s
       storageClassType: "string",
     },
     all_rows_wildcard: {
-      value: cdktn.listMapperHcl(awsLakeformationDataCellsFilterAllRowsWildcardPropertyToHclTerraform, true)(struct!.allRowsWildcard),
+      value: cdktn.listMapperHcl(tfDataCellsFilterAllRowsWildcardPropertyToHclTerraform, true)(struct!.allRowsWildcard),
       isBlock: true,
       type: "list",
       storageClassType: "AllRowsWildcardPropertyList",
@@ -266,7 +266,7 @@ export function awsLakeformationDataCellsFilterRowFilterPropertyToHclTerraform(s
 }
 
 
-export function awsLakeformationDataCellsFilterTableDataPropertyToTerraform(struct?: AwsLakeformationDataCellsFilter.TableDataProperty | cdktn.IResolvable): any {
+export function tfDataCellsFilterTableDataPropertyToTerraform(struct?: TfDataCellsFilter.TableDataProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -278,13 +278,13 @@ export function awsLakeformationDataCellsFilterTableDataPropertyToTerraform(stru
     table_catalog_id: cdktn.stringToTerraform(struct!.tableCatalogId),
     table_name: cdktn.stringToTerraform(struct!.tableName),
     version_id: cdktn.stringToTerraform(struct!.versionId),
-    column_wildcard: cdktn.listMapper(awsLakeformationDataCellsFilterColumnWildcardPropertyToTerraform, true)(struct!.columnWildcard),
-    row_filter: cdktn.listMapper(awsLakeformationDataCellsFilterRowFilterPropertyToTerraform, true)(struct!.rowFilter),
+    column_wildcard: cdktn.listMapper(tfDataCellsFilterColumnWildcardPropertyToTerraform, true)(struct!.columnWildcard),
+    row_filter: cdktn.listMapper(tfDataCellsFilterRowFilterPropertyToTerraform, true)(struct!.rowFilter),
   }
 }
 
 
-export function awsLakeformationDataCellsFilterTableDataPropertyToHclTerraform(struct?: AwsLakeformationDataCellsFilter.TableDataProperty | cdktn.IResolvable): any {
+export function tfDataCellsFilterTableDataPropertyToHclTerraform(struct?: TfDataCellsFilter.TableDataProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -327,13 +327,13 @@ export function awsLakeformationDataCellsFilterTableDataPropertyToHclTerraform(s
       storageClassType: "string",
     },
     column_wildcard: {
-      value: cdktn.listMapperHcl(awsLakeformationDataCellsFilterColumnWildcardPropertyToHclTerraform, true)(struct!.columnWildcard),
+      value: cdktn.listMapperHcl(tfDataCellsFilterColumnWildcardPropertyToHclTerraform, true)(struct!.columnWildcard),
       isBlock: true,
       type: "list",
       storageClassType: "ColumnWildcardPropertyList",
     },
     row_filter: {
-      value: cdktn.listMapperHcl(awsLakeformationDataCellsFilterRowFilterPropertyToHclTerraform, true)(struct!.rowFilter),
+      value: cdktn.listMapperHcl(tfDataCellsFilterRowFilterPropertyToHclTerraform, true)(struct!.rowFilter),
       isBlock: true,
       type: "list",
       storageClassType: "RowFilterPropertyList",
@@ -345,7 +345,7 @@ export function awsLakeformationDataCellsFilterTableDataPropertyToHclTerraform(s
 }
 
 
-export function awsLakeformationDataCellsFilterTimeoutsPropertyToTerraform(struct?: AwsLakeformationDataCellsFilter.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDataCellsFilterTimeoutsPropertyToTerraform(struct?: TfDataCellsFilter.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -356,7 +356,7 @@ export function awsLakeformationDataCellsFilterTimeoutsPropertyToTerraform(struc
 }
 
 
-export function awsLakeformationDataCellsFilterTimeoutsPropertyToHclTerraform(struct?: AwsLakeformationDataCellsFilter.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDataCellsFilterTimeoutsPropertyToHclTerraform(struct?: TfDataCellsFilter.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -375,10 +375,10 @@ export function awsLakeformationDataCellsFilterTimeoutsPropertyToHclTerraform(st
 }
 
 
-export namespace AwsLakeformationDataCellsFilter {
+export namespace TfDataCellsFilter {
 export interface ColumnWildcardProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_cells_filter#excluded_column_names AwsLakeformationDataCellsFilter#excluded_column_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_cells_filter#excluded_column_names TfDataCellsFilter#excluded_column_names}
   */
   readonly excludedColumnNames?: string[];
 }
@@ -524,13 +524,13 @@ export class AllRowsWildcardPropertyList extends cdktn.ComplexList {
 }
 export interface RowFilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_cells_filter#filter_expression AwsLakeformationDataCellsFilter#filter_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_cells_filter#filter_expression TfDataCellsFilter#filter_expression}
   */
   readonly filterExpression?: string;
   /**
   * all_rows_wildcard block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_cells_filter#all_rows_wildcard AwsLakeformationDataCellsFilter#all_rows_wildcard}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_cells_filter#all_rows_wildcard TfDataCellsFilter#all_rows_wildcard}
   */
   readonly allRowsWildcard?: AllRowsWildcardProperty[] | cdktn.IResolvable;
 }
@@ -638,39 +638,39 @@ export class RowFilterPropertyList extends cdktn.ComplexList {
 }
 export interface TableDataProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_cells_filter#column_names AwsLakeformationDataCellsFilter#column_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_cells_filter#column_names TfDataCellsFilter#column_names}
   */
   readonly columnNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_cells_filter#database_name AwsLakeformationDataCellsFilter#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_cells_filter#database_name TfDataCellsFilter#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_cells_filter#name AwsLakeformationDataCellsFilter#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_cells_filter#name TfDataCellsFilter#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_cells_filter#table_catalog_id AwsLakeformationDataCellsFilter#table_catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_cells_filter#table_catalog_id TfDataCellsFilter#table_catalog_id}
   */
   readonly tableCatalogId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_cells_filter#table_name AwsLakeformationDataCellsFilter#table_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_cells_filter#table_name TfDataCellsFilter#table_name}
   */
   readonly tableName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_cells_filter#version_id AwsLakeformationDataCellsFilter#version_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_cells_filter#version_id TfDataCellsFilter#version_id}
   */
   readonly versionId?: string;
   /**
   * column_wildcard block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_cells_filter#column_wildcard AwsLakeformationDataCellsFilter#column_wildcard}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_cells_filter#column_wildcard TfDataCellsFilter#column_wildcard}
   */
   readonly columnWildcard?: ColumnWildcardProperty[] | cdktn.IResolvable;
   /**
   * row_filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_cells_filter#row_filter AwsLakeformationDataCellsFilter#row_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_cells_filter#row_filter TfDataCellsFilter#row_filter}
   */
   readonly rowFilter?: RowFilterProperty[] | cdktn.IResolvable;
 }
@@ -900,7 +900,7 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_cells_filter#create AwsLakeformationDataCellsFilter#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_cells_filter#create TfDataCellsFilter#create}
   */
   readonly create?: string;
 }

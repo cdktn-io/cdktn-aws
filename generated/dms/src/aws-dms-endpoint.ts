@@ -5,158 +5,158 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDmsEndpointConfig extends cdktn.TerraformMetaArguments {
+export interface TfEndpointConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#certificate_arn AwsDmsEndpoint#certificate_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#certificate_arn TfEndpoint#certificate_arn}
   */
   readonly certificateArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#database_name AwsDmsEndpoint#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#database_name TfEndpoint#database_name}
   */
   readonly databaseName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#endpoint_id AwsDmsEndpoint#endpoint_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#endpoint_id TfEndpoint#endpoint_id}
   */
   readonly endpointId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#endpoint_type AwsDmsEndpoint#endpoint_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#endpoint_type TfEndpoint#endpoint_type}
   */
   readonly endpointType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#engine_name AwsDmsEndpoint#engine_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#engine_name TfEndpoint#engine_name}
   */
   readonly engineName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#extra_connection_attributes AwsDmsEndpoint#extra_connection_attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#extra_connection_attributes TfEndpoint#extra_connection_attributes}
   */
   readonly extraConnectionAttributes?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#id AwsDmsEndpoint#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#id TfEndpoint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#kms_key_arn AwsDmsEndpoint#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#kms_key_arn TfEndpoint#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#password AwsDmsEndpoint#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#password TfEndpoint#password}
   */
   readonly password?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#pause_replication_tasks AwsDmsEndpoint#pause_replication_tasks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#pause_replication_tasks TfEndpoint#pause_replication_tasks}
   */
   readonly pauseReplicationTasks?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#port AwsDmsEndpoint#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#port TfEndpoint#port}
   */
   readonly port?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#region AwsDmsEndpoint#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#region TfEndpoint#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#secrets_manager_access_role_arn AwsDmsEndpoint#secrets_manager_access_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#secrets_manager_access_role_arn TfEndpoint#secrets_manager_access_role_arn}
   */
   readonly secretsManagerAccessRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#secrets_manager_arn AwsDmsEndpoint#secrets_manager_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#secrets_manager_arn TfEndpoint#secrets_manager_arn}
   */
   readonly secretsManagerArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#server_name AwsDmsEndpoint#server_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#server_name TfEndpoint#server_name}
   */
   readonly serverName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#service_access_role AwsDmsEndpoint#service_access_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#service_access_role TfEndpoint#service_access_role}
   */
   readonly serviceAccessRole?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#ssl_mode AwsDmsEndpoint#ssl_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#ssl_mode TfEndpoint#ssl_mode}
   */
   readonly sslMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#tags AwsDmsEndpoint#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#tags TfEndpoint#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#tags_all AwsDmsEndpoint#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#tags_all TfEndpoint#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#username AwsDmsEndpoint#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#username TfEndpoint#username}
   */
   readonly username?: string;
   /**
   * elasticsearch_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#elasticsearch_settings AwsDmsEndpoint#elasticsearch_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#elasticsearch_settings TfEndpoint#elasticsearch_settings}
   */
-  readonly elasticsearchSettings?: AwsDmsEndpoint.ElasticsearchSettingsProperty;
+  readonly elasticsearchSettings?: TfEndpoint.ElasticsearchSettingsProperty;
   /**
   * kafka_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#kafka_settings AwsDmsEndpoint#kafka_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#kafka_settings TfEndpoint#kafka_settings}
   */
-  readonly kafkaSettings?: AwsDmsEndpoint.KafkaSettingsProperty;
+  readonly kafkaSettings?: TfEndpoint.KafkaSettingsProperty;
   /**
   * kinesis_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#kinesis_settings AwsDmsEndpoint#kinesis_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#kinesis_settings TfEndpoint#kinesis_settings}
   */
-  readonly kinesisSettings?: AwsDmsEndpoint.KinesisSettingsProperty;
+  readonly kinesisSettings?: TfEndpoint.KinesisSettingsProperty;
   /**
   * mongodb_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#mongodb_settings AwsDmsEndpoint#mongodb_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#mongodb_settings TfEndpoint#mongodb_settings}
   */
-  readonly mongodbSettings?: AwsDmsEndpoint.MongodbSettingsProperty;
+  readonly mongodbSettings?: TfEndpoint.MongodbSettingsProperty;
   /**
   * mysql_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#mysql_settings AwsDmsEndpoint#mysql_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#mysql_settings TfEndpoint#mysql_settings}
   */
-  readonly mysqlSettings?: AwsDmsEndpoint.MysqlSettingsProperty;
+  readonly mysqlSettings?: TfEndpoint.MysqlSettingsProperty;
   /**
   * oracle_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#oracle_settings AwsDmsEndpoint#oracle_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#oracle_settings TfEndpoint#oracle_settings}
   */
-  readonly oracleSettings?: AwsDmsEndpoint.OracleSettingsProperty;
+  readonly oracleSettings?: TfEndpoint.OracleSettingsProperty;
   /**
   * postgres_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#postgres_settings AwsDmsEndpoint#postgres_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#postgres_settings TfEndpoint#postgres_settings}
   */
-  readonly postgresSettings?: AwsDmsEndpoint.PostgresSettingsProperty;
+  readonly postgresSettings?: TfEndpoint.PostgresSettingsProperty;
   /**
   * redis_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#redis_settings AwsDmsEndpoint#redis_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#redis_settings TfEndpoint#redis_settings}
   */
-  readonly redisSettings?: AwsDmsEndpoint.RedisSettingsProperty;
+  readonly redisSettings?: TfEndpoint.RedisSettingsProperty;
   /**
   * redshift_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#redshift_settings AwsDmsEndpoint#redshift_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#redshift_settings TfEndpoint#redshift_settings}
   */
-  readonly redshiftSettings?: AwsDmsEndpoint.RedshiftSettingsProperty;
+  readonly redshiftSettings?: TfEndpoint.RedshiftSettingsProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#timeouts AwsDmsEndpoint#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#timeouts TfEndpoint#timeouts}
   */
-  readonly timeouts?: AwsDmsEndpoint.TimeoutsProperty;
+  readonly timeouts?: TfEndpoint.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint aws_dms_endpoint}
 */
-export class AwsDmsEndpoint extends cdktn.TerraformResource {
+export class TfEndpoint extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -167,11 +167,11 @@ export class AwsDmsEndpoint extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDmsEndpoint resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfEndpoint resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDmsEndpoint to import
-  * @param importFromId The id of the existing AwsDmsEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDmsEndpoint to import is found
+  * @param importToId The construct id used in the generated config for the TfEndpoint to import
+  * @param importFromId The id of the existing TfEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfEndpoint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_dms_endpoint", importId: importFromId, provider });
@@ -186,9 +186,9 @@ export class AwsDmsEndpoint extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDmsEndpointConfig
+  * @param options TfEndpointConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDmsEndpointConfig) {
+  public constructor(scope: Construct, id: string, config: TfEndpointConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_dms_endpoint',
       terraformGeneratorMetadata: {
@@ -557,11 +557,11 @@ export class AwsDmsEndpoint extends cdktn.TerraformResource {
   }
 
   // elasticsearch_settings - computed: false, optional: true, required: false
-  private _elasticsearchSettings = new AwsDmsEndpoint.ElasticsearchSettingsPropertyOutputReference(this, "elasticsearch_settings");
+  private _elasticsearchSettings = new TfEndpoint.ElasticsearchSettingsPropertyOutputReference(this, "elasticsearch_settings");
   public get elasticsearchSettings() {
     return this._elasticsearchSettings;
   }
-  public putElasticsearchSettings(value: AwsDmsEndpoint.ElasticsearchSettingsProperty) {
+  public putElasticsearchSettings(value: TfEndpoint.ElasticsearchSettingsProperty) {
     this._elasticsearchSettings.internalValue = value;
   }
   public resetElasticsearchSettings() {
@@ -573,11 +573,11 @@ export class AwsDmsEndpoint extends cdktn.TerraformResource {
   }
 
   // kafka_settings - computed: false, optional: true, required: false
-  private _kafkaSettings = new AwsDmsEndpoint.KafkaSettingsPropertyOutputReference(this, "kafka_settings");
+  private _kafkaSettings = new TfEndpoint.KafkaSettingsPropertyOutputReference(this, "kafka_settings");
   public get kafkaSettings() {
     return this._kafkaSettings;
   }
-  public putKafkaSettings(value: AwsDmsEndpoint.KafkaSettingsProperty) {
+  public putKafkaSettings(value: TfEndpoint.KafkaSettingsProperty) {
     this._kafkaSettings.internalValue = value;
   }
   public resetKafkaSettings() {
@@ -589,11 +589,11 @@ export class AwsDmsEndpoint extends cdktn.TerraformResource {
   }
 
   // kinesis_settings - computed: false, optional: true, required: false
-  private _kinesisSettings = new AwsDmsEndpoint.KinesisSettingsPropertyOutputReference(this, "kinesis_settings");
+  private _kinesisSettings = new TfEndpoint.KinesisSettingsPropertyOutputReference(this, "kinesis_settings");
   public get kinesisSettings() {
     return this._kinesisSettings;
   }
-  public putKinesisSettings(value: AwsDmsEndpoint.KinesisSettingsProperty) {
+  public putKinesisSettings(value: TfEndpoint.KinesisSettingsProperty) {
     this._kinesisSettings.internalValue = value;
   }
   public resetKinesisSettings() {
@@ -605,11 +605,11 @@ export class AwsDmsEndpoint extends cdktn.TerraformResource {
   }
 
   // mongodb_settings - computed: false, optional: true, required: false
-  private _mongodbSettings = new AwsDmsEndpoint.MongodbSettingsPropertyOutputReference(this, "mongodb_settings");
+  private _mongodbSettings = new TfEndpoint.MongodbSettingsPropertyOutputReference(this, "mongodb_settings");
   public get mongodbSettings() {
     return this._mongodbSettings;
   }
-  public putMongodbSettings(value: AwsDmsEndpoint.MongodbSettingsProperty) {
+  public putMongodbSettings(value: TfEndpoint.MongodbSettingsProperty) {
     this._mongodbSettings.internalValue = value;
   }
   public resetMongodbSettings() {
@@ -621,11 +621,11 @@ export class AwsDmsEndpoint extends cdktn.TerraformResource {
   }
 
   // mysql_settings - computed: false, optional: true, required: false
-  private _mysqlSettings = new AwsDmsEndpoint.MysqlSettingsPropertyOutputReference(this, "mysql_settings");
+  private _mysqlSettings = new TfEndpoint.MysqlSettingsPropertyOutputReference(this, "mysql_settings");
   public get mysqlSettings() {
     return this._mysqlSettings;
   }
-  public putMysqlSettings(value: AwsDmsEndpoint.MysqlSettingsProperty) {
+  public putMysqlSettings(value: TfEndpoint.MysqlSettingsProperty) {
     this._mysqlSettings.internalValue = value;
   }
   public resetMysqlSettings() {
@@ -637,11 +637,11 @@ export class AwsDmsEndpoint extends cdktn.TerraformResource {
   }
 
   // oracle_settings - computed: false, optional: true, required: false
-  private _oracleSettings = new AwsDmsEndpoint.OracleSettingsPropertyOutputReference(this, "oracle_settings");
+  private _oracleSettings = new TfEndpoint.OracleSettingsPropertyOutputReference(this, "oracle_settings");
   public get oracleSettings() {
     return this._oracleSettings;
   }
-  public putOracleSettings(value: AwsDmsEndpoint.OracleSettingsProperty) {
+  public putOracleSettings(value: TfEndpoint.OracleSettingsProperty) {
     this._oracleSettings.internalValue = value;
   }
   public resetOracleSettings() {
@@ -653,11 +653,11 @@ export class AwsDmsEndpoint extends cdktn.TerraformResource {
   }
 
   // postgres_settings - computed: false, optional: true, required: false
-  private _postgresSettings = new AwsDmsEndpoint.PostgresSettingsPropertyOutputReference(this, "postgres_settings");
+  private _postgresSettings = new TfEndpoint.PostgresSettingsPropertyOutputReference(this, "postgres_settings");
   public get postgresSettings() {
     return this._postgresSettings;
   }
-  public putPostgresSettings(value: AwsDmsEndpoint.PostgresSettingsProperty) {
+  public putPostgresSettings(value: TfEndpoint.PostgresSettingsProperty) {
     this._postgresSettings.internalValue = value;
   }
   public resetPostgresSettings() {
@@ -669,11 +669,11 @@ export class AwsDmsEndpoint extends cdktn.TerraformResource {
   }
 
   // redis_settings - computed: false, optional: true, required: false
-  private _redisSettings = new AwsDmsEndpoint.RedisSettingsPropertyOutputReference(this, "redis_settings");
+  private _redisSettings = new TfEndpoint.RedisSettingsPropertyOutputReference(this, "redis_settings");
   public get redisSettings() {
     return this._redisSettings;
   }
-  public putRedisSettings(value: AwsDmsEndpoint.RedisSettingsProperty) {
+  public putRedisSettings(value: TfEndpoint.RedisSettingsProperty) {
     this._redisSettings.internalValue = value;
   }
   public resetRedisSettings() {
@@ -685,11 +685,11 @@ export class AwsDmsEndpoint extends cdktn.TerraformResource {
   }
 
   // redshift_settings - computed: false, optional: true, required: false
-  private _redshiftSettings = new AwsDmsEndpoint.RedshiftSettingsPropertyOutputReference(this, "redshift_settings");
+  private _redshiftSettings = new TfEndpoint.RedshiftSettingsPropertyOutputReference(this, "redshift_settings");
   public get redshiftSettings() {
     return this._redshiftSettings;
   }
-  public putRedshiftSettings(value: AwsDmsEndpoint.RedshiftSettingsProperty) {
+  public putRedshiftSettings(value: TfEndpoint.RedshiftSettingsProperty) {
     this._redshiftSettings.internalValue = value;
   }
   public resetRedshiftSettings() {
@@ -701,11 +701,11 @@ export class AwsDmsEndpoint extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsDmsEndpoint.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfEndpoint.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsDmsEndpoint.TimeoutsProperty) {
+  public putTimeouts(value: TfEndpoint.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -742,16 +742,16 @@ export class AwsDmsEndpoint extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       username: cdktn.stringToTerraform(this._username),
-      elasticsearch_settings: awsDmsEndpointElasticsearchSettingsPropertyToTerraform(this._elasticsearchSettings.internalValue),
-      kafka_settings: awsDmsEndpointKafkaSettingsPropertyToTerraform(this._kafkaSettings.internalValue),
-      kinesis_settings: awsDmsEndpointKinesisSettingsPropertyToTerraform(this._kinesisSettings.internalValue),
-      mongodb_settings: awsDmsEndpointMongodbSettingsPropertyToTerraform(this._mongodbSettings.internalValue),
-      mysql_settings: awsDmsEndpointMysqlSettingsPropertyToTerraform(this._mysqlSettings.internalValue),
-      oracle_settings: awsDmsEndpointOracleSettingsPropertyToTerraform(this._oracleSettings.internalValue),
-      postgres_settings: awsDmsEndpointPostgresSettingsPropertyToTerraform(this._postgresSettings.internalValue),
-      redis_settings: awsDmsEndpointRedisSettingsPropertyToTerraform(this._redisSettings.internalValue),
-      redshift_settings: awsDmsEndpointRedshiftSettingsPropertyToTerraform(this._redshiftSettings.internalValue),
-      timeouts: awsDmsEndpointTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      elasticsearch_settings: tfEndpointElasticsearchSettingsPropertyToTerraform(this._elasticsearchSettings.internalValue),
+      kafka_settings: tfEndpointKafkaSettingsPropertyToTerraform(this._kafkaSettings.internalValue),
+      kinesis_settings: tfEndpointKinesisSettingsPropertyToTerraform(this._kinesisSettings.internalValue),
+      mongodb_settings: tfEndpointMongodbSettingsPropertyToTerraform(this._mongodbSettings.internalValue),
+      mysql_settings: tfEndpointMysqlSettingsPropertyToTerraform(this._mysqlSettings.internalValue),
+      oracle_settings: tfEndpointOracleSettingsPropertyToTerraform(this._oracleSettings.internalValue),
+      postgres_settings: tfEndpointPostgresSettingsPropertyToTerraform(this._postgresSettings.internalValue),
+      redis_settings: tfEndpointRedisSettingsPropertyToTerraform(this._redisSettings.internalValue),
+      redshift_settings: tfEndpointRedshiftSettingsPropertyToTerraform(this._redshiftSettings.internalValue),
+      timeouts: tfEndpointTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -878,64 +878,64 @@ export class AwsDmsEndpoint extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       elasticsearch_settings: {
-        value: awsDmsEndpointElasticsearchSettingsPropertyToHclTerraform(this._elasticsearchSettings.internalValue),
+        value: tfEndpointElasticsearchSettingsPropertyToHclTerraform(this._elasticsearchSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDmsEndpoint.ElasticsearchSettingsPropertyList",
+        storageClassType: "TfEndpoint.ElasticsearchSettingsPropertyList",
       },
       kafka_settings: {
-        value: awsDmsEndpointKafkaSettingsPropertyToHclTerraform(this._kafkaSettings.internalValue),
+        value: tfEndpointKafkaSettingsPropertyToHclTerraform(this._kafkaSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDmsEndpoint.KafkaSettingsPropertyList",
+        storageClassType: "TfEndpoint.KafkaSettingsPropertyList",
       },
       kinesis_settings: {
-        value: awsDmsEndpointKinesisSettingsPropertyToHclTerraform(this._kinesisSettings.internalValue),
+        value: tfEndpointKinesisSettingsPropertyToHclTerraform(this._kinesisSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDmsEndpoint.KinesisSettingsPropertyList",
+        storageClassType: "TfEndpoint.KinesisSettingsPropertyList",
       },
       mongodb_settings: {
-        value: awsDmsEndpointMongodbSettingsPropertyToHclTerraform(this._mongodbSettings.internalValue),
+        value: tfEndpointMongodbSettingsPropertyToHclTerraform(this._mongodbSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDmsEndpoint.MongodbSettingsPropertyList",
+        storageClassType: "TfEndpoint.MongodbSettingsPropertyList",
       },
       mysql_settings: {
-        value: awsDmsEndpointMysqlSettingsPropertyToHclTerraform(this._mysqlSettings.internalValue),
+        value: tfEndpointMysqlSettingsPropertyToHclTerraform(this._mysqlSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDmsEndpoint.MysqlSettingsPropertyList",
+        storageClassType: "TfEndpoint.MysqlSettingsPropertyList",
       },
       oracle_settings: {
-        value: awsDmsEndpointOracleSettingsPropertyToHclTerraform(this._oracleSettings.internalValue),
+        value: tfEndpointOracleSettingsPropertyToHclTerraform(this._oracleSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDmsEndpoint.OracleSettingsPropertyList",
+        storageClassType: "TfEndpoint.OracleSettingsPropertyList",
       },
       postgres_settings: {
-        value: awsDmsEndpointPostgresSettingsPropertyToHclTerraform(this._postgresSettings.internalValue),
+        value: tfEndpointPostgresSettingsPropertyToHclTerraform(this._postgresSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDmsEndpoint.PostgresSettingsPropertyList",
+        storageClassType: "TfEndpoint.PostgresSettingsPropertyList",
       },
       redis_settings: {
-        value: awsDmsEndpointRedisSettingsPropertyToHclTerraform(this._redisSettings.internalValue),
+        value: tfEndpointRedisSettingsPropertyToHclTerraform(this._redisSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDmsEndpoint.RedisSettingsPropertyList",
+        storageClassType: "TfEndpoint.RedisSettingsPropertyList",
       },
       redshift_settings: {
-        value: awsDmsEndpointRedshiftSettingsPropertyToHclTerraform(this._redshiftSettings.internalValue),
+        value: tfEndpointRedshiftSettingsPropertyToHclTerraform(this._redshiftSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDmsEndpoint.RedshiftSettingsPropertyList",
+        storageClassType: "TfEndpoint.RedshiftSettingsPropertyList",
       },
       timeouts: {
-        value: awsDmsEndpointTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfEndpointTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsDmsEndpoint.TimeoutsProperty",
+        storageClassType: "TfEndpoint.TimeoutsProperty",
       },
     };
 
@@ -944,7 +944,7 @@ export class AwsDmsEndpoint extends cdktn.TerraformResource {
   }
 }
 
-export function awsDmsEndpointElasticsearchSettingsPropertyToTerraform(struct?: AwsDmsEndpoint.ElasticsearchSettingsPropertyOutputReference | AwsDmsEndpoint.ElasticsearchSettingsProperty): any {
+export function tfEndpointElasticsearchSettingsPropertyToTerraform(struct?: TfEndpoint.ElasticsearchSettingsPropertyOutputReference | TfEndpoint.ElasticsearchSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -959,7 +959,7 @@ export function awsDmsEndpointElasticsearchSettingsPropertyToTerraform(struct?: 
 }
 
 
-export function awsDmsEndpointElasticsearchSettingsPropertyToHclTerraform(struct?: AwsDmsEndpoint.ElasticsearchSettingsPropertyOutputReference | AwsDmsEndpoint.ElasticsearchSettingsProperty): any {
+export function tfEndpointElasticsearchSettingsPropertyToHclTerraform(struct?: TfEndpoint.ElasticsearchSettingsPropertyOutputReference | TfEndpoint.ElasticsearchSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1002,7 +1002,7 @@ export function awsDmsEndpointElasticsearchSettingsPropertyToHclTerraform(struct
 }
 
 
-export function awsDmsEndpointKafkaSettingsPropertyToTerraform(struct?: AwsDmsEndpoint.KafkaSettingsPropertyOutputReference | AwsDmsEndpoint.KafkaSettingsProperty): any {
+export function tfEndpointKafkaSettingsPropertyToTerraform(struct?: TfEndpoint.KafkaSettingsPropertyOutputReference | TfEndpoint.KafkaSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1031,7 +1031,7 @@ export function awsDmsEndpointKafkaSettingsPropertyToTerraform(struct?: AwsDmsEn
 }
 
 
-export function awsDmsEndpointKafkaSettingsPropertyToHclTerraform(struct?: AwsDmsEndpoint.KafkaSettingsPropertyOutputReference | AwsDmsEndpoint.KafkaSettingsProperty): any {
+export function tfEndpointKafkaSettingsPropertyToHclTerraform(struct?: TfEndpoint.KafkaSettingsPropertyOutputReference | TfEndpoint.KafkaSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1158,7 +1158,7 @@ export function awsDmsEndpointKafkaSettingsPropertyToHclTerraform(struct?: AwsDm
 }
 
 
-export function awsDmsEndpointKinesisSettingsPropertyToTerraform(struct?: AwsDmsEndpoint.KinesisSettingsPropertyOutputReference | AwsDmsEndpoint.KinesisSettingsProperty): any {
+export function tfEndpointKinesisSettingsPropertyToTerraform(struct?: TfEndpoint.KinesisSettingsPropertyOutputReference | TfEndpoint.KinesisSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1178,7 +1178,7 @@ export function awsDmsEndpointKinesisSettingsPropertyToTerraform(struct?: AwsDms
 }
 
 
-export function awsDmsEndpointKinesisSettingsPropertyToHclTerraform(struct?: AwsDmsEndpoint.KinesisSettingsPropertyOutputReference | AwsDmsEndpoint.KinesisSettingsProperty): any {
+export function tfEndpointKinesisSettingsPropertyToHclTerraform(struct?: TfEndpoint.KinesisSettingsPropertyOutputReference | TfEndpoint.KinesisSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1251,7 +1251,7 @@ export function awsDmsEndpointKinesisSettingsPropertyToHclTerraform(struct?: Aws
 }
 
 
-export function awsDmsEndpointMongodbSettingsPropertyToTerraform(struct?: AwsDmsEndpoint.MongodbSettingsPropertyOutputReference | AwsDmsEndpoint.MongodbSettingsProperty): any {
+export function tfEndpointMongodbSettingsPropertyToTerraform(struct?: TfEndpoint.MongodbSettingsPropertyOutputReference | TfEndpoint.MongodbSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1268,7 +1268,7 @@ export function awsDmsEndpointMongodbSettingsPropertyToTerraform(struct?: AwsDms
 }
 
 
-export function awsDmsEndpointMongodbSettingsPropertyToHclTerraform(struct?: AwsDmsEndpoint.MongodbSettingsPropertyOutputReference | AwsDmsEndpoint.MongodbSettingsProperty): any {
+export function tfEndpointMongodbSettingsPropertyToHclTerraform(struct?: TfEndpoint.MongodbSettingsPropertyOutputReference | TfEndpoint.MongodbSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1323,7 +1323,7 @@ export function awsDmsEndpointMongodbSettingsPropertyToHclTerraform(struct?: Aws
 }
 
 
-export function awsDmsEndpointMysqlSettingsPropertyToTerraform(struct?: AwsDmsEndpoint.MysqlSettingsPropertyOutputReference | AwsDmsEndpoint.MysqlSettingsProperty): any {
+export function tfEndpointMysqlSettingsPropertyToTerraform(struct?: TfEndpoint.MysqlSettingsPropertyOutputReference | TfEndpoint.MysqlSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1343,7 +1343,7 @@ export function awsDmsEndpointMysqlSettingsPropertyToTerraform(struct?: AwsDmsEn
 }
 
 
-export function awsDmsEndpointMysqlSettingsPropertyToHclTerraform(struct?: AwsDmsEndpoint.MysqlSettingsPropertyOutputReference | AwsDmsEndpoint.MysqlSettingsProperty): any {
+export function tfEndpointMysqlSettingsPropertyToHclTerraform(struct?: TfEndpoint.MysqlSettingsPropertyOutputReference | TfEndpoint.MysqlSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1416,7 +1416,7 @@ export function awsDmsEndpointMysqlSettingsPropertyToHclTerraform(struct?: AwsDm
 }
 
 
-export function awsDmsEndpointOracleSettingsPropertyToTerraform(struct?: AwsDmsEndpoint.OracleSettingsPropertyOutputReference | AwsDmsEndpoint.OracleSettingsProperty): any {
+export function tfEndpointOracleSettingsPropertyToTerraform(struct?: TfEndpoint.OracleSettingsPropertyOutputReference | TfEndpoint.OracleSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1463,7 +1463,7 @@ export function awsDmsEndpointOracleSettingsPropertyToTerraform(struct?: AwsDmsE
 }
 
 
-export function awsDmsEndpointOracleSettingsPropertyToHclTerraform(struct?: AwsDmsEndpoint.OracleSettingsPropertyOutputReference | AwsDmsEndpoint.OracleSettingsProperty): any {
+export function tfEndpointOracleSettingsPropertyToHclTerraform(struct?: TfEndpoint.OracleSettingsPropertyOutputReference | TfEndpoint.OracleSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1698,7 +1698,7 @@ export function awsDmsEndpointOracleSettingsPropertyToHclTerraform(struct?: AwsD
 }
 
 
-export function awsDmsEndpointPostgresSettingsPropertyToTerraform(struct?: AwsDmsEndpoint.PostgresSettingsPropertyOutputReference | AwsDmsEndpoint.PostgresSettingsProperty): any {
+export function tfEndpointPostgresSettingsPropertyToTerraform(struct?: TfEndpoint.PostgresSettingsPropertyOutputReference | TfEndpoint.PostgresSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1726,7 +1726,7 @@ export function awsDmsEndpointPostgresSettingsPropertyToTerraform(struct?: AwsDm
 }
 
 
-export function awsDmsEndpointPostgresSettingsPropertyToHclTerraform(struct?: AwsDmsEndpoint.PostgresSettingsPropertyOutputReference | AwsDmsEndpoint.PostgresSettingsProperty): any {
+export function tfEndpointPostgresSettingsPropertyToHclTerraform(struct?: TfEndpoint.PostgresSettingsPropertyOutputReference | TfEndpoint.PostgresSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1847,7 +1847,7 @@ export function awsDmsEndpointPostgresSettingsPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsDmsEndpointRedisSettingsPropertyToTerraform(struct?: AwsDmsEndpoint.RedisSettingsPropertyOutputReference | AwsDmsEndpoint.RedisSettingsProperty): any {
+export function tfEndpointRedisSettingsPropertyToTerraform(struct?: TfEndpoint.RedisSettingsPropertyOutputReference | TfEndpoint.RedisSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1864,7 +1864,7 @@ export function awsDmsEndpointRedisSettingsPropertyToTerraform(struct?: AwsDmsEn
 }
 
 
-export function awsDmsEndpointRedisSettingsPropertyToHclTerraform(struct?: AwsDmsEndpoint.RedisSettingsPropertyOutputReference | AwsDmsEndpoint.RedisSettingsProperty): any {
+export function tfEndpointRedisSettingsPropertyToHclTerraform(struct?: TfEndpoint.RedisSettingsPropertyOutputReference | TfEndpoint.RedisSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1919,7 +1919,7 @@ export function awsDmsEndpointRedisSettingsPropertyToHclTerraform(struct?: AwsDm
 }
 
 
-export function awsDmsEndpointRedshiftSettingsPropertyToTerraform(struct?: AwsDmsEndpoint.RedshiftSettingsPropertyOutputReference | AwsDmsEndpoint.RedshiftSettingsProperty): any {
+export function tfEndpointRedshiftSettingsPropertyToTerraform(struct?: TfEndpoint.RedshiftSettingsPropertyOutputReference | TfEndpoint.RedshiftSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1934,7 +1934,7 @@ export function awsDmsEndpointRedshiftSettingsPropertyToTerraform(struct?: AwsDm
 }
 
 
-export function awsDmsEndpointRedshiftSettingsPropertyToHclTerraform(struct?: AwsDmsEndpoint.RedshiftSettingsPropertyOutputReference | AwsDmsEndpoint.RedshiftSettingsProperty): any {
+export function tfEndpointRedshiftSettingsPropertyToHclTerraform(struct?: TfEndpoint.RedshiftSettingsPropertyOutputReference | TfEndpoint.RedshiftSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1977,7 +1977,7 @@ export function awsDmsEndpointRedshiftSettingsPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsDmsEndpointTimeoutsPropertyToTerraform(struct?: AwsDmsEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfEndpointTimeoutsPropertyToTerraform(struct?: TfEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1989,7 +1989,7 @@ export function awsDmsEndpointTimeoutsPropertyToTerraform(struct?: AwsDmsEndpoin
 }
 
 
-export function awsDmsEndpointTimeoutsPropertyToHclTerraform(struct?: AwsDmsEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfEndpointTimeoutsPropertyToHclTerraform(struct?: TfEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2014,26 +2014,26 @@ export function awsDmsEndpointTimeoutsPropertyToHclTerraform(struct?: AwsDmsEndp
 }
 
 
-export namespace AwsDmsEndpoint {
+export namespace TfEndpoint {
 export interface ElasticsearchSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#endpoint_uri AwsDmsEndpoint#endpoint_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#endpoint_uri TfEndpoint#endpoint_uri}
   */
   readonly endpointUri: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#error_retry_duration AwsDmsEndpoint#error_retry_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#error_retry_duration TfEndpoint#error_retry_duration}
   */
   readonly errorRetryDuration?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#full_load_error_percentage AwsDmsEndpoint#full_load_error_percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#full_load_error_percentage TfEndpoint#full_load_error_percentage}
   */
   readonly fullLoadErrorPercentage?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#service_access_role_arn AwsDmsEndpoint#service_access_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#service_access_role_arn TfEndpoint#service_access_role_arn}
   */
   readonly serviceAccessRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#use_new_mapping_type AwsDmsEndpoint#use_new_mapping_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#use_new_mapping_type TfEndpoint#use_new_mapping_type}
   */
   readonly useNewMappingType?: boolean | cdktn.IResolvable;
 }
@@ -2169,79 +2169,79 @@ export class ElasticsearchSettingsPropertyOutputReference extends cdktn.ComplexO
 }
 export interface KafkaSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#broker AwsDmsEndpoint#broker}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#broker TfEndpoint#broker}
   */
   readonly broker: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#include_control_details AwsDmsEndpoint#include_control_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#include_control_details TfEndpoint#include_control_details}
   */
   readonly includeControlDetails?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#include_null_and_empty AwsDmsEndpoint#include_null_and_empty}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#include_null_and_empty TfEndpoint#include_null_and_empty}
   */
   readonly includeNullAndEmpty?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#include_partition_value AwsDmsEndpoint#include_partition_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#include_partition_value TfEndpoint#include_partition_value}
   */
   readonly includePartitionValue?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#include_table_alter_operations AwsDmsEndpoint#include_table_alter_operations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#include_table_alter_operations TfEndpoint#include_table_alter_operations}
   */
   readonly includeTableAlterOperations?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#include_transaction_details AwsDmsEndpoint#include_transaction_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#include_transaction_details TfEndpoint#include_transaction_details}
   */
   readonly includeTransactionDetails?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#message_format AwsDmsEndpoint#message_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#message_format TfEndpoint#message_format}
   */
   readonly messageFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#message_max_bytes AwsDmsEndpoint#message_max_bytes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#message_max_bytes TfEndpoint#message_max_bytes}
   */
   readonly messageMaxBytes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#no_hex_prefix AwsDmsEndpoint#no_hex_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#no_hex_prefix TfEndpoint#no_hex_prefix}
   */
   readonly noHexPrefix?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#partition_include_schema_table AwsDmsEndpoint#partition_include_schema_table}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#partition_include_schema_table TfEndpoint#partition_include_schema_table}
   */
   readonly partitionIncludeSchemaTable?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#sasl_mechanism AwsDmsEndpoint#sasl_mechanism}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#sasl_mechanism TfEndpoint#sasl_mechanism}
   */
   readonly saslMechanism?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#sasl_password AwsDmsEndpoint#sasl_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#sasl_password TfEndpoint#sasl_password}
   */
   readonly saslPassword?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#sasl_username AwsDmsEndpoint#sasl_username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#sasl_username TfEndpoint#sasl_username}
   */
   readonly saslUsername?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#security_protocol AwsDmsEndpoint#security_protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#security_protocol TfEndpoint#security_protocol}
   */
   readonly securityProtocol?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#ssl_ca_certificate_arn AwsDmsEndpoint#ssl_ca_certificate_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#ssl_ca_certificate_arn TfEndpoint#ssl_ca_certificate_arn}
   */
   readonly sslCaCertificateArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#ssl_client_certificate_arn AwsDmsEndpoint#ssl_client_certificate_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#ssl_client_certificate_arn TfEndpoint#ssl_client_certificate_arn}
   */
   readonly sslClientCertificateArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#ssl_client_key_arn AwsDmsEndpoint#ssl_client_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#ssl_client_key_arn TfEndpoint#ssl_client_key_arn}
   */
   readonly sslClientKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#ssl_client_key_password AwsDmsEndpoint#ssl_client_key_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#ssl_client_key_password TfEndpoint#ssl_client_key_password}
   */
   readonly sslClientKeyPassword?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#topic AwsDmsEndpoint#topic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#topic TfEndpoint#topic}
   */
   readonly topic?: string;
 }
@@ -2688,43 +2688,43 @@ export class KafkaSettingsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface KinesisSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#include_control_details AwsDmsEndpoint#include_control_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#include_control_details TfEndpoint#include_control_details}
   */
   readonly includeControlDetails?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#include_null_and_empty AwsDmsEndpoint#include_null_and_empty}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#include_null_and_empty TfEndpoint#include_null_and_empty}
   */
   readonly includeNullAndEmpty?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#include_partition_value AwsDmsEndpoint#include_partition_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#include_partition_value TfEndpoint#include_partition_value}
   */
   readonly includePartitionValue?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#include_table_alter_operations AwsDmsEndpoint#include_table_alter_operations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#include_table_alter_operations TfEndpoint#include_table_alter_operations}
   */
   readonly includeTableAlterOperations?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#include_transaction_details AwsDmsEndpoint#include_transaction_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#include_transaction_details TfEndpoint#include_transaction_details}
   */
   readonly includeTransactionDetails?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#message_format AwsDmsEndpoint#message_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#message_format TfEndpoint#message_format}
   */
   readonly messageFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#partition_include_schema_table AwsDmsEndpoint#partition_include_schema_table}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#partition_include_schema_table TfEndpoint#partition_include_schema_table}
   */
   readonly partitionIncludeSchemaTable?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#service_access_role_arn AwsDmsEndpoint#service_access_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#service_access_role_arn TfEndpoint#service_access_role_arn}
   */
   readonly serviceAccessRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#stream_arn AwsDmsEndpoint#stream_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#stream_arn TfEndpoint#stream_arn}
   */
   readonly streamArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#use_large_integer_value AwsDmsEndpoint#use_large_integer_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#use_large_integer_value TfEndpoint#use_large_integer_value}
   */
   readonly useLargeIntegerValue?: boolean | cdktn.IResolvable;
 }
@@ -2976,31 +2976,31 @@ export class KinesisSettingsPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface MongodbSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#auth_mechanism AwsDmsEndpoint#auth_mechanism}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#auth_mechanism TfEndpoint#auth_mechanism}
   */
   readonly authMechanism?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#auth_source AwsDmsEndpoint#auth_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#auth_source TfEndpoint#auth_source}
   */
   readonly authSource?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#auth_type AwsDmsEndpoint#auth_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#auth_type TfEndpoint#auth_type}
   */
   readonly authType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#docs_to_investigate AwsDmsEndpoint#docs_to_investigate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#docs_to_investigate TfEndpoint#docs_to_investigate}
   */
   readonly docsToInvestigate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#extract_doc_id AwsDmsEndpoint#extract_doc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#extract_doc_id TfEndpoint#extract_doc_id}
   */
   readonly extractDocId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#nesting_level AwsDmsEndpoint#nesting_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#nesting_level TfEndpoint#nesting_level}
   */
   readonly nestingLevel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#use_update_lookup AwsDmsEndpoint#use_update_lookup}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#use_update_lookup TfEndpoint#use_update_lookup}
   */
   readonly useUpdateLookup?: boolean | cdktn.IResolvable;
 }
@@ -3186,43 +3186,43 @@ export class MongodbSettingsPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface MysqlSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#after_connect_script AwsDmsEndpoint#after_connect_script}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#after_connect_script TfEndpoint#after_connect_script}
   */
   readonly afterConnectScript?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#authentication_method AwsDmsEndpoint#authentication_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#authentication_method TfEndpoint#authentication_method}
   */
   readonly authenticationMethod?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#clean_source_metadata_on_mismatch AwsDmsEndpoint#clean_source_metadata_on_mismatch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#clean_source_metadata_on_mismatch TfEndpoint#clean_source_metadata_on_mismatch}
   */
   readonly cleanSourceMetadataOnMismatch?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#events_poll_interval AwsDmsEndpoint#events_poll_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#events_poll_interval TfEndpoint#events_poll_interval}
   */
   readonly eventsPollInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#execute_timeout AwsDmsEndpoint#execute_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#execute_timeout TfEndpoint#execute_timeout}
   */
   readonly executeTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#max_file_size AwsDmsEndpoint#max_file_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#max_file_size TfEndpoint#max_file_size}
   */
   readonly maxFileSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#parallel_load_threads AwsDmsEndpoint#parallel_load_threads}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#parallel_load_threads TfEndpoint#parallel_load_threads}
   */
   readonly parallelLoadThreads?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#server_timezone AwsDmsEndpoint#server_timezone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#server_timezone TfEndpoint#server_timezone}
   */
   readonly serverTimezone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#service_access_role_arn AwsDmsEndpoint#service_access_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#service_access_role_arn TfEndpoint#service_access_role_arn}
   */
   readonly serviceAccessRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#target_db_type AwsDmsEndpoint#target_db_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#target_db_type TfEndpoint#target_db_type}
   */
   readonly targetDbType?: string;
 }
@@ -3474,151 +3474,151 @@ export class MysqlSettingsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface OracleSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#access_alternate_directly AwsDmsEndpoint#access_alternate_directly}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#access_alternate_directly TfEndpoint#access_alternate_directly}
   */
   readonly accessAlternateDirectly?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#add_supplemental_logging AwsDmsEndpoint#add_supplemental_logging}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#add_supplemental_logging TfEndpoint#add_supplemental_logging}
   */
   readonly addSupplementalLogging?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#additional_archived_log_dest_id AwsDmsEndpoint#additional_archived_log_dest_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#additional_archived_log_dest_id TfEndpoint#additional_archived_log_dest_id}
   */
   readonly additionalArchivedLogDestId?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#allow_selected_nested_tables AwsDmsEndpoint#allow_selected_nested_tables}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#allow_selected_nested_tables TfEndpoint#allow_selected_nested_tables}
   */
   readonly allowSelectedNestedTables?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#archived_log_dest_id AwsDmsEndpoint#archived_log_dest_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#archived_log_dest_id TfEndpoint#archived_log_dest_id}
   */
   readonly archivedLogDestId?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#archived_logs_only AwsDmsEndpoint#archived_logs_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#archived_logs_only TfEndpoint#archived_logs_only}
   */
   readonly archivedLogsOnly?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#asm_password AwsDmsEndpoint#asm_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#asm_password TfEndpoint#asm_password}
   */
   readonly asmPassword?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#asm_server AwsDmsEndpoint#asm_server}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#asm_server TfEndpoint#asm_server}
   */
   readonly asmServer?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#asm_user AwsDmsEndpoint#asm_user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#asm_user TfEndpoint#asm_user}
   */
   readonly asmUser?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#authentication_method AwsDmsEndpoint#authentication_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#authentication_method TfEndpoint#authentication_method}
   */
   readonly authenticationMethod?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#char_length_semantics AwsDmsEndpoint#char_length_semantics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#char_length_semantics TfEndpoint#char_length_semantics}
   */
   readonly charLengthSemantics?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#convert_timestamp_with_zone_to_utc AwsDmsEndpoint#convert_timestamp_with_zone_to_utc}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#convert_timestamp_with_zone_to_utc TfEndpoint#convert_timestamp_with_zone_to_utc}
   */
   readonly convertTimestampWithZoneToUtc?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#direct_path_no_log AwsDmsEndpoint#direct_path_no_log}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#direct_path_no_log TfEndpoint#direct_path_no_log}
   */
   readonly directPathNoLog?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#direct_path_parallel_load AwsDmsEndpoint#direct_path_parallel_load}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#direct_path_parallel_load TfEndpoint#direct_path_parallel_load}
   */
   readonly directPathParallelLoad?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#enable_homogenous_tablespace AwsDmsEndpoint#enable_homogenous_tablespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#enable_homogenous_tablespace TfEndpoint#enable_homogenous_tablespace}
   */
   readonly enableHomogenousTablespace?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#extra_archived_log_dest_ids AwsDmsEndpoint#extra_archived_log_dest_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#extra_archived_log_dest_ids TfEndpoint#extra_archived_log_dest_ids}
   */
   readonly extraArchivedLogDestIds?: number[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#fail_task_on_lob_truncation AwsDmsEndpoint#fail_task_on_lob_truncation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#fail_task_on_lob_truncation TfEndpoint#fail_task_on_lob_truncation}
   */
   readonly failTaskOnLobTruncation?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#number_datatype_scale AwsDmsEndpoint#number_datatype_scale}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#number_datatype_scale TfEndpoint#number_datatype_scale}
   */
   readonly numberDatatypeScale?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#open_transaction_window AwsDmsEndpoint#open_transaction_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#open_transaction_window TfEndpoint#open_transaction_window}
   */
   readonly openTransactionWindow?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#oracle_path_prefix AwsDmsEndpoint#oracle_path_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#oracle_path_prefix TfEndpoint#oracle_path_prefix}
   */
   readonly oraclePathPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#parallel_asm_read_threads AwsDmsEndpoint#parallel_asm_read_threads}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#parallel_asm_read_threads TfEndpoint#parallel_asm_read_threads}
   */
   readonly parallelAsmReadThreads?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#read_ahead_blocks AwsDmsEndpoint#read_ahead_blocks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#read_ahead_blocks TfEndpoint#read_ahead_blocks}
   */
   readonly readAheadBlocks?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#read_table_space_name AwsDmsEndpoint#read_table_space_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#read_table_space_name TfEndpoint#read_table_space_name}
   */
   readonly readTableSpaceName?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#replace_path_prefix AwsDmsEndpoint#replace_path_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#replace_path_prefix TfEndpoint#replace_path_prefix}
   */
   readonly replacePathPrefix?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#retry_interval AwsDmsEndpoint#retry_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#retry_interval TfEndpoint#retry_interval}
   */
   readonly retryInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#secrets_manager_oracle_asm_access_role_arn AwsDmsEndpoint#secrets_manager_oracle_asm_access_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#secrets_manager_oracle_asm_access_role_arn TfEndpoint#secrets_manager_oracle_asm_access_role_arn}
   */
   readonly secretsManagerOracleAsmAccessRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#secrets_manager_oracle_asm_secret_id AwsDmsEndpoint#secrets_manager_oracle_asm_secret_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#secrets_manager_oracle_asm_secret_id TfEndpoint#secrets_manager_oracle_asm_secret_id}
   */
   readonly secretsManagerOracleAsmSecretId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#security_db_encryption AwsDmsEndpoint#security_db_encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#security_db_encryption TfEndpoint#security_db_encryption}
   */
   readonly securityDbEncryption?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#security_db_encryption_name AwsDmsEndpoint#security_db_encryption_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#security_db_encryption_name TfEndpoint#security_db_encryption_name}
   */
   readonly securityDbEncryptionName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#spatial_data_option_to_geo_json_function_name AwsDmsEndpoint#spatial_data_option_to_geo_json_function_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#spatial_data_option_to_geo_json_function_name TfEndpoint#spatial_data_option_to_geo_json_function_name}
   */
   readonly spatialDataOptionToGeoJsonFunctionName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#standby_delay_time AwsDmsEndpoint#standby_delay_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#standby_delay_time TfEndpoint#standby_delay_time}
   */
   readonly standbyDelayTime?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#trim_space_in_char AwsDmsEndpoint#trim_space_in_char}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#trim_space_in_char TfEndpoint#trim_space_in_char}
   */
   readonly trimSpaceInChar?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#use_alternate_folder_for_online AwsDmsEndpoint#use_alternate_folder_for_online}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#use_alternate_folder_for_online TfEndpoint#use_alternate_folder_for_online}
   */
   readonly useAlternateFolderForOnline?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#use_bfile AwsDmsEndpoint#use_bfile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#use_bfile TfEndpoint#use_bfile}
   */
   readonly useBfile?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#use_direct_path_full_load AwsDmsEndpoint#use_direct_path_full_load}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#use_direct_path_full_load TfEndpoint#use_direct_path_full_load}
   */
   readonly useDirectPathFullLoad?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#use_logminer_reader AwsDmsEndpoint#use_logminer_reader}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#use_logminer_reader TfEndpoint#use_logminer_reader}
   */
   readonly useLogminerReader?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#use_path_prefix AwsDmsEndpoint#use_path_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#use_path_prefix TfEndpoint#use_path_prefix}
   */
   readonly usePathPrefix?: string;
 }
@@ -4464,75 +4464,75 @@ export class OracleSettingsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface PostgresSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#after_connect_script AwsDmsEndpoint#after_connect_script}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#after_connect_script TfEndpoint#after_connect_script}
   */
   readonly afterConnectScript?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#authentication_method AwsDmsEndpoint#authentication_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#authentication_method TfEndpoint#authentication_method}
   */
   readonly authenticationMethod?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#babelfish_database_name AwsDmsEndpoint#babelfish_database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#babelfish_database_name TfEndpoint#babelfish_database_name}
   */
   readonly babelfishDatabaseName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#capture_ddls AwsDmsEndpoint#capture_ddls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#capture_ddls TfEndpoint#capture_ddls}
   */
   readonly captureDdls?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#database_mode AwsDmsEndpoint#database_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#database_mode TfEndpoint#database_mode}
   */
   readonly databaseMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#ddl_artifacts_schema AwsDmsEndpoint#ddl_artifacts_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#ddl_artifacts_schema TfEndpoint#ddl_artifacts_schema}
   */
   readonly ddlArtifactsSchema?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#execute_timeout AwsDmsEndpoint#execute_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#execute_timeout TfEndpoint#execute_timeout}
   */
   readonly executeTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#fail_tasks_on_lob_truncation AwsDmsEndpoint#fail_tasks_on_lob_truncation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#fail_tasks_on_lob_truncation TfEndpoint#fail_tasks_on_lob_truncation}
   */
   readonly failTasksOnLobTruncation?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#heartbeat_enable AwsDmsEndpoint#heartbeat_enable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#heartbeat_enable TfEndpoint#heartbeat_enable}
   */
   readonly heartbeatEnable?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#heartbeat_frequency AwsDmsEndpoint#heartbeat_frequency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#heartbeat_frequency TfEndpoint#heartbeat_frequency}
   */
   readonly heartbeatFrequency?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#heartbeat_schema AwsDmsEndpoint#heartbeat_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#heartbeat_schema TfEndpoint#heartbeat_schema}
   */
   readonly heartbeatSchema?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#map_boolean_as_boolean AwsDmsEndpoint#map_boolean_as_boolean}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#map_boolean_as_boolean TfEndpoint#map_boolean_as_boolean}
   */
   readonly mapBooleanAsBoolean?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#map_jsonb_as_clob AwsDmsEndpoint#map_jsonb_as_clob}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#map_jsonb_as_clob TfEndpoint#map_jsonb_as_clob}
   */
   readonly mapJsonbAsClob?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#map_long_varchar_as AwsDmsEndpoint#map_long_varchar_as}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#map_long_varchar_as TfEndpoint#map_long_varchar_as}
   */
   readonly mapLongVarcharAs?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#max_file_size AwsDmsEndpoint#max_file_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#max_file_size TfEndpoint#max_file_size}
   */
   readonly maxFileSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#plugin_name AwsDmsEndpoint#plugin_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#plugin_name TfEndpoint#plugin_name}
   */
   readonly pluginName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#service_access_role_arn AwsDmsEndpoint#service_access_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#service_access_role_arn TfEndpoint#service_access_role_arn}
   */
   readonly serviceAccessRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#slot_name AwsDmsEndpoint#slot_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#slot_name TfEndpoint#slot_name}
   */
   readonly slotName?: string;
 }
@@ -4960,31 +4960,31 @@ export class PostgresSettingsPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface RedisSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#auth_password AwsDmsEndpoint#auth_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#auth_password TfEndpoint#auth_password}
   */
   readonly authPassword?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#auth_type AwsDmsEndpoint#auth_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#auth_type TfEndpoint#auth_type}
   */
   readonly authType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#auth_user_name AwsDmsEndpoint#auth_user_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#auth_user_name TfEndpoint#auth_user_name}
   */
   readonly authUserName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#port AwsDmsEndpoint#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#port TfEndpoint#port}
   */
   readonly port: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#server_name AwsDmsEndpoint#server_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#server_name TfEndpoint#server_name}
   */
   readonly serverName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#ssl_ca_certificate_arn AwsDmsEndpoint#ssl_ca_certificate_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#ssl_ca_certificate_arn TfEndpoint#ssl_ca_certificate_arn}
   */
   readonly sslCaCertificateArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#ssl_security_protocol AwsDmsEndpoint#ssl_security_protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#ssl_security_protocol TfEndpoint#ssl_security_protocol}
   */
   readonly sslSecurityProtocol?: string;
 }
@@ -5161,23 +5161,23 @@ export class RedisSettingsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RedshiftSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#bucket_folder AwsDmsEndpoint#bucket_folder}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#bucket_folder TfEndpoint#bucket_folder}
   */
   readonly bucketFolder?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#bucket_name AwsDmsEndpoint#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#bucket_name TfEndpoint#bucket_name}
   */
   readonly bucketName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#encryption_mode AwsDmsEndpoint#encryption_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#encryption_mode TfEndpoint#encryption_mode}
   */
   readonly encryptionMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#server_side_encryption_kms_key_id AwsDmsEndpoint#server_side_encryption_kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#server_side_encryption_kms_key_id TfEndpoint#server_side_encryption_kms_key_id}
   */
   readonly serverSideEncryptionKmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#service_access_role_arn AwsDmsEndpoint#service_access_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#service_access_role_arn TfEndpoint#service_access_role_arn}
   */
   readonly serviceAccessRoleArn?: string;
 }
@@ -5319,11 +5319,11 @@ export class RedshiftSettingsPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#create AwsDmsEndpoint#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#create TfEndpoint#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#delete AwsDmsEndpoint#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_endpoint#delete TfEndpoint#delete}
   */
   readonly delete?: string;
 }

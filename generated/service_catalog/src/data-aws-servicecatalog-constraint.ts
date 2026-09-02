@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsServicecatalogConstraintConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataConstraintConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_constraint#accept_language DataAwsServicecatalogConstraint#accept_language}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_constraint#accept_language TfDataConstraint#accept_language}
   */
   readonly acceptLanguage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_constraint#description DataAwsServicecatalogConstraint#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_constraint#description TfDataConstraint#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_constraint#id DataAwsServicecatalogConstraint#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_constraint#id TfDataConstraint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,21 +24,21 @@ export interface DataAwsServicecatalogConstraintConfig extends cdktn.TerraformMe
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_constraint#region DataAwsServicecatalogConstraint#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_constraint#region TfDataConstraint#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_constraint#timeouts DataAwsServicecatalogConstraint#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_constraint#timeouts TfDataConstraint#timeouts}
   */
-  readonly timeouts?: DataAwsServicecatalogConstraint.TimeoutsProperty;
+  readonly timeouts?: TfDataConstraint.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_constraint aws_servicecatalog_constraint}
 */
-export class DataAwsServicecatalogConstraint extends cdktn.TerraformDataSource {
+export class TfDataConstraint extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class DataAwsServicecatalogConstraint extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsServicecatalogConstraint resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataConstraint resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsServicecatalogConstraint to import
-  * @param importFromId The id of the existing DataAwsServicecatalogConstraint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_constraint#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsServicecatalogConstraint to import is found
+  * @param importToId The construct id used in the generated config for the TfDataConstraint to import
+  * @param importFromId The id of the existing TfDataConstraint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_constraint#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataConstraint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_servicecatalog_constraint", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class DataAwsServicecatalogConstraint extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsServicecatalogConstraintConfig
+  * @param options TfDataConstraintConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsServicecatalogConstraintConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataConstraintConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_servicecatalog_constraint',
       terraformGeneratorMetadata: {
@@ -189,11 +189,11 @@ export class DataAwsServicecatalogConstraint extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAwsServicecatalogConstraint.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfDataConstraint.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: DataAwsServicecatalogConstraint.TimeoutsProperty) {
+  public putTimeouts(value: TfDataConstraint.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -214,7 +214,7 @@ export class DataAwsServicecatalogConstraint extends cdktn.TerraformDataSource {
       description: cdktn.stringToTerraform(this._description),
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: dataAwsServicecatalogConstraintTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfDataConstraintTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -245,10 +245,10 @@ export class DataAwsServicecatalogConstraint extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       timeouts: {
-        value: dataAwsServicecatalogConstraintTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfDataConstraintTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "DataAwsServicecatalogConstraint.TimeoutsProperty",
+        storageClassType: "TfDataConstraint.TimeoutsProperty",
       },
     };
 
@@ -257,7 +257,7 @@ export class DataAwsServicecatalogConstraint extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsServicecatalogConstraintTimeoutsPropertyToTerraform(struct?: DataAwsServicecatalogConstraint.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDataConstraintTimeoutsPropertyToTerraform(struct?: TfDataConstraint.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -268,7 +268,7 @@ export function dataAwsServicecatalogConstraintTimeoutsPropertyToTerraform(struc
 }
 
 
-export function dataAwsServicecatalogConstraintTimeoutsPropertyToHclTerraform(struct?: DataAwsServicecatalogConstraint.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDataConstraintTimeoutsPropertyToHclTerraform(struct?: TfDataConstraint.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -287,10 +287,10 @@ export function dataAwsServicecatalogConstraintTimeoutsPropertyToHclTerraform(st
 }
 
 
-export namespace DataAwsServicecatalogConstraint {
+export namespace TfDataConstraint {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_constraint#read DataAwsServicecatalogConstraint#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_constraint#read TfDataConstraint#read}
   */
   readonly read?: string;
 }

@@ -5,74 +5,74 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCodepipelineConfig extends cdktn.TerraformMetaArguments {
+export interface TfCodepipelineConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#execution_mode AwsCodepipeline#execution_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#execution_mode TfCodepipeline#execution_mode}
   */
   readonly executionMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#id AwsCodepipeline#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#id TfCodepipeline#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#name AwsCodepipeline#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#name TfCodepipeline#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#pipeline_type AwsCodepipeline#pipeline_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#pipeline_type TfCodepipeline#pipeline_type}
   */
   readonly pipelineType?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#region AwsCodepipeline#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#region TfCodepipeline#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#role_arn AwsCodepipeline#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#role_arn TfCodepipeline#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#tags AwsCodepipeline#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#tags TfCodepipeline#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#tags_all AwsCodepipeline#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#tags_all TfCodepipeline#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * artifact_store block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#artifact_store AwsCodepipeline#artifact_store}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#artifact_store TfCodepipeline#artifact_store}
   */
-  readonly artifactStore: AwsCodepipeline.ArtifactStoreProperty[] | cdktn.IResolvable;
+  readonly artifactStore: TfCodepipeline.ArtifactStoreProperty[] | cdktn.IResolvable;
   /**
   * stage block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#stage AwsCodepipeline#stage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#stage TfCodepipeline#stage}
   */
-  readonly stage: AwsCodepipeline.StageProperty[] | cdktn.IResolvable;
+  readonly stage: TfCodepipeline.StageProperty[] | cdktn.IResolvable;
   /**
   * trigger block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#trigger AwsCodepipeline#trigger}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#trigger TfCodepipeline#trigger}
   */
-  readonly trigger?: AwsCodepipeline.TriggerProperty[] | cdktn.IResolvable;
+  readonly trigger?: TfCodepipeline.TriggerProperty[] | cdktn.IResolvable;
   /**
   * variable block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#variable AwsCodepipeline#variable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#variable TfCodepipeline#variable}
   */
-  readonly variable?: AwsCodepipeline.VariableProperty[] | cdktn.IResolvable;
+  readonly variable?: TfCodepipeline.VariableProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline aws_codepipeline}
 */
-export class AwsCodepipeline extends cdktn.TerraformResource {
+export class TfCodepipeline extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -83,11 +83,11 @@ export class AwsCodepipeline extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCodepipeline resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfCodepipeline resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCodepipeline to import
-  * @param importFromId The id of the existing AwsCodepipeline that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCodepipeline to import is found
+  * @param importToId The construct id used in the generated config for the TfCodepipeline to import
+  * @param importFromId The id of the existing TfCodepipeline that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfCodepipeline to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_codepipeline", importId: importFromId, provider });
@@ -102,9 +102,9 @@ export class AwsCodepipeline extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCodepipelineConfig
+  * @param options TfCodepipelineConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCodepipelineConfig) {
+  public constructor(scope: Construct, id: string, config: TfCodepipelineConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_codepipeline',
       terraformGeneratorMetadata: {
@@ -266,17 +266,17 @@ export class AwsCodepipeline extends cdktn.TerraformResource {
   }
 
   // trigger_all - computed: true, optional: false, required: false
-  private _triggerAll = new AwsCodepipeline.TriggerAllPropertyList(this, "trigger_all", false);
+  private _triggerAll = new TfCodepipeline.TriggerAllPropertyList(this, "trigger_all", false);
   public get triggerAll() {
     return this._triggerAll;
   }
 
   // artifact_store - computed: false, optional: false, required: true
-  private _artifactStore = new AwsCodepipeline.ArtifactStorePropertyList(this, "artifact_store", true);
+  private _artifactStore = new TfCodepipeline.ArtifactStorePropertyList(this, "artifact_store", true);
   public get artifactStore() {
     return this._artifactStore;
   }
-  public putArtifactStore(value: AwsCodepipeline.ArtifactStoreProperty[] | cdktn.IResolvable) {
+  public putArtifactStore(value: TfCodepipeline.ArtifactStoreProperty[] | cdktn.IResolvable) {
     this._artifactStore.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -285,11 +285,11 @@ export class AwsCodepipeline extends cdktn.TerraformResource {
   }
 
   // stage - computed: false, optional: false, required: true
-  private _stage = new AwsCodepipeline.StagePropertyList(this, "stage", false);
+  private _stage = new TfCodepipeline.StagePropertyList(this, "stage", false);
   public get stage() {
     return this._stage;
   }
-  public putStage(value: AwsCodepipeline.StageProperty[] | cdktn.IResolvable) {
+  public putStage(value: TfCodepipeline.StageProperty[] | cdktn.IResolvable) {
     this._stage.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -298,11 +298,11 @@ export class AwsCodepipeline extends cdktn.TerraformResource {
   }
 
   // trigger - computed: false, optional: true, required: false
-  private _trigger = new AwsCodepipeline.TriggerPropertyList(this, "trigger", false);
+  private _trigger = new TfCodepipeline.TriggerPropertyList(this, "trigger", false);
   public get trigger() {
     return this._trigger;
   }
-  public putTrigger(value: AwsCodepipeline.TriggerProperty[] | cdktn.IResolvable) {
+  public putTrigger(value: TfCodepipeline.TriggerProperty[] | cdktn.IResolvable) {
     this._trigger.internalValue = value;
   }
   public resetTrigger() {
@@ -314,11 +314,11 @@ export class AwsCodepipeline extends cdktn.TerraformResource {
   }
 
   // variable - computed: false, optional: true, required: false
-  private _variable = new AwsCodepipeline.VariablePropertyList(this, "variable", false);
+  private _variable = new TfCodepipeline.VariablePropertyList(this, "variable", false);
   public get variable() {
     return this._variable;
   }
-  public putVariable(value: AwsCodepipeline.VariableProperty[] | cdktn.IResolvable) {
+  public putVariable(value: TfCodepipeline.VariableProperty[] | cdktn.IResolvable) {
     this._variable.internalValue = value;
   }
   public resetVariable() {
@@ -343,10 +343,10 @@ export class AwsCodepipeline extends cdktn.TerraformResource {
       role_arn: cdktn.stringToTerraform(this._roleArn),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      artifact_store: cdktn.listMapper(awsCodepipelineArtifactStorePropertyToTerraform, true)(this._artifactStore.internalValue),
-      stage: cdktn.listMapper(awsCodepipelineStagePropertyToTerraform, true)(this._stage.internalValue),
-      trigger: cdktn.listMapper(awsCodepipelineTriggerPropertyToTerraform, true)(this._trigger.internalValue),
-      variable: cdktn.listMapper(awsCodepipelineVariablePropertyToTerraform, true)(this._variable.internalValue),
+      artifact_store: cdktn.listMapper(tfCodepipelineArtifactStorePropertyToTerraform, true)(this._artifactStore.internalValue),
+      stage: cdktn.listMapper(tfCodepipelineStagePropertyToTerraform, true)(this._stage.internalValue),
+      trigger: cdktn.listMapper(tfCodepipelineTriggerPropertyToTerraform, true)(this._trigger.internalValue),
+      variable: cdktn.listMapper(tfCodepipelineVariablePropertyToTerraform, true)(this._variable.internalValue),
     };
   }
 
@@ -401,28 +401,28 @@ export class AwsCodepipeline extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       artifact_store: {
-        value: cdktn.listMapperHcl(awsCodepipelineArtifactStorePropertyToHclTerraform, true)(this._artifactStore.internalValue),
+        value: cdktn.listMapperHcl(tfCodepipelineArtifactStorePropertyToHclTerraform, true)(this._artifactStore.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsCodepipeline.ArtifactStorePropertyList",
+        storageClassType: "TfCodepipeline.ArtifactStorePropertyList",
       },
       stage: {
-        value: cdktn.listMapperHcl(awsCodepipelineStagePropertyToHclTerraform, true)(this._stage.internalValue),
+        value: cdktn.listMapperHcl(tfCodepipelineStagePropertyToHclTerraform, true)(this._stage.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCodepipeline.StagePropertyList",
+        storageClassType: "TfCodepipeline.StagePropertyList",
       },
       trigger: {
-        value: cdktn.listMapperHcl(awsCodepipelineTriggerPropertyToHclTerraform, true)(this._trigger.internalValue),
+        value: cdktn.listMapperHcl(tfCodepipelineTriggerPropertyToHclTerraform, true)(this._trigger.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCodepipeline.TriggerPropertyList",
+        storageClassType: "TfCodepipeline.TriggerPropertyList",
       },
       variable: {
-        value: cdktn.listMapperHcl(awsCodepipelineVariablePropertyToHclTerraform, true)(this._variable.internalValue),
+        value: cdktn.listMapperHcl(tfCodepipelineVariablePropertyToHclTerraform, true)(this._variable.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCodepipeline.VariablePropertyList",
+        storageClassType: "TfCodepipeline.VariablePropertyList",
       },
     };
 
@@ -431,7 +431,7 @@ export class AwsCodepipeline extends cdktn.TerraformResource {
   }
 }
 
-export function awsCodepipelineTriggerAllGitConfigurationPullRequestBranchesPropertyToTerraform(struct?: AwsCodepipeline.TriggerAllGitConfigurationPullRequestBranchesProperty): any {
+export function tfCodepipelineTriggerAllGitConfigurationPullRequestBranchesPropertyToTerraform(struct?: TfCodepipeline.TriggerAllGitConfigurationPullRequestBranchesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -441,7 +441,7 @@ export function awsCodepipelineTriggerAllGitConfigurationPullRequestBranchesProp
 }
 
 
-export function awsCodepipelineTriggerAllGitConfigurationPullRequestBranchesPropertyToHclTerraform(struct?: AwsCodepipeline.TriggerAllGitConfigurationPullRequestBranchesProperty): any {
+export function tfCodepipelineTriggerAllGitConfigurationPullRequestBranchesPropertyToHclTerraform(struct?: TfCodepipeline.TriggerAllGitConfigurationPullRequestBranchesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -452,7 +452,7 @@ export function awsCodepipelineTriggerAllGitConfigurationPullRequestBranchesProp
 }
 
 
-export function awsCodepipelineTriggerAllGitConfigurationPullRequestFilePathsPropertyToTerraform(struct?: AwsCodepipeline.TriggerAllGitConfigurationPullRequestFilePathsProperty): any {
+export function tfCodepipelineTriggerAllGitConfigurationPullRequestFilePathsPropertyToTerraform(struct?: TfCodepipeline.TriggerAllGitConfigurationPullRequestFilePathsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -462,7 +462,7 @@ export function awsCodepipelineTriggerAllGitConfigurationPullRequestFilePathsPro
 }
 
 
-export function awsCodepipelineTriggerAllGitConfigurationPullRequestFilePathsPropertyToHclTerraform(struct?: AwsCodepipeline.TriggerAllGitConfigurationPullRequestFilePathsProperty): any {
+export function tfCodepipelineTriggerAllGitConfigurationPullRequestFilePathsPropertyToHclTerraform(struct?: TfCodepipeline.TriggerAllGitConfigurationPullRequestFilePathsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -473,7 +473,7 @@ export function awsCodepipelineTriggerAllGitConfigurationPullRequestFilePathsPro
 }
 
 
-export function awsCodepipelineTriggerAllGitConfigurationPullRequestPropertyToTerraform(struct?: AwsCodepipeline.TriggerAllGitConfigurationPullRequestProperty): any {
+export function tfCodepipelineTriggerAllGitConfigurationPullRequestPropertyToTerraform(struct?: TfCodepipeline.TriggerAllGitConfigurationPullRequestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -483,7 +483,7 @@ export function awsCodepipelineTriggerAllGitConfigurationPullRequestPropertyToTe
 }
 
 
-export function awsCodepipelineTriggerAllGitConfigurationPullRequestPropertyToHclTerraform(struct?: AwsCodepipeline.TriggerAllGitConfigurationPullRequestProperty): any {
+export function tfCodepipelineTriggerAllGitConfigurationPullRequestPropertyToHclTerraform(struct?: TfCodepipeline.TriggerAllGitConfigurationPullRequestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -494,7 +494,7 @@ export function awsCodepipelineTriggerAllGitConfigurationPullRequestPropertyToHc
 }
 
 
-export function awsCodepipelineTriggerAllGitConfigurationPushBranchesPropertyToTerraform(struct?: AwsCodepipeline.TriggerAllGitConfigurationPushBranchesProperty): any {
+export function tfCodepipelineTriggerAllGitConfigurationPushBranchesPropertyToTerraform(struct?: TfCodepipeline.TriggerAllGitConfigurationPushBranchesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -504,7 +504,7 @@ export function awsCodepipelineTriggerAllGitConfigurationPushBranchesPropertyToT
 }
 
 
-export function awsCodepipelineTriggerAllGitConfigurationPushBranchesPropertyToHclTerraform(struct?: AwsCodepipeline.TriggerAllGitConfigurationPushBranchesProperty): any {
+export function tfCodepipelineTriggerAllGitConfigurationPushBranchesPropertyToHclTerraform(struct?: TfCodepipeline.TriggerAllGitConfigurationPushBranchesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -515,7 +515,7 @@ export function awsCodepipelineTriggerAllGitConfigurationPushBranchesPropertyToH
 }
 
 
-export function awsCodepipelineTriggerAllGitConfigurationPushFilePathsPropertyToTerraform(struct?: AwsCodepipeline.TriggerAllGitConfigurationPushFilePathsProperty): any {
+export function tfCodepipelineTriggerAllGitConfigurationPushFilePathsPropertyToTerraform(struct?: TfCodepipeline.TriggerAllGitConfigurationPushFilePathsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -525,7 +525,7 @@ export function awsCodepipelineTriggerAllGitConfigurationPushFilePathsPropertyTo
 }
 
 
-export function awsCodepipelineTriggerAllGitConfigurationPushFilePathsPropertyToHclTerraform(struct?: AwsCodepipeline.TriggerAllGitConfigurationPushFilePathsProperty): any {
+export function tfCodepipelineTriggerAllGitConfigurationPushFilePathsPropertyToHclTerraform(struct?: TfCodepipeline.TriggerAllGitConfigurationPushFilePathsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -536,7 +536,7 @@ export function awsCodepipelineTriggerAllGitConfigurationPushFilePathsPropertyTo
 }
 
 
-export function awsCodepipelineTriggerAllGitConfigurationPushTagsPropertyToTerraform(struct?: AwsCodepipeline.TriggerAllGitConfigurationPushTagsProperty): any {
+export function tfCodepipelineTriggerAllGitConfigurationPushTagsPropertyToTerraform(struct?: TfCodepipeline.TriggerAllGitConfigurationPushTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -546,7 +546,7 @@ export function awsCodepipelineTriggerAllGitConfigurationPushTagsPropertyToTerra
 }
 
 
-export function awsCodepipelineTriggerAllGitConfigurationPushTagsPropertyToHclTerraform(struct?: AwsCodepipeline.TriggerAllGitConfigurationPushTagsProperty): any {
+export function tfCodepipelineTriggerAllGitConfigurationPushTagsPropertyToHclTerraform(struct?: TfCodepipeline.TriggerAllGitConfigurationPushTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -557,7 +557,7 @@ export function awsCodepipelineTriggerAllGitConfigurationPushTagsPropertyToHclTe
 }
 
 
-export function awsCodepipelineTriggerAllGitConfigurationPushPropertyToTerraform(struct?: AwsCodepipeline.TriggerAllGitConfigurationPushProperty): any {
+export function tfCodepipelineTriggerAllGitConfigurationPushPropertyToTerraform(struct?: TfCodepipeline.TriggerAllGitConfigurationPushProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -567,7 +567,7 @@ export function awsCodepipelineTriggerAllGitConfigurationPushPropertyToTerraform
 }
 
 
-export function awsCodepipelineTriggerAllGitConfigurationPushPropertyToHclTerraform(struct?: AwsCodepipeline.TriggerAllGitConfigurationPushProperty): any {
+export function tfCodepipelineTriggerAllGitConfigurationPushPropertyToHclTerraform(struct?: TfCodepipeline.TriggerAllGitConfigurationPushProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -578,7 +578,7 @@ export function awsCodepipelineTriggerAllGitConfigurationPushPropertyToHclTerraf
 }
 
 
-export function awsCodepipelineTriggerAllGitConfigurationPropertyToTerraform(struct?: AwsCodepipeline.TriggerAllGitConfigurationProperty): any {
+export function tfCodepipelineTriggerAllGitConfigurationPropertyToTerraform(struct?: TfCodepipeline.TriggerAllGitConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -588,7 +588,7 @@ export function awsCodepipelineTriggerAllGitConfigurationPropertyToTerraform(str
 }
 
 
-export function awsCodepipelineTriggerAllGitConfigurationPropertyToHclTerraform(struct?: AwsCodepipeline.TriggerAllGitConfigurationProperty): any {
+export function tfCodepipelineTriggerAllGitConfigurationPropertyToHclTerraform(struct?: TfCodepipeline.TriggerAllGitConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -599,7 +599,7 @@ export function awsCodepipelineTriggerAllGitConfigurationPropertyToHclTerraform(
 }
 
 
-export function awsCodepipelineTriggerAllPropertyToTerraform(struct?: AwsCodepipeline.TriggerAllProperty): any {
+export function tfCodepipelineTriggerAllPropertyToTerraform(struct?: TfCodepipeline.TriggerAllProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -609,7 +609,7 @@ export function awsCodepipelineTriggerAllPropertyToTerraform(struct?: AwsCodepip
 }
 
 
-export function awsCodepipelineTriggerAllPropertyToHclTerraform(struct?: AwsCodepipeline.TriggerAllProperty): any {
+export function tfCodepipelineTriggerAllPropertyToHclTerraform(struct?: TfCodepipeline.TriggerAllProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -620,7 +620,7 @@ export function awsCodepipelineTriggerAllPropertyToHclTerraform(struct?: AwsCode
 }
 
 
-export function awsCodepipelineEncryptionKeyPropertyToTerraform(struct?: AwsCodepipeline.EncryptionKeyPropertyOutputReference | AwsCodepipeline.EncryptionKeyProperty): any {
+export function tfCodepipelineEncryptionKeyPropertyToTerraform(struct?: TfCodepipeline.EncryptionKeyPropertyOutputReference | TfCodepipeline.EncryptionKeyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -632,7 +632,7 @@ export function awsCodepipelineEncryptionKeyPropertyToTerraform(struct?: AwsCode
 }
 
 
-export function awsCodepipelineEncryptionKeyPropertyToHclTerraform(struct?: AwsCodepipeline.EncryptionKeyPropertyOutputReference | AwsCodepipeline.EncryptionKeyProperty): any {
+export function tfCodepipelineEncryptionKeyPropertyToHclTerraform(struct?: TfCodepipeline.EncryptionKeyPropertyOutputReference | TfCodepipeline.EncryptionKeyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -657,7 +657,7 @@ export function awsCodepipelineEncryptionKeyPropertyToHclTerraform(struct?: AwsC
 }
 
 
-export function awsCodepipelineArtifactStorePropertyToTerraform(struct?: AwsCodepipeline.ArtifactStoreProperty | cdktn.IResolvable): any {
+export function tfCodepipelineArtifactStorePropertyToTerraform(struct?: TfCodepipeline.ArtifactStoreProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -666,12 +666,12 @@ export function awsCodepipelineArtifactStorePropertyToTerraform(struct?: AwsCode
     location: cdktn.stringToTerraform(struct!.location),
     region: cdktn.stringToTerraform(struct!.region),
     type: cdktn.stringToTerraform(struct!.type),
-    encryption_key: awsCodepipelineEncryptionKeyPropertyToTerraform(struct!.encryptionKey),
+    encryption_key: tfCodepipelineEncryptionKeyPropertyToTerraform(struct!.encryptionKey),
   }
 }
 
 
-export function awsCodepipelineArtifactStorePropertyToHclTerraform(struct?: AwsCodepipeline.ArtifactStoreProperty | cdktn.IResolvable): any {
+export function tfCodepipelineArtifactStorePropertyToHclTerraform(struct?: TfCodepipeline.ArtifactStoreProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -696,7 +696,7 @@ export function awsCodepipelineArtifactStorePropertyToHclTerraform(struct?: AwsC
       storageClassType: "string",
     },
     encryption_key: {
-      value: awsCodepipelineEncryptionKeyPropertyToHclTerraform(struct!.encryptionKey),
+      value: tfCodepipelineEncryptionKeyPropertyToHclTerraform(struct!.encryptionKey),
       isBlock: true,
       type: "list",
       storageClassType: "EncryptionKeyPropertyList",
@@ -708,7 +708,7 @@ export function awsCodepipelineArtifactStorePropertyToHclTerraform(struct?: AwsC
 }
 
 
-export function awsCodepipelineOutputArtifactsForComputeActionPropertyToTerraform(struct?: AwsCodepipeline.OutputArtifactsForComputeActionProperty | cdktn.IResolvable): any {
+export function tfCodepipelineOutputArtifactsForComputeActionPropertyToTerraform(struct?: TfCodepipeline.OutputArtifactsForComputeActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -720,7 +720,7 @@ export function awsCodepipelineOutputArtifactsForComputeActionPropertyToTerrafor
 }
 
 
-export function awsCodepipelineOutputArtifactsForComputeActionPropertyToHclTerraform(struct?: AwsCodepipeline.OutputArtifactsForComputeActionProperty | cdktn.IResolvable): any {
+export function tfCodepipelineOutputArtifactsForComputeActionPropertyToHclTerraform(struct?: TfCodepipeline.OutputArtifactsForComputeActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -745,7 +745,7 @@ export function awsCodepipelineOutputArtifactsForComputeActionPropertyToHclTerra
 }
 
 
-export function awsCodepipelineActionPropertyToTerraform(struct?: AwsCodepipeline.ActionProperty | cdktn.IResolvable): any {
+export function tfCodepipelineActionPropertyToTerraform(struct?: TfCodepipeline.ActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -766,12 +766,12 @@ export function awsCodepipelineActionPropertyToTerraform(struct?: AwsCodepipelin
     run_order: cdktn.numberToTerraform(struct!.runOrder),
     timeout_in_minutes: cdktn.numberToTerraform(struct!.timeoutInMinutes),
     version: cdktn.stringToTerraform(struct!.version),
-    output_artifacts_for_compute_action: cdktn.listMapper(awsCodepipelineOutputArtifactsForComputeActionPropertyToTerraform, true)(struct!.outputArtifactsForComputeAction),
+    output_artifacts_for_compute_action: cdktn.listMapper(tfCodepipelineOutputArtifactsForComputeActionPropertyToTerraform, true)(struct!.outputArtifactsForComputeAction),
   }
 }
 
 
-export function awsCodepipelineActionPropertyToHclTerraform(struct?: AwsCodepipeline.ActionProperty | cdktn.IResolvable): any {
+export function tfCodepipelineActionPropertyToHclTerraform(struct?: TfCodepipeline.ActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -868,7 +868,7 @@ export function awsCodepipelineActionPropertyToHclTerraform(struct?: AwsCodepipe
       storageClassType: "string",
     },
     output_artifacts_for_compute_action: {
-      value: cdktn.listMapperHcl(awsCodepipelineOutputArtifactsForComputeActionPropertyToHclTerraform, true)(struct!.outputArtifactsForComputeAction),
+      value: cdktn.listMapperHcl(tfCodepipelineOutputArtifactsForComputeActionPropertyToHclTerraform, true)(struct!.outputArtifactsForComputeAction),
       isBlock: true,
       type: "list",
       storageClassType: "OutputArtifactsForComputeActionPropertyList",
@@ -880,7 +880,7 @@ export function awsCodepipelineActionPropertyToHclTerraform(struct?: AwsCodepipe
 }
 
 
-export function awsCodepipelineStageBeforeEntryConditionRuleRuleTypeIdPropertyToTerraform(struct?: AwsCodepipeline.StageBeforeEntryConditionRuleRuleTypeIdPropertyOutputReference | AwsCodepipeline.StageBeforeEntryConditionRuleRuleTypeIdProperty): any {
+export function tfCodepipelineStageBeforeEntryConditionRuleRuleTypeIdPropertyToTerraform(struct?: TfCodepipeline.StageBeforeEntryConditionRuleRuleTypeIdPropertyOutputReference | TfCodepipeline.StageBeforeEntryConditionRuleRuleTypeIdProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -894,7 +894,7 @@ export function awsCodepipelineStageBeforeEntryConditionRuleRuleTypeIdPropertyTo
 }
 
 
-export function awsCodepipelineStageBeforeEntryConditionRuleRuleTypeIdPropertyToHclTerraform(struct?: AwsCodepipeline.StageBeforeEntryConditionRuleRuleTypeIdPropertyOutputReference | AwsCodepipeline.StageBeforeEntryConditionRuleRuleTypeIdProperty): any {
+export function tfCodepipelineStageBeforeEntryConditionRuleRuleTypeIdPropertyToHclTerraform(struct?: TfCodepipeline.StageBeforeEntryConditionRuleRuleTypeIdPropertyOutputReference | TfCodepipeline.StageBeforeEntryConditionRuleRuleTypeIdProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -931,7 +931,7 @@ export function awsCodepipelineStageBeforeEntryConditionRuleRuleTypeIdPropertyTo
 }
 
 
-export function awsCodepipelineStageBeforeEntryConditionRulePropertyToTerraform(struct?: AwsCodepipeline.StageBeforeEntryConditionRuleProperty | cdktn.IResolvable): any {
+export function tfCodepipelineStageBeforeEntryConditionRulePropertyToTerraform(struct?: TfCodepipeline.StageBeforeEntryConditionRuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -944,12 +944,12 @@ export function awsCodepipelineStageBeforeEntryConditionRulePropertyToTerraform(
     region: cdktn.stringToTerraform(struct!.region),
     role_arn: cdktn.stringToTerraform(struct!.roleArn),
     timeout_in_minutes: cdktn.numberToTerraform(struct!.timeoutInMinutes),
-    rule_type_id: awsCodepipelineStageBeforeEntryConditionRuleRuleTypeIdPropertyToTerraform(struct!.ruleTypeId),
+    rule_type_id: tfCodepipelineStageBeforeEntryConditionRuleRuleTypeIdPropertyToTerraform(struct!.ruleTypeId),
   }
 }
 
 
-export function awsCodepipelineStageBeforeEntryConditionRulePropertyToHclTerraform(struct?: AwsCodepipeline.StageBeforeEntryConditionRuleProperty | cdktn.IResolvable): any {
+export function tfCodepipelineStageBeforeEntryConditionRulePropertyToHclTerraform(struct?: TfCodepipeline.StageBeforeEntryConditionRuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -998,7 +998,7 @@ export function awsCodepipelineStageBeforeEntryConditionRulePropertyToHclTerrafo
       storageClassType: "number",
     },
     rule_type_id: {
-      value: awsCodepipelineStageBeforeEntryConditionRuleRuleTypeIdPropertyToHclTerraform(struct!.ruleTypeId),
+      value: tfCodepipelineStageBeforeEntryConditionRuleRuleTypeIdPropertyToHclTerraform(struct!.ruleTypeId),
       isBlock: true,
       type: "list",
       storageClassType: "StageBeforeEntryConditionRuleRuleTypeIdPropertyList",
@@ -1010,19 +1010,19 @@ export function awsCodepipelineStageBeforeEntryConditionRulePropertyToHclTerrafo
 }
 
 
-export function awsCodepipelineStageBeforeEntryConditionPropertyToTerraform(struct?: AwsCodepipeline.StageBeforeEntryConditionPropertyOutputReference | AwsCodepipeline.StageBeforeEntryConditionProperty): any {
+export function tfCodepipelineStageBeforeEntryConditionPropertyToTerraform(struct?: TfCodepipeline.StageBeforeEntryConditionPropertyOutputReference | TfCodepipeline.StageBeforeEntryConditionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     result: cdktn.stringToTerraform(struct!.result),
-    rule: cdktn.listMapper(awsCodepipelineStageBeforeEntryConditionRulePropertyToTerraform, true)(struct!.rule),
+    rule: cdktn.listMapper(tfCodepipelineStageBeforeEntryConditionRulePropertyToTerraform, true)(struct!.rule),
   }
 }
 
 
-export function awsCodepipelineStageBeforeEntryConditionPropertyToHclTerraform(struct?: AwsCodepipeline.StageBeforeEntryConditionPropertyOutputReference | AwsCodepipeline.StageBeforeEntryConditionProperty): any {
+export function tfCodepipelineStageBeforeEntryConditionPropertyToHclTerraform(struct?: TfCodepipeline.StageBeforeEntryConditionPropertyOutputReference | TfCodepipeline.StageBeforeEntryConditionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1035,7 +1035,7 @@ export function awsCodepipelineStageBeforeEntryConditionPropertyToHclTerraform(s
       storageClassType: "string",
     },
     rule: {
-      value: cdktn.listMapperHcl(awsCodepipelineStageBeforeEntryConditionRulePropertyToHclTerraform, true)(struct!.rule),
+      value: cdktn.listMapperHcl(tfCodepipelineStageBeforeEntryConditionRulePropertyToHclTerraform, true)(struct!.rule),
       isBlock: true,
       type: "list",
       storageClassType: "StageBeforeEntryConditionRulePropertyList",
@@ -1047,25 +1047,25 @@ export function awsCodepipelineStageBeforeEntryConditionPropertyToHclTerraform(s
 }
 
 
-export function awsCodepipelineBeforeEntryPropertyToTerraform(struct?: AwsCodepipeline.BeforeEntryPropertyOutputReference | AwsCodepipeline.BeforeEntryProperty): any {
+export function tfCodepipelineBeforeEntryPropertyToTerraform(struct?: TfCodepipeline.BeforeEntryPropertyOutputReference | TfCodepipeline.BeforeEntryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    condition: awsCodepipelineStageBeforeEntryConditionPropertyToTerraform(struct!.condition),
+    condition: tfCodepipelineStageBeforeEntryConditionPropertyToTerraform(struct!.condition),
   }
 }
 
 
-export function awsCodepipelineBeforeEntryPropertyToHclTerraform(struct?: AwsCodepipeline.BeforeEntryPropertyOutputReference | AwsCodepipeline.BeforeEntryProperty): any {
+export function tfCodepipelineBeforeEntryPropertyToHclTerraform(struct?: TfCodepipeline.BeforeEntryPropertyOutputReference | TfCodepipeline.BeforeEntryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     condition: {
-      value: awsCodepipelineStageBeforeEntryConditionPropertyToHclTerraform(struct!.condition),
+      value: tfCodepipelineStageBeforeEntryConditionPropertyToHclTerraform(struct!.condition),
       isBlock: true,
       type: "list",
       storageClassType: "StageBeforeEntryConditionPropertyList",
@@ -1077,7 +1077,7 @@ export function awsCodepipelineBeforeEntryPropertyToHclTerraform(struct?: AwsCod
 }
 
 
-export function awsCodepipelineStageOnFailureConditionRuleRuleTypeIdPropertyToTerraform(struct?: AwsCodepipeline.StageOnFailureConditionRuleRuleTypeIdPropertyOutputReference | AwsCodepipeline.StageOnFailureConditionRuleRuleTypeIdProperty): any {
+export function tfCodepipelineStageOnFailureConditionRuleRuleTypeIdPropertyToTerraform(struct?: TfCodepipeline.StageOnFailureConditionRuleRuleTypeIdPropertyOutputReference | TfCodepipeline.StageOnFailureConditionRuleRuleTypeIdProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1091,7 +1091,7 @@ export function awsCodepipelineStageOnFailureConditionRuleRuleTypeIdPropertyToTe
 }
 
 
-export function awsCodepipelineStageOnFailureConditionRuleRuleTypeIdPropertyToHclTerraform(struct?: AwsCodepipeline.StageOnFailureConditionRuleRuleTypeIdPropertyOutputReference | AwsCodepipeline.StageOnFailureConditionRuleRuleTypeIdProperty): any {
+export function tfCodepipelineStageOnFailureConditionRuleRuleTypeIdPropertyToHclTerraform(struct?: TfCodepipeline.StageOnFailureConditionRuleRuleTypeIdPropertyOutputReference | TfCodepipeline.StageOnFailureConditionRuleRuleTypeIdProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1128,7 +1128,7 @@ export function awsCodepipelineStageOnFailureConditionRuleRuleTypeIdPropertyToHc
 }
 
 
-export function awsCodepipelineStageOnFailureConditionRulePropertyToTerraform(struct?: AwsCodepipeline.StageOnFailureConditionRuleProperty | cdktn.IResolvable): any {
+export function tfCodepipelineStageOnFailureConditionRulePropertyToTerraform(struct?: TfCodepipeline.StageOnFailureConditionRuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1141,12 +1141,12 @@ export function awsCodepipelineStageOnFailureConditionRulePropertyToTerraform(st
     region: cdktn.stringToTerraform(struct!.region),
     role_arn: cdktn.stringToTerraform(struct!.roleArn),
     timeout_in_minutes: cdktn.numberToTerraform(struct!.timeoutInMinutes),
-    rule_type_id: awsCodepipelineStageOnFailureConditionRuleRuleTypeIdPropertyToTerraform(struct!.ruleTypeId),
+    rule_type_id: tfCodepipelineStageOnFailureConditionRuleRuleTypeIdPropertyToTerraform(struct!.ruleTypeId),
   }
 }
 
 
-export function awsCodepipelineStageOnFailureConditionRulePropertyToHclTerraform(struct?: AwsCodepipeline.StageOnFailureConditionRuleProperty | cdktn.IResolvable): any {
+export function tfCodepipelineStageOnFailureConditionRulePropertyToHclTerraform(struct?: TfCodepipeline.StageOnFailureConditionRuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1195,7 +1195,7 @@ export function awsCodepipelineStageOnFailureConditionRulePropertyToHclTerraform
       storageClassType: "number",
     },
     rule_type_id: {
-      value: awsCodepipelineStageOnFailureConditionRuleRuleTypeIdPropertyToHclTerraform(struct!.ruleTypeId),
+      value: tfCodepipelineStageOnFailureConditionRuleRuleTypeIdPropertyToHclTerraform(struct!.ruleTypeId),
       isBlock: true,
       type: "list",
       storageClassType: "StageOnFailureConditionRuleRuleTypeIdPropertyList",
@@ -1207,19 +1207,19 @@ export function awsCodepipelineStageOnFailureConditionRulePropertyToHclTerraform
 }
 
 
-export function awsCodepipelineStageOnFailureConditionPropertyToTerraform(struct?: AwsCodepipeline.StageOnFailureConditionPropertyOutputReference | AwsCodepipeline.StageOnFailureConditionProperty): any {
+export function tfCodepipelineStageOnFailureConditionPropertyToTerraform(struct?: TfCodepipeline.StageOnFailureConditionPropertyOutputReference | TfCodepipeline.StageOnFailureConditionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     result: cdktn.stringToTerraform(struct!.result),
-    rule: cdktn.listMapper(awsCodepipelineStageOnFailureConditionRulePropertyToTerraform, true)(struct!.rule),
+    rule: cdktn.listMapper(tfCodepipelineStageOnFailureConditionRulePropertyToTerraform, true)(struct!.rule),
   }
 }
 
 
-export function awsCodepipelineStageOnFailureConditionPropertyToHclTerraform(struct?: AwsCodepipeline.StageOnFailureConditionPropertyOutputReference | AwsCodepipeline.StageOnFailureConditionProperty): any {
+export function tfCodepipelineStageOnFailureConditionPropertyToHclTerraform(struct?: TfCodepipeline.StageOnFailureConditionPropertyOutputReference | TfCodepipeline.StageOnFailureConditionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1232,7 +1232,7 @@ export function awsCodepipelineStageOnFailureConditionPropertyToHclTerraform(str
       storageClassType: "string",
     },
     rule: {
-      value: cdktn.listMapperHcl(awsCodepipelineStageOnFailureConditionRulePropertyToHclTerraform, true)(struct!.rule),
+      value: cdktn.listMapperHcl(tfCodepipelineStageOnFailureConditionRulePropertyToHclTerraform, true)(struct!.rule),
       isBlock: true,
       type: "list",
       storageClassType: "StageOnFailureConditionRulePropertyList",
@@ -1244,7 +1244,7 @@ export function awsCodepipelineStageOnFailureConditionPropertyToHclTerraform(str
 }
 
 
-export function awsCodepipelineRetryConfigurationPropertyToTerraform(struct?: AwsCodepipeline.RetryConfigurationPropertyOutputReference | AwsCodepipeline.RetryConfigurationProperty): any {
+export function tfCodepipelineRetryConfigurationPropertyToTerraform(struct?: TfCodepipeline.RetryConfigurationPropertyOutputReference | TfCodepipeline.RetryConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1255,7 +1255,7 @@ export function awsCodepipelineRetryConfigurationPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsCodepipelineRetryConfigurationPropertyToHclTerraform(struct?: AwsCodepipeline.RetryConfigurationPropertyOutputReference | AwsCodepipeline.RetryConfigurationProperty): any {
+export function tfCodepipelineRetryConfigurationPropertyToHclTerraform(struct?: TfCodepipeline.RetryConfigurationPropertyOutputReference | TfCodepipeline.RetryConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1274,20 +1274,20 @@ export function awsCodepipelineRetryConfigurationPropertyToHclTerraform(struct?:
 }
 
 
-export function awsCodepipelineOnFailurePropertyToTerraform(struct?: AwsCodepipeline.OnFailurePropertyOutputReference | AwsCodepipeline.OnFailureProperty): any {
+export function tfCodepipelineOnFailurePropertyToTerraform(struct?: TfCodepipeline.OnFailurePropertyOutputReference | TfCodepipeline.OnFailureProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     result: cdktn.stringToTerraform(struct!.result),
-    condition: awsCodepipelineStageOnFailureConditionPropertyToTerraform(struct!.condition),
-    retry_configuration: awsCodepipelineRetryConfigurationPropertyToTerraform(struct!.retryConfiguration),
+    condition: tfCodepipelineStageOnFailureConditionPropertyToTerraform(struct!.condition),
+    retry_configuration: tfCodepipelineRetryConfigurationPropertyToTerraform(struct!.retryConfiguration),
   }
 }
 
 
-export function awsCodepipelineOnFailurePropertyToHclTerraform(struct?: AwsCodepipeline.OnFailurePropertyOutputReference | AwsCodepipeline.OnFailureProperty): any {
+export function tfCodepipelineOnFailurePropertyToHclTerraform(struct?: TfCodepipeline.OnFailurePropertyOutputReference | TfCodepipeline.OnFailureProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1300,13 +1300,13 @@ export function awsCodepipelineOnFailurePropertyToHclTerraform(struct?: AwsCodep
       storageClassType: "string",
     },
     condition: {
-      value: awsCodepipelineStageOnFailureConditionPropertyToHclTerraform(struct!.condition),
+      value: tfCodepipelineStageOnFailureConditionPropertyToHclTerraform(struct!.condition),
       isBlock: true,
       type: "list",
       storageClassType: "StageOnFailureConditionPropertyList",
     },
     retry_configuration: {
-      value: awsCodepipelineRetryConfigurationPropertyToHclTerraform(struct!.retryConfiguration),
+      value: tfCodepipelineRetryConfigurationPropertyToHclTerraform(struct!.retryConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "RetryConfigurationPropertyList",
@@ -1318,7 +1318,7 @@ export function awsCodepipelineOnFailurePropertyToHclTerraform(struct?: AwsCodep
 }
 
 
-export function awsCodepipelineStageOnSuccessConditionRuleRuleTypeIdPropertyToTerraform(struct?: AwsCodepipeline.StageOnSuccessConditionRuleRuleTypeIdPropertyOutputReference | AwsCodepipeline.StageOnSuccessConditionRuleRuleTypeIdProperty): any {
+export function tfCodepipelineStageOnSuccessConditionRuleRuleTypeIdPropertyToTerraform(struct?: TfCodepipeline.StageOnSuccessConditionRuleRuleTypeIdPropertyOutputReference | TfCodepipeline.StageOnSuccessConditionRuleRuleTypeIdProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1332,7 +1332,7 @@ export function awsCodepipelineStageOnSuccessConditionRuleRuleTypeIdPropertyToTe
 }
 
 
-export function awsCodepipelineStageOnSuccessConditionRuleRuleTypeIdPropertyToHclTerraform(struct?: AwsCodepipeline.StageOnSuccessConditionRuleRuleTypeIdPropertyOutputReference | AwsCodepipeline.StageOnSuccessConditionRuleRuleTypeIdProperty): any {
+export function tfCodepipelineStageOnSuccessConditionRuleRuleTypeIdPropertyToHclTerraform(struct?: TfCodepipeline.StageOnSuccessConditionRuleRuleTypeIdPropertyOutputReference | TfCodepipeline.StageOnSuccessConditionRuleRuleTypeIdProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1369,7 +1369,7 @@ export function awsCodepipelineStageOnSuccessConditionRuleRuleTypeIdPropertyToHc
 }
 
 
-export function awsCodepipelineStageOnSuccessConditionRulePropertyToTerraform(struct?: AwsCodepipeline.StageOnSuccessConditionRuleProperty | cdktn.IResolvable): any {
+export function tfCodepipelineStageOnSuccessConditionRulePropertyToTerraform(struct?: TfCodepipeline.StageOnSuccessConditionRuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1382,12 +1382,12 @@ export function awsCodepipelineStageOnSuccessConditionRulePropertyToTerraform(st
     region: cdktn.stringToTerraform(struct!.region),
     role_arn: cdktn.stringToTerraform(struct!.roleArn),
     timeout_in_minutes: cdktn.numberToTerraform(struct!.timeoutInMinutes),
-    rule_type_id: awsCodepipelineStageOnSuccessConditionRuleRuleTypeIdPropertyToTerraform(struct!.ruleTypeId),
+    rule_type_id: tfCodepipelineStageOnSuccessConditionRuleRuleTypeIdPropertyToTerraform(struct!.ruleTypeId),
   }
 }
 
 
-export function awsCodepipelineStageOnSuccessConditionRulePropertyToHclTerraform(struct?: AwsCodepipeline.StageOnSuccessConditionRuleProperty | cdktn.IResolvable): any {
+export function tfCodepipelineStageOnSuccessConditionRulePropertyToHclTerraform(struct?: TfCodepipeline.StageOnSuccessConditionRuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1436,7 +1436,7 @@ export function awsCodepipelineStageOnSuccessConditionRulePropertyToHclTerraform
       storageClassType: "number",
     },
     rule_type_id: {
-      value: awsCodepipelineStageOnSuccessConditionRuleRuleTypeIdPropertyToHclTerraform(struct!.ruleTypeId),
+      value: tfCodepipelineStageOnSuccessConditionRuleRuleTypeIdPropertyToHclTerraform(struct!.ruleTypeId),
       isBlock: true,
       type: "list",
       storageClassType: "StageOnSuccessConditionRuleRuleTypeIdPropertyList",
@@ -1448,19 +1448,19 @@ export function awsCodepipelineStageOnSuccessConditionRulePropertyToHclTerraform
 }
 
 
-export function awsCodepipelineStageOnSuccessConditionPropertyToTerraform(struct?: AwsCodepipeline.StageOnSuccessConditionPropertyOutputReference | AwsCodepipeline.StageOnSuccessConditionProperty): any {
+export function tfCodepipelineStageOnSuccessConditionPropertyToTerraform(struct?: TfCodepipeline.StageOnSuccessConditionPropertyOutputReference | TfCodepipeline.StageOnSuccessConditionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     result: cdktn.stringToTerraform(struct!.result),
-    rule: cdktn.listMapper(awsCodepipelineStageOnSuccessConditionRulePropertyToTerraform, true)(struct!.rule),
+    rule: cdktn.listMapper(tfCodepipelineStageOnSuccessConditionRulePropertyToTerraform, true)(struct!.rule),
   }
 }
 
 
-export function awsCodepipelineStageOnSuccessConditionPropertyToHclTerraform(struct?: AwsCodepipeline.StageOnSuccessConditionPropertyOutputReference | AwsCodepipeline.StageOnSuccessConditionProperty): any {
+export function tfCodepipelineStageOnSuccessConditionPropertyToHclTerraform(struct?: TfCodepipeline.StageOnSuccessConditionPropertyOutputReference | TfCodepipeline.StageOnSuccessConditionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1473,7 +1473,7 @@ export function awsCodepipelineStageOnSuccessConditionPropertyToHclTerraform(str
       storageClassType: "string",
     },
     rule: {
-      value: cdktn.listMapperHcl(awsCodepipelineStageOnSuccessConditionRulePropertyToHclTerraform, true)(struct!.rule),
+      value: cdktn.listMapperHcl(tfCodepipelineStageOnSuccessConditionRulePropertyToHclTerraform, true)(struct!.rule),
       isBlock: true,
       type: "list",
       storageClassType: "StageOnSuccessConditionRulePropertyList",
@@ -1485,25 +1485,25 @@ export function awsCodepipelineStageOnSuccessConditionPropertyToHclTerraform(str
 }
 
 
-export function awsCodepipelineOnSuccessPropertyToTerraform(struct?: AwsCodepipeline.OnSuccessPropertyOutputReference | AwsCodepipeline.OnSuccessProperty): any {
+export function tfCodepipelineOnSuccessPropertyToTerraform(struct?: TfCodepipeline.OnSuccessPropertyOutputReference | TfCodepipeline.OnSuccessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    condition: awsCodepipelineStageOnSuccessConditionPropertyToTerraform(struct!.condition),
+    condition: tfCodepipelineStageOnSuccessConditionPropertyToTerraform(struct!.condition),
   }
 }
 
 
-export function awsCodepipelineOnSuccessPropertyToHclTerraform(struct?: AwsCodepipeline.OnSuccessPropertyOutputReference | AwsCodepipeline.OnSuccessProperty): any {
+export function tfCodepipelineOnSuccessPropertyToHclTerraform(struct?: TfCodepipeline.OnSuccessPropertyOutputReference | TfCodepipeline.OnSuccessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     condition: {
-      value: awsCodepipelineStageOnSuccessConditionPropertyToHclTerraform(struct!.condition),
+      value: tfCodepipelineStageOnSuccessConditionPropertyToHclTerraform(struct!.condition),
       isBlock: true,
       type: "list",
       storageClassType: "StageOnSuccessConditionPropertyList",
@@ -1515,22 +1515,22 @@ export function awsCodepipelineOnSuccessPropertyToHclTerraform(struct?: AwsCodep
 }
 
 
-export function awsCodepipelineStagePropertyToTerraform(struct?: AwsCodepipeline.StageProperty | cdktn.IResolvable): any {
+export function tfCodepipelineStagePropertyToTerraform(struct?: TfCodepipeline.StageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     name: cdktn.stringToTerraform(struct!.name),
-    action: cdktn.listMapper(awsCodepipelineActionPropertyToTerraform, true)(struct!.action),
-    before_entry: awsCodepipelineBeforeEntryPropertyToTerraform(struct!.beforeEntry),
-    on_failure: awsCodepipelineOnFailurePropertyToTerraform(struct!.onFailure),
-    on_success: awsCodepipelineOnSuccessPropertyToTerraform(struct!.onSuccess),
+    action: cdktn.listMapper(tfCodepipelineActionPropertyToTerraform, true)(struct!.action),
+    before_entry: tfCodepipelineBeforeEntryPropertyToTerraform(struct!.beforeEntry),
+    on_failure: tfCodepipelineOnFailurePropertyToTerraform(struct!.onFailure),
+    on_success: tfCodepipelineOnSuccessPropertyToTerraform(struct!.onSuccess),
   }
 }
 
 
-export function awsCodepipelineStagePropertyToHclTerraform(struct?: AwsCodepipeline.StageProperty | cdktn.IResolvable): any {
+export function tfCodepipelineStagePropertyToHclTerraform(struct?: TfCodepipeline.StageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1543,25 +1543,25 @@ export function awsCodepipelineStagePropertyToHclTerraform(struct?: AwsCodepipel
       storageClassType: "string",
     },
     action: {
-      value: cdktn.listMapperHcl(awsCodepipelineActionPropertyToHclTerraform, true)(struct!.action),
+      value: cdktn.listMapperHcl(tfCodepipelineActionPropertyToHclTerraform, true)(struct!.action),
       isBlock: true,
       type: "list",
       storageClassType: "ActionPropertyList",
     },
     before_entry: {
-      value: awsCodepipelineBeforeEntryPropertyToHclTerraform(struct!.beforeEntry),
+      value: tfCodepipelineBeforeEntryPropertyToHclTerraform(struct!.beforeEntry),
       isBlock: true,
       type: "list",
       storageClassType: "BeforeEntryPropertyList",
     },
     on_failure: {
-      value: awsCodepipelineOnFailurePropertyToHclTerraform(struct!.onFailure),
+      value: tfCodepipelineOnFailurePropertyToHclTerraform(struct!.onFailure),
       isBlock: true,
       type: "list",
       storageClassType: "OnFailurePropertyList",
     },
     on_success: {
-      value: awsCodepipelineOnSuccessPropertyToHclTerraform(struct!.onSuccess),
+      value: tfCodepipelineOnSuccessPropertyToHclTerraform(struct!.onSuccess),
       isBlock: true,
       type: "list",
       storageClassType: "OnSuccessPropertyList",
@@ -1573,7 +1573,7 @@ export function awsCodepipelineStagePropertyToHclTerraform(struct?: AwsCodepipel
 }
 
 
-export function awsCodepipelineTriggerGitConfigurationPullRequestBranchesPropertyToTerraform(struct?: AwsCodepipeline.TriggerGitConfigurationPullRequestBranchesPropertyOutputReference | AwsCodepipeline.TriggerGitConfigurationPullRequestBranchesProperty): any {
+export function tfCodepipelineTriggerGitConfigurationPullRequestBranchesPropertyToTerraform(struct?: TfCodepipeline.TriggerGitConfigurationPullRequestBranchesPropertyOutputReference | TfCodepipeline.TriggerGitConfigurationPullRequestBranchesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1585,7 +1585,7 @@ export function awsCodepipelineTriggerGitConfigurationPullRequestBranchesPropert
 }
 
 
-export function awsCodepipelineTriggerGitConfigurationPullRequestBranchesPropertyToHclTerraform(struct?: AwsCodepipeline.TriggerGitConfigurationPullRequestBranchesPropertyOutputReference | AwsCodepipeline.TriggerGitConfigurationPullRequestBranchesProperty): any {
+export function tfCodepipelineTriggerGitConfigurationPullRequestBranchesPropertyToHclTerraform(struct?: TfCodepipeline.TriggerGitConfigurationPullRequestBranchesPropertyOutputReference | TfCodepipeline.TriggerGitConfigurationPullRequestBranchesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1610,7 +1610,7 @@ export function awsCodepipelineTriggerGitConfigurationPullRequestBranchesPropert
 }
 
 
-export function awsCodepipelineTriggerGitConfigurationPullRequestFilePathsPropertyToTerraform(struct?: AwsCodepipeline.TriggerGitConfigurationPullRequestFilePathsPropertyOutputReference | AwsCodepipeline.TriggerGitConfigurationPullRequestFilePathsProperty): any {
+export function tfCodepipelineTriggerGitConfigurationPullRequestFilePathsPropertyToTerraform(struct?: TfCodepipeline.TriggerGitConfigurationPullRequestFilePathsPropertyOutputReference | TfCodepipeline.TriggerGitConfigurationPullRequestFilePathsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1622,7 +1622,7 @@ export function awsCodepipelineTriggerGitConfigurationPullRequestFilePathsProper
 }
 
 
-export function awsCodepipelineTriggerGitConfigurationPullRequestFilePathsPropertyToHclTerraform(struct?: AwsCodepipeline.TriggerGitConfigurationPullRequestFilePathsPropertyOutputReference | AwsCodepipeline.TriggerGitConfigurationPullRequestFilePathsProperty): any {
+export function tfCodepipelineTriggerGitConfigurationPullRequestFilePathsPropertyToHclTerraform(struct?: TfCodepipeline.TriggerGitConfigurationPullRequestFilePathsPropertyOutputReference | TfCodepipeline.TriggerGitConfigurationPullRequestFilePathsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1647,20 +1647,20 @@ export function awsCodepipelineTriggerGitConfigurationPullRequestFilePathsProper
 }
 
 
-export function awsCodepipelineTriggerGitConfigurationPullRequestPropertyToTerraform(struct?: AwsCodepipeline.TriggerGitConfigurationPullRequestProperty | cdktn.IResolvable): any {
+export function tfCodepipelineTriggerGitConfigurationPullRequestPropertyToTerraform(struct?: TfCodepipeline.TriggerGitConfigurationPullRequestProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     events: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.events),
-    branches: awsCodepipelineTriggerGitConfigurationPullRequestBranchesPropertyToTerraform(struct!.branches),
-    file_paths: awsCodepipelineTriggerGitConfigurationPullRequestFilePathsPropertyToTerraform(struct!.filePaths),
+    branches: tfCodepipelineTriggerGitConfigurationPullRequestBranchesPropertyToTerraform(struct!.branches),
+    file_paths: tfCodepipelineTriggerGitConfigurationPullRequestFilePathsPropertyToTerraform(struct!.filePaths),
   }
 }
 
 
-export function awsCodepipelineTriggerGitConfigurationPullRequestPropertyToHclTerraform(struct?: AwsCodepipeline.TriggerGitConfigurationPullRequestProperty | cdktn.IResolvable): any {
+export function tfCodepipelineTriggerGitConfigurationPullRequestPropertyToHclTerraform(struct?: TfCodepipeline.TriggerGitConfigurationPullRequestProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1673,13 +1673,13 @@ export function awsCodepipelineTriggerGitConfigurationPullRequestPropertyToHclTe
       storageClassType: "stringList",
     },
     branches: {
-      value: awsCodepipelineTriggerGitConfigurationPullRequestBranchesPropertyToHclTerraform(struct!.branches),
+      value: tfCodepipelineTriggerGitConfigurationPullRequestBranchesPropertyToHclTerraform(struct!.branches),
       isBlock: true,
       type: "list",
       storageClassType: "TriggerGitConfigurationPullRequestBranchesPropertyList",
     },
     file_paths: {
-      value: awsCodepipelineTriggerGitConfigurationPullRequestFilePathsPropertyToHclTerraform(struct!.filePaths),
+      value: tfCodepipelineTriggerGitConfigurationPullRequestFilePathsPropertyToHclTerraform(struct!.filePaths),
       isBlock: true,
       type: "list",
       storageClassType: "TriggerGitConfigurationPullRequestFilePathsPropertyList",
@@ -1691,7 +1691,7 @@ export function awsCodepipelineTriggerGitConfigurationPullRequestPropertyToHclTe
 }
 
 
-export function awsCodepipelineTriggerGitConfigurationPushBranchesPropertyToTerraform(struct?: AwsCodepipeline.TriggerGitConfigurationPushBranchesPropertyOutputReference | AwsCodepipeline.TriggerGitConfigurationPushBranchesProperty): any {
+export function tfCodepipelineTriggerGitConfigurationPushBranchesPropertyToTerraform(struct?: TfCodepipeline.TriggerGitConfigurationPushBranchesPropertyOutputReference | TfCodepipeline.TriggerGitConfigurationPushBranchesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1703,7 +1703,7 @@ export function awsCodepipelineTriggerGitConfigurationPushBranchesPropertyToTerr
 }
 
 
-export function awsCodepipelineTriggerGitConfigurationPushBranchesPropertyToHclTerraform(struct?: AwsCodepipeline.TriggerGitConfigurationPushBranchesPropertyOutputReference | AwsCodepipeline.TriggerGitConfigurationPushBranchesProperty): any {
+export function tfCodepipelineTriggerGitConfigurationPushBranchesPropertyToHclTerraform(struct?: TfCodepipeline.TriggerGitConfigurationPushBranchesPropertyOutputReference | TfCodepipeline.TriggerGitConfigurationPushBranchesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1728,7 +1728,7 @@ export function awsCodepipelineTriggerGitConfigurationPushBranchesPropertyToHclT
 }
 
 
-export function awsCodepipelineTriggerGitConfigurationPushFilePathsPropertyToTerraform(struct?: AwsCodepipeline.TriggerGitConfigurationPushFilePathsPropertyOutputReference | AwsCodepipeline.TriggerGitConfigurationPushFilePathsProperty): any {
+export function tfCodepipelineTriggerGitConfigurationPushFilePathsPropertyToTerraform(struct?: TfCodepipeline.TriggerGitConfigurationPushFilePathsPropertyOutputReference | TfCodepipeline.TriggerGitConfigurationPushFilePathsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1740,7 +1740,7 @@ export function awsCodepipelineTriggerGitConfigurationPushFilePathsPropertyToTer
 }
 
 
-export function awsCodepipelineTriggerGitConfigurationPushFilePathsPropertyToHclTerraform(struct?: AwsCodepipeline.TriggerGitConfigurationPushFilePathsPropertyOutputReference | AwsCodepipeline.TriggerGitConfigurationPushFilePathsProperty): any {
+export function tfCodepipelineTriggerGitConfigurationPushFilePathsPropertyToHclTerraform(struct?: TfCodepipeline.TriggerGitConfigurationPushFilePathsPropertyOutputReference | TfCodepipeline.TriggerGitConfigurationPushFilePathsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1765,7 +1765,7 @@ export function awsCodepipelineTriggerGitConfigurationPushFilePathsPropertyToHcl
 }
 
 
-export function awsCodepipelineTriggerGitConfigurationPushTagsPropertyToTerraform(struct?: AwsCodepipeline.TriggerGitConfigurationPushTagsPropertyOutputReference | AwsCodepipeline.TriggerGitConfigurationPushTagsProperty): any {
+export function tfCodepipelineTriggerGitConfigurationPushTagsPropertyToTerraform(struct?: TfCodepipeline.TriggerGitConfigurationPushTagsPropertyOutputReference | TfCodepipeline.TriggerGitConfigurationPushTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1777,7 +1777,7 @@ export function awsCodepipelineTriggerGitConfigurationPushTagsPropertyToTerrafor
 }
 
 
-export function awsCodepipelineTriggerGitConfigurationPushTagsPropertyToHclTerraform(struct?: AwsCodepipeline.TriggerGitConfigurationPushTagsPropertyOutputReference | AwsCodepipeline.TriggerGitConfigurationPushTagsProperty): any {
+export function tfCodepipelineTriggerGitConfigurationPushTagsPropertyToHclTerraform(struct?: TfCodepipeline.TriggerGitConfigurationPushTagsPropertyOutputReference | TfCodepipeline.TriggerGitConfigurationPushTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1802,39 +1802,39 @@ export function awsCodepipelineTriggerGitConfigurationPushTagsPropertyToHclTerra
 }
 
 
-export function awsCodepipelineTriggerGitConfigurationPushPropertyToTerraform(struct?: AwsCodepipeline.TriggerGitConfigurationPushProperty | cdktn.IResolvable): any {
+export function tfCodepipelineTriggerGitConfigurationPushPropertyToTerraform(struct?: TfCodepipeline.TriggerGitConfigurationPushProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    branches: awsCodepipelineTriggerGitConfigurationPushBranchesPropertyToTerraform(struct!.branches),
-    file_paths: awsCodepipelineTriggerGitConfigurationPushFilePathsPropertyToTerraform(struct!.filePaths),
-    tags: awsCodepipelineTriggerGitConfigurationPushTagsPropertyToTerraform(struct!.tags),
+    branches: tfCodepipelineTriggerGitConfigurationPushBranchesPropertyToTerraform(struct!.branches),
+    file_paths: tfCodepipelineTriggerGitConfigurationPushFilePathsPropertyToTerraform(struct!.filePaths),
+    tags: tfCodepipelineTriggerGitConfigurationPushTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function awsCodepipelineTriggerGitConfigurationPushPropertyToHclTerraform(struct?: AwsCodepipeline.TriggerGitConfigurationPushProperty | cdktn.IResolvable): any {
+export function tfCodepipelineTriggerGitConfigurationPushPropertyToHclTerraform(struct?: TfCodepipeline.TriggerGitConfigurationPushProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     branches: {
-      value: awsCodepipelineTriggerGitConfigurationPushBranchesPropertyToHclTerraform(struct!.branches),
+      value: tfCodepipelineTriggerGitConfigurationPushBranchesPropertyToHclTerraform(struct!.branches),
       isBlock: true,
       type: "list",
       storageClassType: "TriggerGitConfigurationPushBranchesPropertyList",
     },
     file_paths: {
-      value: awsCodepipelineTriggerGitConfigurationPushFilePathsPropertyToHclTerraform(struct!.filePaths),
+      value: tfCodepipelineTriggerGitConfigurationPushFilePathsPropertyToHclTerraform(struct!.filePaths),
       isBlock: true,
       type: "list",
       storageClassType: "TriggerGitConfigurationPushFilePathsPropertyList",
     },
     tags: {
-      value: awsCodepipelineTriggerGitConfigurationPushTagsPropertyToHclTerraform(struct!.tags),
+      value: tfCodepipelineTriggerGitConfigurationPushTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "TriggerGitConfigurationPushTagsPropertyList",
@@ -1846,20 +1846,20 @@ export function awsCodepipelineTriggerGitConfigurationPushPropertyToHclTerraform
 }
 
 
-export function awsCodepipelineTriggerGitConfigurationPropertyToTerraform(struct?: AwsCodepipeline.TriggerGitConfigurationPropertyOutputReference | AwsCodepipeline.TriggerGitConfigurationProperty): any {
+export function tfCodepipelineTriggerGitConfigurationPropertyToTerraform(struct?: TfCodepipeline.TriggerGitConfigurationPropertyOutputReference | TfCodepipeline.TriggerGitConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     source_action_name: cdktn.stringToTerraform(struct!.sourceActionName),
-    pull_request: cdktn.listMapper(awsCodepipelineTriggerGitConfigurationPullRequestPropertyToTerraform, true)(struct!.pullRequest),
-    push: cdktn.listMapper(awsCodepipelineTriggerGitConfigurationPushPropertyToTerraform, true)(struct!.push),
+    pull_request: cdktn.listMapper(tfCodepipelineTriggerGitConfigurationPullRequestPropertyToTerraform, true)(struct!.pullRequest),
+    push: cdktn.listMapper(tfCodepipelineTriggerGitConfigurationPushPropertyToTerraform, true)(struct!.push),
   }
 }
 
 
-export function awsCodepipelineTriggerGitConfigurationPropertyToHclTerraform(struct?: AwsCodepipeline.TriggerGitConfigurationPropertyOutputReference | AwsCodepipeline.TriggerGitConfigurationProperty): any {
+export function tfCodepipelineTriggerGitConfigurationPropertyToHclTerraform(struct?: TfCodepipeline.TriggerGitConfigurationPropertyOutputReference | TfCodepipeline.TriggerGitConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1872,13 +1872,13 @@ export function awsCodepipelineTriggerGitConfigurationPropertyToHclTerraform(str
       storageClassType: "string",
     },
     pull_request: {
-      value: cdktn.listMapperHcl(awsCodepipelineTriggerGitConfigurationPullRequestPropertyToHclTerraform, true)(struct!.pullRequest),
+      value: cdktn.listMapperHcl(tfCodepipelineTriggerGitConfigurationPullRequestPropertyToHclTerraform, true)(struct!.pullRequest),
       isBlock: true,
       type: "list",
       storageClassType: "TriggerGitConfigurationPullRequestPropertyList",
     },
     push: {
-      value: cdktn.listMapperHcl(awsCodepipelineTriggerGitConfigurationPushPropertyToHclTerraform, true)(struct!.push),
+      value: cdktn.listMapperHcl(tfCodepipelineTriggerGitConfigurationPushPropertyToHclTerraform, true)(struct!.push),
       isBlock: true,
       type: "list",
       storageClassType: "TriggerGitConfigurationPushPropertyList",
@@ -1890,19 +1890,19 @@ export function awsCodepipelineTriggerGitConfigurationPropertyToHclTerraform(str
 }
 
 
-export function awsCodepipelineTriggerPropertyToTerraform(struct?: AwsCodepipeline.TriggerProperty | cdktn.IResolvable): any {
+export function tfCodepipelineTriggerPropertyToTerraform(struct?: TfCodepipeline.TriggerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     provider_type: cdktn.stringToTerraform(struct!.providerType),
-    git_configuration: awsCodepipelineTriggerGitConfigurationPropertyToTerraform(struct!.gitConfiguration),
+    git_configuration: tfCodepipelineTriggerGitConfigurationPropertyToTerraform(struct!.gitConfiguration),
   }
 }
 
 
-export function awsCodepipelineTriggerPropertyToHclTerraform(struct?: AwsCodepipeline.TriggerProperty | cdktn.IResolvable): any {
+export function tfCodepipelineTriggerPropertyToHclTerraform(struct?: TfCodepipeline.TriggerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1915,7 +1915,7 @@ export function awsCodepipelineTriggerPropertyToHclTerraform(struct?: AwsCodepip
       storageClassType: "string",
     },
     git_configuration: {
-      value: awsCodepipelineTriggerGitConfigurationPropertyToHclTerraform(struct!.gitConfiguration),
+      value: tfCodepipelineTriggerGitConfigurationPropertyToHclTerraform(struct!.gitConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "TriggerGitConfigurationPropertyList",
@@ -1927,7 +1927,7 @@ export function awsCodepipelineTriggerPropertyToHclTerraform(struct?: AwsCodepip
 }
 
 
-export function awsCodepipelineVariablePropertyToTerraform(struct?: AwsCodepipeline.VariableProperty | cdktn.IResolvable): any {
+export function tfCodepipelineVariablePropertyToTerraform(struct?: TfCodepipeline.VariableProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1940,7 +1940,7 @@ export function awsCodepipelineVariablePropertyToTerraform(struct?: AwsCodepipel
 }
 
 
-export function awsCodepipelineVariablePropertyToHclTerraform(struct?: AwsCodepipeline.VariableProperty | cdktn.IResolvable): any {
+export function tfCodepipelineVariablePropertyToHclTerraform(struct?: TfCodepipeline.VariableProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1971,7 +1971,7 @@ export function awsCodepipelineVariablePropertyToHclTerraform(struct?: AwsCodepi
 }
 
 
-export namespace AwsCodepipeline {
+export namespace TfCodepipeline {
 export interface TriggerAllGitConfigurationPullRequestBranchesProperty {
 }
 export class TriggerAllGitConfigurationPullRequestBranchesPropertyOutputReference extends cdktn.ComplexObject {
@@ -2528,14 +2528,14 @@ export class TriggerAllPropertyList extends cdktn.ComplexList {
 }
 export interface EncryptionKeyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#id AwsCodepipeline#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#id TfCodepipeline#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#type AwsCodepipeline#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#type TfCodepipeline#type}
   */
   readonly type: string;
 }
@@ -2605,21 +2605,21 @@ export class EncryptionKeyPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ArtifactStoreProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#location AwsCodepipeline#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#location TfCodepipeline#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#region AwsCodepipeline#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#region TfCodepipeline#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#type AwsCodepipeline#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#type TfCodepipeline#type}
   */
   readonly type: string;
   /**
   * encryption_key block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#encryption_key AwsCodepipeline#encryption_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#encryption_key TfCodepipeline#encryption_key}
   */
   readonly encryptionKey?: EncryptionKeyProperty;
 }
@@ -2765,11 +2765,11 @@ export class ArtifactStorePropertyList extends cdktn.ComplexList {
 }
 export interface OutputArtifactsForComputeActionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#files AwsCodepipeline#files}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#files TfCodepipeline#files}
   */
   readonly files?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#name AwsCodepipeline#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#name TfCodepipeline#name}
   */
   readonly name: string;
 }
@@ -2874,69 +2874,69 @@ export class OutputArtifactsForComputeActionPropertyList extends cdktn.ComplexLi
 }
 export interface ActionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#category AwsCodepipeline#category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#category TfCodepipeline#category}
   */
   readonly category: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#commands AwsCodepipeline#commands}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#commands TfCodepipeline#commands}
   */
   readonly commands?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#configuration AwsCodepipeline#configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#configuration TfCodepipeline#configuration}
   */
   readonly configuration?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#input_artifacts AwsCodepipeline#input_artifacts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#input_artifacts TfCodepipeline#input_artifacts}
   */
   readonly inputArtifacts?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#name AwsCodepipeline#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#name TfCodepipeline#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#namespace AwsCodepipeline#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#namespace TfCodepipeline#namespace}
   */
   readonly namespace?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#output_artifacts AwsCodepipeline#output_artifacts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#output_artifacts TfCodepipeline#output_artifacts}
   */
   readonly outputArtifacts?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#output_variables AwsCodepipeline#output_variables}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#output_variables TfCodepipeline#output_variables}
   */
   readonly outputVariables?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#owner AwsCodepipeline#owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#owner TfCodepipeline#owner}
   */
   readonly owner: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#provider AwsCodepipeline#provider}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#provider TfCodepipeline#provider}
   */
   readonly provider: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#region AwsCodepipeline#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#region TfCodepipeline#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#role_arn AwsCodepipeline#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#role_arn TfCodepipeline#role_arn}
   */
   readonly roleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#run_order AwsCodepipeline#run_order}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#run_order TfCodepipeline#run_order}
   */
   readonly runOrder?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#timeout_in_minutes AwsCodepipeline#timeout_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#timeout_in_minutes TfCodepipeline#timeout_in_minutes}
   */
   readonly timeoutInMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#version AwsCodepipeline#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#version TfCodepipeline#version}
   */
   readonly version: string;
   /**
   * output_artifacts_for_compute_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#output_artifacts_for_compute_action AwsCodepipeline#output_artifacts_for_compute_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#output_artifacts_for_compute_action TfCodepipeline#output_artifacts_for_compute_action}
   */
   readonly outputArtifactsForComputeAction?: OutputArtifactsForComputeActionProperty[] | cdktn.IResolvable;
 }
@@ -3337,19 +3337,19 @@ export class ActionPropertyList extends cdktn.ComplexList {
 }
 export interface StageBeforeEntryConditionRuleRuleTypeIdProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#category AwsCodepipeline#category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#category TfCodepipeline#category}
   */
   readonly category: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#owner AwsCodepipeline#owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#owner TfCodepipeline#owner}
   */
   readonly owner?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#provider AwsCodepipeline#provider}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#provider TfCodepipeline#provider}
   */
   readonly provider: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#version AwsCodepipeline#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#version TfCodepipeline#version}
   */
   readonly version?: string;
 }
@@ -3463,37 +3463,37 @@ export class StageBeforeEntryConditionRuleRuleTypeIdPropertyOutputReference exte
 }
 export interface StageBeforeEntryConditionRuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#commands AwsCodepipeline#commands}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#commands TfCodepipeline#commands}
   */
   readonly commands?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#configuration AwsCodepipeline#configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#configuration TfCodepipeline#configuration}
   */
   readonly configuration?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#input_artifacts AwsCodepipeline#input_artifacts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#input_artifacts TfCodepipeline#input_artifacts}
   */
   readonly inputArtifacts?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#name AwsCodepipeline#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#name TfCodepipeline#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#region AwsCodepipeline#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#region TfCodepipeline#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#role_arn AwsCodepipeline#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#role_arn TfCodepipeline#role_arn}
   */
   readonly roleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#timeout_in_minutes AwsCodepipeline#timeout_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#timeout_in_minutes TfCodepipeline#timeout_in_minutes}
   */
   readonly timeoutInMinutes?: number;
   /**
   * rule_type_id block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#rule_type_id AwsCodepipeline#rule_type_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#rule_type_id TfCodepipeline#rule_type_id}
   */
   readonly ruleTypeId: StageBeforeEntryConditionRuleRuleTypeIdProperty;
 }
@@ -3727,13 +3727,13 @@ export class StageBeforeEntryConditionRulePropertyList extends cdktn.ComplexList
 }
 export interface StageBeforeEntryConditionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#result AwsCodepipeline#result}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#result TfCodepipeline#result}
   */
   readonly result?: string;
   /**
   * rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#rule AwsCodepipeline#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#rule TfCodepipeline#rule}
   */
   readonly rule: StageBeforeEntryConditionRuleProperty[] | cdktn.IResolvable;
 }
@@ -3808,7 +3808,7 @@ export interface BeforeEntryProperty {
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#condition AwsCodepipeline#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#condition TfCodepipeline#condition}
   */
   readonly condition: StageBeforeEntryConditionProperty;
 }
@@ -3859,19 +3859,19 @@ export class BeforeEntryPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface StageOnFailureConditionRuleRuleTypeIdProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#category AwsCodepipeline#category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#category TfCodepipeline#category}
   */
   readonly category: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#owner AwsCodepipeline#owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#owner TfCodepipeline#owner}
   */
   readonly owner?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#provider AwsCodepipeline#provider}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#provider TfCodepipeline#provider}
   */
   readonly provider: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#version AwsCodepipeline#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#version TfCodepipeline#version}
   */
   readonly version?: string;
 }
@@ -3985,37 +3985,37 @@ export class StageOnFailureConditionRuleRuleTypeIdPropertyOutputReference extend
 }
 export interface StageOnFailureConditionRuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#commands AwsCodepipeline#commands}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#commands TfCodepipeline#commands}
   */
   readonly commands?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#configuration AwsCodepipeline#configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#configuration TfCodepipeline#configuration}
   */
   readonly configuration?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#input_artifacts AwsCodepipeline#input_artifacts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#input_artifacts TfCodepipeline#input_artifacts}
   */
   readonly inputArtifacts?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#name AwsCodepipeline#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#name TfCodepipeline#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#region AwsCodepipeline#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#region TfCodepipeline#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#role_arn AwsCodepipeline#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#role_arn TfCodepipeline#role_arn}
   */
   readonly roleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#timeout_in_minutes AwsCodepipeline#timeout_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#timeout_in_minutes TfCodepipeline#timeout_in_minutes}
   */
   readonly timeoutInMinutes?: number;
   /**
   * rule_type_id block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#rule_type_id AwsCodepipeline#rule_type_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#rule_type_id TfCodepipeline#rule_type_id}
   */
   readonly ruleTypeId: StageOnFailureConditionRuleRuleTypeIdProperty;
 }
@@ -4249,13 +4249,13 @@ export class StageOnFailureConditionRulePropertyList extends cdktn.ComplexList {
 }
 export interface StageOnFailureConditionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#result AwsCodepipeline#result}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#result TfCodepipeline#result}
   */
   readonly result?: string;
   /**
   * rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#rule AwsCodepipeline#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#rule TfCodepipeline#rule}
   */
   readonly rule: StageOnFailureConditionRuleProperty[] | cdktn.IResolvable;
 }
@@ -4328,7 +4328,7 @@ export class StageOnFailureConditionPropertyOutputReference extends cdktn.Comple
 }
 export interface RetryConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#retry_mode AwsCodepipeline#retry_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#retry_mode TfCodepipeline#retry_mode}
   */
   readonly retryMode?: string;
 }
@@ -4382,19 +4382,19 @@ export class RetryConfigurationPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface OnFailureProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#result AwsCodepipeline#result}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#result TfCodepipeline#result}
   */
   readonly result?: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#condition AwsCodepipeline#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#condition TfCodepipeline#condition}
   */
   readonly condition?: StageOnFailureConditionProperty;
   /**
   * retry_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#retry_configuration AwsCodepipeline#retry_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#retry_configuration TfCodepipeline#retry_configuration}
   */
   readonly retryConfiguration?: RetryConfigurationProperty;
 }
@@ -4492,19 +4492,19 @@ export class OnFailurePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface StageOnSuccessConditionRuleRuleTypeIdProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#category AwsCodepipeline#category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#category TfCodepipeline#category}
   */
   readonly category: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#owner AwsCodepipeline#owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#owner TfCodepipeline#owner}
   */
   readonly owner?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#provider AwsCodepipeline#provider}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#provider TfCodepipeline#provider}
   */
   readonly provider: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#version AwsCodepipeline#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#version TfCodepipeline#version}
   */
   readonly version?: string;
 }
@@ -4618,37 +4618,37 @@ export class StageOnSuccessConditionRuleRuleTypeIdPropertyOutputReference extend
 }
 export interface StageOnSuccessConditionRuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#commands AwsCodepipeline#commands}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#commands TfCodepipeline#commands}
   */
   readonly commands?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#configuration AwsCodepipeline#configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#configuration TfCodepipeline#configuration}
   */
   readonly configuration?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#input_artifacts AwsCodepipeline#input_artifacts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#input_artifacts TfCodepipeline#input_artifacts}
   */
   readonly inputArtifacts?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#name AwsCodepipeline#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#name TfCodepipeline#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#region AwsCodepipeline#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#region TfCodepipeline#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#role_arn AwsCodepipeline#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#role_arn TfCodepipeline#role_arn}
   */
   readonly roleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#timeout_in_minutes AwsCodepipeline#timeout_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#timeout_in_minutes TfCodepipeline#timeout_in_minutes}
   */
   readonly timeoutInMinutes?: number;
   /**
   * rule_type_id block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#rule_type_id AwsCodepipeline#rule_type_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#rule_type_id TfCodepipeline#rule_type_id}
   */
   readonly ruleTypeId: StageOnSuccessConditionRuleRuleTypeIdProperty;
 }
@@ -4882,13 +4882,13 @@ export class StageOnSuccessConditionRulePropertyList extends cdktn.ComplexList {
 }
 export interface StageOnSuccessConditionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#result AwsCodepipeline#result}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#result TfCodepipeline#result}
   */
   readonly result?: string;
   /**
   * rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#rule AwsCodepipeline#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#rule TfCodepipeline#rule}
   */
   readonly rule: StageOnSuccessConditionRuleProperty[] | cdktn.IResolvable;
 }
@@ -4963,7 +4963,7 @@ export interface OnSuccessProperty {
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#condition AwsCodepipeline#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#condition TfCodepipeline#condition}
   */
   readonly condition: StageOnSuccessConditionProperty;
 }
@@ -5014,31 +5014,31 @@ export class OnSuccessPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface StageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#name AwsCodepipeline#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#name TfCodepipeline#name}
   */
   readonly name: string;
   /**
   * action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#action AwsCodepipeline#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#action TfCodepipeline#action}
   */
   readonly action: ActionProperty[] | cdktn.IResolvable;
   /**
   * before_entry block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#before_entry AwsCodepipeline#before_entry}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#before_entry TfCodepipeline#before_entry}
   */
   readonly beforeEntry?: BeforeEntryProperty;
   /**
   * on_failure block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#on_failure AwsCodepipeline#on_failure}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#on_failure TfCodepipeline#on_failure}
   */
   readonly onFailure?: OnFailureProperty;
   /**
   * on_success block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#on_success AwsCodepipeline#on_success}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#on_success TfCodepipeline#on_success}
   */
   readonly onSuccess?: OnSuccessProperty;
 }
@@ -5206,11 +5206,11 @@ export class StagePropertyList extends cdktn.ComplexList {
 }
 export interface TriggerGitConfigurationPullRequestBranchesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#excludes AwsCodepipeline#excludes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#excludes TfCodepipeline#excludes}
   */
   readonly excludes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#includes AwsCodepipeline#includes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#includes TfCodepipeline#includes}
   */
   readonly includes?: string[];
 }
@@ -5286,11 +5286,11 @@ export class TriggerGitConfigurationPullRequestBranchesPropertyOutputReference e
 }
 export interface TriggerGitConfigurationPullRequestFilePathsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#excludes AwsCodepipeline#excludes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#excludes TfCodepipeline#excludes}
   */
   readonly excludes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#includes AwsCodepipeline#includes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#includes TfCodepipeline#includes}
   */
   readonly includes?: string[];
 }
@@ -5366,19 +5366,19 @@ export class TriggerGitConfigurationPullRequestFilePathsPropertyOutputReference 
 }
 export interface TriggerGitConfigurationPullRequestProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#events AwsCodepipeline#events}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#events TfCodepipeline#events}
   */
   readonly events?: string[];
   /**
   * branches block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#branches AwsCodepipeline#branches}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#branches TfCodepipeline#branches}
   */
   readonly branches?: TriggerGitConfigurationPullRequestBranchesProperty;
   /**
   * file_paths block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#file_paths AwsCodepipeline#file_paths}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#file_paths TfCodepipeline#file_paths}
   */
   readonly filePaths?: TriggerGitConfigurationPullRequestFilePathsProperty;
 }
@@ -5508,11 +5508,11 @@ export class TriggerGitConfigurationPullRequestPropertyList extends cdktn.Comple
 }
 export interface TriggerGitConfigurationPushBranchesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#excludes AwsCodepipeline#excludes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#excludes TfCodepipeline#excludes}
   */
   readonly excludes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#includes AwsCodepipeline#includes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#includes TfCodepipeline#includes}
   */
   readonly includes?: string[];
 }
@@ -5588,11 +5588,11 @@ export class TriggerGitConfigurationPushBranchesPropertyOutputReference extends 
 }
 export interface TriggerGitConfigurationPushFilePathsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#excludes AwsCodepipeline#excludes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#excludes TfCodepipeline#excludes}
   */
   readonly excludes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#includes AwsCodepipeline#includes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#includes TfCodepipeline#includes}
   */
   readonly includes?: string[];
 }
@@ -5668,11 +5668,11 @@ export class TriggerGitConfigurationPushFilePathsPropertyOutputReference extends
 }
 export interface TriggerGitConfigurationPushTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#excludes AwsCodepipeline#excludes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#excludes TfCodepipeline#excludes}
   */
   readonly excludes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#includes AwsCodepipeline#includes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#includes TfCodepipeline#includes}
   */
   readonly includes?: string[];
 }
@@ -5750,19 +5750,19 @@ export interface TriggerGitConfigurationPushProperty {
   /**
   * branches block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#branches AwsCodepipeline#branches}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#branches TfCodepipeline#branches}
   */
   readonly branches?: TriggerGitConfigurationPushBranchesProperty;
   /**
   * file_paths block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#file_paths AwsCodepipeline#file_paths}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#file_paths TfCodepipeline#file_paths}
   */
   readonly filePaths?: TriggerGitConfigurationPushFilePathsProperty;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#tags AwsCodepipeline#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#tags TfCodepipeline#tags}
   */
   readonly tags?: TriggerGitConfigurationPushTagsProperty;
 }
@@ -5892,19 +5892,19 @@ export class TriggerGitConfigurationPushPropertyList extends cdktn.ComplexList {
 }
 export interface TriggerGitConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#source_action_name AwsCodepipeline#source_action_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#source_action_name TfCodepipeline#source_action_name}
   */
   readonly sourceActionName: string;
   /**
   * pull_request block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#pull_request AwsCodepipeline#pull_request}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#pull_request TfCodepipeline#pull_request}
   */
   readonly pullRequest?: TriggerGitConfigurationPullRequestProperty[] | cdktn.IResolvable;
   /**
   * push block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#push AwsCodepipeline#push}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#push TfCodepipeline#push}
   */
   readonly push?: TriggerGitConfigurationPushProperty[] | cdktn.IResolvable;
 }
@@ -5999,13 +5999,13 @@ export class TriggerGitConfigurationPropertyOutputReference extends cdktn.Comple
 }
 export interface TriggerProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#provider_type AwsCodepipeline#provider_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#provider_type TfCodepipeline#provider_type}
   */
   readonly providerType: string;
   /**
   * git_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#git_configuration AwsCodepipeline#git_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#git_configuration TfCodepipeline#git_configuration}
   */
   readonly gitConfiguration: TriggerGitConfigurationProperty;
 }
@@ -6107,15 +6107,15 @@ export class TriggerPropertyList extends cdktn.ComplexList {
 }
 export interface VariableProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#default_value AwsCodepipeline#default_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#default_value TfCodepipeline#default_value}
   */
   readonly defaultValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#description AwsCodepipeline#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#description TfCodepipeline#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#name AwsCodepipeline#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline#name TfCodepipeline#name}
   */
   readonly name: string;
 }

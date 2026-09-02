@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCodedeployDeploymentConfigConfig extends cdktn.TerraformMetaArguments {
+export interface TfDeploymentConfigConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#compute_platform AwsCodedeployDeploymentConfig#compute_platform}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#compute_platform TfDeploymentConfig#compute_platform}
   */
   readonly computePlatform?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#deployment_config_name AwsCodedeployDeploymentConfig#deployment_config_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#deployment_config_name TfDeploymentConfig#deployment_config_name}
   */
   readonly deploymentConfigName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#id AwsCodedeployDeploymentConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#id TfDeploymentConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,33 +24,33 @@ export interface AwsCodedeployDeploymentConfigConfig extends cdktn.TerraformMeta
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#region AwsCodedeployDeploymentConfig#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#region TfDeploymentConfig#region}
   */
   readonly region?: string;
   /**
   * minimum_healthy_hosts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#minimum_healthy_hosts AwsCodedeployDeploymentConfig#minimum_healthy_hosts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#minimum_healthy_hosts TfDeploymentConfig#minimum_healthy_hosts}
   */
-  readonly minimumHealthyHosts?: AwsCodedeployDeploymentConfig.MinimumHealthyHostsProperty;
+  readonly minimumHealthyHosts?: TfDeploymentConfig.MinimumHealthyHostsProperty;
   /**
   * traffic_routing_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#traffic_routing_config AwsCodedeployDeploymentConfig#traffic_routing_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#traffic_routing_config TfDeploymentConfig#traffic_routing_config}
   */
-  readonly trafficRoutingConfig?: AwsCodedeployDeploymentConfig.TrafficRoutingConfigProperty;
+  readonly trafficRoutingConfig?: TfDeploymentConfig.TrafficRoutingConfigProperty;
   /**
   * zonal_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#zonal_config AwsCodedeployDeploymentConfig#zonal_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#zonal_config TfDeploymentConfig#zonal_config}
   */
-  readonly zonalConfig?: AwsCodedeployDeploymentConfig.ZonalConfigProperty;
+  readonly zonalConfig?: TfDeploymentConfig.ZonalConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config aws_codedeploy_deployment_config}
 */
-export class AwsCodedeployDeploymentConfig extends cdktn.TerraformResource {
+export class TfDeploymentConfig extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class AwsCodedeployDeploymentConfig extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCodedeployDeploymentConfig resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDeploymentConfig resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCodedeployDeploymentConfig to import
-  * @param importFromId The id of the existing AwsCodedeployDeploymentConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCodedeployDeploymentConfig to import is found
+  * @param importToId The construct id used in the generated config for the TfDeploymentConfig to import
+  * @param importFromId The id of the existing TfDeploymentConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDeploymentConfig to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_codedeploy_deployment_config", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class AwsCodedeployDeploymentConfig extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCodedeployDeploymentConfigConfig
+  * @param options TfDeploymentConfigConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCodedeployDeploymentConfigConfig) {
+  public constructor(scope: Construct, id: string, config: TfDeploymentConfigConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_codedeploy_deployment_config',
       terraformGeneratorMetadata: {
@@ -183,11 +183,11 @@ export class AwsCodedeployDeploymentConfig extends cdktn.TerraformResource {
   }
 
   // minimum_healthy_hosts - computed: false, optional: true, required: false
-  private _minimumHealthyHosts = new AwsCodedeployDeploymentConfig.MinimumHealthyHostsPropertyOutputReference(this, "minimum_healthy_hosts");
+  private _minimumHealthyHosts = new TfDeploymentConfig.MinimumHealthyHostsPropertyOutputReference(this, "minimum_healthy_hosts");
   public get minimumHealthyHosts() {
     return this._minimumHealthyHosts;
   }
-  public putMinimumHealthyHosts(value: AwsCodedeployDeploymentConfig.MinimumHealthyHostsProperty) {
+  public putMinimumHealthyHosts(value: TfDeploymentConfig.MinimumHealthyHostsProperty) {
     this._minimumHealthyHosts.internalValue = value;
   }
   public resetMinimumHealthyHosts() {
@@ -199,11 +199,11 @@ export class AwsCodedeployDeploymentConfig extends cdktn.TerraformResource {
   }
 
   // traffic_routing_config - computed: false, optional: true, required: false
-  private _trafficRoutingConfig = new AwsCodedeployDeploymentConfig.TrafficRoutingConfigPropertyOutputReference(this, "traffic_routing_config");
+  private _trafficRoutingConfig = new TfDeploymentConfig.TrafficRoutingConfigPropertyOutputReference(this, "traffic_routing_config");
   public get trafficRoutingConfig() {
     return this._trafficRoutingConfig;
   }
-  public putTrafficRoutingConfig(value: AwsCodedeployDeploymentConfig.TrafficRoutingConfigProperty) {
+  public putTrafficRoutingConfig(value: TfDeploymentConfig.TrafficRoutingConfigProperty) {
     this._trafficRoutingConfig.internalValue = value;
   }
   public resetTrafficRoutingConfig() {
@@ -215,11 +215,11 @@ export class AwsCodedeployDeploymentConfig extends cdktn.TerraformResource {
   }
 
   // zonal_config - computed: false, optional: true, required: false
-  private _zonalConfig = new AwsCodedeployDeploymentConfig.ZonalConfigPropertyOutputReference(this, "zonal_config");
+  private _zonalConfig = new TfDeploymentConfig.ZonalConfigPropertyOutputReference(this, "zonal_config");
   public get zonalConfig() {
     return this._zonalConfig;
   }
-  public putZonalConfig(value: AwsCodedeployDeploymentConfig.ZonalConfigProperty) {
+  public putZonalConfig(value: TfDeploymentConfig.ZonalConfigProperty) {
     this._zonalConfig.internalValue = value;
   }
   public resetZonalConfig() {
@@ -240,9 +240,9 @@ export class AwsCodedeployDeploymentConfig extends cdktn.TerraformResource {
       deployment_config_name: cdktn.stringToTerraform(this._deploymentConfigName),
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      minimum_healthy_hosts: awsCodedeployDeploymentConfigMinimumHealthyHostsPropertyToTerraform(this._minimumHealthyHosts.internalValue),
-      traffic_routing_config: awsCodedeployDeploymentConfigTrafficRoutingConfigPropertyToTerraform(this._trafficRoutingConfig.internalValue),
-      zonal_config: awsCodedeployDeploymentConfigZonalConfigPropertyToTerraform(this._zonalConfig.internalValue),
+      minimum_healthy_hosts: tfDeploymentConfigMinimumHealthyHostsPropertyToTerraform(this._minimumHealthyHosts.internalValue),
+      traffic_routing_config: tfDeploymentConfigTrafficRoutingConfigPropertyToTerraform(this._trafficRoutingConfig.internalValue),
+      zonal_config: tfDeploymentConfigZonalConfigPropertyToTerraform(this._zonalConfig.internalValue),
     };
   }
 
@@ -273,22 +273,22 @@ export class AwsCodedeployDeploymentConfig extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       minimum_healthy_hosts: {
-        value: awsCodedeployDeploymentConfigMinimumHealthyHostsPropertyToHclTerraform(this._minimumHealthyHosts.internalValue),
+        value: tfDeploymentConfigMinimumHealthyHostsPropertyToHclTerraform(this._minimumHealthyHosts.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCodedeployDeploymentConfig.MinimumHealthyHostsPropertyList",
+        storageClassType: "TfDeploymentConfig.MinimumHealthyHostsPropertyList",
       },
       traffic_routing_config: {
-        value: awsCodedeployDeploymentConfigTrafficRoutingConfigPropertyToHclTerraform(this._trafficRoutingConfig.internalValue),
+        value: tfDeploymentConfigTrafficRoutingConfigPropertyToHclTerraform(this._trafficRoutingConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCodedeployDeploymentConfig.TrafficRoutingConfigPropertyList",
+        storageClassType: "TfDeploymentConfig.TrafficRoutingConfigPropertyList",
       },
       zonal_config: {
-        value: awsCodedeployDeploymentConfigZonalConfigPropertyToHclTerraform(this._zonalConfig.internalValue),
+        value: tfDeploymentConfigZonalConfigPropertyToHclTerraform(this._zonalConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCodedeployDeploymentConfig.ZonalConfigPropertyList",
+        storageClassType: "TfDeploymentConfig.ZonalConfigPropertyList",
       },
     };
 
@@ -297,7 +297,7 @@ export class AwsCodedeployDeploymentConfig extends cdktn.TerraformResource {
   }
 }
 
-export function awsCodedeployDeploymentConfigMinimumHealthyHostsPropertyToTerraform(struct?: AwsCodedeployDeploymentConfig.MinimumHealthyHostsPropertyOutputReference | AwsCodedeployDeploymentConfig.MinimumHealthyHostsProperty): any {
+export function tfDeploymentConfigMinimumHealthyHostsPropertyToTerraform(struct?: TfDeploymentConfig.MinimumHealthyHostsPropertyOutputReference | TfDeploymentConfig.MinimumHealthyHostsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -309,7 +309,7 @@ export function awsCodedeployDeploymentConfigMinimumHealthyHostsPropertyToTerraf
 }
 
 
-export function awsCodedeployDeploymentConfigMinimumHealthyHostsPropertyToHclTerraform(struct?: AwsCodedeployDeploymentConfig.MinimumHealthyHostsPropertyOutputReference | AwsCodedeployDeploymentConfig.MinimumHealthyHostsProperty): any {
+export function tfDeploymentConfigMinimumHealthyHostsPropertyToHclTerraform(struct?: TfDeploymentConfig.MinimumHealthyHostsPropertyOutputReference | TfDeploymentConfig.MinimumHealthyHostsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -334,7 +334,7 @@ export function awsCodedeployDeploymentConfigMinimumHealthyHostsPropertyToHclTer
 }
 
 
-export function awsCodedeployDeploymentConfigTimeBasedCanaryPropertyToTerraform(struct?: AwsCodedeployDeploymentConfig.TimeBasedCanaryPropertyOutputReference | AwsCodedeployDeploymentConfig.TimeBasedCanaryProperty): any {
+export function tfDeploymentConfigTimeBasedCanaryPropertyToTerraform(struct?: TfDeploymentConfig.TimeBasedCanaryPropertyOutputReference | TfDeploymentConfig.TimeBasedCanaryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -346,7 +346,7 @@ export function awsCodedeployDeploymentConfigTimeBasedCanaryPropertyToTerraform(
 }
 
 
-export function awsCodedeployDeploymentConfigTimeBasedCanaryPropertyToHclTerraform(struct?: AwsCodedeployDeploymentConfig.TimeBasedCanaryPropertyOutputReference | AwsCodedeployDeploymentConfig.TimeBasedCanaryProperty): any {
+export function tfDeploymentConfigTimeBasedCanaryPropertyToHclTerraform(struct?: TfDeploymentConfig.TimeBasedCanaryPropertyOutputReference | TfDeploymentConfig.TimeBasedCanaryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -371,7 +371,7 @@ export function awsCodedeployDeploymentConfigTimeBasedCanaryPropertyToHclTerrafo
 }
 
 
-export function awsCodedeployDeploymentConfigTimeBasedLinearPropertyToTerraform(struct?: AwsCodedeployDeploymentConfig.TimeBasedLinearPropertyOutputReference | AwsCodedeployDeploymentConfig.TimeBasedLinearProperty): any {
+export function tfDeploymentConfigTimeBasedLinearPropertyToTerraform(struct?: TfDeploymentConfig.TimeBasedLinearPropertyOutputReference | TfDeploymentConfig.TimeBasedLinearProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -383,7 +383,7 @@ export function awsCodedeployDeploymentConfigTimeBasedLinearPropertyToTerraform(
 }
 
 
-export function awsCodedeployDeploymentConfigTimeBasedLinearPropertyToHclTerraform(struct?: AwsCodedeployDeploymentConfig.TimeBasedLinearPropertyOutputReference | AwsCodedeployDeploymentConfig.TimeBasedLinearProperty): any {
+export function tfDeploymentConfigTimeBasedLinearPropertyToHclTerraform(struct?: TfDeploymentConfig.TimeBasedLinearPropertyOutputReference | TfDeploymentConfig.TimeBasedLinearProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -408,20 +408,20 @@ export function awsCodedeployDeploymentConfigTimeBasedLinearPropertyToHclTerrafo
 }
 
 
-export function awsCodedeployDeploymentConfigTrafficRoutingConfigPropertyToTerraform(struct?: AwsCodedeployDeploymentConfig.TrafficRoutingConfigPropertyOutputReference | AwsCodedeployDeploymentConfig.TrafficRoutingConfigProperty): any {
+export function tfDeploymentConfigTrafficRoutingConfigPropertyToTerraform(struct?: TfDeploymentConfig.TrafficRoutingConfigPropertyOutputReference | TfDeploymentConfig.TrafficRoutingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     type: cdktn.stringToTerraform(struct!.type),
-    time_based_canary: awsCodedeployDeploymentConfigTimeBasedCanaryPropertyToTerraform(struct!.timeBasedCanary),
-    time_based_linear: awsCodedeployDeploymentConfigTimeBasedLinearPropertyToTerraform(struct!.timeBasedLinear),
+    time_based_canary: tfDeploymentConfigTimeBasedCanaryPropertyToTerraform(struct!.timeBasedCanary),
+    time_based_linear: tfDeploymentConfigTimeBasedLinearPropertyToTerraform(struct!.timeBasedLinear),
   }
 }
 
 
-export function awsCodedeployDeploymentConfigTrafficRoutingConfigPropertyToHclTerraform(struct?: AwsCodedeployDeploymentConfig.TrafficRoutingConfigPropertyOutputReference | AwsCodedeployDeploymentConfig.TrafficRoutingConfigProperty): any {
+export function tfDeploymentConfigTrafficRoutingConfigPropertyToHclTerraform(struct?: TfDeploymentConfig.TrafficRoutingConfigPropertyOutputReference | TfDeploymentConfig.TrafficRoutingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -434,13 +434,13 @@ export function awsCodedeployDeploymentConfigTrafficRoutingConfigPropertyToHclTe
       storageClassType: "string",
     },
     time_based_canary: {
-      value: awsCodedeployDeploymentConfigTimeBasedCanaryPropertyToHclTerraform(struct!.timeBasedCanary),
+      value: tfDeploymentConfigTimeBasedCanaryPropertyToHclTerraform(struct!.timeBasedCanary),
       isBlock: true,
       type: "list",
       storageClassType: "TimeBasedCanaryPropertyList",
     },
     time_based_linear: {
-      value: awsCodedeployDeploymentConfigTimeBasedLinearPropertyToHclTerraform(struct!.timeBasedLinear),
+      value: tfDeploymentConfigTimeBasedLinearPropertyToHclTerraform(struct!.timeBasedLinear),
       isBlock: true,
       type: "list",
       storageClassType: "TimeBasedLinearPropertyList",
@@ -452,7 +452,7 @@ export function awsCodedeployDeploymentConfigTrafficRoutingConfigPropertyToHclTe
 }
 
 
-export function awsCodedeployDeploymentConfigMinimumHealthyHostsPerZonePropertyToTerraform(struct?: AwsCodedeployDeploymentConfig.MinimumHealthyHostsPerZonePropertyOutputReference | AwsCodedeployDeploymentConfig.MinimumHealthyHostsPerZoneProperty): any {
+export function tfDeploymentConfigMinimumHealthyHostsPerZonePropertyToTerraform(struct?: TfDeploymentConfig.MinimumHealthyHostsPerZonePropertyOutputReference | TfDeploymentConfig.MinimumHealthyHostsPerZoneProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -464,7 +464,7 @@ export function awsCodedeployDeploymentConfigMinimumHealthyHostsPerZonePropertyT
 }
 
 
-export function awsCodedeployDeploymentConfigMinimumHealthyHostsPerZonePropertyToHclTerraform(struct?: AwsCodedeployDeploymentConfig.MinimumHealthyHostsPerZonePropertyOutputReference | AwsCodedeployDeploymentConfig.MinimumHealthyHostsPerZoneProperty): any {
+export function tfDeploymentConfigMinimumHealthyHostsPerZonePropertyToHclTerraform(struct?: TfDeploymentConfig.MinimumHealthyHostsPerZonePropertyOutputReference | TfDeploymentConfig.MinimumHealthyHostsPerZoneProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -489,7 +489,7 @@ export function awsCodedeployDeploymentConfigMinimumHealthyHostsPerZonePropertyT
 }
 
 
-export function awsCodedeployDeploymentConfigZonalConfigPropertyToTerraform(struct?: AwsCodedeployDeploymentConfig.ZonalConfigPropertyOutputReference | AwsCodedeployDeploymentConfig.ZonalConfigProperty): any {
+export function tfDeploymentConfigZonalConfigPropertyToTerraform(struct?: TfDeploymentConfig.ZonalConfigPropertyOutputReference | TfDeploymentConfig.ZonalConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -497,12 +497,12 @@ export function awsCodedeployDeploymentConfigZonalConfigPropertyToTerraform(stru
   return {
     first_zone_monitor_duration_in_seconds: cdktn.numberToTerraform(struct!.firstZoneMonitorDurationInSeconds),
     monitor_duration_in_seconds: cdktn.numberToTerraform(struct!.monitorDurationInSeconds),
-    minimum_healthy_hosts_per_zone: awsCodedeployDeploymentConfigMinimumHealthyHostsPerZonePropertyToTerraform(struct!.minimumHealthyHostsPerZone),
+    minimum_healthy_hosts_per_zone: tfDeploymentConfigMinimumHealthyHostsPerZonePropertyToTerraform(struct!.minimumHealthyHostsPerZone),
   }
 }
 
 
-export function awsCodedeployDeploymentConfigZonalConfigPropertyToHclTerraform(struct?: AwsCodedeployDeploymentConfig.ZonalConfigPropertyOutputReference | AwsCodedeployDeploymentConfig.ZonalConfigProperty): any {
+export function tfDeploymentConfigZonalConfigPropertyToHclTerraform(struct?: TfDeploymentConfig.ZonalConfigPropertyOutputReference | TfDeploymentConfig.ZonalConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -521,7 +521,7 @@ export function awsCodedeployDeploymentConfigZonalConfigPropertyToHclTerraform(s
       storageClassType: "number",
     },
     minimum_healthy_hosts_per_zone: {
-      value: awsCodedeployDeploymentConfigMinimumHealthyHostsPerZonePropertyToHclTerraform(struct!.minimumHealthyHostsPerZone),
+      value: tfDeploymentConfigMinimumHealthyHostsPerZonePropertyToHclTerraform(struct!.minimumHealthyHostsPerZone),
       isBlock: true,
       type: "list",
       storageClassType: "MinimumHealthyHostsPerZonePropertyList",
@@ -533,14 +533,14 @@ export function awsCodedeployDeploymentConfigZonalConfigPropertyToHclTerraform(s
 }
 
 
-export namespace AwsCodedeployDeploymentConfig {
+export namespace TfDeploymentConfig {
 export interface MinimumHealthyHostsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#type AwsCodedeployDeploymentConfig#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#type TfDeploymentConfig#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#value AwsCodedeployDeploymentConfig#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#value TfDeploymentConfig#value}
   */
   readonly value?: number;
 }
@@ -616,11 +616,11 @@ export class MinimumHealthyHostsPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface TimeBasedCanaryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#interval AwsCodedeployDeploymentConfig#interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#interval TfDeploymentConfig#interval}
   */
   readonly interval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#percentage AwsCodedeployDeploymentConfig#percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#percentage TfDeploymentConfig#percentage}
   */
   readonly percentage?: number;
 }
@@ -696,11 +696,11 @@ export class TimeBasedCanaryPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface TimeBasedLinearProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#interval AwsCodedeployDeploymentConfig#interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#interval TfDeploymentConfig#interval}
   */
   readonly interval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#percentage AwsCodedeployDeploymentConfig#percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#percentage TfDeploymentConfig#percentage}
   */
   readonly percentage?: number;
 }
@@ -776,19 +776,19 @@ export class TimeBasedLinearPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface TrafficRoutingConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#type AwsCodedeployDeploymentConfig#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#type TfDeploymentConfig#type}
   */
   readonly type?: string;
   /**
   * time_based_canary block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#time_based_canary AwsCodedeployDeploymentConfig#time_based_canary}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#time_based_canary TfDeploymentConfig#time_based_canary}
   */
   readonly timeBasedCanary?: TimeBasedCanaryProperty;
   /**
   * time_based_linear block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#time_based_linear AwsCodedeployDeploymentConfig#time_based_linear}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#time_based_linear TfDeploymentConfig#time_based_linear}
   */
   readonly timeBasedLinear?: TimeBasedLinearProperty;
 }
@@ -886,11 +886,11 @@ export class TrafficRoutingConfigPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface MinimumHealthyHostsPerZoneProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#type AwsCodedeployDeploymentConfig#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#type TfDeploymentConfig#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#value AwsCodedeployDeploymentConfig#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#value TfDeploymentConfig#value}
   */
   readonly value?: number;
 }
@@ -966,17 +966,17 @@ export class MinimumHealthyHostsPerZonePropertyOutputReference extends cdktn.Com
 }
 export interface ZonalConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#first_zone_monitor_duration_in_seconds AwsCodedeployDeploymentConfig#first_zone_monitor_duration_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#first_zone_monitor_duration_in_seconds TfDeploymentConfig#first_zone_monitor_duration_in_seconds}
   */
   readonly firstZoneMonitorDurationInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#monitor_duration_in_seconds AwsCodedeployDeploymentConfig#monitor_duration_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#monitor_duration_in_seconds TfDeploymentConfig#monitor_duration_in_seconds}
   */
   readonly monitorDurationInSeconds?: number;
   /**
   * minimum_healthy_hosts_per_zone block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#minimum_healthy_hosts_per_zone AwsCodedeployDeploymentConfig#minimum_healthy_hosts_per_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_config#minimum_healthy_hosts_per_zone TfDeploymentConfig#minimum_healthy_hosts_per_zone}
   */
   readonly minimumHealthyHostsPerZone?: MinimumHealthyHostsPerZoneProperty;
 }

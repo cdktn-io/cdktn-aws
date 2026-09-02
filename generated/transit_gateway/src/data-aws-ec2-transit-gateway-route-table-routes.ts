@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsEc2TransitGatewayRouteTableRoutesConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataTransitGatewayRouteTableRoutesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_routes#id DataAwsEc2TransitGatewayRouteTableRoutes#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_routes#id TfDataTransitGatewayRouteTableRoutes#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,25 +16,25 @@ export interface DataAwsEc2TransitGatewayRouteTableRoutesConfig extends cdktn.Te
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_routes#region DataAwsEc2TransitGatewayRouteTableRoutes#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_routes#region TfDataTransitGatewayRouteTableRoutes#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_routes#transit_gateway_route_table_id DataAwsEc2TransitGatewayRouteTableRoutes#transit_gateway_route_table_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_routes#transit_gateway_route_table_id TfDataTransitGatewayRouteTableRoutes#transit_gateway_route_table_id}
   */
   readonly transitGatewayRouteTableId: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_routes#filter DataAwsEc2TransitGatewayRouteTableRoutes#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_routes#filter TfDataTransitGatewayRouteTableRoutes#filter}
   */
-  readonly filter: DataAwsEc2TransitGatewayRouteTableRoutes.FilterProperty[] | cdktn.IResolvable;
+  readonly filter: TfDataTransitGatewayRouteTableRoutes.FilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_routes aws_ec2_transit_gateway_route_table_routes}
 */
-export class DataAwsEc2TransitGatewayRouteTableRoutes extends cdktn.TerraformDataSource {
+export class TfDataTransitGatewayRouteTableRoutes extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class DataAwsEc2TransitGatewayRouteTableRoutes extends cdktn.TerraformDat
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsEc2TransitGatewayRouteTableRoutes resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataTransitGatewayRouteTableRoutes resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsEc2TransitGatewayRouteTableRoutes to import
-  * @param importFromId The id of the existing DataAwsEc2TransitGatewayRouteTableRoutes that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_routes#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsEc2TransitGatewayRouteTableRoutes to import is found
+  * @param importToId The construct id used in the generated config for the TfDataTransitGatewayRouteTableRoutes to import
+  * @param importFromId The id of the existing TfDataTransitGatewayRouteTableRoutes that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_routes#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataTransitGatewayRouteTableRoutes to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_transit_gateway_route_table_routes", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class DataAwsEc2TransitGatewayRouteTableRoutes extends cdktn.TerraformDat
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsEc2TransitGatewayRouteTableRoutesConfig
+  * @param options TfDataTransitGatewayRouteTableRoutesConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsEc2TransitGatewayRouteTableRoutesConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataTransitGatewayRouteTableRoutesConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_transit_gateway_route_table_routes',
       terraformGeneratorMetadata: {
@@ -125,7 +125,7 @@ export class DataAwsEc2TransitGatewayRouteTableRoutes extends cdktn.TerraformDat
   }
 
   // routes - computed: true, optional: false, required: false
-  private _routes = new DataAwsEc2TransitGatewayRouteTableRoutes.RoutesPropertyList(this, "routes", false);
+  private _routes = new TfDataTransitGatewayRouteTableRoutes.RoutesPropertyList(this, "routes", false);
   public get routes() {
     return this._routes;
   }
@@ -144,11 +144,11 @@ export class DataAwsEc2TransitGatewayRouteTableRoutes extends cdktn.TerraformDat
   }
 
   // filter - computed: false, optional: false, required: true
-  private _filter = new DataAwsEc2TransitGatewayRouteTableRoutes.FilterPropertyList(this, "filter", true);
+  private _filter = new TfDataTransitGatewayRouteTableRoutes.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataAwsEc2TransitGatewayRouteTableRoutes.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: TfDataTransitGatewayRouteTableRoutes.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -165,7 +165,7 @@ export class DataAwsEc2TransitGatewayRouteTableRoutes extends cdktn.TerraformDat
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       transit_gateway_route_table_id: cdktn.stringToTerraform(this._transitGatewayRouteTableId),
-      filter: cdktn.listMapper(dataAwsEc2TransitGatewayRouteTableRoutesFilterPropertyToTerraform, true)(this._filter.internalValue),
+      filter: cdktn.listMapper(tfDataTransitGatewayRouteTableRoutesFilterPropertyToTerraform, true)(this._filter.internalValue),
     };
   }
 
@@ -190,10 +190,10 @@ export class DataAwsEc2TransitGatewayRouteTableRoutes extends cdktn.TerraformDat
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataAwsEc2TransitGatewayRouteTableRoutesFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(tfDataTransitGatewayRouteTableRoutesFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataAwsEc2TransitGatewayRouteTableRoutes.FilterPropertyList",
+        storageClassType: "TfDataTransitGatewayRouteTableRoutes.FilterPropertyList",
       },
     };
 
@@ -202,7 +202,7 @@ export class DataAwsEc2TransitGatewayRouteTableRoutes extends cdktn.TerraformDat
   }
 }
 
-export function dataAwsEc2TransitGatewayRouteTableRoutesRoutesPropertyToTerraform(struct?: DataAwsEc2TransitGatewayRouteTableRoutes.RoutesProperty): any {
+export function tfDataTransitGatewayRouteTableRoutesRoutesPropertyToTerraform(struct?: TfDataTransitGatewayRouteTableRoutes.RoutesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -212,7 +212,7 @@ export function dataAwsEc2TransitGatewayRouteTableRoutesRoutesPropertyToTerrafor
 }
 
 
-export function dataAwsEc2TransitGatewayRouteTableRoutesRoutesPropertyToHclTerraform(struct?: DataAwsEc2TransitGatewayRouteTableRoutes.RoutesProperty): any {
+export function tfDataTransitGatewayRouteTableRoutesRoutesPropertyToHclTerraform(struct?: TfDataTransitGatewayRouteTableRoutes.RoutesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -223,7 +223,7 @@ export function dataAwsEc2TransitGatewayRouteTableRoutesRoutesPropertyToHclTerra
 }
 
 
-export function dataAwsEc2TransitGatewayRouteTableRoutesFilterPropertyToTerraform(struct?: DataAwsEc2TransitGatewayRouteTableRoutes.FilterProperty | cdktn.IResolvable): any {
+export function tfDataTransitGatewayRouteTableRoutesFilterPropertyToTerraform(struct?: TfDataTransitGatewayRouteTableRoutes.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -235,7 +235,7 @@ export function dataAwsEc2TransitGatewayRouteTableRoutesFilterPropertyToTerrafor
 }
 
 
-export function dataAwsEc2TransitGatewayRouteTableRoutesFilterPropertyToHclTerraform(struct?: DataAwsEc2TransitGatewayRouteTableRoutes.FilterProperty | cdktn.IResolvable): any {
+export function tfDataTransitGatewayRouteTableRoutesFilterPropertyToHclTerraform(struct?: TfDataTransitGatewayRouteTableRoutes.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -260,7 +260,7 @@ export function dataAwsEc2TransitGatewayRouteTableRoutesFilterPropertyToHclTerra
 }
 
 
-export namespace DataAwsEc2TransitGatewayRouteTableRoutes {
+export namespace TfDataTransitGatewayRouteTableRoutes {
 export interface RoutesProperty {
 }
 export class RoutesPropertyOutputReference extends cdktn.ComplexObject {
@@ -337,11 +337,11 @@ export class RoutesPropertyList extends cdktn.ComplexList {
 }
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_routes#name DataAwsEc2TransitGatewayRouteTableRoutes#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_routes#name TfDataTransitGatewayRouteTableRoutes#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_routes#values DataAwsEc2TransitGatewayRouteTableRoutes#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_route_table_routes#values TfDataTransitGatewayRouteTableRoutes#values}
   */
   readonly values: string[];
 }

@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsEcsContainerDefinitionConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataContainerDefinitionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_container_definition#container_name DataAwsEcsContainerDefinition#container_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_container_definition#container_name TfDataContainerDefinition#container_name}
   */
   readonly containerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_container_definition#id DataAwsEcsContainerDefinition#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_container_definition#id TfDataContainerDefinition#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,11 +20,11 @@ export interface DataAwsEcsContainerDefinitionConfig extends cdktn.TerraformMeta
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_container_definition#region DataAwsEcsContainerDefinition#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_container_definition#region TfDataContainerDefinition#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_container_definition#task_definition DataAwsEcsContainerDefinition#task_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_container_definition#task_definition TfDataContainerDefinition#task_definition}
   */
   readonly taskDefinition: string;
 }
@@ -32,7 +32,7 @@ export interface DataAwsEcsContainerDefinitionConfig extends cdktn.TerraformMeta
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_container_definition aws_ecs_container_definition}
 */
-export class DataAwsEcsContainerDefinition extends cdktn.TerraformDataSource {
+export class TfDataContainerDefinition extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class DataAwsEcsContainerDefinition extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsEcsContainerDefinition resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataContainerDefinition resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsEcsContainerDefinition to import
-  * @param importFromId The id of the existing DataAwsEcsContainerDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_container_definition#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsEcsContainerDefinition to import is found
+  * @param importToId The construct id used in the generated config for the TfDataContainerDefinition to import
+  * @param importFromId The id of the existing TfDataContainerDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_container_definition#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataContainerDefinition to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ecs_container_definition", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class DataAwsEcsContainerDefinition extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsEcsContainerDefinitionConfig
+  * @param options TfDataContainerDefinitionConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsEcsContainerDefinitionConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataContainerDefinitionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ecs_container_definition',
       terraformGeneratorMetadata: {

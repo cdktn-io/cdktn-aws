@@ -5,40 +5,40 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsIdentitystoreGroupConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group#group_id DataAwsIdentitystoreGroup#group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group#group_id TfDataGroup#group_id}
   */
   readonly groupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group#id DataAwsIdentitystoreGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group#id TfDataGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group#identity_store_id DataAwsIdentitystoreGroup#identity_store_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group#identity_store_id TfDataGroup#identity_store_id}
   */
   readonly identityStoreId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group#region DataAwsIdentitystoreGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group#region TfDataGroup#region}
   */
   readonly region?: string;
   /**
   * alternate_identifier block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group#alternate_identifier DataAwsIdentitystoreGroup#alternate_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group#alternate_identifier TfDataGroup#alternate_identifier}
   */
-  readonly alternateIdentifier?: DataAwsIdentitystoreGroup.AlternateIdentifierProperty;
+  readonly alternateIdentifier?: TfDataGroup.AlternateIdentifierProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group aws_identitystore_group}
 */
-export class DataAwsIdentitystoreGroup extends cdktn.TerraformDataSource {
+export class TfDataGroup extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class DataAwsIdentitystoreGroup extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsIdentitystoreGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsIdentitystoreGroup to import
-  * @param importFromId The id of the existing DataAwsIdentitystoreGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsIdentitystoreGroup to import is found
+  * @param importToId The construct id used in the generated config for the TfDataGroup to import
+  * @param importFromId The id of the existing TfDataGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_identitystore_group", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class DataAwsIdentitystoreGroup extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsIdentitystoreGroupConfig
+  * @param options TfDataGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsIdentitystoreGroupConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_identitystore_group',
       terraformGeneratorMetadata: {
@@ -108,7 +108,7 @@ export class DataAwsIdentitystoreGroup extends cdktn.TerraformDataSource {
   }
 
   // external_ids - computed: true, optional: false, required: false
-  private _externalIds = new DataAwsIdentitystoreGroup.ExternalIdsPropertyList(this, "external_ids", false);
+  private _externalIds = new TfDataGroup.ExternalIdsPropertyList(this, "external_ids", false);
   public get externalIds() {
     return this._externalIds;
   }
@@ -175,11 +175,11 @@ export class DataAwsIdentitystoreGroup extends cdktn.TerraformDataSource {
   }
 
   // alternate_identifier - computed: false, optional: true, required: false
-  private _alternateIdentifier = new DataAwsIdentitystoreGroup.AlternateIdentifierPropertyOutputReference(this, "alternate_identifier");
+  private _alternateIdentifier = new TfDataGroup.AlternateIdentifierPropertyOutputReference(this, "alternate_identifier");
   public get alternateIdentifier() {
     return this._alternateIdentifier;
   }
-  public putAlternateIdentifier(value: DataAwsIdentitystoreGroup.AlternateIdentifierProperty) {
+  public putAlternateIdentifier(value: TfDataGroup.AlternateIdentifierProperty) {
     this._alternateIdentifier.internalValue = value;
   }
   public resetAlternateIdentifier() {
@@ -200,7 +200,7 @@ export class DataAwsIdentitystoreGroup extends cdktn.TerraformDataSource {
       id: cdktn.stringToTerraform(this._id),
       identity_store_id: cdktn.stringToTerraform(this._identityStoreId),
       region: cdktn.stringToTerraform(this._region),
-      alternate_identifier: dataAwsIdentitystoreGroupAlternateIdentifierPropertyToTerraform(this._alternateIdentifier.internalValue),
+      alternate_identifier: tfDataGroupAlternateIdentifierPropertyToTerraform(this._alternateIdentifier.internalValue),
     };
   }
 
@@ -231,10 +231,10 @@ export class DataAwsIdentitystoreGroup extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       alternate_identifier: {
-        value: dataAwsIdentitystoreGroupAlternateIdentifierPropertyToHclTerraform(this._alternateIdentifier.internalValue),
+        value: tfDataGroupAlternateIdentifierPropertyToHclTerraform(this._alternateIdentifier.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "DataAwsIdentitystoreGroup.AlternateIdentifierPropertyList",
+        storageClassType: "TfDataGroup.AlternateIdentifierPropertyList",
       },
     };
 
@@ -243,7 +243,7 @@ export class DataAwsIdentitystoreGroup extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsIdentitystoreGroupExternalIdsPropertyToTerraform(struct?: DataAwsIdentitystoreGroup.ExternalIdsProperty): any {
+export function tfDataGroupExternalIdsPropertyToTerraform(struct?: TfDataGroup.ExternalIdsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -253,7 +253,7 @@ export function dataAwsIdentitystoreGroupExternalIdsPropertyToTerraform(struct?:
 }
 
 
-export function dataAwsIdentitystoreGroupExternalIdsPropertyToHclTerraform(struct?: DataAwsIdentitystoreGroup.ExternalIdsProperty): any {
+export function tfDataGroupExternalIdsPropertyToHclTerraform(struct?: TfDataGroup.ExternalIdsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -264,7 +264,7 @@ export function dataAwsIdentitystoreGroupExternalIdsPropertyToHclTerraform(struc
 }
 
 
-export function dataAwsIdentitystoreGroupExternalIdPropertyToTerraform(struct?: DataAwsIdentitystoreGroup.ExternalIdPropertyOutputReference | DataAwsIdentitystoreGroup.ExternalIdProperty): any {
+export function tfDataGroupExternalIdPropertyToTerraform(struct?: TfDataGroup.ExternalIdPropertyOutputReference | TfDataGroup.ExternalIdProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -276,7 +276,7 @@ export function dataAwsIdentitystoreGroupExternalIdPropertyToTerraform(struct?: 
 }
 
 
-export function dataAwsIdentitystoreGroupExternalIdPropertyToHclTerraform(struct?: DataAwsIdentitystoreGroup.ExternalIdPropertyOutputReference | DataAwsIdentitystoreGroup.ExternalIdProperty): any {
+export function tfDataGroupExternalIdPropertyToHclTerraform(struct?: TfDataGroup.ExternalIdPropertyOutputReference | TfDataGroup.ExternalIdProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -301,7 +301,7 @@ export function dataAwsIdentitystoreGroupExternalIdPropertyToHclTerraform(struct
 }
 
 
-export function dataAwsIdentitystoreGroupUniqueAttributePropertyToTerraform(struct?: DataAwsIdentitystoreGroup.UniqueAttributePropertyOutputReference | DataAwsIdentitystoreGroup.UniqueAttributeProperty): any {
+export function tfDataGroupUniqueAttributePropertyToTerraform(struct?: TfDataGroup.UniqueAttributePropertyOutputReference | TfDataGroup.UniqueAttributeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -313,7 +313,7 @@ export function dataAwsIdentitystoreGroupUniqueAttributePropertyToTerraform(stru
 }
 
 
-export function dataAwsIdentitystoreGroupUniqueAttributePropertyToHclTerraform(struct?: DataAwsIdentitystoreGroup.UniqueAttributePropertyOutputReference | DataAwsIdentitystoreGroup.UniqueAttributeProperty): any {
+export function tfDataGroupUniqueAttributePropertyToHclTerraform(struct?: TfDataGroup.UniqueAttributePropertyOutputReference | TfDataGroup.UniqueAttributeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -338,32 +338,32 @@ export function dataAwsIdentitystoreGroupUniqueAttributePropertyToHclTerraform(s
 }
 
 
-export function dataAwsIdentitystoreGroupAlternateIdentifierPropertyToTerraform(struct?: DataAwsIdentitystoreGroup.AlternateIdentifierPropertyOutputReference | DataAwsIdentitystoreGroup.AlternateIdentifierProperty): any {
+export function tfDataGroupAlternateIdentifierPropertyToTerraform(struct?: TfDataGroup.AlternateIdentifierPropertyOutputReference | TfDataGroup.AlternateIdentifierProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    external_id: dataAwsIdentitystoreGroupExternalIdPropertyToTerraform(struct!.externalId),
-    unique_attribute: dataAwsIdentitystoreGroupUniqueAttributePropertyToTerraform(struct!.uniqueAttribute),
+    external_id: tfDataGroupExternalIdPropertyToTerraform(struct!.externalId),
+    unique_attribute: tfDataGroupUniqueAttributePropertyToTerraform(struct!.uniqueAttribute),
   }
 }
 
 
-export function dataAwsIdentitystoreGroupAlternateIdentifierPropertyToHclTerraform(struct?: DataAwsIdentitystoreGroup.AlternateIdentifierPropertyOutputReference | DataAwsIdentitystoreGroup.AlternateIdentifierProperty): any {
+export function tfDataGroupAlternateIdentifierPropertyToHclTerraform(struct?: TfDataGroup.AlternateIdentifierPropertyOutputReference | TfDataGroup.AlternateIdentifierProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     external_id: {
-      value: dataAwsIdentitystoreGroupExternalIdPropertyToHclTerraform(struct!.externalId),
+      value: tfDataGroupExternalIdPropertyToHclTerraform(struct!.externalId),
       isBlock: true,
       type: "list",
       storageClassType: "ExternalIdPropertyList",
     },
     unique_attribute: {
-      value: dataAwsIdentitystoreGroupUniqueAttributePropertyToHclTerraform(struct!.uniqueAttribute),
+      value: tfDataGroupUniqueAttributePropertyToHclTerraform(struct!.uniqueAttribute),
       isBlock: true,
       type: "list",
       storageClassType: "UniqueAttributePropertyList",
@@ -375,7 +375,7 @@ export function dataAwsIdentitystoreGroupAlternateIdentifierPropertyToHclTerrafo
 }
 
 
-export namespace DataAwsIdentitystoreGroup {
+export namespace TfDataGroup {
 export interface ExternalIdsProperty {
 }
 export class ExternalIdsPropertyOutputReference extends cdktn.ComplexObject {
@@ -437,14 +437,14 @@ export class ExternalIdsPropertyList extends cdktn.ComplexList {
 }
 export interface ExternalIdProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group#id DataAwsIdentitystoreGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group#id TfDataGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group#issuer DataAwsIdentitystoreGroup#issuer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group#issuer TfDataGroup#issuer}
   */
   readonly issuer: string;
 }
@@ -514,11 +514,11 @@ export class ExternalIdPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface UniqueAttributeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group#attribute_path DataAwsIdentitystoreGroup#attribute_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group#attribute_path TfDataGroup#attribute_path}
   */
   readonly attributePath: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group#attribute_value DataAwsIdentitystoreGroup#attribute_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group#attribute_value TfDataGroup#attribute_value}
   */
   readonly attributeValue: string;
 }
@@ -590,13 +590,13 @@ export interface AlternateIdentifierProperty {
   /**
   * external_id block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group#external_id DataAwsIdentitystoreGroup#external_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group#external_id TfDataGroup#external_id}
   */
   readonly externalId?: ExternalIdProperty;
   /**
   * unique_attribute block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group#unique_attribute DataAwsIdentitystoreGroup#unique_attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_group#unique_attribute TfDataGroup#unique_attribute}
   */
   readonly uniqueAttribute?: UniqueAttributeProperty;
 }

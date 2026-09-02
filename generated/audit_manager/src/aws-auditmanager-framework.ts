@@ -5,41 +5,41 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsAuditmanagerFrameworkConfig extends cdktn.TerraformMetaArguments {
+export interface TfFrameworkConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#compliance_type AwsAuditmanagerFramework#compliance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#compliance_type TfFramework#compliance_type}
   */
   readonly complianceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#description AwsAuditmanagerFramework#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#description TfFramework#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#name AwsAuditmanagerFramework#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#name TfFramework#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#region AwsAuditmanagerFramework#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#region TfFramework#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#tags AwsAuditmanagerFramework#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#tags TfFramework#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * control_sets block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#control_sets AwsAuditmanagerFramework#control_sets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#control_sets TfFramework#control_sets}
   */
-  readonly controlSets?: AwsAuditmanagerFramework.ControlSetsProperty[] | cdktn.IResolvable;
+  readonly controlSets?: TfFramework.ControlSetsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework aws_auditmanager_framework}
 */
-export class AwsAuditmanagerFramework extends cdktn.TerraformResource {
+export class TfFramework extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -50,11 +50,11 @@ export class AwsAuditmanagerFramework extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsAuditmanagerFramework resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfFramework resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsAuditmanagerFramework to import
-  * @param importFromId The id of the existing AwsAuditmanagerFramework that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsAuditmanagerFramework to import is found
+  * @param importToId The construct id used in the generated config for the TfFramework to import
+  * @param importFromId The id of the existing TfFramework that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfFramework to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_auditmanager_framework", importId: importFromId, provider });
@@ -69,9 +69,9 @@ export class AwsAuditmanagerFramework extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsAuditmanagerFrameworkConfig
+  * @param options TfFrameworkConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsAuditmanagerFrameworkConfig) {
+  public constructor(scope: Construct, id: string, config: TfFrameworkConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_auditmanager_framework',
       terraformGeneratorMetadata: {
@@ -198,11 +198,11 @@ export class AwsAuditmanagerFramework extends cdktn.TerraformResource {
   }
 
   // control_sets - computed: false, optional: true, required: false
-  private _controlSets = new AwsAuditmanagerFramework.ControlSetsPropertyList(this, "control_sets", true);
+  private _controlSets = new TfFramework.ControlSetsPropertyList(this, "control_sets", true);
   public get controlSets() {
     return this._controlSets;
   }
-  public putControlSets(value: AwsAuditmanagerFramework.ControlSetsProperty[] | cdktn.IResolvable) {
+  public putControlSets(value: TfFramework.ControlSetsProperty[] | cdktn.IResolvable) {
     this._controlSets.internalValue = value;
   }
   public resetControlSets() {
@@ -224,7 +224,7 @@ export class AwsAuditmanagerFramework extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      control_sets: cdktn.listMapper(awsAuditmanagerFrameworkControlSetsPropertyToTerraform, true)(this._controlSets.internalValue),
+      control_sets: cdktn.listMapper(tfFrameworkControlSetsPropertyToTerraform, true)(this._controlSets.internalValue),
     };
   }
 
@@ -261,10 +261,10 @@ export class AwsAuditmanagerFramework extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       control_sets: {
-        value: cdktn.listMapperHcl(awsAuditmanagerFrameworkControlSetsPropertyToHclTerraform, true)(this._controlSets.internalValue),
+        value: cdktn.listMapperHcl(tfFrameworkControlSetsPropertyToHclTerraform, true)(this._controlSets.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsAuditmanagerFramework.ControlSetsPropertyList",
+        storageClassType: "TfFramework.ControlSetsPropertyList",
       },
     };
 
@@ -273,7 +273,7 @@ export class AwsAuditmanagerFramework extends cdktn.TerraformResource {
   }
 }
 
-export function awsAuditmanagerFrameworkControlsPropertyToTerraform(struct?: AwsAuditmanagerFramework.ControlsProperty | cdktn.IResolvable): any {
+export function tfFrameworkControlsPropertyToTerraform(struct?: TfFramework.ControlsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -284,7 +284,7 @@ export function awsAuditmanagerFrameworkControlsPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsAuditmanagerFrameworkControlsPropertyToHclTerraform(struct?: AwsAuditmanagerFramework.ControlsProperty | cdktn.IResolvable): any {
+export function tfFrameworkControlsPropertyToHclTerraform(struct?: TfFramework.ControlsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -303,19 +303,19 @@ export function awsAuditmanagerFrameworkControlsPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsAuditmanagerFrameworkControlSetsPropertyToTerraform(struct?: AwsAuditmanagerFramework.ControlSetsProperty | cdktn.IResolvable): any {
+export function tfFrameworkControlSetsPropertyToTerraform(struct?: TfFramework.ControlSetsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     name: cdktn.stringToTerraform(struct!.name),
-    controls: cdktn.listMapper(awsAuditmanagerFrameworkControlsPropertyToTerraform, true)(struct!.controls),
+    controls: cdktn.listMapper(tfFrameworkControlsPropertyToTerraform, true)(struct!.controls),
   }
 }
 
 
-export function awsAuditmanagerFrameworkControlSetsPropertyToHclTerraform(struct?: AwsAuditmanagerFramework.ControlSetsProperty | cdktn.IResolvable): any {
+export function tfFrameworkControlSetsPropertyToHclTerraform(struct?: TfFramework.ControlSetsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -328,7 +328,7 @@ export function awsAuditmanagerFrameworkControlSetsPropertyToHclTerraform(struct
       storageClassType: "string",
     },
     controls: {
-      value: cdktn.listMapperHcl(awsAuditmanagerFrameworkControlsPropertyToHclTerraform, true)(struct!.controls),
+      value: cdktn.listMapperHcl(tfFrameworkControlsPropertyToHclTerraform, true)(struct!.controls),
       isBlock: true,
       type: "set",
       storageClassType: "ControlsPropertyList",
@@ -340,10 +340,10 @@ export function awsAuditmanagerFrameworkControlSetsPropertyToHclTerraform(struct
 }
 
 
-export namespace AwsAuditmanagerFramework {
+export namespace TfFramework {
 export interface ControlsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#id AwsAuditmanagerFramework#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#id TfFramework#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -429,13 +429,13 @@ export class ControlsPropertyList extends cdktn.ComplexList {
 }
 export interface ControlSetsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#name AwsAuditmanagerFramework#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#name TfFramework#name}
   */
   readonly name: string;
   /**
   * controls block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#controls AwsAuditmanagerFramework#controls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#controls TfFramework#controls}
   */
   readonly controls?: ControlsProperty[] | cdktn.IResolvable;
 }

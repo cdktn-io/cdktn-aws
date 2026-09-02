@@ -5,156 +5,156 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsFsxLustreFileSystemConfig extends cdktn.TerraformMetaArguments {
+export interface TfLustreFileSystemConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#auto_import_policy AwsFsxLustreFileSystem#auto_import_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#auto_import_policy TfLustreFileSystem#auto_import_policy}
   */
   readonly autoImportPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#automatic_backup_retention_days AwsFsxLustreFileSystem#automatic_backup_retention_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#automatic_backup_retention_days TfLustreFileSystem#automatic_backup_retention_days}
   */
   readonly automaticBackupRetentionDays?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#backup_id AwsFsxLustreFileSystem#backup_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#backup_id TfLustreFileSystem#backup_id}
   */
   readonly backupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#copy_tags_to_backups AwsFsxLustreFileSystem#copy_tags_to_backups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#copy_tags_to_backups TfLustreFileSystem#copy_tags_to_backups}
   */
   readonly copyTagsToBackups?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#daily_automatic_backup_start_time AwsFsxLustreFileSystem#daily_automatic_backup_start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#daily_automatic_backup_start_time TfLustreFileSystem#daily_automatic_backup_start_time}
   */
   readonly dailyAutomaticBackupStartTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#data_compression_type AwsFsxLustreFileSystem#data_compression_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#data_compression_type TfLustreFileSystem#data_compression_type}
   */
   readonly dataCompressionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#deployment_type AwsFsxLustreFileSystem#deployment_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#deployment_type TfLustreFileSystem#deployment_type}
   */
   readonly deploymentType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#drive_cache_type AwsFsxLustreFileSystem#drive_cache_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#drive_cache_type TfLustreFileSystem#drive_cache_type}
   */
   readonly driveCacheType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#efa_enabled AwsFsxLustreFileSystem#efa_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#efa_enabled TfLustreFileSystem#efa_enabled}
   */
   readonly efaEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#export_path AwsFsxLustreFileSystem#export_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#export_path TfLustreFileSystem#export_path}
   */
   readonly exportPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#file_system_type_version AwsFsxLustreFileSystem#file_system_type_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#file_system_type_version TfLustreFileSystem#file_system_type_version}
   */
   readonly fileSystemTypeVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#final_backup_tags AwsFsxLustreFileSystem#final_backup_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#final_backup_tags TfLustreFileSystem#final_backup_tags}
   */
   readonly finalBackupTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#id AwsFsxLustreFileSystem#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#id TfLustreFileSystem#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#import_path AwsFsxLustreFileSystem#import_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#import_path TfLustreFileSystem#import_path}
   */
   readonly importPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#imported_file_chunk_size AwsFsxLustreFileSystem#imported_file_chunk_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#imported_file_chunk_size TfLustreFileSystem#imported_file_chunk_size}
   */
   readonly importedFileChunkSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#kms_key_id AwsFsxLustreFileSystem#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#kms_key_id TfLustreFileSystem#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#per_unit_storage_throughput AwsFsxLustreFileSystem#per_unit_storage_throughput}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#per_unit_storage_throughput TfLustreFileSystem#per_unit_storage_throughput}
   */
   readonly perUnitStorageThroughput?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#region AwsFsxLustreFileSystem#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#region TfLustreFileSystem#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#security_group_ids AwsFsxLustreFileSystem#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#security_group_ids TfLustreFileSystem#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#skip_final_backup AwsFsxLustreFileSystem#skip_final_backup}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#skip_final_backup TfLustreFileSystem#skip_final_backup}
   */
   readonly skipFinalBackup?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#storage_capacity AwsFsxLustreFileSystem#storage_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#storage_capacity TfLustreFileSystem#storage_capacity}
   */
   readonly storageCapacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#storage_type AwsFsxLustreFileSystem#storage_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#storage_type TfLustreFileSystem#storage_type}
   */
   readonly storageType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#subnet_ids AwsFsxLustreFileSystem#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#subnet_ids TfLustreFileSystem#subnet_ids}
   */
   readonly subnetIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#tags AwsFsxLustreFileSystem#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#tags TfLustreFileSystem#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#tags_all AwsFsxLustreFileSystem#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#tags_all TfLustreFileSystem#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#throughput_capacity AwsFsxLustreFileSystem#throughput_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#throughput_capacity TfLustreFileSystem#throughput_capacity}
   */
   readonly throughputCapacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#weekly_maintenance_start_time AwsFsxLustreFileSystem#weekly_maintenance_start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#weekly_maintenance_start_time TfLustreFileSystem#weekly_maintenance_start_time}
   */
   readonly weeklyMaintenanceStartTime?: string;
   /**
   * data_read_cache_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#data_read_cache_configuration AwsFsxLustreFileSystem#data_read_cache_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#data_read_cache_configuration TfLustreFileSystem#data_read_cache_configuration}
   */
-  readonly dataReadCacheConfiguration?: AwsFsxLustreFileSystem.DataReadCacheConfigurationProperty;
+  readonly dataReadCacheConfiguration?: TfLustreFileSystem.DataReadCacheConfigurationProperty;
   /**
   * log_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#log_configuration AwsFsxLustreFileSystem#log_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#log_configuration TfLustreFileSystem#log_configuration}
   */
-  readonly logConfiguration?: AwsFsxLustreFileSystem.LogConfigurationProperty;
+  readonly logConfiguration?: TfLustreFileSystem.LogConfigurationProperty;
   /**
   * metadata_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#metadata_configuration AwsFsxLustreFileSystem#metadata_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#metadata_configuration TfLustreFileSystem#metadata_configuration}
   */
-  readonly metadataConfiguration?: AwsFsxLustreFileSystem.MetadataConfigurationProperty;
+  readonly metadataConfiguration?: TfLustreFileSystem.MetadataConfigurationProperty;
   /**
   * root_squash_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#root_squash_configuration AwsFsxLustreFileSystem#root_squash_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#root_squash_configuration TfLustreFileSystem#root_squash_configuration}
   */
-  readonly rootSquashConfiguration?: AwsFsxLustreFileSystem.RootSquashConfigurationProperty;
+  readonly rootSquashConfiguration?: TfLustreFileSystem.RootSquashConfigurationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#timeouts AwsFsxLustreFileSystem#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#timeouts TfLustreFileSystem#timeouts}
   */
-  readonly timeouts?: AwsFsxLustreFileSystem.TimeoutsProperty;
+  readonly timeouts?: TfLustreFileSystem.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system aws_fsx_lustre_file_system}
 */
-export class AwsFsxLustreFileSystem extends cdktn.TerraformResource {
+export class TfLustreFileSystem extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -165,11 +165,11 @@ export class AwsFsxLustreFileSystem extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsFsxLustreFileSystem resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfLustreFileSystem resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsFsxLustreFileSystem to import
-  * @param importFromId The id of the existing AwsFsxLustreFileSystem that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsFsxLustreFileSystem to import is found
+  * @param importToId The construct id used in the generated config for the TfLustreFileSystem to import
+  * @param importFromId The id of the existing TfLustreFileSystem that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfLustreFileSystem to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_fsx_lustre_file_system", importId: importFromId, provider });
@@ -184,9 +184,9 @@ export class AwsFsxLustreFileSystem extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsFsxLustreFileSystemConfig
+  * @param options TfLustreFileSystemConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsFsxLustreFileSystemConfig) {
+  public constructor(scope: Construct, id: string, config: TfLustreFileSystemConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_fsx_lustre_file_system',
       terraformGeneratorMetadata: {
@@ -700,11 +700,11 @@ export class AwsFsxLustreFileSystem extends cdktn.TerraformResource {
   }
 
   // data_read_cache_configuration - computed: false, optional: true, required: false
-  private _dataReadCacheConfiguration = new AwsFsxLustreFileSystem.DataReadCacheConfigurationPropertyOutputReference(this, "data_read_cache_configuration");
+  private _dataReadCacheConfiguration = new TfLustreFileSystem.DataReadCacheConfigurationPropertyOutputReference(this, "data_read_cache_configuration");
   public get dataReadCacheConfiguration() {
     return this._dataReadCacheConfiguration;
   }
-  public putDataReadCacheConfiguration(value: AwsFsxLustreFileSystem.DataReadCacheConfigurationProperty) {
+  public putDataReadCacheConfiguration(value: TfLustreFileSystem.DataReadCacheConfigurationProperty) {
     this._dataReadCacheConfiguration.internalValue = value;
   }
   public resetDataReadCacheConfiguration() {
@@ -716,11 +716,11 @@ export class AwsFsxLustreFileSystem extends cdktn.TerraformResource {
   }
 
   // log_configuration - computed: false, optional: true, required: false
-  private _logConfiguration = new AwsFsxLustreFileSystem.LogConfigurationPropertyOutputReference(this, "log_configuration");
+  private _logConfiguration = new TfLustreFileSystem.LogConfigurationPropertyOutputReference(this, "log_configuration");
   public get logConfiguration() {
     return this._logConfiguration;
   }
-  public putLogConfiguration(value: AwsFsxLustreFileSystem.LogConfigurationProperty) {
+  public putLogConfiguration(value: TfLustreFileSystem.LogConfigurationProperty) {
     this._logConfiguration.internalValue = value;
   }
   public resetLogConfiguration() {
@@ -732,11 +732,11 @@ export class AwsFsxLustreFileSystem extends cdktn.TerraformResource {
   }
 
   // metadata_configuration - computed: false, optional: true, required: false
-  private _metadataConfiguration = new AwsFsxLustreFileSystem.MetadataConfigurationPropertyOutputReference(this, "metadata_configuration");
+  private _metadataConfiguration = new TfLustreFileSystem.MetadataConfigurationPropertyOutputReference(this, "metadata_configuration");
   public get metadataConfiguration() {
     return this._metadataConfiguration;
   }
-  public putMetadataConfiguration(value: AwsFsxLustreFileSystem.MetadataConfigurationProperty) {
+  public putMetadataConfiguration(value: TfLustreFileSystem.MetadataConfigurationProperty) {
     this._metadataConfiguration.internalValue = value;
   }
   public resetMetadataConfiguration() {
@@ -748,11 +748,11 @@ export class AwsFsxLustreFileSystem extends cdktn.TerraformResource {
   }
 
   // root_squash_configuration - computed: false, optional: true, required: false
-  private _rootSquashConfiguration = new AwsFsxLustreFileSystem.RootSquashConfigurationPropertyOutputReference(this, "root_squash_configuration");
+  private _rootSquashConfiguration = new TfLustreFileSystem.RootSquashConfigurationPropertyOutputReference(this, "root_squash_configuration");
   public get rootSquashConfiguration() {
     return this._rootSquashConfiguration;
   }
-  public putRootSquashConfiguration(value: AwsFsxLustreFileSystem.RootSquashConfigurationProperty) {
+  public putRootSquashConfiguration(value: TfLustreFileSystem.RootSquashConfigurationProperty) {
     this._rootSquashConfiguration.internalValue = value;
   }
   public resetRootSquashConfiguration() {
@@ -764,11 +764,11 @@ export class AwsFsxLustreFileSystem extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsFsxLustreFileSystem.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfLustreFileSystem.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsFsxLustreFileSystem.TimeoutsProperty) {
+  public putTimeouts(value: TfLustreFileSystem.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -812,11 +812,11 @@ export class AwsFsxLustreFileSystem extends cdktn.TerraformResource {
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       throughput_capacity: cdktn.numberToTerraform(this._throughputCapacity),
       weekly_maintenance_start_time: cdktn.stringToTerraform(this._weeklyMaintenanceStartTime),
-      data_read_cache_configuration: awsFsxLustreFileSystemDataReadCacheConfigurationPropertyToTerraform(this._dataReadCacheConfiguration.internalValue),
-      log_configuration: awsFsxLustreFileSystemLogConfigurationPropertyToTerraform(this._logConfiguration.internalValue),
-      metadata_configuration: awsFsxLustreFileSystemMetadataConfigurationPropertyToTerraform(this._metadataConfiguration.internalValue),
-      root_squash_configuration: awsFsxLustreFileSystemRootSquashConfigurationPropertyToTerraform(this._rootSquashConfiguration.internalValue),
-      timeouts: awsFsxLustreFileSystemTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      data_read_cache_configuration: tfLustreFileSystemDataReadCacheConfigurationPropertyToTerraform(this._dataReadCacheConfiguration.internalValue),
+      log_configuration: tfLustreFileSystemLogConfigurationPropertyToTerraform(this._logConfiguration.internalValue),
+      metadata_configuration: tfLustreFileSystemMetadataConfigurationPropertyToTerraform(this._metadataConfiguration.internalValue),
+      root_squash_configuration: tfLustreFileSystemRootSquashConfigurationPropertyToTerraform(this._rootSquashConfiguration.internalValue),
+      timeouts: tfLustreFileSystemTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -985,34 +985,34 @@ export class AwsFsxLustreFileSystem extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       data_read_cache_configuration: {
-        value: awsFsxLustreFileSystemDataReadCacheConfigurationPropertyToHclTerraform(this._dataReadCacheConfiguration.internalValue),
+        value: tfLustreFileSystemDataReadCacheConfigurationPropertyToHclTerraform(this._dataReadCacheConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsFsxLustreFileSystem.DataReadCacheConfigurationPropertyList",
+        storageClassType: "TfLustreFileSystem.DataReadCacheConfigurationPropertyList",
       },
       log_configuration: {
-        value: awsFsxLustreFileSystemLogConfigurationPropertyToHclTerraform(this._logConfiguration.internalValue),
+        value: tfLustreFileSystemLogConfigurationPropertyToHclTerraform(this._logConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsFsxLustreFileSystem.LogConfigurationPropertyList",
+        storageClassType: "TfLustreFileSystem.LogConfigurationPropertyList",
       },
       metadata_configuration: {
-        value: awsFsxLustreFileSystemMetadataConfigurationPropertyToHclTerraform(this._metadataConfiguration.internalValue),
+        value: tfLustreFileSystemMetadataConfigurationPropertyToHclTerraform(this._metadataConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsFsxLustreFileSystem.MetadataConfigurationPropertyList",
+        storageClassType: "TfLustreFileSystem.MetadataConfigurationPropertyList",
       },
       root_squash_configuration: {
-        value: awsFsxLustreFileSystemRootSquashConfigurationPropertyToHclTerraform(this._rootSquashConfiguration.internalValue),
+        value: tfLustreFileSystemRootSquashConfigurationPropertyToHclTerraform(this._rootSquashConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsFsxLustreFileSystem.RootSquashConfigurationPropertyList",
+        storageClassType: "TfLustreFileSystem.RootSquashConfigurationPropertyList",
       },
       timeouts: {
-        value: awsFsxLustreFileSystemTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfLustreFileSystemTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsFsxLustreFileSystem.TimeoutsProperty",
+        storageClassType: "TfLustreFileSystem.TimeoutsProperty",
       },
     };
 
@@ -1021,7 +1021,7 @@ export class AwsFsxLustreFileSystem extends cdktn.TerraformResource {
   }
 }
 
-export function awsFsxLustreFileSystemDataReadCacheConfigurationPropertyToTerraform(struct?: AwsFsxLustreFileSystem.DataReadCacheConfigurationPropertyOutputReference | AwsFsxLustreFileSystem.DataReadCacheConfigurationProperty): any {
+export function tfLustreFileSystemDataReadCacheConfigurationPropertyToTerraform(struct?: TfLustreFileSystem.DataReadCacheConfigurationPropertyOutputReference | TfLustreFileSystem.DataReadCacheConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1033,7 +1033,7 @@ export function awsFsxLustreFileSystemDataReadCacheConfigurationPropertyToTerraf
 }
 
 
-export function awsFsxLustreFileSystemDataReadCacheConfigurationPropertyToHclTerraform(struct?: AwsFsxLustreFileSystem.DataReadCacheConfigurationPropertyOutputReference | AwsFsxLustreFileSystem.DataReadCacheConfigurationProperty): any {
+export function tfLustreFileSystemDataReadCacheConfigurationPropertyToHclTerraform(struct?: TfLustreFileSystem.DataReadCacheConfigurationPropertyOutputReference | TfLustreFileSystem.DataReadCacheConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1058,7 +1058,7 @@ export function awsFsxLustreFileSystemDataReadCacheConfigurationPropertyToHclTer
 }
 
 
-export function awsFsxLustreFileSystemLogConfigurationPropertyToTerraform(struct?: AwsFsxLustreFileSystem.LogConfigurationPropertyOutputReference | AwsFsxLustreFileSystem.LogConfigurationProperty): any {
+export function tfLustreFileSystemLogConfigurationPropertyToTerraform(struct?: TfLustreFileSystem.LogConfigurationPropertyOutputReference | TfLustreFileSystem.LogConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1070,7 +1070,7 @@ export function awsFsxLustreFileSystemLogConfigurationPropertyToTerraform(struct
 }
 
 
-export function awsFsxLustreFileSystemLogConfigurationPropertyToHclTerraform(struct?: AwsFsxLustreFileSystem.LogConfigurationPropertyOutputReference | AwsFsxLustreFileSystem.LogConfigurationProperty): any {
+export function tfLustreFileSystemLogConfigurationPropertyToHclTerraform(struct?: TfLustreFileSystem.LogConfigurationPropertyOutputReference | TfLustreFileSystem.LogConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1095,7 +1095,7 @@ export function awsFsxLustreFileSystemLogConfigurationPropertyToHclTerraform(str
 }
 
 
-export function awsFsxLustreFileSystemMetadataConfigurationPropertyToTerraform(struct?: AwsFsxLustreFileSystem.MetadataConfigurationPropertyOutputReference | AwsFsxLustreFileSystem.MetadataConfigurationProperty): any {
+export function tfLustreFileSystemMetadataConfigurationPropertyToTerraform(struct?: TfLustreFileSystem.MetadataConfigurationPropertyOutputReference | TfLustreFileSystem.MetadataConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1107,7 +1107,7 @@ export function awsFsxLustreFileSystemMetadataConfigurationPropertyToTerraform(s
 }
 
 
-export function awsFsxLustreFileSystemMetadataConfigurationPropertyToHclTerraform(struct?: AwsFsxLustreFileSystem.MetadataConfigurationPropertyOutputReference | AwsFsxLustreFileSystem.MetadataConfigurationProperty): any {
+export function tfLustreFileSystemMetadataConfigurationPropertyToHclTerraform(struct?: TfLustreFileSystem.MetadataConfigurationPropertyOutputReference | TfLustreFileSystem.MetadataConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1132,7 +1132,7 @@ export function awsFsxLustreFileSystemMetadataConfigurationPropertyToHclTerrafor
 }
 
 
-export function awsFsxLustreFileSystemRootSquashConfigurationPropertyToTerraform(struct?: AwsFsxLustreFileSystem.RootSquashConfigurationPropertyOutputReference | AwsFsxLustreFileSystem.RootSquashConfigurationProperty): any {
+export function tfLustreFileSystemRootSquashConfigurationPropertyToTerraform(struct?: TfLustreFileSystem.RootSquashConfigurationPropertyOutputReference | TfLustreFileSystem.RootSquashConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1144,7 +1144,7 @@ export function awsFsxLustreFileSystemRootSquashConfigurationPropertyToTerraform
 }
 
 
-export function awsFsxLustreFileSystemRootSquashConfigurationPropertyToHclTerraform(struct?: AwsFsxLustreFileSystem.RootSquashConfigurationPropertyOutputReference | AwsFsxLustreFileSystem.RootSquashConfigurationProperty): any {
+export function tfLustreFileSystemRootSquashConfigurationPropertyToHclTerraform(struct?: TfLustreFileSystem.RootSquashConfigurationPropertyOutputReference | TfLustreFileSystem.RootSquashConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1169,7 +1169,7 @@ export function awsFsxLustreFileSystemRootSquashConfigurationPropertyToHclTerraf
 }
 
 
-export function awsFsxLustreFileSystemTimeoutsPropertyToTerraform(struct?: AwsFsxLustreFileSystem.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfLustreFileSystemTimeoutsPropertyToTerraform(struct?: TfLustreFileSystem.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1182,7 +1182,7 @@ export function awsFsxLustreFileSystemTimeoutsPropertyToTerraform(struct?: AwsFs
 }
 
 
-export function awsFsxLustreFileSystemTimeoutsPropertyToHclTerraform(struct?: AwsFsxLustreFileSystem.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfLustreFileSystemTimeoutsPropertyToHclTerraform(struct?: TfLustreFileSystem.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1213,14 +1213,14 @@ export function awsFsxLustreFileSystemTimeoutsPropertyToHclTerraform(struct?: Aw
 }
 
 
-export namespace AwsFsxLustreFileSystem {
+export namespace TfLustreFileSystem {
 export interface DataReadCacheConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#size AwsFsxLustreFileSystem#size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#size TfLustreFileSystem#size}
   */
   readonly size?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#sizing_mode AwsFsxLustreFileSystem#sizing_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#sizing_mode TfLustreFileSystem#sizing_mode}
   */
   readonly sizingMode: string;
 }
@@ -1293,11 +1293,11 @@ export class DataReadCacheConfigurationPropertyOutputReference extends cdktn.Com
 }
 export interface LogConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#destination AwsFsxLustreFileSystem#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#destination TfLustreFileSystem#destination}
   */
   readonly destination?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#level AwsFsxLustreFileSystem#level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#level TfLustreFileSystem#level}
   */
   readonly level?: string;
 }
@@ -1373,11 +1373,11 @@ export class LogConfigurationPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface MetadataConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#iops AwsFsxLustreFileSystem#iops}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#iops TfLustreFileSystem#iops}
   */
   readonly iops?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#mode AwsFsxLustreFileSystem#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#mode TfLustreFileSystem#mode}
   */
   readonly mode?: string;
 }
@@ -1453,11 +1453,11 @@ export class MetadataConfigurationPropertyOutputReference extends cdktn.ComplexO
 }
 export interface RootSquashConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#no_squash_nids AwsFsxLustreFileSystem#no_squash_nids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#no_squash_nids TfLustreFileSystem#no_squash_nids}
   */
   readonly noSquashNids?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#root_squash AwsFsxLustreFileSystem#root_squash}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#root_squash TfLustreFileSystem#root_squash}
   */
   readonly rootSquash?: string;
 }
@@ -1533,15 +1533,15 @@ export class RootSquashConfigurationPropertyOutputReference extends cdktn.Comple
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#create AwsFsxLustreFileSystem#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#create TfLustreFileSystem#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#delete AwsFsxLustreFileSystem#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#delete TfLustreFileSystem#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#update AwsFsxLustreFileSystem#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_lustre_file_system#update TfLustreFileSystem#update}
   */
   readonly update?: string;
 }

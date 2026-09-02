@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsLakeformationResourceConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataResourceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_resource#arn DataAwsLakeformationResource#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_resource#arn TfDataResource#arn}
   */
   readonly arn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_resource#id DataAwsLakeformationResource#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_resource#id TfDataResource#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,7 +20,7 @@ export interface DataAwsLakeformationResourceConfig extends cdktn.TerraformMetaA
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_resource#region DataAwsLakeformationResource#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_resource#region TfDataResource#region}
   */
   readonly region?: string;
 }
@@ -28,7 +28,7 @@ export interface DataAwsLakeformationResourceConfig extends cdktn.TerraformMetaA
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_resource aws_lakeformation_resource}
 */
-export class DataAwsLakeformationResource extends cdktn.TerraformDataSource {
+export class TfDataResource extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class DataAwsLakeformationResource extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsLakeformationResource resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataResource resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsLakeformationResource to import
-  * @param importFromId The id of the existing DataAwsLakeformationResource that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_resource#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsLakeformationResource to import is found
+  * @param importToId The construct id used in the generated config for the TfDataResource to import
+  * @param importFromId The id of the existing TfDataResource that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lakeformation_resource#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataResource to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lakeformation_resource", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class DataAwsLakeformationResource extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsLakeformationResourceConfig
+  * @param options TfDataResourceConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsLakeformationResourceConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataResourceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lakeformation_resource',
       terraformGeneratorMetadata: {

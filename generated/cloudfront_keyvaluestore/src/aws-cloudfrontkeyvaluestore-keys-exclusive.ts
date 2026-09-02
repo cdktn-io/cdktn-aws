@@ -5,31 +5,31 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCloudfrontkeyvaluestoreKeysExclusiveConfig extends cdktn.TerraformMetaArguments {
+export interface TfKeysExclusiveConfig extends cdktn.TerraformMetaArguments {
   /**
   * The Amazon Resource Name (ARN) of the Key Value Store.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfrontkeyvaluestore_keys_exclusive#key_value_store_arn AwsCloudfrontkeyvaluestoreKeysExclusive#key_value_store_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfrontkeyvaluestore_keys_exclusive#key_value_store_arn TfKeysExclusive#key_value_store_arn}
   */
   readonly keyValueStoreArn: string;
   /**
   * Maximum resource key values pairs that you wills update in a single API request. AWS has a default quota of 50 keys or a 3 MB payload, whichever is reached first
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfrontkeyvaluestore_keys_exclusive#max_batch_size AwsCloudfrontkeyvaluestoreKeysExclusive#max_batch_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfrontkeyvaluestore_keys_exclusive#max_batch_size TfKeysExclusive#max_batch_size}
   */
   readonly maxBatchSize?: number;
   /**
   * resource_key_value_pair block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfrontkeyvaluestore_keys_exclusive#resource_key_value_pair AwsCloudfrontkeyvaluestoreKeysExclusive#resource_key_value_pair}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfrontkeyvaluestore_keys_exclusive#resource_key_value_pair TfKeysExclusive#resource_key_value_pair}
   */
-  readonly resourceKeyValuePair?: AwsCloudfrontkeyvaluestoreKeysExclusive.ResourceKeyValuePairProperty[] | cdktn.IResolvable;
+  readonly resourceKeyValuePair?: TfKeysExclusive.ResourceKeyValuePairProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfrontkeyvaluestore_keys_exclusive aws_cloudfrontkeyvaluestore_keys_exclusive}
 */
-export class AwsCloudfrontkeyvaluestoreKeysExclusive extends cdktn.TerraformResource {
+export class TfKeysExclusive extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -40,11 +40,11 @@ export class AwsCloudfrontkeyvaluestoreKeysExclusive extends cdktn.TerraformReso
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCloudfrontkeyvaluestoreKeysExclusive resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfKeysExclusive resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCloudfrontkeyvaluestoreKeysExclusive to import
-  * @param importFromId The id of the existing AwsCloudfrontkeyvaluestoreKeysExclusive that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfrontkeyvaluestore_keys_exclusive#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCloudfrontkeyvaluestoreKeysExclusive to import is found
+  * @param importToId The construct id used in the generated config for the TfKeysExclusive to import
+  * @param importFromId The id of the existing TfKeysExclusive that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfrontkeyvaluestore_keys_exclusive#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfKeysExclusive to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudfrontkeyvaluestore_keys_exclusive", importId: importFromId, provider });
@@ -59,9 +59,9 @@ export class AwsCloudfrontkeyvaluestoreKeysExclusive extends cdktn.TerraformReso
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCloudfrontkeyvaluestoreKeysExclusiveConfig
+  * @param options TfKeysExclusiveConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCloudfrontkeyvaluestoreKeysExclusiveConfig) {
+  public constructor(scope: Construct, id: string, config: TfKeysExclusiveConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudfrontkeyvaluestore_keys_exclusive',
       terraformGeneratorMetadata: {
@@ -121,11 +121,11 @@ export class AwsCloudfrontkeyvaluestoreKeysExclusive extends cdktn.TerraformReso
   }
 
   // resource_key_value_pair - computed: false, optional: true, required: false
-  private _resourceKeyValuePair = new AwsCloudfrontkeyvaluestoreKeysExclusive.ResourceKeyValuePairPropertyList(this, "resource_key_value_pair", true);
+  private _resourceKeyValuePair = new TfKeysExclusive.ResourceKeyValuePairPropertyList(this, "resource_key_value_pair", true);
   public get resourceKeyValuePair() {
     return this._resourceKeyValuePair;
   }
-  public putResourceKeyValuePair(value: AwsCloudfrontkeyvaluestoreKeysExclusive.ResourceKeyValuePairProperty[] | cdktn.IResolvable) {
+  public putResourceKeyValuePair(value: TfKeysExclusive.ResourceKeyValuePairProperty[] | cdktn.IResolvable) {
     this._resourceKeyValuePair.internalValue = value;
   }
   public resetResourceKeyValuePair() {
@@ -144,7 +144,7 @@ export class AwsCloudfrontkeyvaluestoreKeysExclusive extends cdktn.TerraformReso
     return {
       key_value_store_arn: cdktn.stringToTerraform(this._keyValueStoreArn),
       max_batch_size: cdktn.numberToTerraform(this._maxBatchSize),
-      resource_key_value_pair: cdktn.listMapper(awsCloudfrontkeyvaluestoreKeysExclusiveResourceKeyValuePairPropertyToTerraform, true)(this._resourceKeyValuePair.internalValue),
+      resource_key_value_pair: cdktn.listMapper(tfKeysExclusiveResourceKeyValuePairPropertyToTerraform, true)(this._resourceKeyValuePair.internalValue),
     };
   }
 
@@ -163,10 +163,10 @@ export class AwsCloudfrontkeyvaluestoreKeysExclusive extends cdktn.TerraformReso
         storageClassType: "number",
       },
       resource_key_value_pair: {
-        value: cdktn.listMapperHcl(awsCloudfrontkeyvaluestoreKeysExclusiveResourceKeyValuePairPropertyToHclTerraform, true)(this._resourceKeyValuePair.internalValue),
+        value: cdktn.listMapperHcl(tfKeysExclusiveResourceKeyValuePairPropertyToHclTerraform, true)(this._resourceKeyValuePair.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsCloudfrontkeyvaluestoreKeysExclusive.ResourceKeyValuePairPropertyList",
+        storageClassType: "TfKeysExclusive.ResourceKeyValuePairPropertyList",
       },
     };
 
@@ -175,7 +175,7 @@ export class AwsCloudfrontkeyvaluestoreKeysExclusive extends cdktn.TerraformReso
   }
 }
 
-export function awsCloudfrontkeyvaluestoreKeysExclusiveResourceKeyValuePairPropertyToTerraform(struct?: AwsCloudfrontkeyvaluestoreKeysExclusive.ResourceKeyValuePairProperty | cdktn.IResolvable): any {
+export function tfKeysExclusiveResourceKeyValuePairPropertyToTerraform(struct?: TfKeysExclusive.ResourceKeyValuePairProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -187,7 +187,7 @@ export function awsCloudfrontkeyvaluestoreKeysExclusiveResourceKeyValuePairPrope
 }
 
 
-export function awsCloudfrontkeyvaluestoreKeysExclusiveResourceKeyValuePairPropertyToHclTerraform(struct?: AwsCloudfrontkeyvaluestoreKeysExclusive.ResourceKeyValuePairProperty | cdktn.IResolvable): any {
+export function tfKeysExclusiveResourceKeyValuePairPropertyToHclTerraform(struct?: TfKeysExclusive.ResourceKeyValuePairProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -212,18 +212,18 @@ export function awsCloudfrontkeyvaluestoreKeysExclusiveResourceKeyValuePairPrope
 }
 
 
-export namespace AwsCloudfrontkeyvaluestoreKeysExclusive {
+export namespace TfKeysExclusive {
 export interface ResourceKeyValuePairProperty {
   /**
   * The key to put.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfrontkeyvaluestore_keys_exclusive#key AwsCloudfrontkeyvaluestoreKeysExclusive#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfrontkeyvaluestore_keys_exclusive#key TfKeysExclusive#key}
   */
   readonly key: string;
   /**
   * The value to put.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfrontkeyvaluestore_keys_exclusive#value AwsCloudfrontkeyvaluestoreKeysExclusive#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfrontkeyvaluestore_keys_exclusive#value TfKeysExclusive#value}
   */
   readonly value: string;
 }

@@ -5,108 +5,108 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsStoragegatewayGatewayConfig extends cdktn.TerraformMetaArguments {
+export interface TfGatewayConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#activation_key AwsStoragegatewayGateway#activation_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#activation_key TfGateway#activation_key}
   */
   readonly activationKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#average_download_rate_limit_in_bits_per_sec AwsStoragegatewayGateway#average_download_rate_limit_in_bits_per_sec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#average_download_rate_limit_in_bits_per_sec TfGateway#average_download_rate_limit_in_bits_per_sec}
   */
   readonly averageDownloadRateLimitInBitsPerSec?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#average_upload_rate_limit_in_bits_per_sec AwsStoragegatewayGateway#average_upload_rate_limit_in_bits_per_sec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#average_upload_rate_limit_in_bits_per_sec TfGateway#average_upload_rate_limit_in_bits_per_sec}
   */
   readonly averageUploadRateLimitInBitsPerSec?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#cloudwatch_log_group_arn AwsStoragegatewayGateway#cloudwatch_log_group_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#cloudwatch_log_group_arn TfGateway#cloudwatch_log_group_arn}
   */
   readonly cloudwatchLogGroupArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#gateway_ip_address AwsStoragegatewayGateway#gateway_ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#gateway_ip_address TfGateway#gateway_ip_address}
   */
   readonly gatewayIpAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#gateway_name AwsStoragegatewayGateway#gateway_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#gateway_name TfGateway#gateway_name}
   */
   readonly gatewayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#gateway_timezone AwsStoragegatewayGateway#gateway_timezone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#gateway_timezone TfGateway#gateway_timezone}
   */
   readonly gatewayTimezone: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#gateway_type AwsStoragegatewayGateway#gateway_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#gateway_type TfGateway#gateway_type}
   */
   readonly gatewayType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#gateway_vpc_endpoint AwsStoragegatewayGateway#gateway_vpc_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#gateway_vpc_endpoint TfGateway#gateway_vpc_endpoint}
   */
   readonly gatewayVpcEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#id AwsStoragegatewayGateway#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#id TfGateway#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#medium_changer_type AwsStoragegatewayGateway#medium_changer_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#medium_changer_type TfGateway#medium_changer_type}
   */
   readonly mediumChangerType?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#region AwsStoragegatewayGateway#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#region TfGateway#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#smb_file_share_visibility AwsStoragegatewayGateway#smb_file_share_visibility}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#smb_file_share_visibility TfGateway#smb_file_share_visibility}
   */
   readonly smbFileShareVisibility?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#smb_guest_password AwsStoragegatewayGateway#smb_guest_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#smb_guest_password TfGateway#smb_guest_password}
   */
   readonly smbGuestPassword?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#smb_security_strategy AwsStoragegatewayGateway#smb_security_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#smb_security_strategy TfGateway#smb_security_strategy}
   */
   readonly smbSecurityStrategy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#tags AwsStoragegatewayGateway#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#tags TfGateway#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#tags_all AwsStoragegatewayGateway#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#tags_all TfGateway#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#tape_drive_type AwsStoragegatewayGateway#tape_drive_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#tape_drive_type TfGateway#tape_drive_type}
   */
   readonly tapeDriveType?: string;
   /**
   * maintenance_start_time block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#maintenance_start_time AwsStoragegatewayGateway#maintenance_start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#maintenance_start_time TfGateway#maintenance_start_time}
   */
-  readonly maintenanceStartTime?: AwsStoragegatewayGateway.MaintenanceStartTimeProperty;
+  readonly maintenanceStartTime?: TfGateway.MaintenanceStartTimeProperty;
   /**
   * smb_active_directory_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#smb_active_directory_settings AwsStoragegatewayGateway#smb_active_directory_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#smb_active_directory_settings TfGateway#smb_active_directory_settings}
   */
-  readonly smbActiveDirectorySettings?: AwsStoragegatewayGateway.SmbActiveDirectorySettingsProperty;
+  readonly smbActiveDirectorySettings?: TfGateway.SmbActiveDirectorySettingsProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#timeouts AwsStoragegatewayGateway#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#timeouts TfGateway#timeouts}
   */
-  readonly timeouts?: AwsStoragegatewayGateway.TimeoutsProperty;
+  readonly timeouts?: TfGateway.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway aws_storagegateway_gateway}
 */
-export class AwsStoragegatewayGateway extends cdktn.TerraformResource {
+export class TfGateway extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -117,11 +117,11 @@ export class AwsStoragegatewayGateway extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsStoragegatewayGateway resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfGateway resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsStoragegatewayGateway to import
-  * @param importFromId The id of the existing AwsStoragegatewayGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsStoragegatewayGateway to import is found
+  * @param importToId The construct id used in the generated config for the TfGateway to import
+  * @param importFromId The id of the existing TfGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfGateway to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_storagegateway_gateway", importId: importFromId, provider });
@@ -136,9 +136,9 @@ export class AwsStoragegatewayGateway extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsStoragegatewayGatewayConfig
+  * @param options TfGatewayConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsStoragegatewayGatewayConfig) {
+  public constructor(scope: Construct, id: string, config: TfGatewayConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_storagegateway_gateway',
       terraformGeneratorMetadata: {
@@ -295,7 +295,7 @@ export class AwsStoragegatewayGateway extends cdktn.TerraformResource {
   }
 
   // gateway_network_interface - computed: true, optional: false, required: false
-  private _gatewayNetworkInterface = new AwsStoragegatewayGateway.GatewayNetworkInterfacePropertyList(this, "gateway_network_interface", false);
+  private _gatewayNetworkInterface = new TfGateway.GatewayNetworkInterfacePropertyList(this, "gateway_network_interface", false);
   public get gatewayNetworkInterface() {
     return this._gatewayNetworkInterface;
   }
@@ -495,11 +495,11 @@ export class AwsStoragegatewayGateway extends cdktn.TerraformResource {
   }
 
   // maintenance_start_time - computed: false, optional: true, required: false
-  private _maintenanceStartTime = new AwsStoragegatewayGateway.MaintenanceStartTimePropertyOutputReference(this, "maintenance_start_time");
+  private _maintenanceStartTime = new TfGateway.MaintenanceStartTimePropertyOutputReference(this, "maintenance_start_time");
   public get maintenanceStartTime() {
     return this._maintenanceStartTime;
   }
-  public putMaintenanceStartTime(value: AwsStoragegatewayGateway.MaintenanceStartTimeProperty) {
+  public putMaintenanceStartTime(value: TfGateway.MaintenanceStartTimeProperty) {
     this._maintenanceStartTime.internalValue = value;
   }
   public resetMaintenanceStartTime() {
@@ -511,11 +511,11 @@ export class AwsStoragegatewayGateway extends cdktn.TerraformResource {
   }
 
   // smb_active_directory_settings - computed: false, optional: true, required: false
-  private _smbActiveDirectorySettings = new AwsStoragegatewayGateway.SmbActiveDirectorySettingsPropertyOutputReference(this, "smb_active_directory_settings");
+  private _smbActiveDirectorySettings = new TfGateway.SmbActiveDirectorySettingsPropertyOutputReference(this, "smb_active_directory_settings");
   public get smbActiveDirectorySettings() {
     return this._smbActiveDirectorySettings;
   }
-  public putSmbActiveDirectorySettings(value: AwsStoragegatewayGateway.SmbActiveDirectorySettingsProperty) {
+  public putSmbActiveDirectorySettings(value: TfGateway.SmbActiveDirectorySettingsProperty) {
     this._smbActiveDirectorySettings.internalValue = value;
   }
   public resetSmbActiveDirectorySettings() {
@@ -527,11 +527,11 @@ export class AwsStoragegatewayGateway extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsStoragegatewayGateway.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfGateway.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsStoragegatewayGateway.TimeoutsProperty) {
+  public putTimeouts(value: TfGateway.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -566,9 +566,9 @@ export class AwsStoragegatewayGateway extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       tape_drive_type: cdktn.stringToTerraform(this._tapeDriveType),
-      maintenance_start_time: awsStoragegatewayGatewayMaintenanceStartTimePropertyToTerraform(this._maintenanceStartTime.internalValue),
-      smb_active_directory_settings: awsStoragegatewayGatewaySmbActiveDirectorySettingsPropertyToTerraform(this._smbActiveDirectorySettings.internalValue),
-      timeouts: awsStoragegatewayGatewayTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      maintenance_start_time: tfGatewayMaintenanceStartTimePropertyToTerraform(this._maintenanceStartTime.internalValue),
+      smb_active_directory_settings: tfGatewaySmbActiveDirectorySettingsPropertyToTerraform(this._smbActiveDirectorySettings.internalValue),
+      timeouts: tfGatewayTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -683,22 +683,22 @@ export class AwsStoragegatewayGateway extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       maintenance_start_time: {
-        value: awsStoragegatewayGatewayMaintenanceStartTimePropertyToHclTerraform(this._maintenanceStartTime.internalValue),
+        value: tfGatewayMaintenanceStartTimePropertyToHclTerraform(this._maintenanceStartTime.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsStoragegatewayGateway.MaintenanceStartTimePropertyList",
+        storageClassType: "TfGateway.MaintenanceStartTimePropertyList",
       },
       smb_active_directory_settings: {
-        value: awsStoragegatewayGatewaySmbActiveDirectorySettingsPropertyToHclTerraform(this._smbActiveDirectorySettings.internalValue),
+        value: tfGatewaySmbActiveDirectorySettingsPropertyToHclTerraform(this._smbActiveDirectorySettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsStoragegatewayGateway.SmbActiveDirectorySettingsPropertyList",
+        storageClassType: "TfGateway.SmbActiveDirectorySettingsPropertyList",
       },
       timeouts: {
-        value: awsStoragegatewayGatewayTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfGatewayTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsStoragegatewayGateway.TimeoutsProperty",
+        storageClassType: "TfGateway.TimeoutsProperty",
       },
     };
 
@@ -707,7 +707,7 @@ export class AwsStoragegatewayGateway extends cdktn.TerraformResource {
   }
 }
 
-export function awsStoragegatewayGatewayGatewayNetworkInterfacePropertyToTerraform(struct?: AwsStoragegatewayGateway.GatewayNetworkInterfaceProperty): any {
+export function tfGatewayGatewayNetworkInterfacePropertyToTerraform(struct?: TfGateway.GatewayNetworkInterfaceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -717,7 +717,7 @@ export function awsStoragegatewayGatewayGatewayNetworkInterfacePropertyToTerrafo
 }
 
 
-export function awsStoragegatewayGatewayGatewayNetworkInterfacePropertyToHclTerraform(struct?: AwsStoragegatewayGateway.GatewayNetworkInterfaceProperty): any {
+export function tfGatewayGatewayNetworkInterfacePropertyToHclTerraform(struct?: TfGateway.GatewayNetworkInterfaceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -728,7 +728,7 @@ export function awsStoragegatewayGatewayGatewayNetworkInterfacePropertyToHclTerr
 }
 
 
-export function awsStoragegatewayGatewayMaintenanceStartTimePropertyToTerraform(struct?: AwsStoragegatewayGateway.MaintenanceStartTimePropertyOutputReference | AwsStoragegatewayGateway.MaintenanceStartTimeProperty): any {
+export function tfGatewayMaintenanceStartTimePropertyToTerraform(struct?: TfGateway.MaintenanceStartTimePropertyOutputReference | TfGateway.MaintenanceStartTimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -742,7 +742,7 @@ export function awsStoragegatewayGatewayMaintenanceStartTimePropertyToTerraform(
 }
 
 
-export function awsStoragegatewayGatewayMaintenanceStartTimePropertyToHclTerraform(struct?: AwsStoragegatewayGateway.MaintenanceStartTimePropertyOutputReference | AwsStoragegatewayGateway.MaintenanceStartTimeProperty): any {
+export function tfGatewayMaintenanceStartTimePropertyToHclTerraform(struct?: TfGateway.MaintenanceStartTimePropertyOutputReference | TfGateway.MaintenanceStartTimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -779,7 +779,7 @@ export function awsStoragegatewayGatewayMaintenanceStartTimePropertyToHclTerrafo
 }
 
 
-export function awsStoragegatewayGatewaySmbActiveDirectorySettingsPropertyToTerraform(struct?: AwsStoragegatewayGateway.SmbActiveDirectorySettingsPropertyOutputReference | AwsStoragegatewayGateway.SmbActiveDirectorySettingsProperty): any {
+export function tfGatewaySmbActiveDirectorySettingsPropertyToTerraform(struct?: TfGateway.SmbActiveDirectorySettingsPropertyOutputReference | TfGateway.SmbActiveDirectorySettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -795,7 +795,7 @@ export function awsStoragegatewayGatewaySmbActiveDirectorySettingsPropertyToTerr
 }
 
 
-export function awsStoragegatewayGatewaySmbActiveDirectorySettingsPropertyToHclTerraform(struct?: AwsStoragegatewayGateway.SmbActiveDirectorySettingsPropertyOutputReference | AwsStoragegatewayGateway.SmbActiveDirectorySettingsProperty): any {
+export function tfGatewaySmbActiveDirectorySettingsPropertyToHclTerraform(struct?: TfGateway.SmbActiveDirectorySettingsPropertyOutputReference | TfGateway.SmbActiveDirectorySettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -844,7 +844,7 @@ export function awsStoragegatewayGatewaySmbActiveDirectorySettingsPropertyToHclT
 }
 
 
-export function awsStoragegatewayGatewayTimeoutsPropertyToTerraform(struct?: AwsStoragegatewayGateway.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfGatewayTimeoutsPropertyToTerraform(struct?: TfGateway.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -855,7 +855,7 @@ export function awsStoragegatewayGatewayTimeoutsPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsStoragegatewayGatewayTimeoutsPropertyToHclTerraform(struct?: AwsStoragegatewayGateway.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfGatewayTimeoutsPropertyToHclTerraform(struct?: TfGateway.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -874,7 +874,7 @@ export function awsStoragegatewayGatewayTimeoutsPropertyToHclTerraform(struct?: 
 }
 
 
-export namespace AwsStoragegatewayGateway {
+export namespace TfGateway {
 export interface GatewayNetworkInterfaceProperty {
 }
 export class GatewayNetworkInterfacePropertyOutputReference extends cdktn.ComplexObject {
@@ -931,19 +931,19 @@ export class GatewayNetworkInterfacePropertyList extends cdktn.ComplexList {
 }
 export interface MaintenanceStartTimeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#day_of_month AwsStoragegatewayGateway#day_of_month}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#day_of_month TfGateway#day_of_month}
   */
   readonly dayOfMonth?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#day_of_week AwsStoragegatewayGateway#day_of_week}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#day_of_week TfGateway#day_of_week}
   */
   readonly dayOfWeek?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#hour_of_day AwsStoragegatewayGateway#hour_of_day}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#hour_of_day TfGateway#hour_of_day}
   */
   readonly hourOfDay: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#minute_of_hour AwsStoragegatewayGateway#minute_of_hour}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#minute_of_hour TfGateway#minute_of_hour}
   */
   readonly minuteOfHour?: number;
 }
@@ -1060,27 +1060,27 @@ export class MaintenanceStartTimePropertyOutputReference extends cdktn.ComplexOb
 }
 export interface SmbActiveDirectorySettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#domain_controllers AwsStoragegatewayGateway#domain_controllers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#domain_controllers TfGateway#domain_controllers}
   */
   readonly domainControllers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#domain_name AwsStoragegatewayGateway#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#domain_name TfGateway#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#organizational_unit AwsStoragegatewayGateway#organizational_unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#organizational_unit TfGateway#organizational_unit}
   */
   readonly organizationalUnit?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#password AwsStoragegatewayGateway#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#password TfGateway#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#timeout_in_seconds AwsStoragegatewayGateway#timeout_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#timeout_in_seconds TfGateway#timeout_in_seconds}
   */
   readonly timeoutInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#username AwsStoragegatewayGateway#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#username TfGateway#username}
   */
   readonly username: string;
 }
@@ -1240,7 +1240,7 @@ export class SmbActiveDirectorySettingsPropertyOutputReference extends cdktn.Com
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#create AwsStoragegatewayGateway#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#create TfGateway#create}
   */
   readonly create?: string;
 }

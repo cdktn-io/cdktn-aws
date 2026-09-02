@@ -5,71 +5,71 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsBedrockagentcoreBrowserConfig extends cdktn.TerraformMetaArguments {
+export interface TfBrowserConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#description AwsBedrockagentcoreBrowser#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#description TfBrowser#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#execution_role_arn AwsBedrockagentcoreBrowser#execution_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#execution_role_arn TfBrowser#execution_role_arn}
   */
   readonly executionRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#name AwsBedrockagentcoreBrowser#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#name TfBrowser#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#region AwsBedrockagentcoreBrowser#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#region TfBrowser#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#tags AwsBedrockagentcoreBrowser#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#tags TfBrowser#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * browser_signing block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#browser_signing AwsBedrockagentcoreBrowser#browser_signing}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#browser_signing TfBrowser#browser_signing}
   */
-  readonly browserSigning?: AwsBedrockagentcoreBrowser.BrowserSigningProperty[] | cdktn.IResolvable;
+  readonly browserSigning?: TfBrowser.BrowserSigningProperty[] | cdktn.IResolvable;
   /**
   * certificate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#certificate AwsBedrockagentcoreBrowser#certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#certificate TfBrowser#certificate}
   */
-  readonly certificate?: AwsBedrockagentcoreBrowser.CertificateProperty[] | cdktn.IResolvable;
+  readonly certificate?: TfBrowser.CertificateProperty[] | cdktn.IResolvable;
   /**
   * enterprise_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#enterprise_policy AwsBedrockagentcoreBrowser#enterprise_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#enterprise_policy TfBrowser#enterprise_policy}
   */
-  readonly enterprisePolicy?: AwsBedrockagentcoreBrowser.EnterprisePolicyProperty[] | cdktn.IResolvable;
+  readonly enterprisePolicy?: TfBrowser.EnterprisePolicyProperty[] | cdktn.IResolvable;
   /**
   * network_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#network_configuration AwsBedrockagentcoreBrowser#network_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#network_configuration TfBrowser#network_configuration}
   */
-  readonly networkConfiguration?: AwsBedrockagentcoreBrowser.NetworkConfigurationProperty[] | cdktn.IResolvable;
+  readonly networkConfiguration?: TfBrowser.NetworkConfigurationProperty[] | cdktn.IResolvable;
   /**
   * recording block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#recording AwsBedrockagentcoreBrowser#recording}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#recording TfBrowser#recording}
   */
-  readonly recording?: AwsBedrockagentcoreBrowser.RecordingProperty[] | cdktn.IResolvable;
+  readonly recording?: TfBrowser.RecordingProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#timeouts AwsBedrockagentcoreBrowser#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#timeouts TfBrowser#timeouts}
   */
-  readonly timeouts?: AwsBedrockagentcoreBrowser.TimeoutsProperty;
+  readonly timeouts?: TfBrowser.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser aws_bedrockagentcore_browser}
 */
-export class AwsBedrockagentcoreBrowser extends cdktn.TerraformResource {
+export class TfBrowser extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -80,11 +80,11 @@ export class AwsBedrockagentcoreBrowser extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsBedrockagentcoreBrowser resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfBrowser resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsBedrockagentcoreBrowser to import
-  * @param importFromId The id of the existing AwsBedrockagentcoreBrowser that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsBedrockagentcoreBrowser to import is found
+  * @param importToId The construct id used in the generated config for the TfBrowser to import
+  * @param importFromId The id of the existing TfBrowser that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfBrowser to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrockagentcore_browser", importId: importFromId, provider });
@@ -99,9 +99,9 @@ export class AwsBedrockagentcoreBrowser extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsBedrockagentcoreBrowserConfig
+  * @param options TfBrowserConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsBedrockagentcoreBrowserConfig) {
+  public constructor(scope: Construct, id: string, config: TfBrowserConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrockagentcore_browser',
       terraformGeneratorMetadata: {
@@ -228,11 +228,11 @@ export class AwsBedrockagentcoreBrowser extends cdktn.TerraformResource {
   }
 
   // browser_signing - computed: false, optional: true, required: false
-  private _browserSigning = new AwsBedrockagentcoreBrowser.BrowserSigningPropertyList(this, "browser_signing", false);
+  private _browserSigning = new TfBrowser.BrowserSigningPropertyList(this, "browser_signing", false);
   public get browserSigning() {
     return this._browserSigning;
   }
-  public putBrowserSigning(value: AwsBedrockagentcoreBrowser.BrowserSigningProperty[] | cdktn.IResolvable) {
+  public putBrowserSigning(value: TfBrowser.BrowserSigningProperty[] | cdktn.IResolvable) {
     this._browserSigning.internalValue = value;
   }
   public resetBrowserSigning() {
@@ -244,11 +244,11 @@ export class AwsBedrockagentcoreBrowser extends cdktn.TerraformResource {
   }
 
   // certificate - computed: false, optional: true, required: false
-  private _certificate = new AwsBedrockagentcoreBrowser.CertificatePropertyList(this, "certificate", false);
+  private _certificate = new TfBrowser.CertificatePropertyList(this, "certificate", false);
   public get certificate() {
     return this._certificate;
   }
-  public putCertificate(value: AwsBedrockagentcoreBrowser.CertificateProperty[] | cdktn.IResolvable) {
+  public putCertificate(value: TfBrowser.CertificateProperty[] | cdktn.IResolvable) {
     this._certificate.internalValue = value;
   }
   public resetCertificate() {
@@ -260,11 +260,11 @@ export class AwsBedrockagentcoreBrowser extends cdktn.TerraformResource {
   }
 
   // enterprise_policy - computed: false, optional: true, required: false
-  private _enterprisePolicy = new AwsBedrockagentcoreBrowser.EnterprisePolicyPropertyList(this, "enterprise_policy", false);
+  private _enterprisePolicy = new TfBrowser.EnterprisePolicyPropertyList(this, "enterprise_policy", false);
   public get enterprisePolicy() {
     return this._enterprisePolicy;
   }
-  public putEnterprisePolicy(value: AwsBedrockagentcoreBrowser.EnterprisePolicyProperty[] | cdktn.IResolvable) {
+  public putEnterprisePolicy(value: TfBrowser.EnterprisePolicyProperty[] | cdktn.IResolvable) {
     this._enterprisePolicy.internalValue = value;
   }
   public resetEnterprisePolicy() {
@@ -276,11 +276,11 @@ export class AwsBedrockagentcoreBrowser extends cdktn.TerraformResource {
   }
 
   // network_configuration - computed: false, optional: true, required: false
-  private _networkConfiguration = new AwsBedrockagentcoreBrowser.NetworkConfigurationPropertyList(this, "network_configuration", false);
+  private _networkConfiguration = new TfBrowser.NetworkConfigurationPropertyList(this, "network_configuration", false);
   public get networkConfiguration() {
     return this._networkConfiguration;
   }
-  public putNetworkConfiguration(value: AwsBedrockagentcoreBrowser.NetworkConfigurationProperty[] | cdktn.IResolvable) {
+  public putNetworkConfiguration(value: TfBrowser.NetworkConfigurationProperty[] | cdktn.IResolvable) {
     this._networkConfiguration.internalValue = value;
   }
   public resetNetworkConfiguration() {
@@ -292,11 +292,11 @@ export class AwsBedrockagentcoreBrowser extends cdktn.TerraformResource {
   }
 
   // recording - computed: false, optional: true, required: false
-  private _recording = new AwsBedrockagentcoreBrowser.RecordingPropertyList(this, "recording", false);
+  private _recording = new TfBrowser.RecordingPropertyList(this, "recording", false);
   public get recording() {
     return this._recording;
   }
-  public putRecording(value: AwsBedrockagentcoreBrowser.RecordingProperty[] | cdktn.IResolvable) {
+  public putRecording(value: TfBrowser.RecordingProperty[] | cdktn.IResolvable) {
     this._recording.internalValue = value;
   }
   public resetRecording() {
@@ -308,11 +308,11 @@ export class AwsBedrockagentcoreBrowser extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsBedrockagentcoreBrowser.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfBrowser.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsBedrockagentcoreBrowser.TimeoutsProperty) {
+  public putTimeouts(value: TfBrowser.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -334,12 +334,12 @@ export class AwsBedrockagentcoreBrowser extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      browser_signing: cdktn.listMapper(awsBedrockagentcoreBrowserBrowserSigningPropertyToTerraform, true)(this._browserSigning.internalValue),
-      certificate: cdktn.listMapper(awsBedrockagentcoreBrowserCertificatePropertyToTerraform, true)(this._certificate.internalValue),
-      enterprise_policy: cdktn.listMapper(awsBedrockagentcoreBrowserEnterprisePolicyPropertyToTerraform, true)(this._enterprisePolicy.internalValue),
-      network_configuration: cdktn.listMapper(awsBedrockagentcoreBrowserNetworkConfigurationPropertyToTerraform, true)(this._networkConfiguration.internalValue),
-      recording: cdktn.listMapper(awsBedrockagentcoreBrowserRecordingPropertyToTerraform, true)(this._recording.internalValue),
-      timeouts: awsBedrockagentcoreBrowserTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      browser_signing: cdktn.listMapper(tfBrowserBrowserSigningPropertyToTerraform, true)(this._browserSigning.internalValue),
+      certificate: cdktn.listMapper(tfBrowserCertificatePropertyToTerraform, true)(this._certificate.internalValue),
+      enterprise_policy: cdktn.listMapper(tfBrowserEnterprisePolicyPropertyToTerraform, true)(this._enterprisePolicy.internalValue),
+      network_configuration: cdktn.listMapper(tfBrowserNetworkConfigurationPropertyToTerraform, true)(this._networkConfiguration.internalValue),
+      recording: cdktn.listMapper(tfBrowserRecordingPropertyToTerraform, true)(this._recording.internalValue),
+      timeouts: tfBrowserTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -376,40 +376,40 @@ export class AwsBedrockagentcoreBrowser extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       browser_signing: {
-        value: cdktn.listMapperHcl(awsBedrockagentcoreBrowserBrowserSigningPropertyToHclTerraform, true)(this._browserSigning.internalValue),
+        value: cdktn.listMapperHcl(tfBrowserBrowserSigningPropertyToHclTerraform, true)(this._browserSigning.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentcoreBrowser.BrowserSigningPropertyList",
+        storageClassType: "TfBrowser.BrowserSigningPropertyList",
       },
       certificate: {
-        value: cdktn.listMapperHcl(awsBedrockagentcoreBrowserCertificatePropertyToHclTerraform, true)(this._certificate.internalValue),
+        value: cdktn.listMapperHcl(tfBrowserCertificatePropertyToHclTerraform, true)(this._certificate.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentcoreBrowser.CertificatePropertyList",
+        storageClassType: "TfBrowser.CertificatePropertyList",
       },
       enterprise_policy: {
-        value: cdktn.listMapperHcl(awsBedrockagentcoreBrowserEnterprisePolicyPropertyToHclTerraform, true)(this._enterprisePolicy.internalValue),
+        value: cdktn.listMapperHcl(tfBrowserEnterprisePolicyPropertyToHclTerraform, true)(this._enterprisePolicy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentcoreBrowser.EnterprisePolicyPropertyList",
+        storageClassType: "TfBrowser.EnterprisePolicyPropertyList",
       },
       network_configuration: {
-        value: cdktn.listMapperHcl(awsBedrockagentcoreBrowserNetworkConfigurationPropertyToHclTerraform, true)(this._networkConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfBrowserNetworkConfigurationPropertyToHclTerraform, true)(this._networkConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentcoreBrowser.NetworkConfigurationPropertyList",
+        storageClassType: "TfBrowser.NetworkConfigurationPropertyList",
       },
       recording: {
-        value: cdktn.listMapperHcl(awsBedrockagentcoreBrowserRecordingPropertyToHclTerraform, true)(this._recording.internalValue),
+        value: cdktn.listMapperHcl(tfBrowserRecordingPropertyToHclTerraform, true)(this._recording.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBedrockagentcoreBrowser.RecordingPropertyList",
+        storageClassType: "TfBrowser.RecordingPropertyList",
       },
       timeouts: {
-        value: awsBedrockagentcoreBrowserTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfBrowserTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsBedrockagentcoreBrowser.TimeoutsProperty",
+        storageClassType: "TfBrowser.TimeoutsProperty",
       },
     };
 
@@ -418,7 +418,7 @@ export class AwsBedrockagentcoreBrowser extends cdktn.TerraformResource {
   }
 }
 
-export function awsBedrockagentcoreBrowserBrowserSigningPropertyToTerraform(struct?: AwsBedrockagentcoreBrowser.BrowserSigningProperty | cdktn.IResolvable): any {
+export function tfBrowserBrowserSigningPropertyToTerraform(struct?: TfBrowser.BrowserSigningProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -429,7 +429,7 @@ export function awsBedrockagentcoreBrowserBrowserSigningPropertyToTerraform(stru
 }
 
 
-export function awsBedrockagentcoreBrowserBrowserSigningPropertyToHclTerraform(struct?: AwsBedrockagentcoreBrowser.BrowserSigningProperty | cdktn.IResolvable): any {
+export function tfBrowserBrowserSigningPropertyToHclTerraform(struct?: TfBrowser.BrowserSigningProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -448,7 +448,7 @@ export function awsBedrockagentcoreBrowserBrowserSigningPropertyToHclTerraform(s
 }
 
 
-export function awsBedrockagentcoreBrowserSecretsManagerPropertyToTerraform(struct?: AwsBedrockagentcoreBrowser.SecretsManagerProperty | cdktn.IResolvable): any {
+export function tfBrowserSecretsManagerPropertyToTerraform(struct?: TfBrowser.SecretsManagerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -459,7 +459,7 @@ export function awsBedrockagentcoreBrowserSecretsManagerPropertyToTerraform(stru
 }
 
 
-export function awsBedrockagentcoreBrowserSecretsManagerPropertyToHclTerraform(struct?: AwsBedrockagentcoreBrowser.SecretsManagerProperty | cdktn.IResolvable): any {
+export function tfBrowserSecretsManagerPropertyToHclTerraform(struct?: TfBrowser.SecretsManagerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -478,25 +478,25 @@ export function awsBedrockagentcoreBrowserSecretsManagerPropertyToHclTerraform(s
 }
 
 
-export function awsBedrockagentcoreBrowserCertificateLocationPropertyToTerraform(struct?: AwsBedrockagentcoreBrowser.CertificateLocationProperty | cdktn.IResolvable): any {
+export function tfBrowserCertificateLocationPropertyToTerraform(struct?: TfBrowser.CertificateLocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    secrets_manager: cdktn.listMapper(awsBedrockagentcoreBrowserSecretsManagerPropertyToTerraform, true)(struct!.secretsManager),
+    secrets_manager: cdktn.listMapper(tfBrowserSecretsManagerPropertyToTerraform, true)(struct!.secretsManager),
   }
 }
 
 
-export function awsBedrockagentcoreBrowserCertificateLocationPropertyToHclTerraform(struct?: AwsBedrockagentcoreBrowser.CertificateLocationProperty | cdktn.IResolvable): any {
+export function tfBrowserCertificateLocationPropertyToHclTerraform(struct?: TfBrowser.CertificateLocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     secrets_manager: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreBrowserSecretsManagerPropertyToHclTerraform, true)(struct!.secretsManager),
+      value: cdktn.listMapperHcl(tfBrowserSecretsManagerPropertyToHclTerraform, true)(struct!.secretsManager),
       isBlock: true,
       type: "list",
       storageClassType: "SecretsManagerPropertyList",
@@ -508,25 +508,25 @@ export function awsBedrockagentcoreBrowserCertificateLocationPropertyToHclTerraf
 }
 
 
-export function awsBedrockagentcoreBrowserCertificatePropertyToTerraform(struct?: AwsBedrockagentcoreBrowser.CertificateProperty | cdktn.IResolvable): any {
+export function tfBrowserCertificatePropertyToTerraform(struct?: TfBrowser.CertificateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    location: cdktn.listMapper(awsBedrockagentcoreBrowserCertificateLocationPropertyToTerraform, true)(struct!.location),
+    location: cdktn.listMapper(tfBrowserCertificateLocationPropertyToTerraform, true)(struct!.location),
   }
 }
 
 
-export function awsBedrockagentcoreBrowserCertificatePropertyToHclTerraform(struct?: AwsBedrockagentcoreBrowser.CertificateProperty | cdktn.IResolvable): any {
+export function tfBrowserCertificatePropertyToHclTerraform(struct?: TfBrowser.CertificateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     location: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreBrowserCertificateLocationPropertyToHclTerraform, true)(struct!.location),
+      value: cdktn.listMapperHcl(tfBrowserCertificateLocationPropertyToHclTerraform, true)(struct!.location),
       isBlock: true,
       type: "list",
       storageClassType: "CertificateLocationPropertyList",
@@ -538,7 +538,7 @@ export function awsBedrockagentcoreBrowserCertificatePropertyToHclTerraform(stru
 }
 
 
-export function awsBedrockagentcoreBrowserS3PropertyToTerraform(struct?: AwsBedrockagentcoreBrowser.S3Property | cdktn.IResolvable): any {
+export function tfBrowserS3PropertyToTerraform(struct?: TfBrowser.S3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -551,7 +551,7 @@ export function awsBedrockagentcoreBrowserS3PropertyToTerraform(struct?: AwsBedr
 }
 
 
-export function awsBedrockagentcoreBrowserS3PropertyToHclTerraform(struct?: AwsBedrockagentcoreBrowser.S3Property | cdktn.IResolvable): any {
+export function tfBrowserS3PropertyToHclTerraform(struct?: TfBrowser.S3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -582,25 +582,25 @@ export function awsBedrockagentcoreBrowserS3PropertyToHclTerraform(struct?: AwsB
 }
 
 
-export function awsBedrockagentcoreBrowserEnterprisePolicyLocationPropertyToTerraform(struct?: AwsBedrockagentcoreBrowser.EnterprisePolicyLocationProperty | cdktn.IResolvable): any {
+export function tfBrowserEnterprisePolicyLocationPropertyToTerraform(struct?: TfBrowser.EnterprisePolicyLocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    s3: cdktn.listMapper(awsBedrockagentcoreBrowserS3PropertyToTerraform, true)(struct!.s3),
+    s3: cdktn.listMapper(tfBrowserS3PropertyToTerraform, true)(struct!.s3),
   }
 }
 
 
-export function awsBedrockagentcoreBrowserEnterprisePolicyLocationPropertyToHclTerraform(struct?: AwsBedrockagentcoreBrowser.EnterprisePolicyLocationProperty | cdktn.IResolvable): any {
+export function tfBrowserEnterprisePolicyLocationPropertyToHclTerraform(struct?: TfBrowser.EnterprisePolicyLocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     s3: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreBrowserS3PropertyToHclTerraform, true)(struct!.s3),
+      value: cdktn.listMapperHcl(tfBrowserS3PropertyToHclTerraform, true)(struct!.s3),
       isBlock: true,
       type: "list",
       storageClassType: "S3PropertyList",
@@ -612,19 +612,19 @@ export function awsBedrockagentcoreBrowserEnterprisePolicyLocationPropertyToHclT
 }
 
 
-export function awsBedrockagentcoreBrowserEnterprisePolicyPropertyToTerraform(struct?: AwsBedrockagentcoreBrowser.EnterprisePolicyProperty | cdktn.IResolvable): any {
+export function tfBrowserEnterprisePolicyPropertyToTerraform(struct?: TfBrowser.EnterprisePolicyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     type: cdktn.stringToTerraform(struct!.type),
-    location: cdktn.listMapper(awsBedrockagentcoreBrowserEnterprisePolicyLocationPropertyToTerraform, true)(struct!.location),
+    location: cdktn.listMapper(tfBrowserEnterprisePolicyLocationPropertyToTerraform, true)(struct!.location),
   }
 }
 
 
-export function awsBedrockagentcoreBrowserEnterprisePolicyPropertyToHclTerraform(struct?: AwsBedrockagentcoreBrowser.EnterprisePolicyProperty | cdktn.IResolvable): any {
+export function tfBrowserEnterprisePolicyPropertyToHclTerraform(struct?: TfBrowser.EnterprisePolicyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -637,7 +637,7 @@ export function awsBedrockagentcoreBrowserEnterprisePolicyPropertyToHclTerraform
       storageClassType: "string",
     },
     location: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreBrowserEnterprisePolicyLocationPropertyToHclTerraform, true)(struct!.location),
+      value: cdktn.listMapperHcl(tfBrowserEnterprisePolicyLocationPropertyToHclTerraform, true)(struct!.location),
       isBlock: true,
       type: "list",
       storageClassType: "EnterprisePolicyLocationPropertyList",
@@ -649,7 +649,7 @@ export function awsBedrockagentcoreBrowserEnterprisePolicyPropertyToHclTerraform
 }
 
 
-export function awsBedrockagentcoreBrowserVpcConfigPropertyToTerraform(struct?: AwsBedrockagentcoreBrowser.VpcConfigProperty | cdktn.IResolvable): any {
+export function tfBrowserVpcConfigPropertyToTerraform(struct?: TfBrowser.VpcConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -661,7 +661,7 @@ export function awsBedrockagentcoreBrowserVpcConfigPropertyToTerraform(struct?: 
 }
 
 
-export function awsBedrockagentcoreBrowserVpcConfigPropertyToHclTerraform(struct?: AwsBedrockagentcoreBrowser.VpcConfigProperty | cdktn.IResolvable): any {
+export function tfBrowserVpcConfigPropertyToHclTerraform(struct?: TfBrowser.VpcConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -686,19 +686,19 @@ export function awsBedrockagentcoreBrowserVpcConfigPropertyToHclTerraform(struct
 }
 
 
-export function awsBedrockagentcoreBrowserNetworkConfigurationPropertyToTerraform(struct?: AwsBedrockagentcoreBrowser.NetworkConfigurationProperty | cdktn.IResolvable): any {
+export function tfBrowserNetworkConfigurationPropertyToTerraform(struct?: TfBrowser.NetworkConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     network_mode: cdktn.stringToTerraform(struct!.networkMode),
-    vpc_config: cdktn.listMapper(awsBedrockagentcoreBrowserVpcConfigPropertyToTerraform, true)(struct!.vpcConfig),
+    vpc_config: cdktn.listMapper(tfBrowserVpcConfigPropertyToTerraform, true)(struct!.vpcConfig),
   }
 }
 
 
-export function awsBedrockagentcoreBrowserNetworkConfigurationPropertyToHclTerraform(struct?: AwsBedrockagentcoreBrowser.NetworkConfigurationProperty | cdktn.IResolvable): any {
+export function tfBrowserNetworkConfigurationPropertyToHclTerraform(struct?: TfBrowser.NetworkConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -711,7 +711,7 @@ export function awsBedrockagentcoreBrowserNetworkConfigurationPropertyToHclTerra
       storageClassType: "string",
     },
     vpc_config: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreBrowserVpcConfigPropertyToHclTerraform, true)(struct!.vpcConfig),
+      value: cdktn.listMapperHcl(tfBrowserVpcConfigPropertyToHclTerraform, true)(struct!.vpcConfig),
       isBlock: true,
       type: "list",
       storageClassType: "VpcConfigPropertyList",
@@ -723,7 +723,7 @@ export function awsBedrockagentcoreBrowserNetworkConfigurationPropertyToHclTerra
 }
 
 
-export function awsBedrockagentcoreBrowserS3LocationPropertyToTerraform(struct?: AwsBedrockagentcoreBrowser.S3LocationProperty | cdktn.IResolvable): any {
+export function tfBrowserS3LocationPropertyToTerraform(struct?: TfBrowser.S3LocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -735,7 +735,7 @@ export function awsBedrockagentcoreBrowserS3LocationPropertyToTerraform(struct?:
 }
 
 
-export function awsBedrockagentcoreBrowserS3LocationPropertyToHclTerraform(struct?: AwsBedrockagentcoreBrowser.S3LocationProperty | cdktn.IResolvable): any {
+export function tfBrowserS3LocationPropertyToHclTerraform(struct?: TfBrowser.S3LocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -760,19 +760,19 @@ export function awsBedrockagentcoreBrowserS3LocationPropertyToHclTerraform(struc
 }
 
 
-export function awsBedrockagentcoreBrowserRecordingPropertyToTerraform(struct?: AwsBedrockagentcoreBrowser.RecordingProperty | cdktn.IResolvable): any {
+export function tfBrowserRecordingPropertyToTerraform(struct?: TfBrowser.RecordingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     enabled: cdktn.booleanToTerraform(struct!.enabled),
-    s3_location: cdktn.listMapper(awsBedrockagentcoreBrowserS3LocationPropertyToTerraform, true)(struct!.s3Location),
+    s3_location: cdktn.listMapper(tfBrowserS3LocationPropertyToTerraform, true)(struct!.s3Location),
   }
 }
 
 
-export function awsBedrockagentcoreBrowserRecordingPropertyToHclTerraform(struct?: AwsBedrockagentcoreBrowser.RecordingProperty | cdktn.IResolvable): any {
+export function tfBrowserRecordingPropertyToHclTerraform(struct?: TfBrowser.RecordingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -785,7 +785,7 @@ export function awsBedrockagentcoreBrowserRecordingPropertyToHclTerraform(struct
       storageClassType: "boolean",
     },
     s3_location: {
-      value: cdktn.listMapperHcl(awsBedrockagentcoreBrowserS3LocationPropertyToHclTerraform, true)(struct!.s3Location),
+      value: cdktn.listMapperHcl(tfBrowserS3LocationPropertyToHclTerraform, true)(struct!.s3Location),
       isBlock: true,
       type: "list",
       storageClassType: "S3LocationPropertyList",
@@ -797,7 +797,7 @@ export function awsBedrockagentcoreBrowserRecordingPropertyToHclTerraform(struct
 }
 
 
-export function awsBedrockagentcoreBrowserTimeoutsPropertyToTerraform(struct?: AwsBedrockagentcoreBrowser.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfBrowserTimeoutsPropertyToTerraform(struct?: TfBrowser.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -809,7 +809,7 @@ export function awsBedrockagentcoreBrowserTimeoutsPropertyToTerraform(struct?: A
 }
 
 
-export function awsBedrockagentcoreBrowserTimeoutsPropertyToHclTerraform(struct?: AwsBedrockagentcoreBrowser.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfBrowserTimeoutsPropertyToHclTerraform(struct?: TfBrowser.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -834,10 +834,10 @@ export function awsBedrockagentcoreBrowserTimeoutsPropertyToHclTerraform(struct?
 }
 
 
-export namespace AwsBedrockagentcoreBrowser {
+export namespace TfBrowser {
 export interface BrowserSigningProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#enabled AwsBedrockagentcoreBrowser#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#enabled TfBrowser#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
 }
@@ -920,7 +920,7 @@ export class BrowserSigningPropertyList extends cdktn.ComplexList {
 }
 export interface SecretsManagerProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#secret_arn AwsBedrockagentcoreBrowser#secret_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#secret_arn TfBrowser#secret_arn}
   */
   readonly secretArn: string;
 }
@@ -1005,7 +1005,7 @@ export interface CertificateLocationProperty {
   /**
   * secrets_manager block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#secrets_manager AwsBedrockagentcoreBrowser#secrets_manager}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#secrets_manager TfBrowser#secrets_manager}
   */
   readonly secretsManager?: SecretsManagerProperty[] | cdktn.IResolvable;
 }
@@ -1093,7 +1093,7 @@ export interface CertificateProperty {
   /**
   * location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#location AwsBedrockagentcoreBrowser#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#location TfBrowser#location}
   */
   readonly location?: CertificateLocationProperty[] | cdktn.IResolvable;
 }
@@ -1179,15 +1179,15 @@ export class CertificatePropertyList extends cdktn.ComplexList {
 }
 export interface S3Property {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#bucket AwsBedrockagentcoreBrowser#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#bucket TfBrowser#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#prefix AwsBedrockagentcoreBrowser#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#prefix TfBrowser#prefix}
   */
   readonly prefix: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#version_id AwsBedrockagentcoreBrowser#version_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#version_id TfBrowser#version_id}
   */
   readonly versionId?: string;
 }
@@ -1313,7 +1313,7 @@ export interface EnterprisePolicyLocationProperty {
   /**
   * s3 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#s3 AwsBedrockagentcoreBrowser#s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#s3 TfBrowser#s3}
   */
   readonly s3?: S3Property[] | cdktn.IResolvable;
 }
@@ -1399,13 +1399,13 @@ export class EnterprisePolicyLocationPropertyList extends cdktn.ComplexList {
 }
 export interface EnterprisePolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#type AwsBedrockagentcoreBrowser#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#type TfBrowser#type}
   */
   readonly type?: string;
   /**
   * location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#location AwsBedrockagentcoreBrowser#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#location TfBrowser#location}
   */
   readonly location?: EnterprisePolicyLocationProperty[] | cdktn.IResolvable;
 }
@@ -1513,11 +1513,11 @@ export class EnterprisePolicyPropertyList extends cdktn.ComplexList {
 }
 export interface VpcConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#security_groups AwsBedrockagentcoreBrowser#security_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#security_groups TfBrowser#security_groups}
   */
   readonly securityGroups: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#subnets AwsBedrockagentcoreBrowser#subnets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#subnets TfBrowser#subnets}
   */
   readonly subnets: string[];
 }
@@ -1619,13 +1619,13 @@ export class VpcConfigPropertyList extends cdktn.ComplexList {
 }
 export interface NetworkConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#network_mode AwsBedrockagentcoreBrowser#network_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#network_mode TfBrowser#network_mode}
   */
   readonly networkMode: string;
   /**
   * vpc_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#vpc_config AwsBedrockagentcoreBrowser#vpc_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#vpc_config TfBrowser#vpc_config}
   */
   readonly vpcConfig?: VpcConfigProperty[] | cdktn.IResolvable;
 }
@@ -1730,11 +1730,11 @@ export class NetworkConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface S3LocationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#bucket AwsBedrockagentcoreBrowser#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#bucket TfBrowser#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#prefix AwsBedrockagentcoreBrowser#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#prefix TfBrowser#prefix}
   */
   readonly prefix: string;
 }
@@ -1836,13 +1836,13 @@ export class S3LocationPropertyList extends cdktn.ComplexList {
 }
 export interface RecordingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#enabled AwsBedrockagentcoreBrowser#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#enabled TfBrowser#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
   * s3_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#s3_location AwsBedrockagentcoreBrowser#s3_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#s3_location TfBrowser#s3_location}
   */
   readonly s3Location?: S3LocationProperty[] | cdktn.IResolvable;
 }
@@ -1952,13 +1952,13 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#create AwsBedrockagentcoreBrowser#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#create TfBrowser#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#delete AwsBedrockagentcoreBrowser#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser#delete TfBrowser#delete}
   */
   readonly delete?: string;
 }

@@ -5,29 +5,29 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCloudfrontVpcOriginConfig extends cdktn.TerraformMetaArguments {
+export interface TfVpcOriginConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_vpc_origin#tags AwsCloudfrontVpcOrigin#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_vpc_origin#tags TfVpcOrigin#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_vpc_origin#timeouts AwsCloudfrontVpcOrigin#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_vpc_origin#timeouts TfVpcOrigin#timeouts}
   */
-  readonly timeouts?: AwsCloudfrontVpcOrigin.TimeoutsProperty;
+  readonly timeouts?: TfVpcOrigin.TimeoutsProperty;
   /**
   * vpc_origin_endpoint_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_vpc_origin#vpc_origin_endpoint_config AwsCloudfrontVpcOrigin#vpc_origin_endpoint_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_vpc_origin#vpc_origin_endpoint_config TfVpcOrigin#vpc_origin_endpoint_config}
   */
-  readonly vpcOriginEndpointConfig?: AwsCloudfrontVpcOrigin.VpcOriginEndpointConfigProperty[] | cdktn.IResolvable;
+  readonly vpcOriginEndpointConfig?: TfVpcOrigin.VpcOriginEndpointConfigProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_vpc_origin aws_cloudfront_vpc_origin}
 */
-export class AwsCloudfrontVpcOrigin extends cdktn.TerraformResource {
+export class TfVpcOrigin extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -38,11 +38,11 @@ export class AwsCloudfrontVpcOrigin extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCloudfrontVpcOrigin resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfVpcOrigin resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCloudfrontVpcOrigin to import
-  * @param importFromId The id of the existing AwsCloudfrontVpcOrigin that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_vpc_origin#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCloudfrontVpcOrigin to import is found
+  * @param importToId The construct id used in the generated config for the TfVpcOrigin to import
+  * @param importFromId The id of the existing TfVpcOrigin that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_vpc_origin#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfVpcOrigin to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudfront_vpc_origin", importId: importFromId, provider });
@@ -57,9 +57,9 @@ export class AwsCloudfrontVpcOrigin extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCloudfrontVpcOriginConfig = {}
+  * @param options TfVpcOriginConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsCloudfrontVpcOriginConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfVpcOriginConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudfront_vpc_origin',
       terraformGeneratorMetadata: {
@@ -122,11 +122,11 @@ export class AwsCloudfrontVpcOrigin extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsCloudfrontVpcOrigin.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfVpcOrigin.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsCloudfrontVpcOrigin.TimeoutsProperty) {
+  public putTimeouts(value: TfVpcOrigin.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -138,11 +138,11 @@ export class AwsCloudfrontVpcOrigin extends cdktn.TerraformResource {
   }
 
   // vpc_origin_endpoint_config - computed: false, optional: true, required: false
-  private _vpcOriginEndpointConfig = new AwsCloudfrontVpcOrigin.VpcOriginEndpointConfigPropertyList(this, "vpc_origin_endpoint_config", false);
+  private _vpcOriginEndpointConfig = new TfVpcOrigin.VpcOriginEndpointConfigPropertyList(this, "vpc_origin_endpoint_config", false);
   public get vpcOriginEndpointConfig() {
     return this._vpcOriginEndpointConfig;
   }
-  public putVpcOriginEndpointConfig(value: AwsCloudfrontVpcOrigin.VpcOriginEndpointConfigProperty[] | cdktn.IResolvable) {
+  public putVpcOriginEndpointConfig(value: TfVpcOrigin.VpcOriginEndpointConfigProperty[] | cdktn.IResolvable) {
     this._vpcOriginEndpointConfig.internalValue = value;
   }
   public resetVpcOriginEndpointConfig() {
@@ -160,8 +160,8 @@ export class AwsCloudfrontVpcOrigin extends cdktn.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      timeouts: awsCloudfrontVpcOriginTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      vpc_origin_endpoint_config: cdktn.listMapper(awsCloudfrontVpcOriginVpcOriginEndpointConfigPropertyToTerraform, true)(this._vpcOriginEndpointConfig.internalValue),
+      timeouts: tfVpcOriginTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      vpc_origin_endpoint_config: cdktn.listMapper(tfVpcOriginVpcOriginEndpointConfigPropertyToTerraform, true)(this._vpcOriginEndpointConfig.internalValue),
     };
   }
 
@@ -174,16 +174,16 @@ export class AwsCloudfrontVpcOrigin extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsCloudfrontVpcOriginTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfVpcOriginTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsCloudfrontVpcOrigin.TimeoutsProperty",
+        storageClassType: "TfVpcOrigin.TimeoutsProperty",
       },
       vpc_origin_endpoint_config: {
-        value: cdktn.listMapperHcl(awsCloudfrontVpcOriginVpcOriginEndpointConfigPropertyToHclTerraform, true)(this._vpcOriginEndpointConfig.internalValue),
+        value: cdktn.listMapperHcl(tfVpcOriginVpcOriginEndpointConfigPropertyToHclTerraform, true)(this._vpcOriginEndpointConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudfrontVpcOrigin.VpcOriginEndpointConfigPropertyList",
+        storageClassType: "TfVpcOrigin.VpcOriginEndpointConfigPropertyList",
       },
     };
 
@@ -192,7 +192,7 @@ export class AwsCloudfrontVpcOrigin extends cdktn.TerraformResource {
   }
 }
 
-export function awsCloudfrontVpcOriginTimeoutsPropertyToTerraform(struct?: AwsCloudfrontVpcOrigin.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfVpcOriginTimeoutsPropertyToTerraform(struct?: TfVpcOrigin.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -205,7 +205,7 @@ export function awsCloudfrontVpcOriginTimeoutsPropertyToTerraform(struct?: AwsCl
 }
 
 
-export function awsCloudfrontVpcOriginTimeoutsPropertyToHclTerraform(struct?: AwsCloudfrontVpcOrigin.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfVpcOriginTimeoutsPropertyToHclTerraform(struct?: TfVpcOrigin.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -236,7 +236,7 @@ export function awsCloudfrontVpcOriginTimeoutsPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsCloudfrontVpcOriginOriginSslProtocolsPropertyToTerraform(struct?: AwsCloudfrontVpcOrigin.OriginSslProtocolsProperty | cdktn.IResolvable): any {
+export function tfVpcOriginOriginSslProtocolsPropertyToTerraform(struct?: TfVpcOrigin.OriginSslProtocolsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -248,7 +248,7 @@ export function awsCloudfrontVpcOriginOriginSslProtocolsPropertyToTerraform(stru
 }
 
 
-export function awsCloudfrontVpcOriginOriginSslProtocolsPropertyToHclTerraform(struct?: AwsCloudfrontVpcOrigin.OriginSslProtocolsProperty | cdktn.IResolvable): any {
+export function tfVpcOriginOriginSslProtocolsPropertyToHclTerraform(struct?: TfVpcOrigin.OriginSslProtocolsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -273,7 +273,7 @@ export function awsCloudfrontVpcOriginOriginSslProtocolsPropertyToHclTerraform(s
 }
 
 
-export function awsCloudfrontVpcOriginVpcOriginEndpointConfigPropertyToTerraform(struct?: AwsCloudfrontVpcOrigin.VpcOriginEndpointConfigProperty | cdktn.IResolvable): any {
+export function tfVpcOriginVpcOriginEndpointConfigPropertyToTerraform(struct?: TfVpcOrigin.VpcOriginEndpointConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -284,12 +284,12 @@ export function awsCloudfrontVpcOriginVpcOriginEndpointConfigPropertyToTerraform
     https_port: cdktn.numberToTerraform(struct!.httpsPort),
     name: cdktn.stringToTerraform(struct!.name),
     origin_protocol_policy: cdktn.stringToTerraform(struct!.originProtocolPolicy),
-    origin_ssl_protocols: cdktn.listMapper(awsCloudfrontVpcOriginOriginSslProtocolsPropertyToTerraform, true)(struct!.originSslProtocols),
+    origin_ssl_protocols: cdktn.listMapper(tfVpcOriginOriginSslProtocolsPropertyToTerraform, true)(struct!.originSslProtocols),
   }
 }
 
 
-export function awsCloudfrontVpcOriginVpcOriginEndpointConfigPropertyToHclTerraform(struct?: AwsCloudfrontVpcOrigin.VpcOriginEndpointConfigProperty | cdktn.IResolvable): any {
+export function tfVpcOriginVpcOriginEndpointConfigPropertyToHclTerraform(struct?: TfVpcOrigin.VpcOriginEndpointConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -326,7 +326,7 @@ export function awsCloudfrontVpcOriginVpcOriginEndpointConfigPropertyToHclTerraf
       storageClassType: "string",
     },
     origin_ssl_protocols: {
-      value: cdktn.listMapperHcl(awsCloudfrontVpcOriginOriginSslProtocolsPropertyToHclTerraform, true)(struct!.originSslProtocols),
+      value: cdktn.listMapperHcl(tfVpcOriginOriginSslProtocolsPropertyToHclTerraform, true)(struct!.originSslProtocols),
       isBlock: true,
       type: "list",
       storageClassType: "OriginSslProtocolsPropertyList",
@@ -338,24 +338,24 @@ export function awsCloudfrontVpcOriginVpcOriginEndpointConfigPropertyToHclTerraf
 }
 
 
-export namespace AwsCloudfrontVpcOrigin {
+export namespace TfVpcOrigin {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_vpc_origin#create AwsCloudfrontVpcOrigin#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_vpc_origin#create TfVpcOrigin#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_vpc_origin#delete AwsCloudfrontVpcOrigin#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_vpc_origin#delete TfVpcOrigin#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_vpc_origin#update AwsCloudfrontVpcOrigin#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_vpc_origin#update TfVpcOrigin#update}
   */
   readonly update?: string;
 }
@@ -463,11 +463,11 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface OriginSslProtocolsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_vpc_origin#items AwsCloudfrontVpcOrigin#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_vpc_origin#items TfVpcOrigin#items}
   */
   readonly items: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_vpc_origin#quantity AwsCloudfrontVpcOrigin#quantity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_vpc_origin#quantity TfVpcOrigin#quantity}
   */
   readonly quantity: number;
 }
@@ -569,29 +569,29 @@ export class OriginSslProtocolsPropertyList extends cdktn.ComplexList {
 }
 export interface VpcOriginEndpointConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_vpc_origin#arn AwsCloudfrontVpcOrigin#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_vpc_origin#arn TfVpcOrigin#arn}
   */
   readonly arn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_vpc_origin#http_port AwsCloudfrontVpcOrigin#http_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_vpc_origin#http_port TfVpcOrigin#http_port}
   */
   readonly httpPort: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_vpc_origin#https_port AwsCloudfrontVpcOrigin#https_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_vpc_origin#https_port TfVpcOrigin#https_port}
   */
   readonly httpsPort: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_vpc_origin#name AwsCloudfrontVpcOrigin#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_vpc_origin#name TfVpcOrigin#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_vpc_origin#origin_protocol_policy AwsCloudfrontVpcOrigin#origin_protocol_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_vpc_origin#origin_protocol_policy TfVpcOrigin#origin_protocol_policy}
   */
   readonly originProtocolPolicy: string;
   /**
   * origin_ssl_protocols block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_vpc_origin#origin_ssl_protocols AwsCloudfrontVpcOrigin#origin_ssl_protocols}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_vpc_origin#origin_ssl_protocols TfVpcOrigin#origin_ssl_protocols}
   */
   readonly originSslProtocols?: OriginSslProtocolsProperty[] | cdktn.IResolvable;
 }

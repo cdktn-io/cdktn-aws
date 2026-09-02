@@ -5,47 +5,47 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsNetworkfirewallTlsInspectionConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface TfTlsInspectionConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#description AwsNetworkfirewallTlsInspectionConfiguration#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#description TfTlsInspectionConfiguration#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#encryption_configuration AwsNetworkfirewallTlsInspectionConfiguration#encryption_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#encryption_configuration TfTlsInspectionConfiguration#encryption_configuration}
   */
-  readonly encryptionConfiguration?: AwsNetworkfirewallTlsInspectionConfiguration.EncryptionConfigurationProperty[] | cdktn.IResolvable;
+  readonly encryptionConfiguration?: TfTlsInspectionConfiguration.EncryptionConfigurationProperty[] | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#name AwsNetworkfirewallTlsInspectionConfiguration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#name TfTlsInspectionConfiguration#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#region AwsNetworkfirewallTlsInspectionConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#region TfTlsInspectionConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#tags AwsNetworkfirewallTlsInspectionConfiguration#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#tags TfTlsInspectionConfiguration#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#timeouts AwsNetworkfirewallTlsInspectionConfiguration#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#timeouts TfTlsInspectionConfiguration#timeouts}
   */
-  readonly timeouts?: AwsNetworkfirewallTlsInspectionConfiguration.TimeoutsProperty;
+  readonly timeouts?: TfTlsInspectionConfiguration.TimeoutsProperty;
   /**
   * tls_inspection_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#tls_inspection_configuration AwsNetworkfirewallTlsInspectionConfiguration#tls_inspection_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#tls_inspection_configuration TfTlsInspectionConfiguration#tls_inspection_configuration}
   */
-  readonly tlsInspectionConfiguration?: AwsNetworkfirewallTlsInspectionConfiguration.TlsInspectionConfigurationProperty[] | cdktn.IResolvable;
+  readonly tlsInspectionConfiguration?: TfTlsInspectionConfiguration.TlsInspectionConfigurationProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration aws_networkfirewall_tls_inspection_configuration}
 */
-export class AwsNetworkfirewallTlsInspectionConfiguration extends cdktn.TerraformResource {
+export class TfTlsInspectionConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -56,11 +56,11 @@ export class AwsNetworkfirewallTlsInspectionConfiguration extends cdktn.Terrafor
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsNetworkfirewallTlsInspectionConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfTlsInspectionConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsNetworkfirewallTlsInspectionConfiguration to import
-  * @param importFromId The id of the existing AwsNetworkfirewallTlsInspectionConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsNetworkfirewallTlsInspectionConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the TfTlsInspectionConfiguration to import
+  * @param importFromId The id of the existing TfTlsInspectionConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfTlsInspectionConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkfirewall_tls_inspection_configuration", importId: importFromId, provider });
@@ -75,9 +75,9 @@ export class AwsNetworkfirewallTlsInspectionConfiguration extends cdktn.Terrafor
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsNetworkfirewallTlsInspectionConfigurationConfig
+  * @param options TfTlsInspectionConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsNetworkfirewallTlsInspectionConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: TfTlsInspectionConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_networkfirewall_tls_inspection_configuration',
       terraformGeneratorMetadata: {
@@ -112,13 +112,13 @@ export class AwsNetworkfirewallTlsInspectionConfiguration extends cdktn.Terrafor
   }
 
   // certificate_authority - computed: true, optional: false, required: false
-  private _certificateAuthority = new AwsNetworkfirewallTlsInspectionConfiguration.CertificateAuthorityPropertyList(this, "certificate_authority", false);
+  private _certificateAuthority = new TfTlsInspectionConfiguration.CertificateAuthorityPropertyList(this, "certificate_authority", false);
   public get certificateAuthority() {
     return this._certificateAuthority;
   }
 
   // certificates - computed: true, optional: false, required: false
-  private _certificates = new AwsNetworkfirewallTlsInspectionConfiguration.CertificatesPropertyList(this, "certificates", false);
+  private _certificates = new TfTlsInspectionConfiguration.CertificatesPropertyList(this, "certificates", false);
   public get certificates() {
     return this._certificates;
   }
@@ -140,11 +140,11 @@ export class AwsNetworkfirewallTlsInspectionConfiguration extends cdktn.Terrafor
   }
 
   // encryption_configuration - computed: true, optional: true, required: false
-  private _encryptionConfiguration = new AwsNetworkfirewallTlsInspectionConfiguration.EncryptionConfigurationPropertyList(this, "encryption_configuration", false);
+  private _encryptionConfiguration = new TfTlsInspectionConfiguration.EncryptionConfigurationPropertyList(this, "encryption_configuration", false);
   public get encryptionConfiguration() {
     return this._encryptionConfiguration;
   }
-  public putEncryptionConfiguration(value: AwsNetworkfirewallTlsInspectionConfiguration.EncryptionConfigurationProperty[] | cdktn.IResolvable) {
+  public putEncryptionConfiguration(value: TfTlsInspectionConfiguration.EncryptionConfigurationProperty[] | cdktn.IResolvable) {
     this._encryptionConfiguration.internalValue = value;
   }
   public resetEncryptionConfiguration() {
@@ -227,11 +227,11 @@ export class AwsNetworkfirewallTlsInspectionConfiguration extends cdktn.Terrafor
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsNetworkfirewallTlsInspectionConfiguration.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfTlsInspectionConfiguration.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsNetworkfirewallTlsInspectionConfiguration.TimeoutsProperty) {
+  public putTimeouts(value: TfTlsInspectionConfiguration.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -243,11 +243,11 @@ export class AwsNetworkfirewallTlsInspectionConfiguration extends cdktn.Terrafor
   }
 
   // tls_inspection_configuration - computed: false, optional: true, required: false
-  private _tlsInspectionConfiguration = new AwsNetworkfirewallTlsInspectionConfiguration.TlsInspectionConfigurationPropertyList(this, "tls_inspection_configuration", false);
+  private _tlsInspectionConfiguration = new TfTlsInspectionConfiguration.TlsInspectionConfigurationPropertyList(this, "tls_inspection_configuration", false);
   public get tlsInspectionConfiguration() {
     return this._tlsInspectionConfiguration;
   }
-  public putTlsInspectionConfiguration(value: AwsNetworkfirewallTlsInspectionConfiguration.TlsInspectionConfigurationProperty[] | cdktn.IResolvable) {
+  public putTlsInspectionConfiguration(value: TfTlsInspectionConfiguration.TlsInspectionConfigurationProperty[] | cdktn.IResolvable) {
     this._tlsInspectionConfiguration.internalValue = value;
   }
   public resetTlsInspectionConfiguration() {
@@ -265,12 +265,12 @@ export class AwsNetworkfirewallTlsInspectionConfiguration extends cdktn.Terrafor
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: cdktn.stringToTerraform(this._description),
-      encryption_configuration: cdktn.listMapper(awsNetworkfirewallTlsInspectionConfigurationEncryptionConfigurationPropertyToTerraform, false)(this._encryptionConfiguration.internalValue),
+      encryption_configuration: cdktn.listMapper(tfTlsInspectionConfigurationEncryptionConfigurationPropertyToTerraform, false)(this._encryptionConfiguration.internalValue),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      timeouts: awsNetworkfirewallTlsInspectionConfigurationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      tls_inspection_configuration: cdktn.listMapper(awsNetworkfirewallTlsInspectionConfigurationTlsInspectionConfigurationPropertyToTerraform, true)(this._tlsInspectionConfiguration.internalValue),
+      timeouts: tfTlsInspectionConfigurationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      tls_inspection_configuration: cdktn.listMapper(tfTlsInspectionConfigurationTlsInspectionConfigurationPropertyToTerraform, true)(this._tlsInspectionConfiguration.internalValue),
     };
   }
 
@@ -283,10 +283,10 @@ export class AwsNetworkfirewallTlsInspectionConfiguration extends cdktn.Terrafor
         storageClassType: "string",
       },
       encryption_configuration: {
-        value: cdktn.listMapperHcl(awsNetworkfirewallTlsInspectionConfigurationEncryptionConfigurationPropertyToHclTerraform, false)(this._encryptionConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfTlsInspectionConfigurationEncryptionConfigurationPropertyToHclTerraform, false)(this._encryptionConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsNetworkfirewallTlsInspectionConfiguration.EncryptionConfigurationPropertyList",
+        storageClassType: "TfTlsInspectionConfiguration.EncryptionConfigurationPropertyList",
       },
       name: {
         value: cdktn.stringToHclTerraform(this._name),
@@ -307,16 +307,16 @@ export class AwsNetworkfirewallTlsInspectionConfiguration extends cdktn.Terrafor
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsNetworkfirewallTlsInspectionConfigurationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfTlsInspectionConfigurationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsNetworkfirewallTlsInspectionConfiguration.TimeoutsProperty",
+        storageClassType: "TfTlsInspectionConfiguration.TimeoutsProperty",
       },
       tls_inspection_configuration: {
-        value: cdktn.listMapperHcl(awsNetworkfirewallTlsInspectionConfigurationTlsInspectionConfigurationPropertyToHclTerraform, true)(this._tlsInspectionConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfTlsInspectionConfigurationTlsInspectionConfigurationPropertyToHclTerraform, true)(this._tlsInspectionConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsNetworkfirewallTlsInspectionConfiguration.TlsInspectionConfigurationPropertyList",
+        storageClassType: "TfTlsInspectionConfiguration.TlsInspectionConfigurationPropertyList",
       },
     };
 
@@ -325,7 +325,7 @@ export class AwsNetworkfirewallTlsInspectionConfiguration extends cdktn.Terrafor
   }
 }
 
-export function awsNetworkfirewallTlsInspectionConfigurationCertificateAuthorityPropertyToTerraform(struct?: AwsNetworkfirewallTlsInspectionConfiguration.CertificateAuthorityProperty): any {
+export function tfTlsInspectionConfigurationCertificateAuthorityPropertyToTerraform(struct?: TfTlsInspectionConfiguration.CertificateAuthorityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -335,7 +335,7 @@ export function awsNetworkfirewallTlsInspectionConfigurationCertificateAuthority
 }
 
 
-export function awsNetworkfirewallTlsInspectionConfigurationCertificateAuthorityPropertyToHclTerraform(struct?: AwsNetworkfirewallTlsInspectionConfiguration.CertificateAuthorityProperty): any {
+export function tfTlsInspectionConfigurationCertificateAuthorityPropertyToHclTerraform(struct?: TfTlsInspectionConfiguration.CertificateAuthorityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -346,7 +346,7 @@ export function awsNetworkfirewallTlsInspectionConfigurationCertificateAuthority
 }
 
 
-export function awsNetworkfirewallTlsInspectionConfigurationCertificatesPropertyToTerraform(struct?: AwsNetworkfirewallTlsInspectionConfiguration.CertificatesProperty): any {
+export function tfTlsInspectionConfigurationCertificatesPropertyToTerraform(struct?: TfTlsInspectionConfiguration.CertificatesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -356,7 +356,7 @@ export function awsNetworkfirewallTlsInspectionConfigurationCertificatesProperty
 }
 
 
-export function awsNetworkfirewallTlsInspectionConfigurationCertificatesPropertyToHclTerraform(struct?: AwsNetworkfirewallTlsInspectionConfiguration.CertificatesProperty): any {
+export function tfTlsInspectionConfigurationCertificatesPropertyToHclTerraform(struct?: TfTlsInspectionConfiguration.CertificatesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -367,7 +367,7 @@ export function awsNetworkfirewallTlsInspectionConfigurationCertificatesProperty
 }
 
 
-export function awsNetworkfirewallTlsInspectionConfigurationEncryptionConfigurationPropertyToTerraform(struct?: AwsNetworkfirewallTlsInspectionConfiguration.EncryptionConfigurationProperty | cdktn.IResolvable): any {
+export function tfTlsInspectionConfigurationEncryptionConfigurationPropertyToTerraform(struct?: TfTlsInspectionConfiguration.EncryptionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -379,7 +379,7 @@ export function awsNetworkfirewallTlsInspectionConfigurationEncryptionConfigurat
 }
 
 
-export function awsNetworkfirewallTlsInspectionConfigurationEncryptionConfigurationPropertyToHclTerraform(struct?: AwsNetworkfirewallTlsInspectionConfiguration.EncryptionConfigurationProperty | cdktn.IResolvable): any {
+export function tfTlsInspectionConfigurationEncryptionConfigurationPropertyToHclTerraform(struct?: TfTlsInspectionConfiguration.EncryptionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -404,7 +404,7 @@ export function awsNetworkfirewallTlsInspectionConfigurationEncryptionConfigurat
 }
 
 
-export function awsNetworkfirewallTlsInspectionConfigurationTimeoutsPropertyToTerraform(struct?: AwsNetworkfirewallTlsInspectionConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfTlsInspectionConfigurationTimeoutsPropertyToTerraform(struct?: TfTlsInspectionConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -417,7 +417,7 @@ export function awsNetworkfirewallTlsInspectionConfigurationTimeoutsPropertyToTe
 }
 
 
-export function awsNetworkfirewallTlsInspectionConfigurationTimeoutsPropertyToHclTerraform(struct?: AwsNetworkfirewallTlsInspectionConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfTlsInspectionConfigurationTimeoutsPropertyToHclTerraform(struct?: TfTlsInspectionConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -448,7 +448,7 @@ export function awsNetworkfirewallTlsInspectionConfigurationTimeoutsPropertyToHc
 }
 
 
-export function awsNetworkfirewallTlsInspectionConfigurationCheckCertificateRevocationStatusPropertyToTerraform(struct?: AwsNetworkfirewallTlsInspectionConfiguration.CheckCertificateRevocationStatusProperty | cdktn.IResolvable): any {
+export function tfTlsInspectionConfigurationCheckCertificateRevocationStatusPropertyToTerraform(struct?: TfTlsInspectionConfiguration.CheckCertificateRevocationStatusProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -460,7 +460,7 @@ export function awsNetworkfirewallTlsInspectionConfigurationCheckCertificateRevo
 }
 
 
-export function awsNetworkfirewallTlsInspectionConfigurationCheckCertificateRevocationStatusPropertyToHclTerraform(struct?: AwsNetworkfirewallTlsInspectionConfiguration.CheckCertificateRevocationStatusProperty | cdktn.IResolvable): any {
+export function tfTlsInspectionConfigurationCheckCertificateRevocationStatusPropertyToHclTerraform(struct?: TfTlsInspectionConfiguration.CheckCertificateRevocationStatusProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -485,7 +485,7 @@ export function awsNetworkfirewallTlsInspectionConfigurationCheckCertificateRevo
 }
 
 
-export function awsNetworkfirewallTlsInspectionConfigurationDestinationPropertyToTerraform(struct?: AwsNetworkfirewallTlsInspectionConfiguration.DestinationProperty | cdktn.IResolvable): any {
+export function tfTlsInspectionConfigurationDestinationPropertyToTerraform(struct?: TfTlsInspectionConfiguration.DestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -496,7 +496,7 @@ export function awsNetworkfirewallTlsInspectionConfigurationDestinationPropertyT
 }
 
 
-export function awsNetworkfirewallTlsInspectionConfigurationDestinationPropertyToHclTerraform(struct?: AwsNetworkfirewallTlsInspectionConfiguration.DestinationProperty | cdktn.IResolvable): any {
+export function tfTlsInspectionConfigurationDestinationPropertyToHclTerraform(struct?: TfTlsInspectionConfiguration.DestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -515,7 +515,7 @@ export function awsNetworkfirewallTlsInspectionConfigurationDestinationPropertyT
 }
 
 
-export function awsNetworkfirewallTlsInspectionConfigurationDestinationPortsPropertyToTerraform(struct?: AwsNetworkfirewallTlsInspectionConfiguration.DestinationPortsProperty | cdktn.IResolvable): any {
+export function tfTlsInspectionConfigurationDestinationPortsPropertyToTerraform(struct?: TfTlsInspectionConfiguration.DestinationPortsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -527,7 +527,7 @@ export function awsNetworkfirewallTlsInspectionConfigurationDestinationPortsProp
 }
 
 
-export function awsNetworkfirewallTlsInspectionConfigurationDestinationPortsPropertyToHclTerraform(struct?: AwsNetworkfirewallTlsInspectionConfiguration.DestinationPortsProperty | cdktn.IResolvable): any {
+export function tfTlsInspectionConfigurationDestinationPortsPropertyToHclTerraform(struct?: TfTlsInspectionConfiguration.DestinationPortsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -552,7 +552,7 @@ export function awsNetworkfirewallTlsInspectionConfigurationDestinationPortsProp
 }
 
 
-export function awsNetworkfirewallTlsInspectionConfigurationSourcePropertyToTerraform(struct?: AwsNetworkfirewallTlsInspectionConfiguration.SourceProperty | cdktn.IResolvable): any {
+export function tfTlsInspectionConfigurationSourcePropertyToTerraform(struct?: TfTlsInspectionConfiguration.SourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -563,7 +563,7 @@ export function awsNetworkfirewallTlsInspectionConfigurationSourcePropertyToTerr
 }
 
 
-export function awsNetworkfirewallTlsInspectionConfigurationSourcePropertyToHclTerraform(struct?: AwsNetworkfirewallTlsInspectionConfiguration.SourceProperty | cdktn.IResolvable): any {
+export function tfTlsInspectionConfigurationSourcePropertyToHclTerraform(struct?: TfTlsInspectionConfiguration.SourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -582,7 +582,7 @@ export function awsNetworkfirewallTlsInspectionConfigurationSourcePropertyToHclT
 }
 
 
-export function awsNetworkfirewallTlsInspectionConfigurationSourcePortsPropertyToTerraform(struct?: AwsNetworkfirewallTlsInspectionConfiguration.SourcePortsProperty | cdktn.IResolvable): any {
+export function tfTlsInspectionConfigurationSourcePortsPropertyToTerraform(struct?: TfTlsInspectionConfiguration.SourcePortsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -594,7 +594,7 @@ export function awsNetworkfirewallTlsInspectionConfigurationSourcePortsPropertyT
 }
 
 
-export function awsNetworkfirewallTlsInspectionConfigurationSourcePortsPropertyToHclTerraform(struct?: AwsNetworkfirewallTlsInspectionConfiguration.SourcePortsProperty | cdktn.IResolvable): any {
+export function tfTlsInspectionConfigurationSourcePortsPropertyToHclTerraform(struct?: TfTlsInspectionConfiguration.SourcePortsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -619,22 +619,22 @@ export function awsNetworkfirewallTlsInspectionConfigurationSourcePortsPropertyT
 }
 
 
-export function awsNetworkfirewallTlsInspectionConfigurationScopePropertyToTerraform(struct?: AwsNetworkfirewallTlsInspectionConfiguration.ScopeProperty | cdktn.IResolvable): any {
+export function tfTlsInspectionConfigurationScopePropertyToTerraform(struct?: TfTlsInspectionConfiguration.ScopeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     protocols: cdktn.listMapper(cdktn.numberToTerraform, false)(struct!.protocols),
-    destination: cdktn.listMapper(awsNetworkfirewallTlsInspectionConfigurationDestinationPropertyToTerraform, true)(struct!.destination),
-    destination_ports: cdktn.listMapper(awsNetworkfirewallTlsInspectionConfigurationDestinationPortsPropertyToTerraform, true)(struct!.destinationPorts),
-    source: cdktn.listMapper(awsNetworkfirewallTlsInspectionConfigurationSourcePropertyToTerraform, true)(struct!.source),
-    source_ports: cdktn.listMapper(awsNetworkfirewallTlsInspectionConfigurationSourcePortsPropertyToTerraform, true)(struct!.sourcePorts),
+    destination: cdktn.listMapper(tfTlsInspectionConfigurationDestinationPropertyToTerraform, true)(struct!.destination),
+    destination_ports: cdktn.listMapper(tfTlsInspectionConfigurationDestinationPortsPropertyToTerraform, true)(struct!.destinationPorts),
+    source: cdktn.listMapper(tfTlsInspectionConfigurationSourcePropertyToTerraform, true)(struct!.source),
+    source_ports: cdktn.listMapper(tfTlsInspectionConfigurationSourcePortsPropertyToTerraform, true)(struct!.sourcePorts),
   }
 }
 
 
-export function awsNetworkfirewallTlsInspectionConfigurationScopePropertyToHclTerraform(struct?: AwsNetworkfirewallTlsInspectionConfiguration.ScopeProperty | cdktn.IResolvable): any {
+export function tfTlsInspectionConfigurationScopePropertyToHclTerraform(struct?: TfTlsInspectionConfiguration.ScopeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -647,25 +647,25 @@ export function awsNetworkfirewallTlsInspectionConfigurationScopePropertyToHclTe
       storageClassType: "numberList",
     },
     destination: {
-      value: cdktn.listMapperHcl(awsNetworkfirewallTlsInspectionConfigurationDestinationPropertyToHclTerraform, true)(struct!.destination),
+      value: cdktn.listMapperHcl(tfTlsInspectionConfigurationDestinationPropertyToHclTerraform, true)(struct!.destination),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationPropertyList",
     },
     destination_ports: {
-      value: cdktn.listMapperHcl(awsNetworkfirewallTlsInspectionConfigurationDestinationPortsPropertyToHclTerraform, true)(struct!.destinationPorts),
+      value: cdktn.listMapperHcl(tfTlsInspectionConfigurationDestinationPortsPropertyToHclTerraform, true)(struct!.destinationPorts),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationPortsPropertyList",
     },
     source: {
-      value: cdktn.listMapperHcl(awsNetworkfirewallTlsInspectionConfigurationSourcePropertyToHclTerraform, true)(struct!.source),
+      value: cdktn.listMapperHcl(tfTlsInspectionConfigurationSourcePropertyToHclTerraform, true)(struct!.source),
       isBlock: true,
       type: "list",
       storageClassType: "SourcePropertyList",
     },
     source_ports: {
-      value: cdktn.listMapperHcl(awsNetworkfirewallTlsInspectionConfigurationSourcePortsPropertyToHclTerraform, true)(struct!.sourcePorts),
+      value: cdktn.listMapperHcl(tfTlsInspectionConfigurationSourcePortsPropertyToHclTerraform, true)(struct!.sourcePorts),
       isBlock: true,
       type: "list",
       storageClassType: "SourcePortsPropertyList",
@@ -677,7 +677,7 @@ export function awsNetworkfirewallTlsInspectionConfigurationScopePropertyToHclTe
 }
 
 
-export function awsNetworkfirewallTlsInspectionConfigurationServerCertificatePropertyToTerraform(struct?: AwsNetworkfirewallTlsInspectionConfiguration.ServerCertificateProperty | cdktn.IResolvable): any {
+export function tfTlsInspectionConfigurationServerCertificatePropertyToTerraform(struct?: TfTlsInspectionConfiguration.ServerCertificateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -688,7 +688,7 @@ export function awsNetworkfirewallTlsInspectionConfigurationServerCertificatePro
 }
 
 
-export function awsNetworkfirewallTlsInspectionConfigurationServerCertificatePropertyToHclTerraform(struct?: AwsNetworkfirewallTlsInspectionConfiguration.ServerCertificateProperty | cdktn.IResolvable): any {
+export function tfTlsInspectionConfigurationServerCertificatePropertyToHclTerraform(struct?: TfTlsInspectionConfiguration.ServerCertificateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -707,21 +707,21 @@ export function awsNetworkfirewallTlsInspectionConfigurationServerCertificatePro
 }
 
 
-export function awsNetworkfirewallTlsInspectionConfigurationServerCertificateConfigurationPropertyToTerraform(struct?: AwsNetworkfirewallTlsInspectionConfiguration.ServerCertificateConfigurationProperty | cdktn.IResolvable): any {
+export function tfTlsInspectionConfigurationServerCertificateConfigurationPropertyToTerraform(struct?: TfTlsInspectionConfiguration.ServerCertificateConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     certificate_authority_arn: cdktn.stringToTerraform(struct!.certificateAuthorityArn),
-    check_certificate_revocation_status: cdktn.listMapper(awsNetworkfirewallTlsInspectionConfigurationCheckCertificateRevocationStatusPropertyToTerraform, true)(struct!.checkCertificateRevocationStatus),
-    scope: cdktn.listMapper(awsNetworkfirewallTlsInspectionConfigurationScopePropertyToTerraform, true)(struct!.scope),
-    server_certificate: cdktn.listMapper(awsNetworkfirewallTlsInspectionConfigurationServerCertificatePropertyToTerraform, true)(struct!.serverCertificate),
+    check_certificate_revocation_status: cdktn.listMapper(tfTlsInspectionConfigurationCheckCertificateRevocationStatusPropertyToTerraform, true)(struct!.checkCertificateRevocationStatus),
+    scope: cdktn.listMapper(tfTlsInspectionConfigurationScopePropertyToTerraform, true)(struct!.scope),
+    server_certificate: cdktn.listMapper(tfTlsInspectionConfigurationServerCertificatePropertyToTerraform, true)(struct!.serverCertificate),
   }
 }
 
 
-export function awsNetworkfirewallTlsInspectionConfigurationServerCertificateConfigurationPropertyToHclTerraform(struct?: AwsNetworkfirewallTlsInspectionConfiguration.ServerCertificateConfigurationProperty | cdktn.IResolvable): any {
+export function tfTlsInspectionConfigurationServerCertificateConfigurationPropertyToHclTerraform(struct?: TfTlsInspectionConfiguration.ServerCertificateConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -734,19 +734,19 @@ export function awsNetworkfirewallTlsInspectionConfigurationServerCertificateCon
       storageClassType: "string",
     },
     check_certificate_revocation_status: {
-      value: cdktn.listMapperHcl(awsNetworkfirewallTlsInspectionConfigurationCheckCertificateRevocationStatusPropertyToHclTerraform, true)(struct!.checkCertificateRevocationStatus),
+      value: cdktn.listMapperHcl(tfTlsInspectionConfigurationCheckCertificateRevocationStatusPropertyToHclTerraform, true)(struct!.checkCertificateRevocationStatus),
       isBlock: true,
       type: "list",
       storageClassType: "CheckCertificateRevocationStatusPropertyList",
     },
     scope: {
-      value: cdktn.listMapperHcl(awsNetworkfirewallTlsInspectionConfigurationScopePropertyToHclTerraform, true)(struct!.scope),
+      value: cdktn.listMapperHcl(tfTlsInspectionConfigurationScopePropertyToHclTerraform, true)(struct!.scope),
       isBlock: true,
       type: "list",
       storageClassType: "ScopePropertyList",
     },
     server_certificate: {
-      value: cdktn.listMapperHcl(awsNetworkfirewallTlsInspectionConfigurationServerCertificatePropertyToHclTerraform, true)(struct!.serverCertificate),
+      value: cdktn.listMapperHcl(tfTlsInspectionConfigurationServerCertificatePropertyToHclTerraform, true)(struct!.serverCertificate),
       isBlock: true,
       type: "list",
       storageClassType: "ServerCertificatePropertyList",
@@ -758,25 +758,25 @@ export function awsNetworkfirewallTlsInspectionConfigurationServerCertificateCon
 }
 
 
-export function awsNetworkfirewallTlsInspectionConfigurationTlsInspectionConfigurationPropertyToTerraform(struct?: AwsNetworkfirewallTlsInspectionConfiguration.TlsInspectionConfigurationProperty | cdktn.IResolvable): any {
+export function tfTlsInspectionConfigurationTlsInspectionConfigurationPropertyToTerraform(struct?: TfTlsInspectionConfiguration.TlsInspectionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    server_certificate_configuration: cdktn.listMapper(awsNetworkfirewallTlsInspectionConfigurationServerCertificateConfigurationPropertyToTerraform, true)(struct!.serverCertificateConfiguration),
+    server_certificate_configuration: cdktn.listMapper(tfTlsInspectionConfigurationServerCertificateConfigurationPropertyToTerraform, true)(struct!.serverCertificateConfiguration),
   }
 }
 
 
-export function awsNetworkfirewallTlsInspectionConfigurationTlsInspectionConfigurationPropertyToHclTerraform(struct?: AwsNetworkfirewallTlsInspectionConfiguration.TlsInspectionConfigurationProperty | cdktn.IResolvable): any {
+export function tfTlsInspectionConfigurationTlsInspectionConfigurationPropertyToHclTerraform(struct?: TfTlsInspectionConfiguration.TlsInspectionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     server_certificate_configuration: {
-      value: cdktn.listMapperHcl(awsNetworkfirewallTlsInspectionConfigurationServerCertificateConfigurationPropertyToHclTerraform, true)(struct!.serverCertificateConfiguration),
+      value: cdktn.listMapperHcl(tfTlsInspectionConfigurationServerCertificateConfigurationPropertyToHclTerraform, true)(struct!.serverCertificateConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ServerCertificateConfigurationPropertyList",
@@ -788,7 +788,7 @@ export function awsNetworkfirewallTlsInspectionConfigurationTlsInspectionConfigu
 }
 
 
-export namespace AwsNetworkfirewallTlsInspectionConfiguration {
+export namespace TfTlsInspectionConfiguration {
 export interface CertificateAuthorityProperty {
 }
 export class CertificateAuthorityPropertyOutputReference extends cdktn.ComplexObject {
@@ -929,11 +929,11 @@ export class CertificatesPropertyList extends cdktn.ComplexList {
 }
 export interface EncryptionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#key_id AwsNetworkfirewallTlsInspectionConfiguration#key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#key_id TfTlsInspectionConfiguration#key_id}
   */
   readonly keyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#type AwsNetworkfirewallTlsInspectionConfiguration#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#type TfTlsInspectionConfiguration#type}
   */
   readonly type?: string;
 }
@@ -1043,19 +1043,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#create AwsNetworkfirewallTlsInspectionConfiguration#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#create TfTlsInspectionConfiguration#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#delete AwsNetworkfirewallTlsInspectionConfiguration#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#delete TfTlsInspectionConfiguration#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#update AwsNetworkfirewallTlsInspectionConfiguration#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#update TfTlsInspectionConfiguration#update}
   */
   readonly update?: string;
 }
@@ -1163,11 +1163,11 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface CheckCertificateRevocationStatusProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#revoked_status_action AwsNetworkfirewallTlsInspectionConfiguration#revoked_status_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#revoked_status_action TfTlsInspectionConfiguration#revoked_status_action}
   */
   readonly revokedStatusAction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#unknown_status_action AwsNetworkfirewallTlsInspectionConfiguration#unknown_status_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#unknown_status_action TfTlsInspectionConfiguration#unknown_status_action}
   */
   readonly unknownStatusAction?: string;
 }
@@ -1275,7 +1275,7 @@ export class CheckCertificateRevocationStatusPropertyList extends cdktn.ComplexL
 }
 export interface DestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#address_definition AwsNetworkfirewallTlsInspectionConfiguration#address_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#address_definition TfTlsInspectionConfiguration#address_definition}
   */
   readonly addressDefinition: string;
 }
@@ -1358,11 +1358,11 @@ export class DestinationPropertyList extends cdktn.ComplexList {
 }
 export interface DestinationPortsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#from_port AwsNetworkfirewallTlsInspectionConfiguration#from_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#from_port TfTlsInspectionConfiguration#from_port}
   */
   readonly fromPort: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#to_port AwsNetworkfirewallTlsInspectionConfiguration#to_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#to_port TfTlsInspectionConfiguration#to_port}
   */
   readonly toPort: number;
 }
@@ -1464,7 +1464,7 @@ export class DestinationPortsPropertyList extends cdktn.ComplexList {
 }
 export interface SourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#address_definition AwsNetworkfirewallTlsInspectionConfiguration#address_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#address_definition TfTlsInspectionConfiguration#address_definition}
   */
   readonly addressDefinition: string;
 }
@@ -1547,11 +1547,11 @@ export class SourcePropertyList extends cdktn.ComplexList {
 }
 export interface SourcePortsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#from_port AwsNetworkfirewallTlsInspectionConfiguration#from_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#from_port TfTlsInspectionConfiguration#from_port}
   */
   readonly fromPort: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#to_port AwsNetworkfirewallTlsInspectionConfiguration#to_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#to_port TfTlsInspectionConfiguration#to_port}
   */
   readonly toPort: number;
 }
@@ -1653,31 +1653,31 @@ export class SourcePortsPropertyList extends cdktn.ComplexList {
 }
 export interface ScopeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#protocols AwsNetworkfirewallTlsInspectionConfiguration#protocols}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#protocols TfTlsInspectionConfiguration#protocols}
   */
   readonly protocols: number[];
   /**
   * destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#destination AwsNetworkfirewallTlsInspectionConfiguration#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#destination TfTlsInspectionConfiguration#destination}
   */
   readonly destination?: DestinationProperty[] | cdktn.IResolvable;
   /**
   * destination_ports block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#destination_ports AwsNetworkfirewallTlsInspectionConfiguration#destination_ports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#destination_ports TfTlsInspectionConfiguration#destination_ports}
   */
   readonly destinationPorts?: DestinationPortsProperty[] | cdktn.IResolvable;
   /**
   * source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#source AwsNetworkfirewallTlsInspectionConfiguration#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#source TfTlsInspectionConfiguration#source}
   */
   readonly source?: SourceProperty[] | cdktn.IResolvable;
   /**
   * source_ports block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#source_ports AwsNetworkfirewallTlsInspectionConfiguration#source_ports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#source_ports TfTlsInspectionConfiguration#source_ports}
   */
   readonly sourcePorts?: SourcePortsProperty[] | cdktn.IResolvable;
 }
@@ -1848,7 +1848,7 @@ export class ScopePropertyList extends cdktn.ComplexList {
 }
 export interface ServerCertificateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#resource_arn AwsNetworkfirewallTlsInspectionConfiguration#resource_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#resource_arn TfTlsInspectionConfiguration#resource_arn}
   */
   readonly resourceArn?: string;
 }
@@ -1934,25 +1934,25 @@ export class ServerCertificatePropertyList extends cdktn.ComplexList {
 }
 export interface ServerCertificateConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#certificate_authority_arn AwsNetworkfirewallTlsInspectionConfiguration#certificate_authority_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#certificate_authority_arn TfTlsInspectionConfiguration#certificate_authority_arn}
   */
   readonly certificateAuthorityArn?: string;
   /**
   * check_certificate_revocation_status block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#check_certificate_revocation_status AwsNetworkfirewallTlsInspectionConfiguration#check_certificate_revocation_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#check_certificate_revocation_status TfTlsInspectionConfiguration#check_certificate_revocation_status}
   */
   readonly checkCertificateRevocationStatus?: CheckCertificateRevocationStatusProperty[] | cdktn.IResolvable;
   /**
   * scope block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#scope AwsNetworkfirewallTlsInspectionConfiguration#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#scope TfTlsInspectionConfiguration#scope}
   */
   readonly scope?: ScopeProperty[] | cdktn.IResolvable;
   /**
   * server_certificate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#server_certificate AwsNetworkfirewallTlsInspectionConfiguration#server_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#server_certificate TfTlsInspectionConfiguration#server_certificate}
   */
   readonly serverCertificate?: ServerCertificateProperty[] | cdktn.IResolvable;
 }
@@ -2106,7 +2106,7 @@ export interface TlsInspectionConfigurationProperty {
   /**
   * server_certificate_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#server_certificate_configuration AwsNetworkfirewallTlsInspectionConfiguration#server_certificate_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_tls_inspection_configuration#server_certificate_configuration TfTlsInspectionConfiguration#server_certificate_configuration}
   */
   readonly serverCertificateConfiguration?: ServerCertificateConfigurationProperty[] | cdktn.IResolvable;
 }

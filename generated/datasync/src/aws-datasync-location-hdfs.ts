@@ -5,94 +5,94 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDatasyncLocationHdfsConfig extends cdktn.TerraformMetaArguments {
+export interface TfLocationHdfsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#agent_arns AwsDatasyncLocationHdfs#agent_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#agent_arns TfLocationHdfs#agent_arns}
   */
   readonly agentArns: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#authentication_type AwsDatasyncLocationHdfs#authentication_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#authentication_type TfLocationHdfs#authentication_type}
   */
   readonly authenticationType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#block_size AwsDatasyncLocationHdfs#block_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#block_size TfLocationHdfs#block_size}
   */
   readonly blockSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#id AwsDatasyncLocationHdfs#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#id TfLocationHdfs#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#kerberos_keytab AwsDatasyncLocationHdfs#kerberos_keytab}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#kerberos_keytab TfLocationHdfs#kerberos_keytab}
   */
   readonly kerberosKeytab?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#kerberos_keytab_base64 AwsDatasyncLocationHdfs#kerberos_keytab_base64}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#kerberos_keytab_base64 TfLocationHdfs#kerberos_keytab_base64}
   */
   readonly kerberosKeytabBase64?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#kerberos_krb5_conf AwsDatasyncLocationHdfs#kerberos_krb5_conf}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#kerberos_krb5_conf TfLocationHdfs#kerberos_krb5_conf}
   */
   readonly kerberosKrb5Conf?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#kerberos_krb5_conf_base64 AwsDatasyncLocationHdfs#kerberos_krb5_conf_base64}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#kerberos_krb5_conf_base64 TfLocationHdfs#kerberos_krb5_conf_base64}
   */
   readonly kerberosKrb5ConfBase64?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#kerberos_principal AwsDatasyncLocationHdfs#kerberos_principal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#kerberos_principal TfLocationHdfs#kerberos_principal}
   */
   readonly kerberosPrincipal?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#kms_key_provider_uri AwsDatasyncLocationHdfs#kms_key_provider_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#kms_key_provider_uri TfLocationHdfs#kms_key_provider_uri}
   */
   readonly kmsKeyProviderUri?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#region AwsDatasyncLocationHdfs#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#region TfLocationHdfs#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#replication_factor AwsDatasyncLocationHdfs#replication_factor}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#replication_factor TfLocationHdfs#replication_factor}
   */
   readonly replicationFactor?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#simple_user AwsDatasyncLocationHdfs#simple_user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#simple_user TfLocationHdfs#simple_user}
   */
   readonly simpleUser?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#subdirectory AwsDatasyncLocationHdfs#subdirectory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#subdirectory TfLocationHdfs#subdirectory}
   */
   readonly subdirectory?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#tags AwsDatasyncLocationHdfs#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#tags TfLocationHdfs#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#tags_all AwsDatasyncLocationHdfs#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#tags_all TfLocationHdfs#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * name_node block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#name_node AwsDatasyncLocationHdfs#name_node}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#name_node TfLocationHdfs#name_node}
   */
-  readonly nameNode: AwsDatasyncLocationHdfs.NameNodeProperty[] | cdktn.IResolvable;
+  readonly nameNode: TfLocationHdfs.NameNodeProperty[] | cdktn.IResolvable;
   /**
   * qop_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#qop_configuration AwsDatasyncLocationHdfs#qop_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#qop_configuration TfLocationHdfs#qop_configuration}
   */
-  readonly qopConfiguration?: AwsDatasyncLocationHdfs.QopConfigurationProperty;
+  readonly qopConfiguration?: TfLocationHdfs.QopConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs aws_datasync_location_hdfs}
 */
-export class AwsDatasyncLocationHdfs extends cdktn.TerraformResource {
+export class TfLocationHdfs extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -103,11 +103,11 @@ export class AwsDatasyncLocationHdfs extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDatasyncLocationHdfs resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfLocationHdfs resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDatasyncLocationHdfs to import
-  * @param importFromId The id of the existing AwsDatasyncLocationHdfs that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDatasyncLocationHdfs to import is found
+  * @param importToId The construct id used in the generated config for the TfLocationHdfs to import
+  * @param importFromId The id of the existing TfLocationHdfs that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfLocationHdfs to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_datasync_location_hdfs", importId: importFromId, provider });
@@ -122,9 +122,9 @@ export class AwsDatasyncLocationHdfs extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDatasyncLocationHdfsConfig
+  * @param options TfLocationHdfsConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDatasyncLocationHdfsConfig) {
+  public constructor(scope: Construct, id: string, config: TfLocationHdfsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_datasync_location_hdfs',
       terraformGeneratorMetadata: {
@@ -428,11 +428,11 @@ export class AwsDatasyncLocationHdfs extends cdktn.TerraformResource {
   }
 
   // name_node - computed: false, optional: false, required: true
-  private _nameNode = new AwsDatasyncLocationHdfs.NameNodePropertyList(this, "name_node", true);
+  private _nameNode = new TfLocationHdfs.NameNodePropertyList(this, "name_node", true);
   public get nameNode() {
     return this._nameNode;
   }
-  public putNameNode(value: AwsDatasyncLocationHdfs.NameNodeProperty[] | cdktn.IResolvable) {
+  public putNameNode(value: TfLocationHdfs.NameNodeProperty[] | cdktn.IResolvable) {
     this._nameNode.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -441,11 +441,11 @@ export class AwsDatasyncLocationHdfs extends cdktn.TerraformResource {
   }
 
   // qop_configuration - computed: false, optional: true, required: false
-  private _qopConfiguration = new AwsDatasyncLocationHdfs.QopConfigurationPropertyOutputReference(this, "qop_configuration");
+  private _qopConfiguration = new TfLocationHdfs.QopConfigurationPropertyOutputReference(this, "qop_configuration");
   public get qopConfiguration() {
     return this._qopConfiguration;
   }
-  public putQopConfiguration(value: AwsDatasyncLocationHdfs.QopConfigurationProperty) {
+  public putQopConfiguration(value: TfLocationHdfs.QopConfigurationProperty) {
     this._qopConfiguration.internalValue = value;
   }
   public resetQopConfiguration() {
@@ -478,8 +478,8 @@ export class AwsDatasyncLocationHdfs extends cdktn.TerraformResource {
       subdirectory: cdktn.stringToTerraform(this._subdirectory),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      name_node: cdktn.listMapper(awsDatasyncLocationHdfsNameNodePropertyToTerraform, true)(this._nameNode.internalValue),
-      qop_configuration: awsDatasyncLocationHdfsQopConfigurationPropertyToTerraform(this._qopConfiguration.internalValue),
+      name_node: cdktn.listMapper(tfLocationHdfsNameNodePropertyToTerraform, true)(this._nameNode.internalValue),
+      qop_configuration: tfLocationHdfsQopConfigurationPropertyToTerraform(this._qopConfiguration.internalValue),
     };
   }
 
@@ -582,16 +582,16 @@ export class AwsDatasyncLocationHdfs extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       name_node: {
-        value: cdktn.listMapperHcl(awsDatasyncLocationHdfsNameNodePropertyToHclTerraform, true)(this._nameNode.internalValue),
+        value: cdktn.listMapperHcl(tfLocationHdfsNameNodePropertyToHclTerraform, true)(this._nameNode.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsDatasyncLocationHdfs.NameNodePropertyList",
+        storageClassType: "TfLocationHdfs.NameNodePropertyList",
       },
       qop_configuration: {
-        value: awsDatasyncLocationHdfsQopConfigurationPropertyToHclTerraform(this._qopConfiguration.internalValue),
+        value: tfLocationHdfsQopConfigurationPropertyToHclTerraform(this._qopConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDatasyncLocationHdfs.QopConfigurationPropertyList",
+        storageClassType: "TfLocationHdfs.QopConfigurationPropertyList",
       },
     };
 
@@ -600,7 +600,7 @@ export class AwsDatasyncLocationHdfs extends cdktn.TerraformResource {
   }
 }
 
-export function awsDatasyncLocationHdfsNameNodePropertyToTerraform(struct?: AwsDatasyncLocationHdfs.NameNodeProperty | cdktn.IResolvable): any {
+export function tfLocationHdfsNameNodePropertyToTerraform(struct?: TfLocationHdfs.NameNodeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -612,7 +612,7 @@ export function awsDatasyncLocationHdfsNameNodePropertyToTerraform(struct?: AwsD
 }
 
 
-export function awsDatasyncLocationHdfsNameNodePropertyToHclTerraform(struct?: AwsDatasyncLocationHdfs.NameNodeProperty | cdktn.IResolvable): any {
+export function tfLocationHdfsNameNodePropertyToHclTerraform(struct?: TfLocationHdfs.NameNodeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -637,7 +637,7 @@ export function awsDatasyncLocationHdfsNameNodePropertyToHclTerraform(struct?: A
 }
 
 
-export function awsDatasyncLocationHdfsQopConfigurationPropertyToTerraform(struct?: AwsDatasyncLocationHdfs.QopConfigurationPropertyOutputReference | AwsDatasyncLocationHdfs.QopConfigurationProperty): any {
+export function tfLocationHdfsQopConfigurationPropertyToTerraform(struct?: TfLocationHdfs.QopConfigurationPropertyOutputReference | TfLocationHdfs.QopConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -649,7 +649,7 @@ export function awsDatasyncLocationHdfsQopConfigurationPropertyToTerraform(struc
 }
 
 
-export function awsDatasyncLocationHdfsQopConfigurationPropertyToHclTerraform(struct?: AwsDatasyncLocationHdfs.QopConfigurationPropertyOutputReference | AwsDatasyncLocationHdfs.QopConfigurationProperty): any {
+export function tfLocationHdfsQopConfigurationPropertyToHclTerraform(struct?: TfLocationHdfs.QopConfigurationPropertyOutputReference | TfLocationHdfs.QopConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -674,14 +674,14 @@ export function awsDatasyncLocationHdfsQopConfigurationPropertyToHclTerraform(st
 }
 
 
-export namespace AwsDatasyncLocationHdfs {
+export namespace TfLocationHdfs {
 export interface NameNodeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#hostname AwsDatasyncLocationHdfs#hostname}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#hostname TfLocationHdfs#hostname}
   */
   readonly hostname: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#port AwsDatasyncLocationHdfs#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#port TfLocationHdfs#port}
   */
   readonly port: number;
 }
@@ -783,11 +783,11 @@ export class NameNodePropertyList extends cdktn.ComplexList {
 }
 export interface QopConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#data_transfer_protection AwsDatasyncLocationHdfs#data_transfer_protection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#data_transfer_protection TfLocationHdfs#data_transfer_protection}
   */
   readonly dataTransferProtection?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#rpc_protection AwsDatasyncLocationHdfs#rpc_protection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_hdfs#rpc_protection TfLocationHdfs#rpc_protection}
   */
   readonly rpcProtection?: string;
 }

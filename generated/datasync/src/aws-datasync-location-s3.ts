@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDatasyncLocationS3Config extends cdktn.TerraformMetaArguments {
+export interface TfLocationS3Config extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_s3#agent_arns AwsDatasyncLocationS3#agent_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_s3#agent_arns TfLocationS3#agent_arns}
   */
   readonly agentArns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_s3#id AwsDatasyncLocationS3#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_s3#id TfLocationS3#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,41 +20,41 @@ export interface AwsDatasyncLocationS3Config extends cdktn.TerraformMetaArgument
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_s3#region AwsDatasyncLocationS3#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_s3#region TfLocationS3#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_s3#s3_bucket_arn AwsDatasyncLocationS3#s3_bucket_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_s3#s3_bucket_arn TfLocationS3#s3_bucket_arn}
   */
   readonly s3BucketArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_s3#s3_storage_class AwsDatasyncLocationS3#s3_storage_class}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_s3#s3_storage_class TfLocationS3#s3_storage_class}
   */
   readonly s3StorageClass?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_s3#subdirectory AwsDatasyncLocationS3#subdirectory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_s3#subdirectory TfLocationS3#subdirectory}
   */
   readonly subdirectory: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_s3#tags AwsDatasyncLocationS3#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_s3#tags TfLocationS3#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_s3#tags_all AwsDatasyncLocationS3#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_s3#tags_all TfLocationS3#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * s3_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_s3#s3_config AwsDatasyncLocationS3#s3_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_s3#s3_config TfLocationS3#s3_config}
   */
-  readonly s3Config: AwsDatasyncLocationS3.S3ConfigProperty;
+  readonly s3Config: TfLocationS3.S3ConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_s3 aws_datasync_location_s3}
 */
-export class AwsDatasyncLocationS3 extends cdktn.TerraformResource {
+export class TfLocationS3 extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class AwsDatasyncLocationS3 extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDatasyncLocationS3 resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfLocationS3 resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDatasyncLocationS3 to import
-  * @param importFromId The id of the existing AwsDatasyncLocationS3 that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_s3#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDatasyncLocationS3 to import is found
+  * @param importToId The construct id used in the generated config for the TfLocationS3 to import
+  * @param importFromId The id of the existing TfLocationS3 that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_s3#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfLocationS3 to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_datasync_location_s3", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class AwsDatasyncLocationS3 extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDatasyncLocationS3Config
+  * @param options TfLocationS3Config
   */
-  public constructor(scope: Construct, id: string, config: AwsDatasyncLocationS3Config) {
+  public constructor(scope: Construct, id: string, config: TfLocationS3Config) {
     super(scope, id, {
       terraformResourceType: 'aws_datasync_location_s3',
       terraformGeneratorMetadata: {
@@ -250,11 +250,11 @@ export class AwsDatasyncLocationS3 extends cdktn.TerraformResource {
   }
 
   // s3_config - computed: false, optional: false, required: true
-  private _s3Config = new AwsDatasyncLocationS3.S3ConfigPropertyOutputReference(this, "s3_config");
+  private _s3Config = new TfLocationS3.S3ConfigPropertyOutputReference(this, "s3_config");
   public get s3Config() {
     return this._s3Config;
   }
-  public putS3Config(value: AwsDatasyncLocationS3.S3ConfigProperty) {
+  public putS3Config(value: TfLocationS3.S3ConfigProperty) {
     this._s3Config.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -276,7 +276,7 @@ export class AwsDatasyncLocationS3 extends cdktn.TerraformResource {
       subdirectory: cdktn.stringToTerraform(this._subdirectory),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      s3_config: awsDatasyncLocationS3S3ConfigPropertyToTerraform(this._s3Config.internalValue),
+      s3_config: tfLocationS3S3ConfigPropertyToTerraform(this._s3Config.internalValue),
     };
   }
 
@@ -331,10 +331,10 @@ export class AwsDatasyncLocationS3 extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       s3_config: {
-        value: awsDatasyncLocationS3S3ConfigPropertyToHclTerraform(this._s3Config.internalValue),
+        value: tfLocationS3S3ConfigPropertyToHclTerraform(this._s3Config.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDatasyncLocationS3.S3ConfigPropertyList",
+        storageClassType: "TfLocationS3.S3ConfigPropertyList",
       },
     };
 
@@ -343,7 +343,7 @@ export class AwsDatasyncLocationS3 extends cdktn.TerraformResource {
   }
 }
 
-export function awsDatasyncLocationS3S3ConfigPropertyToTerraform(struct?: AwsDatasyncLocationS3.S3ConfigPropertyOutputReference | AwsDatasyncLocationS3.S3ConfigProperty): any {
+export function tfLocationS3S3ConfigPropertyToTerraform(struct?: TfLocationS3.S3ConfigPropertyOutputReference | TfLocationS3.S3ConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -354,7 +354,7 @@ export function awsDatasyncLocationS3S3ConfigPropertyToTerraform(struct?: AwsDat
 }
 
 
-export function awsDatasyncLocationS3S3ConfigPropertyToHclTerraform(struct?: AwsDatasyncLocationS3.S3ConfigPropertyOutputReference | AwsDatasyncLocationS3.S3ConfigProperty): any {
+export function tfLocationS3S3ConfigPropertyToHclTerraform(struct?: TfLocationS3.S3ConfigPropertyOutputReference | TfLocationS3.S3ConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -373,10 +373,10 @@ export function awsDatasyncLocationS3S3ConfigPropertyToHclTerraform(struct?: Aws
 }
 
 
-export namespace AwsDatasyncLocationS3 {
+export namespace TfLocationS3 {
 export interface S3ConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_s3#bucket_access_role_arn AwsDatasyncLocationS3#bucket_access_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_s3#bucket_access_role_arn TfLocationS3#bucket_access_role_arn}
   */
   readonly bucketAccessRoleArn: string;
 }

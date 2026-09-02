@@ -5,70 +5,70 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEcrRepositoryConfig extends cdktn.TerraformMetaArguments {
+export interface TfRepositoryConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#force_delete AwsEcrRepository#force_delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#force_delete TfRepository#force_delete}
   */
   readonly forceDelete?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#id AwsEcrRepository#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#id TfRepository#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#image_tag_mutability AwsEcrRepository#image_tag_mutability}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#image_tag_mutability TfRepository#image_tag_mutability}
   */
   readonly imageTagMutability?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#name AwsEcrRepository#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#name TfRepository#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#region AwsEcrRepository#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#region TfRepository#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#tags AwsEcrRepository#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#tags TfRepository#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#tags_all AwsEcrRepository#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#tags_all TfRepository#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * encryption_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#encryption_configuration AwsEcrRepository#encryption_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#encryption_configuration TfRepository#encryption_configuration}
   */
-  readonly encryptionConfiguration?: AwsEcrRepository.EncryptionConfigurationProperty[] | cdktn.IResolvable;
+  readonly encryptionConfiguration?: TfRepository.EncryptionConfigurationProperty[] | cdktn.IResolvable;
   /**
   * image_scanning_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#image_scanning_configuration AwsEcrRepository#image_scanning_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#image_scanning_configuration TfRepository#image_scanning_configuration}
   */
-  readonly imageScanningConfiguration?: AwsEcrRepository.ImageScanningConfigurationProperty;
+  readonly imageScanningConfiguration?: TfRepository.ImageScanningConfigurationProperty;
   /**
   * image_tag_mutability_exclusion_filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#image_tag_mutability_exclusion_filter AwsEcrRepository#image_tag_mutability_exclusion_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#image_tag_mutability_exclusion_filter TfRepository#image_tag_mutability_exclusion_filter}
   */
-  readonly imageTagMutabilityExclusionFilter?: AwsEcrRepository.ImageTagMutabilityExclusionFilterProperty[] | cdktn.IResolvable;
+  readonly imageTagMutabilityExclusionFilter?: TfRepository.ImageTagMutabilityExclusionFilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#timeouts AwsEcrRepository#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#timeouts TfRepository#timeouts}
   */
-  readonly timeouts?: AwsEcrRepository.TimeoutsProperty;
+  readonly timeouts?: TfRepository.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository aws_ecr_repository}
 */
-export class AwsEcrRepository extends cdktn.TerraformResource {
+export class TfRepository extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -79,11 +79,11 @@ export class AwsEcrRepository extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEcrRepository resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfRepository resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEcrRepository to import
-  * @param importFromId The id of the existing AwsEcrRepository that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEcrRepository to import is found
+  * @param importToId The construct id used in the generated config for the TfRepository to import
+  * @param importFromId The id of the existing TfRepository that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfRepository to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ecr_repository", importId: importFromId, provider });
@@ -98,9 +98,9 @@ export class AwsEcrRepository extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEcrRepositoryConfig
+  * @param options TfRepositoryConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEcrRepositoryConfig) {
+  public constructor(scope: Construct, id: string, config: TfRepositoryConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ecr_repository',
       terraformGeneratorMetadata: {
@@ -258,11 +258,11 @@ export class AwsEcrRepository extends cdktn.TerraformResource {
   }
 
   // encryption_configuration - computed: false, optional: true, required: false
-  private _encryptionConfiguration = new AwsEcrRepository.EncryptionConfigurationPropertyList(this, "encryption_configuration", false);
+  private _encryptionConfiguration = new TfRepository.EncryptionConfigurationPropertyList(this, "encryption_configuration", false);
   public get encryptionConfiguration() {
     return this._encryptionConfiguration;
   }
-  public putEncryptionConfiguration(value: AwsEcrRepository.EncryptionConfigurationProperty[] | cdktn.IResolvable) {
+  public putEncryptionConfiguration(value: TfRepository.EncryptionConfigurationProperty[] | cdktn.IResolvable) {
     this._encryptionConfiguration.internalValue = value;
   }
   public resetEncryptionConfiguration() {
@@ -274,11 +274,11 @@ export class AwsEcrRepository extends cdktn.TerraformResource {
   }
 
   // image_scanning_configuration - computed: false, optional: true, required: false
-  private _imageScanningConfiguration = new AwsEcrRepository.ImageScanningConfigurationPropertyOutputReference(this, "image_scanning_configuration");
+  private _imageScanningConfiguration = new TfRepository.ImageScanningConfigurationPropertyOutputReference(this, "image_scanning_configuration");
   public get imageScanningConfiguration() {
     return this._imageScanningConfiguration;
   }
-  public putImageScanningConfiguration(value: AwsEcrRepository.ImageScanningConfigurationProperty) {
+  public putImageScanningConfiguration(value: TfRepository.ImageScanningConfigurationProperty) {
     this._imageScanningConfiguration.internalValue = value;
   }
   public resetImageScanningConfiguration() {
@@ -290,11 +290,11 @@ export class AwsEcrRepository extends cdktn.TerraformResource {
   }
 
   // image_tag_mutability_exclusion_filter - computed: false, optional: true, required: false
-  private _imageTagMutabilityExclusionFilter = new AwsEcrRepository.ImageTagMutabilityExclusionFilterPropertyList(this, "image_tag_mutability_exclusion_filter", false);
+  private _imageTagMutabilityExclusionFilter = new TfRepository.ImageTagMutabilityExclusionFilterPropertyList(this, "image_tag_mutability_exclusion_filter", false);
   public get imageTagMutabilityExclusionFilter() {
     return this._imageTagMutabilityExclusionFilter;
   }
-  public putImageTagMutabilityExclusionFilter(value: AwsEcrRepository.ImageTagMutabilityExclusionFilterProperty[] | cdktn.IResolvable) {
+  public putImageTagMutabilityExclusionFilter(value: TfRepository.ImageTagMutabilityExclusionFilterProperty[] | cdktn.IResolvable) {
     this._imageTagMutabilityExclusionFilter.internalValue = value;
   }
   public resetImageTagMutabilityExclusionFilter() {
@@ -306,11 +306,11 @@ export class AwsEcrRepository extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsEcrRepository.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfRepository.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsEcrRepository.TimeoutsProperty) {
+  public putTimeouts(value: TfRepository.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -334,10 +334,10 @@ export class AwsEcrRepository extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      encryption_configuration: cdktn.listMapper(awsEcrRepositoryEncryptionConfigurationPropertyToTerraform, true)(this._encryptionConfiguration.internalValue),
-      image_scanning_configuration: awsEcrRepositoryImageScanningConfigurationPropertyToTerraform(this._imageScanningConfiguration.internalValue),
-      image_tag_mutability_exclusion_filter: cdktn.listMapper(awsEcrRepositoryImageTagMutabilityExclusionFilterPropertyToTerraform, true)(this._imageTagMutabilityExclusionFilter.internalValue),
-      timeouts: awsEcrRepositoryTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      encryption_configuration: cdktn.listMapper(tfRepositoryEncryptionConfigurationPropertyToTerraform, true)(this._encryptionConfiguration.internalValue),
+      image_scanning_configuration: tfRepositoryImageScanningConfigurationPropertyToTerraform(this._imageScanningConfiguration.internalValue),
+      image_tag_mutability_exclusion_filter: cdktn.listMapper(tfRepositoryImageTagMutabilityExclusionFilterPropertyToTerraform, true)(this._imageTagMutabilityExclusionFilter.internalValue),
+      timeouts: tfRepositoryTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -386,28 +386,28 @@ export class AwsEcrRepository extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       encryption_configuration: {
-        value: cdktn.listMapperHcl(awsEcrRepositoryEncryptionConfigurationPropertyToHclTerraform, true)(this._encryptionConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfRepositoryEncryptionConfigurationPropertyToHclTerraform, true)(this._encryptionConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEcrRepository.EncryptionConfigurationPropertyList",
+        storageClassType: "TfRepository.EncryptionConfigurationPropertyList",
       },
       image_scanning_configuration: {
-        value: awsEcrRepositoryImageScanningConfigurationPropertyToHclTerraform(this._imageScanningConfiguration.internalValue),
+        value: tfRepositoryImageScanningConfigurationPropertyToHclTerraform(this._imageScanningConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEcrRepository.ImageScanningConfigurationPropertyList",
+        storageClassType: "TfRepository.ImageScanningConfigurationPropertyList",
       },
       image_tag_mutability_exclusion_filter: {
-        value: cdktn.listMapperHcl(awsEcrRepositoryImageTagMutabilityExclusionFilterPropertyToHclTerraform, true)(this._imageTagMutabilityExclusionFilter.internalValue),
+        value: cdktn.listMapperHcl(tfRepositoryImageTagMutabilityExclusionFilterPropertyToHclTerraform, true)(this._imageTagMutabilityExclusionFilter.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEcrRepository.ImageTagMutabilityExclusionFilterPropertyList",
+        storageClassType: "TfRepository.ImageTagMutabilityExclusionFilterPropertyList",
       },
       timeouts: {
-        value: awsEcrRepositoryTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfRepositoryTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsEcrRepository.TimeoutsProperty",
+        storageClassType: "TfRepository.TimeoutsProperty",
       },
     };
 
@@ -416,7 +416,7 @@ export class AwsEcrRepository extends cdktn.TerraformResource {
   }
 }
 
-export function awsEcrRepositoryEncryptionConfigurationPropertyToTerraform(struct?: AwsEcrRepository.EncryptionConfigurationProperty | cdktn.IResolvable): any {
+export function tfRepositoryEncryptionConfigurationPropertyToTerraform(struct?: TfRepository.EncryptionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -428,7 +428,7 @@ export function awsEcrRepositoryEncryptionConfigurationPropertyToTerraform(struc
 }
 
 
-export function awsEcrRepositoryEncryptionConfigurationPropertyToHclTerraform(struct?: AwsEcrRepository.EncryptionConfigurationProperty | cdktn.IResolvable): any {
+export function tfRepositoryEncryptionConfigurationPropertyToHclTerraform(struct?: TfRepository.EncryptionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -453,7 +453,7 @@ export function awsEcrRepositoryEncryptionConfigurationPropertyToHclTerraform(st
 }
 
 
-export function awsEcrRepositoryImageScanningConfigurationPropertyToTerraform(struct?: AwsEcrRepository.ImageScanningConfigurationPropertyOutputReference | AwsEcrRepository.ImageScanningConfigurationProperty): any {
+export function tfRepositoryImageScanningConfigurationPropertyToTerraform(struct?: TfRepository.ImageScanningConfigurationPropertyOutputReference | TfRepository.ImageScanningConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -464,7 +464,7 @@ export function awsEcrRepositoryImageScanningConfigurationPropertyToTerraform(st
 }
 
 
-export function awsEcrRepositoryImageScanningConfigurationPropertyToHclTerraform(struct?: AwsEcrRepository.ImageScanningConfigurationPropertyOutputReference | AwsEcrRepository.ImageScanningConfigurationProperty): any {
+export function tfRepositoryImageScanningConfigurationPropertyToHclTerraform(struct?: TfRepository.ImageScanningConfigurationPropertyOutputReference | TfRepository.ImageScanningConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -483,7 +483,7 @@ export function awsEcrRepositoryImageScanningConfigurationPropertyToHclTerraform
 }
 
 
-export function awsEcrRepositoryImageTagMutabilityExclusionFilterPropertyToTerraform(struct?: AwsEcrRepository.ImageTagMutabilityExclusionFilterProperty | cdktn.IResolvable): any {
+export function tfRepositoryImageTagMutabilityExclusionFilterPropertyToTerraform(struct?: TfRepository.ImageTagMutabilityExclusionFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -495,7 +495,7 @@ export function awsEcrRepositoryImageTagMutabilityExclusionFilterPropertyToTerra
 }
 
 
-export function awsEcrRepositoryImageTagMutabilityExclusionFilterPropertyToHclTerraform(struct?: AwsEcrRepository.ImageTagMutabilityExclusionFilterProperty | cdktn.IResolvable): any {
+export function tfRepositoryImageTagMutabilityExclusionFilterPropertyToHclTerraform(struct?: TfRepository.ImageTagMutabilityExclusionFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -520,7 +520,7 @@ export function awsEcrRepositoryImageTagMutabilityExclusionFilterPropertyToHclTe
 }
 
 
-export function awsEcrRepositoryTimeoutsPropertyToTerraform(struct?: AwsEcrRepository.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfRepositoryTimeoutsPropertyToTerraform(struct?: TfRepository.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -531,7 +531,7 @@ export function awsEcrRepositoryTimeoutsPropertyToTerraform(struct?: AwsEcrRepos
 }
 
 
-export function awsEcrRepositoryTimeoutsPropertyToHclTerraform(struct?: AwsEcrRepository.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfRepositoryTimeoutsPropertyToHclTerraform(struct?: TfRepository.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -550,14 +550,14 @@ export function awsEcrRepositoryTimeoutsPropertyToHclTerraform(struct?: AwsEcrRe
 }
 
 
-export namespace AwsEcrRepository {
+export namespace TfRepository {
 export interface EncryptionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#encryption_type AwsEcrRepository#encryption_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#encryption_type TfRepository#encryption_type}
   */
   readonly encryptionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#kms_key AwsEcrRepository#kms_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#kms_key TfRepository#kms_key}
   */
   readonly kmsKey?: string;
 }
@@ -665,7 +665,7 @@ export class EncryptionConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface ImageScanningConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#scan_on_push AwsEcrRepository#scan_on_push}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#scan_on_push TfRepository#scan_on_push}
   */
   readonly scanOnPush: boolean | cdktn.IResolvable;
 }
@@ -716,11 +716,11 @@ export class ImageScanningConfigurationPropertyOutputReference extends cdktn.Com
 }
 export interface ImageTagMutabilityExclusionFilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#filter AwsEcrRepository#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#filter TfRepository#filter}
   */
   readonly filter: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#filter_type AwsEcrRepository#filter_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#filter_type TfRepository#filter_type}
   */
   readonly filterType: string;
 }
@@ -822,7 +822,7 @@ export class ImageTagMutabilityExclusionFilterPropertyList extends cdktn.Complex
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#delete AwsEcrRepository#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository#delete TfRepository#delete}
   */
   readonly delete?: string;
 }

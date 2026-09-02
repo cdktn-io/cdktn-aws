@@ -5,34 +5,34 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsAcmpcaPermissionConfig extends cdktn.TerraformMetaArguments {
+export interface TfPermissionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_permission#actions AwsAcmpcaPermission#actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_permission#actions TfPermission#actions}
   */
   readonly actions: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_permission#certificate_authority_arn AwsAcmpcaPermission#certificate_authority_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_permission#certificate_authority_arn TfPermission#certificate_authority_arn}
   */
   readonly certificateAuthorityArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_permission#id AwsAcmpcaPermission#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_permission#id TfPermission#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_permission#principal AwsAcmpcaPermission#principal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_permission#principal TfPermission#principal}
   */
   readonly principal: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_permission#region AwsAcmpcaPermission#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_permission#region TfPermission#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_permission#source_account AwsAcmpcaPermission#source_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_permission#source_account TfPermission#source_account}
   */
   readonly sourceAccount?: string;
 }
@@ -40,7 +40,7 @@ export interface AwsAcmpcaPermissionConfig extends cdktn.TerraformMetaArguments 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_permission aws_acmpca_permission}
 */
-export class AwsAcmpcaPermission extends cdktn.TerraformResource {
+export class TfPermission extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class AwsAcmpcaPermission extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsAcmpcaPermission resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfPermission resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsAcmpcaPermission to import
-  * @param importFromId The id of the existing AwsAcmpcaPermission that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_permission#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsAcmpcaPermission to import is found
+  * @param importToId The construct id used in the generated config for the TfPermission to import
+  * @param importFromId The id of the existing TfPermission that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_permission#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfPermission to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_acmpca_permission", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class AwsAcmpcaPermission extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsAcmpcaPermissionConfig
+  * @param options TfPermissionConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsAcmpcaPermissionConfig) {
+  public constructor(scope: Construct, id: string, config: TfPermissionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_acmpca_permission',
       terraformGeneratorMetadata: {

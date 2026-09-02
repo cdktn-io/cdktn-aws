@@ -5,24 +5,24 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsNetworkmanagerLinkConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataLinkConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_link#global_network_id DataAwsNetworkmanagerLink#global_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_link#global_network_id TfDataLink#global_network_id}
   */
   readonly globalNetworkId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_link#id DataAwsNetworkmanagerLink#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_link#id TfDataLink#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_link#link_id DataAwsNetworkmanagerLink#link_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_link#link_id TfDataLink#link_id}
   */
   readonly linkId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_link#tags DataAwsNetworkmanagerLink#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_link#tags TfDataLink#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -30,7 +30,7 @@ export interface DataAwsNetworkmanagerLinkConfig extends cdktn.TerraformMetaArgu
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_link aws_networkmanager_link}
 */
-export class DataAwsNetworkmanagerLink extends cdktn.TerraformDataSource {
+export class TfDataLink extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -41,11 +41,11 @@ export class DataAwsNetworkmanagerLink extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsNetworkmanagerLink resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataLink resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsNetworkmanagerLink to import
-  * @param importFromId The id of the existing DataAwsNetworkmanagerLink that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_link#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsNetworkmanagerLink to import is found
+  * @param importToId The construct id used in the generated config for the TfDataLink to import
+  * @param importFromId The id of the existing TfDataLink that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_link#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataLink to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkmanager_link", importId: importFromId, provider });
@@ -60,9 +60,9 @@ export class DataAwsNetworkmanagerLink extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsNetworkmanagerLinkConfig
+  * @param options TfDataLinkConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsNetworkmanagerLinkConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataLinkConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_networkmanager_link',
       terraformGeneratorMetadata: {
@@ -94,7 +94,7 @@ export class DataAwsNetworkmanagerLink extends cdktn.TerraformDataSource {
   }
 
   // bandwidth - computed: true, optional: false, required: false
-  private _bandwidth = new DataAwsNetworkmanagerLink.BandwidthPropertyList(this, "bandwidth", false);
+  private _bandwidth = new TfDataLink.BandwidthPropertyList(this, "bandwidth", false);
   public get bandwidth() {
     return this._bandwidth;
   }
@@ -223,7 +223,7 @@ export class DataAwsNetworkmanagerLink extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsNetworkmanagerLinkBandwidthPropertyToTerraform(struct?: DataAwsNetworkmanagerLink.BandwidthProperty): any {
+export function tfDataLinkBandwidthPropertyToTerraform(struct?: TfDataLink.BandwidthProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -233,7 +233,7 @@ export function dataAwsNetworkmanagerLinkBandwidthPropertyToTerraform(struct?: D
 }
 
 
-export function dataAwsNetworkmanagerLinkBandwidthPropertyToHclTerraform(struct?: DataAwsNetworkmanagerLink.BandwidthProperty): any {
+export function tfDataLinkBandwidthPropertyToHclTerraform(struct?: TfDataLink.BandwidthProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -244,7 +244,7 @@ export function dataAwsNetworkmanagerLinkBandwidthPropertyToHclTerraform(struct?
 }
 
 
-export namespace DataAwsNetworkmanagerLink {
+export namespace TfDataLink {
 export interface BandwidthProperty {
 }
 export class BandwidthPropertyOutputReference extends cdktn.ComplexObject {

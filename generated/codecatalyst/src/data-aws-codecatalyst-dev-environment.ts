@@ -5,56 +5,56 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsCodecatalystDevEnvironmentConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataDevEnvironmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#alias DataAwsCodecatalystDevEnvironment#alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#alias TfDataDevEnvironment#alias}
   */
   readonly alias?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#creator_id DataAwsCodecatalystDevEnvironment#creator_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#creator_id TfDataDevEnvironment#creator_id}
   */
   readonly creatorId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#env_id DataAwsCodecatalystDevEnvironment#env_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#env_id TfDataDevEnvironment#env_id}
   */
   readonly envId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#id DataAwsCodecatalystDevEnvironment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#id TfDataDevEnvironment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#project_name DataAwsCodecatalystDevEnvironment#project_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#project_name TfDataDevEnvironment#project_name}
   */
   readonly projectName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#region DataAwsCodecatalystDevEnvironment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#region TfDataDevEnvironment#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#space_name DataAwsCodecatalystDevEnvironment#space_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#space_name TfDataDevEnvironment#space_name}
   */
   readonly spaceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#tags DataAwsCodecatalystDevEnvironment#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#tags TfDataDevEnvironment#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * repositories block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#repositories DataAwsCodecatalystDevEnvironment#repositories}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#repositories TfDataDevEnvironment#repositories}
   */
-  readonly repositories?: DataAwsCodecatalystDevEnvironment.RepositoriesProperty[] | cdktn.IResolvable;
+  readonly repositories?: TfDataDevEnvironment.RepositoriesProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment aws_codecatalyst_dev_environment}
 */
-export class DataAwsCodecatalystDevEnvironment extends cdktn.TerraformDataSource {
+export class TfDataDevEnvironment extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class DataAwsCodecatalystDevEnvironment extends cdktn.TerraformDataSource
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsCodecatalystDevEnvironment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataDevEnvironment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsCodecatalystDevEnvironment to import
-  * @param importFromId The id of the existing DataAwsCodecatalystDevEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsCodecatalystDevEnvironment to import is found
+  * @param importToId The construct id used in the generated config for the TfDataDevEnvironment to import
+  * @param importFromId The id of the existing TfDataDevEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codecatalyst_dev_environment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataDevEnvironment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_codecatalyst_dev_environment", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class DataAwsCodecatalystDevEnvironment extends cdktn.TerraformDataSource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsCodecatalystDevEnvironmentConfig
+  * @param options TfDataDevEnvironmentConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsCodecatalystDevEnvironmentConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataDevEnvironmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_codecatalyst_dev_environment',
       terraformGeneratorMetadata: {
@@ -179,7 +179,7 @@ export class DataAwsCodecatalystDevEnvironment extends cdktn.TerraformDataSource
   }
 
   // ides - computed: true, optional: false, required: false
-  private _ides = new DataAwsCodecatalystDevEnvironment.IdesPropertyList(this, "ides", false);
+  private _ides = new TfDataDevEnvironment.IdesPropertyList(this, "ides", false);
   public get ides() {
     return this._ides;
   }
@@ -200,7 +200,7 @@ export class DataAwsCodecatalystDevEnvironment extends cdktn.TerraformDataSource
   }
 
   // persistent_storage - computed: true, optional: false, required: false
-  private _persistentStorage = new DataAwsCodecatalystDevEnvironment.PersistentStoragePropertyList(this, "persistent_storage", false);
+  private _persistentStorage = new TfDataDevEnvironment.PersistentStoragePropertyList(this, "persistent_storage", false);
   public get persistentStorage() {
     return this._persistentStorage;
   }
@@ -274,11 +274,11 @@ export class DataAwsCodecatalystDevEnvironment extends cdktn.TerraformDataSource
   }
 
   // repositories - computed: false, optional: true, required: false
-  private _repositories = new DataAwsCodecatalystDevEnvironment.RepositoriesPropertyList(this, "repositories", false);
+  private _repositories = new TfDataDevEnvironment.RepositoriesPropertyList(this, "repositories", false);
   public get repositories() {
     return this._repositories;
   }
-  public putRepositories(value: DataAwsCodecatalystDevEnvironment.RepositoriesProperty[] | cdktn.IResolvable) {
+  public putRepositories(value: TfDataDevEnvironment.RepositoriesProperty[] | cdktn.IResolvable) {
     this._repositories.internalValue = value;
   }
   public resetRepositories() {
@@ -303,7 +303,7 @@ export class DataAwsCodecatalystDevEnvironment extends cdktn.TerraformDataSource
       region: cdktn.stringToTerraform(this._region),
       space_name: cdktn.stringToTerraform(this._spaceName),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      repositories: cdktn.listMapper(dataAwsCodecatalystDevEnvironmentRepositoriesPropertyToTerraform, true)(this._repositories.internalValue),
+      repositories: cdktn.listMapper(tfDataDevEnvironmentRepositoriesPropertyToTerraform, true)(this._repositories.internalValue),
     };
   }
 
@@ -358,10 +358,10 @@ export class DataAwsCodecatalystDevEnvironment extends cdktn.TerraformDataSource
         storageClassType: "stringMap",
       },
       repositories: {
-        value: cdktn.listMapperHcl(dataAwsCodecatalystDevEnvironmentRepositoriesPropertyToHclTerraform, true)(this._repositories.internalValue),
+        value: cdktn.listMapperHcl(tfDataDevEnvironmentRepositoriesPropertyToHclTerraform, true)(this._repositories.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "DataAwsCodecatalystDevEnvironment.RepositoriesPropertyList",
+        storageClassType: "TfDataDevEnvironment.RepositoriesPropertyList",
       },
     };
 
@@ -370,7 +370,7 @@ export class DataAwsCodecatalystDevEnvironment extends cdktn.TerraformDataSource
   }
 }
 
-export function dataAwsCodecatalystDevEnvironmentIdesPropertyToTerraform(struct?: DataAwsCodecatalystDevEnvironment.IdesProperty): any {
+export function tfDataDevEnvironmentIdesPropertyToTerraform(struct?: TfDataDevEnvironment.IdesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -380,7 +380,7 @@ export function dataAwsCodecatalystDevEnvironmentIdesPropertyToTerraform(struct?
 }
 
 
-export function dataAwsCodecatalystDevEnvironmentIdesPropertyToHclTerraform(struct?: DataAwsCodecatalystDevEnvironment.IdesProperty): any {
+export function tfDataDevEnvironmentIdesPropertyToHclTerraform(struct?: TfDataDevEnvironment.IdesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -391,7 +391,7 @@ export function dataAwsCodecatalystDevEnvironmentIdesPropertyToHclTerraform(stru
 }
 
 
-export function dataAwsCodecatalystDevEnvironmentPersistentStoragePropertyToTerraform(struct?: DataAwsCodecatalystDevEnvironment.PersistentStorageProperty): any {
+export function tfDataDevEnvironmentPersistentStoragePropertyToTerraform(struct?: TfDataDevEnvironment.PersistentStorageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -401,7 +401,7 @@ export function dataAwsCodecatalystDevEnvironmentPersistentStoragePropertyToTerr
 }
 
 
-export function dataAwsCodecatalystDevEnvironmentPersistentStoragePropertyToHclTerraform(struct?: DataAwsCodecatalystDevEnvironment.PersistentStorageProperty): any {
+export function tfDataDevEnvironmentPersistentStoragePropertyToHclTerraform(struct?: TfDataDevEnvironment.PersistentStorageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -412,7 +412,7 @@ export function dataAwsCodecatalystDevEnvironmentPersistentStoragePropertyToHclT
 }
 
 
-export function dataAwsCodecatalystDevEnvironmentRepositoriesPropertyToTerraform(struct?: DataAwsCodecatalystDevEnvironment.RepositoriesProperty | cdktn.IResolvable): any {
+export function tfDataDevEnvironmentRepositoriesPropertyToTerraform(struct?: TfDataDevEnvironment.RepositoriesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -422,7 +422,7 @@ export function dataAwsCodecatalystDevEnvironmentRepositoriesPropertyToTerraform
 }
 
 
-export function dataAwsCodecatalystDevEnvironmentRepositoriesPropertyToHclTerraform(struct?: DataAwsCodecatalystDevEnvironment.RepositoriesProperty | cdktn.IResolvable): any {
+export function tfDataDevEnvironmentRepositoriesPropertyToHclTerraform(struct?: TfDataDevEnvironment.RepositoriesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -433,7 +433,7 @@ export function dataAwsCodecatalystDevEnvironmentRepositoriesPropertyToHclTerraf
 }
 
 
-export namespace DataAwsCodecatalystDevEnvironment {
+export namespace TfDataDevEnvironment {
 export interface IdesProperty {
 }
 export class IdesPropertyOutputReference extends cdktn.ComplexObject {

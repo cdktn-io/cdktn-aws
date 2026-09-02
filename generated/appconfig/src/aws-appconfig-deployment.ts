@@ -5,54 +5,54 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsAppconfigDeploymentConfig extends cdktn.TerraformMetaArguments {
+export interface TfDeploymentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment#application_id AwsAppconfigDeployment#application_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment#application_id TfDeployment#application_id}
   */
   readonly applicationId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment#configuration_profile_id AwsAppconfigDeployment#configuration_profile_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment#configuration_profile_id TfDeployment#configuration_profile_id}
   */
   readonly configurationProfileId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment#configuration_version AwsAppconfigDeployment#configuration_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment#configuration_version TfDeployment#configuration_version}
   */
   readonly configurationVersion: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment#deployment_strategy_id AwsAppconfigDeployment#deployment_strategy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment#deployment_strategy_id TfDeployment#deployment_strategy_id}
   */
   readonly deploymentStrategyId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment#description AwsAppconfigDeployment#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment#description TfDeployment#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment#environment_id AwsAppconfigDeployment#environment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment#environment_id TfDeployment#environment_id}
   */
   readonly environmentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment#id AwsAppconfigDeployment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment#id TfDeployment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment#kms_key_identifier AwsAppconfigDeployment#kms_key_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment#kms_key_identifier TfDeployment#kms_key_identifier}
   */
   readonly kmsKeyIdentifier?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment#region AwsAppconfigDeployment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment#region TfDeployment#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment#tags AwsAppconfigDeployment#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment#tags TfDeployment#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment#tags_all AwsAppconfigDeployment#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment#tags_all TfDeployment#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -60,7 +60,7 @@ export interface AwsAppconfigDeploymentConfig extends cdktn.TerraformMetaArgumen
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment aws_appconfig_deployment}
 */
-export class AwsAppconfigDeployment extends cdktn.TerraformResource {
+export class TfDeployment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -71,11 +71,11 @@ export class AwsAppconfigDeployment extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsAppconfigDeployment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDeployment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsAppconfigDeployment to import
-  * @param importFromId The id of the existing AwsAppconfigDeployment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsAppconfigDeployment to import is found
+  * @param importToId The construct id used in the generated config for the TfDeployment to import
+  * @param importFromId The id of the existing TfDeployment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDeployment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appconfig_deployment", importId: importFromId, provider });
@@ -90,9 +90,9 @@ export class AwsAppconfigDeployment extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsAppconfigDeploymentConfig
+  * @param options TfDeploymentConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsAppconfigDeploymentConfig) {
+  public constructor(scope: Construct, id: string, config: TfDeploymentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appconfig_deployment',
       terraformGeneratorMetadata: {

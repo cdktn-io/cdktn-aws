@@ -5,90 +5,90 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDatasyncTaskConfig extends cdktn.TerraformMetaArguments {
+export interface TfTaskConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#cloudwatch_log_group_arn AwsDatasyncTask#cloudwatch_log_group_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#cloudwatch_log_group_arn TfTask#cloudwatch_log_group_arn}
   */
   readonly cloudwatchLogGroupArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#destination_location_arn AwsDatasyncTask#destination_location_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#destination_location_arn TfTask#destination_location_arn}
   */
   readonly destinationLocationArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#id AwsDatasyncTask#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#id TfTask#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#name AwsDatasyncTask#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#name TfTask#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#region AwsDatasyncTask#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#region TfTask#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#source_location_arn AwsDatasyncTask#source_location_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#source_location_arn TfTask#source_location_arn}
   */
   readonly sourceLocationArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#tags AwsDatasyncTask#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#tags TfTask#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#tags_all AwsDatasyncTask#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#tags_all TfTask#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#task_mode AwsDatasyncTask#task_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#task_mode TfTask#task_mode}
   */
   readonly taskMode?: string;
   /**
   * excludes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#excludes AwsDatasyncTask#excludes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#excludes TfTask#excludes}
   */
-  readonly excludes?: AwsDatasyncTask.ExcludesProperty;
+  readonly excludes?: TfTask.ExcludesProperty;
   /**
   * includes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#includes AwsDatasyncTask#includes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#includes TfTask#includes}
   */
-  readonly includes?: AwsDatasyncTask.IncludesProperty;
+  readonly includes?: TfTask.IncludesProperty;
   /**
   * options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#options AwsDatasyncTask#options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#options TfTask#options}
   */
-  readonly options?: AwsDatasyncTask.OptionsProperty;
+  readonly options?: TfTask.OptionsProperty;
   /**
   * schedule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#schedule AwsDatasyncTask#schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#schedule TfTask#schedule}
   */
-  readonly schedule?: AwsDatasyncTask.ScheduleProperty;
+  readonly schedule?: TfTask.ScheduleProperty;
   /**
   * task_report_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#task_report_config AwsDatasyncTask#task_report_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#task_report_config TfTask#task_report_config}
   */
-  readonly taskReportConfig?: AwsDatasyncTask.TaskReportConfigProperty;
+  readonly taskReportConfig?: TfTask.TaskReportConfigProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#timeouts AwsDatasyncTask#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#timeouts TfTask#timeouts}
   */
-  readonly timeouts?: AwsDatasyncTask.TimeoutsProperty;
+  readonly timeouts?: TfTask.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task aws_datasync_task}
 */
-export class AwsDatasyncTask extends cdktn.TerraformResource {
+export class TfTask extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -99,11 +99,11 @@ export class AwsDatasyncTask extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDatasyncTask resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfTask resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDatasyncTask to import
-  * @param importFromId The id of the existing AwsDatasyncTask that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDatasyncTask to import is found
+  * @param importToId The construct id used in the generated config for the TfTask to import
+  * @param importFromId The id of the existing TfTask that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfTask to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_datasync_task", importId: importFromId, provider });
@@ -118,9 +118,9 @@ export class AwsDatasyncTask extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDatasyncTaskConfig
+  * @param options TfTaskConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDatasyncTaskConfig) {
+  public constructor(scope: Construct, id: string, config: TfTaskConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_datasync_task',
       terraformGeneratorMetadata: {
@@ -301,11 +301,11 @@ export class AwsDatasyncTask extends cdktn.TerraformResource {
   }
 
   // excludes - computed: false, optional: true, required: false
-  private _excludes = new AwsDatasyncTask.ExcludesPropertyOutputReference(this, "excludes");
+  private _excludes = new TfTask.ExcludesPropertyOutputReference(this, "excludes");
   public get excludes() {
     return this._excludes;
   }
-  public putExcludes(value: AwsDatasyncTask.ExcludesProperty) {
+  public putExcludes(value: TfTask.ExcludesProperty) {
     this._excludes.internalValue = value;
   }
   public resetExcludes() {
@@ -317,11 +317,11 @@ export class AwsDatasyncTask extends cdktn.TerraformResource {
   }
 
   // includes - computed: false, optional: true, required: false
-  private _includes = new AwsDatasyncTask.IncludesPropertyOutputReference(this, "includes");
+  private _includes = new TfTask.IncludesPropertyOutputReference(this, "includes");
   public get includes() {
     return this._includes;
   }
-  public putIncludes(value: AwsDatasyncTask.IncludesProperty) {
+  public putIncludes(value: TfTask.IncludesProperty) {
     this._includes.internalValue = value;
   }
   public resetIncludes() {
@@ -333,11 +333,11 @@ export class AwsDatasyncTask extends cdktn.TerraformResource {
   }
 
   // options - computed: false, optional: true, required: false
-  private _options = new AwsDatasyncTask.OptionsPropertyOutputReference(this, "options");
+  private _options = new TfTask.OptionsPropertyOutputReference(this, "options");
   public get options() {
     return this._options;
   }
-  public putOptions(value: AwsDatasyncTask.OptionsProperty) {
+  public putOptions(value: TfTask.OptionsProperty) {
     this._options.internalValue = value;
   }
   public resetOptions() {
@@ -349,11 +349,11 @@ export class AwsDatasyncTask extends cdktn.TerraformResource {
   }
 
   // schedule - computed: false, optional: true, required: false
-  private _schedule = new AwsDatasyncTask.SchedulePropertyOutputReference(this, "schedule");
+  private _schedule = new TfTask.SchedulePropertyOutputReference(this, "schedule");
   public get schedule() {
     return this._schedule;
   }
-  public putSchedule(value: AwsDatasyncTask.ScheduleProperty) {
+  public putSchedule(value: TfTask.ScheduleProperty) {
     this._schedule.internalValue = value;
   }
   public resetSchedule() {
@@ -365,11 +365,11 @@ export class AwsDatasyncTask extends cdktn.TerraformResource {
   }
 
   // task_report_config - computed: false, optional: true, required: false
-  private _taskReportConfig = new AwsDatasyncTask.TaskReportConfigPropertyOutputReference(this, "task_report_config");
+  private _taskReportConfig = new TfTask.TaskReportConfigPropertyOutputReference(this, "task_report_config");
   public get taskReportConfig() {
     return this._taskReportConfig;
   }
-  public putTaskReportConfig(value: AwsDatasyncTask.TaskReportConfigProperty) {
+  public putTaskReportConfig(value: TfTask.TaskReportConfigProperty) {
     this._taskReportConfig.internalValue = value;
   }
   public resetTaskReportConfig() {
@@ -381,11 +381,11 @@ export class AwsDatasyncTask extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsDatasyncTask.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfTask.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsDatasyncTask.TimeoutsProperty) {
+  public putTimeouts(value: TfTask.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -411,12 +411,12 @@ export class AwsDatasyncTask extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       task_mode: cdktn.stringToTerraform(this._taskMode),
-      excludes: awsDatasyncTaskExcludesPropertyToTerraform(this._excludes.internalValue),
-      includes: awsDatasyncTaskIncludesPropertyToTerraform(this._includes.internalValue),
-      options: awsDatasyncTaskOptionsPropertyToTerraform(this._options.internalValue),
-      schedule: awsDatasyncTaskSchedulePropertyToTerraform(this._schedule.internalValue),
-      task_report_config: awsDatasyncTaskTaskReportConfigPropertyToTerraform(this._taskReportConfig.internalValue),
-      timeouts: awsDatasyncTaskTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      excludes: tfTaskExcludesPropertyToTerraform(this._excludes.internalValue),
+      includes: tfTaskIncludesPropertyToTerraform(this._includes.internalValue),
+      options: tfTaskOptionsPropertyToTerraform(this._options.internalValue),
+      schedule: tfTaskSchedulePropertyToTerraform(this._schedule.internalValue),
+      task_report_config: tfTaskTaskReportConfigPropertyToTerraform(this._taskReportConfig.internalValue),
+      timeouts: tfTaskTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -477,40 +477,40 @@ export class AwsDatasyncTask extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       excludes: {
-        value: awsDatasyncTaskExcludesPropertyToHclTerraform(this._excludes.internalValue),
+        value: tfTaskExcludesPropertyToHclTerraform(this._excludes.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDatasyncTask.ExcludesPropertyList",
+        storageClassType: "TfTask.ExcludesPropertyList",
       },
       includes: {
-        value: awsDatasyncTaskIncludesPropertyToHclTerraform(this._includes.internalValue),
+        value: tfTaskIncludesPropertyToHclTerraform(this._includes.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDatasyncTask.IncludesPropertyList",
+        storageClassType: "TfTask.IncludesPropertyList",
       },
       options: {
-        value: awsDatasyncTaskOptionsPropertyToHclTerraform(this._options.internalValue),
+        value: tfTaskOptionsPropertyToHclTerraform(this._options.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDatasyncTask.OptionsPropertyList",
+        storageClassType: "TfTask.OptionsPropertyList",
       },
       schedule: {
-        value: awsDatasyncTaskSchedulePropertyToHclTerraform(this._schedule.internalValue),
+        value: tfTaskSchedulePropertyToHclTerraform(this._schedule.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDatasyncTask.SchedulePropertyList",
+        storageClassType: "TfTask.SchedulePropertyList",
       },
       task_report_config: {
-        value: awsDatasyncTaskTaskReportConfigPropertyToHclTerraform(this._taskReportConfig.internalValue),
+        value: tfTaskTaskReportConfigPropertyToHclTerraform(this._taskReportConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDatasyncTask.TaskReportConfigPropertyList",
+        storageClassType: "TfTask.TaskReportConfigPropertyList",
       },
       timeouts: {
-        value: awsDatasyncTaskTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfTaskTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsDatasyncTask.TimeoutsProperty",
+        storageClassType: "TfTask.TimeoutsProperty",
       },
     };
 
@@ -519,7 +519,7 @@ export class AwsDatasyncTask extends cdktn.TerraformResource {
   }
 }
 
-export function awsDatasyncTaskExcludesPropertyToTerraform(struct?: AwsDatasyncTask.ExcludesPropertyOutputReference | AwsDatasyncTask.ExcludesProperty): any {
+export function tfTaskExcludesPropertyToTerraform(struct?: TfTask.ExcludesPropertyOutputReference | TfTask.ExcludesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -531,7 +531,7 @@ export function awsDatasyncTaskExcludesPropertyToTerraform(struct?: AwsDatasyncT
 }
 
 
-export function awsDatasyncTaskExcludesPropertyToHclTerraform(struct?: AwsDatasyncTask.ExcludesPropertyOutputReference | AwsDatasyncTask.ExcludesProperty): any {
+export function tfTaskExcludesPropertyToHclTerraform(struct?: TfTask.ExcludesPropertyOutputReference | TfTask.ExcludesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -556,7 +556,7 @@ export function awsDatasyncTaskExcludesPropertyToHclTerraform(struct?: AwsDatasy
 }
 
 
-export function awsDatasyncTaskIncludesPropertyToTerraform(struct?: AwsDatasyncTask.IncludesPropertyOutputReference | AwsDatasyncTask.IncludesProperty): any {
+export function tfTaskIncludesPropertyToTerraform(struct?: TfTask.IncludesPropertyOutputReference | TfTask.IncludesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -568,7 +568,7 @@ export function awsDatasyncTaskIncludesPropertyToTerraform(struct?: AwsDatasyncT
 }
 
 
-export function awsDatasyncTaskIncludesPropertyToHclTerraform(struct?: AwsDatasyncTask.IncludesPropertyOutputReference | AwsDatasyncTask.IncludesProperty): any {
+export function tfTaskIncludesPropertyToHclTerraform(struct?: TfTask.IncludesPropertyOutputReference | TfTask.IncludesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -593,7 +593,7 @@ export function awsDatasyncTaskIncludesPropertyToHclTerraform(struct?: AwsDatasy
 }
 
 
-export function awsDatasyncTaskOptionsPropertyToTerraform(struct?: AwsDatasyncTask.OptionsPropertyOutputReference | AwsDatasyncTask.OptionsProperty): any {
+export function tfTaskOptionsPropertyToTerraform(struct?: TfTask.OptionsPropertyOutputReference | TfTask.OptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -618,7 +618,7 @@ export function awsDatasyncTaskOptionsPropertyToTerraform(struct?: AwsDatasyncTa
 }
 
 
-export function awsDatasyncTaskOptionsPropertyToHclTerraform(struct?: AwsDatasyncTask.OptionsPropertyOutputReference | AwsDatasyncTask.OptionsProperty): any {
+export function tfTaskOptionsPropertyToHclTerraform(struct?: TfTask.OptionsPropertyOutputReference | TfTask.OptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -721,7 +721,7 @@ export function awsDatasyncTaskOptionsPropertyToHclTerraform(struct?: AwsDatasyn
 }
 
 
-export function awsDatasyncTaskSchedulePropertyToTerraform(struct?: AwsDatasyncTask.SchedulePropertyOutputReference | AwsDatasyncTask.ScheduleProperty): any {
+export function tfTaskSchedulePropertyToTerraform(struct?: TfTask.SchedulePropertyOutputReference | TfTask.ScheduleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -733,7 +733,7 @@ export function awsDatasyncTaskSchedulePropertyToTerraform(struct?: AwsDatasyncT
 }
 
 
-export function awsDatasyncTaskSchedulePropertyToHclTerraform(struct?: AwsDatasyncTask.SchedulePropertyOutputReference | AwsDatasyncTask.ScheduleProperty): any {
+export function tfTaskSchedulePropertyToHclTerraform(struct?: TfTask.SchedulePropertyOutputReference | TfTask.ScheduleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -758,7 +758,7 @@ export function awsDatasyncTaskSchedulePropertyToHclTerraform(struct?: AwsDatasy
 }
 
 
-export function awsDatasyncTaskReportOverridesPropertyToTerraform(struct?: AwsDatasyncTask.ReportOverridesPropertyOutputReference | AwsDatasyncTask.ReportOverridesProperty): any {
+export function tfTaskReportOverridesPropertyToTerraform(struct?: TfTask.ReportOverridesPropertyOutputReference | TfTask.ReportOverridesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -772,7 +772,7 @@ export function awsDatasyncTaskReportOverridesPropertyToTerraform(struct?: AwsDa
 }
 
 
-export function awsDatasyncTaskReportOverridesPropertyToHclTerraform(struct?: AwsDatasyncTask.ReportOverridesPropertyOutputReference | AwsDatasyncTask.ReportOverridesProperty): any {
+export function tfTaskReportOverridesPropertyToHclTerraform(struct?: TfTask.ReportOverridesPropertyOutputReference | TfTask.ReportOverridesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -809,7 +809,7 @@ export function awsDatasyncTaskReportOverridesPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsDatasyncTaskS3DestinationPropertyToTerraform(struct?: AwsDatasyncTask.S3DestinationPropertyOutputReference | AwsDatasyncTask.S3DestinationProperty): any {
+export function tfTaskS3DestinationPropertyToTerraform(struct?: TfTask.S3DestinationPropertyOutputReference | TfTask.S3DestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -822,7 +822,7 @@ export function awsDatasyncTaskS3DestinationPropertyToTerraform(struct?: AwsData
 }
 
 
-export function awsDatasyncTaskS3DestinationPropertyToHclTerraform(struct?: AwsDatasyncTask.S3DestinationPropertyOutputReference | AwsDatasyncTask.S3DestinationProperty): any {
+export function tfTaskS3DestinationPropertyToHclTerraform(struct?: TfTask.S3DestinationPropertyOutputReference | TfTask.S3DestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -853,7 +853,7 @@ export function awsDatasyncTaskS3DestinationPropertyToHclTerraform(struct?: AwsD
 }
 
 
-export function awsDatasyncTaskTaskReportConfigPropertyToTerraform(struct?: AwsDatasyncTask.TaskReportConfigPropertyOutputReference | AwsDatasyncTask.TaskReportConfigProperty): any {
+export function tfTaskTaskReportConfigPropertyToTerraform(struct?: TfTask.TaskReportConfigPropertyOutputReference | TfTask.TaskReportConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -862,13 +862,13 @@ export function awsDatasyncTaskTaskReportConfigPropertyToTerraform(struct?: AwsD
     output_type: cdktn.stringToTerraform(struct!.outputType),
     report_level: cdktn.stringToTerraform(struct!.reportLevel),
     s3_object_versioning: cdktn.stringToTerraform(struct!.s3ObjectVersioning),
-    report_overrides: awsDatasyncTaskReportOverridesPropertyToTerraform(struct!.reportOverrides),
-    s3_destination: awsDatasyncTaskS3DestinationPropertyToTerraform(struct!.s3Destination),
+    report_overrides: tfTaskReportOverridesPropertyToTerraform(struct!.reportOverrides),
+    s3_destination: tfTaskS3DestinationPropertyToTerraform(struct!.s3Destination),
   }
 }
 
 
-export function awsDatasyncTaskTaskReportConfigPropertyToHclTerraform(struct?: AwsDatasyncTask.TaskReportConfigPropertyOutputReference | AwsDatasyncTask.TaskReportConfigProperty): any {
+export function tfTaskTaskReportConfigPropertyToHclTerraform(struct?: TfTask.TaskReportConfigPropertyOutputReference | TfTask.TaskReportConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -893,13 +893,13 @@ export function awsDatasyncTaskTaskReportConfigPropertyToHclTerraform(struct?: A
       storageClassType: "string",
     },
     report_overrides: {
-      value: awsDatasyncTaskReportOverridesPropertyToHclTerraform(struct!.reportOverrides),
+      value: tfTaskReportOverridesPropertyToHclTerraform(struct!.reportOverrides),
       isBlock: true,
       type: "list",
       storageClassType: "ReportOverridesPropertyList",
     },
     s3_destination: {
-      value: awsDatasyncTaskS3DestinationPropertyToHclTerraform(struct!.s3Destination),
+      value: tfTaskS3DestinationPropertyToHclTerraform(struct!.s3Destination),
       isBlock: true,
       type: "list",
       storageClassType: "S3DestinationPropertyList",
@@ -911,7 +911,7 @@ export function awsDatasyncTaskTaskReportConfigPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsDatasyncTaskTimeoutsPropertyToTerraform(struct?: AwsDatasyncTask.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfTaskTimeoutsPropertyToTerraform(struct?: TfTask.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -922,7 +922,7 @@ export function awsDatasyncTaskTimeoutsPropertyToTerraform(struct?: AwsDatasyncT
 }
 
 
-export function awsDatasyncTaskTimeoutsPropertyToHclTerraform(struct?: AwsDatasyncTask.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfTaskTimeoutsPropertyToHclTerraform(struct?: TfTask.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -941,14 +941,14 @@ export function awsDatasyncTaskTimeoutsPropertyToHclTerraform(struct?: AwsDatasy
 }
 
 
-export namespace AwsDatasyncTask {
+export namespace TfTask {
 export interface ExcludesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#filter_type AwsDatasyncTask#filter_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#filter_type TfTask#filter_type}
   */
   readonly filterType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#value AwsDatasyncTask#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#value TfTask#value}
   */
   readonly value?: string;
 }
@@ -1024,11 +1024,11 @@ export class ExcludesPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface IncludesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#filter_type AwsDatasyncTask#filter_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#filter_type TfTask#filter_type}
   */
   readonly filterType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#value AwsDatasyncTask#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#value TfTask#value}
   */
   readonly value?: string;
 }
@@ -1104,63 +1104,63 @@ export class IncludesPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface OptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#atime AwsDatasyncTask#atime}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#atime TfTask#atime}
   */
   readonly atime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#bytes_per_second AwsDatasyncTask#bytes_per_second}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#bytes_per_second TfTask#bytes_per_second}
   */
   readonly bytesPerSecond?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#gid AwsDatasyncTask#gid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#gid TfTask#gid}
   */
   readonly gid?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#log_level AwsDatasyncTask#log_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#log_level TfTask#log_level}
   */
   readonly logLevel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#mtime AwsDatasyncTask#mtime}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#mtime TfTask#mtime}
   */
   readonly mtime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#object_tags AwsDatasyncTask#object_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#object_tags TfTask#object_tags}
   */
   readonly objectTags?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#overwrite_mode AwsDatasyncTask#overwrite_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#overwrite_mode TfTask#overwrite_mode}
   */
   readonly overwriteMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#posix_permissions AwsDatasyncTask#posix_permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#posix_permissions TfTask#posix_permissions}
   */
   readonly posixPermissions?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#preserve_deleted_files AwsDatasyncTask#preserve_deleted_files}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#preserve_deleted_files TfTask#preserve_deleted_files}
   */
   readonly preserveDeletedFiles?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#preserve_devices AwsDatasyncTask#preserve_devices}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#preserve_devices TfTask#preserve_devices}
   */
   readonly preserveDevices?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#security_descriptor_copy_flags AwsDatasyncTask#security_descriptor_copy_flags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#security_descriptor_copy_flags TfTask#security_descriptor_copy_flags}
   */
   readonly securityDescriptorCopyFlags?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#task_queueing AwsDatasyncTask#task_queueing}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#task_queueing TfTask#task_queueing}
   */
   readonly taskQueueing?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#transfer_mode AwsDatasyncTask#transfer_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#transfer_mode TfTask#transfer_mode}
   */
   readonly transferMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#uid AwsDatasyncTask#uid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#uid TfTask#uid}
   */
   readonly uid?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#verify_mode AwsDatasyncTask#verify_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#verify_mode TfTask#verify_mode}
   */
   readonly verifyMode?: string;
 }
@@ -1522,11 +1522,11 @@ export class OptionsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ScheduleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#schedule_expression AwsDatasyncTask#schedule_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#schedule_expression TfTask#schedule_expression}
   */
   readonly scheduleExpression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#status AwsDatasyncTask#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#status TfTask#status}
   */
   readonly status?: string;
 }
@@ -1599,19 +1599,19 @@ export class SchedulePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ReportOverridesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#deleted_override AwsDatasyncTask#deleted_override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#deleted_override TfTask#deleted_override}
   */
   readonly deletedOverride?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#skipped_override AwsDatasyncTask#skipped_override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#skipped_override TfTask#skipped_override}
   */
   readonly skippedOverride?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#transferred_override AwsDatasyncTask#transferred_override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#transferred_override TfTask#transferred_override}
   */
   readonly transferredOverride?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#verified_override AwsDatasyncTask#verified_override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#verified_override TfTask#verified_override}
   */
   readonly verifiedOverride?: string;
 }
@@ -1731,15 +1731,15 @@ export class ReportOverridesPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface S3DestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#bucket_access_role_arn AwsDatasyncTask#bucket_access_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#bucket_access_role_arn TfTask#bucket_access_role_arn}
   */
   readonly bucketAccessRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#s3_bucket_arn AwsDatasyncTask#s3_bucket_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#s3_bucket_arn TfTask#s3_bucket_arn}
   */
   readonly s3BucketArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#subdirectory AwsDatasyncTask#subdirectory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#subdirectory TfTask#subdirectory}
   */
   readonly subdirectory?: string;
 }
@@ -1831,27 +1831,27 @@ export class S3DestinationPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TaskReportConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#output_type AwsDatasyncTask#output_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#output_type TfTask#output_type}
   */
   readonly outputType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#report_level AwsDatasyncTask#report_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#report_level TfTask#report_level}
   */
   readonly reportLevel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#s3_object_versioning AwsDatasyncTask#s3_object_versioning}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#s3_object_versioning TfTask#s3_object_versioning}
   */
   readonly s3ObjectVersioning?: string;
   /**
   * report_overrides block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#report_overrides AwsDatasyncTask#report_overrides}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#report_overrides TfTask#report_overrides}
   */
   readonly reportOverrides?: ReportOverridesProperty;
   /**
   * s3_destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#s3_destination AwsDatasyncTask#s3_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#s3_destination TfTask#s3_destination}
   */
   readonly s3Destination: S3DestinationProperty;
 }
@@ -1990,7 +1990,7 @@ export class TaskReportConfigPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#create AwsDatasyncTask#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_task#create TfTask#create}
   */
   readonly create?: string;
 }

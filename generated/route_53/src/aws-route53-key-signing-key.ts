@@ -5,42 +5,42 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsRoute53KeySigningKeyConfig extends cdktn.TerraformMetaArguments {
+export interface TfKeySigningKeyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_key_signing_key#hosted_zone_id AwsRoute53KeySigningKey#hosted_zone_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_key_signing_key#hosted_zone_id TfKeySigningKey#hosted_zone_id}
   */
   readonly hostedZoneId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_key_signing_key#id AwsRoute53KeySigningKey#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_key_signing_key#id TfKeySigningKey#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_key_signing_key#key_management_service_arn AwsRoute53KeySigningKey#key_management_service_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_key_signing_key#key_management_service_arn TfKeySigningKey#key_management_service_arn}
   */
   readonly keyManagementServiceArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_key_signing_key#name AwsRoute53KeySigningKey#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_key_signing_key#name TfKeySigningKey#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_key_signing_key#status AwsRoute53KeySigningKey#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_key_signing_key#status TfKeySigningKey#status}
   */
   readonly status?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_key_signing_key#timeouts AwsRoute53KeySigningKey#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_key_signing_key#timeouts TfKeySigningKey#timeouts}
   */
-  readonly timeouts?: AwsRoute53KeySigningKey.TimeoutsProperty;
+  readonly timeouts?: TfKeySigningKey.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_key_signing_key aws_route53_key_signing_key}
 */
-export class AwsRoute53KeySigningKey extends cdktn.TerraformResource {
+export class TfKeySigningKey extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class AwsRoute53KeySigningKey extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsRoute53KeySigningKey resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfKeySigningKey resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsRoute53KeySigningKey to import
-  * @param importFromId The id of the existing AwsRoute53KeySigningKey that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_key_signing_key#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsRoute53KeySigningKey to import is found
+  * @param importToId The construct id used in the generated config for the TfKeySigningKey to import
+  * @param importFromId The id of the existing TfKeySigningKey that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_key_signing_key#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfKeySigningKey to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route53_key_signing_key", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class AwsRoute53KeySigningKey extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsRoute53KeySigningKeyConfig
+  * @param options TfKeySigningKeyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsRoute53KeySigningKeyConfig) {
+  public constructor(scope: Construct, id: string, config: TfKeySigningKeyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_route53_key_signing_key',
       terraformGeneratorMetadata: {
@@ -222,11 +222,11 @@ export class AwsRoute53KeySigningKey extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsRoute53KeySigningKey.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfKeySigningKey.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsRoute53KeySigningKey.TimeoutsProperty) {
+  public putTimeouts(value: TfKeySigningKey.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -248,7 +248,7 @@ export class AwsRoute53KeySigningKey extends cdktn.TerraformResource {
       key_management_service_arn: cdktn.stringToTerraform(this._keyManagementServiceArn),
       name: cdktn.stringToTerraform(this._name),
       status: cdktn.stringToTerraform(this._status),
-      timeouts: awsRoute53KeySigningKeyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfKeySigningKeyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -285,10 +285,10 @@ export class AwsRoute53KeySigningKey extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsRoute53KeySigningKeyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfKeySigningKeyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsRoute53KeySigningKey.TimeoutsProperty",
+        storageClassType: "TfKeySigningKey.TimeoutsProperty",
       },
     };
 
@@ -297,7 +297,7 @@ export class AwsRoute53KeySigningKey extends cdktn.TerraformResource {
   }
 }
 
-export function awsRoute53KeySigningKeyTimeoutsPropertyToTerraform(struct?: AwsRoute53KeySigningKey.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfKeySigningKeyTimeoutsPropertyToTerraform(struct?: TfKeySigningKey.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -310,7 +310,7 @@ export function awsRoute53KeySigningKeyTimeoutsPropertyToTerraform(struct?: AwsR
 }
 
 
-export function awsRoute53KeySigningKeyTimeoutsPropertyToHclTerraform(struct?: AwsRoute53KeySigningKey.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfKeySigningKeyTimeoutsPropertyToHclTerraform(struct?: TfKeySigningKey.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -341,18 +341,18 @@ export function awsRoute53KeySigningKeyTimeoutsPropertyToHclTerraform(struct?: A
 }
 
 
-export namespace AwsRoute53KeySigningKey {
+export namespace TfKeySigningKey {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_key_signing_key#create AwsRoute53KeySigningKey#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_key_signing_key#create TfKeySigningKey#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_key_signing_key#delete AwsRoute53KeySigningKey#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_key_signing_key#delete TfKeySigningKey#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_key_signing_key#update AwsRoute53KeySigningKey#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_key_signing_key#update TfKeySigningKey#update}
   */
   readonly update?: string;
 }

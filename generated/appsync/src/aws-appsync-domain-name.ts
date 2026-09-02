@@ -5,21 +5,21 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsAppsyncDomainNameConfig extends cdktn.TerraformMetaArguments {
+export interface TfDomainNameConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_domain_name#certificate_arn AwsAppsyncDomainName#certificate_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_domain_name#certificate_arn TfDomainName#certificate_arn}
   */
   readonly certificateArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_domain_name#description AwsAppsyncDomainName#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_domain_name#description TfDomainName#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_domain_name#domain_name AwsAppsyncDomainName#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_domain_name#domain_name TfDomainName#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_domain_name#id AwsAppsyncDomainName#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_domain_name#id TfDomainName#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,7 +28,7 @@ export interface AwsAppsyncDomainNameConfig extends cdktn.TerraformMetaArguments
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_domain_name#region AwsAppsyncDomainName#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_domain_name#region TfDomainName#region}
   */
   readonly region?: string;
 }
@@ -36,7 +36,7 @@ export interface AwsAppsyncDomainNameConfig extends cdktn.TerraformMetaArguments
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_domain_name aws_appsync_domain_name}
 */
-export class AwsAppsyncDomainName extends cdktn.TerraformResource {
+export class TfDomainName extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class AwsAppsyncDomainName extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsAppsyncDomainName resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDomainName resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsAppsyncDomainName to import
-  * @param importFromId The id of the existing AwsAppsyncDomainName that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_domain_name#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsAppsyncDomainName to import is found
+  * @param importToId The construct id used in the generated config for the TfDomainName to import
+  * @param importFromId The id of the existing TfDomainName that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_domain_name#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDomainName to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appsync_domain_name", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class AwsAppsyncDomainName extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsAppsyncDomainNameConfig
+  * @param options TfDomainNameConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsAppsyncDomainNameConfig) {
+  public constructor(scope: Construct, id: string, config: TfDomainNameConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appsync_domain_name',
       terraformGeneratorMetadata: {

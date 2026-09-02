@@ -5,49 +5,49 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsAppsyncSourceApiAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface TfSourceApiAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_source_api_association#description AwsAppsyncSourceApiAssociation#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_source_api_association#description TfSourceApiAssociation#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_source_api_association#merged_api_arn AwsAppsyncSourceApiAssociation#merged_api_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_source_api_association#merged_api_arn TfSourceApiAssociation#merged_api_arn}
   */
   readonly mergedApiArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_source_api_association#merged_api_id AwsAppsyncSourceApiAssociation#merged_api_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_source_api_association#merged_api_id TfSourceApiAssociation#merged_api_id}
   */
   readonly mergedApiId?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_source_api_association#region AwsAppsyncSourceApiAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_source_api_association#region TfSourceApiAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_source_api_association#source_api_arn AwsAppsyncSourceApiAssociation#source_api_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_source_api_association#source_api_arn TfSourceApiAssociation#source_api_arn}
   */
   readonly sourceApiArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_source_api_association#source_api_association_config AwsAppsyncSourceApiAssociation#source_api_association_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_source_api_association#source_api_association_config TfSourceApiAssociation#source_api_association_config}
   */
-  readonly sourceApiAssociationConfig?: AwsAppsyncSourceApiAssociation.SourceApiAssociationConfigProperty[] | cdktn.IResolvable;
+  readonly sourceApiAssociationConfig?: TfSourceApiAssociation.SourceApiAssociationConfigProperty[] | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_source_api_association#source_api_id AwsAppsyncSourceApiAssociation#source_api_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_source_api_association#source_api_id TfSourceApiAssociation#source_api_id}
   */
   readonly sourceApiId?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_source_api_association#timeouts AwsAppsyncSourceApiAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_source_api_association#timeouts TfSourceApiAssociation#timeouts}
   */
-  readonly timeouts?: AwsAppsyncSourceApiAssociation.TimeoutsProperty;
+  readonly timeouts?: TfSourceApiAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_source_api_association aws_appsync_source_api_association}
 */
-export class AwsAppsyncSourceApiAssociation extends cdktn.TerraformResource {
+export class TfSourceApiAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -58,11 +58,11 @@ export class AwsAppsyncSourceApiAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsAppsyncSourceApiAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfSourceApiAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsAppsyncSourceApiAssociation to import
-  * @param importFromId The id of the existing AwsAppsyncSourceApiAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_source_api_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsAppsyncSourceApiAssociation to import is found
+  * @param importToId The construct id used in the generated config for the TfSourceApiAssociation to import
+  * @param importFromId The id of the existing TfSourceApiAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_source_api_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfSourceApiAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appsync_source_api_association", importId: importFromId, provider });
@@ -77,9 +77,9 @@ export class AwsAppsyncSourceApiAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsAppsyncSourceApiAssociationConfig = {}
+  * @param options TfSourceApiAssociationConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsAppsyncSourceApiAssociationConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfSourceApiAssociationConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_appsync_source_api_association',
       terraformGeneratorMetadata: {
@@ -205,11 +205,11 @@ export class AwsAppsyncSourceApiAssociation extends cdktn.TerraformResource {
   }
 
   // source_api_association_config - computed: true, optional: true, required: false
-  private _sourceApiAssociationConfig = new AwsAppsyncSourceApiAssociation.SourceApiAssociationConfigPropertyList(this, "source_api_association_config", false);
+  private _sourceApiAssociationConfig = new TfSourceApiAssociation.SourceApiAssociationConfigPropertyList(this, "source_api_association_config", false);
   public get sourceApiAssociationConfig() {
     return this._sourceApiAssociationConfig;
   }
-  public putSourceApiAssociationConfig(value: AwsAppsyncSourceApiAssociation.SourceApiAssociationConfigProperty[] | cdktn.IResolvable) {
+  public putSourceApiAssociationConfig(value: TfSourceApiAssociation.SourceApiAssociationConfigProperty[] | cdktn.IResolvable) {
     this._sourceApiAssociationConfig.internalValue = value;
   }
   public resetSourceApiAssociationConfig() {
@@ -237,11 +237,11 @@ export class AwsAppsyncSourceApiAssociation extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsAppsyncSourceApiAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfSourceApiAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsAppsyncSourceApiAssociation.TimeoutsProperty) {
+  public putTimeouts(value: TfSourceApiAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -263,9 +263,9 @@ export class AwsAppsyncSourceApiAssociation extends cdktn.TerraformResource {
       merged_api_id: cdktn.stringToTerraform(this._mergedApiId),
       region: cdktn.stringToTerraform(this._region),
       source_api_arn: cdktn.stringToTerraform(this._sourceApiArn),
-      source_api_association_config: cdktn.listMapper(awsAppsyncSourceApiAssociationSourceApiAssociationConfigPropertyToTerraform, false)(this._sourceApiAssociationConfig.internalValue),
+      source_api_association_config: cdktn.listMapper(tfSourceApiAssociationSourceApiAssociationConfigPropertyToTerraform, false)(this._sourceApiAssociationConfig.internalValue),
       source_api_id: cdktn.stringToTerraform(this._sourceApiId),
-      timeouts: awsAppsyncSourceApiAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfSourceApiAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -302,10 +302,10 @@ export class AwsAppsyncSourceApiAssociation extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       source_api_association_config: {
-        value: cdktn.listMapperHcl(awsAppsyncSourceApiAssociationSourceApiAssociationConfigPropertyToHclTerraform, false)(this._sourceApiAssociationConfig.internalValue),
+        value: cdktn.listMapperHcl(tfSourceApiAssociationSourceApiAssociationConfigPropertyToHclTerraform, false)(this._sourceApiAssociationConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAppsyncSourceApiAssociation.SourceApiAssociationConfigPropertyList",
+        storageClassType: "TfSourceApiAssociation.SourceApiAssociationConfigPropertyList",
       },
       source_api_id: {
         value: cdktn.stringToHclTerraform(this._sourceApiId),
@@ -314,10 +314,10 @@ export class AwsAppsyncSourceApiAssociation extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsAppsyncSourceApiAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfSourceApiAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsAppsyncSourceApiAssociation.TimeoutsProperty",
+        storageClassType: "TfSourceApiAssociation.TimeoutsProperty",
       },
     };
 
@@ -326,7 +326,7 @@ export class AwsAppsyncSourceApiAssociation extends cdktn.TerraformResource {
   }
 }
 
-export function awsAppsyncSourceApiAssociationSourceApiAssociationConfigPropertyToTerraform(struct?: AwsAppsyncSourceApiAssociation.SourceApiAssociationConfigProperty | cdktn.IResolvable): any {
+export function tfSourceApiAssociationSourceApiAssociationConfigPropertyToTerraform(struct?: TfSourceApiAssociation.SourceApiAssociationConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -337,7 +337,7 @@ export function awsAppsyncSourceApiAssociationSourceApiAssociationConfigProperty
 }
 
 
-export function awsAppsyncSourceApiAssociationSourceApiAssociationConfigPropertyToHclTerraform(struct?: AwsAppsyncSourceApiAssociation.SourceApiAssociationConfigProperty | cdktn.IResolvable): any {
+export function tfSourceApiAssociationSourceApiAssociationConfigPropertyToHclTerraform(struct?: TfSourceApiAssociation.SourceApiAssociationConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -356,7 +356,7 @@ export function awsAppsyncSourceApiAssociationSourceApiAssociationConfigProperty
 }
 
 
-export function awsAppsyncSourceApiAssociationTimeoutsPropertyToTerraform(struct?: AwsAppsyncSourceApiAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfSourceApiAssociationTimeoutsPropertyToTerraform(struct?: TfSourceApiAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -369,7 +369,7 @@ export function awsAppsyncSourceApiAssociationTimeoutsPropertyToTerraform(struct
 }
 
 
-export function awsAppsyncSourceApiAssociationTimeoutsPropertyToHclTerraform(struct?: AwsAppsyncSourceApiAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfSourceApiAssociationTimeoutsPropertyToHclTerraform(struct?: TfSourceApiAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -400,10 +400,10 @@ export function awsAppsyncSourceApiAssociationTimeoutsPropertyToHclTerraform(str
 }
 
 
-export namespace AwsAppsyncSourceApiAssociation {
+export namespace TfSourceApiAssociation {
 export interface SourceApiAssociationConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_source_api_association#merge_type AwsAppsyncSourceApiAssociation#merge_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_source_api_association#merge_type TfSourceApiAssociation#merge_type}
   */
   readonly mergeType?: string;
 }
@@ -491,19 +491,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_source_api_association#create AwsAppsyncSourceApiAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_source_api_association#create TfSourceApiAssociation#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_source_api_association#delete AwsAppsyncSourceApiAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_source_api_association#delete TfSourceApiAssociation#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_source_api_association#update AwsAppsyncSourceApiAssociation#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_source_api_association#update TfSourceApiAssociation#update}
   */
   readonly update?: string;
 }

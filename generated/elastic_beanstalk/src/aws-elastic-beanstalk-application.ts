@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsElasticBeanstalkApplicationConfig extends cdktn.TerraformMetaArguments {
+export interface TfApplicationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_application#description AwsElasticBeanstalkApplication#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_application#description TfApplication#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_application#id AwsElasticBeanstalkApplication#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_application#id TfApplication#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_application#name AwsElasticBeanstalkApplication#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_application#name TfApplication#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_application#region AwsElasticBeanstalkApplication#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_application#region TfApplication#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_application#tags AwsElasticBeanstalkApplication#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_application#tags TfApplication#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_application#tags_all AwsElasticBeanstalkApplication#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_application#tags_all TfApplication#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * appversion_lifecycle block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_application#appversion_lifecycle AwsElasticBeanstalkApplication#appversion_lifecycle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_application#appversion_lifecycle TfApplication#appversion_lifecycle}
   */
-  readonly appversionLifecycle?: AwsElasticBeanstalkApplication.AppversionLifecycleProperty;
+  readonly appversionLifecycle?: TfApplication.AppversionLifecycleProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_application aws_elastic_beanstalk_application}
 */
-export class AwsElasticBeanstalkApplication extends cdktn.TerraformResource {
+export class TfApplication extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class AwsElasticBeanstalkApplication extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsElasticBeanstalkApplication resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfApplication resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsElasticBeanstalkApplication to import
-  * @param importFromId The id of the existing AwsElasticBeanstalkApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_application#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsElasticBeanstalkApplication to import is found
+  * @param importToId The construct id used in the generated config for the TfApplication to import
+  * @param importFromId The id of the existing TfApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_application#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfApplication to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_elastic_beanstalk_application", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class AwsElasticBeanstalkApplication extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsElasticBeanstalkApplicationConfig
+  * @param options TfApplicationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsElasticBeanstalkApplicationConfig) {
+  public constructor(scope: Construct, id: string, config: TfApplicationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_elastic_beanstalk_application',
       terraformGeneratorMetadata: {
@@ -206,11 +206,11 @@ export class AwsElasticBeanstalkApplication extends cdktn.TerraformResource {
   }
 
   // appversion_lifecycle - computed: false, optional: true, required: false
-  private _appversionLifecycle = new AwsElasticBeanstalkApplication.AppversionLifecyclePropertyOutputReference(this, "appversion_lifecycle");
+  private _appversionLifecycle = new TfApplication.AppversionLifecyclePropertyOutputReference(this, "appversion_lifecycle");
   public get appversionLifecycle() {
     return this._appversionLifecycle;
   }
-  public putAppversionLifecycle(value: AwsElasticBeanstalkApplication.AppversionLifecycleProperty) {
+  public putAppversionLifecycle(value: TfApplication.AppversionLifecycleProperty) {
     this._appversionLifecycle.internalValue = value;
   }
   public resetAppversionLifecycle() {
@@ -233,7 +233,7 @@ export class AwsElasticBeanstalkApplication extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      appversion_lifecycle: awsElasticBeanstalkApplicationAppversionLifecyclePropertyToTerraform(this._appversionLifecycle.internalValue),
+      appversion_lifecycle: tfApplicationAppversionLifecyclePropertyToTerraform(this._appversionLifecycle.internalValue),
     };
   }
 
@@ -276,10 +276,10 @@ export class AwsElasticBeanstalkApplication extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       appversion_lifecycle: {
-        value: awsElasticBeanstalkApplicationAppversionLifecyclePropertyToHclTerraform(this._appversionLifecycle.internalValue),
+        value: tfApplicationAppversionLifecyclePropertyToHclTerraform(this._appversionLifecycle.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsElasticBeanstalkApplication.AppversionLifecyclePropertyList",
+        storageClassType: "TfApplication.AppversionLifecyclePropertyList",
       },
     };
 
@@ -288,7 +288,7 @@ export class AwsElasticBeanstalkApplication extends cdktn.TerraformResource {
   }
 }
 
-export function awsElasticBeanstalkApplicationAppversionLifecyclePropertyToTerraform(struct?: AwsElasticBeanstalkApplication.AppversionLifecyclePropertyOutputReference | AwsElasticBeanstalkApplication.AppversionLifecycleProperty): any {
+export function tfApplicationAppversionLifecyclePropertyToTerraform(struct?: TfApplication.AppversionLifecyclePropertyOutputReference | TfApplication.AppversionLifecycleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -302,7 +302,7 @@ export function awsElasticBeanstalkApplicationAppversionLifecyclePropertyToTerra
 }
 
 
-export function awsElasticBeanstalkApplicationAppversionLifecyclePropertyToHclTerraform(struct?: AwsElasticBeanstalkApplication.AppversionLifecyclePropertyOutputReference | AwsElasticBeanstalkApplication.AppversionLifecycleProperty): any {
+export function tfApplicationAppversionLifecyclePropertyToHclTerraform(struct?: TfApplication.AppversionLifecyclePropertyOutputReference | TfApplication.AppversionLifecycleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -339,22 +339,22 @@ export function awsElasticBeanstalkApplicationAppversionLifecyclePropertyToHclTe
 }
 
 
-export namespace AwsElasticBeanstalkApplication {
+export namespace TfApplication {
 export interface AppversionLifecycleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_application#delete_source_from_s3 AwsElasticBeanstalkApplication#delete_source_from_s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_application#delete_source_from_s3 TfApplication#delete_source_from_s3}
   */
   readonly deleteSourceFromS3?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_application#max_age_in_days AwsElasticBeanstalkApplication#max_age_in_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_application#max_age_in_days TfApplication#max_age_in_days}
   */
   readonly maxAgeInDays?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_application#max_count AwsElasticBeanstalkApplication#max_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_application#max_count TfApplication#max_count}
   */
   readonly maxCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_application#service_role AwsElasticBeanstalkApplication#service_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_application#service_role TfApplication#service_role}
   */
   readonly serviceRole: string;
 }

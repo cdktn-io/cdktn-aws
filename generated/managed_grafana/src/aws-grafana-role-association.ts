@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsGrafanaRoleAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface TfRoleAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_role_association#group_ids AwsGrafanaRoleAssociation#group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_role_association#group_ids TfRoleAssociation#group_ids}
   */
   readonly groupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_role_association#id AwsGrafanaRoleAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_role_association#id TfRoleAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,33 +20,33 @@ export interface AwsGrafanaRoleAssociationConfig extends cdktn.TerraformMetaArgu
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_role_association#region AwsGrafanaRoleAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_role_association#region TfRoleAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_role_association#role AwsGrafanaRoleAssociation#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_role_association#role TfRoleAssociation#role}
   */
   readonly role: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_role_association#user_ids AwsGrafanaRoleAssociation#user_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_role_association#user_ids TfRoleAssociation#user_ids}
   */
   readonly userIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_role_association#workspace_id AwsGrafanaRoleAssociation#workspace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_role_association#workspace_id TfRoleAssociation#workspace_id}
   */
   readonly workspaceId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_role_association#timeouts AwsGrafanaRoleAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_role_association#timeouts TfRoleAssociation#timeouts}
   */
-  readonly timeouts?: AwsGrafanaRoleAssociation.TimeoutsProperty;
+  readonly timeouts?: TfRoleAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_role_association aws_grafana_role_association}
 */
-export class AwsGrafanaRoleAssociation extends cdktn.TerraformResource {
+export class TfRoleAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class AwsGrafanaRoleAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsGrafanaRoleAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfRoleAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsGrafanaRoleAssociation to import
-  * @param importFromId The id of the existing AwsGrafanaRoleAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_role_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsGrafanaRoleAssociation to import is found
+  * @param importToId The construct id used in the generated config for the TfRoleAssociation to import
+  * @param importFromId The id of the existing TfRoleAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_role_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfRoleAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_grafana_role_association", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class AwsGrafanaRoleAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsGrafanaRoleAssociationConfig
+  * @param options TfRoleAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsGrafanaRoleAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: TfRoleAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_grafana_role_association',
       terraformGeneratorMetadata: {
@@ -198,11 +198,11 @@ export class AwsGrafanaRoleAssociation extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsGrafanaRoleAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfRoleAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsGrafanaRoleAssociation.TimeoutsProperty) {
+  public putTimeouts(value: TfRoleAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -225,7 +225,7 @@ export class AwsGrafanaRoleAssociation extends cdktn.TerraformResource {
       role: cdktn.stringToTerraform(this._role),
       user_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._userIds),
       workspace_id: cdktn.stringToTerraform(this._workspaceId),
-      timeouts: awsGrafanaRoleAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfRoleAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -268,10 +268,10 @@ export class AwsGrafanaRoleAssociation extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsGrafanaRoleAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfRoleAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsGrafanaRoleAssociation.TimeoutsProperty",
+        storageClassType: "TfRoleAssociation.TimeoutsProperty",
       },
     };
 
@@ -280,7 +280,7 @@ export class AwsGrafanaRoleAssociation extends cdktn.TerraformResource {
   }
 }
 
-export function awsGrafanaRoleAssociationTimeoutsPropertyToTerraform(struct?: AwsGrafanaRoleAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfRoleAssociationTimeoutsPropertyToTerraform(struct?: TfRoleAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -292,7 +292,7 @@ export function awsGrafanaRoleAssociationTimeoutsPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsGrafanaRoleAssociationTimeoutsPropertyToHclTerraform(struct?: AwsGrafanaRoleAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfRoleAssociationTimeoutsPropertyToHclTerraform(struct?: TfRoleAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -317,14 +317,14 @@ export function awsGrafanaRoleAssociationTimeoutsPropertyToHclTerraform(struct?:
 }
 
 
-export namespace AwsGrafanaRoleAssociation {
+export namespace TfRoleAssociation {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_role_association#create AwsGrafanaRoleAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_role_association#create TfRoleAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_role_association#delete AwsGrafanaRoleAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_role_association#delete TfRoleAssociation#delete}
   */
   readonly delete?: string;
 }

@@ -5,76 +5,76 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsBudgetsBudgetActionConfig extends cdktn.TerraformMetaArguments {
+export interface TfBudgetActionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#account_id AwsBudgetsBudgetAction#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#account_id TfBudgetAction#account_id}
   */
   readonly accountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#action_type AwsBudgetsBudgetAction#action_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#action_type TfBudgetAction#action_type}
   */
   readonly actionType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#approval_model AwsBudgetsBudgetAction#approval_model}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#approval_model TfBudgetAction#approval_model}
   */
   readonly approvalModel: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#budget_name AwsBudgetsBudgetAction#budget_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#budget_name TfBudgetAction#budget_name}
   */
   readonly budgetName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#execution_role_arn AwsBudgetsBudgetAction#execution_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#execution_role_arn TfBudgetAction#execution_role_arn}
   */
   readonly executionRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#id AwsBudgetsBudgetAction#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#id TfBudgetAction#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#notification_type AwsBudgetsBudgetAction#notification_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#notification_type TfBudgetAction#notification_type}
   */
   readonly notificationType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#tags AwsBudgetsBudgetAction#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#tags TfBudgetAction#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#tags_all AwsBudgetsBudgetAction#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#tags_all TfBudgetAction#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * action_threshold block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#action_threshold AwsBudgetsBudgetAction#action_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#action_threshold TfBudgetAction#action_threshold}
   */
-  readonly actionThreshold: AwsBudgetsBudgetAction.ActionThresholdProperty;
+  readonly actionThreshold: TfBudgetAction.ActionThresholdProperty;
   /**
   * definition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#definition AwsBudgetsBudgetAction#definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#definition TfBudgetAction#definition}
   */
-  readonly definition: AwsBudgetsBudgetAction.DefinitionProperty;
+  readonly definition: TfBudgetAction.DefinitionProperty;
   /**
   * subscriber block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#subscriber AwsBudgetsBudgetAction#subscriber}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#subscriber TfBudgetAction#subscriber}
   */
-  readonly subscriber: AwsBudgetsBudgetAction.SubscriberProperty[] | cdktn.IResolvable;
+  readonly subscriber: TfBudgetAction.SubscriberProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#timeouts AwsBudgetsBudgetAction#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#timeouts TfBudgetAction#timeouts}
   */
-  readonly timeouts?: AwsBudgetsBudgetAction.TimeoutsProperty;
+  readonly timeouts?: TfBudgetAction.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action aws_budgets_budget_action}
 */
-export class AwsBudgetsBudgetAction extends cdktn.TerraformResource {
+export class TfBudgetAction extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -85,11 +85,11 @@ export class AwsBudgetsBudgetAction extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsBudgetsBudgetAction resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfBudgetAction resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsBudgetsBudgetAction to import
-  * @param importFromId The id of the existing AwsBudgetsBudgetAction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsBudgetsBudgetAction to import is found
+  * @param importToId The construct id used in the generated config for the TfBudgetAction to import
+  * @param importFromId The id of the existing TfBudgetAction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfBudgetAction to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_budgets_budget_action", importId: importFromId, provider });
@@ -104,9 +104,9 @@ export class AwsBudgetsBudgetAction extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsBudgetsBudgetActionConfig
+  * @param options TfBudgetActionConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsBudgetsBudgetActionConfig) {
+  public constructor(scope: Construct, id: string, config: TfBudgetActionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_budgets_budget_action',
       terraformGeneratorMetadata: {
@@ -286,11 +286,11 @@ export class AwsBudgetsBudgetAction extends cdktn.TerraformResource {
   }
 
   // action_threshold - computed: false, optional: false, required: true
-  private _actionThreshold = new AwsBudgetsBudgetAction.ActionThresholdPropertyOutputReference(this, "action_threshold");
+  private _actionThreshold = new TfBudgetAction.ActionThresholdPropertyOutputReference(this, "action_threshold");
   public get actionThreshold() {
     return this._actionThreshold;
   }
-  public putActionThreshold(value: AwsBudgetsBudgetAction.ActionThresholdProperty) {
+  public putActionThreshold(value: TfBudgetAction.ActionThresholdProperty) {
     this._actionThreshold.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -299,11 +299,11 @@ export class AwsBudgetsBudgetAction extends cdktn.TerraformResource {
   }
 
   // definition - computed: false, optional: false, required: true
-  private _definition = new AwsBudgetsBudgetAction.DefinitionPropertyOutputReference(this, "definition");
+  private _definition = new TfBudgetAction.DefinitionPropertyOutputReference(this, "definition");
   public get definition() {
     return this._definition;
   }
-  public putDefinition(value: AwsBudgetsBudgetAction.DefinitionProperty) {
+  public putDefinition(value: TfBudgetAction.DefinitionProperty) {
     this._definition.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -312,11 +312,11 @@ export class AwsBudgetsBudgetAction extends cdktn.TerraformResource {
   }
 
   // subscriber - computed: false, optional: false, required: true
-  private _subscriber = new AwsBudgetsBudgetAction.SubscriberPropertyList(this, "subscriber", true);
+  private _subscriber = new TfBudgetAction.SubscriberPropertyList(this, "subscriber", true);
   public get subscriber() {
     return this._subscriber;
   }
-  public putSubscriber(value: AwsBudgetsBudgetAction.SubscriberProperty[] | cdktn.IResolvable) {
+  public putSubscriber(value: TfBudgetAction.SubscriberProperty[] | cdktn.IResolvable) {
     this._subscriber.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -325,11 +325,11 @@ export class AwsBudgetsBudgetAction extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsBudgetsBudgetAction.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfBudgetAction.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsBudgetsBudgetAction.TimeoutsProperty) {
+  public putTimeouts(value: TfBudgetAction.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -355,10 +355,10 @@ export class AwsBudgetsBudgetAction extends cdktn.TerraformResource {
       notification_type: cdktn.stringToTerraform(this._notificationType),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      action_threshold: awsBudgetsBudgetActionActionThresholdPropertyToTerraform(this._actionThreshold.internalValue),
-      definition: awsBudgetsBudgetActionDefinitionPropertyToTerraform(this._definition.internalValue),
-      subscriber: cdktn.listMapper(awsBudgetsBudgetActionSubscriberPropertyToTerraform, true)(this._subscriber.internalValue),
-      timeouts: awsBudgetsBudgetActionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      action_threshold: tfBudgetActionActionThresholdPropertyToTerraform(this._actionThreshold.internalValue),
+      definition: tfBudgetActionDefinitionPropertyToTerraform(this._definition.internalValue),
+      subscriber: cdktn.listMapper(tfBudgetActionSubscriberPropertyToTerraform, true)(this._subscriber.internalValue),
+      timeouts: tfBudgetActionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -419,28 +419,28 @@ export class AwsBudgetsBudgetAction extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       action_threshold: {
-        value: awsBudgetsBudgetActionActionThresholdPropertyToHclTerraform(this._actionThreshold.internalValue),
+        value: tfBudgetActionActionThresholdPropertyToHclTerraform(this._actionThreshold.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBudgetsBudgetAction.ActionThresholdPropertyList",
+        storageClassType: "TfBudgetAction.ActionThresholdPropertyList",
       },
       definition: {
-        value: awsBudgetsBudgetActionDefinitionPropertyToHclTerraform(this._definition.internalValue),
+        value: tfBudgetActionDefinitionPropertyToHclTerraform(this._definition.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBudgetsBudgetAction.DefinitionPropertyList",
+        storageClassType: "TfBudgetAction.DefinitionPropertyList",
       },
       subscriber: {
-        value: cdktn.listMapperHcl(awsBudgetsBudgetActionSubscriberPropertyToHclTerraform, true)(this._subscriber.internalValue),
+        value: cdktn.listMapperHcl(tfBudgetActionSubscriberPropertyToHclTerraform, true)(this._subscriber.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsBudgetsBudgetAction.SubscriberPropertyList",
+        storageClassType: "TfBudgetAction.SubscriberPropertyList",
       },
       timeouts: {
-        value: awsBudgetsBudgetActionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfBudgetActionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsBudgetsBudgetAction.TimeoutsProperty",
+        storageClassType: "TfBudgetAction.TimeoutsProperty",
       },
     };
 
@@ -449,7 +449,7 @@ export class AwsBudgetsBudgetAction extends cdktn.TerraformResource {
   }
 }
 
-export function awsBudgetsBudgetActionActionThresholdPropertyToTerraform(struct?: AwsBudgetsBudgetAction.ActionThresholdPropertyOutputReference | AwsBudgetsBudgetAction.ActionThresholdProperty): any {
+export function tfBudgetActionActionThresholdPropertyToTerraform(struct?: TfBudgetAction.ActionThresholdPropertyOutputReference | TfBudgetAction.ActionThresholdProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -461,7 +461,7 @@ export function awsBudgetsBudgetActionActionThresholdPropertyToTerraform(struct?
 }
 
 
-export function awsBudgetsBudgetActionActionThresholdPropertyToHclTerraform(struct?: AwsBudgetsBudgetAction.ActionThresholdPropertyOutputReference | AwsBudgetsBudgetAction.ActionThresholdProperty): any {
+export function tfBudgetActionActionThresholdPropertyToHclTerraform(struct?: TfBudgetAction.ActionThresholdPropertyOutputReference | TfBudgetAction.ActionThresholdProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -486,7 +486,7 @@ export function awsBudgetsBudgetActionActionThresholdPropertyToHclTerraform(stru
 }
 
 
-export function awsBudgetsBudgetActionIamActionDefinitionPropertyToTerraform(struct?: AwsBudgetsBudgetAction.IamActionDefinitionPropertyOutputReference | AwsBudgetsBudgetAction.IamActionDefinitionProperty): any {
+export function tfBudgetActionIamActionDefinitionPropertyToTerraform(struct?: TfBudgetAction.IamActionDefinitionPropertyOutputReference | TfBudgetAction.IamActionDefinitionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -500,7 +500,7 @@ export function awsBudgetsBudgetActionIamActionDefinitionPropertyToTerraform(str
 }
 
 
-export function awsBudgetsBudgetActionIamActionDefinitionPropertyToHclTerraform(struct?: AwsBudgetsBudgetAction.IamActionDefinitionPropertyOutputReference | AwsBudgetsBudgetAction.IamActionDefinitionProperty): any {
+export function tfBudgetActionIamActionDefinitionPropertyToHclTerraform(struct?: TfBudgetAction.IamActionDefinitionPropertyOutputReference | TfBudgetAction.IamActionDefinitionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -537,7 +537,7 @@ export function awsBudgetsBudgetActionIamActionDefinitionPropertyToHclTerraform(
 }
 
 
-export function awsBudgetsBudgetActionScpActionDefinitionPropertyToTerraform(struct?: AwsBudgetsBudgetAction.ScpActionDefinitionPropertyOutputReference | AwsBudgetsBudgetAction.ScpActionDefinitionProperty): any {
+export function tfBudgetActionScpActionDefinitionPropertyToTerraform(struct?: TfBudgetAction.ScpActionDefinitionPropertyOutputReference | TfBudgetAction.ScpActionDefinitionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -549,7 +549,7 @@ export function awsBudgetsBudgetActionScpActionDefinitionPropertyToTerraform(str
 }
 
 
-export function awsBudgetsBudgetActionScpActionDefinitionPropertyToHclTerraform(struct?: AwsBudgetsBudgetAction.ScpActionDefinitionPropertyOutputReference | AwsBudgetsBudgetAction.ScpActionDefinitionProperty): any {
+export function tfBudgetActionScpActionDefinitionPropertyToHclTerraform(struct?: TfBudgetAction.ScpActionDefinitionPropertyOutputReference | TfBudgetAction.ScpActionDefinitionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -574,7 +574,7 @@ export function awsBudgetsBudgetActionScpActionDefinitionPropertyToHclTerraform(
 }
 
 
-export function awsBudgetsBudgetActionSsmActionDefinitionPropertyToTerraform(struct?: AwsBudgetsBudgetAction.SsmActionDefinitionPropertyOutputReference | AwsBudgetsBudgetAction.SsmActionDefinitionProperty): any {
+export function tfBudgetActionSsmActionDefinitionPropertyToTerraform(struct?: TfBudgetAction.SsmActionDefinitionPropertyOutputReference | TfBudgetAction.SsmActionDefinitionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -587,7 +587,7 @@ export function awsBudgetsBudgetActionSsmActionDefinitionPropertyToTerraform(str
 }
 
 
-export function awsBudgetsBudgetActionSsmActionDefinitionPropertyToHclTerraform(struct?: AwsBudgetsBudgetAction.SsmActionDefinitionPropertyOutputReference | AwsBudgetsBudgetAction.SsmActionDefinitionProperty): any {
+export function tfBudgetActionSsmActionDefinitionPropertyToHclTerraform(struct?: TfBudgetAction.SsmActionDefinitionPropertyOutputReference | TfBudgetAction.SsmActionDefinitionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -618,39 +618,39 @@ export function awsBudgetsBudgetActionSsmActionDefinitionPropertyToHclTerraform(
 }
 
 
-export function awsBudgetsBudgetActionDefinitionPropertyToTerraform(struct?: AwsBudgetsBudgetAction.DefinitionPropertyOutputReference | AwsBudgetsBudgetAction.DefinitionProperty): any {
+export function tfBudgetActionDefinitionPropertyToTerraform(struct?: TfBudgetAction.DefinitionPropertyOutputReference | TfBudgetAction.DefinitionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    iam_action_definition: awsBudgetsBudgetActionIamActionDefinitionPropertyToTerraform(struct!.iamActionDefinition),
-    scp_action_definition: awsBudgetsBudgetActionScpActionDefinitionPropertyToTerraform(struct!.scpActionDefinition),
-    ssm_action_definition: awsBudgetsBudgetActionSsmActionDefinitionPropertyToTerraform(struct!.ssmActionDefinition),
+    iam_action_definition: tfBudgetActionIamActionDefinitionPropertyToTerraform(struct!.iamActionDefinition),
+    scp_action_definition: tfBudgetActionScpActionDefinitionPropertyToTerraform(struct!.scpActionDefinition),
+    ssm_action_definition: tfBudgetActionSsmActionDefinitionPropertyToTerraform(struct!.ssmActionDefinition),
   }
 }
 
 
-export function awsBudgetsBudgetActionDefinitionPropertyToHclTerraform(struct?: AwsBudgetsBudgetAction.DefinitionPropertyOutputReference | AwsBudgetsBudgetAction.DefinitionProperty): any {
+export function tfBudgetActionDefinitionPropertyToHclTerraform(struct?: TfBudgetAction.DefinitionPropertyOutputReference | TfBudgetAction.DefinitionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     iam_action_definition: {
-      value: awsBudgetsBudgetActionIamActionDefinitionPropertyToHclTerraform(struct!.iamActionDefinition),
+      value: tfBudgetActionIamActionDefinitionPropertyToHclTerraform(struct!.iamActionDefinition),
       isBlock: true,
       type: "list",
       storageClassType: "IamActionDefinitionPropertyList",
     },
     scp_action_definition: {
-      value: awsBudgetsBudgetActionScpActionDefinitionPropertyToHclTerraform(struct!.scpActionDefinition),
+      value: tfBudgetActionScpActionDefinitionPropertyToHclTerraform(struct!.scpActionDefinition),
       isBlock: true,
       type: "list",
       storageClassType: "ScpActionDefinitionPropertyList",
     },
     ssm_action_definition: {
-      value: awsBudgetsBudgetActionSsmActionDefinitionPropertyToHclTerraform(struct!.ssmActionDefinition),
+      value: tfBudgetActionSsmActionDefinitionPropertyToHclTerraform(struct!.ssmActionDefinition),
       isBlock: true,
       type: "list",
       storageClassType: "SsmActionDefinitionPropertyList",
@@ -662,7 +662,7 @@ export function awsBudgetsBudgetActionDefinitionPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsBudgetsBudgetActionSubscriberPropertyToTerraform(struct?: AwsBudgetsBudgetAction.SubscriberProperty | cdktn.IResolvable): any {
+export function tfBudgetActionSubscriberPropertyToTerraform(struct?: TfBudgetAction.SubscriberProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -674,7 +674,7 @@ export function awsBudgetsBudgetActionSubscriberPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsBudgetsBudgetActionSubscriberPropertyToHclTerraform(struct?: AwsBudgetsBudgetAction.SubscriberProperty | cdktn.IResolvable): any {
+export function tfBudgetActionSubscriberPropertyToHclTerraform(struct?: TfBudgetAction.SubscriberProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -699,7 +699,7 @@ export function awsBudgetsBudgetActionSubscriberPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsBudgetsBudgetActionTimeoutsPropertyToTerraform(struct?: AwsBudgetsBudgetAction.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfBudgetActionTimeoutsPropertyToTerraform(struct?: TfBudgetAction.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -712,7 +712,7 @@ export function awsBudgetsBudgetActionTimeoutsPropertyToTerraform(struct?: AwsBu
 }
 
 
-export function awsBudgetsBudgetActionTimeoutsPropertyToHclTerraform(struct?: AwsBudgetsBudgetAction.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfBudgetActionTimeoutsPropertyToHclTerraform(struct?: TfBudgetAction.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -743,14 +743,14 @@ export function awsBudgetsBudgetActionTimeoutsPropertyToHclTerraform(struct?: Aw
 }
 
 
-export namespace AwsBudgetsBudgetAction {
+export namespace TfBudgetAction {
 export interface ActionThresholdProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#action_threshold_type AwsBudgetsBudgetAction#action_threshold_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#action_threshold_type TfBudgetAction#action_threshold_type}
   */
   readonly actionThresholdType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#action_threshold_value AwsBudgetsBudgetAction#action_threshold_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#action_threshold_value TfBudgetAction#action_threshold_value}
   */
   readonly actionThresholdValue: number;
 }
@@ -820,19 +820,19 @@ export class ActionThresholdPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface IamActionDefinitionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#groups AwsBudgetsBudgetAction#groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#groups TfBudgetAction#groups}
   */
   readonly groups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#policy_arn AwsBudgetsBudgetAction#policy_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#policy_arn TfBudgetAction#policy_arn}
   */
   readonly policyArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#roles AwsBudgetsBudgetAction#roles}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#roles TfBudgetAction#roles}
   */
   readonly roles?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#users AwsBudgetsBudgetAction#users}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#users TfBudgetAction#users}
   */
   readonly users?: string[];
 }
@@ -949,11 +949,11 @@ export class IamActionDefinitionPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface ScpActionDefinitionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#policy_id AwsBudgetsBudgetAction#policy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#policy_id TfBudgetAction#policy_id}
   */
   readonly policyId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#target_ids AwsBudgetsBudgetAction#target_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#target_ids TfBudgetAction#target_ids}
   */
   readonly targetIds: string[];
 }
@@ -1023,15 +1023,15 @@ export class ScpActionDefinitionPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface SsmActionDefinitionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#action_sub_type AwsBudgetsBudgetAction#action_sub_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#action_sub_type TfBudgetAction#action_sub_type}
   */
   readonly actionSubType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#instance_ids AwsBudgetsBudgetAction#instance_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#instance_ids TfBudgetAction#instance_ids}
   */
   readonly instanceIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#region AwsBudgetsBudgetAction#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#region TfBudgetAction#region}
   */
   readonly region: string;
 }
@@ -1122,19 +1122,19 @@ export interface DefinitionProperty {
   /**
   * iam_action_definition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#iam_action_definition AwsBudgetsBudgetAction#iam_action_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#iam_action_definition TfBudgetAction#iam_action_definition}
   */
   readonly iamActionDefinition?: IamActionDefinitionProperty;
   /**
   * scp_action_definition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#scp_action_definition AwsBudgetsBudgetAction#scp_action_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#scp_action_definition TfBudgetAction#scp_action_definition}
   */
   readonly scpActionDefinition?: ScpActionDefinitionProperty;
   /**
   * ssm_action_definition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#ssm_action_definition AwsBudgetsBudgetAction#ssm_action_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#ssm_action_definition TfBudgetAction#ssm_action_definition}
   */
   readonly ssmActionDefinition?: SsmActionDefinitionProperty;
 }
@@ -1232,11 +1232,11 @@ export class DefinitionPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SubscriberProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#address AwsBudgetsBudgetAction#address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#address TfBudgetAction#address}
   */
   readonly address: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#subscription_type AwsBudgetsBudgetAction#subscription_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#subscription_type TfBudgetAction#subscription_type}
   */
   readonly subscriptionType: string;
 }
@@ -1338,15 +1338,15 @@ export class SubscriberPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#create AwsBudgetsBudgetAction#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#create TfBudgetAction#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#delete AwsBudgetsBudgetAction#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#delete TfBudgetAction#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#update AwsBudgetsBudgetAction#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/budgets_budget_action#update TfBudgetAction#update}
   */
   readonly update?: string;
 }

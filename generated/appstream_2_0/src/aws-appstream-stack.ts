@@ -5,88 +5,88 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsAppstreamStackConfig extends cdktn.TerraformMetaArguments {
+export interface TfStackConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#description AwsAppstreamStack#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#description TfStack#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#display_name AwsAppstreamStack#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#display_name TfStack#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#embed_host_domains AwsAppstreamStack#embed_host_domains}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#embed_host_domains TfStack#embed_host_domains}
   */
   readonly embedHostDomains?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#feedback_url AwsAppstreamStack#feedback_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#feedback_url TfStack#feedback_url}
   */
   readonly feedbackUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#id AwsAppstreamStack#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#id TfStack#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#name AwsAppstreamStack#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#name TfStack#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#redirect_url AwsAppstreamStack#redirect_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#redirect_url TfStack#redirect_url}
   */
   readonly redirectUrl?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#region AwsAppstreamStack#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#region TfStack#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#tags AwsAppstreamStack#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#tags TfStack#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#tags_all AwsAppstreamStack#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#tags_all TfStack#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * access_endpoints block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#access_endpoints AwsAppstreamStack#access_endpoints}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#access_endpoints TfStack#access_endpoints}
   */
-  readonly accessEndpoints?: AwsAppstreamStack.AccessEndpointsProperty[] | cdktn.IResolvable;
+  readonly accessEndpoints?: TfStack.AccessEndpointsProperty[] | cdktn.IResolvable;
   /**
   * application_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#application_settings AwsAppstreamStack#application_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#application_settings TfStack#application_settings}
   */
-  readonly applicationSettings?: AwsAppstreamStack.ApplicationSettingsProperty;
+  readonly applicationSettings?: TfStack.ApplicationSettingsProperty;
   /**
   * storage_connectors block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#storage_connectors AwsAppstreamStack#storage_connectors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#storage_connectors TfStack#storage_connectors}
   */
-  readonly storageConnectors?: AwsAppstreamStack.StorageConnectorsProperty[] | cdktn.IResolvable;
+  readonly storageConnectors?: TfStack.StorageConnectorsProperty[] | cdktn.IResolvable;
   /**
   * streaming_experience_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#streaming_experience_settings AwsAppstreamStack#streaming_experience_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#streaming_experience_settings TfStack#streaming_experience_settings}
   */
-  readonly streamingExperienceSettings?: AwsAppstreamStack.StreamingExperienceSettingsProperty;
+  readonly streamingExperienceSettings?: TfStack.StreamingExperienceSettingsProperty;
   /**
   * user_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#user_settings AwsAppstreamStack#user_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#user_settings TfStack#user_settings}
   */
-  readonly userSettings?: AwsAppstreamStack.UserSettingsProperty[] | cdktn.IResolvable;
+  readonly userSettings?: TfStack.UserSettingsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack aws_appstream_stack}
 */
-export class AwsAppstreamStack extends cdktn.TerraformResource {
+export class TfStack extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -97,11 +97,11 @@ export class AwsAppstreamStack extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsAppstreamStack resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfStack resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsAppstreamStack to import
-  * @param importFromId The id of the existing AwsAppstreamStack that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsAppstreamStack to import is found
+  * @param importToId The construct id used in the generated config for the TfStack to import
+  * @param importFromId The id of the existing TfStack that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfStack to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appstream_stack", importId: importFromId, provider });
@@ -116,9 +116,9 @@ export class AwsAppstreamStack extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsAppstreamStackConfig
+  * @param options TfStackConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsAppstreamStackConfig) {
+  public constructor(scope: Construct, id: string, config: TfStackConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appstream_stack',
       terraformGeneratorMetadata: {
@@ -323,11 +323,11 @@ export class AwsAppstreamStack extends cdktn.TerraformResource {
   }
 
   // access_endpoints - computed: false, optional: true, required: false
-  private _accessEndpoints = new AwsAppstreamStack.AccessEndpointsPropertyList(this, "access_endpoints", true);
+  private _accessEndpoints = new TfStack.AccessEndpointsPropertyList(this, "access_endpoints", true);
   public get accessEndpoints() {
     return this._accessEndpoints;
   }
-  public putAccessEndpoints(value: AwsAppstreamStack.AccessEndpointsProperty[] | cdktn.IResolvable) {
+  public putAccessEndpoints(value: TfStack.AccessEndpointsProperty[] | cdktn.IResolvable) {
     this._accessEndpoints.internalValue = value;
   }
   public resetAccessEndpoints() {
@@ -339,11 +339,11 @@ export class AwsAppstreamStack extends cdktn.TerraformResource {
   }
 
   // application_settings - computed: false, optional: true, required: false
-  private _applicationSettings = new AwsAppstreamStack.ApplicationSettingsPropertyOutputReference(this, "application_settings");
+  private _applicationSettings = new TfStack.ApplicationSettingsPropertyOutputReference(this, "application_settings");
   public get applicationSettings() {
     return this._applicationSettings;
   }
-  public putApplicationSettings(value: AwsAppstreamStack.ApplicationSettingsProperty) {
+  public putApplicationSettings(value: TfStack.ApplicationSettingsProperty) {
     this._applicationSettings.internalValue = value;
   }
   public resetApplicationSettings() {
@@ -355,11 +355,11 @@ export class AwsAppstreamStack extends cdktn.TerraformResource {
   }
 
   // storage_connectors - computed: false, optional: true, required: false
-  private _storageConnectors = new AwsAppstreamStack.StorageConnectorsPropertyList(this, "storage_connectors", true);
+  private _storageConnectors = new TfStack.StorageConnectorsPropertyList(this, "storage_connectors", true);
   public get storageConnectors() {
     return this._storageConnectors;
   }
-  public putStorageConnectors(value: AwsAppstreamStack.StorageConnectorsProperty[] | cdktn.IResolvable) {
+  public putStorageConnectors(value: TfStack.StorageConnectorsProperty[] | cdktn.IResolvable) {
     this._storageConnectors.internalValue = value;
   }
   public resetStorageConnectors() {
@@ -371,11 +371,11 @@ export class AwsAppstreamStack extends cdktn.TerraformResource {
   }
 
   // streaming_experience_settings - computed: false, optional: true, required: false
-  private _streamingExperienceSettings = new AwsAppstreamStack.StreamingExperienceSettingsPropertyOutputReference(this, "streaming_experience_settings");
+  private _streamingExperienceSettings = new TfStack.StreamingExperienceSettingsPropertyOutputReference(this, "streaming_experience_settings");
   public get streamingExperienceSettings() {
     return this._streamingExperienceSettings;
   }
-  public putStreamingExperienceSettings(value: AwsAppstreamStack.StreamingExperienceSettingsProperty) {
+  public putStreamingExperienceSettings(value: TfStack.StreamingExperienceSettingsProperty) {
     this._streamingExperienceSettings.internalValue = value;
   }
   public resetStreamingExperienceSettings() {
@@ -387,11 +387,11 @@ export class AwsAppstreamStack extends cdktn.TerraformResource {
   }
 
   // user_settings - computed: false, optional: true, required: false
-  private _userSettings = new AwsAppstreamStack.UserSettingsPropertyList(this, "user_settings", true);
+  private _userSettings = new TfStack.UserSettingsPropertyList(this, "user_settings", true);
   public get userSettings() {
     return this._userSettings;
   }
-  public putUserSettings(value: AwsAppstreamStack.UserSettingsProperty[] | cdktn.IResolvable) {
+  public putUserSettings(value: TfStack.UserSettingsProperty[] | cdktn.IResolvable) {
     this._userSettings.internalValue = value;
   }
   public resetUserSettings() {
@@ -418,11 +418,11 @@ export class AwsAppstreamStack extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      access_endpoints: cdktn.listMapper(awsAppstreamStackAccessEndpointsPropertyToTerraform, true)(this._accessEndpoints.internalValue),
-      application_settings: awsAppstreamStackApplicationSettingsPropertyToTerraform(this._applicationSettings.internalValue),
-      storage_connectors: cdktn.listMapper(awsAppstreamStackStorageConnectorsPropertyToTerraform, true)(this._storageConnectors.internalValue),
-      streaming_experience_settings: awsAppstreamStackStreamingExperienceSettingsPropertyToTerraform(this._streamingExperienceSettings.internalValue),
-      user_settings: cdktn.listMapper(awsAppstreamStackUserSettingsPropertyToTerraform, true)(this._userSettings.internalValue),
+      access_endpoints: cdktn.listMapper(tfStackAccessEndpointsPropertyToTerraform, true)(this._accessEndpoints.internalValue),
+      application_settings: tfStackApplicationSettingsPropertyToTerraform(this._applicationSettings.internalValue),
+      storage_connectors: cdktn.listMapper(tfStackStorageConnectorsPropertyToTerraform, true)(this._storageConnectors.internalValue),
+      streaming_experience_settings: tfStackStreamingExperienceSettingsPropertyToTerraform(this._streamingExperienceSettings.internalValue),
+      user_settings: cdktn.listMapper(tfStackUserSettingsPropertyToTerraform, true)(this._userSettings.internalValue),
     };
   }
 
@@ -489,34 +489,34 @@ export class AwsAppstreamStack extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       access_endpoints: {
-        value: cdktn.listMapperHcl(awsAppstreamStackAccessEndpointsPropertyToHclTerraform, true)(this._accessEndpoints.internalValue),
+        value: cdktn.listMapperHcl(tfStackAccessEndpointsPropertyToHclTerraform, true)(this._accessEndpoints.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsAppstreamStack.AccessEndpointsPropertyList",
+        storageClassType: "TfStack.AccessEndpointsPropertyList",
       },
       application_settings: {
-        value: awsAppstreamStackApplicationSettingsPropertyToHclTerraform(this._applicationSettings.internalValue),
+        value: tfStackApplicationSettingsPropertyToHclTerraform(this._applicationSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAppstreamStack.ApplicationSettingsPropertyList",
+        storageClassType: "TfStack.ApplicationSettingsPropertyList",
       },
       storage_connectors: {
-        value: cdktn.listMapperHcl(awsAppstreamStackStorageConnectorsPropertyToHclTerraform, true)(this._storageConnectors.internalValue),
+        value: cdktn.listMapperHcl(tfStackStorageConnectorsPropertyToHclTerraform, true)(this._storageConnectors.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsAppstreamStack.StorageConnectorsPropertyList",
+        storageClassType: "TfStack.StorageConnectorsPropertyList",
       },
       streaming_experience_settings: {
-        value: awsAppstreamStackStreamingExperienceSettingsPropertyToHclTerraform(this._streamingExperienceSettings.internalValue),
+        value: tfStackStreamingExperienceSettingsPropertyToHclTerraform(this._streamingExperienceSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAppstreamStack.StreamingExperienceSettingsPropertyList",
+        storageClassType: "TfStack.StreamingExperienceSettingsPropertyList",
       },
       user_settings: {
-        value: cdktn.listMapperHcl(awsAppstreamStackUserSettingsPropertyToHclTerraform, true)(this._userSettings.internalValue),
+        value: cdktn.listMapperHcl(tfStackUserSettingsPropertyToHclTerraform, true)(this._userSettings.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsAppstreamStack.UserSettingsPropertyList",
+        storageClassType: "TfStack.UserSettingsPropertyList",
       },
     };
 
@@ -525,7 +525,7 @@ export class AwsAppstreamStack extends cdktn.TerraformResource {
   }
 }
 
-export function awsAppstreamStackAccessEndpointsPropertyToTerraform(struct?: AwsAppstreamStack.AccessEndpointsProperty | cdktn.IResolvable): any {
+export function tfStackAccessEndpointsPropertyToTerraform(struct?: TfStack.AccessEndpointsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -537,7 +537,7 @@ export function awsAppstreamStackAccessEndpointsPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsAppstreamStackAccessEndpointsPropertyToHclTerraform(struct?: AwsAppstreamStack.AccessEndpointsProperty | cdktn.IResolvable): any {
+export function tfStackAccessEndpointsPropertyToHclTerraform(struct?: TfStack.AccessEndpointsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -562,7 +562,7 @@ export function awsAppstreamStackAccessEndpointsPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsAppstreamStackApplicationSettingsPropertyToTerraform(struct?: AwsAppstreamStack.ApplicationSettingsPropertyOutputReference | AwsAppstreamStack.ApplicationSettingsProperty): any {
+export function tfStackApplicationSettingsPropertyToTerraform(struct?: TfStack.ApplicationSettingsPropertyOutputReference | TfStack.ApplicationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -574,7 +574,7 @@ export function awsAppstreamStackApplicationSettingsPropertyToTerraform(struct?:
 }
 
 
-export function awsAppstreamStackApplicationSettingsPropertyToHclTerraform(struct?: AwsAppstreamStack.ApplicationSettingsPropertyOutputReference | AwsAppstreamStack.ApplicationSettingsProperty): any {
+export function tfStackApplicationSettingsPropertyToHclTerraform(struct?: TfStack.ApplicationSettingsPropertyOutputReference | TfStack.ApplicationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -599,7 +599,7 @@ export function awsAppstreamStackApplicationSettingsPropertyToHclTerraform(struc
 }
 
 
-export function awsAppstreamStackStorageConnectorsPropertyToTerraform(struct?: AwsAppstreamStack.StorageConnectorsProperty | cdktn.IResolvable): any {
+export function tfStackStorageConnectorsPropertyToTerraform(struct?: TfStack.StorageConnectorsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -612,7 +612,7 @@ export function awsAppstreamStackStorageConnectorsPropertyToTerraform(struct?: A
 }
 
 
-export function awsAppstreamStackStorageConnectorsPropertyToHclTerraform(struct?: AwsAppstreamStack.StorageConnectorsProperty | cdktn.IResolvable): any {
+export function tfStackStorageConnectorsPropertyToHclTerraform(struct?: TfStack.StorageConnectorsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -643,7 +643,7 @@ export function awsAppstreamStackStorageConnectorsPropertyToHclTerraform(struct?
 }
 
 
-export function awsAppstreamStackStreamingExperienceSettingsPropertyToTerraform(struct?: AwsAppstreamStack.StreamingExperienceSettingsPropertyOutputReference | AwsAppstreamStack.StreamingExperienceSettingsProperty): any {
+export function tfStackStreamingExperienceSettingsPropertyToTerraform(struct?: TfStack.StreamingExperienceSettingsPropertyOutputReference | TfStack.StreamingExperienceSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -654,7 +654,7 @@ export function awsAppstreamStackStreamingExperienceSettingsPropertyToTerraform(
 }
 
 
-export function awsAppstreamStackStreamingExperienceSettingsPropertyToHclTerraform(struct?: AwsAppstreamStack.StreamingExperienceSettingsPropertyOutputReference | AwsAppstreamStack.StreamingExperienceSettingsProperty): any {
+export function tfStackStreamingExperienceSettingsPropertyToHclTerraform(struct?: TfStack.StreamingExperienceSettingsPropertyOutputReference | TfStack.StreamingExperienceSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -673,7 +673,7 @@ export function awsAppstreamStackStreamingExperienceSettingsPropertyToHclTerrafo
 }
 
 
-export function awsAppstreamStackUserSettingsPropertyToTerraform(struct?: AwsAppstreamStack.UserSettingsProperty | cdktn.IResolvable): any {
+export function tfStackUserSettingsPropertyToTerraform(struct?: TfStack.UserSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -685,7 +685,7 @@ export function awsAppstreamStackUserSettingsPropertyToTerraform(struct?: AwsApp
 }
 
 
-export function awsAppstreamStackUserSettingsPropertyToHclTerraform(struct?: AwsAppstreamStack.UserSettingsProperty | cdktn.IResolvable): any {
+export function tfStackUserSettingsPropertyToHclTerraform(struct?: TfStack.UserSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -710,14 +710,14 @@ export function awsAppstreamStackUserSettingsPropertyToHclTerraform(struct?: Aws
 }
 
 
-export namespace AwsAppstreamStack {
+export namespace TfStack {
 export interface AccessEndpointsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#endpoint_type AwsAppstreamStack#endpoint_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#endpoint_type TfStack#endpoint_type}
   */
   readonly endpointType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#vpce_id AwsAppstreamStack#vpce_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#vpce_id TfStack#vpce_id}
   */
   readonly vpceId?: string;
 }
@@ -822,11 +822,11 @@ export class AccessEndpointsPropertyList extends cdktn.ComplexList {
 }
 export interface ApplicationSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#enabled AwsAppstreamStack#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#enabled TfStack#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#settings_group AwsAppstreamStack#settings_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#settings_group TfStack#settings_group}
   */
   readonly settingsGroup?: string;
 }
@@ -899,15 +899,15 @@ export class ApplicationSettingsPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface StorageConnectorsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#connector_type AwsAppstreamStack#connector_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#connector_type TfStack#connector_type}
   */
   readonly connectorType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#domains AwsAppstreamStack#domains}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#domains TfStack#domains}
   */
   readonly domains?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#resource_identifier AwsAppstreamStack#resource_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#resource_identifier TfStack#resource_identifier}
   */
   readonly resourceIdentifier?: string;
 }
@@ -1034,7 +1034,7 @@ export class StorageConnectorsPropertyList extends cdktn.ComplexList {
 }
 export interface StreamingExperienceSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#preferred_protocol AwsAppstreamStack#preferred_protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#preferred_protocol TfStack#preferred_protocol}
   */
   readonly preferredProtocol?: string;
 }
@@ -1088,11 +1088,11 @@ export class StreamingExperienceSettingsPropertyOutputReference extends cdktn.Co
 }
 export interface UserSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#action AwsAppstreamStack#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#action TfStack#action}
   */
   readonly action: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#permission AwsAppstreamStack#permission}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_stack#permission TfStack#permission}
   */
   readonly permission: string;
 }

@@ -5,23 +5,23 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsMediaPackagev2ChannelGroupConfig extends cdktn.TerraformMetaArguments {
+export interface TfChannelGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_packagev2_channel_group#description AwsMediaPackagev2ChannelGroup#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_packagev2_channel_group#description TfChannelGroup#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_packagev2_channel_group#name AwsMediaPackagev2ChannelGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_packagev2_channel_group#name TfChannelGroup#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_packagev2_channel_group#region AwsMediaPackagev2ChannelGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_packagev2_channel_group#region TfChannelGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_packagev2_channel_group#tags AwsMediaPackagev2ChannelGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_packagev2_channel_group#tags TfChannelGroup#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -29,7 +29,7 @@ export interface AwsMediaPackagev2ChannelGroupConfig extends cdktn.TerraformMeta
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_packagev2_channel_group aws_media_packagev2_channel_group}
 */
-export class AwsMediaPackagev2ChannelGroup extends cdktn.TerraformResource {
+export class TfChannelGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -40,11 +40,11 @@ export class AwsMediaPackagev2ChannelGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsMediaPackagev2ChannelGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfChannelGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsMediaPackagev2ChannelGroup to import
-  * @param importFromId The id of the existing AwsMediaPackagev2ChannelGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_packagev2_channel_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsMediaPackagev2ChannelGroup to import is found
+  * @param importToId The construct id used in the generated config for the TfChannelGroup to import
+  * @param importFromId The id of the existing TfChannelGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_packagev2_channel_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfChannelGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_media_packagev2_channel_group", importId: importFromId, provider });
@@ -59,9 +59,9 @@ export class AwsMediaPackagev2ChannelGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsMediaPackagev2ChannelGroupConfig
+  * @param options TfChannelGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsMediaPackagev2ChannelGroupConfig) {
+  public constructor(scope: Construct, id: string, config: TfChannelGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_media_packagev2_channel_group',
       terraformGeneratorMetadata: {

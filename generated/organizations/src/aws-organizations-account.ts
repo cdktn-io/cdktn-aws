@@ -5,62 +5,62 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsOrganizationsAccountConfig extends cdktn.TerraformMetaArguments {
+export interface TfAccountConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_account#close_on_deletion AwsOrganizationsAccount#close_on_deletion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_account#close_on_deletion TfAccount#close_on_deletion}
   */
   readonly closeOnDeletion?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_account#create_govcloud AwsOrganizationsAccount#create_govcloud}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_account#create_govcloud TfAccount#create_govcloud}
   */
   readonly createGovcloud?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_account#email AwsOrganizationsAccount#email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_account#email TfAccount#email}
   */
   readonly email: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_account#iam_user_access_to_billing AwsOrganizationsAccount#iam_user_access_to_billing}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_account#iam_user_access_to_billing TfAccount#iam_user_access_to_billing}
   */
   readonly iamUserAccessToBilling?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_account#id AwsOrganizationsAccount#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_account#id TfAccount#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_account#name AwsOrganizationsAccount#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_account#name TfAccount#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_account#parent_id AwsOrganizationsAccount#parent_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_account#parent_id TfAccount#parent_id}
   */
   readonly parentId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_account#role_name AwsOrganizationsAccount#role_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_account#role_name TfAccount#role_name}
   */
   readonly roleName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_account#tags AwsOrganizationsAccount#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_account#tags TfAccount#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_account#tags_all AwsOrganizationsAccount#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_account#tags_all TfAccount#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_account#timeouts AwsOrganizationsAccount#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_account#timeouts TfAccount#timeouts}
   */
-  readonly timeouts?: AwsOrganizationsAccount.TimeoutsProperty;
+  readonly timeouts?: TfAccount.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_account aws_organizations_account}
 */
-export class AwsOrganizationsAccount extends cdktn.TerraformResource {
+export class TfAccount extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -71,11 +71,11 @@ export class AwsOrganizationsAccount extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsOrganizationsAccount resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAccount resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsOrganizationsAccount to import
-  * @param importFromId The id of the existing AwsOrganizationsAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_account#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsOrganizationsAccount to import is found
+  * @param importToId The construct id used in the generated config for the TfAccount to import
+  * @param importFromId The id of the existing TfAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_account#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAccount to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_organizations_account", importId: importFromId, provider });
@@ -90,9 +90,9 @@ export class AwsOrganizationsAccount extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsOrganizationsAccountConfig
+  * @param options TfAccountConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsOrganizationsAccountConfig) {
+  public constructor(scope: Construct, id: string, config: TfAccountConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_organizations_account',
       terraformGeneratorMetadata: {
@@ -310,11 +310,11 @@ export class AwsOrganizationsAccount extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsOrganizationsAccount.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfAccount.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsOrganizationsAccount.TimeoutsProperty) {
+  public putTimeouts(value: TfAccount.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -341,7 +341,7 @@ export class AwsOrganizationsAccount extends cdktn.TerraformResource {
       role_name: cdktn.stringToTerraform(this._roleName),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: awsOrganizationsAccountTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfAccountTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -408,10 +408,10 @@ export class AwsOrganizationsAccount extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsOrganizationsAccountTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfAccountTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsOrganizationsAccount.TimeoutsProperty",
+        storageClassType: "TfAccount.TimeoutsProperty",
       },
     };
 
@@ -420,7 +420,7 @@ export class AwsOrganizationsAccount extends cdktn.TerraformResource {
   }
 }
 
-export function awsOrganizationsAccountTimeoutsPropertyToTerraform(struct?: AwsOrganizationsAccount.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfAccountTimeoutsPropertyToTerraform(struct?: TfAccount.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -433,7 +433,7 @@ export function awsOrganizationsAccountTimeoutsPropertyToTerraform(struct?: AwsO
 }
 
 
-export function awsOrganizationsAccountTimeoutsPropertyToHclTerraform(struct?: AwsOrganizationsAccount.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfAccountTimeoutsPropertyToHclTerraform(struct?: TfAccount.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -464,18 +464,18 @@ export function awsOrganizationsAccountTimeoutsPropertyToHclTerraform(struct?: A
 }
 
 
-export namespace AwsOrganizationsAccount {
+export namespace TfAccount {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_account#create AwsOrganizationsAccount#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_account#create TfAccount#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_account#delete AwsOrganizationsAccount#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_account#delete TfAccount#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_account#update AwsOrganizationsAccount#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_account#update TfAccount#update}
   */
   readonly update?: string;
 }

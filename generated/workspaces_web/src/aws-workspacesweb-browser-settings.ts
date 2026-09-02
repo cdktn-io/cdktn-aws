@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsWorkspaceswebBrowserSettingsConfig extends cdktn.TerraformMetaArguments {
+export interface TfBrowserSettingsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_browser_settings#additional_encryption_context AwsWorkspaceswebBrowserSettings#additional_encryption_context}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_browser_settings#additional_encryption_context TfBrowserSettings#additional_encryption_context}
   */
   readonly additionalEncryptionContext?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_browser_settings#browser_policy AwsWorkspaceswebBrowserSettings#browser_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_browser_settings#browser_policy TfBrowserSettings#browser_policy}
   */
   readonly browserPolicy: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_browser_settings#customer_managed_key AwsWorkspaceswebBrowserSettings#customer_managed_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_browser_settings#customer_managed_key TfBrowserSettings#customer_managed_key}
   */
   readonly customerManagedKey?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_browser_settings#region AwsWorkspaceswebBrowserSettings#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_browser_settings#region TfBrowserSettings#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_browser_settings#tags AwsWorkspaceswebBrowserSettings#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_browser_settings#tags TfBrowserSettings#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -33,7 +33,7 @@ export interface AwsWorkspaceswebBrowserSettingsConfig extends cdktn.TerraformMe
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_browser_settings aws_workspacesweb_browser_settings}
 */
-export class AwsWorkspaceswebBrowserSettings extends cdktn.TerraformResource {
+export class TfBrowserSettings extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class AwsWorkspaceswebBrowserSettings extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsWorkspaceswebBrowserSettings resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfBrowserSettings resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsWorkspaceswebBrowserSettings to import
-  * @param importFromId The id of the existing AwsWorkspaceswebBrowserSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_browser_settings#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsWorkspaceswebBrowserSettings to import is found
+  * @param importToId The construct id used in the generated config for the TfBrowserSettings to import
+  * @param importFromId The id of the existing TfBrowserSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_browser_settings#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfBrowserSettings to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_workspacesweb_browser_settings", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class AwsWorkspaceswebBrowserSettings extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsWorkspaceswebBrowserSettingsConfig
+  * @param options TfBrowserSettingsConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsWorkspaceswebBrowserSettingsConfig) {
+  public constructor(scope: Construct, id: string, config: TfBrowserSettingsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_workspacesweb_browser_settings',
       terraformGeneratorMetadata: {

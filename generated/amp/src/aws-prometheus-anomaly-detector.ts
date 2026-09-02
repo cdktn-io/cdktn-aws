@@ -5,57 +5,57 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsPrometheusAnomalyDetectorConfig extends cdktn.TerraformMetaArguments {
+export interface TfAnomalyDetectorConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#alias AwsPrometheusAnomalyDetector#alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#alias TfAnomalyDetector#alias}
   */
   readonly alias: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#evaluation_interval_in_seconds AwsPrometheusAnomalyDetector#evaluation_interval_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#evaluation_interval_in_seconds TfAnomalyDetector#evaluation_interval_in_seconds}
   */
   readonly evaluationIntervalInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#labels AwsPrometheusAnomalyDetector#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#labels TfAnomalyDetector#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#region AwsPrometheusAnomalyDetector#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#region TfAnomalyDetector#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#tags AwsPrometheusAnomalyDetector#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#tags TfAnomalyDetector#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#workspace_id AwsPrometheusAnomalyDetector#workspace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#workspace_id TfAnomalyDetector#workspace_id}
   */
   readonly workspaceId: string;
   /**
   * configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#configuration AwsPrometheusAnomalyDetector#configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#configuration TfAnomalyDetector#configuration}
   */
-  readonly configuration?: AwsPrometheusAnomalyDetector.ConfigurationProperty[] | cdktn.IResolvable;
+  readonly configuration?: TfAnomalyDetector.ConfigurationProperty[] | cdktn.IResolvable;
   /**
   * missing_data_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#missing_data_action AwsPrometheusAnomalyDetector#missing_data_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#missing_data_action TfAnomalyDetector#missing_data_action}
   */
-  readonly missingDataAction?: AwsPrometheusAnomalyDetector.MissingDataActionProperty[] | cdktn.IResolvable;
+  readonly missingDataAction?: TfAnomalyDetector.MissingDataActionProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#timeouts AwsPrometheusAnomalyDetector#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#timeouts TfAnomalyDetector#timeouts}
   */
-  readonly timeouts?: AwsPrometheusAnomalyDetector.TimeoutsProperty;
+  readonly timeouts?: TfAnomalyDetector.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector aws_prometheus_anomaly_detector}
 */
-export class AwsPrometheusAnomalyDetector extends cdktn.TerraformResource {
+export class TfAnomalyDetector extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -66,11 +66,11 @@ export class AwsPrometheusAnomalyDetector extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsPrometheusAnomalyDetector resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAnomalyDetector resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsPrometheusAnomalyDetector to import
-  * @param importFromId The id of the existing AwsPrometheusAnomalyDetector that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsPrometheusAnomalyDetector to import is found
+  * @param importToId The construct id used in the generated config for the TfAnomalyDetector to import
+  * @param importFromId The id of the existing TfAnomalyDetector that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAnomalyDetector to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_prometheus_anomaly_detector", importId: importFromId, provider });
@@ -85,9 +85,9 @@ export class AwsPrometheusAnomalyDetector extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsPrometheusAnomalyDetectorConfig
+  * @param options TfAnomalyDetectorConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsPrometheusAnomalyDetectorConfig) {
+  public constructor(scope: Construct, id: string, config: TfAnomalyDetectorConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_prometheus_anomaly_detector',
       terraformGeneratorMetadata: {
@@ -230,11 +230,11 @@ export class AwsPrometheusAnomalyDetector extends cdktn.TerraformResource {
   }
 
   // configuration - computed: false, optional: true, required: false
-  private _configuration = new AwsPrometheusAnomalyDetector.ConfigurationPropertyList(this, "configuration", false);
+  private _configuration = new TfAnomalyDetector.ConfigurationPropertyList(this, "configuration", false);
   public get configuration() {
     return this._configuration;
   }
-  public putConfiguration(value: AwsPrometheusAnomalyDetector.ConfigurationProperty[] | cdktn.IResolvable) {
+  public putConfiguration(value: TfAnomalyDetector.ConfigurationProperty[] | cdktn.IResolvable) {
     this._configuration.internalValue = value;
   }
   public resetConfiguration() {
@@ -246,11 +246,11 @@ export class AwsPrometheusAnomalyDetector extends cdktn.TerraformResource {
   }
 
   // missing_data_action - computed: false, optional: true, required: false
-  private _missingDataAction = new AwsPrometheusAnomalyDetector.MissingDataActionPropertyList(this, "missing_data_action", false);
+  private _missingDataAction = new TfAnomalyDetector.MissingDataActionPropertyList(this, "missing_data_action", false);
   public get missingDataAction() {
     return this._missingDataAction;
   }
-  public putMissingDataAction(value: AwsPrometheusAnomalyDetector.MissingDataActionProperty[] | cdktn.IResolvable) {
+  public putMissingDataAction(value: TfAnomalyDetector.MissingDataActionProperty[] | cdktn.IResolvable) {
     this._missingDataAction.internalValue = value;
   }
   public resetMissingDataAction() {
@@ -262,11 +262,11 @@ export class AwsPrometheusAnomalyDetector extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsPrometheusAnomalyDetector.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfAnomalyDetector.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsPrometheusAnomalyDetector.TimeoutsProperty) {
+  public putTimeouts(value: TfAnomalyDetector.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -289,9 +289,9 @@ export class AwsPrometheusAnomalyDetector extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       workspace_id: cdktn.stringToTerraform(this._workspaceId),
-      configuration: cdktn.listMapper(awsPrometheusAnomalyDetectorConfigurationPropertyToTerraform, true)(this._configuration.internalValue),
-      missing_data_action: cdktn.listMapper(awsPrometheusAnomalyDetectorMissingDataActionPropertyToTerraform, true)(this._missingDataAction.internalValue),
-      timeouts: awsPrometheusAnomalyDetectorTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      configuration: cdktn.listMapper(tfAnomalyDetectorConfigurationPropertyToTerraform, true)(this._configuration.internalValue),
+      missing_data_action: cdktn.listMapper(tfAnomalyDetectorMissingDataActionPropertyToTerraform, true)(this._missingDataAction.internalValue),
+      timeouts: tfAnomalyDetectorTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -334,22 +334,22 @@ export class AwsPrometheusAnomalyDetector extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       configuration: {
-        value: cdktn.listMapperHcl(awsPrometheusAnomalyDetectorConfigurationPropertyToHclTerraform, true)(this._configuration.internalValue),
+        value: cdktn.listMapperHcl(tfAnomalyDetectorConfigurationPropertyToHclTerraform, true)(this._configuration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsPrometheusAnomalyDetector.ConfigurationPropertyList",
+        storageClassType: "TfAnomalyDetector.ConfigurationPropertyList",
       },
       missing_data_action: {
-        value: cdktn.listMapperHcl(awsPrometheusAnomalyDetectorMissingDataActionPropertyToHclTerraform, true)(this._missingDataAction.internalValue),
+        value: cdktn.listMapperHcl(tfAnomalyDetectorMissingDataActionPropertyToHclTerraform, true)(this._missingDataAction.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsPrometheusAnomalyDetector.MissingDataActionPropertyList",
+        storageClassType: "TfAnomalyDetector.MissingDataActionPropertyList",
       },
       timeouts: {
-        value: awsPrometheusAnomalyDetectorTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfAnomalyDetectorTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsPrometheusAnomalyDetector.TimeoutsProperty",
+        storageClassType: "TfAnomalyDetector.TimeoutsProperty",
       },
     };
 
@@ -358,7 +358,7 @@ export class AwsPrometheusAnomalyDetector extends cdktn.TerraformResource {
   }
 }
 
-export function awsPrometheusAnomalyDetectorIgnoreNearExpectedFromAbovePropertyToTerraform(struct?: AwsPrometheusAnomalyDetector.IgnoreNearExpectedFromAboveProperty | cdktn.IResolvable): any {
+export function tfAnomalyDetectorIgnoreNearExpectedFromAbovePropertyToTerraform(struct?: TfAnomalyDetector.IgnoreNearExpectedFromAboveProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -370,7 +370,7 @@ export function awsPrometheusAnomalyDetectorIgnoreNearExpectedFromAbovePropertyT
 }
 
 
-export function awsPrometheusAnomalyDetectorIgnoreNearExpectedFromAbovePropertyToHclTerraform(struct?: AwsPrometheusAnomalyDetector.IgnoreNearExpectedFromAboveProperty | cdktn.IResolvable): any {
+export function tfAnomalyDetectorIgnoreNearExpectedFromAbovePropertyToHclTerraform(struct?: TfAnomalyDetector.IgnoreNearExpectedFromAboveProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -395,7 +395,7 @@ export function awsPrometheusAnomalyDetectorIgnoreNearExpectedFromAbovePropertyT
 }
 
 
-export function awsPrometheusAnomalyDetectorIgnoreNearExpectedFromBelowPropertyToTerraform(struct?: AwsPrometheusAnomalyDetector.IgnoreNearExpectedFromBelowProperty | cdktn.IResolvable): any {
+export function tfAnomalyDetectorIgnoreNearExpectedFromBelowPropertyToTerraform(struct?: TfAnomalyDetector.IgnoreNearExpectedFromBelowProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -407,7 +407,7 @@ export function awsPrometheusAnomalyDetectorIgnoreNearExpectedFromBelowPropertyT
 }
 
 
-export function awsPrometheusAnomalyDetectorIgnoreNearExpectedFromBelowPropertyToHclTerraform(struct?: AwsPrometheusAnomalyDetector.IgnoreNearExpectedFromBelowProperty | cdktn.IResolvable): any {
+export function tfAnomalyDetectorIgnoreNearExpectedFromBelowPropertyToHclTerraform(struct?: TfAnomalyDetector.IgnoreNearExpectedFromBelowProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -432,7 +432,7 @@ export function awsPrometheusAnomalyDetectorIgnoreNearExpectedFromBelowPropertyT
 }
 
 
-export function awsPrometheusAnomalyDetectorRandomCutForestPropertyToTerraform(struct?: AwsPrometheusAnomalyDetector.RandomCutForestProperty | cdktn.IResolvable): any {
+export function tfAnomalyDetectorRandomCutForestPropertyToTerraform(struct?: TfAnomalyDetector.RandomCutForestProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -441,13 +441,13 @@ export function awsPrometheusAnomalyDetectorRandomCutForestPropertyToTerraform(s
     query: cdktn.stringToTerraform(struct!.query),
     sample_size: cdktn.numberToTerraform(struct!.sampleSize),
     shingle_size: cdktn.numberToTerraform(struct!.shingleSize),
-    ignore_near_expected_from_above: cdktn.listMapper(awsPrometheusAnomalyDetectorIgnoreNearExpectedFromAbovePropertyToTerraform, true)(struct!.ignoreNearExpectedFromAbove),
-    ignore_near_expected_from_below: cdktn.listMapper(awsPrometheusAnomalyDetectorIgnoreNearExpectedFromBelowPropertyToTerraform, true)(struct!.ignoreNearExpectedFromBelow),
+    ignore_near_expected_from_above: cdktn.listMapper(tfAnomalyDetectorIgnoreNearExpectedFromAbovePropertyToTerraform, true)(struct!.ignoreNearExpectedFromAbove),
+    ignore_near_expected_from_below: cdktn.listMapper(tfAnomalyDetectorIgnoreNearExpectedFromBelowPropertyToTerraform, true)(struct!.ignoreNearExpectedFromBelow),
   }
 }
 
 
-export function awsPrometheusAnomalyDetectorRandomCutForestPropertyToHclTerraform(struct?: AwsPrometheusAnomalyDetector.RandomCutForestProperty | cdktn.IResolvable): any {
+export function tfAnomalyDetectorRandomCutForestPropertyToHclTerraform(struct?: TfAnomalyDetector.RandomCutForestProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -472,13 +472,13 @@ export function awsPrometheusAnomalyDetectorRandomCutForestPropertyToHclTerrafor
       storageClassType: "number",
     },
     ignore_near_expected_from_above: {
-      value: cdktn.listMapperHcl(awsPrometheusAnomalyDetectorIgnoreNearExpectedFromAbovePropertyToHclTerraform, true)(struct!.ignoreNearExpectedFromAbove),
+      value: cdktn.listMapperHcl(tfAnomalyDetectorIgnoreNearExpectedFromAbovePropertyToHclTerraform, true)(struct!.ignoreNearExpectedFromAbove),
       isBlock: true,
       type: "list",
       storageClassType: "IgnoreNearExpectedFromAbovePropertyList",
     },
     ignore_near_expected_from_below: {
-      value: cdktn.listMapperHcl(awsPrometheusAnomalyDetectorIgnoreNearExpectedFromBelowPropertyToHclTerraform, true)(struct!.ignoreNearExpectedFromBelow),
+      value: cdktn.listMapperHcl(tfAnomalyDetectorIgnoreNearExpectedFromBelowPropertyToHclTerraform, true)(struct!.ignoreNearExpectedFromBelow),
       isBlock: true,
       type: "list",
       storageClassType: "IgnoreNearExpectedFromBelowPropertyList",
@@ -490,25 +490,25 @@ export function awsPrometheusAnomalyDetectorRandomCutForestPropertyToHclTerrafor
 }
 
 
-export function awsPrometheusAnomalyDetectorConfigurationPropertyToTerraform(struct?: AwsPrometheusAnomalyDetector.ConfigurationProperty | cdktn.IResolvable): any {
+export function tfAnomalyDetectorConfigurationPropertyToTerraform(struct?: TfAnomalyDetector.ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    random_cut_forest: cdktn.listMapper(awsPrometheusAnomalyDetectorRandomCutForestPropertyToTerraform, true)(struct!.randomCutForest),
+    random_cut_forest: cdktn.listMapper(tfAnomalyDetectorRandomCutForestPropertyToTerraform, true)(struct!.randomCutForest),
   }
 }
 
 
-export function awsPrometheusAnomalyDetectorConfigurationPropertyToHclTerraform(struct?: AwsPrometheusAnomalyDetector.ConfigurationProperty | cdktn.IResolvable): any {
+export function tfAnomalyDetectorConfigurationPropertyToHclTerraform(struct?: TfAnomalyDetector.ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     random_cut_forest: {
-      value: cdktn.listMapperHcl(awsPrometheusAnomalyDetectorRandomCutForestPropertyToHclTerraform, true)(struct!.randomCutForest),
+      value: cdktn.listMapperHcl(tfAnomalyDetectorRandomCutForestPropertyToHclTerraform, true)(struct!.randomCutForest),
       isBlock: true,
       type: "list",
       storageClassType: "RandomCutForestPropertyList",
@@ -520,7 +520,7 @@ export function awsPrometheusAnomalyDetectorConfigurationPropertyToHclTerraform(
 }
 
 
-export function awsPrometheusAnomalyDetectorMissingDataActionPropertyToTerraform(struct?: AwsPrometheusAnomalyDetector.MissingDataActionProperty | cdktn.IResolvable): any {
+export function tfAnomalyDetectorMissingDataActionPropertyToTerraform(struct?: TfAnomalyDetector.MissingDataActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -532,7 +532,7 @@ export function awsPrometheusAnomalyDetectorMissingDataActionPropertyToTerraform
 }
 
 
-export function awsPrometheusAnomalyDetectorMissingDataActionPropertyToHclTerraform(struct?: AwsPrometheusAnomalyDetector.MissingDataActionProperty | cdktn.IResolvable): any {
+export function tfAnomalyDetectorMissingDataActionPropertyToHclTerraform(struct?: TfAnomalyDetector.MissingDataActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -557,7 +557,7 @@ export function awsPrometheusAnomalyDetectorMissingDataActionPropertyToHclTerraf
 }
 
 
-export function awsPrometheusAnomalyDetectorTimeoutsPropertyToTerraform(struct?: AwsPrometheusAnomalyDetector.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfAnomalyDetectorTimeoutsPropertyToTerraform(struct?: TfAnomalyDetector.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -570,7 +570,7 @@ export function awsPrometheusAnomalyDetectorTimeoutsPropertyToTerraform(struct?:
 }
 
 
-export function awsPrometheusAnomalyDetectorTimeoutsPropertyToHclTerraform(struct?: AwsPrometheusAnomalyDetector.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfAnomalyDetectorTimeoutsPropertyToHclTerraform(struct?: TfAnomalyDetector.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -601,14 +601,14 @@ export function awsPrometheusAnomalyDetectorTimeoutsPropertyToHclTerraform(struc
 }
 
 
-export namespace AwsPrometheusAnomalyDetector {
+export namespace TfAnomalyDetector {
 export interface IgnoreNearExpectedFromAboveProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#amount AwsPrometheusAnomalyDetector#amount}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#amount TfAnomalyDetector#amount}
   */
   readonly amount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#ratio AwsPrometheusAnomalyDetector#ratio}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#ratio TfAnomalyDetector#ratio}
   */
   readonly ratio?: number;
 }
@@ -716,11 +716,11 @@ export class IgnoreNearExpectedFromAbovePropertyList extends cdktn.ComplexList {
 }
 export interface IgnoreNearExpectedFromBelowProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#amount AwsPrometheusAnomalyDetector#amount}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#amount TfAnomalyDetector#amount}
   */
   readonly amount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#ratio AwsPrometheusAnomalyDetector#ratio}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#ratio TfAnomalyDetector#ratio}
   */
   readonly ratio?: number;
 }
@@ -828,27 +828,27 @@ export class IgnoreNearExpectedFromBelowPropertyList extends cdktn.ComplexList {
 }
 export interface RandomCutForestProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#query AwsPrometheusAnomalyDetector#query}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#query TfAnomalyDetector#query}
   */
   readonly query: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#sample_size AwsPrometheusAnomalyDetector#sample_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#sample_size TfAnomalyDetector#sample_size}
   */
   readonly sampleSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#shingle_size AwsPrometheusAnomalyDetector#shingle_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#shingle_size TfAnomalyDetector#shingle_size}
   */
   readonly shingleSize?: number;
   /**
   * ignore_near_expected_from_above block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#ignore_near_expected_from_above AwsPrometheusAnomalyDetector#ignore_near_expected_from_above}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#ignore_near_expected_from_above TfAnomalyDetector#ignore_near_expected_from_above}
   */
   readonly ignoreNearExpectedFromAbove?: IgnoreNearExpectedFromAboveProperty[] | cdktn.IResolvable;
   /**
   * ignore_near_expected_from_below block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#ignore_near_expected_from_below AwsPrometheusAnomalyDetector#ignore_near_expected_from_below}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#ignore_near_expected_from_below TfAnomalyDetector#ignore_near_expected_from_below}
   */
   readonly ignoreNearExpectedFromBelow?: IgnoreNearExpectedFromBelowProperty[] | cdktn.IResolvable;
 }
@@ -1021,7 +1021,7 @@ export interface ConfigurationProperty {
   /**
   * random_cut_forest block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#random_cut_forest AwsPrometheusAnomalyDetector#random_cut_forest}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#random_cut_forest TfAnomalyDetector#random_cut_forest}
   */
   readonly randomCutForest?: RandomCutForestProperty[] | cdktn.IResolvable;
 }
@@ -1107,11 +1107,11 @@ export class ConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface MissingDataActionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#mark_as_anomaly AwsPrometheusAnomalyDetector#mark_as_anomaly}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#mark_as_anomaly TfAnomalyDetector#mark_as_anomaly}
   */
   readonly markAsAnomaly?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#skip AwsPrometheusAnomalyDetector#skip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#skip TfAnomalyDetector#skip}
   */
   readonly skip?: boolean | cdktn.IResolvable;
 }
@@ -1221,19 +1221,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#create AwsPrometheusAnomalyDetector#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#create TfAnomalyDetector#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#delete AwsPrometheusAnomalyDetector#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#delete TfAnomalyDetector#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#update AwsPrometheusAnomalyDetector#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_anomaly_detector#update TfAnomalyDetector#update}
   */
   readonly update?: string;
 }

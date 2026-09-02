@@ -5,87 +5,87 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDrsReplicationConfigurationTemplateConfig extends cdktn.TerraformMetaArguments {
+export interface TfReplicationConfigurationTemplateConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#associate_default_security_group AwsDrsReplicationConfigurationTemplate#associate_default_security_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#associate_default_security_group TfReplicationConfigurationTemplate#associate_default_security_group}
   */
   readonly associateDefaultSecurityGroup: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#auto_replicate_new_disks AwsDrsReplicationConfigurationTemplate#auto_replicate_new_disks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#auto_replicate_new_disks TfReplicationConfigurationTemplate#auto_replicate_new_disks}
   */
   readonly autoReplicateNewDisks?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#bandwidth_throttling AwsDrsReplicationConfigurationTemplate#bandwidth_throttling}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#bandwidth_throttling TfReplicationConfigurationTemplate#bandwidth_throttling}
   */
   readonly bandwidthThrottling: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#create_public_ip AwsDrsReplicationConfigurationTemplate#create_public_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#create_public_ip TfReplicationConfigurationTemplate#create_public_ip}
   */
   readonly createPublicIp: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#data_plane_routing AwsDrsReplicationConfigurationTemplate#data_plane_routing}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#data_plane_routing TfReplicationConfigurationTemplate#data_plane_routing}
   */
   readonly dataPlaneRouting: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#default_large_staging_disk_type AwsDrsReplicationConfigurationTemplate#default_large_staging_disk_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#default_large_staging_disk_type TfReplicationConfigurationTemplate#default_large_staging_disk_type}
   */
   readonly defaultLargeStagingDiskType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#ebs_encryption AwsDrsReplicationConfigurationTemplate#ebs_encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#ebs_encryption TfReplicationConfigurationTemplate#ebs_encryption}
   */
   readonly ebsEncryption: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#ebs_encryption_key_arn AwsDrsReplicationConfigurationTemplate#ebs_encryption_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#ebs_encryption_key_arn TfReplicationConfigurationTemplate#ebs_encryption_key_arn}
   */
   readonly ebsEncryptionKeyArn?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#region AwsDrsReplicationConfigurationTemplate#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#region TfReplicationConfigurationTemplate#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#replication_server_instance_type AwsDrsReplicationConfigurationTemplate#replication_server_instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#replication_server_instance_type TfReplicationConfigurationTemplate#replication_server_instance_type}
   */
   readonly replicationServerInstanceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#replication_servers_security_groups_ids AwsDrsReplicationConfigurationTemplate#replication_servers_security_groups_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#replication_servers_security_groups_ids TfReplicationConfigurationTemplate#replication_servers_security_groups_ids}
   */
   readonly replicationServersSecurityGroupsIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#staging_area_subnet_id AwsDrsReplicationConfigurationTemplate#staging_area_subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#staging_area_subnet_id TfReplicationConfigurationTemplate#staging_area_subnet_id}
   */
   readonly stagingAreaSubnetId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#staging_area_tags AwsDrsReplicationConfigurationTemplate#staging_area_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#staging_area_tags TfReplicationConfigurationTemplate#staging_area_tags}
   */
   readonly stagingAreaTags: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#tags AwsDrsReplicationConfigurationTemplate#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#tags TfReplicationConfigurationTemplate#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#use_dedicated_replication_server AwsDrsReplicationConfigurationTemplate#use_dedicated_replication_server}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#use_dedicated_replication_server TfReplicationConfigurationTemplate#use_dedicated_replication_server}
   */
   readonly useDedicatedReplicationServer: boolean | cdktn.IResolvable;
   /**
   * pit_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#pit_policy AwsDrsReplicationConfigurationTemplate#pit_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#pit_policy TfReplicationConfigurationTemplate#pit_policy}
   */
-  readonly pitPolicy?: AwsDrsReplicationConfigurationTemplate.PitPolicyProperty[] | cdktn.IResolvable;
+  readonly pitPolicy?: TfReplicationConfigurationTemplate.PitPolicyProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#timeouts AwsDrsReplicationConfigurationTemplate#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#timeouts TfReplicationConfigurationTemplate#timeouts}
   */
-  readonly timeouts?: AwsDrsReplicationConfigurationTemplate.TimeoutsProperty;
+  readonly timeouts?: TfReplicationConfigurationTemplate.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template aws_drs_replication_configuration_template}
 */
-export class AwsDrsReplicationConfigurationTemplate extends cdktn.TerraformResource {
+export class TfReplicationConfigurationTemplate extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -96,11 +96,11 @@ export class AwsDrsReplicationConfigurationTemplate extends cdktn.TerraformResou
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDrsReplicationConfigurationTemplate resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfReplicationConfigurationTemplate resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDrsReplicationConfigurationTemplate to import
-  * @param importFromId The id of the existing AwsDrsReplicationConfigurationTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDrsReplicationConfigurationTemplate to import is found
+  * @param importToId The construct id used in the generated config for the TfReplicationConfigurationTemplate to import
+  * @param importFromId The id of the existing TfReplicationConfigurationTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfReplicationConfigurationTemplate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_drs_replication_configuration_template", importId: importFromId, provider });
@@ -115,9 +115,9 @@ export class AwsDrsReplicationConfigurationTemplate extends cdktn.TerraformResou
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDrsReplicationConfigurationTemplateConfig
+  * @param options TfReplicationConfigurationTemplateConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDrsReplicationConfigurationTemplateConfig) {
+  public constructor(scope: Construct, id: string, config: TfReplicationConfigurationTemplateConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_drs_replication_configuration_template',
       terraformGeneratorMetadata: {
@@ -380,11 +380,11 @@ export class AwsDrsReplicationConfigurationTemplate extends cdktn.TerraformResou
   }
 
   // pit_policy - computed: false, optional: true, required: false
-  private _pitPolicy = new AwsDrsReplicationConfigurationTemplate.PitPolicyPropertyList(this, "pit_policy", false);
+  private _pitPolicy = new TfReplicationConfigurationTemplate.PitPolicyPropertyList(this, "pit_policy", false);
   public get pitPolicy() {
     return this._pitPolicy;
   }
-  public putPitPolicy(value: AwsDrsReplicationConfigurationTemplate.PitPolicyProperty[] | cdktn.IResolvable) {
+  public putPitPolicy(value: TfReplicationConfigurationTemplate.PitPolicyProperty[] | cdktn.IResolvable) {
     this._pitPolicy.internalValue = value;
   }
   public resetPitPolicy() {
@@ -396,11 +396,11 @@ export class AwsDrsReplicationConfigurationTemplate extends cdktn.TerraformResou
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsDrsReplicationConfigurationTemplate.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfReplicationConfigurationTemplate.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsDrsReplicationConfigurationTemplate.TimeoutsProperty) {
+  public putTimeouts(value: TfReplicationConfigurationTemplate.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -432,8 +432,8 @@ export class AwsDrsReplicationConfigurationTemplate extends cdktn.TerraformResou
       staging_area_tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._stagingAreaTags),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       use_dedicated_replication_server: cdktn.booleanToTerraform(this._useDedicatedReplicationServer),
-      pit_policy: cdktn.listMapper(awsDrsReplicationConfigurationTemplatePitPolicyPropertyToTerraform, true)(this._pitPolicy.internalValue),
-      timeouts: awsDrsReplicationConfigurationTemplateTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      pit_policy: cdktn.listMapper(tfReplicationConfigurationTemplatePitPolicyPropertyToTerraform, true)(this._pitPolicy.internalValue),
+      timeouts: tfReplicationConfigurationTemplateTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -530,16 +530,16 @@ export class AwsDrsReplicationConfigurationTemplate extends cdktn.TerraformResou
         storageClassType: "boolean",
       },
       pit_policy: {
-        value: cdktn.listMapperHcl(awsDrsReplicationConfigurationTemplatePitPolicyPropertyToHclTerraform, true)(this._pitPolicy.internalValue),
+        value: cdktn.listMapperHcl(tfReplicationConfigurationTemplatePitPolicyPropertyToHclTerraform, true)(this._pitPolicy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsDrsReplicationConfigurationTemplate.PitPolicyPropertyList",
+        storageClassType: "TfReplicationConfigurationTemplate.PitPolicyPropertyList",
       },
       timeouts: {
-        value: awsDrsReplicationConfigurationTemplateTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfReplicationConfigurationTemplateTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsDrsReplicationConfigurationTemplate.TimeoutsProperty",
+        storageClassType: "TfReplicationConfigurationTemplate.TimeoutsProperty",
       },
     };
 
@@ -548,7 +548,7 @@ export class AwsDrsReplicationConfigurationTemplate extends cdktn.TerraformResou
   }
 }
 
-export function awsDrsReplicationConfigurationTemplatePitPolicyPropertyToTerraform(struct?: AwsDrsReplicationConfigurationTemplate.PitPolicyProperty | cdktn.IResolvable): any {
+export function tfReplicationConfigurationTemplatePitPolicyPropertyToTerraform(struct?: TfReplicationConfigurationTemplate.PitPolicyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -563,7 +563,7 @@ export function awsDrsReplicationConfigurationTemplatePitPolicyPropertyToTerrafo
 }
 
 
-export function awsDrsReplicationConfigurationTemplatePitPolicyPropertyToHclTerraform(struct?: AwsDrsReplicationConfigurationTemplate.PitPolicyProperty | cdktn.IResolvable): any {
+export function tfReplicationConfigurationTemplatePitPolicyPropertyToHclTerraform(struct?: TfReplicationConfigurationTemplate.PitPolicyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -606,7 +606,7 @@ export function awsDrsReplicationConfigurationTemplatePitPolicyPropertyToHclTerr
 }
 
 
-export function awsDrsReplicationConfigurationTemplateTimeoutsPropertyToTerraform(struct?: AwsDrsReplicationConfigurationTemplate.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfReplicationConfigurationTemplateTimeoutsPropertyToTerraform(struct?: TfReplicationConfigurationTemplate.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -619,7 +619,7 @@ export function awsDrsReplicationConfigurationTemplateTimeoutsPropertyToTerrafor
 }
 
 
-export function awsDrsReplicationConfigurationTemplateTimeoutsPropertyToHclTerraform(struct?: AwsDrsReplicationConfigurationTemplate.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfReplicationConfigurationTemplateTimeoutsPropertyToHclTerraform(struct?: TfReplicationConfigurationTemplate.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -650,26 +650,26 @@ export function awsDrsReplicationConfigurationTemplateTimeoutsPropertyToHclTerra
 }
 
 
-export namespace AwsDrsReplicationConfigurationTemplate {
+export namespace TfReplicationConfigurationTemplate {
 export interface PitPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#enabled AwsDrsReplicationConfigurationTemplate#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#enabled TfReplicationConfigurationTemplate#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#interval AwsDrsReplicationConfigurationTemplate#interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#interval TfReplicationConfigurationTemplate#interval}
   */
   readonly interval: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#retention_duration AwsDrsReplicationConfigurationTemplate#retention_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#retention_duration TfReplicationConfigurationTemplate#retention_duration}
   */
   readonly retentionDuration: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#rule_id AwsDrsReplicationConfigurationTemplate#rule_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#rule_id TfReplicationConfigurationTemplate#rule_id}
   */
   readonly ruleId?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#units AwsDrsReplicationConfigurationTemplate#units}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#units TfReplicationConfigurationTemplate#units}
   */
   readonly units: string;
 }
@@ -836,19 +836,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#create AwsDrsReplicationConfigurationTemplate#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#create TfReplicationConfigurationTemplate#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#delete AwsDrsReplicationConfigurationTemplate#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#delete TfReplicationConfigurationTemplate#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#update AwsDrsReplicationConfigurationTemplate#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/drs_replication_configuration_template#update TfReplicationConfigurationTemplate#update}
   */
   readonly update?: string;
 }

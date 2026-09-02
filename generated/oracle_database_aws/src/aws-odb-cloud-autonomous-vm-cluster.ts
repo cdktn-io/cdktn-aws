@@ -5,131 +5,131 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsOdbCloudAutonomousVmClusterConfig extends cdktn.TerraformMetaArguments {
+export interface TfCloudAutonomousVmClusterConfig extends cdktn.TerraformMetaArguments {
   /**
   * The data storage size allocated for Autonomous Databases in the Autonomous VM cluster, in TB. Changing this will force terraform to create new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#autonomous_data_storage_size_in_tbs AwsOdbCloudAutonomousVmCluster#autonomous_data_storage_size_in_tbs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#autonomous_data_storage_size_in_tbs TfCloudAutonomousVmCluster#autonomous_data_storage_size_in_tbs}
   */
   readonly autonomousDataStorageSizeInTbs: number;
   /**
   * The unique identifier of the Exadata infrastructure for this VM cluster. Changing this will create a new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#cloud_exadata_infrastructure_arn AwsOdbCloudAutonomousVmCluster#cloud_exadata_infrastructure_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#cloud_exadata_infrastructure_arn TfCloudAutonomousVmCluster#cloud_exadata_infrastructure_arn}
   */
   readonly cloudExadataInfrastructureArn?: string;
   /**
   * Exadata infrastructure id. Changing this will force terraform to create new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#cloud_exadata_infrastructure_id AwsOdbCloudAutonomousVmCluster#cloud_exadata_infrastructure_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#cloud_exadata_infrastructure_id TfCloudAutonomousVmCluster#cloud_exadata_infrastructure_id}
   */
   readonly cloudExadataInfrastructureId?: string;
   /**
   * The number of CPU cores enabled per node in the Autonomous VM cluster.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#cpu_core_count_per_node AwsOdbCloudAutonomousVmCluster#cpu_core_count_per_node}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#cpu_core_count_per_node TfCloudAutonomousVmCluster#cpu_core_count_per_node}
   */
   readonly cpuCoreCountPerNode: number;
   /**
   * The database servers in the Autonomous VM cluster. Changing this will force terraform to create new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#db_servers AwsOdbCloudAutonomousVmCluster#db_servers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#db_servers TfCloudAutonomousVmCluster#db_servers}
   */
   readonly dbServers: string[];
   /**
   * The description of the Autonomous VM cluster.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#description AwsOdbCloudAutonomousVmCluster#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#description TfCloudAutonomousVmCluster#description}
   */
   readonly description?: string;
   /**
   * The display name of the Autonomous VM cluster. Changing this will force terraform to create new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#display_name AwsOdbCloudAutonomousVmCluster#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#display_name TfCloudAutonomousVmCluster#display_name}
   */
   readonly displayName: string;
   /**
   * Indicates whether mutual TLS (mTLS) authentication is enabled for the Autonomous VM cluster. Changing this will force terraform to create new resource. 
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#is_mtls_enabled_vm_cluster AwsOdbCloudAutonomousVmCluster#is_mtls_enabled_vm_cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#is_mtls_enabled_vm_cluster TfCloudAutonomousVmCluster#is_mtls_enabled_vm_cluster}
   */
   readonly isMtlsEnabledVmCluster?: boolean | cdktn.IResolvable;
   /**
   * The license model for the Autonomous VM cluster. Valid values are LICENSE_INCLUDED or BRING_YOUR_OWN_LICENSE . Changing this will force terraform to create new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#license_model AwsOdbCloudAutonomousVmCluster#license_model}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#license_model TfCloudAutonomousVmCluster#license_model}
   */
   readonly licenseModel?: string;
   /**
   * The amount of memory allocated per Oracle Compute Unit, in GB. Changing this will force terraform to create new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#memory_per_oracle_compute_unit_in_gbs AwsOdbCloudAutonomousVmCluster#memory_per_oracle_compute_unit_in_gbs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#memory_per_oracle_compute_unit_in_gbs TfCloudAutonomousVmCluster#memory_per_oracle_compute_unit_in_gbs}
   */
   readonly memoryPerOracleComputeUnitInGbs: number;
   /**
   * The unique identifier of the ODB network for the VM cluster. This member is required. Changing this will create a new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#odb_network_arn AwsOdbCloudAutonomousVmCluster#odb_network_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#odb_network_arn TfCloudAutonomousVmCluster#odb_network_arn}
   */
   readonly odbNetworkArn?: string;
   /**
   * The unique identifier of the ODB network associated with this Autonomous VM Cluster. Changing this will force terraform to create new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#odb_network_id AwsOdbCloudAutonomousVmCluster#odb_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#odb_network_id TfCloudAutonomousVmCluster#odb_network_id}
   */
   readonly odbNetworkId?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#region AwsOdbCloudAutonomousVmCluster#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#region TfCloudAutonomousVmCluster#region}
   */
   readonly region?: string;
   /**
   * The SCAN listener port for non-TLS (TCP) protocol. The default is 1521. Changing this will force terraform to create new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#scan_listener_port_non_tls AwsOdbCloudAutonomousVmCluster#scan_listener_port_non_tls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#scan_listener_port_non_tls TfCloudAutonomousVmCluster#scan_listener_port_non_tls}
   */
   readonly scanListenerPortNonTls: number;
   /**
   * The SCAN listener port for TLS (TCP) protocol. The default is 2484. Changing this will force terraform to create new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#scan_listener_port_tls AwsOdbCloudAutonomousVmCluster#scan_listener_port_tls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#scan_listener_port_tls TfCloudAutonomousVmCluster#scan_listener_port_tls}
   */
   readonly scanListenerPortTls: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#tags AwsOdbCloudAutonomousVmCluster#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#tags TfCloudAutonomousVmCluster#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * The time zone of the Autonomous VM cluster. Changing this will force terraform to create new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#time_zone AwsOdbCloudAutonomousVmCluster#time_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#time_zone TfCloudAutonomousVmCluster#time_zone}
   */
   readonly timeZone?: string;
   /**
   * The total number of Autonomous Container Databases that can be created with the allocated local storage. Changing this will force terraform to create new resource.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#total_container_databases AwsOdbCloudAutonomousVmCluster#total_container_databases}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#total_container_databases TfCloudAutonomousVmCluster#total_container_databases}
   */
   readonly totalContainerDatabases: number;
   /**
   * maintenance_window block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#maintenance_window AwsOdbCloudAutonomousVmCluster#maintenance_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#maintenance_window TfCloudAutonomousVmCluster#maintenance_window}
   */
-  readonly maintenanceWindow?: AwsOdbCloudAutonomousVmCluster.MaintenanceWindowProperty[] | cdktn.IResolvable;
+  readonly maintenanceWindow?: TfCloudAutonomousVmCluster.MaintenanceWindowProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#timeouts AwsOdbCloudAutonomousVmCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#timeouts TfCloudAutonomousVmCluster#timeouts}
   */
-  readonly timeouts?: AwsOdbCloudAutonomousVmCluster.TimeoutsProperty;
+  readonly timeouts?: TfCloudAutonomousVmCluster.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster aws_odb_cloud_autonomous_vm_cluster}
 */
-export class AwsOdbCloudAutonomousVmCluster extends cdktn.TerraformResource {
+export class TfCloudAutonomousVmCluster extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -140,11 +140,11 @@ export class AwsOdbCloudAutonomousVmCluster extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsOdbCloudAutonomousVmCluster resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfCloudAutonomousVmCluster resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsOdbCloudAutonomousVmCluster to import
-  * @param importFromId The id of the existing AwsOdbCloudAutonomousVmCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsOdbCloudAutonomousVmCluster to import is found
+  * @param importToId The construct id used in the generated config for the TfCloudAutonomousVmCluster to import
+  * @param importFromId The id of the existing TfCloudAutonomousVmCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfCloudAutonomousVmCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_odb_cloud_autonomous_vm_cluster", importId: importFromId, provider });
@@ -159,9 +159,9 @@ export class AwsOdbCloudAutonomousVmCluster extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsOdbCloudAutonomousVmClusterConfig
+  * @param options TfCloudAutonomousVmClusterConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsOdbCloudAutonomousVmClusterConfig) {
+  public constructor(scope: Construct, id: string, config: TfCloudAutonomousVmClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_odb_cloud_autonomous_vm_cluster',
       terraformGeneratorMetadata: {
@@ -644,11 +644,11 @@ export class AwsOdbCloudAutonomousVmCluster extends cdktn.TerraformResource {
   }
 
   // maintenance_window - computed: false, optional: true, required: false
-  private _maintenanceWindow = new AwsOdbCloudAutonomousVmCluster.MaintenanceWindowPropertyList(this, "maintenance_window", false);
+  private _maintenanceWindow = new TfCloudAutonomousVmCluster.MaintenanceWindowPropertyList(this, "maintenance_window", false);
   public get maintenanceWindow() {
     return this._maintenanceWindow;
   }
-  public putMaintenanceWindow(value: AwsOdbCloudAutonomousVmCluster.MaintenanceWindowProperty[] | cdktn.IResolvable) {
+  public putMaintenanceWindow(value: TfCloudAutonomousVmCluster.MaintenanceWindowProperty[] | cdktn.IResolvable) {
     this._maintenanceWindow.internalValue = value;
   }
   public resetMaintenanceWindow() {
@@ -660,11 +660,11 @@ export class AwsOdbCloudAutonomousVmCluster extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsOdbCloudAutonomousVmCluster.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfCloudAutonomousVmCluster.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsOdbCloudAutonomousVmCluster.TimeoutsProperty) {
+  public putTimeouts(value: TfCloudAutonomousVmCluster.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -699,8 +699,8 @@ export class AwsOdbCloudAutonomousVmCluster extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       time_zone: cdktn.stringToTerraform(this._timeZone),
       total_container_databases: cdktn.numberToTerraform(this._totalContainerDatabases),
-      maintenance_window: cdktn.listMapper(awsOdbCloudAutonomousVmClusterMaintenanceWindowPropertyToTerraform, true)(this._maintenanceWindow.internalValue),
-      timeouts: awsOdbCloudAutonomousVmClusterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      maintenance_window: cdktn.listMapper(tfCloudAutonomousVmClusterMaintenanceWindowPropertyToTerraform, true)(this._maintenanceWindow.internalValue),
+      timeouts: tfCloudAutonomousVmClusterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -815,16 +815,16 @@ export class AwsOdbCloudAutonomousVmCluster extends cdktn.TerraformResource {
         storageClassType: "number",
       },
       maintenance_window: {
-        value: cdktn.listMapperHcl(awsOdbCloudAutonomousVmClusterMaintenanceWindowPropertyToHclTerraform, true)(this._maintenanceWindow.internalValue),
+        value: cdktn.listMapperHcl(tfCloudAutonomousVmClusterMaintenanceWindowPropertyToHclTerraform, true)(this._maintenanceWindow.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsOdbCloudAutonomousVmCluster.MaintenanceWindowPropertyList",
+        storageClassType: "TfCloudAutonomousVmCluster.MaintenanceWindowPropertyList",
       },
       timeouts: {
-        value: awsOdbCloudAutonomousVmClusterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfCloudAutonomousVmClusterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsOdbCloudAutonomousVmCluster.TimeoutsProperty",
+        storageClassType: "TfCloudAutonomousVmCluster.TimeoutsProperty",
       },
     };
 
@@ -833,7 +833,7 @@ export class AwsOdbCloudAutonomousVmCluster extends cdktn.TerraformResource {
   }
 }
 
-export function awsOdbCloudAutonomousVmClusterDaysOfWeekPropertyToTerraform(struct?: AwsOdbCloudAutonomousVmCluster.DaysOfWeekProperty | cdktn.IResolvable): any {
+export function tfCloudAutonomousVmClusterDaysOfWeekPropertyToTerraform(struct?: TfCloudAutonomousVmCluster.DaysOfWeekProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -844,7 +844,7 @@ export function awsOdbCloudAutonomousVmClusterDaysOfWeekPropertyToTerraform(stru
 }
 
 
-export function awsOdbCloudAutonomousVmClusterDaysOfWeekPropertyToHclTerraform(struct?: AwsOdbCloudAutonomousVmCluster.DaysOfWeekProperty | cdktn.IResolvable): any {
+export function tfCloudAutonomousVmClusterDaysOfWeekPropertyToHclTerraform(struct?: TfCloudAutonomousVmCluster.DaysOfWeekProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -863,7 +863,7 @@ export function awsOdbCloudAutonomousVmClusterDaysOfWeekPropertyToHclTerraform(s
 }
 
 
-export function awsOdbCloudAutonomousVmClusterMonthsPropertyToTerraform(struct?: AwsOdbCloudAutonomousVmCluster.MonthsProperty | cdktn.IResolvable): any {
+export function tfCloudAutonomousVmClusterMonthsPropertyToTerraform(struct?: TfCloudAutonomousVmCluster.MonthsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -874,7 +874,7 @@ export function awsOdbCloudAutonomousVmClusterMonthsPropertyToTerraform(struct?:
 }
 
 
-export function awsOdbCloudAutonomousVmClusterMonthsPropertyToHclTerraform(struct?: AwsOdbCloudAutonomousVmCluster.MonthsProperty | cdktn.IResolvable): any {
+export function tfCloudAutonomousVmClusterMonthsPropertyToHclTerraform(struct?: TfCloudAutonomousVmCluster.MonthsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -893,30 +893,30 @@ export function awsOdbCloudAutonomousVmClusterMonthsPropertyToHclTerraform(struc
 }
 
 
-export function awsOdbCloudAutonomousVmClusterMaintenanceWindowPropertyToTerraform(struct?: AwsOdbCloudAutonomousVmCluster.MaintenanceWindowProperty | cdktn.IResolvable): any {
+export function tfCloudAutonomousVmClusterMaintenanceWindowPropertyToTerraform(struct?: TfCloudAutonomousVmCluster.MaintenanceWindowProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    days_of_week: cdktn.listMapper(awsOdbCloudAutonomousVmClusterDaysOfWeekPropertyToTerraform, false)(struct!.daysOfWeek),
+    days_of_week: cdktn.listMapper(tfCloudAutonomousVmClusterDaysOfWeekPropertyToTerraform, false)(struct!.daysOfWeek),
     hours_of_day: cdktn.listMapper(cdktn.numberToTerraform, false)(struct!.hoursOfDay),
     lead_time_in_weeks: cdktn.numberToTerraform(struct!.leadTimeInWeeks),
-    months: cdktn.listMapper(awsOdbCloudAutonomousVmClusterMonthsPropertyToTerraform, false)(struct!.months),
+    months: cdktn.listMapper(tfCloudAutonomousVmClusterMonthsPropertyToTerraform, false)(struct!.months),
     preference: cdktn.stringToTerraform(struct!.preference),
     weeks_of_month: cdktn.listMapper(cdktn.numberToTerraform, false)(struct!.weeksOfMonth),
   }
 }
 
 
-export function awsOdbCloudAutonomousVmClusterMaintenanceWindowPropertyToHclTerraform(struct?: AwsOdbCloudAutonomousVmCluster.MaintenanceWindowProperty | cdktn.IResolvable): any {
+export function tfCloudAutonomousVmClusterMaintenanceWindowPropertyToHclTerraform(struct?: TfCloudAutonomousVmCluster.MaintenanceWindowProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     days_of_week: {
-      value: cdktn.listMapperHcl(awsOdbCloudAutonomousVmClusterDaysOfWeekPropertyToHclTerraform, false)(struct!.daysOfWeek),
+      value: cdktn.listMapperHcl(tfCloudAutonomousVmClusterDaysOfWeekPropertyToHclTerraform, false)(struct!.daysOfWeek),
       isBlock: true,
       type: "set",
       storageClassType: "DaysOfWeekPropertyList",
@@ -934,7 +934,7 @@ export function awsOdbCloudAutonomousVmClusterMaintenanceWindowPropertyToHclTerr
       storageClassType: "number",
     },
     months: {
-      value: cdktn.listMapperHcl(awsOdbCloudAutonomousVmClusterMonthsPropertyToHclTerraform, false)(struct!.months),
+      value: cdktn.listMapperHcl(tfCloudAutonomousVmClusterMonthsPropertyToHclTerraform, false)(struct!.months),
       isBlock: true,
       type: "set",
       storageClassType: "MonthsPropertyList",
@@ -958,7 +958,7 @@ export function awsOdbCloudAutonomousVmClusterMaintenanceWindowPropertyToHclTerr
 }
 
 
-export function awsOdbCloudAutonomousVmClusterTimeoutsPropertyToTerraform(struct?: AwsOdbCloudAutonomousVmCluster.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfCloudAutonomousVmClusterTimeoutsPropertyToTerraform(struct?: TfCloudAutonomousVmCluster.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -971,7 +971,7 @@ export function awsOdbCloudAutonomousVmClusterTimeoutsPropertyToTerraform(struct
 }
 
 
-export function awsOdbCloudAutonomousVmClusterTimeoutsPropertyToHclTerraform(struct?: AwsOdbCloudAutonomousVmCluster.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfCloudAutonomousVmClusterTimeoutsPropertyToHclTerraform(struct?: TfCloudAutonomousVmCluster.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1002,10 +1002,10 @@ export function awsOdbCloudAutonomousVmClusterTimeoutsPropertyToHclTerraform(str
 }
 
 
-export namespace AwsOdbCloudAutonomousVmCluster {
+export namespace TfCloudAutonomousVmCluster {
 export interface DaysOfWeekProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#name AwsOdbCloudAutonomousVmCluster#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#name TfCloudAutonomousVmCluster#name}
   */
   readonly name?: string;
 }
@@ -1091,7 +1091,7 @@ export class DaysOfWeekPropertyList extends cdktn.ComplexList {
 }
 export interface MonthsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#name AwsOdbCloudAutonomousVmCluster#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#name TfCloudAutonomousVmCluster#name}
   */
   readonly name?: string;
 }
@@ -1179,37 +1179,37 @@ export interface MaintenanceWindowProperty {
   /**
   * The days of the week when maintenance can be performed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#days_of_week AwsOdbCloudAutonomousVmCluster#days_of_week}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#days_of_week TfCloudAutonomousVmCluster#days_of_week}
   */
   readonly daysOfWeek?: DaysOfWeekProperty[] | cdktn.IResolvable;
   /**
   * The hours of the day when maintenance can be performed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#hours_of_day AwsOdbCloudAutonomousVmCluster#hours_of_day}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#hours_of_day TfCloudAutonomousVmCluster#hours_of_day}
   */
   readonly hoursOfDay?: number[];
   /**
   * The lead time in weeks before the maintenance window.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#lead_time_in_weeks AwsOdbCloudAutonomousVmCluster#lead_time_in_weeks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#lead_time_in_weeks TfCloudAutonomousVmCluster#lead_time_in_weeks}
   */
   readonly leadTimeInWeeks?: number;
   /**
   * The months when maintenance can be performed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#months AwsOdbCloudAutonomousVmCluster#months}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#months TfCloudAutonomousVmCluster#months}
   */
   readonly months?: MonthsProperty[] | cdktn.IResolvable;
   /**
   * The preference for the maintenance window scheduling.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#preference AwsOdbCloudAutonomousVmCluster#preference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#preference TfCloudAutonomousVmCluster#preference}
   */
   readonly preference: string;
   /**
   * Indicates whether to skip release updates during maintenance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#weeks_of_month AwsOdbCloudAutonomousVmCluster#weeks_of_month}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#weeks_of_month TfCloudAutonomousVmCluster#weeks_of_month}
   */
   readonly weeksOfMonth?: number[];
 }
@@ -1404,19 +1404,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#create AwsOdbCloudAutonomousVmCluster#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#create TfCloudAutonomousVmCluster#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#delete AwsOdbCloudAutonomousVmCluster#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#delete TfCloudAutonomousVmCluster#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#update AwsOdbCloudAutonomousVmCluster#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_autonomous_vm_cluster#update TfCloudAutonomousVmCluster#update}
   */
   readonly update?: string;
 }

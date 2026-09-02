@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsPrometheusAlertManagerDefinitionConfig extends cdktn.TerraformMetaArguments {
+export interface TfAlertManagerDefinitionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_alert_manager_definition#definition AwsPrometheusAlertManagerDefinition#definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_alert_manager_definition#definition TfAlertManagerDefinition#definition}
   */
   readonly definition: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_alert_manager_definition#id AwsPrometheusAlertManagerDefinition#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_alert_manager_definition#id TfAlertManagerDefinition#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,11 +20,11 @@ export interface AwsPrometheusAlertManagerDefinitionConfig extends cdktn.Terrafo
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_alert_manager_definition#region AwsPrometheusAlertManagerDefinition#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_alert_manager_definition#region TfAlertManagerDefinition#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_alert_manager_definition#workspace_id AwsPrometheusAlertManagerDefinition#workspace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_alert_manager_definition#workspace_id TfAlertManagerDefinition#workspace_id}
   */
   readonly workspaceId: string;
 }
@@ -32,7 +32,7 @@ export interface AwsPrometheusAlertManagerDefinitionConfig extends cdktn.Terrafo
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_alert_manager_definition aws_prometheus_alert_manager_definition}
 */
-export class AwsPrometheusAlertManagerDefinition extends cdktn.TerraformResource {
+export class TfAlertManagerDefinition extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class AwsPrometheusAlertManagerDefinition extends cdktn.TerraformResource
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsPrometheusAlertManagerDefinition resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAlertManagerDefinition resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsPrometheusAlertManagerDefinition to import
-  * @param importFromId The id of the existing AwsPrometheusAlertManagerDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_alert_manager_definition#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsPrometheusAlertManagerDefinition to import is found
+  * @param importToId The construct id used in the generated config for the TfAlertManagerDefinition to import
+  * @param importFromId The id of the existing TfAlertManagerDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_alert_manager_definition#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAlertManagerDefinition to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_prometheus_alert_manager_definition", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class AwsPrometheusAlertManagerDefinition extends cdktn.TerraformResource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsPrometheusAlertManagerDefinitionConfig
+  * @param options TfAlertManagerDefinitionConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsPrometheusAlertManagerDefinitionConfig) {
+  public constructor(scope: Construct, id: string, config: TfAlertManagerDefinitionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_prometheus_alert_manager_definition',
       terraformGeneratorMetadata: {

@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsCloudfrontOriginAccessControlConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataOriginAccessControlConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_origin_access_control#id DataAwsCloudfrontOriginAccessControl#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_origin_access_control#id TfDataOriginAccessControl#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -18,7 +18,7 @@ export interface DataAwsCloudfrontOriginAccessControlConfig extends cdktn.Terraf
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_origin_access_control aws_cloudfront_origin_access_control}
 */
-export class DataAwsCloudfrontOriginAccessControl extends cdktn.TerraformDataSource {
+export class TfDataOriginAccessControl extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -29,11 +29,11 @@ export class DataAwsCloudfrontOriginAccessControl extends cdktn.TerraformDataSou
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsCloudfrontOriginAccessControl resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataOriginAccessControl resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsCloudfrontOriginAccessControl to import
-  * @param importFromId The id of the existing DataAwsCloudfrontOriginAccessControl that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_origin_access_control#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsCloudfrontOriginAccessControl to import is found
+  * @param importToId The construct id used in the generated config for the TfDataOriginAccessControl to import
+  * @param importFromId The id of the existing TfDataOriginAccessControl that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_origin_access_control#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataOriginAccessControl to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudfront_origin_access_control", importId: importFromId, provider });
@@ -48,9 +48,9 @@ export class DataAwsCloudfrontOriginAccessControl extends cdktn.TerraformDataSou
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsCloudfrontOriginAccessControlConfig
+  * @param options TfDataOriginAccessControlConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsCloudfrontOriginAccessControlConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataOriginAccessControlConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudfront_origin_access_control',
       terraformGeneratorMetadata: {

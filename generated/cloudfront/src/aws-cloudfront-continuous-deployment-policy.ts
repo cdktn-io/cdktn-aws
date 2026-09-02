@@ -5,29 +5,29 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCloudfrontContinuousDeploymentPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface TfContinuousDeploymentPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_continuous_deployment_policy#enabled AwsCloudfrontContinuousDeploymentPolicy#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_continuous_deployment_policy#enabled TfContinuousDeploymentPolicy#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
   * staging_distribution_dns_names block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_continuous_deployment_policy#staging_distribution_dns_names AwsCloudfrontContinuousDeploymentPolicy#staging_distribution_dns_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_continuous_deployment_policy#staging_distribution_dns_names TfContinuousDeploymentPolicy#staging_distribution_dns_names}
   */
-  readonly stagingDistributionDnsNames?: AwsCloudfrontContinuousDeploymentPolicy.StagingDistributionDnsNamesProperty[] | cdktn.IResolvable;
+  readonly stagingDistributionDnsNames?: TfContinuousDeploymentPolicy.StagingDistributionDnsNamesProperty[] | cdktn.IResolvable;
   /**
   * traffic_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_continuous_deployment_policy#traffic_config AwsCloudfrontContinuousDeploymentPolicy#traffic_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_continuous_deployment_policy#traffic_config TfContinuousDeploymentPolicy#traffic_config}
   */
-  readonly trafficConfig?: AwsCloudfrontContinuousDeploymentPolicy.TrafficConfigProperty[] | cdktn.IResolvable;
+  readonly trafficConfig?: TfContinuousDeploymentPolicy.TrafficConfigProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_continuous_deployment_policy aws_cloudfront_continuous_deployment_policy}
 */
-export class AwsCloudfrontContinuousDeploymentPolicy extends cdktn.TerraformResource {
+export class TfContinuousDeploymentPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -38,11 +38,11 @@ export class AwsCloudfrontContinuousDeploymentPolicy extends cdktn.TerraformReso
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCloudfrontContinuousDeploymentPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfContinuousDeploymentPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCloudfrontContinuousDeploymentPolicy to import
-  * @param importFromId The id of the existing AwsCloudfrontContinuousDeploymentPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_continuous_deployment_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCloudfrontContinuousDeploymentPolicy to import is found
+  * @param importToId The construct id used in the generated config for the TfContinuousDeploymentPolicy to import
+  * @param importFromId The id of the existing TfContinuousDeploymentPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_continuous_deployment_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfContinuousDeploymentPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudfront_continuous_deployment_policy", importId: importFromId, provider });
@@ -57,9 +57,9 @@ export class AwsCloudfrontContinuousDeploymentPolicy extends cdktn.TerraformReso
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCloudfrontContinuousDeploymentPolicyConfig
+  * @param options TfContinuousDeploymentPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCloudfrontContinuousDeploymentPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: TfContinuousDeploymentPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudfront_continuous_deployment_policy',
       terraformGeneratorMetadata: {
@@ -118,11 +118,11 @@ export class AwsCloudfrontContinuousDeploymentPolicy extends cdktn.TerraformReso
   }
 
   // staging_distribution_dns_names - computed: false, optional: true, required: false
-  private _stagingDistributionDnsNames = new AwsCloudfrontContinuousDeploymentPolicy.StagingDistributionDnsNamesPropertyList(this, "staging_distribution_dns_names", false);
+  private _stagingDistributionDnsNames = new TfContinuousDeploymentPolicy.StagingDistributionDnsNamesPropertyList(this, "staging_distribution_dns_names", false);
   public get stagingDistributionDnsNames() {
     return this._stagingDistributionDnsNames;
   }
-  public putStagingDistributionDnsNames(value: AwsCloudfrontContinuousDeploymentPolicy.StagingDistributionDnsNamesProperty[] | cdktn.IResolvable) {
+  public putStagingDistributionDnsNames(value: TfContinuousDeploymentPolicy.StagingDistributionDnsNamesProperty[] | cdktn.IResolvable) {
     this._stagingDistributionDnsNames.internalValue = value;
   }
   public resetStagingDistributionDnsNames() {
@@ -134,11 +134,11 @@ export class AwsCloudfrontContinuousDeploymentPolicy extends cdktn.TerraformReso
   }
 
   // traffic_config - computed: false, optional: true, required: false
-  private _trafficConfig = new AwsCloudfrontContinuousDeploymentPolicy.TrafficConfigPropertyList(this, "traffic_config", false);
+  private _trafficConfig = new TfContinuousDeploymentPolicy.TrafficConfigPropertyList(this, "traffic_config", false);
   public get trafficConfig() {
     return this._trafficConfig;
   }
-  public putTrafficConfig(value: AwsCloudfrontContinuousDeploymentPolicy.TrafficConfigProperty[] | cdktn.IResolvable) {
+  public putTrafficConfig(value: TfContinuousDeploymentPolicy.TrafficConfigProperty[] | cdktn.IResolvable) {
     this._trafficConfig.internalValue = value;
   }
   public resetTrafficConfig() {
@@ -156,8 +156,8 @@ export class AwsCloudfrontContinuousDeploymentPolicy extends cdktn.TerraformReso
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       enabled: cdktn.booleanToTerraform(this._enabled),
-      staging_distribution_dns_names: cdktn.listMapper(awsCloudfrontContinuousDeploymentPolicyStagingDistributionDnsNamesPropertyToTerraform, true)(this._stagingDistributionDnsNames.internalValue),
-      traffic_config: cdktn.listMapper(awsCloudfrontContinuousDeploymentPolicyTrafficConfigPropertyToTerraform, true)(this._trafficConfig.internalValue),
+      staging_distribution_dns_names: cdktn.listMapper(tfContinuousDeploymentPolicyStagingDistributionDnsNamesPropertyToTerraform, true)(this._stagingDistributionDnsNames.internalValue),
+      traffic_config: cdktn.listMapper(tfContinuousDeploymentPolicyTrafficConfigPropertyToTerraform, true)(this._trafficConfig.internalValue),
     };
   }
 
@@ -170,16 +170,16 @@ export class AwsCloudfrontContinuousDeploymentPolicy extends cdktn.TerraformReso
         storageClassType: "boolean",
       },
       staging_distribution_dns_names: {
-        value: cdktn.listMapperHcl(awsCloudfrontContinuousDeploymentPolicyStagingDistributionDnsNamesPropertyToHclTerraform, true)(this._stagingDistributionDnsNames.internalValue),
+        value: cdktn.listMapperHcl(tfContinuousDeploymentPolicyStagingDistributionDnsNamesPropertyToHclTerraform, true)(this._stagingDistributionDnsNames.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudfrontContinuousDeploymentPolicy.StagingDistributionDnsNamesPropertyList",
+        storageClassType: "TfContinuousDeploymentPolicy.StagingDistributionDnsNamesPropertyList",
       },
       traffic_config: {
-        value: cdktn.listMapperHcl(awsCloudfrontContinuousDeploymentPolicyTrafficConfigPropertyToHclTerraform, true)(this._trafficConfig.internalValue),
+        value: cdktn.listMapperHcl(tfContinuousDeploymentPolicyTrafficConfigPropertyToHclTerraform, true)(this._trafficConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsCloudfrontContinuousDeploymentPolicy.TrafficConfigPropertyList",
+        storageClassType: "TfContinuousDeploymentPolicy.TrafficConfigPropertyList",
       },
     };
 
@@ -188,7 +188,7 @@ export class AwsCloudfrontContinuousDeploymentPolicy extends cdktn.TerraformReso
   }
 }
 
-export function awsCloudfrontContinuousDeploymentPolicyStagingDistributionDnsNamesPropertyToTerraform(struct?: AwsCloudfrontContinuousDeploymentPolicy.StagingDistributionDnsNamesProperty | cdktn.IResolvable): any {
+export function tfContinuousDeploymentPolicyStagingDistributionDnsNamesPropertyToTerraform(struct?: TfContinuousDeploymentPolicy.StagingDistributionDnsNamesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -200,7 +200,7 @@ export function awsCloudfrontContinuousDeploymentPolicyStagingDistributionDnsNam
 }
 
 
-export function awsCloudfrontContinuousDeploymentPolicyStagingDistributionDnsNamesPropertyToHclTerraform(struct?: AwsCloudfrontContinuousDeploymentPolicy.StagingDistributionDnsNamesProperty | cdktn.IResolvable): any {
+export function tfContinuousDeploymentPolicyStagingDistributionDnsNamesPropertyToHclTerraform(struct?: TfContinuousDeploymentPolicy.StagingDistributionDnsNamesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -225,7 +225,7 @@ export function awsCloudfrontContinuousDeploymentPolicyStagingDistributionDnsNam
 }
 
 
-export function awsCloudfrontContinuousDeploymentPolicySingleHeaderConfigPropertyToTerraform(struct?: AwsCloudfrontContinuousDeploymentPolicy.SingleHeaderConfigProperty | cdktn.IResolvable): any {
+export function tfContinuousDeploymentPolicySingleHeaderConfigPropertyToTerraform(struct?: TfContinuousDeploymentPolicy.SingleHeaderConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -237,7 +237,7 @@ export function awsCloudfrontContinuousDeploymentPolicySingleHeaderConfigPropert
 }
 
 
-export function awsCloudfrontContinuousDeploymentPolicySingleHeaderConfigPropertyToHclTerraform(struct?: AwsCloudfrontContinuousDeploymentPolicy.SingleHeaderConfigProperty | cdktn.IResolvable): any {
+export function tfContinuousDeploymentPolicySingleHeaderConfigPropertyToHclTerraform(struct?: TfContinuousDeploymentPolicy.SingleHeaderConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -262,7 +262,7 @@ export function awsCloudfrontContinuousDeploymentPolicySingleHeaderConfigPropert
 }
 
 
-export function awsCloudfrontContinuousDeploymentPolicySessionStickinessConfigPropertyToTerraform(struct?: AwsCloudfrontContinuousDeploymentPolicy.SessionStickinessConfigProperty | cdktn.IResolvable): any {
+export function tfContinuousDeploymentPolicySessionStickinessConfigPropertyToTerraform(struct?: TfContinuousDeploymentPolicy.SessionStickinessConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -274,7 +274,7 @@ export function awsCloudfrontContinuousDeploymentPolicySessionStickinessConfigPr
 }
 
 
-export function awsCloudfrontContinuousDeploymentPolicySessionStickinessConfigPropertyToHclTerraform(struct?: AwsCloudfrontContinuousDeploymentPolicy.SessionStickinessConfigProperty | cdktn.IResolvable): any {
+export function tfContinuousDeploymentPolicySessionStickinessConfigPropertyToHclTerraform(struct?: TfContinuousDeploymentPolicy.SessionStickinessConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -299,19 +299,19 @@ export function awsCloudfrontContinuousDeploymentPolicySessionStickinessConfigPr
 }
 
 
-export function awsCloudfrontContinuousDeploymentPolicySingleWeightConfigPropertyToTerraform(struct?: AwsCloudfrontContinuousDeploymentPolicy.SingleWeightConfigProperty | cdktn.IResolvable): any {
+export function tfContinuousDeploymentPolicySingleWeightConfigPropertyToTerraform(struct?: TfContinuousDeploymentPolicy.SingleWeightConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     weight: cdktn.numberToTerraform(struct!.weight),
-    session_stickiness_config: cdktn.listMapper(awsCloudfrontContinuousDeploymentPolicySessionStickinessConfigPropertyToTerraform, true)(struct!.sessionStickinessConfig),
+    session_stickiness_config: cdktn.listMapper(tfContinuousDeploymentPolicySessionStickinessConfigPropertyToTerraform, true)(struct!.sessionStickinessConfig),
   }
 }
 
 
-export function awsCloudfrontContinuousDeploymentPolicySingleWeightConfigPropertyToHclTerraform(struct?: AwsCloudfrontContinuousDeploymentPolicy.SingleWeightConfigProperty | cdktn.IResolvable): any {
+export function tfContinuousDeploymentPolicySingleWeightConfigPropertyToHclTerraform(struct?: TfContinuousDeploymentPolicy.SingleWeightConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -324,7 +324,7 @@ export function awsCloudfrontContinuousDeploymentPolicySingleWeightConfigPropert
       storageClassType: "number",
     },
     session_stickiness_config: {
-      value: cdktn.listMapperHcl(awsCloudfrontContinuousDeploymentPolicySessionStickinessConfigPropertyToHclTerraform, true)(struct!.sessionStickinessConfig),
+      value: cdktn.listMapperHcl(tfContinuousDeploymentPolicySessionStickinessConfigPropertyToHclTerraform, true)(struct!.sessionStickinessConfig),
       isBlock: true,
       type: "list",
       storageClassType: "SessionStickinessConfigPropertyList",
@@ -336,20 +336,20 @@ export function awsCloudfrontContinuousDeploymentPolicySingleWeightConfigPropert
 }
 
 
-export function awsCloudfrontContinuousDeploymentPolicyTrafficConfigPropertyToTerraform(struct?: AwsCloudfrontContinuousDeploymentPolicy.TrafficConfigProperty | cdktn.IResolvable): any {
+export function tfContinuousDeploymentPolicyTrafficConfigPropertyToTerraform(struct?: TfContinuousDeploymentPolicy.TrafficConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     type: cdktn.stringToTerraform(struct!.type),
-    single_header_config: cdktn.listMapper(awsCloudfrontContinuousDeploymentPolicySingleHeaderConfigPropertyToTerraform, true)(struct!.singleHeaderConfig),
-    single_weight_config: cdktn.listMapper(awsCloudfrontContinuousDeploymentPolicySingleWeightConfigPropertyToTerraform, true)(struct!.singleWeightConfig),
+    single_header_config: cdktn.listMapper(tfContinuousDeploymentPolicySingleHeaderConfigPropertyToTerraform, true)(struct!.singleHeaderConfig),
+    single_weight_config: cdktn.listMapper(tfContinuousDeploymentPolicySingleWeightConfigPropertyToTerraform, true)(struct!.singleWeightConfig),
   }
 }
 
 
-export function awsCloudfrontContinuousDeploymentPolicyTrafficConfigPropertyToHclTerraform(struct?: AwsCloudfrontContinuousDeploymentPolicy.TrafficConfigProperty | cdktn.IResolvable): any {
+export function tfContinuousDeploymentPolicyTrafficConfigPropertyToHclTerraform(struct?: TfContinuousDeploymentPolicy.TrafficConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -362,13 +362,13 @@ export function awsCloudfrontContinuousDeploymentPolicyTrafficConfigPropertyToHc
       storageClassType: "string",
     },
     single_header_config: {
-      value: cdktn.listMapperHcl(awsCloudfrontContinuousDeploymentPolicySingleHeaderConfigPropertyToHclTerraform, true)(struct!.singleHeaderConfig),
+      value: cdktn.listMapperHcl(tfContinuousDeploymentPolicySingleHeaderConfigPropertyToHclTerraform, true)(struct!.singleHeaderConfig),
       isBlock: true,
       type: "list",
       storageClassType: "SingleHeaderConfigPropertyList",
     },
     single_weight_config: {
-      value: cdktn.listMapperHcl(awsCloudfrontContinuousDeploymentPolicySingleWeightConfigPropertyToHclTerraform, true)(struct!.singleWeightConfig),
+      value: cdktn.listMapperHcl(tfContinuousDeploymentPolicySingleWeightConfigPropertyToHclTerraform, true)(struct!.singleWeightConfig),
       isBlock: true,
       type: "list",
       storageClassType: "SingleWeightConfigPropertyList",
@@ -380,14 +380,14 @@ export function awsCloudfrontContinuousDeploymentPolicyTrafficConfigPropertyToHc
 }
 
 
-export namespace AwsCloudfrontContinuousDeploymentPolicy {
+export namespace TfContinuousDeploymentPolicy {
 export interface StagingDistributionDnsNamesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_continuous_deployment_policy#items AwsCloudfrontContinuousDeploymentPolicy#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_continuous_deployment_policy#items TfContinuousDeploymentPolicy#items}
   */
   readonly items?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_continuous_deployment_policy#quantity AwsCloudfrontContinuousDeploymentPolicy#quantity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_continuous_deployment_policy#quantity TfContinuousDeploymentPolicy#quantity}
   */
   readonly quantity: number;
 }
@@ -492,11 +492,11 @@ export class StagingDistributionDnsNamesPropertyList extends cdktn.ComplexList {
 }
 export interface SingleHeaderConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_continuous_deployment_policy#header AwsCloudfrontContinuousDeploymentPolicy#header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_continuous_deployment_policy#header TfContinuousDeploymentPolicy#header}
   */
   readonly header: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_continuous_deployment_policy#value AwsCloudfrontContinuousDeploymentPolicy#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_continuous_deployment_policy#value TfContinuousDeploymentPolicy#value}
   */
   readonly value: string;
 }
@@ -598,11 +598,11 @@ export class SingleHeaderConfigPropertyList extends cdktn.ComplexList {
 }
 export interface SessionStickinessConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_continuous_deployment_policy#idle_ttl AwsCloudfrontContinuousDeploymentPolicy#idle_ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_continuous_deployment_policy#idle_ttl TfContinuousDeploymentPolicy#idle_ttl}
   */
   readonly idleTtl: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_continuous_deployment_policy#maximum_ttl AwsCloudfrontContinuousDeploymentPolicy#maximum_ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_continuous_deployment_policy#maximum_ttl TfContinuousDeploymentPolicy#maximum_ttl}
   */
   readonly maximumTtl: number;
 }
@@ -704,13 +704,13 @@ export class SessionStickinessConfigPropertyList extends cdktn.ComplexList {
 }
 export interface SingleWeightConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_continuous_deployment_policy#weight AwsCloudfrontContinuousDeploymentPolicy#weight}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_continuous_deployment_policy#weight TfContinuousDeploymentPolicy#weight}
   */
   readonly weight: number;
   /**
   * session_stickiness_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_continuous_deployment_policy#session_stickiness_config AwsCloudfrontContinuousDeploymentPolicy#session_stickiness_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_continuous_deployment_policy#session_stickiness_config TfContinuousDeploymentPolicy#session_stickiness_config}
   */
   readonly sessionStickinessConfig?: SessionStickinessConfigProperty[] | cdktn.IResolvable;
 }
@@ -815,19 +815,19 @@ export class SingleWeightConfigPropertyList extends cdktn.ComplexList {
 }
 export interface TrafficConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_continuous_deployment_policy#type AwsCloudfrontContinuousDeploymentPolicy#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_continuous_deployment_policy#type TfContinuousDeploymentPolicy#type}
   */
   readonly type: string;
   /**
   * single_header_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_continuous_deployment_policy#single_header_config AwsCloudfrontContinuousDeploymentPolicy#single_header_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_continuous_deployment_policy#single_header_config TfContinuousDeploymentPolicy#single_header_config}
   */
   readonly singleHeaderConfig?: SingleHeaderConfigProperty[] | cdktn.IResolvable;
   /**
   * single_weight_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_continuous_deployment_policy#single_weight_config AwsCloudfrontContinuousDeploymentPolicy#single_weight_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_continuous_deployment_policy#single_weight_config TfContinuousDeploymentPolicy#single_weight_config}
   */
   readonly singleWeightConfig?: SingleWeightConfigProperty[] | cdktn.IResolvable;
 }

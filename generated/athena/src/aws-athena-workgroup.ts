@@ -5,56 +5,56 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsAthenaWorkgroupConfig extends cdktn.TerraformMetaArguments {
+export interface TfWorkgroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#description AwsAthenaWorkgroup#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#description TfWorkgroup#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#force_destroy AwsAthenaWorkgroup#force_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#force_destroy TfWorkgroup#force_destroy}
   */
   readonly forceDestroy?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#id AwsAthenaWorkgroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#id TfWorkgroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#name AwsAthenaWorkgroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#name TfWorkgroup#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#region AwsAthenaWorkgroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#region TfWorkgroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#state AwsAthenaWorkgroup#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#state TfWorkgroup#state}
   */
   readonly state?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#tags AwsAthenaWorkgroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#tags TfWorkgroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#tags_all AwsAthenaWorkgroup#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#tags_all TfWorkgroup#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#configuration AwsAthenaWorkgroup#configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#configuration TfWorkgroup#configuration}
   */
-  readonly configuration?: AwsAthenaWorkgroup.ConfigurationProperty;
+  readonly configuration?: TfWorkgroup.ConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup aws_athena_workgroup}
 */
-export class AwsAthenaWorkgroup extends cdktn.TerraformResource {
+export class TfWorkgroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class AwsAthenaWorkgroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsAthenaWorkgroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfWorkgroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsAthenaWorkgroup to import
-  * @param importFromId The id of the existing AwsAthenaWorkgroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsAthenaWorkgroup to import is found
+  * @param importToId The construct id used in the generated config for the TfWorkgroup to import
+  * @param importFromId The id of the existing TfWorkgroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfWorkgroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_athena_workgroup", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class AwsAthenaWorkgroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsAthenaWorkgroupConfig
+  * @param options TfWorkgroupConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsAthenaWorkgroupConfig) {
+  public constructor(scope: Construct, id: string, config: TfWorkgroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_athena_workgroup',
       terraformGeneratorMetadata: {
@@ -248,11 +248,11 @@ export class AwsAthenaWorkgroup extends cdktn.TerraformResource {
   }
 
   // configuration - computed: false, optional: true, required: false
-  private _configuration = new AwsAthenaWorkgroup.ConfigurationPropertyOutputReference(this, "configuration");
+  private _configuration = new TfWorkgroup.ConfigurationPropertyOutputReference(this, "configuration");
   public get configuration() {
     return this._configuration;
   }
-  public putConfiguration(value: AwsAthenaWorkgroup.ConfigurationProperty) {
+  public putConfiguration(value: TfWorkgroup.ConfigurationProperty) {
     this._configuration.internalValue = value;
   }
   public resetConfiguration() {
@@ -277,7 +277,7 @@ export class AwsAthenaWorkgroup extends cdktn.TerraformResource {
       state: cdktn.stringToTerraform(this._state),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      configuration: awsAthenaWorkgroupConfigurationPropertyToTerraform(this._configuration.internalValue),
+      configuration: tfWorkgroupConfigurationPropertyToTerraform(this._configuration.internalValue),
     };
   }
 
@@ -332,10 +332,10 @@ export class AwsAthenaWorkgroup extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       configuration: {
-        value: awsAthenaWorkgroupConfigurationPropertyToHclTerraform(this._configuration.internalValue),
+        value: tfWorkgroupConfigurationPropertyToHclTerraform(this._configuration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAthenaWorkgroup.ConfigurationPropertyList",
+        storageClassType: "TfWorkgroup.ConfigurationPropertyList",
       },
     };
 
@@ -344,7 +344,7 @@ export class AwsAthenaWorkgroup extends cdktn.TerraformResource {
   }
 }
 
-export function awsAthenaWorkgroupCustomerContentEncryptionConfigurationPropertyToTerraform(struct?: AwsAthenaWorkgroup.CustomerContentEncryptionConfigurationPropertyOutputReference | AwsAthenaWorkgroup.CustomerContentEncryptionConfigurationProperty): any {
+export function tfWorkgroupCustomerContentEncryptionConfigurationPropertyToTerraform(struct?: TfWorkgroup.CustomerContentEncryptionConfigurationPropertyOutputReference | TfWorkgroup.CustomerContentEncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -355,7 +355,7 @@ export function awsAthenaWorkgroupCustomerContentEncryptionConfigurationProperty
 }
 
 
-export function awsAthenaWorkgroupCustomerContentEncryptionConfigurationPropertyToHclTerraform(struct?: AwsAthenaWorkgroup.CustomerContentEncryptionConfigurationPropertyOutputReference | AwsAthenaWorkgroup.CustomerContentEncryptionConfigurationProperty): any {
+export function tfWorkgroupCustomerContentEncryptionConfigurationPropertyToHclTerraform(struct?: TfWorkgroup.CustomerContentEncryptionConfigurationPropertyOutputReference | TfWorkgroup.CustomerContentEncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -374,7 +374,7 @@ export function awsAthenaWorkgroupCustomerContentEncryptionConfigurationProperty
 }
 
 
-export function awsAthenaWorkgroupEngineVersionPropertyToTerraform(struct?: AwsAthenaWorkgroup.EngineVersionPropertyOutputReference | AwsAthenaWorkgroup.EngineVersionProperty): any {
+export function tfWorkgroupEngineVersionPropertyToTerraform(struct?: TfWorkgroup.EngineVersionPropertyOutputReference | TfWorkgroup.EngineVersionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -385,7 +385,7 @@ export function awsAthenaWorkgroupEngineVersionPropertyToTerraform(struct?: AwsA
 }
 
 
-export function awsAthenaWorkgroupEngineVersionPropertyToHclTerraform(struct?: AwsAthenaWorkgroup.EngineVersionPropertyOutputReference | AwsAthenaWorkgroup.EngineVersionProperty): any {
+export function tfWorkgroupEngineVersionPropertyToHclTerraform(struct?: TfWorkgroup.EngineVersionPropertyOutputReference | TfWorkgroup.EngineVersionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -404,7 +404,7 @@ export function awsAthenaWorkgroupEngineVersionPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsAthenaWorkgroupIdentityCenterConfigurationPropertyToTerraform(struct?: AwsAthenaWorkgroup.IdentityCenterConfigurationPropertyOutputReference | AwsAthenaWorkgroup.IdentityCenterConfigurationProperty): any {
+export function tfWorkgroupIdentityCenterConfigurationPropertyToTerraform(struct?: TfWorkgroup.IdentityCenterConfigurationPropertyOutputReference | TfWorkgroup.IdentityCenterConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -416,7 +416,7 @@ export function awsAthenaWorkgroupIdentityCenterConfigurationPropertyToTerraform
 }
 
 
-export function awsAthenaWorkgroupIdentityCenterConfigurationPropertyToHclTerraform(struct?: AwsAthenaWorkgroup.IdentityCenterConfigurationPropertyOutputReference | AwsAthenaWorkgroup.IdentityCenterConfigurationProperty): any {
+export function tfWorkgroupIdentityCenterConfigurationPropertyToHclTerraform(struct?: TfWorkgroup.IdentityCenterConfigurationPropertyOutputReference | TfWorkgroup.IdentityCenterConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -441,7 +441,7 @@ export function awsAthenaWorkgroupIdentityCenterConfigurationPropertyToHclTerraf
 }
 
 
-export function awsAthenaWorkgroupConfigurationManagedQueryResultsConfigurationEncryptionConfigurationPropertyToTerraform(struct?: AwsAthenaWorkgroup.ConfigurationManagedQueryResultsConfigurationEncryptionConfigurationPropertyOutputReference | AwsAthenaWorkgroup.ConfigurationManagedQueryResultsConfigurationEncryptionConfigurationProperty): any {
+export function tfWorkgroupConfigurationManagedQueryResultsConfigurationEncryptionConfigurationPropertyToTerraform(struct?: TfWorkgroup.ConfigurationManagedQueryResultsConfigurationEncryptionConfigurationPropertyOutputReference | TfWorkgroup.ConfigurationManagedQueryResultsConfigurationEncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -452,7 +452,7 @@ export function awsAthenaWorkgroupConfigurationManagedQueryResultsConfigurationE
 }
 
 
-export function awsAthenaWorkgroupConfigurationManagedQueryResultsConfigurationEncryptionConfigurationPropertyToHclTerraform(struct?: AwsAthenaWorkgroup.ConfigurationManagedQueryResultsConfigurationEncryptionConfigurationPropertyOutputReference | AwsAthenaWorkgroup.ConfigurationManagedQueryResultsConfigurationEncryptionConfigurationProperty): any {
+export function tfWorkgroupConfigurationManagedQueryResultsConfigurationEncryptionConfigurationPropertyToHclTerraform(struct?: TfWorkgroup.ConfigurationManagedQueryResultsConfigurationEncryptionConfigurationPropertyOutputReference | TfWorkgroup.ConfigurationManagedQueryResultsConfigurationEncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -471,19 +471,19 @@ export function awsAthenaWorkgroupConfigurationManagedQueryResultsConfigurationE
 }
 
 
-export function awsAthenaWorkgroupManagedQueryResultsConfigurationPropertyToTerraform(struct?: AwsAthenaWorkgroup.ManagedQueryResultsConfigurationPropertyOutputReference | AwsAthenaWorkgroup.ManagedQueryResultsConfigurationProperty): any {
+export function tfWorkgroupManagedQueryResultsConfigurationPropertyToTerraform(struct?: TfWorkgroup.ManagedQueryResultsConfigurationPropertyOutputReference | TfWorkgroup.ManagedQueryResultsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     enabled: cdktn.booleanToTerraform(struct!.enabled),
-    encryption_configuration: awsAthenaWorkgroupConfigurationManagedQueryResultsConfigurationEncryptionConfigurationPropertyToTerraform(struct!.encryptionConfiguration),
+    encryption_configuration: tfWorkgroupConfigurationManagedQueryResultsConfigurationEncryptionConfigurationPropertyToTerraform(struct!.encryptionConfiguration),
   }
 }
 
 
-export function awsAthenaWorkgroupManagedQueryResultsConfigurationPropertyToHclTerraform(struct?: AwsAthenaWorkgroup.ManagedQueryResultsConfigurationPropertyOutputReference | AwsAthenaWorkgroup.ManagedQueryResultsConfigurationProperty): any {
+export function tfWorkgroupManagedQueryResultsConfigurationPropertyToHclTerraform(struct?: TfWorkgroup.ManagedQueryResultsConfigurationPropertyOutputReference | TfWorkgroup.ManagedQueryResultsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -496,7 +496,7 @@ export function awsAthenaWorkgroupManagedQueryResultsConfigurationPropertyToHclT
       storageClassType: "boolean",
     },
     encryption_configuration: {
-      value: awsAthenaWorkgroupConfigurationManagedQueryResultsConfigurationEncryptionConfigurationPropertyToHclTerraform(struct!.encryptionConfiguration),
+      value: tfWorkgroupConfigurationManagedQueryResultsConfigurationEncryptionConfigurationPropertyToHclTerraform(struct!.encryptionConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ConfigurationManagedQueryResultsConfigurationEncryptionConfigurationPropertyList",
@@ -508,7 +508,7 @@ export function awsAthenaWorkgroupManagedQueryResultsConfigurationPropertyToHclT
 }
 
 
-export function awsAthenaWorkgroupLogTypePropertyToTerraform(struct?: AwsAthenaWorkgroup.LogTypeProperty | cdktn.IResolvable): any {
+export function tfWorkgroupLogTypePropertyToTerraform(struct?: TfWorkgroup.LogTypeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -520,7 +520,7 @@ export function awsAthenaWorkgroupLogTypePropertyToTerraform(struct?: AwsAthenaW
 }
 
 
-export function awsAthenaWorkgroupLogTypePropertyToHclTerraform(struct?: AwsAthenaWorkgroup.LogTypeProperty | cdktn.IResolvable): any {
+export function tfWorkgroupLogTypePropertyToHclTerraform(struct?: TfWorkgroup.LogTypeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -545,7 +545,7 @@ export function awsAthenaWorkgroupLogTypePropertyToHclTerraform(struct?: AwsAthe
 }
 
 
-export function awsAthenaWorkgroupCloudWatchLoggingConfigurationPropertyToTerraform(struct?: AwsAthenaWorkgroup.CloudWatchLoggingConfigurationPropertyOutputReference | AwsAthenaWorkgroup.CloudWatchLoggingConfigurationProperty): any {
+export function tfWorkgroupCloudWatchLoggingConfigurationPropertyToTerraform(struct?: TfWorkgroup.CloudWatchLoggingConfigurationPropertyOutputReference | TfWorkgroup.CloudWatchLoggingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -554,12 +554,12 @@ export function awsAthenaWorkgroupCloudWatchLoggingConfigurationPropertyToTerraf
     enabled: cdktn.booleanToTerraform(struct!.enabled),
     log_group: cdktn.stringToTerraform(struct!.logGroup),
     log_stream_name_prefix: cdktn.stringToTerraform(struct!.logStreamNamePrefix),
-    log_type: cdktn.listMapper(awsAthenaWorkgroupLogTypePropertyToTerraform, true)(struct!.logType),
+    log_type: cdktn.listMapper(tfWorkgroupLogTypePropertyToTerraform, true)(struct!.logType),
   }
 }
 
 
-export function awsAthenaWorkgroupCloudWatchLoggingConfigurationPropertyToHclTerraform(struct?: AwsAthenaWorkgroup.CloudWatchLoggingConfigurationPropertyOutputReference | AwsAthenaWorkgroup.CloudWatchLoggingConfigurationProperty): any {
+export function tfWorkgroupCloudWatchLoggingConfigurationPropertyToHclTerraform(struct?: TfWorkgroup.CloudWatchLoggingConfigurationPropertyOutputReference | TfWorkgroup.CloudWatchLoggingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -584,7 +584,7 @@ export function awsAthenaWorkgroupCloudWatchLoggingConfigurationPropertyToHclTer
       storageClassType: "string",
     },
     log_type: {
-      value: cdktn.listMapperHcl(awsAthenaWorkgroupLogTypePropertyToHclTerraform, true)(struct!.logType),
+      value: cdktn.listMapperHcl(tfWorkgroupLogTypePropertyToHclTerraform, true)(struct!.logType),
       isBlock: true,
       type: "set",
       storageClassType: "LogTypePropertyList",
@@ -596,7 +596,7 @@ export function awsAthenaWorkgroupCloudWatchLoggingConfigurationPropertyToHclTer
 }
 
 
-export function awsAthenaWorkgroupManagedLoggingConfigurationPropertyToTerraform(struct?: AwsAthenaWorkgroup.ManagedLoggingConfigurationPropertyOutputReference | AwsAthenaWorkgroup.ManagedLoggingConfigurationProperty): any {
+export function tfWorkgroupManagedLoggingConfigurationPropertyToTerraform(struct?: TfWorkgroup.ManagedLoggingConfigurationPropertyOutputReference | TfWorkgroup.ManagedLoggingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -608,7 +608,7 @@ export function awsAthenaWorkgroupManagedLoggingConfigurationPropertyToTerraform
 }
 
 
-export function awsAthenaWorkgroupManagedLoggingConfigurationPropertyToHclTerraform(struct?: AwsAthenaWorkgroup.ManagedLoggingConfigurationPropertyOutputReference | AwsAthenaWorkgroup.ManagedLoggingConfigurationProperty): any {
+export function tfWorkgroupManagedLoggingConfigurationPropertyToHclTerraform(struct?: TfWorkgroup.ManagedLoggingConfigurationPropertyOutputReference | TfWorkgroup.ManagedLoggingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -633,7 +633,7 @@ export function awsAthenaWorkgroupManagedLoggingConfigurationPropertyToHclTerraf
 }
 
 
-export function awsAthenaWorkgroupS3LoggingConfigurationPropertyToTerraform(struct?: AwsAthenaWorkgroup.S3LoggingConfigurationPropertyOutputReference | AwsAthenaWorkgroup.S3LoggingConfigurationProperty): any {
+export function tfWorkgroupS3LoggingConfigurationPropertyToTerraform(struct?: TfWorkgroup.S3LoggingConfigurationPropertyOutputReference | TfWorkgroup.S3LoggingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -646,7 +646,7 @@ export function awsAthenaWorkgroupS3LoggingConfigurationPropertyToTerraform(stru
 }
 
 
-export function awsAthenaWorkgroupS3LoggingConfigurationPropertyToHclTerraform(struct?: AwsAthenaWorkgroup.S3LoggingConfigurationPropertyOutputReference | AwsAthenaWorkgroup.S3LoggingConfigurationProperty): any {
+export function tfWorkgroupS3LoggingConfigurationPropertyToHclTerraform(struct?: TfWorkgroup.S3LoggingConfigurationPropertyOutputReference | TfWorkgroup.S3LoggingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -677,39 +677,39 @@ export function awsAthenaWorkgroupS3LoggingConfigurationPropertyToHclTerraform(s
 }
 
 
-export function awsAthenaWorkgroupMonitoringConfigurationPropertyToTerraform(struct?: AwsAthenaWorkgroup.MonitoringConfigurationPropertyOutputReference | AwsAthenaWorkgroup.MonitoringConfigurationProperty): any {
+export function tfWorkgroupMonitoringConfigurationPropertyToTerraform(struct?: TfWorkgroup.MonitoringConfigurationPropertyOutputReference | TfWorkgroup.MonitoringConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cloud_watch_logging_configuration: awsAthenaWorkgroupCloudWatchLoggingConfigurationPropertyToTerraform(struct!.cloudWatchLoggingConfiguration),
-    managed_logging_configuration: awsAthenaWorkgroupManagedLoggingConfigurationPropertyToTerraform(struct!.managedLoggingConfiguration),
-    s3_logging_configuration: awsAthenaWorkgroupS3LoggingConfigurationPropertyToTerraform(struct!.s3LoggingConfiguration),
+    cloud_watch_logging_configuration: tfWorkgroupCloudWatchLoggingConfigurationPropertyToTerraform(struct!.cloudWatchLoggingConfiguration),
+    managed_logging_configuration: tfWorkgroupManagedLoggingConfigurationPropertyToTerraform(struct!.managedLoggingConfiguration),
+    s3_logging_configuration: tfWorkgroupS3LoggingConfigurationPropertyToTerraform(struct!.s3LoggingConfiguration),
   }
 }
 
 
-export function awsAthenaWorkgroupMonitoringConfigurationPropertyToHclTerraform(struct?: AwsAthenaWorkgroup.MonitoringConfigurationPropertyOutputReference | AwsAthenaWorkgroup.MonitoringConfigurationProperty): any {
+export function tfWorkgroupMonitoringConfigurationPropertyToHclTerraform(struct?: TfWorkgroup.MonitoringConfigurationPropertyOutputReference | TfWorkgroup.MonitoringConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cloud_watch_logging_configuration: {
-      value: awsAthenaWorkgroupCloudWatchLoggingConfigurationPropertyToHclTerraform(struct!.cloudWatchLoggingConfiguration),
+      value: tfWorkgroupCloudWatchLoggingConfigurationPropertyToHclTerraform(struct!.cloudWatchLoggingConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "CloudWatchLoggingConfigurationPropertyList",
     },
     managed_logging_configuration: {
-      value: awsAthenaWorkgroupManagedLoggingConfigurationPropertyToHclTerraform(struct!.managedLoggingConfiguration),
+      value: tfWorkgroupManagedLoggingConfigurationPropertyToHclTerraform(struct!.managedLoggingConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ManagedLoggingConfigurationPropertyList",
     },
     s3_logging_configuration: {
-      value: awsAthenaWorkgroupS3LoggingConfigurationPropertyToHclTerraform(struct!.s3LoggingConfiguration),
+      value: tfWorkgroupS3LoggingConfigurationPropertyToHclTerraform(struct!.s3LoggingConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "S3LoggingConfigurationPropertyList",
@@ -721,7 +721,7 @@ export function awsAthenaWorkgroupMonitoringConfigurationPropertyToHclTerraform(
 }
 
 
-export function awsAthenaWorkgroupQueryResultsS3AccessGrantsConfigurationPropertyToTerraform(struct?: AwsAthenaWorkgroup.QueryResultsS3AccessGrantsConfigurationPropertyOutputReference | AwsAthenaWorkgroup.QueryResultsS3AccessGrantsConfigurationProperty): any {
+export function tfWorkgroupQueryResultsS3AccessGrantsConfigurationPropertyToTerraform(struct?: TfWorkgroup.QueryResultsS3AccessGrantsConfigurationPropertyOutputReference | TfWorkgroup.QueryResultsS3AccessGrantsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -734,7 +734,7 @@ export function awsAthenaWorkgroupQueryResultsS3AccessGrantsConfigurationPropert
 }
 
 
-export function awsAthenaWorkgroupQueryResultsS3AccessGrantsConfigurationPropertyToHclTerraform(struct?: AwsAthenaWorkgroup.QueryResultsS3AccessGrantsConfigurationPropertyOutputReference | AwsAthenaWorkgroup.QueryResultsS3AccessGrantsConfigurationProperty): any {
+export function tfWorkgroupQueryResultsS3AccessGrantsConfigurationPropertyToHclTerraform(struct?: TfWorkgroup.QueryResultsS3AccessGrantsConfigurationPropertyOutputReference | TfWorkgroup.QueryResultsS3AccessGrantsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -765,7 +765,7 @@ export function awsAthenaWorkgroupQueryResultsS3AccessGrantsConfigurationPropert
 }
 
 
-export function awsAthenaWorkgroupAclConfigurationPropertyToTerraform(struct?: AwsAthenaWorkgroup.AclConfigurationPropertyOutputReference | AwsAthenaWorkgroup.AclConfigurationProperty): any {
+export function tfWorkgroupAclConfigurationPropertyToTerraform(struct?: TfWorkgroup.AclConfigurationPropertyOutputReference | TfWorkgroup.AclConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -776,7 +776,7 @@ export function awsAthenaWorkgroupAclConfigurationPropertyToTerraform(struct?: A
 }
 
 
-export function awsAthenaWorkgroupAclConfigurationPropertyToHclTerraform(struct?: AwsAthenaWorkgroup.AclConfigurationPropertyOutputReference | AwsAthenaWorkgroup.AclConfigurationProperty): any {
+export function tfWorkgroupAclConfigurationPropertyToHclTerraform(struct?: TfWorkgroup.AclConfigurationPropertyOutputReference | TfWorkgroup.AclConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -795,7 +795,7 @@ export function awsAthenaWorkgroupAclConfigurationPropertyToHclTerraform(struct?
 }
 
 
-export function awsAthenaWorkgroupConfigurationResultConfigurationEncryptionConfigurationPropertyToTerraform(struct?: AwsAthenaWorkgroup.ConfigurationResultConfigurationEncryptionConfigurationPropertyOutputReference | AwsAthenaWorkgroup.ConfigurationResultConfigurationEncryptionConfigurationProperty): any {
+export function tfWorkgroupConfigurationResultConfigurationEncryptionConfigurationPropertyToTerraform(struct?: TfWorkgroup.ConfigurationResultConfigurationEncryptionConfigurationPropertyOutputReference | TfWorkgroup.ConfigurationResultConfigurationEncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -807,7 +807,7 @@ export function awsAthenaWorkgroupConfigurationResultConfigurationEncryptionConf
 }
 
 
-export function awsAthenaWorkgroupConfigurationResultConfigurationEncryptionConfigurationPropertyToHclTerraform(struct?: AwsAthenaWorkgroup.ConfigurationResultConfigurationEncryptionConfigurationPropertyOutputReference | AwsAthenaWorkgroup.ConfigurationResultConfigurationEncryptionConfigurationProperty): any {
+export function tfWorkgroupConfigurationResultConfigurationEncryptionConfigurationPropertyToHclTerraform(struct?: TfWorkgroup.ConfigurationResultConfigurationEncryptionConfigurationPropertyOutputReference | TfWorkgroup.ConfigurationResultConfigurationEncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -832,7 +832,7 @@ export function awsAthenaWorkgroupConfigurationResultConfigurationEncryptionConf
 }
 
 
-export function awsAthenaWorkgroupResultConfigurationPropertyToTerraform(struct?: AwsAthenaWorkgroup.ResultConfigurationPropertyOutputReference | AwsAthenaWorkgroup.ResultConfigurationProperty): any {
+export function tfWorkgroupResultConfigurationPropertyToTerraform(struct?: TfWorkgroup.ResultConfigurationPropertyOutputReference | TfWorkgroup.ResultConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -840,13 +840,13 @@ export function awsAthenaWorkgroupResultConfigurationPropertyToTerraform(struct?
   return {
     expected_bucket_owner: cdktn.stringToTerraform(struct!.expectedBucketOwner),
     output_location: cdktn.stringToTerraform(struct!.outputLocation),
-    acl_configuration: awsAthenaWorkgroupAclConfigurationPropertyToTerraform(struct!.aclConfiguration),
-    encryption_configuration: awsAthenaWorkgroupConfigurationResultConfigurationEncryptionConfigurationPropertyToTerraform(struct!.encryptionConfiguration),
+    acl_configuration: tfWorkgroupAclConfigurationPropertyToTerraform(struct!.aclConfiguration),
+    encryption_configuration: tfWorkgroupConfigurationResultConfigurationEncryptionConfigurationPropertyToTerraform(struct!.encryptionConfiguration),
   }
 }
 
 
-export function awsAthenaWorkgroupResultConfigurationPropertyToHclTerraform(struct?: AwsAthenaWorkgroup.ResultConfigurationPropertyOutputReference | AwsAthenaWorkgroup.ResultConfigurationProperty): any {
+export function tfWorkgroupResultConfigurationPropertyToHclTerraform(struct?: TfWorkgroup.ResultConfigurationPropertyOutputReference | TfWorkgroup.ResultConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -865,13 +865,13 @@ export function awsAthenaWorkgroupResultConfigurationPropertyToHclTerraform(stru
       storageClassType: "string",
     },
     acl_configuration: {
-      value: awsAthenaWorkgroupAclConfigurationPropertyToHclTerraform(struct!.aclConfiguration),
+      value: tfWorkgroupAclConfigurationPropertyToHclTerraform(struct!.aclConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "AclConfigurationPropertyList",
     },
     encryption_configuration: {
-      value: awsAthenaWorkgroupConfigurationResultConfigurationEncryptionConfigurationPropertyToHclTerraform(struct!.encryptionConfiguration),
+      value: tfWorkgroupConfigurationResultConfigurationEncryptionConfigurationPropertyToHclTerraform(struct!.encryptionConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ConfigurationResultConfigurationEncryptionConfigurationPropertyList",
@@ -883,7 +883,7 @@ export function awsAthenaWorkgroupResultConfigurationPropertyToHclTerraform(stru
 }
 
 
-export function awsAthenaWorkgroupConfigurationPropertyToTerraform(struct?: AwsAthenaWorkgroup.ConfigurationPropertyOutputReference | AwsAthenaWorkgroup.ConfigurationProperty): any {
+export function tfWorkgroupConfigurationPropertyToTerraform(struct?: TfWorkgroup.ConfigurationPropertyOutputReference | TfWorkgroup.ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -895,18 +895,18 @@ export function awsAthenaWorkgroupConfigurationPropertyToTerraform(struct?: AwsA
     execution_role: cdktn.stringToTerraform(struct!.executionRole),
     publish_cloudwatch_metrics_enabled: cdktn.booleanToTerraform(struct!.publishCloudwatchMetricsEnabled),
     requester_pays_enabled: cdktn.booleanToTerraform(struct!.requesterPaysEnabled),
-    customer_content_encryption_configuration: awsAthenaWorkgroupCustomerContentEncryptionConfigurationPropertyToTerraform(struct!.customerContentEncryptionConfiguration),
-    engine_version: awsAthenaWorkgroupEngineVersionPropertyToTerraform(struct!.engineVersion),
-    identity_center_configuration: awsAthenaWorkgroupIdentityCenterConfigurationPropertyToTerraform(struct!.identityCenterConfiguration),
-    managed_query_results_configuration: awsAthenaWorkgroupManagedQueryResultsConfigurationPropertyToTerraform(struct!.managedQueryResultsConfiguration),
-    monitoring_configuration: awsAthenaWorkgroupMonitoringConfigurationPropertyToTerraform(struct!.monitoringConfiguration),
-    query_results_s3_access_grants_configuration: awsAthenaWorkgroupQueryResultsS3AccessGrantsConfigurationPropertyToTerraform(struct!.queryResultsS3AccessGrantsConfiguration),
-    result_configuration: awsAthenaWorkgroupResultConfigurationPropertyToTerraform(struct!.resultConfiguration),
+    customer_content_encryption_configuration: tfWorkgroupCustomerContentEncryptionConfigurationPropertyToTerraform(struct!.customerContentEncryptionConfiguration),
+    engine_version: tfWorkgroupEngineVersionPropertyToTerraform(struct!.engineVersion),
+    identity_center_configuration: tfWorkgroupIdentityCenterConfigurationPropertyToTerraform(struct!.identityCenterConfiguration),
+    managed_query_results_configuration: tfWorkgroupManagedQueryResultsConfigurationPropertyToTerraform(struct!.managedQueryResultsConfiguration),
+    monitoring_configuration: tfWorkgroupMonitoringConfigurationPropertyToTerraform(struct!.monitoringConfiguration),
+    query_results_s3_access_grants_configuration: tfWorkgroupQueryResultsS3AccessGrantsConfigurationPropertyToTerraform(struct!.queryResultsS3AccessGrantsConfiguration),
+    result_configuration: tfWorkgroupResultConfigurationPropertyToTerraform(struct!.resultConfiguration),
   }
 }
 
 
-export function awsAthenaWorkgroupConfigurationPropertyToHclTerraform(struct?: AwsAthenaWorkgroup.ConfigurationPropertyOutputReference | AwsAthenaWorkgroup.ConfigurationProperty): any {
+export function tfWorkgroupConfigurationPropertyToHclTerraform(struct?: TfWorkgroup.ConfigurationPropertyOutputReference | TfWorkgroup.ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -949,43 +949,43 @@ export function awsAthenaWorkgroupConfigurationPropertyToHclTerraform(struct?: A
       storageClassType: "boolean",
     },
     customer_content_encryption_configuration: {
-      value: awsAthenaWorkgroupCustomerContentEncryptionConfigurationPropertyToHclTerraform(struct!.customerContentEncryptionConfiguration),
+      value: tfWorkgroupCustomerContentEncryptionConfigurationPropertyToHclTerraform(struct!.customerContentEncryptionConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "CustomerContentEncryptionConfigurationPropertyList",
     },
     engine_version: {
-      value: awsAthenaWorkgroupEngineVersionPropertyToHclTerraform(struct!.engineVersion),
+      value: tfWorkgroupEngineVersionPropertyToHclTerraform(struct!.engineVersion),
       isBlock: true,
       type: "list",
       storageClassType: "EngineVersionPropertyList",
     },
     identity_center_configuration: {
-      value: awsAthenaWorkgroupIdentityCenterConfigurationPropertyToHclTerraform(struct!.identityCenterConfiguration),
+      value: tfWorkgroupIdentityCenterConfigurationPropertyToHclTerraform(struct!.identityCenterConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "IdentityCenterConfigurationPropertyList",
     },
     managed_query_results_configuration: {
-      value: awsAthenaWorkgroupManagedQueryResultsConfigurationPropertyToHclTerraform(struct!.managedQueryResultsConfiguration),
+      value: tfWorkgroupManagedQueryResultsConfigurationPropertyToHclTerraform(struct!.managedQueryResultsConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ManagedQueryResultsConfigurationPropertyList",
     },
     monitoring_configuration: {
-      value: awsAthenaWorkgroupMonitoringConfigurationPropertyToHclTerraform(struct!.monitoringConfiguration),
+      value: tfWorkgroupMonitoringConfigurationPropertyToHclTerraform(struct!.monitoringConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "MonitoringConfigurationPropertyList",
     },
     query_results_s3_access_grants_configuration: {
-      value: awsAthenaWorkgroupQueryResultsS3AccessGrantsConfigurationPropertyToHclTerraform(struct!.queryResultsS3AccessGrantsConfiguration),
+      value: tfWorkgroupQueryResultsS3AccessGrantsConfigurationPropertyToHclTerraform(struct!.queryResultsS3AccessGrantsConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "QueryResultsS3AccessGrantsConfigurationPropertyList",
     },
     result_configuration: {
-      value: awsAthenaWorkgroupResultConfigurationPropertyToHclTerraform(struct!.resultConfiguration),
+      value: tfWorkgroupResultConfigurationPropertyToHclTerraform(struct!.resultConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ResultConfigurationPropertyList",
@@ -997,10 +997,10 @@ export function awsAthenaWorkgroupConfigurationPropertyToHclTerraform(struct?: A
 }
 
 
-export namespace AwsAthenaWorkgroup {
+export namespace TfWorkgroup {
 export interface CustomerContentEncryptionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#kms_key AwsAthenaWorkgroup#kms_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#kms_key TfWorkgroup#kms_key}
   */
   readonly kmsKey?: string;
 }
@@ -1054,7 +1054,7 @@ export class CustomerContentEncryptionConfigurationPropertyOutputReference exten
 }
 export interface EngineVersionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#selected_engine_version AwsAthenaWorkgroup#selected_engine_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#selected_engine_version TfWorkgroup#selected_engine_version}
   */
   readonly selectedEngineVersion?: string;
 }
@@ -1113,11 +1113,11 @@ export class EngineVersionPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface IdentityCenterConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#enable_identity_center AwsAthenaWorkgroup#enable_identity_center}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#enable_identity_center TfWorkgroup#enable_identity_center}
   */
   readonly enableIdentityCenter?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#identity_center_instance_arn AwsAthenaWorkgroup#identity_center_instance_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#identity_center_instance_arn TfWorkgroup#identity_center_instance_arn}
   */
   readonly identityCenterInstanceArn?: string;
 }
@@ -1193,7 +1193,7 @@ export class IdentityCenterConfigurationPropertyOutputReference extends cdktn.Co
 }
 export interface ConfigurationManagedQueryResultsConfigurationEncryptionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#kms_key AwsAthenaWorkgroup#kms_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#kms_key TfWorkgroup#kms_key}
   */
   readonly kmsKey?: string;
 }
@@ -1247,13 +1247,13 @@ export class ConfigurationManagedQueryResultsConfigurationEncryptionConfiguratio
 }
 export interface ManagedQueryResultsConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#enabled AwsAthenaWorkgroup#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#enabled TfWorkgroup#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
   * encryption_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#encryption_configuration AwsAthenaWorkgroup#encryption_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#encryption_configuration TfWorkgroup#encryption_configuration}
   */
   readonly encryptionConfiguration?: ConfigurationManagedQueryResultsConfigurationEncryptionConfigurationProperty;
 }
@@ -1329,11 +1329,11 @@ export class ManagedQueryResultsConfigurationPropertyOutputReference extends cdk
 }
 export interface LogTypeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#key AwsAthenaWorkgroup#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#key TfWorkgroup#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#values AwsAthenaWorkgroup#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#values TfWorkgroup#values}
   */
   readonly values: string[];
 }
@@ -1435,21 +1435,21 @@ export class LogTypePropertyList extends cdktn.ComplexList {
 }
 export interface CloudWatchLoggingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#enabled AwsAthenaWorkgroup#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#enabled TfWorkgroup#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#log_group AwsAthenaWorkgroup#log_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#log_group TfWorkgroup#log_group}
   */
   readonly logGroup?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#log_stream_name_prefix AwsAthenaWorkgroup#log_stream_name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#log_stream_name_prefix TfWorkgroup#log_stream_name_prefix}
   */
   readonly logStreamNamePrefix?: string;
   /**
   * log_type block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#log_type AwsAthenaWorkgroup#log_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#log_type TfWorkgroup#log_type}
   */
   readonly logType?: LogTypeProperty[] | cdktn.IResolvable;
 }
@@ -1566,11 +1566,11 @@ export class CloudWatchLoggingConfigurationPropertyOutputReference extends cdktn
 }
 export interface ManagedLoggingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#enabled AwsAthenaWorkgroup#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#enabled TfWorkgroup#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#kms_key AwsAthenaWorkgroup#kms_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#kms_key TfWorkgroup#kms_key}
   */
   readonly kmsKey?: string;
 }
@@ -1643,15 +1643,15 @@ export class ManagedLoggingConfigurationPropertyOutputReference extends cdktn.Co
 }
 export interface S3LoggingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#enabled AwsAthenaWorkgroup#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#enabled TfWorkgroup#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#kms_key AwsAthenaWorkgroup#kms_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#kms_key TfWorkgroup#kms_key}
   */
   readonly kmsKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#log_location AwsAthenaWorkgroup#log_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#log_location TfWorkgroup#log_location}
   */
   readonly logLocation?: string;
 }
@@ -1748,19 +1748,19 @@ export interface MonitoringConfigurationProperty {
   /**
   * cloud_watch_logging_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#cloud_watch_logging_configuration AwsAthenaWorkgroup#cloud_watch_logging_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#cloud_watch_logging_configuration TfWorkgroup#cloud_watch_logging_configuration}
   */
   readonly cloudWatchLoggingConfiguration?: CloudWatchLoggingConfigurationProperty;
   /**
   * managed_logging_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#managed_logging_configuration AwsAthenaWorkgroup#managed_logging_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#managed_logging_configuration TfWorkgroup#managed_logging_configuration}
   */
   readonly managedLoggingConfiguration?: ManagedLoggingConfigurationProperty;
   /**
   * s3_logging_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#s3_logging_configuration AwsAthenaWorkgroup#s3_logging_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#s3_logging_configuration TfWorkgroup#s3_logging_configuration}
   */
   readonly s3LoggingConfiguration?: S3LoggingConfigurationProperty;
 }
@@ -1858,15 +1858,15 @@ export class MonitoringConfigurationPropertyOutputReference extends cdktn.Comple
 }
 export interface QueryResultsS3AccessGrantsConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#authentication_type AwsAthenaWorkgroup#authentication_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#authentication_type TfWorkgroup#authentication_type}
   */
   readonly authenticationType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#create_user_level_prefix AwsAthenaWorkgroup#create_user_level_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#create_user_level_prefix TfWorkgroup#create_user_level_prefix}
   */
   readonly createUserLevelPrefix?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#enable_s3_access_grants AwsAthenaWorkgroup#enable_s3_access_grants}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#enable_s3_access_grants TfWorkgroup#enable_s3_access_grants}
   */
   readonly enableS3AccessGrants: boolean | cdktn.IResolvable;
 }
@@ -1958,7 +1958,7 @@ export class QueryResultsS3AccessGrantsConfigurationPropertyOutputReference exte
 }
 export interface AclConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#s3_acl_option AwsAthenaWorkgroup#s3_acl_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#s3_acl_option TfWorkgroup#s3_acl_option}
   */
   readonly s3AclOption: string;
 }
@@ -2009,11 +2009,11 @@ export class AclConfigurationPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface ConfigurationResultConfigurationEncryptionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#encryption_option AwsAthenaWorkgroup#encryption_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#encryption_option TfWorkgroup#encryption_option}
   */
   readonly encryptionOption?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#kms_key_arn AwsAthenaWorkgroup#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#kms_key_arn TfWorkgroup#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
 }
@@ -2089,23 +2089,23 @@ export class ConfigurationResultConfigurationEncryptionConfigurationPropertyOutp
 }
 export interface ResultConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#expected_bucket_owner AwsAthenaWorkgroup#expected_bucket_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#expected_bucket_owner TfWorkgroup#expected_bucket_owner}
   */
   readonly expectedBucketOwner?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#output_location AwsAthenaWorkgroup#output_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#output_location TfWorkgroup#output_location}
   */
   readonly outputLocation?: string;
   /**
   * acl_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#acl_configuration AwsAthenaWorkgroup#acl_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#acl_configuration TfWorkgroup#acl_configuration}
   */
   readonly aclConfiguration?: AclConfigurationProperty;
   /**
   * encryption_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#encryption_configuration AwsAthenaWorkgroup#encryption_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#encryption_configuration TfWorkgroup#encryption_configuration}
   */
   readonly encryptionConfiguration?: ConfigurationResultConfigurationEncryptionConfigurationProperty;
 }
@@ -2225,69 +2225,69 @@ export class ResultConfigurationPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface ConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#bytes_scanned_cutoff_per_query AwsAthenaWorkgroup#bytes_scanned_cutoff_per_query}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#bytes_scanned_cutoff_per_query TfWorkgroup#bytes_scanned_cutoff_per_query}
   */
   readonly bytesScannedCutoffPerQuery?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#enable_minimum_encryption_configuration AwsAthenaWorkgroup#enable_minimum_encryption_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#enable_minimum_encryption_configuration TfWorkgroup#enable_minimum_encryption_configuration}
   */
   readonly enableMinimumEncryptionConfiguration?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#enforce_workgroup_configuration AwsAthenaWorkgroup#enforce_workgroup_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#enforce_workgroup_configuration TfWorkgroup#enforce_workgroup_configuration}
   */
   readonly enforceWorkgroupConfiguration?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#execution_role AwsAthenaWorkgroup#execution_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#execution_role TfWorkgroup#execution_role}
   */
   readonly executionRole?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#publish_cloudwatch_metrics_enabled AwsAthenaWorkgroup#publish_cloudwatch_metrics_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#publish_cloudwatch_metrics_enabled TfWorkgroup#publish_cloudwatch_metrics_enabled}
   */
   readonly publishCloudwatchMetricsEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#requester_pays_enabled AwsAthenaWorkgroup#requester_pays_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#requester_pays_enabled TfWorkgroup#requester_pays_enabled}
   */
   readonly requesterPaysEnabled?: boolean | cdktn.IResolvable;
   /**
   * customer_content_encryption_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#customer_content_encryption_configuration AwsAthenaWorkgroup#customer_content_encryption_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#customer_content_encryption_configuration TfWorkgroup#customer_content_encryption_configuration}
   */
   readonly customerContentEncryptionConfiguration?: CustomerContentEncryptionConfigurationProperty;
   /**
   * engine_version block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#engine_version AwsAthenaWorkgroup#engine_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#engine_version TfWorkgroup#engine_version}
   */
   readonly engineVersion?: EngineVersionProperty;
   /**
   * identity_center_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#identity_center_configuration AwsAthenaWorkgroup#identity_center_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#identity_center_configuration TfWorkgroup#identity_center_configuration}
   */
   readonly identityCenterConfiguration?: IdentityCenterConfigurationProperty;
   /**
   * managed_query_results_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#managed_query_results_configuration AwsAthenaWorkgroup#managed_query_results_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#managed_query_results_configuration TfWorkgroup#managed_query_results_configuration}
   */
   readonly managedQueryResultsConfiguration?: ManagedQueryResultsConfigurationProperty;
   /**
   * monitoring_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#monitoring_configuration AwsAthenaWorkgroup#monitoring_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#monitoring_configuration TfWorkgroup#monitoring_configuration}
   */
   readonly monitoringConfiguration?: MonitoringConfigurationProperty;
   /**
   * query_results_s3_access_grants_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#query_results_s3_access_grants_configuration AwsAthenaWorkgroup#query_results_s3_access_grants_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#query_results_s3_access_grants_configuration TfWorkgroup#query_results_s3_access_grants_configuration}
   */
   readonly queryResultsS3AccessGrantsConfiguration?: QueryResultsS3AccessGrantsConfigurationProperty;
   /**
   * result_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#result_configuration AwsAthenaWorkgroup#result_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_workgroup#result_configuration TfWorkgroup#result_configuration}
   */
   readonly resultConfiguration?: ResultConfigurationProperty;
 }

@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsCloudwatchEventBusPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface TfBusPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus_policy#event_bus_name AwsCloudwatchEventBusPolicy#event_bus_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus_policy#event_bus_name TfBusPolicy#event_bus_name}
   */
   readonly eventBusName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus_policy#id AwsCloudwatchEventBusPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus_policy#id TfBusPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus_policy#policy AwsCloudwatchEventBusPolicy#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus_policy#policy TfBusPolicy#policy}
   */
   readonly policy: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus_policy#region AwsCloudwatchEventBusPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus_policy#region TfBusPolicy#region}
   */
   readonly region?: string;
 }
@@ -32,7 +32,7 @@ export interface AwsCloudwatchEventBusPolicyConfig extends cdktn.TerraformMetaAr
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus_policy aws_cloudwatch_event_bus_policy}
 */
-export class AwsCloudwatchEventBusPolicy extends cdktn.TerraformResource {
+export class TfBusPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class AwsCloudwatchEventBusPolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsCloudwatchEventBusPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfBusPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsCloudwatchEventBusPolicy to import
-  * @param importFromId The id of the existing AwsCloudwatchEventBusPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsCloudwatchEventBusPolicy to import is found
+  * @param importToId The construct id used in the generated config for the TfBusPolicy to import
+  * @param importFromId The id of the existing TfBusPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfBusPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudwatch_event_bus_policy", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class AwsCloudwatchEventBusPolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsCloudwatchEventBusPolicyConfig
+  * @param options TfBusPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsCloudwatchEventBusPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: TfBusPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudwatch_event_bus_policy',
       terraformGeneratorMetadata: {

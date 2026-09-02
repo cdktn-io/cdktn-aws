@@ -5,11 +5,11 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface EphemeralAwsEcrpublicAuthorizationTokenConfig extends cdktn.TerraformEphemeralMetaArguments {
+export interface TfEphemeralAuthorizationTokenConfig extends cdktn.TerraformEphemeralMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/ecrpublic_authorization_token#region EphemeralAwsEcrpublicAuthorizationToken#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/ecrpublic_authorization_token#region TfEphemeralAuthorizationToken#region}
   */
   readonly region?: string;
 }
@@ -17,7 +17,7 @@ export interface EphemeralAwsEcrpublicAuthorizationTokenConfig extends cdktn.Ter
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/ecrpublic_authorization_token aws_ecrpublic_authorization_token}
 */
-export class EphemeralAwsEcrpublicAuthorizationToken extends cdktn.TerraformEphemeralResource {
+export class TfEphemeralAuthorizationToken extends cdktn.TerraformEphemeralResource {
 
   // =================
   // STATIC PROPERTIES
@@ -33,9 +33,9 @@ export class EphemeralAwsEcrpublicAuthorizationToken extends cdktn.TerraformEphe
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options EphemeralAwsEcrpublicAuthorizationTokenConfig = {}
+  * @param options TfEphemeralAuthorizationTokenConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: EphemeralAwsEcrpublicAuthorizationTokenConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfEphemeralAuthorizationTokenConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ecrpublic_authorization_token',
       terraformGeneratorMetadata: {

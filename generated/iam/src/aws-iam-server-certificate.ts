@@ -5,58 +5,58 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsIamServerCertificateConfig extends cdktn.TerraformMetaArguments {
+export interface TfServerCertificateConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_server_certificate#certificate_body AwsIamServerCertificate#certificate_body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_server_certificate#certificate_body TfServerCertificate#certificate_body}
   */
   readonly certificateBody: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_server_certificate#certificate_chain AwsIamServerCertificate#certificate_chain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_server_certificate#certificate_chain TfServerCertificate#certificate_chain}
   */
   readonly certificateChain?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_server_certificate#id AwsIamServerCertificate#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_server_certificate#id TfServerCertificate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_server_certificate#name AwsIamServerCertificate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_server_certificate#name TfServerCertificate#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_server_certificate#name_prefix AwsIamServerCertificate#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_server_certificate#name_prefix TfServerCertificate#name_prefix}
   */
   readonly namePrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_server_certificate#path AwsIamServerCertificate#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_server_certificate#path TfServerCertificate#path}
   */
   readonly path?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_server_certificate#private_key AwsIamServerCertificate#private_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_server_certificate#private_key TfServerCertificate#private_key}
   */
   readonly privateKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_server_certificate#tags AwsIamServerCertificate#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_server_certificate#tags TfServerCertificate#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_server_certificate#tags_all AwsIamServerCertificate#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_server_certificate#tags_all TfServerCertificate#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_server_certificate#timeouts AwsIamServerCertificate#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_server_certificate#timeouts TfServerCertificate#timeouts}
   */
-  readonly timeouts?: AwsIamServerCertificate.TimeoutsProperty;
+  readonly timeouts?: TfServerCertificate.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_server_certificate aws_iam_server_certificate}
 */
-export class AwsIamServerCertificate extends cdktn.TerraformResource {
+export class TfServerCertificate extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -67,11 +67,11 @@ export class AwsIamServerCertificate extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsIamServerCertificate resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfServerCertificate resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsIamServerCertificate to import
-  * @param importFromId The id of the existing AwsIamServerCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_server_certificate#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsIamServerCertificate to import is found
+  * @param importToId The construct id used in the generated config for the TfServerCertificate to import
+  * @param importFromId The id of the existing TfServerCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_server_certificate#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfServerCertificate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iam_server_certificate", importId: importFromId, provider });
@@ -86,9 +86,9 @@ export class AwsIamServerCertificate extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsIamServerCertificateConfig
+  * @param options TfServerCertificateConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsIamServerCertificateConfig) {
+  public constructor(scope: Construct, id: string, config: TfServerCertificateConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iam_server_certificate',
       terraformGeneratorMetadata: {
@@ -274,11 +274,11 @@ export class AwsIamServerCertificate extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsIamServerCertificate.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfServerCertificate.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsIamServerCertificate.TimeoutsProperty) {
+  public putTimeouts(value: TfServerCertificate.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -304,7 +304,7 @@ export class AwsIamServerCertificate extends cdktn.TerraformResource {
       private_key: cdktn.stringToTerraform(this._privateKey),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: awsIamServerCertificateTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfServerCertificateTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -365,10 +365,10 @@ export class AwsIamServerCertificate extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsIamServerCertificateTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfServerCertificateTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsIamServerCertificate.TimeoutsProperty",
+        storageClassType: "TfServerCertificate.TimeoutsProperty",
       },
     };
 
@@ -377,7 +377,7 @@ export class AwsIamServerCertificate extends cdktn.TerraformResource {
   }
 }
 
-export function awsIamServerCertificateTimeoutsPropertyToTerraform(struct?: AwsIamServerCertificate.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfServerCertificateTimeoutsPropertyToTerraform(struct?: TfServerCertificate.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -388,7 +388,7 @@ export function awsIamServerCertificateTimeoutsPropertyToTerraform(struct?: AwsI
 }
 
 
-export function awsIamServerCertificateTimeoutsPropertyToHclTerraform(struct?: AwsIamServerCertificate.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfServerCertificateTimeoutsPropertyToHclTerraform(struct?: TfServerCertificate.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -407,10 +407,10 @@ export function awsIamServerCertificateTimeoutsPropertyToHclTerraform(struct?: A
 }
 
 
-export namespace AwsIamServerCertificate {
+export namespace TfServerCertificate {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_server_certificate#delete AwsIamServerCertificate#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_server_certificate#delete TfServerCertificate#delete}
   */
   readonly delete?: string;
 }

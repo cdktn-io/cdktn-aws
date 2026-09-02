@@ -5,52 +5,52 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsServicecatalogPortfolioConfig extends cdktn.TerraformMetaArguments {
+export interface TfPortfolioConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio#description AwsServicecatalogPortfolio#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio#description TfPortfolio#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio#id AwsServicecatalogPortfolio#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio#id TfPortfolio#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio#name AwsServicecatalogPortfolio#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio#name TfPortfolio#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio#provider_name AwsServicecatalogPortfolio#provider_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio#provider_name TfPortfolio#provider_name}
   */
   readonly providerName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio#region AwsServicecatalogPortfolio#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio#region TfPortfolio#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio#tags AwsServicecatalogPortfolio#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio#tags TfPortfolio#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio#tags_all AwsServicecatalogPortfolio#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio#tags_all TfPortfolio#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio#timeouts AwsServicecatalogPortfolio#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio#timeouts TfPortfolio#timeouts}
   */
-  readonly timeouts?: AwsServicecatalogPortfolio.TimeoutsProperty;
+  readonly timeouts?: TfPortfolio.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio aws_servicecatalog_portfolio}
 */
-export class AwsServicecatalogPortfolio extends cdktn.TerraformResource {
+export class TfPortfolio extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class AwsServicecatalogPortfolio extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsServicecatalogPortfolio resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfPortfolio resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsServicecatalogPortfolio to import
-  * @param importFromId The id of the existing AwsServicecatalogPortfolio that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsServicecatalogPortfolio to import is found
+  * @param importToId The construct id used in the generated config for the TfPortfolio to import
+  * @param importFromId The id of the existing TfPortfolio that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfPortfolio to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_servicecatalog_portfolio", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class AwsServicecatalogPortfolio extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsServicecatalogPortfolioConfig
+  * @param options TfPortfolioConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsServicecatalogPortfolioConfig) {
+  public constructor(scope: Construct, id: string, config: TfPortfolioConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_servicecatalog_portfolio',
       terraformGeneratorMetadata: {
@@ -229,11 +229,11 @@ export class AwsServicecatalogPortfolio extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsServicecatalogPortfolio.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfPortfolio.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsServicecatalogPortfolio.TimeoutsProperty) {
+  public putTimeouts(value: TfPortfolio.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -257,7 +257,7 @@ export class AwsServicecatalogPortfolio extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: awsServicecatalogPortfolioTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfPortfolioTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -306,10 +306,10 @@ export class AwsServicecatalogPortfolio extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsServicecatalogPortfolioTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfPortfolioTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsServicecatalogPortfolio.TimeoutsProperty",
+        storageClassType: "TfPortfolio.TimeoutsProperty",
       },
     };
 
@@ -318,7 +318,7 @@ export class AwsServicecatalogPortfolio extends cdktn.TerraformResource {
   }
 }
 
-export function awsServicecatalogPortfolioTimeoutsPropertyToTerraform(struct?: AwsServicecatalogPortfolio.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfPortfolioTimeoutsPropertyToTerraform(struct?: TfPortfolio.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -332,7 +332,7 @@ export function awsServicecatalogPortfolioTimeoutsPropertyToTerraform(struct?: A
 }
 
 
-export function awsServicecatalogPortfolioTimeoutsPropertyToHclTerraform(struct?: AwsServicecatalogPortfolio.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfPortfolioTimeoutsPropertyToHclTerraform(struct?: TfPortfolio.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -369,22 +369,22 @@ export function awsServicecatalogPortfolioTimeoutsPropertyToHclTerraform(struct?
 }
 
 
-export namespace AwsServicecatalogPortfolio {
+export namespace TfPortfolio {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio#create AwsServicecatalogPortfolio#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio#create TfPortfolio#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio#delete AwsServicecatalogPortfolio#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio#delete TfPortfolio#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio#read AwsServicecatalogPortfolio#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio#read TfPortfolio#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio#update AwsServicecatalogPortfolio#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio#update TfPortfolio#update}
   */
   readonly update?: string;
 }

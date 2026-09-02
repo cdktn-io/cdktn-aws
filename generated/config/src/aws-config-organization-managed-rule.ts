@@ -5,72 +5,72 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsConfigOrganizationManagedRuleConfig extends cdktn.TerraformMetaArguments {
+export interface TfOrganizationManagedRuleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#description AwsConfigOrganizationManagedRule#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#description TfOrganizationManagedRule#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#excluded_accounts AwsConfigOrganizationManagedRule#excluded_accounts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#excluded_accounts TfOrganizationManagedRule#excluded_accounts}
   */
   readonly excludedAccounts?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#id AwsConfigOrganizationManagedRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#id TfOrganizationManagedRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#input_parameters AwsConfigOrganizationManagedRule#input_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#input_parameters TfOrganizationManagedRule#input_parameters}
   */
   readonly inputParameters?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#maximum_execution_frequency AwsConfigOrganizationManagedRule#maximum_execution_frequency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#maximum_execution_frequency TfOrganizationManagedRule#maximum_execution_frequency}
   */
   readonly maximumExecutionFrequency?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#name AwsConfigOrganizationManagedRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#name TfOrganizationManagedRule#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#region AwsConfigOrganizationManagedRule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#region TfOrganizationManagedRule#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#resource_id_scope AwsConfigOrganizationManagedRule#resource_id_scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#resource_id_scope TfOrganizationManagedRule#resource_id_scope}
   */
   readonly resourceIdScope?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#resource_types_scope AwsConfigOrganizationManagedRule#resource_types_scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#resource_types_scope TfOrganizationManagedRule#resource_types_scope}
   */
   readonly resourceTypesScope?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#rule_identifier AwsConfigOrganizationManagedRule#rule_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#rule_identifier TfOrganizationManagedRule#rule_identifier}
   */
   readonly ruleIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#tag_key_scope AwsConfigOrganizationManagedRule#tag_key_scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#tag_key_scope TfOrganizationManagedRule#tag_key_scope}
   */
   readonly tagKeyScope?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#tag_value_scope AwsConfigOrganizationManagedRule#tag_value_scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#tag_value_scope TfOrganizationManagedRule#tag_value_scope}
   */
   readonly tagValueScope?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#timeouts AwsConfigOrganizationManagedRule#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#timeouts TfOrganizationManagedRule#timeouts}
   */
-  readonly timeouts?: AwsConfigOrganizationManagedRule.TimeoutsProperty;
+  readonly timeouts?: TfOrganizationManagedRule.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule aws_config_organization_managed_rule}
 */
-export class AwsConfigOrganizationManagedRule extends cdktn.TerraformResource {
+export class TfOrganizationManagedRule extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -81,11 +81,11 @@ export class AwsConfigOrganizationManagedRule extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsConfigOrganizationManagedRule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfOrganizationManagedRule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsConfigOrganizationManagedRule to import
-  * @param importFromId The id of the existing AwsConfigOrganizationManagedRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsConfigOrganizationManagedRule to import is found
+  * @param importToId The construct id used in the generated config for the TfOrganizationManagedRule to import
+  * @param importFromId The id of the existing TfOrganizationManagedRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfOrganizationManagedRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_config_organization_managed_rule", importId: importFromId, provider });
@@ -100,9 +100,9 @@ export class AwsConfigOrganizationManagedRule extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsConfigOrganizationManagedRuleConfig
+  * @param options TfOrganizationManagedRuleConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsConfigOrganizationManagedRuleConfig) {
+  public constructor(scope: Construct, id: string, config: TfOrganizationManagedRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_config_organization_managed_rule',
       terraformGeneratorMetadata: {
@@ -329,11 +329,11 @@ export class AwsConfigOrganizationManagedRule extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsConfigOrganizationManagedRule.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfOrganizationManagedRule.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsConfigOrganizationManagedRule.TimeoutsProperty) {
+  public putTimeouts(value: TfOrganizationManagedRule.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -362,7 +362,7 @@ export class AwsConfigOrganizationManagedRule extends cdktn.TerraformResource {
       rule_identifier: cdktn.stringToTerraform(this._ruleIdentifier),
       tag_key_scope: cdktn.stringToTerraform(this._tagKeyScope),
       tag_value_scope: cdktn.stringToTerraform(this._tagValueScope),
-      timeouts: awsConfigOrganizationManagedRuleTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfOrganizationManagedRuleTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -441,10 +441,10 @@ export class AwsConfigOrganizationManagedRule extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsConfigOrganizationManagedRuleTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfOrganizationManagedRuleTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsConfigOrganizationManagedRule.TimeoutsProperty",
+        storageClassType: "TfOrganizationManagedRule.TimeoutsProperty",
       },
     };
 
@@ -453,7 +453,7 @@ export class AwsConfigOrganizationManagedRule extends cdktn.TerraformResource {
   }
 }
 
-export function awsConfigOrganizationManagedRuleTimeoutsPropertyToTerraform(struct?: AwsConfigOrganizationManagedRule.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfOrganizationManagedRuleTimeoutsPropertyToTerraform(struct?: TfOrganizationManagedRule.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -466,7 +466,7 @@ export function awsConfigOrganizationManagedRuleTimeoutsPropertyToTerraform(stru
 }
 
 
-export function awsConfigOrganizationManagedRuleTimeoutsPropertyToHclTerraform(struct?: AwsConfigOrganizationManagedRule.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfOrganizationManagedRuleTimeoutsPropertyToHclTerraform(struct?: TfOrganizationManagedRule.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -497,18 +497,18 @@ export function awsConfigOrganizationManagedRuleTimeoutsPropertyToHclTerraform(s
 }
 
 
-export namespace AwsConfigOrganizationManagedRule {
+export namespace TfOrganizationManagedRule {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#create AwsConfigOrganizationManagedRule#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#create TfOrganizationManagedRule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#delete AwsConfigOrganizationManagedRule#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#delete TfOrganizationManagedRule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#update AwsConfigOrganizationManagedRule#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_managed_rule#update TfOrganizationManagedRule#update}
   */
   readonly update?: string;
 }

@@ -5,39 +5,39 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsObservabilityadminCentralizationRuleForOrganizationConfig extends cdktn.TerraformMetaArguments {
+export interface TfCentralizationRuleForOrganizationConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#region AwsObservabilityadminCentralizationRuleForOrganization#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#region TfCentralizationRuleForOrganization#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#rule_name AwsObservabilityadminCentralizationRuleForOrganization#rule_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#rule_name TfCentralizationRuleForOrganization#rule_name}
   */
   readonly ruleName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#tags AwsObservabilityadminCentralizationRuleForOrganization#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#tags TfCentralizationRuleForOrganization#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#rule AwsObservabilityadminCentralizationRuleForOrganization#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#rule TfCentralizationRuleForOrganization#rule}
   */
-  readonly rule?: AwsObservabilityadminCentralizationRuleForOrganization.RuleProperty[] | cdktn.IResolvable;
+  readonly rule?: TfCentralizationRuleForOrganization.RuleProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#timeouts AwsObservabilityadminCentralizationRuleForOrganization#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#timeouts TfCentralizationRuleForOrganization#timeouts}
   */
-  readonly timeouts?: AwsObservabilityadminCentralizationRuleForOrganization.TimeoutsProperty;
+  readonly timeouts?: TfCentralizationRuleForOrganization.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization aws_observabilityadmin_centralization_rule_for_organization}
 */
-export class AwsObservabilityadminCentralizationRuleForOrganization extends cdktn.TerraformResource {
+export class TfCentralizationRuleForOrganization extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -48,11 +48,11 @@ export class AwsObservabilityadminCentralizationRuleForOrganization extends cdkt
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsObservabilityadminCentralizationRuleForOrganization resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfCentralizationRuleForOrganization resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsObservabilityadminCentralizationRuleForOrganization to import
-  * @param importFromId The id of the existing AwsObservabilityadminCentralizationRuleForOrganization that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsObservabilityadminCentralizationRuleForOrganization to import is found
+  * @param importToId The construct id used in the generated config for the TfCentralizationRuleForOrganization to import
+  * @param importFromId The id of the existing TfCentralizationRuleForOrganization that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfCentralizationRuleForOrganization to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_observabilityadmin_centralization_rule_for_organization", importId: importFromId, provider });
@@ -67,9 +67,9 @@ export class AwsObservabilityadminCentralizationRuleForOrganization extends cdkt
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsObservabilityadminCentralizationRuleForOrganizationConfig
+  * @param options TfCentralizationRuleForOrganizationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsObservabilityadminCentralizationRuleForOrganizationConfig) {
+  public constructor(scope: Construct, id: string, config: TfCentralizationRuleForOrganizationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_observabilityadmin_centralization_rule_for_organization',
       terraformGeneratorMetadata: {
@@ -163,11 +163,11 @@ export class AwsObservabilityadminCentralizationRuleForOrganization extends cdkt
   }
 
   // rule - computed: false, optional: true, required: false
-  private _rule = new AwsObservabilityadminCentralizationRuleForOrganization.RulePropertyList(this, "rule", false);
+  private _rule = new TfCentralizationRuleForOrganization.RulePropertyList(this, "rule", false);
   public get rule() {
     return this._rule;
   }
-  public putRule(value: AwsObservabilityadminCentralizationRuleForOrganization.RuleProperty[] | cdktn.IResolvable) {
+  public putRule(value: TfCentralizationRuleForOrganization.RuleProperty[] | cdktn.IResolvable) {
     this._rule.internalValue = value;
   }
   public resetRule() {
@@ -179,11 +179,11 @@ export class AwsObservabilityadminCentralizationRuleForOrganization extends cdkt
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsObservabilityadminCentralizationRuleForOrganization.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfCentralizationRuleForOrganization.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsObservabilityadminCentralizationRuleForOrganization.TimeoutsProperty) {
+  public putTimeouts(value: TfCentralizationRuleForOrganization.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -203,8 +203,8 @@ export class AwsObservabilityadminCentralizationRuleForOrganization extends cdkt
       region: cdktn.stringToTerraform(this._region),
       rule_name: cdktn.stringToTerraform(this._ruleName),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      rule: cdktn.listMapper(awsObservabilityadminCentralizationRuleForOrganizationRulePropertyToTerraform, true)(this._rule.internalValue),
-      timeouts: awsObservabilityadminCentralizationRuleForOrganizationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      rule: cdktn.listMapper(tfCentralizationRuleForOrganizationRulePropertyToTerraform, true)(this._rule.internalValue),
+      timeouts: tfCentralizationRuleForOrganizationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -229,16 +229,16 @@ export class AwsObservabilityadminCentralizationRuleForOrganization extends cdkt
         storageClassType: "stringMap",
       },
       rule: {
-        value: cdktn.listMapperHcl(awsObservabilityadminCentralizationRuleForOrganizationRulePropertyToHclTerraform, true)(this._rule.internalValue),
+        value: cdktn.listMapperHcl(tfCentralizationRuleForOrganizationRulePropertyToHclTerraform, true)(this._rule.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsObservabilityadminCentralizationRuleForOrganization.RulePropertyList",
+        storageClassType: "TfCentralizationRuleForOrganization.RulePropertyList",
       },
       timeouts: {
-        value: awsObservabilityadminCentralizationRuleForOrganizationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfCentralizationRuleForOrganizationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsObservabilityadminCentralizationRuleForOrganization.TimeoutsProperty",
+        storageClassType: "TfCentralizationRuleForOrganization.TimeoutsProperty",
       },
     };
 
@@ -247,7 +247,7 @@ export class AwsObservabilityadminCentralizationRuleForOrganization extends cdkt
   }
 }
 
-export function awsObservabilityadminCentralizationRuleForOrganizationRuleDestinationDestinationLogsConfigurationBackupConfigurationPropertyToTerraform(struct?: AwsObservabilityadminCentralizationRuleForOrganization.RuleDestinationDestinationLogsConfigurationBackupConfigurationProperty | cdktn.IResolvable): any {
+export function tfCentralizationRuleForOrganizationRuleDestinationDestinationLogsConfigurationBackupConfigurationPropertyToTerraform(struct?: TfCentralizationRuleForOrganization.RuleDestinationDestinationLogsConfigurationBackupConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -259,7 +259,7 @@ export function awsObservabilityadminCentralizationRuleForOrganizationRuleDestin
 }
 
 
-export function awsObservabilityadminCentralizationRuleForOrganizationRuleDestinationDestinationLogsConfigurationBackupConfigurationPropertyToHclTerraform(struct?: AwsObservabilityadminCentralizationRuleForOrganization.RuleDestinationDestinationLogsConfigurationBackupConfigurationProperty | cdktn.IResolvable): any {
+export function tfCentralizationRuleForOrganizationRuleDestinationDestinationLogsConfigurationBackupConfigurationPropertyToHclTerraform(struct?: TfCentralizationRuleForOrganization.RuleDestinationDestinationLogsConfigurationBackupConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -284,7 +284,7 @@ export function awsObservabilityadminCentralizationRuleForOrganizationRuleDestin
 }
 
 
-export function awsObservabilityadminCentralizationRuleForOrganizationLogGroupNameConfigurationPropertyToTerraform(struct?: AwsObservabilityadminCentralizationRuleForOrganization.LogGroupNameConfigurationProperty | cdktn.IResolvable): any {
+export function tfCentralizationRuleForOrganizationLogGroupNameConfigurationPropertyToTerraform(struct?: TfCentralizationRuleForOrganization.LogGroupNameConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -295,7 +295,7 @@ export function awsObservabilityadminCentralizationRuleForOrganizationLogGroupNa
 }
 
 
-export function awsObservabilityadminCentralizationRuleForOrganizationLogGroupNameConfigurationPropertyToHclTerraform(struct?: AwsObservabilityadminCentralizationRuleForOrganization.LogGroupNameConfigurationProperty | cdktn.IResolvable): any {
+export function tfCentralizationRuleForOrganizationLogGroupNameConfigurationPropertyToHclTerraform(struct?: TfCentralizationRuleForOrganization.LogGroupNameConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -314,7 +314,7 @@ export function awsObservabilityadminCentralizationRuleForOrganizationLogGroupNa
 }
 
 
-export function awsObservabilityadminCentralizationRuleForOrganizationLogsEncryptionConfigurationPropertyToTerraform(struct?: AwsObservabilityadminCentralizationRuleForOrganization.LogsEncryptionConfigurationProperty | cdktn.IResolvable): any {
+export function tfCentralizationRuleForOrganizationLogsEncryptionConfigurationPropertyToTerraform(struct?: TfCentralizationRuleForOrganization.LogsEncryptionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -328,7 +328,7 @@ export function awsObservabilityadminCentralizationRuleForOrganizationLogsEncryp
 }
 
 
-export function awsObservabilityadminCentralizationRuleForOrganizationLogsEncryptionConfigurationPropertyToHclTerraform(struct?: AwsObservabilityadminCentralizationRuleForOrganization.LogsEncryptionConfigurationProperty | cdktn.IResolvable): any {
+export function tfCentralizationRuleForOrganizationLogsEncryptionConfigurationPropertyToHclTerraform(struct?: TfCentralizationRuleForOrganization.LogsEncryptionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -365,7 +365,7 @@ export function awsObservabilityadminCentralizationRuleForOrganizationLogsEncryp
 }
 
 
-export function awsObservabilityadminCentralizationRuleForOrganizationTagPropagationConfigurationPropertyToTerraform(struct?: AwsObservabilityadminCentralizationRuleForOrganization.TagPropagationConfigurationProperty | cdktn.IResolvable): any {
+export function tfCentralizationRuleForOrganizationTagPropagationConfigurationPropertyToTerraform(struct?: TfCentralizationRuleForOrganization.TagPropagationConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -377,7 +377,7 @@ export function awsObservabilityadminCentralizationRuleForOrganizationTagPropaga
 }
 
 
-export function awsObservabilityadminCentralizationRuleForOrganizationTagPropagationConfigurationPropertyToHclTerraform(struct?: AwsObservabilityadminCentralizationRuleForOrganization.TagPropagationConfigurationProperty | cdktn.IResolvable): any {
+export function tfCentralizationRuleForOrganizationTagPropagationConfigurationPropertyToHclTerraform(struct?: TfCentralizationRuleForOrganization.TagPropagationConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -402,46 +402,46 @@ export function awsObservabilityadminCentralizationRuleForOrganizationTagPropaga
 }
 
 
-export function awsObservabilityadminCentralizationRuleForOrganizationDestinationLogsConfigurationPropertyToTerraform(struct?: AwsObservabilityadminCentralizationRuleForOrganization.DestinationLogsConfigurationProperty | cdktn.IResolvable): any {
+export function tfCentralizationRuleForOrganizationDestinationLogsConfigurationPropertyToTerraform(struct?: TfCentralizationRuleForOrganization.DestinationLogsConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    backup_configuration: cdktn.listMapper(awsObservabilityadminCentralizationRuleForOrganizationRuleDestinationDestinationLogsConfigurationBackupConfigurationPropertyToTerraform, true)(struct!.backupConfiguration),
-    log_group_name_configuration: cdktn.listMapper(awsObservabilityadminCentralizationRuleForOrganizationLogGroupNameConfigurationPropertyToTerraform, true)(struct!.logGroupNameConfiguration),
-    logs_encryption_configuration: cdktn.listMapper(awsObservabilityadminCentralizationRuleForOrganizationLogsEncryptionConfigurationPropertyToTerraform, true)(struct!.logsEncryptionConfiguration),
-    tag_propagation_configuration: cdktn.listMapper(awsObservabilityadminCentralizationRuleForOrganizationTagPropagationConfigurationPropertyToTerraform, true)(struct!.tagPropagationConfiguration),
+    backup_configuration: cdktn.listMapper(tfCentralizationRuleForOrganizationRuleDestinationDestinationLogsConfigurationBackupConfigurationPropertyToTerraform, true)(struct!.backupConfiguration),
+    log_group_name_configuration: cdktn.listMapper(tfCentralizationRuleForOrganizationLogGroupNameConfigurationPropertyToTerraform, true)(struct!.logGroupNameConfiguration),
+    logs_encryption_configuration: cdktn.listMapper(tfCentralizationRuleForOrganizationLogsEncryptionConfigurationPropertyToTerraform, true)(struct!.logsEncryptionConfiguration),
+    tag_propagation_configuration: cdktn.listMapper(tfCentralizationRuleForOrganizationTagPropagationConfigurationPropertyToTerraform, true)(struct!.tagPropagationConfiguration),
   }
 }
 
 
-export function awsObservabilityadminCentralizationRuleForOrganizationDestinationLogsConfigurationPropertyToHclTerraform(struct?: AwsObservabilityadminCentralizationRuleForOrganization.DestinationLogsConfigurationProperty | cdktn.IResolvable): any {
+export function tfCentralizationRuleForOrganizationDestinationLogsConfigurationPropertyToHclTerraform(struct?: TfCentralizationRuleForOrganization.DestinationLogsConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     backup_configuration: {
-      value: cdktn.listMapperHcl(awsObservabilityadminCentralizationRuleForOrganizationRuleDestinationDestinationLogsConfigurationBackupConfigurationPropertyToHclTerraform, true)(struct!.backupConfiguration),
+      value: cdktn.listMapperHcl(tfCentralizationRuleForOrganizationRuleDestinationDestinationLogsConfigurationBackupConfigurationPropertyToHclTerraform, true)(struct!.backupConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "RuleDestinationDestinationLogsConfigurationBackupConfigurationPropertyList",
     },
     log_group_name_configuration: {
-      value: cdktn.listMapperHcl(awsObservabilityadminCentralizationRuleForOrganizationLogGroupNameConfigurationPropertyToHclTerraform, true)(struct!.logGroupNameConfiguration),
+      value: cdktn.listMapperHcl(tfCentralizationRuleForOrganizationLogGroupNameConfigurationPropertyToHclTerraform, true)(struct!.logGroupNameConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "LogGroupNameConfigurationPropertyList",
     },
     logs_encryption_configuration: {
-      value: cdktn.listMapperHcl(awsObservabilityadminCentralizationRuleForOrganizationLogsEncryptionConfigurationPropertyToHclTerraform, true)(struct!.logsEncryptionConfiguration),
+      value: cdktn.listMapperHcl(tfCentralizationRuleForOrganizationLogsEncryptionConfigurationPropertyToHclTerraform, true)(struct!.logsEncryptionConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "LogsEncryptionConfigurationPropertyList",
     },
     tag_propagation_configuration: {
-      value: cdktn.listMapperHcl(awsObservabilityadminCentralizationRuleForOrganizationTagPropagationConfigurationPropertyToHclTerraform, true)(struct!.tagPropagationConfiguration),
+      value: cdktn.listMapperHcl(tfCentralizationRuleForOrganizationTagPropagationConfigurationPropertyToHclTerraform, true)(struct!.tagPropagationConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "TagPropagationConfigurationPropertyList",
@@ -453,7 +453,7 @@ export function awsObservabilityadminCentralizationRuleForOrganizationDestinatio
 }
 
 
-export function awsObservabilityadminCentralizationRuleForOrganizationRuleDestinationDestinationMetricsConfigurationBackupConfigurationPropertyToTerraform(struct?: AwsObservabilityadminCentralizationRuleForOrganization.RuleDestinationDestinationMetricsConfigurationBackupConfigurationProperty | cdktn.IResolvable): any {
+export function tfCentralizationRuleForOrganizationRuleDestinationDestinationMetricsConfigurationBackupConfigurationPropertyToTerraform(struct?: TfCentralizationRuleForOrganization.RuleDestinationDestinationMetricsConfigurationBackupConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -464,7 +464,7 @@ export function awsObservabilityadminCentralizationRuleForOrganizationRuleDestin
 }
 
 
-export function awsObservabilityadminCentralizationRuleForOrganizationRuleDestinationDestinationMetricsConfigurationBackupConfigurationPropertyToHclTerraform(struct?: AwsObservabilityadminCentralizationRuleForOrganization.RuleDestinationDestinationMetricsConfigurationBackupConfigurationProperty | cdktn.IResolvable): any {
+export function tfCentralizationRuleForOrganizationRuleDestinationDestinationMetricsConfigurationBackupConfigurationPropertyToHclTerraform(struct?: TfCentralizationRuleForOrganization.RuleDestinationDestinationMetricsConfigurationBackupConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -483,25 +483,25 @@ export function awsObservabilityadminCentralizationRuleForOrganizationRuleDestin
 }
 
 
-export function awsObservabilityadminCentralizationRuleForOrganizationDestinationMetricsConfigurationPropertyToTerraform(struct?: AwsObservabilityadminCentralizationRuleForOrganization.DestinationMetricsConfigurationProperty | cdktn.IResolvable): any {
+export function tfCentralizationRuleForOrganizationDestinationMetricsConfigurationPropertyToTerraform(struct?: TfCentralizationRuleForOrganization.DestinationMetricsConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    backup_configuration: cdktn.listMapper(awsObservabilityadminCentralizationRuleForOrganizationRuleDestinationDestinationMetricsConfigurationBackupConfigurationPropertyToTerraform, true)(struct!.backupConfiguration),
+    backup_configuration: cdktn.listMapper(tfCentralizationRuleForOrganizationRuleDestinationDestinationMetricsConfigurationBackupConfigurationPropertyToTerraform, true)(struct!.backupConfiguration),
   }
 }
 
 
-export function awsObservabilityadminCentralizationRuleForOrganizationDestinationMetricsConfigurationPropertyToHclTerraform(struct?: AwsObservabilityadminCentralizationRuleForOrganization.DestinationMetricsConfigurationProperty | cdktn.IResolvable): any {
+export function tfCentralizationRuleForOrganizationDestinationMetricsConfigurationPropertyToHclTerraform(struct?: TfCentralizationRuleForOrganization.DestinationMetricsConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     backup_configuration: {
-      value: cdktn.listMapperHcl(awsObservabilityadminCentralizationRuleForOrganizationRuleDestinationDestinationMetricsConfigurationBackupConfigurationPropertyToHclTerraform, true)(struct!.backupConfiguration),
+      value: cdktn.listMapperHcl(tfCentralizationRuleForOrganizationRuleDestinationDestinationMetricsConfigurationBackupConfigurationPropertyToHclTerraform, true)(struct!.backupConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "RuleDestinationDestinationMetricsConfigurationBackupConfigurationPropertyList",
@@ -513,7 +513,7 @@ export function awsObservabilityadminCentralizationRuleForOrganizationDestinatio
 }
 
 
-export function awsObservabilityadminCentralizationRuleForOrganizationDestinationPropertyToTerraform(struct?: AwsObservabilityadminCentralizationRuleForOrganization.DestinationProperty | cdktn.IResolvable): any {
+export function tfCentralizationRuleForOrganizationDestinationPropertyToTerraform(struct?: TfCentralizationRuleForOrganization.DestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -521,13 +521,13 @@ export function awsObservabilityadminCentralizationRuleForOrganizationDestinatio
   return {
     account: cdktn.stringToTerraform(struct!.account),
     region: cdktn.stringToTerraform(struct!.region),
-    destination_logs_configuration: cdktn.listMapper(awsObservabilityadminCentralizationRuleForOrganizationDestinationLogsConfigurationPropertyToTerraform, true)(struct!.destinationLogsConfiguration),
-    destination_metrics_configuration: cdktn.listMapper(awsObservabilityadminCentralizationRuleForOrganizationDestinationMetricsConfigurationPropertyToTerraform, true)(struct!.destinationMetricsConfiguration),
+    destination_logs_configuration: cdktn.listMapper(tfCentralizationRuleForOrganizationDestinationLogsConfigurationPropertyToTerraform, true)(struct!.destinationLogsConfiguration),
+    destination_metrics_configuration: cdktn.listMapper(tfCentralizationRuleForOrganizationDestinationMetricsConfigurationPropertyToTerraform, true)(struct!.destinationMetricsConfiguration),
   }
 }
 
 
-export function awsObservabilityadminCentralizationRuleForOrganizationDestinationPropertyToHclTerraform(struct?: AwsObservabilityadminCentralizationRuleForOrganization.DestinationProperty | cdktn.IResolvable): any {
+export function tfCentralizationRuleForOrganizationDestinationPropertyToHclTerraform(struct?: TfCentralizationRuleForOrganization.DestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -546,13 +546,13 @@ export function awsObservabilityadminCentralizationRuleForOrganizationDestinatio
       storageClassType: "string",
     },
     destination_logs_configuration: {
-      value: cdktn.listMapperHcl(awsObservabilityadminCentralizationRuleForOrganizationDestinationLogsConfigurationPropertyToHclTerraform, true)(struct!.destinationLogsConfiguration),
+      value: cdktn.listMapperHcl(tfCentralizationRuleForOrganizationDestinationLogsConfigurationPropertyToHclTerraform, true)(struct!.destinationLogsConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationLogsConfigurationPropertyList",
     },
     destination_metrics_configuration: {
-      value: cdktn.listMapperHcl(awsObservabilityadminCentralizationRuleForOrganizationDestinationMetricsConfigurationPropertyToHclTerraform, true)(struct!.destinationMetricsConfiguration),
+      value: cdktn.listMapperHcl(tfCentralizationRuleForOrganizationDestinationMetricsConfigurationPropertyToHclTerraform, true)(struct!.destinationMetricsConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationMetricsConfigurationPropertyList",
@@ -564,7 +564,7 @@ export function awsObservabilityadminCentralizationRuleForOrganizationDestinatio
 }
 
 
-export function awsObservabilityadminCentralizationRuleForOrganizationSourceLogsConfigurationPropertyToTerraform(struct?: AwsObservabilityadminCentralizationRuleForOrganization.SourceLogsConfigurationProperty | cdktn.IResolvable): any {
+export function tfCentralizationRuleForOrganizationSourceLogsConfigurationPropertyToTerraform(struct?: TfCentralizationRuleForOrganization.SourceLogsConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -577,7 +577,7 @@ export function awsObservabilityadminCentralizationRuleForOrganizationSourceLogs
 }
 
 
-export function awsObservabilityadminCentralizationRuleForOrganizationSourceLogsConfigurationPropertyToHclTerraform(struct?: AwsObservabilityadminCentralizationRuleForOrganization.SourceLogsConfigurationProperty | cdktn.IResolvable): any {
+export function tfCentralizationRuleForOrganizationSourceLogsConfigurationPropertyToHclTerraform(struct?: TfCentralizationRuleForOrganization.SourceLogsConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -608,7 +608,7 @@ export function awsObservabilityadminCentralizationRuleForOrganizationSourceLogs
 }
 
 
-export function awsObservabilityadminCentralizationRuleForOrganizationSourceMetricsConfigurationPropertyToTerraform(struct?: AwsObservabilityadminCentralizationRuleForOrganization.SourceMetricsConfigurationProperty | cdktn.IResolvable): any {
+export function tfCentralizationRuleForOrganizationSourceMetricsConfigurationPropertyToTerraform(struct?: TfCentralizationRuleForOrganization.SourceMetricsConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -619,7 +619,7 @@ export function awsObservabilityadminCentralizationRuleForOrganizationSourceMetr
 }
 
 
-export function awsObservabilityadminCentralizationRuleForOrganizationSourceMetricsConfigurationPropertyToHclTerraform(struct?: AwsObservabilityadminCentralizationRuleForOrganization.SourceMetricsConfigurationProperty | cdktn.IResolvable): any {
+export function tfCentralizationRuleForOrganizationSourceMetricsConfigurationPropertyToHclTerraform(struct?: TfCentralizationRuleForOrganization.SourceMetricsConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -638,7 +638,7 @@ export function awsObservabilityadminCentralizationRuleForOrganizationSourceMetr
 }
 
 
-export function awsObservabilityadminCentralizationRuleForOrganizationSourcePropertyToTerraform(struct?: AwsObservabilityadminCentralizationRuleForOrganization.SourceProperty | cdktn.IResolvable): any {
+export function tfCentralizationRuleForOrganizationSourcePropertyToTerraform(struct?: TfCentralizationRuleForOrganization.SourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -646,13 +646,13 @@ export function awsObservabilityadminCentralizationRuleForOrganizationSourceProp
   return {
     regions: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.regions),
     scope: cdktn.stringToTerraform(struct!.scope),
-    source_logs_configuration: cdktn.listMapper(awsObservabilityadminCentralizationRuleForOrganizationSourceLogsConfigurationPropertyToTerraform, true)(struct!.sourceLogsConfiguration),
-    source_metrics_configuration: cdktn.listMapper(awsObservabilityadminCentralizationRuleForOrganizationSourceMetricsConfigurationPropertyToTerraform, true)(struct!.sourceMetricsConfiguration),
+    source_logs_configuration: cdktn.listMapper(tfCentralizationRuleForOrganizationSourceLogsConfigurationPropertyToTerraform, true)(struct!.sourceLogsConfiguration),
+    source_metrics_configuration: cdktn.listMapper(tfCentralizationRuleForOrganizationSourceMetricsConfigurationPropertyToTerraform, true)(struct!.sourceMetricsConfiguration),
   }
 }
 
 
-export function awsObservabilityadminCentralizationRuleForOrganizationSourcePropertyToHclTerraform(struct?: AwsObservabilityadminCentralizationRuleForOrganization.SourceProperty | cdktn.IResolvable): any {
+export function tfCentralizationRuleForOrganizationSourcePropertyToHclTerraform(struct?: TfCentralizationRuleForOrganization.SourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -671,13 +671,13 @@ export function awsObservabilityadminCentralizationRuleForOrganizationSourceProp
       storageClassType: "string",
     },
     source_logs_configuration: {
-      value: cdktn.listMapperHcl(awsObservabilityadminCentralizationRuleForOrganizationSourceLogsConfigurationPropertyToHclTerraform, true)(struct!.sourceLogsConfiguration),
+      value: cdktn.listMapperHcl(tfCentralizationRuleForOrganizationSourceLogsConfigurationPropertyToHclTerraform, true)(struct!.sourceLogsConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "SourceLogsConfigurationPropertyList",
     },
     source_metrics_configuration: {
-      value: cdktn.listMapperHcl(awsObservabilityadminCentralizationRuleForOrganizationSourceMetricsConfigurationPropertyToHclTerraform, true)(struct!.sourceMetricsConfiguration),
+      value: cdktn.listMapperHcl(tfCentralizationRuleForOrganizationSourceMetricsConfigurationPropertyToHclTerraform, true)(struct!.sourceMetricsConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "SourceMetricsConfigurationPropertyList",
@@ -689,32 +689,32 @@ export function awsObservabilityadminCentralizationRuleForOrganizationSourceProp
 }
 
 
-export function awsObservabilityadminCentralizationRuleForOrganizationRulePropertyToTerraform(struct?: AwsObservabilityadminCentralizationRuleForOrganization.RuleProperty | cdktn.IResolvable): any {
+export function tfCentralizationRuleForOrganizationRulePropertyToTerraform(struct?: TfCentralizationRuleForOrganization.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    destination: cdktn.listMapper(awsObservabilityadminCentralizationRuleForOrganizationDestinationPropertyToTerraform, true)(struct!.destination),
-    source: cdktn.listMapper(awsObservabilityadminCentralizationRuleForOrganizationSourcePropertyToTerraform, true)(struct!.source),
+    destination: cdktn.listMapper(tfCentralizationRuleForOrganizationDestinationPropertyToTerraform, true)(struct!.destination),
+    source: cdktn.listMapper(tfCentralizationRuleForOrganizationSourcePropertyToTerraform, true)(struct!.source),
   }
 }
 
 
-export function awsObservabilityadminCentralizationRuleForOrganizationRulePropertyToHclTerraform(struct?: AwsObservabilityadminCentralizationRuleForOrganization.RuleProperty | cdktn.IResolvable): any {
+export function tfCentralizationRuleForOrganizationRulePropertyToHclTerraform(struct?: TfCentralizationRuleForOrganization.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     destination: {
-      value: cdktn.listMapperHcl(awsObservabilityadminCentralizationRuleForOrganizationDestinationPropertyToHclTerraform, true)(struct!.destination),
+      value: cdktn.listMapperHcl(tfCentralizationRuleForOrganizationDestinationPropertyToHclTerraform, true)(struct!.destination),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationPropertyList",
     },
     source: {
-      value: cdktn.listMapperHcl(awsObservabilityadminCentralizationRuleForOrganizationSourcePropertyToHclTerraform, true)(struct!.source),
+      value: cdktn.listMapperHcl(tfCentralizationRuleForOrganizationSourcePropertyToHclTerraform, true)(struct!.source),
       isBlock: true,
       type: "list",
       storageClassType: "SourcePropertyList",
@@ -726,7 +726,7 @@ export function awsObservabilityadminCentralizationRuleForOrganizationRuleProper
 }
 
 
-export function awsObservabilityadminCentralizationRuleForOrganizationTimeoutsPropertyToTerraform(struct?: AwsObservabilityadminCentralizationRuleForOrganization.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfCentralizationRuleForOrganizationTimeoutsPropertyToTerraform(struct?: TfCentralizationRuleForOrganization.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -738,7 +738,7 @@ export function awsObservabilityadminCentralizationRuleForOrganizationTimeoutsPr
 }
 
 
-export function awsObservabilityadminCentralizationRuleForOrganizationTimeoutsPropertyToHclTerraform(struct?: AwsObservabilityadminCentralizationRuleForOrganization.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfCentralizationRuleForOrganizationTimeoutsPropertyToHclTerraform(struct?: TfCentralizationRuleForOrganization.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -763,14 +763,14 @@ export function awsObservabilityadminCentralizationRuleForOrganizationTimeoutsPr
 }
 
 
-export namespace AwsObservabilityadminCentralizationRuleForOrganization {
+export namespace TfCentralizationRuleForOrganization {
 export interface RuleDestinationDestinationLogsConfigurationBackupConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#kms_key_arn AwsObservabilityadminCentralizationRuleForOrganization#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#kms_key_arn TfCentralizationRuleForOrganization#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#region AwsObservabilityadminCentralizationRuleForOrganization#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#region TfCentralizationRuleForOrganization#region}
   */
   readonly region?: string;
 }
@@ -878,7 +878,7 @@ export class RuleDestinationDestinationLogsConfigurationBackupConfigurationPrope
 }
 export interface LogGroupNameConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#log_group_name_pattern AwsObservabilityadminCentralizationRuleForOrganization#log_group_name_pattern}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#log_group_name_pattern TfCentralizationRuleForOrganization#log_group_name_pattern}
   */
   readonly logGroupNamePattern: string;
 }
@@ -961,19 +961,19 @@ export class LogGroupNameConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface LogsEncryptionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#encryption_conflict_resolution_strategy AwsObservabilityadminCentralizationRuleForOrganization#encryption_conflict_resolution_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#encryption_conflict_resolution_strategy TfCentralizationRuleForOrganization#encryption_conflict_resolution_strategy}
   */
   readonly encryptionConflictResolutionStrategy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#encryption_scope AwsObservabilityadminCentralizationRuleForOrganization#encryption_scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#encryption_scope TfCentralizationRuleForOrganization#encryption_scope}
   */
   readonly encryptionScope?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#encryption_strategy AwsObservabilityadminCentralizationRuleForOrganization#encryption_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#encryption_strategy TfCentralizationRuleForOrganization#encryption_strategy}
   */
   readonly encryptionStrategy: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#kms_key_arn AwsObservabilityadminCentralizationRuleForOrganization#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#kms_key_arn TfCentralizationRuleForOrganization#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
 }
@@ -1122,11 +1122,11 @@ export class LogsEncryptionConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface TagPropagationConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#destination_role_arn AwsObservabilityadminCentralizationRuleForOrganization#destination_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#destination_role_arn TfCentralizationRuleForOrganization#destination_role_arn}
   */
   readonly destinationRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#tag_conflict_resolution_strategy AwsObservabilityadminCentralizationRuleForOrganization#tag_conflict_resolution_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#tag_conflict_resolution_strategy TfCentralizationRuleForOrganization#tag_conflict_resolution_strategy}
   */
   readonly tagConflictResolutionStrategy?: string;
 }
@@ -1233,25 +1233,25 @@ export interface DestinationLogsConfigurationProperty {
   /**
   * backup_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#backup_configuration AwsObservabilityadminCentralizationRuleForOrganization#backup_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#backup_configuration TfCentralizationRuleForOrganization#backup_configuration}
   */
   readonly backupConfiguration?: RuleDestinationDestinationLogsConfigurationBackupConfigurationProperty[] | cdktn.IResolvable;
   /**
   * log_group_name_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#log_group_name_configuration AwsObservabilityadminCentralizationRuleForOrganization#log_group_name_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#log_group_name_configuration TfCentralizationRuleForOrganization#log_group_name_configuration}
   */
   readonly logGroupNameConfiguration?: LogGroupNameConfigurationProperty[] | cdktn.IResolvable;
   /**
   * logs_encryption_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#logs_encryption_configuration AwsObservabilityadminCentralizationRuleForOrganization#logs_encryption_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#logs_encryption_configuration TfCentralizationRuleForOrganization#logs_encryption_configuration}
   */
   readonly logsEncryptionConfiguration?: LogsEncryptionConfigurationProperty[] | cdktn.IResolvable;
   /**
   * tag_propagation_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#tag_propagation_configuration AwsObservabilityadminCentralizationRuleForOrganization#tag_propagation_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#tag_propagation_configuration TfCentralizationRuleForOrganization#tag_propagation_configuration}
   */
   readonly tagPropagationConfiguration?: TagPropagationConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -1403,7 +1403,7 @@ export class DestinationLogsConfigurationPropertyList extends cdktn.ComplexList 
 }
 export interface RuleDestinationDestinationMetricsConfigurationBackupConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#region AwsObservabilityadminCentralizationRuleForOrganization#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#region TfCentralizationRuleForOrganization#region}
   */
   readonly region: string;
 }
@@ -1488,7 +1488,7 @@ export interface DestinationMetricsConfigurationProperty {
   /**
   * backup_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#backup_configuration AwsObservabilityadminCentralizationRuleForOrganization#backup_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#backup_configuration TfCentralizationRuleForOrganization#backup_configuration}
   */
   readonly backupConfiguration?: RuleDestinationDestinationMetricsConfigurationBackupConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -1574,23 +1574,23 @@ export class DestinationMetricsConfigurationPropertyList extends cdktn.ComplexLi
 }
 export interface DestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#account AwsObservabilityadminCentralizationRuleForOrganization#account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#account TfCentralizationRuleForOrganization#account}
   */
   readonly account: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#region AwsObservabilityadminCentralizationRuleForOrganization#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#region TfCentralizationRuleForOrganization#region}
   */
   readonly region: string;
   /**
   * destination_logs_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#destination_logs_configuration AwsObservabilityadminCentralizationRuleForOrganization#destination_logs_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#destination_logs_configuration TfCentralizationRuleForOrganization#destination_logs_configuration}
   */
   readonly destinationLogsConfiguration?: DestinationLogsConfigurationProperty[] | cdktn.IResolvable;
   /**
   * destination_metrics_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#destination_metrics_configuration AwsObservabilityadminCentralizationRuleForOrganization#destination_metrics_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#destination_metrics_configuration TfCentralizationRuleForOrganization#destination_metrics_configuration}
   */
   readonly destinationMetricsConfiguration?: DestinationMetricsConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -1736,15 +1736,15 @@ export class DestinationPropertyList extends cdktn.ComplexList {
 }
 export interface SourceLogsConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#data_source_selection_criteria AwsObservabilityadminCentralizationRuleForOrganization#data_source_selection_criteria}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#data_source_selection_criteria TfCentralizationRuleForOrganization#data_source_selection_criteria}
   */
   readonly dataSourceSelectionCriteria?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#encrypted_log_group_strategy AwsObservabilityadminCentralizationRuleForOrganization#encrypted_log_group_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#encrypted_log_group_strategy TfCentralizationRuleForOrganization#encrypted_log_group_strategy}
   */
   readonly encryptedLogGroupStrategy: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#log_group_selection_criteria AwsObservabilityadminCentralizationRuleForOrganization#log_group_selection_criteria}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#log_group_selection_criteria TfCentralizationRuleForOrganization#log_group_selection_criteria}
   */
   readonly logGroupSelectionCriteria?: string;
 }
@@ -1871,7 +1871,7 @@ export class SourceLogsConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface SourceMetricsConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#metrics_selection_criteria AwsObservabilityadminCentralizationRuleForOrganization#metrics_selection_criteria}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#metrics_selection_criteria TfCentralizationRuleForOrganization#metrics_selection_criteria}
   */
   readonly metricsSelectionCriteria: string;
 }
@@ -1954,23 +1954,23 @@ export class SourceMetricsConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface SourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#regions AwsObservabilityadminCentralizationRuleForOrganization#regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#regions TfCentralizationRuleForOrganization#regions}
   */
   readonly regions: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#scope AwsObservabilityadminCentralizationRuleForOrganization#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#scope TfCentralizationRuleForOrganization#scope}
   */
   readonly scope: string;
   /**
   * source_logs_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#source_logs_configuration AwsObservabilityadminCentralizationRuleForOrganization#source_logs_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#source_logs_configuration TfCentralizationRuleForOrganization#source_logs_configuration}
   */
   readonly sourceLogsConfiguration?: SourceLogsConfigurationProperty[] | cdktn.IResolvable;
   /**
   * source_metrics_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#source_metrics_configuration AwsObservabilityadminCentralizationRuleForOrganization#source_metrics_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#source_metrics_configuration TfCentralizationRuleForOrganization#source_metrics_configuration}
   */
   readonly sourceMetricsConfiguration?: SourceMetricsConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -2118,13 +2118,13 @@ export interface RuleProperty {
   /**
   * destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#destination AwsObservabilityadminCentralizationRuleForOrganization#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#destination TfCentralizationRuleForOrganization#destination}
   */
   readonly destination?: DestinationProperty[] | cdktn.IResolvable;
   /**
   * source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#source AwsObservabilityadminCentralizationRuleForOrganization#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#source TfCentralizationRuleForOrganization#source}
   */
   readonly source?: SourceProperty[] | cdktn.IResolvable;
 }
@@ -2234,13 +2234,13 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#create AwsObservabilityadminCentralizationRuleForOrganization#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#create TfCentralizationRuleForOrganization#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#update AwsObservabilityadminCentralizationRuleForOrganization#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_centralization_rule_for_organization#update TfCentralizationRuleForOrganization#update}
   */
   readonly update?: string;
 }

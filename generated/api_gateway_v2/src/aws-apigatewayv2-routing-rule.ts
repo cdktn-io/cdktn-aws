@@ -5,39 +5,39 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsApigatewayv2RoutingRuleConfig extends cdktn.TerraformMetaArguments {
+export interface TfRoutingRuleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_routing_rule#domain_name AwsApigatewayv2RoutingRule#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_routing_rule#domain_name TfRoutingRule#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_routing_rule#priority AwsApigatewayv2RoutingRule#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_routing_rule#priority TfRoutingRule#priority}
   */
   readonly priority: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_routing_rule#region AwsApigatewayv2RoutingRule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_routing_rule#region TfRoutingRule#region}
   */
   readonly region?: string;
   /**
   * action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_routing_rule#action AwsApigatewayv2RoutingRule#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_routing_rule#action TfRoutingRule#action}
   */
-  readonly action?: AwsApigatewayv2RoutingRule.ActionProperty[] | cdktn.IResolvable;
+  readonly action?: TfRoutingRule.ActionProperty[] | cdktn.IResolvable;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_routing_rule#condition AwsApigatewayv2RoutingRule#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_routing_rule#condition TfRoutingRule#condition}
   */
-  readonly condition?: AwsApigatewayv2RoutingRule.ConditionProperty[] | cdktn.IResolvable;
+  readonly condition?: TfRoutingRule.ConditionProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_routing_rule aws_apigatewayv2_routing_rule}
 */
-export class AwsApigatewayv2RoutingRule extends cdktn.TerraformResource {
+export class TfRoutingRule extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -48,11 +48,11 @@ export class AwsApigatewayv2RoutingRule extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsApigatewayv2RoutingRule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfRoutingRule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsApigatewayv2RoutingRule to import
-  * @param importFromId The id of the existing AwsApigatewayv2RoutingRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_routing_rule#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsApigatewayv2RoutingRule to import is found
+  * @param importToId The construct id used in the generated config for the TfRoutingRule to import
+  * @param importFromId The id of the existing TfRoutingRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_routing_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfRoutingRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_apigatewayv2_routing_rule", importId: importFromId, provider });
@@ -67,9 +67,9 @@ export class AwsApigatewayv2RoutingRule extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsApigatewayv2RoutingRuleConfig
+  * @param options TfRoutingRuleConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsApigatewayv2RoutingRuleConfig) {
+  public constructor(scope: Construct, id: string, config: TfRoutingRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_apigatewayv2_routing_rule',
       terraformGeneratorMetadata: {
@@ -149,11 +149,11 @@ export class AwsApigatewayv2RoutingRule extends cdktn.TerraformResource {
   }
 
   // action - computed: false, optional: true, required: false
-  private _action = new AwsApigatewayv2RoutingRule.ActionPropertyList(this, "action", false);
+  private _action = new TfRoutingRule.ActionPropertyList(this, "action", false);
   public get action() {
     return this._action;
   }
-  public putAction(value: AwsApigatewayv2RoutingRule.ActionProperty[] | cdktn.IResolvable) {
+  public putAction(value: TfRoutingRule.ActionProperty[] | cdktn.IResolvable) {
     this._action.internalValue = value;
   }
   public resetAction() {
@@ -165,11 +165,11 @@ export class AwsApigatewayv2RoutingRule extends cdktn.TerraformResource {
   }
 
   // condition - computed: false, optional: true, required: false
-  private _condition = new AwsApigatewayv2RoutingRule.ConditionPropertyList(this, "condition", false);
+  private _condition = new TfRoutingRule.ConditionPropertyList(this, "condition", false);
   public get condition() {
     return this._condition;
   }
-  public putCondition(value: AwsApigatewayv2RoutingRule.ConditionProperty[] | cdktn.IResolvable) {
+  public putCondition(value: TfRoutingRule.ConditionProperty[] | cdktn.IResolvable) {
     this._condition.internalValue = value;
   }
   public resetCondition() {
@@ -189,8 +189,8 @@ export class AwsApigatewayv2RoutingRule extends cdktn.TerraformResource {
       domain_name: cdktn.stringToTerraform(this._domainName),
       priority: cdktn.numberToTerraform(this._priority),
       region: cdktn.stringToTerraform(this._region),
-      action: cdktn.listMapper(awsApigatewayv2RoutingRuleActionPropertyToTerraform, true)(this._action.internalValue),
-      condition: cdktn.listMapper(awsApigatewayv2RoutingRuleConditionPropertyToTerraform, true)(this._condition.internalValue),
+      action: cdktn.listMapper(tfRoutingRuleActionPropertyToTerraform, true)(this._action.internalValue),
+      condition: cdktn.listMapper(tfRoutingRuleConditionPropertyToTerraform, true)(this._condition.internalValue),
     };
   }
 
@@ -215,16 +215,16 @@ export class AwsApigatewayv2RoutingRule extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       action: {
-        value: cdktn.listMapperHcl(awsApigatewayv2RoutingRuleActionPropertyToHclTerraform, true)(this._action.internalValue),
+        value: cdktn.listMapperHcl(tfRoutingRuleActionPropertyToHclTerraform, true)(this._action.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsApigatewayv2RoutingRule.ActionPropertyList",
+        storageClassType: "TfRoutingRule.ActionPropertyList",
       },
       condition: {
-        value: cdktn.listMapperHcl(awsApigatewayv2RoutingRuleConditionPropertyToHclTerraform, true)(this._condition.internalValue),
+        value: cdktn.listMapperHcl(tfRoutingRuleConditionPropertyToHclTerraform, true)(this._condition.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsApigatewayv2RoutingRule.ConditionPropertyList",
+        storageClassType: "TfRoutingRule.ConditionPropertyList",
       },
     };
 
@@ -233,7 +233,7 @@ export class AwsApigatewayv2RoutingRule extends cdktn.TerraformResource {
   }
 }
 
-export function awsApigatewayv2RoutingRuleInvokeApiPropertyToTerraform(struct?: AwsApigatewayv2RoutingRule.InvokeApiProperty | cdktn.IResolvable): any {
+export function tfRoutingRuleInvokeApiPropertyToTerraform(struct?: TfRoutingRule.InvokeApiProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -246,7 +246,7 @@ export function awsApigatewayv2RoutingRuleInvokeApiPropertyToTerraform(struct?: 
 }
 
 
-export function awsApigatewayv2RoutingRuleInvokeApiPropertyToHclTerraform(struct?: AwsApigatewayv2RoutingRule.InvokeApiProperty | cdktn.IResolvable): any {
+export function tfRoutingRuleInvokeApiPropertyToHclTerraform(struct?: TfRoutingRule.InvokeApiProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -277,25 +277,25 @@ export function awsApigatewayv2RoutingRuleInvokeApiPropertyToHclTerraform(struct
 }
 
 
-export function awsApigatewayv2RoutingRuleActionPropertyToTerraform(struct?: AwsApigatewayv2RoutingRule.ActionProperty | cdktn.IResolvable): any {
+export function tfRoutingRuleActionPropertyToTerraform(struct?: TfRoutingRule.ActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    invoke_api: cdktn.listMapper(awsApigatewayv2RoutingRuleInvokeApiPropertyToTerraform, true)(struct!.invokeApi),
+    invoke_api: cdktn.listMapper(tfRoutingRuleInvokeApiPropertyToTerraform, true)(struct!.invokeApi),
   }
 }
 
 
-export function awsApigatewayv2RoutingRuleActionPropertyToHclTerraform(struct?: AwsApigatewayv2RoutingRule.ActionProperty | cdktn.IResolvable): any {
+export function tfRoutingRuleActionPropertyToHclTerraform(struct?: TfRoutingRule.ActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     invoke_api: {
-      value: cdktn.listMapperHcl(awsApigatewayv2RoutingRuleInvokeApiPropertyToHclTerraform, true)(struct!.invokeApi),
+      value: cdktn.listMapperHcl(tfRoutingRuleInvokeApiPropertyToHclTerraform, true)(struct!.invokeApi),
       isBlock: true,
       type: "list",
       storageClassType: "InvokeApiPropertyList",
@@ -307,7 +307,7 @@ export function awsApigatewayv2RoutingRuleActionPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsApigatewayv2RoutingRuleMatchBasePathsPropertyToTerraform(struct?: AwsApigatewayv2RoutingRule.MatchBasePathsProperty | cdktn.IResolvable): any {
+export function tfRoutingRuleMatchBasePathsPropertyToTerraform(struct?: TfRoutingRule.MatchBasePathsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -318,7 +318,7 @@ export function awsApigatewayv2RoutingRuleMatchBasePathsPropertyToTerraform(stru
 }
 
 
-export function awsApigatewayv2RoutingRuleMatchBasePathsPropertyToHclTerraform(struct?: AwsApigatewayv2RoutingRule.MatchBasePathsProperty | cdktn.IResolvable): any {
+export function tfRoutingRuleMatchBasePathsPropertyToHclTerraform(struct?: TfRoutingRule.MatchBasePathsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -337,7 +337,7 @@ export function awsApigatewayv2RoutingRuleMatchBasePathsPropertyToHclTerraform(s
 }
 
 
-export function awsApigatewayv2RoutingRuleAnyOfPropertyToTerraform(struct?: AwsApigatewayv2RoutingRule.AnyOfProperty | cdktn.IResolvable): any {
+export function tfRoutingRuleAnyOfPropertyToTerraform(struct?: TfRoutingRule.AnyOfProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -349,7 +349,7 @@ export function awsApigatewayv2RoutingRuleAnyOfPropertyToTerraform(struct?: AwsA
 }
 
 
-export function awsApigatewayv2RoutingRuleAnyOfPropertyToHclTerraform(struct?: AwsApigatewayv2RoutingRule.AnyOfProperty | cdktn.IResolvable): any {
+export function tfRoutingRuleAnyOfPropertyToHclTerraform(struct?: TfRoutingRule.AnyOfProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -374,25 +374,25 @@ export function awsApigatewayv2RoutingRuleAnyOfPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsApigatewayv2RoutingRuleMatchHeadersPropertyToTerraform(struct?: AwsApigatewayv2RoutingRule.MatchHeadersProperty | cdktn.IResolvable): any {
+export function tfRoutingRuleMatchHeadersPropertyToTerraform(struct?: TfRoutingRule.MatchHeadersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    any_of: cdktn.listMapper(awsApigatewayv2RoutingRuleAnyOfPropertyToTerraform, true)(struct!.anyOf),
+    any_of: cdktn.listMapper(tfRoutingRuleAnyOfPropertyToTerraform, true)(struct!.anyOf),
   }
 }
 
 
-export function awsApigatewayv2RoutingRuleMatchHeadersPropertyToHclTerraform(struct?: AwsApigatewayv2RoutingRule.MatchHeadersProperty | cdktn.IResolvable): any {
+export function tfRoutingRuleMatchHeadersPropertyToHclTerraform(struct?: TfRoutingRule.MatchHeadersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     any_of: {
-      value: cdktn.listMapperHcl(awsApigatewayv2RoutingRuleAnyOfPropertyToHclTerraform, true)(struct!.anyOf),
+      value: cdktn.listMapperHcl(tfRoutingRuleAnyOfPropertyToHclTerraform, true)(struct!.anyOf),
       isBlock: true,
       type: "list",
       storageClassType: "AnyOfPropertyList",
@@ -404,32 +404,32 @@ export function awsApigatewayv2RoutingRuleMatchHeadersPropertyToHclTerraform(str
 }
 
 
-export function awsApigatewayv2RoutingRuleConditionPropertyToTerraform(struct?: AwsApigatewayv2RoutingRule.ConditionProperty | cdktn.IResolvable): any {
+export function tfRoutingRuleConditionPropertyToTerraform(struct?: TfRoutingRule.ConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    match_base_paths: cdktn.listMapper(awsApigatewayv2RoutingRuleMatchBasePathsPropertyToTerraform, true)(struct!.matchBasePaths),
-    match_headers: cdktn.listMapper(awsApigatewayv2RoutingRuleMatchHeadersPropertyToTerraform, true)(struct!.matchHeaders),
+    match_base_paths: cdktn.listMapper(tfRoutingRuleMatchBasePathsPropertyToTerraform, true)(struct!.matchBasePaths),
+    match_headers: cdktn.listMapper(tfRoutingRuleMatchHeadersPropertyToTerraform, true)(struct!.matchHeaders),
   }
 }
 
 
-export function awsApigatewayv2RoutingRuleConditionPropertyToHclTerraform(struct?: AwsApigatewayv2RoutingRule.ConditionProperty | cdktn.IResolvable): any {
+export function tfRoutingRuleConditionPropertyToHclTerraform(struct?: TfRoutingRule.ConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     match_base_paths: {
-      value: cdktn.listMapperHcl(awsApigatewayv2RoutingRuleMatchBasePathsPropertyToHclTerraform, true)(struct!.matchBasePaths),
+      value: cdktn.listMapperHcl(tfRoutingRuleMatchBasePathsPropertyToHclTerraform, true)(struct!.matchBasePaths),
       isBlock: true,
       type: "list",
       storageClassType: "MatchBasePathsPropertyList",
     },
     match_headers: {
-      value: cdktn.listMapperHcl(awsApigatewayv2RoutingRuleMatchHeadersPropertyToHclTerraform, true)(struct!.matchHeaders),
+      value: cdktn.listMapperHcl(tfRoutingRuleMatchHeadersPropertyToHclTerraform, true)(struct!.matchHeaders),
       isBlock: true,
       type: "list",
       storageClassType: "MatchHeadersPropertyList",
@@ -441,18 +441,18 @@ export function awsApigatewayv2RoutingRuleConditionPropertyToHclTerraform(struct
 }
 
 
-export namespace AwsApigatewayv2RoutingRule {
+export namespace TfRoutingRule {
 export interface InvokeApiProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_routing_rule#api_id AwsApigatewayv2RoutingRule#api_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_routing_rule#api_id TfRoutingRule#api_id}
   */
   readonly apiId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_routing_rule#stage AwsApigatewayv2RoutingRule#stage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_routing_rule#stage TfRoutingRule#stage}
   */
   readonly stage: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_routing_rule#strip_base_path AwsApigatewayv2RoutingRule#strip_base_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_routing_rule#strip_base_path TfRoutingRule#strip_base_path}
   */
   readonly stripBasePath?: boolean | cdktn.IResolvable;
 }
@@ -578,7 +578,7 @@ export interface ActionProperty {
   /**
   * invoke_api block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_routing_rule#invoke_api AwsApigatewayv2RoutingRule#invoke_api}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_routing_rule#invoke_api TfRoutingRule#invoke_api}
   */
   readonly invokeApi?: InvokeApiProperty[] | cdktn.IResolvable;
 }
@@ -664,7 +664,7 @@ export class ActionPropertyList extends cdktn.ComplexList {
 }
 export interface MatchBasePathsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_routing_rule#any_of AwsApigatewayv2RoutingRule#any_of}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_routing_rule#any_of TfRoutingRule#any_of}
   */
   readonly anyOf: string[];
 }
@@ -747,11 +747,11 @@ export class MatchBasePathsPropertyList extends cdktn.ComplexList {
 }
 export interface AnyOfProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_routing_rule#header AwsApigatewayv2RoutingRule#header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_routing_rule#header TfRoutingRule#header}
   */
   readonly header: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_routing_rule#value_glob AwsApigatewayv2RoutingRule#value_glob}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_routing_rule#value_glob TfRoutingRule#value_glob}
   */
   readonly valueGlob: string;
 }
@@ -855,7 +855,7 @@ export interface MatchHeadersProperty {
   /**
   * any_of block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_routing_rule#any_of AwsApigatewayv2RoutingRule#any_of}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_routing_rule#any_of TfRoutingRule#any_of}
   */
   readonly anyOf?: AnyOfProperty[] | cdktn.IResolvable;
 }
@@ -943,13 +943,13 @@ export interface ConditionProperty {
   /**
   * match_base_paths block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_routing_rule#match_base_paths AwsApigatewayv2RoutingRule#match_base_paths}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_routing_rule#match_base_paths TfRoutingRule#match_base_paths}
   */
   readonly matchBasePaths?: MatchBasePathsProperty[] | cdktn.IResolvable;
   /**
   * match_headers block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_routing_rule#match_headers AwsApigatewayv2RoutingRule#match_headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_routing_rule#match_headers TfRoutingRule#match_headers}
   */
   readonly matchHeaders?: MatchHeadersProperty[] | cdktn.IResolvable;
 }

@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsAppintegrationsEventIntegrationConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataEventIntegrationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appintegrations_event_integration#id DataAwsAppintegrationsEventIntegration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appintegrations_event_integration#id TfDataEventIntegration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appintegrations_event_integration#name DataAwsAppintegrationsEventIntegration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appintegrations_event_integration#name TfDataEventIntegration#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appintegrations_event_integration#region DataAwsAppintegrationsEventIntegration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appintegrations_event_integration#region TfDataEventIntegration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appintegrations_event_integration#tags DataAwsAppintegrationsEventIntegration#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appintegrations_event_integration#tags TfDataEventIntegration#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -32,7 +32,7 @@ export interface DataAwsAppintegrationsEventIntegrationConfig extends cdktn.Terr
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appintegrations_event_integration aws_appintegrations_event_integration}
 */
-export class DataAwsAppintegrationsEventIntegration extends cdktn.TerraformDataSource {
+export class TfDataEventIntegration extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class DataAwsAppintegrationsEventIntegration extends cdktn.TerraformDataS
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsAppintegrationsEventIntegration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataEventIntegration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsAppintegrationsEventIntegration to import
-  * @param importFromId The id of the existing DataAwsAppintegrationsEventIntegration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appintegrations_event_integration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsAppintegrationsEventIntegration to import is found
+  * @param importToId The construct id used in the generated config for the TfDataEventIntegration to import
+  * @param importFromId The id of the existing TfDataEventIntegration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appintegrations_event_integration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataEventIntegration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appintegrations_event_integration", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class DataAwsAppintegrationsEventIntegration extends cdktn.TerraformDataS
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsAppintegrationsEventIntegrationConfig
+  * @param options TfDataEventIntegrationConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsAppintegrationsEventIntegrationConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataEventIntegrationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appintegrations_event_integration',
       terraformGeneratorMetadata: {
@@ -101,7 +101,7 @@ export class DataAwsAppintegrationsEventIntegration extends cdktn.TerraformDataS
   }
 
   // event_filter - computed: true, optional: false, required: false
-  private _eventFilter = new DataAwsAppintegrationsEventIntegration.EventFilterPropertyList(this, "event_filter", false);
+  private _eventFilter = new TfDataEventIntegration.EventFilterPropertyList(this, "event_filter", false);
   public get eventFilter() {
     return this._eventFilter;
   }
@@ -218,7 +218,7 @@ export class DataAwsAppintegrationsEventIntegration extends cdktn.TerraformDataS
   }
 }
 
-export function dataAwsAppintegrationsEventIntegrationEventFilterPropertyToTerraform(struct?: DataAwsAppintegrationsEventIntegration.EventFilterProperty): any {
+export function tfDataEventIntegrationEventFilterPropertyToTerraform(struct?: TfDataEventIntegration.EventFilterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -228,7 +228,7 @@ export function dataAwsAppintegrationsEventIntegrationEventFilterPropertyToTerra
 }
 
 
-export function dataAwsAppintegrationsEventIntegrationEventFilterPropertyToHclTerraform(struct?: DataAwsAppintegrationsEventIntegration.EventFilterProperty): any {
+export function tfDataEventIntegrationEventFilterPropertyToHclTerraform(struct?: TfDataEventIntegration.EventFilterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -239,7 +239,7 @@ export function dataAwsAppintegrationsEventIntegrationEventFilterPropertyToHclTe
 }
 
 
-export namespace DataAwsAppintegrationsEventIntegration {
+export namespace TfDataEventIntegration {
 export interface EventFilterProperty {
 }
 export class EventFilterPropertyOutputReference extends cdktn.ComplexObject {

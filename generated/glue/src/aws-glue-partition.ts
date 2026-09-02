@@ -5,52 +5,52 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsGluePartitionConfig extends cdktn.TerraformMetaArguments {
+export interface TfPartitionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#catalog_id AwsGluePartition#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#catalog_id TfPartition#catalog_id}
   */
   readonly catalogId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#database_name AwsGluePartition#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#database_name TfPartition#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#id AwsGluePartition#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#id TfPartition#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#parameters AwsGluePartition#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#parameters TfPartition#parameters}
   */
   readonly parameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#partition_values AwsGluePartition#partition_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#partition_values TfPartition#partition_values}
   */
   readonly partitionValues: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#region AwsGluePartition#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#region TfPartition#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#table_name AwsGluePartition#table_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#table_name TfPartition#table_name}
   */
   readonly tableName: string;
   /**
   * storage_descriptor block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#storage_descriptor AwsGluePartition#storage_descriptor}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#storage_descriptor TfPartition#storage_descriptor}
   */
-  readonly storageDescriptor?: AwsGluePartition.StorageDescriptorProperty;
+  readonly storageDescriptor?: TfPartition.StorageDescriptorProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition aws_glue_partition}
 */
-export class AwsGluePartition extends cdktn.TerraformResource {
+export class TfPartition extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class AwsGluePartition extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsGluePartition resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfPartition resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsGluePartition to import
-  * @param importFromId The id of the existing AwsGluePartition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsGluePartition to import is found
+  * @param importToId The construct id used in the generated config for the TfPartition to import
+  * @param importFromId The id of the existing TfPartition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfPartition to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_glue_partition", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class AwsGluePartition extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsGluePartitionConfig
+  * @param options TfPartitionConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsGluePartitionConfig) {
+  public constructor(scope: Construct, id: string, config: TfPartitionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_glue_partition',
       terraformGeneratorMetadata: {
@@ -231,11 +231,11 @@ export class AwsGluePartition extends cdktn.TerraformResource {
   }
 
   // storage_descriptor - computed: false, optional: true, required: false
-  private _storageDescriptor = new AwsGluePartition.StorageDescriptorPropertyOutputReference(this, "storage_descriptor");
+  private _storageDescriptor = new TfPartition.StorageDescriptorPropertyOutputReference(this, "storage_descriptor");
   public get storageDescriptor() {
     return this._storageDescriptor;
   }
-  public putStorageDescriptor(value: AwsGluePartition.StorageDescriptorProperty) {
+  public putStorageDescriptor(value: TfPartition.StorageDescriptorProperty) {
     this._storageDescriptor.internalValue = value;
   }
   public resetStorageDescriptor() {
@@ -259,7 +259,7 @@ export class AwsGluePartition extends cdktn.TerraformResource {
       partition_values: cdktn.listMapper(cdktn.stringToTerraform, false)(this._partitionValues),
       region: cdktn.stringToTerraform(this._region),
       table_name: cdktn.stringToTerraform(this._tableName),
-      storage_descriptor: awsGluePartitionStorageDescriptorPropertyToTerraform(this._storageDescriptor.internalValue),
+      storage_descriptor: tfPartitionStorageDescriptorPropertyToTerraform(this._storageDescriptor.internalValue),
     };
   }
 
@@ -308,10 +308,10 @@ export class AwsGluePartition extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       storage_descriptor: {
-        value: awsGluePartitionStorageDescriptorPropertyToHclTerraform(this._storageDescriptor.internalValue),
+        value: tfPartitionStorageDescriptorPropertyToHclTerraform(this._storageDescriptor.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsGluePartition.StorageDescriptorPropertyList",
+        storageClassType: "TfPartition.StorageDescriptorPropertyList",
       },
     };
 
@@ -320,7 +320,7 @@ export class AwsGluePartition extends cdktn.TerraformResource {
   }
 }
 
-export function awsGluePartitionColumnsPropertyToTerraform(struct?: AwsGluePartition.ColumnsProperty | cdktn.IResolvable): any {
+export function tfPartitionColumnsPropertyToTerraform(struct?: TfPartition.ColumnsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -333,7 +333,7 @@ export function awsGluePartitionColumnsPropertyToTerraform(struct?: AwsGlueParti
 }
 
 
-export function awsGluePartitionColumnsPropertyToHclTerraform(struct?: AwsGluePartition.ColumnsProperty | cdktn.IResolvable): any {
+export function tfPartitionColumnsPropertyToHclTerraform(struct?: TfPartition.ColumnsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -364,7 +364,7 @@ export function awsGluePartitionColumnsPropertyToHclTerraform(struct?: AwsGluePa
 }
 
 
-export function awsGluePartitionSerDeInfoPropertyToTerraform(struct?: AwsGluePartition.SerDeInfoPropertyOutputReference | AwsGluePartition.SerDeInfoProperty): any {
+export function tfPartitionSerDeInfoPropertyToTerraform(struct?: TfPartition.SerDeInfoPropertyOutputReference | TfPartition.SerDeInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -377,7 +377,7 @@ export function awsGluePartitionSerDeInfoPropertyToTerraform(struct?: AwsGluePar
 }
 
 
-export function awsGluePartitionSerDeInfoPropertyToHclTerraform(struct?: AwsGluePartition.SerDeInfoPropertyOutputReference | AwsGluePartition.SerDeInfoProperty): any {
+export function tfPartitionSerDeInfoPropertyToHclTerraform(struct?: TfPartition.SerDeInfoPropertyOutputReference | TfPartition.SerDeInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -408,7 +408,7 @@ export function awsGluePartitionSerDeInfoPropertyToHclTerraform(struct?: AwsGlue
 }
 
 
-export function awsGluePartitionSkewedInfoPropertyToTerraform(struct?: AwsGluePartition.SkewedInfoPropertyOutputReference | AwsGluePartition.SkewedInfoProperty): any {
+export function tfPartitionSkewedInfoPropertyToTerraform(struct?: TfPartition.SkewedInfoPropertyOutputReference | TfPartition.SkewedInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -421,7 +421,7 @@ export function awsGluePartitionSkewedInfoPropertyToTerraform(struct?: AwsGluePa
 }
 
 
-export function awsGluePartitionSkewedInfoPropertyToHclTerraform(struct?: AwsGluePartition.SkewedInfoPropertyOutputReference | AwsGluePartition.SkewedInfoProperty): any {
+export function tfPartitionSkewedInfoPropertyToHclTerraform(struct?: TfPartition.SkewedInfoPropertyOutputReference | TfPartition.SkewedInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -452,7 +452,7 @@ export function awsGluePartitionSkewedInfoPropertyToHclTerraform(struct?: AwsGlu
 }
 
 
-export function awsGluePartitionSortColumnsPropertyToTerraform(struct?: AwsGluePartition.SortColumnsProperty | cdktn.IResolvable): any {
+export function tfPartitionSortColumnsPropertyToTerraform(struct?: TfPartition.SortColumnsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -464,7 +464,7 @@ export function awsGluePartitionSortColumnsPropertyToTerraform(struct?: AwsGlueP
 }
 
 
-export function awsGluePartitionSortColumnsPropertyToHclTerraform(struct?: AwsGluePartition.SortColumnsProperty | cdktn.IResolvable): any {
+export function tfPartitionSortColumnsPropertyToHclTerraform(struct?: TfPartition.SortColumnsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -489,7 +489,7 @@ export function awsGluePartitionSortColumnsPropertyToHclTerraform(struct?: AwsGl
 }
 
 
-export function awsGluePartitionStorageDescriptorPropertyToTerraform(struct?: AwsGluePartition.StorageDescriptorPropertyOutputReference | AwsGluePartition.StorageDescriptorProperty): any {
+export function tfPartitionStorageDescriptorPropertyToTerraform(struct?: TfPartition.StorageDescriptorPropertyOutputReference | TfPartition.StorageDescriptorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -504,15 +504,15 @@ export function awsGluePartitionStorageDescriptorPropertyToTerraform(struct?: Aw
     output_format: cdktn.stringToTerraform(struct!.outputFormat),
     parameters: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.parameters),
     stored_as_sub_directories: cdktn.booleanToTerraform(struct!.storedAsSubDirectories),
-    columns: cdktn.listMapper(awsGluePartitionColumnsPropertyToTerraform, true)(struct!.columns),
-    ser_de_info: awsGluePartitionSerDeInfoPropertyToTerraform(struct!.serDeInfo),
-    skewed_info: awsGluePartitionSkewedInfoPropertyToTerraform(struct!.skewedInfo),
-    sort_columns: cdktn.listMapper(awsGluePartitionSortColumnsPropertyToTerraform, true)(struct!.sortColumns),
+    columns: cdktn.listMapper(tfPartitionColumnsPropertyToTerraform, true)(struct!.columns),
+    ser_de_info: tfPartitionSerDeInfoPropertyToTerraform(struct!.serDeInfo),
+    skewed_info: tfPartitionSkewedInfoPropertyToTerraform(struct!.skewedInfo),
+    sort_columns: cdktn.listMapper(tfPartitionSortColumnsPropertyToTerraform, true)(struct!.sortColumns),
   }
 }
 
 
-export function awsGluePartitionStorageDescriptorPropertyToHclTerraform(struct?: AwsGluePartition.StorageDescriptorPropertyOutputReference | AwsGluePartition.StorageDescriptorProperty): any {
+export function tfPartitionStorageDescriptorPropertyToHclTerraform(struct?: TfPartition.StorageDescriptorPropertyOutputReference | TfPartition.StorageDescriptorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -573,25 +573,25 @@ export function awsGluePartitionStorageDescriptorPropertyToHclTerraform(struct?:
       storageClassType: "boolean",
     },
     columns: {
-      value: cdktn.listMapperHcl(awsGluePartitionColumnsPropertyToHclTerraform, true)(struct!.columns),
+      value: cdktn.listMapperHcl(tfPartitionColumnsPropertyToHclTerraform, true)(struct!.columns),
       isBlock: true,
       type: "list",
       storageClassType: "ColumnsPropertyList",
     },
     ser_de_info: {
-      value: awsGluePartitionSerDeInfoPropertyToHclTerraform(struct!.serDeInfo),
+      value: tfPartitionSerDeInfoPropertyToHclTerraform(struct!.serDeInfo),
       isBlock: true,
       type: "list",
       storageClassType: "SerDeInfoPropertyList",
     },
     skewed_info: {
-      value: awsGluePartitionSkewedInfoPropertyToHclTerraform(struct!.skewedInfo),
+      value: tfPartitionSkewedInfoPropertyToHclTerraform(struct!.skewedInfo),
       isBlock: true,
       type: "list",
       storageClassType: "SkewedInfoPropertyList",
     },
     sort_columns: {
-      value: cdktn.listMapperHcl(awsGluePartitionSortColumnsPropertyToHclTerraform, true)(struct!.sortColumns),
+      value: cdktn.listMapperHcl(tfPartitionSortColumnsPropertyToHclTerraform, true)(struct!.sortColumns),
       isBlock: true,
       type: "list",
       storageClassType: "SortColumnsPropertyList",
@@ -603,18 +603,18 @@ export function awsGluePartitionStorageDescriptorPropertyToHclTerraform(struct?:
 }
 
 
-export namespace AwsGluePartition {
+export namespace TfPartition {
 export interface ColumnsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#comment AwsGluePartition#comment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#comment TfPartition#comment}
   */
   readonly comment?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#name AwsGluePartition#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#name TfPartition#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#type AwsGluePartition#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#type TfPartition#type}
   */
   readonly type?: string;
 }
@@ -741,15 +741,15 @@ export class ColumnsPropertyList extends cdktn.ComplexList {
 }
 export interface SerDeInfoProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#name AwsGluePartition#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#name TfPartition#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#parameters AwsGluePartition#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#parameters TfPartition#parameters}
   */
   readonly parameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#serialization_library AwsGluePartition#serialization_library}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#serialization_library TfPartition#serialization_library}
   */
   readonly serializationLibrary?: string;
 }
@@ -847,15 +847,15 @@ export class SerDeInfoPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SkewedInfoProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#skewed_column_names AwsGluePartition#skewed_column_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#skewed_column_names TfPartition#skewed_column_names}
   */
   readonly skewedColumnNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#skewed_column_value_location_maps AwsGluePartition#skewed_column_value_location_maps}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#skewed_column_value_location_maps TfPartition#skewed_column_value_location_maps}
   */
   readonly skewedColumnValueLocationMaps?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#skewed_column_values AwsGluePartition#skewed_column_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#skewed_column_values TfPartition#skewed_column_values}
   */
   readonly skewedColumnValues?: string[];
 }
@@ -953,11 +953,11 @@ export class SkewedInfoPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SortColumnsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#column AwsGluePartition#column}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#column TfPartition#column}
   */
   readonly column: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#sort_order AwsGluePartition#sort_order}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#sort_order TfPartition#sort_order}
   */
   readonly sortOrder: number;
 }
@@ -1059,63 +1059,63 @@ export class SortColumnsPropertyList extends cdktn.ComplexList {
 }
 export interface StorageDescriptorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#additional_locations AwsGluePartition#additional_locations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#additional_locations TfPartition#additional_locations}
   */
   readonly additionalLocations?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#bucket_columns AwsGluePartition#bucket_columns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#bucket_columns TfPartition#bucket_columns}
   */
   readonly bucketColumns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#compressed AwsGluePartition#compressed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#compressed TfPartition#compressed}
   */
   readonly compressed?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#input_format AwsGluePartition#input_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#input_format TfPartition#input_format}
   */
   readonly inputFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#location AwsGluePartition#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#location TfPartition#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#number_of_buckets AwsGluePartition#number_of_buckets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#number_of_buckets TfPartition#number_of_buckets}
   */
   readonly numberOfBuckets?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#output_format AwsGluePartition#output_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#output_format TfPartition#output_format}
   */
   readonly outputFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#parameters AwsGluePartition#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#parameters TfPartition#parameters}
   */
   readonly parameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#stored_as_sub_directories AwsGluePartition#stored_as_sub_directories}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#stored_as_sub_directories TfPartition#stored_as_sub_directories}
   */
   readonly storedAsSubDirectories?: boolean | cdktn.IResolvable;
   /**
   * columns block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#columns AwsGluePartition#columns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#columns TfPartition#columns}
   */
   readonly columns?: ColumnsProperty[] | cdktn.IResolvable;
   /**
   * ser_de_info block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#ser_de_info AwsGluePartition#ser_de_info}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#ser_de_info TfPartition#ser_de_info}
   */
   readonly serDeInfo?: SerDeInfoProperty;
   /**
   * skewed_info block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#skewed_info AwsGluePartition#skewed_info}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#skewed_info TfPartition#skewed_info}
   */
   readonly skewedInfo?: SkewedInfoProperty;
   /**
   * sort_columns block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#sort_columns AwsGluePartition#sort_columns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_partition#sort_columns TfPartition#sort_columns}
   */
   readonly sortColumns?: SortColumnsProperty[] | cdktn.IResolvable;
 }

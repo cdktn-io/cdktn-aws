@@ -5,63 +5,63 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEcsDaemonConfig extends cdktn.TerraformMetaArguments {
+export interface TfDaemonConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#capacity_provider_arns AwsEcsDaemon#capacity_provider_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#capacity_provider_arns TfDaemon#capacity_provider_arns}
   */
   readonly capacityProviderArns: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#cluster_arn AwsEcsDaemon#cluster_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#cluster_arn TfDaemon#cluster_arn}
   */
   readonly clusterArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#daemon_task_definition_arn AwsEcsDaemon#daemon_task_definition_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#daemon_task_definition_arn TfDaemon#daemon_task_definition_arn}
   */
   readonly daemonTaskDefinitionArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#enable_ecs_managed_tags AwsEcsDaemon#enable_ecs_managed_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#enable_ecs_managed_tags TfDaemon#enable_ecs_managed_tags}
   */
   readonly enableEcsManagedTags?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#enable_execute_command AwsEcsDaemon#enable_execute_command}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#enable_execute_command TfDaemon#enable_execute_command}
   */
   readonly enableExecuteCommand?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#name AwsEcsDaemon#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#name TfDaemon#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#propagate_tags AwsEcsDaemon#propagate_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#propagate_tags TfDaemon#propagate_tags}
   */
   readonly propagateTags?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#region AwsEcsDaemon#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#region TfDaemon#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#tags AwsEcsDaemon#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#tags TfDaemon#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * deployment_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#deployment_configuration AwsEcsDaemon#deployment_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#deployment_configuration TfDaemon#deployment_configuration}
   */
-  readonly deploymentConfiguration?: AwsEcsDaemon.DeploymentConfigurationProperty[] | cdktn.IResolvable;
+  readonly deploymentConfiguration?: TfDaemon.DeploymentConfigurationProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#timeouts AwsEcsDaemon#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#timeouts TfDaemon#timeouts}
   */
-  readonly timeouts?: AwsEcsDaemon.TimeoutsProperty;
+  readonly timeouts?: TfDaemon.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon aws_ecs_daemon}
 */
-export class AwsEcsDaemon extends cdktn.TerraformResource {
+export class TfDaemon extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -72,11 +72,11 @@ export class AwsEcsDaemon extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEcsDaemon resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDaemon resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEcsDaemon to import
-  * @param importFromId The id of the existing AwsEcsDaemon that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEcsDaemon to import is found
+  * @param importToId The construct id used in the generated config for the TfDaemon to import
+  * @param importFromId The id of the existing TfDaemon that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDaemon to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ecs_daemon", importId: importFromId, provider });
@@ -91,9 +91,9 @@ export class AwsEcsDaemon extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEcsDaemonConfig
+  * @param options TfDaemonConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEcsDaemonConfig) {
+  public constructor(scope: Construct, id: string, config: TfDaemonConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ecs_daemon',
       terraformGeneratorMetadata: {
@@ -283,11 +283,11 @@ export class AwsEcsDaemon extends cdktn.TerraformResource {
   }
 
   // deployment_configuration - computed: false, optional: true, required: false
-  private _deploymentConfiguration = new AwsEcsDaemon.DeploymentConfigurationPropertyList(this, "deployment_configuration", false);
+  private _deploymentConfiguration = new TfDaemon.DeploymentConfigurationPropertyList(this, "deployment_configuration", false);
   public get deploymentConfiguration() {
     return this._deploymentConfiguration;
   }
-  public putDeploymentConfiguration(value: AwsEcsDaemon.DeploymentConfigurationProperty[] | cdktn.IResolvable) {
+  public putDeploymentConfiguration(value: TfDaemon.DeploymentConfigurationProperty[] | cdktn.IResolvable) {
     this._deploymentConfiguration.internalValue = value;
   }
   public resetDeploymentConfiguration() {
@@ -299,11 +299,11 @@ export class AwsEcsDaemon extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsEcsDaemon.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfDaemon.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsEcsDaemon.TimeoutsProperty) {
+  public putTimeouts(value: TfDaemon.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -329,8 +329,8 @@ export class AwsEcsDaemon extends cdktn.TerraformResource {
       propagate_tags: cdktn.stringToTerraform(this._propagateTags),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      deployment_configuration: cdktn.listMapper(awsEcsDaemonDeploymentConfigurationPropertyToTerraform, true)(this._deploymentConfiguration.internalValue),
-      timeouts: awsEcsDaemonTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      deployment_configuration: cdktn.listMapper(tfDaemonDeploymentConfigurationPropertyToTerraform, true)(this._deploymentConfiguration.internalValue),
+      timeouts: tfDaemonTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -391,16 +391,16 @@ export class AwsEcsDaemon extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       deployment_configuration: {
-        value: cdktn.listMapperHcl(awsEcsDaemonDeploymentConfigurationPropertyToHclTerraform, true)(this._deploymentConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfDaemonDeploymentConfigurationPropertyToHclTerraform, true)(this._deploymentConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsEcsDaemon.DeploymentConfigurationPropertyList",
+        storageClassType: "TfDaemon.DeploymentConfigurationPropertyList",
       },
       timeouts: {
-        value: awsEcsDaemonTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfDaemonTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsEcsDaemon.TimeoutsProperty",
+        storageClassType: "TfDaemon.TimeoutsProperty",
       },
     };
 
@@ -409,7 +409,7 @@ export class AwsEcsDaemon extends cdktn.TerraformResource {
   }
 }
 
-export function awsEcsDaemonAlarmsPropertyToTerraform(struct?: AwsEcsDaemon.AlarmsProperty | cdktn.IResolvable): any {
+export function tfDaemonAlarmsPropertyToTerraform(struct?: TfDaemon.AlarmsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -421,7 +421,7 @@ export function awsEcsDaemonAlarmsPropertyToTerraform(struct?: AwsEcsDaemon.Alar
 }
 
 
-export function awsEcsDaemonAlarmsPropertyToHclTerraform(struct?: AwsEcsDaemon.AlarmsProperty | cdktn.IResolvable): any {
+export function tfDaemonAlarmsPropertyToHclTerraform(struct?: TfDaemon.AlarmsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -446,7 +446,7 @@ export function awsEcsDaemonAlarmsPropertyToHclTerraform(struct?: AwsEcsDaemon.A
 }
 
 
-export function awsEcsDaemonDeploymentConfigurationPropertyToTerraform(struct?: AwsEcsDaemon.DeploymentConfigurationProperty | cdktn.IResolvable): any {
+export function tfDaemonDeploymentConfigurationPropertyToTerraform(struct?: TfDaemon.DeploymentConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -454,12 +454,12 @@ export function awsEcsDaemonDeploymentConfigurationPropertyToTerraform(struct?: 
   return {
     bake_time_in_minutes: cdktn.numberToTerraform(struct!.bakeTimeInMinutes),
     drain_percent: cdktn.numberToTerraform(struct!.drainPercent),
-    alarms: cdktn.listMapper(awsEcsDaemonAlarmsPropertyToTerraform, true)(struct!.alarms),
+    alarms: cdktn.listMapper(tfDaemonAlarmsPropertyToTerraform, true)(struct!.alarms),
   }
 }
 
 
-export function awsEcsDaemonDeploymentConfigurationPropertyToHclTerraform(struct?: AwsEcsDaemon.DeploymentConfigurationProperty | cdktn.IResolvable): any {
+export function tfDaemonDeploymentConfigurationPropertyToHclTerraform(struct?: TfDaemon.DeploymentConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -478,7 +478,7 @@ export function awsEcsDaemonDeploymentConfigurationPropertyToHclTerraform(struct
       storageClassType: "number",
     },
     alarms: {
-      value: cdktn.listMapperHcl(awsEcsDaemonAlarmsPropertyToHclTerraform, true)(struct!.alarms),
+      value: cdktn.listMapperHcl(tfDaemonAlarmsPropertyToHclTerraform, true)(struct!.alarms),
       isBlock: true,
       type: "list",
       storageClassType: "AlarmsPropertyList",
@@ -490,7 +490,7 @@ export function awsEcsDaemonDeploymentConfigurationPropertyToHclTerraform(struct
 }
 
 
-export function awsEcsDaemonTimeoutsPropertyToTerraform(struct?: AwsEcsDaemon.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDaemonTimeoutsPropertyToTerraform(struct?: TfDaemon.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -503,7 +503,7 @@ export function awsEcsDaemonTimeoutsPropertyToTerraform(struct?: AwsEcsDaemon.Ti
 }
 
 
-export function awsEcsDaemonTimeoutsPropertyToHclTerraform(struct?: AwsEcsDaemon.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDaemonTimeoutsPropertyToHclTerraform(struct?: TfDaemon.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -534,14 +534,14 @@ export function awsEcsDaemonTimeoutsPropertyToHclTerraform(struct?: AwsEcsDaemon
 }
 
 
-export namespace AwsEcsDaemon {
+export namespace TfDaemon {
 export interface AlarmsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#alarm_names AwsEcsDaemon#alarm_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#alarm_names TfDaemon#alarm_names}
   */
   readonly alarmNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#enable AwsEcsDaemon#enable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#enable TfDaemon#enable}
   */
   readonly enable?: boolean | cdktn.IResolvable;
 }
@@ -649,17 +649,17 @@ export class AlarmsPropertyList extends cdktn.ComplexList {
 }
 export interface DeploymentConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#bake_time_in_minutes AwsEcsDaemon#bake_time_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#bake_time_in_minutes TfDaemon#bake_time_in_minutes}
   */
   readonly bakeTimeInMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#drain_percent AwsEcsDaemon#drain_percent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#drain_percent TfDaemon#drain_percent}
   */
   readonly drainPercent?: number;
   /**
   * alarms block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#alarms AwsEcsDaemon#alarms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#alarms TfDaemon#alarms}
   */
   readonly alarms?: AlarmsProperty[] | cdktn.IResolvable;
 }
@@ -791,19 +791,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#create AwsEcsDaemon#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#create TfDaemon#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#delete AwsEcsDaemon#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#delete TfDaemon#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#update AwsEcsDaemon#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_daemon#update TfDaemon#update}
   */
   readonly update?: string;
 }

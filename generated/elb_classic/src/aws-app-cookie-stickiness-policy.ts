@@ -5,34 +5,34 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsAppCookieStickinessPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface TfAppCookieStickinessPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/app_cookie_stickiness_policy#cookie_name AwsAppCookieStickinessPolicy#cookie_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/app_cookie_stickiness_policy#cookie_name TfAppCookieStickinessPolicy#cookie_name}
   */
   readonly cookieName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/app_cookie_stickiness_policy#id AwsAppCookieStickinessPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/app_cookie_stickiness_policy#id TfAppCookieStickinessPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/app_cookie_stickiness_policy#lb_port AwsAppCookieStickinessPolicy#lb_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/app_cookie_stickiness_policy#lb_port TfAppCookieStickinessPolicy#lb_port}
   */
   readonly lbPort: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/app_cookie_stickiness_policy#load_balancer AwsAppCookieStickinessPolicy#load_balancer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/app_cookie_stickiness_policy#load_balancer TfAppCookieStickinessPolicy#load_balancer}
   */
   readonly loadBalancer: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/app_cookie_stickiness_policy#name AwsAppCookieStickinessPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/app_cookie_stickiness_policy#name TfAppCookieStickinessPolicy#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/app_cookie_stickiness_policy#region AwsAppCookieStickinessPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/app_cookie_stickiness_policy#region TfAppCookieStickinessPolicy#region}
   */
   readonly region?: string;
 }
@@ -40,7 +40,7 @@ export interface AwsAppCookieStickinessPolicyConfig extends cdktn.TerraformMetaA
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/app_cookie_stickiness_policy aws_app_cookie_stickiness_policy}
 */
-export class AwsAppCookieStickinessPolicy extends cdktn.TerraformResource {
+export class TfAppCookieStickinessPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class AwsAppCookieStickinessPolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsAppCookieStickinessPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfAppCookieStickinessPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsAppCookieStickinessPolicy to import
-  * @param importFromId The id of the existing AwsAppCookieStickinessPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/app_cookie_stickiness_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsAppCookieStickinessPolicy to import is found
+  * @param importToId The construct id used in the generated config for the TfAppCookieStickinessPolicy to import
+  * @param importFromId The id of the existing TfAppCookieStickinessPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/app_cookie_stickiness_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfAppCookieStickinessPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_app_cookie_stickiness_policy", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class AwsAppCookieStickinessPolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsAppCookieStickinessPolicyConfig
+  * @param options TfAppCookieStickinessPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsAppCookieStickinessPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: TfAppCookieStickinessPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_app_cookie_stickiness_policy',
       terraformGeneratorMetadata: {

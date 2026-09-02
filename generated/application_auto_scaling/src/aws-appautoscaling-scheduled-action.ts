@@ -5,64 +5,64 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsAppautoscalingScheduledActionConfig extends cdktn.TerraformMetaArguments {
+export interface TfScheduledActionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_scheduled_action#end_time AwsAppautoscalingScheduledAction#end_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_scheduled_action#end_time TfScheduledAction#end_time}
   */
   readonly endTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_scheduled_action#id AwsAppautoscalingScheduledAction#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_scheduled_action#id TfScheduledAction#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_scheduled_action#name AwsAppautoscalingScheduledAction#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_scheduled_action#name TfScheduledAction#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_scheduled_action#region AwsAppautoscalingScheduledAction#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_scheduled_action#region TfScheduledAction#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_scheduled_action#resource_id AwsAppautoscalingScheduledAction#resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_scheduled_action#resource_id TfScheduledAction#resource_id}
   */
   readonly resourceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_scheduled_action#scalable_dimension AwsAppautoscalingScheduledAction#scalable_dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_scheduled_action#scalable_dimension TfScheduledAction#scalable_dimension}
   */
   readonly scalableDimension: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_scheduled_action#schedule AwsAppautoscalingScheduledAction#schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_scheduled_action#schedule TfScheduledAction#schedule}
   */
   readonly schedule: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_scheduled_action#service_namespace AwsAppautoscalingScheduledAction#service_namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_scheduled_action#service_namespace TfScheduledAction#service_namespace}
   */
   readonly serviceNamespace: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_scheduled_action#start_time AwsAppautoscalingScheduledAction#start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_scheduled_action#start_time TfScheduledAction#start_time}
   */
   readonly startTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_scheduled_action#timezone AwsAppautoscalingScheduledAction#timezone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_scheduled_action#timezone TfScheduledAction#timezone}
   */
   readonly timezone?: string;
   /**
   * scalable_target_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_scheduled_action#scalable_target_action AwsAppautoscalingScheduledAction#scalable_target_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_scheduled_action#scalable_target_action TfScheduledAction#scalable_target_action}
   */
-  readonly scalableTargetAction: AwsAppautoscalingScheduledAction.ScalableTargetActionProperty;
+  readonly scalableTargetAction: TfScheduledAction.ScalableTargetActionProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_scheduled_action aws_appautoscaling_scheduled_action}
 */
-export class AwsAppautoscalingScheduledAction extends cdktn.TerraformResource {
+export class TfScheduledAction extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -73,11 +73,11 @@ export class AwsAppautoscalingScheduledAction extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsAppautoscalingScheduledAction resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfScheduledAction resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsAppautoscalingScheduledAction to import
-  * @param importFromId The id of the existing AwsAppautoscalingScheduledAction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_scheduled_action#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsAppautoscalingScheduledAction to import is found
+  * @param importToId The construct id used in the generated config for the TfScheduledAction to import
+  * @param importFromId The id of the existing TfScheduledAction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_scheduled_action#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfScheduledAction to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appautoscaling_scheduled_action", importId: importFromId, provider });
@@ -92,9 +92,9 @@ export class AwsAppautoscalingScheduledAction extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsAppautoscalingScheduledActionConfig
+  * @param options TfScheduledActionConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsAppautoscalingScheduledActionConfig) {
+  public constructor(scope: Construct, id: string, config: TfScheduledActionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appautoscaling_scheduled_action',
       terraformGeneratorMetadata: {
@@ -278,11 +278,11 @@ export class AwsAppautoscalingScheduledAction extends cdktn.TerraformResource {
   }
 
   // scalable_target_action - computed: false, optional: false, required: true
-  private _scalableTargetAction = new AwsAppautoscalingScheduledAction.ScalableTargetActionPropertyOutputReference(this, "scalable_target_action");
+  private _scalableTargetAction = new TfScheduledAction.ScalableTargetActionPropertyOutputReference(this, "scalable_target_action");
   public get scalableTargetAction() {
     return this._scalableTargetAction;
   }
-  public putScalableTargetAction(value: AwsAppautoscalingScheduledAction.ScalableTargetActionProperty) {
+  public putScalableTargetAction(value: TfScheduledAction.ScalableTargetActionProperty) {
     this._scalableTargetAction.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -306,7 +306,7 @@ export class AwsAppautoscalingScheduledAction extends cdktn.TerraformResource {
       service_namespace: cdktn.stringToTerraform(this._serviceNamespace),
       start_time: cdktn.stringToTerraform(this._startTime),
       timezone: cdktn.stringToTerraform(this._timezone),
-      scalable_target_action: awsAppautoscalingScheduledActionScalableTargetActionPropertyToTerraform(this._scalableTargetAction.internalValue),
+      scalable_target_action: tfScheduledActionScalableTargetActionPropertyToTerraform(this._scalableTargetAction.internalValue),
     };
   }
 
@@ -373,10 +373,10 @@ export class AwsAppautoscalingScheduledAction extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       scalable_target_action: {
-        value: awsAppautoscalingScheduledActionScalableTargetActionPropertyToHclTerraform(this._scalableTargetAction.internalValue),
+        value: tfScheduledActionScalableTargetActionPropertyToHclTerraform(this._scalableTargetAction.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsAppautoscalingScheduledAction.ScalableTargetActionPropertyList",
+        storageClassType: "TfScheduledAction.ScalableTargetActionPropertyList",
       },
     };
 
@@ -385,7 +385,7 @@ export class AwsAppautoscalingScheduledAction extends cdktn.TerraformResource {
   }
 }
 
-export function awsAppautoscalingScheduledActionScalableTargetActionPropertyToTerraform(struct?: AwsAppautoscalingScheduledAction.ScalableTargetActionPropertyOutputReference | AwsAppautoscalingScheduledAction.ScalableTargetActionProperty): any {
+export function tfScheduledActionScalableTargetActionPropertyToTerraform(struct?: TfScheduledAction.ScalableTargetActionPropertyOutputReference | TfScheduledAction.ScalableTargetActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -397,7 +397,7 @@ export function awsAppautoscalingScheduledActionScalableTargetActionPropertyToTe
 }
 
 
-export function awsAppautoscalingScheduledActionScalableTargetActionPropertyToHclTerraform(struct?: AwsAppautoscalingScheduledAction.ScalableTargetActionPropertyOutputReference | AwsAppautoscalingScheduledAction.ScalableTargetActionProperty): any {
+export function tfScheduledActionScalableTargetActionPropertyToHclTerraform(struct?: TfScheduledAction.ScalableTargetActionPropertyOutputReference | TfScheduledAction.ScalableTargetActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -422,14 +422,14 @@ export function awsAppautoscalingScheduledActionScalableTargetActionPropertyToHc
 }
 
 
-export namespace AwsAppautoscalingScheduledAction {
+export namespace TfScheduledAction {
 export interface ScalableTargetActionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_scheduled_action#max_capacity AwsAppautoscalingScheduledAction#max_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_scheduled_action#max_capacity TfScheduledAction#max_capacity}
   */
   readonly maxCapacity?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_scheduled_action#min_capacity AwsAppautoscalingScheduledAction#min_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_scheduled_action#min_capacity TfScheduledAction#min_capacity}
   */
   readonly minCapacity?: string;
 }

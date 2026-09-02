@@ -5,80 +5,80 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsFsxFileCacheConfig extends cdktn.TerraformMetaArguments {
+export interface TfFileCacheConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#copy_tags_to_data_repository_associations AwsFsxFileCache#copy_tags_to_data_repository_associations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#copy_tags_to_data_repository_associations TfFileCache#copy_tags_to_data_repository_associations}
   */
   readonly copyTagsToDataRepositoryAssociations?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#file_cache_type AwsFsxFileCache#file_cache_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#file_cache_type TfFileCache#file_cache_type}
   */
   readonly fileCacheType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#file_cache_type_version AwsFsxFileCache#file_cache_type_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#file_cache_type_version TfFileCache#file_cache_type_version}
   */
   readonly fileCacheTypeVersion: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#id AwsFsxFileCache#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#id TfFileCache#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#kms_key_id AwsFsxFileCache#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#kms_key_id TfFileCache#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#region AwsFsxFileCache#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#region TfFileCache#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#security_group_ids AwsFsxFileCache#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#security_group_ids TfFileCache#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#storage_capacity AwsFsxFileCache#storage_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#storage_capacity TfFileCache#storage_capacity}
   */
   readonly storageCapacity: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#subnet_ids AwsFsxFileCache#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#subnet_ids TfFileCache#subnet_ids}
   */
   readonly subnetIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#tags AwsFsxFileCache#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#tags TfFileCache#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#tags_all AwsFsxFileCache#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#tags_all TfFileCache#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * data_repository_association block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#data_repository_association AwsFsxFileCache#data_repository_association}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#data_repository_association TfFileCache#data_repository_association}
   */
-  readonly dataRepositoryAssociation?: AwsFsxFileCache.DataRepositoryAssociationProperty[] | cdktn.IResolvable;
+  readonly dataRepositoryAssociation?: TfFileCache.DataRepositoryAssociationProperty[] | cdktn.IResolvable;
   /**
   * lustre_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#lustre_configuration AwsFsxFileCache#lustre_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#lustre_configuration TfFileCache#lustre_configuration}
   */
-  readonly lustreConfiguration?: AwsFsxFileCache.LustreConfigurationProperty[] | cdktn.IResolvable;
+  readonly lustreConfiguration?: TfFileCache.LustreConfigurationProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#timeouts AwsFsxFileCache#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#timeouts TfFileCache#timeouts}
   */
-  readonly timeouts?: AwsFsxFileCache.TimeoutsProperty;
+  readonly timeouts?: TfFileCache.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache aws_fsx_file_cache}
 */
-export class AwsFsxFileCache extends cdktn.TerraformResource {
+export class TfFileCache extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -89,11 +89,11 @@ export class AwsFsxFileCache extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsFsxFileCache resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfFileCache resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsFsxFileCache to import
-  * @param importFromId The id of the existing AwsFsxFileCache that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsFsxFileCache to import is found
+  * @param importToId The construct id used in the generated config for the TfFileCache to import
+  * @param importFromId The id of the existing TfFileCache that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfFileCache to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_fsx_file_cache", importId: importFromId, provider });
@@ -108,9 +108,9 @@ export class AwsFsxFileCache extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsFsxFileCacheConfig
+  * @param options TfFileCacheConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsFsxFileCacheConfig) {
+  public constructor(scope: Construct, id: string, config: TfFileCacheConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_fsx_file_cache',
       terraformGeneratorMetadata: {
@@ -346,11 +346,11 @@ export class AwsFsxFileCache extends cdktn.TerraformResource {
   }
 
   // data_repository_association - computed: false, optional: true, required: false
-  private _dataRepositoryAssociation = new AwsFsxFileCache.DataRepositoryAssociationPropertyList(this, "data_repository_association", true);
+  private _dataRepositoryAssociation = new TfFileCache.DataRepositoryAssociationPropertyList(this, "data_repository_association", true);
   public get dataRepositoryAssociation() {
     return this._dataRepositoryAssociation;
   }
-  public putDataRepositoryAssociation(value: AwsFsxFileCache.DataRepositoryAssociationProperty[] | cdktn.IResolvable) {
+  public putDataRepositoryAssociation(value: TfFileCache.DataRepositoryAssociationProperty[] | cdktn.IResolvable) {
     this._dataRepositoryAssociation.internalValue = value;
   }
   public resetDataRepositoryAssociation() {
@@ -362,11 +362,11 @@ export class AwsFsxFileCache extends cdktn.TerraformResource {
   }
 
   // lustre_configuration - computed: false, optional: true, required: false
-  private _lustreConfiguration = new AwsFsxFileCache.LustreConfigurationPropertyList(this, "lustre_configuration", true);
+  private _lustreConfiguration = new TfFileCache.LustreConfigurationPropertyList(this, "lustre_configuration", true);
   public get lustreConfiguration() {
     return this._lustreConfiguration;
   }
-  public putLustreConfiguration(value: AwsFsxFileCache.LustreConfigurationProperty[] | cdktn.IResolvable) {
+  public putLustreConfiguration(value: TfFileCache.LustreConfigurationProperty[] | cdktn.IResolvable) {
     this._lustreConfiguration.internalValue = value;
   }
   public resetLustreConfiguration() {
@@ -378,11 +378,11 @@ export class AwsFsxFileCache extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsFsxFileCache.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfFileCache.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsFsxFileCache.TimeoutsProperty) {
+  public putTimeouts(value: TfFileCache.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -410,9 +410,9 @@ export class AwsFsxFileCache extends cdktn.TerraformResource {
       subnet_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._subnetIds),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      data_repository_association: cdktn.listMapper(awsFsxFileCacheDataRepositoryAssociationPropertyToTerraform, true)(this._dataRepositoryAssociation.internalValue),
-      lustre_configuration: cdktn.listMapper(awsFsxFileCacheLustreConfigurationPropertyToTerraform, true)(this._lustreConfiguration.internalValue),
-      timeouts: awsFsxFileCacheTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      data_repository_association: cdktn.listMapper(tfFileCacheDataRepositoryAssociationPropertyToTerraform, true)(this._dataRepositoryAssociation.internalValue),
+      lustre_configuration: cdktn.listMapper(tfFileCacheLustreConfigurationPropertyToTerraform, true)(this._lustreConfiguration.internalValue),
+      timeouts: tfFileCacheTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -485,22 +485,22 @@ export class AwsFsxFileCache extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       data_repository_association: {
-        value: cdktn.listMapperHcl(awsFsxFileCacheDataRepositoryAssociationPropertyToHclTerraform, true)(this._dataRepositoryAssociation.internalValue),
+        value: cdktn.listMapperHcl(tfFileCacheDataRepositoryAssociationPropertyToHclTerraform, true)(this._dataRepositoryAssociation.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsFsxFileCache.DataRepositoryAssociationPropertyList",
+        storageClassType: "TfFileCache.DataRepositoryAssociationPropertyList",
       },
       lustre_configuration: {
-        value: cdktn.listMapperHcl(awsFsxFileCacheLustreConfigurationPropertyToHclTerraform, true)(this._lustreConfiguration.internalValue),
+        value: cdktn.listMapperHcl(tfFileCacheLustreConfigurationPropertyToHclTerraform, true)(this._lustreConfiguration.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsFsxFileCache.LustreConfigurationPropertyList",
+        storageClassType: "TfFileCache.LustreConfigurationPropertyList",
       },
       timeouts: {
-        value: awsFsxFileCacheTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfFileCacheTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsFsxFileCache.TimeoutsProperty",
+        storageClassType: "TfFileCache.TimeoutsProperty",
       },
     };
 
@@ -509,7 +509,7 @@ export class AwsFsxFileCache extends cdktn.TerraformResource {
   }
 }
 
-export function awsFsxFileCacheNfsPropertyToTerraform(struct?: AwsFsxFileCache.NfsProperty | cdktn.IResolvable): any {
+export function tfFileCacheNfsPropertyToTerraform(struct?: TfFileCache.NfsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -521,7 +521,7 @@ export function awsFsxFileCacheNfsPropertyToTerraform(struct?: AwsFsxFileCache.N
 }
 
 
-export function awsFsxFileCacheNfsPropertyToHclTerraform(struct?: AwsFsxFileCache.NfsProperty | cdktn.IResolvable): any {
+export function tfFileCacheNfsPropertyToHclTerraform(struct?: TfFileCache.NfsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -546,7 +546,7 @@ export function awsFsxFileCacheNfsPropertyToHclTerraform(struct?: AwsFsxFileCach
 }
 
 
-export function awsFsxFileCacheDataRepositoryAssociationPropertyToTerraform(struct?: AwsFsxFileCache.DataRepositoryAssociationProperty | cdktn.IResolvable): any {
+export function tfFileCacheDataRepositoryAssociationPropertyToTerraform(struct?: TfFileCache.DataRepositoryAssociationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -556,12 +556,12 @@ export function awsFsxFileCacheDataRepositoryAssociationPropertyToTerraform(stru
     data_repository_subdirectories: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.dataRepositorySubdirectories),
     file_cache_path: cdktn.stringToTerraform(struct!.fileCachePath),
     tags: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.tags),
-    nfs: cdktn.listMapper(awsFsxFileCacheNfsPropertyToTerraform, true)(struct!.nfs),
+    nfs: cdktn.listMapper(tfFileCacheNfsPropertyToTerraform, true)(struct!.nfs),
   }
 }
 
 
-export function awsFsxFileCacheDataRepositoryAssociationPropertyToHclTerraform(struct?: AwsFsxFileCache.DataRepositoryAssociationProperty | cdktn.IResolvable): any {
+export function tfFileCacheDataRepositoryAssociationPropertyToHclTerraform(struct?: TfFileCache.DataRepositoryAssociationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -592,7 +592,7 @@ export function awsFsxFileCacheDataRepositoryAssociationPropertyToHclTerraform(s
       storageClassType: "stringMap",
     },
     nfs: {
-      value: cdktn.listMapperHcl(awsFsxFileCacheNfsPropertyToHclTerraform, true)(struct!.nfs),
+      value: cdktn.listMapperHcl(tfFileCacheNfsPropertyToHclTerraform, true)(struct!.nfs),
       isBlock: true,
       type: "set",
       storageClassType: "NfsPropertyList",
@@ -604,7 +604,7 @@ export function awsFsxFileCacheDataRepositoryAssociationPropertyToHclTerraform(s
 }
 
 
-export function awsFsxFileCacheLogConfigurationPropertyToTerraform(struct?: AwsFsxFileCache.LogConfigurationProperty): any {
+export function tfFileCacheLogConfigurationPropertyToTerraform(struct?: TfFileCache.LogConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -614,7 +614,7 @@ export function awsFsxFileCacheLogConfigurationPropertyToTerraform(struct?: AwsF
 }
 
 
-export function awsFsxFileCacheLogConfigurationPropertyToHclTerraform(struct?: AwsFsxFileCache.LogConfigurationProperty): any {
+export function tfFileCacheLogConfigurationPropertyToHclTerraform(struct?: TfFileCache.LogConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -625,7 +625,7 @@ export function awsFsxFileCacheLogConfigurationPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsFsxFileCacheMetadataConfigurationPropertyToTerraform(struct?: AwsFsxFileCache.MetadataConfigurationProperty | cdktn.IResolvable): any {
+export function tfFileCacheMetadataConfigurationPropertyToTerraform(struct?: TfFileCache.MetadataConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -636,7 +636,7 @@ export function awsFsxFileCacheMetadataConfigurationPropertyToTerraform(struct?:
 }
 
 
-export function awsFsxFileCacheMetadataConfigurationPropertyToHclTerraform(struct?: AwsFsxFileCache.MetadataConfigurationProperty | cdktn.IResolvable): any {
+export function tfFileCacheMetadataConfigurationPropertyToHclTerraform(struct?: TfFileCache.MetadataConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -655,7 +655,7 @@ export function awsFsxFileCacheMetadataConfigurationPropertyToHclTerraform(struc
 }
 
 
-export function awsFsxFileCacheLustreConfigurationPropertyToTerraform(struct?: AwsFsxFileCache.LustreConfigurationProperty | cdktn.IResolvable): any {
+export function tfFileCacheLustreConfigurationPropertyToTerraform(struct?: TfFileCache.LustreConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -664,12 +664,12 @@ export function awsFsxFileCacheLustreConfigurationPropertyToTerraform(struct?: A
     deployment_type: cdktn.stringToTerraform(struct!.deploymentType),
     per_unit_storage_throughput: cdktn.numberToTerraform(struct!.perUnitStorageThroughput),
     weekly_maintenance_start_time: cdktn.stringToTerraform(struct!.weeklyMaintenanceStartTime),
-    metadata_configuration: cdktn.listMapper(awsFsxFileCacheMetadataConfigurationPropertyToTerraform, true)(struct!.metadataConfiguration),
+    metadata_configuration: cdktn.listMapper(tfFileCacheMetadataConfigurationPropertyToTerraform, true)(struct!.metadataConfiguration),
   }
 }
 
 
-export function awsFsxFileCacheLustreConfigurationPropertyToHclTerraform(struct?: AwsFsxFileCache.LustreConfigurationProperty | cdktn.IResolvable): any {
+export function tfFileCacheLustreConfigurationPropertyToHclTerraform(struct?: TfFileCache.LustreConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -694,7 +694,7 @@ export function awsFsxFileCacheLustreConfigurationPropertyToHclTerraform(struct?
       storageClassType: "string",
     },
     metadata_configuration: {
-      value: cdktn.listMapperHcl(awsFsxFileCacheMetadataConfigurationPropertyToHclTerraform, true)(struct!.metadataConfiguration),
+      value: cdktn.listMapperHcl(tfFileCacheMetadataConfigurationPropertyToHclTerraform, true)(struct!.metadataConfiguration),
       isBlock: true,
       type: "set",
       storageClassType: "MetadataConfigurationPropertyList",
@@ -706,7 +706,7 @@ export function awsFsxFileCacheLustreConfigurationPropertyToHclTerraform(struct?
 }
 
 
-export function awsFsxFileCacheTimeoutsPropertyToTerraform(struct?: AwsFsxFileCache.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfFileCacheTimeoutsPropertyToTerraform(struct?: TfFileCache.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -719,7 +719,7 @@ export function awsFsxFileCacheTimeoutsPropertyToTerraform(struct?: AwsFsxFileCa
 }
 
 
-export function awsFsxFileCacheTimeoutsPropertyToHclTerraform(struct?: AwsFsxFileCache.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfFileCacheTimeoutsPropertyToHclTerraform(struct?: TfFileCache.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -750,14 +750,14 @@ export function awsFsxFileCacheTimeoutsPropertyToHclTerraform(struct?: AwsFsxFil
 }
 
 
-export namespace AwsFsxFileCache {
+export namespace TfFileCache {
 export interface NfsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#dns_ips AwsFsxFileCache#dns_ips}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#dns_ips TfFileCache#dns_ips}
   */
   readonly dnsIps?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#version AwsFsxFileCache#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#version TfFileCache#version}
   */
   readonly version: string;
 }
@@ -862,25 +862,25 @@ export class NfsPropertyList extends cdktn.ComplexList {
 }
 export interface DataRepositoryAssociationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#data_repository_path AwsFsxFileCache#data_repository_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#data_repository_path TfFileCache#data_repository_path}
   */
   readonly dataRepositoryPath: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#data_repository_subdirectories AwsFsxFileCache#data_repository_subdirectories}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#data_repository_subdirectories TfFileCache#data_repository_subdirectories}
   */
   readonly dataRepositorySubdirectories?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#file_cache_path AwsFsxFileCache#file_cache_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#file_cache_path TfFileCache#file_cache_path}
   */
   readonly fileCachePath: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#tags AwsFsxFileCache#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#tags TfFileCache#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * nfs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#nfs AwsFsxFileCache#nfs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#nfs TfFileCache#nfs}
   */
   readonly nfs?: NfsProperty[] | cdktn.IResolvable;
 }
@@ -1137,7 +1137,7 @@ export class LogConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface MetadataConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#storage_capacity AwsFsxFileCache#storage_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#storage_capacity TfFileCache#storage_capacity}
   */
   readonly storageCapacity: number;
 }
@@ -1220,21 +1220,21 @@ export class MetadataConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface LustreConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#deployment_type AwsFsxFileCache#deployment_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#deployment_type TfFileCache#deployment_type}
   */
   readonly deploymentType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#per_unit_storage_throughput AwsFsxFileCache#per_unit_storage_throughput}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#per_unit_storage_throughput TfFileCache#per_unit_storage_throughput}
   */
   readonly perUnitStorageThroughput: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#weekly_maintenance_start_time AwsFsxFileCache#weekly_maintenance_start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#weekly_maintenance_start_time TfFileCache#weekly_maintenance_start_time}
   */
   readonly weeklyMaintenanceStartTime?: string;
   /**
   * metadata_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#metadata_configuration AwsFsxFileCache#metadata_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#metadata_configuration TfFileCache#metadata_configuration}
   */
   readonly metadataConfiguration: MetadataConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -1388,15 +1388,15 @@ export class LustreConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#create AwsFsxFileCache#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#create TfFileCache#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#delete AwsFsxFileCache#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#delete TfFileCache#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#update AwsFsxFileCache#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#update TfFileCache#update}
   */
   readonly update?: string;
 }

@@ -5,54 +5,54 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsNetworkmanagerCoreNetworkConfig extends cdktn.TerraformMetaArguments {
+export interface TfCoreNetworkConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network#base_policy_document AwsNetworkmanagerCoreNetwork#base_policy_document}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network#base_policy_document TfCoreNetwork#base_policy_document}
   */
   readonly basePolicyDocument?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network#base_policy_regions AwsNetworkmanagerCoreNetwork#base_policy_regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network#base_policy_regions TfCoreNetwork#base_policy_regions}
   */
   readonly basePolicyRegions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network#create_base_policy AwsNetworkmanagerCoreNetwork#create_base_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network#create_base_policy TfCoreNetwork#create_base_policy}
   */
   readonly createBasePolicy?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network#description AwsNetworkmanagerCoreNetwork#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network#description TfCoreNetwork#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network#global_network_id AwsNetworkmanagerCoreNetwork#global_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network#global_network_id TfCoreNetwork#global_network_id}
   */
   readonly globalNetworkId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network#id AwsNetworkmanagerCoreNetwork#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network#id TfCoreNetwork#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network#tags AwsNetworkmanagerCoreNetwork#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network#tags TfCoreNetwork#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network#tags_all AwsNetworkmanagerCoreNetwork#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network#tags_all TfCoreNetwork#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network#timeouts AwsNetworkmanagerCoreNetwork#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network#timeouts TfCoreNetwork#timeouts}
   */
-  readonly timeouts?: AwsNetworkmanagerCoreNetwork.TimeoutsProperty;
+  readonly timeouts?: TfCoreNetwork.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network aws_networkmanager_core_network}
 */
-export class AwsNetworkmanagerCoreNetwork extends cdktn.TerraformResource {
+export class TfCoreNetwork extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -63,11 +63,11 @@ export class AwsNetworkmanagerCoreNetwork extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsNetworkmanagerCoreNetwork resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfCoreNetwork resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsNetworkmanagerCoreNetwork to import
-  * @param importFromId The id of the existing AwsNetworkmanagerCoreNetwork that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsNetworkmanagerCoreNetwork to import is found
+  * @param importToId The construct id used in the generated config for the TfCoreNetwork to import
+  * @param importFromId The id of the existing TfCoreNetwork that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfCoreNetwork to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkmanager_core_network", importId: importFromId, provider });
@@ -82,9 +82,9 @@ export class AwsNetworkmanagerCoreNetwork extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsNetworkmanagerCoreNetworkConfig
+  * @param options TfCoreNetworkConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsNetworkmanagerCoreNetworkConfig) {
+  public constructor(scope: Construct, id: string, config: TfCoreNetworkConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_networkmanager_core_network',
       terraformGeneratorMetadata: {
@@ -190,7 +190,7 @@ export class AwsNetworkmanagerCoreNetwork extends cdktn.TerraformResource {
   }
 
   // edges - computed: true, optional: false, required: false
-  private _edges = new AwsNetworkmanagerCoreNetwork.EdgesPropertyList(this, "edges", false);
+  private _edges = new TfCoreNetwork.EdgesPropertyList(this, "edges", false);
   public get edges() {
     return this._edges;
   }
@@ -225,7 +225,7 @@ export class AwsNetworkmanagerCoreNetwork extends cdktn.TerraformResource {
   }
 
   // segments - computed: true, optional: false, required: false
-  private _segments = new AwsNetworkmanagerCoreNetwork.SegmentsPropertyList(this, "segments", false);
+  private _segments = new TfCoreNetwork.SegmentsPropertyList(this, "segments", false);
   public get segments() {
     return this._segments;
   }
@@ -268,11 +268,11 @@ export class AwsNetworkmanagerCoreNetwork extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsNetworkmanagerCoreNetwork.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfCoreNetwork.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsNetworkmanagerCoreNetwork.TimeoutsProperty) {
+  public putTimeouts(value: TfCoreNetwork.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -297,7 +297,7 @@ export class AwsNetworkmanagerCoreNetwork extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: awsNetworkmanagerCoreNetworkTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfCoreNetworkTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -352,10 +352,10 @@ export class AwsNetworkmanagerCoreNetwork extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsNetworkmanagerCoreNetworkTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfCoreNetworkTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsNetworkmanagerCoreNetwork.TimeoutsProperty",
+        storageClassType: "TfCoreNetwork.TimeoutsProperty",
       },
     };
 
@@ -364,7 +364,7 @@ export class AwsNetworkmanagerCoreNetwork extends cdktn.TerraformResource {
   }
 }
 
-export function awsNetworkmanagerCoreNetworkEdgesPropertyToTerraform(struct?: AwsNetworkmanagerCoreNetwork.EdgesProperty): any {
+export function tfCoreNetworkEdgesPropertyToTerraform(struct?: TfCoreNetwork.EdgesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -374,7 +374,7 @@ export function awsNetworkmanagerCoreNetworkEdgesPropertyToTerraform(struct?: Aw
 }
 
 
-export function awsNetworkmanagerCoreNetworkEdgesPropertyToHclTerraform(struct?: AwsNetworkmanagerCoreNetwork.EdgesProperty): any {
+export function tfCoreNetworkEdgesPropertyToHclTerraform(struct?: TfCoreNetwork.EdgesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -385,7 +385,7 @@ export function awsNetworkmanagerCoreNetworkEdgesPropertyToHclTerraform(struct?:
 }
 
 
-export function awsNetworkmanagerCoreNetworkSegmentsPropertyToTerraform(struct?: AwsNetworkmanagerCoreNetwork.SegmentsProperty): any {
+export function tfCoreNetworkSegmentsPropertyToTerraform(struct?: TfCoreNetwork.SegmentsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -395,7 +395,7 @@ export function awsNetworkmanagerCoreNetworkSegmentsPropertyToTerraform(struct?:
 }
 
 
-export function awsNetworkmanagerCoreNetworkSegmentsPropertyToHclTerraform(struct?: AwsNetworkmanagerCoreNetwork.SegmentsProperty): any {
+export function tfCoreNetworkSegmentsPropertyToHclTerraform(struct?: TfCoreNetwork.SegmentsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -406,7 +406,7 @@ export function awsNetworkmanagerCoreNetworkSegmentsPropertyToHclTerraform(struc
 }
 
 
-export function awsNetworkmanagerCoreNetworkTimeoutsPropertyToTerraform(struct?: AwsNetworkmanagerCoreNetwork.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfCoreNetworkTimeoutsPropertyToTerraform(struct?: TfCoreNetwork.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -419,7 +419,7 @@ export function awsNetworkmanagerCoreNetworkTimeoutsPropertyToTerraform(struct?:
 }
 
 
-export function awsNetworkmanagerCoreNetworkTimeoutsPropertyToHclTerraform(struct?: AwsNetworkmanagerCoreNetwork.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfCoreNetworkTimeoutsPropertyToHclTerraform(struct?: TfCoreNetwork.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -450,7 +450,7 @@ export function awsNetworkmanagerCoreNetworkTimeoutsPropertyToHclTerraform(struc
 }
 
 
-export namespace AwsNetworkmanagerCoreNetwork {
+export namespace TfCoreNetwork {
 export interface EdgesProperty {
 }
 export class EdgesPropertyOutputReference extends cdktn.ComplexObject {
@@ -581,15 +581,15 @@ export class SegmentsPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network#create AwsNetworkmanagerCoreNetwork#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network#create TfCoreNetwork#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network#delete AwsNetworkmanagerCoreNetwork#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network#delete TfCoreNetwork#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network#update AwsNetworkmanagerCoreNetwork#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network#update TfCoreNetwork#update}
   */
   readonly update?: string;
 }

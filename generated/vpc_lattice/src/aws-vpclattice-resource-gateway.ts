@@ -5,57 +5,57 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsVpclatticeResourceGatewayConfig extends cdktn.TerraformMetaArguments {
+export interface TfResourceGatewayConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_gateway#ip_address_type AwsVpclatticeResourceGateway#ip_address_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_gateway#ip_address_type TfResourceGateway#ip_address_type}
   */
   readonly ipAddressType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_gateway#ipv4_addresses_per_eni AwsVpclatticeResourceGateway#ipv4_addresses_per_eni}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_gateway#ipv4_addresses_per_eni TfResourceGateway#ipv4_addresses_per_eni}
   */
   readonly ipv4AddressesPerEni?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_gateway#name AwsVpclatticeResourceGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_gateway#name TfResourceGateway#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_gateway#region AwsVpclatticeResourceGateway#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_gateway#region TfResourceGateway#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_gateway#resource_config_dns_resolution AwsVpclatticeResourceGateway#resource_config_dns_resolution}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_gateway#resource_config_dns_resolution TfResourceGateway#resource_config_dns_resolution}
   */
   readonly resourceConfigDnsResolution?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_gateway#security_group_ids AwsVpclatticeResourceGateway#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_gateway#security_group_ids TfResourceGateway#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_gateway#subnet_ids AwsVpclatticeResourceGateway#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_gateway#subnet_ids TfResourceGateway#subnet_ids}
   */
   readonly subnetIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_gateway#tags AwsVpclatticeResourceGateway#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_gateway#tags TfResourceGateway#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_gateway#vpc_id AwsVpclatticeResourceGateway#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_gateway#vpc_id TfResourceGateway#vpc_id}
   */
   readonly vpcId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_gateway#timeouts AwsVpclatticeResourceGateway#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_gateway#timeouts TfResourceGateway#timeouts}
   */
-  readonly timeouts?: AwsVpclatticeResourceGateway.TimeoutsProperty;
+  readonly timeouts?: TfResourceGateway.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_gateway aws_vpclattice_resource_gateway}
 */
-export class AwsVpclatticeResourceGateway extends cdktn.TerraformResource {
+export class TfResourceGateway extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -66,11 +66,11 @@ export class AwsVpclatticeResourceGateway extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsVpclatticeResourceGateway resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfResourceGateway resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsVpclatticeResourceGateway to import
-  * @param importFromId The id of the existing AwsVpclatticeResourceGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_gateway#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsVpclatticeResourceGateway to import is found
+  * @param importToId The construct id used in the generated config for the TfResourceGateway to import
+  * @param importFromId The id of the existing TfResourceGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_gateway#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfResourceGateway to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpclattice_resource_gateway", importId: importFromId, provider });
@@ -85,9 +85,9 @@ export class AwsVpclatticeResourceGateway extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsVpclatticeResourceGatewayConfig
+  * @param options TfResourceGatewayConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsVpclatticeResourceGatewayConfig) {
+  public constructor(scope: Construct, id: string, config: TfResourceGatewayConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpclattice_resource_gateway',
       terraformGeneratorMetadata: {
@@ -276,11 +276,11 @@ export class AwsVpclatticeResourceGateway extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsVpclatticeResourceGateway.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfResourceGateway.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsVpclatticeResourceGateway.TimeoutsProperty) {
+  public putTimeouts(value: TfResourceGateway.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -306,7 +306,7 @@ export class AwsVpclatticeResourceGateway extends cdktn.TerraformResource {
       subnet_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._subnetIds),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       vpc_id: cdktn.stringToTerraform(this._vpcId),
-      timeouts: awsVpclatticeResourceGatewayTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfResourceGatewayTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -367,10 +367,10 @@ export class AwsVpclatticeResourceGateway extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsVpclatticeResourceGatewayTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfResourceGatewayTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsVpclatticeResourceGateway.TimeoutsProperty",
+        storageClassType: "TfResourceGateway.TimeoutsProperty",
       },
     };
 
@@ -379,7 +379,7 @@ export class AwsVpclatticeResourceGateway extends cdktn.TerraformResource {
   }
 }
 
-export function awsVpclatticeResourceGatewayTimeoutsPropertyToTerraform(struct?: AwsVpclatticeResourceGateway.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfResourceGatewayTimeoutsPropertyToTerraform(struct?: TfResourceGateway.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -392,7 +392,7 @@ export function awsVpclatticeResourceGatewayTimeoutsPropertyToTerraform(struct?:
 }
 
 
-export function awsVpclatticeResourceGatewayTimeoutsPropertyToHclTerraform(struct?: AwsVpclatticeResourceGateway.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfResourceGatewayTimeoutsPropertyToHclTerraform(struct?: TfResourceGateway.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -423,24 +423,24 @@ export function awsVpclatticeResourceGatewayTimeoutsPropertyToHclTerraform(struc
 }
 
 
-export namespace AwsVpclatticeResourceGateway {
+export namespace TfResourceGateway {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_gateway#create AwsVpclatticeResourceGateway#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_gateway#create TfResourceGateway#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_gateway#delete AwsVpclatticeResourceGateway#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_gateway#delete TfResourceGateway#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_gateway#update AwsVpclatticeResourceGateway#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_gateway#update TfResourceGateway#update}
   */
   readonly update?: string;
 }

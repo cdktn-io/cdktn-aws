@@ -5,52 +5,52 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsBackupVaultConfig extends cdktn.TerraformMetaArguments {
+export interface TfVaultConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault#force_destroy AwsBackupVault#force_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault#force_destroy TfVault#force_destroy}
   */
   readonly forceDestroy?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault#id AwsBackupVault#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault#id TfVault#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault#kms_key_arn AwsBackupVault#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault#kms_key_arn TfVault#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault#name AwsBackupVault#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault#name TfVault#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault#region AwsBackupVault#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault#region TfVault#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault#tags AwsBackupVault#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault#tags TfVault#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault#tags_all AwsBackupVault#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault#tags_all TfVault#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault#timeouts AwsBackupVault#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault#timeouts TfVault#timeouts}
   */
-  readonly timeouts?: AwsBackupVault.TimeoutsProperty;
+  readonly timeouts?: TfVault.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault aws_backup_vault}
 */
-export class AwsBackupVault extends cdktn.TerraformResource {
+export class TfVault extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class AwsBackupVault extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsBackupVault resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfVault resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsBackupVault to import
-  * @param importFromId The id of the existing AwsBackupVault that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsBackupVault to import is found
+  * @param importToId The construct id used in the generated config for the TfVault to import
+  * @param importFromId The id of the existing TfVault that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfVault to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_backup_vault", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class AwsBackupVault extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsBackupVaultConfig
+  * @param options TfVaultConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsBackupVaultConfig) {
+  public constructor(scope: Construct, id: string, config: TfVaultConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_backup_vault',
       terraformGeneratorMetadata: {
@@ -232,11 +232,11 @@ export class AwsBackupVault extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsBackupVault.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfVault.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsBackupVault.TimeoutsProperty) {
+  public putTimeouts(value: TfVault.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -260,7 +260,7 @@ export class AwsBackupVault extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: awsBackupVaultTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfVaultTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -309,10 +309,10 @@ export class AwsBackupVault extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsBackupVaultTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfVaultTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsBackupVault.TimeoutsProperty",
+        storageClassType: "TfVault.TimeoutsProperty",
       },
     };
 
@@ -321,7 +321,7 @@ export class AwsBackupVault extends cdktn.TerraformResource {
   }
 }
 
-export function awsBackupVaultTimeoutsPropertyToTerraform(struct?: AwsBackupVault.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfVaultTimeoutsPropertyToTerraform(struct?: TfVault.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -332,7 +332,7 @@ export function awsBackupVaultTimeoutsPropertyToTerraform(struct?: AwsBackupVaul
 }
 
 
-export function awsBackupVaultTimeoutsPropertyToHclTerraform(struct?: AwsBackupVault.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfVaultTimeoutsPropertyToHclTerraform(struct?: TfVault.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -351,10 +351,10 @@ export function awsBackupVaultTimeoutsPropertyToHclTerraform(struct?: AwsBackupV
 }
 
 
-export namespace AwsBackupVault {
+export namespace TfVault {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault#delete AwsBackupVault#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault#delete TfVault#delete}
   */
   readonly delete?: string;
 }

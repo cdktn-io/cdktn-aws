@@ -5,44 +5,44 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsDynamodbContributorInsightsConfig extends cdktn.TerraformMetaArguments {
+export interface TfContributorInsightsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_contributor_insights#id AwsDynamodbContributorInsights#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_contributor_insights#id TfContributorInsights#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_contributor_insights#index_name AwsDynamodbContributorInsights#index_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_contributor_insights#index_name TfContributorInsights#index_name}
   */
   readonly indexName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_contributor_insights#mode AwsDynamodbContributorInsights#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_contributor_insights#mode TfContributorInsights#mode}
   */
   readonly mode?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_contributor_insights#region AwsDynamodbContributorInsights#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_contributor_insights#region TfContributorInsights#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_contributor_insights#table_name AwsDynamodbContributorInsights#table_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_contributor_insights#table_name TfContributorInsights#table_name}
   */
   readonly tableName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_contributor_insights#timeouts AwsDynamodbContributorInsights#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_contributor_insights#timeouts TfContributorInsights#timeouts}
   */
-  readonly timeouts?: AwsDynamodbContributorInsights.TimeoutsProperty;
+  readonly timeouts?: TfContributorInsights.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_contributor_insights aws_dynamodb_contributor_insights}
 */
-export class AwsDynamodbContributorInsights extends cdktn.TerraformResource {
+export class TfContributorInsights extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class AwsDynamodbContributorInsights extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsDynamodbContributorInsights resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfContributorInsights resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsDynamodbContributorInsights to import
-  * @param importFromId The id of the existing AwsDynamodbContributorInsights that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_contributor_insights#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsDynamodbContributorInsights to import is found
+  * @param importToId The construct id used in the generated config for the TfContributorInsights to import
+  * @param importFromId The id of the existing TfContributorInsights that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_contributor_insights#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfContributorInsights to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_dynamodb_contributor_insights", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class AwsDynamodbContributorInsights extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsDynamodbContributorInsightsConfig
+  * @param options TfContributorInsightsConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsDynamodbContributorInsightsConfig) {
+  public constructor(scope: Construct, id: string, config: TfContributorInsightsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_dynamodb_contributor_insights',
       terraformGeneratorMetadata: {
@@ -180,11 +180,11 @@ export class AwsDynamodbContributorInsights extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsDynamodbContributorInsights.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfContributorInsights.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsDynamodbContributorInsights.TimeoutsProperty) {
+  public putTimeouts(value: TfContributorInsights.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -206,7 +206,7 @@ export class AwsDynamodbContributorInsights extends cdktn.TerraformResource {
       mode: cdktn.stringToTerraform(this._mode),
       region: cdktn.stringToTerraform(this._region),
       table_name: cdktn.stringToTerraform(this._tableName),
-      timeouts: awsDynamodbContributorInsightsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfContributorInsightsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -243,10 +243,10 @@ export class AwsDynamodbContributorInsights extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsDynamodbContributorInsightsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfContributorInsightsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsDynamodbContributorInsights.TimeoutsProperty",
+        storageClassType: "TfContributorInsights.TimeoutsProperty",
       },
     };
 
@@ -255,7 +255,7 @@ export class AwsDynamodbContributorInsights extends cdktn.TerraformResource {
   }
 }
 
-export function awsDynamodbContributorInsightsTimeoutsPropertyToTerraform(struct?: AwsDynamodbContributorInsights.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfContributorInsightsTimeoutsPropertyToTerraform(struct?: TfContributorInsights.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -267,7 +267,7 @@ export function awsDynamodbContributorInsightsTimeoutsPropertyToTerraform(struct
 }
 
 
-export function awsDynamodbContributorInsightsTimeoutsPropertyToHclTerraform(struct?: AwsDynamodbContributorInsights.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfContributorInsightsTimeoutsPropertyToHclTerraform(struct?: TfContributorInsights.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -292,14 +292,14 @@ export function awsDynamodbContributorInsightsTimeoutsPropertyToHclTerraform(str
 }
 
 
-export namespace AwsDynamodbContributorInsights {
+export namespace TfContributorInsights {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_contributor_insights#create AwsDynamodbContributorInsights#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_contributor_insights#create TfContributorInsights#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_contributor_insights#delete AwsDynamodbContributorInsights#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_contributor_insights#delete TfContributorInsights#delete}
   */
   readonly delete?: string;
 }

@@ -5,68 +5,68 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsMacie2CustomDataIdentifierConfig extends cdktn.TerraformMetaArguments {
+export interface TfCustomDataIdentifierConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_custom_data_identifier#description AwsMacie2CustomDataIdentifier#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_custom_data_identifier#description TfCustomDataIdentifier#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_custom_data_identifier#id AwsMacie2CustomDataIdentifier#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_custom_data_identifier#id TfCustomDataIdentifier#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_custom_data_identifier#ignore_words AwsMacie2CustomDataIdentifier#ignore_words}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_custom_data_identifier#ignore_words TfCustomDataIdentifier#ignore_words}
   */
   readonly ignoreWords?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_custom_data_identifier#keywords AwsMacie2CustomDataIdentifier#keywords}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_custom_data_identifier#keywords TfCustomDataIdentifier#keywords}
   */
   readonly keywords?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_custom_data_identifier#maximum_match_distance AwsMacie2CustomDataIdentifier#maximum_match_distance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_custom_data_identifier#maximum_match_distance TfCustomDataIdentifier#maximum_match_distance}
   */
   readonly maximumMatchDistance?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_custom_data_identifier#name AwsMacie2CustomDataIdentifier#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_custom_data_identifier#name TfCustomDataIdentifier#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_custom_data_identifier#name_prefix AwsMacie2CustomDataIdentifier#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_custom_data_identifier#name_prefix TfCustomDataIdentifier#name_prefix}
   */
   readonly namePrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_custom_data_identifier#regex AwsMacie2CustomDataIdentifier#regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_custom_data_identifier#regex TfCustomDataIdentifier#regex}
   */
   readonly regex?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_custom_data_identifier#region AwsMacie2CustomDataIdentifier#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_custom_data_identifier#region TfCustomDataIdentifier#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_custom_data_identifier#tags AwsMacie2CustomDataIdentifier#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_custom_data_identifier#tags TfCustomDataIdentifier#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_custom_data_identifier#tags_all AwsMacie2CustomDataIdentifier#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_custom_data_identifier#tags_all TfCustomDataIdentifier#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_custom_data_identifier#timeouts AwsMacie2CustomDataIdentifier#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_custom_data_identifier#timeouts TfCustomDataIdentifier#timeouts}
   */
-  readonly timeouts?: AwsMacie2CustomDataIdentifier.TimeoutsProperty;
+  readonly timeouts?: TfCustomDataIdentifier.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_custom_data_identifier aws_macie2_custom_data_identifier}
 */
-export class AwsMacie2CustomDataIdentifier extends cdktn.TerraformResource {
+export class TfCustomDataIdentifier extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -77,11 +77,11 @@ export class AwsMacie2CustomDataIdentifier extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsMacie2CustomDataIdentifier resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfCustomDataIdentifier resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsMacie2CustomDataIdentifier to import
-  * @param importFromId The id of the existing AwsMacie2CustomDataIdentifier that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_custom_data_identifier#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsMacie2CustomDataIdentifier to import is found
+  * @param importToId The construct id used in the generated config for the TfCustomDataIdentifier to import
+  * @param importFromId The id of the existing TfCustomDataIdentifier that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_custom_data_identifier#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfCustomDataIdentifier to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_macie2_custom_data_identifier", importId: importFromId, provider });
@@ -96,9 +96,9 @@ export class AwsMacie2CustomDataIdentifier extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsMacie2CustomDataIdentifierConfig = {}
+  * @param options TfCustomDataIdentifierConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: AwsMacie2CustomDataIdentifierConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfCustomDataIdentifierConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_macie2_custom_data_identifier',
       terraformGeneratorMetadata: {
@@ -319,11 +319,11 @@ export class AwsMacie2CustomDataIdentifier extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsMacie2CustomDataIdentifier.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfCustomDataIdentifier.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsMacie2CustomDataIdentifier.TimeoutsProperty) {
+  public putTimeouts(value: TfCustomDataIdentifier.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -351,7 +351,7 @@ export class AwsMacie2CustomDataIdentifier extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: awsMacie2CustomDataIdentifierTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfCustomDataIdentifierTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -424,10 +424,10 @@ export class AwsMacie2CustomDataIdentifier extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsMacie2CustomDataIdentifierTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfCustomDataIdentifierTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsMacie2CustomDataIdentifier.TimeoutsProperty",
+        storageClassType: "TfCustomDataIdentifier.TimeoutsProperty",
       },
     };
 
@@ -436,7 +436,7 @@ export class AwsMacie2CustomDataIdentifier extends cdktn.TerraformResource {
   }
 }
 
-export function awsMacie2CustomDataIdentifierTimeoutsPropertyToTerraform(struct?: AwsMacie2CustomDataIdentifier.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfCustomDataIdentifierTimeoutsPropertyToTerraform(struct?: TfCustomDataIdentifier.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -447,7 +447,7 @@ export function awsMacie2CustomDataIdentifierTimeoutsPropertyToTerraform(struct?
 }
 
 
-export function awsMacie2CustomDataIdentifierTimeoutsPropertyToHclTerraform(struct?: AwsMacie2CustomDataIdentifier.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfCustomDataIdentifierTimeoutsPropertyToHclTerraform(struct?: TfCustomDataIdentifier.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -466,10 +466,10 @@ export function awsMacie2CustomDataIdentifierTimeoutsPropertyToHclTerraform(stru
 }
 
 
-export namespace AwsMacie2CustomDataIdentifier {
+export namespace TfCustomDataIdentifier {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_custom_data_identifier#create AwsMacie2CustomDataIdentifier#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_custom_data_identifier#create TfCustomDataIdentifier#create}
   */
   readonly create?: string;
 }

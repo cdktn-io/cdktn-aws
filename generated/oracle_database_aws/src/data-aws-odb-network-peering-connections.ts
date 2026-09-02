@@ -5,11 +5,11 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsOdbNetworkPeeringConnectionsConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataNetworkPeeringConnectionsConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_network_peering_connections#region DataAwsOdbNetworkPeeringConnections#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_network_peering_connections#region TfDataNetworkPeeringConnections#region}
   */
   readonly region?: string;
 }
@@ -17,7 +17,7 @@ export interface DataAwsOdbNetworkPeeringConnectionsConfig extends cdktn.Terrafo
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_network_peering_connections aws_odb_network_peering_connections}
 */
-export class DataAwsOdbNetworkPeeringConnections extends cdktn.TerraformDataSource {
+export class TfDataNetworkPeeringConnections extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -28,11 +28,11 @@ export class DataAwsOdbNetworkPeeringConnections extends cdktn.TerraformDataSour
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsOdbNetworkPeeringConnections resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataNetworkPeeringConnections resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsOdbNetworkPeeringConnections to import
-  * @param importFromId The id of the existing DataAwsOdbNetworkPeeringConnections that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_network_peering_connections#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsOdbNetworkPeeringConnections to import is found
+  * @param importToId The construct id used in the generated config for the TfDataNetworkPeeringConnections to import
+  * @param importFromId The id of the existing TfDataNetworkPeeringConnections that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_network_peering_connections#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataNetworkPeeringConnections to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_odb_network_peering_connections", importId: importFromId, provider });
@@ -47,9 +47,9 @@ export class DataAwsOdbNetworkPeeringConnections extends cdktn.TerraformDataSour
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsOdbNetworkPeeringConnectionsConfig = {}
+  * @param options TfDataNetworkPeeringConnectionsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsOdbNetworkPeeringConnectionsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDataNetworkPeeringConnectionsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_odb_network_peering_connections',
       terraformGeneratorMetadata: {
@@ -73,7 +73,7 @@ export class DataAwsOdbNetworkPeeringConnections extends cdktn.TerraformDataSour
   // ==========
 
   // odb_peering_connections - computed: true, optional: false, required: false
-  private _odbPeeringConnections = new DataAwsOdbNetworkPeeringConnections.OdbPeeringConnectionsPropertyList(this, "odb_peering_connections", false);
+  private _odbPeeringConnections = new TfDataNetworkPeeringConnections.OdbPeeringConnectionsPropertyList(this, "odb_peering_connections", false);
   public get odbPeeringConnections() {
     return this._odbPeeringConnections;
   }
@@ -119,7 +119,7 @@ export class DataAwsOdbNetworkPeeringConnections extends cdktn.TerraformDataSour
   }
 }
 
-export function dataAwsOdbNetworkPeeringConnectionsOdbPeeringConnectionsPropertyToTerraform(struct?: DataAwsOdbNetworkPeeringConnections.OdbPeeringConnectionsProperty): any {
+export function tfDataNetworkPeeringConnectionsOdbPeeringConnectionsPropertyToTerraform(struct?: TfDataNetworkPeeringConnections.OdbPeeringConnectionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -129,7 +129,7 @@ export function dataAwsOdbNetworkPeeringConnectionsOdbPeeringConnectionsProperty
 }
 
 
-export function dataAwsOdbNetworkPeeringConnectionsOdbPeeringConnectionsPropertyToHclTerraform(struct?: DataAwsOdbNetworkPeeringConnections.OdbPeeringConnectionsProperty): any {
+export function tfDataNetworkPeeringConnectionsOdbPeeringConnectionsPropertyToHclTerraform(struct?: TfDataNetworkPeeringConnections.OdbPeeringConnectionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -140,7 +140,7 @@ export function dataAwsOdbNetworkPeeringConnectionsOdbPeeringConnectionsProperty
 }
 
 
-export namespace DataAwsOdbNetworkPeeringConnections {
+export namespace TfDataNetworkPeeringConnections {
 export interface OdbPeeringConnectionsProperty {
 }
 export class OdbPeeringConnectionsPropertyOutputReference extends cdktn.ComplexObject {

@@ -5,45 +5,45 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsBackupRestoreTestingPlanConfig extends cdktn.TerraformMetaArguments {
+export interface TfRestoreTestingPlanConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_plan#name AwsBackupRestoreTestingPlan#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_plan#name TfRestoreTestingPlan#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_plan#region AwsBackupRestoreTestingPlan#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_plan#region TfRestoreTestingPlan#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_plan#schedule_expression AwsBackupRestoreTestingPlan#schedule_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_plan#schedule_expression TfRestoreTestingPlan#schedule_expression}
   */
   readonly scheduleExpression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_plan#schedule_expression_timezone AwsBackupRestoreTestingPlan#schedule_expression_timezone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_plan#schedule_expression_timezone TfRestoreTestingPlan#schedule_expression_timezone}
   */
   readonly scheduleExpressionTimezone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_plan#start_window_hours AwsBackupRestoreTestingPlan#start_window_hours}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_plan#start_window_hours TfRestoreTestingPlan#start_window_hours}
   */
   readonly startWindowHours?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_plan#tags AwsBackupRestoreTestingPlan#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_plan#tags TfRestoreTestingPlan#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * recovery_point_selection block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_plan#recovery_point_selection AwsBackupRestoreTestingPlan#recovery_point_selection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_plan#recovery_point_selection TfRestoreTestingPlan#recovery_point_selection}
   */
-  readonly recoveryPointSelection?: AwsBackupRestoreTestingPlan.RecoveryPointSelectionProperty[] | cdktn.IResolvable;
+  readonly recoveryPointSelection?: TfRestoreTestingPlan.RecoveryPointSelectionProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_plan aws_backup_restore_testing_plan}
 */
-export class AwsBackupRestoreTestingPlan extends cdktn.TerraformResource {
+export class TfRestoreTestingPlan extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -54,11 +54,11 @@ export class AwsBackupRestoreTestingPlan extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsBackupRestoreTestingPlan resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfRestoreTestingPlan resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsBackupRestoreTestingPlan to import
-  * @param importFromId The id of the existing AwsBackupRestoreTestingPlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_plan#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsBackupRestoreTestingPlan to import is found
+  * @param importToId The construct id used in the generated config for the TfRestoreTestingPlan to import
+  * @param importFromId The id of the existing TfRestoreTestingPlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_plan#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfRestoreTestingPlan to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_backup_restore_testing_plan", importId: importFromId, provider });
@@ -73,9 +73,9 @@ export class AwsBackupRestoreTestingPlan extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsBackupRestoreTestingPlanConfig
+  * @param options TfRestoreTestingPlanConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsBackupRestoreTestingPlanConfig) {
+  public constructor(scope: Construct, id: string, config: TfRestoreTestingPlanConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_backup_restore_testing_plan',
       terraformGeneratorMetadata: {
@@ -206,11 +206,11 @@ export class AwsBackupRestoreTestingPlan extends cdktn.TerraformResource {
   }
 
   // recovery_point_selection - computed: false, optional: true, required: false
-  private _recoveryPointSelection = new AwsBackupRestoreTestingPlan.RecoveryPointSelectionPropertyList(this, "recovery_point_selection", false);
+  private _recoveryPointSelection = new TfRestoreTestingPlan.RecoveryPointSelectionPropertyList(this, "recovery_point_selection", false);
   public get recoveryPointSelection() {
     return this._recoveryPointSelection;
   }
-  public putRecoveryPointSelection(value: AwsBackupRestoreTestingPlan.RecoveryPointSelectionProperty[] | cdktn.IResolvable) {
+  public putRecoveryPointSelection(value: TfRestoreTestingPlan.RecoveryPointSelectionProperty[] | cdktn.IResolvable) {
     this._recoveryPointSelection.internalValue = value;
   }
   public resetRecoveryPointSelection() {
@@ -233,7 +233,7 @@ export class AwsBackupRestoreTestingPlan extends cdktn.TerraformResource {
       schedule_expression_timezone: cdktn.stringToTerraform(this._scheduleExpressionTimezone),
       start_window_hours: cdktn.numberToTerraform(this._startWindowHours),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      recovery_point_selection: cdktn.listMapper(awsBackupRestoreTestingPlanRecoveryPointSelectionPropertyToTerraform, true)(this._recoveryPointSelection.internalValue),
+      recovery_point_selection: cdktn.listMapper(tfRestoreTestingPlanRecoveryPointSelectionPropertyToTerraform, true)(this._recoveryPointSelection.internalValue),
     };
   }
 
@@ -276,10 +276,10 @@ export class AwsBackupRestoreTestingPlan extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       recovery_point_selection: {
-        value: cdktn.listMapperHcl(awsBackupRestoreTestingPlanRecoveryPointSelectionPropertyToHclTerraform, true)(this._recoveryPointSelection.internalValue),
+        value: cdktn.listMapperHcl(tfRestoreTestingPlanRecoveryPointSelectionPropertyToHclTerraform, true)(this._recoveryPointSelection.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsBackupRestoreTestingPlan.RecoveryPointSelectionPropertyList",
+        storageClassType: "TfRestoreTestingPlan.RecoveryPointSelectionPropertyList",
       },
     };
 
@@ -288,7 +288,7 @@ export class AwsBackupRestoreTestingPlan extends cdktn.TerraformResource {
   }
 }
 
-export function awsBackupRestoreTestingPlanRecoveryPointSelectionPropertyToTerraform(struct?: AwsBackupRestoreTestingPlan.RecoveryPointSelectionProperty | cdktn.IResolvable): any {
+export function tfRestoreTestingPlanRecoveryPointSelectionPropertyToTerraform(struct?: TfRestoreTestingPlan.RecoveryPointSelectionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -303,7 +303,7 @@ export function awsBackupRestoreTestingPlanRecoveryPointSelectionPropertyToTerra
 }
 
 
-export function awsBackupRestoreTestingPlanRecoveryPointSelectionPropertyToHclTerraform(struct?: AwsBackupRestoreTestingPlan.RecoveryPointSelectionProperty | cdktn.IResolvable): any {
+export function tfRestoreTestingPlanRecoveryPointSelectionPropertyToHclTerraform(struct?: TfRestoreTestingPlan.RecoveryPointSelectionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -346,26 +346,26 @@ export function awsBackupRestoreTestingPlanRecoveryPointSelectionPropertyToHclTe
 }
 
 
-export namespace AwsBackupRestoreTestingPlan {
+export namespace TfRestoreTestingPlan {
 export interface RecoveryPointSelectionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_plan#algorithm AwsBackupRestoreTestingPlan#algorithm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_plan#algorithm TfRestoreTestingPlan#algorithm}
   */
   readonly algorithm: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_plan#exclude_vaults AwsBackupRestoreTestingPlan#exclude_vaults}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_plan#exclude_vaults TfRestoreTestingPlan#exclude_vaults}
   */
   readonly excludeVaults?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_plan#include_vaults AwsBackupRestoreTestingPlan#include_vaults}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_plan#include_vaults TfRestoreTestingPlan#include_vaults}
   */
   readonly includeVaults: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_plan#recovery_point_types AwsBackupRestoreTestingPlan#recovery_point_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_plan#recovery_point_types TfRestoreTestingPlan#recovery_point_types}
   */
   readonly recoveryPointTypes: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_plan#selection_window_days AwsBackupRestoreTestingPlan#selection_window_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_plan#selection_window_days TfRestoreTestingPlan#selection_window_days}
   */
   readonly selectionWindowDays?: number;
 }

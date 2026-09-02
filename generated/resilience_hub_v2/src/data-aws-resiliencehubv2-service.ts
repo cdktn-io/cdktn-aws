@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsResiliencehubv2ServiceConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataServiceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resiliencehubv2_service#arn DataAwsResiliencehubv2Service#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resiliencehubv2_service#arn TfDataService#arn}
   */
   readonly arn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resiliencehubv2_service#region DataAwsResiliencehubv2Service#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resiliencehubv2_service#region TfDataService#region}
   */
   readonly region?: string;
 }
@@ -21,7 +21,7 @@ export interface DataAwsResiliencehubv2ServiceConfig extends cdktn.TerraformMeta
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resiliencehubv2_service aws_resiliencehubv2_service}
 */
-export class DataAwsResiliencehubv2Service extends cdktn.TerraformDataSource {
+export class TfDataService extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class DataAwsResiliencehubv2Service extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsResiliencehubv2Service resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataService resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsResiliencehubv2Service to import
-  * @param importFromId The id of the existing DataAwsResiliencehubv2Service that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resiliencehubv2_service#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsResiliencehubv2Service to import is found
+  * @param importToId The construct id used in the generated config for the TfDataService to import
+  * @param importFromId The id of the existing TfDataService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resiliencehubv2_service#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataService to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_resiliencehubv2_service", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class DataAwsResiliencehubv2Service extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsResiliencehubv2ServiceConfig
+  * @param options TfDataServiceConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsResiliencehubv2ServiceConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataServiceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_resiliencehubv2_service',
       terraformGeneratorMetadata: {
@@ -91,7 +91,7 @@ export class DataAwsResiliencehubv2Service extends cdktn.TerraformDataSource {
   }
 
   // associated_system - computed: true, optional: false, required: false
-  private _associatedSystem = new DataAwsResiliencehubv2Service.AssociatedSystemPropertyList(this, "associated_system", false);
+  private _associatedSystem = new TfDataService.AssociatedSystemPropertyList(this, "associated_system", false);
   public get associatedSystem() {
     return this._associatedSystem;
   }
@@ -112,7 +112,7 @@ export class DataAwsResiliencehubv2Service extends cdktn.TerraformDataSource {
   }
 
   // permission_model - computed: true, optional: false, required: false
-  private _permissionModel = new DataAwsResiliencehubv2Service.PermissionModelPropertyList(this, "permission_model", false);
+  private _permissionModel = new TfDataService.PermissionModelPropertyList(this, "permission_model", false);
   public get permissionModel() {
     return this._permissionModel;
   }
@@ -181,7 +181,7 @@ export class DataAwsResiliencehubv2Service extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsResiliencehubv2ServiceAssociatedSystemPropertyToTerraform(struct?: DataAwsResiliencehubv2Service.AssociatedSystemProperty): any {
+export function tfDataServiceAssociatedSystemPropertyToTerraform(struct?: TfDataService.AssociatedSystemProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -191,7 +191,7 @@ export function dataAwsResiliencehubv2ServiceAssociatedSystemPropertyToTerraform
 }
 
 
-export function dataAwsResiliencehubv2ServiceAssociatedSystemPropertyToHclTerraform(struct?: DataAwsResiliencehubv2Service.AssociatedSystemProperty): any {
+export function tfDataServiceAssociatedSystemPropertyToHclTerraform(struct?: TfDataService.AssociatedSystemProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -202,7 +202,7 @@ export function dataAwsResiliencehubv2ServiceAssociatedSystemPropertyToHclTerraf
 }
 
 
-export function dataAwsResiliencehubv2ServiceCrossAccountRolePropertyToTerraform(struct?: DataAwsResiliencehubv2Service.CrossAccountRoleProperty): any {
+export function tfDataServiceCrossAccountRolePropertyToTerraform(struct?: TfDataService.CrossAccountRoleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -212,7 +212,7 @@ export function dataAwsResiliencehubv2ServiceCrossAccountRolePropertyToTerraform
 }
 
 
-export function dataAwsResiliencehubv2ServiceCrossAccountRolePropertyToHclTerraform(struct?: DataAwsResiliencehubv2Service.CrossAccountRoleProperty): any {
+export function tfDataServiceCrossAccountRolePropertyToHclTerraform(struct?: TfDataService.CrossAccountRoleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -223,7 +223,7 @@ export function dataAwsResiliencehubv2ServiceCrossAccountRolePropertyToHclTerraf
 }
 
 
-export function dataAwsResiliencehubv2ServicePermissionModelPropertyToTerraform(struct?: DataAwsResiliencehubv2Service.PermissionModelProperty): any {
+export function tfDataServicePermissionModelPropertyToTerraform(struct?: TfDataService.PermissionModelProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -233,7 +233,7 @@ export function dataAwsResiliencehubv2ServicePermissionModelPropertyToTerraform(
 }
 
 
-export function dataAwsResiliencehubv2ServicePermissionModelPropertyToHclTerraform(struct?: DataAwsResiliencehubv2Service.PermissionModelProperty): any {
+export function tfDataServicePermissionModelPropertyToHclTerraform(struct?: TfDataService.PermissionModelProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -244,7 +244,7 @@ export function dataAwsResiliencehubv2ServicePermissionModelPropertyToHclTerrafo
 }
 
 
-export namespace DataAwsResiliencehubv2Service {
+export namespace TfDataService {
 export interface AssociatedSystemProperty {
 }
 export class AssociatedSystemPropertyOutputReference extends cdktn.ComplexObject {

@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsVpcEndpointAssociationsConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataEndpointAssociationsConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint_associations#region DataAwsVpcEndpointAssociations#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint_associations#region TfDataEndpointAssociations#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint_associations#vpc_endpoint_id DataAwsVpcEndpointAssociations#vpc_endpoint_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint_associations#vpc_endpoint_id TfDataEndpointAssociations#vpc_endpoint_id}
   */
   readonly vpcEndpointId: string;
 }
@@ -21,7 +21,7 @@ export interface DataAwsVpcEndpointAssociationsConfig extends cdktn.TerraformMet
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint_associations aws_vpc_endpoint_associations}
 */
-export class DataAwsVpcEndpointAssociations extends cdktn.TerraformDataSource {
+export class TfDataEndpointAssociations extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class DataAwsVpcEndpointAssociations extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsVpcEndpointAssociations resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataEndpointAssociations resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsVpcEndpointAssociations to import
-  * @param importFromId The id of the existing DataAwsVpcEndpointAssociations that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint_associations#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsVpcEndpointAssociations to import is found
+  * @param importToId The construct id used in the generated config for the TfDataEndpointAssociations to import
+  * @param importFromId The id of the existing TfDataEndpointAssociations that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpc_endpoint_associations#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataEndpointAssociations to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpc_endpoint_associations", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class DataAwsVpcEndpointAssociations extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsVpcEndpointAssociationsConfig
+  * @param options TfDataEndpointAssociationsConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsVpcEndpointAssociationsConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataEndpointAssociationsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpc_endpoint_associations',
       terraformGeneratorMetadata: {
@@ -78,7 +78,7 @@ export class DataAwsVpcEndpointAssociations extends cdktn.TerraformDataSource {
   // ==========
 
   // associations - computed: true, optional: false, required: false
-  private _associations = new DataAwsVpcEndpointAssociations.AssociationsPropertyList(this, "associations", false);
+  private _associations = new TfDataEndpointAssociations.AssociationsPropertyList(this, "associations", false);
   public get associations() {
     return this._associations;
   }
@@ -144,7 +144,7 @@ export class DataAwsVpcEndpointAssociations extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsVpcEndpointAssociationsDnsEntryPropertyToTerraform(struct?: DataAwsVpcEndpointAssociations.DnsEntryProperty): any {
+export function tfDataEndpointAssociationsDnsEntryPropertyToTerraform(struct?: TfDataEndpointAssociations.DnsEntryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -154,7 +154,7 @@ export function dataAwsVpcEndpointAssociationsDnsEntryPropertyToTerraform(struct
 }
 
 
-export function dataAwsVpcEndpointAssociationsDnsEntryPropertyToHclTerraform(struct?: DataAwsVpcEndpointAssociations.DnsEntryProperty): any {
+export function tfDataEndpointAssociationsDnsEntryPropertyToHclTerraform(struct?: TfDataEndpointAssociations.DnsEntryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -165,7 +165,7 @@ export function dataAwsVpcEndpointAssociationsDnsEntryPropertyToHclTerraform(str
 }
 
 
-export function dataAwsVpcEndpointAssociationsPrivateDnsEntryPropertyToTerraform(struct?: DataAwsVpcEndpointAssociations.PrivateDnsEntryProperty): any {
+export function tfDataEndpointAssociationsPrivateDnsEntryPropertyToTerraform(struct?: TfDataEndpointAssociations.PrivateDnsEntryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -175,7 +175,7 @@ export function dataAwsVpcEndpointAssociationsPrivateDnsEntryPropertyToTerraform
 }
 
 
-export function dataAwsVpcEndpointAssociationsPrivateDnsEntryPropertyToHclTerraform(struct?: DataAwsVpcEndpointAssociations.PrivateDnsEntryProperty): any {
+export function tfDataEndpointAssociationsPrivateDnsEntryPropertyToHclTerraform(struct?: TfDataEndpointAssociations.PrivateDnsEntryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -186,7 +186,7 @@ export function dataAwsVpcEndpointAssociationsPrivateDnsEntryPropertyToHclTerraf
 }
 
 
-export function dataAwsVpcEndpointAssociationsAssociationsPropertyToTerraform(struct?: DataAwsVpcEndpointAssociations.AssociationsProperty): any {
+export function tfDataEndpointAssociationsAssociationsPropertyToTerraform(struct?: TfDataEndpointAssociations.AssociationsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -196,7 +196,7 @@ export function dataAwsVpcEndpointAssociationsAssociationsPropertyToTerraform(st
 }
 
 
-export function dataAwsVpcEndpointAssociationsAssociationsPropertyToHclTerraform(struct?: DataAwsVpcEndpointAssociations.AssociationsProperty): any {
+export function tfDataEndpointAssociationsAssociationsPropertyToHclTerraform(struct?: TfDataEndpointAssociations.AssociationsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -207,7 +207,7 @@ export function dataAwsVpcEndpointAssociationsAssociationsPropertyToHclTerraform
 }
 
 
-export namespace DataAwsVpcEndpointAssociations {
+export namespace TfDataEndpointAssociations {
 export interface DnsEntryProperty {
 }
 export class DnsEntryPropertyOutputReference extends cdktn.ComplexObject {

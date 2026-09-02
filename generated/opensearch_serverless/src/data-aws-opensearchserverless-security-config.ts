@@ -5,11 +5,11 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsOpensearchserverlessSecurityConfigConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataSecurityConfigConfig extends cdktn.TerraformMetaArguments {
   /**
   * The unique identifier of the security configuration.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_security_config#id DataAwsOpensearchserverlessSecurityConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_security_config#id TfDataSecurityConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -18,33 +18,33 @@ export interface DataAwsOpensearchserverlessSecurityConfigConfig extends cdktn.T
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_security_config#region DataAwsOpensearchserverlessSecurityConfig#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_security_config#region TfDataSecurityConfig#region}
   */
   readonly region?: string;
   /**
   * iam_federation_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_security_config#iam_federation_options DataAwsOpensearchserverlessSecurityConfig#iam_federation_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_security_config#iam_federation_options TfDataSecurityConfig#iam_federation_options}
   */
-  readonly iamFederationOptions?: DataAwsOpensearchserverlessSecurityConfig.IamFederationOptionsProperty[] | cdktn.IResolvable;
+  readonly iamFederationOptions?: TfDataSecurityConfig.IamFederationOptionsProperty[] | cdktn.IResolvable;
   /**
   * iam_identity_center_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_security_config#iam_identity_center_options DataAwsOpensearchserverlessSecurityConfig#iam_identity_center_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_security_config#iam_identity_center_options TfDataSecurityConfig#iam_identity_center_options}
   */
-  readonly iamIdentityCenterOptions?: DataAwsOpensearchserverlessSecurityConfig.IamIdentityCenterOptionsProperty[] | cdktn.IResolvable;
+  readonly iamIdentityCenterOptions?: TfDataSecurityConfig.IamIdentityCenterOptionsProperty[] | cdktn.IResolvable;
   /**
   * saml_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_security_config#saml_options DataAwsOpensearchserverlessSecurityConfig#saml_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_security_config#saml_options TfDataSecurityConfig#saml_options}
   */
-  readonly samlOptions?: DataAwsOpensearchserverlessSecurityConfig.SamlOptionsProperty[] | cdktn.IResolvable;
+  readonly samlOptions?: TfDataSecurityConfig.SamlOptionsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_security_config aws_opensearchserverless_security_config}
 */
-export class DataAwsOpensearchserverlessSecurityConfig extends cdktn.TerraformDataSource {
+export class TfDataSecurityConfig extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class DataAwsOpensearchserverlessSecurityConfig extends cdktn.TerraformDa
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsOpensearchserverlessSecurityConfig resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataSecurityConfig resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsOpensearchserverlessSecurityConfig to import
-  * @param importFromId The id of the existing DataAwsOpensearchserverlessSecurityConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_security_config#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsOpensearchserverlessSecurityConfig to import is found
+  * @param importToId The construct id used in the generated config for the TfDataSecurityConfig to import
+  * @param importFromId The id of the existing TfDataSecurityConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_security_config#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataSecurityConfig to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_opensearchserverless_security_config", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class DataAwsOpensearchserverlessSecurityConfig extends cdktn.TerraformDa
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsOpensearchserverlessSecurityConfigConfig
+  * @param options TfDataSecurityConfigConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsOpensearchserverlessSecurityConfigConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataSecurityConfigConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_opensearchserverless_security_config',
       terraformGeneratorMetadata: {
@@ -158,11 +158,11 @@ export class DataAwsOpensearchserverlessSecurityConfig extends cdktn.TerraformDa
   }
 
   // iam_federation_options - computed: false, optional: true, required: false
-  private _iamFederationOptions = new DataAwsOpensearchserverlessSecurityConfig.IamFederationOptionsPropertyList(this, "iam_federation_options", false);
+  private _iamFederationOptions = new TfDataSecurityConfig.IamFederationOptionsPropertyList(this, "iam_federation_options", false);
   public get iamFederationOptions() {
     return this._iamFederationOptions;
   }
-  public putIamFederationOptions(value: DataAwsOpensearchserverlessSecurityConfig.IamFederationOptionsProperty[] | cdktn.IResolvable) {
+  public putIamFederationOptions(value: TfDataSecurityConfig.IamFederationOptionsProperty[] | cdktn.IResolvable) {
     this._iamFederationOptions.internalValue = value;
   }
   public resetIamFederationOptions() {
@@ -174,11 +174,11 @@ export class DataAwsOpensearchserverlessSecurityConfig extends cdktn.TerraformDa
   }
 
   // iam_identity_center_options - computed: false, optional: true, required: false
-  private _iamIdentityCenterOptions = new DataAwsOpensearchserverlessSecurityConfig.IamIdentityCenterOptionsPropertyList(this, "iam_identity_center_options", false);
+  private _iamIdentityCenterOptions = new TfDataSecurityConfig.IamIdentityCenterOptionsPropertyList(this, "iam_identity_center_options", false);
   public get iamIdentityCenterOptions() {
     return this._iamIdentityCenterOptions;
   }
-  public putIamIdentityCenterOptions(value: DataAwsOpensearchserverlessSecurityConfig.IamIdentityCenterOptionsProperty[] | cdktn.IResolvable) {
+  public putIamIdentityCenterOptions(value: TfDataSecurityConfig.IamIdentityCenterOptionsProperty[] | cdktn.IResolvable) {
     this._iamIdentityCenterOptions.internalValue = value;
   }
   public resetIamIdentityCenterOptions() {
@@ -190,11 +190,11 @@ export class DataAwsOpensearchserverlessSecurityConfig extends cdktn.TerraformDa
   }
 
   // saml_options - computed: false, optional: true, required: false
-  private _samlOptions = new DataAwsOpensearchserverlessSecurityConfig.SamlOptionsPropertyList(this, "saml_options", false);
+  private _samlOptions = new TfDataSecurityConfig.SamlOptionsPropertyList(this, "saml_options", false);
   public get samlOptions() {
     return this._samlOptions;
   }
-  public putSamlOptions(value: DataAwsOpensearchserverlessSecurityConfig.SamlOptionsProperty[] | cdktn.IResolvable) {
+  public putSamlOptions(value: TfDataSecurityConfig.SamlOptionsProperty[] | cdktn.IResolvable) {
     this._samlOptions.internalValue = value;
   }
   public resetSamlOptions() {
@@ -213,9 +213,9 @@ export class DataAwsOpensearchserverlessSecurityConfig extends cdktn.TerraformDa
     return {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      iam_federation_options: cdktn.listMapper(dataAwsOpensearchserverlessSecurityConfigIamFederationOptionsPropertyToTerraform, true)(this._iamFederationOptions.internalValue),
-      iam_identity_center_options: cdktn.listMapper(dataAwsOpensearchserverlessSecurityConfigIamIdentityCenterOptionsPropertyToTerraform, true)(this._iamIdentityCenterOptions.internalValue),
-      saml_options: cdktn.listMapper(dataAwsOpensearchserverlessSecurityConfigSamlOptionsPropertyToTerraform, true)(this._samlOptions.internalValue),
+      iam_federation_options: cdktn.listMapper(tfDataSecurityConfigIamFederationOptionsPropertyToTerraform, true)(this._iamFederationOptions.internalValue),
+      iam_identity_center_options: cdktn.listMapper(tfDataSecurityConfigIamIdentityCenterOptionsPropertyToTerraform, true)(this._iamIdentityCenterOptions.internalValue),
+      saml_options: cdktn.listMapper(tfDataSecurityConfigSamlOptionsPropertyToTerraform, true)(this._samlOptions.internalValue),
     };
   }
 
@@ -234,22 +234,22 @@ export class DataAwsOpensearchserverlessSecurityConfig extends cdktn.TerraformDa
         storageClassType: "string",
       },
       iam_federation_options: {
-        value: cdktn.listMapperHcl(dataAwsOpensearchserverlessSecurityConfigIamFederationOptionsPropertyToHclTerraform, true)(this._iamFederationOptions.internalValue),
+        value: cdktn.listMapperHcl(tfDataSecurityConfigIamFederationOptionsPropertyToHclTerraform, true)(this._iamFederationOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "DataAwsOpensearchserverlessSecurityConfig.IamFederationOptionsPropertyList",
+        storageClassType: "TfDataSecurityConfig.IamFederationOptionsPropertyList",
       },
       iam_identity_center_options: {
-        value: cdktn.listMapperHcl(dataAwsOpensearchserverlessSecurityConfigIamIdentityCenterOptionsPropertyToHclTerraform, true)(this._iamIdentityCenterOptions.internalValue),
+        value: cdktn.listMapperHcl(tfDataSecurityConfigIamIdentityCenterOptionsPropertyToHclTerraform, true)(this._iamIdentityCenterOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "DataAwsOpensearchserverlessSecurityConfig.IamIdentityCenterOptionsPropertyList",
+        storageClassType: "TfDataSecurityConfig.IamIdentityCenterOptionsPropertyList",
       },
       saml_options: {
-        value: cdktn.listMapperHcl(dataAwsOpensearchserverlessSecurityConfigSamlOptionsPropertyToHclTerraform, true)(this._samlOptions.internalValue),
+        value: cdktn.listMapperHcl(tfDataSecurityConfigSamlOptionsPropertyToHclTerraform, true)(this._samlOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "DataAwsOpensearchserverlessSecurityConfig.SamlOptionsPropertyList",
+        storageClassType: "TfDataSecurityConfig.SamlOptionsPropertyList",
       },
     };
 
@@ -258,7 +258,7 @@ export class DataAwsOpensearchserverlessSecurityConfig extends cdktn.TerraformDa
   }
 }
 
-export function dataAwsOpensearchserverlessSecurityConfigIamFederationOptionsPropertyToTerraform(struct?: DataAwsOpensearchserverlessSecurityConfig.IamFederationOptionsProperty | cdktn.IResolvable): any {
+export function tfDataSecurityConfigIamFederationOptionsPropertyToTerraform(struct?: TfDataSecurityConfig.IamFederationOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -268,7 +268,7 @@ export function dataAwsOpensearchserverlessSecurityConfigIamFederationOptionsPro
 }
 
 
-export function dataAwsOpensearchserverlessSecurityConfigIamFederationOptionsPropertyToHclTerraform(struct?: DataAwsOpensearchserverlessSecurityConfig.IamFederationOptionsProperty | cdktn.IResolvable): any {
+export function tfDataSecurityConfigIamFederationOptionsPropertyToHclTerraform(struct?: TfDataSecurityConfig.IamFederationOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -279,7 +279,7 @@ export function dataAwsOpensearchserverlessSecurityConfigIamFederationOptionsPro
 }
 
 
-export function dataAwsOpensearchserverlessSecurityConfigIamIdentityCenterOptionsPropertyToTerraform(struct?: DataAwsOpensearchserverlessSecurityConfig.IamIdentityCenterOptionsProperty | cdktn.IResolvable): any {
+export function tfDataSecurityConfigIamIdentityCenterOptionsPropertyToTerraform(struct?: TfDataSecurityConfig.IamIdentityCenterOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -289,7 +289,7 @@ export function dataAwsOpensearchserverlessSecurityConfigIamIdentityCenterOption
 }
 
 
-export function dataAwsOpensearchserverlessSecurityConfigIamIdentityCenterOptionsPropertyToHclTerraform(struct?: DataAwsOpensearchserverlessSecurityConfig.IamIdentityCenterOptionsProperty | cdktn.IResolvable): any {
+export function tfDataSecurityConfigIamIdentityCenterOptionsPropertyToHclTerraform(struct?: TfDataSecurityConfig.IamIdentityCenterOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -300,7 +300,7 @@ export function dataAwsOpensearchserverlessSecurityConfigIamIdentityCenterOption
 }
 
 
-export function dataAwsOpensearchserverlessSecurityConfigSamlOptionsPropertyToTerraform(struct?: DataAwsOpensearchserverlessSecurityConfig.SamlOptionsProperty | cdktn.IResolvable): any {
+export function tfDataSecurityConfigSamlOptionsPropertyToTerraform(struct?: TfDataSecurityConfig.SamlOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -310,7 +310,7 @@ export function dataAwsOpensearchserverlessSecurityConfigSamlOptionsPropertyToTe
 }
 
 
-export function dataAwsOpensearchserverlessSecurityConfigSamlOptionsPropertyToHclTerraform(struct?: DataAwsOpensearchserverlessSecurityConfig.SamlOptionsProperty | cdktn.IResolvable): any {
+export function tfDataSecurityConfigSamlOptionsPropertyToHclTerraform(struct?: TfDataSecurityConfig.SamlOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -321,7 +321,7 @@ export function dataAwsOpensearchserverlessSecurityConfigSamlOptionsPropertyToHc
 }
 
 
-export namespace DataAwsOpensearchserverlessSecurityConfig {
+export namespace TfDataSecurityConfig {
 export interface IamFederationOptionsProperty {
 }
 export class IamFederationOptionsPropertyOutputReference extends cdktn.ComplexObject {

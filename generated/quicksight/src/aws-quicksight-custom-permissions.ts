@@ -5,37 +5,37 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsQuicksightCustomPermissionsConfig extends cdktn.TerraformMetaArguments {
+export interface TfCustomPermissionsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#aws_account_id AwsQuicksightCustomPermissions#aws_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#aws_account_id TfCustomPermissions#aws_account_id}
   */
   readonly awsAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#custom_permissions_name AwsQuicksightCustomPermissions#custom_permissions_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#custom_permissions_name TfCustomPermissions#custom_permissions_name}
   */
   readonly customPermissionsName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#region AwsQuicksightCustomPermissions#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#region TfCustomPermissions#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#tags AwsQuicksightCustomPermissions#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#tags TfCustomPermissions#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * capabilities block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#capabilities AwsQuicksightCustomPermissions#capabilities}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#capabilities TfCustomPermissions#capabilities}
   */
-  readonly capabilities?: AwsQuicksightCustomPermissions.CapabilitiesProperty[] | cdktn.IResolvable;
+  readonly capabilities?: TfCustomPermissions.CapabilitiesProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions aws_quicksight_custom_permissions}
 */
-export class AwsQuicksightCustomPermissions extends cdktn.TerraformResource {
+export class TfCustomPermissions extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -46,11 +46,11 @@ export class AwsQuicksightCustomPermissions extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsQuicksightCustomPermissions resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfCustomPermissions resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsQuicksightCustomPermissions to import
-  * @param importFromId The id of the existing AwsQuicksightCustomPermissions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsQuicksightCustomPermissions to import is found
+  * @param importToId The construct id used in the generated config for the TfCustomPermissions to import
+  * @param importFromId The id of the existing TfCustomPermissions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfCustomPermissions to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_quicksight_custom_permissions", importId: importFromId, provider });
@@ -65,9 +65,9 @@ export class AwsQuicksightCustomPermissions extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsQuicksightCustomPermissionsConfig
+  * @param options TfCustomPermissionsConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsQuicksightCustomPermissionsConfig) {
+  public constructor(scope: Construct, id: string, config: TfCustomPermissionsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_quicksight_custom_permissions',
       terraformGeneratorMetadata: {
@@ -167,11 +167,11 @@ export class AwsQuicksightCustomPermissions extends cdktn.TerraformResource {
   }
 
   // capabilities - computed: false, optional: true, required: false
-  private _capabilities = new AwsQuicksightCustomPermissions.CapabilitiesPropertyList(this, "capabilities", false);
+  private _capabilities = new TfCustomPermissions.CapabilitiesPropertyList(this, "capabilities", false);
   public get capabilities() {
     return this._capabilities;
   }
-  public putCapabilities(value: AwsQuicksightCustomPermissions.CapabilitiesProperty[] | cdktn.IResolvable) {
+  public putCapabilities(value: TfCustomPermissions.CapabilitiesProperty[] | cdktn.IResolvable) {
     this._capabilities.internalValue = value;
   }
   public resetCapabilities() {
@@ -192,7 +192,7 @@ export class AwsQuicksightCustomPermissions extends cdktn.TerraformResource {
       custom_permissions_name: cdktn.stringToTerraform(this._customPermissionsName),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      capabilities: cdktn.listMapper(awsQuicksightCustomPermissionsCapabilitiesPropertyToTerraform, true)(this._capabilities.internalValue),
+      capabilities: cdktn.listMapper(tfCustomPermissionsCapabilitiesPropertyToTerraform, true)(this._capabilities.internalValue),
     };
   }
 
@@ -223,10 +223,10 @@ export class AwsQuicksightCustomPermissions extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       capabilities: {
-        value: cdktn.listMapperHcl(awsQuicksightCustomPermissionsCapabilitiesPropertyToHclTerraform, true)(this._capabilities.internalValue),
+        value: cdktn.listMapperHcl(tfCustomPermissionsCapabilitiesPropertyToHclTerraform, true)(this._capabilities.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsQuicksightCustomPermissions.CapabilitiesPropertyList",
+        storageClassType: "TfCustomPermissions.CapabilitiesPropertyList",
       },
     };
 
@@ -235,7 +235,7 @@ export class AwsQuicksightCustomPermissions extends cdktn.TerraformResource {
   }
 }
 
-export function awsQuicksightCustomPermissionsCapabilitiesPropertyToTerraform(struct?: AwsQuicksightCustomPermissions.CapabilitiesProperty | cdktn.IResolvable): any {
+export function tfCustomPermissionsCapabilitiesPropertyToTerraform(struct?: TfCustomPermissions.CapabilitiesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -268,7 +268,7 @@ export function awsQuicksightCustomPermissionsCapabilitiesPropertyToTerraform(st
 }
 
 
-export function awsQuicksightCustomPermissionsCapabilitiesPropertyToHclTerraform(struct?: AwsQuicksightCustomPermissions.CapabilitiesProperty | cdktn.IResolvable): any {
+export function tfCustomPermissionsCapabilitiesPropertyToHclTerraform(struct?: TfCustomPermissions.CapabilitiesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -419,98 +419,98 @@ export function awsQuicksightCustomPermissionsCapabilitiesPropertyToHclTerraform
 }
 
 
-export namespace AwsQuicksightCustomPermissions {
+export namespace TfCustomPermissions {
 export interface CapabilitiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#add_or_run_anomaly_detection_for_analyses AwsQuicksightCustomPermissions#add_or_run_anomaly_detection_for_analyses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#add_or_run_anomaly_detection_for_analyses TfCustomPermissions#add_or_run_anomaly_detection_for_analyses}
   */
   readonly addOrRunAnomalyDetectionForAnalyses?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#create_and_update_dashboard_email_reports AwsQuicksightCustomPermissions#create_and_update_dashboard_email_reports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#create_and_update_dashboard_email_reports TfCustomPermissions#create_and_update_dashboard_email_reports}
   */
   readonly createAndUpdateDashboardEmailReports?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#create_and_update_data_sources AwsQuicksightCustomPermissions#create_and_update_data_sources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#create_and_update_data_sources TfCustomPermissions#create_and_update_data_sources}
   */
   readonly createAndUpdateDataSources?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#create_and_update_datasets AwsQuicksightCustomPermissions#create_and_update_datasets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#create_and_update_datasets TfCustomPermissions#create_and_update_datasets}
   */
   readonly createAndUpdateDatasets?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#create_and_update_themes AwsQuicksightCustomPermissions#create_and_update_themes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#create_and_update_themes TfCustomPermissions#create_and_update_themes}
   */
   readonly createAndUpdateThemes?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#create_and_update_threshold_alerts AwsQuicksightCustomPermissions#create_and_update_threshold_alerts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#create_and_update_threshold_alerts TfCustomPermissions#create_and_update_threshold_alerts}
   */
   readonly createAndUpdateThresholdAlerts?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#create_shared_folders AwsQuicksightCustomPermissions#create_shared_folders}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#create_shared_folders TfCustomPermissions#create_shared_folders}
   */
   readonly createSharedFolders?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#create_spice_dataset AwsQuicksightCustomPermissions#create_spice_dataset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#create_spice_dataset TfCustomPermissions#create_spice_dataset}
   */
   readonly createSpiceDataset?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#export_to_csv AwsQuicksightCustomPermissions#export_to_csv}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#export_to_csv TfCustomPermissions#export_to_csv}
   */
   readonly exportToCsv?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#export_to_csv_in_scheduled_reports AwsQuicksightCustomPermissions#export_to_csv_in_scheduled_reports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#export_to_csv_in_scheduled_reports TfCustomPermissions#export_to_csv_in_scheduled_reports}
   */
   readonly exportToCsvInScheduledReports?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#export_to_excel AwsQuicksightCustomPermissions#export_to_excel}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#export_to_excel TfCustomPermissions#export_to_excel}
   */
   readonly exportToExcel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#export_to_excel_in_scheduled_reports AwsQuicksightCustomPermissions#export_to_excel_in_scheduled_reports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#export_to_excel_in_scheduled_reports TfCustomPermissions#export_to_excel_in_scheduled_reports}
   */
   readonly exportToExcelInScheduledReports?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#export_to_pdf AwsQuicksightCustomPermissions#export_to_pdf}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#export_to_pdf TfCustomPermissions#export_to_pdf}
   */
   readonly exportToPdf?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#export_to_pdf_in_scheduled_reports AwsQuicksightCustomPermissions#export_to_pdf_in_scheduled_reports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#export_to_pdf_in_scheduled_reports TfCustomPermissions#export_to_pdf_in_scheduled_reports}
   */
   readonly exportToPdfInScheduledReports?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#include_content_in_scheduled_reports_email AwsQuicksightCustomPermissions#include_content_in_scheduled_reports_email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#include_content_in_scheduled_reports_email TfCustomPermissions#include_content_in_scheduled_reports_email}
   */
   readonly includeContentInScheduledReportsEmail?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#print_reports AwsQuicksightCustomPermissions#print_reports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#print_reports TfCustomPermissions#print_reports}
   */
   readonly printReports?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#rename_shared_folders AwsQuicksightCustomPermissions#rename_shared_folders}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#rename_shared_folders TfCustomPermissions#rename_shared_folders}
   */
   readonly renameSharedFolders?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#share_analyses AwsQuicksightCustomPermissions#share_analyses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#share_analyses TfCustomPermissions#share_analyses}
   */
   readonly shareAnalyses?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#share_dashboards AwsQuicksightCustomPermissions#share_dashboards}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#share_dashboards TfCustomPermissions#share_dashboards}
   */
   readonly shareDashboards?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#share_data_sources AwsQuicksightCustomPermissions#share_data_sources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#share_data_sources TfCustomPermissions#share_data_sources}
   */
   readonly shareDataSources?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#share_datasets AwsQuicksightCustomPermissions#share_datasets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#share_datasets TfCustomPermissions#share_datasets}
   */
   readonly shareDatasets?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#subscribe_dashboard_email_reports AwsQuicksightCustomPermissions#subscribe_dashboard_email_reports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#subscribe_dashboard_email_reports TfCustomPermissions#subscribe_dashboard_email_reports}
   */
   readonly subscribeDashboardEmailReports?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#view_account_spice_capacity AwsQuicksightCustomPermissions#view_account_spice_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_custom_permissions#view_account_spice_capacity TfCustomPermissions#view_account_spice_capacity}
   */
   readonly viewAccountSpiceCapacity?: string;
 }

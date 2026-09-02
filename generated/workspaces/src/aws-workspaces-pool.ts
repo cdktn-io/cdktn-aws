@@ -5,63 +5,63 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsWorkspacesPoolConfig extends cdktn.TerraformMetaArguments {
+export interface TfPoolConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#application_settings AwsWorkspacesPool#application_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#application_settings TfPool#application_settings}
   */
-  readonly applicationSettings?: AwsWorkspacesPool.ApplicationSettingsProperty[] | cdktn.IResolvable;
+  readonly applicationSettings?: TfPool.ApplicationSettingsProperty[] | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#bundle_id AwsWorkspacesPool#bundle_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#bundle_id TfPool#bundle_id}
   */
   readonly bundleId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#description AwsWorkspacesPool#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#description TfPool#description}
   */
   readonly description: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#directory_id AwsWorkspacesPool#directory_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#directory_id TfPool#directory_id}
   */
   readonly directoryId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#pool_name AwsWorkspacesPool#pool_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#pool_name TfPool#pool_name}
   */
   readonly poolName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#region AwsWorkspacesPool#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#region TfPool#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#running_mode AwsWorkspacesPool#running_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#running_mode TfPool#running_mode}
   */
   readonly runningMode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#tags AwsWorkspacesPool#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#tags TfPool#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#timeout_settings AwsWorkspacesPool#timeout_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#timeout_settings TfPool#timeout_settings}
   */
-  readonly timeoutSettings?: AwsWorkspacesPool.TimeoutSettingsProperty[] | cdktn.IResolvable;
+  readonly timeoutSettings?: TfPool.TimeoutSettingsProperty[] | cdktn.IResolvable;
   /**
   * capacity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#capacity AwsWorkspacesPool#capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#capacity TfPool#capacity}
   */
-  readonly capacity?: AwsWorkspacesPool.CapacityProperty[] | cdktn.IResolvable;
+  readonly capacity?: TfPool.CapacityProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#timeouts AwsWorkspacesPool#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#timeouts TfPool#timeouts}
   */
-  readonly timeouts?: AwsWorkspacesPool.TimeoutsProperty;
+  readonly timeouts?: TfPool.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool aws_workspaces_pool}
 */
-export class AwsWorkspacesPool extends cdktn.TerraformResource {
+export class TfPool extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -72,11 +72,11 @@ export class AwsWorkspacesPool extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsWorkspacesPool resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfPool resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsWorkspacesPool to import
-  * @param importFromId The id of the existing AwsWorkspacesPool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsWorkspacesPool to import is found
+  * @param importToId The construct id used in the generated config for the TfPool to import
+  * @param importFromId The id of the existing TfPool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfPool to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_workspaces_pool", importId: importFromId, provider });
@@ -91,9 +91,9 @@ export class AwsWorkspacesPool extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsWorkspacesPoolConfig
+  * @param options TfPoolConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsWorkspacesPoolConfig) {
+  public constructor(scope: Construct, id: string, config: TfPoolConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_workspaces_pool',
       terraformGeneratorMetadata: {
@@ -127,11 +127,11 @@ export class AwsWorkspacesPool extends cdktn.TerraformResource {
   // ==========
 
   // application_settings - computed: true, optional: true, required: false
-  private _applicationSettings = new AwsWorkspacesPool.ApplicationSettingsPropertyList(this, "application_settings", false);
+  private _applicationSettings = new TfPool.ApplicationSettingsPropertyList(this, "application_settings", false);
   public get applicationSettings() {
     return this._applicationSettings;
   }
-  public putApplicationSettings(value: AwsWorkspacesPool.ApplicationSettingsProperty[] | cdktn.IResolvable) {
+  public putApplicationSettings(value: TfPool.ApplicationSettingsProperty[] | cdktn.IResolvable) {
     this._applicationSettings.internalValue = value;
   }
   public resetApplicationSettings() {
@@ -156,7 +156,7 @@ export class AwsWorkspacesPool extends cdktn.TerraformResource {
   }
 
   // capacity_status - computed: true, optional: false, required: false
-  private _capacityStatus = new AwsWorkspacesPool.CapacityStatusPropertyList(this, "capacity_status", false);
+  private _capacityStatus = new TfPool.CapacityStatusPropertyList(this, "capacity_status", false);
   public get capacityStatus() {
     return this._capacityStatus;
   }
@@ -277,11 +277,11 @@ export class AwsWorkspacesPool extends cdktn.TerraformResource {
   }
 
   // timeout_settings - computed: true, optional: true, required: false
-  private _timeoutSettings = new AwsWorkspacesPool.TimeoutSettingsPropertyList(this, "timeout_settings", false);
+  private _timeoutSettings = new TfPool.TimeoutSettingsPropertyList(this, "timeout_settings", false);
   public get timeoutSettings() {
     return this._timeoutSettings;
   }
-  public putTimeoutSettings(value: AwsWorkspacesPool.TimeoutSettingsProperty[] | cdktn.IResolvable) {
+  public putTimeoutSettings(value: TfPool.TimeoutSettingsProperty[] | cdktn.IResolvable) {
     this._timeoutSettings.internalValue = value;
   }
   public resetTimeoutSettings() {
@@ -293,11 +293,11 @@ export class AwsWorkspacesPool extends cdktn.TerraformResource {
   }
 
   // capacity - computed: false, optional: true, required: false
-  private _capacity = new AwsWorkspacesPool.CapacityPropertyList(this, "capacity", false);
+  private _capacity = new TfPool.CapacityPropertyList(this, "capacity", false);
   public get capacity() {
     return this._capacity;
   }
-  public putCapacity(value: AwsWorkspacesPool.CapacityProperty[] | cdktn.IResolvable) {
+  public putCapacity(value: TfPool.CapacityProperty[] | cdktn.IResolvable) {
     this._capacity.internalValue = value;
   }
   public resetCapacity() {
@@ -309,11 +309,11 @@ export class AwsWorkspacesPool extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsWorkspacesPool.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfPool.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsWorkspacesPool.TimeoutsProperty) {
+  public putTimeouts(value: TfPool.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -330,7 +330,7 @@ export class AwsWorkspacesPool extends cdktn.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      application_settings: cdktn.listMapper(awsWorkspacesPoolApplicationSettingsPropertyToTerraform, false)(this._applicationSettings.internalValue),
+      application_settings: cdktn.listMapper(tfPoolApplicationSettingsPropertyToTerraform, false)(this._applicationSettings.internalValue),
       bundle_id: cdktn.stringToTerraform(this._bundleId),
       description: cdktn.stringToTerraform(this._description),
       directory_id: cdktn.stringToTerraform(this._directoryId),
@@ -338,19 +338,19 @@ export class AwsWorkspacesPool extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       running_mode: cdktn.stringToTerraform(this._runningMode),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      timeout_settings: cdktn.listMapper(awsWorkspacesPoolTimeoutSettingsPropertyToTerraform, false)(this._timeoutSettings.internalValue),
-      capacity: cdktn.listMapper(awsWorkspacesPoolCapacityPropertyToTerraform, true)(this._capacity.internalValue),
-      timeouts: awsWorkspacesPoolTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeout_settings: cdktn.listMapper(tfPoolTimeoutSettingsPropertyToTerraform, false)(this._timeoutSettings.internalValue),
+      capacity: cdktn.listMapper(tfPoolCapacityPropertyToTerraform, true)(this._capacity.internalValue),
+      timeouts: tfPoolTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
   protected synthesizeHclAttributes(): { [name: string]: any } {
     const attrs = {
       application_settings: {
-        value: cdktn.listMapperHcl(awsWorkspacesPoolApplicationSettingsPropertyToHclTerraform, false)(this._applicationSettings.internalValue),
+        value: cdktn.listMapperHcl(tfPoolApplicationSettingsPropertyToHclTerraform, false)(this._applicationSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsWorkspacesPool.ApplicationSettingsPropertyList",
+        storageClassType: "TfPool.ApplicationSettingsPropertyList",
       },
       bundle_id: {
         value: cdktn.stringToHclTerraform(this._bundleId),
@@ -395,22 +395,22 @@ export class AwsWorkspacesPool extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeout_settings: {
-        value: cdktn.listMapperHcl(awsWorkspacesPoolTimeoutSettingsPropertyToHclTerraform, false)(this._timeoutSettings.internalValue),
+        value: cdktn.listMapperHcl(tfPoolTimeoutSettingsPropertyToHclTerraform, false)(this._timeoutSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsWorkspacesPool.TimeoutSettingsPropertyList",
+        storageClassType: "TfPool.TimeoutSettingsPropertyList",
       },
       capacity: {
-        value: cdktn.listMapperHcl(awsWorkspacesPoolCapacityPropertyToHclTerraform, true)(this._capacity.internalValue),
+        value: cdktn.listMapperHcl(tfPoolCapacityPropertyToHclTerraform, true)(this._capacity.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsWorkspacesPool.CapacityPropertyList",
+        storageClassType: "TfPool.CapacityPropertyList",
       },
       timeouts: {
-        value: awsWorkspacesPoolTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfPoolTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsWorkspacesPool.TimeoutsProperty",
+        storageClassType: "TfPool.TimeoutsProperty",
       },
     };
 
@@ -419,7 +419,7 @@ export class AwsWorkspacesPool extends cdktn.TerraformResource {
   }
 }
 
-export function awsWorkspacesPoolApplicationSettingsPropertyToTerraform(struct?: AwsWorkspacesPool.ApplicationSettingsProperty | cdktn.IResolvable): any {
+export function tfPoolApplicationSettingsPropertyToTerraform(struct?: TfPool.ApplicationSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -431,7 +431,7 @@ export function awsWorkspacesPoolApplicationSettingsPropertyToTerraform(struct?:
 }
 
 
-export function awsWorkspacesPoolApplicationSettingsPropertyToHclTerraform(struct?: AwsWorkspacesPool.ApplicationSettingsProperty | cdktn.IResolvable): any {
+export function tfPoolApplicationSettingsPropertyToHclTerraform(struct?: TfPool.ApplicationSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -456,7 +456,7 @@ export function awsWorkspacesPoolApplicationSettingsPropertyToHclTerraform(struc
 }
 
 
-export function awsWorkspacesPoolCapacityStatusPropertyToTerraform(struct?: AwsWorkspacesPool.CapacityStatusProperty): any {
+export function tfPoolCapacityStatusPropertyToTerraform(struct?: TfPool.CapacityStatusProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -466,7 +466,7 @@ export function awsWorkspacesPoolCapacityStatusPropertyToTerraform(struct?: AwsW
 }
 
 
-export function awsWorkspacesPoolCapacityStatusPropertyToHclTerraform(struct?: AwsWorkspacesPool.CapacityStatusProperty): any {
+export function tfPoolCapacityStatusPropertyToHclTerraform(struct?: TfPool.CapacityStatusProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -477,7 +477,7 @@ export function awsWorkspacesPoolCapacityStatusPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsWorkspacesPoolTimeoutSettingsPropertyToTerraform(struct?: AwsWorkspacesPool.TimeoutSettingsProperty | cdktn.IResolvable): any {
+export function tfPoolTimeoutSettingsPropertyToTerraform(struct?: TfPool.TimeoutSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -490,7 +490,7 @@ export function awsWorkspacesPoolTimeoutSettingsPropertyToTerraform(struct?: Aws
 }
 
 
-export function awsWorkspacesPoolTimeoutSettingsPropertyToHclTerraform(struct?: AwsWorkspacesPool.TimeoutSettingsProperty | cdktn.IResolvable): any {
+export function tfPoolTimeoutSettingsPropertyToHclTerraform(struct?: TfPool.TimeoutSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -521,7 +521,7 @@ export function awsWorkspacesPoolTimeoutSettingsPropertyToHclTerraform(struct?: 
 }
 
 
-export function awsWorkspacesPoolCapacityPropertyToTerraform(struct?: AwsWorkspacesPool.CapacityProperty | cdktn.IResolvable): any {
+export function tfPoolCapacityPropertyToTerraform(struct?: TfPool.CapacityProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -532,7 +532,7 @@ export function awsWorkspacesPoolCapacityPropertyToTerraform(struct?: AwsWorkspa
 }
 
 
-export function awsWorkspacesPoolCapacityPropertyToHclTerraform(struct?: AwsWorkspacesPool.CapacityProperty | cdktn.IResolvable): any {
+export function tfPoolCapacityPropertyToHclTerraform(struct?: TfPool.CapacityProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -551,7 +551,7 @@ export function awsWorkspacesPoolCapacityPropertyToHclTerraform(struct?: AwsWork
 }
 
 
-export function awsWorkspacesPoolTimeoutsPropertyToTerraform(struct?: AwsWorkspacesPool.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfPoolTimeoutsPropertyToTerraform(struct?: TfPool.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -564,7 +564,7 @@ export function awsWorkspacesPoolTimeoutsPropertyToTerraform(struct?: AwsWorkspa
 }
 
 
-export function awsWorkspacesPoolTimeoutsPropertyToHclTerraform(struct?: AwsWorkspacesPool.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfPoolTimeoutsPropertyToHclTerraform(struct?: TfPool.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -595,14 +595,14 @@ export function awsWorkspacesPoolTimeoutsPropertyToHclTerraform(struct?: AwsWork
 }
 
 
-export namespace AwsWorkspacesPool {
+export namespace TfPool {
 export interface ApplicationSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#settings_group AwsWorkspacesPool#settings_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#settings_group TfPool#settings_group}
   */
   readonly settingsGroup?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#status AwsWorkspacesPool#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#status TfPool#status}
   */
   readonly status?: string;
 }
@@ -779,15 +779,15 @@ export class CapacityStatusPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#disconnect_timeout_in_seconds AwsWorkspacesPool#disconnect_timeout_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#disconnect_timeout_in_seconds TfPool#disconnect_timeout_in_seconds}
   */
   readonly disconnectTimeoutInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#idle_disconnect_timeout_in_seconds AwsWorkspacesPool#idle_disconnect_timeout_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#idle_disconnect_timeout_in_seconds TfPool#idle_disconnect_timeout_in_seconds}
   */
   readonly idleDisconnectTimeoutInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#max_user_duration_in_seconds AwsWorkspacesPool#max_user_duration_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#max_user_duration_in_seconds TfPool#max_user_duration_in_seconds}
   */
   readonly maxUserDurationInSeconds?: number;
 }
@@ -917,7 +917,7 @@ export class TimeoutSettingsPropertyList extends cdktn.ComplexList {
 }
 export interface CapacityProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#desired_user_sessions AwsWorkspacesPool#desired_user_sessions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#desired_user_sessions TfPool#desired_user_sessions}
   */
   readonly desiredUserSessions: number;
 }
@@ -1002,19 +1002,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#create AwsWorkspacesPool#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#create TfPool#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#delete AwsWorkspacesPool#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#delete TfPool#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#update AwsWorkspacesPool#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_pool#update TfPool#update}
   */
   readonly update?: string;
 }

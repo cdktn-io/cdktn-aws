@@ -5,23 +5,23 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsEcrImagesConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataImagesConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_images#region DataAwsEcrImages#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_images#region TfDataImages#region}
   */
   readonly region?: string;
   /**
   * ID of the registry (AWS account ID)
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_images#registry_id DataAwsEcrImages#registry_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_images#registry_id TfDataImages#registry_id}
   */
   readonly registryId?: string;
   /**
   * Name of the repository
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_images#repository_name DataAwsEcrImages#repository_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_images#repository_name TfDataImages#repository_name}
   */
   readonly repositoryName: string;
 }
@@ -29,7 +29,7 @@ export interface DataAwsEcrImagesConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_images aws_ecr_images}
 */
-export class DataAwsEcrImages extends cdktn.TerraformDataSource {
+export class TfDataImages extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -40,11 +40,11 @@ export class DataAwsEcrImages extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsEcrImages resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataImages resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsEcrImages to import
-  * @param importFromId The id of the existing DataAwsEcrImages that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_images#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsEcrImages to import is found
+  * @param importToId The construct id used in the generated config for the TfDataImages to import
+  * @param importFromId The id of the existing TfDataImages that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_images#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataImages to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ecr_images", importId: importFromId, provider });
@@ -59,9 +59,9 @@ export class DataAwsEcrImages extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsEcrImagesConfig
+  * @param options TfDataImagesConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsEcrImagesConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataImagesConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ecr_images',
       terraformGeneratorMetadata: {
@@ -87,7 +87,7 @@ export class DataAwsEcrImages extends cdktn.TerraformDataSource {
   // ==========
 
   // image_ids - computed: true, optional: false, required: false
-  private _imageIds = new DataAwsEcrImages.ImageIdsPropertyList(this, "image_ids", false);
+  private _imageIds = new TfDataImages.ImageIdsPropertyList(this, "image_ids", false);
   public get imageIds() {
     return this._imageIds;
   }
@@ -176,7 +176,7 @@ export class DataAwsEcrImages extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsEcrImagesImageIdsPropertyToTerraform(struct?: DataAwsEcrImages.ImageIdsProperty): any {
+export function tfDataImagesImageIdsPropertyToTerraform(struct?: TfDataImages.ImageIdsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -186,7 +186,7 @@ export function dataAwsEcrImagesImageIdsPropertyToTerraform(struct?: DataAwsEcrI
 }
 
 
-export function dataAwsEcrImagesImageIdsPropertyToHclTerraform(struct?: DataAwsEcrImages.ImageIdsProperty): any {
+export function tfDataImagesImageIdsPropertyToHclTerraform(struct?: TfDataImages.ImageIdsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -197,7 +197,7 @@ export function dataAwsEcrImagesImageIdsPropertyToHclTerraform(struct?: DataAwsE
 }
 
 
-export namespace DataAwsEcrImages {
+export namespace TfDataImages {
 export interface ImageIdsProperty {
 }
 export class ImageIdsPropertyOutputReference extends cdktn.ComplexObject {

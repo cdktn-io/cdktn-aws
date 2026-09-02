@@ -5,68 +5,68 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsVpcEndpointServiceConfig extends cdktn.TerraformMetaArguments {
+export interface TfEndpointServiceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service#acceptance_required AwsVpcEndpointService#acceptance_required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service#acceptance_required TfEndpointService#acceptance_required}
   */
   readonly acceptanceRequired: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service#allowed_principals AwsVpcEndpointService#allowed_principals}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service#allowed_principals TfEndpointService#allowed_principals}
   */
   readonly allowedPrincipals?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service#gateway_load_balancer_arns AwsVpcEndpointService#gateway_load_balancer_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service#gateway_load_balancer_arns TfEndpointService#gateway_load_balancer_arns}
   */
   readonly gatewayLoadBalancerArns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service#id AwsVpcEndpointService#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service#id TfEndpointService#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service#network_load_balancer_arns AwsVpcEndpointService#network_load_balancer_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service#network_load_balancer_arns TfEndpointService#network_load_balancer_arns}
   */
   readonly networkLoadBalancerArns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service#private_dns_name AwsVpcEndpointService#private_dns_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service#private_dns_name TfEndpointService#private_dns_name}
   */
   readonly privateDnsName?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service#region AwsVpcEndpointService#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service#region TfEndpointService#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service#supported_ip_address_types AwsVpcEndpointService#supported_ip_address_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service#supported_ip_address_types TfEndpointService#supported_ip_address_types}
   */
   readonly supportedIpAddressTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service#supported_regions AwsVpcEndpointService#supported_regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service#supported_regions TfEndpointService#supported_regions}
   */
   readonly supportedRegions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service#tags AwsVpcEndpointService#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service#tags TfEndpointService#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service#tags_all AwsVpcEndpointService#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service#tags_all TfEndpointService#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service#timeouts AwsVpcEndpointService#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service#timeouts TfEndpointService#timeouts}
   */
-  readonly timeouts?: AwsVpcEndpointService.TimeoutsProperty;
+  readonly timeouts?: TfEndpointService.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service aws_vpc_endpoint_service}
 */
-export class AwsVpcEndpointService extends cdktn.TerraformResource {
+export class TfEndpointService extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -77,11 +77,11 @@ export class AwsVpcEndpointService extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsVpcEndpointService resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfEndpointService resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsVpcEndpointService to import
-  * @param importFromId The id of the existing AwsVpcEndpointService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsVpcEndpointService to import is found
+  * @param importToId The construct id used in the generated config for the TfEndpointService to import
+  * @param importFromId The id of the existing TfEndpointService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfEndpointService to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpc_endpoint_service", importId: importFromId, provider });
@@ -96,9 +96,9 @@ export class AwsVpcEndpointService extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsVpcEndpointServiceConfig
+  * @param options TfEndpointServiceConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsVpcEndpointServiceConfig) {
+  public constructor(scope: Construct, id: string, config: TfEndpointServiceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpc_endpoint_service',
       terraformGeneratorMetadata: {
@@ -246,7 +246,7 @@ export class AwsVpcEndpointService extends cdktn.TerraformResource {
   }
 
   // private_dns_name_configuration - computed: true, optional: false, required: false
-  private _privateDnsNameConfiguration = new AwsVpcEndpointService.PrivateDnsNameConfigurationPropertyList(this, "private_dns_name_configuration", false);
+  private _privateDnsNameConfiguration = new TfEndpointService.PrivateDnsNameConfigurationPropertyList(this, "private_dns_name_configuration", false);
   public get privateDnsNameConfiguration() {
     return this._privateDnsNameConfiguration;
   }
@@ -347,11 +347,11 @@ export class AwsVpcEndpointService extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsVpcEndpointService.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfEndpointService.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsVpcEndpointService.TimeoutsProperty) {
+  public putTimeouts(value: TfEndpointService.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -379,7 +379,7 @@ export class AwsVpcEndpointService extends cdktn.TerraformResource {
       supported_regions: cdktn.listMapper(cdktn.stringToTerraform, false)(this._supportedRegions),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: awsVpcEndpointServiceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfEndpointServiceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -452,10 +452,10 @@ export class AwsVpcEndpointService extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: awsVpcEndpointServiceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfEndpointServiceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsVpcEndpointService.TimeoutsProperty",
+        storageClassType: "TfEndpointService.TimeoutsProperty",
       },
     };
 
@@ -464,7 +464,7 @@ export class AwsVpcEndpointService extends cdktn.TerraformResource {
   }
 }
 
-export function awsVpcEndpointServicePrivateDnsNameConfigurationPropertyToTerraform(struct?: AwsVpcEndpointService.PrivateDnsNameConfigurationProperty): any {
+export function tfEndpointServicePrivateDnsNameConfigurationPropertyToTerraform(struct?: TfEndpointService.PrivateDnsNameConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -474,7 +474,7 @@ export function awsVpcEndpointServicePrivateDnsNameConfigurationPropertyToTerraf
 }
 
 
-export function awsVpcEndpointServicePrivateDnsNameConfigurationPropertyToHclTerraform(struct?: AwsVpcEndpointService.PrivateDnsNameConfigurationProperty): any {
+export function tfEndpointServicePrivateDnsNameConfigurationPropertyToHclTerraform(struct?: TfEndpointService.PrivateDnsNameConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -485,7 +485,7 @@ export function awsVpcEndpointServicePrivateDnsNameConfigurationPropertyToHclTer
 }
 
 
-export function awsVpcEndpointServiceTimeoutsPropertyToTerraform(struct?: AwsVpcEndpointService.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfEndpointServiceTimeoutsPropertyToTerraform(struct?: TfEndpointService.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -498,7 +498,7 @@ export function awsVpcEndpointServiceTimeoutsPropertyToTerraform(struct?: AwsVpc
 }
 
 
-export function awsVpcEndpointServiceTimeoutsPropertyToHclTerraform(struct?: AwsVpcEndpointService.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfEndpointServiceTimeoutsPropertyToHclTerraform(struct?: TfEndpointService.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -529,7 +529,7 @@ export function awsVpcEndpointServiceTimeoutsPropertyToHclTerraform(struct?: Aws
 }
 
 
-export namespace AwsVpcEndpointService {
+export namespace TfEndpointService {
 export interface PrivateDnsNameConfigurationProperty {
 }
 export class PrivateDnsNameConfigurationPropertyOutputReference extends cdktn.ComplexObject {
@@ -601,15 +601,15 @@ export class PrivateDnsNameConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service#create AwsVpcEndpointService#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service#create TfEndpointService#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service#delete AwsVpcEndpointService#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service#delete TfEndpointService#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service#update AwsVpcEndpointService#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_service#update TfEndpointService#update}
   */
   readonly update?: string;
 }

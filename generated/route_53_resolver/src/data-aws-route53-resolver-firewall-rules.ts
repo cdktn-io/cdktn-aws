@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsRoute53ResolverFirewallRulesConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataResolverFirewallRulesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_firewall_rules#action DataAwsRoute53ResolverFirewallRules#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_firewall_rules#action TfDataResolverFirewallRules#action}
   */
   readonly action?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_firewall_rules#firewall_rule_group_id DataAwsRoute53ResolverFirewallRules#firewall_rule_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_firewall_rules#firewall_rule_group_id TfDataResolverFirewallRules#firewall_rule_group_id}
   */
   readonly firewallRuleGroupId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_firewall_rules#id DataAwsRoute53ResolverFirewallRules#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_firewall_rules#id TfDataResolverFirewallRules#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_firewall_rules#priority DataAwsRoute53ResolverFirewallRules#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_firewall_rules#priority TfDataResolverFirewallRules#priority}
   */
   readonly priority?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_firewall_rules#region DataAwsRoute53ResolverFirewallRules#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_firewall_rules#region TfDataResolverFirewallRules#region}
   */
   readonly region?: string;
 }
@@ -36,7 +36,7 @@ export interface DataAwsRoute53ResolverFirewallRulesConfig extends cdktn.Terrafo
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_firewall_rules aws_route53_resolver_firewall_rules}
 */
-export class DataAwsRoute53ResolverFirewallRules extends cdktn.TerraformDataSource {
+export class TfDataResolverFirewallRules extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class DataAwsRoute53ResolverFirewallRules extends cdktn.TerraformDataSour
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsRoute53ResolverFirewallRules resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataResolverFirewallRules resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsRoute53ResolverFirewallRules to import
-  * @param importFromId The id of the existing DataAwsRoute53ResolverFirewallRules that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_firewall_rules#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsRoute53ResolverFirewallRules to import is found
+  * @param importToId The construct id used in the generated config for the TfDataResolverFirewallRules to import
+  * @param importFromId The id of the existing TfDataResolverFirewallRules that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_firewall_rules#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataResolverFirewallRules to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route53_resolver_firewall_rules", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class DataAwsRoute53ResolverFirewallRules extends cdktn.TerraformDataSour
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsRoute53ResolverFirewallRulesConfig
+  * @param options TfDataResolverFirewallRulesConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsRoute53ResolverFirewallRulesConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataResolverFirewallRulesConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_route53_resolver_firewall_rules',
       terraformGeneratorMetadata: {
@@ -125,7 +125,7 @@ export class DataAwsRoute53ResolverFirewallRules extends cdktn.TerraformDataSour
   }
 
   // firewall_rules - computed: true, optional: false, required: false
-  private _firewallRules = new DataAwsRoute53ResolverFirewallRules.FirewallRulesPropertyList(this, "firewall_rules", false);
+  private _firewallRules = new TfDataResolverFirewallRules.FirewallRulesPropertyList(this, "firewall_rules", false);
   public get firewallRules() {
     return this._firewallRules;
   }
@@ -231,7 +231,7 @@ export class DataAwsRoute53ResolverFirewallRules extends cdktn.TerraformDataSour
   }
 }
 
-export function dataAwsRoute53ResolverFirewallRulesFirewallRulesPropertyToTerraform(struct?: DataAwsRoute53ResolverFirewallRules.FirewallRulesProperty): any {
+export function tfDataResolverFirewallRulesFirewallRulesPropertyToTerraform(struct?: TfDataResolverFirewallRules.FirewallRulesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -241,7 +241,7 @@ export function dataAwsRoute53ResolverFirewallRulesFirewallRulesPropertyToTerraf
 }
 
 
-export function dataAwsRoute53ResolverFirewallRulesFirewallRulesPropertyToHclTerraform(struct?: DataAwsRoute53ResolverFirewallRules.FirewallRulesProperty): any {
+export function tfDataResolverFirewallRulesFirewallRulesPropertyToHclTerraform(struct?: TfDataResolverFirewallRules.FirewallRulesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -252,7 +252,7 @@ export function dataAwsRoute53ResolverFirewallRulesFirewallRulesPropertyToHclTer
 }
 
 
-export namespace DataAwsRoute53ResolverFirewallRules {
+export namespace TfDataResolverFirewallRules {
 export interface FirewallRulesProperty {
 }
 export class FirewallRulesPropertyOutputReference extends cdktn.ComplexObject {

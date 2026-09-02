@@ -5,44 +5,44 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsGrafanaLicenseAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface TfLicenseAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_license_association#grafana_token AwsGrafanaLicenseAssociation#grafana_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_license_association#grafana_token TfLicenseAssociation#grafana_token}
   */
   readonly grafanaToken?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_license_association#id AwsGrafanaLicenseAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_license_association#id TfLicenseAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_license_association#license_type AwsGrafanaLicenseAssociation#license_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_license_association#license_type TfLicenseAssociation#license_type}
   */
   readonly licenseType: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_license_association#region AwsGrafanaLicenseAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_license_association#region TfLicenseAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_license_association#workspace_id AwsGrafanaLicenseAssociation#workspace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_license_association#workspace_id TfLicenseAssociation#workspace_id}
   */
   readonly workspaceId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_license_association#timeouts AwsGrafanaLicenseAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_license_association#timeouts TfLicenseAssociation#timeouts}
   */
-  readonly timeouts?: AwsGrafanaLicenseAssociation.TimeoutsProperty;
+  readonly timeouts?: TfLicenseAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_license_association aws_grafana_license_association}
 */
-export class AwsGrafanaLicenseAssociation extends cdktn.TerraformResource {
+export class TfLicenseAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class AwsGrafanaLicenseAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsGrafanaLicenseAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfLicenseAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsGrafanaLicenseAssociation to import
-  * @param importFromId The id of the existing AwsGrafanaLicenseAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_license_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsGrafanaLicenseAssociation to import is found
+  * @param importToId The construct id used in the generated config for the TfLicenseAssociation to import
+  * @param importFromId The id of the existing TfLicenseAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_license_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfLicenseAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_grafana_license_association", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class AwsGrafanaLicenseAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsGrafanaLicenseAssociationConfig
+  * @param options TfLicenseAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsGrafanaLicenseAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: TfLicenseAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_grafana_license_association',
       terraformGeneratorMetadata: {
@@ -187,11 +187,11 @@ export class AwsGrafanaLicenseAssociation extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsGrafanaLicenseAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfLicenseAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsGrafanaLicenseAssociation.TimeoutsProperty) {
+  public putTimeouts(value: TfLicenseAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -213,7 +213,7 @@ export class AwsGrafanaLicenseAssociation extends cdktn.TerraformResource {
       license_type: cdktn.stringToTerraform(this._licenseType),
       region: cdktn.stringToTerraform(this._region),
       workspace_id: cdktn.stringToTerraform(this._workspaceId),
-      timeouts: awsGrafanaLicenseAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfLicenseAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -250,10 +250,10 @@ export class AwsGrafanaLicenseAssociation extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsGrafanaLicenseAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfLicenseAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsGrafanaLicenseAssociation.TimeoutsProperty",
+        storageClassType: "TfLicenseAssociation.TimeoutsProperty",
       },
     };
 
@@ -262,7 +262,7 @@ export class AwsGrafanaLicenseAssociation extends cdktn.TerraformResource {
   }
 }
 
-export function awsGrafanaLicenseAssociationTimeoutsPropertyToTerraform(struct?: AwsGrafanaLicenseAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfLicenseAssociationTimeoutsPropertyToTerraform(struct?: TfLicenseAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -274,7 +274,7 @@ export function awsGrafanaLicenseAssociationTimeoutsPropertyToTerraform(struct?:
 }
 
 
-export function awsGrafanaLicenseAssociationTimeoutsPropertyToHclTerraform(struct?: AwsGrafanaLicenseAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfLicenseAssociationTimeoutsPropertyToHclTerraform(struct?: TfLicenseAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -299,14 +299,14 @@ export function awsGrafanaLicenseAssociationTimeoutsPropertyToHclTerraform(struc
 }
 
 
-export namespace AwsGrafanaLicenseAssociation {
+export namespace TfLicenseAssociation {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_license_association#create AwsGrafanaLicenseAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_license_association#create TfLicenseAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_license_association#delete AwsGrafanaLicenseAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_license_association#delete TfLicenseAssociation#delete}
   */
   readonly delete?: string;
 }

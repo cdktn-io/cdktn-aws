@@ -5,66 +5,66 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsStoragegatewayFileSystemAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface TfFileSystemAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_file_system_association#audit_destination_arn AwsStoragegatewayFileSystemAssociation#audit_destination_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_file_system_association#audit_destination_arn TfFileSystemAssociation#audit_destination_arn}
   */
   readonly auditDestinationArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_file_system_association#gateway_arn AwsStoragegatewayFileSystemAssociation#gateway_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_file_system_association#gateway_arn TfFileSystemAssociation#gateway_arn}
   */
   readonly gatewayArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_file_system_association#id AwsStoragegatewayFileSystemAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_file_system_association#id TfFileSystemAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_file_system_association#location_arn AwsStoragegatewayFileSystemAssociation#location_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_file_system_association#location_arn TfFileSystemAssociation#location_arn}
   */
   readonly locationArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_file_system_association#password AwsStoragegatewayFileSystemAssociation#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_file_system_association#password TfFileSystemAssociation#password}
   */
   readonly password: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_file_system_association#region AwsStoragegatewayFileSystemAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_file_system_association#region TfFileSystemAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_file_system_association#tags AwsStoragegatewayFileSystemAssociation#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_file_system_association#tags TfFileSystemAssociation#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_file_system_association#tags_all AwsStoragegatewayFileSystemAssociation#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_file_system_association#tags_all TfFileSystemAssociation#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_file_system_association#username AwsStoragegatewayFileSystemAssociation#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_file_system_association#username TfFileSystemAssociation#username}
   */
   readonly username: string;
   /**
   * cache_attributes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_file_system_association#cache_attributes AwsStoragegatewayFileSystemAssociation#cache_attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_file_system_association#cache_attributes TfFileSystemAssociation#cache_attributes}
   */
-  readonly cacheAttributes?: AwsStoragegatewayFileSystemAssociation.CacheAttributesProperty;
+  readonly cacheAttributes?: TfFileSystemAssociation.CacheAttributesProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_file_system_association#timeouts AwsStoragegatewayFileSystemAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_file_system_association#timeouts TfFileSystemAssociation#timeouts}
   */
-  readonly timeouts?: AwsStoragegatewayFileSystemAssociation.TimeoutsProperty;
+  readonly timeouts?: TfFileSystemAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_file_system_association aws_storagegateway_file_system_association}
 */
-export class AwsStoragegatewayFileSystemAssociation extends cdktn.TerraformResource {
+export class TfFileSystemAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -75,11 +75,11 @@ export class AwsStoragegatewayFileSystemAssociation extends cdktn.TerraformResou
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsStoragegatewayFileSystemAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfFileSystemAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsStoragegatewayFileSystemAssociation to import
-  * @param importFromId The id of the existing AwsStoragegatewayFileSystemAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_file_system_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsStoragegatewayFileSystemAssociation to import is found
+  * @param importToId The construct id used in the generated config for the TfFileSystemAssociation to import
+  * @param importFromId The id of the existing TfFileSystemAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_file_system_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfFileSystemAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_storagegateway_file_system_association", importId: importFromId, provider });
@@ -94,9 +94,9 @@ export class AwsStoragegatewayFileSystemAssociation extends cdktn.TerraformResou
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsStoragegatewayFileSystemAssociationConfig
+  * @param options TfFileSystemAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsStoragegatewayFileSystemAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: TfFileSystemAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_storagegateway_file_system_association',
       terraformGeneratorMetadata: {
@@ -267,11 +267,11 @@ export class AwsStoragegatewayFileSystemAssociation extends cdktn.TerraformResou
   }
 
   // cache_attributes - computed: false, optional: true, required: false
-  private _cacheAttributes = new AwsStoragegatewayFileSystemAssociation.CacheAttributesPropertyOutputReference(this, "cache_attributes");
+  private _cacheAttributes = new TfFileSystemAssociation.CacheAttributesPropertyOutputReference(this, "cache_attributes");
   public get cacheAttributes() {
     return this._cacheAttributes;
   }
-  public putCacheAttributes(value: AwsStoragegatewayFileSystemAssociation.CacheAttributesProperty) {
+  public putCacheAttributes(value: TfFileSystemAssociation.CacheAttributesProperty) {
     this._cacheAttributes.internalValue = value;
   }
   public resetCacheAttributes() {
@@ -283,11 +283,11 @@ export class AwsStoragegatewayFileSystemAssociation extends cdktn.TerraformResou
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsStoragegatewayFileSystemAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfFileSystemAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsStoragegatewayFileSystemAssociation.TimeoutsProperty) {
+  public putTimeouts(value: TfFileSystemAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -313,8 +313,8 @@ export class AwsStoragegatewayFileSystemAssociation extends cdktn.TerraformResou
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       username: cdktn.stringToTerraform(this._username),
-      cache_attributes: awsStoragegatewayFileSystemAssociationCacheAttributesPropertyToTerraform(this._cacheAttributes.internalValue),
-      timeouts: awsStoragegatewayFileSystemAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      cache_attributes: tfFileSystemAssociationCacheAttributesPropertyToTerraform(this._cacheAttributes.internalValue),
+      timeouts: tfFileSystemAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -375,16 +375,16 @@ export class AwsStoragegatewayFileSystemAssociation extends cdktn.TerraformResou
         storageClassType: "string",
       },
       cache_attributes: {
-        value: awsStoragegatewayFileSystemAssociationCacheAttributesPropertyToHclTerraform(this._cacheAttributes.internalValue),
+        value: tfFileSystemAssociationCacheAttributesPropertyToHclTerraform(this._cacheAttributes.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsStoragegatewayFileSystemAssociation.CacheAttributesPropertyList",
+        storageClassType: "TfFileSystemAssociation.CacheAttributesPropertyList",
       },
       timeouts: {
-        value: awsStoragegatewayFileSystemAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfFileSystemAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsStoragegatewayFileSystemAssociation.TimeoutsProperty",
+        storageClassType: "TfFileSystemAssociation.TimeoutsProperty",
       },
     };
 
@@ -393,7 +393,7 @@ export class AwsStoragegatewayFileSystemAssociation extends cdktn.TerraformResou
   }
 }
 
-export function awsStoragegatewayFileSystemAssociationCacheAttributesPropertyToTerraform(struct?: AwsStoragegatewayFileSystemAssociation.CacheAttributesPropertyOutputReference | AwsStoragegatewayFileSystemAssociation.CacheAttributesProperty): any {
+export function tfFileSystemAssociationCacheAttributesPropertyToTerraform(struct?: TfFileSystemAssociation.CacheAttributesPropertyOutputReference | TfFileSystemAssociation.CacheAttributesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -404,7 +404,7 @@ export function awsStoragegatewayFileSystemAssociationCacheAttributesPropertyToT
 }
 
 
-export function awsStoragegatewayFileSystemAssociationCacheAttributesPropertyToHclTerraform(struct?: AwsStoragegatewayFileSystemAssociation.CacheAttributesPropertyOutputReference | AwsStoragegatewayFileSystemAssociation.CacheAttributesProperty): any {
+export function tfFileSystemAssociationCacheAttributesPropertyToHclTerraform(struct?: TfFileSystemAssociation.CacheAttributesPropertyOutputReference | TfFileSystemAssociation.CacheAttributesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -423,7 +423,7 @@ export function awsStoragegatewayFileSystemAssociationCacheAttributesPropertyToH
 }
 
 
-export function awsStoragegatewayFileSystemAssociationTimeoutsPropertyToTerraform(struct?: AwsStoragegatewayFileSystemAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfFileSystemAssociationTimeoutsPropertyToTerraform(struct?: TfFileSystemAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -436,7 +436,7 @@ export function awsStoragegatewayFileSystemAssociationTimeoutsPropertyToTerrafor
 }
 
 
-export function awsStoragegatewayFileSystemAssociationTimeoutsPropertyToHclTerraform(struct?: AwsStoragegatewayFileSystemAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfFileSystemAssociationTimeoutsPropertyToHclTerraform(struct?: TfFileSystemAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -467,10 +467,10 @@ export function awsStoragegatewayFileSystemAssociationTimeoutsPropertyToHclTerra
 }
 
 
-export namespace AwsStoragegatewayFileSystemAssociation {
+export namespace TfFileSystemAssociation {
 export interface CacheAttributesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_file_system_association#cache_stale_timeout_in_seconds AwsStoragegatewayFileSystemAssociation#cache_stale_timeout_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_file_system_association#cache_stale_timeout_in_seconds TfFileSystemAssociation#cache_stale_timeout_in_seconds}
   */
   readonly cacheStaleTimeoutInSeconds?: number;
 }
@@ -524,15 +524,15 @@ export class CacheAttributesPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_file_system_association#create AwsStoragegatewayFileSystemAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_file_system_association#create TfFileSystemAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_file_system_association#delete AwsStoragegatewayFileSystemAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_file_system_association#delete TfFileSystemAssociation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_file_system_association#update AwsStoragegatewayFileSystemAssociation#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_file_system_association#update TfFileSystemAssociation#update}
   */
   readonly update?: string;
 }

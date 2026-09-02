@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsBackupReportPlanConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataReportPlanConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/backup_report_plan#id DataAwsBackupReportPlan#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/backup_report_plan#id TfDataReportPlan#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/backup_report_plan#name DataAwsBackupReportPlan#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/backup_report_plan#name TfDataReportPlan#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/backup_report_plan#region DataAwsBackupReportPlan#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/backup_report_plan#region TfDataReportPlan#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/backup_report_plan#tags DataAwsBackupReportPlan#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/backup_report_plan#tags TfDataReportPlan#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -32,7 +32,7 @@ export interface DataAwsBackupReportPlanConfig extends cdktn.TerraformMetaArgume
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/backup_report_plan aws_backup_report_plan}
 */
-export class DataAwsBackupReportPlan extends cdktn.TerraformDataSource {
+export class TfDataReportPlan extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class DataAwsBackupReportPlan extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsBackupReportPlan resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataReportPlan resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsBackupReportPlan to import
-  * @param importFromId The id of the existing DataAwsBackupReportPlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/backup_report_plan#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsBackupReportPlan to import is found
+  * @param importToId The construct id used in the generated config for the TfDataReportPlan to import
+  * @param importFromId The id of the existing TfDataReportPlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/backup_report_plan#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataReportPlan to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_backup_report_plan", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class DataAwsBackupReportPlan extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsBackupReportPlanConfig
+  * @param options TfDataReportPlanConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsBackupReportPlanConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataReportPlanConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_backup_report_plan',
       terraformGeneratorMetadata: {
@@ -156,13 +156,13 @@ export class DataAwsBackupReportPlan extends cdktn.TerraformDataSource {
   }
 
   // report_delivery_channel - computed: true, optional: false, required: false
-  private _reportDeliveryChannel = new DataAwsBackupReportPlan.ReportDeliveryChannelPropertyList(this, "report_delivery_channel", false);
+  private _reportDeliveryChannel = new TfDataReportPlan.ReportDeliveryChannelPropertyList(this, "report_delivery_channel", false);
   public get reportDeliveryChannel() {
     return this._reportDeliveryChannel;
   }
 
   // report_setting - computed: true, optional: false, required: false
-  private _reportSetting = new DataAwsBackupReportPlan.ReportSettingPropertyList(this, "report_setting", false);
+  private _reportSetting = new TfDataReportPlan.ReportSettingPropertyList(this, "report_setting", false);
   public get reportSetting() {
     return this._reportSetting;
   }
@@ -229,7 +229,7 @@ export class DataAwsBackupReportPlan extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsBackupReportPlanReportDeliveryChannelPropertyToTerraform(struct?: DataAwsBackupReportPlan.ReportDeliveryChannelProperty): any {
+export function tfDataReportPlanReportDeliveryChannelPropertyToTerraform(struct?: TfDataReportPlan.ReportDeliveryChannelProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -239,7 +239,7 @@ export function dataAwsBackupReportPlanReportDeliveryChannelPropertyToTerraform(
 }
 
 
-export function dataAwsBackupReportPlanReportDeliveryChannelPropertyToHclTerraform(struct?: DataAwsBackupReportPlan.ReportDeliveryChannelProperty): any {
+export function tfDataReportPlanReportDeliveryChannelPropertyToHclTerraform(struct?: TfDataReportPlan.ReportDeliveryChannelProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -250,7 +250,7 @@ export function dataAwsBackupReportPlanReportDeliveryChannelPropertyToHclTerrafo
 }
 
 
-export function dataAwsBackupReportPlanReportSettingPropertyToTerraform(struct?: DataAwsBackupReportPlan.ReportSettingProperty): any {
+export function tfDataReportPlanReportSettingPropertyToTerraform(struct?: TfDataReportPlan.ReportSettingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -260,7 +260,7 @@ export function dataAwsBackupReportPlanReportSettingPropertyToTerraform(struct?:
 }
 
 
-export function dataAwsBackupReportPlanReportSettingPropertyToHclTerraform(struct?: DataAwsBackupReportPlan.ReportSettingProperty): any {
+export function tfDataReportPlanReportSettingPropertyToHclTerraform(struct?: TfDataReportPlan.ReportSettingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -271,7 +271,7 @@ export function dataAwsBackupReportPlanReportSettingPropertyToHclTerraform(struc
 }
 
 
-export namespace DataAwsBackupReportPlan {
+export namespace TfDataReportPlan {
 export interface ReportDeliveryChannelProperty {
 }
 export class ReportDeliveryChannelPropertyOutputReference extends cdktn.ComplexObject {

@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsEfsFileSystemConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataFileSystemConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/efs_file_system#creation_token DataAwsEfsFileSystem#creation_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/efs_file_system#creation_token TfDataFileSystem#creation_token}
   */
   readonly creationToken?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/efs_file_system#file_system_id DataAwsEfsFileSystem#file_system_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/efs_file_system#file_system_id TfDataFileSystem#file_system_id}
   */
   readonly fileSystemId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/efs_file_system#id DataAwsEfsFileSystem#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/efs_file_system#id TfDataFileSystem#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,11 +24,11 @@ export interface DataAwsEfsFileSystemConfig extends cdktn.TerraformMetaArguments
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/efs_file_system#region DataAwsEfsFileSystem#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/efs_file_system#region TfDataFileSystem#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/efs_file_system#tags DataAwsEfsFileSystem#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/efs_file_system#tags TfDataFileSystem#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -36,7 +36,7 @@ export interface DataAwsEfsFileSystemConfig extends cdktn.TerraformMetaArguments
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/efs_file_system aws_efs_file_system}
 */
-export class DataAwsEfsFileSystem extends cdktn.TerraformDataSource {
+export class TfDataFileSystem extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class DataAwsEfsFileSystem extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsEfsFileSystem resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataFileSystem resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsEfsFileSystem to import
-  * @param importFromId The id of the existing DataAwsEfsFileSystem that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/efs_file_system#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsEfsFileSystem to import is found
+  * @param importToId The construct id used in the generated config for the TfDataFileSystem to import
+  * @param importFromId The id of the existing TfDataFileSystem that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/efs_file_system#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataFileSystem to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_efs_file_system", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class DataAwsEfsFileSystem extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsEfsFileSystemConfig = {}
+  * @param options TfDataFileSystemConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataAwsEfsFileSystemConfig = {}) {
+  public constructor(scope: Construct, id: string, config: TfDataFileSystemConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_efs_file_system',
       terraformGeneratorMetadata: {
@@ -174,7 +174,7 @@ export class DataAwsEfsFileSystem extends cdktn.TerraformDataSource {
   }
 
   // lifecycle_policy - computed: true, optional: false, required: false
-  private _lifecyclePolicy = new DataAwsEfsFileSystem.LifecyclePolicyPropertyList(this, "lifecycle_policy", false);
+  private _lifecyclePolicy = new TfDataFileSystem.LifecyclePolicyPropertyList(this, "lifecycle_policy", false);
   public get lifecyclePolicy() {
     return this._lifecyclePolicy;
   }
@@ -190,7 +190,7 @@ export class DataAwsEfsFileSystem extends cdktn.TerraformDataSource {
   }
 
   // protection - computed: true, optional: false, required: false
-  private _protection = new DataAwsEfsFileSystem.ProtectionPropertyList(this, "protection", false);
+  private _protection = new TfDataFileSystem.ProtectionPropertyList(this, "protection", false);
   public get protection() {
     return this._protection;
   }
@@ -295,7 +295,7 @@ export class DataAwsEfsFileSystem extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataAwsEfsFileSystemLifecyclePolicyPropertyToTerraform(struct?: DataAwsEfsFileSystem.LifecyclePolicyProperty): any {
+export function tfDataFileSystemLifecyclePolicyPropertyToTerraform(struct?: TfDataFileSystem.LifecyclePolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -305,7 +305,7 @@ export function dataAwsEfsFileSystemLifecyclePolicyPropertyToTerraform(struct?: 
 }
 
 
-export function dataAwsEfsFileSystemLifecyclePolicyPropertyToHclTerraform(struct?: DataAwsEfsFileSystem.LifecyclePolicyProperty): any {
+export function tfDataFileSystemLifecyclePolicyPropertyToHclTerraform(struct?: TfDataFileSystem.LifecyclePolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -316,7 +316,7 @@ export function dataAwsEfsFileSystemLifecyclePolicyPropertyToHclTerraform(struct
 }
 
 
-export function dataAwsEfsFileSystemProtectionPropertyToTerraform(struct?: DataAwsEfsFileSystem.ProtectionProperty): any {
+export function tfDataFileSystemProtectionPropertyToTerraform(struct?: TfDataFileSystem.ProtectionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -326,7 +326,7 @@ export function dataAwsEfsFileSystemProtectionPropertyToTerraform(struct?: DataA
 }
 
 
-export function dataAwsEfsFileSystemProtectionPropertyToHclTerraform(struct?: DataAwsEfsFileSystem.ProtectionProperty): any {
+export function tfDataFileSystemProtectionPropertyToHclTerraform(struct?: TfDataFileSystem.ProtectionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -337,7 +337,7 @@ export function dataAwsEfsFileSystemProtectionPropertyToHclTerraform(struct?: Da
 }
 
 
-export namespace DataAwsEfsFileSystem {
+export namespace TfDataFileSystem {
 export interface LifecyclePolicyProperty {
 }
 export class LifecyclePolicyPropertyOutputReference extends cdktn.ComplexObject {

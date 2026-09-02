@@ -5,40 +5,40 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsSesv2DedicatedIpAssignmentConfig extends cdktn.TerraformMetaArguments {
+export interface TfDedicatedIpAssignmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_dedicated_ip_assignment#destination_pool_name AwsSesv2DedicatedIpAssignment#destination_pool_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_dedicated_ip_assignment#destination_pool_name TfDedicatedIpAssignment#destination_pool_name}
   */
   readonly destinationPoolName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_dedicated_ip_assignment#id AwsSesv2DedicatedIpAssignment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_dedicated_ip_assignment#id TfDedicatedIpAssignment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_dedicated_ip_assignment#ip AwsSesv2DedicatedIpAssignment#ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_dedicated_ip_assignment#ip TfDedicatedIpAssignment#ip}
   */
   readonly ip: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_dedicated_ip_assignment#region AwsSesv2DedicatedIpAssignment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_dedicated_ip_assignment#region TfDedicatedIpAssignment#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_dedicated_ip_assignment#timeouts AwsSesv2DedicatedIpAssignment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_dedicated_ip_assignment#timeouts TfDedicatedIpAssignment#timeouts}
   */
-  readonly timeouts?: AwsSesv2DedicatedIpAssignment.TimeoutsProperty;
+  readonly timeouts?: TfDedicatedIpAssignment.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_dedicated_ip_assignment aws_sesv2_dedicated_ip_assignment}
 */
-export class AwsSesv2DedicatedIpAssignment extends cdktn.TerraformResource {
+export class TfDedicatedIpAssignment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class AwsSesv2DedicatedIpAssignment extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsSesv2DedicatedIpAssignment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDedicatedIpAssignment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsSesv2DedicatedIpAssignment to import
-  * @param importFromId The id of the existing AwsSesv2DedicatedIpAssignment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_dedicated_ip_assignment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsSesv2DedicatedIpAssignment to import is found
+  * @param importToId The construct id used in the generated config for the TfDedicatedIpAssignment to import
+  * @param importFromId The id of the existing TfDedicatedIpAssignment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_dedicated_ip_assignment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDedicatedIpAssignment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sesv2_dedicated_ip_assignment", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class AwsSesv2DedicatedIpAssignment extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsSesv2DedicatedIpAssignmentConfig
+  * @param options TfDedicatedIpAssignmentConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsSesv2DedicatedIpAssignmentConfig) {
+  public constructor(scope: Construct, id: string, config: TfDedicatedIpAssignmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sesv2_dedicated_ip_assignment',
       terraformGeneratorMetadata: {
@@ -156,11 +156,11 @@ export class AwsSesv2DedicatedIpAssignment extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsSesv2DedicatedIpAssignment.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfDedicatedIpAssignment.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsSesv2DedicatedIpAssignment.TimeoutsProperty) {
+  public putTimeouts(value: TfDedicatedIpAssignment.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -181,7 +181,7 @@ export class AwsSesv2DedicatedIpAssignment extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       ip: cdktn.stringToTerraform(this._ip),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: awsSesv2DedicatedIpAssignmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfDedicatedIpAssignmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -212,10 +212,10 @@ export class AwsSesv2DedicatedIpAssignment extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: awsSesv2DedicatedIpAssignmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfDedicatedIpAssignmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsSesv2DedicatedIpAssignment.TimeoutsProperty",
+        storageClassType: "TfDedicatedIpAssignment.TimeoutsProperty",
       },
     };
 
@@ -224,7 +224,7 @@ export class AwsSesv2DedicatedIpAssignment extends cdktn.TerraformResource {
   }
 }
 
-export function awsSesv2DedicatedIpAssignmentTimeoutsPropertyToTerraform(struct?: AwsSesv2DedicatedIpAssignment.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDedicatedIpAssignmentTimeoutsPropertyToTerraform(struct?: TfDedicatedIpAssignment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -236,7 +236,7 @@ export function awsSesv2DedicatedIpAssignmentTimeoutsPropertyToTerraform(struct?
 }
 
 
-export function awsSesv2DedicatedIpAssignmentTimeoutsPropertyToHclTerraform(struct?: AwsSesv2DedicatedIpAssignment.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfDedicatedIpAssignmentTimeoutsPropertyToHclTerraform(struct?: TfDedicatedIpAssignment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -261,14 +261,14 @@ export function awsSesv2DedicatedIpAssignmentTimeoutsPropertyToHclTerraform(stru
 }
 
 
-export namespace AwsSesv2DedicatedIpAssignment {
+export namespace TfDedicatedIpAssignment {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_dedicated_ip_assignment#create AwsSesv2DedicatedIpAssignment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_dedicated_ip_assignment#create TfDedicatedIpAssignment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_dedicated_ip_assignment#delete AwsSesv2DedicatedIpAssignment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_dedicated_ip_assignment#delete TfDedicatedIpAssignment#delete}
   */
   readonly delete?: string;
 }

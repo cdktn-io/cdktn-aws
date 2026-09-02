@@ -5,74 +5,74 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsConnectUserConfig extends cdktn.TerraformMetaArguments {
+export interface TfUserConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#directory_user_id AwsConnectUser#directory_user_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#directory_user_id TfUser#directory_user_id}
   */
   readonly directoryUserId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#hierarchy_group_id AwsConnectUser#hierarchy_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#hierarchy_group_id TfUser#hierarchy_group_id}
   */
   readonly hierarchyGroupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#id AwsConnectUser#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#id TfUser#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#instance_id AwsConnectUser#instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#instance_id TfUser#instance_id}
   */
   readonly instanceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#name AwsConnectUser#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#name TfUser#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#password AwsConnectUser#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#password TfUser#password}
   */
   readonly password?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#region AwsConnectUser#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#region TfUser#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#routing_profile_id AwsConnectUser#routing_profile_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#routing_profile_id TfUser#routing_profile_id}
   */
   readonly routingProfileId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#security_profile_ids AwsConnectUser#security_profile_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#security_profile_ids TfUser#security_profile_ids}
   */
   readonly securityProfileIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#tags AwsConnectUser#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#tags TfUser#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#tags_all AwsConnectUser#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#tags_all TfUser#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * identity_info block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#identity_info AwsConnectUser#identity_info}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#identity_info TfUser#identity_info}
   */
-  readonly identityInfo?: AwsConnectUser.IdentityInfoProperty;
+  readonly identityInfo?: TfUser.IdentityInfoProperty;
   /**
   * phone_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#phone_config AwsConnectUser#phone_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#phone_config TfUser#phone_config}
   */
-  readonly phoneConfig: AwsConnectUser.PhoneConfigProperty;
+  readonly phoneConfig: TfUser.PhoneConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user aws_connect_user}
 */
-export class AwsConnectUser extends cdktn.TerraformResource {
+export class TfUser extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -83,11 +83,11 @@ export class AwsConnectUser extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsConnectUser resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfUser resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsConnectUser to import
-  * @param importFromId The id of the existing AwsConnectUser that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsConnectUser to import is found
+  * @param importToId The construct id used in the generated config for the TfUser to import
+  * @param importFromId The id of the existing TfUser that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfUser to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_connect_user", importId: importFromId, provider });
@@ -102,9 +102,9 @@ export class AwsConnectUser extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsConnectUserConfig
+  * @param options TfUserConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsConnectUserConfig) {
+  public constructor(scope: Construct, id: string, config: TfUserConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_connect_user',
       terraformGeneratorMetadata: {
@@ -314,11 +314,11 @@ export class AwsConnectUser extends cdktn.TerraformResource {
   }
 
   // identity_info - computed: false, optional: true, required: false
-  private _identityInfo = new AwsConnectUser.IdentityInfoPropertyOutputReference(this, "identity_info");
+  private _identityInfo = new TfUser.IdentityInfoPropertyOutputReference(this, "identity_info");
   public get identityInfo() {
     return this._identityInfo;
   }
-  public putIdentityInfo(value: AwsConnectUser.IdentityInfoProperty) {
+  public putIdentityInfo(value: TfUser.IdentityInfoProperty) {
     this._identityInfo.internalValue = value;
   }
   public resetIdentityInfo() {
@@ -330,11 +330,11 @@ export class AwsConnectUser extends cdktn.TerraformResource {
   }
 
   // phone_config - computed: false, optional: false, required: true
-  private _phoneConfig = new AwsConnectUser.PhoneConfigPropertyOutputReference(this, "phone_config");
+  private _phoneConfig = new TfUser.PhoneConfigPropertyOutputReference(this, "phone_config");
   public get phoneConfig() {
     return this._phoneConfig;
   }
-  public putPhoneConfig(value: AwsConnectUser.PhoneConfigProperty) {
+  public putPhoneConfig(value: TfUser.PhoneConfigProperty) {
     this._phoneConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -359,8 +359,8 @@ export class AwsConnectUser extends cdktn.TerraformResource {
       security_profile_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._securityProfileIds),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      identity_info: awsConnectUserIdentityInfoPropertyToTerraform(this._identityInfo.internalValue),
-      phone_config: awsConnectUserPhoneConfigPropertyToTerraform(this._phoneConfig.internalValue),
+      identity_info: tfUserIdentityInfoPropertyToTerraform(this._identityInfo.internalValue),
+      phone_config: tfUserPhoneConfigPropertyToTerraform(this._phoneConfig.internalValue),
     };
   }
 
@@ -433,16 +433,16 @@ export class AwsConnectUser extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       identity_info: {
-        value: awsConnectUserIdentityInfoPropertyToHclTerraform(this._identityInfo.internalValue),
+        value: tfUserIdentityInfoPropertyToHclTerraform(this._identityInfo.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsConnectUser.IdentityInfoPropertyList",
+        storageClassType: "TfUser.IdentityInfoPropertyList",
       },
       phone_config: {
-        value: awsConnectUserPhoneConfigPropertyToHclTerraform(this._phoneConfig.internalValue),
+        value: tfUserPhoneConfigPropertyToHclTerraform(this._phoneConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsConnectUser.PhoneConfigPropertyList",
+        storageClassType: "TfUser.PhoneConfigPropertyList",
       },
     };
 
@@ -451,7 +451,7 @@ export class AwsConnectUser extends cdktn.TerraformResource {
   }
 }
 
-export function awsConnectUserIdentityInfoPropertyToTerraform(struct?: AwsConnectUser.IdentityInfoPropertyOutputReference | AwsConnectUser.IdentityInfoProperty): any {
+export function tfUserIdentityInfoPropertyToTerraform(struct?: TfUser.IdentityInfoPropertyOutputReference | TfUser.IdentityInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -465,7 +465,7 @@ export function awsConnectUserIdentityInfoPropertyToTerraform(struct?: AwsConnec
 }
 
 
-export function awsConnectUserIdentityInfoPropertyToHclTerraform(struct?: AwsConnectUser.IdentityInfoPropertyOutputReference | AwsConnectUser.IdentityInfoProperty): any {
+export function tfUserIdentityInfoPropertyToHclTerraform(struct?: TfUser.IdentityInfoPropertyOutputReference | TfUser.IdentityInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -502,7 +502,7 @@ export function awsConnectUserIdentityInfoPropertyToHclTerraform(struct?: AwsCon
 }
 
 
-export function awsConnectUserPhoneConfigPropertyToTerraform(struct?: AwsConnectUser.PhoneConfigPropertyOutputReference | AwsConnectUser.PhoneConfigProperty): any {
+export function tfUserPhoneConfigPropertyToTerraform(struct?: TfUser.PhoneConfigPropertyOutputReference | TfUser.PhoneConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -516,7 +516,7 @@ export function awsConnectUserPhoneConfigPropertyToTerraform(struct?: AwsConnect
 }
 
 
-export function awsConnectUserPhoneConfigPropertyToHclTerraform(struct?: AwsConnectUser.PhoneConfigPropertyOutputReference | AwsConnectUser.PhoneConfigProperty): any {
+export function tfUserPhoneConfigPropertyToHclTerraform(struct?: TfUser.PhoneConfigPropertyOutputReference | TfUser.PhoneConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -553,22 +553,22 @@ export function awsConnectUserPhoneConfigPropertyToHclTerraform(struct?: AwsConn
 }
 
 
-export namespace AwsConnectUser {
+export namespace TfUser {
 export interface IdentityInfoProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#email AwsConnectUser#email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#email TfUser#email}
   */
   readonly email?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#first_name AwsConnectUser#first_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#first_name TfUser#first_name}
   */
   readonly firstName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#last_name AwsConnectUser#last_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#last_name TfUser#last_name}
   */
   readonly lastName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#secondary_email AwsConnectUser#secondary_email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#secondary_email TfUser#secondary_email}
   */
   readonly secondaryEmail?: string;
 }
@@ -688,19 +688,19 @@ export class IdentityInfoPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface PhoneConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#after_contact_work_time_limit AwsConnectUser#after_contact_work_time_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#after_contact_work_time_limit TfUser#after_contact_work_time_limit}
   */
   readonly afterContactWorkTimeLimit?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#auto_accept AwsConnectUser#auto_accept}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#auto_accept TfUser#auto_accept}
   */
   readonly autoAccept?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#desk_phone_number AwsConnectUser#desk_phone_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#desk_phone_number TfUser#desk_phone_number}
   */
   readonly deskPhoneNumber?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#phone_type AwsConnectUser#phone_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_user#phone_type TfUser#phone_type}
   */
   readonly phoneType: string;
 }

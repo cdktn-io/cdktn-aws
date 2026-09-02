@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataAwsTransferServerConfig extends cdktn.TerraformMetaArguments {
+export interface TfDataServerConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/transfer_server#id DataAwsTransferServer#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/transfer_server#id TfDataServer#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,15 +16,15 @@ export interface DataAwsTransferServerConfig extends cdktn.TerraformMetaArgument
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/transfer_server#region DataAwsTransferServer#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/transfer_server#region TfDataServer#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/transfer_server#server_id DataAwsTransferServer#server_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/transfer_server#server_id TfDataServer#server_id}
   */
   readonly serverId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/transfer_server#tags DataAwsTransferServer#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/transfer_server#tags TfDataServer#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -32,7 +32,7 @@ export interface DataAwsTransferServerConfig extends cdktn.TerraformMetaArgument
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/transfer_server aws_transfer_server}
 */
-export class DataAwsTransferServer extends cdktn.TerraformDataSource {
+export class TfDataServer extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class DataAwsTransferServer extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataAwsTransferServer resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfDataServer resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataAwsTransferServer to import
-  * @param importFromId The id of the existing DataAwsTransferServer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/transfer_server#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataAwsTransferServer to import is found
+  * @param importToId The construct id used in the generated config for the TfDataServer to import
+  * @param importFromId The id of the existing TfDataServer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/transfer_server#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfDataServer to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_transfer_server", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class DataAwsTransferServer extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataAwsTransferServerConfig
+  * @param options TfDataServerConfig
   */
-  public constructor(scope: Construct, id: string, config: DataAwsTransferServerConfig) {
+  public constructor(scope: Construct, id: string, config: TfDataServerConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_transfer_server',
       terraformGeneratorMetadata: {

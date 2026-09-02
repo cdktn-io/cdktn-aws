@@ -5,36 +5,36 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsWafregionalSizeConstraintSetConfig extends cdktn.TerraformMetaArguments {
+export interface TfSizeConstraintSetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_size_constraint_set#id AwsWafregionalSizeConstraintSet#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_size_constraint_set#id TfSizeConstraintSet#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_size_constraint_set#name AwsWafregionalSizeConstraintSet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_size_constraint_set#name TfSizeConstraintSet#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_size_constraint_set#region AwsWafregionalSizeConstraintSet#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_size_constraint_set#region TfSizeConstraintSet#region}
   */
   readonly region?: string;
   /**
   * size_constraints block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_size_constraint_set#size_constraints AwsWafregionalSizeConstraintSet#size_constraints}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_size_constraint_set#size_constraints TfSizeConstraintSet#size_constraints}
   */
-  readonly sizeConstraints?: AwsWafregionalSizeConstraintSet.SizeConstraintsProperty[] | cdktn.IResolvable;
+  readonly sizeConstraints?: TfSizeConstraintSet.SizeConstraintsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_size_constraint_set aws_wafregional_size_constraint_set}
 */
-export class AwsWafregionalSizeConstraintSet extends cdktn.TerraformResource {
+export class TfSizeConstraintSet extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class AwsWafregionalSizeConstraintSet extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsWafregionalSizeConstraintSet resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfSizeConstraintSet resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsWafregionalSizeConstraintSet to import
-  * @param importFromId The id of the existing AwsWafregionalSizeConstraintSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_size_constraint_set#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsWafregionalSizeConstraintSet to import is found
+  * @param importToId The construct id used in the generated config for the TfSizeConstraintSet to import
+  * @param importFromId The id of the existing TfSizeConstraintSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_size_constraint_set#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfSizeConstraintSet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_wafregional_size_constraint_set", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class AwsWafregionalSizeConstraintSet extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsWafregionalSizeConstraintSetConfig
+  * @param options TfSizeConstraintSetConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsWafregionalSizeConstraintSetConfig) {
+  public constructor(scope: Construct, id: string, config: TfSizeConstraintSetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_wafregional_size_constraint_set',
       terraformGeneratorMetadata: {
@@ -143,11 +143,11 @@ export class AwsWafregionalSizeConstraintSet extends cdktn.TerraformResource {
   }
 
   // size_constraints - computed: false, optional: true, required: false
-  private _sizeConstraints = new AwsWafregionalSizeConstraintSet.SizeConstraintsPropertyList(this, "size_constraints", true);
+  private _sizeConstraints = new TfSizeConstraintSet.SizeConstraintsPropertyList(this, "size_constraints", true);
   public get sizeConstraints() {
     return this._sizeConstraints;
   }
-  public putSizeConstraints(value: AwsWafregionalSizeConstraintSet.SizeConstraintsProperty[] | cdktn.IResolvable) {
+  public putSizeConstraints(value: TfSizeConstraintSet.SizeConstraintsProperty[] | cdktn.IResolvable) {
     this._sizeConstraints.internalValue = value;
   }
   public resetSizeConstraints() {
@@ -167,7 +167,7 @@ export class AwsWafregionalSizeConstraintSet extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
-      size_constraints: cdktn.listMapper(awsWafregionalSizeConstraintSetSizeConstraintsPropertyToTerraform, true)(this._sizeConstraints.internalValue),
+      size_constraints: cdktn.listMapper(tfSizeConstraintSetSizeConstraintsPropertyToTerraform, true)(this._sizeConstraints.internalValue),
     };
   }
 
@@ -192,10 +192,10 @@ export class AwsWafregionalSizeConstraintSet extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       size_constraints: {
-        value: cdktn.listMapperHcl(awsWafregionalSizeConstraintSetSizeConstraintsPropertyToHclTerraform, true)(this._sizeConstraints.internalValue),
+        value: cdktn.listMapperHcl(tfSizeConstraintSetSizeConstraintsPropertyToHclTerraform, true)(this._sizeConstraints.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "AwsWafregionalSizeConstraintSet.SizeConstraintsPropertyList",
+        storageClassType: "TfSizeConstraintSet.SizeConstraintsPropertyList",
       },
     };
 
@@ -204,7 +204,7 @@ export class AwsWafregionalSizeConstraintSet extends cdktn.TerraformResource {
   }
 }
 
-export function awsWafregionalSizeConstraintSetFieldToMatchPropertyToTerraform(struct?: AwsWafregionalSizeConstraintSet.FieldToMatchPropertyOutputReference | AwsWafregionalSizeConstraintSet.FieldToMatchProperty): any {
+export function tfSizeConstraintSetFieldToMatchPropertyToTerraform(struct?: TfSizeConstraintSet.FieldToMatchPropertyOutputReference | TfSizeConstraintSet.FieldToMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -216,7 +216,7 @@ export function awsWafregionalSizeConstraintSetFieldToMatchPropertyToTerraform(s
 }
 
 
-export function awsWafregionalSizeConstraintSetFieldToMatchPropertyToHclTerraform(struct?: AwsWafregionalSizeConstraintSet.FieldToMatchPropertyOutputReference | AwsWafregionalSizeConstraintSet.FieldToMatchProperty): any {
+export function tfSizeConstraintSetFieldToMatchPropertyToHclTerraform(struct?: TfSizeConstraintSet.FieldToMatchPropertyOutputReference | TfSizeConstraintSet.FieldToMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -241,7 +241,7 @@ export function awsWafregionalSizeConstraintSetFieldToMatchPropertyToHclTerrafor
 }
 
 
-export function awsWafregionalSizeConstraintSetSizeConstraintsPropertyToTerraform(struct?: AwsWafregionalSizeConstraintSet.SizeConstraintsProperty | cdktn.IResolvable): any {
+export function tfSizeConstraintSetSizeConstraintsPropertyToTerraform(struct?: TfSizeConstraintSet.SizeConstraintsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -250,12 +250,12 @@ export function awsWafregionalSizeConstraintSetSizeConstraintsPropertyToTerrafor
     comparison_operator: cdktn.stringToTerraform(struct!.comparisonOperator),
     size: cdktn.numberToTerraform(struct!.size),
     text_transformation: cdktn.stringToTerraform(struct!.textTransformation),
-    field_to_match: awsWafregionalSizeConstraintSetFieldToMatchPropertyToTerraform(struct!.fieldToMatch),
+    field_to_match: tfSizeConstraintSetFieldToMatchPropertyToTerraform(struct!.fieldToMatch),
   }
 }
 
 
-export function awsWafregionalSizeConstraintSetSizeConstraintsPropertyToHclTerraform(struct?: AwsWafregionalSizeConstraintSet.SizeConstraintsProperty | cdktn.IResolvable): any {
+export function tfSizeConstraintSetSizeConstraintsPropertyToHclTerraform(struct?: TfSizeConstraintSet.SizeConstraintsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -280,7 +280,7 @@ export function awsWafregionalSizeConstraintSetSizeConstraintsPropertyToHclTerra
       storageClassType: "string",
     },
     field_to_match: {
-      value: awsWafregionalSizeConstraintSetFieldToMatchPropertyToHclTerraform(struct!.fieldToMatch),
+      value: tfSizeConstraintSetFieldToMatchPropertyToHclTerraform(struct!.fieldToMatch),
       isBlock: true,
       type: "list",
       storageClassType: "FieldToMatchPropertyList",
@@ -292,14 +292,14 @@ export function awsWafregionalSizeConstraintSetSizeConstraintsPropertyToHclTerra
 }
 
 
-export namespace AwsWafregionalSizeConstraintSet {
+export namespace TfSizeConstraintSet {
 export interface FieldToMatchProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_size_constraint_set#data AwsWafregionalSizeConstraintSet#data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_size_constraint_set#data TfSizeConstraintSet#data}
   */
   readonly data?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_size_constraint_set#type AwsWafregionalSizeConstraintSet#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_size_constraint_set#type TfSizeConstraintSet#type}
   */
   readonly type: string;
 }
@@ -372,21 +372,21 @@ export class FieldToMatchPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SizeConstraintsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_size_constraint_set#comparison_operator AwsWafregionalSizeConstraintSet#comparison_operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_size_constraint_set#comparison_operator TfSizeConstraintSet#comparison_operator}
   */
   readonly comparisonOperator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_size_constraint_set#size AwsWafregionalSizeConstraintSet#size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_size_constraint_set#size TfSizeConstraintSet#size}
   */
   readonly size: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_size_constraint_set#text_transformation AwsWafregionalSizeConstraintSet#text_transformation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_size_constraint_set#text_transformation TfSizeConstraintSet#text_transformation}
   */
   readonly textTransformation: string;
   /**
   * field_to_match block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_size_constraint_set#field_to_match AwsWafregionalSizeConstraintSet#field_to_match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_size_constraint_set#field_to_match TfSizeConstraintSet#field_to_match}
   */
   readonly fieldToMatch: FieldToMatchProperty;
 }

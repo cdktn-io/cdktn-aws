@@ -5,64 +5,64 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsS3BucketInventoryConfig extends cdktn.TerraformMetaArguments {
+export interface TfBucketInventoryConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#bucket AwsS3BucketInventory#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#bucket TfBucketInventory#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#enabled AwsS3BucketInventory#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#enabled TfBucketInventory#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#id AwsS3BucketInventory#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#id TfBucketInventory#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#included_object_versions AwsS3BucketInventory#included_object_versions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#included_object_versions TfBucketInventory#included_object_versions}
   */
   readonly includedObjectVersions: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#name AwsS3BucketInventory#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#name TfBucketInventory#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#optional_fields AwsS3BucketInventory#optional_fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#optional_fields TfBucketInventory#optional_fields}
   */
   readonly optionalFields?: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#region AwsS3BucketInventory#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#region TfBucketInventory#region}
   */
   readonly region?: string;
   /**
   * destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#destination AwsS3BucketInventory#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#destination TfBucketInventory#destination}
   */
-  readonly destination: AwsS3BucketInventory.DestinationProperty;
+  readonly destination: TfBucketInventory.DestinationProperty;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#filter AwsS3BucketInventory#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#filter TfBucketInventory#filter}
   */
-  readonly filter?: AwsS3BucketInventory.FilterProperty;
+  readonly filter?: TfBucketInventory.FilterProperty;
   /**
   * schedule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#schedule AwsS3BucketInventory#schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#schedule TfBucketInventory#schedule}
   */
-  readonly schedule: AwsS3BucketInventory.ScheduleProperty;
+  readonly schedule: TfBucketInventory.ScheduleProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory aws_s3_bucket_inventory}
 */
-export class AwsS3BucketInventory extends cdktn.TerraformResource {
+export class TfBucketInventory extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -73,11 +73,11 @@ export class AwsS3BucketInventory extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsS3BucketInventory resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfBucketInventory resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsS3BucketInventory to import
-  * @param importFromId The id of the existing AwsS3BucketInventory that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsS3BucketInventory to import is found
+  * @param importToId The construct id used in the generated config for the TfBucketInventory to import
+  * @param importFromId The id of the existing TfBucketInventory that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfBucketInventory to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3_bucket_inventory", importId: importFromId, provider });
@@ -92,9 +92,9 @@ export class AwsS3BucketInventory extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsS3BucketInventoryConfig
+  * @param options TfBucketInventoryConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsS3BucketInventoryConfig) {
+  public constructor(scope: Construct, id: string, config: TfBucketInventoryConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3_bucket_inventory',
       terraformGeneratorMetadata: {
@@ -230,11 +230,11 @@ export class AwsS3BucketInventory extends cdktn.TerraformResource {
   }
 
   // destination - computed: false, optional: false, required: true
-  private _destination = new AwsS3BucketInventory.DestinationPropertyOutputReference(this, "destination");
+  private _destination = new TfBucketInventory.DestinationPropertyOutputReference(this, "destination");
   public get destination() {
     return this._destination;
   }
-  public putDestination(value: AwsS3BucketInventory.DestinationProperty) {
+  public putDestination(value: TfBucketInventory.DestinationProperty) {
     this._destination.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -243,11 +243,11 @@ export class AwsS3BucketInventory extends cdktn.TerraformResource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new AwsS3BucketInventory.FilterPropertyOutputReference(this, "filter");
+  private _filter = new TfBucketInventory.FilterPropertyOutputReference(this, "filter");
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: AwsS3BucketInventory.FilterProperty) {
+  public putFilter(value: TfBucketInventory.FilterProperty) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -259,11 +259,11 @@ export class AwsS3BucketInventory extends cdktn.TerraformResource {
   }
 
   // schedule - computed: false, optional: false, required: true
-  private _schedule = new AwsS3BucketInventory.SchedulePropertyOutputReference(this, "schedule");
+  private _schedule = new TfBucketInventory.SchedulePropertyOutputReference(this, "schedule");
   public get schedule() {
     return this._schedule;
   }
-  public putSchedule(value: AwsS3BucketInventory.ScheduleProperty) {
+  public putSchedule(value: TfBucketInventory.ScheduleProperty) {
     this._schedule.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -284,9 +284,9 @@ export class AwsS3BucketInventory extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       optional_fields: cdktn.listMapper(cdktn.stringToTerraform, false)(this._optionalFields),
       region: cdktn.stringToTerraform(this._region),
-      destination: awsS3BucketInventoryDestinationPropertyToTerraform(this._destination.internalValue),
-      filter: awsS3BucketInventoryFilterPropertyToTerraform(this._filter.internalValue),
-      schedule: awsS3BucketInventorySchedulePropertyToTerraform(this._schedule.internalValue),
+      destination: tfBucketInventoryDestinationPropertyToTerraform(this._destination.internalValue),
+      filter: tfBucketInventoryFilterPropertyToTerraform(this._filter.internalValue),
+      schedule: tfBucketInventorySchedulePropertyToTerraform(this._schedule.internalValue),
     };
   }
 
@@ -335,22 +335,22 @@ export class AwsS3BucketInventory extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       destination: {
-        value: awsS3BucketInventoryDestinationPropertyToHclTerraform(this._destination.internalValue),
+        value: tfBucketInventoryDestinationPropertyToHclTerraform(this._destination.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsS3BucketInventory.DestinationPropertyList",
+        storageClassType: "TfBucketInventory.DestinationPropertyList",
       },
       filter: {
-        value: awsS3BucketInventoryFilterPropertyToHclTerraform(this._filter.internalValue),
+        value: tfBucketInventoryFilterPropertyToHclTerraform(this._filter.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsS3BucketInventory.FilterPropertyList",
+        storageClassType: "TfBucketInventory.FilterPropertyList",
       },
       schedule: {
-        value: awsS3BucketInventorySchedulePropertyToHclTerraform(this._schedule.internalValue),
+        value: tfBucketInventorySchedulePropertyToHclTerraform(this._schedule.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "AwsS3BucketInventory.SchedulePropertyList",
+        storageClassType: "TfBucketInventory.SchedulePropertyList",
       },
     };
 
@@ -359,7 +359,7 @@ export class AwsS3BucketInventory extends cdktn.TerraformResource {
   }
 }
 
-export function awsS3BucketInventorySseKmsPropertyToTerraform(struct?: AwsS3BucketInventory.SseKmsPropertyOutputReference | AwsS3BucketInventory.SseKmsProperty): any {
+export function tfBucketInventorySseKmsPropertyToTerraform(struct?: TfBucketInventory.SseKmsPropertyOutputReference | TfBucketInventory.SseKmsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -370,7 +370,7 @@ export function awsS3BucketInventorySseKmsPropertyToTerraform(struct?: AwsS3Buck
 }
 
 
-export function awsS3BucketInventorySseKmsPropertyToHclTerraform(struct?: AwsS3BucketInventory.SseKmsPropertyOutputReference | AwsS3BucketInventory.SseKmsProperty): any {
+export function tfBucketInventorySseKmsPropertyToHclTerraform(struct?: TfBucketInventory.SseKmsPropertyOutputReference | TfBucketInventory.SseKmsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -389,7 +389,7 @@ export function awsS3BucketInventorySseKmsPropertyToHclTerraform(struct?: AwsS3B
 }
 
 
-export function awsS3BucketInventorySseS3PropertyToTerraform(struct?: AwsS3BucketInventory.SseS3PropertyOutputReference | AwsS3BucketInventory.SseS3Property): any {
+export function tfBucketInventorySseS3PropertyToTerraform(struct?: TfBucketInventory.SseS3PropertyOutputReference | TfBucketInventory.SseS3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -399,7 +399,7 @@ export function awsS3BucketInventorySseS3PropertyToTerraform(struct?: AwsS3Bucke
 }
 
 
-export function awsS3BucketInventorySseS3PropertyToHclTerraform(struct?: AwsS3BucketInventory.SseS3PropertyOutputReference | AwsS3BucketInventory.SseS3Property): any {
+export function tfBucketInventorySseS3PropertyToHclTerraform(struct?: TfBucketInventory.SseS3PropertyOutputReference | TfBucketInventory.SseS3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -410,32 +410,32 @@ export function awsS3BucketInventorySseS3PropertyToHclTerraform(struct?: AwsS3Bu
 }
 
 
-export function awsS3BucketInventoryEncryptionPropertyToTerraform(struct?: AwsS3BucketInventory.EncryptionPropertyOutputReference | AwsS3BucketInventory.EncryptionProperty): any {
+export function tfBucketInventoryEncryptionPropertyToTerraform(struct?: TfBucketInventory.EncryptionPropertyOutputReference | TfBucketInventory.EncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    sse_kms: awsS3BucketInventorySseKmsPropertyToTerraform(struct!.sseKms),
-    sse_s3: awsS3BucketInventorySseS3PropertyToTerraform(struct!.sseS3),
+    sse_kms: tfBucketInventorySseKmsPropertyToTerraform(struct!.sseKms),
+    sse_s3: tfBucketInventorySseS3PropertyToTerraform(struct!.sseS3),
   }
 }
 
 
-export function awsS3BucketInventoryEncryptionPropertyToHclTerraform(struct?: AwsS3BucketInventory.EncryptionPropertyOutputReference | AwsS3BucketInventory.EncryptionProperty): any {
+export function tfBucketInventoryEncryptionPropertyToHclTerraform(struct?: TfBucketInventory.EncryptionPropertyOutputReference | TfBucketInventory.EncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     sse_kms: {
-      value: awsS3BucketInventorySseKmsPropertyToHclTerraform(struct!.sseKms),
+      value: tfBucketInventorySseKmsPropertyToHclTerraform(struct!.sseKms),
       isBlock: true,
       type: "list",
       storageClassType: "SseKmsPropertyList",
     },
     sse_s3: {
-      value: awsS3BucketInventorySseS3PropertyToHclTerraform(struct!.sseS3),
+      value: tfBucketInventorySseS3PropertyToHclTerraform(struct!.sseS3),
       isBlock: true,
       type: "list",
       storageClassType: "SseS3PropertyList",
@@ -447,7 +447,7 @@ export function awsS3BucketInventoryEncryptionPropertyToHclTerraform(struct?: Aw
 }
 
 
-export function awsS3BucketInventoryBucketPropertyToTerraform(struct?: AwsS3BucketInventory.BucketPropertyOutputReference | AwsS3BucketInventory.BucketProperty): any {
+export function tfBucketInventoryBucketPropertyToTerraform(struct?: TfBucketInventory.BucketPropertyOutputReference | TfBucketInventory.BucketProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -457,12 +457,12 @@ export function awsS3BucketInventoryBucketPropertyToTerraform(struct?: AwsS3Buck
     bucket_arn: cdktn.stringToTerraform(struct!.bucketArn),
     format: cdktn.stringToTerraform(struct!.format),
     prefix: cdktn.stringToTerraform(struct!.prefix),
-    encryption: awsS3BucketInventoryEncryptionPropertyToTerraform(struct!.encryption),
+    encryption: tfBucketInventoryEncryptionPropertyToTerraform(struct!.encryption),
   }
 }
 
 
-export function awsS3BucketInventoryBucketPropertyToHclTerraform(struct?: AwsS3BucketInventory.BucketPropertyOutputReference | AwsS3BucketInventory.BucketProperty): any {
+export function tfBucketInventoryBucketPropertyToHclTerraform(struct?: TfBucketInventory.BucketPropertyOutputReference | TfBucketInventory.BucketProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -493,7 +493,7 @@ export function awsS3BucketInventoryBucketPropertyToHclTerraform(struct?: AwsS3B
       storageClassType: "string",
     },
     encryption: {
-      value: awsS3BucketInventoryEncryptionPropertyToHclTerraform(struct!.encryption),
+      value: tfBucketInventoryEncryptionPropertyToHclTerraform(struct!.encryption),
       isBlock: true,
       type: "list",
       storageClassType: "EncryptionPropertyList",
@@ -505,25 +505,25 @@ export function awsS3BucketInventoryBucketPropertyToHclTerraform(struct?: AwsS3B
 }
 
 
-export function awsS3BucketInventoryDestinationPropertyToTerraform(struct?: AwsS3BucketInventory.DestinationPropertyOutputReference | AwsS3BucketInventory.DestinationProperty): any {
+export function tfBucketInventoryDestinationPropertyToTerraform(struct?: TfBucketInventory.DestinationPropertyOutputReference | TfBucketInventory.DestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    bucket: awsS3BucketInventoryBucketPropertyToTerraform(struct!.bucket),
+    bucket: tfBucketInventoryBucketPropertyToTerraform(struct!.bucket),
   }
 }
 
 
-export function awsS3BucketInventoryDestinationPropertyToHclTerraform(struct?: AwsS3BucketInventory.DestinationPropertyOutputReference | AwsS3BucketInventory.DestinationProperty): any {
+export function tfBucketInventoryDestinationPropertyToHclTerraform(struct?: TfBucketInventory.DestinationPropertyOutputReference | TfBucketInventory.DestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     bucket: {
-      value: awsS3BucketInventoryBucketPropertyToHclTerraform(struct!.bucket),
+      value: tfBucketInventoryBucketPropertyToHclTerraform(struct!.bucket),
       isBlock: true,
       type: "list",
       storageClassType: "BucketPropertyList",
@@ -535,7 +535,7 @@ export function awsS3BucketInventoryDestinationPropertyToHclTerraform(struct?: A
 }
 
 
-export function awsS3BucketInventoryFilterPropertyToTerraform(struct?: AwsS3BucketInventory.FilterPropertyOutputReference | AwsS3BucketInventory.FilterProperty): any {
+export function tfBucketInventoryFilterPropertyToTerraform(struct?: TfBucketInventory.FilterPropertyOutputReference | TfBucketInventory.FilterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -546,7 +546,7 @@ export function awsS3BucketInventoryFilterPropertyToTerraform(struct?: AwsS3Buck
 }
 
 
-export function awsS3BucketInventoryFilterPropertyToHclTerraform(struct?: AwsS3BucketInventory.FilterPropertyOutputReference | AwsS3BucketInventory.FilterProperty): any {
+export function tfBucketInventoryFilterPropertyToHclTerraform(struct?: TfBucketInventory.FilterPropertyOutputReference | TfBucketInventory.FilterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -565,7 +565,7 @@ export function awsS3BucketInventoryFilterPropertyToHclTerraform(struct?: AwsS3B
 }
 
 
-export function awsS3BucketInventorySchedulePropertyToTerraform(struct?: AwsS3BucketInventory.SchedulePropertyOutputReference | AwsS3BucketInventory.ScheduleProperty): any {
+export function tfBucketInventorySchedulePropertyToTerraform(struct?: TfBucketInventory.SchedulePropertyOutputReference | TfBucketInventory.ScheduleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -576,7 +576,7 @@ export function awsS3BucketInventorySchedulePropertyToTerraform(struct?: AwsS3Bu
 }
 
 
-export function awsS3BucketInventorySchedulePropertyToHclTerraform(struct?: AwsS3BucketInventory.SchedulePropertyOutputReference | AwsS3BucketInventory.ScheduleProperty): any {
+export function tfBucketInventorySchedulePropertyToHclTerraform(struct?: TfBucketInventory.SchedulePropertyOutputReference | TfBucketInventory.ScheduleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -595,10 +595,10 @@ export function awsS3BucketInventorySchedulePropertyToHclTerraform(struct?: AwsS
 }
 
 
-export namespace AwsS3BucketInventory {
+export namespace TfBucketInventory {
 export interface SseKmsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#key_id AwsS3BucketInventory#key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#key_id TfBucketInventory#key_id}
   */
   readonly keyId: string;
 }
@@ -679,13 +679,13 @@ export interface EncryptionProperty {
   /**
   * sse_kms block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#sse_kms AwsS3BucketInventory#sse_kms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#sse_kms TfBucketInventory#sse_kms}
   */
   readonly sseKms?: SseKmsProperty;
   /**
   * sse_s3 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#sse_s3 AwsS3BucketInventory#sse_s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#sse_s3 TfBucketInventory#sse_s3}
   */
   readonly sseS3?: SseS3Property;
 }
@@ -761,25 +761,25 @@ export class EncryptionPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface BucketProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#account_id AwsS3BucketInventory#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#account_id TfBucketInventory#account_id}
   */
   readonly accountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#bucket_arn AwsS3BucketInventory#bucket_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#bucket_arn TfBucketInventory#bucket_arn}
   */
   readonly bucketArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#format AwsS3BucketInventory#format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#format TfBucketInventory#format}
   */
   readonly format: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#prefix AwsS3BucketInventory#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#prefix TfBucketInventory#prefix}
   */
   readonly prefix?: string;
   /**
   * encryption block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#encryption AwsS3BucketInventory#encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#encryption TfBucketInventory#encryption}
   */
   readonly encryption?: EncryptionProperty;
 }
@@ -917,7 +917,7 @@ export interface DestinationProperty {
   /**
   * bucket block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#bucket AwsS3BucketInventory#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#bucket TfBucketInventory#bucket}
   */
   readonly bucket: BucketProperty;
 }
@@ -968,7 +968,7 @@ export class DestinationPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#prefix AwsS3BucketInventory#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#prefix TfBucketInventory#prefix}
   */
   readonly prefix?: string;
 }
@@ -1022,7 +1022,7 @@ export class FilterPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ScheduleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#frequency AwsS3BucketInventory#frequency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_inventory#frequency TfBucketInventory#frequency}
   */
   readonly frequency: string;
 }

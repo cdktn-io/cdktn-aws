@@ -5,73 +5,73 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsEc2TransitGatewayMeteringPolicyEntryConfig extends cdktn.TerraformMetaArguments {
+export interface TfTransitGatewayMeteringPolicyEntryConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#destination_cidr_block AwsEc2TransitGatewayMeteringPolicyEntry#destination_cidr_block}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#destination_cidr_block TfTransitGatewayMeteringPolicyEntry#destination_cidr_block}
   */
   readonly destinationCidrBlock?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#destination_port_range AwsEc2TransitGatewayMeteringPolicyEntry#destination_port_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#destination_port_range TfTransitGatewayMeteringPolicyEntry#destination_port_range}
   */
   readonly destinationPortRange?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#destination_transit_gateway_attachment_id AwsEc2TransitGatewayMeteringPolicyEntry#destination_transit_gateway_attachment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#destination_transit_gateway_attachment_id TfTransitGatewayMeteringPolicyEntry#destination_transit_gateway_attachment_id}
   */
   readonly destinationTransitGatewayAttachmentId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#destination_transit_gateway_attachment_type AwsEc2TransitGatewayMeteringPolicyEntry#destination_transit_gateway_attachment_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#destination_transit_gateway_attachment_type TfTransitGatewayMeteringPolicyEntry#destination_transit_gateway_attachment_type}
   */
   readonly destinationTransitGatewayAttachmentType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#metered_account AwsEc2TransitGatewayMeteringPolicyEntry#metered_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#metered_account TfTransitGatewayMeteringPolicyEntry#metered_account}
   */
   readonly meteredAccount: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#policy_rule_number AwsEc2TransitGatewayMeteringPolicyEntry#policy_rule_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#policy_rule_number TfTransitGatewayMeteringPolicyEntry#policy_rule_number}
   */
   readonly policyRuleNumber: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#protocol AwsEc2TransitGatewayMeteringPolicyEntry#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#protocol TfTransitGatewayMeteringPolicyEntry#protocol}
   */
   readonly protocol?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#region AwsEc2TransitGatewayMeteringPolicyEntry#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#region TfTransitGatewayMeteringPolicyEntry#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#source_cidr_block AwsEc2TransitGatewayMeteringPolicyEntry#source_cidr_block}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#source_cidr_block TfTransitGatewayMeteringPolicyEntry#source_cidr_block}
   */
   readonly sourceCidrBlock?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#source_port_range AwsEc2TransitGatewayMeteringPolicyEntry#source_port_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#source_port_range TfTransitGatewayMeteringPolicyEntry#source_port_range}
   */
   readonly sourcePortRange?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#source_transit_gateway_attachment_id AwsEc2TransitGatewayMeteringPolicyEntry#source_transit_gateway_attachment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#source_transit_gateway_attachment_id TfTransitGatewayMeteringPolicyEntry#source_transit_gateway_attachment_id}
   */
   readonly sourceTransitGatewayAttachmentId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#source_transit_gateway_attachment_type AwsEc2TransitGatewayMeteringPolicyEntry#source_transit_gateway_attachment_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#source_transit_gateway_attachment_type TfTransitGatewayMeteringPolicyEntry#source_transit_gateway_attachment_type}
   */
   readonly sourceTransitGatewayAttachmentType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#transit_gateway_metering_policy_id AwsEc2TransitGatewayMeteringPolicyEntry#transit_gateway_metering_policy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#transit_gateway_metering_policy_id TfTransitGatewayMeteringPolicyEntry#transit_gateway_metering_policy_id}
   */
   readonly transitGatewayMeteringPolicyId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#timeouts AwsEc2TransitGatewayMeteringPolicyEntry#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#timeouts TfTransitGatewayMeteringPolicyEntry#timeouts}
   */
-  readonly timeouts?: AwsEc2TransitGatewayMeteringPolicyEntry.TimeoutsProperty;
+  readonly timeouts?: TfTransitGatewayMeteringPolicyEntry.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry aws_ec2_transit_gateway_metering_policy_entry}
 */
-export class AwsEc2TransitGatewayMeteringPolicyEntry extends cdktn.TerraformResource {
+export class TfTransitGatewayMeteringPolicyEntry extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -82,11 +82,11 @@ export class AwsEc2TransitGatewayMeteringPolicyEntry extends cdktn.TerraformReso
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsEc2TransitGatewayMeteringPolicyEntry resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfTransitGatewayMeteringPolicyEntry resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsEc2TransitGatewayMeteringPolicyEntry to import
-  * @param importFromId The id of the existing AwsEc2TransitGatewayMeteringPolicyEntry that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsEc2TransitGatewayMeteringPolicyEntry to import is found
+  * @param importToId The construct id used in the generated config for the TfTransitGatewayMeteringPolicyEntry to import
+  * @param importFromId The id of the existing TfTransitGatewayMeteringPolicyEntry that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfTransitGatewayMeteringPolicyEntry to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_transit_gateway_metering_policy_entry", importId: importFromId, provider });
@@ -101,9 +101,9 @@ export class AwsEc2TransitGatewayMeteringPolicyEntry extends cdktn.TerraformReso
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsEc2TransitGatewayMeteringPolicyEntryConfig
+  * @param options TfTransitGatewayMeteringPolicyEntryConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsEc2TransitGatewayMeteringPolicyEntryConfig) {
+  public constructor(scope: Construct, id: string, config: TfTransitGatewayMeteringPolicyEntryConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_transit_gateway_metering_policy_entry',
       terraformGeneratorMetadata: {
@@ -339,11 +339,11 @@ export class AwsEc2TransitGatewayMeteringPolicyEntry extends cdktn.TerraformReso
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsEc2TransitGatewayMeteringPolicyEntry.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfTransitGatewayMeteringPolicyEntry.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsEc2TransitGatewayMeteringPolicyEntry.TimeoutsProperty) {
+  public putTimeouts(value: TfTransitGatewayMeteringPolicyEntry.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -373,7 +373,7 @@ export class AwsEc2TransitGatewayMeteringPolicyEntry extends cdktn.TerraformReso
       source_transit_gateway_attachment_id: cdktn.stringToTerraform(this._sourceTransitGatewayAttachmentId),
       source_transit_gateway_attachment_type: cdktn.stringToTerraform(this._sourceTransitGatewayAttachmentType),
       transit_gateway_metering_policy_id: cdktn.stringToTerraform(this._transitGatewayMeteringPolicyId),
-      timeouts: awsEc2TransitGatewayMeteringPolicyEntryTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfTransitGatewayMeteringPolicyEntryTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -458,10 +458,10 @@ export class AwsEc2TransitGatewayMeteringPolicyEntry extends cdktn.TerraformReso
         storageClassType: "string",
       },
       timeouts: {
-        value: awsEc2TransitGatewayMeteringPolicyEntryTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfTransitGatewayMeteringPolicyEntryTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsEc2TransitGatewayMeteringPolicyEntry.TimeoutsProperty",
+        storageClassType: "TfTransitGatewayMeteringPolicyEntry.TimeoutsProperty",
       },
     };
 
@@ -470,7 +470,7 @@ export class AwsEc2TransitGatewayMeteringPolicyEntry extends cdktn.TerraformReso
   }
 }
 
-export function awsEc2TransitGatewayMeteringPolicyEntryTimeoutsPropertyToTerraform(struct?: AwsEc2TransitGatewayMeteringPolicyEntry.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfTransitGatewayMeteringPolicyEntryTimeoutsPropertyToTerraform(struct?: TfTransitGatewayMeteringPolicyEntry.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -482,7 +482,7 @@ export function awsEc2TransitGatewayMeteringPolicyEntryTimeoutsPropertyToTerrafo
 }
 
 
-export function awsEc2TransitGatewayMeteringPolicyEntryTimeoutsPropertyToHclTerraform(struct?: AwsEc2TransitGatewayMeteringPolicyEntry.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfTransitGatewayMeteringPolicyEntryTimeoutsPropertyToHclTerraform(struct?: TfTransitGatewayMeteringPolicyEntry.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -507,18 +507,18 @@ export function awsEc2TransitGatewayMeteringPolicyEntryTimeoutsPropertyToHclTerr
 }
 
 
-export namespace AwsEc2TransitGatewayMeteringPolicyEntry {
+export namespace TfTransitGatewayMeteringPolicyEntry {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#create AwsEc2TransitGatewayMeteringPolicyEntry#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#create TfTransitGatewayMeteringPolicyEntry#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#delete AwsEc2TransitGatewayMeteringPolicyEntry#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_metering_policy_entry#delete TfTransitGatewayMeteringPolicyEntry#delete}
   */
   readonly delete?: string;
 }

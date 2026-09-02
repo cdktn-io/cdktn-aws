@@ -5,41 +5,41 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface AwsRoute53ProfilesResourceAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface TfResourceAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53profiles_resource_association#name AwsRoute53ProfilesResourceAssociation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53profiles_resource_association#name TfResourceAssociation#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53profiles_resource_association#profile_id AwsRoute53ProfilesResourceAssociation#profile_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53profiles_resource_association#profile_id TfResourceAssociation#profile_id}
   */
   readonly profileId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53profiles_resource_association#region AwsRoute53ProfilesResourceAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53profiles_resource_association#region TfResourceAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53profiles_resource_association#resource_arn AwsRoute53ProfilesResourceAssociation#resource_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53profiles_resource_association#resource_arn TfResourceAssociation#resource_arn}
   */
   readonly resourceArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53profiles_resource_association#resource_properties AwsRoute53ProfilesResourceAssociation#resource_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53profiles_resource_association#resource_properties TfResourceAssociation#resource_properties}
   */
   readonly resourceProperties?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53profiles_resource_association#timeouts AwsRoute53ProfilesResourceAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53profiles_resource_association#timeouts TfResourceAssociation#timeouts}
   */
-  readonly timeouts?: AwsRoute53ProfilesResourceAssociation.TimeoutsProperty;
+  readonly timeouts?: TfResourceAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53profiles_resource_association aws_route53profiles_resource_association}
 */
-export class AwsRoute53ProfilesResourceAssociation extends cdktn.TerraformResource {
+export class TfResourceAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -50,11 +50,11 @@ export class AwsRoute53ProfilesResourceAssociation extends cdktn.TerraformResour
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a AwsRoute53ProfilesResourceAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfResourceAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the AwsRoute53ProfilesResourceAssociation to import
-  * @param importFromId The id of the existing AwsRoute53ProfilesResourceAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53profiles_resource_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the AwsRoute53ProfilesResourceAssociation to import is found
+  * @param importToId The construct id used in the generated config for the TfResourceAssociation to import
+  * @param importFromId The id of the existing TfResourceAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53profiles_resource_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfResourceAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route53profiles_resource_association", importId: importFromId, provider });
@@ -69,9 +69,9 @@ export class AwsRoute53ProfilesResourceAssociation extends cdktn.TerraformResour
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options AwsRoute53ProfilesResourceAssociationConfig
+  * @param options TfResourceAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: AwsRoute53ProfilesResourceAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: TfResourceAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_route53profiles_resource_association',
       terraformGeneratorMetadata: {
@@ -196,11 +196,11 @@ export class AwsRoute53ProfilesResourceAssociation extends cdktn.TerraformResour
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AwsRoute53ProfilesResourceAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfResourceAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: AwsRoute53ProfilesResourceAssociation.TimeoutsProperty) {
+  public putTimeouts(value: TfResourceAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -222,7 +222,7 @@ export class AwsRoute53ProfilesResourceAssociation extends cdktn.TerraformResour
       region: cdktn.stringToTerraform(this._region),
       resource_arn: cdktn.stringToTerraform(this._resourceArn),
       resource_properties: cdktn.stringToTerraform(this._resourceProperties),
-      timeouts: awsRoute53ProfilesResourceAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfResourceAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -259,10 +259,10 @@ export class AwsRoute53ProfilesResourceAssociation extends cdktn.TerraformResour
         storageClassType: "string",
       },
       timeouts: {
-        value: awsRoute53ProfilesResourceAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfResourceAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "AwsRoute53ProfilesResourceAssociation.TimeoutsProperty",
+        storageClassType: "TfResourceAssociation.TimeoutsProperty",
       },
     };
 
@@ -271,7 +271,7 @@ export class AwsRoute53ProfilesResourceAssociation extends cdktn.TerraformResour
   }
 }
 
-export function awsRoute53ProfilesResourceAssociationTimeoutsPropertyToTerraform(struct?: AwsRoute53ProfilesResourceAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfResourceAssociationTimeoutsPropertyToTerraform(struct?: TfResourceAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -284,7 +284,7 @@ export function awsRoute53ProfilesResourceAssociationTimeoutsPropertyToTerraform
 }
 
 
-export function awsRoute53ProfilesResourceAssociationTimeoutsPropertyToHclTerraform(struct?: AwsRoute53ProfilesResourceAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfResourceAssociationTimeoutsPropertyToHclTerraform(struct?: TfResourceAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -315,24 +315,24 @@ export function awsRoute53ProfilesResourceAssociationTimeoutsPropertyToHclTerraf
 }
 
 
-export namespace AwsRoute53ProfilesResourceAssociation {
+export namespace TfResourceAssociation {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53profiles_resource_association#create AwsRoute53ProfilesResourceAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53profiles_resource_association#create TfResourceAssociation#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53profiles_resource_association#delete AwsRoute53ProfilesResourceAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53profiles_resource_association#delete TfResourceAssociation#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Read operations occur during any refresh or planning operation when refresh is enabled.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53profiles_resource_association#read AwsRoute53ProfilesResourceAssociation#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53profiles_resource_association#read TfResourceAssociation#read}
   */
   readonly read?: string;
 }
