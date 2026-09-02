@@ -3200,25 +3200,25 @@
   "aws_ec2_client_vpn_authorization_rule": {
     "surface": "resource",
     "group": "vpn_client",
-    "className": "TfClientVpnAuthorizationRule",
+    "className": "TfAuthorizationRule",
     "previous": "AwsEc2ClientVpnAuthorizationRule"
   },
   "aws_ec2_client_vpn_endpoint": {
     "surface": "resource",
     "group": "vpn_client",
-    "className": "TfClientVpnEndpoint",
+    "className": "TfEndpoint",
     "previous": "AwsEc2ClientVpnEndpoint"
   },
   "aws_ec2_client_vpn_network_association": {
     "surface": "resource",
     "group": "vpn_client",
-    "className": "TfClientVpnNetworkAssociation",
+    "className": "TfNetworkAssociation",
     "previous": "AwsEc2ClientVpnNetworkAssociation"
   },
   "aws_ec2_client_vpn_route": {
     "surface": "resource",
     "group": "vpn_client",
-    "className": "TfClientVpnRoute",
+    "className": "TfRoute",
     "previous": "AwsEc2ClientVpnRoute"
   },
   "aws_ec2_default_credit_specification": {
@@ -3374,133 +3374,133 @@
   "aws_ec2_transit_gateway": {
     "surface": "resource",
     "group": "transit_gateway",
-    "className": "TfTransitGateway",
+    "className": "TfEc2TransitGateway",
     "previous": "AwsEc2TransitGateway"
   },
   "aws_ec2_transit_gateway_connect": {
     "surface": "resource",
     "group": "transit_gateway",
-    "className": "TfTransitGatewayConnect",
+    "className": "TfConnect",
     "previous": "AwsEc2TransitGatewayConnect"
   },
   "aws_ec2_transit_gateway_connect_peer": {
     "surface": "resource",
     "group": "transit_gateway",
-    "className": "TfTransitGatewayConnectPeer",
+    "className": "TfConnectPeer",
     "previous": "AwsEc2TransitGatewayConnectPeer"
   },
   "aws_ec2_transit_gateway_default_route_table_association": {
     "surface": "resource",
     "group": "transit_gateway",
-    "className": "TfTransitGatewayDefaultRouteTableAssociation",
+    "className": "TfDefaultRouteTableAssociation",
     "previous": "AwsEc2TransitGatewayDefaultRouteTableAssociation"
   },
   "aws_ec2_transit_gateway_default_route_table_propagation": {
     "surface": "resource",
     "group": "transit_gateway",
-    "className": "TfTransitGatewayDefaultRouteTablePropagation",
+    "className": "TfDefaultRouteTablePropagation",
     "previous": "AwsEc2TransitGatewayDefaultRouteTablePropagation"
   },
   "aws_ec2_transit_gateway_metering_policy": {
     "surface": "resource",
     "group": "transit_gateway",
-    "className": "TfTransitGatewayMeteringPolicy",
+    "className": "TfMeteringPolicy",
     "previous": "AwsEc2TransitGatewayMeteringPolicy"
   },
   "aws_ec2_transit_gateway_metering_policy_entry": {
     "surface": "resource",
     "group": "transit_gateway",
-    "className": "TfTransitGatewayMeteringPolicyEntry",
+    "className": "TfMeteringPolicyEntry",
     "previous": "AwsEc2TransitGatewayMeteringPolicyEntry"
   },
   "aws_ec2_transit_gateway_multicast_domain": {
     "surface": "resource",
     "group": "transit_gateway",
-    "className": "TfTransitGatewayMulticastDomain",
+    "className": "TfMulticastDomain",
     "previous": "AwsEc2TransitGatewayMulticastDomain"
   },
   "aws_ec2_transit_gateway_multicast_domain_association": {
     "surface": "resource",
     "group": "transit_gateway",
-    "className": "TfTransitGatewayMulticastDomainAssociation",
+    "className": "TfMulticastDomainAssociation",
     "previous": "AwsEc2TransitGatewayMulticastDomainAssociation"
   },
   "aws_ec2_transit_gateway_multicast_group_member": {
     "surface": "resource",
     "group": "transit_gateway",
-    "className": "TfTransitGatewayMulticastGroupMember",
+    "className": "TfMulticastGroupMember",
     "previous": "AwsEc2TransitGatewayMulticastGroupMember"
   },
   "aws_ec2_transit_gateway_multicast_group_source": {
     "surface": "resource",
     "group": "transit_gateway",
-    "className": "TfTransitGatewayMulticastGroupSource",
+    "className": "TfMulticastGroupSource",
     "previous": "AwsEc2TransitGatewayMulticastGroupSource"
   },
   "aws_ec2_transit_gateway_peering_attachment": {
     "surface": "resource",
     "group": "transit_gateway",
-    "className": "TfTransitGatewayPeeringAttachment",
+    "className": "TfPeeringAttachment",
     "previous": "AwsEc2TransitGatewayPeeringAttachment"
   },
   "aws_ec2_transit_gateway_peering_attachment_accepter": {
     "surface": "resource",
     "group": "transit_gateway",
-    "className": "TfTransitGatewayPeeringAttachmentAccepter",
+    "className": "TfPeeringAttachmentAccepter",
     "previous": "AwsEc2TransitGatewayPeeringAttachmentAccepter"
   },
   "aws_ec2_transit_gateway_policy_table": {
     "surface": "resource",
     "group": "transit_gateway",
-    "className": "TfTransitGatewayPolicyTable",
+    "className": "TfPolicyTable",
     "previous": "AwsEc2TransitGatewayPolicyTable"
   },
   "aws_ec2_transit_gateway_policy_table_association": {
     "surface": "resource",
     "group": "transit_gateway",
-    "className": "TfTransitGatewayPolicyTableAssociation",
+    "className": "TfPolicyTableAssociation",
     "previous": "AwsEc2TransitGatewayPolicyTableAssociation"
   },
   "aws_ec2_transit_gateway_prefix_list_reference": {
     "surface": "resource",
     "group": "transit_gateway",
-    "className": "TfTransitGatewayPrefixListReference",
+    "className": "TfPrefixListReference",
     "previous": "AwsEc2TransitGatewayPrefixListReference"
   },
   "aws_ec2_transit_gateway_route": {
     "surface": "resource",
     "group": "transit_gateway",
-    "className": "TfTransitGatewayRoute",
+    "className": "TfRoute",
     "previous": "AwsEc2TransitGatewayRoute"
   },
   "aws_ec2_transit_gateway_route_table": {
     "surface": "resource",
     "group": "transit_gateway",
-    "className": "TfTransitGatewayRouteTable",
+    "className": "TfRouteTable",
     "previous": "AwsEc2TransitGatewayRouteTable"
   },
   "aws_ec2_transit_gateway_route_table_association": {
     "surface": "resource",
     "group": "transit_gateway",
-    "className": "TfTransitGatewayRouteTableAssociation",
+    "className": "TfRouteTableAssociation",
     "previous": "AwsEc2TransitGatewayRouteTableAssociation"
   },
   "aws_ec2_transit_gateway_route_table_propagation": {
     "surface": "resource",
     "group": "transit_gateway",
-    "className": "TfTransitGatewayRouteTablePropagation",
+    "className": "TfRouteTablePropagation",
     "previous": "AwsEc2TransitGatewayRouteTablePropagation"
   },
   "aws_ec2_transit_gateway_vpc_attachment": {
     "surface": "resource",
     "group": "transit_gateway",
-    "className": "TfTransitGatewayVpcAttachment",
+    "className": "TfVpcAttachment",
     "previous": "AwsEc2TransitGatewayVpcAttachment"
   },
   "aws_ec2_transit_gateway_vpc_attachment_accepter": {
     "surface": "resource",
     "group": "transit_gateway",
-    "className": "TfTransitGatewayVpcAttachmentAccepter",
+    "className": "TfVpcAttachmentAccepter",
     "previous": "AwsEc2TransitGatewayVpcAttachmentAccepter"
   },
   "aws_ecr_account_setting": {
@@ -7682,13 +7682,13 @@
   "aws_s3_access_point": {
     "surface": "resource",
     "group": "s3_control",
-    "className": "TfS3AccessPoint",
+    "className": "TfAccessPoint",
     "previous": "AwsS3AccessPoint"
   },
   "aws_s3_account_public_access_block": {
     "surface": "resource",
     "group": "s3_control",
-    "className": "TfS3AccountPublicAccessBlock",
+    "className": "TfAccountPublicAccessBlock",
     "previous": "AwsS3AccountPublicAccessBlock"
   },
   "aws_s3_bucket": {
@@ -11330,7 +11330,7 @@
   "data_aws_ec2_client_vpn_endpoint": {
     "surface": "data_source",
     "group": "vpn_client",
-    "className": "DataTfClientVpnEndpoint",
+    "className": "DataTfEndpoint",
     "previous": "DataAwsEc2ClientVpnEndpoint"
   },
   "data_aws_ec2_coip_pool": {
@@ -11486,103 +11486,103 @@
   "data_aws_ec2_transit_gateway": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "DataTfTransitGateway",
+    "className": "DataTfEc2TransitGateway",
     "previous": "DataAwsEc2TransitGateway"
   },
   "data_aws_ec2_transit_gateway_attachment": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "DataTfTransitGatewayAttachment",
+    "className": "DataTfAttachment",
     "previous": "DataAwsEc2TransitGatewayAttachment"
   },
   "data_aws_ec2_transit_gateway_attachments": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "DataTfTransitGatewayAttachments",
+    "className": "DataTfAttachments",
     "previous": "DataAwsEc2TransitGatewayAttachments"
   },
   "data_aws_ec2_transit_gateway_connect": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "DataTfTransitGatewayConnect",
+    "className": "DataTfConnect",
     "previous": "DataAwsEc2TransitGatewayConnect"
   },
   "data_aws_ec2_transit_gateway_connect_peer": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "DataTfTransitGatewayConnectPeer",
+    "className": "DataTfConnectPeer",
     "previous": "DataAwsEc2TransitGatewayConnectPeer"
   },
   "data_aws_ec2_transit_gateway_dx_gateway_attachment": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "DataTfTransitGatewayDxGatewayAttachment",
+    "className": "DataTfDxGatewayAttachment",
     "previous": "DataAwsEc2TransitGatewayDxGatewayAttachment"
   },
   "data_aws_ec2_transit_gateway_multicast_domain": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "DataTfTransitGatewayMulticastDomain",
+    "className": "DataTfMulticastDomain",
     "previous": "DataAwsEc2TransitGatewayMulticastDomain"
   },
   "data_aws_ec2_transit_gateway_peering_attachment": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "DataTfTransitGatewayPeeringAttachment",
+    "className": "DataTfPeeringAttachment",
     "previous": "DataAwsEc2TransitGatewayPeeringAttachment"
   },
   "data_aws_ec2_transit_gateway_peering_attachments": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "DataTfTransitGatewayPeeringAttachments",
+    "className": "DataTfPeeringAttachments",
     "previous": "DataAwsEc2TransitGatewayPeeringAttachments"
   },
   "data_aws_ec2_transit_gateway_route_table": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "DataTfTransitGatewayRouteTable",
+    "className": "DataTfRouteTable",
     "previous": "DataAwsEc2TransitGatewayRouteTable"
   },
   "data_aws_ec2_transit_gateway_route_table_associations": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "DataTfTransitGatewayRouteTableAssociations",
+    "className": "DataTfRouteTableAssociations",
     "previous": "DataAwsEc2TransitGatewayRouteTableAssociations"
   },
   "data_aws_ec2_transit_gateway_route_table_propagations": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "DataTfTransitGatewayRouteTablePropagations",
+    "className": "DataTfRouteTablePropagations",
     "previous": "DataAwsEc2TransitGatewayRouteTablePropagations"
   },
   "data_aws_ec2_transit_gateway_route_table_routes": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "DataTfTransitGatewayRouteTableRoutes",
+    "className": "DataTfRouteTableRoutes",
     "previous": "DataAwsEc2TransitGatewayRouteTableRoutes"
   },
   "data_aws_ec2_transit_gateway_route_tables": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "DataTfTransitGatewayRouteTables",
+    "className": "DataTfRouteTables",
     "previous": "DataAwsEc2TransitGatewayRouteTables"
   },
   "data_aws_ec2_transit_gateway_vpc_attachment": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "DataTfTransitGatewayVpcAttachment",
+    "className": "DataTfVpcAttachment",
     "previous": "DataAwsEc2TransitGatewayVpcAttachment"
   },
   "data_aws_ec2_transit_gateway_vpc_attachments": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "DataTfTransitGatewayVpcAttachments",
+    "className": "DataTfVpcAttachments",
     "previous": "DataAwsEc2TransitGatewayVpcAttachments"
   },
   "data_aws_ec2_transit_gateway_vpn_attachment": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "DataTfTransitGatewayVpnAttachment",
+    "className": "DataTfVpnAttachment",
     "previous": "DataAwsEc2TransitGatewayVpnAttachment"
   },
   "data_aws_ecr_authorization_token": {
@@ -13484,13 +13484,13 @@
   "data_aws_s3_access_point": {
     "surface": "data_source",
     "group": "s3_control",
-    "className": "DataTfS3AccessPoint",
+    "className": "DataTfAccessPoint",
     "previous": "DataAwsS3AccessPoint"
   },
   "data_aws_s3_account_public_access_block": {
     "surface": "data_source",
     "group": "s3_control",
-    "className": "DataTfS3AccountPublicAccessBlock",
+    "className": "DataTfAccountPublicAccessBlock",
     "previous": "DataAwsS3AccountPublicAccessBlock"
   },
   "data_aws_s3_bucket": {

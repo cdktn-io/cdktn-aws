@@ -5,29 +5,29 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfClientVpnEndpointConfig extends cdktn.TerraformMetaArguments {
+export interface TfEndpointConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#client_cidr_block TfClientVpnEndpoint#client_cidr_block}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#client_cidr_block TfEndpoint#client_cidr_block}
   */
   readonly clientCidrBlock?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#description TfClientVpnEndpoint#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#description TfEndpoint#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#disconnect_on_session_timeout TfClientVpnEndpoint#disconnect_on_session_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#disconnect_on_session_timeout TfEndpoint#disconnect_on_session_timeout}
   */
   readonly disconnectOnSessionTimeout?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#dns_servers TfClientVpnEndpoint#dns_servers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#dns_servers TfEndpoint#dns_servers}
   */
   readonly dnsServers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#endpoint_ip_address_type TfClientVpnEndpoint#endpoint_ip_address_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#endpoint_ip_address_type TfEndpoint#endpoint_ip_address_type}
   */
   readonly endpointIpAddressType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#id TfClientVpnEndpoint#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#id TfEndpoint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -36,95 +36,95 @@ export interface TfClientVpnEndpointConfig extends cdktn.TerraformMetaArguments 
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#region TfClientVpnEndpoint#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#region TfEndpoint#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#security_group_ids TfClientVpnEndpoint#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#security_group_ids TfEndpoint#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#self_service_portal TfClientVpnEndpoint#self_service_portal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#self_service_portal TfEndpoint#self_service_portal}
   */
   readonly selfServicePortal?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#server_certificate_arn TfClientVpnEndpoint#server_certificate_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#server_certificate_arn TfEndpoint#server_certificate_arn}
   */
   readonly serverCertificateArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#session_timeout_hours TfClientVpnEndpoint#session_timeout_hours}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#session_timeout_hours TfEndpoint#session_timeout_hours}
   */
   readonly sessionTimeoutHours?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#split_tunnel TfClientVpnEndpoint#split_tunnel}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#split_tunnel TfEndpoint#split_tunnel}
   */
   readonly splitTunnel?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#tags TfClientVpnEndpoint#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#tags TfEndpoint#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#tags_all TfClientVpnEndpoint#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#tags_all TfEndpoint#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#traffic_ip_address_type TfClientVpnEndpoint#traffic_ip_address_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#traffic_ip_address_type TfEndpoint#traffic_ip_address_type}
   */
   readonly trafficIpAddressType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#transport_protocol TfClientVpnEndpoint#transport_protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#transport_protocol TfEndpoint#transport_protocol}
   */
   readonly transportProtocol?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#vpc_id TfClientVpnEndpoint#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#vpc_id TfEndpoint#vpc_id}
   */
   readonly vpcId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#vpn_port TfClientVpnEndpoint#vpn_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#vpn_port TfEndpoint#vpn_port}
   */
   readonly vpnPort?: number;
   /**
   * authentication_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#authentication_options TfClientVpnEndpoint#authentication_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#authentication_options TfEndpoint#authentication_options}
   */
-  readonly authenticationOptions: TfClientVpnEndpoint.AuthenticationOptionsProperty[] | cdktn.IResolvable;
+  readonly authenticationOptions: TfEndpoint.AuthenticationOptionsProperty[] | cdktn.IResolvable;
   /**
   * client_connect_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#client_connect_options TfClientVpnEndpoint#client_connect_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#client_connect_options TfEndpoint#client_connect_options}
   */
-  readonly clientConnectOptions?: TfClientVpnEndpoint.ClientConnectOptionsProperty;
+  readonly clientConnectOptions?: TfEndpoint.ClientConnectOptionsProperty;
   /**
   * client_login_banner_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#client_login_banner_options TfClientVpnEndpoint#client_login_banner_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#client_login_banner_options TfEndpoint#client_login_banner_options}
   */
-  readonly clientLoginBannerOptions?: TfClientVpnEndpoint.ClientLoginBannerOptionsProperty;
+  readonly clientLoginBannerOptions?: TfEndpoint.ClientLoginBannerOptionsProperty;
   /**
   * client_route_enforcement_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#client_route_enforcement_options TfClientVpnEndpoint#client_route_enforcement_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#client_route_enforcement_options TfEndpoint#client_route_enforcement_options}
   */
-  readonly clientRouteEnforcementOptions?: TfClientVpnEndpoint.ClientRouteEnforcementOptionsProperty;
+  readonly clientRouteEnforcementOptions?: TfEndpoint.ClientRouteEnforcementOptionsProperty;
   /**
   * connection_log_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#connection_log_options TfClientVpnEndpoint#connection_log_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#connection_log_options TfEndpoint#connection_log_options}
   */
-  readonly connectionLogOptions: TfClientVpnEndpoint.ConnectionLogOptionsProperty;
+  readonly connectionLogOptions: TfEndpoint.ConnectionLogOptionsProperty;
   /**
   * transit_gateway_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#transit_gateway_configuration TfClientVpnEndpoint#transit_gateway_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#transit_gateway_configuration TfEndpoint#transit_gateway_configuration}
   */
-  readonly transitGatewayConfiguration?: TfClientVpnEndpoint.TransitGatewayConfigurationProperty;
+  readonly transitGatewayConfiguration?: TfEndpoint.TransitGatewayConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint aws_ec2_client_vpn_endpoint}
 */
-export class TfClientVpnEndpoint extends cdktn.TerraformResource {
+export class TfEndpoint extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -135,11 +135,11 @@ export class TfClientVpnEndpoint extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfClientVpnEndpoint resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfEndpoint resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfClientVpnEndpoint to import
-  * @param importFromId The id of the existing TfClientVpnEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfClientVpnEndpoint to import is found
+  * @param importToId The construct id used in the generated config for the TfEndpoint to import
+  * @param importFromId The id of the existing TfEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfEndpoint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_client_vpn_endpoint", importId: importFromId, provider });
@@ -154,9 +154,9 @@ export class TfClientVpnEndpoint extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfClientVpnEndpointConfig
+  * @param options TfEndpointConfig
   */
-  public constructor(scope: Construct, id: string, config: TfClientVpnEndpointConfig) {
+  public constructor(scope: Construct, id: string, config: TfEndpointConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_client_vpn_endpoint',
       terraformGeneratorMetadata: {
@@ -503,11 +503,11 @@ export class TfClientVpnEndpoint extends cdktn.TerraformResource {
   }
 
   // authentication_options - computed: false, optional: false, required: true
-  private _authenticationOptions = new TfClientVpnEndpoint.AuthenticationOptionsPropertyList(this, "authentication_options", true);
+  private _authenticationOptions = new TfEndpoint.AuthenticationOptionsPropertyList(this, "authentication_options", true);
   public get authenticationOptions() {
     return this._authenticationOptions;
   }
-  public putAuthenticationOptions(value: TfClientVpnEndpoint.AuthenticationOptionsProperty[] | cdktn.IResolvable) {
+  public putAuthenticationOptions(value: TfEndpoint.AuthenticationOptionsProperty[] | cdktn.IResolvable) {
     this._authenticationOptions.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -516,11 +516,11 @@ export class TfClientVpnEndpoint extends cdktn.TerraformResource {
   }
 
   // client_connect_options - computed: false, optional: true, required: false
-  private _clientConnectOptions = new TfClientVpnEndpoint.ClientConnectOptionsPropertyOutputReference(this, "client_connect_options");
+  private _clientConnectOptions = new TfEndpoint.ClientConnectOptionsPropertyOutputReference(this, "client_connect_options");
   public get clientConnectOptions() {
     return this._clientConnectOptions;
   }
-  public putClientConnectOptions(value: TfClientVpnEndpoint.ClientConnectOptionsProperty) {
+  public putClientConnectOptions(value: TfEndpoint.ClientConnectOptionsProperty) {
     this._clientConnectOptions.internalValue = value;
   }
   public resetClientConnectOptions() {
@@ -532,11 +532,11 @@ export class TfClientVpnEndpoint extends cdktn.TerraformResource {
   }
 
   // client_login_banner_options - computed: false, optional: true, required: false
-  private _clientLoginBannerOptions = new TfClientVpnEndpoint.ClientLoginBannerOptionsPropertyOutputReference(this, "client_login_banner_options");
+  private _clientLoginBannerOptions = new TfEndpoint.ClientLoginBannerOptionsPropertyOutputReference(this, "client_login_banner_options");
   public get clientLoginBannerOptions() {
     return this._clientLoginBannerOptions;
   }
-  public putClientLoginBannerOptions(value: TfClientVpnEndpoint.ClientLoginBannerOptionsProperty) {
+  public putClientLoginBannerOptions(value: TfEndpoint.ClientLoginBannerOptionsProperty) {
     this._clientLoginBannerOptions.internalValue = value;
   }
   public resetClientLoginBannerOptions() {
@@ -548,11 +548,11 @@ export class TfClientVpnEndpoint extends cdktn.TerraformResource {
   }
 
   // client_route_enforcement_options - computed: false, optional: true, required: false
-  private _clientRouteEnforcementOptions = new TfClientVpnEndpoint.ClientRouteEnforcementOptionsPropertyOutputReference(this, "client_route_enforcement_options");
+  private _clientRouteEnforcementOptions = new TfEndpoint.ClientRouteEnforcementOptionsPropertyOutputReference(this, "client_route_enforcement_options");
   public get clientRouteEnforcementOptions() {
     return this._clientRouteEnforcementOptions;
   }
-  public putClientRouteEnforcementOptions(value: TfClientVpnEndpoint.ClientRouteEnforcementOptionsProperty) {
+  public putClientRouteEnforcementOptions(value: TfEndpoint.ClientRouteEnforcementOptionsProperty) {
     this._clientRouteEnforcementOptions.internalValue = value;
   }
   public resetClientRouteEnforcementOptions() {
@@ -564,11 +564,11 @@ export class TfClientVpnEndpoint extends cdktn.TerraformResource {
   }
 
   // connection_log_options - computed: false, optional: false, required: true
-  private _connectionLogOptions = new TfClientVpnEndpoint.ConnectionLogOptionsPropertyOutputReference(this, "connection_log_options");
+  private _connectionLogOptions = new TfEndpoint.ConnectionLogOptionsPropertyOutputReference(this, "connection_log_options");
   public get connectionLogOptions() {
     return this._connectionLogOptions;
   }
-  public putConnectionLogOptions(value: TfClientVpnEndpoint.ConnectionLogOptionsProperty) {
+  public putConnectionLogOptions(value: TfEndpoint.ConnectionLogOptionsProperty) {
     this._connectionLogOptions.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -577,11 +577,11 @@ export class TfClientVpnEndpoint extends cdktn.TerraformResource {
   }
 
   // transit_gateway_configuration - computed: false, optional: true, required: false
-  private _transitGatewayConfiguration = new TfClientVpnEndpoint.TransitGatewayConfigurationPropertyOutputReference(this, "transit_gateway_configuration");
+  private _transitGatewayConfiguration = new TfEndpoint.TransitGatewayConfigurationPropertyOutputReference(this, "transit_gateway_configuration");
   public get transitGatewayConfiguration() {
     return this._transitGatewayConfiguration;
   }
-  public putTransitGatewayConfiguration(value: TfClientVpnEndpoint.TransitGatewayConfigurationProperty) {
+  public putTransitGatewayConfiguration(value: TfEndpoint.TransitGatewayConfigurationProperty) {
     this._transitGatewayConfiguration.internalValue = value;
   }
   public resetTransitGatewayConfiguration() {
@@ -616,12 +616,12 @@ export class TfClientVpnEndpoint extends cdktn.TerraformResource {
       transport_protocol: cdktn.stringToTerraform(this._transportProtocol),
       vpc_id: cdktn.stringToTerraform(this._vpcId),
       vpn_port: cdktn.numberToTerraform(this._vpnPort),
-      authentication_options: cdktn.listMapper(tfClientVpnEndpointAuthenticationOptionsPropertyToTerraform, true)(this._authenticationOptions.internalValue),
-      client_connect_options: tfClientVpnEndpointClientConnectOptionsPropertyToTerraform(this._clientConnectOptions.internalValue),
-      client_login_banner_options: tfClientVpnEndpointClientLoginBannerOptionsPropertyToTerraform(this._clientLoginBannerOptions.internalValue),
-      client_route_enforcement_options: tfClientVpnEndpointClientRouteEnforcementOptionsPropertyToTerraform(this._clientRouteEnforcementOptions.internalValue),
-      connection_log_options: tfClientVpnEndpointConnectionLogOptionsPropertyToTerraform(this._connectionLogOptions.internalValue),
-      transit_gateway_configuration: tfClientVpnEndpointTransitGatewayConfigurationPropertyToTerraform(this._transitGatewayConfiguration.internalValue),
+      authentication_options: cdktn.listMapper(tfEndpointAuthenticationOptionsPropertyToTerraform, true)(this._authenticationOptions.internalValue),
+      client_connect_options: tfEndpointClientConnectOptionsPropertyToTerraform(this._clientConnectOptions.internalValue),
+      client_login_banner_options: tfEndpointClientLoginBannerOptionsPropertyToTerraform(this._clientLoginBannerOptions.internalValue),
+      client_route_enforcement_options: tfEndpointClientRouteEnforcementOptionsPropertyToTerraform(this._clientRouteEnforcementOptions.internalValue),
+      connection_log_options: tfEndpointConnectionLogOptionsPropertyToTerraform(this._connectionLogOptions.internalValue),
+      transit_gateway_configuration: tfEndpointTransitGatewayConfigurationPropertyToTerraform(this._transitGatewayConfiguration.internalValue),
     };
   }
 
@@ -736,40 +736,40 @@ export class TfClientVpnEndpoint extends cdktn.TerraformResource {
         storageClassType: "number",
       },
       authentication_options: {
-        value: cdktn.listMapperHcl(tfClientVpnEndpointAuthenticationOptionsPropertyToHclTerraform, true)(this._authenticationOptions.internalValue),
+        value: cdktn.listMapperHcl(tfEndpointAuthenticationOptionsPropertyToHclTerraform, true)(this._authenticationOptions.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfClientVpnEndpoint.AuthenticationOptionsPropertyList",
+        storageClassType: "TfEndpoint.AuthenticationOptionsPropertyList",
       },
       client_connect_options: {
-        value: tfClientVpnEndpointClientConnectOptionsPropertyToHclTerraform(this._clientConnectOptions.internalValue),
+        value: tfEndpointClientConnectOptionsPropertyToHclTerraform(this._clientConnectOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfClientVpnEndpoint.ClientConnectOptionsPropertyList",
+        storageClassType: "TfEndpoint.ClientConnectOptionsPropertyList",
       },
       client_login_banner_options: {
-        value: tfClientVpnEndpointClientLoginBannerOptionsPropertyToHclTerraform(this._clientLoginBannerOptions.internalValue),
+        value: tfEndpointClientLoginBannerOptionsPropertyToHclTerraform(this._clientLoginBannerOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfClientVpnEndpoint.ClientLoginBannerOptionsPropertyList",
+        storageClassType: "TfEndpoint.ClientLoginBannerOptionsPropertyList",
       },
       client_route_enforcement_options: {
-        value: tfClientVpnEndpointClientRouteEnforcementOptionsPropertyToHclTerraform(this._clientRouteEnforcementOptions.internalValue),
+        value: tfEndpointClientRouteEnforcementOptionsPropertyToHclTerraform(this._clientRouteEnforcementOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfClientVpnEndpoint.ClientRouteEnforcementOptionsPropertyList",
+        storageClassType: "TfEndpoint.ClientRouteEnforcementOptionsPropertyList",
       },
       connection_log_options: {
-        value: tfClientVpnEndpointConnectionLogOptionsPropertyToHclTerraform(this._connectionLogOptions.internalValue),
+        value: tfEndpointConnectionLogOptionsPropertyToHclTerraform(this._connectionLogOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfClientVpnEndpoint.ConnectionLogOptionsPropertyList",
+        storageClassType: "TfEndpoint.ConnectionLogOptionsPropertyList",
       },
       transit_gateway_configuration: {
-        value: tfClientVpnEndpointTransitGatewayConfigurationPropertyToHclTerraform(this._transitGatewayConfiguration.internalValue),
+        value: tfEndpointTransitGatewayConfigurationPropertyToHclTerraform(this._transitGatewayConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfClientVpnEndpoint.TransitGatewayConfigurationPropertyList",
+        storageClassType: "TfEndpoint.TransitGatewayConfigurationPropertyList",
       },
     };
 
@@ -778,7 +778,7 @@ export class TfClientVpnEndpoint extends cdktn.TerraformResource {
   }
 }
 
-export function tfClientVpnEndpointAuthenticationOptionsPropertyToTerraform(struct?: TfClientVpnEndpoint.AuthenticationOptionsProperty | cdktn.IResolvable): any {
+export function tfEndpointAuthenticationOptionsPropertyToTerraform(struct?: TfEndpoint.AuthenticationOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -793,7 +793,7 @@ export function tfClientVpnEndpointAuthenticationOptionsPropertyToTerraform(stru
 }
 
 
-export function tfClientVpnEndpointAuthenticationOptionsPropertyToHclTerraform(struct?: TfClientVpnEndpoint.AuthenticationOptionsProperty | cdktn.IResolvable): any {
+export function tfEndpointAuthenticationOptionsPropertyToHclTerraform(struct?: TfEndpoint.AuthenticationOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -836,7 +836,7 @@ export function tfClientVpnEndpointAuthenticationOptionsPropertyToHclTerraform(s
 }
 
 
-export function tfClientVpnEndpointClientConnectOptionsPropertyToTerraform(struct?: TfClientVpnEndpoint.ClientConnectOptionsPropertyOutputReference | TfClientVpnEndpoint.ClientConnectOptionsProperty): any {
+export function tfEndpointClientConnectOptionsPropertyToTerraform(struct?: TfEndpoint.ClientConnectOptionsPropertyOutputReference | TfEndpoint.ClientConnectOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -848,7 +848,7 @@ export function tfClientVpnEndpointClientConnectOptionsPropertyToTerraform(struc
 }
 
 
-export function tfClientVpnEndpointClientConnectOptionsPropertyToHclTerraform(struct?: TfClientVpnEndpoint.ClientConnectOptionsPropertyOutputReference | TfClientVpnEndpoint.ClientConnectOptionsProperty): any {
+export function tfEndpointClientConnectOptionsPropertyToHclTerraform(struct?: TfEndpoint.ClientConnectOptionsPropertyOutputReference | TfEndpoint.ClientConnectOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -873,7 +873,7 @@ export function tfClientVpnEndpointClientConnectOptionsPropertyToHclTerraform(st
 }
 
 
-export function tfClientVpnEndpointClientLoginBannerOptionsPropertyToTerraform(struct?: TfClientVpnEndpoint.ClientLoginBannerOptionsPropertyOutputReference | TfClientVpnEndpoint.ClientLoginBannerOptionsProperty): any {
+export function tfEndpointClientLoginBannerOptionsPropertyToTerraform(struct?: TfEndpoint.ClientLoginBannerOptionsPropertyOutputReference | TfEndpoint.ClientLoginBannerOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -885,7 +885,7 @@ export function tfClientVpnEndpointClientLoginBannerOptionsPropertyToTerraform(s
 }
 
 
-export function tfClientVpnEndpointClientLoginBannerOptionsPropertyToHclTerraform(struct?: TfClientVpnEndpoint.ClientLoginBannerOptionsPropertyOutputReference | TfClientVpnEndpoint.ClientLoginBannerOptionsProperty): any {
+export function tfEndpointClientLoginBannerOptionsPropertyToHclTerraform(struct?: TfEndpoint.ClientLoginBannerOptionsPropertyOutputReference | TfEndpoint.ClientLoginBannerOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -910,7 +910,7 @@ export function tfClientVpnEndpointClientLoginBannerOptionsPropertyToHclTerrafor
 }
 
 
-export function tfClientVpnEndpointClientRouteEnforcementOptionsPropertyToTerraform(struct?: TfClientVpnEndpoint.ClientRouteEnforcementOptionsPropertyOutputReference | TfClientVpnEndpoint.ClientRouteEnforcementOptionsProperty): any {
+export function tfEndpointClientRouteEnforcementOptionsPropertyToTerraform(struct?: TfEndpoint.ClientRouteEnforcementOptionsPropertyOutputReference | TfEndpoint.ClientRouteEnforcementOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -921,7 +921,7 @@ export function tfClientVpnEndpointClientRouteEnforcementOptionsPropertyToTerraf
 }
 
 
-export function tfClientVpnEndpointClientRouteEnforcementOptionsPropertyToHclTerraform(struct?: TfClientVpnEndpoint.ClientRouteEnforcementOptionsPropertyOutputReference | TfClientVpnEndpoint.ClientRouteEnforcementOptionsProperty): any {
+export function tfEndpointClientRouteEnforcementOptionsPropertyToHclTerraform(struct?: TfEndpoint.ClientRouteEnforcementOptionsPropertyOutputReference | TfEndpoint.ClientRouteEnforcementOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -940,7 +940,7 @@ export function tfClientVpnEndpointClientRouteEnforcementOptionsPropertyToHclTer
 }
 
 
-export function tfClientVpnEndpointConnectionLogOptionsPropertyToTerraform(struct?: TfClientVpnEndpoint.ConnectionLogOptionsPropertyOutputReference | TfClientVpnEndpoint.ConnectionLogOptionsProperty): any {
+export function tfEndpointConnectionLogOptionsPropertyToTerraform(struct?: TfEndpoint.ConnectionLogOptionsPropertyOutputReference | TfEndpoint.ConnectionLogOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -953,7 +953,7 @@ export function tfClientVpnEndpointConnectionLogOptionsPropertyToTerraform(struc
 }
 
 
-export function tfClientVpnEndpointConnectionLogOptionsPropertyToHclTerraform(struct?: TfClientVpnEndpoint.ConnectionLogOptionsPropertyOutputReference | TfClientVpnEndpoint.ConnectionLogOptionsProperty): any {
+export function tfEndpointConnectionLogOptionsPropertyToHclTerraform(struct?: TfEndpoint.ConnectionLogOptionsPropertyOutputReference | TfEndpoint.ConnectionLogOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -984,7 +984,7 @@ export function tfClientVpnEndpointConnectionLogOptionsPropertyToHclTerraform(st
 }
 
 
-export function tfClientVpnEndpointTransitGatewayConfigurationPropertyToTerraform(struct?: TfClientVpnEndpoint.TransitGatewayConfigurationPropertyOutputReference | TfClientVpnEndpoint.TransitGatewayConfigurationProperty): any {
+export function tfEndpointTransitGatewayConfigurationPropertyToTerraform(struct?: TfEndpoint.TransitGatewayConfigurationPropertyOutputReference | TfEndpoint.TransitGatewayConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -997,7 +997,7 @@ export function tfClientVpnEndpointTransitGatewayConfigurationPropertyToTerrafor
 }
 
 
-export function tfClientVpnEndpointTransitGatewayConfigurationPropertyToHclTerraform(struct?: TfClientVpnEndpoint.TransitGatewayConfigurationPropertyOutputReference | TfClientVpnEndpoint.TransitGatewayConfigurationProperty): any {
+export function tfEndpointTransitGatewayConfigurationPropertyToHclTerraform(struct?: TfEndpoint.TransitGatewayConfigurationPropertyOutputReference | TfEndpoint.TransitGatewayConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1028,26 +1028,26 @@ export function tfClientVpnEndpointTransitGatewayConfigurationPropertyToHclTerra
 }
 
 
-export namespace TfClientVpnEndpoint {
+export namespace TfEndpoint {
 export interface AuthenticationOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#active_directory_id TfClientVpnEndpoint#active_directory_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#active_directory_id TfEndpoint#active_directory_id}
   */
   readonly activeDirectoryId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#root_certificate_chain_arn TfClientVpnEndpoint#root_certificate_chain_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#root_certificate_chain_arn TfEndpoint#root_certificate_chain_arn}
   */
   readonly rootCertificateChainArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#saml_provider_arn TfClientVpnEndpoint#saml_provider_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#saml_provider_arn TfEndpoint#saml_provider_arn}
   */
   readonly samlProviderArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#self_service_saml_provider_arn TfClientVpnEndpoint#self_service_saml_provider_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#self_service_saml_provider_arn TfEndpoint#self_service_saml_provider_arn}
   */
   readonly selfServiceSamlProviderArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#type TfClientVpnEndpoint#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#type TfEndpoint#type}
   */
   readonly type: string;
 }
@@ -1218,11 +1218,11 @@ export class AuthenticationOptionsPropertyList extends cdktn.ComplexList {
 }
 export interface ClientConnectOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#enabled TfClientVpnEndpoint#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#enabled TfEndpoint#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#lambda_function_arn TfClientVpnEndpoint#lambda_function_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#lambda_function_arn TfEndpoint#lambda_function_arn}
   */
   readonly lambdaFunctionArn?: string;
 }
@@ -1298,11 +1298,11 @@ export class ClientConnectOptionsPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface ClientLoginBannerOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#banner_text TfClientVpnEndpoint#banner_text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#banner_text TfEndpoint#banner_text}
   */
   readonly bannerText?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#enabled TfClientVpnEndpoint#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#enabled TfEndpoint#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
 }
@@ -1378,7 +1378,7 @@ export class ClientLoginBannerOptionsPropertyOutputReference extends cdktn.Compl
 }
 export interface ClientRouteEnforcementOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#enforced TfClientVpnEndpoint#enforced}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#enforced TfEndpoint#enforced}
   */
   readonly enforced?: boolean | cdktn.IResolvable;
 }
@@ -1432,15 +1432,15 @@ export class ClientRouteEnforcementOptionsPropertyOutputReference extends cdktn.
 }
 export interface ConnectionLogOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#cloudwatch_log_group TfClientVpnEndpoint#cloudwatch_log_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#cloudwatch_log_group TfEndpoint#cloudwatch_log_group}
   */
   readonly cloudwatchLogGroup?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#cloudwatch_log_stream TfClientVpnEndpoint#cloudwatch_log_stream}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#cloudwatch_log_stream TfEndpoint#cloudwatch_log_stream}
   */
   readonly cloudwatchLogStream?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#enabled TfClientVpnEndpoint#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#enabled TfEndpoint#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
 }
@@ -1535,15 +1535,15 @@ export class ConnectionLogOptionsPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface TransitGatewayConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#availability_zone_ids TfClientVpnEndpoint#availability_zone_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#availability_zone_ids TfEndpoint#availability_zone_ids}
   */
   readonly availabilityZoneIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#availability_zones TfClientVpnEndpoint#availability_zones}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#availability_zones TfEndpoint#availability_zones}
   */
   readonly availabilityZones?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#transit_gateway_id TfClientVpnEndpoint#transit_gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_endpoint#transit_gateway_id TfEndpoint#transit_gateway_id}
   */
   readonly transitGatewayId?: string;
 }

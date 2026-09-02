@@ -3879,6 +3879,7 @@
     "s3_control": {
       "title": "S3 Control",
       "stripPrefixes": [
+        "s3",
         "s3control"
       ],
       "resources": [
@@ -4614,7 +4615,7 @@
     "transit_gateway": {
       "title": "Transit Gateway",
       "stripPrefixes": [
-        "ec2"
+        "ec2_transit_gateway"
       ],
       "resources": [
         "aws_ec2_transit_gateway",
@@ -4904,7 +4905,7 @@
     "vpn_client": {
       "title": "VPN (Client)",
       "stripPrefixes": [
-        "ec2"
+        "ec2_client_vpn"
       ],
       "resources": [
         "aws_ec2_client_vpn_authorization_rule",

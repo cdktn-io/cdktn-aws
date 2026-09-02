@@ -1008,9 +1008,9 @@
       "bytes": 1144088
     },
     "s3_control": {
-      "hash": "930279ba055b3cdb6d7c2206efd8cc89231ea54e98985a67374d2acf430ac7e4",
+      "hash": "564738c7ba53ca2372a7cdb10fa114d4dc62619245356f90ea97ffbe5ca16bc6",
       "files": 26,
-      "bytes": 552514
+      "bytes": 552324
     },
     "s3_files": {
       "hash": "db3b06f83015503a0410f123139990690079258ebfc16dee545fcdfb1370854e",
@@ -1193,9 +1193,9 @@
       "bytes": 475122
     },
     "transit_gateway": {
-      "hash": "b1b04f4aac23c6d4e453181e755763629c13e2d00375a0a4058433dc1bf9060b",
+      "hash": "4329cf1064e2ae550a47e3590a661534e4e1646c41afcb8144db4f1b2fd8d591",
       "files": 43,
-      "bytes": 658018
+      "bytes": 643893
     },
     "user_experience_customization": {
       "hash": "18c9c6ad2c2f3112a478d08724dcc6a32b853aad50849491b98515228c7e7231",
@@ -1238,9 +1238,9 @@
       "bytes": 452215
     },
     "vpn_client": {
-      "hash": "97e2fbbb39372d684124d5a23412fecac6dece0678b6bb43e5867ce0252d411f",
+      "hash": "c57a638763736e5a66682722b860a2df8f9dcf83c51ffec271ad0dd967025773",
       "files": 9,
-      "bytes": 159961
+      "bytes": 157531
     },
     "vpn_site_to_site": {
       "hash": "2be59999175c162e78b0b31f2dfe5a3cf2e03f6d4269814f4fa351bef1b3cc45",

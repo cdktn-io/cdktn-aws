@@ -5,60 +5,60 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTransitGatewayConnectConfig extends cdktn.TerraformMetaArguments {
+export interface TfConnectConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect#id TfTransitGatewayConnect#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect#id TfConnect#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect#protocol TfTransitGatewayConnect#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect#protocol TfConnect#protocol}
   */
   readonly protocol?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect#region TfTransitGatewayConnect#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect#region TfConnect#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect#tags TfTransitGatewayConnect#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect#tags TfConnect#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect#tags_all TfTransitGatewayConnect#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect#tags_all TfConnect#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect#transit_gateway_default_route_table_association TfTransitGatewayConnect#transit_gateway_default_route_table_association}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect#transit_gateway_default_route_table_association TfConnect#transit_gateway_default_route_table_association}
   */
   readonly transitGatewayDefaultRouteTableAssociation?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect#transit_gateway_default_route_table_propagation TfTransitGatewayConnect#transit_gateway_default_route_table_propagation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect#transit_gateway_default_route_table_propagation TfConnect#transit_gateway_default_route_table_propagation}
   */
   readonly transitGatewayDefaultRouteTablePropagation?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect#transit_gateway_id TfTransitGatewayConnect#transit_gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect#transit_gateway_id TfConnect#transit_gateway_id}
   */
   readonly transitGatewayId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect#transport_attachment_id TfTransitGatewayConnect#transport_attachment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect#transport_attachment_id TfConnect#transport_attachment_id}
   */
   readonly transportAttachmentId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect#timeouts TfTransitGatewayConnect#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect#timeouts TfConnect#timeouts}
   */
-  readonly timeouts?: TfTransitGatewayConnect.TimeoutsProperty;
+  readonly timeouts?: TfConnect.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect aws_ec2_transit_gateway_connect}
 */
-export class TfTransitGatewayConnect extends cdktn.TerraformResource {
+export class TfConnect extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -69,11 +69,11 @@ export class TfTransitGatewayConnect extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTransitGatewayConnect resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfConnect resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTransitGatewayConnect to import
-  * @param importFromId The id of the existing TfTransitGatewayConnect that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTransitGatewayConnect to import is found
+  * @param importToId The construct id used in the generated config for the TfConnect to import
+  * @param importFromId The id of the existing TfConnect that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfConnect to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_transit_gateway_connect", importId: importFromId, provider });
@@ -88,9 +88,9 @@ export class TfTransitGatewayConnect extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTransitGatewayConnectConfig
+  * @param options TfConnectConfig
   */
-  public constructor(scope: Construct, id: string, config: TfTransitGatewayConnectConfig) {
+  public constructor(scope: Construct, id: string, config: TfConnectConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_transit_gateway_connect',
       terraformGeneratorMetadata: {
@@ -261,11 +261,11 @@ export class TfTransitGatewayConnect extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfTransitGatewayConnect.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfConnect.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfTransitGatewayConnect.TimeoutsProperty) {
+  public putTimeouts(value: TfConnect.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -291,7 +291,7 @@ export class TfTransitGatewayConnect extends cdktn.TerraformResource {
       transit_gateway_default_route_table_propagation: cdktn.booleanToTerraform(this._transitGatewayDefaultRouteTablePropagation),
       transit_gateway_id: cdktn.stringToTerraform(this._transitGatewayId),
       transport_attachment_id: cdktn.stringToTerraform(this._transportAttachmentId),
-      timeouts: tfTransitGatewayConnectTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfConnectTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -352,10 +352,10 @@ export class TfTransitGatewayConnect extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfTransitGatewayConnectTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfConnectTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfTransitGatewayConnect.TimeoutsProperty",
+        storageClassType: "TfConnect.TimeoutsProperty",
       },
     };
 
@@ -364,7 +364,7 @@ export class TfTransitGatewayConnect extends cdktn.TerraformResource {
   }
 }
 
-export function tfTransitGatewayConnectTimeoutsPropertyToTerraform(struct?: TfTransitGatewayConnect.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfConnectTimeoutsPropertyToTerraform(struct?: TfConnect.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -377,7 +377,7 @@ export function tfTransitGatewayConnectTimeoutsPropertyToTerraform(struct?: TfTr
 }
 
 
-export function tfTransitGatewayConnectTimeoutsPropertyToHclTerraform(struct?: TfTransitGatewayConnect.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfConnectTimeoutsPropertyToHclTerraform(struct?: TfConnect.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -408,18 +408,18 @@ export function tfTransitGatewayConnectTimeoutsPropertyToHclTerraform(struct?: T
 }
 
 
-export namespace TfTransitGatewayConnect {
+export namespace TfConnect {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect#create TfTransitGatewayConnect#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect#create TfConnect#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect#delete TfTransitGatewayConnect#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect#delete TfConnect#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect#update TfTransitGatewayConnect#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect#update TfConnect#update}
   */
   readonly update?: string;
 }

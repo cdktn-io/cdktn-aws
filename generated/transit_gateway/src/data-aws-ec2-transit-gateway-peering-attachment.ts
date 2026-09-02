@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfTransitGatewayPeeringAttachmentConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfPeeringAttachmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_peering_attachment#id DataTfTransitGatewayPeeringAttachment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_peering_attachment#id DataTfPeeringAttachment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,31 +16,31 @@ export interface DataTfTransitGatewayPeeringAttachmentConfig extends cdktn.Terra
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_peering_attachment#region DataTfTransitGatewayPeeringAttachment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_peering_attachment#region DataTfPeeringAttachment#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_peering_attachment#tags DataTfTransitGatewayPeeringAttachment#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_peering_attachment#tags DataTfPeeringAttachment#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_peering_attachment#filter DataTfTransitGatewayPeeringAttachment#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_peering_attachment#filter DataTfPeeringAttachment#filter}
   */
-  readonly filter?: DataTfTransitGatewayPeeringAttachment.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfPeeringAttachment.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_peering_attachment#timeouts DataTfTransitGatewayPeeringAttachment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_peering_attachment#timeouts DataTfPeeringAttachment#timeouts}
   */
-  readonly timeouts?: DataTfTransitGatewayPeeringAttachment.TimeoutsProperty;
+  readonly timeouts?: DataTfPeeringAttachment.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_peering_attachment aws_ec2_transit_gateway_peering_attachment}
 */
-export class DataTfTransitGatewayPeeringAttachment extends cdktn.TerraformDataSource {
+export class DataTfPeeringAttachment extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class DataTfTransitGatewayPeeringAttachment extends cdktn.TerraformDataSo
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfTransitGatewayPeeringAttachment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfPeeringAttachment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfTransitGatewayPeeringAttachment to import
-  * @param importFromId The id of the existing DataTfTransitGatewayPeeringAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_peering_attachment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfTransitGatewayPeeringAttachment to import is found
+  * @param importToId The construct id used in the generated config for the DataTfPeeringAttachment to import
+  * @param importFromId The id of the existing DataTfPeeringAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_peering_attachment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfPeeringAttachment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_transit_gateway_peering_attachment", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class DataTfTransitGatewayPeeringAttachment extends cdktn.TerraformDataSo
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfTransitGatewayPeeringAttachmentConfig = {}
+  * @param options DataTfPeeringAttachmentConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfTransitGatewayPeeringAttachmentConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfPeeringAttachmentConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_transit_gateway_peering_attachment',
       terraformGeneratorMetadata: {
@@ -178,11 +178,11 @@ export class DataTfTransitGatewayPeeringAttachment extends cdktn.TerraformDataSo
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataTfTransitGatewayPeeringAttachment.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfPeeringAttachment.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataTfTransitGatewayPeeringAttachment.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfPeeringAttachment.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -194,11 +194,11 @@ export class DataTfTransitGatewayPeeringAttachment extends cdktn.TerraformDataSo
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataTfTransitGatewayPeeringAttachment.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataTfPeeringAttachment.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: DataTfTransitGatewayPeeringAttachment.TimeoutsProperty) {
+  public putTimeouts(value: DataTfPeeringAttachment.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -218,8 +218,8 @@ export class DataTfTransitGatewayPeeringAttachment extends cdktn.TerraformDataSo
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      filter: cdktn.listMapper(dataTfTransitGatewayPeeringAttachmentFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: dataTfTransitGatewayPeeringAttachmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(dataTfPeeringAttachmentFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: dataTfPeeringAttachmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -244,16 +244,16 @@ export class DataTfTransitGatewayPeeringAttachment extends cdktn.TerraformDataSo
         storageClassType: "stringMap",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataTfTransitGatewayPeeringAttachmentFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfPeeringAttachmentFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataTfTransitGatewayPeeringAttachment.FilterPropertyList",
+        storageClassType: "DataTfPeeringAttachment.FilterPropertyList",
       },
       timeouts: {
-        value: dataTfTransitGatewayPeeringAttachmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataTfPeeringAttachmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "DataTfTransitGatewayPeeringAttachment.TimeoutsProperty",
+        storageClassType: "DataTfPeeringAttachment.TimeoutsProperty",
       },
     };
 
@@ -262,7 +262,7 @@ export class DataTfTransitGatewayPeeringAttachment extends cdktn.TerraformDataSo
   }
 }
 
-export function dataTfTransitGatewayPeeringAttachmentFilterPropertyToTerraform(struct?: DataTfTransitGatewayPeeringAttachment.FilterProperty | cdktn.IResolvable): any {
+export function dataTfPeeringAttachmentFilterPropertyToTerraform(struct?: DataTfPeeringAttachment.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -274,7 +274,7 @@ export function dataTfTransitGatewayPeeringAttachmentFilterPropertyToTerraform(s
 }
 
 
-export function dataTfTransitGatewayPeeringAttachmentFilterPropertyToHclTerraform(struct?: DataTfTransitGatewayPeeringAttachment.FilterProperty | cdktn.IResolvable): any {
+export function dataTfPeeringAttachmentFilterPropertyToHclTerraform(struct?: DataTfPeeringAttachment.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -299,7 +299,7 @@ export function dataTfTransitGatewayPeeringAttachmentFilterPropertyToHclTerrafor
 }
 
 
-export function dataTfTransitGatewayPeeringAttachmentTimeoutsPropertyToTerraform(struct?: DataTfTransitGatewayPeeringAttachment.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfPeeringAttachmentTimeoutsPropertyToTerraform(struct?: DataTfPeeringAttachment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -310,7 +310,7 @@ export function dataTfTransitGatewayPeeringAttachmentTimeoutsPropertyToTerraform
 }
 
 
-export function dataTfTransitGatewayPeeringAttachmentTimeoutsPropertyToHclTerraform(struct?: DataTfTransitGatewayPeeringAttachment.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfPeeringAttachmentTimeoutsPropertyToHclTerraform(struct?: DataTfPeeringAttachment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -329,14 +329,14 @@ export function dataTfTransitGatewayPeeringAttachmentTimeoutsPropertyToHclTerraf
 }
 
 
-export namespace DataTfTransitGatewayPeeringAttachment {
+export namespace DataTfPeeringAttachment {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_peering_attachment#name DataTfTransitGatewayPeeringAttachment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_peering_attachment#name DataTfPeeringAttachment#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_peering_attachment#values DataTfTransitGatewayPeeringAttachment#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_peering_attachment#values DataTfPeeringAttachment#values}
   */
   readonly values: string[];
 }
@@ -438,7 +438,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_peering_attachment#read DataTfTransitGatewayPeeringAttachment#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_peering_attachment#read DataTfPeeringAttachment#read}
   */
   readonly read?: string;
 }

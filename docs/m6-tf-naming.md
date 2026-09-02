@@ -65,8 +65,10 @@ prefix.
 **The empty-stem back-off.** When the type *is* the prefix there is nothing left to name the class
 after, so the raw type is kept: `aws_vpc` → `TfVpc`, not `Tf`. Seven terraform types in the pinned
 schema land here — `aws_vpc`, `aws_vpc_ipam`, `aws_lb`, `aws_elb`, `aws_cloudtrail`,
-`aws_codepipeline` and the meta data source `aws_arn` (eleven schema entries, counting the ones that
-exist on two surfaces) — and it is the only place the stripping backs off.
+`aws_codepipeline` and `aws_ec2_transit_gateway` (twelve schema entries, counting the ones that
+exist on two surfaces) — and it is the only place the stripping backs off. The raw type is kept
+whole, so `aws_ec2_transit_gateway` in group `transit_gateway` (`[ec2_transit_gateway]`) is
+`TfEc2TransitGateway`, not `TfTransitGateway`.
 
 Worked examples, all asserted in `tools/aws2cdk/test/contract.test.ts`:
 
@@ -113,7 +115,8 @@ or `rm -rf generated/*/dist` first.
 
 ## The curated `stripPrefixes`
 
-Nine groups needed a hand-written list; the table and the reasoning are in
+Twelve groups needed a hand-written list (one of them empty — the provider's meta data sources have
+no service prefix at all); the table and the reasoning are in
 [`curation.md`](./curation.md) (§ `stripPrefixes`). The rule of thumb is: strip exactly the
 service-name tokens the group title already conveys, never a token that names the resource itself.
 

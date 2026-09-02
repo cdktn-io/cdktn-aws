@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfTransitGatewayVpcAttachmentsConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfVpcAttachmentsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_vpc_attachments#id DataTfTransitGatewayVpcAttachments#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_vpc_attachments#id DataTfVpcAttachments#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,27 +16,27 @@ export interface DataTfTransitGatewayVpcAttachmentsConfig extends cdktn.Terrafor
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_vpc_attachments#region DataTfTransitGatewayVpcAttachments#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_vpc_attachments#region DataTfVpcAttachments#region}
   */
   readonly region?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_vpc_attachments#filter DataTfTransitGatewayVpcAttachments#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_vpc_attachments#filter DataTfVpcAttachments#filter}
   */
-  readonly filter?: DataTfTransitGatewayVpcAttachments.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfVpcAttachments.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_vpc_attachments#timeouts DataTfTransitGatewayVpcAttachments#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_vpc_attachments#timeouts DataTfVpcAttachments#timeouts}
   */
-  readonly timeouts?: DataTfTransitGatewayVpcAttachments.TimeoutsProperty;
+  readonly timeouts?: DataTfVpcAttachments.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_vpc_attachments aws_ec2_transit_gateway_vpc_attachments}
 */
-export class DataTfTransitGatewayVpcAttachments extends cdktn.TerraformDataSource {
+export class DataTfVpcAttachments extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class DataTfTransitGatewayVpcAttachments extends cdktn.TerraformDataSourc
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfTransitGatewayVpcAttachments resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfVpcAttachments resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfTransitGatewayVpcAttachments to import
-  * @param importFromId The id of the existing DataTfTransitGatewayVpcAttachments that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_vpc_attachments#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfTransitGatewayVpcAttachments to import is found
+  * @param importToId The construct id used in the generated config for the DataTfVpcAttachments to import
+  * @param importFromId The id of the existing DataTfVpcAttachments that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_vpc_attachments#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfVpcAttachments to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_transit_gateway_vpc_attachments", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class DataTfTransitGatewayVpcAttachments extends cdktn.TerraformDataSourc
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfTransitGatewayVpcAttachmentsConfig = {}
+  * @param options DataTfVpcAttachmentsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfTransitGatewayVpcAttachmentsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfVpcAttachmentsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_transit_gateway_vpc_attachments',
       terraformGeneratorMetadata: {
@@ -132,11 +132,11 @@ export class DataTfTransitGatewayVpcAttachments extends cdktn.TerraformDataSourc
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataTfTransitGatewayVpcAttachments.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfVpcAttachments.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataTfTransitGatewayVpcAttachments.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfVpcAttachments.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -148,11 +148,11 @@ export class DataTfTransitGatewayVpcAttachments extends cdktn.TerraformDataSourc
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataTfTransitGatewayVpcAttachments.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataTfVpcAttachments.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: DataTfTransitGatewayVpcAttachments.TimeoutsProperty) {
+  public putTimeouts(value: DataTfVpcAttachments.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -171,8 +171,8 @@ export class DataTfTransitGatewayVpcAttachments extends cdktn.TerraformDataSourc
     return {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      filter: cdktn.listMapper(dataTfTransitGatewayVpcAttachmentsFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: dataTfTransitGatewayVpcAttachmentsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(dataTfVpcAttachmentsFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: dataTfVpcAttachmentsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -191,16 +191,16 @@ export class DataTfTransitGatewayVpcAttachments extends cdktn.TerraformDataSourc
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataTfTransitGatewayVpcAttachmentsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfVpcAttachmentsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataTfTransitGatewayVpcAttachments.FilterPropertyList",
+        storageClassType: "DataTfVpcAttachments.FilterPropertyList",
       },
       timeouts: {
-        value: dataTfTransitGatewayVpcAttachmentsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataTfVpcAttachmentsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "DataTfTransitGatewayVpcAttachments.TimeoutsProperty",
+        storageClassType: "DataTfVpcAttachments.TimeoutsProperty",
       },
     };
 
@@ -209,7 +209,7 @@ export class DataTfTransitGatewayVpcAttachments extends cdktn.TerraformDataSourc
   }
 }
 
-export function dataTfTransitGatewayVpcAttachmentsFilterPropertyToTerraform(struct?: DataTfTransitGatewayVpcAttachments.FilterProperty | cdktn.IResolvable): any {
+export function dataTfVpcAttachmentsFilterPropertyToTerraform(struct?: DataTfVpcAttachments.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -221,7 +221,7 @@ export function dataTfTransitGatewayVpcAttachmentsFilterPropertyToTerraform(stru
 }
 
 
-export function dataTfTransitGatewayVpcAttachmentsFilterPropertyToHclTerraform(struct?: DataTfTransitGatewayVpcAttachments.FilterProperty | cdktn.IResolvable): any {
+export function dataTfVpcAttachmentsFilterPropertyToHclTerraform(struct?: DataTfVpcAttachments.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -246,7 +246,7 @@ export function dataTfTransitGatewayVpcAttachmentsFilterPropertyToHclTerraform(s
 }
 
 
-export function dataTfTransitGatewayVpcAttachmentsTimeoutsPropertyToTerraform(struct?: DataTfTransitGatewayVpcAttachments.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfVpcAttachmentsTimeoutsPropertyToTerraform(struct?: DataTfVpcAttachments.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -257,7 +257,7 @@ export function dataTfTransitGatewayVpcAttachmentsTimeoutsPropertyToTerraform(st
 }
 
 
-export function dataTfTransitGatewayVpcAttachmentsTimeoutsPropertyToHclTerraform(struct?: DataTfTransitGatewayVpcAttachments.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfVpcAttachmentsTimeoutsPropertyToHclTerraform(struct?: DataTfVpcAttachments.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -276,14 +276,14 @@ export function dataTfTransitGatewayVpcAttachmentsTimeoutsPropertyToHclTerraform
 }
 
 
-export namespace DataTfTransitGatewayVpcAttachments {
+export namespace DataTfVpcAttachments {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_vpc_attachments#name DataTfTransitGatewayVpcAttachments#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_vpc_attachments#name DataTfVpcAttachments#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_vpc_attachments#values DataTfTransitGatewayVpcAttachments#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_vpc_attachments#values DataTfVpcAttachments#values}
   */
   readonly values: string[];
 }
@@ -385,7 +385,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_vpc_attachments#read DataTfTransitGatewayVpcAttachments#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway_vpc_attachments#read DataTfVpcAttachments#read}
   */
   readonly read?: string;
 }

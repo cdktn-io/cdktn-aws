@@ -5,56 +5,56 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTransitGatewayMulticastDomainConfig extends cdktn.TerraformMetaArguments {
+export interface TfMulticastDomainConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain#auto_accept_shared_associations TfTransitGatewayMulticastDomain#auto_accept_shared_associations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain#auto_accept_shared_associations TfMulticastDomain#auto_accept_shared_associations}
   */
   readonly autoAcceptSharedAssociations?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain#id TfTransitGatewayMulticastDomain#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain#id TfMulticastDomain#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain#igmpv2_support TfTransitGatewayMulticastDomain#igmpv2_support}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain#igmpv2_support TfMulticastDomain#igmpv2_support}
   */
   readonly igmpv2Support?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain#region TfTransitGatewayMulticastDomain#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain#region TfMulticastDomain#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain#static_sources_support TfTransitGatewayMulticastDomain#static_sources_support}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain#static_sources_support TfMulticastDomain#static_sources_support}
   */
   readonly staticSourcesSupport?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain#tags TfTransitGatewayMulticastDomain#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain#tags TfMulticastDomain#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain#tags_all TfTransitGatewayMulticastDomain#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain#tags_all TfMulticastDomain#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain#transit_gateway_id TfTransitGatewayMulticastDomain#transit_gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain#transit_gateway_id TfMulticastDomain#transit_gateway_id}
   */
   readonly transitGatewayId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain#timeouts TfTransitGatewayMulticastDomain#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain#timeouts TfMulticastDomain#timeouts}
   */
-  readonly timeouts?: TfTransitGatewayMulticastDomain.TimeoutsProperty;
+  readonly timeouts?: TfMulticastDomain.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain aws_ec2_transit_gateway_multicast_domain}
 */
-export class TfTransitGatewayMulticastDomain extends cdktn.TerraformResource {
+export class TfMulticastDomain extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class TfTransitGatewayMulticastDomain extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTransitGatewayMulticastDomain resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a TfMulticastDomain resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTransitGatewayMulticastDomain to import
-  * @param importFromId The id of the existing TfTransitGatewayMulticastDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTransitGatewayMulticastDomain to import is found
+  * @param importToId The construct id used in the generated config for the TfMulticastDomain to import
+  * @param importFromId The id of the existing TfMulticastDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the TfMulticastDomain to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_transit_gateway_multicast_domain", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class TfTransitGatewayMulticastDomain extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTransitGatewayMulticastDomainConfig
+  * @param options TfMulticastDomainConfig
   */
-  public constructor(scope: Construct, id: string, config: TfTransitGatewayMulticastDomainConfig) {
+  public constructor(scope: Construct, id: string, config: TfMulticastDomainConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_transit_gateway_multicast_domain',
       terraformGeneratorMetadata: {
@@ -253,11 +253,11 @@ export class TfTransitGatewayMulticastDomain extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfTransitGatewayMulticastDomain.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new TfMulticastDomain.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfTransitGatewayMulticastDomain.TimeoutsProperty) {
+  public putTimeouts(value: TfMulticastDomain.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -282,7 +282,7 @@ export class TfTransitGatewayMulticastDomain extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       transit_gateway_id: cdktn.stringToTerraform(this._transitGatewayId),
-      timeouts: tfTransitGatewayMulticastDomainTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: tfMulticastDomainTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -337,10 +337,10 @@ export class TfTransitGatewayMulticastDomain extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfTransitGatewayMulticastDomainTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: tfMulticastDomainTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfTransitGatewayMulticastDomain.TimeoutsProperty",
+        storageClassType: "TfMulticastDomain.TimeoutsProperty",
       },
     };
 
@@ -349,7 +349,7 @@ export class TfTransitGatewayMulticastDomain extends cdktn.TerraformResource {
   }
 }
 
-export function tfTransitGatewayMulticastDomainTimeoutsPropertyToTerraform(struct?: TfTransitGatewayMulticastDomain.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfMulticastDomainTimeoutsPropertyToTerraform(struct?: TfMulticastDomain.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -361,7 +361,7 @@ export function tfTransitGatewayMulticastDomainTimeoutsPropertyToTerraform(struc
 }
 
 
-export function tfTransitGatewayMulticastDomainTimeoutsPropertyToHclTerraform(struct?: TfTransitGatewayMulticastDomain.TimeoutsProperty | cdktn.IResolvable): any {
+export function tfMulticastDomainTimeoutsPropertyToHclTerraform(struct?: TfMulticastDomain.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -386,14 +386,14 @@ export function tfTransitGatewayMulticastDomainTimeoutsPropertyToHclTerraform(st
 }
 
 
-export namespace TfTransitGatewayMulticastDomain {
+export namespace TfMulticastDomain {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain#create TfTransitGatewayMulticastDomain#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain#create TfMulticastDomain#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain#delete TfTransitGatewayMulticastDomain#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain#delete TfMulticastDomain#delete}
   */
   readonly delete?: string;
 }

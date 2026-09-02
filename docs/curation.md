@@ -16,6 +16,7 @@ Mined 2026-09-01 from `hashicorp/terraform-provider-aws` at tag **v6.62.0**, joi
 | ephemeral resources | 10 | all via doc frontmatter |
 | aliases | 6 | all `aws_alb*` |
 | slug overrides | 14 | 8 for the four collision pairs, 6 for slug shortening |
+| stripPrefix overrides | 12 | the miner's proposal was wrong or too broad; § `stripPrefixes` |
 | hand assignments | 0 | none were needed |
 | unmapped after curation | **0** | the gate has no misc bucket |
 
@@ -278,7 +279,7 @@ provider's meta data sources are the one case. What is not legal is omitting the
 nobody decided, and both the generator and gate C refuse it.
 
 The curation rule: **strip exactly the service-name tokens the group title already conveys, never a
-token that names the resource itself.** Nine of the 257 proposals broke it.
+token that names the resource itself.** Twelve of the 257 proposals broke it.
 
 | slug | proposed | curated | why |
 | --- | --- | --- | --- |
@@ -291,6 +292,16 @@ token that names the resource itself.** Nine of the 257 proposals broke it.
 | `elemental_mediastore` | `media` | `media_store` | same, for MediaStore |
 | `eventbridge` | `cloudwatch` | `cloudwatch_event` | EventBridge's types are still spelled `aws_cloudwatch_event_*`: `TfEventApiDestination` → `TfApiDestination` |
 | `meta_data_sources` | `service` | *(empty)* | this group is the provider's own meta data sources (`aws_arn`, `aws_partition`, `aws_region`…) and shares no service name at all, so there is nothing to strip — where the proposed `service` would have turned `aws_service_principal` into `DataTfPrincipal` |
+| `s3_control` | `s3control` | `s3`, `s3control` | two of the 19 members are spelled `aws_s3_*` (`aws_s3_access_point`, `aws_s3_account_public_access_block`) and kept an `S3` the other 17 shed; both are S3 Control APIs, so both tokens are the group's own name → `TfAccessPoint`, `TfAccountPublicAccessBlock` |
+| `transit_gateway` | `ec2` | `ec2_transit_gateway` | the group **is** transit gateway, so repeating it in every class says it twice: `TfTransitGatewayRoute` → `TfRoute`, `…_vpc_attachment` → `TfVpcAttachment`. `aws_ec2_transit_gateway` itself is an exact match and backs off to the raw type, `TfEc2TransitGateway` |
+| `vpn_client` | `ec2` | `ec2_client_vpn` | same: the group is AWS Client VPN, and `client_vpn` names it, not the resource → `TfEndpoint`, `TfRoute`, `TfAuthorizationRule`, `TfNetworkAssociation`, `DataTfEndpoint` |
+
+### Considered, kept
+
+| slug | tighter list considered | why kept |
+| --- | --- | --- |
+| `route_53_resolver` | `route53_resolver` | it would name two resources after nothing: `aws_route53_resolver_config` → `TfConfig` and `aws_route53_resolver_firewall_config` → `TfConfigConfig`-shaped noise. `resolver` is doing real work in those names, so only `route53` is stripped |
+| `wavelength` | `ec2_carrier_gateway` | the group's single member is `aws_ec2_carrier_gateway`, and "carrier gateway" *is* the resource — stripping it would leave the empty-stem back-off holding the whole type anyway. `[ec2]` gives `TfCarrierGateway` |
 
 Eight groups the M6 brief expected to need an override did not, because the mechanical proposal
 already produces the curated value: `auto_scaling_plans`, `chime_sdk_media_pipelines`,
