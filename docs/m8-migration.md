@@ -94,7 +94,7 @@ Every gate, run on this tree at the commit that closed the slice (macOS, 12 core
 
 | gate | command | result |
 | --- | --- | --- |
-| tests | `pnpm test` | 2,280 passed, 9 snapshots, 13 suites (2,253 generator + 27 migration tool), 8.5 s |
+| tests | `pnpm test` | 2,291 passed, 9 snapshots, 13 suites (2,253 generator + 38 migration tool), 8.7 s |
 | types | `pnpm typecheck` | root + `tools/aws2cdk` + `tools/migrate` + 258/258 generated packages OK, 57 s |
 | generator | `pnpm generate` ×2 | 3,434 files / 2,401 classes / **9,856 nested types** in 3.3 s; `git status` clean on both runs |
 | groups | `pnpm check:groups` | PASS — 257 groups, gate C: 259 prefixes, all used, 0 collisions |
@@ -145,3 +145,21 @@ Two cheaper follow-ons in the same pass: `package.json` keeps `@cdktn/provider-a
 `migrate-verify`'s `includes("0 unmapped")` — which "10 unmapped" also satisfies — is anchored.
 8 new tests, 35 in the tool's suite. Deferred: emitting `import type` when every merged binding came
 from a type-only import; the behaviour is documented in the guide's limits table instead.
+
+## Round 2 review fixes
+
+Two more of the same shape, both on the paths round 1 opened:
+
+* **A default import of the classic package was dropped, or retargeted.** `classicBindings` read
+  the namespace and named bindings but never `getDefaultImport()`, so a sibling binding on the same
+  statement marked it handled and the round-1 backstop skipped it: `import d, { iamRole } from '…'`
+  lost `d` at exit 0, and `import d, * as ns from '…'` moved `d` onto `@cdktn/aws`, which has no
+  member it could reach. The default binding is a reported binding now, `residualImport` spells the
+  default slot back, and a statement that keeps ANY binding is never retargeted.
+* **A name kept in a residual import had been freed for the group barrel**, because the alias search
+  ran over every binding before knowing which ones the run would remove. `migrateFile` decides all
+  of them first and only then assigns aliases, over the names actually removed.
+
+3 new tests, 38 in the tool's suite. The evidence table's test row above is corrected to match.
+Also softened: the guide's limits table claimed every limit was reported — three are silent
+(JSDoc `@type`, `require(someVariable)`, `import type`), and they now say so.

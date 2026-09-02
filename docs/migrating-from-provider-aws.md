@@ -14,6 +14,9 @@ There is a tool. It is a dry run by default.
 ```bash
 npx @cdktn/aws-migrate ts --project tsconfig.json              # print the diff and the report
 npx @cdktn/aws-migrate ts --project tsconfig.json --write      # apply it
+
+# not published yet — until it is, run it from a checkout of this repository:
+pnpm migrate ts --project ../my-app/tsconfig.json
 ```
 
 ## What changes
@@ -87,13 +90,14 @@ could not move — so the file still compiles while you decide. While anything i
 imports still have to install. **The exit code is non-zero while anything is unmapped**, which is
 what lets a CI job gate on the tool.
 
-Known limits, all of them reported rather than silently wrong:
+Known limits. Every one of them is reported at runtime except the three marked **silent**, which the
+closing `grep` below is there to catch:
 
 | limit | what happens |
 | --- | --- |
-| JSDoc `@type {S3Bucket}` | not rewritten, and not reported either — it is a comment; grep for `@cdktn/provider-aws` afterwards |
-| a dynamic `require(someVariable)` | not recognised as an import; nothing is rewritten |
-| string-keyed access, `aws['s3Bucket']['S3Bucket']` | not recognised; nothing is rewritten |
+| JSDoc `@type {S3Bucket}` | **silent** — it is a comment, and the tool does not read comments |
+| a dynamic `require(someVariable)` | **silent** — the specifier is not a literal, so nothing recognises it as an import |
+| string-keyed access, `aws['s3Bucket']['S3Bucket']` | reported — the binding is seen, the hop through it is not a name to rewrite |
 | a classic submodule passed around as a value (`const m = s3Bucket;`) | reported — there is no single symbol to rename |
 | a shorthand property assignment (`{ S3Bucket }`) | reported — renaming it would rename the property too |
 | a re-export of a classic binding (`export { S3Bucket };`) | reported — `export { s3.TfBucket }` is not valid syntax; re-export it by hand |
@@ -101,7 +105,7 @@ Known limits, all of them reported rather than silently wrong:
 | `import x = require('@cdktn/provider-aws/…')`, `import('…')` | reported — the specifier is recognised, the form is not rewritten |
 | a subpath with no map row | reported, and its import kept whole |
 | a default import (`import aws from '@cdktn/provider-aws'`) | reported — neither library has a default export, so the binding stays on the classic package, and a `* as` binding sharing that statement stays with it |
-| `import type { … }` of a classic type | rewritten to a plain `import { s3 } from '@cdktn/aws'` — under `verbatimModuleSyntax` that is a runtime import the file did not have before |
+| `import type { … }` of a classic type | **silent** — rewritten to a plain `import { s3 } from '@cdktn/aws'`; under `verbatimModuleSyntax` that is a runtime import the file did not have before |
 
 After a `--write` run, `grep -r '@cdktn/provider-aws' .` is the honest last step.
 

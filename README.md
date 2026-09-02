@@ -165,6 +165,9 @@ There is a tool, and it is a dry run by default:
 ```bash
 npx @cdktn/aws-migrate ts --project tsconfig.json            # print the diff and the report
 npx @cdktn/aws-migrate ts --project tsconfig.json --write    # apply it
+
+# not published yet — until it is, run it from a checkout of this repository:
+pnpm migrate ts --project ../my-app/tsconfig.json
 ```
 
 It rewrites every import form (deep, barrel, `* as`, and the `require()` spelling of each), every
