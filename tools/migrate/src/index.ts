@@ -8,7 +8,7 @@ import * as fs from "node:fs";
 import * as path from "node:path";
 import { Project } from "ts-morph";
 import { unifiedDiff } from "./diff";
-import { ManifestChange, migrateManifest } from "./manifest";
+import { ManifestChange, ManifestResult, migrateManifest } from "./manifest";
 import { SymbolIndex, buildSymbolIndex, readNamingMap } from "./map";
 import { Report, renderReport, unmappedOf } from "./report";
 import { FileResult, migrateProject } from "./rewrite";
@@ -61,13 +61,15 @@ export function run(options: RunOptions): RunResult {
   // A file that kept a residual classic import still needs the classic dependency to install, so
   // the manifest adds `@cdktn/aws` beside it rather than replacing it until the run is clean.
   const keepClassic = files.some((f) => f.unmapped.length > 0);
-  const manifests: ManifestChange[] = manifestsFor(options)
+  const rewritten: ManifestResult[] = manifestsFor(options)
     .map((f) => migrateManifest(f, relative(f), keepClassic))
-    .filter((m): m is ManifestChange => m !== undefined);
+    .filter((m): m is ManifestResult => m !== undefined);
+  // One report row per (file, block); one diff and one write per file.
+  const manifests: ManifestChange[] = rewritten.flatMap((m) => m.changes);
 
   const diff = [
     ...files.map((f) => unifiedDiff(f.file, f.before, f.after)),
-    ...manifests.map((m) => unifiedDiff(m.file, m.before, m.after)),
+    ...rewritten.map((m) => unifiedDiff(m.file, m.before, m.after)),
   ]
     .filter(Boolean)
     .join("");
@@ -76,7 +78,7 @@ export function run(options: RunOptions): RunResult {
     for (const f of files) {
       if (f.before !== f.after) fs.writeFileSync(path.resolve(options.root, f.file), f.after);
     }
-    for (const m of manifests) fs.writeFileSync(path.resolve(options.root, m.file), m.after);
+    for (const m of rewritten) fs.writeFileSync(path.resolve(options.root, m.file), m.after);
   }
 
   return { files, manifests, wrote: options.write, diff };

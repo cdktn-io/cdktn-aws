@@ -75,8 +75,9 @@ It rewrites:
 * every reference to those bindings, in value **and** type positions — `typeof`, generics,
   `satisfies`, `extends`, a type annotation — resolved through the TypeScript symbol rather than by
   matching text, so a local variable that happens to share a name is never touched;
-* `package.json`: `@cdktn/provider-aws` becomes `@cdktn/aws@^0.2.0`, in whichever dependency block
-  declared it.
+* `package.json`: `@cdktn/provider-aws` becomes `@cdktn/aws@^0.2.0`, in every dependency block that
+  declared it — a library that has it in both `dependencies` and `peerDependencies` gets both, one
+  report row each.
 
 If the group name is already bound in a file, the barrel member is aliased deterministically
 (`import { s3 as s3_ }`, then `s3_2`, `s3_3`).

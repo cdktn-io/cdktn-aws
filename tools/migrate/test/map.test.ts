@@ -94,21 +94,40 @@ describe("package.json", () => {
       name: "example",
       dependencies: { cdktn: "0.24.0", "@cdktn/provider-aws": "^25.3.0", constructs: "^10.7.0" },
     });
-    const change = migrateManifest(file, "package.json")!;
-    expect(change.block).toBe("dependencies");
-    expect(change.from).toBe("^25.3.0");
-    expect(JSON.parse(change.after).dependencies).toEqual({
+    const result = migrateManifest(file, "package.json")!;
+    expect(result.changes).toEqual([
+      { file: "package.json", block: "dependencies", from: "^25.3.0", keptClassic: false },
+    ]);
+    expect(JSON.parse(result.after).dependencies).toEqual({
       "@cdktn/aws": "^0.2.0",
       cdktn: "0.24.0",
       constructs: "^10.7.0",
     });
   });
 
+  it("swaps it in EVERY block that declared it — a library declares two", () => {
+    // Taking only the first block left the project peer-depending on the library it migrated off,
+    // with nothing in the report and a zero exit code to say so.
+    const file = write({
+      name: "example",
+      dependencies: { "@cdktn/provider-aws": "^25.3.0" },
+      peerDependencies: { "@cdktn/provider-aws": "^25.0.0", cdktn: "^0.24.0" },
+    });
+    const result = migrateManifest(file, "package.json")!;
+    expect(result.changes.map((c) => [c.block, c.from])).toEqual([
+      ["dependencies", "^25.3.0"],
+      ["peerDependencies", "^25.0.0"],
+    ]);
+    const after = JSON.parse(result.after);
+    expect(after.dependencies).toEqual({ "@cdktn/aws": "^0.2.0" });
+    expect(after.peerDependencies).toEqual({ "@cdktn/aws": "^0.2.0", cdktn: "^0.24.0" });
+  });
+
   it("keeps the classic dependency while the run has residual imports to install", () => {
     const file = write({ name: "example", dependencies: { "@cdktn/provider-aws": "^25.3.0" } });
-    const change = migrateManifest(file, "package.json", true)!;
-    expect(change.keptClassic).toBe(true);
-    expect(JSON.parse(change.after).dependencies).toEqual({
+    const result = migrateManifest(file, "package.json", true)!;
+    expect(result.changes[0].keptClassic).toBe(true);
+    expect(JSON.parse(result.after).dependencies).toEqual({
       "@cdktn/aws": "^0.2.0",
       "@cdktn/provider-aws": "^25.3.0",
     });
