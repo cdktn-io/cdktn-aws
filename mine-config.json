@@ -23,7 +23,7 @@
 
   "stripPrefixOverrides": {
     "cloud_map": ["service_discovery"],
-    "cloudhsm": ["cloudhsm", "cloudhsm_v2"],
+    "cloudhsm": ["cloudhsm_v2"],
     "cloudwatch_logs": ["cloudwatch", "cloudwatch_log"],
     "elemental_mediaconvert": ["media_convert"],
     "elemental_mediapackage": ["media_package"],

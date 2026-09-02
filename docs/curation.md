@@ -284,7 +284,7 @@ token that names the resource itself.** Twelve of the 257 proposals broke it.
 | slug | proposed | curated | why |
 | --- | --- | --- | --- |
 | `cloud_map` | `service` | `service_discovery` | the service is "service discovery"; the proposal split it and left `aws_service_discovery_http_namespace` as `TfDiscoveryHttpNamespace` |
-| `cloudhsm` | `cloudhsm` | `cloudhsm`, `cloudhsm_v2` | `v2` is part of the service's terraform prefix, not of the resource: `TfV2Cluster` → `TfCluster` |
+| `cloudhsm` | `cloudhsm` | `cloudhsm_v2` | `v2` is part of the service's terraform prefix, not of the resource: `TfV2Cluster` → `TfCluster`; every member is `aws_cloudhsm_v2_*`, so a bare `cloudhsm` entry would never win |
 | `cloudwatch_logs` | `cloudwatch` | `cloudwatch`, `cloudwatch_log` | the group is CloudWatch **Logs**: `aws_cloudwatch_log_group` → `TfGroup`, while the one non-`log` member (`aws_cloudwatch_query_definition`) still sheds `cloudwatch` |
 | `elemental_mediaconvert` | `media` | `media_convert` | `convert` names the service, not the queue: `TfConvertQueue` → `TfQueue` |
 | `elemental_mediapackage` | `media` | `media_package` | same, for MediaPackage |

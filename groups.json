@@ -801,7 +801,6 @@
     "cloudhsm": {
       "title": "CloudHSM",
       "stripPrefixes": [
-        "cloudhsm",
         "cloudhsm_v2"
       ],
       "resources": [
