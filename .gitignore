@@ -37,3 +37,7 @@ examples/*/cdktn.out/
 
 # CI checks the classic @cdktn/provider-aws tree out here (ci.yml); locally it is a sibling clone.
 /ref-provider-aws/
+
+# The migration example is compiled and synthesised in a temp directory (scripts/migrate-verify.mjs).
+# These appear only when someone runs tsc/node inside the example itself.
+examples/migrate/typescript/*/cdktf.out/

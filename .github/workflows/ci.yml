@@ -47,6 +47,7 @@ permissions: {}
 #   typecheck, tests and invariants
 #   groups, generate determinism and runtime contract
 #   synth smoke (validation on)
+#   migration tool and worked example
 #   jsii shard 1/8 … jsii shard 8/8
 #   every group compiled exactly once, JSII3/JSII6 zero
 #   pacmak + size shard 1/8, pacmak + size shard 5/8
@@ -63,6 +64,11 @@ permissions: {}
 # reconcile jobs below carry `if: ${{ !cancelled() }}` plus an explicit `needs.*.result` gate: a
 # job skipped by an unmet `needs:` is reported to branch protection as passing, so without that
 # pair a red shard would leave every required context green.
+#
+# `migration tool and worked example` is the sixth non-matrix name and is deliberately NOT in the
+# manager's required set yet: adding a required context the manager does not know about is what
+# makes a repository unmergeable, so it goes in with the manager change, not ahead of it. Until
+# then it is a visible check that a reviewer reads, and `pnpm migrate:verify` runs it locally.
 jobs:
   # ---------------------------------------------------------------------------------------------
   # The gates that need nothing but the checkout: no provider schema, no Go toolchain, no jsii.
@@ -209,6 +215,33 @@ jobs:
 
       - name: synth:smoke
         run: pnpm synth:smoke
+
+  # ---------------------------------------------------------------------------------------------
+  # The migration proof: the tool still produces the committed `migrated/` example, and that example
+  # synthesises the same terraform the classic project did.
+  #
+  # Light on purpose. It compiles the six groups the example imports — not the monolith, and never
+  # `@cdktn/provider-aws` itself, which is ~460 MB installed. The classic side of the comparison is
+  # `examples/migrate/typescript/golden/cdk.tf.json`, produced once locally by
+  # `pnpm migrate:golden:refresh` and committed; see that directory's README.
+  migrate:
+    name: migration tool and worked example
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4.3.0
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+
+      - name: migrate:verify (tool output byte-equal, synth equal to the golden)
+        run: pnpm migrate:verify
 
   # ---------------------------------------------------------------------------------------------
   # Every group compiled by the one pinned jsii. Sharded because the groups are independent by

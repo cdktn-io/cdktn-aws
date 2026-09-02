@@ -1,0 +1,155 @@
+{
+  "//": {
+    "metadata": {
+      "backend": "local",
+      "stackName": "migrate-example",
+      "version": "0.24.0"
+    },
+    "outputs": {
+      "migrate-example": {
+        "account-id": "account-id",
+        "versioning-enabled": "versioning-enabled"
+      }
+    }
+  },
+  "data": {
+    "aws_caller_identity": {
+      "identity": {
+        "//": {
+          "metadata": {
+            "path": "migrate-example/identity",
+            "uniqueId": "identity"
+          }
+        }
+      }
+    }
+  },
+  "output": {
+    "account-id": {
+      "value": "${data.aws_caller_identity.identity.account_id}"
+    },
+    "versioning-enabled": {
+      "value": "${aws_s3_bucket.assets.versioning[0].enabled}"
+    }
+  },
+  "provider": {
+    "aws": [
+      {
+        "assume_role": [
+          {
+            "role_arn": "arn:aws:iam::123456789012:role/deployer",
+            "session_name": "cdktn-aws-migrate-example"
+          }
+        ],
+        "region": "eu-west-1"
+      }
+    ]
+  },
+  "resource": {
+    "aws_alb": {
+      "edge": {
+        "//": {
+          "metadata": {
+            "path": "migrate-example/edge",
+            "uniqueId": "edge"
+          }
+        },
+        "internal": true,
+        "name": "cdktn-aws-migrate-example",
+        "subnets": [
+          "subnet-0123456789abcdef0"
+        ]
+      }
+    },
+    "aws_iam_role": {
+      "handler-role": {
+        "//": {
+          "metadata": {
+            "path": "migrate-example/handler-role",
+            "uniqueId": "handler-role"
+          }
+        },
+        "assume_role_policy": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"lambda.amazonaws.com\"},\"Action\":\"sts:AssumeRole\"}]}",
+        "name": "cdktn-aws-migrate-example"
+      }
+    },
+    "aws_lambda_function": {
+      "handler": {
+        "//": {
+          "metadata": {
+            "path": "migrate-example/handler",
+            "uniqueId": "handler"
+          }
+        },
+        "filename": "handler.zip",
+        "function_name": "cdktn-aws-migrate-example",
+        "handler": "index.handler",
+        "role": "${aws_iam_role.handler-role.arn}",
+        "runtime": "nodejs22.x",
+        "vpc_config": {
+          "security_group_ids": [
+            "sg-0123456789abcdef0"
+          ],
+          "subnet_ids": [
+            "subnet-0123456789abcdef0"
+          ]
+        }
+      }
+    },
+    "aws_s3_bucket": {
+      "assets": {
+        "//": {
+          "metadata": {
+            "path": "migrate-example/assets",
+            "uniqueId": "assets"
+          }
+        },
+        "bucket": "cdktn-aws-migrate-example-assets",
+        "cors_rule": [
+          {
+            "allowed_methods": [
+              "GET"
+            ],
+            "allowed_origins": [
+              "https://example.com"
+            ],
+            "max_age_seconds": 3000
+          }
+        ],
+        "tags": {
+          "example": "migrate"
+        },
+        "versioning": {
+          "enabled": true
+        }
+      }
+    },
+    "aws_s3_bucket_versioning": {
+      "assets-versioning": {
+        "//": {
+          "metadata": {
+            "path": "migrate-example/assets-versioning",
+            "uniqueId": "assets-versioning"
+          }
+        },
+        "bucket": "${aws_s3_bucket.assets.bucket}",
+        "versioning_configuration": {
+          "status": "Enabled"
+        }
+      }
+    }
+  },
+  "terraform": {
+    "backend": {
+      "local": {
+        "path": "terraform.tfstate"
+      }
+    },
+    "required_providers": {
+      "aws": {
+        "source": "hashicorp/aws",
+        "version": "6.62.0"
+      }
+    }
+  }
+}
