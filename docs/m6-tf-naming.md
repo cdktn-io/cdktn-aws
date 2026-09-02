@@ -194,3 +194,29 @@ Every gate, run on this tree at the commit that renamed it (macOS, 12 cores):
 | pacmak (full fleet) | `pnpm pacmak:go` | 258/258, every module path asserted against its own manifest, 698 s serial |
 | Go build | `scripts/go-tidy-build.mjs` over the packed fleet | 258/258 tidied and `go build ./...` clean, 47.5 s at 10-way |
 | Go consumer | `scripts/go-consumer.mjs` | 36 modules, all 35 sampled types present, every assertion OK |
+
+### Post-review fix-up, 2026-09-02
+
+Three changes landed after the review above: the surface marker moved to position 0
+(`DataTfBucket`), an empty `stripPrefixes` became legal, and `s3_control`, `transit_gateway` and
+`vpn_client` got curated lists. Re-run on the same machine:
+
+| gate | command | result |
+| --- | --- | --- |
+| groups | `pnpm check:groups` | PASS — 257 groups, gate C: 259 prefixes, all used, 0 class-name collisions |
+| miner is clean | `pnpm mine` | proposes no diff against the committed `groups.json` (12 stripPrefix overrides) |
+| generator | `pnpm generate` | 3,434 files / 2,401 classes in 3.2 s; a second run leaves `git status` clean |
+| types | `pnpm typecheck` | 258/258 packages OK, 67 s |
+| tests | `pnpm test` | 2,197 passed, 9 snapshots |
+| fixtures | `pnpm fixture:check` | up to date |
+| jsii (full fleet) | `pnpm jsii` | 258/258 OK, **198 s** serial — JSII3 **0**, JSII6 **0**, JSII5018 2,519 |
+| runtime contract | `pnpm check:contract --strict` | `aws_lb` 22/22 units identical to `../ref-provider-aws` |
+| synth | `pnpm synth:smoke` | PASS with validation ON |
+| isolation | `pnpm check:imports` | 0 cross-group imports over 2,660 TS files |
+| ambiguity | `naming-map.json` | 0 resources named `DataTf…`/`EphemeralTf…`; the 23 `Tf<Data…>` resources are unambiguously resources |
+| pacmak (40 groups) | `build-generated.mjs --pacmak-go` over the 36 the consumer imports + `quicksight`, `s3_control`, `transit_gateway`, `vpn_client` | 40/40 packed, every module path asserted against its own manifest, 96 s |
+| Go build | `go mod tidy && go build ./...` in each packed module | 40/40 clean. `awsquicksight` carries `TfDataSet.go` and `DataTfDataSet.go` side by side — the case-insensitive file-name check the Go emitter would have failed on a bad rename |
+| Go consumer | `scripts/go-consumer.mjs --root <packed 40>` | all 35 sampled types present, synth with validation ON, every assertion OK |
+
+The full fleet was not re-packed (`pnpm pacmak:go`, 698 s) or re-run through `check:go-imports`
+after the fix-up — `check:go-imports` reads packed modules, so it needs that pack first.
