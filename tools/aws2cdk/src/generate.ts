@@ -399,7 +399,7 @@ export function generate(options: GenerateOptions): GenerateResult {
         ? {
             slug,
             title: "AWS Provider",
-            // The provider construct is not an L1 resource and keeps its 0.1.x name, so there is
+            // The provider construct is not an L1 resource and keeps its classic name, so there is
             // nothing to strip — `naming.classNameForEntry` short-circuits on the provider surface.
             stripPrefixes: [],
             resources: [],

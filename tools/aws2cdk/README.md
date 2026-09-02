@@ -16,7 +16,8 @@ pnpm --filter @cdktn-aws/aws2cdk exec tsx bin/baseline.ts <outDir> [resource ...
 | `src/vendored/cdktn/**` | the cdk-terrain provider generator, **verbatim**. Never edit. See `src/vendored/VENDORED.md`. |
 | `src/grouped/**` | the adapted layer: same models/emitters, re-pointed at per-resource namespaces. Every file names its vendored origin. |
 | `src/naming.ts` | class/interface/nested-type names. Pure, order-independent. `Tf` + the group-stripped stem — docs/m6-tf-naming.md. |
-| `src/naming-map.ts` | the repo-root `naming-map.json`: terraform type -> new name + 0.1.x name, for the migration tool. |
+| `src/naming-map.ts` | the repo-root `naming-map.json`: terraform type -> new name + `@cdktn/provider-aws` name, for the migration tool. |
+| `src/classic-naming.ts` | the `@cdktn/provider-aws` identity of a terraform type, read off the vendored parser's own models. |
 | `src/groups.ts` | `groups.json` loading, alias resolution, group slug -> Go package name. |
 | `src/manifest.ts` | the per-group standalone jsii `package.json` / `README.md` / `tsconfig.json`. |
 | `src/generate.ts` | the orchestrator. |

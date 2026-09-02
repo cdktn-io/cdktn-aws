@@ -150,7 +150,8 @@ source-layer marker — the analogue of `aws-cdk-lib`'s `Cfn` — so the bare na
 free for a future L2, and the group already says "s3" so the class does not repeat it. Which tokens
 count as the group's own is curated per group in `groups.json#stripPrefixes`, never inferred; an
 exact match backs off (`aws_vpc` → `TfVpc`). `AwsProvider` is unchanged — it is not an L1 resource.
-`naming-map.json` at the repo root records every 0.1.x name against its new one. The decision, the
+`naming-map.json` at the repo root is the rename table from `@cdktn/provider-aws`: every terraform
+type against both its classic identity and its new one. The decision, the
 algorithm and the curated overrides are in [`docs/m6-tf-naming.md`](./docs/m6-tf-naming.md).
 
 ## M1 — the generator (done)

@@ -182,7 +182,7 @@ describe("provider-defined functions", () => {
   it("keeps the functions class on the provider's own name, outside the Tf grammar", () => {
     const text = read(fnFile);
     // `AwsProviderFunctions` hangs off the provider construct, which is not an L1 resource: both
-    // keep their 0.1.x names, and they are the only exports in the tree the grammar excuses.
+    // keep the names `@cdktn/provider-aws` gives them, and are the only exports the grammar excuses.
     for (const { name } of topLevelExports(text)) {
       expect(isProviderExport(name)).toBe(true);
       expect(name).not.toMatch(NAME_GRAMMAR.resourceClass);
@@ -308,7 +308,7 @@ describe("naming grammar over the whole generated tree", () => {
       const text = fs.readFileSync(path.join(srcDir, rel), "utf-8");
       for (const { kind, name } of topLevelExports(text)) {
         // AwsProvider/AwsProviderConfig/AwsProviderFunctions are outside the grammar by decision:
-        // the provider construct is not an L1 resource and kept its 0.1.x name (docs/m6-tf-naming.md).
+        // the provider construct is not an L1 resource and keeps its classic name (docs/m6-tf-naming.md).
         if (isProviderExport(name)) continue;
         if (kind === "function") expect(name).toMatch(NAME_GRAMMAR.mapperFunction);
         else if (kind === "class") expect(name).toMatch(NAME_GRAMMAR.resourceClass);

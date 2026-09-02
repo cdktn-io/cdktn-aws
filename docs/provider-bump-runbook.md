@@ -118,7 +118,10 @@ gate C: group "foo" derives TfThing from both "aws_foo_thing" and "aws_thing"
 
 A prefix change renames every class it touches, which is a breaking change for consumers exactly
 like a group move. Say so in the release notes, and check `naming-map.json`'s diff — it is the
-review table for any renaming (`git diff naming-map.json` after `pnpm generate`).
+review table for any renaming (`git diff naming-map.json` after `pnpm generate`). Its `classic`
+column is the `@cdktn/provider-aws` side of the same bump, so a sibling `../ref-provider-aws`
+checkout at the SAME provider version is what makes `pnpm test`'s 2,401-row cross-check meaningful;
+without one the check skips locally and fails under `CI`.
 
 ## (c) Upstream renames a subcategory
 
@@ -302,6 +305,7 @@ into a provider bump.
 [ ] every new subcategory has a deliberate slug, recorded in docs/curation.md
 [ ] every new group has a deliberate stripPrefixes list, recorded in docs/curation.md
 [ ] naming-map.json diff read: every rename is intended and listed in the release notes
+[ ] ../ref-provider-aws checked out at the same provider version (the classic cross-check)
 [ ] every gate B move is either acknowledged in docs/group-moves.md or pinned via manualAssignments
 [ ] pnpm check:groups PASS
 [ ] pnpm typecheck && pnpm test

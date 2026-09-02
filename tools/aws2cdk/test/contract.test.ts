@@ -121,7 +121,7 @@ describe("naming", () => {
   });
 
   it("refuses a group that omits stripPrefixes, and accepts one that declares it empty", () => {
-    // Absence means "nobody decided" and would silently restore the 0.1.x spelling; `[]` is a
+    // Absence means "nobody decided" and would silently restore the un-stripped spelling; `[]` is a
     // decision. Probed on a copy of groups.json so the real file stays the fixture it is.
     const real = JSON.parse(fs.readFileSync(groupsJsonPath, "utf-8"));
     const probe = path.join(fs.mkdtempSync(path.join(os.tmpdir(), "groups-")), "groups.json");
@@ -151,7 +151,7 @@ describe("naming", () => {
     expect(byName.get("lambda:aws_lambda_invocation:ephemeral_resource")!.className).toBe(
       "EphemeralTfInvocation",
     );
-    // the provider construct is not an L1 resource and keeps its 0.1.x name
+    // the provider construct is not an L1 resource and keeps its `@cdktn/provider-aws` name
     expect(byName.get("provider:aws:provider")!.className).toBe("AwsProvider");
   });
 

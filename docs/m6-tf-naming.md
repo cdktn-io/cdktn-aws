@@ -6,16 +6,18 @@ bump — 0.2.0 is cut once the nested-type milestone lands too.
 
 ## The decision
 
-`Aws` as a class prefix is replaced by **`Tf`**, and the group's own service prefix is dropped from
-the stem:
+An L1 class is **`Tf`** + the terraform type with the group's own service prefix dropped from the
+stem. Against `@cdktn/provider-aws`, the library a consumer is migrating from:
 
 ```ts
 import { s3, lambda } from '@cdktn/aws';
 
-new s3.TfBucket(this, 'b', { bucket: 'x' });                // was  s3.AwsS3Bucket
-new s3.TfBucketVersioning(this, 'v', { … });                // was  s3.AwsS3BucketVersioning
-new lambda.TfFunction(this, 'fn', { functionName: 'f' });   // was  lambda.AwsLambdaFunction
+new s3.TfBucket(this, 'b', { bucket: 'x' });                // was  s3Bucket.S3Bucket
+new s3.TfBucketVersioning(this, 'v', { … });                // was  s3BucketVersioning.S3BucketVersioningA
+new lambda.TfFunction(this, 'fn', { functionName: 'f' });   // was  lambdaFunction.LambdaFunction
 ```
+
+(`S3BucketVersioningA` is not a typo — see [`naming-map.json`](#naming-mapjson).)
 
 Two things are going on, and they are separable:
 
@@ -27,7 +29,7 @@ Two things are going on, and they are separable:
 | `Cfn` = generated 1:1 from the CloudFormation resource spec | `Tf` = generated 1:1 from the terraform resource schema |
 | `aws_s3.Bucket` is the hand-written L2 | `awss3.Bucket` is free for a future L2 |
 
-That last row is the whole point. `s3.AwsS3Bucket` and `s3.Bucket` look like unrelated things;
+That last row is the whole point. `s3Bucket.S3Bucket` and `s3.Bucket` look like unrelated things;
 `s3.TfBucket` and `s3.Bucket` read as the two layers over one resource, which is the vocabulary the
 CDK ecosystem already has.
 
@@ -72,25 +74,31 @@ pinned schema land there — `aws_vpc`, `aws_vpc_ipam`, `aws_lb`, `aws_elb`, `aw
 `aws_codepipeline` (ten schema entries, counting the ones that exist on two surfaces) — and it is
 the only place the stripping backs off entirely.
 
-Worked examples, all asserted in `tools/aws2cdk/test/contract.test.ts`:
+Worked examples, all asserted in `tools/aws2cdk/test/contract.test.ts`, with the
+`@cdktn/provider-aws` spelling of the same type — the thing a migrating consumer is holding — from
+`tools/aws2cdk/test/classic-naming.test.ts`:
 
-| terraform type | group | stripPrefixes | class |
-| --- | --- | --- | --- |
-| `aws_s3_bucket_versioning` | `s3` | `[s3]` | `TfBucketVersioning` |
-| data `aws_s3_bucket` | `s3` | `[s3]` | `DataTfBucket` |
-| `aws_instance` | `ec2` | `[ec2]` | `TfInstance` |
-| `aws_ec2_capacity_reservation` | `ec2` | `[ec2]` | `TfCapacityReservation` |
-| `aws_prometheus_workspace` | `amp` | `[prometheus]` | `TfWorkspace` |
-| `aws_acmpca_certificate_authority` | `acm_pca` | `[acmpca]` | `TfCertificateAuthority` |
-| `aws_vpc` | `vpc` | `[vpc]` | `TfVpc` (no prefix leaves a stem) |
-| `aws_ec2_transit_gateway` | `transit_gateway` | `[ec2, ec2_transit_gateway]` | `TfTransitGateway` (the exact match falls through to `ec2`) |
-| `aws_lb` / `aws_alb` (alias) | `elb` | `[lb]` | `TfLb` / `TfAlb` |
-| `aws_lb_listener` | `elb` | `[lb]` | `TfListener` |
-| `aws_lambda_function` | `lambda` | `[lambda]` | `TfFunction` |
-| ephemeral `aws_lambda_invocation` | `lambda` | `[lambda]` | `EphemeralTfInvocation` |
-| data `aws_identitystore_user` | `sso_identity_store` | `[identitystore]` | `DataTfUser` |
-| `aws_cloudwatch_log_group` | `cloudwatch_logs` | `[cloudwatch, cloudwatch_log]` | `TfGroup` |
-| the provider block | `provider` | — | `AwsProvider` (unchanged) |
+| terraform type | group | stripPrefixes | class | was, in `@cdktn/provider-aws` |
+| --- | --- | --- | --- | --- |
+| `aws_s3_bucket_versioning` | `s3` | `[s3]` | `TfBucketVersioning` | `s3BucketVersioning.S3BucketVersioningA` |
+| data `aws_s3_bucket` | `s3` | `[s3]` | `DataTfBucket` | `dataAwsS3Bucket.DataAwsS3Bucket` |
+| `aws_instance` | `ec2` | `[ec2]` | `TfInstance` | `instance.Instance` |
+| `aws_ec2_capacity_reservation` | `ec2` | `[ec2]` | `TfCapacityReservation` | `ec2CapacityReservation.Ec2CapacityReservation` |
+| `aws_prometheus_workspace` | `amp` | `[prometheus]` | `TfWorkspace` | `prometheusWorkspace.PrometheusWorkspace` |
+| `aws_acmpca_certificate_authority` | `acm_pca` | `[acmpca]` | `TfCertificateAuthority` | `acmpcaCertificateAuthority.AcmpcaCertificateAuthority` |
+| `aws_vpc` | `vpc` | `[vpc]` | `TfVpc` (no prefix leaves a stem) | `vpc.Vpc` |
+| `aws_ec2_transit_gateway` | `transit_gateway` | `[ec2, ec2_transit_gateway]` | `TfTransitGateway` (the exact match falls through to `ec2`) | `ec2TransitGateway.Ec2TransitGateway` |
+| `aws_lb` / `aws_alb` (alias) | `elb` | `[lb]` | `TfLb` / `TfAlb` | `lb.Lb` / `alb.Alb` |
+| `aws_lb_listener` | `elb` | `[lb]` | `TfListener` | `lbListener.LbListener` |
+| `aws_lambda_function` | `lambda` | `[lambda]` | `TfFunction` | `lambdaFunction.LambdaFunction` |
+| ephemeral `aws_lambda_invocation` | `lambda` | `[lambda]` | `EphemeralTfInvocation` | `ephemeralAwsLambdaInvocation.EphemeralAwsLambdaInvocation` |
+| data `aws_identitystore_user` | `sso_identity_store` | `[identitystore]` | `DataTfUser` | `dataAwsIdentitystoreUser.DataAwsIdentitystoreUser` |
+| `aws_cloudwatch_log_group` | `cloudwatch_logs` | `[cloudwatch, cloudwatch_log]` | `TfGroup` | `cloudwatchLogGroup.CloudwatchLogGroup` |
+| the provider block | `provider` | — | `AwsProvider` (unchanged) | `provider.AwsProvider` |
+
+The last column is the classic library's TS submodule and class. Both other targets fall out of it
+by jsii's own rules — Go drops the non-alphanumerics and lowercases (`s3bucketversioning`), Python
+snake-cases (`s3_bucket_versioning`) — and `naming-map.json` carries all three per entry.
 
 ## The gates
 
@@ -111,8 +119,8 @@ asserts exist so a provider bump cannot introduce one silently.
 
 `jsii-pacmak` does **not** clear its output directory, and a rename is the one change where that
 matters: pack over an existing `generated/<group>/dist/go/` and it keeps yesterday's
-`AwsAcmCertificate*.go` beside today's `TfCertificate*.go`, in a module whose assembly no longer
-declares those types. `scripts/build-fleet.mjs` removes the output before packing; the serial
+the files the run before it wrote beside today's `TfCertificate*.go`, in a module whose assembly no
+longer declares those types. `scripts/build-fleet.mjs` removes the output before packing; the serial
 `scripts/build-generated.mjs --pacmak-go` does not. After a rename, pack the fleet with the former,
 or `rm -rf generated/*/dist` first.
 
@@ -143,40 +151,81 @@ service-name tokens the group title already conveys, never a token that names th
 
 ## `naming-map.json`
 
-A full `pnpm generate` writes the rename map to the repo root — one entry per generated class,
-keyed by the surface-marked terraform type:
+A full `pnpm generate` writes the rename table to the repo root. It maps **`@cdktn/provider-aws` ->
+`@cdktn/aws` 0.2.0** — the classic per-resource cdktn library is what every consumer of these
+bindings is holding, and 0.1.x of this package was a PoC alpha with none. One entry per generated
+class, keyed by the surface-marked terraform type, with the package roots recorded once:
 
 ```json
-"aws_s3_bucket_versioning": {
-  "surface": "resource", "group": "s3",
-  "className": "TfBucketVersioning", "previous": "AwsS3BucketVersioning"
+{
+  "classicRoots": {
+    "npm": "@cdktn/provider-aws",
+    "goModule": "github.com/cdktn-io/cdktn-provider-aws-go",
+    "goPackage": "aws",
+    "python": "cdktn_provider_aws"
+  },
+  "entries": {
+    "aws_s3_bucket_versioning": {
+      "surface": "resource", "group": "s3", "className": "TfBucketVersioning",
+      "classic": {
+        "module": "s3-bucket-versioning", "className": "S3BucketVersioningA",
+        "go": "s3bucketversioning", "python": "s3_bucket_versioning"
+      }
+    }
+  }
 }
 ```
 
-`previous` is produced by `naming.legacyClassName`, the 0.1.x rule kept and frozen for exactly this
-purpose. The file is the input of the upcoming migration-tool milestone, and the review table for
-this change: 2,401 entries, sorted, committed.
+The `classic` side is **not** derived from a rule restated here. `tools/aws2cdk/src/classic-naming.ts`
+runs the vendored cdk-terrain parser — the same machinery `bin/baseline.ts` drives, in the same
+order — and reads the names off its models, because the classic rule is not a function of one
+terraform type: `uniqueClassName` and `uniqueBaseName` carry state across the whole schema, and
+every nested struct competes for the same class-name pool. That is why `aws_s3_bucket_versioning`
+is `S3BucketVersioningA`: `aws_s3_bucket`'s own `versioning` block took `S3BucketVersioning` first.
+Eleven types land on such a suffix, and no rule short of running the parser finds them:
+
+```
+AutoscalingGroupTagA   DynamodbTableReplicaA   Ec2ManagedPrefixListEntryA
+NetworkInterfaceAttachmentA   S3BucketLoggingA   S3BucketObjectLockConfigurationA
+S3BucketReplicationConfigurationA   S3BucketServerSideEncryptionConfigurationA
+S3BucketVersioningA   VpcPeeringConnectionAccepterA   Wafv2WebAclRuleA
+```
+
+The Go and Python names come from jsii-pacmak's own submodule rules — `goPackageNameForAssembly`
+(non-alphanumerics dropped, lowercased) and the python target's `getPackageName` (snake_cased) —
+applied to the TS submodule `src/index.ts` exports the module directory under.
+
+All 2,401 rows are cross-checked against a `../ref-provider-aws` checkout by
+`tools/aws2cdk/test/classic-naming.test.ts`: every `classic.module` must exist as `src/<module>/`
+there and its `index.ts` must declare that class on that surface. 2,401 matched, 0 unmatched. The
+check is skipped when the sibling checkout is absent and **fails** when it is absent under `CI`
+(`CDKTN_PROVIDER_AWS_ROOT=none` is the deliberate opt-out), the same convention `manifests.test.ts`
+uses for the Go fleet.
+
+The file is the input of the upcoming migration-tool milestone, and the review table for this
+change: 2,401 entries, sorted, committed.
 
 ## Go, before and after
 
 The Go fleet inherits the rename through jsii-pacmak — module paths and package names are
-unaffected, since those come from the slug, not from any class name:
+unaffected, since those come from the slug, not from any class name. Against the classic Go
+module, where each resource is its own package:
 
 ```go
-// before (v0.1.1)
-awss3.NewAwsS3Bucket(stack, jsii.String("b"), &awss3.AwsS3BucketConfig{Bucket: jsii.String("x")})
-awss3.NewAwsS3BucketVersioning(stack, jsii.String("v"), &awss3.AwsS3BucketVersioningConfig{
-    VersioningConfiguration: &awss3.AwsS3BucketVersioning_VersioningConfigurationProperty{…},
+// @cdktn/provider-aws (github.com/cdktn-io/cdktn-provider-aws-go/aws/vNN/…)
+s3bucket.NewS3Bucket(stack, jsii.String("b"), &s3bucket.S3BucketConfig{Bucket: jsii.String("x")})
+s3bucketversioning.NewS3BucketVersioningA(stack, jsii.String("v"), &s3bucketversioning.S3BucketVersioningAConfig{
+    VersioningConfiguration: &s3bucketversioning.S3BucketVersioningVersioningConfiguration{…},
 })
 
-// after
+// @cdktn/aws 0.2.0 — one package per service group
 awss3.NewTfBucket(stack, jsii.String("b"), &awss3.TfBucketConfig{Bucket: jsii.String("x")})
 awss3.NewTfBucketVersioning(stack, jsii.String("v"), &awss3.TfBucketVersioningConfig{
     VersioningConfiguration: &awss3.TfBucketVersioning_VersioningConfigurationProperty{…},
 })
 ```
 
-`examples/go-consumer/main.go` is the compiled proof of that spelling.
+`examples/go-consumer/main.go` is the compiled proof of the second spelling.
 
 ## Evidence
 
@@ -237,3 +286,24 @@ instead of ending the search, which moves three `transit_gateway` entries and no
 | runtime contract | `pnpm check:contract --strict` | 22/22 units identical |
 | synth | `pnpm synth:smoke` | PASS, validation ON |
 | Go | jsii + pacmak + `go build ./...` for `transit_gateway` | OK — JSII3 0, JSII6 0; `TfTransitGateway.go` and `DataTfTransitGateway.go` both build |
+
+### `naming-map.json` reworked to the classic library, 2026-09-02
+
+The map carried a `previous` column of 0.1.x `Aws<FullType>` names, and `naming.ts` froze that rule
+for the migration tool. Wrong target: 0.1.x is a PoC alpha with no consumers, and the migration to
+rewrite is `@cdktn/provider-aws` -> `@cdktn/aws` 0.2.0. `previous` is replaced by `classic`
+(module / className / go / python) and `legacyClassName` is gone; file names are unaffected, since
+they were only ever the dashed terraform type.
+
+| gate | command | result |
+| --- | --- | --- |
+| generator | `pnpm generate` ×2 | 3,434 files / 2,401 classes in 3.4 s; `naming-map.json` rewritten, `generated/` byte-identical, `git status` clean on the second run |
+| classic cross-check | `pnpm test` | **2,401 / 2,401** rows matched against `../ref-provider-aws` — every `classic.module` exists as `src/<module>/` and its `index.ts` declares that class on that surface. 0 unmatched, 0 classic modules unaccounted for (`provider-functions` is the only classic submodule that is not a schema entry) |
+| tests | `pnpm test` | 2,226 passed, 9 snapshots |
+| fixtures | `pnpm fixture:check` | up to date |
+| types | `pnpm typecheck` (root + generator) | OK |
+| groups | `pnpm check:groups` | PASS — gate C: 259 prefixes, all used, 0 collisions |
+
+The 11 `A`-suffixed classic names above are the reason the derivation runs the vendored parser
+instead of restating a rule; a re-implementation would have got every one of them wrong, and the
+2,401-row cross-check is what proved that before the map was committed.
