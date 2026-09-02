@@ -542,9 +542,10 @@ export function migrateFile(file: SourceFile, index: SymbolIndex, relative: stri
   let rewrites = 0;
 
   const taken = declaredNames(file);
-  // A binding this run removes frees its name for a group barrel member; a `* as aws` binding is
-  // kept (only its package moves), so its name stays spoken for.
-  for (const binding of bindings) if (binding.detail.kind !== "root") taken.delete(binding.name);
+  // Only a binding this run REMOVES frees its name for a group barrel member: a `* as aws` binding
+  // keeps its own spelling (only its package moves), and one held back in a residual classic import
+  // is still bound in the file.
+  for (const { binding } of moving) if (binding.detail.kind !== "root") taken.delete(binding.name);
   const alias = new Map<string, string>();
   const aliasOf = (group: string): string => {
     let name = alias.get(group);

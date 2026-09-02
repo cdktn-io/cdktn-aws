@@ -83,6 +83,22 @@ describe("aliasing", () => {
     ).toContain("import { s3 as s3_2 } from '@cdktn/aws';");
   });
 
+  it("aliases around a name that stays bound by a RESIDUAL classic import", () => {
+    // The kept binding is still `s3` after the rewrite, so handing the group barrel that name
+    // would compile to a duplicate identifier — and change what `new s3(…)` means.
+    const result = migrate(
+      [
+        "import { S3BucketInvented as s3, S3Bucket } from '@cdktn/provider-aws/lib/s3-bucket';",
+        "export function build(scope: any) { new s3(scope, 'x', {}); new S3Bucket(scope, 'b', {}); }",
+      ].join("\n"),
+    );
+    expect(result.after).toContain("import { s3 as s3_ } from '@cdktn/aws';");
+    expect(result.after).toContain(
+      "import { S3BucketInvented as s3 } from '@cdktn/provider-aws/lib/s3-bucket';",
+    );
+    expect(result.after).toContain("new s3_.TfBucket(scope, 'b', {});");
+  });
+
   it("leaves a same-named local alone — the rewrite resolves symbols, not text", () => {
     const source = [
       "import { S3Bucket } from '@cdktn/provider-aws/lib/s3-bucket';",
