@@ -368,19 +368,20 @@ export interface MapperNamingEntry {
  * enough. At 257-group scale it is not: string concatenation is not injective when one class name
  * is a prefix of another. Two real cases in aws 6.62.0 —
  *
- *     AwsWafv2WebAcl  + RuleActionAllowProperty  ┐ both spell
- *     AwsWafv2WebAclRule  + ActionAllowProperty  ┘ awsWafv2WebAclRuleActionAllowPropertyToTerraform
- *     AwsS3Bucket + ObjectLockConfigurationRuleProperty ┐ both spell
- *     AwsS3BucketObjectLockConfiguration + RuleProperty ┘ awsS3Bucket…RulePropertyToTerraform
+ *     TfWebAcl  + RuleActionAllowProperty  ┐ both spell
+ *     TfWebAclRule  + ActionAllowProperty  ┘ tfWebAclRuleActionAllowPropertyToTerraform
+ *     TfBucket + ObjectLockConfigurationRuleProperty ┐ both spell
+ *     TfBucketObjectLockConfiguration + RuleProperty ┘ tfBucket…RulePropertyToTerraform
  *
- * — 42 duplicate exports in `waf` and `s3`, which `tsc` reports as TS2308 on the barrel and which
- * would otherwise let one mapper silently shadow another.
+ * — 21 duplicate exports in `waf` and `s3`, which `tsc` reports as TS2308 on the barrel and which
+ * would otherwise let one mapper silently shadow another. (Stripping the group prefix did not
+ * create this: the same two families collided as `AwsWafv2WebAcl…`/`AwsS3Bucket…` in 0.1.x.)
  *
  * The fallback: every class in a colliding cluster gets `Mapper` inserted at the boundary
- * (`awsWafv2WebAclMapperRuleActionAllowPropertyToTerraform`). It is applied to the whole cluster,
- * not just to a "loser", so the result does not depend on iteration order; a class not in any
- * cluster keeps the plain prefix, which is why the three M1 groups emit byte-identically to
- * before. The disambiguator is alphanumeric, so `NAME_GRAMMAR.mapperFunction` still holds.
+ * (`tfWebAclMapperRuleActionAllowPropertyToTerraform`). It is applied to the whole cluster, not
+ * just to a "loser", so the result does not depend on iteration order; a class not in any cluster
+ * keeps the plain prefix, which is why only `waf` and `s3` are touched at all. The disambiguator is
+ * alphanumeric, so `NAME_GRAMMAR.mapperFunction` still holds.
  *
  * A residual collision after the rewrite would need a class name containing `Mapper` at exactly
  * the splice point; that is asserted against rather than assumed, and generation aborts loudly if
