@@ -5,6 +5,9 @@
   "groups": {
     "elb": {
       "title": "ELB (Elastic Load Balancing)",
+      "stripPrefixes": [
+        "lb"
+      ],
       "resources": [
         "aws_lb"
       ],
@@ -15,6 +18,9 @@
     },
     "lambda": {
       "title": "Lambda",
+      "stripPrefixes": [
+        "lambda"
+      ],
       "resources": [
         "aws_lambda_function",
         "aws_lambda_permission"

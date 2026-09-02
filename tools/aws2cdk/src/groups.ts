@@ -17,6 +17,12 @@ export const SURFACES: readonly SurfaceKind[] = ["resources", "dataSources", "ep
 
 export interface Group {
   readonly title: string;
+  /**
+   * The service-name token prefixes this group's own title already conveys, stripped off a member's
+   * terraform type before it is turned into a class name (`aws_s3_bucket` -> `TfBucket`). Curated,
+   * never inferred — see docs/curation.md and `src/naming.ts#classNameForEntry`.
+   */
+  readonly stripPrefixes: string[];
   readonly resources: string[];
   readonly dataSources: string[];
   readonly ephemeralResources: string[];
@@ -35,6 +41,15 @@ export function readGroups(file = groupsJsonPath): GroupsFile {
   const parsed = JSON.parse(readFileSync(file, "utf-8"));
   if (!parsed.groups || typeof parsed.groups !== "object") {
     throw new Error(`${file}: missing "groups" object`);
+  }
+  // There is no implicit default for stripPrefixes: a missing list would silently name every class
+  // in that group after its full terraform type again, which is exactly the 0.1.x spelling M6
+  // replaced. `check:groups` is the authority on the list's content; this is the generator refusing
+  // to guess.
+  for (const [slug, group] of Object.entries(parsed.groups as Record<string, Group>)) {
+    if (!Array.isArray(group.stripPrefixes) || group.stripPrefixes.length === 0) {
+      throw new Error(`${file}: group "${slug}" has no "stripPrefixes" (see docs/curation.md)`);
+    }
   }
   return {
     pinnedProviderVersion: parsed.pinnedProviderVersion ?? "",
@@ -68,6 +83,8 @@ export const PROVIDER_GROUP = "provider";
 export interface GroupMembers {
   readonly slug: string;
   readonly title: string;
+  /** the group's curated class-name prefixes; empty for the synthetic provider group */
+  readonly stripPrefixes: string[];
   readonly resources: string[];
   readonly dataSources: string[];
   readonly ephemeralResources: string[];
@@ -121,6 +138,7 @@ export function membersOf(
   return {
     slug,
     title: group.title,
+    stripPrefixes: [...group.stripPrefixes],
     resources: [...new Set(buckets.resources)].sort(),
     dataSources: [...new Set(buckets.dataSources)].sort(),
     ephemeralResources: [...new Set(buckets.ephemeralResources)].sort(),

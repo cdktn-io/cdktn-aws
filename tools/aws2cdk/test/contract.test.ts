@@ -20,7 +20,14 @@ import {
   shuffleSchemaKeys,
   topLevelExports,
 } from "./helpers";
-import { NAME_GRAMMAR, propertyTypeNamesForResource } from "../src/naming";
+import {
+  NAME_GRAMMAR,
+  classNameForEntry,
+  fileNameForTerraformType,
+  isProviderExport,
+  legacyClassName,
+  propertyTypeNamesForResource,
+} from "../src/naming";
 import { assertUniqueGoPackageNames, goPackageName, membersOf, npmPackageName, readGroups } from "../src/groups";
 import { groupsJsonPath } from "../src/groups";
 
@@ -76,25 +83,65 @@ describe("layout", () => {
 });
 
 describe("naming", () => {
-  it("names classes after the FULL terraform type, provider prefix kept", () => {
+  /**
+   * The M6 table (docs/m6-tf-naming.md), asserted on the pure function so that groups the fixture
+   * does not contain — and cannot, without carrying their schemas — are covered too. The fixture's
+   * own two groups are then checked on real emitted output below.
+   */
+  it.each([
+    ["aws_s3_bucket_versioning", "resource", ["s3"], "TfBucketVersioning"],
+    ["data_aws_s3_bucket", "data_source", ["s3"], "TfDataBucket"],
+    ["aws_instance", "resource", ["ec2"], "TfInstance"],
+    ["aws_ec2_capacity_reservation", "resource", ["ec2"], "TfCapacityReservation"],
+    ["aws_prometheus_workspace", "resource", ["prometheus"], "TfWorkspace"],
+    ["aws_acmpca_certificate_authority", "resource", ["acmpca"], "TfCertificateAuthority"],
+    // the type IS the prefix: nothing left to name the class after, so the raw type is kept
+    ["aws_vpc", "resource", ["vpc"], "TfVpc"],
+    ["aws_lb", "resource", ["lb"], "TfLb"],
+    ["aws_alb", "resource", ["lb"], "TfAlb"],
+    ["aws_lb_listener", "resource", ["lb"], "TfListener"],
+    ["aws_lambda_function", "resource", ["lambda"], "TfFunction"],
+    ["ephemeral_aws_lambda_invocation", "ephemeral_resource", ["lambda"], "TfEphemeralInvocation"],
+    ["data_aws_identitystore_user", "data_source", ["identitystore"], "TfDataUser"],
+    // longest match wins, so the group's two prefixes do not fight over cloudwatch_log_*
+    ["aws_cloudwatch_log_group", "resource", ["cloudwatch_log", "cloudwatch"], "TfGroup"],
+    ["aws_cloudwatch_query_definition", "resource", ["cloudwatch_log", "cloudwatch"], "TfQueryDefinition"],
+  ] as const)("names %s (%s) %s -> %s", (parserType, surface, stripPrefixes, expected) => {
+    expect(classNameForEntry({ parserType, surface, stripPrefixes: [...stripPrefixes] })).toBe(expected);
+  });
+
+  it("strips the group's own service prefix from the emitted class names", () => {
     const byName = new Map(
       result.groups.flatMap((g) => g.entries.map((e) => [`${g.slug}:${e.terraformName}:${e.schemaType}`, e])),
     );
-    expect(byName.get("elb:aws_lb:resource")!.className).toBe("AwsLb");
-    expect(byName.get("elb:aws_alb:resource")!.className).toBe("AwsAlb");
-    expect(byName.get("lambda:aws_lambda_function:resource")!.className).toBe("AwsLambdaFunction");
-    // decision 2, the load-bearing example: NOT AwsFunction.
-    expect(byName.get("lambda:aws_lambda_function:resource")!.className).not.toBe("AwsFunction");
-    expect(byName.get("elb:aws_lb:data_source")!.className).toBe("DataAwsLb");
+    expect(byName.get("elb:aws_lb:resource")!.className).toBe("TfLb");
+    expect(byName.get("elb:aws_alb:resource")!.className).toBe("TfAlb");
+    expect(byName.get("lambda:aws_lambda_function:resource")!.className).toBe("TfFunction");
+    // decision 2, the load-bearing example: the group already says "lambda".
+    expect(byName.get("lambda:aws_lambda_function:resource")!.className).not.toBe("TfLambdaFunction");
+    expect(byName.get("elb:aws_lb:data_source")!.className).toBe("TfDataLb");
     expect(byName.get("lambda:aws_lambda_invocation:ephemeral_resource")!.className).toBe(
+      "TfEphemeralInvocation",
+    );
+    // the provider construct is not an L1 resource and keeps its 0.1.x name
+    expect(byName.get("provider:aws:provider")!.className).toBe("AwsProvider");
+  });
+
+  it("records every entry's 0.1.x name for the migration map", () => {
+    const byName = new Map(
+      result.groups.flatMap((g) => g.entries.map((e) => [`${g.slug}:${e.terraformName}:${e.schemaType}`, e])),
+    );
+    expect(byName.get("lambda:aws_lambda_function:resource")!.previousClassName).toBe("AwsLambdaFunction");
+    expect(byName.get("elb:aws_lb:data_source")!.previousClassName).toBe("DataAwsLb");
+    expect(byName.get("lambda:aws_lambda_invocation:ephemeral_resource")!.previousClassName).toBe(
       "EphemeralAwsLambdaInvocation",
     );
-    expect(byName.get("provider:aws:provider")!.className).toBe("AwsProvider");
+    expect(legacyClassName("aws_s3_bucket_versioning")).toBe("AwsS3BucketVersioning");
   });
 
   it("suffixes the config interface with Config, never Props", () => {
     const text = read("lambda/src/aws-lambda-function.ts");
-    expect(text).toMatch(/^export interface AwsLambdaFunctionConfig extends cdktn\.TerraformMetaArguments/m);
+    expect(text).toMatch(/^export interface TfFunctionConfig extends cdktn\.TerraformMetaArguments/m);
     expect(text).not.toMatch(/^export interface \w+Props\b/m);
   });
 
@@ -104,6 +151,7 @@ describe("naming", () => {
       for (const rel of listFiles(srcDir).filter((f) => f !== "index.ts")) {
         const text = fs.readFileSync(path.join(srcDir, rel), "utf-8");
         for (const { kind, name } of topLevelExports(text)) {
+          if (isProviderExport(name)) continue;
           if (kind === "function") {
             expect(name).toMatch(NAME_GRAMMAR.mapperFunction);
           } else if (kind === "class") {
@@ -126,19 +174,24 @@ describe("naming", () => {
     }
   });
 
-  it("keeps the classic cdktn file-name spelling", () => {
+  it("keeps the classic cdktn file-name spelling, keyed on the terraform type not the class", () => {
     expect(listFiles(path.join(outDir, "elb", "src"))).toEqual(
       expect.arrayContaining(["aws-lb.ts", "aws-alb.ts", "data-aws-lb.ts"]),
     );
     expect(listFiles(path.join(outDir, "lambda", "src"))).toContain("ephemeral-aws-lambda-invocation.ts");
+    // `TfFunction` lives in `aws-lambda-function.ts`: the rename moved no file, which is what keeps
+    // hashes.json keyed on the same tree it was in 0.1.x.
+    expect(fileNameForTerraformType("aws_lambda_function")).toBe("aws-lambda-function");
+    expect(fileNameForTerraformType("data_aws_s3_bucket")).toBe("data-aws-s3-bucket");
+    expect(read("lambda/src/aws-lambda-function.ts")).toContain("export class TfFunction ");
   });
 });
 
 describe("namespace mount", () => {
   it("merges the nested types into a namespace on the resource class", () => {
     const text = read("lambda/src/aws-lambda-function.ts");
-    expect(text).toMatch(/^export class AwsLambdaFunction extends cdktn\.TerraformResource/m);
-    expect(text).toMatch(/^export namespace AwsLambdaFunction \{/m);
+    expect(text).toMatch(/^export class TfFunction extends cdktn\.TerraformResource/m);
+    expect(text).toMatch(/^export namespace TfFunction \{/m);
     const members = namespaceMembers(text);
     expect(members).toContain("VpcConfigProperty");
     expect(members).toContain("VpcConfigPropertyOutputReference");
@@ -151,26 +204,26 @@ describe("namespace mount", () => {
     const nsStart = text.indexOf("\nexport namespace ");
     const top = text.slice(0, nsStart);
     const body = text.slice(nsStart);
-    expect(top).toContain("AwsLambdaFunction.VpcConfigProperty");
+    expect(top).toContain("TfFunction.VpcConfigProperty");
     // inside the namespace the sibling type resolves bare — never self-qualified
-    expect(body).not.toContain("AwsLambdaFunction.VpcConfigProperty");
+    expect(body).not.toContain("TfFunction.VpcConfigProperty");
     expect(body).toMatch(/^export interface VpcConfigProperty \{/m);
   });
 
   it("keeps the mapper functions at module level, where jsii ignores them", () => {
     const text = read("lambda/src/aws-lambda-function.ts");
     const nsStart = text.indexOf("\nexport namespace ");
-    expect(text.slice(0, nsStart)).toMatch(/^export function awsLambdaFunctionVpcConfigPropertyToTerraform\(/m);
+    expect(text.slice(0, nsStart)).toMatch(/^export function tfFunctionVpcConfigPropertyToTerraform\(/m);
     expect(text.slice(nsStart)).not.toMatch(/^export function /m);
   });
 
   it("prefixes mapper names with the owning class so two resources in one package cannot collide", () => {
     // `timeouts` exists on both fixture lambda resources; the mappers must not share a name.
     expect(read("lambda/src/aws-lambda-function.ts")).toContain(
-      "export function awsLambdaFunctionTimeoutsPropertyToTerraform(",
+      "export function tfFunctionTimeoutsPropertyToTerraform(",
     );
     expect(read("lambda/src/aws-lambda-permission.ts")).toContain(
-      "export function awsLambdaPermissionTimeoutsPropertyToTerraform(",
+      "export function tfPermissionTimeoutsPropertyToTerraform(",
     );
   });
 });
@@ -178,15 +231,15 @@ describe("namespace mount", () => {
 describe("surfaces", () => {
   it("emits a data source against TerraformDataSource", () => {
     expect(read("elb/src/data-aws-lb.ts")).toMatch(
-      /^export class DataAwsLb extends cdktn\.TerraformDataSource/m,
+      /^export class TfDataLb extends cdktn\.TerraformDataSource/m,
     );
   });
 
   it("emits an ephemeral resource against TerraformEphemeralResource, with no import helper", () => {
     const text = read("lambda/src/ephemeral-aws-lambda-invocation.ts");
-    expect(text).toMatch(/^export class EphemeralAwsLambdaInvocation extends cdktn\.TerraformEphemeralResource/m);
+    expect(text).toMatch(/^export class TfEphemeralInvocation extends cdktn\.TerraformEphemeralResource/m);
     expect(text).toMatch(
-      /^export interface EphemeralAwsLambdaInvocationConfig extends cdktn\.TerraformEphemeralMetaArguments/m,
+      /^export interface TfEphemeralInvocationConfig extends cdktn\.TerraformEphemeralMetaArguments/m,
     );
     // an ephemeral resource has no state to import into
     expect(text).not.toContain("generateConfigForImport");
@@ -248,11 +301,11 @@ describe("aliases", () => {
   it("generates an alias as its own class inside its canonical target's group", () => {
     const elb = result.groups.find((g) => g.slug === "elb")!;
     const names = elb.entries.map((e) => e.className);
-    expect(names).toContain("AwsAlb");
-    expect(names).toContain("AwsLb");
+    expect(names).toContain("TfAlb");
+    expect(names).toContain("TfLb");
     expect(read("elb/src/index.ts")).toContain("export * from './aws-alb';");
-    // and it is a real, independent class — not a re-export of AwsLb
-    expect(read("elb/src/aws-alb.ts")).toMatch(/^export class AwsAlb extends cdktn\.TerraformResource/m);
+    // and it is a real, independent class — not a re-export of TfLb
+    expect(read("elb/src/aws-alb.ts")).toMatch(/^export class TfAlb extends cdktn\.TerraformResource/m);
     expect(read("elb/src/aws-alb.ts")).toContain(`public static readonly tfResourceType = "aws_alb";`);
   });
 

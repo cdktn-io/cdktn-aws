@@ -12,6 +12,7 @@ import { generate } from "../src/generate";
 import { loadAwsSchema, repoRoot } from "../src/schema";
 import { PROVIDER_GROUP, readGroups } from "../src/groups";
 import { HASHES_FILE, buildHashesManifest, writeHashesManifest } from "../src/hashes";
+import { NAMING_MAP_FILE, buildNamingMap, writeNamingMap } from "../src/naming-map";
 
 /**
  * The three packages M1 proved the generator on (docs/curation.md, "M1 group selection"):
@@ -79,8 +80,15 @@ function main() {
       ),
     );
     console.log(`wrote ${HASHES_FILE} for ${result.groups.length} groups`);
+    // One level above the generated tree, i.e. the repo root for the default outDir: the map
+    // describes the rename, not the emitted packages, and nothing under `generated/` may import it.
+    const map = buildNamingMap(result);
+    writeNamingMap(path.resolve(outDir, ".."), map);
+    console.log(`wrote ${NAMING_MAP_FILE} for ${Object.keys(map).length} entries`);
   } else {
-    console.log(`partial run (${slugs.length} groups): ${HASHES_FILE} left untouched`);
+    console.log(
+      `partial run (${slugs.length} groups): ${HASHES_FILE} and ${NAMING_MAP_FILE} left untouched`,
+    );
   }
 
   const classes = result.groups.reduce((n, g) => n + g.entries.length, 0);

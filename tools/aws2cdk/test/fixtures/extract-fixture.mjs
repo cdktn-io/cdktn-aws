@@ -97,9 +97,19 @@ const miniGroups = {
   pinnedProviderVersion,
   pinnedProviderTag: `v${pinnedProviderVersion}`,
   groups: {
-    elb: { title: "ELB (Elastic Load Balancing)", resources: ["aws_lb"], dataSources: ["aws_lb"], ephemeralResources: [] },
+    elb: {
+      title: "ELB (Elastic Load Balancing)",
+      // Same lists the real groups.json carries for these two groups — the fixture asserts the
+      // stripping rule (`aws_lb` -> `TfLb` by the empty-stem back-off, `aws_lb_listener` ->
+      // `TfListener`, the alias `aws_alb` -> `TfAlb`), so a wrong list here would assert nothing.
+      stripPrefixes: ["lb"],
+      resources: ["aws_lb"],
+      dataSources: ["aws_lb"],
+      ephemeralResources: [],
+    },
     lambda: {
       title: "Lambda",
+      stripPrefixes: ["lambda"],
       resources: ["aws_lambda_function", "aws_lambda_permission"],
       dataSources: [],
       ephemeralResources: ["aws_lambda_invocation"],
