@@ -55,7 +55,9 @@ type BindingKind =
   /** `import * as s3Bucket from '…/lib/s3-bucket'`, or `import { s3Bucket } from '@cdktn/provider-aws'` */
   | { readonly kind: "namespace"; readonly module: ClassicModule }
   /** `import * as aws from '@cdktn/provider-aws'` — two hops: `aws.s3Bucket.S3Bucket` */
-  | { readonly kind: "root" };
+  | { readonly kind: "root" }
+  /** a classic binding the map cannot place — reported and kept, never dropped */
+  | { readonly kind: "unknown"; readonly reason: string };
 
 interface Binding {
   readonly local: Node;
@@ -133,6 +135,12 @@ function moduleFor(
   return deep ? index.byModule.get(deep) : index.bySubmodule.get(name);
 }
 
+/** A classic binding whose module the map does not know: kept whole, and reported. */
+const UNKNOWN_MODULE: BindingKind = {
+  kind: "unknown",
+  reason: "no naming-map row for this classic submodule",
+};
+
 /** Every binding a file takes from the classic package, whatever form it is written in. */
 function classicBindings(file: SourceFile, index: SymbolIndex): Binding[] {
   const bindings: Binding[] = [];
@@ -144,8 +152,12 @@ function classicBindings(file: SourceFile, index: SymbolIndex): Binding[] {
 
     const star = decl.getNamespaceImport();
     const starModule = deep ? index.byModule.get(deep) : undefined;
-    if (star && (!deep || starModule)) {
-      const detail: BindingKind = starModule ? { kind: "namespace", module: starModule } : { kind: "root" };
+    if (star) {
+      const detail: BindingKind = starModule
+        ? { kind: "namespace", module: starModule }
+        : deep
+          ? UNKNOWN_MODULE
+          : { kind: "root" };
       bindings.push({
         local: star,
         name: star.getText(),
@@ -159,10 +171,11 @@ function classicBindings(file: SourceFile, index: SymbolIndex): Binding[] {
       const imported = spec.getName();
       const local = spec.getAliasNode() ?? spec.getNameNode();
       const module = moduleFor(index, specifier, imported);
-      if (!module) continue;
-      const detail: BindingKind = deep
-        ? { kind: "symbol", module, imported }
-        : { kind: "namespace", module };
+      const detail: BindingKind = !module
+        ? UNKNOWN_MODULE
+        : deep
+          ? { kind: "symbol", module, imported }
+          : { kind: "namespace", module };
       bindings.push({ local, name: local.getText(), detail, statement: decl, clause: spec.getText() });
     }
   }
@@ -176,8 +189,11 @@ function classicBindings(file: SourceFile, index: SymbolIndex): Binding[] {
 
     if (Node.isIdentifier(nameNode)) {
       const module = deep ? index.byModule.get(deep) : undefined;
-      if (deep && !module) continue;
-      const detail: BindingKind = module ? { kind: "namespace", module } : { kind: "root" };
+      const detail: BindingKind = module
+        ? { kind: "namespace", module }
+        : deep
+          ? UNKNOWN_MODULE
+          : { kind: "root" };
       bindings.push({
         local: nameNode,
         name: nameNode.getText(),
@@ -191,12 +207,12 @@ function classicBindings(file: SourceFile, index: SymbolIndex): Binding[] {
     for (const element of nameNode.getElements()) {
       const imported = (element.getPropertyNameNode() ?? element.getNameNode()).getText();
       const local = element.getNameNode();
-      if (!Node.isIdentifier(local)) continue;
-      const module = moduleFor(index, specifier, imported);
-      if (!module) continue;
-      const detail: BindingKind = deep
-        ? { kind: "symbol", module, imported }
-        : { kind: "namespace", module };
+      const module = Node.isIdentifier(local) ? moduleFor(index, specifier, imported) : undefined;
+      const detail: BindingKind = !module
+        ? UNKNOWN_MODULE
+        : deep
+          ? { kind: "symbol", module, imported }
+          : { kind: "namespace", module };
       bindings.push({ local, name: local.getText(), detail, statement, clause: element.getText() });
     }
   }
@@ -354,11 +370,53 @@ function residualImport(statement: ImportDeclaration | VariableStatement, kept: 
   return `${statement.getDeclarationKind()} ${binding} = require('${specifier}');`;
 }
 
+/** Is this literal in a module-specifier position — an import/export clause, `require`, `import()`? */
+function isModuleSpecifier(literal: Node): boolean {
+  const parent = literal.getParent();
+  if (!parent) return false;
+  if (Node.isImportDeclaration(parent) || Node.isExportDeclaration(parent)) {
+    return parent.getModuleSpecifier() === literal;
+  }
+  if (Node.isExternalModuleReference(parent)) return true;
+  if (Node.isLiteralTypeNode(parent)) return Node.isImportTypeNode(parent.getParent());
+  if (Node.isCallExpression(parent)) {
+    const callee = parent.getExpression();
+    return callee.getText() === "require" || callee.getKind() === SyntaxKind.ImportKeyword;
+  }
+  return false;
+}
+
+/**
+ * The backstop: every classic specifier this run did not decide about — an import form the tool
+ * does not model (`export … from`, `import x = require(…)`, `import('…')`) or a subpath it cannot
+ * resolve. Reporting them is not a nicety: `package.json` drops the classic dependency, so a form
+ * that is passed over silently leaves the project importing a package it no longer depends on.
+ */
+function unhandledClassicImports(file: SourceFile, handled: ReadonlySet<Node>, relative: string): Unmapped[] {
+  const findings: Unmapped[] = [];
+  for (const literal of file.getDescendantsOfKind(SyntaxKind.StringLiteral)) {
+    if (!isClassicSpecifier(literal.getLiteralValue()) || !isModuleSpecifier(literal)) continue;
+    let owner: Node | undefined = literal;
+    while (owner && !handled.has(owner)) owner = owner.getParent();
+    if (owner) continue;
+    findings.push({
+      file: relative,
+      line: lineOf(literal),
+      symbol: literal.getLiteralValue(),
+      reason: "classic import form the tool does not rewrite — move it by hand",
+    });
+  }
+  return findings;
+}
+
 export function migrateFile(file: SourceFile, index: SymbolIndex, relative: string): FileResult {
   const before = file.getFullText();
   const bindings = classicBindings(file, index);
+  // The statements this run decides about; anything else naming the classic package is the backstop's.
+  const statements = new Set(bindings.map((b) => b.statement));
   if (bindings.length === 0) {
-    return { file: relative, before, after: before, rewrites: 0, unmapped: [] };
+    const unhandled = unhandledClassicImports(file, statements, relative);
+    return { file: relative, before, after: before, rewrites: 0, unmapped: unhandled };
   }
 
   const edits: Edit[] = [];
@@ -391,6 +449,16 @@ export function migrateFile(file: SourceFile, index: SymbolIndex, relative: stri
   };
 
   for (const binding of bindings) {
+    if (binding.detail.kind === "unknown") {
+      keep(binding, {
+        file: relative,
+        line: lineOf(binding.local),
+        symbol: binding.name,
+        reason: binding.detail.reason,
+      });
+      continue;
+    }
+
     // A named import of a symbol the map does not know is unmapped whether or not the file ever
     // uses it — decided here, once, rather than once per reference (and never silently dropped
     // because the import happens to be unused).
@@ -437,7 +505,6 @@ export function migrateFile(file: SourceFile, index: SymbolIndex, relative: stri
 
   // Rewrite the statements: a root binding only changes package, everything else is replaced by
   // the merged group import (plus a residual classic import for whatever could not move).
-  const statements = new Set(bindings.map((b) => b.statement));
   let insertAt: number | undefined;
   for (const statement of [...statements].sort((a, b) => a.getStart() - b.getStart())) {
     const kept = keptByStatement.get(statement) ?? [];
@@ -472,6 +539,7 @@ export function migrateFile(file: SourceFile, index: SymbolIndex, relative: stri
     edits.push({ start: insertAt, end: insertAt, text: `import { ${members} } from '${TARGET_PACKAGE}';\n` });
   }
 
+  unmapped.push(...unhandledClassicImports(file, statements, relative));
   return { file: relative, before, after: applyEdits(before, edits), rewrites, unmapped };
 }
 

@@ -53,6 +53,21 @@ describe("the symbol index", () => {
     expect(classicModuleOfSpecifier("@cdktn/provider-aws/lib/s3-bucket")).toBe("s3-bucket");
     expect(classicModuleOfSpecifier("@cdktn/provider-aws/src/s3-bucket/index")).toBe("s3-bucket");
   });
+
+  it("reads a big module's split-out structs as the module itself", () => {
+    // `src/wafv2-web-acl-rule/index.ts` is `export * from './index-structs/index'`, so the subpath
+    // names the same submodule — and it is where every nested struct is actually declared.
+    expect(classicModuleOfSpecifier("@cdktn/provider-aws/lib/wafv2-web-acl-rule/index-structs")).toBe(
+      "wafv2-web-acl-rule",
+    );
+    expect(
+      classicModuleOfSpecifier("@cdktn/provider-aws/lib/wafv2-web-acl-rule/index-structs/structs0"),
+    ).toBe("wafv2-web-acl-rule");
+    expect(index.byModule.get("wafv2-web-acl-rule")?.symbols.get("Wafv2WebAclRuleActionA")).toEqual({
+      group: "waf",
+      member: "TfWebAclRule.ActionProperty",
+    });
+  });
 });
 
 describe("package.json", () => {

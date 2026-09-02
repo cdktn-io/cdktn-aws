@@ -157,8 +157,12 @@ export function classicModuleOfSpecifier(specifier: string): string | undefined 
   if (!specifier.startsWith(`${CLASSIC_PACKAGE}/`)) return undefined;
   const rest = specifier.slice(CLASSIC_PACKAGE.length + 1);
   // Published `@cdktn/provider-aws` puts its compiled submodules under `lib/`; a source checkout
-  // (and the docs) also spell it `src/`. Both name the same submodule.
-  return rest.replace(/^(lib|src)\//, "").replace(/\/index(\.js|\.ts|\.d\.ts)?$/, "");
+  // (and the docs) also spell it `src/`. Both name the same submodule. A large module's structs are
+  // split into an `index-structs/` the module's own index re-exports, so that subpath is the module.
+  return rest
+    .replace(/^(lib|src)\//, "")
+    .replace(/\/index-structs(\/.*)?$/, "")
+    .replace(/\/index(\.js|\.ts|\.d\.ts)?$/, "");
 }
 
 export function isClassicSpecifier(specifier: string): boolean {

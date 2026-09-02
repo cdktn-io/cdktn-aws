@@ -101,6 +101,22 @@ describe("import forms", () => {
     );
   });
 
+  it("rewrites the split-out structs subpath of a large module", () => {
+    expect(
+      migrated(
+        [
+          "import { Wafv2WebAclRuleActionA } from '@cdktn/provider-aws/lib/wafv2-web-acl-rule/index-structs';",
+          "export const action: Wafv2WebAclRuleActionA = {};",
+        ].join("\n"),
+      ),
+    ).toBe(
+      [
+        "import { waf } from '@cdktn/aws';",
+        "export const action: waf.TfWebAclRule.ActionProperty = {};",
+      ].join("\n"),
+    );
+  });
+
   it("merges two groups into one sorted import declaration", () => {
     expect(
       migrated(
@@ -123,5 +139,49 @@ describe("import forms", () => {
         "new s3.TfBucket(this, 'b', { bucket: 'x' });",
       ].join("\n"),
     );
+  });
+});
+
+describe("forms the tool does not model", () => {
+  // `package.json` loses the classic dependency, so a classic specifier that is merely passed over
+  // leaves a project importing a package it no longer depends on — with a zero exit code. Every one
+  // of them is reported instead, whatever the form, by a backstop that scans specifiers.
+  const reasons = (source: string) => migrate(source).unmapped.map((u) => [u.symbol, u.reason]);
+
+  it("reports a re-export declaration and a star re-export", () => {
+    const source = [
+      "export { S3Bucket } from '@cdktn/provider-aws/lib/s3-bucket';",
+      "export * from '@cdktn/provider-aws/lib/s3-bucket-versioning';",
+    ].join("\n");
+    expect(reasons(source)).toEqual([
+      ["@cdktn/provider-aws/lib/s3-bucket", "classic import form the tool does not rewrite — move it by hand"],
+      [
+        "@cdktn/provider-aws/lib/s3-bucket-versioning",
+        "classic import form the tool does not rewrite — move it by hand",
+      ],
+    ]);
+    expect(migrate(source).after).toBe(source);
+  });
+
+  it("reports `import x = require(…)` and a dynamic `import('…')`", () => {
+    expect(
+      reasons(
+        [
+          "import s3Bucket = require('@cdktn/provider-aws/lib/s3-bucket');",
+          "export const later = () => import('@cdktn/provider-aws/lib/iam-role');",
+          "export const x = (s: any) => new s3Bucket.S3Bucket(s, 'x', {});",
+        ].join("\n"),
+      ).map(([symbol]) => symbol),
+    ).toEqual(["@cdktn/provider-aws/lib/s3-bucket", "@cdktn/provider-aws/lib/iam-role"]);
+  });
+
+  it("reports a subpath with no map row instead of dropping its import", () => {
+    const result = migrate(
+      "import * as invented from '@cdktn/provider-aws/lib/not-a-resource';\nexport const m = invented;",
+    );
+    expect(result.unmapped.map((u) => u.reason)).toEqual([
+      "no naming-map row for this classic submodule",
+    ]);
+    expect(result.after).toContain("import * as invented from '@cdktn/provider-aws/lib/not-a-resource';");
   });
 });
