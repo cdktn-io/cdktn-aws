@@ -1,0 +1,141 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+/**
+ * The properties that make the rewrite safe to run unattended: it resolves through symbols rather
+ * than text, it never collides with a name the file already uses, it reports what it does not know
+ * instead of guessing, and running it twice does nothing the second time.
+ */
+import { migrate, migrated } from "./helpers";
+
+describe("type positions", () => {
+  it("rewrites a type reference, a typeof, a generic argument and a satisfies", () => {
+    expect(
+      migrated(
+        [
+          "import { S3Bucket, S3BucketConfig } from '@cdktn/provider-aws/lib/s3-bucket';",
+          "",
+          "type Ctor = typeof S3Bucket;",
+          "declare const buckets: Array<S3Bucket>;",
+          "const config = { bucket: 'x' } satisfies S3BucketConfig;",
+          "export class Wrapper extends S3Bucket {}",
+        ].join("\n"),
+      ),
+    ).toBe(
+      [
+        "import { s3 } from '@cdktn/aws';",
+        "",
+        "type Ctor = typeof s3.TfBucket;",
+        "declare const buckets: Array<s3.TfBucket>;",
+        "const config = { bucket: 'x' } satisfies s3.TfBucketConfig;",
+        "export class Wrapper extends s3.TfBucket {}",
+      ].join("\n"),
+    );
+  });
+});
+
+describe("aliasing", () => {
+  it("aliases the group when the file already binds that name", () => {
+    expect(
+      migrated(
+        [
+          "import { S3Bucket } from '@cdktn/provider-aws/lib/s3-bucket';",
+          "const s3 = new AWS.S3();",
+          "export const b = new S3Bucket(this, 'b', { bucket: s3.name });",
+        ].join("\n"),
+      ),
+    ).toBe(
+      [
+        "import { s3 as s3_ } from '@cdktn/aws';",
+        "const s3 = new AWS.S3();",
+        "export const b = new s3_.TfBucket(this, 'b', { bucket: s3.name });",
+      ].join("\n"),
+    );
+  });
+
+  it("keeps aliasing deterministically when the obvious alias is taken too", () => {
+    expect(
+      migrated(
+        [
+          "import { S3Bucket } from '@cdktn/provider-aws/lib/s3-bucket';",
+          "declare const s3: unknown;",
+          "declare const s3_: unknown;",
+          "export const b = new S3Bucket(this, 'b', {});",
+        ].join("\n"),
+      ),
+    ).toContain("import { s3 as s3_2 } from '@cdktn/aws';");
+  });
+
+  it("leaves a same-named local alone — the rewrite resolves symbols, not text", () => {
+    const source = [
+      "import { S3Bucket } from '@cdktn/provider-aws/lib/s3-bucket';",
+      "",
+      "export function build() {",
+      "  const S3Bucket = 'a local that shadows the import';",
+      "  return S3Bucket;",
+      "}",
+      "export const real = new S3Bucket(this, 'b', {});",
+    ].join("\n");
+    const after = migrated(source);
+    expect(after).toContain("  const S3Bucket = 'a local that shadows the import';");
+    expect(after).toContain("  return S3Bucket;");
+    expect(after).toContain("export const real = new s3.TfBucket(this, 'b', {});");
+  });
+});
+
+describe("what it refuses to guess", () => {
+  it("reports an unknown classic export and leaves its import in place", () => {
+    const result = migrate(
+      [
+        "import { S3Bucket, S3BucketInvented } from '@cdktn/provider-aws/lib/s3-bucket';",
+        "new S3Bucket(this, 'b', {});",
+        "new S3BucketInvented(this, 'x', {});",
+      ].join("\n"),
+    );
+    expect(result.unmapped).toEqual([
+      {
+        file: "main.ts",
+        line: 1,
+        symbol: "s3-bucket.S3BucketInvented",
+        reason: "no naming-map row for this classic export",
+      },
+    ]);
+    expect(result.after).toContain("import { s3 } from '@cdktn/aws';");
+    expect(result.after).toContain(
+      "import { S3BucketInvented } from '@cdktn/provider-aws/lib/s3-bucket';",
+    );
+    expect(result.after).toContain("new s3.TfBucket(this, 'b', {});");
+    expect(result.after).toContain("new S3BucketInvented(this, 'x', {});");
+  });
+
+  it("reports a classic submodule used as a value rather than as a namespace", () => {
+    const result = migrate(
+      [
+        "import * as s3Bucket from '@cdktn/provider-aws/lib/s3-bucket';",
+        "export const everything = s3Bucket;",
+      ].join("\n"),
+    );
+    expect(result.unmapped.map((u) => u.reason)).toEqual([
+      "the classic submodule is used as a value, not as `<submodule>.<Symbol>`",
+    ]);
+    expect(result.after).toBe(result.before);
+  });
+});
+
+describe("idempotence", () => {
+  it("does nothing at all on its own output", () => {
+    const source = [
+      "import { s3Bucket, provider } from '@cdktn/provider-aws';",
+      "import { LambdaFunction } from '@cdktn/provider-aws/lib/lambda-function';",
+      "",
+      "new provider.AwsProvider(this, 'aws', { region: 'eu-west-1' });",
+      "new s3Bucket.S3Bucket(this, 'b', { bucket: 'x' });",
+      "new LambdaFunction(this, 'f', {});",
+    ].join("\n");
+    const once = migrated(source);
+    expect(once).not.toBe(source);
+    const twice = migrate(once);
+    expect(twice.after).toBe(once);
+    expect(twice.rewrites).toBe(0);
+    expect(twice.unmapped).toEqual([]);
+  });
+});

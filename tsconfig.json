@@ -13,5 +13,5 @@
     "types": ["node"]
   },
   "include": ["tools/*/src/**/*.ts"],
-  "exclude": ["tools/aws2cdk/**"]
+  "exclude": ["tools/aws2cdk/**", "tools/migrate/**"]
 }

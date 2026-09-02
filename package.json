@@ -30,7 +30,7 @@
     "release": "node scripts/release.mjs",
     "synth:smoke": "node scripts/synth-smoke.mjs",
     "test": "jest",
-    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tools/aws2cdk/tsconfig.json && node scripts/typecheck-generated.mjs"
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tools/aws2cdk/tsconfig.json && tsc --noEmit -p tools/migrate/tsconfig.json && node scripts/typecheck-generated.mjs"
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",
