@@ -28,6 +28,7 @@ import {
   legacyClassName,
   propertyTypeNamesForResource,
 } from "../src/naming";
+import { buildNamingMap } from "../src/naming-map";
 import { assertUniqueGoPackageNames, goPackageName, membersOf, npmPackageName, readGroups } from "../src/groups";
 import { groupsJsonPath } from "../src/groups";
 
@@ -125,6 +126,26 @@ describe("naming", () => {
     );
     // the provider construct is not an L1 resource and keeps its 0.1.x name
     expect(byName.get("provider:aws:provider")!.className).toBe("AwsProvider");
+  });
+
+  it("builds a naming map keyed by the surface-marked terraform type", () => {
+    // Two classes, one terraform name: the key has to carry the surface or the migration tool
+    // cannot tell `AwsLb` from `DataAwsLb`.
+    const map = buildNamingMap(result);
+    expect(map["aws_lb"]).toEqual({
+      surface: "resource",
+      group: "elb",
+      className: "TfLb",
+      previous: "AwsLb",
+    });
+    expect(map["data_aws_lb"].className).toBe("TfDataLb");
+    expect(map["aws_provider"]).toEqual({
+      surface: "provider",
+      group: "provider",
+      className: "AwsProvider",
+      previous: "AwsProvider",
+    });
+    expect(Object.keys(map)).toEqual([...Object.keys(map)].sort());
   });
 
   it("records every entry's 0.1.x name for the migration map", () => {
