@@ -286,7 +286,7 @@ token that names the resource itself.** Nine of the 257 proposals broke it.
 | `elemental_mediapackage_version_2` | `media` | `media_packagev2` | same, for MediaPackage v2 — the version token travels with the service name |
 | `elemental_mediastore` | `media` | `media_store` | same, for MediaStore |
 | `eventbridge` | `cloudwatch` | `cloudwatch_event` | EventBridge's types are still spelled `aws_cloudwatch_event_*`: `TfEventApiDestination` → `TfApiDestination` |
-| `meta_data_sources` | `service` | `arn` | this group is the provider's own meta data sources (`aws_arn`, `aws_partition`, `aws_region`…) and shares no service name at all. `arn` matches exactly one member *exactly*, so the empty-stem back-off makes the list inert and every name is kept whole — where the proposed `service` would have turned `aws_service_principal` into `TfDataPrincipal` |
+| `meta_data_sources` | `service` | `arn` | this group is the provider's own meta data sources (`aws_arn`, `aws_partition`, `aws_region`…) and shares no service name at all. `arn` matches exactly one member *exactly*, so the empty-stem back-off makes the list inert and every name is kept whole — where the proposed `service` would have turned `aws_service_principal` into `DataTfPrincipal` |
 
 Eight groups the M6 brief expected to need an override did not, because the mechanical proposal
 already produces the curated value: `auto_scaling_plans`, `chime_sdk_media_pipelines`,

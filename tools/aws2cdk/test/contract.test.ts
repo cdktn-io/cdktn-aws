@@ -91,7 +91,7 @@ describe("naming", () => {
    */
   it.each([
     ["aws_s3_bucket_versioning", "resource", ["s3"], "TfBucketVersioning"],
-    ["data_aws_s3_bucket", "data_source", ["s3"], "TfDataBucket"],
+    ["data_aws_s3_bucket", "data_source", ["s3"], "DataTfBucket"],
     ["aws_instance", "resource", ["ec2"], "TfInstance"],
     ["aws_ec2_capacity_reservation", "resource", ["ec2"], "TfCapacityReservation"],
     ["aws_prometheus_workspace", "resource", ["prometheus"], "TfWorkspace"],
@@ -102,8 +102,8 @@ describe("naming", () => {
     ["aws_alb", "resource", ["lb"], "TfAlb"],
     ["aws_lb_listener", "resource", ["lb"], "TfListener"],
     ["aws_lambda_function", "resource", ["lambda"], "TfFunction"],
-    ["ephemeral_aws_lambda_invocation", "ephemeral_resource", ["lambda"], "TfEphemeralInvocation"],
-    ["data_aws_identitystore_user", "data_source", ["identitystore"], "TfDataUser"],
+    ["ephemeral_aws_lambda_invocation", "ephemeral_resource", ["lambda"], "EphemeralTfInvocation"],
+    ["data_aws_identitystore_user", "data_source", ["identitystore"], "DataTfUser"],
     // longest match wins, so the group's two prefixes do not fight over cloudwatch_log_*
     ["aws_cloudwatch_log_group", "resource", ["cloudwatch_log", "cloudwatch"], "TfGroup"],
     ["aws_cloudwatch_query_definition", "resource", ["cloudwatch_log", "cloudwatch"], "TfQueryDefinition"],
@@ -120,9 +120,9 @@ describe("naming", () => {
     expect(byName.get("lambda:aws_lambda_function:resource")!.className).toBe("TfFunction");
     // decision 2, the load-bearing example: the group already says "lambda".
     expect(byName.get("lambda:aws_lambda_function:resource")!.className).not.toBe("TfLambdaFunction");
-    expect(byName.get("elb:aws_lb:data_source")!.className).toBe("TfDataLb");
+    expect(byName.get("elb:aws_lb:data_source")!.className).toBe("DataTfLb");
     expect(byName.get("lambda:aws_lambda_invocation:ephemeral_resource")!.className).toBe(
-      "TfEphemeralInvocation",
+      "EphemeralTfInvocation",
     );
     // the provider construct is not an L1 resource and keeps its 0.1.x name
     expect(byName.get("provider:aws:provider")!.className).toBe("AwsProvider");
@@ -138,7 +138,7 @@ describe("naming", () => {
       className: "TfLb",
       previous: "AwsLb",
     });
-    expect(map["data_aws_lb"].className).toBe("TfDataLb");
+    expect(map["data_aws_lb"].className).toBe("DataTfLb");
     expect(map["aws_provider"]).toEqual({
       surface: "provider",
       group: "provider",
@@ -252,15 +252,15 @@ describe("namespace mount", () => {
 describe("surfaces", () => {
   it("emits a data source against TerraformDataSource", () => {
     expect(read("elb/src/data-aws-lb.ts")).toMatch(
-      /^export class TfDataLb extends cdktn\.TerraformDataSource/m,
+      /^export class DataTfLb extends cdktn\.TerraformDataSource/m,
     );
   });
 
   it("emits an ephemeral resource against TerraformEphemeralResource, with no import helper", () => {
     const text = read("lambda/src/ephemeral-aws-lambda-invocation.ts");
-    expect(text).toMatch(/^export class TfEphemeralInvocation extends cdktn\.TerraformEphemeralResource/m);
+    expect(text).toMatch(/^export class EphemeralTfInvocation extends cdktn\.TerraformEphemeralResource/m);
     expect(text).toMatch(
-      /^export interface TfEphemeralInvocationConfig extends cdktn\.TerraformEphemeralMetaArguments/m,
+      /^export interface EphemeralTfInvocationConfig extends cdktn\.TerraformEphemeralMetaArguments/m,
     );
     // an ephemeral resource has no state to import into
     expect(text).not.toContain("generateConfigForImport");

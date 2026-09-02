@@ -142,9 +142,10 @@ Headline, measured not argued (full method and every caveat in
 
 ## M6 — the `Tf` naming (done)
 
-An L1 class is `Tf` + the terraform type with its group's own service prefix removed:
+An L1 class is `Tf` + the terraform type with its group's own service prefix removed, behind a
+`Data`/`Ephemeral` marker on the two non-resource surfaces:
 `aws_s3_bucket_versioning` in group `s3` is `awss3.TfBucketVersioning`, `data aws_s3_bucket` is
-`TfDataBucket`, `ephemeral aws_lambda_invocation` is `TfEphemeralInvocation`. `Tf` is the
+`DataTfBucket`, `ephemeral aws_lambda_invocation` is `EphemeralTfInvocation`. `Tf` is the
 source-layer marker — the analogue of `aws-cdk-lib`'s `Cfn` — so the bare name (`s3.Bucket`) stays
 free for a future L2, and the group already says "s3" so the class does not repeat it. Which tokens
 count as the group's own is curated per group in `groups.json#stripPrefixes`, never inferred; an

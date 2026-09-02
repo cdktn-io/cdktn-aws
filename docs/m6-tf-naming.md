@@ -49,12 +49,18 @@ stem:        the LONGEST p in stripPrefixes (ties alphabetical) with
                raw === p            -> stem = raw     (the empty-stem back-off, below)
                raw startsWith p+"_" -> stem = raw without p_
              no match               -> stem = raw
-className:   "Tf" + ("" | "Data" | "Ephemeral") + toPascalCase(stem)
+className:   ("" | "Data" | "Ephemeral") + "Tf" + toPascalCase(stem)
 configName:  className + "Config"
 ```
 
-The surface marker comes **first**, so every L1 symbol of a module starts with `Tf`:
-`TfDataBucket`, `TfEphemeralInvocation` — never `DataTfBucket`. It sorts the way it reads.
+The surface marker sits at **position 0**: `DataTfBucket`, `EphemeralTfInvocation` — not
+`TfDataBucket`. The alternative (marker after `Tf`, so every symbol starts with `Tf`) reads
+ambiguously on the 23 resources whose terraform type leads with a `data_`/`database` token:
+`quicksight.TfDataSet` is the resource `aws_quicksight_data_set` while `TfDataDataSet` would be its
+data source, and nothing but the doubled word distinguishes them. With the marker first, **anything
+starting with `Tf` is a resource**, full stop — and cdktn's own leading `Data…` shape
+(`DataAwsS3Bucket`) is preserved, so a migrating consumer's muscle memory still lands on the right
+prefix.
 
 **The empty-stem back-off.** When the type *is* the prefix there is nothing left to name the class
 after, so the raw type is kept: `aws_vpc` → `TfVpc`, not `Tf`. Seven terraform types in the pinned
@@ -67,7 +73,7 @@ Worked examples, all asserted in `tools/aws2cdk/test/contract.test.ts`:
 | terraform type | group | stripPrefixes | class |
 | --- | --- | --- | --- |
 | `aws_s3_bucket_versioning` | `s3` | `[s3]` | `TfBucketVersioning` |
-| data `aws_s3_bucket` | `s3` | `[s3]` | `TfDataBucket` |
+| data `aws_s3_bucket` | `s3` | `[s3]` | `DataTfBucket` |
 | `aws_instance` | `ec2` | `[ec2]` | `TfInstance` |
 | `aws_ec2_capacity_reservation` | `ec2` | `[ec2]` | `TfCapacityReservation` |
 | `aws_prometheus_workspace` | `amp` | `[prometheus]` | `TfWorkspace` |
@@ -76,8 +82,8 @@ Worked examples, all asserted in `tools/aws2cdk/test/contract.test.ts`:
 | `aws_lb` / `aws_alb` (alias) | `elb` | `[lb]` | `TfLb` / `TfAlb` |
 | `aws_lb_listener` | `elb` | `[lb]` | `TfListener` |
 | `aws_lambda_function` | `lambda` | `[lambda]` | `TfFunction` |
-| ephemeral `aws_lambda_invocation` | `lambda` | `[lambda]` | `TfEphemeralInvocation` |
-| data `aws_identitystore_user` | `sso_identity_store` | `[identitystore]` | `TfDataUser` |
+| ephemeral `aws_lambda_invocation` | `lambda` | `[lambda]` | `EphemeralTfInvocation` |
+| data `aws_identitystore_user` | `sso_identity_store` | `[identitystore]` | `DataTfUser` |
 | `aws_cloudwatch_log_group` | `cloudwatch_logs` | `[cloudwatch, cloudwatch_log]` | `TfGroup` |
 | the provider block | `provider` | — | `AwsProvider` (unchanged) |
 

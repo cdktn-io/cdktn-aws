@@ -43,8 +43,13 @@ const SURFACE_MARKER: Record<"data_source" | "ephemeral_resource", string> = {
   ephemeral_resource: "ephemeral_",
 };
 
-/** Prefix FIRST, always: `TfDataBucket`, `TfEphemeralInvocation` — every L1 symbol starts with `Tf`. */
-const SURFACE_INFIX: Record<EntrySurface, string> = {
+/**
+ * The surface marker sits at position 0: `DataTfBucket`, `EphemeralTfInvocation`. So anything
+ * starting with `Tf` is a resource — 23 resources whose terraform type leads with a `data_`/
+ * `database` token would otherwise read as data sources — and cdktn's leading `Data…` shape
+ * survives for migrating consumers.
+ */
+const SURFACE_PREFIX: Record<EntrySurface, string> = {
   resource: "",
   data_source: "Data",
   ephemeral_resource: "Ephemeral",
@@ -115,7 +120,7 @@ export function stemFor(raw: string, stripPrefixes: readonly string[]): string {
 }
 
 /**
- * The class name for one schema entry: `Tf` + the surface infix + PascalCase of the stem.
+ * The class name for one schema entry: the surface marker + `Tf` + PascalCase of the stem.
  *
  * `toPascalCase` is codemaker's, the same one the vendored parser uses for its own class names, so
  * `s3_bucket` and `bucket` PascalCase the same way they always did.
@@ -130,7 +135,7 @@ export function classNameForEntry(entry: ClassNameEntry): string {
     );
   }
   const stem = stemFor(rawTypeFor(entry.parserType, surface), entry.stripPrefixes);
-  return `${CLASS_PREFIX}${SURFACE_INFIX[surface]}${ensureIdentifierStart(toPascalCase(stem))}`;
+  return `${SURFACE_PREFIX[surface]}${CLASS_PREFIX}${ensureIdentifierStart(toPascalCase(stem))}`;
 }
 
 /**
@@ -471,8 +476,8 @@ function downcaseFirst(s: string): string {
  * accident, so the assert sites let those through explicitly.
  */
 export const NAME_GRAMMAR = {
-  resourceClass: /^Tf(Data|Ephemeral)?[A-Z][A-Za-z0-9]*$/,
-  configInterface: /^Tf(Data|Ephemeral)?[A-Z][A-Za-z0-9]*Config$/,
+  resourceClass: /^(Data|Ephemeral)?Tf[A-Z][A-Za-z0-9]*$/,
+  configInterface: /^(Data|Ephemeral)?Tf[A-Z][A-Za-z0-9]*Config$/,
   propertyInterface: /^[A-Z][A-Za-z0-9]*Property$/,
   propertyOutputReference: /^[A-Z][A-Za-z0-9]*PropertyOutputReference$/,
   propertyList: /^[A-Z][A-Za-z0-9]*PropertyList$/,

@@ -277,7 +277,7 @@ Permanent, and all three needed **before the first tag**:
 This report records M0–M4 as they were built and stays as written. One thing in it is now out of
 date: the class-naming rule. §"the generator" describes classes named PascalCase-of-the-full-
 terraform-type (`AwsLambdaFunction`); since M6 they are `Tf` + the terraform type with the owning
-group's service prefix stripped (`lambda.TfFunction`, `s3.TfBucket`, `s3.TfDataBucket`), with `Tf`
+group's service prefix stripped (`lambda.TfFunction`, `s3.TfBucket`, `s3.DataTfBucket`), with `Tf`
 playing the role `Cfn` plays in aws-cdk-lib and the bare name left free for a future L2. Curated
 per group in `groups.json#stripPrefixes`, gated by `check:groups` gate C, mapped old-to-new in
 `naming-map.json`. Decision and algorithm: [`docs/m6-tf-naming.md`](./docs/m6-tf-naming.md).

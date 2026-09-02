@@ -178,7 +178,7 @@ func samples() []*sample {
 			awsssm.NewTfActivation(s, jsii.String("ssm"), &awsssm.TfActivationConfig{IamRole: jsii.String("consumer-ssm-role")})
 		}},
 		{module: "awssts", tfType: "aws_caller_identity", isData: true, build: func(s cdktn.TerraformStack) {
-			awssts.NewTfDataCallerIdentity(s, jsii.String("caller"), &awssts.TfDataCallerIdentityConfig{})
+			awssts.NewDataTfCallerIdentity(s, jsii.String("caller"), &awssts.DataTfCallerIdentityConfig{})
 		}},
 		{module: "awsswf", tfType: "aws_swf_domain", build: func(s cdktn.TerraformStack) {
 			awsswf.NewTfDomain(s, jsii.String("swf"), &awsswf.TfDomainConfig{WorkflowExecutionRetentionPeriodInDays: jsii.String("7")})
