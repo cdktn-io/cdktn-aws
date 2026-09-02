@@ -3374,7 +3374,7 @@
   "aws_ec2_transit_gateway": {
     "surface": "resource",
     "group": "transit_gateway",
-    "className": "TfEc2TransitGateway",
+    "className": "TfTransitGateway",
     "previous": "AwsEc2TransitGateway"
   },
   "aws_ec2_transit_gateway_connect": {
@@ -11486,7 +11486,7 @@
   "data_aws_ec2_transit_gateway": {
     "surface": "data_source",
     "group": "transit_gateway",
-    "className": "DataTfEc2TransitGateway",
+    "className": "DataTfTransitGateway",
     "previous": "DataAwsEc2TransitGateway"
   },
   "data_aws_ec2_transit_gateway_attachment": {

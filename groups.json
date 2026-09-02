@@ -4615,6 +4615,7 @@
     "transit_gateway": {
       "title": "Transit Gateway",
       "stripPrefixes": [
+        "ec2",
         "ec2_transit_gateway"
       ],
       "resources": [

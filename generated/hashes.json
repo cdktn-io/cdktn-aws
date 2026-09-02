@@ -1193,9 +1193,9 @@
       "bytes": 475122
     },
     "transit_gateway": {
-      "hash": "4329cf1064e2ae550a47e3590a661534e4e1646c41afcb8144db4f1b2fd8d591",
+      "hash": "ed982483fd18831238254d77da1b1a64b5fac8787f42b3bb861c1bb04530b912",
       "files": 43,
-      "bytes": 643893
+      "bytes": 643668
     },
     "user_experience_customization": {
       "hash": "18c9c6ad2c2f3112a478d08724dcc6a32b853aad50849491b98515228c7e7231",

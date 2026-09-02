@@ -46,9 +46,10 @@ parserType:  aws_s3_bucket_versioning | data_aws_s3_bucket | ephemeral_aws_lambd
 surface:     resource                 | data_source        | ephemeral        (the marker decides)
 raw:         drop the surface marker, then the `aws_` provider prefix   -> s3_bucket_versioning
 stem:        the LONGEST p in stripPrefixes (ties alphabetical) with
-               raw === p            -> stem = raw     (the empty-stem back-off, below)
                raw startsWith p+"_" -> stem = raw without p_
-             no match               -> stem = raw
+             a p matching raw EXACTLY leaves no stem, so it is skipped and the
+             next-longest p gets its turn
+             none leaves a stem     -> stem = raw     (the empty-stem back-off, below)
 className:   ("" | "Data" | "Ephemeral") + "Tf" + toPascalCase(stem)
 configName:  className + "Config"
 ```
@@ -62,13 +63,14 @@ starting with `Tf` is a resource**, full stop — and cdktn's own leading `Data�
 (`DataAwsS3Bucket`) is preserved, so a migrating consumer's muscle memory still lands on the right
 prefix.
 
-**The empty-stem back-off.** When the type *is* the prefix there is nothing left to name the class
-after, so the raw type is kept: `aws_vpc` → `TfVpc`, not `Tf`. Seven terraform types in the pinned
-schema land here — `aws_vpc`, `aws_vpc_ipam`, `aws_lb`, `aws_elb`, `aws_cloudtrail`,
-`aws_codepipeline` and `aws_ec2_transit_gateway` (twelve schema entries, counting the ones that
-exist on two surfaces) — and it is the only place the stripping backs off. The raw type is kept
-whole, so `aws_ec2_transit_gateway` in group `transit_gateway` (`[ec2_transit_gateway]`) is
-`TfEc2TransitGateway`, not `TfTransitGateway`.
+**The empty-stem back-off.** A prefix that matches the raw type *exactly* would name the class after
+nothing, so it does not win — the next-longest prefix does. `transit_gateway` lists
+`[ec2, ec2_transit_gateway]`, so `aws_ec2_transit_gateway` falls through to `ec2` and is
+`TfTransitGateway` (while `aws_ec2_transit_gateway_route` is still `TfRoute`). Only when *no* prefix
+leaves a stem is the raw type kept whole: `aws_vpc` → `TfVpc`, not `Tf`. Six terraform types in the
+pinned schema land there — `aws_vpc`, `aws_vpc_ipam`, `aws_lb`, `aws_elb`, `aws_cloudtrail`,
+`aws_codepipeline` (ten schema entries, counting the ones that exist on two surfaces) — and it is
+the only place the stripping backs off entirely.
 
 Worked examples, all asserted in `tools/aws2cdk/test/contract.test.ts`:
 
@@ -80,7 +82,8 @@ Worked examples, all asserted in `tools/aws2cdk/test/contract.test.ts`:
 | `aws_ec2_capacity_reservation` | `ec2` | `[ec2]` | `TfCapacityReservation` |
 | `aws_prometheus_workspace` | `amp` | `[prometheus]` | `TfWorkspace` |
 | `aws_acmpca_certificate_authority` | `acm_pca` | `[acmpca]` | `TfCertificateAuthority` |
-| `aws_vpc` | `vpc` | `[vpc]` | `TfVpc` (empty stem) |
+| `aws_vpc` | `vpc` | `[vpc]` | `TfVpc` (no prefix leaves a stem) |
+| `aws_ec2_transit_gateway` | `transit_gateway` | `[ec2, ec2_transit_gateway]` | `TfTransitGateway` (the exact match falls through to `ec2`) |
 | `aws_lb` / `aws_alb` (alias) | `elb` | `[lb]` | `TfLb` / `TfAlb` |
 | `aws_lb_listener` | `elb` | `[lb]` | `TfListener` |
 | `aws_lambda_function` | `lambda` | `[lambda]` | `TfFunction` |
@@ -220,3 +223,17 @@ Three changes landed after the review above: the surface marker moved to positio
 
 The full fleet was not re-packed (`pnpm pacmak:go`, 698 s) or re-run through `check:go-imports`
 after the fix-up — `check:go-imports` reads packed modules, so it needs that pack first.
+
+**Back-off refinement** (same day): an exact-matching prefix now falls through to the next-longest
+instead of ending the search, which moves three `transit_gateway` entries and nothing else.
+
+| gate | command | result |
+| --- | --- | --- |
+| groups | `pnpm check:groups` | PASS — gate C: 260 prefixes, every one used, 0 collisions |
+| miner is clean | `pnpm mine` | zero diff against `groups.json` |
+| generator | `pnpm generate` ×2 | 3,434 files; 3 entries changed (`aws_ec2_transit_gateway` on both surfaces + its Go file), `git status` clean on the second run |
+| tests / fixtures | `pnpm test`, `pnpm fixture:check` | 2,200 passed, 9 snapshots; fixtures up to date |
+| types | `pnpm typecheck` | 258/258 OK |
+| runtime contract | `pnpm check:contract --strict` | 22/22 units identical |
+| synth | `pnpm synth:smoke` | PASS, validation ON |
+| Go | jsii + pacmak + `go build ./...` for `transit_gateway` | OK — JSII3 0, JSII6 0; `TfTransitGateway.go` and `DataTfTransitGateway.go` both build |

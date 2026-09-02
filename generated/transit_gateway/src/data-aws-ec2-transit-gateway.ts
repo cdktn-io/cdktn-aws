@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfEc2TransitGatewayConfig extends cdktn.TerraformMetaArguments {
+export interface DataTfTransitGatewayConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway#id DataTfEc2TransitGateway#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway#id DataTfTransitGateway#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,31 +16,31 @@ export interface DataTfEc2TransitGatewayConfig extends cdktn.TerraformMetaArgume
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway#region DataTfEc2TransitGateway#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway#region DataTfTransitGateway#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway#tags DataTfEc2TransitGateway#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway#tags DataTfTransitGateway#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway#filter DataTfEc2TransitGateway#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway#filter DataTfTransitGateway#filter}
   */
-  readonly filter?: DataTfEc2TransitGateway.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataTfTransitGateway.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway#timeouts DataTfEc2TransitGateway#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway#timeouts DataTfTransitGateway#timeouts}
   */
-  readonly timeouts?: DataTfEc2TransitGateway.TimeoutsProperty;
+  readonly timeouts?: DataTfTransitGateway.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway aws_ec2_transit_gateway}
 */
-export class DataTfEc2TransitGateway extends cdktn.TerraformDataSource {
+export class DataTfTransitGateway extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class DataTfEc2TransitGateway extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfEc2TransitGateway resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataTfTransitGateway resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfEc2TransitGateway to import
-  * @param importFromId The id of the existing DataTfEc2TransitGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfEc2TransitGateway to import is found
+  * @param importToId The construct id used in the generated config for the DataTfTransitGateway to import
+  * @param importFromId The id of the existing DataTfTransitGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTfTransitGateway to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_transit_gateway", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class DataTfEc2TransitGateway extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfEc2TransitGatewayConfig = {}
+  * @param options DataTfTransitGatewayConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfEc2TransitGatewayConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataTfTransitGatewayConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_transit_gateway',
       terraformGeneratorMetadata: {
@@ -223,11 +223,11 @@ export class DataTfEc2TransitGateway extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataTfEc2TransitGateway.FilterPropertyList(this, "filter", true);
+  private _filter = new DataTfTransitGateway.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataTfEc2TransitGateway.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataTfTransitGateway.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -239,11 +239,11 @@ export class DataTfEc2TransitGateway extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataTfEc2TransitGateway.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataTfTransitGateway.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: DataTfEc2TransitGateway.TimeoutsProperty) {
+  public putTimeouts(value: DataTfTransitGateway.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -263,8 +263,8 @@ export class DataTfEc2TransitGateway extends cdktn.TerraformDataSource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      filter: cdktn.listMapper(dataTfEc2TransitGatewayFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: dataTfEc2TransitGatewayTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(dataTfTransitGatewayFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: dataTfTransitGatewayTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -289,16 +289,16 @@ export class DataTfEc2TransitGateway extends cdktn.TerraformDataSource {
         storageClassType: "stringMap",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataTfEc2TransitGatewayFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataTfTransitGatewayFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataTfEc2TransitGateway.FilterPropertyList",
+        storageClassType: "DataTfTransitGateway.FilterPropertyList",
       },
       timeouts: {
-        value: dataTfEc2TransitGatewayTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataTfTransitGatewayTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "DataTfEc2TransitGateway.TimeoutsProperty",
+        storageClassType: "DataTfTransitGateway.TimeoutsProperty",
       },
     };
 
@@ -307,7 +307,7 @@ export class DataTfEc2TransitGateway extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfEc2TransitGatewayFilterPropertyToTerraform(struct?: DataTfEc2TransitGateway.FilterProperty | cdktn.IResolvable): any {
+export function dataTfTransitGatewayFilterPropertyToTerraform(struct?: DataTfTransitGateway.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -319,7 +319,7 @@ export function dataTfEc2TransitGatewayFilterPropertyToTerraform(struct?: DataTf
 }
 
 
-export function dataTfEc2TransitGatewayFilterPropertyToHclTerraform(struct?: DataTfEc2TransitGateway.FilterProperty | cdktn.IResolvable): any {
+export function dataTfTransitGatewayFilterPropertyToHclTerraform(struct?: DataTfTransitGateway.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -344,7 +344,7 @@ export function dataTfEc2TransitGatewayFilterPropertyToHclTerraform(struct?: Dat
 }
 
 
-export function dataTfEc2TransitGatewayTimeoutsPropertyToTerraform(struct?: DataTfEc2TransitGateway.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfTransitGatewayTimeoutsPropertyToTerraform(struct?: DataTfTransitGateway.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -355,7 +355,7 @@ export function dataTfEc2TransitGatewayTimeoutsPropertyToTerraform(struct?: Data
 }
 
 
-export function dataTfEc2TransitGatewayTimeoutsPropertyToHclTerraform(struct?: DataTfEc2TransitGateway.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataTfTransitGatewayTimeoutsPropertyToHclTerraform(struct?: DataTfTransitGateway.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -374,14 +374,14 @@ export function dataTfEc2TransitGatewayTimeoutsPropertyToHclTerraform(struct?: D
 }
 
 
-export namespace DataTfEc2TransitGateway {
+export namespace DataTfTransitGateway {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway#name DataTfEc2TransitGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway#name DataTfTransitGateway#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway#values DataTfEc2TransitGateway#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway#values DataTfTransitGateway#values}
   */
   readonly values: string[];
 }
@@ -483,7 +483,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway#read DataTfEc2TransitGateway#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_transit_gateway#read DataTfTransitGateway#read}
   */
   readonly read?: string;
 }

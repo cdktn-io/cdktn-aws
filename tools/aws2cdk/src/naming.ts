@@ -102,18 +102,20 @@ export function rawTypeFor(parserType: string, surface: EntrySurface = surfaceOf
  * The part of the terraform type the class is named after: the raw type with the group's own
  * service tokens removed.
  *
- * The LONGEST matching prefix wins (ties alphabetical, so the result never depends on the order the
- * curated list happens to be written in): `cloudwatch_logs` lists `[cloudwatch_log, cloudwatch]`
- * so `cloudwatch_log_group` becomes `group` while `cloudwatch_query_definition` becomes
- * `query_definition`.
+ * The LONGEST prefix that matches AND leaves a non-empty stem wins (ties alphabetical, so the result
+ * never depends on the order the curated list happens to be written in): `cloudwatch_logs` lists
+ * `[cloudwatch_log, cloudwatch]` so `cloudwatch_log_group` becomes `group` while
+ * `cloudwatch_query_definition` becomes `query_definition`.
  *
- * An EXACT match leaves nothing to name the class after (`aws_vpc` in group `vpc`, `aws_lb` in
- * `elb`), so the raw type is kept: `TfVpc`, `TfLb`. That is the one place the stripping backs off.
+ * A prefix that matches the raw type EXACTLY leaves nothing to name the class after, so it is
+ * skipped and the next-longest prefix gets its turn: `transit_gateway` lists
+ * `[ec2, ec2_transit_gateway]`, and `ec2_transit_gateway` falls through to `ec2` -> `TfTransitGateway`.
+ * Only when NO prefix leaves a non-empty stem is the raw type kept (`aws_vpc` in `vpc` -> `TfVpc`,
+ * `aws_lb` in `elb` -> `TfLb`). That is the one place the stripping backs off entirely.
  */
 export function stemFor(raw: string, stripPrefixes: readonly string[]): string {
   const byLongest = [...stripPrefixes].sort((a, b) => b.length - a.length || (a < b ? -1 : a > b ? 1 : 0));
   for (const p of byLongest) {
-    if (raw === p) return raw;
     if (raw.startsWith(`${p}_`)) return raw.slice(p.length + 1);
   }
   return raw;

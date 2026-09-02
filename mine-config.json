@@ -32,7 +32,7 @@
     "eventbridge": ["cloudwatch_event"],
     "meta_data_sources": [],
     "s3_control": ["s3", "s3control"],
-    "transit_gateway": ["ec2_transit_gateway"],
+    "transit_gateway": ["ec2", "ec2_transit_gateway"],
     "vpn_client": ["ec2_client_vpn"]
   },
 

@@ -108,6 +108,11 @@ describe("naming", () => {
     // longest match wins, so the group's two prefixes do not fight over cloudwatch_log_*
     ["aws_cloudwatch_log_group", "resource", ["cloudwatch_log", "cloudwatch"], "TfGroup"],
     ["aws_cloudwatch_query_definition", "resource", ["cloudwatch_log", "cloudwatch"], "TfQueryDefinition"],
+    // an exact match empties the stem, so the next-longest prefix gets its turn
+    ["aws_ec2_transit_gateway", "resource", ["ec2", "ec2_transit_gateway"], "TfTransitGateway"],
+    ["aws_ec2_transit_gateway_route", "resource", ["ec2", "ec2_transit_gateway"], "TfRoute"],
+    // …and when the shorter prefix does not match either, the raw type is kept
+    ["aws_vpc", "resource", ["ec2", "vpc"], "TfVpc"],
     // an EMPTY list is legal and strips nothing — the provider's own meta data sources
     ["data_aws_arn", "data_source", [], "DataTfArn"],
     ["data_aws_service_principal", "data_source", [], "DataTfServicePrincipal"],
