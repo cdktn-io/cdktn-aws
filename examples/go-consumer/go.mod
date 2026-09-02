@@ -3,10 +3,10 @@
 // writes the go.work whose `replace` directives supply the real directories. That is deliberate —
 // the example measures and proves the fleet as it stands in this repository, not the last release.
 //
-// A real consumer does not need any of that. The fleet IS published: every module under
-// github.com/cdktn-io/cdktn-aws-go resolves at v0.1.1 through proxy.golang.org (verified against
-// the proxy, e.g. .../awsprovider/@latest -> v0.1.1). Requiring `.../awsprovider v0.1.1` and
-// dropping the workspace is all it takes. See README.md.
+// A real consumer does not need any of that. The fleet IS published, at the Tf names this example
+// calls: every module under github.com/cdktn-io/cdktn-aws-go resolves at v0.2.0 through
+// proxy.golang.org (verified against the proxy, e.g. .../awsprovider/@latest -> v0.2.0). Requiring
+// `.../awsprovider v0.2.0` and dropping the workspace is all it takes. See README.md.
 module github.com/cdktn-io/cdktn-aws/examples/go-consumer
 
 go 1.25.0

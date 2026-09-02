@@ -4,7 +4,7 @@
 /**
  * Build and run `examples/go-consumer` against a local checkout of the Go fleet.
  *
- * The fleet is published (`v0.1.1` on `proxy.golang.org`), but this example is deliberately *not*
+ * The fleet is published (`v0.2.0` on `proxy.golang.org`), but this example is deliberately *not*
  * built the way a consumer would build it: it exists to measure and prove the fleet as it stands
  * in a local checkout, not the last release. So it is built in **workspace mode**: this script
  * writes a `go.work` naming the local module directories, which is why
