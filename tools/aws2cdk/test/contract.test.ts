@@ -165,6 +165,20 @@ describe("naming", () => {
       group: "elb",
       className: "TfLb",
       classic: { module: "lb", className: "Lb", go: "lb", python: "lb" },
+      // one row per nested struct; the four wrapper spellings and the two mappers are derived from
+      // it by `NESTED_SUFFIX_RULES` rather than repeated four times over
+      nested: {
+        access_logs: { className: "AccessLogsProperty", classic: "LbAccessLogs" },
+        connection_logs: { className: "ConnectionLogsProperty", classic: "LbConnectionLogs" },
+        health_check_logs: { className: "HealthCheckLogsProperty", classic: "LbHealthCheckLogs" },
+        ipam_pools: { className: "IpamPoolsProperty", classic: "LbIpamPools" },
+        minimum_load_balancer_capacity: {
+          className: "MinimumLoadBalancerCapacityProperty",
+          classic: "LbMinimumLoadBalancerCapacity",
+        },
+        subnet_mapping: { className: "SubnetMappingProperty", classic: "LbSubnetMapping" },
+        timeouts: { className: "TimeoutsProperty", classic: "LbTimeouts" },
+      },
     });
     expect(map.entries["data_aws_lb"].className).toBe("DataTfLb");
     expect(map.entries["aws_provider"]).toEqual({
@@ -172,8 +186,37 @@ describe("naming", () => {
       group: "provider",
       className: "AwsProvider",
       classic: { module: "provider", className: "AwsProvider", go: "provider", python: "provider" },
+      nested: {
+        assume_role: { className: "AssumeRoleProperty", classic: "AwsProviderAssumeRole" },
+        assume_role_with_web_identity: {
+          className: "AssumeRoleWithWebIdentityProperty",
+          classic: "AwsProviderAssumeRoleWithWebIdentity",
+        },
+        default_tags: { className: "DefaultTagsProperty", classic: "AwsProviderDefaultTags" },
+        endpoints: { className: "EndpointsProperty", classic: "AwsProviderEndpoints" },
+        ignore_tags: { className: "IgnoreTagsProperty", classic: "AwsProviderIgnoreTags" },
+      },
     });
     expect(Object.keys(map.entries)).toEqual([...Object.keys(map.entries)].sort());
+  });
+
+  it("refuses to write a nested row whose two parses have drifted apart", () => {
+    // The nested join is positional — the two parsers walk one schema block the same way — so the
+    // one thing it must never do is line rows up silently when they no longer correspond.
+    const drifted = buildClassicNameIndex(miniSchema());
+    drifted["aws_lb"] = { ...drifted["aws_lb"], nested: ["LbAccessLogs", "LbTimeouts"] };
+    expect(() => buildNamingMap(result, drifted)).toThrow(
+      /"aws_lb" parses to 7 nested types here and 2 in @cdktn\/provider-aws/,
+    );
+
+    // Same length, one adjacent pair swapped — the case a length check alone would wave through.
+    const misaligned = buildClassicNameIndex(miniSchema());
+    const swapped = [...misaligned["aws_lb"].nested];
+    [swapped[5], swapped[6]] = [swapped[6], swapped[5]];
+    misaligned["aws_lb"] = { ...misaligned["aws_lb"], nested: swapped };
+    expect(() => buildNamingMap(result, misaligned)).toThrow(
+      /lines up with the classic class "LbTimeouts", which does not end in "SubnetMapping"/,
+    );
   });
 
   it("refuses to write a map row it has no @cdktn/provider-aws identity for", () => {

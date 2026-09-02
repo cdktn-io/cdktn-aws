@@ -77,6 +77,14 @@ export interface GenerateOptions {
   readonly fqpn?: string;
 }
 
+/** One nested block/attribute type, as the rename map needs it. */
+export interface EmittedNestedType {
+  /** the terraform attribute path below the resource root, `path.join('.')` */
+  readonly path: string;
+  /** the name it is mounted under on the class's namespace, e.g. `CorsRuleProperty` */
+  readonly className: string;
+}
+
 export interface EmittedEntry {
   readonly terraformName: string;
   /** the surface-marked type the file is named after (`data_aws_lb`), i.e. the naming-map key */
@@ -85,6 +93,13 @@ export interface EmittedEntry {
   readonly className: string;
   readonly fileBase: string;
   readonly nestedTypes: number;
+  /**
+   * The nested types **in the parser's own struct order** — which is what lets `naming-map.ts` zip
+   * them against the classic parser's structs for the same schema entry.
+   */
+  readonly nested: readonly EmittedNestedType[];
+  /** what the module-level mapper functions are prefixed with — see `naming.mapperPrefixesForGroup` */
+  readonly mapperPrefix: string;
 }
 
 export interface GroupResult {
@@ -345,6 +360,8 @@ function emitEntry(built: BuiltEntry, srcDir: string, mapperPrefix: string): Emi
     className,
     fileBase,
     nestedTypes: resource.structs.length,
+    nested: resource.structs.map((s) => ({ path: s.path.join("."), className: s.name })),
+    mapperPrefix,
   };
 }
 

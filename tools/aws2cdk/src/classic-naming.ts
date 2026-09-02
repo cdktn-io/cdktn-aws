@@ -35,8 +35,21 @@ export interface ClassicName {
   readonly python: string;
 }
 
+export interface ClassicIdentity {
+  readonly identity: ClassicName;
+  /**
+   * The classic class name of every nested struct, in the vendored parser's own struct order.
+   *
+   * Order is the join key with the grouped parser's struct paths (`naming-map.ts` zips the two),
+   * and it is meaningful because both parsers walk one schema block the same way — the grouped
+   * parser is an adaptation of this one, not a re-implementation. The zip asserts the alignment
+   * per row rather than trusting it.
+   */
+  readonly nested: readonly string[];
+}
+
 /** Keyed exactly like `naming-map.json`: the surface-marked terraform type. */
-export type ClassicNameIndex = Record<string, ClassicName>;
+export type ClassicNameIndex = Record<string, ClassicIdentity>;
 
 /**
  * The TS submodule name: the export alias `provider-generator.ts#emitIndexFile` writes into
@@ -77,14 +90,22 @@ export function buildClassicNameIndex(schema: any, fqpn: string = AWS_FQPN): Cla
 
   const parser = new ResourceParser();
   const index: ClassicNameIndex = {};
-  const record = (key: string, model: { className: string; fileName: string }) => {
+  const record = (
+    key: string,
+    model: { className: string; fileName: string; structs: { name: string }[] },
+  ) => {
     const module = model.fileName.replace(/\/index\.ts$/, "");
     const submodule = submoduleForModule(module);
     index[key] = {
-      module,
-      className: model.className,
-      go: goPackageForSubmodule(submodule),
-      python: pythonModuleForSubmodule(submodule),
+      identity: {
+        module,
+        className: model.className,
+        go: goPackageForSubmodule(submodule),
+        python: pythonModuleForSubmodule(submodule),
+      },
+      // `ResourceModel#structs` is `[configStruct, ...nested]`; the config struct is named by the
+      // `<className>Config` rule the map records per entry, so only the tail is a nested type.
+      nested: model.structs.slice(1).map((s) => s.name),
     };
   };
 

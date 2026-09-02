@@ -21,7 +21,8 @@ import {
   pythonModuleForSubmodule,
   submoduleForModule,
 } from "../src/classic-naming";
-import { readNamingMap } from "../src/naming-map";
+import { NESTED_SUFFIX_RULES, readNamingMap } from "../src/naming-map";
+import { NAME_GRAMMAR, fileNameForTerraformType } from "../src/naming";
 
 const repoRoot = path.resolve(__dirname, "..", "..", "..");
 const map = readNamingMap(repoRoot);
@@ -34,8 +35,8 @@ describe("the classic name derivation", () => {
   const index = buildClassicNameIndex(miniSchema());
 
   it("names a resource after its terraform type with the provider prefix dropped", () => {
-    expect(index["aws_lb"]).toEqual({ module: "lb", className: "Lb", go: "lb", python: "lb" });
-    expect(index["aws_lambda_function"]).toEqual({
+    expect(index["aws_lb"].identity).toEqual({ module: "lb", className: "Lb", go: "lb", python: "lb" });
+    expect(index["aws_lambda_function"].identity).toEqual({
       module: "lambda-function",
       className: "LambdaFunction",
       go: "lambdafunction",
@@ -45,17 +46,28 @@ describe("the classic name derivation", () => {
 
   it("keeps the surface marker AND the provider prefix on a data source and an ephemeral", () => {
     // The classic parser only strips `aws_` from a *leading* position, which `data_aws_lb` has not.
-    expect(index["data_aws_lb"].className).toBe("DataAwsLb");
-    expect(index["ephemeral_aws_lambda_invocation"].className).toBe("EphemeralAwsLambdaInvocation");
+    expect(index["data_aws_lb"].identity.className).toBe("DataAwsLb");
+    expect(index["ephemeral_aws_lambda_invocation"].identity.className).toBe(
+      "EphemeralAwsLambdaInvocation",
+    );
   });
 
   it("puts the provider block in `provider`, as `AwsProvider`", () => {
-    expect(index["aws_provider"]).toEqual({
+    expect(index["aws_provider"].identity).toEqual({
       module: "provider",
       className: "AwsProvider",
       go: "provider",
       python: "provider",
     });
+  });
+
+  it("keeps each resource's nested struct names, the config struct excluded", () => {
+    // The vendored parser's flat, whole-provider names — `<resource><path>` — in its own struct
+    // order, which is the key the map joins the two parses on.
+    expect(index["aws_lambda_function"].nested).toContain("LambdaFunctionVpcConfig");
+    expect(index["aws_provider"].nested).toContain("AwsProviderAssumeRole");
+    // `LambdaFunctionConfig` is the resource's Config interface, not a nested type.
+    expect(index["aws_lambda_function"].nested).not.toContain("LambdaFunctionConfig");
   });
 
   it("derives the Go and Python submodules by jsii-pacmak's own rules", () => {
@@ -113,6 +125,65 @@ describe("naming-map.json", () => {
   });
 });
 
+describe("naming-map.json's nested section", () => {
+  it("publishes the suffix rules it expects its readers to apply", () => {
+    expect(map.nestedSuffixRules).toEqual(NESTED_SUFFIX_RULES);
+    expect(map.nestedSuffixRules.suffixes).toContain("OutputReference");
+  });
+
+  it("carries one row per nested struct, path-keyed and sorted", () => {
+    const rows = Object.values(map.entries).reduce(
+      (n, e) => n + Object.keys(e.nested ?? {}).length,
+      0,
+    );
+    // The generator's own count for the pinned schema — 9,856 nested types over 2,401 entries.
+    expect(rows).toBe(9856);
+    for (const entry of Object.values(map.entries)) {
+      const paths = Object.keys(entry.nested ?? {});
+      expect(paths).toEqual([...paths].sort());
+      expect(paths.filter((p) => p === "")).toEqual([]);
+    }
+  });
+
+  it("names every nested type `<leaf>Property`, or a full-path form when leaves collide", () => {
+    const offGrammar = Object.entries(map.entries).flatMap(([key, e]) =>
+      Object.entries(e.nested ?? {})
+        .filter(([, n]) => !NAME_GRAMMAR.propertyInterface.test(n.className))
+        .map(([p, n]) => `${key} ${p}: ${n.className}`),
+    );
+    expect(offGrammar).toEqual([]);
+    expect(map.entries["aws_s3_bucket"].nested!["cors_rule"]).toEqual({
+      className: "CorsRuleProperty",
+      classic: "S3BucketCorsRule",
+    });
+  });
+
+  it("records a mapperPrefix only where it is not the class name", () => {
+    // `naming.mapperPrefixesForGroup`'s `Mapper` fallback, which only `s3` and `waf` need.
+    const overridden = Object.entries(map.entries)
+      .filter(([, e]) => e.mapperPrefix !== undefined)
+      .map(([key, e]) => [key, e.group, e.mapperPrefix]);
+    expect(overridden.map((r) => r[0])).toEqual([
+      "aws_s3_bucket",
+      "aws_s3_bucket_object_lock_configuration",
+      "aws_s3_bucket_server_side_encryption_configuration",
+      "aws_wafv2_web_acl",
+      "aws_wafv2_web_acl_rule",
+    ]);
+    expect(new Set(overridden.map((r) => r[1]))).toEqual(new Set(["s3", "waf"]));
+    expect(map.entries["aws_s3_bucket"].mapperPrefix).toBe("TfBucketMapper");
+    expect(map.entries["aws_wafv2_web_acl"].mapperPrefix).toBe("TfWebAclMapper");
+    expect(map.entries["aws_lambda_function"].mapperPrefix).toBeUndefined();
+  });
+
+  it("mounts the provider's own blocks on AwsProvider", () => {
+    expect(map.entries["aws_provider"].nested!["assume_role"]).toEqual({
+      className: "AssumeRoleProperty",
+      classic: "AwsProviderAssumeRole",
+    });
+  });
+});
+
 // Locally, a missing ref-provider-aws checkout is an ordinary state — it is a sibling clone, not a
 // submodule — so this reports as visibly skipped. In CI it is not: an absent checkout would turn
 // 2,401 assertions into a green run that asserted nothing about the names the migration tool will
@@ -161,6 +232,64 @@ describeClassic(`the classic library at ${classicRepo}`, () => {
       }
     }
     expect(missing).toEqual([]);
+  });
+
+  // The nested section is the migration tool's whole rewrite table for block types, and its claim
+  // is not "these names exist" but "these names, plus five spellings derived from them by
+  // NESTED_SUFFIX_RULES, are what @cdktn/provider-aws declares". Ten resources chosen to span every
+  // shape that has ever surprised us: the `…A` quirk on both sides of the pair that causes it, the
+  // two groups whose mappers carry the `Mapper` disambiguator, a data source, an ephemeral, an
+  // alias resource, and the provider block (whose nested types get no wrapper classes at all).
+  describe.each([
+    ["aws_s3_bucket", "s3-bucket"],
+    ["aws_s3_bucket_versioning", "s3-bucket-versioning"],
+    ["aws_wafv2_web_acl", "wafv2-web-acl"],
+    ["aws_lambda_function", "lambda-function"],
+    ["aws_iam_role", "iam-role"],
+    ["aws_lb_listener", "lb-listener"],
+    ["aws_instance", "instance"],
+    ["data_aws_iam_policy_document", "data-aws-iam-policy-document"],
+    ["ephemeral_aws_kms_secrets", "ephemeral-aws-kms-secrets"],
+    ["aws_provider", "provider"],
+  ])("%s's nested types", (key, module) => {
+    const entry = map.entries[key];
+    const source = fs.readFileSync(path.join(classicRepo, "src", module, "index.ts"), "utf-8");
+    const nested = Object.entries(entry.nested ?? {});
+
+    it("declares every `classic` name as an interface, and its two mappers", () => {
+      expect(nested.length).toBeGreaterThan(0);
+      const missing = nested.flatMap(([p, n]) => {
+        const camel = `${n.classic.charAt(0).toLowerCase()}${n.classic.slice(1)}`;
+        return [
+          `export interface ${n.classic} {`,
+          `export function ${camel}ToTerraform(`,
+          `export function ${camel}ToHclTerraform(`,
+        ]
+          .filter((decl) => !source.includes(decl))
+          .map((decl) => `${p}: no "${decl}"`);
+      });
+      expect(missing).toEqual([]);
+    });
+
+    it("has the same wrapper classes there as `<className><suffix>` has here", () => {
+      // The suffix rules are symmetric or they are useless: a consumer holding
+      // `S3BucketCorsRuleList` has to land on `TfBucket.CorsRulePropertyList` and nowhere else.
+      const ours = fs.readFileSync(
+        path.join(repoRoot, "generated", entry.group, "src", `${fileNameForTerraformType(key)}.ts`),
+        "utf-8",
+      );
+      const asymmetric = nested.flatMap(([p, n]) =>
+        NESTED_SUFFIX_RULES.suffixes
+          .filter((suffix) => suffix !== "")
+          .filter(
+            (suffix) =>
+              source.includes(`export class ${n.classic}${suffix} extends`) !==
+              ours.includes(`export class ${n.className}${suffix} extends`),
+          )
+          .map((suffix) => `${p}: ${n.classic}${suffix} / ${n.className}${suffix}`),
+      );
+      expect(asymmetric).toEqual([]);
+    });
   });
 
   it("exports its whole submodule set through src/index.ts, and the map covers all of it", () => {
