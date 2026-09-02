@@ -145,6 +145,46 @@ describe("what it refuses to guess", () => {
     expect(result.after).toBe(result.before);
   });
 
+  const DEFAULT_IMPORT =
+    "default import of the classic package — there is no default export to move; move it by hand";
+
+  it("reports a default import that shares its statement with a named one, and keeps it bound", () => {
+    // The sibling binding is what makes this dangerous: it marks the statement handled, so without
+    // its own row the default would leave with the statement — silently, at exit 0.
+    const result = migrate(
+      [
+        "import d, { iamRole } from '@cdktn/provider-aws';",
+        "export function build(scope: any) {",
+        "  new iamRole.IamRole(scope, 'r', {});",
+        "  new d.s3Bucket.S3Bucket(scope, 'b', {});",
+        "}",
+      ].join("\n"),
+    );
+    expect(result.unmapped).toEqual([
+      { file: "main.ts", line: 1, symbol: "d", reason: DEFAULT_IMPORT },
+    ]);
+    expect(result.after).toContain("import { iam } from '@cdktn/aws';");
+    expect(result.after).toContain("import d from '@cdktn/provider-aws';");
+    expect(result.after).toContain("new d.s3Bucket.S3Bucket(scope, 'b', {});");
+  });
+
+  it("will not retarget a `* as` barrel whose statement also carries a default import", () => {
+    const result = migrate(
+      [
+        "import d, * as ns from '@cdktn/provider-aws';",
+        "export const x = (s: any) => [new ns.iamRole.IamRole(s, 'r', {}), d.s3Bucket.S3Bucket];",
+      ].join("\n"),
+    );
+    expect(result.unmapped.map((u) => [u.symbol, u.reason])).toEqual([
+      ["d", DEFAULT_IMPORT],
+      [
+        "ns",
+        "another binding on this classic import could not move, so the package cannot be retargeted",
+      ],
+    ]);
+    expect(result.after).toBe(result.before);
+  });
+
   it("reports a classic submodule used as a value rather than as a namespace", () => {
     const result = migrate(
       [

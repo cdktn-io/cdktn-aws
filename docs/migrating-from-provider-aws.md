@@ -100,6 +100,7 @@ Known limits, all of them reported rather than silently wrong:
 | `export … from '@cdktn/provider-aws/…'`, `export *` | reported — the classic names are part of *your* API there, so the choice is yours |
 | `import x = require('@cdktn/provider-aws/…')`, `import('…')` | reported — the specifier is recognised, the form is not rewritten |
 | a subpath with no map row | reported, and its import kept whole |
+| a default import (`import aws from '@cdktn/provider-aws'`) | reported — neither library has a default export, so the binding stays on the classic package, and a `* as` binding sharing that statement stays with it |
 | `import type { … }` of a classic type | rewritten to a plain `import { s3 } from '@cdktn/aws'` — under `verbatimModuleSyntax` that is a runtime import the file did not have before |
 
 After a `--write` run, `grep -r '@cdktn/provider-aws' .` is the honest last step.

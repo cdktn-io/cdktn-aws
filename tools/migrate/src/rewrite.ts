@@ -67,6 +67,8 @@ interface Binding {
   readonly statement: ImportDeclaration | VariableStatement;
   /** how this binding is spelled inside a rebuilt import, e.g. `s3Bucket` or `S3Bucket as B` */
   readonly clause: string;
+  /** which slot of an import clause it occupies, so a residual can be spelled back correctly */
+  readonly form: "default" | "star" | "named";
 }
 
 const lineOf = (node: Node): number => node.getStartLineNumber();
@@ -150,6 +152,25 @@ function classicBindings(file: SourceFile, index: SymbolIndex): Binding[] {
     if (!isClassicSpecifier(specifier)) continue;
     const deep = classicModuleOfSpecifier(specifier);
 
+    // `import aws from '@cdktn/provider-aws'` compiles under `esModuleInterop`, and neither library
+    // has a default export to rename it to — so it is reported and held on the classic package,
+    // never folded away with the statement its sibling bindings move out of.
+    const byDefault = decl.getDefaultImport();
+    if (byDefault) {
+      bindings.push({
+        local: byDefault,
+        name: byDefault.getText(),
+        detail: {
+          kind: "unknown",
+          reason:
+            "default import of the classic package — there is no default export to move; move it by hand",
+        },
+        statement: decl,
+        clause: byDefault.getText(),
+        form: "default",
+      });
+    }
+
     const star = decl.getNamespaceImport();
     const starModule = deep ? index.byModule.get(deep) : undefined;
     if (star) {
@@ -164,6 +185,7 @@ function classicBindings(file: SourceFile, index: SymbolIndex): Binding[] {
         detail,
         statement: decl,
         clause: `* as ${star.getText()}`,
+        form: "star",
       });
     }
 
@@ -176,7 +198,14 @@ function classicBindings(file: SourceFile, index: SymbolIndex): Binding[] {
         : deep
           ? { kind: "symbol", module, imported }
           : { kind: "namespace", module };
-      bindings.push({ local, name: local.getText(), detail, statement: decl, clause: spec.getText() });
+      bindings.push({
+        local,
+        name: local.getText(),
+        detail,
+        statement: decl,
+        clause: spec.getText(),
+        form: "named",
+      });
     }
   }
 
@@ -200,6 +229,7 @@ function classicBindings(file: SourceFile, index: SymbolIndex): Binding[] {
         detail,
         statement,
         clause: nameNode.getText(),
+        form: "star",
       });
       continue;
     }
@@ -213,7 +243,14 @@ function classicBindings(file: SourceFile, index: SymbolIndex): Binding[] {
         : deep
           ? { kind: "symbol", module, imported }
           : { kind: "namespace", module };
-      bindings.push({ local, name: local.getText(), detail, statement, clause: element.getText() });
+      bindings.push({
+        local,
+        name: local.getText(),
+        detail,
+        statement,
+        clause: element.getText(),
+        form: "named",
+      });
     }
   }
 
@@ -357,9 +394,14 @@ function resolve(
 function residualImport(statement: ImportDeclaration | VariableStatement, kept: Binding[]): string {
   if (Node.isImportDeclaration(statement)) {
     const specifier = statement.getModuleSpecifierValue();
-    const star = kept.find((b) => b.clause.startsWith("* as "));
-    const clause = star ? star.clause : `{ ${kept.map((b) => b.clause).join(", ")} }`;
-    return `import ${clause} from '${specifier}';`;
+    // An import clause is `default`, `default, * as ns`, `default, { … }`, `* as ns` or `{ … }` —
+    // a star and a named list can never appear together, so at most two slots are ever spelled.
+    const star = kept.find((b) => b.form === "star");
+    const named = kept.filter((b) => b.form === "named");
+    const clauses = kept.filter((b) => b.form === "default").map((b) => b.clause);
+    if (star) clauses.push(star.clause);
+    else if (named.length > 0) clauses.push(`{ ${named.map((b) => b.clause).join(", ")} }`);
+    return `import ${clauses.join(", ")} from '${specifier}';`;
   }
   const specifier = requiredSpecifier(statement)!;
   const declaration = statement.getDeclarations()[0];
@@ -419,27 +461,11 @@ export function migrateFile(file: SourceFile, index: SymbolIndex, relative: stri
     return { file: relative, before, after: before, rewrites: 0, unmapped: unhandled };
   }
 
-  const edits: Edit[] = [];
   const unmapped: Unmapped[] = [];
-  const groupsUsed = new Set<string>();
   const keptByStatement = new Map<ImportDeclaration | VariableStatement, Binding[]>();
-  const retargetedRoots: Binding[] = [];
-  let rewrites = 0;
-
-  const taken = declaredNames(file);
-  // A binding this run removes frees its name for a group barrel member; a `* as aws` binding is
-  // kept (only its package moves), so its name stays spoken for.
-  for (const binding of bindings) if (binding.detail.kind !== "root") taken.delete(binding.name);
-  const alias = new Map<string, string>();
-  const aliasOf = (group: string): string => {
-    let name = alias.get(group);
-    if (name === undefined) {
-      name = aliasFor(group, taken);
-      taken.add(name);
-      alias.set(group, name);
-    }
-    return name;
-  };
+  // Decide every binding first, emit second: which names a group barrel may take depends on which
+  // bindings this run actually REMOVES, and that is not known until the last one has been decided.
+  const moving: { binding: Binding; occurrences: readonly Occurrence[] }[] = [];
 
   const keep = (binding: Binding, finding: Unmapped) => {
     unmapped.push(finding);
@@ -492,6 +518,45 @@ export function migrateFile(file: SourceFile, index: SymbolIndex, relative: stri
       for (const o of failed) keep(binding, o.unmapped!);
       continue;
     }
+    moving.push({ binding, occurrences });
+  }
+
+  // Retargeting a root binding moves the package string the WHOLE statement hangs off, so a
+  // statement that keeps any binding cannot be retargeted: `import d, * as aws from '…'` would
+  // resolve `d` against a package that never exported it.
+  for (let i = moving.length - 1; i >= 0; i--) {
+    const { binding } = moving[i];
+    if (binding.detail.kind !== "root" || !keptByStatement.has(binding.statement)) continue;
+    moving.splice(i, 1);
+    keep(binding, {
+      file: relative,
+      line: lineOf(binding.local),
+      symbol: binding.name,
+      reason: "another binding on this classic import could not move, so the package cannot be retargeted",
+    });
+  }
+
+  const edits: Edit[] = [];
+  const groupsUsed = new Set<string>();
+  const retargetedRoots: Binding[] = [];
+  let rewrites = 0;
+
+  const taken = declaredNames(file);
+  // A binding this run removes frees its name for a group barrel member; a `* as aws` binding is
+  // kept (only its package moves), so its name stays spoken for.
+  for (const binding of bindings) if (binding.detail.kind !== "root") taken.delete(binding.name);
+  const alias = new Map<string, string>();
+  const aliasOf = (group: string): string => {
+    let name = alias.get(group);
+    if (name === undefined) {
+      name = aliasFor(group, taken);
+      taken.add(name);
+      alias.set(group, name);
+    }
+    return name;
+  };
+
+  for (const { binding, occurrences } of moving) {
     for (const o of occurrences) {
       // A root binding rewrites the whole `<barrel>.<submodule>.<Symbol>` span and needs no group
       // import; everything else lands under the group barrel member this file will import.
