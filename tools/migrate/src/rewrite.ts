@@ -232,15 +232,19 @@ function resolve(
     // Whether the symbol is known was decided once, before any reference was looked at — see
     // `migrateFile`. Reaching here means it is.
     const target = binding.detail.module.symbols.get(binding.detail.imported)!;
-    if (Node.isShorthandPropertyAssignment(ref.getParent())) {
+    // Two positions where the identifier also NAMES something: a qualified `s3.TfBucket` does not
+    // parse in an export clause, and in a shorthand it would rename the property as well.
+    const parent = ref.getParent();
+    const inPlace = Node.isExportSpecifier(parent)
+      ? "export specifier — a qualified name is not valid there; re-export it by hand"
+      : Node.isShorthandPropertyAssignment(parent)
+        ? "shorthand property assignment — renaming it would rename the property too"
+        : undefined;
+    if (inPlace) {
       return {
         start: ref.getStart(),
         end: ref.getEnd(),
-        unmapped: {
-          ...at,
-          symbol: binding.detail.imported,
-          reason: "shorthand property assignment — renaming it would rename the property too",
-        },
+        unmapped: { ...at, symbol: binding.detail.imported, reason: inPlace },
       };
     }
     return { start: ref.getStart(), end: ref.getEnd(), group: target.group, member: target.member };

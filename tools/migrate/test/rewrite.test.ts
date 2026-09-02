@@ -107,6 +107,26 @@ describe("what it refuses to guess", () => {
     expect(result.after).toContain("new S3BucketInvented(this, 'x', {});");
   });
 
+  it("reports a re-exported binding rather than emitting `export { s3.TfBucket }`", () => {
+    // An export clause takes names, not qualified names: rewriting there produces text that does
+    // not parse, which is the one failure a migration tool must never ship.
+    const result = migrate(
+      [
+        "import { S3Bucket as B } from '@cdktn/provider-aws/lib/s3-bucket';",
+        "export { B };",
+      ].join("\n"),
+    );
+    expect(result.unmapped).toEqual([
+      {
+        file: "main.ts",
+        line: 2,
+        symbol: "S3Bucket",
+        reason: "export specifier — a qualified name is not valid there; re-export it by hand",
+      },
+    ]);
+    expect(result.after).toBe(result.before);
+  });
+
   it("reports a classic submodule used as a value rather than as a namespace", () => {
     const result = migrate(
       [
