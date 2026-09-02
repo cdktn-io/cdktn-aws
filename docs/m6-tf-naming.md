@@ -96,6 +96,15 @@ Gate C calls the generator's own `classNameForEntry` rather than a second copy o
 cannot pass on a tree the generator would not emit. The pinned schema produces zero collisions; the
 asserts exist so a provider bump cannot introduce one silently.
 
+### One operational trap
+
+`jsii-pacmak` does **not** clear its output directory, and a rename is the one change where that
+matters: pack over an existing `generated/<group>/dist/go/` and it keeps yesterday's
+`AwsAcmCertificate*.go` beside today's `TfCertificate*.go`, in a module whose assembly no longer
+declares those types. `scripts/build-fleet.mjs` removes the output before packing; the serial
+`scripts/build-generated.mjs --pacmak-go` does not. After a rename, pack the fleet with the former,
+or `rm -rf generated/*/dist` first.
+
 ## The curated `stripPrefixes`
 
 Nine groups needed a hand-written list; the table and the reasoning are in

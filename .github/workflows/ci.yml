@@ -157,12 +157,13 @@ jobs:
 
       - name: generate twice — byte-identical, and equal to the committed tree
         # `hashes.json` is what the Go release tags off, so a generator that is not a pure function
-        # of (groups.json, schema, generator) would re-tag 258 modules for nothing.
+        # of (groups.json, schema, generator) would re-tag 258 modules for nothing. `naming-map.json`
+        # is written by the same run and is the migration tool's input, so it is held to the same bar.
         run: |
           pnpm generate
-          git diff --exit-code -- generated/
+          git diff --exit-code -- generated/ naming-map.json
           pnpm generate
-          git diff --exit-code -- generated/
+          git diff --exit-code -- generated/ naming-map.json
 
       - name: runtime contract diff (strict)
         # Without --strict a missing reference build is a skip with exit 0, which is right for a
